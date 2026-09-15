@@ -20,4 +20,13 @@ int  cleanup_register(void (*fn)(void));
  *   Con la tabla vacía (BSS=0) es un no-op seguro. */
 void run_cleanup_callbacks(void);
 
+/* Flag "¿ya ejecuté el cleanup?" (DAT_0014186c).
+ *   0 = pendiente, 1 = ya corrió los destructores. */
+extern int g_cleanup_done;
+
+/* Ejecuta run_cleanup_callbacks() UNA sola vez.
+ *   El guard se setea ANTES de ejecutar (protección anti-re-entrancia:
+ *   un callback que llame a cleanup_run_once de nuevo no re-entra). */
+void cleanup_run_once(void);
+
 #endif /* LIFECYCLE_H */

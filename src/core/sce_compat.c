@@ -176,3 +176,26 @@ int sce_stub_syscall91(void)
 	return 0;
 #endif
 }
+
+void display_init_channel_b(void)
+{
+	uint32_t cnt = 3u;
+
+	/* Setup: 116(0x5A) → 90 → flush(0) → flush(2) → 116(0x5B) → 116(0x54) */
+	sce_stub_syscall116(0x5A);          /* kick, op=90 */
+	sce_stub_syscall90(0x80075000, 0x1347d0, 0x330);  /* wait con flags */
+	sceFlushCache(0, 0, 0);
+	sceFlushCache(2, 0, 0);
+	sce_stub_syscall116(0x5B);          /* kick, op=91 */
+	sce_stub_syscall116(0x54);          /* kick, op=84 */
+
+	/* Bucle: 5 iteraciones, cada una: signal(op) + kick(op+1) */
+	do {
+		cnt = cnt + 1u;
+		sce_stub_syscall91(0x55 + (cnt - 3));   /* op avanza 0x55→0x56 */
+		sce_stub_syscall116(0x55 + (cnt - 3));  /* kick siguiente */
+	} while (cnt < 8u);
+
+	/* [Corregido] DAT_00134b48 = 3 (literal del asm), no el retorno del signal */
+	g_display_channel_b = 3;
+}

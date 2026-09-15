@@ -32,5 +32,8 @@ int sce_stub_syscall90(void);
  * [CONFIRM] Confirmar wait/signal al descifrar FUN_0011fa88. */
 int sce_stub_syscall91(void);
 
+int sce_stub_syscall116(int op_code);   /* $a0 solo */
+int sce_stub_syscall90(int a0, int a1, int a2);
+int sce_stub_syscall91(int op_code, int data);
 
 #endif /* SCE_COMPAT_H */

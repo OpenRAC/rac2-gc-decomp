@@ -37,3 +37,15 @@ void run_cleanup_callbacks(void)
 		if (g_cleanup_table[i] != 0)        /* <- tapón del off-by-one del asm */
 			g_cleanup_table[i]();
 }
+
+int g_cleanup_done = 0;   /* DAT_0014186c */
+
+void cleanup_run_once(void)
+{
+	if (g_cleanup_done == 0)
+	{
+		g_cleanup_done = 1;        /* set ANTES de limpiar (anti-re-entrancia) */
+		run_cleanup_callbacks();
+	}
+	/* si ya = 1, no hace nada: idempotente */
+}
