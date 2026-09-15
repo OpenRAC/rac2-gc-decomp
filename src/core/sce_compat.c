@@ -198,4 +198,61 @@ void display_init_channel_b(void)
 
 	/* [Corregido] DAT_00134b48 = 3 (literal del asm), no el retorno del signal */
 	g_display_channel_b = 3;
+
+}
+
+int GetOsdConfigParam(void* out_buf)
+{
+#if defined(PLATFORM_PS2)
+	register void* r __asm__("a0") = out_buf;
+	__asm__ volatile ("li v0, 0x4b\n\t syscall\n\t" : : "r"(r) : "memory", "v0");
+#else
+	/* PC: no hay kernel. El buffer queda a 0 (estado "default"). */
+	if (out_buf) *(unsigned int*)out_buf = 0;
+#endif
+	return 0;
+}
+
+int SetOsdConfigParam(const void* in_buf)
+{
+#if defined(PLATFORM_PS2)
+	register const void* r __asm__("a0") = in_buf;
+	__asm__ volatile ("li v0, 0x4a\n\t syscall\n\t"
+		: : "r"(r) : "memory", "v0");
+#else
+	/* PC: no hay kernel que escribir. No-op seguro. */
+	(void)in_buf;
+#endif
+	return 0;
+}
+
+/* ------------------------------------------------------------------ */
+/*  sys_config_init  (FUN_0011f8d0)                                    */
+/*                                                                     */
+/*  PS2 original:                                                     */
+/*    v   = Get(sp);        v |= 0x2000;   Set(sp+4 = v);             */
+/*    v   = Get(sp+4);      campo = (v>>13) & 7;                      */
+/*    return (campo < 1);                                                     */
+/*                                                                     */
+/*  PC: config empieza a 0 → campo = 0 → devuelve 1 (modo default).    */
+/*  El bit 13 forzado no tiene efecto observable (no hay kernel).      */
+/* ------------------------------------------------------------------ */
+int sys_config_init(void)
+{
+	unsigned int v;
+
+#if defined(PLATFORM_PS2)
+	GetOsdConfigParam(&v);          /* 1) leer estado actual        */
+	v |= 0x2000u;                   /* 2) forzar el bit 13          */
+	SetOsdConfigParam(&v);          /* 3) escribir de vuelta        */
+	GetOsdConfigParam(&v);          /* 4) re-leer                   */
+	v = (v >> 13) & 0x7u;           /* 5) extraer campo 13-15 (0..7)*/
+	return (v < 1) ? 1 : 0;         /* 6) == 0 ? 1 : 0              */
+#else
+	(void)v;
+	/* PC: sin kernel. El "campo de modo" termina en 0 (default) y la
+	   función devuelve 1 (== modo default OK). Idéntico resultado al
+	   original en la vía "PAL / config no forzada". */
+	return 1;
+#endif
 }
