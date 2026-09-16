@@ -10,15 +10,6 @@ int  sce_stub_syscall116(void);
 /* Stub: syscall 131 – polling de estado (read/write head) */
 int  sce_stub_syscall131(void);
 
-/* Barrera de sincronización EE<->IOP (spin-wait original).
- *   En PC: no-op + escribir g_sync_state para que los
- *   readers posteriores no vean 0. */
-void sce_sync_barrier(void);
-
-/* Global de estado compartido. 0x20c/0x168 eran offsets
- * de cabezal en el anillo SIF. En PC se fija a 0. */
-int  g_sync_state;
-
 /* Stub: syscall 64 – sceSemaCreate(SemaParam_t*).
  * Crea un semáforo de kernel. En PS2 devuelve un ID (handle) del kernel;
  * en PC devuelve un ID virtual estable. NUNCA crea recursos SDL aquí. */

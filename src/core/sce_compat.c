@@ -34,65 +34,6 @@ int sce_stub_syscall131(void)
 }
 
 /* ------------------------------------------------------------------ */
-/*  Global de estado (DAT_00134e20 en el ELF)                         */
-/*  [MOD-PENDING] Identificar quién lee esta global y ponerle el      */
-/*  nombre real del motor Insomniac.                                   */
-/* ------------------------------------------------------------------ */
-int g_sync_state = 0;
-
-/* ------------------------------------------------------------------ */
-/*  sce_sync_barrier  (FUN_0011f718)                                  */
-/*                                                                     */
-/*  PS2 original:                                                     */
-/*    kick(); kick();                                                 */
-/*    head_a = poll() - 0x20c;                                        */
-/*    head_b = poll() - 0x168;                                        */
-/*    while (head_a != head_b) { spin... }                            */
-/*    DAT_00134e20 = head_a;                                          */
-/*                                                                     */
-/*  PC: no hay IOP ni anillo SIF. El "spin" es inútil (ambos          */
-/*  stubs devuelven 0 → convergen al instante).  Solo escribimos      */
-/*  la global para no romper la cadena de dependencias.               */
-/* ------------------------------------------------------------------ */
-void sce_sync_barrier(void)
-{
-	int head_a, head_b;
-
-#if defined(PLATFORM_PS2)
-	sce_stub_syscall116();   /* kick 1 */
-	sce_stub_syscall116();   /* kick 2 */
-
-	head_a = sce_stub_syscall131() - 0x20c;
-	head_b = sce_stub_syscall131() - 0x168;
-
-	/* Spin-wait: re-poll el cabezal que va "detrás" hasta converger */
-	while (head_a != head_b) {
-		if (head_a < head_b)
-			head_a = sce_stub_syscall131() - 0x20c;
-		else
-			head_b = sce_stub_syscall131() - 0x168;
-	}
-#else
-	/* PC: ambos stubs devuelven 0, el while no se entra nunca.
-	   Se deja el código para que la lógica sea 1:1 con el ELF
-	   y sirva de referencia si alguien emula. */
-	(void)head_a;
-	(void)head_b;
-	head_a = sce_stub_syscall131() - 0x20c;  /* 0 - 0x20c */
-	head_b = sce_stub_syscall131() - 0x168;  /* 0 - 0x168 */
-	/* head_a != head_b → se entra al while → convergen en 1 iter */
-	while (head_a != head_b) {
-		if (head_a < head_b)
-			head_a = sce_stub_syscall131() - 0x20c;
-		else
-			head_b = sce_stub_syscall131() - 0x168;
-	}
-#endif
-
-	g_sync_state = head_a;
-}
-
-/* ------------------------------------------------------------------ */
 /*  Stub: syscall 64 – sceSemaCreate (kernel semaphore)              */
 /*  PS2:  li v0, 0x40 ; syscall   (param en $a0)                     */
 /*  PC:   devuelve un ID virtual estable. No crea SDL_Semaphore:     */

@@ -86,9 +86,6 @@ extern "C" {
 	void kernel_hardware_memory_init(void);
 	long kernel_tlb_cache_sync(void);
 
-	bool kernel_system_sync_guard(void);
-	bool kernel_system_sync_release(void);
-
 	u32  sys_log_write_buffered_alt(s32 log_level, const char* p_srcString, u32 write_len, s32 flush_flag);
 	u32  sys_log_write_buffered(s32 log_level, const char* p_srcString, u32 write_len, s32 flush_flag); // MISMATCH: antes declarada como "s32" (la definición real devuelve u32)
 	s32  sys_log_dispatch_message(u32 log_level, const char* p_message, s32 message_len);

@@ -24,7 +24,6 @@ s32 sceWaitSema(s32 sema_id);
 s32 sceSignalSema(s32 sema_id);
 s32 iSignalSema(s32 sema_id);
 s32 scePollSema(s32 sema_id);
-s32 sceDeleteSema(s32 sema_id);
 
 /* ------------------------------------------------------------------------
  * Hilos del Kernel de la PS2.
@@ -32,7 +31,6 @@ s32 sceDeleteSema(s32 sema_id);
 s32 sceWakeupThread(s32 thread_id);
 s32 iWakeupThread(s32 thread_id);
 s32 sceReferThreadStatus(s32 thread_id, void* status_ptr);
-s32 sceGetThreadId(void);
 s32 sceSleepThread(void);
 
 /* ------------------------------------------------------------------------

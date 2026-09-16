@@ -117,45 +117,6 @@ s32 scePollSema(s32 sema_id) {
 }
 
 /**
- * @brief Destruye y libera un objeto semáforo de la memoria protegida del Kernel de la PS2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (0x41 MIPS Syscall) (PAL)
- *
- * @param sema_id Identificador único del semáforo de hardware que se va a eliminar.
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
- */
-s32 sceDeleteSema(s32 sema_id) {
-#if defined(PLATFORM_PS2)
-	// En la consola real, se invoca mediante ensamblador inline:
-	// __asm__ volatile("li $v0, 65 \n syscall"); // syscall 0x41 nativa
-	return 0;
-#else
-	// Para el port a PC, emulamos la destrucción liberando activamente los recursos de SDL2.
-
-	if (sema_id == g_GraphicsSemaphoreID && g_GraphicsSemaphore != NULL) {
-		SDL_DestroySemaphore(g_GraphicsSemaphore);
-		g_GraphicsSemaphore = NULL;
-		g_GraphicsSemaphoreID = SYS_SEMAPHORE_INVALID;
-	}
-	else if (sema_id == g_RenderSemaphoreID_A && g_RenderSemaphore_A != NULL) {
-		SDL_DestroySemaphore(g_RenderSemaphore_A);
-		g_RenderSemaphore_A = NULL;
-		g_RenderSemaphoreID_A = SYS_SEMAPHORE_INVALID;
-	}
-	else if (sema_id == g_RenderSemaphoreID_B && g_RenderSemaphore_B != NULL) {
-		SDL_DestroySemaphore(g_RenderSemaphore_B);
-		g_RenderSemaphore_B = NULL;
-		g_RenderSemaphoreID_B = SYS_SEMAPHORE_INVALID;
-	}
-	else {
-		// Evitamos advertencias del compilador si es un ID de semáforo genérico
-		(void)sema_id;
-	}
-
-	return 0; // Confirmamos el borrado exitoso
-#endif
-}
-
-/**
  * @brief Envía una señal de liberación a un semáforo de forma segura desde un contexto de interrupción.
  * Dirección original en Ghidra: Sector de Internal Hooks (Syscall MIPS -67 / 0xFFFFFFFFFFFFFFBD) (PAL)
  *
@@ -255,24 +216,6 @@ s32 sceReferThreadStatus(s32 thread_id, void* status_ptr) {
 	}
 
 	return 0;
-#endif
-}
-
-/**
- * @brief Recupera el identificador único (ID) del hilo de ejecución que se encuentra activo en el Kernel de la PS2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (0x2F MIPS Syscall) (PAL)
- *
- * @return s32 El ID del hilo de ejecución actual (número positivo), o un valor negativo si ocurre un error.
- */
-s32 sceGetThreadId(void) {
-#if defined(PLATFORM_PS2)
-	// En la consola real, se invoca mediante ensamblador inline:
-	// __asm__ volatile("li $v0, 47 \n syscall");
-	return 0;
-#else
-	// Para el port a PC, emulamos la llamada devolviendo un ID de hilo lógico fijo (ej. 1 para el hilo principal).
-	// Esto es completamente seguro y compatible ya que en PC las tareas IO se ejecutan de largo:
-	return 1;
 #endif
 }
 

@@ -942,21 +942,6 @@ s32 sys_deci2_print_log(const char* p_message, s32 max_len) {
 }
 
 /**
- * @brief Rutina de liberación y activación de interrupciones del procesador Emotion Engine.
- * Reactiva los hilos del sistema de la PS2 tras una operación crítica de sincronización.
- * Dirección original en Ghidra: 0x0011F628 (PAL)
- *
- * @return bool Devuelve el estado de la bandera de diagnóstico del procesador.
- */
-bool kernel_system_sync_release(void) {
-	// Reactiva las interrupciones generales en el hardware de la PlayStation 2
-	EI();
-
-	// Evalúa y retorna el estado del bit 16 del registro Status del Coprocesador 0
-	return (Status & 0x10000) != 0;
-}
-
-/**
  * @brief Inicializa el subsistema de comunicación de depuración DECI2 del motor.
  * Configura la cola de transmisión y escribe las cabeceras de protocolo en memoria.
  * Dirección original en Ghidra: 0x0011BE20 (PAL)
@@ -997,27 +982,6 @@ bool sys_deci2_subsystem_init(void) {
 	}
 
 	return is_channel_valid;
-}
-
-/**
- * @brief Rutina de bloqueo y sincronización del procesador Emotion Engine.
- * Monitorea el estado de las banderas del procesador mediante un spinlock seguro.
- * Dirección original en Ghidra: 0x0011F5E0 (PAL)
- *
- * @return bool Devuelve el estado final de la bandera de diagnóstico del procesador.
- */
-bool kernel_system_sync_guard(void) {
-	// 0x10000 corresponde a una bandera de estado de interrupción/diagnóstico en el Coprocesador 0 de MIPS
-	if ((Status & 0x10000) != 0) {
-		do {
-			DI();        // Desactivar interrupciones de hardware en la PS2
-			SYNC(0x10);  // Forzar la sincronización del pipeline de datos del procesador
-		} while ((Status & 0x10000) != 0); // Repetir hasta que el hardware se estabilice
-
-		return (Status & 0x10000) != 0;
-	}
-
-	return false;
 }
 
 /**
