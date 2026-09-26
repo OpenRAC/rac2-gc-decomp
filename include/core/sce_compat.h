@@ -5,10 +5,10 @@
 int  sceFlushCache(int mode, void* addr, int size);
 
 /* Stub: syscall 116 – kick/notificación SIF o DMA */
-int  sce_stub_syscall116(void);
+int  sceSifCheckM_S(void);
 
 /* Stub: syscall 131 – polling de estado (read/write head) */
-int  sce_stub_syscall131(void);
+int  sceSifSetM_S(void);
 
 /* Stub: syscall 64 – sceSemaCreate(SemaParam_t*).
  * Crea un semáforo de kernel. En PS2 devuelve un ID (handle) del kernel;
@@ -17,15 +17,14 @@ int sceSemaCreate(void* param);   /* param = SemaParam_t* (se ignora en PC) */
 
 /* Stub: syscall 90 – espera/señal de event-set o flush de cola del kernel.
  * Vecino de la familia de semáforos/eventos. En PC: no-op. */
-int sce_stub_syscall90(void);
+int sceSifSetRpcQueue(void);
 
 /* Stub: syscall 91 – signal de event-set (pareja de la 90).
  * [CONFIRM] Confirmar wait/signal al descifrar FUN_0011fa88. */
-int sce_stub_syscall91(void);
+int sceSifInitRpc(void);
 
-int sce_stub_syscall116(int op_code);   /* $a0 solo */
-int sce_stub_syscall90(int a0, int a1, int a2);
-int sce_stub_syscall91(int op_code, int data);
+int sceSifCheckM_S(int op_code);   /* $a0 solo */
+int sceSifSetRpcQueue(int a0, int a1, int a2);
 
 /* Stub: syscall 75 – GetOsdConfigParam (consulta de config del sistema).
  *   PS2: li v0, 0x4b ; syscall   (devuelve int en $v0)

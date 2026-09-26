@@ -53,7 +53,7 @@ void ResetInitializationFlag(void);
 
 void NoOperation(void);
 
-bool WaitForInterruptStatus(void);
+bool WaitForInterruptStatus(SDL_Window* window);
 
 bool kernel_system_sync_guard(void);
 bool kernel_system_sync_release(void);
@@ -63,5 +63,23 @@ void InitializePointers(void);
 void ProcessCache(uint param_1, uint param_2);
 
 void InitializeStruct(int param_1);
+
+void ProcessFunction(void);
+
+void SetVSyncFlag(SDL_Window* window);
+
+/* [CONFIRM] Handshake de VSync del motor: setea la flag de VSync,
+ *   habilita la línea de interrupción del EE (INTSTAT bit 2 = 0x4),
+ *   espera al PRIMER vblank (bit 2 limpio O handler escribiendo en
+ *   buffer[0]), hace el ack (INTCONT) y devuelve el handle/estado del
+ *   VSync (buffer[8], el uStack_18 del C de Ghidra).
+ *   PS2:  vent. 0x0010f000 (INTSTAT) + 0x001000000 (ack) +
+ *         kernel_system_sync_guard/release (protección de IRQ).
+ *   PC:   no hay EE/INTSTAT. No-op, devuelve 0 (handle nulo).
+ *   [MOD-PENDING] Cuando exista render real, esto se mapea a la
+ *         sincronización vertical nativa (glXSwapInterval / DWM /
+ *         SDL_WaitEvent) del canal activo. */
+int vsync_wait_first(void);
+
 
 #endif // CORE_H

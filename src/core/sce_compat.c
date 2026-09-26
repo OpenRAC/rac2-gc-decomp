@@ -5,13 +5,13 @@
 /*  PS2:  li v1, 0x74 ; syscall                                       */
 /*  PC:   no-op                                                       */
 /* ------------------------------------------------------------------ */
-int sce_stub_syscall116(void)
+int sceSifCheckM_S(void)
 {
 #if defined(PLATFORM_PS2)
 	__asm__ volatile ("li v0, 0x74\n\t syscall\n\t" : : : "memory", "v0");
-	return 0;
+	return 1;
 #else
-	return 0;
+	return 1;
 #endif
 }
 
@@ -20,7 +20,7 @@ int sce_stub_syscall116(void)
 /*  PS2:  li v1, 0x83 ; syscall                                       */
 /*  PC:   no-op, devuelve 0                                           */
 /* ------------------------------------------------------------------ */
-int sce_stub_syscall131(void)
+int sceSifSetM_S(void)
 {
 #if defined(PLATFORM_PS2)
 	int r;
@@ -93,7 +93,7 @@ int sceFlushCache(int mode, void* addr, int size)
 /*  PS2:  li v0, 0x5a ; syscall                                       */
 /*  PC:   no-op (no hay event-sets del IOP que esperar)               */
 /* ------------------------------------------------------------------ */
-int sce_stub_syscall90(void)
+int sceSifSetRpcQueue(void)
 {
 #if defined(PLATFORM_PS2)
 	__asm__ volatile ("li v0, 0x5a\n\t syscall\n\t" : : : "memory", "v0");
@@ -108,7 +108,7 @@ int sce_stub_syscall90(void)
 /*  PS2:  li v0, 0x5b ; syscall                                       */
 /*  PC:   no-op (no hay event-sets del IOP que liberar)               */
 /* ------------------------------------------------------------------ */
-int sce_stub_syscall91(void)
+int sceSifInitRpc(void)
 {
 #if defined(PLATFORM_PS2)
 	__asm__ volatile ("li v0, 0x5b\n\t syscall\n\t" : : : "memory", "v0");
@@ -123,18 +123,18 @@ void display_init_channel_b(void)
 	uint32_t cnt = 3u;
 
 	/* Setup: 116(0x5A) → 90 → flush(0) → flush(2) → 116(0x5B) → 116(0x54) */
-	sce_stub_syscall116(0x5A);          /* kick, op=90 */
-	sce_stub_syscall90(0x80075000, 0x1347d0, 0x330);  /* wait con flags */
+	sceSifCheckM_S(0x5A);          /* kick, op=90 */
+	sceSifSetRpcQueue(0x80075000, 0x1347d0, 0x330);  /* wait con flags */
 	sceFlushCache(0, 0, 0);
 	sceFlushCache(2, 0, 0);
-	sce_stub_syscall116(0x5B);          /* kick, op=91 */
-	sce_stub_syscall116(0x54);          /* kick, op=84 */
+	sceSifCheckM_S(0x5B);          /* kick, op=91 */
+	sceSifCheckM_S(0x54);          /* kick, op=84 */
 
 	/* Bucle: 5 iteraciones, cada una: signal(op) + kick(op+1) */
 	do {
 		cnt = cnt + 1u;
-		sce_stub_syscall91(0x55 + (cnt - 3));   /* op avanza 0x55→0x56 */
-		sce_stub_syscall116(0x55 + (cnt - 3));  /* kick siguiente */
+		sceSifInitRpc(0x55 + (cnt - 3));   /* op avanza 0x55→0x56 */
+		sceSifCheckM_S(0x55 + (cnt - 3));  /* kick siguiente */
 	} while (cnt < 8u);
 
 	/* [Corregido] DAT_00134b48 = 3 (literal del asm), no el retorno del signal */

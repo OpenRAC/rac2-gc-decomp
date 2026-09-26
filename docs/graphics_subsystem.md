@@ -15,6 +15,8 @@ This document documents the control points of the Graphics Synthesizer (GS) and 
 * **Game Loop (Engine Tick):** Logically fixed to fixed intervals equivalent to the original rate (16.66 ms to emulate native 60 Hz).
 * **Visual Loop (Render Frame Rate):** Decoupled via linear interpolation of gameplay variables (`DeltaTime` on PC), allowing for user-configurable scalable refresh rates (60 Hz, 144 Hz, Uncapped).
 
+## Falta **0x001A9138** 
+
 # Español
 
 # Subsistema Gráfico y Control de Cuadros (GS / V-Sync Sync)
@@ -31,3 +33,9 @@ Este documento registra los puntos de control del Sintetizador Gráfico (GS) y l
 ## Estrategia de FPS Dinámicos para el Port de PC
 * **Lazo Lúdico (Engine Tick):** Fijado lógicamente a pasos fijos equivalentes a la tasa original (16.66ms para emular 60Hz nativos).
 * **Lazo Visual (Render Frame Rate):** Desacoplado mediante interpolación lineal de variables lúdicas (`DeltaTime` en PC), permitiendo tasas de refresco escalables (60Hz, 144Hz, Uncapped) configurables por el usuario.
+
+
+| Dirección de Memoria | Tipo de Dato | Valor de Cadena Estática | Propósito / Uso en el Motor |
+| :--- | :--- | :--- | :--- |
+| **`0x001A9138`** | `char[]` | `"Unsupported language\n"` | Mensaje de pánico impreso por el selector si el índice devuelto por la BIOS no coincide con los assets del disco. |
+

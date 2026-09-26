@@ -396,47 +396,43 @@ void NoOperation(void) {
 // Define la dirección de REG_INTC_STAT
 #define REG_INTC_STAT (*(volatile uint32_t *)0x1000f000)
 
-bool WaitForInterruptStatus(void) {
-	// Implementación de la función WaitForInterruptStatus
-	// Aquí puedes realizar las operaciones necesarias para esperar el estado de la interrupción
-	// Por ejemplo, adquirir el bloqueo de sincronización, configurar el registro de estado de interrupción, etc.
-
-	// Ejemplo de implementación parcial:
-	bool guard_success;
-	uint32_t intc_stat;
-
-	// Adquirir el bloqueo de sincronización
-	guard_success = kernel_system_sync_guard();
-	if (!guard_success) {
+// Función para simular la operación de sincronización
+bool WaitForInterruptStatus(SDL_Window* window) {
+	if (!window) {
+		fprintf(stderr, "Ventana SDL no inicializada.\n");
 		return false;
 	}
 
-	// Establecer REG_INTC_STAT a 4
-	REG_INTC_STAT = 4;
-	// Asegurar que la escritura se complete
-	__sync_synchronize();
+	// Simulación de adquirir el bloqueo de sincronización
+	bool guard_success = true; // Suponemos que siempre se puede adquirir el bloqueo
 
-	// Liberar el bloqueo de sincronización
-	kernel_system_sync_release();
+	if (guard_success) {
+		// Simulación de establecer REG_INTC_STAT a 4
+		SDL_GL_SetSwapInterval(4); // Simulación de registro REG_INTC_STAT
+		// Asegurar que la escritura se complete
+		SDL_GL_SwapWindow(window);
+
+		// Simulación de liberar el bloqueo de sincronización
+	}
 
 	// Esperar hasta que el bit 2 de REG_INTC_STAT esté establecido
+	uint32_t intc_stat;
 	do {
-		intc_stat = REG_INTC_STAT;
+		// Simulación de leer REG_INTC_STAT
+		intc_stat = SDL_GL_GetSwapInterval(); // Simulación de registro REG_INTC_STAT
 	} while ((intc_stat & 4) == 0);
 
-	// Adquirir nuevamente el bloqueo de sincronización
-	guard_success = kernel_system_sync_guard();
-	if (!guard_success) {
-		return false;
+	// Simulación de adquirir nuevamente el bloqueo de sincronización
+	guard_success = true; // Suponemos que siempre se puede adquirir el bloqueo
+
+	if (guard_success) {
+		// Simulación de establecer REG_INTC_STAT a 4 nuevamente
+		SDL_GL_SetSwapInterval(4); // Simulación de registro REG_INTC_STAT
+		// Asegurar que la escritura se complete
+		SDL_GL_SwapWindow(window);
+
+		// Simulación de liberar el bloqueo de sincronización
 	}
-
-	// Establecer REG_INTC_STAT a 4 nuevamente
-	REG_INTC_STAT = 4;
-	// Asegurar que la escritura se complete
-	__sync_synchronize();
-
-	// Liberar el bloqueo de sincronización
-	kernel_system_sync_release();
 
 	return true;
 }
@@ -562,4 +558,104 @@ void InitializeStruct(int param_1) {
 		*puVar1 = 0;
 		puVar1 = puVar1 + 1;
 	} while (-1 < iVar2);
+}
+
+// Define las variables globales
+static int DAT_001395cc = 0;
+static int DAT_00139470 = 0;
+static int DAT_00139484 = 0;
+static int DAT_001b1a3c = 0;
+static int DAT_001a74a0 = 0;
+static int DAT_001a74a4 = 0;
+static int iGpffff8430 = 0;
+static int DAT_001b1a38 = 0;
+static int iGp000029c8 = 0;
+
+// Define los punteros a funciones
+static void (*PTR_LAB_002560d0[])(void) = { /* Inicializa con las funciones correspondientes */ };
+
+void ProcessFunction(void) {
+	int iVar1;
+
+	iVar1 = iGpffff8430;
+	if (((DAT_001395cc != 0) || (DAT_00139470 != 0)) || (0 < DAT_00139484)) {
+		DAT_001b1a3c = 1;
+	}
+	if ((DAT_001a74a4 & 0x80) != 0) {
+		DAT_001a74a0 = 0x15;
+		DAT_001a74a4 = (DAT_001a74a4 & 0xffffff7f) | 0x40;
+	}
+	if ((DAT_001a74a4 & 0x100) != 0) {
+		DAT_001a74a0 = 0x14;
+		DAT_001a74a4 = (DAT_001a74a4 & 0xfffffeff) | 0x40;
+	}
+	(*(code*)(&PTR_LAB_002560d0)[DAT_001a74a0])();
+	iGp000029c8 = DAT_001b1a38 + 1;
+	if (DAT_001a74a0 != iVar1) {
+		DAT_001b1a38 = 0;
+	}
+}
+
+void SetVSyncFlag(SDL_Window* window) {
+	if (window) {
+		// Habilitar la sincronización vertical
+		if (SDL_GL_SetSwapInterval(1) != 0) {
+			fprintf(stderr, "No se pudo habilitar la sincronización vertical: %s\n", SDL_GetError());
+		}
+		else {
+			printf("Sincronización vertical habilitada.\n");
+		}
+	}
+	else {
+		fprintf(stderr, "Ventana SDL no inicializada.\n");
+	}
+}
+
+/* [CONFIRM] Registros de interrupciones del EE (ventanas de memoria).
+ *   INTSTAT = 0x0010f000 (estado de líneas) ; bit 2 = VSync (0x4).
+ *   INTCONT = 0x001000000 (control / ack). */
+#define EE_INTSTAT   (*(volatile unsigned int *)0x0010f000u)
+#define EE_INTCONT   (*(volatile unsigned int *)0x001000000u)
+#define EE_INT_VSYNC 0x4u
+
+int vsync_wait_first(void)
+{
+	unsigned int buf0 = 0;   /* buffer[0]: flag escrita por el handler de IRQ */
+	unsigned int handle = 0; /* buffer[8]: handle/estado devuelto           */
+	int guard;
+
+#if defined(PLATFORM_PS2)
+	/* 1) SetVSyncFlag(sp, sp+8): le pasa al motor los dos slots del buffer */
+	SetVSyncFlag(&buf0, &handle);
+
+	/* 2) Protege IRQ + habilita la línea de VSync en INTSTAT */
+	guard = kernel_system_sync_guard();
+	EE_INTSTAT |= EE_INT_VSYNC;
+	__asm__ __volatile__("sync\n" ::: "memory");
+	if (guard) kernel_system_sync_release();
+
+	/* 3) Espera al primer vblank: bit 2 limpio O handler en buf0 */
+	for (;;)
+	{
+		if ((EE_INTSTAT & EE_INT_VSYNC) != 0) break;   /* vblank llegó */
+		if (buf0 != 0) break;                          /* handler escribió */
+	}
+
+	/* 4) Ack de la interrupción (con IRQ protegidas) */
+	guard = kernel_system_sync_guard();
+	EE_INTCONT |= EE_INT_VSYNC;
+	__asm__ __volatile__("sync\n" ::: "memory");
+	if (guard) kernel_system_sync_release();
+
+	return (int)handle;
+#else
+	/* PC: sin EE, sin INTSTAT/INTCONT, sin handler de IRQ del motor.
+	   [MOD-PENDING] Cuando exista render real, esto se mapea a la
+	   sincronización vertical nativa del canal activo
+	   (glXSwapInterval / DWM / SDL_WaitEvent) y devuelve un handle
+	   nativo en lugar de 0. */
+	(void)buf0;
+	(void)handle;
+	return 0;
+#endif
 }

@@ -354,3 +354,153 @@ int sceMcWriteExtended(int channel, int slot, const char* filename, void* buffer
 	(void)channel; (void)slot; (void)filename; (void)buffer; (void)size;
 	return 0;
 }
+
+/**
+ * @brief Registra un manejador de eventos o interrupción (Callback) para un canal específico del controlador DMA (DMAC).
+ * Dirección original en Ghidra: Sector de Stubs de Syscalls (18 MIPS Syscall / 0x12) (PAL)
+ *
+ * @param dma_channel Canal DMA correspondiente de la PS2 (ej: 5 para el bus SIF).
+ * @param p_handler Puntero a la función que actuará como manejador de la interrupción.
+ * @param arg Argumento opcional de control que se le pasará a la función manejadora.
+ * @return s32 ID de la ranura o manejador asignado (positivo para éxito, o negativo si ocurre un error).
+ */
+s32 sceAddDmacHandler(s32 dma_channel, void* p_handler, s32 arg) {
+#if defined(PLATFORM_PS2)
+	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// __asm__ volatile("li $v1, 18 \n syscall");
+	return 0;
+#else
+	// Para el port nativo de PC, al ser una emulación de alto nivel por software,
+	// interceptamos la llamada para confirmar que el canal lúdico simulado se enlazó.
+	// Devolvemos un ID de ranura positivo fijo (ej: 1) para dar luz verde de largo:
+	(void)dma_channel;
+	(void)p_handler;
+	(void)arg;
+
+	return 1;
+#endif
+}
+
+/**
+ * @brief Remueve un manejador de canal DMA registrado previamente en el controlador de hardware (DMAC) de la PS2.
+ * Dirección original en Ghidra: Sector de Stubs de Syscalls (19 MIPS Syscall / 0x13) (PAL)
+ *
+ * @param dma_channel Canal DMA correspondiente (param_1).
+ * @param handler_id Identificador numérico o ranura asignada al manejador que se desea liberar (param_2).
+ * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ */
+s32 RemoveDmacHandler(s32 dma_channel, s32 handler_id) {
+#if defined(PLATFORM_PS2)
+	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// __asm__ volatile("li $v1, 19 \n syscall");
+	return 0;
+#else
+	// Para el port nativo de PC, el sistema operativo moderno gestiona las colas de ráfaga 
+	// en nanosegundos de forma transparente, por lo que confirmamos éxito inmediato:
+	(void)dma_channel;
+	(void)handler_id;
+	return 0;
+#endif
+}
+
+/**
+ * @brief Remueve un manejador de interrupciones físicas registrado previamente en la CPU Emotion Engine.
+ * Dirección original en Ghidra: Sector de Stubs de Syscalls (17 MIPS Syscall / 0x11) (PAL)
+ *
+ * @param intc_id Identificador de la interrupción física (param_1).
+ * @param handler_id Identificador o ranura del manejador a remover (param_2).
+ * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ */
+s32 RemoveIntcHandler(s32 intc_id, s32 handler_id) {
+#if defined(PLATFORM_PS2)
+	// En la consola real, esto se ejecuta mediante la instrucción inline:
+	// __asm__ volatile("li $v1, 17 \n syscall");
+	return 0;
+#else
+	// Para el port a PC, dado que el sistema operativo moderno gestiona el hardware
+	// de fondo de forma nativa, emulamos la remoción devolviendo éxito inmediato:
+	(void)intc_id;
+	(void)handler_id;
+	return 0;
+#endif
+}
+
+/**
+ * @brief Activa una línea de interrupción por hardware específica en el procesador Emotion Engine.
+ * Dirección original en Ghidra: Sector de Stubs de Syscalls (20 MIPS Syscall / 0x14) (PAL)
+ *
+ * @param intc_id Identificador de la interrupción física a encender (param_1).
+ * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ */
+s32 _EnableIntc(s32 intc_id) {
+#if defined(PLATFORM_PS2)
+	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// __asm__ volatile("li $v1, 20 \n syscall");
+	return 0;
+#else
+	// Para el port nativo de PC, el sistema operativo moderno gestiona el hardware
+	// de fondo de forma nativa, por lo que confirmamos éxito inmediato:
+	(void)intc_id;
+	return 0;
+#endif
+}
+
+/**
+ * @brief Desactiva una línea de interrupción por hardware específica en el procesador Emotion Engine.
+ * Dirección original en Ghidra: Sector de Stubs de Syscalls (21 MIPS Syscall / 0x15) (PAL)
+ *
+ * @param intc_id Identificador de la interrupción física a apagar (param_1).
+ * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ */
+s32 _DisableIntc(s32 intc_id) {
+#if defined(PLATFORM_PS2)
+	// En la consola real, esto se ejecuta mediante la instrucción inline:
+	// __asm__ volatile("li $v1, 21 \n syscall");
+	return 0;
+#else
+	// Para el port a PC, dado que el sistema operativo moderno gestiona el hardware
+	// de fondo de forma nativa, emulamos la desactivación devolviendo éxito inmediato:
+	(void)intc_id;
+	return 0;
+#endif
+}
+
+/**
+ * @brief Activa o habilita un canal específico del controlador DMA (DMAC) en el Kernel de la PlayStation 2.
+ * Dirección original en Ghidra: Sector de Stubs de Syscalls (22 MIPS Syscall / 0x16) (PAL)
+ *
+ * @param dma_channel El identificador del canal DMA a encender (param_1).
+ * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ */
+s32 sceEnableDmac(s32 dma_channel) {
+#if defined(PLATFORM_PS2)
+	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// __asm__ volatile("li $v1, 22 \n syscall");
+	return 0;
+#else
+	// Para tu port nativo de PC con SDL 2.32.2, el sistema operativo gestiona el hardware
+	// de fondo de forma inmediata y automática, por lo que confirmamos éxito de largo:
+	(void)dma_channel;
+	return 0;
+#endif
+}
+
+/**
+ * @brief Desactiva o inhabilita un canal específico del controlador DMA (DMAC) en el Kernel de la PlayStation 2.
+ * Dirección original en Ghidra: Sector de Stubs de Syscalls (23 MIPS Syscall / 0x17) (PAL)
+ *
+ * @param dma_channel El identificador del canal DMA a apagar (param_1).
+ * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ */
+s32 _DisableDmac(s32 dma_channel) {
+#if defined(PLATFORM_PS2)
+	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// __asm__ volatile("li $v1, 23 \n syscall");
+	return 0;
+#else
+	// Para el port nativo de PC, dado que el hardware moderno no requiere sincronías
+	// manuales de buses de consola, confirmamos el apagado simulado de inmediato:
+	(void)dma_channel;
+	return 0;
+#endif
+}

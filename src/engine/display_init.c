@@ -46,3 +46,53 @@ void display_b_vu_config(void)
 	(void)g_display_b_state;
 #endif
 }
+
+/* [CONFIRM] Registros de interrupciones del EE (ventanas de memoria).
+ *   INTSTAT = 0x0010f000 (estado de líneas) ; bit 2 = VSync (0x4).
+ *   INTCONT = 0x001000000 (control / ack). */
+#define EE_INTSTAT   (*(volatile unsigned int *)0x0010f000u)
+#define EE_INTCONT   (*(volatile unsigned int *)0x001000000u)
+#define EE_INT_VSYNC 0x4u
+
+int vsync_wait_first(void)
+{
+	unsigned int buf0 = 0;   /* buffer[0]: flag escrita por el handler de IRQ */
+	unsigned int handle = 0; /* buffer[8]: handle/estado devuelto           */
+	int guard;
+
+#if defined(PLATFORM_PS2)
+	/* 1) SetVSyncFlag(sp, sp+8): le pasa al motor los dos slots del buffer */
+	SetVSyncFlag(&buf0, &handle);
+
+	/* 2) Protege IRQ + habilita la línea de VSync en INTSTAT */
+	guard = kernel_system_sync_guard();
+	EE_INTSTAT |= EE_INT_VSYNC;
+	__asm__ __volatile__("sync\n" ::: "memory");
+	if (guard) kernel_system_sync_release();
+
+	/* 3) Espera al primer vblank: bit 2 limpio O handler en buf0 */
+	for (;;)
+	{
+		if ((EE_INTSTAT & EE_INT_VSYNC) != 0) break;   /* vblank llegó */
+		if (buf0 != 0) break;                          /* handler escribió */
+	}
+
+	/* 4) Ack de la interrupción (con IRQ protegidas) */
+	guard = kernel_system_sync_guard();
+	EE_INTCONT |= EE_INT_VSYNC;
+	__asm__ __volatile__("sync\n" ::: "memory");
+	if (guard) kernel_system_sync_release();
+
+	return (int)handle;
+#else
+	/* PC: sin EE, sin INTSTAT/INTCONT, sin handler de IRQ del motor.
+	   [MOD-PENDING] Cuando exista render real, esto se mapea a la
+	   sincronización vertical nativa del canal activo
+	   (glXSwapInterval / DWM / SDL_WaitEvent) y devuelve un handle
+	   nativo en lugar de 0. */
+	(void)buf0;
+	(void)handle;
+	return 0;
+#endif
+}
+
