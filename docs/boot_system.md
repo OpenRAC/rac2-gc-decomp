@@ -14,8 +14,6 @@ This document lists the addresses of global variables initialized by the graphic
 | **`0x001A6470`** | `uint32_t` | `0` | Planet dynamic data loading control flag. |
 | **`0x001A64B4`** | `uint32_t` | `0` | Base pointer for the global economy and inventory manager. |
 
-Translated with DeepL.com (free version)
-
 # Español
 
 # Registro de Inicialización del Sistema de Arranque - Ratchet & Clank 2 (PAL)
