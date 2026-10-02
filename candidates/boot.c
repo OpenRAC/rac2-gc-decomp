@@ -531,3 +531,17 @@ extern void FUN_0011AAD0(s32);
 void FUN_0034F3B8(void) {
     FUN_0011AAD0(1);
 }
+
+/* lot15 -- deux jumeaux du premier corps qui appelle (meme forme, 32 octets).
+   Le creneau de delai est un `nop` : l'appel n'a AUCUN argument, et le corps rend 1. */
+extern void FUN_001338C8();
+s32 FUN_0034F898(void) {
+    FUN_001338C8();
+    return 1;
+}
+
+extern void FUN_0012EE28();
+s32 FUN_00351828(void) {
+    FUN_0012EE28();
+    return 1;
+}

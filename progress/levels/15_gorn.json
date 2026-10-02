@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "15_gorn",
   "reference_sha256": "838098ef94f05d78f79be2f65291447db6c9468e7c44e2cab36396f720cce109",
-  "source_sha256": "f4067ad68b40e5526a23672128e6e8ea60ef4d3a7699489d7be646d80a7c9755",
-  "catalog_sha256": "db86cb7da308a4f88c4ce1d0bf30c547190e132821680b9ec5be07edd167041d",
+  "source_sha256": "672e46af100f346217451d7e6ee310c913943214974e5364b2e5638b6c197406",
+  "catalog_sha256": "ad325043a708430d452c4f4379213af262fa1538df20e064a04f2a08969f1564",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -872,6 +872,18 @@
       "program": "15_gorn"
     },
     {
+      "symbol": "FUN_0034F898",
+      "address": 4642128,
+      "size": 32,
+      "matched": true,
+      "reference_sha256": "c11a5263da672d979e106040849d733ae617523ed73973cded81bc125120773a",
+      "candidate_sha256": "c11a5263da672d979e106040849d733ae617523ed73973cded81bc125120773a",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "15_gorn"
+    },
+    {
       "symbol": "FUN_0034FAE8",
       "address": 4642720,
       "size": 16,
@@ -902,6 +914,18 @@
       "matched": true,
       "reference_sha256": "0ead36a145291d33a6076fa190f83148fad755a3b0242395219b41deb530b317",
       "candidate_sha256": "0ead36a145291d33a6076fa190f83148fad755a3b0242395219b41deb530b317",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "15_gorn"
+    },
+    {
+      "symbol": "FUN_00351828",
+      "address": 4650208,
+      "size": 32,
+      "matched": true,
+      "reference_sha256": "6748fe37c4b035369a3d2b51fe515f3c8245d9aa8fc7a69eae314fe4e7dfb1f0",
+      "candidate_sha256": "6748fe37c4b035369a3d2b51fe515f3c8245d9aa8fc7a69eae314fe4e7dfb1f0",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -985,7 +1009,7 @@
     "bytes_compared": 2916344,
     "segments": 1
   },
-  "matched_code_bytes": 1848,
+  "matched_code_bytes": 1912,
   "tools": {
     "ee-gcc2953.exe": "522d28f9d74ddfce89568437156c8ee323c806de525d99907f698050dee8d81e",
     "ee-as.exe": "5ae3c981bb4e105bd1edfc48c11f15a932dbbf4680be46edc46c55a869885f9e",
@@ -993,8 +1017,8 @@
     "cc1.exe": "0393bcd31f91a6b9f0255db97f1cc99eba78ee8fc003e9a04dfabed1ae1d522e",
     "cpp.exe": "b9c50aa66f9cf5dbd80b2affe9874ec7674b7328965c629476f6ad7c77943154"
   },
-  "candidate_elf_sha256": "d21487d8ff2c237e4ee9d9f212d21e87af441fd110d995eb6544d051a91848ec",
-  "c_object_sha256": "c4daec834bf535ad7deb0a77a074e09c28414f0a2b625b9fa6155c00d070b288",
+  "candidate_elf_sha256": "32dd74e69d42b2906739bbea9f63931f02cc9046ac364df0d9c842bfa689f470",
+  "c_object_sha256": "f71792bedbaa5d6fe6236ce4112e8db782d2f69b2e918cb531e90529c3e2056e",
   "replacement_inputs": {
     "115D80.s": [
       "FUN_00282C48",
@@ -1069,9 +1093,11 @@
       "FUN_0034AFE8",
       "FUN_0034CE98",
       "FUN_0034F3B8",
+      "FUN_0034F898",
       "FUN_0034FAE8",
       "FUN_003505E0",
       "FUN_00350698",
+      "FUN_00351828",
       "FUN_00351888",
       "FUN_003518D8",
       "FUN_003518E0",

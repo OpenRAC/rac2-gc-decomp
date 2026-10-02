@@ -1,11 +1,11 @@
 {
   "target": "SCUS_972.68",
-  "verified_at": "2026-10-02T16:02:28.093814+00:00",
+  "verified_at": "2026-10-02T16:57:07.250244+00:00",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "f4067ad68b40e5526a23672128e6e8ea60ef4d3a7699489d7be646d80a7c9755",
-  "candidate_elf_sha256": "2ff07482026bb93d59bcd596b1e682db7bdbe50551ed172e702de6b33aa05bee",
-  "object_sha256": "c4daec834bf535ad7deb0a77a074e09c28414f0a2b625b9fa6155c00d070b288",
-  "catalog_sha256": "4ebbf3c850793c7ebe1f578bfc35e0bea1096d2ddbb2cdd625cc32a2f7077f8c",
+  "source_sha256": "672e46af100f346217451d7e6ee310c913943214974e5364b2e5638b6c197406",
+  "candidate_elf_sha256": "ab1eecdb448c1ec4eb4da845c6050277dfc423bea7f483aa638c130615a20d76",
+  "object_sha256": "f71792bedbaa5d6fe6236ce4112e8db782d2f69b2e918cb531e90529c3e2056e",
+  "catalog_sha256": "dcca96ccd6c8c3d66bf748e05937773469ecfb6efca17580e24ce614b5240a6e",
   "checker_sha256": "4b92a73b6f057db542363d3fbf52ca5c47dee7380cf8968c08a65948a9cc7e53",
   "flags": [
     "-O2",
@@ -871,6 +871,16 @@
       "state": "matched_unintegrated"
     },
     {
+      "symbol": "FUN_0034F898",
+      "address": 3471512,
+      "size": 32,
+      "matched": true,
+      "reference_sha256": "c11a5263da672d979e106040849d733ae617523ed73973cded81bc125120773a",
+      "candidate_sha256": "c11a5263da672d979e106040849d733ae617523ed73973cded81bc125120773a",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
       "symbol": "FUN_0034FAE8",
       "address": 3472104,
       "size": 16,
@@ -897,6 +907,16 @@
       "matched": true,
       "reference_sha256": "0ead36a145291d33a6076fa190f83148fad755a3b0242395219b41deb530b317",
       "candidate_sha256": "0ead36a145291d33a6076fa190f83148fad755a3b0242395219b41deb530b317",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
+      "symbol": "FUN_00351828",
+      "address": 3479592,
+      "size": 32,
+      "matched": true,
+      "reference_sha256": "6748fe37c4b035369a3d2b51fe515f3c8245d9aa8fc7a69eae314fe4e7dfb1f0",
+      "candidate_sha256": "6748fe37c4b035369a3d2b51fe515f3c8245d9aa8fc7a69eae314fe4e7dfb1f0",
       "different_bytes": 0,
       "state": "matched_unintegrated"
     },
