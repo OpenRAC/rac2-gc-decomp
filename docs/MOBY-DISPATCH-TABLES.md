@@ -99,6 +99,27 @@ its virtual address must translate first.
 - **Not a placement.** Naming a level function does not put reviewed C into a level, and
   this table is not part of `config/level-catalog.json`.
 
+## Applying the names
+
+`scripts/ghidra/ApplyMobyNames.java` is a Ghidra script: it reads `docs/moby-dispatch.tsv`
+and names the functions of the overlay currently open, taking the level name as its first
+argument. It builds both address candidates from the ELF section table on disk (virtual
+address and file offset, because an overlay may have been imported either way), leaves an
+existing name alone, gives a function shared by several classes the first name it receives,
+and reports what it did. Nothing is persisted until the program is saved.
+
+Measured on the first two overlays, with this table:
+
+| Overlay | Rows for the level | Renamed | Already named | No function at the address |
+| --- | ---: | ---: | ---: | ---: |
+| `1_oozla` | 253 | **183** | 22 | 48 |
+| `2_maktar_nebula` | 254 | **188** | 20 | 46 |
+
+Both were controlled afterwards by a separate read-only check: every name landed on an
+address present in the TSV — **183 of 183** and **188 of 188**, zero elsewhere. The rows
+with no function are addresses Ghidra's analysis did not turn into functions; the table
+carries them regardless.
+
 ## Provenance
 
 The class identifiers come from **CreepNT's `rc2_aug8_research`**
