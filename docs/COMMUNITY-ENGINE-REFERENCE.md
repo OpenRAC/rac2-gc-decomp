@@ -85,22 +85,42 @@ The game uses dynamic level overlays loaded over the high memory region:
 
 ### 4.1 Moby Object Model (`include/moby.h`)
 - All dynamic entities (Ratchet, enemies, crates, hazards, projectiles) are **Mobies**.
-- **Layout Compatibility**: The first `0x28` bytes directly match Deadlocked (`MobyInstance`) and UYA:
-  - `0x00`: Position `(X, Y, Z)` as 3x `f32`
-  - `0x0C`: `state` (u8)
-  - `0x0D`: `group` (u8, collision group)
-  - `0x0E`: `mclass` (u8, class sub-type)
-  - `0x0F`: `alpha` (u8, transparency/fade)
-  - `0x10`: Rotation `(Pitch, Yaw, Roll)` as 3x `f32`
-  - `0x1C`: `scale` (u8)
-  - `0x1D`: `drawDistance` (u8)
-  - `0x1E`: `modeBits` (u16) — bit `0x40` indicates **No Pre-Update** (`MOBY_MODE_NO_PRE_UPDATE`)
-  - `0x20`: `pModel` (pointer to model mesh)
-  - `0x24`: `pParent` (parent joint/moby pointer)
-  - `0x64`: `pUpdate` — per-tick function pointer (`void (*)(Moby *)`)
-  - `0x68`: `pVar` — pointer to moby-specific state structure
-  - `0x6C`: `oClass` — Object Class ID (e.g. `4351` = Clank-switch debug trigger in Nebula G34)
-  - `0x6E`: `UID` — Unique actor ID in loaded level
+- **Authentic Structure Layout (`MobyInstance`, 256 bytes / 0x100)**:
+  Recovered from unstripped `.mdebug` STABS types (Deadlocked prototype) and verified against retail function signatures (`InitMobyInstance` clears 0x100 bytes):
+  - `0x00`: `bSphere` (BSphere: x, y, z, rad)
+  - `0x10`: `pos` (vec4: world position X, Y, Z, W)
+  - `0x20`: `state` (u8) — current state (`0xFE` = free slot, `0xFF` = array tail)
+  - `0x21`: `group` (u8, collision / grouping index)
+  - `0x22`: `mclass` (u8, class sub-type / moby class byte)
+  - `0x23`: `alpha` (u8, opacity / blend alpha, default `0x80`)
+  - `0x24`: `pClass` (pointer to class definition record)
+  - `0x28`: `pChain` (next moby pointer in active update chain)
+  - `0x2C`: `collDamage` (u8)
+  - `0x2D`: `deathCnt` (u8)
+  - `0x2E`: `occlIndex` (u16)
+  - `0x30`: `updateDist` (u8)
+  - `0x31`: `drawn` (u8)
+  - `0x32`: `drawDist` (u16)
+  - `0x34`: `modeBits` (u16) — bit `0x40` indicates **No Pre-Update** (`MOBY_MODE_NO_PRE_UPDATE`)
+  - `0x36`: `modeBits2` (u16, default `0x7F80`)
+  - `0x38`: `lights` (u64 lighting bitmask)
+  - `0x40`: `animSeq` (pointer)
+  - `0x44`: `animSeqT` (f32)
+  - `0x48`: `animSpeed` (f32)
+  - `0x58`: `jointCache` (joint matrix cache pointer)
+  - `0x5C`: `pManipulator` (joint / IK manipulator)
+  - `0x60`: `glow_rgba` (u32)
+  - `0x70`: `scale` (f32)
+  - `0x80`: `lSphere` (BSphere: local bounding sphere)
+  - `0x98`: `collData` (collision mesh / pill data)
+  - `0x9C`: `collActive` (u32)
+  - `0xA8`: `pUpdate` — per-tick function pointer (`void (*)(Moby *)`)
+  - `0xAC`: `pVar` — pointer to moby-specific state structure (0x80 bytes per actor)
+  - `0xB2`: `UID` — unique actor ID in loaded level
+  - `0xB8`: `pParent` — parent joint / moby pointer
+  - `0xBC`: `oClass` — Object Class ID (e.g. `4351` = Clank-switch debug trigger in Nebula G34)
+  - `0xC0`: `rMtx` (3x4 orientation / rotation matrix, 48 bytes)
+  - `0xF0`: `rot` (vec4: Pitch, Yaw, Roll Euler angles)
 - **Dispatch**:
   - `CreateMobyChain(void)`
   - `PreUpdateMoby(Moby *moby)`
@@ -119,9 +139,23 @@ The game uses dynamic level overlays loaded over the high memory region:
 - Challenge Mode state:
   - Retail code strictly tests `challenge_mode > 0` (or `!= 0`).
 
-### 4.4 RaC1 Save Import Gadgets (`include/gadgets.h`)
-- RaC2 contains logic to detect RaC1 saves and unlock legacy weapons for free.
-- The enum names in RaC2 directly mirror RaC1's internal `GADGET_*` enum (Bomb Glove, Pyrocitor, Blaster, Glove of Doom, Suck Cannon, Swingshot, RYNO, etc.).
+### 4.4 RaC1 Save Import & Memory Card Validation (`include/gadgets.h`, `include/save.h`)
+- **Memory Card Directory Identifiers**:
+  - NTSC-U: `BASCUS-97199` (RaC1), `BASCUS-97268` (RaC2)
+  - PAL: `BESCES-50916` (RaC1), `BESCES-51607` (RaC2)
+- **Save File IFF Architecture**:
+  - Insomniac save streams use an IFF chunk protocol (`mc_gamedata` and `mc_leveldata`).
+  - Key chunk IDs include: `0` (`SAVE_BLOCK_LEVEL`), `1` (`SAVE_BLOCK_BOLT_COUNT`), `2` (`SAVE_BLOCK_GAME_COMPLETES`), `5` (`SAVE_BLOCK_GLOBAL_FLAGS`), `10` (`SAVE_BLOCK_UNLOCKS`), `12` (`SAVE_BLOCK_PURCHASABLE_VENDOR_ITEMS`).
+- **Vendor Free-Weapon Unlock Mechanic**:
+  - When talking to the Gadgetron vendor on Planet Barlow (and Megacorp vendors), the game queries `libmc` for save files in slot 1 and slot 2 (`mc0:`, `mc1:`).
+  - If a valid RaC1 save is found, it parses Chunk 10 (`SAVE_BLOCK_UNLOCKS`).
+  - The bitmask indicates which legacy weapons Ratchet acquired in RaC1:
+    - Bit 0 (`0x01`): Bomb Glove (`GADGET_BOMB_GLOVE`)
+    - Bit 1 (`0x02`): Pyrocitor (`GADGET_PYROCITOR`)
+    - Bit 2 (`0x04`): Blaster (`GADGET_BLASTER`)
+    - Bit 3 (`0x08`): Glove of Doom (`GADGET_GLOVE_OF_DOOM`)
+    - Bit 4 (`0x10`): Suck Cannon (`GADGET_SUCK_CANNON`)
+  - For each legacy weapon unlocked in the RaC1 save, the purchase cost is set to **0 bolts** (free of charge).
 
 ### 4.5 Controller & Frontend Quirks
 - In the RaC2 title screen, `R2` and the Right Stick do not satisfy the "Press START" condition.
