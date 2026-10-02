@@ -518,3 +518,11 @@ void FUN_00336508(u8 *a0, s32 a1, s32 a2) {
     *((u32 *)*(u8 **)(o + 0xC) + 3) = (*((u32 *)*(u8 **)(o + 0xC) + 3) & 0x00FFFFFF) | (u32)(a2 << 24);
 }
 
+
+/* lot14 -- corps mesures, tailles posees au catalogue. */
+extern u8 D_0018C0B0[];
+void FUN_002AB650(u8 *a0) {
+    u8 *p = *(u8 **)D_0018C0B0;
+    *(long *)(a0 + 0x38) = *(long *)(p + 0x38);
+}
+
