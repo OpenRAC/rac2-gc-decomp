@@ -56,7 +56,28 @@ One exception in 27 levels is a retail linker merge, not a broken correspondence
 
 The 328 unnamed moby records are class identifiers **absent from the 8 August build** —
 added later. Their identifiers are read from the table; no name can be given to them from
-this source. The retail camera identifier set (`0,3,4,5,6,7,17,19,20,23,24,25,26,27`)
+this source, but they are real classes, and that is checked independently below.
+
+### The identifiers are the retail's own class enumeration
+
+`Wrench` unpacks the retail's moby classes into `moby_classes/<id>_<name>`, which is an
+independent enumeration of what a class identifier is in this build. Cross-checked against
+the table:
+
+| | |
+| --- | ---: |
+| Classes Wrench enumerates in the retail | **1 476** |
+| Distinct identifiers in the dispatch table | 1 158 |
+| … that Wrench also enumerates | **1 119** (96.6 %) |
+| The 328 unnamed records' identifiers, found in Wrench's list | **129 / 129** |
+
+Twenty-one of those class folders carry a name — `0_ratchet`, `10_clank`, `2425_fan`,
+`2716_slot_machine`, `4056_elevator_dam`, `4057_secret_door`, `2452_ant_ring`,
+`3138_clanks_apt_glass`, and thirteen more. **Where those names come from was not
+established here** — they are not in the boot ELF nor in a level overlay, as a raw string
+search shows — so they are recorded as observed, not explained.
+
+The retail camera identifier set (`0,3,4,5,6,7,17,19,20,23,24,25,26,27`)
 contains the prototype's set exactly, plus `20`; camera transfer rests on that set equality
 and on the record layout, not on the pair control above, which is moby-specific.
 
@@ -67,9 +88,10 @@ its virtual address must translate first.
 
 ## What this is not
 
-- **Not designer names.** `UpdateMoby_3032` states a moby class, not a creature. The only
-  route to real names found so far is the assert-message pass on the prototype that named
-  one hundred and six boot functions in this project.
+- **Not designer names.** `UpdateMoby_3032` states a moby class, not a creature. Two routes
+  to real names exist so far, and both are thin: the assert-message pass on the prototype,
+  which named one hundred and six boot functions in this project, and the twenty-one class
+  names Wrench carries.
 - **Not boot code.** Crossing all 5,788 handlers with the boot bodies this project has
   mapped into the levels (82 per level in `config/level-catalog.json`, 288 in the wider
   prefix survey) gives **zero overlap**. The dispatch tables point at level-local code —
