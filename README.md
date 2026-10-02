@@ -168,7 +168,9 @@ corpus whose bytes are identical in RAC2 - see `docs/SECOND-C-LOT.md` and
 body opens a function in the level overlays - see `docs/FOURTH-C-LOT.md` and
 `docs/FIFTH-C-LOT.md`. One further body is the first that **cannot** be placed in a level:
 it reads a global, and the level catalogues are built with an empty external map, so it
-counts in the boot only - see `docs/SIXTH-C-LOT.md`.
+counts in the boot only - see `docs/SIXTH-C-LOT.md`. One further body is the first that
+**calls** another function; it is placed in all twenty-seven overlays through a per-level
+external map measured by masked search - see `docs/SEVENTH-C-LOT.md`.
 
 ```powershell
 .venv\Scripts\python.exe scripts/check_candidates.py --reference <boot.elf> --toolchain <SN-ProDG-3.01-EE-gcc-directory> --runtime D:\RAC2\runtime
@@ -191,7 +193,7 @@ zero-size symbols, unlinked objects and identical prefixes with extra code are
 refused. A deliberately wrong pointer-return candidate was compiled and rejected.
 `progress/candidates.json` records reproducible source, tool and byte hashes.
 
-These ninety-three functions are now **integrated** into the whole-boot reconstruction.
+These ninety-four functions are now **integrated** into the whole-boot reconstruction.
 `progress/integration.json` records the complete boot gate, exact C object hash,
 post-link function hashes and removed assembly inputs. `progress/candidates.json`
 is the independent qualification of that same object before the complete link.

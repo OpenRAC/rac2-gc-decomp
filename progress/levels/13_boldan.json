@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "13_boldan",
   "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
-  "source_sha256": "16b1bc3a8f0f3b499af20d224b11add549609b4676ce6eff96e63d3551a9e6ed",
-  "catalog_sha256": "fb74b447b0474aadd87c8379dc9e785dae1d90ee2a932d92bf4e7a653b146918",
+  "source_sha256": "f4067ad68b40e5526a23672128e6e8ea60ef4d3a7699489d7be646d80a7c9755",
+  "catalog_sha256": "db86cb7da308a4f88c4ce1d0bf30c547190e132821680b9ec5be07edd167041d",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -860,6 +860,18 @@
       "program": "13_boldan"
     },
     {
+      "symbol": "FUN_0034F3B8",
+      "address": 4558320,
+      "size": 28,
+      "matched": true,
+      "reference_sha256": "1003c2384ae2dcbbd7233d44bfc9a6be46d88e286fde165df8c3bddfaacb21c4",
+      "candidate_sha256": "1003c2384ae2dcbbd7233d44bfc9a6be46d88e286fde165df8c3bddfaacb21c4",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "13_boldan"
+    },
+    {
       "symbol": "FUN_0034FAE8",
       "address": 4560160,
       "size": 16,
@@ -973,7 +985,7 @@
     "bytes_compared": 2833784,
     "segments": 1
   },
-  "matched_code_bytes": 1820,
+  "matched_code_bytes": 1848,
   "tools": {
     "ee-gcc2953.exe": "522d28f9d74ddfce89568437156c8ee323c806de525d99907f698050dee8d81e",
     "ee-as.exe": "5ae3c981bb4e105bd1edfc48c11f15a932dbbf4680be46edc46c55a869885f9e",
@@ -981,8 +993,8 @@
     "cc1.exe": "0393bcd31f91a6b9f0255db97f1cc99eba78ee8fc003e9a04dfabed1ae1d522e",
     "cpp.exe": "b9c50aa66f9cf5dbd80b2affe9874ec7674b7328965c629476f6ad7c77943154"
   },
-  "candidate_elf_sha256": "87e2d5cc5e1ed22ad3c521adbfe2d140c7c15415da58e0bae05c58f88233d6f5",
-  "c_object_sha256": "9467c605100b6420020c6a4cbc23f12ac0845516e53a01b9e1ab5099dede8544",
+  "candidate_elf_sha256": "80265fcefb4fc5d8f64f36880ac9c4c91a2225ca905bb9b0f691b1168eb70bfe",
+  "c_object_sha256": "c4daec834bf535ad7deb0a77a074e09c28414f0a2b625b9fa6155c00d070b288",
   "replacement_inputs": {
     "107E80.s": [
       "FUN_00282C48",
@@ -1056,6 +1068,7 @@
       "FUN_0034A4A8",
       "FUN_0034AFE8",
       "FUN_0034CE98",
+      "FUN_0034F3B8",
       "FUN_0034FAE8",
       "FUN_003505E0",
       "FUN_00350698",

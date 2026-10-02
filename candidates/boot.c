@@ -526,3 +526,8 @@ void FUN_002AB650(u8 *a0) {
     *(long *)(a0 + 0x38) = *(long *)(p + 0x38);
 }
 
+/* lot15 -- premier corps qui APPELLE : la famille des appels s'ouvre. */
+extern void FUN_0011AAD0(s32);
+void FUN_0034F3B8(void) {
+    FUN_0011AAD0(1);
+}

@@ -16,7 +16,8 @@
     "D_001A7A0A": 1735178,
     "D_00189EA0": 1613472,
     "D_00139648": 1283656,
-    "D_0018C0B0": 1622192
+    "D_0018C0B0": 1622192,
+    "FUN_0011AAD0": 1157840
   },
   "functions": [
     {
@@ -762,6 +763,14 @@
       "ranges": 1,
       "xrefs": 0,
       "meaning": "recopie 64 bits depuis l'objet pointe par une globale ; corps identique a l'octet dans les 27 niveaux"
+    },
+    {
+      "symbol": "FUN_0034F3B8",
+      "address": 3470264,
+      "size": 28,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "appelle FUN_0011AAD0 avec l'argument 1 et ne rend rien ; premier corps de la famille des appels"
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"

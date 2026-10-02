@@ -210,8 +210,17 @@ def level_catalog(level: str) -> dict:
             raise ValueError("Duplicate level placement symbol or address")
         seen_symbols.add(symbol)
         seen_addresses.add(address)
+    # A placement whose body calls another function carries the address of each callee
+    # IN THIS LEVEL ("externals"), measured by masked search: the jal operand is absolute,
+    # so it differs between the boot and the overlay while every other byte is identical.
+    externals = entry.get("externals", {})
+    if not isinstance(externals, dict):
+        raise ValueError("Level externals must be an object")
+    for name, address in externals.items():
+        if type(address) is not int or address <= 0 or address % 4:
+            raise ValueError("Invalid level external address")
     return {"target": boot["target"], "level": level, "reference_sha256": entry["reference_sha256"],
-            "flags": boot["flags"], "functions": functions, "externals": {}}
+            "flags": boot["flags"], "functions": functions, "externals": externals}
 
 
 def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: str) -> tuple[dict, Path, dict]:
