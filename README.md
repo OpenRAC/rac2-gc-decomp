@@ -44,7 +44,7 @@ The native runtime remains a separate development milestone.
 
 Verified on **2026-10-02**: the complete boot image (**2,521,763 loaded bytes,
 two PT_LOAD segments**) and **all 27 level overlays** rebuild identically in loaded
-memory. **157 tool tests pass**. **Eighty-six C functions (1,752 bytes) are integrated in the boot, and the same reviewed C is integrated in all 27 level overlays (1,935 placements, 41,500 bytes)**
+memory. **157 tool tests pass**. **Ninety-two C functions (2,008 bytes) are integrated in the boot, and the same reviewed C is integrated in all 27 level overlays (2,091 placements, 48,156 bytes)**
 using genuine compiler-produced objects, with the complete boot matching both
 original loaded segments. The general compiler profile and native runtime
 remain to be established.
@@ -164,8 +164,9 @@ SHA-256 and R5900 language verified. All seven contiguous bodies, callers and re
 delay slots were reviewed. `config/candidate-catalog.json` records their individual
 boundaries. Two later lots added nineteen bodies measured in RAC1's reconstruction
 corpus whose bytes are identical in RAC2 - see `docs/SECOND-C-LOT.md` and
-`docs/THIRD-C-LOT.md`. Sixty more come from RAC2's own bytes instead, where one boot
-body opens a function in the level overlays - see `docs/FOURTH-C-LOT.md`.
+`docs/THIRD-C-LOT.md`. Sixty-six more come from RAC2's own bytes instead, where one boot
+body opens a function in the level overlays - see `docs/FOURTH-C-LOT.md` and
+`docs/FIFTH-C-LOT.md`.
 
 ```powershell
 .venv\Scripts\python.exe scripts/check_candidates.py --reference <boot.elf> --toolchain <SN-ProDG-3.01-EE-gcc-directory> --runtime D:\RAC2\runtime
@@ -188,7 +189,7 @@ zero-size symbols, unlinked objects and identical prefixes with extra code are
 refused. A deliberately wrong pointer-return candidate was compiled and rejected.
 `progress/candidates.json` records reproducible source, tool and byte hashes.
 
-These eighty-six functions are now **integrated** into the whole-boot reconstruction.
+These ninety-two functions are now **integrated** into the whole-boot reconstruction.
 `progress/integration.json` records the complete boot gate, exact C object hash,
 post-link function hashes and removed assembly inputs. `progress/candidates.json`
 is the independent qualification of that same object before the complete link.
@@ -197,7 +198,7 @@ The remaining SDK and game functions still require separate compiler qualificati
 ## decomp.dev reporting
 
 The CI uploads `SCUS_972.68_report` in objdiff report v2 format. It records
-**43,252 integrated C bytes out of 48,788,176 executable bytes (about 0.089%)**,
+**50,164 integrated C bytes out of 48,788,176 executable bytes (about 0.103%)**,
 independently of assembly reconstruction. The measured scope includes the boot and all 27
 overlays, with executable and initialized-data section sizes, including VU code.
 Function counts are omitted until boundaries have been reviewed. Generated section
