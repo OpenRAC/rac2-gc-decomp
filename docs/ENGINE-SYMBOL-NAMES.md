@@ -112,6 +112,38 @@ a seven-case menu-action switch — sits at `0x0026ede8`, inside retail FRONTEND
   in this project is named from it; a candidate would still have to be confirmed by the
   code at its own address.
 
+## Update, same day — *which* prototype, now measured
+
+The title above repeats the repository's own naming ("aug8"). That naming is **not** what
+the linker script indexes, and the disc can now be identified from the patch file itself.
+
+`patches/_iso_patch.toml` declares where it patches: a boot ELF at file offset `0x229800`
+with size `1541852`. The **6 August 2003 preview disc** (obtained from archive.org) places
+its boot — `SCUS_972.68`, 1 541 852 bytes — at **LBA 1107**, which is exactly offset
+`0x229800`. The patch file also documents the original instructions it overwrites; all
+three documented sites we could check are **byte-identical** in that disc:
+
+| Patch site | What the patch file says it replaces | 6 August boot |
+| --- | --- | --- |
+| `0x0021d0b8` | a store, a return and a stack adjustment (`memcard_ResetGame` tail) | identical |
+| `0x001fc7d4` | a call to `movie()` and its delay-slot load | identical |
+| `0x001fc95c` | the colour build for the "Alpha/Preview Disk" text | identical |
+
+So the linker script maps the **6 August 2003** image. The 8 August disc could not be
+tested — its download returns 404 — but every site we could check matches the 6 August
+disc exactly.
+
+On that build the names are **right**, and checkable on its own code: `sprintf`
+(`0x00115da0`) and `guiDrawText2` (`0x001fbd10`) are genuine function prologues there,
+`Settings` (`0x00139e18`) carries the `GameSettings` values the community menu source
+describes — including the two camera flags left *inverted*, which is precisely what
+patch 6 exists to fix — `Level` (`0x001a81e8`) holds `-1`, and `PAD` (`0x00138080`) is
+zeroed. What failed in the table above is transfer to the **US retail**, not the naming.
+
+Provenance note: that disc's `SCES`/`SCUS` boot is the same product code as the retail US
+release, and its section table matches the repository's `elf_secthdr.csv` for
+`core.data`, `core.rdata`, `core.bss`, `core.lit` and `.text` exactly.
+
 ## Provenance
 
 - Symbol names and addresses: `codeberg.org/CreepNT/rc2_aug8_research` —
