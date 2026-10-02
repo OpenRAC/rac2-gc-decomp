@@ -195,6 +195,18 @@ post-link function hashes and removed assembly inputs. `progress/candidates.json
 is the independent qualification of that same object before the complete link.
 The remaining SDK and game functions still require separate compiler qualification.
 
+## Level dispatch tables
+
+Every level overlay carries three dispatch tables (`lvl.vtbl`, `lvl.camvtbl`,
+`lvl.sndvtbl`) keyed by class identifier, and those identifiers are stable between the
+prototype builds and the retail. **6 356 functions in the 27 retail overlays therefore
+carry an identifier already named by the community's prototype extraction** —
+`UpdateMoby_<oClass>`, `InitCamera_<id>`, `UpdateSound_<id>`. The transfer rests on a
+falsifiable control (282 pairs of merged prototype functions, 282 identical retail
+handlers), and it names level-local code: none of the 5 788 handlers is one of the boot
+bodies placed in the levels. Method, limits and provenance in
+`docs/MOBY-DISPATCH-TABLES.md`; the mapping in `docs/moby-dispatch.tsv`.
+
 ## decomp.dev reporting
 
 The CI uploads `SCUS_972.68_report` in objdiff report v2 format. It records
