@@ -65,3 +65,17 @@ void LVL_24_SHIP_SHACK_FUN_002D1570(s32 selected, s32 index) {
         }
     }
 }
+
+typedef struct {
+ u8 prefix[0x30];s32 state;u8 gap0[0x1c];u8 *current;u8 gap1[0x138];s32 bank[2];
+} NativeContext;
+extern NativeContext LVL_24_SHIP_SHACK_D_001BC3C0;
+extern u8 LVL_24_SHIP_SHACK_D_0028AAC0[];
+void LVL_24_SHIP_SHACK_FUN_0035E348(void) {
+ s32 index=-1;
+ if(LVL_24_SHIP_SHACK_D_001BC3C0.state==9) index=1;
+ if(index!=-1) {
+  LVL_24_SHIP_SHACK_D_001BC3C0.current=LVL_24_SHIP_SHACK_D_0028AAC0;
+  *(s32 *)(LVL_24_SHIP_SHACK_D_0028AAC0+0x68)=LVL_24_SHIP_SHACK_D_001BC3C0.bank[index];
+ }
+}

@@ -214,10 +214,11 @@ bodies placed in the levels. Method, limits and provenance in
 ## decomp.dev reporting
 
 The CI uploads `SCUS_972.68_report` in objdiff report v2 format. It records
-**214,048 integrated C bytes out of 48,788,176 executable bytes (about 0.439%)**,
+**214,120 integrated C bytes out of 48,788,176 executable bytes (about 0.439%)**,
 independently of assembly reconstruction. The measured scope includes the boot and all 27
 overlays, with executable and initialized-data section sizes, including VU code. The [twenty-second native C lot](docs/TWENTY-SECOND-NATIVE-LOT.md)
-records a new exact 72-byte body in `24_ship_shack` and its resident-data provenance.
+records a new exact 72-byte body in `24_ship_shack` and its resident-data provenance. The [twenty-third native C lot](docs/TWENTY-THIRD-NATIVE-LOT.md)
+adds another exact body there with separately measured BSS and data owners.
 Function counts are omitted until boundaries have been reviewed. Generated section
 units are placeholders for that future catalogue, not completed translation units.
 
