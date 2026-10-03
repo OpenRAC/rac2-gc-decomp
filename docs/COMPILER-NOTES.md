@@ -49,12 +49,19 @@ found from a witness pair in the retail image, then validated on the full corpus
 3. **No sibling calls, by default.** The Cygnus 2.9 sibcall pass, absent from the
    SN compiler, must stay inert (`FUN_003512B8` ends in `jal 0x11ac40` plus a
    full restore, not in a tail jump).
-4. **The `mtc1` hazard nop is conditional.** The assembler inserts a `nop` after
-   a GP→FP transfer **only when the GPR read was written by the immediately
-   preceding instruction** (`FUN_002A7940`: `addiu $v0…` then `mtc1 $v0,$f0`
-   → `nop`; `FUN_00283CE0`: the `mtc1` opens the function → no `nop`). The plain
-   "next instruction reads the written FPR" test — used by both stock GAS and
-   `Ps2EeAs` — over-generates.
+4. **The `mtc1` hazard nop.** Measured on the whole boot (`veille/mesure-regle-mtc1.py`,
+   598 transfers whose next instruction reads the written FPR): a `nop` is present
+   in **587** of them, at **every** distance of the source GPR (1, 2, 3, 4, 6 … 86)
+   and even when that GPR is never written in the function (20 cases). The 1999
+   source says the same (`gas/config/tc-mips.c`, `INSN_WRITE_FPR_T` branch: nop as
+   soon as the next instruction uses the FPR). The rule is therefore the plain
+   "next instruction reads the written FPR" test, **with one measured exception**:
+   the 11 cases without a `nop` sit in 5 functions
+   (`0x00283ce0`, `0x00283c28`, `0x002a677c`, `0x002e0408`, `0x002e0558`), and in
+   `FUN_00283CE0` the `mtc1` is the **first instruction of the function**.
+   An earlier attempt narrowed the rule to "the GPR was written two instructions
+   back" (two data points) — it refused the `nop` in `FUN_002A7878`, where the
+   retail has one.
 
 Two source-level lessons the witnesses also pinned down:
 
@@ -80,7 +87,10 @@ proofs:
 |---|---|
 | `cc1` | `3e7628b7eb97e4f20d5f1e336c0b9ce51b939dea0a0d362815b6b5586214d86a` |
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
-| `as` | `87a1a012d421f3a11eb439eeb1438c888b9e637b6aed86f03366b598b1c3863d` |
+| `as` | `20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7` |
+
+(An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
+and has been superseded. `cc1` and `cpp` are unchanged: only the assembler moved.)
 
 The linker stays the SDK `ld.exe` used before. The pipeline drives the chain
 through `scripts/wsl_chain.py` (the 1999 tools are 32-bit Linux binaries: they
