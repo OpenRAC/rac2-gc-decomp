@@ -36,17 +36,23 @@ present; the table has room for 64 and the remaining entries are zero.
 
 ## 3. A level archive
 
-`G/LEVELn.WAD` opens with 24 32-bit words: a header size (`0x60`), a sector field, a level
-id (`0x08`), then four (offset, size) couples **in sectors, relative to the start of the
-file** — `data` at `0x10`, then three more. Measured on all 27 levels of the 9 September
-disc: sorted by offset the four couples **chain exactly** (`offset + size == next offset`,
-27/27) and partition the file after the first sector. Level 0, for example: `{1, 690}`,
-`{691, 6467}`, `{7158, 311}`, `{7469, 12}`, in a 15 319 728-byte file. The second couple
-is the level data WAD (below); the region at `{1, N}` is raw and its structure is not yet
-identified; the last couple is a small uncompressed blob. The community layout for this
-generation labels the last three gameplay (NTSC, PAL) and occlusion — the `0x20` couple
-is a `"WAD"`-compressed stream on 27/27 levels, and the mapping is otherwise kept as a
-lead.
+`G/LEVELn.WAD` opens with 24 32-bit words: a header size (`0x60` on every level), a word
+that is zero everywhere, the level id at `0x08` (equal to the level number on all 27),
+a word at `0x0c` (the generation's `reverb`: 0 on 21 levels, 3 or 4 on the other six),
+then up to ten (offset, size) couples **in sectors, relative to the start of the file**:
+four at `0x10` (`data` first), then six more at `0x30` — the generation's chunk-file
+ranges. Measured on all 27 levels of the 9 September disc: the four base couples chain
+exactly when sorted by offset (`offset + size == next offset`, 27/27) and partition the
+file after the first sector — level 0, for example: `{1, 690}`, `{691, 6467}`,
+`{7158, 311}`, `{7469, 12}`, in a 15 319 728-byte file. The second couple is the level
+data WAD (below); the region at `{1, N}` is raw and its structure is not yet identified;
+the last couple is a small uncompressed blob. The six chunk couples are zero on 19
+levels and chain in slot order on the other 8 (levels 1, 2, 4, 7, 8, 11, 19, 20 — level
+20 populates all six); the community layout for this generation carries them in the
+level header's `ChunkWadHeader` (three chunk files and three chunk sound banks). The
+same layout labels the last three base couples gameplay (NTSC, PAL) and occlusion — the
+`0x20` couple is a `"WAD"`-compressed stream on 27/27 levels, and the mapping is
+otherwise kept as a lead.
 
 **The offset of the level data is not assumed.** The extractor tries every word as an
 offset — in sectors, then in bytes — and keeps the one that makes a valid section list
