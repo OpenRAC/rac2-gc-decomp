@@ -43,33 +43,56 @@ found from a witness pair in the retail image, then validated on the full corpus
    released source widens register 0 to `TImode`, which makes every slot 16
    bytes; the retail build does not (`FUN_002889B8`: `sd $s0,0($sp); sd $ra,8($sp)`,
    frame 16).
-2. **Save order.** Saves and restores are emitted in ascending register order
+2. **Save order.** GPR saves and restores are emitted in ascending register order
    (`s0, s1, …, ra`); the released `save_restore_insns` loop descends from `$ra`.
-   The frame layout is identical either way.
+   FPR saves retain their descending order and precede the GPR block. Restores
+   retain GPR before FPR. The two emission blocks and all stack offsets are
+   preserved, with their shared base initialized before the first block.
+   The public [block-reordering patch](../scripts/compiler/reorder_save_blocks.py)
+   applies after the ascending-GPR change. This ordering reproduces
+   `FUN_002A7878` (92 bytes) and `FUN_002A78D8` (104 bytes); all 103 previously
+   integrated bodies still match under the new compiler.
 3. **No sibling calls, by default.** The Cygnus 2.9 sibcall pass, absent from the
    SN compiler, must stay inert (`FUN_003512B8` ends in `jal 0x11ac40` plus a
    full restore, not in a tail jump).
-4. **The `mtc1` hazard nop.** Measured on the whole boot (`veille/mesure-regle-mtc1.py`,
+4. **The `mtc1` hazard nop.** The initial boot survey (`veille/mesure-regle-mtc1.py`,
    598 transfers whose next instruction reads the written FPR): a `nop` is present
    in **587** of them, at **every** distance of the source GPR (1, 2, 3, 4, 6 … 86)
    and even when that GPR is never written in the function (20 cases). The 1999
    source says the same (`gas/config/tc-mips.c`, `INSN_WRITE_FPR_T` branch: nop as
    soon as the next instruction uses the FPR). The rule is therefore the plain
-   "next instruction reads the written FPR" test, **with one measured exception**:
+   "next instruction reads the written FPR" test, with a compatibility exemption:
    the 11 cases without a `nop` sit in 5 functions
    (`0x00283ce0`, `0x00283c28`, `0x002a677c`, `0x002e0408`, `0x002e0558`), and in
-   `FUN_00283CE0` the `mtc1` is the **first instruction of the function**.
+   `FUN_00283CE0` the `mtc1` is the first instruction of the function. The
+   implementation tests cleared assembler instruction history, which can also
+   occur within a function; it is not a function-boundary detector.
    An earlier attempt narrowed the rule to "the GPR was written two instructions
    back" (two data points) — it refused the `nop` in `FUN_002A7878`, where the
    retail has one.
 
-Two source-level lessons the witnesses also pinned down:
+The original 598-case survey covered one floating-point source field. A fresh
+survey covering both source operands finds **915 immediate dependencies: 897
+with a delay and 18 without**. It retains all 598 original cases. The ten cases
+in `0x00283c28`, `0x002a677c`, `0x002e0408` and `0x002e0558` are reproduced by
+explicit instruction-ordering control; their reordering-mode witnesses and two
+positive controls retain the delay. The private diagnostic passed 52 fixtures.
+This establishes a sufficient assembler mechanism without recovering the
+original source directives. Synthetic alignment and branch witnesses trigger
+the compatibility exemption inside a function. ISA selection supplies another
+sufficient mechanism, so source provenance remains unresolved. This diagnostic
+does not change the assembler or qualify every transfer in the game.
+
+Source-level lessons the witnesses also pinned down:
 
 - A 16-byte copy must go through a 128-bit integer type
   (`__attribute__((mode(TI)))`) to reach `lq`/`sq`; the aggregate path builds
   `ld`/`sd` pairs or a `memcpy` call (`FUN_002A8C00`).
 - The callee's prototype decides `$v0` vs `$v1` for a rematerialised constant
   after a call: a value-returning prototype keeps `$v0` busy (`FUN_002889B8`).
+- A result variable distinct from the floating-point input parameter avoids an
+  extra register copy in `FUN_002A78D8`; this source change is required in
+  addition to the reordered prologue.
 
 ## Reproducing the chain
 
@@ -85,12 +108,15 @@ proofs:
 
 | Tool | sha256 |
 |---|---|
-| `cc1` | `3e7628b7eb97e4f20d5f1e336c0b9ce51b939dea0a0d362815b6b5586214d86a` |
+| `cc1` | `c9952c1b8eab5f84f680c32a9219c3c03963503844ba17c4210ccd831af3fafe` |
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `as` | `20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7` |
 
 (An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
-and has been superseded. `cc1` and `cpp` are unchanged: only the assembler moved.)
+and has been superseded. The earlier `cc1`, `3e7628b7…`, emitted the GPR save
+block first. The new `cc1` was rebuilt from the source archive and patch stack:
+its complete rebuild and its incremental build have identical hashes. `cpp`
+and the current `as` are unchanged.)
 
 The linker stays the SDK `ld.exe` used before. The pipeline drives the chain
 through `scripts/wsl_chain.py` (the 1999 tools are 32-bit Linux binaries: they

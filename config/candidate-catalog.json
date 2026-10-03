@@ -23,7 +23,13 @@
     "FUN_001163B0": 1139632,
     "FUN_00115484": 1135748,
     "FUN_0011AC60": 1158240,
-    "FUN_0011AC40": 1158208
+    "FUN_0011AC40": 1158208,
+    "FUN_00133890": 1259664,
+    "FUN_001338F0": 1259760,
+    "FUN_0011F5E0": 1177056,
+    "FUN_0011F628": 1177128,
+    "FUN_001253A8": 1201064,
+    "FUN_00124B88": 1198984
   },
   "functions": [
     {
@@ -849,6 +855,78 @@
       "ranges": 1,
       "xrefs": 0,
       "meaning": "attend puis combine deux champs decales de 11"
+    },
+    {
+      "symbol": "FUN_002A7878",
+      "address": 2783352,
+      "size": 92,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "interpolation aleatoire entre deux flottants (15 bits) ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_002A78D8",
+      "address": 2783448,
+      "size": 104,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "interpolation aleatoire (12 bits) avec signe aleatoire ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_0034F918",
+      "address": 3471640,
+      "size": 68,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "appel sans argument et remise a zero de huit champs ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_0034F8C0",
+      "address": 3471552,
+      "size": 88,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "arrondi signe vers zero au multiple de 1024 et appel a cinq arguments ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_00350B70",
+      "address": 3476336,
+      "size": 84,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "ajout 32 et 64 bits a deux compteurs sous semaphore ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_00350798",
+      "address": 3475352,
+      "size": 108,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "programme IPU FROM CHCR entre deux sections critiques ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_00350808",
+      "address": 3475464,
+      "size": 108,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "programme IPU TO CHCR entre deux sections critiques ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_003506B0",
+      "address": 3475120,
+      "size": 156,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "lit des secteurs puis synchronise et avance le curseur en mode bloquant ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_00351E70",
+      "address": 3481200,
+      "size": 120,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "avance une file circulaire et marque une entree sous section critique ; exact boot match, level placements qualified separately"
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"

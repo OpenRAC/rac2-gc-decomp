@@ -612,3 +612,93 @@ s32 FUN_00351268(u8 *a0) {
     FUN_0011AC40(*(s32 *)(a0 + 0x40));
     return x;
 }
+
+/* Ninth lot: privately byte-gated call-bearing bodies. */
+extern s32 FUN_001163B0(void);
+f32 FUN_002A7878(f32 a0, f32 a1) {
+    s32 r = FUN_001163B0();
+    return a0 + (f32)(r >> 16 & 0x7FFF) * (a1 - a0) * 3.0517578125e-05f;
+}
+
+extern s32 FUN_001163B0(void);
+f32 FUN_002A78D8(f32 a0, f32 a1) {
+    s32 r = FUN_001163B0();
+    f32 result = a0 + (f32)(r >> 16 & 0xFFF) * (a1 - a0) * 0.000244140625f;
+    if ((r >> 16 & 1) != 0) result = -result;
+    return result;
+}
+
+extern s32 FUN_00133890(void);
+void FUN_0034F918(u8 *a0) {
+    FUN_00133890();
+    *(volatile s32 *)(a0 + 0x5c) = 0;
+    *(volatile s32 *)(a0 + 0x00) = 0;
+    *(volatile s32 *)(a0 + 0x30) = 0;
+    *(volatile s32 *)(a0 + 0x38) = 0;
+    *(volatile s32 *)(a0 + 0x3c) = 0;
+    *(volatile s32 *)(a0 + 0x44) = 0;
+    *(volatile s32 *)(a0 + 0x50) = 0;
+    *(volatile s32 *)(a0 + 0x58) = 0;
+}
+
+extern void FUN_001338F0(s32, s32, s32, s32, s32);
+void FUN_0034F8C0(u8 *a0) {
+    FUN_001338F0(*(s32 *)(a0+0x48), *(s32 *)(a0+0x4c) / 1024 * 1024,
+                *(s32 *)(a0+0x5c), *(s32 *)(a0+0x14), *(s32 *)(a0+0x18));
+    *(s32 *)a0 = 2;
+}
+
+extern s32 FUN_0011AC60(s32);
+extern s32 FUN_0011AC40(s32);
+void FUN_00350B70(u8 *a0, s32 a1) {
+    FUN_0011AC60(*(s32 *)(a0+0x40));
+    *(s32 *)(a0+0x14) += (s32)a1;
+    *(long *)(a0+0x48) = (long)a1 + *(long *)(a0+0x48);
+    FUN_0011AC40(*(s32 *)(a0+0x40));
+}
+
+extern s32 FUN_0011F5E0(void);
+extern s32 FUN_0011F628(void);
+void FUN_00350798(u32 a0) {
+    FUN_0011F5E0();
+    *(volatile u32 *)0x1000f590 = *(volatile u32 *)0x1000f520 | 0x10000;
+    *(volatile u32 *)0x1000b000 = a0;
+    *(volatile u32 *)0x1000f590 = *(volatile u32 *)0x1000f520 & 0xfffeffff;
+    FUN_0011F628();
+}
+
+extern s32 FUN_0011F5E0(void);
+extern s32 FUN_0011F628(void);
+void FUN_00350808(u32 a0) {
+    FUN_0011F5E0();
+    *(volatile u32 *)0x1000f590 = *(volatile u32 *)0x1000f520 | 0x10000;
+    *(volatile u32 *)0x1000b400 = a0;
+    *(volatile u32 *)0x1000f590 = *(volatile u32 *)0x1000f520 & 0xfffeffff;
+    FUN_0011F628();
+}
+
+extern s32 FUN_001253A8(s32, s32, u8 *, u8 *);
+extern s32 FUN_00124B88(s32);
+s32 FUN_003506B0(u8 *a0, u8 *a1, s32 a2, s32 a3) {
+    u8 mode[3];
+    s32 sectors = a2 >> 11;
+    s32 out = 0;
+    mode[0] = 100; mode[1] = 1; mode[2] = 0;
+    FUN_001253A8(*(s32 *)(a0+4), sectors, a1, mode);
+    if (a3 == 0) {
+        *(s32 *)(a0+4) += sectors;
+        FUN_00124B88(0);
+        out = a2;
+    }
+    return out;
+}
+
+extern s32 FUN_0011F5E0(void);
+extern s32 FUN_0011F628(void);
+void FUN_00351E70(u8 *a0) {
+    FUN_0011F5E0();
+    *(s32 *)(*(u8 **)(a0+4) + *(s32 *)(a0+8) * 0x138c0) = 2;
+    *(volatile s32 *)(a0+0xc) += 1;
+    *(volatile s32 *)(a0+8) = (*(volatile s32 *)(a0+8) + 1) % *(s32 *)(a0+0x10);
+    FUN_0011F628();
+}
