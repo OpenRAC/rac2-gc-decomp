@@ -125,3 +125,15 @@ These six preserved leaf sources were previously rejected under `dff08a34`. They
 The accepted full-source form reuses the existing `TI` typedef. It avoids redeclaring a mode attribute whose token `TI` has already become a type name in this old compiler. No assembly source or instruction bytes are embedded.
 
 The boot zero-store result was subsequently integrated through [lot 24](TWENTY-FOURTH-C-LOT.md): 178 boot symbols, 27 complete overlay gates, and an exported total of 214,344 C bytes. Trial rows retain their original qualification states.
+
+
+## PCSX2 observations
+
+These two runtime observations are not compiler trials and do not alter the
+source-trial counts above. Evidence directories are relative to the private
+PCSX2 session bank. See [the validation record](../progress/pcsx2/boot-lot24.json).
+
+| Probe | Instrument | Outcome | Private evidence |
+|---|---|---|---|
+| Retail ISO | PCSX2 d75a0ad, DebugServer 21512, PINE 28012 | SCUS-97268 v1.01; loaded function sample equals pinned bytes; breakpoint hit not observed | `20261003-162346-bf1dbc7d/mcp-reference-observations.json` |
+| Lot 24 rebuilt ELF + same ISO | Same dedicated profile | SCUS-97268 v1.01; loaded function sample equals retail/pinned/rebuilt bytes; gameplay unverified | `20261003-163125-1a5e81ad/mcp-rebuilt-observations.json` |

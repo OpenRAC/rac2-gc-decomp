@@ -51,6 +51,8 @@ The exported total is **214,344 / 48,788,176 bytes (0.4393%)**. The measured C p
 is documented in [compiler notes](docs/COMPILER-NOTES.md). Native gameplay remains unverified.
 
 Latest matching lot: [a 128-bit zero store at 28 locations](docs/TWENTY-FOURTH-C-LOT.md).
+The [PCSX2 observations](docs/PCSX2-VALIDATION.md) cover the retail disc and rebuilt boot;
+visual gameplay and native PC execution remain unverified.
 
 ## Requirements
 
