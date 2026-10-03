@@ -127,9 +127,9 @@ def compile_snapshot(directory: Path, toolchain: Path, flags: list) -> tuple[Pat
     return snapshot, object_path
 
 
-def compile_c(reference: Path, directory: Path, toolchain: Path) -> tuple[dict, Path, dict]:
+def compile_c(reference: Path, directory: Path, toolchain: Path, review_path: Path | None = None) -> tuple[dict, Path, dict]:
     catalog = json.loads((ROOT / "config" / "candidate-catalog.json").read_text(encoding="utf-8"))
-    candidates = json.loads((ROOT / "progress" / "candidates.json").read_text(encoding="utf-8"))
+    candidates = json.loads((review_path or ROOT / "progress/candidates.json").read_text(encoding="utf-8"))
     source = ROOT / "candidates" / "boot.c"
     if file_hash(reference) != catalog["reference_sha256"] or file_hash(source) != candidates["source_sha256"]:
         raise ValueError("Integration inputs changed since candidate review")
@@ -219,10 +219,21 @@ def level_catalog(level: str) -> dict:
             "flags": boot["flags"], "functions": functions, "externals": externals}
 
 
-def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: str) -> tuple[dict, Path, dict]:
+def _compile_shared_level_c(reference: Path, directory: Path, toolchain: Path, level: str,
+                            review_path: Path | None = None) -> tuple[dict, Path, dict]:
     """Compile the reviewed C again and qualify that exact object at level addresses."""
     catalog = level_catalog(level)
-    candidates = json.loads((ROOT / "progress" / "candidates.json").read_text(encoding="utf-8"))
+    candidates = json.loads((review_path or ROOT / "progress/candidates.json").read_text(encoding="utf-8"))
+    boot_path = ROOT / "config/candidate-catalog.json"
+    boot = json.loads(boot_path.read_bytes())
+    expected = {(item["symbol"], item["address"], item["size"]) for item in boot["functions"]}
+    reviewed = candidates.get("functions", [])
+    actual = {(item.get("symbol"), item.get("address"), item.get("size")) for item in reviewed if item.get("matched") is True}
+    if (candidates.get("target") != boot["target"] or candidates.get("reference_sha256") != boot["reference_sha256"]
+            or candidates.get("source_sha256") != file_hash(ROOT / "candidates/boot.c")
+            or candidates.get("catalog_sha256") != file_hash(boot_path) or candidates.get("flags") != boot["flags"]
+            or actual != expected or len(reviewed) != len(expected)):
+        raise ValueError("Shared level requires a complete pinned boot review")
     if file_hash(reference) != catalog["reference_sha256"]:
         raise ValueError("Level reference changed since the placement catalog was measured")
     linker = linker_instrument(toolchain)
@@ -265,6 +276,54 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
     return catalog, object_path, hashes
 
 
+def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: str, review_path: Path | None = None):
+    """Preserve the legacy gate, optionally add an independently reviewed level source."""
+    from level_native import paths, compile_reviewed, ranges, dependencies
+    catalog, object_path, hashes = _compile_shared_level_c(reference, directory, toolchain, level, review_path)
+    source_path, native_catalog_path, native_review_path = paths(level)
+    if not (ROOT / native_catalog_path).exists():
+        return catalog, object_path, hashes
+    review = json.loads((review_path or ROOT / "progress/candidates.json").read_bytes())
+    if file_hash(object_path) != review["object_sha256"]:
+        raise ValueError("Shared source/object differs from the reviewed boot object")
+    native, native_object, native_proof = compile_reviewed(
+        reference, directory / "build/c/native" / level, toolchain, level, ROOT)
+    if native_proof["tools"] != hashes:
+        raise ValueError("Native and shared compiler instruments disagree")
+    shared_functions = [{**function, "candidate_source": "candidates/boot.c", "origin": "boot-shared"}
+                        for function in catalog["functions"]]
+    native_functions = [{**function, "candidate_source": source_path, "origin": "level-native"}
+                        for function in native["functions"]]
+    functions = shared_functions + native_functions
+    ranges(functions)
+    externals = dict(catalog["externals"])
+    definitions = {function["symbol"]: function["address"] for function in functions}
+    for name, address in native["externals"].items():
+        if name in definitions:
+            if definitions[name] != address:
+                raise ValueError("Native external disagrees with an integrated definition")
+            continue
+        if name in externals and externals[name] != address:
+            raise ValueError("Native and shared external addresses conflict")
+        externals[name] = address
+    combined = {**catalog, "functions": functions, "externals": externals,
+                "native": {"source": source_path, "catalog_path": native_catalog_path,
+                           "review_path": native_review_path, "object_proof": native_proof,
+                           "review_sha256": file_hash(ROOT / native_review_path)},
+                "shared_functions": shared_functions, "native_functions": native_functions,
+                "compiled_sources": {"candidates/boot.c": catalog["compiled_source_sha256"],
+                                     source_path: native_proof["source_sha256"]},
+                "dependency_sha256": dependencies(level, ROOT, review_path), "reference_entry": native["entry"],
+                "boot_review_sha256": file_hash(review_path or ROOT / "progress/candidates.json")}
+    if native["gp"]:
+        combined["gp"] = native["gp"]
+    return combined, {"candidates/boot.c": object_path, source_path: native_object}, hashes
+
+
+def c_objects(objects) -> list[Path]:
+    return list(objects.values()) if isinstance(objects, dict) else [objects]
+
+
 def replace_inputs(directory: Path, sources: list[Path], catalog: dict, c_object: Path,
                    relocated: bool = False) -> tuple[list[Path], dict]:
     script = directory / "config" / "rac2.ld"
@@ -293,7 +352,8 @@ def replace_inputs(directory: Path, sources: list[Path], catalog: dict, c_object
             if piece["kind"] == "c":
                 function = piece["function"]
                 found.add(function["symbol"])
-                new_inputs.append(c_object.relative_to(directory).as_posix() + f"(.text.{function['symbol']});")
+                owner = c_object[function["candidate_source"]] if isinstance(c_object, dict) else c_object
+                new_inputs.append(owner.relative_to(directory).as_posix() + f"(.text.{function['symbol']});")
             else:
                 fragment = directory / "asm_pp" / "integrated" / f"{source.stem}_{index}.s"
                 fragment.parent.mkdir(exist_ok=True)
@@ -331,7 +391,10 @@ def add_definitions(directory: Path, catalog: dict) -> None:
 
 def validate_integrated(reference: Path, candidate: Path, catalog: dict, source: Path,
                        program: str = "boot") -> list[dict]:
-    if file_hash(source) != catalog["compiled_source_sha256"]:
+    if "compiled_sources" in catalog:
+        if any(file_hash(ROOT / path) != digest for path, digest in catalog["compiled_sources"].items()):
+            raise ValueError("A native or shared C source changed after its integration snapshot")
+    elif file_hash(source) != catalog["compiled_source_sha256"]:
         raise ValueError("Public C source changed after the compiled integration snapshot")
     results = [compare_function(reference, candidate, function["symbol"], function["address"], function["size"])
                for function in catalog["functions"]]
@@ -340,4 +403,7 @@ def validate_integrated(reference: Path, candidate: Path, catalog: dict, source:
     for result in results:
         result.update({"integrated": True, "program": program})
         result["state"] = "integrated"
+        if "native" in catalog:
+            function = next(item for item in catalog["functions"] if item["symbol"] == result["symbol"])
+            result.update({"candidate_source": function["candidate_source"], "origin": function["origin"]})
     return results

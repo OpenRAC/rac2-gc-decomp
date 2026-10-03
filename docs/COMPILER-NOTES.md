@@ -115,6 +115,34 @@ body or a retail witness contradicting the restricted patterns would falsify
 the compatibility claim. The four exception functions remain explained by a
 sufficient mechanism; their original source directives remain unresolved.
 
+6. **Architectural zero in TImode stores.** The recognition condition already
+   admits zero, but the memory-store alternatives constrained the source to a
+   register. The [zero-store patch](../scripts/compiler/allow_zero_ti_store.patch)
+   admits constraint `J` and prints that source using `%z1`. It permits an
+   actual zero constant reaching the store to select `sq` from architectural
+   zero. It does not eliminate every materialised zero: five independent
+   source witnesses, including a simple zero store and nonzero/copy cases,
+   retain their previous output. The complete 168-byte `FUN_002E5FE0` becomes
+   exact with a counted 52-entry loop, while the older compiler differs in
+   six bytes on the same source and flags.
+7. **Preserve the generic frame scheduler by default.** The cumulative P21
+   option forces emission order between two frame-related instructions. The
+   earlier RAC2 recipe enabled that option. The
+   [default patch](../scripts/compiler/disable_frame_order_default.patch)
+   restores the generic scheduler default; the explicit opt-in remains.
+   `FUN_002B7170` requires `s2`, `s0`, `s1` saves rather than the forced order.
+   Its source also needs the measured constant lifetimes and final store
+   order. With that source, the previous profile differs only in the three
+   prologue words; the new profile reproduces the complete 372-byte body.
+   All 176 earlier qualified bodies remain exact, for a combined 177/177.
+   This qualifies the current corpus, not every frame layout in the game.
+
+Two complete builds reproduce release compiler `1ae7dceb` with the zero-store
+change, and another two reproduce `8bed6eae` with the frame option default off.
+`cpp` and GNU `as` retain their hashes. The complete release rebuilds exclude
+all diagnostic buffer/ranking instrumentation. The intermediate object-rebuild
+hashes remain private diagnostics rather than release identities.
+
 Source-level lessons the witnesses also pinned down:
 
 - A 16-byte copy must go through a 128-bit integer type
@@ -144,7 +172,7 @@ proofs:
 
 | Tool | sha256 |
 |---|---|
-| `cc1` | `dff08a347efb82d33bcc921d426922a199dbcb4fe807a3662b75ce0196c6ac5f` |
+| `cc1` | `8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d` |
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `as` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
 

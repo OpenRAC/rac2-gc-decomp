@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "24_ship_shack",
+  "program": "levels/24_ship_shack",
+  "reference_sha256": "4afbc22add84109c84ef8ca49099fdf9863905e5f497369c207ac5cb47814740",
+  "entry": 2763912,
+  "source": "candidates/levels/24_ship_shack.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "functions": [
+    {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D6960",
+      "address": 2976096,
+      "size": 24,
+      "meaning": "clears five object fields; authored level-only C"
+    },
+    {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002F5DE0",
+      "address": 3104224,
+      "size": 80,
+      "meaning": "authored C for independently verified level-native body"
+    }
+  ],
+  "externals": {
+    "LVL_24_SHIP_SHACK_FUN_002F5D18": 3104024
+  }
+}

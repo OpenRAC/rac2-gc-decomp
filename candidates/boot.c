@@ -1314,3 +1314,78 @@ void FUN_002B8888(u8 *a0) {
  *(volatile s32 *)(a0+0x1c0)=0;*(volatile s32 *)(a0+0x1c4)=0;*(volatile s32 *)(a0+0x1c8)=0;*(volatile s32 *)(a0+0x1d8)=0;
  do { p[-16]=0;count--;p[0]=0;p++; }while(count>=0);
 }
+
+s32 FUN_00300280(s32 *a0,s32 a1) {
+ s32 out=-1,i=0,flag=1; s32 *p=a0;
+ for(;i<64;i++,p++) {
+  if(*p==0) {
+   *p=a1;
+   a0[0x89]=flag;
+   a0[0x88]++;
+   out=i;
+   p[0x40]=0;
+   break;
+  }
+ }
+ return out;
+}
+
+extern s32 FUN_00133230(void);
+extern s32 FUN_00132028(void);
+extern s32 FUN_00132AC8(void);
+extern u8 D_00188660[];
+void FUN_002E5FE0(void) {
+    typedef s32 quad __attribute__((mode(__TI__)));
+    s32 count;
+    u8 *p;
+    FUN_00133230(); FUN_00132028(); FUN_00132AC8();
+    while (FUN_00132028() != 0) {}
+    p=D_00188660; count=3;
+    do { *(volatile quad *)p = 0; count--; p += 16; } while (count >= 0);
+
+
+    p=D_00188660;
+    *(s32 *)(p+0x40)=0;
+    for(count=0;count<52;count++) {
+        *(s32 *)(p+count*0x70+0x70)=0;
+        *(u8 *)(p+count*0x70+0x74)=0;
+    }
+}
+
+typedef struct { u8 before[0x1730]; s32 count; u8 *table; } CallbackGlobals;
+extern u8 D_00188660[];
+void FUN_002E5F60(void) {
+    s32 i=0;
+    for (i=0;i<((CallbackGlobals *)D_00188660)->count;i++) {
+            u8 *entry=(u8 *)(i*0x90+(s32)((CallbackGlobals *)D_00188660)->table);
+            void (*callback)(u8 *)=*(void (**)(u8 *))(entry+4);
+            if (callback) callback(entry);
+    }
+}
+
+typedef struct {
+ u8 before[0x2c]; short clear2c; u8 gap1[14]; short mode,next; u8 gap2[4];
+ u32 busy44; short value48; u8 gap3[2]; short step4c,step4e; u8 gap4[24];
+ u32 busy68; u8 gap5[4]; short step70,step72; u8 gap6[24];
+ u32 busy8c; u8 gap7[4]; short step94,step96;
+} WaitState;
+extern u8 D_001A63A8[];
+extern s32 FUN_00133230(void);
+extern s32 FUN_00132028(void);
+extern s32 FUN_00133310(void);
+extern s32 FUN_00133490(s32);
+void FUN_002B7170(void) {
+    ((void (*)(void))FUN_00133230)();
+    while (((WaitState *)D_001A63A8)->busy44 == 0xffffffffU) FUN_00132028();
+    while (((WaitState *)D_001A63A8)->busy8c == 0xffffffffU) FUN_00132028();
+    while (((WaitState *)D_001A63A8)->busy68 == 0xffffffffU) FUN_00132028();
+    FUN_00133310();
+    while (FUN_00132028() != 0) {}
+    FUN_00133490(1);
+    ((WaitState *)D_001A63A8)->step4e = 0; ((WaitState *)D_001A63A8)->step4c = 0; ((WaitState *)D_001A63A8)->busy44 = 0;
+    if (((WaitState *)D_001A63A8)->mode != -1) ((WaitState *)D_001A63A8)->value48 = ((WaitState *)D_001A63A8)->mode;
+    ((WaitState *)D_001A63A8)->step72 = 0; ((WaitState *)D_001A63A8)->step70 = 0; ((WaitState *)D_001A63A8)->busy68 = 0;
+    ((WaitState *)D_001A63A8)->step96 = 0; ((WaitState *)D_001A63A8)->step94 = 0; ((WaitState *)D_001A63A8)->busy8c = 0;
+    ((WaitState *)D_001A63A8)->clear2c = 0; ((WaitState *)D_001A63A8)->mode = -1;
+    ((WaitState *)D_001A63A8)->next = -1;
+}

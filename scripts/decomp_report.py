@@ -204,7 +204,8 @@ def level_placements(document: dict, program: str, target: dict, overlays: dict,
 
 
 def validate_level_proof(proof: dict, target: dict, overlays: dict, progress: dict,
-                         integration: dict, catalog_bytes: bytes, boot_catalog: dict) -> list[dict]:
+                         integration: dict, catalog_bytes: bytes, boot_catalog: dict,
+                         expected_totals: tuple[int, int] | None = None) -> list[dict]:
     """One level overlay's C integration proof, held to the same rules as the boot.
 
     The boot proof is the source of truth for the reviewed C: its source hash was
@@ -277,9 +278,10 @@ def validate_level_proof(proof: dict, target: dict, overlays: dict, progress: di
             or recorded[0].get("reference_sha256") != pinned[program]
             or recorded[0].get("bytes_compared") != gate["bytes_compared"]):
         raise ValueError("Progress level gate contradicts integration")
-    if (("integrated_c_functions" in recorded[0] and recorded[0]["integrated_c_functions"] != len(functions))
+    count, byte_count = expected_totals or (len(functions), sum(function["size"] for function in functions))
+    if (("integrated_c_functions" in recorded[0] and recorded[0]["integrated_c_functions"] != count)
             or ("integrated_c_bytes" in recorded[0]
-                and recorded[0]["integrated_c_bytes"] != sum(function["size"] for function in functions))):
+                and recorded[0]["integrated_c_bytes"] != byte_count)):
         raise ValueError("Progress level byte count contradicts integration")
     for field in ("object_sha256", "c_object_sha256", "candidate_elf_sha256", "checker_sha256"):
         if field in proof:
@@ -290,8 +292,95 @@ def validate_level_proof(proof: dict, target: dict, overlays: dict, progress: di
     return functions
 
 
+def validate_native_level_proof(proof: dict, target: dict, overlays: dict, progress: dict,
+                                integration: dict, catalog_bytes: bytes, boot_catalog: dict,
+                                candidate_review: Path | None = None) -> list[dict]:
+    """Validate both objects and their union; neither a boot proof nor a partial gate suffices."""
+    from level_native import load_catalog, validate_review, paths, ranges, dependencies, file_hash
+    level = proof.get("program")
+    if proof.get("schema") != 2 or proof.get("kind") != "level-c-integration":
+        raise ValueError("Invalid native level integration kind")
+    reconstruction_tools = proof.get("reconstruction_tools")
+    if not isinstance(reconstruction_tools, dict) or set(reconstruction_tools) != {"Ps2EeAs.exe", "ld.exe"}:
+        raise ValueError("Native integration requires both reconstruction instrument identities")
+    for value in reconstruction_tools.values():
+        require_hash(value)
+    if any(progress.get("tools", {}).get(name) != value for name, value in reconstruction_tools.items()):
+        raise ValueError("Native reconstruction instruments disagree with runtime gates")
+    catalog = load_catalog(level, ROOT)
+    source_path, native_catalog_path, review_path = paths(level)
+    native = proof.get("native")
+    if (not isinstance(native, dict) or native.get("source") != source_path
+            or native.get("catalog_path") != native_catalog_path or native.get("review_path") != review_path
+            or native.get("review_sha256") != file_hash(ROOT / review_path)
+            or type(proof.get("reference_entry")) is not int or type(proof.get("candidate_entry")) is not int
+            or proof.get("reference_entry") != catalog["entry"] or proof.get("candidate_entry") != catalog["entry"]
+            or proof.get("dependency_sha256") != dependencies(level, ROOT, candidate_review)):
+        raise ValueError("Native integration source, entry or dependency mismatch")
+    review = json.loads((ROOT / review_path).read_bytes())
+    validate_review(review, catalog, level, ROOT)
+    qualified = native.get("object_qualification")
+    validate_review(qualified, catalog, level, ROOT)
+    if (native.get("object_sha256") != review["object_sha256"]
+            or qualified["object_sha256"] != review["object_sha256"]
+            or qualified["tools"] != review["tools"]
+            or any(proof.get("tools", {}).get(name) != value for name, value in review["tools"].items())):
+        raise ValueError("Native integration source/object or instruments disagree with review")
+    functions = proof.get("functions")
+    if not isinstance(functions, list) or not functions:
+        raise ValueError("Native integration requires complete functions")
+    ranges(functions)
+    count, total = len(functions), sum(item["size"] for item in functions)
+    shared = proof.get("shared")
+    if not isinstance(shared, dict):
+        raise ValueError("Native integration requires the unchanged shared boot gate")
+    review_path = candidate_review or ROOT / "progress/candidates.json"
+    boot_review = json.loads(review_path.read_bytes())
+    if proof.get("boot_review_sha256") != file_hash(review_path):
+        raise ValueError("Native integration cites a different boot review")
+    require_hash(proof.get("candidate_elf_sha256"))
+    require_hash(shared.get("c_object_sha256"))
+    if (shared["c_object_sha256"] != boot_review.get("object_sha256")
+            or proof.get("c_object_sha256") != shared["c_object_sha256"]
+            or proof.get("candidate_elf_sha256") != shared.get("candidate_elf_sha256")
+            or any(proof.get(key) != shared.get(key) for key in
+                   ("source_sha256", "catalog_sha256", "candidate_source"))):
+        raise ValueError("Shared source/object or full ELF identity changed in native proof")
+    shared_rows = [item for item in functions if item.get("origin") == "boot-shared"]
+    if any(item.get("candidate_source") != "candidates/boot.c" for item in shared_rows):
+        raise ValueError("Shared functions must retain their boot C provenance")
+    shared_results = validate_level_proof({**shared, "functions": shared_rows}, target, overlays, progress, integration,
+                                          catalog_bytes, boot_catalog, (count, total))
+    expected = {item["symbol"]: item for item in catalog["functions"]}
+    native_results = [item for item in functions if item.get("origin") == "level-native"]
+    if not isinstance(native_results, list) or len(native_results) != len(expected):
+        raise ValueError("Native integration is partial")
+    checked = {item["symbol"]: item for item in qualified["functions"]}
+    for result in native_results:
+        item = expected.get(result.get("symbol"))
+        object_result = checked.get(result.get("symbol"))
+        if (item is None or result.get("address") != item["address"] or result.get("size") != item["size"]
+                or result.get("program") != level or result.get("candidate_source") != source_path
+                or result.get("origin") != "level-native" or result.get("integrated") is not True
+                or result.get("matched") is not True or result.get("different_bytes") != 0
+                or result.get("reference_sha256") != object_result["reference_sha256"]
+                or result.get("candidate_sha256") != object_result["candidate_sha256"]):
+            raise ValueError("Native integration requires the complete reviewed object bodies")
+    union = shared_results + native_results
+    ranges(union)
+    by_symbol = {item["symbol"]: item for item in union}
+    if (len(by_symbol) != len(union) or len(functions) != len(union)
+            or any(by_symbol.get(item["symbol"]) != item for item in functions)
+            or proof.get("matched_code_bytes") != total or proof.get("target") != target["serial"]
+            or proof.get("reference_sha256") != catalog["reference_sha256"]
+            or proof.get("state") != "integrated" or proof.get("full_level_gate") != shared.get("full_level_gate")):
+        raise ValueError("Native/shared union, identity, full gate or derived counts mismatch")
+    return functions
+
+
 def generate(scope: dict, target: dict, overlays: dict, progress: dict,
-             integration: dict | None = None, levels: list[dict] | None = None) -> dict:
+             integration: dict | None = None, levels: list[dict] | None = None,
+             candidate_review: Path | None = None) -> dict:
     if scope["target"] != target["serial"] or overlays["target"] != target["serial"]:
         raise ValueError("Progress scope belongs to another target")
     for field in ("decompiled_functions", "integrated_functions"):
@@ -321,8 +410,11 @@ def generate(scope: dict, target: dict, overlays: dict, progress: dict,
             if not isinstance(program, str) or program in seen_programs:
                 raise ValueError("Duplicate or invalid level integration proof")
             seen_programs.add(program)
-            functions.extend(validate_level_proof(proof, target, overlays, progress, integration,
-                                                  catalog_bytes, boot_catalog))
+            if proof.get("kind") == "level-c-integration":
+                functions.extend(validate_native_level_proof(proof, target, overlays, progress, integration,
+                                                             catalog_bytes, boot_catalog, candidate_review))
+            else:
+                functions.extend(validate_level_proof(proof, target, overlays, progress, integration, catalog_bytes, boot_catalog))
     owners = {}
     promoted_by_section = {}
     for program in programs:
@@ -369,7 +461,8 @@ def generate(scope: dict, target: dict, overlays: dict, progress: dict,
             promoted = promoted_by_section.get(id(section), [])
             remaining = size - sum(function["size"] for function in promoted)
             for function in promoted:
-                units.append({"name": f"{program['name']}/candidates/boot.c/{function['symbol']}",
+                candidate_source = function.get("candidate_source", "candidates/boot.c")
+                units.append({"name": f"{program['name']}/{candidate_source}/{function['symbol']}",
                               "measures": measures(function["size"], 0, 1, function["size"], 1),
                               "sections": [{"name": section["name"], "size": str(function["size"]),
                                             "fuzzyMatchPercent": 100,
@@ -378,7 +471,7 @@ def generate(scope: dict, target: dict, overlays: dict, progress: dict,
                                              "fuzzyMatchPercent": 100,
                                              "metadata": {"virtualAddress": str(function["address"])}}],
                               "metadata": {"complete": True, "autoGenerated": False,
-                                           "sourcePath": "candidates/boot.c", "moduleName": program["name"],
+                                           "sourcePath": candidate_source, "moduleName": program["name"],
                                            "progressCategories": [category]}})
             if not remaining:
                 continue
@@ -411,17 +504,23 @@ def main() -> int:
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--level-proof", type=Path, action="append", default=[], metavar="PATH",
                         help="reviewed C integration proof for one level overlay (repeatable)")
+    parser.add_argument("--candidate-review", type=Path, help="explicit fresh boot object review, preserving the prior review")
+    parser.add_argument("--integration-proof", type=Path, help="explicit boot integration proof")
+    parser.add_argument("--progress-proof", type=Path, help="explicit verified runtime gates")
     args = parser.parse_args()
     def read(relative: str) -> dict:
         return json.loads((ROOT / relative).read_text(encoding="utf-8"))
-    integration = read("progress/integration.json") if (ROOT / "progress/integration.json").exists() else None
+    integration = (json.loads(args.integration_proof.read_bytes()) if args.integration_proof else
+                   read("progress/integration.json") if (ROOT / "progress/integration.json").exists() else None)
     levels = [json.loads(path.read_text(encoding="utf-8")) for path in args.level_proof]
     if levels and integration is None:
         raise ValueError("Level integration proofs require the boot integration proof")
+    progress = json.loads(args.progress_proof.read_bytes()) if args.progress_proof else read("progress/report.json")
     report = generate(read("config/progress-scope.json"), read("config/target.json"),
-                      read("config/overlays.json"), read("progress/report.json"), integration, levels)
+                      read("config/overlays.json"), progress, integration, levels, args.candidate_review)
     if integration is not None:
-        validate_object_proof(integration, read("progress/candidates.json"))
+        validate_object_proof(integration, json.loads(args.candidate_review.read_bytes()) if args.candidate_review
+                              else read("progress/candidates.json"))
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"output": str(args.output), "units": len(report["units"]),

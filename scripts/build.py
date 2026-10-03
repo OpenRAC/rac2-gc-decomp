@@ -184,7 +184,8 @@ def resolved_symbols(directory: Path) -> None:
 
 
 def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Path, jobs: int, name: str,
-            c_toolchain: Path | None = None, level: str | None = None) -> dict:
+            c_toolchain: Path | None = None, level: str | None = None,
+            candidate_review: Path | None = None) -> dict:
     if hashlib.sha256(reference.read_bytes()).hexdigest() != expected_hash:
         raise ValueError("Reference changed since verified extraction")
     directory.mkdir(parents=True)
@@ -203,23 +204,27 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
     c_object = None
     if c_toolchain is not None:
         from integration import (compile_c, compile_level_c, replace_inputs, add_definitions,
-                                 validate_integrated)
+                                 validate_integrated, c_objects)
         if level is None:
             if name != "boot":
                 raise ValueError("C integration is qualified for the boot only")
-            catalog, c_object, c_hashes = compile_c(reference, directory, c_toolchain)
+            catalog, c_object, c_hashes = (compile_c(reference, directory, c_toolchain) if candidate_review is None
+                                         else compile_c(reference, directory, c_toolchain, candidate_review))
         else:
             if name != "overlay":
                 raise ValueError("Level C integration is qualified for one overlay at a time")
-            catalog, c_object, c_hashes = compile_level_c(reference, directory, c_toolchain, level)
+            catalog, c_object, c_hashes = (compile_level_c(reference, directory, c_toolchain, level) if candidate_review is None
+                                         else compile_level_c(reference, directory, c_toolchain, level, candidate_review))
         sources, replacements = replace_inputs(directory, sources, catalog, c_object,
                                                relocated=level is not None)
     assembler = toolchain / "ee" / "bin" / "Ps2EeAs.exe"
     linker = toolchain / "ee" / "bin" / "ld.exe"
+    reconstruction_hashes = ({path.name: hashlib.sha256(path.read_bytes()).hexdigest()
+                             for path in (assembler, linker)} if c_object is not None and "native" in catalog else None)
     with ThreadPoolExecutor(max_workers=jobs) as pool:
         objects = list(pool.map(lambda source: assemble_source(source, directory, assembler), sources))
     if c_object is not None:
-        objects.append(c_object)
+        objects.extend(c_objects(c_object))
     resolved_symbols(directory)
     if c_object is not None:
         add_definitions(directory, catalog)
@@ -229,6 +234,9 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
                  "-Map", f"build/{name}.map", "-o", f"build/{name}.elf"]
     arguments.extend(object_path.relative_to(directory).as_posix() for object_path in objects)
     checked(arguments, directory, directory / "link.log")
+    if reconstruction_hashes is not None and reconstruction_hashes != {
+            path.name: hashlib.sha256(path.read_bytes()).hexdigest() for path in (assembler, linker)}:
+        raise ValueError("Reconstruction instruments changed during native integration")
     assert_fresh(output, objects + [directory / "config" / "rac2.ld", directory / "config" / "undefined_symbols.ld"])
     result = compare_loads(reference, output)
     if not result["matched"]:
@@ -249,8 +257,29 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
                              "segments": sum(segment["type"] == 1 for segment in read_elf(reference)["segments"])},
                  "matched_code_bytes": sum(function["size"] for function in functions), "tools": c_hashes,
                  "candidate_elf_sha256": result["candidate_sha256"],
-                 "c_object_sha256": hashlib.sha256(c_object.read_bytes()).hexdigest(),
+                 "c_object_sha256": hashlib.sha256(c_objects(c_object)[0].read_bytes()).hexdigest(),
                  "replacement_inputs": replacements}
+        if "native" in catalog:
+            from level_native import dependencies, file_hash
+            if read_elf(output)["entry"] != catalog["reference_entry"]:
+                raise ValueError("Native final linked entry differs from the pinned overlay entry")
+            if dependencies(level, ROOT, candidate_review) != catalog["dependency_sha256"]:
+                raise ValueError("Native integration dependency changed during reconstruction")
+            shared = {**proof, "functions": [item for item in functions if item["origin"] == "boot-shared"]}
+            shared["matched_code_bytes"] = sum(item["size"] for item in shared["functions"])
+            # Final function rows live once in the union. Reconstruct the shared
+            # subset for its unchanged validator rather than copying it again.
+            shared.pop("functions")
+            native = catalog["native"]
+            proof.update({"schema": 2, "kind": "level-c-integration", "shared": shared,
+                          "reconstruction_tools": reconstruction_hashes,
+                          "reference_entry": catalog["reference_entry"], "candidate_entry": read_elf(output)["entry"],
+                          "dependency_sha256": catalog["dependency_sha256"],
+                          "boot_review_sha256": catalog["boot_review_sha256"],
+                          "native": {"source": native["source"], "catalog_path": native["catalog_path"],
+                                     "review_path": native["review_path"], "review_sha256": native["review_sha256"],
+                                     "object_qualification": native["object_proof"],
+                                     "object_sha256": file_hash(c_object[native["source"]])}})
         (directory / "integration.json").write_text(json.dumps(proof, indent=2) + "\n", encoding="utf-8")
         result["integrated_c_functions"] = len(functions)
         result["integrated_c_bytes"] = proof["matched_code_bytes"]
@@ -266,10 +295,16 @@ def main() -> int:
     parser.add_argument("--all-levels", action="store_true")
     parser.add_argument("--c-toolchain", type=Path, help="integrate reviewed C using the separately qualified SN compiler")
     parser.add_argument("--c-level", help="also integrate the reviewed C into this one level overlay")
+    parser.add_argument("--c-all-levels", action="store_true", help="integrate shared and available native C in all overlays")
+    parser.add_argument("--candidate-review", type=Path, help="explicit fresh boot object review; does not overwrite prior provenance")
     parser.add_argument("--jobs", type=int, default=8)
     args = parser.parse_args()
     if args.jobs < 1:
         raise ValueError("jobs must be positive")
+    if args.c_all_levels and (not args.c_toolchain or not args.all_levels):
+        raise ValueError("All-level C integration requires --all-levels and --c-toolchain")
+    if args.candidate_review and not args.c_toolchain:
+        raise ValueError("An explicit candidate review requires C integration")
     versions = {"splat64": "0.50.0", "spimdisasm": "1.42.4", "rabbitizer": "1.16.2"}
     for package, version in versions.items():
         if importlib.metadata.version(package) != version:
@@ -301,7 +336,7 @@ def main() -> int:
               "g1": None, "g3": [], "decompiled_functions": 0, "compiler_flags": None}
     report["g1"] = rebuild(Path(manifest["boot"]["path"]), manifest["boot"]["sha256"],
                            builds / "boot", toolchain, args.jobs, "boot",
-                           args.c_toolchain.resolve() if args.c_toolchain else None)
+                           args.c_toolchain.resolve() if args.c_toolchain else None, candidate_review=args.candidate_review)
     if args.c_toolchain:
         report["decompiled_functions"] = report["g1"]["integrated_c_functions"]
     c_level = None
@@ -313,7 +348,8 @@ def main() -> int:
             raise ValueError("Level C integration requires one overlay of the verified manifest")
         c_level = matches[0]
         result = rebuild(Path(c_level["path"]), c_level["sha256"], builds / c_level["level"],
-                         toolchain, args.jobs, "overlay", args.c_toolchain.resolve(), level=c_level["level"])
+                         toolchain, args.jobs, "overlay", args.c_toolchain.resolve(), level=c_level["level"],
+                         candidate_review=args.candidate_review)
         result["level"] = c_level["level"]
         report["g3"].append(result)
     if args.all_levels:
@@ -323,7 +359,9 @@ def main() -> int:
             if c_level is not None and overlay["level"] == c_level["level"]:
                 continue
             result = rebuild(Path(overlay["path"]), overlay["sha256"], builds / overlay["level"],
-                             toolchain, args.jobs, "overlay")
+                             toolchain, args.jobs, "overlay",
+                             args.c_toolchain.resolve() if args.c_all_levels else None,
+                             level=overlay["level"] if args.c_all_levels else None, candidate_review=args.candidate_review)
             result["level"] = overlay["level"]
             report["g3"].append(result)
     builds.mkdir(exist_ok=True, parents=True)

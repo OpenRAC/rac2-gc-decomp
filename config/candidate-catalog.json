@@ -56,7 +56,10 @@
     "D_001A7B90": 1735568,
     "D_001A7BB8": 1735608,
     "FUN_00124418": 1197080,
-    "FUN_001257D0": 1202128
+    "FUN_001257D0": 1202128,
+    "FUN_00132AC8": 1256136,
+    "FUN_00133310": 1258256,
+    "FUN_00133490": 1258640
   },
   "functions": [
     {
@@ -1442,6 +1445,38 @@
       "ranges": 1,
       "xrefs": 0,
       "meaning": "reset status fields and clear two sixteen-word ranges"
+    },
+    {
+      "symbol": "FUN_00300280",
+      "address": 3146368,
+      "size": 124,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "claim the first empty slot and initialize its entry flag"
+    },
+    {
+      "symbol": "FUN_002E5FE0",
+      "address": 3039200,
+      "size": 168,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "vide deux tables globales apres synchronization; boot seulement"
+    },
+    {
+      "symbol": "FUN_002E5F60",
+      "address": 3039072,
+      "size": 120,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "appelle les callbacks des entrees globales; boot seulement"
+    },
+    {
+      "symbol": "FUN_002B7170",
+      "address": 2847088,
+      "size": 372,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "attend la fin de trois operations et reinitialise etats globaux; boot seulement"
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"
