@@ -80,6 +80,11 @@ found from a witness pair in the retail image, then validated on the full corpus
    to reach the measured minimum of seven instructions. With the hook and
    the correct local call view, the complete body matches at 168 bytes.
    All 114 previously accepted bodies are unchanged under this compiler.
+   Count a `TRAP_IF` using its machine-description instruction length: the
+   R5900 division guard expands to a branch and a break, rather than one
+   encoded instruction. Counting it as one overpadded a seven-word loop in
+   `FUN_0028B950`; the [counter patch](../scripts/compiler/count_trap_length.py)
+   removes that extra padding while preserving all 143 earlier bodies.
 
 The original 598-case survey covered one floating-point source field. A fresh
 survey covering both source operands finds **915 immediate dependencies: 897
@@ -122,14 +127,15 @@ proofs:
 
 | Tool | sha256 |
 |---|---|
-| `cc1` | `158e5c201b60541017d9562d0332f417884dcc588fce8878c3fbd7801a922fb1` |
+| `cc1` | `dff08a347efb82d33bcc921d426922a199dbcb4fe807a3662b75ce0196c6ac5f` |
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `as` | `20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7` |
 
 (An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
 and has been superseded. The earlier `cc1`, `3e7628b7…`, emitted the GPR save
 block first. `c9952c1b…` reordered the save blocks; `158e5c20…` additionally
-restores the post-DBR loop hook. The new compiler was completely rebuilt in
+restores the post-DBR loop hook. `dff08a34…` additionally counts division-guard
+expansions by their MD length. The new compiler was completely rebuilt in
 two separate source/build directories, with identical hashes. `cpp` and the
 current `as` are unchanged.)
 

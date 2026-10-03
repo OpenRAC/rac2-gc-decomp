@@ -1,11 +1,11 @@
 {
   "target": "SCUS_972.68",
-  "verified_at": "2026-10-03T06:24:37.763542+00:00",
+  "verified_at": "2026-10-03T06:59:23.719601+00:00",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "6c276f9da229affaad39977c8e8ce4b7acb06ee4fe0f4be085b91626de072420",
-  "candidate_elf_sha256": "e80988e54e064c843bc685d643e4b1c12657fbdfcb2a37c9be73ba9ccafb1102",
-  "object_sha256": "b4d6f4e5004e3060f044299d7b7476e5d3799729b5edc0d01fc74e496b1c112a",
-  "catalog_sha256": "cd33e2fbea38b85f635fcdfbe357bdb0c08c948d903c364ae36d892b800db604",
+  "source_sha256": "0704e59452576f53db73283c1e4cc88d80997b0d246a9e509184579f0b727977",
+  "candidate_elf_sha256": "b17c6cca888af6acbdd8ae16617bdd99c427cdc3eb0a38883f7b293a69495421",
+  "object_sha256": "01f3abe62038e6c958ee599b3f381555ec545b7e4f0c7468771ad789eb3b59dd",
+  "catalog_sha256": "025781a23979a2a659fa1991f7eb00f7b6bbfe80073167e8bfa30e5552812672",
   "checker_sha256": "1de3d96ebd74ab2786efd0c1b924683153d27004c846c329795cde3c6bec4773",
   "flags": [
     "-O2",
@@ -13,7 +13,7 @@
     "-ffunction-sections"
   ],
   "tools": {
-    "cc1": "158e5c201b60541017d9562d0332f417884dcc588fce8878c3fbd7801a922fb1",
+    "cc1": "dff08a347efb82d33bcc921d426922a199dbcb4fe807a3662b75ce0196c6ac5f",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
@@ -220,6 +220,16 @@
       "state": "matched_unintegrated"
     },
     {
+      "symbol": "FUN_0028B950",
+      "address": 2668880,
+      "size": 252,
+      "matched": true,
+      "reference_sha256": "7bac75036d09102cb40483511dac407d26b2916bceccb503162052666f0384a8",
+      "candidate_sha256": "7bac75036d09102cb40483511dac407d26b2916bceccb503162052666f0384a8",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
       "symbol": "FUN_002934B8",
       "address": 2700472,
       "size": 60,
@@ -340,6 +350,16 @@
       "state": "matched_unintegrated"
     },
     {
+      "symbol": "FUN_002A8A50",
+      "address": 2787920,
+      "size": 160,
+      "matched": true,
+      "reference_sha256": "f8954c3316a6d9a155a2ec049570254492b8983b9e0daed4fe76e4bebf2948b4",
+      "candidate_sha256": "f8954c3316a6d9a155a2ec049570254492b8983b9e0daed4fe76e4bebf2948b4",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
       "symbol": "FUN_002A8AF0",
       "address": 2788080,
       "size": 204,
@@ -426,6 +446,16 @@
       "matched": true,
       "reference_sha256": "cecbde63fec2d1dec3d90276b554208f049d1bf52fa749b85923aac4b185ff55",
       "candidate_sha256": "cecbde63fec2d1dec3d90276b554208f049d1bf52fa749b85923aac4b185ff55",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
+      "symbol": "FUN_002B3868",
+      "address": 2832488,
+      "size": 40,
+      "matched": true,
+      "reference_sha256": "4a3b365dd7282fc79a6d47b88121e3e7978987d0a232c85766ff0eaee22a0223",
+      "candidate_sha256": "4a3b365dd7282fc79a6d47b88121e3e7978987d0a232c85766ff0eaee22a0223",
       "different_bytes": 0,
       "state": "matched_unintegrated"
     },
@@ -626,6 +656,26 @@
       "matched": true,
       "reference_sha256": "e856b9103ef09093a4aeae863e82e56f283fd4f76607d418804c6fe4cefea9fc",
       "candidate_sha256": "e856b9103ef09093a4aeae863e82e56f283fd4f76607d418804c6fe4cefea9fc",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
+      "symbol": "FUN_00335E68",
+      "address": 3366504,
+      "size": 32,
+      "matched": true,
+      "reference_sha256": "a2d1ff8483812c9687449753f8e3ac7301cc55358f8040fa87faa56b23efc0ff",
+      "candidate_sha256": "a2d1ff8483812c9687449753f8e3ac7301cc55358f8040fa87faa56b23efc0ff",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
+      "symbol": "FUN_00335E88",
+      "address": 3366536,
+      "size": 40,
+      "matched": true,
+      "reference_sha256": "d8c9d10272214264c853561da90307b5bb1cbf75b6ad7922b051e83a5f2fe574",
+      "candidate_sha256": "d8c9d10272214264c853561da90307b5bb1cbf75b6ad7922b051e83a5f2fe574",
       "different_bytes": 0,
       "state": "matched_unintegrated"
     },
@@ -1240,6 +1290,16 @@
       "state": "matched_unintegrated"
     },
     {
+      "symbol": "FUN_0034FA30",
+      "address": 3471920,
+      "size": 180,
+      "matched": true,
+      "reference_sha256": "1110f3f56431220099df394698efe42f5dd91925b25a7ea383483e41f06656c5",
+      "candidate_sha256": "1110f3f56431220099df394698efe42f5dd91925b25a7ea383483e41f06656c5",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
       "symbol": "FUN_0034FAE8",
       "address": 3472104,
       "size": 16,
@@ -1256,6 +1316,16 @@
       "matched": true,
       "reference_sha256": "01d5b786f20a50a1850f24afe836b2cb35083a2df78bd3d8e768c1841cb7d8a2",
       "candidate_sha256": "01d5b786f20a50a1850f24afe836b2cb35083a2df78bd3d8e768c1841cb7d8a2",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
+      "symbol": "FUN_003505B0",
+      "address": 3474864,
+      "size": 48,
+      "matched": true,
+      "reference_sha256": "19032bc5c7eb7f8e40d97e1dd3bfdb0af28f2a8fbe41b43a94a77dfd2bcd96a6",
+      "candidate_sha256": "19032bc5c7eb7f8e40d97e1dd3bfdb0af28f2a8fbe41b43a94a77dfd2bcd96a6",
       "different_bytes": 0,
       "state": "matched_unintegrated"
     },
@@ -1446,6 +1516,16 @@
       "matched": true,
       "reference_sha256": "70fdf27e8aa878da05756ac62760c98eaf2fae1b69de4ab32efbf0360e950247",
       "candidate_sha256": "70fdf27e8aa878da05756ac62760c98eaf2fae1b69de4ab32efbf0360e950247",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
+      "symbol": "FUN_00351FA0",
+      "address": 3481504,
+      "size": 32,
+      "matched": true,
+      "reference_sha256": "a39d865c89ad082eb3ecbd53acb8961fe283ba921fdc27e2b149aa3514ba6df7",
+      "candidate_sha256": "a39d865c89ad082eb3ecbd53acb8961fe283ba921fdc27e2b149aa3514ba6df7",
       "different_bytes": 0,
       "state": "matched_unintegrated"
     }

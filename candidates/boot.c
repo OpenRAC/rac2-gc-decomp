@@ -1074,3 +1074,81 @@ void FUN_002E59F8(s32 a0) {
         if(state!=0 && state!=6) p[0x74]=4;
     }
 }
+
+s32 FUN_002B3868(u8 *a0) {
+ u8 flags=a0[0xbe];
+ if(((flags^1)&1)!=0) {a0[0xbe]=flags|1;return 1;}
+ return 0;
+}
+
+void FUN_00335E68(u8 *a0, s32 a1) {
+ f32 *p=*(f32 **)(a0+0x10);
+ *p=(a1!=0)?1.0f:0.0f;
+}
+
+s32 FUN_00335E88(u8 *a0) {
+ return 0.0f<**(f32 **)(a0+0x10);
+}
+
+s32 FUN_003505B0(u8 *a0,u8 **a1) {
+ s32 *p=(s32 *)(a0+0x50000);
+ s32 n=p[2]-p[1];
+ if(n!=0) *a1=a0+p[0];
+ return n;
+}
+
+void FUN_00351FA0(u8 *a0) {
+ if(*(volatile s32 *)(a0+0xc)>0) *(volatile s32 *)(a0+0xc)=*(volatile s32 *)(a0+0xc)-1;
+}
+
+void FUN_0034FA30(s32 *a0,s32 a1) {
+    if(a0[0]==0) {
+        if(a0[1]!=4) {
+            s32 space=40-a0[12];
+            s32 take=a1;
+            if(space<a1) take=space;
+            a0[12]+=take;
+            if(a0[12]>39) a0[0]=1;
+            a1-=take;
+        } else a0[0]=1;
+    }
+    a0[16]=a0[16]/1024*1024;
+    a0[14]=(a0[14]+a1)%a0[16];
+    a0[15]+=a1;
+    a0[17]+=a1;
+}
+
+typedef struct { f32 x,y,z,w; } MmiPoint;
+s32 FUN_002A8A50(const f32 *a0,const MmiPoint *a1,s32 a2) {
+    s32 i;
+    for(i=0;i<a2;i++) {
+        f32 x=a1[i].x,y=a1[i].y;
+        if((a1[(i+1)%a2].x-x)*(a0[1]-y)-(a1[(i+1)%a2].y-y)*(a0[0]-x)>0.0f) return i+1;
+    }
+    return 0;
+}
+
+void FUN_0028B950(u8 *a0) {
+    s32 *value=*(s32 **)(a0+0xc);
+    s32 digits;
+    s32 n;
+    if (value!=0 && ((u32)value&3)==0) {
+        s32 initial=*value;
+        s32 maximum=*(s32 *)(a0+8);
+        *(volatile s32 *)(a0+0x78)=initial;
+        if (maximum<initial) *(volatile s32 *)(a0+0x78)=maximum;
+        *(s32 *)(a0+0x74)=*(volatile s32 *)(a0+0x78);
+    } else {
+        *(volatile s32 *)(a0+0x74)=99999;
+        *(volatile s32 *)(a0+0x78)=99999;
+    }
+    digits=0;
+    for (n=*(volatile s32 *)(a0+8);n>9;n/=10) digits++;
+    if ((*(u32 *)(a0+0x60)&3)==0 && (*(u32 *)(a0+0x60)&12)!=0) {
+        *(s32 *)(a0+0x5c)+=(digits+1)*12;
+        if (*(volatile s32 *)(a0+0x58)<14) { *(s32 *)(a0+0x58)=14; return; }
+    } else {
+        if (*(s32 *)(a0+0x5c)<12) *(s32 *)(a0+0x5c)=12;
+        *(s32 *)(a0+0x58)=*(volatile s32 *)(a0+0x58)+(digits+1)*14;
+    }
+}
