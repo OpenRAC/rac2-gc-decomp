@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from elf_tools import address_bytes, assert_fresh, read_elf
+from wsl_chain import compile_c, tool_hashes
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -120,28 +121,22 @@ def main() -> int:
         raise ValueError("C candidates must not embed assembly or retail bytes")
     work = runtime / "candidate-runs" / uuid.uuid4().hex[:8]
     work.mkdir(parents=True)
-    compiler = args.toolchain.resolve() / "bin" / "ee-gcc2953.exe"
-    assembler = args.toolchain.resolve() / "bin" / "ee-as.exe"
     linker = args.toolchain.resolve() / "ee" / "bin" / "ld.exe"
-    cc1 = args.toolchain.resolve() / "lib" / "gcc-lib" / "ee" / "2.95.3" / "cc1.exe"
-    cpp = cc1.parent / "cpp.exe"
-    for instrument in (compiler, assembler, linker, cc1, cpp):
-        if not instrument.is_file():
-            raise ValueError(f"Missing instrument {instrument.name}")
-    run([str(compiler), "-v"], work / "compiler-version.log")
+    if not linker.is_file():
+        raise ValueError(f"Missing instrument {linker.name}")
     assembly = work / "candidate.s"
     object_path = work / "candidate.o"
     flags = catalog["flags"]
     # The compiler writes the source spelling into `.file`, so the same file
     # compiled as an absolute path and as a bare name produces two different
-    # objects. Compile from the source's own directory under its bare name:
-    # the object then identifies the file itself, not the machine or the build
-    # directory it happened to be copied to, and two passes over one source
-    # yield one hash.
-    run([str(compiler), "-S", *flags, source.name, "-o", str(assembly)],
-        work / "compile-assembly.log", source.parent)
-    run([str(compiler), "-c", *flags, source.name, "-o", str(object_path)],
-        work / "compile.log", source.parent)
+    # objects. The reconstructed chain compiles the source under its bare name
+    # inside WSL (wsl_chain.py): the object identifies the file itself, not the
+    # machine or the build directory, and two passes over one source yield one
+    # hash.
+    compile_c(source, flags, object_path, assembly, work / "compile.log")
+    (work / "compiler-version.log").write_text(
+        "\n".join(f"{name}: {hash_}" for name, hash_ in tool_hashes(args.toolchain).items()) + "\n",
+        encoding="utf-8")
     assert_fresh(object_path, [source])
     functions = sorted(catalog["functions"], key=lambda function: function["address"])
     script = work / "candidate.ld"
@@ -156,8 +151,7 @@ def main() -> int:
               "candidate_elf_sha256": file_hash(candidate), "object_sha256": file_hash(object_path),
               "catalog_sha256": file_hash(ROOT / "config" / "candidate-catalog.json"),
               "checker_sha256": file_hash(Path(__file__)),
-              "flags": flags, "tools": {instrument.name: file_hash(instrument)
-                                         for instrument in (compiler, assembler, linker, cc1, cpp)},
+              "flags": flags, "tools": tool_hashes(args.toolchain),
               "functions": results, "integrated_functions": 0,
               "profile_scope": "Only the fully matched functions below; not a general RAC2 compiler qualification"}
     (work / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

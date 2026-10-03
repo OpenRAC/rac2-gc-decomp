@@ -9,6 +9,7 @@ from pathlib import Path
 
 from check_candidates import compare_function, file_hash, run, linker_script
 from elf_tools import assert_fresh
+from wsl_chain import compile_c as compile_c_source, tool_hashes
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -104,16 +105,12 @@ def split_assembly(content: str, functions: list[dict], relocated: bool = False)
     return pieces
 
 
-def c_instruments(toolchain: Path) -> dict:
-    """The separately qualified SN 2.95.3 instruments, by recorded name."""
-    return {"ee-gcc2953.exe": toolchain / "bin" / "ee-gcc2953.exe",
-            "ee-as.exe": toolchain / "bin" / "ee-as.exe",
-            "ld.exe": toolchain / "ee" / "bin" / "ld.exe",
-            "cc1.exe": toolchain / "lib" / "gcc-lib" / "ee" / "2.95.3" / "cc1.exe",
-            "cpp.exe": toolchain / "lib" / "gcc-lib" / "ee" / "2.95.3" / "cpp.exe"}
+def linker_instrument(toolchain: Path) -> Path:
+    """The chain's linker; the 2.9-ee compiler tools are hashed through WSL."""
+    return toolchain / "ee" / "bin" / "ld.exe"
 
 
-def compile_snapshot(directory: Path, instruments: dict, flags: list) -> tuple[Path, Path]:
+def compile_snapshot(directory: Path, toolchain: Path, flags: list) -> tuple[Path, Path]:
     """Compile the reviewed public source into this build; never edit the reviewed copy."""
     source = ROOT / "candidates" / "boot.c"
     c_directory = directory / "build" / "c"
@@ -125,8 +122,7 @@ def compile_snapshot(directory: Path, instruments: dict, flags: list) -> tuple[P
     # candidate checker does: `.file` carries the source spelling, so passing
     # the absolute build path here would hash a different object than the one
     # the candidate gate qualified, and that object would differ per machine.
-    run([str(instruments["ee-gcc2953.exe"]), "-c", *flags, snapshot.name, "-o", str(object_path)],
-        directory / "compile-c.log", snapshot.parent)
+    compile_c_source(snapshot, flags, object_path, None, directory / "compile-c.log")
     assert_fresh(object_path, [snapshot])
     return snapshot, object_path
 
@@ -144,11 +140,11 @@ def compile_c(reference: Path, directory: Path, toolchain: Path) -> tuple[dict, 
               if entry["matched"]}
     if actual != expected or len(candidates["functions"]) != len(expected):
         raise ValueError("Every integrated function requires a complete candidate match")
-    instrument_paths = c_instruments(toolchain)
-    hashes = {name: file_hash(path) for name, path in instrument_paths.items()}
+    linker = linker_instrument(toolchain)
+    hashes = tool_hashes(toolchain)
     if hashes != candidates["tools"]:
         raise ValueError("C integration instruments differ from the qualified candidate run")
-    snapshot, object_path = compile_snapshot(directory, instrument_paths, catalog["flags"])
+    snapshot, object_path = compile_snapshot(directory, toolchain, catalog["flags"])
     if file_hash(snapshot) != candidates["source_sha256"]:
         raise ValueError("C source changed while creating the integration snapshot")
     catalog["compiled_source_sha256"] = candidates["source_sha256"]
@@ -156,7 +152,7 @@ def compile_c(reference: Path, directory: Path, toolchain: Path) -> tuple[dict, 
     qualification_script = c_directory / "qualification.ld"
     qualification_script.write_text(linker_script(catalog), encoding="ascii")
     qualified = c_directory / "qualification.elf"
-    run([str(instrument_paths["ld.exe"]), "-T", str(qualification_script), "-o", str(qualified), str(object_path)],
+    run([str(linker), "-T", str(qualification_script), "-o", str(qualified), str(object_path)],
         directory / "qualify-c-object.log")
     assert_fresh(qualified, [object_path, snapshot, qualification_script])
     results = [compare_function(reference, qualified, function["symbol"], function["address"], function["size"])
@@ -229,11 +225,11 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
     candidates = json.loads((ROOT / "progress" / "candidates.json").read_text(encoding="utf-8"))
     if file_hash(reference) != catalog["reference_sha256"]:
         raise ValueError("Level reference changed since the placement catalog was measured")
-    instrument_paths = c_instruments(toolchain)
-    hashes = {name: file_hash(path) for name, path in instrument_paths.items()}
+    linker = linker_instrument(toolchain)
+    hashes = tool_hashes(toolchain)
     if hashes != candidates["tools"]:
         raise ValueError("C integration instruments differ from the qualified candidate run")
-    snapshot, object_path = compile_snapshot(directory, instrument_paths, catalog["flags"])
+    snapshot, object_path = compile_snapshot(directory, toolchain, catalog["flags"])
     if file_hash(snapshot) != candidates["source_sha256"]:
         raise ValueError("C source changed while creating the level integration snapshot")
     catalog["compiled_source_sha256"] = candidates["source_sha256"]
@@ -248,7 +244,7 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
         "/DISCARD/ : { *(.reginfo) }", "/DISCARD/ : { *(.reginfo) *(.text.FUN_*) }")
     qualification_script.write_text(script, encoding="ascii")
     qualified = c_directory / "level-qualification.elf"
-    run([str(instrument_paths["ld.exe"]), "-T", str(qualification_script), "-o", str(qualified), str(object_path)],
+    run([str(linker), "-T", str(qualification_script), "-o", str(qualified), str(object_path)],
         directory / "qualify-level-object.log")
     assert_fresh(qualified, [object_path, snapshot, qualification_script])
     results = [compare_function(reference, qualified, function["symbol"], function["address"], function["size"])

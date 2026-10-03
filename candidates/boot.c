@@ -207,15 +207,20 @@ s32 FUN_0012DA98(void *arg0) {
    which the retail build does not do; the qualifier is what keeps the store
    ahead of the return. The alternative idiom used by the RAC1 corpus is inline
    assembly, which the candidate gate refuses. */
+/* The copy itself goes through a 128-bit integer type, not the aggregate:
+   the reconstructed 2.9-ee compiler reaches lq/sq only through TImode (the
+   aggregate path builds ld/sd pairs or a memcpy call). Same bytes as the
+   retail (`lq $v0,0($a3); sq $v0,0($a0)`). */
 
 typedef struct { int a, b, c, d; } __attribute__((aligned(16))) Quad16;
+typedef int TI __attribute__((mode(TI)));
 
 void FUN_002A8C00(char *a, int b, int c, float d, Quad16 *q) {
     *(int *)(a + 0x10) = b;
     *(int *)(a + 0x14) = c;
     *(float *)(a + 0x1C) = d;
     *(int *)(a + 0x20) = 1;
-    *(volatile Quad16 *)a = *q;
+    *(volatile TI *)a = *(TI *)q;
 }
 
 void FUN_002B6770(int arg0, long arg1) {
@@ -544,4 +549,66 @@ extern void FUN_0012EE28();
 s32 FUN_00351828(void) {
     FUN_0012EE28();
     return 1;
+}
+
+/* La campagne : les corps qui appellent, reproduits par la chaine
+   reconstruite (2.9-ee + gas raffine) -- sauvegardes sd en creneaux de 8,
+   pas de sibcall, le prototype qui rend s32 decide v0 vs v1, chaines ||
+   a sortie unique. Mesures et preuves : docs/COMPILER-NOTES.md. */
+
+/* FUN_002A77E0 : tirage aleatoire borne par l'argument */
+extern s32 FUN_001163B0(void);
+s32 FUN_002A77E0(s32 a0) {
+    return (FUN_001163B0() >> 16 & 0x7fff) % a0;
+}
+
+/* FUN_002A7940 : tirage d'un angle : 12 bits ramenes autour de zero, puis en radians */
+extern s32 FUN_001163B0(void);
+f32 FUN_002A7940(void) {
+    return (f32)((FUN_001163B0() >> 16 & 0xfff) - 0x800) * 0.0015339808f;
+}
+
+/* FUN_002A7820 : tirage aleatoire dans un intervalle ferme */
+extern s32 FUN_001163B0(void);
+s32 FUN_002A7820(s32 a0, s32 a1) {
+    return (FUN_001163B0() >> 16 & 0x7fff) % ((a1 - a0) + 1) + a0;
+}
+
+/* FUN_002889B8 : remet trois champs a zero, initialise un bloc, puis arme deux drapeaux */
+extern s32 FUN_00115484(u8 *, s32, s32);
+void FUN_002889B8(u8 *a0) {
+    *(s32 *)(a0 + 0x30) = 0;
+    *(s32 *)(a0 + 0x34) = 0;
+    *(s32 *)(a0 + 0x38) = 0;
+    FUN_00115484(a0 + 8, 0xcd, 0x28);
+    *(s32 *)(a0 + 0x44) = 0;
+    *(s32 *)(a0 + 0x40) = 1;
+}
+
+/* FUN_003512B8 : arrondit un champ au multiple de 2048, sous sema */
+extern s32 FUN_0011AC60(s32);
+extern s32 FUN_0011AC40(s32);
+void FUN_003512B8(u8 *a0) {
+    FUN_0011AC60(*(s32 *)(a0 + 0x40));
+    *(s32 *)(a0 + 0x14) = (*(s32 *)(a0 + 0x14) + 0x7ff) / 0x800 * 0x800;
+    FUN_0011AC40(*(s32 *)(a0 + 0x40));
+}
+
+/* FUN_00300540 : aiguillage : categorie d'arme selon l'identifiant */
+s32 FUN_00300540(s32 a0) {
+    s32 v = 0;
+    if (a0 == 0 || a0 == 14 || a0 == 13) v = 2;
+    else if (a0 == 1 || a0 == 3 || a0 == 11 || a0 == 12) v = 1;
+    return v;
+}
+
+/* FUN_00351268 : attend puis combine deux champs decales de 11 */
+extern s32 FUN_0011AC60(s32 a0);
+extern s32 FUN_0011AC40(s32 a0);
+s32 FUN_00351268(u8 *a0) {
+    s32 x;
+    FUN_0011AC60(*(s32 *)(a0 + 0x40));
+    x = (*(s32 *)(a0 + 0x10) << 11) + *(s32 *)(a0 + 0x14);
+    FUN_0011AC40(*(s32 *)(a0 + 0x40));
+    return x;
 }

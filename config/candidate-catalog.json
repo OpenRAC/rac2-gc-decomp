@@ -19,7 +19,11 @@
     "D_0018C0B0": 1622192,
     "FUN_0011AAD0": 1157840,
     "FUN_001338C8": 1259720,
-    "FUN_0012EE28": 1240616
+    "FUN_0012EE28": 1240616,
+    "FUN_001163B0": 1139632,
+    "FUN_00115484": 1135748,
+    "FUN_0011AC60": 1158240,
+    "FUN_0011AC40": 1158208
   },
   "functions": [
     {
@@ -789,6 +793,62 @@
       "ranges": 1,
       "xrefs": 0,
       "meaning": "appelle FUN_0012EE28 avec l'argument 1 et rend 1"
+    },
+    {
+      "symbol": "FUN_002A77E0",
+      "address": 2783200,
+      "size": 60,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "tirage aleatoire borne par l'argument"
+    },
+    {
+      "symbol": "FUN_002A7940",
+      "address": 2783552,
+      "size": 68,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "tirage d'un angle : 12 bits ramenes autour de zero, puis en radians"
+    },
+    {
+      "symbol": "FUN_002A7820",
+      "address": 2783264,
+      "size": 84,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "tirage aleatoire dans un intervalle ferme"
+    },
+    {
+      "symbol": "FUN_002889B8",
+      "address": 2656696,
+      "size": 72,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "remet trois champs a zero, initialise un bloc, puis arme deux drapeaux"
+    },
+    {
+      "symbol": "FUN_003512B8",
+      "address": 3478200,
+      "size": 84,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "arrondit un champ au multiple de 2048, sous sema"
+    },
+    {
+      "symbol": "FUN_00300540",
+      "address": 3147072,
+      "size": 80,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "aiguillage : categorie d'arme selon l'identifiant"
+    },
+    {
+      "symbol": "FUN_00351268",
+      "address": 3478120,
+      "size": 76,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "attend puis combine deux champs decales de 11"
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"
