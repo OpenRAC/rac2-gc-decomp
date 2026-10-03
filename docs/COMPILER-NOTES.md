@@ -149,6 +149,13 @@ through `scripts/wsl_chain.py` (the 1999 tools are 32-bit Linux binaries: they
 run under WSL, and every source is compiled under its bare name inside the WSL
 filesystem, so the object is reproducible from any checkout).
 
+There are two assembly paths in the integrated build. Reviewed C goes through
+`cpp`/`cc1` and GNU `as` to produce its C object. The remaining reconstructed
+assembly inputs still go through `Ps2EeAs.exe` in `scripts/build.py`. That build
+then links both sets of objects; Ps2EeAs does not reassemble the already produced
+C object. The C path was introduced in commit `b2b9101`. A padding assumption
+about Ps2EeAs therefore does not automatically apply to the GNU-assembled C.
+
 ## Scope
 
 This document claims what was measured: the named bodies and the 96 previously

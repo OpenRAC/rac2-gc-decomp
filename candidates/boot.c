@@ -1152,3 +1152,55 @@ void FUN_0028B950(u8 *a0) {
         *(s32 *)(a0+0x58)=*(volatile s32 *)(a0+0x58)+(digits+1)*14;
     }
 }
+
+s32 FUN_002CB4E8(s32 a0) {
+ s32 result=0;
+ if(a0<0x15 || a0==0x18) result=1;
+ return result;
+}
+
+s32 FUN_002ED688(u8 *a0) {
+ if((*(unsigned short *)(a0+0x34)&0x20)==0) return 0;
+ return (*(s32 **)(a0+0x68))[5];
+}
+
+void FUN_00335E38(u8 *a0,f32 f0,f32 f1,f32 f2,f32 f3) {
+ (*(f32 **)a0)[0]=f0;(*(f32 **)a0)[1]=f1;
+ (*(f32 **)a0)[2]=f2;(*(f32 **)a0)[3]=f3;
+}
+
+void FUN_00335F88(u8 *a0,f32 f0,f32 f1,f32 f2,f32 f3) {
+ (*(f32 **)(a0+4))[0]=f0;(*(f32 **)(a0+4))[1]=f1;
+ (*(f32 **)(a0+4))[2]=f2;(*(f32 **)(a0+4))[3]=f3;
+}
+
+s32 FUN_00342BC0(u8 *a0) {
+ if(*(s32 *)(a0+0x10)!=0) return *(s32 *)((u32)a0+(*(s32 *)(a0+0x14)<<2)+0x28);
+ return 0;
+}
+
+void FUN_003480F0(u8 *a0,f32 f0,f32 f1) {
+ (*(f32 **)(a0+0x4c))[0]=f0;
+ (*(f32 **)(a0+0x4c))[1]=f1;
+ (*(s32 **)(a0+0x4c))[2]=0;
+ (*(s32 **)(a0+0x4c))[3]=0;
+}
+
+void FUN_00350878(unsigned long *a0,unsigned long a1,unsigned long a2,unsigned long a3) {
+ *a0=(a1<<32)|((a2<<32)>>4)|((a3<<32)>>32);
+}
+
+f32 FUN_002A7798(f32 a0) {
+ return 1.0f-(1.0f-a0)*(1.0f-a0);
+}
+
+void FUN_00339760(u8 *a0) {s32 v=1;*(s32 *)(a0+0x300)=v;}
+
+void FUN_00350590(u8 *a0) {
+ a0+=0x50000;
+ *(s32 *)(a0+8)=0x50000;
+ *(s32 *)a0=0;
+ *(s32 *)(a0+4)=0;
+}
+
+void FUN_003518C8(u8 *a0) {s32 v=1;*(s32 *)(a0+0xa8)=v;}
