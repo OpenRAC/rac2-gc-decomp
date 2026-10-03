@@ -975,3 +975,102 @@ void FUN_0034FB20(u8 *a0, s32 a1, s32 a2, s32 a3) {
     while (FUN_0011AFC0(id) >= 0) {}
     FUN_00133930(a2,a3);
 }
+
+s32 FUN_0029AE78(s32 *a0) {
+ s32 n=8;
+ while(a0[0]!=0) {
+  n+=8; n+=a0[1]; n=(n+3)&-4;
+  a0+=4;
+ }
+ return n+8;
+}
+
+s32 FUN_002AB1F0(u8 *a0) {
+ if(a0==0) return 0;
+ if((*(unsigned short *)(a0+0x34)&0x20)!=0) return (*(s32 **)(a0+0x68))[0];
+ return 0;
+}
+
+s32 FUN_002AB220(u8 *a0) {
+ if(a0==0) return 0;
+ if((*(unsigned short *)(a0+0x34)&0x20)!=0) return (*(s32 **)(a0+0x68))[4];
+ return 0;
+}
+
+s32 FUN_002AD0B0(u8 *a0) {
+ if(a0==0) return 0;
+ if((*(unsigned short *)(a0+0x34)&0x20)==0) return 0;
+ return (*(s32 **)(a0+0x68))[2];
+}
+
+u8 *FUN_00349498(u8 *a0) {
+ s32 *p=(s32 *)(a0+0x30);s32 i=3;
+ do {
+  p[0]=0;p[1]=0;p[2]=0;p[3]=0;
+  i--;p+=4;
+ }while(i!=-1);
+ return a0;
+}
+
+void FUN_0026FEB8(const char *format,...) {
+}
+
+void FUN_002802E0(unsigned short *a0,s32 a1,s32 a2,s32 a3,s32 a4,s32 a5,s32 a6,s32 a7,s32 a8) {
+ a0[0]=a1;a0[1]=a2;a0[2]=a3;a0[3]=a4;
+ a0[4]=a5;a0[5]=a6;a0[8]=a7;a0[9]=a8;
+ a0[6]=0;a0[7]=0;a0[10]=0;a0[11]=0;
+}
+
+void FUN_0034F960(s32 *a0,s32 *a1,s32 *a2,s32 *a3,s32 *a4) {
+ s32 offset,n;
+ if(a0[0]==0) {
+  if(a0[1]!=4) {
+   *a1=(s32)((u8 *)a0+(a0[12]+8));
+   *a2=0x28-a0[12]; *a3=a0[13]; *a4=a0[16];
+   return;
+  }
+  *a1=a0[13]; *a2=a0[16];
+  clear: *a3=0; *a4=0; return;
+ }
+ n=a0[16]-a0[15];offset=a0[14];
+ if(a0[16]-offset>=n) {
+  *a1=a0[13]+offset; *a2=n; goto clear;
+ }
+ *a1=a0[13]+offset;
+ *a2=a0[16]-a0[14]; *a3=a0[13];
+ *a4=n-(a0[16]-a0[14]);
+}
+
+s32 FUN_00350628(u8 *a0,s32 *a1) {
+    u8 *p=a0+0x50000;
+    s32 used=*(s32 *)(p+4);
+    if(used!=0) {
+        s32 size=*(s32 *)(p+8);
+        *a1=(s32)a0+((*(s32 *)p-used)+size)%size;
+    }
+    return *(s32 *)(p+4);
+}
+
+extern u8 D_00188660[];
+s32 FUN_002E59B0(s32 a0,s32 a1) {
+    if(a1>=0) {
+        u8 *p=D_00188660+a1*0x70;
+        if(*(s32 *)(p+0x88)==a0 && (u32)p[0x74]-1<2) return 1;
+    }
+    return 0;
+}
+
+extern u8 D_00188660[];
+void FUN_002E59F8(s32 a0) {
+    if(a0>=0) {
+        u8 *p=D_00188660+a0*0x70;
+        s32 state=p[0x74];
+        if(state==7) {
+            *(s32 *)(p+0x88)=0;
+            *(s32 *)(p+0x8c)=0;
+            p[0x74]=0;
+            return;
+        }
+        if(state!=0 && state!=6) p[0x74]=4;
+    }
+}

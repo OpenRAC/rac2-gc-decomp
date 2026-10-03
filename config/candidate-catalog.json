@@ -47,7 +47,8 @@
     "FUN_00132028": 1253416,
     "FUN_0011AFC0": 1159104,
     "FUN_0011AFE0": 1159136,
-    "FUN_00133930": 1259824
+    "FUN_00133930": 1259824,
+    "D_00188660": 1607264
   },
   "functions": [
     {
@@ -1105,6 +1106,94 @@
       "ranges": 1,
       "xrefs": 0,
       "meaning": "soumet SIF DMA puis attend completion; qualifie seulement avec padding post-DBR"
+    },
+    {
+      "symbol": "FUN_0029AE78",
+      "address": 2731640,
+      "size": 56,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "somme les tailles alignees de descriptors termines par zero"
+    },
+    {
+      "symbol": "FUN_002AB1F0",
+      "address": 2798064,
+      "size": 48,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "lit un champ indirect lorsque pointeur et drapeau sont valides"
+    },
+    {
+      "symbol": "FUN_002AB220",
+      "address": 2798112,
+      "size": 48,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "lit un champ indirect+0x10 sous drapeau et pointeur valides"
+    },
+    {
+      "symbol": "FUN_002AD0B0",
+      "address": 2805936,
+      "size": 48,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "lit un champ indirect+8 sous drapeau et pointeur valides"
+    },
+    {
+      "symbol": "FUN_00349498",
+      "address": 3445912,
+      "size": 52,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "remet a zero seize mots et conserve le pointeur objet"
+    },
+    {
+      "symbol": "FUN_0026FEB8",
+      "address": 2555576,
+      "size": 56,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "stub variadique sans sortie;47 vrais callers format et args variables"
+    },
+    {
+      "symbol": "FUN_002802E0",
+      "address": 2622176,
+      "size": 56,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "initialise huit valeurs16bits et quatre zeros; neuf args prouves t0-t3 et0sp"
+    },
+    {
+      "symbol": "FUN_0034F960",
+      "address": 3471712,
+      "size": 208,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "decrit deux plages de tampon avec quatre sorties; cinq args confirmes callsite3503f4"
+    },
+    {
+      "symbol": "FUN_00350628",
+      "address": 3474984,
+      "size": 72,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "return used count and circular source position if nonempty"
+    },
+    {
+      "symbol": "FUN_002E59B0",
+      "address": 3037616,
+      "size": 72,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "test owner and active state of global entry; boot only"
+    },
+    {
+      "symbol": "FUN_002E59F8",
+      "address": 3037688,
+      "size": 84,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "clear or stop a global entry state; boot only"
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"
