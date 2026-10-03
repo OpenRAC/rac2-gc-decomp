@@ -14,6 +14,121 @@ name at the exact entry address; all 597 agreed. The two passes have no overlapp
 virtual entry addresses and analyst-assigned structural labels. It contains no game
 messages, extracted instructions or assets.
 
+## First pass: the remaining 59 messages
+
+**Historical investigation, 2–3 October 2026:** after the dispatch-table pass
+described in [`MOBY-DISPATCH-TABLES.md`](MOBY-DISPATCH-TABLES.md), a selected set
+of **59 diagnostic messages** remained without a carrying function in the analyzed
+retail boot. The comparison used the retail target and the **9 September 2003 PAL
+review disc**, whose boot identifier is `SCES_516.07`. These 59 cases were resolved
+as a localization/classification task; that did not mean 59 additional EE functions
+had been identified or that every diagnostic in either game image had been analyzed.
+
+### Method and extraction correction
+
+1. **Our own ISO9660 reader and level-archive extractor.** The September prototype's
+   level table was located at `RC2.HDR + 0x5000 + i*0x3000`, with the level LBA at
+   `+0x0004` and scene LBA at `+0x1804`. Its LBAs were checked against the actual
+   ISO9660 directory. Each level archive contains chained `(dest_addr, copy_size,
+   section_type, entry_point)` records followed by their content, covering `.lit`,
+   `.bss`, `.data`, `lvl.vtbl`, `lvl.camvtbl`, `lvl.sndvtbl` and `.text`.
+2. **32 of the 59 selected messages occur inside retail level overlays.** Their
+   referencing functions were located in the corresponding retail programs already
+   loaded in Ghidra. This explains why a boot-only investigation could not identify
+   their overlay carriers.
+3. **Naming guard.** The first pass changed only a generic `FUN_…` function receiving
+   exactly one distinct proposed label from the selected diagnostic patterns.
+   Existing names and functions receiving conflicting selected labels were preserved.
+   This selection-based guard is not proof that a function references exactly one
+   message across the entire image; the scripts searched the first occurrence of each
+   selected pattern and followed Ghidra's existing references.
+
+The first report recorded **27 levels and 57,070,528 extracted bytes**. This was an
+incomplete extraction, corrected on **3 October 2026**: the section-header plausibility
+test rejected a valid **8-byte section** because it required at least `0x10` bytes.
+That stopped the chain before the following `.text` in **10 of the 27 levels**.
+The corrected corpus has **27 levels, 189 sections (seven per level) and
+75,369,728 bytes**, recovering **18,299,200 bytes**. The seven-section layout is
+therefore the corrected result, rather than a property fully observed in the first
+truncated corpus. The byte totals are retained here to explain the correction.
+
+The missing content was level code. The diagnostic-message comparison was rerun on
+the complete corpus and its previously reported counts were unchanged; it does not
+turn the old incomplete extraction into a complete one retroactively.
+
+### First-pass result: 102 annotations
+
+**102 functions were named across 25 overlays.** Shared-library code appears as a
+separate copy in each level, so one role can occur in several programs:
+
+| Name | Functions |
+| --- | ---: |
+| `DirectionalLightsOverflow` | 25 |
+| `CameraCollPrimTestGridOutOfBounds` | 25 |
+| `LevelDoorLimitExceeded` | 25 |
+| `NpcShowMessageBadId` | 10 |
+| `PathSetWtoDistNullPath` | 7 |
+| `ThermanatorBallsNeededReport` | 5 |
+| `PathDrawInvalidIndex` | 2 |
+| `MusicPitchDecreased` | 2 |
+| `CutsceneFinished` | 1 |
+| **Total** | **102** |
+
+The historical persistence check reran the pass after saving: those functions were
+reported as already named. On 3 October 2026, all 102 entries were also checked
+against the current Ghidra function names. Their keys and the nine-name count table
+remain present in [`assert-message-names.tsv`](assert-message-names.tsv), alongside
+the second-pass additions.
+
+**Thermanator cross-confirmation:** two related diagnostic messages are referenced
+by `UpdateMoby_3212`, whose existing name was derived independently from the
+prototype's class identifiers in the dispatch-table pass. Together, the identifier
+evidence and diagnostic context support the identification of **class 3212 as the
+Thermanator**. The function's existing dispatch name was preserved; the two
+messages did not trigger two competing automatic renames. This corroboration
+does not recover an original designer/source symbol for its implementation.
+
+### The other 27 cases: evidence for IOP library data
+
+The remaining **27 of the 59** selected messages were located in boot-image data
+sections: `core.data` / `core.rdata` in the September prototype, with corresponding
+retail boot data. The cluster contains identifiers associated with IOP-side
+libraries, including `989snd`, `libcdvd`, `libdma`, `libpad2`, `libdbc` / `libmc`
+and `SIF`, together with library-version records and `sceDbc*` / `SifDmaAddr`
+identifiers. Their game text and version-banner contents are not reproduced here.
+
+The historical controls were:
+
+- **0/27** selected addresses recovered as targets of `lui`/`addiu` pairs in the
+  retail boot `.text`, and **0/27** in the September prototype boot `.text`.
+- Of **2,982 distinct addresses** constructed by those pairs in the prototype
+  boot `.text`, the scanner recovered the known witness counts exactly:
+  **119/119, 115/115 and 110/110**.
+- The available Ghidra reference analysis reported no cross-reference to those
+  27 strings.
+
+Together, these observations support the classification as **IOP-library string
+data packaged in the EE boot image**, rather than diagnostics attached to an
+identified EE function. They are static evidence, not verification of a particular
+module's upload or execution, and absence from this instruction-pair/reference
+analysis does not exclude every indirect address construction. No EE function was
+named from these 27 cases. Thus the original 59-case investigation accounts for
+**32 overlay-localized cases plus 27 library-data cases**, without treating data
+classification as source-code recovery.
+
+### First-pass limits and provenance
+
+The first pass preserved conflicting selected labels, including four debug-camera
+controls, sound-mismatch cases and the Thermanator pair. A diagnostic-derived label
+describes an observed relationship, not everything the function does. Its overlay
+identifications used dispatch identifiers and diagnostic references; the first pass
+made no byte-level prototype-to-retail code-correspondence claim.
+
+The source of this historical pass was the **9 September 2003 PAL review disc
+(`SCES_516.07`)**, read with our own tools, plus the pinned retail overlay programs.
+The reverse-engineered archive format and the detailed working evidence remain in
+the project notes. No original source symbols were recovered by this naming method.
+
 ## What the labels mean
 
 These are annotations of functions that reference a diagnostic message. They are
@@ -28,7 +143,7 @@ labelled `BoltsSpawnNegativeCount`, contains a larger spawning routine. These la
 are useful search anchors and should be refined only after reviewing the whole body.
 They must not be promoted directly to decompilation API names.
 
-## Provenance and checks
+## Second pass: 495 additions and current checks
 
 The private second-pass journal records 495 successful renames and zero failures.
 Its 495 rename records have 495 distinct program/address keys. The input selection
