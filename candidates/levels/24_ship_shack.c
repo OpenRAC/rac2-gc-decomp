@@ -22,3 +22,10 @@ void LVL_24_SHIP_SHACK_FUN_002F5DE0(u8 *object) {
  *(s32 *)(object+0x74)=-2;*(s32 *)(object+0x78)=30;
  *(u16 *)(object+0x48)=0;*(u16 *)(object+0x4a)=0;*(s32 *)(object+0x70)=0;
 }
+
+typedef struct {u32 items[5];} NativeTable20;
+extern const NativeTable20 LVL_24_SHIP_SHACK_D_001A8EB0;
+u32 LVL_24_SHIP_SHACK_FUN_002F2510(s32 index) {
+ NativeTable20 values=LVL_24_SHIP_SHACK_D_001A8EB0;
+ return values.items[index];
+}
