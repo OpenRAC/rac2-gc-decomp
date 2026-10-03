@@ -6,10 +6,10 @@
   "reference_sha256": "575ab90300200e2c8bd49afba637aa9212e82d2ee17af618e2ad8c5bf78bd36b",
   "reference_entry": 2769288,
   "candidate_source": "candidates/levels/26_jamming_array.c",
-  "source_sha256": "8536f1731d899f9cc9ab076b9696fcc66c7a59e64b3ebc0a157dc6f51a9cf343",
-  "catalog_sha256": "206dde776bf759d85e250b45ec5dc4f98868f84a3373a6d2f33f2ac8575044e9",
-  "object_sha256": "203b6901d86787be7c1d89ebc7019d757382ab2bdb36679e4d61ba3cb3cb1494",
-  "candidate_elf_sha256": "993172589b20e96eca2136bad4cf817caaa7e3550afa2e4be824f73ac1cb22f0",
+  "source_sha256": "6ced1b08e5b8a5a007b30cb9e0ba7e3297e1f90fb60581334bc6b4867ff3c10d",
+  "catalog_sha256": "28337a59fb3b77b95a7700de52b0dbdfb63a0978d92fe5e0d6620bd01253a1f3",
+  "object_sha256": "b6cb22486c0f57b14929d34b5af9d3d96735a72eb5ee246baaec697b7d8767e0",
+  "candidate_elf_sha256": "d3587eb693ede724f940eb847baf181327075ff58ba4846b2add67481e980d66",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_002AE5D0",
+      "address": 2811344,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_002D7020",
+      "address": 2977824,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_26_JAMMING_ARRAY_FUN_002D7FE0",
       "address": 2981856,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

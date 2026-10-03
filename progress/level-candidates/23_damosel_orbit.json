@@ -6,10 +6,10 @@
   "reference_sha256": "0c75617382013a703eb5fcc85845f4d1352f496bfbb4047f512454aa730d37b4",
   "reference_entry": 2801928,
   "candidate_source": "candidates/levels/23_damosel_orbit.c",
-  "source_sha256": "e2138ab0fae57a0e6e31fc7d0be3b973298e1183f8eaf703620f70afe4b768d3",
-  "catalog_sha256": "ff0dca1f76164a73109ccd9e9bdee5846a8b76ca3ff366244efb20d3ffe106d2",
-  "object_sha256": "4dc6ff684ed6a7fc5b8c22ef1bf2d87120a99af1f2c3a17961de10ea02670507",
-  "candidate_elf_sha256": "6a4dd44a57d5eb4e46b56ece25769fe1527b81f4c0289aff4f083fe98925f8b4",
+  "source_sha256": "5bde8807cbfd4d8992a2d5ddf3a64d7b945ebf8a092a52c3abb1f73e19174ab5",
+  "catalog_sha256": "612a00bd1c0dca2a1c1e7105cd24415cefd59e014136dd81f3fecac7279132bb",
+  "object_sha256": "f2151baad251a3d18e029863d31d9de7218d925c6b95df0cce693e1c0ebe7f6c",
+  "candidate_elf_sha256": "225c64045e26ad9b79067099c23985177631ed68dfc68c63437e861049da2737",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6D88",
+      "address": 2846088,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E12B8",
+      "address": 3019448,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E2278",
       "address": 3023480,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

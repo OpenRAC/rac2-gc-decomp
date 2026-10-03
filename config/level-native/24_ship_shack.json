@@ -14,10 +14,46 @@
   ],
   "functions": [
     {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002AD0D0",
+      "address": 2805968,
+      "size": 20,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+    },
+    {
       "symbol": "LVL_24_SHIP_SHACK_FUN_002D1570",
       "address": 2954608,
       "size": 72,
       "meaning": "updates the resident selection and index after validating the selected table entry"
+    },
+    {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D2878",
+      "address": 2959480,
+      "size": 28,
+      "meaning": "calls the measured float callee with the negated input"
+    },
+    {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5820",
+      "address": 2971680,
+      "size": 28,
+      "meaning": "calls the measured integer callee with zero"
+    },
+    {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5840",
+      "address": 2971712,
+      "size": 28,
+      "meaning": "calls the measured integer callee with three"
+    },
+    {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D59A0",
+      "address": 2972064,
+      "size": 12,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+    },
+    {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5A30",
+      "address": 2972208,
+      "size": 28,
+      "meaning": "tests the byte at the indexed 16-byte table entry"
     },
     {
       "symbol": "LVL_24_SHIP_SHACK_FUN_002D6960",
@@ -26,15 +62,21 @@
       "meaning": "clears five object fields; authored level-only C"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002F5DE0",
-      "address": 3104224,
-      "size": 80,
-      "meaning": "authored C for independently verified level-native body"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D6CF8",
+      "address": 2977016,
+      "size": 32,
+      "meaning": "sets the referenced object halfword at 0x7e and clears its byte at 0x7d"
     },
     {
       "symbol": "LVL_24_SHIP_SHACK_FUN_002F2510",
       "address": 3089680,
       "size": 72,
+      "meaning": "authored C for independently verified level-native body"
+    },
+    {
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002F5DE0",
+      "address": 3104224,
+      "size": 80,
       "meaning": "authored C for independently verified level-native body"
     },
     {
@@ -57,6 +99,11 @@
     "LVL_24_SHIP_SHACK_D_001B1B74": 1776500,
     "LVL_24_SHIP_SHACK_D_00189E20": 1613344,
     "LVL_24_SHIP_SHACK_D_001BC3C0": 1819584,
-    "LVL_24_SHIP_SHACK_D_0028AAC0": 2665152
+    "LVL_24_SHIP_SHACK_D_0028AAC0": 2665152,
+    "LVL_24_SHIP_SHACK_D_0018C0B4": 1622196,
+    "LVL_24_SHIP_SHACK_FUN_002D25C0": 2958784,
+    "LVL_24_SHIP_SHACK_FUN_002D5860": 2971744,
+    "LVL_24_SHIP_SHACK_D_001B8500": 1803520,
+    "LVL_24_SHIP_SHACK_D_001B8580": 1803648
   }
 }

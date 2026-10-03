@@ -2136,6 +2136,34 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_15_GORN_FUN_002C6E50",
+      "address": 2911824,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "15_gorn",
+      "candidate_source": "candidates/levels/15_gorn.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002EF720",
+      "address": 3077920,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "15_gorn",
+      "candidate_source": "candidates/levels/15_gorn.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_15_GORN_FUN_002F06E0",
       "address": 3081952,
       "size": 24,
@@ -2169,14 +2197,14 @@
     "bytes_compared": 2916344,
     "segments": 1
   },
-  "matched_code_bytes": 7584,
+  "matched_code_bytes": 7616,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "dbfbff01097062a706d44617feb023be665ef9e9e2fc5090855da1c4f90b7489",
+  "candidate_elf_sha256": "f9e4c3922f08f4ac3be1e625bee73fed3cfe85d13bec25d5b038af6b0692623a",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "115D80.s": [
@@ -2332,6 +2360,8 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_15_GORN_FUN_002C6E50",
+      "LVL_15_GORN_FUN_002EF720",
       "LVL_15_GORN_FUN_002F06E0",
       "LVL_15_GORN_FUN_0030C8F8"
     ]
@@ -2358,7 +2388,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "dbfbff01097062a706d44617feb023be665ef9e9e2fc5090855da1c4f90b7489",
+    "candidate_elf_sha256": "f9e4c3922f08f4ac3be1e625bee73fed3cfe85d13bec25d5b038af6b0692623a",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "115D80.s": [
@@ -2514,6 +2544,8 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_15_GORN_FUN_002C6E50",
+        "LVL_15_GORN_FUN_002EF720",
         "LVL_15_GORN_FUN_002F06E0",
         "LVL_15_GORN_FUN_0030C8F8"
       ]
@@ -2525,13 +2557,13 @@
   },
   "reference_entry": 2869768,
   "candidate_entry": 2869768,
-  "dependency_sha256": "4bbb610eb1898568e61d0762a8c434b6fc854b64d3650951f21bbfa0b81547eb",
+  "dependency_sha256": "26c0db9f4a5e2f24147b52b37b13d6fd8dff88929eafc9ee3b043cc141f457c7",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/15_gorn.c",
     "catalog_path": "config/level-native/15_gorn.json",
     "review_path": "progress/level-candidates/15_gorn.json",
-    "review_sha256": "89364600a134f41d062fc6fa3f4e997bf2e9bd6a7b6fc89123468472573735f0",
+    "review_sha256": "c36700a6d1b266fd1286aa945231593cb9c29c2a69698042e766d9c97c5b4040",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2540,10 +2572,10 @@
       "reference_sha256": "838098ef94f05d78f79be2f65291447db6c9468e7c44e2cab36396f720cce109",
       "reference_entry": 2869768,
       "candidate_source": "candidates/levels/15_gorn.c",
-      "source_sha256": "14561b3bed2cf8f45d2deeb72371b726422cd1bae665b430b36e93df58da91f4",
-      "catalog_sha256": "b0cfd0a707ea09db7633d546d22c5eb722a0d318726ae2a961e2f77ea0059f6f",
-      "object_sha256": "d33ba1b287e22460c452bb198e674dafac4738b89e44a930117836a8a4fb654b",
-      "candidate_elf_sha256": "d40f4821b2098a074d6adc35611af24d663810bef78ffc9181a739be0604d4d7",
+      "source_sha256": "47380dd97e1c18e2989b0d1b9de6bc2d89c8b9acf557547459b088fc47197fdd",
+      "catalog_sha256": "3c00b01cb31afff4f0727c38acd6f1bc17e6db6a51f1a25f23a3cb4c97fd6054",
+      "object_sha256": "ee1648146d5a87750e1a3015d44d7c5c68aac86fd479d8b2ff5107cba863d2c8",
+      "candidate_elf_sha256": "dbb1b6b54d3dc2fafcec527176b7e82114fbab0f49b754a59fc67e4e0d9e3b81",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2558,6 +2590,28 @@
       ],
       "state": "matched_unintegrated",
       "functions": [
+        {
+          "symbol": "LVL_15_GORN_FUN_002C6E50",
+          "address": 2911824,
+          "size": 20,
+          "matched": true,
+          "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 20
+        },
+        {
+          "symbol": "LVL_15_GORN_FUN_002EF720",
+          "address": 3077920,
+          "size": 12,
+          "matched": true,
+          "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 12
+        },
         {
           "symbol": "LVL_15_GORN_FUN_002F06E0",
           "address": 3081952,
@@ -2581,8 +2635,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 96
+      "matched_code_bytes": 128
     },
-    "object_sha256": "d33ba1b287e22460c452bb198e674dafac4738b89e44a930117836a8a4fb654b"
+    "object_sha256": "ee1648146d5a87750e1a3015d44d7c5c68aac86fd479d8b2ff5107cba863d2c8"
   }
 }

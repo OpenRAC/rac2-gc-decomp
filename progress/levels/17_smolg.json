@@ -2136,6 +2136,34 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_17_SMOLG_FUN_002AF358",
+      "address": 2814808,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "17_smolg",
+      "candidate_source": "candidates/levels/17_smolg.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_17_SMOLG_FUN_002D7940",
+      "address": 2980160,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "17_smolg",
+      "candidate_source": "candidates/levels/17_smolg.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_17_SMOLG_FUN_002D8998",
       "address": 2984344,
       "size": 24,
@@ -2169,14 +2197,14 @@
     "bytes_compared": 2803536,
     "segments": 1
   },
-  "matched_code_bytes": 7584,
+  "matched_code_bytes": 7616,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "08caa5d65e4059c9e5eb5e6790ef2f0c1079198e38bad5df598d580d22fec46f",
+  "candidate_elf_sha256": "f0b9d4d86a90de2f9d565f95feac1addcbfc5512e3d38c109bf866c13395bc06",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "FE400.s": [
@@ -2332,6 +2360,8 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_17_SMOLG_FUN_002AF358",
+      "LVL_17_SMOLG_FUN_002D7940",
       "LVL_17_SMOLG_FUN_002D8998",
       "LVL_17_SMOLG_FUN_002F4C40"
     ]
@@ -2358,7 +2388,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "08caa5d65e4059c9e5eb5e6790ef2f0c1079198e38bad5df598d580d22fec46f",
+    "candidate_elf_sha256": "f0b9d4d86a90de2f9d565f95feac1addcbfc5512e3d38c109bf866c13395bc06",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "FE400.s": [
@@ -2514,6 +2544,8 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_17_SMOLG_FUN_002AF358",
+        "LVL_17_SMOLG_FUN_002D7940",
         "LVL_17_SMOLG_FUN_002D8998",
         "LVL_17_SMOLG_FUN_002F4C40"
       ]
@@ -2525,13 +2557,13 @@
   },
   "reference_entry": 2773128,
   "candidate_entry": 2773128,
-  "dependency_sha256": "e1d67de8e7cdf75162d057ce13bd01262fd23090c343e64d70347305828bd32a",
+  "dependency_sha256": "1cd0a44fa89c472d439ed40701bd8e189ec2ca59279bb5e48630d3f1d9413aff",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/17_smolg.c",
     "catalog_path": "config/level-native/17_smolg.json",
     "review_path": "progress/level-candidates/17_smolg.json",
-    "review_sha256": "94402bc02b01ee48dd313eaafed5b9ba91ab3b8fa1fd6be74514fdf01791768e",
+    "review_sha256": "805d4cb8e6a36e99418a26b99edfe3eb6cde6d1ab2eec5825fb7a1e075d6cae8",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2540,10 +2572,10 @@
       "reference_sha256": "4e1908fbc51ea0f156a32077fd20b2af755fe0b1f4aa7b1bc67967208e7e87f4",
       "reference_entry": 2773128,
       "candidate_source": "candidates/levels/17_smolg.c",
-      "source_sha256": "29af0097171fddd622cfdd6a1ecdfcebb58e5f9fd5fcadd2d0c952b6271bb7f7",
-      "catalog_sha256": "cec3e07fb76d9d2414f340b9071e8661687faa77f78fdd6e53cfd8bbe35b81bc",
-      "object_sha256": "10dd42e17eaee5ab8b73e00f73066a23e748a2d7af4b8c631634d08b477597a3",
-      "candidate_elf_sha256": "0c78f38b8382a047d48a5320aba6232fa949a961121e4188841d1818732b17b8",
+      "source_sha256": "dd182974ece21107d0081114ca7aba54895b73f7932cc47358c5d41cea97e3d8",
+      "catalog_sha256": "3dbe05f9ec57fb8dd514a047b159337daa19a4adfabd8eb67a37be4f44964cd7",
+      "object_sha256": "e7c26ed3f8349b214602a13e36dc58c469818a180f03932b4468f54f3d2066eb",
+      "candidate_elf_sha256": "c7211ae87be46be549c418103dd50a87399e325d25698c29e23f9dc4e89a707c",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2558,6 +2590,28 @@
       ],
       "state": "matched_unintegrated",
       "functions": [
+        {
+          "symbol": "LVL_17_SMOLG_FUN_002AF358",
+          "address": 2814808,
+          "size": 20,
+          "matched": true,
+          "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 20
+        },
+        {
+          "symbol": "LVL_17_SMOLG_FUN_002D7940",
+          "address": 2980160,
+          "size": 12,
+          "matched": true,
+          "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 12
+        },
         {
           "symbol": "LVL_17_SMOLG_FUN_002D8998",
           "address": 2984344,
@@ -2581,8 +2635,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 96
+      "matched_code_bytes": 128
     },
-    "object_sha256": "10dd42e17eaee5ab8b73e00f73066a23e748a2d7af4b8c631634d08b477597a3"
+    "object_sha256": "e7c26ed3f8349b214602a13e36dc58c469818a180f03932b4468f54f3d2066eb"
   }
 }

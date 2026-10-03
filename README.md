@@ -46,13 +46,18 @@ The native runtime remains a separate development milestone.
 Verified on **2026-10-03**: the complete boot image (**2,521,763 loaded bytes,
 two PT_LOAD segments**) and **all 27 level overlays** rebuild identically in loaded
 memory. **176 tool tests pass**. **178 C functions (9,336 bytes)** are integrated in the
-boot, with **4,158 reviewed overlay placements (205,008 bytes)**, including native C.
-The exported total is **214,344 / 48,788,176 bytes (0.4393%)**. The measured C profile
+boot, with **4,217 reviewed overlay placements (206,016 bytes)**, including native C.
+The exported total is **215,352 / 48,788,176 bytes (0.4414%)**. The measured C profile
 is documented in [compiler notes](docs/COMPILER-NOTES.md). Native gameplay remains unverified.
 
 Latest matching lot: [a 128-bit zero store at 28 locations](docs/TWENTY-FOURTH-C-LOT.md).
 The [PCSX2 observations](docs/PCSX2-VALIDATION.md) cover the retail disc and rebuilt boot;
 visual gameplay and native PC execution remain unverified.
+
+[Lot 25](docs/TWENTY-FIFTH-C-LOT.md) adds two independently qualified native
+families across all 27 overlays and five Ship Shack bodies: 59 placements and
+1,008 C bytes. Full loaded-byte gates, 176 tests and the exporter pass. The
+campaign continues; the first 0.5% milestone and the 100% objective remain open.
 
 ## Requirements
 

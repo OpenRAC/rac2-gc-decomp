@@ -1,3 +1,4 @@
+typedef unsigned char u8;
 typedef int s32;
 typedef unsigned int u32;
 typedef struct { u32 items[5]; } NativeTable20;
@@ -8,4 +9,14 @@ void LVL_25_WUPASH_NEBULA_FUN_002EAA60(s32 *object) {
 u32 LVL_25_WUPASH_NEBULA_FUN_003068C8(s32 index) {
     NativeTable20 values=LVL_25_WUPASH_NEBULA_D_001A8EB0;
     return values.items[index];
+}
+
+u32 LVL_25_WUPASH_NEBULA_FUN_002C11D0(u8 *object,u32 value) {
+    if(value==255) value=object[0xa9];
+    return value;
+}
+
+extern u32 LVL_25_WUPASH_NEBULA_D_0018C0B4;
+u32 LVL_25_WUPASH_NEBULA_FUN_002E9AA0(void) {
+    return LVL_25_WUPASH_NEBULA_D_0018C0B4;
 }

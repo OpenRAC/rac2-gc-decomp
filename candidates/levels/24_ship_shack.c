@@ -79,3 +79,40 @@ void LVL_24_SHIP_SHACK_FUN_0035E348(void) {
   *(s32 *)(LVL_24_SHIP_SHACK_D_0028AAC0+0x68)=LVL_24_SHIP_SHACK_D_001BC3C0.bank[index];
  }
 }
+
+u32 LVL_24_SHIP_SHACK_FUN_002AD0D0(u8 *object,u32 value) {
+    if(value==255) value=object[0xa9];
+    return value;
+}
+
+extern u32 LVL_24_SHIP_SHACK_D_0018C0B4;
+u32 LVL_24_SHIP_SHACK_FUN_002D59A0(void) {
+    return LVL_24_SHIP_SHACK_D_0018C0B4;
+}
+
+extern void LVL_24_SHIP_SHACK_FUN_002D25C0(f32);
+extern void LVL_24_SHIP_SHACK_FUN_002D5860(s32);
+extern u8 LVL_24_SHIP_SHACK_D_001B8500[];
+typedef struct {u8 prefix[0x190];u8 *object;} NativeObjectRefView;
+extern NativeObjectRefView LVL_24_SHIP_SHACK_D_001B8580;
+
+void LVL_24_SHIP_SHACK_FUN_002D2878(f32 value) {
+ LVL_24_SHIP_SHACK_FUN_002D25C0(-value);
+}
+
+void LVL_24_SHIP_SHACK_FUN_002D5820(void) {
+ LVL_24_SHIP_SHACK_FUN_002D5860(0);
+}
+
+void LVL_24_SHIP_SHACK_FUN_002D5840(void) {
+ LVL_24_SHIP_SHACK_FUN_002D5860(3);
+}
+
+s32 LVL_24_SHIP_SHACK_FUN_002D5A30(s32 index) {
+ return LVL_24_SHIP_SHACK_D_001B8500[index*16]!=0;
+}
+
+void LVL_24_SHIP_SHACK_FUN_002D6CF8(void) {
+ *(u16 *)(LVL_24_SHIP_SHACK_D_001B8580.object+0x7e)=1;
+ LVL_24_SHIP_SHACK_D_001B8580.object[0x7d]=0;
+}

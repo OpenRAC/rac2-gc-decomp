@@ -6,10 +6,10 @@
   "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
   "reference_entry": 2929800,
   "candidate_source": "candidates/levels/4_barlow.c",
-  "source_sha256": "83447d00fb53a4d79529d3af6a7a9fd4014b20c5a197fa0e8746a88ea18a9cc3",
-  "catalog_sha256": "44b2128603dfbbe708af6ec93dc9cec483555028f189ef8d0b6c6fcfb17367f0",
-  "object_sha256": "a3bbf720b99be40a5c181e9a7d68ee8b967202ae6d8c5cbc7994d87236b17bd7",
-  "candidate_elf_sha256": "121eb567e0daeeac33bf1aaa17a20e9010f8393d7cd3e01b0eb7de773487c329",
+  "source_sha256": "35fbc7c79c6fde486557321b17eb49b7e8cea2c75daa449790597efc8db121aa",
+  "catalog_sha256": "c645e471a19f828798dcee1f438dc75062ee1dee8470055790c1ccfc7bee9583",
+  "object_sha256": "1c085b5eeee5165fae71268fc87405d5d96cb071318f1d84b09add7b11d07490",
+  "candidate_elf_sha256": "ef947affb8d8d2a33afa592280abc933cdb03e7f8737973d35559043b424ea7d",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_4_BARLOW_FUN_002D44B8",
+      "address": 2966712,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_4_BARLOW_FUN_002F70D8",
+      "address": 3109080,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_4_BARLOW_FUN_002F8130",
       "address": 3113264,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

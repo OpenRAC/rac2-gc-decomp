@@ -6,10 +6,10 @@
   "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
   "reference_entry": 2791176,
   "candidate_source": "candidates/levels/12_todano.c",
-  "source_sha256": "49af20e5536cb6da7f862d26d621b2feec9d069727658323b8dc3cfa2e8f5298",
-  "catalog_sha256": "bb957a514a5ef8348c60497b0070cda3c51b93618efd9f5281c9f91bfbb01d3b",
-  "object_sha256": "27b55c2e7a190b1ca168026715c91e35aae8adb41a5483db8dd492c945d4ae47",
-  "candidate_elf_sha256": "9335e1ee7e3896444d7de380792a4d1ba6430c4e968f334e7ae7181b5cb4a540",
+  "source_sha256": "0e4e5268ffb41f2ec4397ebf302b3e77a889b0234795d162ca70f2d68309ed38",
+  "catalog_sha256": "c64d858688f93ff947db0c4123f1004aab6c314a2ea1983eb2c02b0a8122a9d5",
+  "object_sha256": "f0c4d02dd547c739dff394cefe44940575e721ef0dcc93a5397670dc63d8d6aa",
+  "candidate_elf_sha256": "e5ba0ae5834d3058f53696b1e553de8148c72c919c6b32dde3b77c4384389f36",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_12_TODANO_FUN_002B3808",
+      "address": 2832392,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_002DA098",
+      "address": 2990232,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_12_TODANO_FUN_002DB058",
       "address": 2994264,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

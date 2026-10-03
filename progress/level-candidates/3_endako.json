@@ -6,10 +6,10 @@
   "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
   "reference_entry": 2794248,
   "candidate_source": "candidates/levels/3_endako.c",
-  "source_sha256": "3ec0f507f138f5c04be836338e8afacea3eb9245fdc40a9f234c335b957eb052",
-  "catalog_sha256": "fac5e8919e16380b9aa5f21bada9dfdb63d1ff3fd45dc1c8b3e87f109a594bc1",
-  "object_sha256": "ec1e12ec18095df615174753fdea60a03ea98475022270e7955beb34f7f30a20",
-  "candidate_elf_sha256": "56ac5ec41fd4c0f956b72bc9ae0889fc872609c2d663f2d51e909ad5a6119869",
+  "source_sha256": "13e537bf91d9076e8600a2fabe117ed01f24ba6dec5b18412fa1d0758aa796e6",
+  "catalog_sha256": "79cf29ffbb26b64fc49dc9142f7cae896494634aaf35d004af5c53afc7964940",
+  "object_sha256": "03cde3795650ea9230a2fbeff0535b353bc8687bb9d195442c49ba734d0bab6e",
+  "candidate_elf_sha256": "b42f9c3fe2707e09101f526b02e55cd4aaa727303932dce4583e1e74553b3032",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_3_ENDAKO_FUN_002B3890",
+      "address": 2832528,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_3_ENDAKO_FUN_002D73C0",
+      "address": 2978752,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_3_ENDAKO_FUN_002D8418",
       "address": 2982936,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

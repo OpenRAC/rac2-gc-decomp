@@ -2136,6 +2136,34 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_002C11D0",
+      "address": 2888144,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "25_wupash_nebula",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_002E9AA0",
+      "address": 3054240,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "25_wupash_nebula",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EAA60",
       "address": 3058272,
       "size": 24,
@@ -2169,14 +2197,14 @@
     "bytes_compared": 2802432,
     "segments": 1
   },
-  "matched_code_bytes": 7584,
+  "matched_code_bytes": 7616,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "cda35ca210be00363924a2a738eadbb95410eb39e4a3d77548dae52ca56fb2f5",
+  "candidate_elf_sha256": "d17a118747ee8e3905e99e2b8be8b5a74eedcdca6196b02a421d98493996c80d",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "110100.s": [
@@ -2332,6 +2360,8 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_25_WUPASH_NEBULA_FUN_002C11D0",
+      "LVL_25_WUPASH_NEBULA_FUN_002E9AA0",
       "LVL_25_WUPASH_NEBULA_FUN_002EAA60",
       "LVL_25_WUPASH_NEBULA_FUN_003068C8"
     ]
@@ -2358,7 +2388,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "cda35ca210be00363924a2a738eadbb95410eb39e4a3d77548dae52ca56fb2f5",
+    "candidate_elf_sha256": "d17a118747ee8e3905e99e2b8be8b5a74eedcdca6196b02a421d98493996c80d",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "110100.s": [
@@ -2514,6 +2544,8 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_25_WUPASH_NEBULA_FUN_002C11D0",
+        "LVL_25_WUPASH_NEBULA_FUN_002E9AA0",
         "LVL_25_WUPASH_NEBULA_FUN_002EAA60",
         "LVL_25_WUPASH_NEBULA_FUN_003068C8"
       ]
@@ -2525,13 +2557,13 @@
   },
   "reference_entry": 2846088,
   "candidate_entry": 2846088,
-  "dependency_sha256": "72d112b43b828c6b1cd75381f88ddedb60da17aebb16ac70b95fc0b16ef1dcf9",
+  "dependency_sha256": "5d0d4da98b652b5bf57b12c60a42530094b5f3ac4c75f0655afc8fe8783d49a8",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/25_wupash_nebula.c",
     "catalog_path": "config/level-native/25_wupash_nebula.json",
     "review_path": "progress/level-candidates/25_wupash_nebula.json",
-    "review_sha256": "5f57c0b074bc926a9df9e5d5ecc75f818960e75211b7ec7bc8b7dcae1dae62c8",
+    "review_sha256": "5f94bb2bc27f1366a3e225bd34fcc8b4bf778c0ae28711f60648ae230770a959",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2540,10 +2572,10 @@
       "reference_sha256": "075a0a55f83fd7d35957af62eeac8e911357cee2fa6119edd9f2cfcdea7e9cdc",
       "reference_entry": 2846088,
       "candidate_source": "candidates/levels/25_wupash_nebula.c",
-      "source_sha256": "43465347713dd42bf26c2a3fd322f4468bd0c85b73a59ee04cf64930bd6d62c8",
-      "catalog_sha256": "33797f9b1c76394374cbfa0ecbba2ba1a336234b87910e1785e555d418856c3c",
-      "object_sha256": "10b52993ccaf51dad82d030fd886bd127e1f00f7e4ecfc046bed7d8bd743fef0",
-      "candidate_elf_sha256": "f7873ce9a3e2886a18815623068907d454f4087e5321b77447f24b9089daf69e",
+      "source_sha256": "4583061c88ea8f3bc7ca5975b6f027f7788ef21f90ff8cff7fb0dbe17e96d4d1",
+      "catalog_sha256": "7a36ed9fb74d70e01644c748fb52caceccedd211e2addd74469dae0bbefb0d9e",
+      "object_sha256": "8182b52ad44d2ed1d98ce306e890b0035408c582fd02262dc1761c6d936c856c",
+      "candidate_elf_sha256": "ea6dde2116c181b21651374fc819b5942022a77bc1b18d6366289892da4e06bc",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2558,6 +2590,28 @@
       ],
       "state": "matched_unintegrated",
       "functions": [
+        {
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_002C11D0",
+          "address": 2888144,
+          "size": 20,
+          "matched": true,
+          "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 20
+        },
+        {
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_002E9AA0",
+          "address": 3054240,
+          "size": 12,
+          "matched": true,
+          "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 12
+        },
         {
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EAA60",
           "address": 3058272,
@@ -2581,8 +2635,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 96
+      "matched_code_bytes": 128
     },
-    "object_sha256": "10b52993ccaf51dad82d030fd886bd127e1f00f7e4ecfc046bed7d8bd743fef0"
+    "object_sha256": "8182b52ad44d2ed1d98ce306e890b0035408c582fd02262dc1761c6d936c856c"
   }
 }

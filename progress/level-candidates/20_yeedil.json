@@ -6,10 +6,10 @@
   "reference_sha256": "af33c5378811e9d57c612c10002ca5c92eb676add3db0552ab2d6231034cafc8",
   "reference_entry": 2844552,
   "candidate_source": "candidates/levels/20_yeedil.c",
-  "source_sha256": "3542577cb89adf8ff34b854392b240196a2e55844a2e387e36322174eebc828e",
-  "catalog_sha256": "330acb5ccec70dfe9f55d9c39450ec262e53f564d1cc7d63c537913b605b89e5",
-  "object_sha256": "747906f8a728ba5c43f615ca7fd50a5afcb2cf02eaba0bc4a25fa1adb57ed1f2",
-  "candidate_elf_sha256": "fb82f6d36169a571f9dba2db3239f592ab2663ea39713afdc52da7eb5a94b73c",
+  "source_sha256": "64183ac080acff5457d01b22d371dbba2e96b8d3a78d7c58ddf003658a2b8b1b",
+  "catalog_sha256": "33baaf79f04323a9cf7768e8dfe2a65df47048f2f62da5197cedcc44b4c2e061",
+  "object_sha256": "0c2273884f317191dd9dfc5fe3c4fa2fb18d5e11c18c78af4e57316fbc03befa",
+  "candidate_elf_sha256": "187d5ef5ec19b35592f13fe2bb16f076c77ee694a390e37222d81a342688f292",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_20_YEEDIL_FUN_002C0D60",
+      "address": 2887008,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_20_YEEDIL_FUN_002EA888",
+      "address": 3057800,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_20_YEEDIL_FUN_002EB8E0",
       "address": 3061984,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

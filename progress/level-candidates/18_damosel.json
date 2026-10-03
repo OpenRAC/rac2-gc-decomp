@@ -6,10 +6,10 @@
   "reference_sha256": "61c1050b11c8bbb1674bc35107ccf83f2634ee6c8248c9983ba552343d911113",
   "reference_entry": 2890376,
   "candidate_source": "candidates/levels/18_damosel.c",
-  "source_sha256": "a041d9a854bf90e6d4c0fdb27c6e891f2ea321626e83c5b9fc4dbd245083e1bf",
-  "catalog_sha256": "357a8da07f84f75343161e8d38c326762452e4687fe2d403795dd0eb1a8531b2",
-  "object_sha256": "7fd1795839c462fb1cb524fc312c076d5b5753ed0d242cf42a6cb2826279755e",
-  "candidate_elf_sha256": "1f4ff4a09900d88926d07bf0f7452bb89fcf7169ffb9d1057d482cf494dbaf1b",
+  "source_sha256": "7ce75457ee0c97aec94eb1c8d515bea90449bfdb3afe7b14d980dfd62a248655",
+  "catalog_sha256": "b80d6c2c245f768f62abcacf8184ac3c5c4d8c2359499a5fa38f7f80a725e660",
+  "object_sha256": "e65c9544fca15c020c0229d68d9943cc5f1233e376a8ce7740c8fd89dd7b0168",
+  "candidate_elf_sha256": "98f0991ddb203317b78ac07ba73b9d44c0da37a06d4be326f5f34444bc4974f5",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_18_DAMOSEL_FUN_002CB2F8",
+      "address": 2929400,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_18_DAMOSEL_FUN_002F1130",
+      "address": 3084592,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_18_DAMOSEL_FUN_002F2188",
       "address": 3088776,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

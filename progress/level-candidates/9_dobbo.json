@@ -6,10 +6,10 @@
   "reference_sha256": "a47999f3aa251431498e068932ac542399b5e402ab8dcddcbfe246dc220b7810",
   "reference_entry": 2782472,
   "candidate_source": "candidates/levels/9_dobbo.c",
-  "source_sha256": "23e7aae85c52c394534de5b23f82e4902eea8f32735c7bbb18659aff6a4dcc21",
-  "catalog_sha256": "021f29475e7ded64d845d31bf8decbfd9f4e4e1594bb29ef22da0277c2152b56",
-  "object_sha256": "f33e667f5633951e74a16782a6f0b58cacddce5c04df5d66880585a188e029b2",
-  "candidate_elf_sha256": "bc51c566d22ced0ea98b1c4a7daff9bf93df874ee72c5fcaac12afe80de7b267",
+  "source_sha256": "134b329b11ada4272917c1b0ca62fa3b4043de73f1b30c39bfb3f35a07c048cd",
+  "catalog_sha256": "68b2092fc9e8ab412bc52be8597e37b1c80ef1823640c56145a494415db41853",
+  "object_sha256": "4a71ae0a1fbfe22d93f20b97acd306be199667cf803323fca7a2703a7e1f36e8",
+  "candidate_elf_sha256": "8180f7f414027e32d3d3cd497b0bf728fdf46f720a532200a8653a9d5dd6033a",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_9_DOBBO_FUN_002B0A20",
+      "address": 2820640,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_9_DOBBO_FUN_002D2990",
+      "address": 2959760,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_9_DOBBO_FUN_002D39E8",
       "address": 2963944,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

@@ -6,10 +6,10 @@
   "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
   "reference_entry": 2776968,
   "candidate_source": "candidates/levels/1_oozla.c",
-  "source_sha256": "e03ebc1b1eac3eee94faa6a18c71c66431d1f2dc03b3245efc41945c56339e89",
-  "catalog_sha256": "1b37ae86004dbc5ae8215973cffe79292df8ee341e5e3a7709966b8fc3ff7cf2",
-  "object_sha256": "47b6981bc04610b25d293e0e880721dfd6140508d455e99878b9516961797962",
-  "candidate_elf_sha256": "c1cccd2d35e447ec1490851a60d0241095a59a24463150521d699c5302925b75",
+  "source_sha256": "ecaae0b086088fbc506c42ec34501a167bdaea2ea628f838c29db7002c582666",
+  "catalog_sha256": "a1e9f61624ae932c733bbbfda3cc43472ad87743758ea31c26c8e786110c61db",
+  "object_sha256": "d60ccf281a791c33f25a0b845e8fb221a29b42cffb6707620c65fde87fd5cc2f",
+  "candidate_elf_sha256": "3107da909ce53a31671472fe87795667a5b161caba6c11d676d66a0d051c5d5c",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_1_OOZLA_FUN_002AEA88",
+      "address": 2812552,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_1_OOZLA_FUN_002CC0B8",
+      "address": 2932920,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_1_OOZLA_FUN_002CD110",
       "address": 2937104,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

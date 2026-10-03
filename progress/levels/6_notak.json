@@ -2136,6 +2136,34 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_6_NOTAK_FUN_002ED5D0",
+      "address": 3069392,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "6_notak",
+      "candidate_source": "candidates/levels/6_notak.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_6_NOTAK_FUN_00316068",
+      "address": 3235944,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "6_notak",
+      "candidate_source": "candidates/levels/6_notak.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_6_NOTAK_FUN_00317028",
       "address": 3239976,
       "size": 24,
@@ -2169,14 +2197,14 @@
     "bytes_compared": 3086560,
     "segments": 1
   },
-  "matched_code_bytes": 7584,
+  "matched_code_bytes": 7616,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "629345c613f49bb9f3fb03b9fcbb962d7e7e4156f1fec64a600974b721eb8bd2",
+  "candidate_elf_sha256": "ac324a572f07f22def5518c0b90fdc9489a45a5b3f98b763467e65ff4dd03079",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "13C500.s": [
@@ -2332,6 +2360,8 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_6_NOTAK_FUN_002ED5D0",
+      "LVL_6_NOTAK_FUN_00316068",
       "LVL_6_NOTAK_FUN_00317028",
       "LVL_6_NOTAK_FUN_003332A8"
     ]
@@ -2358,7 +2388,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "629345c613f49bb9f3fb03b9fcbb962d7e7e4156f1fec64a600974b721eb8bd2",
+    "candidate_elf_sha256": "ac324a572f07f22def5518c0b90fdc9489a45a5b3f98b763467e65ff4dd03079",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "13C500.s": [
@@ -2514,6 +2544,8 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_6_NOTAK_FUN_002ED5D0",
+        "LVL_6_NOTAK_FUN_00316068",
         "LVL_6_NOTAK_FUN_00317028",
         "LVL_6_NOTAK_FUN_003332A8"
       ]
@@ -2525,13 +2557,13 @@
   },
   "reference_entry": 3027336,
   "candidate_entry": 3027336,
-  "dependency_sha256": "2668778cd32631e7f0e4e44361f1151a090d7c95d7db24d75b606dd0da96833f",
+  "dependency_sha256": "f2550162248d44cfc76bb8c5b4348227599f2dffed2bf6a667df340efb72df74",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/6_notak.c",
     "catalog_path": "config/level-native/6_notak.json",
     "review_path": "progress/level-candidates/6_notak.json",
-    "review_sha256": "abb0055ec5404d5e3368b4db2544434d47951adbe90b4cea61768aee535cef13",
+    "review_sha256": "bc72d5f5b1d989adcb49bafcdd265688805044a5c92cbff746916ffcd2d660ad",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2540,10 +2572,10 @@
       "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
       "reference_entry": 3027336,
       "candidate_source": "candidates/levels/6_notak.c",
-      "source_sha256": "007a55a94e31f1a9e58c8fa24f668aeb28368c1500b0c65290010f9585a4896c",
-      "catalog_sha256": "ba6d92aeb9e513f88a116f2f5740c811a9fe4979a821c8ac371eb7effa8ae865",
-      "object_sha256": "3d1f6ba7e36ce51a33f5e39d9dbc6c7e88ccfa3bd45a1e390fc1708ed8244e60",
-      "candidate_elf_sha256": "95b5ae98fb1f6690aade3a64663b145afe195f8abf60472ade065ea83c179d22",
+      "source_sha256": "e27c8bb3ddac7a6392350f8337d6acad558501049d6e0f41ea50184b5b3e0d9c",
+      "catalog_sha256": "2a62a7085dd6893e9db226c7379e19832b7e8803b1da070351dcaeba1d3d1f1a",
+      "object_sha256": "85d17405ba0ff91396153e7c3f1fc1ad5eec75256c9bc9bd705388e444f3cc70",
+      "candidate_elf_sha256": "33b07831110bb6a45c04c73040fa8d748f31772d52f8d2e422fe45e1be5ad01b",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2558,6 +2590,28 @@
       ],
       "state": "matched_unintegrated",
       "functions": [
+        {
+          "symbol": "LVL_6_NOTAK_FUN_002ED5D0",
+          "address": 3069392,
+          "size": 20,
+          "matched": true,
+          "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 20
+        },
+        {
+          "symbol": "LVL_6_NOTAK_FUN_00316068",
+          "address": 3235944,
+          "size": 12,
+          "matched": true,
+          "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 12
+        },
         {
           "symbol": "LVL_6_NOTAK_FUN_00317028",
           "address": 3239976,
@@ -2581,8 +2635,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 96
+      "matched_code_bytes": 128
     },
-    "object_sha256": "3d1f6ba7e36ce51a33f5e39d9dbc6c7e88ccfa3bd45a1e390fc1708ed8244e60"
+    "object_sha256": "85d17405ba0ff91396153e7c3f1fc1ad5eec75256c9bc9bd705388e444f3cc70"
   }
 }

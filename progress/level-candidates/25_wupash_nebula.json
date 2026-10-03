@@ -6,10 +6,10 @@
   "reference_sha256": "075a0a55f83fd7d35957af62eeac8e911357cee2fa6119edd9f2cfcdea7e9cdc",
   "reference_entry": 2846088,
   "candidate_source": "candidates/levels/25_wupash_nebula.c",
-  "source_sha256": "43465347713dd42bf26c2a3fd322f4468bd0c85b73a59ee04cf64930bd6d62c8",
-  "catalog_sha256": "33797f9b1c76394374cbfa0ecbba2ba1a336234b87910e1785e555d418856c3c",
-  "object_sha256": "10b52993ccaf51dad82d030fd886bd127e1f00f7e4ecfc046bed7d8bd743fef0",
-  "candidate_elf_sha256": "f7873ce9a3e2886a18815623068907d454f4087e5321b77447f24b9089daf69e",
+  "source_sha256": "4583061c88ea8f3bc7ca5975b6f027f7788ef21f90ff8cff7fb0dbe17e96d4d1",
+  "catalog_sha256": "7a36ed9fb74d70e01644c748fb52caceccedd211e2addd74469dae0bbefb0d9e",
+  "object_sha256": "8182b52ad44d2ed1d98ce306e890b0035408c582fd02262dc1761c6d936c856c",
+  "candidate_elf_sha256": "ea6dde2116c181b21651374fc819b5942022a77bc1b18d6366289892da4e06bc",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_002C11D0",
+      "address": 2888144,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_002E9AA0",
+      "address": 3054240,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EAA60",
       "address": 3058272,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

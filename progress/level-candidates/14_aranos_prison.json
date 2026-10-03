@@ -6,10 +6,10 @@
   "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
   "reference_entry": 2798344,
   "candidate_source": "candidates/levels/14_aranos_prison.c",
-  "source_sha256": "c05b26943c1c5a0a4deb0e3b43db9c05c8750e2968ad5158bad98be9c6d127c1",
-  "catalog_sha256": "e257193e054044ff39fe2b0287c2732cd428bc149d9381f8c97896aaad705d93",
-  "object_sha256": "0e7e457a8988a1441faa1d0b44e155461294dd7d175d6f7479241474bc6eb114",
-  "candidate_elf_sha256": "8cb979d0aae0b450ec4578071c67e28e9ec51d69b5b354856866c2abffd18a0b",
+  "source_sha256": "bcb545f31c124ffddc7442a8daf95b6bbe6f185d02a7d46a1ad759ad21b34605",
+  "catalog_sha256": "da5ef74ec9aa3ea48635ec1a8e4e021df98d90840f70fb58f65568ffb6b2f8f2",
+  "object_sha256": "82dea40339b946b7b6f0790bc775d81c58045fd6b5e6a2646b4b130a66262c14",
+  "candidate_elf_sha256": "374f0f7709772d5ca858c234eed551e4abf634713a1a866c98ec32fd43b5a27d",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_002B5750",
+      "address": 2840400,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_002DE1E8",
+      "address": 3006952,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_14_ARANOS_PRISON_FUN_002DF240",
       "address": 3011136,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

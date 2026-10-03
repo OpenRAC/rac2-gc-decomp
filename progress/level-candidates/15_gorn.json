@@ -6,10 +6,10 @@
   "reference_sha256": "838098ef94f05d78f79be2f65291447db6c9468e7c44e2cab36396f720cce109",
   "reference_entry": 2869768,
   "candidate_source": "candidates/levels/15_gorn.c",
-  "source_sha256": "14561b3bed2cf8f45d2deeb72371b726422cd1bae665b430b36e93df58da91f4",
-  "catalog_sha256": "b0cfd0a707ea09db7633d546d22c5eb722a0d318726ae2a961e2f77ea0059f6f",
-  "object_sha256": "d33ba1b287e22460c452bb198e674dafac4738b89e44a930117836a8a4fb654b",
-  "candidate_elf_sha256": "d40f4821b2098a074d6adc35611af24d663810bef78ffc9181a739be0604d4d7",
+  "source_sha256": "47380dd97e1c18e2989b0d1b9de6bc2d89c8b9acf557547459b088fc47197fdd",
+  "catalog_sha256": "3c00b01cb31afff4f0727c38acd6f1bc17e6db6a51f1a25f23a3cb4c97fd6054",
+  "object_sha256": "ee1648146d5a87750e1a3015d44d7c5c68aac86fd479d8b2ff5107cba863d2c8",
+  "candidate_elf_sha256": "dbb1b6b54d3dc2fafcec527176b7e82114fbab0f49b754a59fc67e4e0d9e3b81",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_15_GORN_FUN_002C6E50",
+      "address": 2911824,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002EF720",
+      "address": 3077920,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_15_GORN_FUN_002F06E0",
       "address": 3081952,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

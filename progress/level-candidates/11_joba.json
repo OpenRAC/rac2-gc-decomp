@@ -6,10 +6,10 @@
   "reference_sha256": "c6cf24ac0591c78ae6a5320a333b4465f54969ab91e0f42f52fcb7fc95f2f00e",
   "reference_entry": 2870792,
   "candidate_source": "candidates/levels/11_joba.c",
-  "source_sha256": "0589ef50bbe116ea8dbc4077b07b92d00e2a17a2b0838b89ecb1646833091cc8",
-  "catalog_sha256": "45a7ae739dd7483550e66fe34c6efaa316f7d480a594e6bd01ee2f62a4222434",
-  "object_sha256": "1b4dcec88525cc9d8399f69c9b023eec871b5888873455e7ae1cafe5364a226a",
-  "candidate_elf_sha256": "5479f2b4c61579e859ff7fc37a3dc1b76c3968f90aa4a70c64f3dd596bb01252",
+  "source_sha256": "5b8065dc7c8de52da58dca8477e6e673daa25779c3d0ec9950c13eb415e84ec3",
+  "catalog_sha256": "806dfaf609ae874f44c4b71ec46a315270526258b865d5265aea30134fad93e7",
+  "object_sha256": "dd43fdfde89caf4d219842cb3ee3a7c32310e47a37795a9390e81e9e9107df22",
+  "candidate_elf_sha256": "0251895aad1b52617619c099af82bea307607403d2b2098bebb90393732e67b6",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_11_JOBA_FUN_002C6358",
+      "address": 2909016,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_11_JOBA_FUN_002E86E0",
+      "address": 3049184,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_11_JOBA_FUN_002E9738",
       "address": 3053368,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

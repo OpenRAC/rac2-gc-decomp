@@ -6,10 +6,10 @@
   "reference_sha256": "76b77dbbc9a3e15f1c4f202a36b37d01bdaff7936142c14b5b35a1552a85287a",
   "reference_entry": 2769288,
   "candidate_source": "candidates/levels/7_siberius.c",
-  "source_sha256": "8165e35fda3fc66d1355f0dbce846b793cd79427749a710ecff8880d3e3c7eb3",
-  "catalog_sha256": "0789bcc3aac0ca31e9a306fa135d4d4e91424fa2d61bf58e2f3653bdd44b6176",
-  "object_sha256": "7756b98fe11a98ae1c533bf756432d6adf733885d17e2f1ad316c0e68cde8a9a",
-  "candidate_elf_sha256": "8425b2f9d87784290bbadaf2385bb7d49727a0c49179ff934e1de82082a7c1df",
+  "source_sha256": "fb89e503aec02853325ffcf3603f089e21572e790e790e41cf43f72cfcefa6c7",
+  "catalog_sha256": "c5e782c09ad2f09746cb6e4c186e1077dc230358c312c32f6ea4de0698646cd2",
+  "object_sha256": "7c73354e56f18bbdb9038515ba33fb4773948903fb4a97c0e77ac99ed9a72de2",
+  "candidate_elf_sha256": "dc05110980882e595199c3dfb750b824ec565557df9d4c01097b3330794c67af",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_7_SIBERIUS_FUN_002ACDF0",
+      "address": 2805232,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_7_SIBERIUS_FUN_002CC898",
+      "address": 2934936,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_7_SIBERIUS_FUN_002CD8F0",
       "address": 2939120,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

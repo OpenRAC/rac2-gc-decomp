@@ -6,10 +6,10 @@
   "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
   "reference_entry": 3027336,
   "candidate_source": "candidates/levels/6_notak.c",
-  "source_sha256": "007a55a94e31f1a9e58c8fa24f668aeb28368c1500b0c65290010f9585a4896c",
-  "catalog_sha256": "ba6d92aeb9e513f88a116f2f5740c811a9fe4979a821c8ac371eb7effa8ae865",
-  "object_sha256": "3d1f6ba7e36ce51a33f5e39d9dbc6c7e88ccfa3bd45a1e390fc1708ed8244e60",
-  "candidate_elf_sha256": "95b5ae98fb1f6690aade3a64663b145afe195f8abf60472ade065ea83c179d22",
+  "source_sha256": "e27c8bb3ddac7a6392350f8337d6acad558501049d6e0f41ea50184b5b3e0d9c",
+  "catalog_sha256": "2a62a7085dd6893e9db226c7379e19832b7e8803b1da070351dcaeba1d3d1f1a",
+  "object_sha256": "85d17405ba0ff91396153e7c3f1fc1ad5eec75256c9bc9bd705388e444f3cc70",
+  "candidate_elf_sha256": "33b07831110bb6a45c04c73040fa8d748f31772d52f8d2e422fe45e1be5ad01b",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_6_NOTAK_FUN_002ED5D0",
+      "address": 3069392,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_6_NOTAK_FUN_00316068",
+      "address": 3235944,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_6_NOTAK_FUN_00317028",
       "address": 3239976,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }

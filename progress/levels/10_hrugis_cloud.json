@@ -2136,6 +2136,34 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002C8D50",
+      "address": 2919760,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "10_hrugis_cloud",
+      "candidate_source": "candidates/levels/10_hrugis_cloud.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F1620",
+      "address": 3085856,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "10_hrugis_cloud",
+      "candidate_source": "candidates/levels/10_hrugis_cloud.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F25E0",
       "address": 3089888,
       "size": 24,
@@ -2169,14 +2197,14 @@
     "bytes_compared": 2871096,
     "segments": 1
   },
-  "matched_code_bytes": 7584,
+  "matched_code_bytes": 7616,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "cfec7c7a3ece68492fa6f525b2c1aba03fcf3bd1656925151773d2354a72e155",
+  "candidate_elf_sha256": "1cb9df94b232f3df7219f583fea84fbf08ceb027459aa984a3363428e3f4320f",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "117C80.s": [
@@ -2332,6 +2360,8 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_10_HRUGIS_CLOUD_FUN_002C8D50",
+      "LVL_10_HRUGIS_CLOUD_FUN_002F1620",
       "LVL_10_HRUGIS_CLOUD_FUN_002F25E0",
       "LVL_10_HRUGIS_CLOUD_FUN_0030E810"
     ]
@@ -2358,7 +2388,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "cfec7c7a3ece68492fa6f525b2c1aba03fcf3bd1656925151773d2354a72e155",
+    "candidate_elf_sha256": "1cb9df94b232f3df7219f583fea84fbf08ceb027459aa984a3363428e3f4320f",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "117C80.s": [
@@ -2514,6 +2544,8 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_10_HRUGIS_CLOUD_FUN_002C8D50",
+        "LVL_10_HRUGIS_CLOUD_FUN_002F1620",
         "LVL_10_HRUGIS_CLOUD_FUN_002F25E0",
         "LVL_10_HRUGIS_CLOUD_FUN_0030E810"
       ]
@@ -2525,13 +2557,13 @@
   },
   "reference_entry": 2877704,
   "candidate_entry": 2877704,
-  "dependency_sha256": "fbb0ea5c18519354eb01a07f98f7cbfeff606fec1a1867054c7f78633fb38055",
+  "dependency_sha256": "6b13c467474db39796e61023fbfdb3d5482bbea37f200974bf14a8cb1f67cc72",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/10_hrugis_cloud.c",
     "catalog_path": "config/level-native/10_hrugis_cloud.json",
     "review_path": "progress/level-candidates/10_hrugis_cloud.json",
-    "review_sha256": "4e9ea4309d4facb31bb43b929b989c155c236e652f48302d7f96270003459de0",
+    "review_sha256": "f2c69487d3ea5c842d74f4d82aed75e5b4037accb87cff9dd6230d3e06d23f6b",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2540,10 +2572,10 @@
       "reference_sha256": "287e8f233f0b60cf4ccb3f0ff4dc043b907cabb7b3eff8c2229ca79cc1d19b48",
       "reference_entry": 2877704,
       "candidate_source": "candidates/levels/10_hrugis_cloud.c",
-      "source_sha256": "4537b3eec2b7b9544e167af43b35375160a4ea03f51cdcc071f255a7ed321870",
-      "catalog_sha256": "03483d4bb1aa80bf575d57c1ddb957659f1fcc26ffe8abc5274e2b2aced19974",
-      "object_sha256": "7012aa6cdc4d4d2724306901c41ce01f9c3bd30b4d6eb1d7f0ea506f91ed4f89",
-      "candidate_elf_sha256": "e0a407eeab9f9d1e522d2e75479e01064323f594e0fd1991a7e0a49559b502db",
+      "source_sha256": "bfef9928a7e40673d24ab1778cb490d4a2a14efc04c81908345b191587f6b2ad",
+      "catalog_sha256": "12d656b64a483e02d417452717e4f9b9126f68286935e3f85d24b028645edfbf",
+      "object_sha256": "40c9bd0a00cf105ff568266f89fdb1ddc66db58a1477da75a5326d695cd4ae9e",
+      "candidate_elf_sha256": "8b8cee4e8e8edd58e5eaac895570f9c19b479eeeb4613dddaa3d91595eb142cb",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2558,6 +2590,28 @@
       ],
       "state": "matched_unintegrated",
       "functions": [
+        {
+          "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002C8D50",
+          "address": 2919760,
+          "size": 20,
+          "matched": true,
+          "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 20
+        },
+        {
+          "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F1620",
+          "address": 3085856,
+          "size": 12,
+          "matched": true,
+          "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 12
+        },
         {
           "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F25E0",
           "address": 3089888,
@@ -2581,8 +2635,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 96
+      "matched_code_bytes": 128
     },
-    "object_sha256": "7012aa6cdc4d4d2724306901c41ce01f9c3bd30b4d6eb1d7f0ea506f91ed4f89"
+    "object_sha256": "40c9bd0a00cf105ff568266f89fdb1ddc66db58a1477da75a5326d695cd4ae9e"
   }
 }

@@ -2122,6 +2122,34 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_12_TODANO_FUN_002B3808",
+      "address": 2832392,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "12_todano",
+      "candidate_source": "candidates/levels/12_todano.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_002DA098",
+      "address": 2990232,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "12_todano",
+      "candidate_source": "candidates/levels/12_todano.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_12_TODANO_FUN_002DB058",
       "address": 2994264,
       "size": 24,
@@ -2155,14 +2183,14 @@
     "bytes_compared": 2843680,
     "segments": 1
   },
-  "matched_code_bytes": 7568,
+  "matched_code_bytes": 7600,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "9300c5f064bcf3d64d6f4f57e1b368e6914121653e9ea7bcc62ba44580a9fdaf",
+  "candidate_elf_sha256": "ca38930735d2a04025f7e18bd57d369aa3cb03bb44829c9b6fd26ae80f637d4d",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "102A80.s": [
@@ -2317,6 +2345,8 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_12_TODANO_FUN_002B3808",
+      "LVL_12_TODANO_FUN_002DA098",
       "LVL_12_TODANO_FUN_002DB058",
       "LVL_12_TODANO_FUN_002F7628"
     ]
@@ -2343,7 +2373,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "9300c5f064bcf3d64d6f4f57e1b368e6914121653e9ea7bcc62ba44580a9fdaf",
+    "candidate_elf_sha256": "ca38930735d2a04025f7e18bd57d369aa3cb03bb44829c9b6fd26ae80f637d4d",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "102A80.s": [
@@ -2498,6 +2528,8 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_12_TODANO_FUN_002B3808",
+        "LVL_12_TODANO_FUN_002DA098",
         "LVL_12_TODANO_FUN_002DB058",
         "LVL_12_TODANO_FUN_002F7628"
       ]
@@ -2509,13 +2541,13 @@
   },
   "reference_entry": 2791176,
   "candidate_entry": 2791176,
-  "dependency_sha256": "d835e9c2a3665882b9cbf9dd07fa38d383a5bd13062cd311bb358e27c4fe65d7",
+  "dependency_sha256": "8951fb2a198bc5855769403ec2bd9aabc5d623b9caa84afcd463a3877cc1ccfa",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/12_todano.c",
     "catalog_path": "config/level-native/12_todano.json",
     "review_path": "progress/level-candidates/12_todano.json",
-    "review_sha256": "8a568d82cf7d18419700f293b569a9a3ef3a543278fa5cfc451d1a4a66000226",
+    "review_sha256": "f705693aee1ca5f1aab484469ac54debd850d454680bb4924d863c63ce46c1fd",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2524,10 +2556,10 @@
       "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
       "reference_entry": 2791176,
       "candidate_source": "candidates/levels/12_todano.c",
-      "source_sha256": "49af20e5536cb6da7f862d26d621b2feec9d069727658323b8dc3cfa2e8f5298",
-      "catalog_sha256": "bb957a514a5ef8348c60497b0070cda3c51b93618efd9f5281c9f91bfbb01d3b",
-      "object_sha256": "27b55c2e7a190b1ca168026715c91e35aae8adb41a5483db8dd492c945d4ae47",
-      "candidate_elf_sha256": "9335e1ee7e3896444d7de380792a4d1ba6430c4e968f334e7ae7181b5cb4a540",
+      "source_sha256": "0e4e5268ffb41f2ec4397ebf302b3e77a889b0234795d162ca70f2d68309ed38",
+      "catalog_sha256": "c64d858688f93ff947db0c4123f1004aab6c314a2ea1983eb2c02b0a8122a9d5",
+      "object_sha256": "f0c4d02dd547c739dff394cefe44940575e721ef0dcc93a5397670dc63d8d6aa",
+      "candidate_elf_sha256": "e5ba0ae5834d3058f53696b1e553de8148c72c919c6b32dde3b77c4384389f36",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2542,6 +2574,28 @@
       ],
       "state": "matched_unintegrated",
       "functions": [
+        {
+          "symbol": "LVL_12_TODANO_FUN_002B3808",
+          "address": 2832392,
+          "size": 20,
+          "matched": true,
+          "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 20
+        },
+        {
+          "symbol": "LVL_12_TODANO_FUN_002DA098",
+          "address": 2990232,
+          "size": 12,
+          "matched": true,
+          "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 12
+        },
         {
           "symbol": "LVL_12_TODANO_FUN_002DB058",
           "address": 2994264,
@@ -2565,8 +2619,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 96
+      "matched_code_bytes": 128
     },
-    "object_sha256": "27b55c2e7a190b1ca168026715c91e35aae8adb41a5483db8dd492c945d4ae47"
+    "object_sha256": "f0c4d02dd547c739dff394cefe44940575e721ef0dcc93a5397670dc63d8d6aa"
   }
 }

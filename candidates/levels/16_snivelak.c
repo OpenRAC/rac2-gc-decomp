@@ -1,3 +1,4 @@
+typedef unsigned char u8;
 typedef int s32;
 typedef unsigned int u32;
 typedef struct { u32 items[5]; } NativeTable20;
@@ -8,4 +9,14 @@ void LVL_16_SNIVELAK_FUN_002D0B60(s32 *object) {
 u32 LVL_16_SNIVELAK_FUN_002ED1C8(s32 index) {
     NativeTable20 values=LVL_16_SNIVELAK_D_001A8EB0;
     return values.items[index];
+}
+
+u32 LVL_16_SNIVELAK_FUN_002AE4B0(u8 *object,u32 value) {
+    if(value==255) value=object[0xa9];
+    return value;
+}
+
+extern u32 LVL_16_SNIVELAK_D_0018C0B4;
+u32 LVL_16_SNIVELAK_FUN_002CFB08(void) {
+    return LVL_16_SNIVELAK_D_0018C0B4;
 }

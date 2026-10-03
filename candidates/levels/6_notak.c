@@ -1,3 +1,4 @@
+typedef unsigned char u8;
 typedef int s32;
 typedef unsigned int u32;
 typedef struct { u32 items[5]; } NativeTable20;
@@ -8,4 +9,14 @@ void LVL_6_NOTAK_FUN_00317028(s32 *object) {
 u32 LVL_6_NOTAK_FUN_003332A8(s32 index) {
     NativeTable20 values=LVL_6_NOTAK_D_001A8EB0;
     return values.items[index];
+}
+
+u32 LVL_6_NOTAK_FUN_002ED5D0(u8 *object,u32 value) {
+    if(value==255) value=object[0xa9];
+    return value;
+}
+
+extern u32 LVL_6_NOTAK_D_0018C0B4;
+u32 LVL_6_NOTAK_FUN_00316068(void) {
+    return LVL_6_NOTAK_D_0018C0B4;
 }

@@ -6,10 +6,10 @@
   "reference_sha256": "eeab491a667c311b024745af7173ac08371e279ade0b4ab5d48b6f81fa751aaf",
   "reference_entry": 2782728,
   "candidate_source": "candidates/levels/19_grelbin.c",
-  "source_sha256": "4e0309e231bfa5bd3533a1d12a49d3a86ad8c37a639094c7115af179131000ea",
-  "catalog_sha256": "e99896001cf095a4ca0f979c2057090388b6d06916b0f9ffacb035bc3a611fb5",
-  "object_sha256": "d2558b8ab06c2296ecbfc339023edcaebcb990584b599fd601d630788746a9ea",
-  "candidate_elf_sha256": "3a0b4012d939373a027a2007c5da940b470639135e3877c63976aa2d309e2017",
+  "source_sha256": "3c3ae4b81079283bcbe33f346fde53b74bf82f9293b2c93f8f2cfb52cd7f22d4",
+  "catalog_sha256": "59028eb458c0091003ec3f3f011e8fdf27cd4b2d0d965354fb89b022aae0a267",
+  "object_sha256": "5ce9b914267d07e242ebb52eca2be1c7db8b19ac933b65245171d156f867682d",
+  "candidate_elf_sha256": "ad27e96d47450cd7ce6a106000100c377c7d717662c839644b87e18f8f2bf084",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -24,6 +24,28 @@
   ],
   "state": "matched_unintegrated",
   "functions": [
+    {
+      "symbol": "LVL_19_GRELBIN_FUN_002B0DD8",
+      "address": 2821592,
+      "size": 20,
+      "matched": true,
+      "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 20
+    },
+    {
+      "symbol": "LVL_19_GRELBIN_FUN_002D4390",
+      "address": 2966416,
+      "size": 12,
+      "matched": true,
+      "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 12
+    },
     {
       "symbol": "LVL_19_GRELBIN_FUN_002D53E8",
       "address": 2970600,
@@ -47,5 +69,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 96
+  "matched_code_bytes": 128
 }
