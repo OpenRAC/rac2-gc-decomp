@@ -29,7 +29,11 @@
     "FUN_0011F5E0": 1177056,
     "FUN_0011F628": 1177128,
     "FUN_001253A8": 1201064,
-    "FUN_00124B88": 1198984
+    "FUN_00124B88": 1198984,
+    "FUN_00126470": 1205360,
+    "FUN_0011AEA0": 1158816,
+    "FUN_00126730": 1206064,
+    "FUN_001244B8": 1197240
   },
   "functions": [
     {
@@ -927,6 +931,22 @@
       "ranges": 1,
       "xrefs": 0,
       "meaning": "avance une file circulaire et marque une entree sous section critique ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_002FC8D0",
+      "address": 3131600,
+      "size": 188,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "extrait des blocs GS arrondis a 16384 octets, compteur restant en clause for ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_00350A78",
+      "address": 3476088,
+      "size": 244,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "decompose espace libre tampon circulaire; restant avant modulo et somme preservee par long ; exact boot match, level placements qualified separately"
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"

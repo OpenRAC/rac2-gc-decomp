@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "boot",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "e22fbdeaea8199eab65041b324495ad7c2dddaeaa079a5ab16fff2b19019ac85",
-  "catalog_sha256": "e4e3533f95b86051a5d2719baee0a744a0cc376981a1d526cd1a9f1ea71804a7",
+  "source_sha256": "51c5b5a2807d3e9820a87e1a84cd6df00ec2b5dbcdd614a1144e2395d88bd604",
+  "catalog_sha256": "cf185e85f0abbc9c9bcb78f0cf9311550ed877533cbb5023b57b4606fc84ef43",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -1350,6 +1350,30 @@
       "state": "integrated",
       "integrated": true,
       "program": "boot"
+    },
+    {
+      "symbol": "FUN_002FC8D0",
+      "address": 3131600,
+      "size": 188,
+      "matched": true,
+      "reference_sha256": "56fd6f69876c19ab816b202f0c313a9d3b6416deaaaec8a7bf71aa931a0c99ee",
+      "candidate_sha256": "56fd6f69876c19ab816b202f0c313a9d3b6416deaaaec8a7bf71aa931a0c99ee",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
+    },
+    {
+      "symbol": "FUN_00350A78",
+      "address": 3476088,
+      "size": 244,
+      "matched": true,
+      "reference_sha256": "e9c7533e3cf7fb3c2c8a9dbfcf88ad75af1e3ad831fef7e959a6d2c8ada7bdb0",
+      "candidate_sha256": "e9c7533e3cf7fb3c2c8a9dbfcf88ad75af1e3ad831fef7e959a6d2c8ada7bdb0",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
     }
   ],
   "full_boot_gate": {
@@ -1357,15 +1381,15 @@
     "bytes_compared": 2521763,
     "segments": 2
   },
-  "matched_code_bytes": 3572,
+  "matched_code_bytes": 4004,
   "tools": {
     "cc1": "c9952c1b8eab5f84f680c32a9219c3c03963503844ba17c4210ccd831af3fafe",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "0a07ee8dc70813f3291750bf2c197f293ad4b4db0043e329dd157d6e24d161c9",
-  "c_object_sha256": "9fa057b4b5084448fb966af0986921aa5c47e3f33e9494ed2f639020f1f4b20e",
+  "candidate_elf_sha256": "b21329e3677c9b524e6c95a7b09947838812d412cdaee97b51f53892cb82b6b2",
+  "c_object_sha256": "a75cb5074ff0872f46c8331edc8c12a9c2978129336a0e72aff7a2fe5f605d31",
   "replacement_inputs": {
     "16180.s": [
       "FUN_00115200",
@@ -1481,7 +1505,9 @@
       "FUN_00350798",
       "FUN_00350808",
       "FUN_003506B0",
-      "FUN_00351E70"
+      "FUN_00351E70",
+      "FUN_002FC8D0",
+      "FUN_00350A78"
     ]
   }
 }

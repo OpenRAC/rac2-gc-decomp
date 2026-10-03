@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "11_joba",
   "reference_sha256": "c6cf24ac0591c78ae6a5320a333b4465f54969ab91e0f42f52fcb7fc95f2f00e",
-  "source_sha256": "e22fbdeaea8199eab65041b324495ad7c2dddaeaa079a5ab16fff2b19019ac85",
-  "catalog_sha256": "e44d287ff7571096579d4a14484e11826576bb7b35378904cc6f2e743f1f53ae",
+  "source_sha256": "51c5b5a2807d3e9820a87e1a84cd6df00ec2b5dbcdd614a1144e2395d88bd604",
+  "catalog_sha256": "25a4cbc5e08b5cf6d640798c5b4bc7088c140c03ef8d7f6fb6cfc772066fdf7d",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -266,6 +266,18 @@
       "matched": true,
       "reference_sha256": "33a9d2d27f7d7c6755ff6244f00748b3974b2275065dd3d66cc3c80c96f074de",
       "candidate_sha256": "33a9d2d27f7d7c6755ff6244f00748b3974b2275065dd3d66cc3c80c96f074de",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "11_joba"
+    },
+    {
+      "symbol": "FUN_002FC8D0",
+      "address": 3735776,
+      "size": 188,
+      "matched": true,
+      "reference_sha256": "56fd6f69876c19ab816b202f0c313a9d3b6416deaaaec8a7bf71aa931a0c99ee",
+      "candidate_sha256": "56fd6f69876c19ab816b202f0c313a9d3b6416deaaaec8a7bf71aa931a0c99ee",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -1040,6 +1052,18 @@
       "program": "11_joba"
     },
     {
+      "symbol": "FUN_00350A78",
+      "address": 4881680,
+      "size": 244,
+      "matched": true,
+      "reference_sha256": "e9c7533e3cf7fb3c2c8a9dbfcf88ad75af1e3ad831fef7e959a6d2c8ada7bdb0",
+      "candidate_sha256": "e9c7533e3cf7fb3c2c8a9dbfcf88ad75af1e3ad831fef7e959a6d2c8ada7bdb0",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "11_joba"
+    },
+    {
       "symbol": "FUN_00350B70",
       "address": 4881928,
       "size": 84,
@@ -1177,15 +1201,15 @@
     "bytes_compared": 3151320,
     "segments": 1
   },
-  "matched_code_bytes": 3148,
+  "matched_code_bytes": 3580,
   "tools": {
     "cc1": "c9952c1b8eab5f84f680c32a9219c3c03963503844ba17c4210ccd831af3fafe",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "da2905390c3a82afa6d8cddad22cbddd6b88506b3d04f70d695efc2eb9cbad96",
-  "c_object_sha256": "9fa057b4b5084448fb966af0986921aa5c47e3f33e9494ed2f639020f1f4b20e",
+  "candidate_elf_sha256": "20a4536f9280dce806d650caee2f29974ccec1af9d48e4b848250837cdeabf35",
+  "c_object_sha256": "a75cb5074ff0872f46c8331edc8c12a9c2978129336a0e72aff7a2fe5f605d31",
   "replacement_inputs": {
     "116180.s": [
       "FUN_00282C48",
@@ -1210,6 +1234,7 @@
       "FUN_002CC6A0",
       "FUN_002E60A0",
       "FUN_002E60E8",
+      "FUN_002FC8D0",
       "FUN_00300540",
       "FUN_00312B58",
       "FUN_00312E10",
@@ -1274,6 +1299,7 @@
       "FUN_003505E0",
       "FUN_00350698",
       "FUN_003506B0",
+      "FUN_00350A78",
       "FUN_00350B70",
       "FUN_00351268",
       "FUN_003512B8",

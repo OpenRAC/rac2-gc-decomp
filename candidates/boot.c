@@ -702,3 +702,43 @@ void FUN_00351E70(u8 *a0) {
     *(volatile s32 *)(a0+8) = (*(volatile s32 *)(a0+8) + 1) % *(s32 *)(a0+0x10);
     FUN_0011F628();
 }
+
+/* lot10: privately byte-gated bodies. */
+extern s32 FUN_00126470(u8 *, s32, s32, s32, s32, s32, s32, s32);
+extern s32 FUN_0011AEA0(s32);
+extern s32 FUN_00126730(u8 *, u8 *);
+extern s32 FUN_001244B8(s32, s32);
+void FUN_002FC8D0(u8 *a0, s32 a1, s32 a2) {
+    u8 image[112];
+    s32 remain = (a2 + 0x3fff) & ~0x3fff;
+    s32 src = 0, dst = 0;
+    for (; remain > 0; remain -= 0x4000) {
+        FUN_00126470(image, (s32)(short)((a1+src)>>8), 1, 1, 0, 0, 64, 64);
+        src += 0x4000;
+        FUN_0011AEA0(0);
+        FUN_00126730(image,a0+dst);
+        dst += 0x3000;
+        FUN_001244B8(0,0);
+    }
+}
+
+extern s32 FUN_0011AC60(s32);
+extern s32 FUN_0011AC40(s32);
+void FUN_00350A78(s32 *a0, s32 *a1, s32 *a2, s32 *a3, s32 *a4) {
+    s32 pos, left;
+    FUN_0011AC60(a0[16]);
+    left = (s32)((long)a0[2] - (long)(a0[4]+2)) * 2048 - a0[5];
+    pos = ((a0[3] + a0[4]) * 2048 + a0[5]) % a0[6];
+    if (left <= a0[6]-pos) {
+        *a1 = a0[0]+pos;
+        *a2 = left;
+        *a3 = 0;
+        *a4 = 0;
+    } else {
+        *a1 = a0[0]+pos;
+        *a2 = a0[6]-pos;
+        *a3 = a0[0];
+        *a4 = left - (a0[6]-pos);
+    }
+    FUN_0011AC40(a0[16]);
+}
