@@ -125,6 +125,12 @@ sufficient mechanism; their original source directives remain unresolved.
    retain their previous output. The complete 168-byte `FUN_002E5FE0` becomes
    exact with a counted 52-entry loop, while the older compiler differs in
    six bytes on the same source and flags.
+   A fresh current-profile qualification also reproduces the complete 8-byte
+   `FUN_00282C88`: one 128-bit zero assignment. Its historical `dff08a34`
+   baseline produced 12 bytes; the full boot source now reuses the existing
+   `TI` typedef and passes 178/178 complete symbols. This additional source
+   witness is recorded in the [experiment register](C-NATIVE-EXPERIMENT-REGISTER.md);
+   it does not imply that every zero-store spelling selects the same form.
 7. **Preserve the generic frame scheduler by default.** The cumulative P21
    option forces emission order between two frame-related instructions. The
    earlier RAC2 recipe enabled that option. The

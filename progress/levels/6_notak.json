@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "6_notak",
   "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
-  "source_sha256": "3d68fc8a774112df0425a7f5b35baa0b9989baf3442d526cd7649eb683483244",
-  "catalog_sha256": "2ef5e92c955ad1cb747ecd419e76e804080d253fdf5da392c91417d5c2aabe25",
+  "source_sha256": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
+  "catalog_sha256": "1d8fd8eab1e75283b6fdccf0d24e0cc9ad2a24150aee0d32f0a7891c9214e084",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -56,6 +56,20 @@
       "matched": true,
       "reference_sha256": "6b4d226fc22ad3590dd74f001e84a6a98194a295e319db77d2e287120ab7080c",
       "candidate_sha256": "6b4d226fc22ad3590dd74f001e84a6a98194a295e319db77d2e287120ab7080c",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "6_notak",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
+      "symbol": "FUN_00282C88",
+      "address": 3331472,
+      "size": 8,
+      "matched": true,
+      "reference_sha256": "9d716af445071a6128e58d4f9bf2ac64bffc8299e9c517813fc6be1b2cd6d5f5",
+      "candidate_sha256": "9d716af445071a6128e58d4f9bf2ac64bffc8299e9c517813fc6be1b2cd6d5f5",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -2155,21 +2169,22 @@
     "bytes_compared": 3086560,
     "segments": 1
   },
-  "matched_code_bytes": 7576,
+  "matched_code_bytes": 7584,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "031894c88189bcfe5d1a98c81685b6b53fba380b933d087cdf2c32ecfc943580",
-  "c_object_sha256": "5e2034de516c45ea1002d94dd8e32e6cf5e7224652560229fcd156f47b896bbe",
+  "candidate_elf_sha256": "629345c613f49bb9f3fb03b9fcbb962d7e7e4156f1fec64a600974b721eb8bd2",
+  "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "13C500.s": [
       "FUN_0026FEB8",
       "FUN_0027F128",
       "FUN_002802E0",
       "FUN_00282C48",
+      "FUN_00282C88",
       "FUN_00283CE0",
       "FUN_002889B8",
       "FUN_00288A00",
@@ -2327,8 +2342,8 @@
     "target": "SCUS_972.68",
     "program": "6_notak",
     "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
-    "source_sha256": "3d68fc8a774112df0425a7f5b35baa0b9989baf3442d526cd7649eb683483244",
-    "catalog_sha256": "2ef5e92c955ad1cb747ecd419e76e804080d253fdf5da392c91417d5c2aabe25",
+    "source_sha256": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
+    "catalog_sha256": "1d8fd8eab1e75283b6fdccf0d24e0cc9ad2a24150aee0d32f0a7891c9214e084",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_level_gate": {
@@ -2336,21 +2351,22 @@
       "bytes_compared": 3086560,
       "segments": 1
     },
-    "matched_code_bytes": 7480,
+    "matched_code_bytes": 7488,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "031894c88189bcfe5d1a98c81685b6b53fba380b933d087cdf2c32ecfc943580",
-    "c_object_sha256": "5e2034de516c45ea1002d94dd8e32e6cf5e7224652560229fcd156f47b896bbe",
+    "candidate_elf_sha256": "629345c613f49bb9f3fb03b9fcbb962d7e7e4156f1fec64a600974b721eb8bd2",
+    "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "13C500.s": [
         "FUN_0026FEB8",
         "FUN_0027F128",
         "FUN_002802E0",
         "FUN_00282C48",
+        "FUN_00282C88",
         "FUN_00283CE0",
         "FUN_002889B8",
         "FUN_00288A00",
@@ -2509,8 +2525,8 @@
   },
   "reference_entry": 3027336,
   "candidate_entry": 3027336,
-  "dependency_sha256": "b137a5d15b84a5d42b75ab060753cb6b0878909244beb225ae73d063af2a2c44",
-  "boot_review_sha256": "52bcc0b24442a0ff3d1e99f5a5f8ce2ee7b072dc688cccf90f2e030ff87b20c2",
+  "dependency_sha256": "2668778cd32631e7f0e4e44361f1151a090d7c95d7db24d75b606dd0da96833f",
+  "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/6_notak.c",
     "catalog_path": "config/level-native/6_notak.json",

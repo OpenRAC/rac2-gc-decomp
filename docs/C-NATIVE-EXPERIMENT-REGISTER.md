@@ -1,17 +1,17 @@
-# Native C Experiment Register — Ship Shack
+# C Experiment Register
 
-This is the canonical index for native-C reconstruction experiments against `levels/24_ship_shack`. Check it before proposing or running a new source variant. Add one row immediately after each trial; never overwrite a prior row. The run directory is the evidence package and retains the exact source, catalog, object, assembly, logs, and qualification result. Ghidra remains the place for function analysis and annotations; this register records compiler experiments and their outcomes. The repository tracks this index; generated game objects, binaries, and runtime artifacts remain local.
+This is the canonical index for the recorded RAC2 C experiments. The original table covers `levels/24_ship_shack`; boot requalifications are appended below. Check it before proposing or running a new source variant. Add one row immediately after each trial; never overwrite a prior row. The run directory is the evidence package and retains the exact source, catalog, object, assembly, logs, and qualification result. Ghidra remains the place for function analysis and annotations; this register records compiler experiments and their outcomes. The repository tracks this index; generated game objects, binaries, and runtime artifacts remain local.
 
 ## Current scope and interpretation
 
 - Reference: `SCUS_972.68`, `/levels/24_ship_shack.elf`, pinned ELF SHA-256 `4afbc22add84109c84ef8ca49099fdf9863905e5f497369c207ac5cb47814740`.
-- This register inventories 72 distinct archived trials across 12 functions: 7 exact results, 61 byte mismatches, 2 archived runs without proof, 1 compiler failure, and 1 source rejected before compilation.
+- This register inventories 78 distinct archived trials across 12 functions: 7 exact results, 67 byte mismatches, 2 archived runs without proof, 1 compiler failure, and 1 source rejected before compilation.
 - The 51 proof-bearing trials from the original candidate bank used the historical `dff08a34` C compiler profile with `-O2 -G0 -ffunction-sections`; seven later measured `FUN_002B0408` variants, five measured `FUN_002F2718` trials, two measured `FUN_00323430` variants, and the two latest exact promotions used the current `8bed6eae` profile with the same flags. Two earlier 8bed-labelled folders do not retain qualification proofs and are explicitly marked unverified; the register-binding source was separately rejected before compilation. Other pinned tool hashes for proof-bearing trials are recorded in their local evidence. Historical exact results are not current-profile qualification; requalify a candidate with the current checker before treating an old exact result as current evidence.
 - The five historical exact targets are now present in the public level-native catalog at the repository revision where this register was created. The table records the trial result and its original profile, not a substitute for current proofs.
 - Classification uses `qualification_passed` and `proof.functions[].matched`; `proof.state` alone is not decisive. Aggregate `*-results.json` files duplicate these per-run records. Deduplicate by run directory / `work` path.
 - Archived evidence remains in the private GAMING work area. Each evidence path is relative to the private `D:\RAC2\work` root. Candidate-bank runs retain `result.json` and `catalog.json`; source and compiler artifacts are present where the run reached that stage. Proof-bearing runs also contain object qualification data. The two original no-proof runs preserve their compiler/chain errors in `result.json` and `compile.log`.
 
-## Archived runs
+## Archived Ship Shack native runs
 
 | Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
 |---|---|---:|---|---|---|---:|---|---|
@@ -89,7 +89,39 @@ This is the canonical index for native-C reconstruction experiments against `lev
 | `0x002F2718` | `FUN_002F2718` | 64 | `native-2f2718-root8bed-d2e7070/trial-output-zero-expect-true` | `8bed6eae` | MISMATCH | 68 produced / 64 target bytes | `8499d0e74683785c` | `nuit-codex-prologue/native-2f2718-root8bed-d2e7070/trial-output-zero-expect-true` |
 | `0x00323430` | `FUN_00323430` | 112 | `native-323430-root8bed-299e03a/trial-baseline-current-profile` | `8bed6eae` | MISMATCH | 108 produced / 112 target bytes | `9ac0e2a8242a9473` | `nuit-codex-prologue/native-323430-root8bed-299e03a/trial-baseline-current-profile` |
 | `0x00323430` | `FUN_00323430` | 112 | `native-323430-root8bed-fddf057/trial-global-pointer-volatile` | `8bed6eae` | MISMATCH | 108 produced / 112 target bytes | `437fa4953b2871b5` | `nuit-codex-prologue/native-323430-root8bed-fddf057/trial-global-pointer-volatile` |
+| `0x002F2B48` | `FUN_002F2B48` | 136 | `native-2f2b48-current-3ffc9ce/trial-baseline` | `8bed6eae` | MISMATCH | 124 produced / 136 target bytes | `4aa343b081032ad9` | `nuit-codex-prologue/native-2f2b48-current-3ffc9ce/trial-baseline` |
+
+| `0x002F2B48` | `FUN_002F2B48` | 136 | `native-2f2b48-direct-fields-8bed/trial-direct-fields` | `8bed6eae` | MISMATCH | 26 / 136 bytes | `1849f21220d919e5` | `nuit-codex-prologue/native-2f2b48-direct-fields-8bed/trial-direct-fields` |
+
+| `0x002F2B48` | `FUN_002F2B48` | 136 | `native-2f2b48-array-state-8bed/trial-array-state` | `8bed6eae` | MISMATCH | 152 produced / 136 target bytes | `8bf29f22a64fe7be` | `nuit-codex-prologue/native-2f2b48-array-state-8bed/trial-array-state` |
+
+| `0x002F2B48` | `FUN_002F2B48` | 136 | `native-2f2b48-struct-state-8bed/trial-struct-state` | `8bed6eae` | MISMATCH | 152 produced / 136 target bytes | `289e2fdd27852c84` | `nuit-codex-prologue/native-2f2b48-struct-state-8bed/trial-struct-state` |
+
+| `0x002F2B48` | `FUN_002F2B48` | 136 | `native-2f2b48-struct-state-normal-8bed/trial-normal-struct` | `8bed6eae` | MISMATCH | 7 / 136 bytes | `1b24b8c2695482a7` | `nuit-codex-prologue/native-2f2b48-struct-state-normal-8bed/trial-normal-struct` |
+
+| `0x002F2B48` | `FUN_002F2B48` | 136 | `native-2f2b48-struct-state-normal-8bed/trial-table-placement` | `8bed6eae` | MISMATCH (generated-table placement) | 4 / 136 bytes | `1b24b8c2695482a7` | `nuit-codex-prologue/native-2f2b48-struct-state-normal-8bed/trial-table-placement` |
+
 
 ## New trial entry format
 
 Append a row after every compiler experiment, including a failed compile or a no-match. Keep its complete run directory. Record the address, function size, immutable trial ID, compiler profile, qualification result, byte difference or size, source hash, and evidence path. If the source or compiler profile changes, it is a new trial. If evidence is unavailable, write `unknown` rather than inferring a value. Update the inventory totals and exact-current-profile status only from checker output.
+
+
+## Boot requalification — current 8bed profile
+
+These six preserved leaf sources were previously rejected under `dff08a34`. They were compiled together once under `8bed6eae`, using the unchanged flags and pinned boot reference. This is a new tool-profile measurement, not a new source guess. The batch source SHA-256 is `bf776cd816911e1d8f998a5595c6801bd39cce3111692c1eec776dc52553c3f9`. Each row points to the same complete private run, with its target as the unique record key. An exact private result requires full boot and overlay integration before it counts as progress.
+
+| Target | Program | Trial record | C profile | Result | Produced / target bytes | Source SHA prefix | Evidence directory |
+|---|---|---|---|---|---|---|---|
+| `FUN_00282C88` | boot | `resume8bed-46170a12:FUN_00282C88` | `8bed6eae` | EXACT; integration pending | 8 / 8 | `bf776cd816911e1d` | `nuit-codex-prologue/boot-resume-3ffc9ce-8bed/run-resume8bed-46170a12` |
+| `FUN_00283678` | boot | `resume8bed-46170a12:FUN_00283678` | `8bed6eae` | MISMATCH | 28 / 32 | `bf776cd816911e1d` | `nuit-codex-prologue/boot-resume-3ffc9ce-8bed/run-resume8bed-46170a12` |
+| `FUN_0029CF58` | boot | `resume8bed-46170a12:FUN_0029CF58` | `8bed6eae` | MISMATCH | 36 / 32 | `bf776cd816911e1d` | `nuit-codex-prologue/boot-resume-3ffc9ce-8bed/run-resume8bed-46170a12` |
+| `FUN_00300300` | boot | `resume8bed-46170a12:FUN_00300300` | `8bed6eae` | MISMATCH | 44 / 48 | `bf776cd816911e1d` | `nuit-codex-prologue/boot-resume-3ffc9ce-8bed/run-resume8bed-46170a12` |
+| `FUN_003495A0` | boot | `resume8bed-46170a12:FUN_003495A0` | `8bed6eae` | MISMATCH (6 differing bytes) | 20 / 20 | `bf776cd816911e1d` | `nuit-codex-prologue/boot-resume-3ffc9ce-8bed/run-resume8bed-46170a12` |
+| `FUN_00349610` | boot | `resume8bed-46170a12:FUN_00349610` | `8bed6eae` | MISMATCH | 20 / 24 | `bf776cd816911e1d` | `nuit-codex-prologue/boot-resume-3ffc9ce-8bed/run-resume8bed-46170a12` |
+| `FUN_00282C88` | full boot source | `full-zero128-beed6e87` | `8bed6eae` | COMPILE FAIL: existing TI typedef conflicts with mode attribute token | not produced / 8 | `unknown` | `nuit-codex-prologue/boot-zero128-full/candidate-runs/beed6e87` |
+| `FUN_00282C88` | full boot source | `full-zero128-reuse-type-0d1cb468` | `8bed6eae` | EXACT; 178/178 complete boot symbols | 8 / 8 | `0de6cd7c5c971515` | `nuit-codex-prologue/boot-zero128-full-reuse-type/candidate-runs/0d1cb468` |
+
+The accepted full-source form reuses the existing `TI` typedef. It avoids redeclaring a mode attribute whose token `TI` has already become a type name in this old compiler. No assembly source or instruction bytes are embedded.
+
+The boot zero-store result was subsequently integrated through [lot 24](TWENTY-FOURTH-C-LOT.md): 178 boot symbols, 27 complete overlay gates, and an exported total of 214,344 C bytes. Trial rows retain their original qualification states.

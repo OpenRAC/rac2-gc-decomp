@@ -1389,3 +1389,6 @@ void FUN_002B7170(void) {
     ((WaitState *)D_001A63A8)->clear2c = 0; ((WaitState *)D_001A63A8)->mode = -1;
     ((WaitState *)D_001A63A8)->next = -1;
 }
+
+/* Clear one aligned 128-bit object through architectural zero. */
+void FUN_00282C88(TI *a0) { *a0 = 0; }

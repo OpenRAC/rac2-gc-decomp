@@ -38,17 +38,19 @@ This repository is part of project 45.
 ## Current status
 
 Assembly reconstruction and matching C/C++ are tracked separately.
-For native C experiments, see the [Ship Shack experiment register](docs/C-NATIVE-EXPERIMENT-REGISTER.md).
+For recorded C experiments, see the [experiment register](docs/C-NATIVE-EXPERIMENT-REGISTER.md).
 See [the measured progress report](progress/report.json) and
 [the C integration proof](progress/integration.json) for their respective results.
 The native runtime remains a separate development milestone.
 
-Verified on **2026-10-02**: the complete boot image (**2,521,763 loaded bytes,
+Verified on **2026-10-03**: the complete boot image (**2,521,763 loaded bytes,
 two PT_LOAD segments**) and **all 27 level overlays** rebuild identically in loaded
-memory. **157 tool tests pass**. **Ninety-two C functions (2,008 bytes) are integrated in the boot, and the same reviewed C is integrated in all 27 level overlays (2,091 placements, 48,156 bytes)**
-using genuine compiler-produced objects, with the complete boot matching both
-original loaded segments. The general compiler profile and native runtime
-remain to be established.
+memory. **176 tool tests pass**. **178 C functions (9,336 bytes)** are integrated in the
+boot, with **4,158 reviewed overlay placements (205,008 bytes)**, including native C.
+The exported total is **214,344 / 48,788,176 bytes (0.4393%)**. The measured C profile
+is documented in [compiler notes](docs/COMPILER-NOTES.md). Native gameplay remains unverified.
+
+Latest matching lot: [a 128-bit zero store at 28 locations](docs/TWENTY-FOURTH-C-LOT.md).
 
 ## Requirements
 
