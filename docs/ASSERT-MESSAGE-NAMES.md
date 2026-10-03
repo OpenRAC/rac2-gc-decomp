@@ -1,92 +1,80 @@
-# Assert-message carriers — 102 level functions named, and the last 59 messages closed
+# Assert-message carriers: 597 recorded annotations
 
-**Measured 2026-10-02/03 against the pinned retail image** (`config/target.json`) and the
-9 September 2003 PAL prototype disc.
+Measured on 3 October 2026 against the USA v1.01 retail programs identified by
+[`config/target.json`](../config/target.json) and
+[`config/overlays.json`](../config/overlays.json).
 
-After the dispatch-table pass (`docs/MOBY-DISPATCH-TABLES.md`) one family of names was still
-open: **59 assert messages** localized in the retail boot had **no carrying function**. No
-instruction computes their address — not in the retail boot, not in the prototype boot. This
-document records where they actually live, what was named, and what is deliberately **not**
-named.
+The second naming pass adds **495 function annotations, using 33 distinct labels,
+across 25 level overlays**. Combined with the previous 102 entries, the public table
+contains **597 unique `(program, address)` entries**. Every one of the 495 new entries
+and every one of the 102 previous entries was compared with the current Ghidra function
+name at the exact entry address; all 597 agreed. The two passes have no overlapping keys.
 
-## Method
+[`assert-message-names.tsv`](assert-message-names.tsv) contains only program identifiers,
+virtual entry addresses and analyst-assigned structural labels. It contains no game
+messages, extracted instructions or assets.
 
-1. **Our own ISO9660 reader** and a level-archive extractor. The prototype disc's level table
-   sits at `RC2.HDR + 0x5000 + i*0x3000` (level LBA at `+0x0004`, scene LBA at `+0x1804`),
-   verified against the volume's real LBAs; each level is a chain of `(dest_addr, copy_size,
-   section_type, entry_point)` records followed by their content, in seven sections:
-   `.lit`, `.bss`, `.data`, `lvl.vtbl`, `lvl.camvtbl`, `lvl.sndvtbl`, `.text`.
-   **27 levels, 57 070 528 bytes** extracted.
-2. **32 of the 59 messages occur inside the retail level overlays.** Each one was resolved to
-   the function that references it, using the retail overlays already loaded in the analysis
-   project.
-3. **Strict naming rule.** A function is renamed only when **both** hold: its current name is
-   still generic (`FUN_…`) **and exactly one** message targets it. An existing name is never
-   overwritten; a function targeted by several messages is left alone and listed, never guessed.
+## What the labels mean
 
-## Result
+These are annotations of functions that reference a diagnostic message. They are
+**not original source symbols**, inferred function signatures, or proof that the
+entire function implements the condition named in its label. A reference can occur in
+one error branch of a much larger routine. The `Report` suffix describes the observed
+diagnostic relationship; it does not establish that reporting is the routine's only job.
 
-**102 functions named across 25 overlays** (the level overlays each carry their own copy of
-the shared library, so a name lands in every level that has it):
+For example, level 0 entry `0x00369008`, currently labelled `TfragTextureOverflow`,
+builds a DMA chain and checks a threshold within that work. Level 0 entry `0x00321878`,
+labelled `BoltsSpawnNegativeCount`, contains a larger spawning routine. These labels
+are useful search anchors and should be refined only after reviewing the whole body.
+They must not be promoted directly to decompilation API names.
 
-| Name | Functions |
-| --- | ---: |
-| `DirectionalLightsOverflow` | 25 |
-| `CameraCollPrimTestGridOutOfBounds` | 25 |
-| `LevelDoorLimitExceeded` | 25 |
-| `NpcShowMessageBadId` | 10 |
-| `PathSetWtoDistNullPath` | 7 |
-| `ThermanatorBallsNeededReport` | 5 |
-| `PathDrawInvalidIndex` | 2 |
-| `MusicPitchDecreased` | 2 |
-| `CutsceneFinished` | 1 |
-| | **102** |
+## Provenance and checks
 
-The per-function list (program, address, name) is in `docs/assert-message-names.tsv`.
-Persistence was verified rather than assumed: re-running the pass after saving reports the
-functions as already named, not as renames.
+The private second-pass journal records 495 successful renames and zero failures.
+Its 495 rename records have 495 distinct program/address keys. The input selection
+has 33 diagnostic patterns, each associated with one analyst label. The pass visited
+the boot and 25 overlays; the boot contributed **zero new entries**, because its
+relevant functions already had names. Thus 26 programs visited is compatible with
+25 programs contributing to this export.
 
-**Cross-confirmation worth recording:** the Thermanator's two messages are referenced by
-`UpdateMoby_3212` — a function named by the dispatch-table pass from the prototype's class
-identifiers alone. Two independent methods (class identifier tables, assert strings) agree
-that **class 3212 is the Thermanator**.
+The naming script preserved existing non-generic names and rejected a function when
+the selected patterns supplied more than one different label. Its search used the
+first matching occurrence of each selected pattern in a program and followed existing
+Ghidra references. This is a narrower property than proving that the function contains
+exactly one diagnostic string in the entire binary. The export verification establishes
+name fidelity; it does not repair missing references or certify every semantic decision.
 
-## The other 27 messages are IOP library strings — not EE code
+The previous pass contributed 102 annotations across 25 overlays. Its independent
+class-identifier cross-check remains documented in
+[`MOBY-DISPATCH-TABLES.md`](MOBY-DISPATCH-TABLES.md). Functions with conflicting
+diagnostic labels and names already assigned by another method were preserved.
 
-The remaining 27 do occur on the disc, but in the **boot image's data sections**
-(`core.data` / `core.rdata` in the prototype; the retail boot keeps them in its own data
-sections). They are the assert strings of **IOP-side libraries** — `989snd`, `libcdvd`,
-`libdma`, `libpad2`, `libdbc`/`libmc`, `SIF` — including the version banners
-`PsIIlibcdvd 2530`, `PsIIlibdma 2500`, `PsIIlibpad2 2500`, sitting in a dense cluster of
-`sceDbc*` / `SifDmaAddr` strings: a module's string table carried in the EE image to be
-uploaded to the IOP.
+No game text is necessary to reproduce the application step. The privately owned
+retail image and analysis database remain the source for semantic review.
 
-Controls for that claim, all measured:
+## Applying or verifying the table
 
-- **0 / 27** of them is the target of a `lui`/`addiu` pair in the retail boot's `.text`,
-  and **0 / 27** in the prototype boot's `.text`.
-- The scanner used for that was **controlled on known values**: of the 2 982 distinct
-  addresses the prototype's `.text` builds with `lui`/`addiu`, it recovers the witness
-  counts exactly (119/119, 115/115, 110/110).
-- The reference analysis reports no cross-reference to them either.
+[`ApplyAssertMessageNames.java`](../scripts/ghidra/ApplyAssertMessageNames.java)
+accepts a program identifier and the TSV path. It previews by default; the explicit
+third argument `--apply` enables renaming. It checks the complete level `.text`
+SHA-256 against its recorded retail fingerprint before processing names, resolves a
+virtual-address or raw-file-offset import only when exactly one mapping matches,
+requires a function at the exact entry address, and never overwrites an existing
+non-generic name. Conflicting rows fail before any renames.
 
-Naming an EE function for these would be a category error: the code that references them
-runs on the IOP, a different processor with its own address space.
+Example arguments for the level 0 overlay:
 
-## Limits
+```text
+0_aranos_tutorial docs/assert-message-names.tsv
+```
 
-- A name here describes the function **that reports the assert**; it is not a claim about
-  everything the function does.
-- Functions targeted by **several** messages were left untouched — for example a group of
-  four debug camera controls, the pair of sound-mismatch messages, and the Thermanator pair.
-  They wait for a human decision rather than a guessed name.
-- The level overlays were identified by identifier transfer (dispatch tables) and assert
-  strings; no byte-level correspondence between prototype and retail level code is claimed.
+With `--apply`, review the summary and save the program explicitly after inspecting
+the changes. The script does not create functions, infer signatures, touch the boot,
+transfer prototype addresses, or apply the cross-build anchor survey.
 
-## Provenance
+## Separate cross-build evidence
 
-- Prototype: 9 September 2003 PAL review disc (`SCES_516.07` boot), our own readers; the
-  level-archive format was reverse-engineered and is documented in the project's working
-  notes, not here.
-- No bytes of either game image are reproduced in this document or in the TSV — only
-  identifiers, addresses and structural names.
+The Aug6/retail survey is qualified separately in
+[`AUG6-RETAIL-ANCHORS.md`](AUG6-RETAIL-ANCHORS.md). Matching code windows, diagnostic
+annotations and class-table identifiers are different forms of evidence. None of them
+alone establishes a byte-exact C reconstruction or a playable runtime.
