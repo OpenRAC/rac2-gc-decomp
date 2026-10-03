@@ -5,8 +5,8 @@ This is the canonical index for native-C reconstruction experiments against `lev
 ## Current scope and interpretation
 
 - Reference: `SCUS_972.68`, `/levels/24_ship_shack.elf`, pinned ELF SHA-256 `4afbc22add84109c84ef8ca49099fdf9863905e5f497369c207ac5cb47814740`.
-- This register inventories 64 distinct archived trials across 12 functions: 7 exact results, 53 byte mismatches, 2 archived runs without proof, 1 compiler failure, and 1 compiled candidate that was not byte-compared.
-- The 51 proof-bearing trials from the original candidate bank used the historical `dff08a34` C compiler profile with `-O2 -G0 -ffunction-sections`; seven later measured `FUN_002B0408` variants and the two latest exact promotions used the current `8bed6eae` profile with the same flags. The two remaining 8bed-labelled folders do not retain a proof/hash and are explicitly marked unverified. Other pinned tool hashes for proof-bearing trials are recorded in their local evidence. Historical exact results are not current-profile qualification; requalify a candidate with the current checker before treating an old exact result as current evidence.
+- This register inventories 65 distinct archived trials across 12 functions: 7 exact results, 54 byte mismatches, 2 archived runs without proof, 1 compiler failure, and 1 compiled candidate that was not byte-compared.
+- The 51 proof-bearing trials from the original candidate bank used the historical `dff08a34` C compiler profile with `-O2 -G0 -ffunction-sections`; seven later measured `FUN_002B0408` variants, one `FUN_002F2718` trial, and the two latest exact promotions used the current `8bed6eae` profile with the same flags. The two remaining 8bed-labelled folders do not retain a proof/hash and are explicitly marked unverified. Other pinned tool hashes for proof-bearing trials are recorded in their local evidence. Historical exact results are not current-profile qualification; requalify a candidate with the current checker before treating an old exact result as current evidence.
 - The five historical exact targets are now present in the public level-native catalog at the repository revision where this register was created. The table records the trial result and its original profile, not a substitute for current proofs.
 - Classification uses `qualification_passed` and `proof.functions[].matched`; `proof.state` alone is not decisive. Aggregate `*-results.json` files duplicate these per-run records. Deduplicate by run directory / `work` path.
 - Archived evidence remains in the private GAMING work area. Each row gives a directory relative to its `nuit-codex-level-candidates` folder; it contains `result.json`, `catalog.json`, and source. Proof-bearing runs also contain object qualification data. The two no-proof runs preserve their compiler/chain errors in `result.json` and `compile.log`.
@@ -81,6 +81,7 @@ This is the canonical index for native-C reconstruction experiments against `lev
 | `0x002D1570` | `FUN_002D1570` | 72 | `native-24-002d1570-8bed/native-candidates/9a830e6b` | `8bed6eae` | EXACT; publicly integrated | 0 | `da33359d7ab9dfe7` | `native-24-002d1570-8bed/native-candidates/9a830e6b` |
 | `0x0035E348` | `FUN_0035E348` | 72 | `native-24-0035e348-8bed/native-candidates/ae6987b9` | `8bed6eae` | EXACT; publicly integrated | 0 | `e1cb74637497fd03` | `native-24-0035e348-8bed/native-candidates/ae6987b9` |
 
+| `0x002F2718` | `FUN_002F2718` | 64 | `native-2f2718-root8bed-5163ea2/trial-success-first-global-order` | `8bed6eae` | MISMATCH | 68 produced / 64 target bytes | `28244d9ce6f4c990` | `nuit-codex-prologue/native-2f2718-root8bed-5163ea2/trial-success-first-global-order` |
 
 ## New trial entry format
 
