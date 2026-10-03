@@ -33,7 +33,21 @@
     "FUN_00126470": 1205360,
     "FUN_0011AEA0": 1158816,
     "FUN_00126730": 1206064,
-    "FUN_001244B8": 1197240
+    "FUN_001244B8": 1197240,
+    "D_001A63A8": 1729448,
+    "FUN_00133688": 1259144,
+    "D_001A72E0": 1733344,
+    "D_001A7340": 1733440,
+    "D_001A63E8": 1729512,
+    "D_001A7900": 1734912,
+    "D_001A7430": 1733680,
+    "D_001A7434": 1733684,
+    "FUN_001334B8": 1258680,
+    "FUN_00133230": 1258032,
+    "FUN_00132028": 1253416,
+    "FUN_0011AFC0": 1159104,
+    "FUN_0011AFE0": 1159136,
+    "FUN_00133930": 1259824
   },
   "functions": [
     {
@@ -947,6 +961,150 @@
       "ranges": 1,
       "xrefs": 0,
       "meaning": "decompose espace libre tampon circulaire; restant avant modulo et somme preservee par long ; exact boot match, level placements qualified separately"
+    },
+    {
+      "symbol": "FUN_00288A00",
+      "address": 2656768,
+      "size": 156,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "depile deux mots dune file circulaire a cinq entrees"
+    },
+    {
+      "symbol": "FUN_00288AA0",
+      "address": 2656928,
+      "size": 116,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "empile une valeur et son indicateur dans une file circulaire"
+    },
+    {
+      "symbol": "FUN_00295BE8",
+      "address": 2710504,
+      "size": 100,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "choisit huit octets entre deux sources selon chaque masque"
+    },
+    {
+      "symbol": "FUN_0029F978",
+      "address": 2750840,
+      "size": 120,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "initialise et chaine une entree seulement si son drapeau est nul"
+    },
+    {
+      "symbol": "FUN_00348068",
+      "address": 3440744,
+      "size": 108,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "compte des enregistrements positifs et borne un index"
+    },
+    {
+      "symbol": "FUN_00350750",
+      "address": 3475280,
+      "size": 68,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "identifie un bloc par son etat, rend son index"
+    },
+    {
+      "symbol": "FUN_0027F128",
+      "address": 2617640,
+      "size": 80,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "somme les metriques signees des caracteres avec limite"
+    },
+    {
+      "symbol": "FUN_002C9A98",
+      "address": 2923160,
+      "size": 60,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "recule un index circulaire vers une entree non nulle"
+    },
+    {
+      "symbol": "FUN_002C9AD8",
+      "address": 2923224,
+      "size": 60,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "avance un index circulaire vers une entree non nulle"
+    },
+    {
+      "symbol": "FUN_002DE810",
+      "address": 3008528,
+      "size": 64,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "initialise six valeurs 16 bits depuis dimensions et moities"
+    },
+    {
+      "symbol": "FUN_00336D50",
+      "address": 3370320,
+      "size": 80,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "recherche une cle dans une table de paires"
+    },
+    {
+      "symbol": "FUN_00349150",
+      "address": 3445072,
+      "size": 64,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "initialise soixante-quatre valeurs a moins un et compteurs a zero"
+    },
+    {
+      "symbol": "FUN_00349630",
+      "address": 3446320,
+      "size": 60,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "memorise une valeur et initialise un flottant une seule fois"
+    },
+    {
+      "symbol": "FUN_00349918",
+      "address": 3447064,
+      "size": 80,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "remet a zero deux groupes de douze mots"
+    },
+    {
+      "symbol": "FUN_002B7D88",
+      "address": 2850184,
+      "size": 112,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "finalise et appelle le callback global si operation achevee; boot seulement"
+    },
+    {
+      "symbol": "FUN_00285708",
+      "address": 2643720,
+      "size": 128,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "stocke image GS parametrable depuis globales; boot seulement"
+    },
+    {
+      "symbol": "FUN_002B7C10",
+      "address": 2849808,
+      "size": 112,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "mode CD empaquete puis appel reorganise; reference utilise GP; boot seulement"
+    },
+    {
+      "symbol": "FUN_0034FB20",
+      "address": 3472160,
+      "size": 168,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "soumet SIF DMA puis attend completion; qualifie seulement avec padding post-DBR"
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"

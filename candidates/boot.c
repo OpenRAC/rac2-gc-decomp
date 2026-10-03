@@ -742,3 +742,236 @@ void FUN_00350A78(s32 *a0, s32 *a1, s32 *a2, s32 *a3, s32 *a4) {
     }
     FUN_0011AC40(a0[16]);
 }
+
+s32 FUN_00288A00(u8 *a0,s32 *a1,s32 *a2) {
+ s32 *values,*flags; s32 idx;
+ if(*(s32 *)(a0+0x38)==0) return 0;
+ if(--*(s32 *)(a0+0x38)==0) *(s32 *)(a0+0x44)=0;
+ values=(s32 *)(a0+8); flags=(s32 *)(a0+12);
+ *a1=*(s32 *)((u32)values+(*(s32 *)(a0+0x34)<<3));
+ *a2=*(s32 *)((u32)flags+(*(s32 *)(a0+0x34)<<3));
+ values=(s32 *)((u32)values+(*(s32 *)(a0+0x34)<<3)); *values=-1;
+ flags=(s32 *)((u32)flags+(*(s32 *)(a0+0x34)<<3)); *flags=-1;
+ idx=*(s32 *)(a0+0x34)+1;
+ if(idx==5) idx=0;
+ *(s32 *)(a0+0x34)=idx;
+ return 1;
+}
+
+s32 FUN_00288AA0(u8 *a0,s32 a1) {
+ s32 v;
+ if(*(s32 *)(a0+0x38)==5 || *(s32 *)(a0+0x44)!=0) return 0;
+ *(s32 *)((u32)a0+(*(s32 *)(a0+0x30)<<3)+8)=a1;
+ *(u32 *)((u32)a0+(*(s32 *)(a0+0x30)<<3)+12)=(u32)(a1-0x20U)<0x91;
+ v=*(s32 *)(a0+0x30)+1;
+ if(v==5) v=0;
+ *(s32 *)(a0+0x38)=*(s32 *)(a0+0x38)+1;
+ *(s32 *)(a0+0x30)=v;
+ return 1;
+}
+
+void FUN_00295BE8(u8 *a0,u8 *a1,u8 *a2,u8 *a3) {
+ s32 i=0;
+ do {
+  s32 next=i+1;
+  u32 mask=1;
+  u8 *nextp=a3+1;
+  s32 j=7;
+  do {
+   u8 value;
+   j--;
+   if(*a3&mask) value=*a1; else value=*a2;
+   mask<<=1;
+   *a0=value;
+   a1++;a2++;a0++;
+  } while(j>=0);
+  i=next;
+  a3=nextp;
+ } while(i<0x8000);
+}
+
+void FUN_0029F978(u8 *a0,u32 a1,u8 *a2) {
+ u8 *p;
+ if(a2[1]!=0) return;
+ a2[0]=a1; a2[1]=1;
+ *(f32 *)(a2+0x1c)=1.0f;
+ *(f32 *)(a2+0x20)=1.0f;
+ *(f32 *)(a2+0x24)=1.0f;
+ *(f32 *)(a2+0x28)=1.0f;
+ p=*(u8 **)(*(u8 **)(*(u8 **)(a0+0x24)+0x1c)+a2[0]*4+4);
+ *(u32 *)(a2+4)=p[p[0]+4]*0x40+0x70000000;
+ *(u8 **)(a2+8)=*(u8 **)(a0+0x54);
+ *(u8 **)(a0+0x54)=a2;
+}
+
+void FUN_00348068(u8 *a0,f32 *a1) {
+ f32 *end;
+ *(f32 **)(a0+0x58)=a1;
+ *(s32 *)(a0+0xb0)=0;
+ end=a1+0x50;
+ if(a1[0]>0.0f) {
+  do {
+   a1+=5;
+   (*(s32 *)(a0+0xb0))++;
+  } while(*a1>0.0f && (s32)a1<(s32)end);
+ }
+ if(*(s32 *)(a0+0x50)>=*(s32 *)(a0+0xb0)) *(s32 *)(a0+0x50)=0;
+}
+
+s32 FUN_00350750(u8 *a2, s32 a1) {
+    u32 v1 = ((*(u32 *)(a2 + 8) << 4) + *(u32 *)(a2 + 4) + 0x10) & 0x0FFFFFFF;
+    if (a1 == v1) return 0;
+    return (u32)(a1 - *(u32 *)a2) >> 11;
+}
+
+s32 FUN_0027F128(u8 *a0,s32 a1,u8 *a2) {
+ s32 out=0,i=0;
+ u8 *p;
+ if(a1!=0 && a0[0]!=0) {
+  p=a0;
+  do {
+   s32 value=*(signed char *)(a2+p[0]*4+3);
+   i++; p++;
+   if(value!=0) out+=value;
+   if(i==a1) break;
+  } while(p[0]!=0);
+ }
+ return out;
+}
+
+void FUN_002C9A98(s32 *a0) {
+ s32 *base=a0+3; s32 v;
+ do {
+  v=--a0[1];
+  if(v<=0) v=a0[0];
+  a0[1]=v;
+ } while(*(s32 *)((u32)base+(v<<2))==0);
+}
+
+void FUN_002C9AD8(s32 *a0) {
+ s32 limit=a0[0]; s32 *base=a0+3; s32 v;
+ do {
+  v=a0[1]+1;
+  if(limit<v) v=0;
+  a0[1]=v;
+ } while(*(s32 *)((u32)base+(v<<2))==0);
+}
+
+void FUN_002DE810(unsigned short *a0,u8 *a1) {
+ a0[0]=0;
+ a0[1]=*(unsigned short *)(a1+0x24);
+ a0[2]=0;
+ a0[3]=*(unsigned short *)(a1+0x20);
+ a0[4]=*(s32 *)(a1+0x20)>>1;
+ a0[5]=*(s32 *)(a1+0x24)>>1;
+ a0[8]=0x10;a0[9]=0;
+}
+
+s32 FUN_00336D50(u8 *a0,s32 a1) {
+ s32 count=*(s32 *)(a0+0x18); s32 i,out=0;u8 *base=a0+0x1c;
+ for(i=0;i<count;i++) {
+  s32 *p=(s32 *)((i<<3)+(u32)base);
+  if(p[0]==a1) {out=p[1];break;}
+ }
+ return out;
+}
+
+void FUN_00349150(s32 *a0) {
+ u8 *p=(u8 *)a0+0x50; s32 value=-1; s32 i=15;
+ a0[0]=0;a0[0x52]=0;
+ do {
+  *(s32 *)(p-12)=value;*(s32 *)(p-8)=value;*(s32 *)(p-4)=value;*(s32 *)p=value;
+  i--;p+=16;
+ }while(i>=0);
+ a0[0x54]=0;a0[0x55]=0;
+}
+
+void FUN_00349630(u8 *a0,s32 a1) {
+ *(s32 *)(a0+0x1c)=a1;
+ if(*(s32 *)(a0+0x28)==0) {
+  if(a1==1) *(f32 *)(a0+0x18)=0.0f;
+  else *(f32 *)(a0+0x18)=1.0f;
+  *(s32 *)(a0+0x28)=1;
+ }
+}
+
+u8 *FUN_00349918(u8 *a0) {
+ s32 *p=(s32 *)(a0+0x2c); s32 i=1;
+ do {
+  s32 *end=p+12;
+  s32 next=i-1;
+  s32 j=2;
+  do {
+   p[0]=0;p[1]=0;p[2]=0;p[3]=0;
+   j--;p+=4;
+  } while(j!=-1);
+  i=next;p=end;
+ } while(i!=-1);
+ return a0;
+}
+
+extern u8 D_001A63A8[];
+extern s32 FUN_00133688(void);
+extern s32 FUN_0011AEA0(s32);
+void FUN_002B7D88(s32 a0) {
+    if (a0 == 1) {
+        if (FUN_00133688() != 0) { *(short *)(D_001A63A8+4) = 2; } else {
+            void (*callback)(s32,s32);
+            s32 data, flag;
+            ((void (*)(s32))FUN_0011AEA0)(0);
+            flag = D_001A63A8[6] == 0;
+            callback = *(void (**)(s32,s32))(D_001A63A8+0x18);
+            *(short *)(D_001A63A8+4) = 0;
+            D_001A63A8[6] = 0;
+            if (callback) {
+                data = *(s32 *)(D_001A63A8+0x1c);
+                *(void (**)(s32,s32))(D_001A63A8+0x18) = 0;
+                *(s32 *)(D_001A63A8+0x1c) = 0;
+                callback(data,flag);
+            }
+        }
+    }
+}
+
+extern s32 D_001A72E0[] __attribute__((sda));
+extern s32 D_001A7340[] __attribute__((sda));
+extern s32 FUN_00126470(u8 *, s32, s32, s32, s32, s32, s32, s32);
+extern s32 FUN_0011AEA0(s32);
+extern s32 FUN_00126730(u8 *, u8 *);
+void FUN_00285708(s32 a0, s32 a1, s32 a2, s32 a3, u8 *a4) {
+    u8 image[112];
+    FUN_00126470(image, (D_001A72E0[0]<<8)>>16, (D_001A7340[0]<<10)>>16,
+                0x30,(short)a0,(short)a1,(short)a2,(short)a3);
+    FUN_0011AEA0(0);
+    FUN_00126730(image,a4);
+}
+
+typedef struct __attribute__((packed)) { u8 mode[4]; } CdMode;
+extern CdMode D_001A63E8;
+extern u8 D_001A7900[] __attribute__((sda));
+extern s32 D_001A7430[] __attribute__((sda));
+extern s32 D_001A7434 __attribute__((sda));
+extern s32 FUN_001334B8(s32,s32,s32,CdMode *);
+extern s32 FUN_00133230(void);
+extern s32 FUN_00132028(void);
+s32 FUN_002B7C10(s32 a0, s32 a1, s32 a2) {
+    CdMode mode = D_001A63E8;
+    mode.mode[1] = D_001A7900[0];
+    D_001A7430[0] = 0; D_001A7434 = 0;
+    FUN_001334B8(a1,a2,a0,&mode);
+    FUN_00133230(); FUN_00132028();
+    return 1;
+}
+
+extern s32 FUN_0011AEA0(s32);
+extern s32 FUN_0011AFE0(s32 *, s32);
+extern s32 FUN_0011AFC0(s32);
+extern s32 FUN_00133930(s32, s32);
+void FUN_0034FB20(u8 *a0, s32 a1, s32 a2, s32 a3) {
+    s32 dma[4], id;
+    ((void (*)(s32))FUN_0011AEA0)(0);
+    dma[0] = a1; dma[1] = *(s32 *)(a0+0x48); dma[2] = a2; dma[3] = 0;
+    do { id = FUN_0011AFE0(dma,1); } while (id == 0);
+    while (FUN_0011AFC0(id) >= 0) {}
+    FUN_00133930(a2,a3);
+}

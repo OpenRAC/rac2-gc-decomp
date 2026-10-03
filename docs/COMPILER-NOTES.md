@@ -36,7 +36,7 @@ campaign's first 96 matches never exercised it.
 
 ## The compiler-side rules that had to be measured
 
-Four changes separate the released 2.9 sources from the retail compiler; each was
+Five changes separate this reconstructed profile from the released 2.9 sources; each was
 found from a witness pair in the retail image, then validated on the full corpus:
 
 1. **Save width.** `prologue/epilogue` save GPRs with `sd` in 8-byte slots. The
@@ -70,6 +70,16 @@ found from a witness pair in the retail image, then validated on the full corpus
    An earlier attempt narrowed the rule to "the GPR was written two instructions
    back" (two data points) — it refused the `nop` in `FUN_002A7878`, where the
    retail has one.
+5. **Short-loop padding after delay-slot scheduling.** The cumulative stack's
+   patch 0054 disables the post-DBR hook because its original pipeline uses
+   Ps2EeAs to pad short loops. This repository's C pipeline uses GNU `as`,
+   which has no compensating loop-padding pass. Restore the existing
+   `mips_r5900_pad_loops` hook after the other 0054 changes, using
+   [`enable_loop_padding.py`](../scripts/compiler/enable_loop_padding.py).
+   The two polling loops of `FUN_0034FB20` otherwise lack the padding needed
+   to reach the measured minimum of seven instructions. With the hook and
+   the correct local call view, the complete body matches at 168 bytes.
+   All 114 previously accepted bodies are unchanged under this compiler.
 
 The original 598-case survey covered one floating-point source field. A fresh
 survey covering both source operands finds **915 immediate dependencies: 897
@@ -93,6 +103,10 @@ Source-level lessons the witnesses also pinned down:
 - A result variable distinct from the floating-point input parameter avoids an
   extra register copy in `FUN_002A78D8`; this source change is required in
   addition to the reordered prologue.
+- A local `void`-returning function-pointer view can preserve the shared
+  value-returning declaration while reproducing the register allocation at a
+  particular call. The accepted call still targets the same measured address;
+  this does not recover the library's original C prototype.
 
 ## Reproducing the chain
 
@@ -108,15 +122,21 @@ proofs:
 
 | Tool | sha256 |
 |---|---|
-| `cc1` | `c9952c1b8eab5f84f680c32a9219c3c03963503844ba17c4210ccd831af3fafe` |
+| `cc1` | `158e5c201b60541017d9562d0332f417884dcc588fce8878c3fbd7801a922fb1` |
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `as` | `20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7` |
 
 (An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
 and has been superseded. The earlier `cc1`, `3e7628b7…`, emitted the GPR save
-block first. The new `cc1` was rebuilt from the source archive and patch stack:
-its complete rebuild and its incremental build have identical hashes. `cpp`
-and the current `as` are unchanged.)
+block first. `c9952c1b…` reordered the save blocks; `158e5c20…` additionally
+restores the post-DBR loop hook. The new compiler was completely rebuilt in
+two separate source/build directories, with identical hashes. `cpp` and the
+current `as` are unchanged.)
+
+The 1999 Makefile omits a dependency from `flow.o` to `insn-flags.h`, so a
+clean parallel build can race the generated headers. Generate `insn-flags.h`,
+`insn-codes.h` and `insn-config.h` before the parallel `cc1`/`cpp` build. This
+build-order repair does not change the resulting compiler hash.
 
 The linker stays the SDK `ld.exe` used before. The pipeline drives the chain
 through `scripts/wsl_chain.py` (the 1999 tools are 32-bit Linux binaries: they
