@@ -1,11 +1,11 @@
 {
   "target": "SCUS_972.68",
-  "verified_at": "2026-10-03T07:36:27.692668+00:00",
+  "verified_at": "2026-10-03T08:06:44.967365+00:00",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "0e92ef218d9ad5cd374eb872f2d4956c0167bc878ab88e04d6f4400a00e41fbc",
-  "candidate_elf_sha256": "0c71df206e6c1a79ebf8a0968df0ffbc5ecdf13d34e21f7806d80ed197870b35",
-  "object_sha256": "4976df90e038d5cbf357c52ff0f6113487803508cbe92073cd90b1dc8cd252f1",
-  "catalog_sha256": "dc4b2792c887b1ca66e5864857a1c439894a15c44b5530a8b5701b7e9aa8756d",
+  "source_sha256": "5c89451de6914dfaf1046d919d74423adbde8e2018c75e0c1cdc5710e774cb1f",
+  "candidate_elf_sha256": "1e7b8402139a9f67ec3f3a471efbe7fccca91c0f0017245b644f216bbd9b0535",
+  "object_sha256": "b9d25a8983091b323c82b96ad34f3edbd4f6892520d63725ca07e5909c6654b0",
+  "catalog_sha256": "3bd9ff0dd09050d16ac8a0df92166dda4e802083079ae815a588b7a3e77de7d5",
   "checker_sha256": "1de3d96ebd74ab2786efd0c1b924683153d27004c846c329795cde3c6bec4773",
   "flags": [
     "-O2",
@@ -1280,6 +1280,26 @@
       "state": "matched_unintegrated"
     },
     {
+      "symbol": "FUN_00349AB8",
+      "address": 3447480,
+      "size": 40,
+      "matched": true,
+      "reference_sha256": "d8d7c8652f004f432d001e0671b13861d9ea9cd2747586deebc6d96f12deb121",
+      "candidate_sha256": "d8d7c8652f004f432d001e0671b13861d9ea9cd2747586deebc6d96f12deb121",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
+      "symbol": "FUN_00349AE0",
+      "address": 3447520,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "f63c63a3a5d9515e3f089bd812c2443f0486f9a53b0e9ee80c5000426df879dc",
+      "candidate_sha256": "f63c63a3a5d9515e3f089bd812c2443f0486f9a53b0e9ee80c5000426df879dc",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
       "symbol": "FUN_00349B18",
       "address": 3447576,
       "size": 8,
@@ -1436,6 +1456,16 @@
       "matched": true,
       "reference_sha256": "b0ca29a6bd35caf9c2b6357d9ce7336e783d82b0f08576a0370be14c6e112739",
       "candidate_sha256": "b0ca29a6bd35caf9c2b6357d9ce7336e783d82b0f08576a0370be14c6e112739",
+      "different_bytes": 0,
+      "state": "matched_unintegrated"
+    },
+    {
+      "symbol": "FUN_00350670",
+      "address": 3475056,
+      "size": 36,
+      "matched": true,
+      "reference_sha256": "5bbb57f6eae6446a6f20a136dfd5d5b245f28269ebba1b6af5f8e086d0ba4b04",
+      "candidate_sha256": "5bbb57f6eae6446a6f20a136dfd5d5b245f28269ebba1b6af5f8e086d0ba4b04",
       "different_bytes": 0,
       "state": "matched_unintegrated"
     },

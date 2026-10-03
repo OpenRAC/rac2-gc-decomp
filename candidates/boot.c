@@ -1204,3 +1204,26 @@ void FUN_00350590(u8 *a0) {
 }
 
 void FUN_003518C8(u8 *a0) {s32 v=1;*(s32 *)(a0+0xa8)=v;}
+
+void FUN_00349AB8(u8 *a0,s32 a1) {
+ if(a1!=0) *(f32 *)(a0+0x10)=1.0f;
+ else *(f32 *)(a0+0x10)=0.0f;
+ *(s32 *)(a0+0x14)=1;
+ *(s32 *)(a0+0x1c)=1;
+}
+
+void FUN_00349AE0(u8 *a0,s32 a1) {
+ if(a1!=0) *(f32 *)(a0+0x10)=0.0f;
+ else *(f32 *)(a0+0x10)=1.0f;
+ *(s32 *)(a0+0x14)=-1;
+ *(s32 *)(a0+0x1c)=1;
+}
+
+s32 FUN_00350670(u8 *a0,s32 a1) {
+ s32 original,value;
+ a0+=0x50000;
+ value=*(s32 *)(a0+4);original=value;
+ if(a1<value) value=a1;
+ *(s32 *)(a0+4)=original-value;
+ return value;
+}
