@@ -11,9 +11,11 @@ Full walkthrough: **[docs/START-HERE.md](docs/START-HERE.md)**.
 1. **Your own copy of the game** — the USA v1.01 disc (`SCUS_972.68`), verified against the
    hashes pinned in `config/target.json`. Greatest Hits v2.00 and other regions are
    *different targets*; do not mix them.
-2. **The SN ProDG toolchains** — ProDG 2.0 (`ee/bin/Ps2EeAs.exe`, `ee/bin/ld.exe`) to
-   reconstruct assembly, and ProDG 3.01 (`bin/ee-gcc2953.exe`, `bin/ee-as.exe`,
-   `lib/gcc-lib/ee/2.95.3/cc1.exe`) to prove C.
+2. **The local toolchains** — ProDG 2.0 (`ee/bin/Ps2EeAs.exe`, `ee/bin/ld.exe`)
+   reconstructs assembly. Authored C uses the qualified GNU EE compiler and
+   assembler profile, then the ProDG linker. See
+   [docs/COMPILER-NOTES.md](docs/COMPILER-NOTES.md) for the measured profiles and
+   their limits; a byte match does not establish the original compiler identity.
 3. **Wrench** (`wrenchbuild`) to unpack the level executables.
 
 That is deliberate: no game data and no proprietary SDK is distributed here. The tooling and
@@ -35,6 +37,16 @@ the tests run without any of it — `python -m unittest discover -s tests -v` an
 5. **Open the pull request** — with the command you ran and its result.
 
 ## Hard rules
+
+- **Write in English.** Documentation, comments, messages, catalogue
+  descriptions and commit messages use English. Measured game identifiers and
+  program names retain their original spelling.
+- **Use detailed, scoped commit messages.** Follow the Lombyte style: a subject
+  such as `overlay: qualify two native code families across 27 levels`, then
+  paragraphs explaining the concrete change, its technical reason, measured
+  scope and before/after progress, and the validation actually performed.
+  Record relevant limitations. Substantive changes require more than a subject.
+  The repository provides `.gitmessage` as a commit template.
 
 - **Byte equality is the only acceptor.** No patched bytes, no trimming after the link, no
   "it looks right", no model verdict.
