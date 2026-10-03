@@ -29,3 +29,17 @@ u32 LVL_24_SHIP_SHACK_FUN_002F2510(s32 index) {
  NativeTable20 values=LVL_24_SHIP_SHACK_D_001A8EB0;
  return values.items[index];
 }
+
+extern s32 LVL_24_SHIP_SHACK_D_001B1B70[] __attribute__((sda));
+extern u32 LVL_24_SHIP_SHACK_D_001B1B74[] __attribute__((sda));
+s32 LVL_24_SHIP_SHACK_FUN_0034F218(s32 key) {
+ s32 count=0;
+ u32 *flags=LVL_24_SHIP_SHACK_D_001B1B74;
+ s32 *keys=LVL_24_SHIP_SHACK_D_001B1B70;
+ do {
+  count++;
+  if(*keys!=key) {flags+=2;keys+=2;continue;}
+  *flags|=4;return 0;
+ }while(count<5);
+ return 1;
+}
