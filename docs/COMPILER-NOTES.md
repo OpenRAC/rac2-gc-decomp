@@ -69,7 +69,7 @@ found from a witness pair in the retail image, then validated on the full corpus
    assembler instruction history, which can also occur within a function;
    it is not a function-boundary detector. Eight retail first-transfer witnesses
    falsify that blanket exemption: four require a nop and four do not.
-   The [restricted exemption patch](../scripts/compiler/restrict_mtc1_exemption.patch)
+   The [restricted exemption transformer](../scripts/compiler/restrict_mtc1_exemption.py)
    retains only two measured producer/consumer patterns after cleared history:
    `a0` to `f0` followed by `cvt.s.w f0,f0`, and zero to `f0` followed by
    `c.lt.s f12,f0`. Other combinations retain the existing hazard logic.
@@ -128,7 +128,7 @@ sufficient mechanism; their original source directives remain unresolved.
 7. **Preserve the generic frame scheduler by default.** The cumulative P21
    option forces emission order between two frame-related instructions. The
    earlier RAC2 recipe enabled that option. The
-   [default patch](../scripts/compiler/disable_frame_order_default.patch)
+   [default transformer](../scripts/compiler/disable_frame_order_default.py)
    restores the generic scheduler default; the explicit opt-in remains.
    `FUN_002B7170` requires `s2`, `s0`, `s1` saves rather than the forced order.
    Its source also needs the measured constant lifetimes and final store
@@ -217,3 +217,18 @@ integrated bodies are reproduced byte-for-byte; the profile is not offered as a
 general RAC2 compiler qualification. Bodies that exercise VU/MMI instructions or
 `$gp` are outside it. The four rules above are the ones the corpus could
 falsify; a future body that disagrees with them is a measurement, not a surprise.
+
+## English source transformers
+
+The operand-exemption and frame-default adjustments are now expressed as
+English Python source transformers, replacing patch files that included French
+source annotations. They retain the same narrowly checked input states.
+
+The exemption transformer reproduces the qualified `tc-mips.c` exactly
+(SHA-256 `61e51c1ebcdf860db4503b6cc6a11c40596d1f3c969daf66ee56a45f454130ca`).
+The frame transformer changes only the source comment relative to the qualified
+frame-off source: its source hash is
+`c76c0bec5b56c198381ab2a4fc60c161a4287e8312d7d1fdea3d1e6a0e1af614`,
+and host preprocessing with the release flags produces identical output.
+The active compiler and assembler remain the qualified binaries recorded above;
+this documentation change does not claim a new binary rebuild.
