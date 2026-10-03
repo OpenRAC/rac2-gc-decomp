@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "20_yeedil",
+  "program": "levels/20_yeedil",
+  "reference_sha256": "af33c5378811e9d57c612c10002ca5c92eb676add3db0552ab2d6231034cafc8",
+  "entry": 2844552,
+  "source": "candidates/levels/20_yeedil.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_20_YEEDIL_FUN_002EB8E0",
+      "address": 3061984,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_20_YEEDIL_FUN_00307F48",
+      "address": 3178312,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_20_YEEDIL_D_001A8EB0": 1740464
+  }
+}

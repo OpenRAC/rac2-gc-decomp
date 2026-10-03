@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "kind": "level-native-candidate",
+  "target": "SCUS_972.68",
+  "program": "levels/3_endako",
+  "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
+  "reference_entry": 2794248,
+  "candidate_source": "candidates/levels/3_endako.c",
+  "source_sha256": "3ec0f507f138f5c04be836338e8afacea3eb9245fdc40a9f234c335b957eb052",
+  "catalog_sha256": "fac5e8919e16380b9aa5f21bada9dfdb63d1ff3fd45dc1c8b3e87f109a594bc1",
+  "object_sha256": "ec1e12ec18095df615174753fdea60a03ea98475022270e7955beb34f7f30a20",
+  "candidate_elf_sha256": "56ac5ec41fd4c0f956b72bc9ae0889fc872609c2d663f2d51e909ad5a6119869",
+  "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
+  "tools": {
+    "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
+    "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
+    "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
+    "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
+  },
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "state": "matched_unintegrated",
+  "functions": [
+    {
+      "symbol": "LVL_3_ENDAKO_FUN_002D8418",
+      "address": 2982936,
+      "size": 24,
+      "matched": true,
+      "reference_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
+      "candidate_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 24
+    },
+    {
+      "symbol": "LVL_3_ENDAKO_FUN_002F4CD8",
+      "address": 3099864,
+      "size": 72,
+      "matched": true,
+      "reference_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
+      "candidate_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 72
+    }
+  ],
+  "matched_code_bytes": 96
+}

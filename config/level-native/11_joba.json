@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "11_joba",
+  "program": "levels/11_joba",
+  "reference_sha256": "c6cf24ac0591c78ae6a5320a333b4465f54969ab91e0f42f52fcb7fc95f2f00e",
+  "entry": 2870792,
+  "source": "candidates/levels/11_joba.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_11_JOBA_FUN_002E9738",
+      "address": 3053368,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_11_JOBA_FUN_00306280",
+      "address": 3170944,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_11_JOBA_D_001A8EB0": 1740464
+  }
+}

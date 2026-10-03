@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "kind": "level-native-candidate",
+  "target": "SCUS_972.68",
+  "program": "levels/14_aranos_prison",
+  "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
+  "reference_entry": 2798344,
+  "candidate_source": "candidates/levels/14_aranos_prison.c",
+  "source_sha256": "c05b26943c1c5a0a4deb0e3b43db9c05c8750e2968ad5158bad98be9c6d127c1",
+  "catalog_sha256": "e257193e054044ff39fe2b0287c2732cd428bc149d9381f8c97896aaad705d93",
+  "object_sha256": "0e7e457a8988a1441faa1d0b44e155461294dd7d175d6f7479241474bc6eb114",
+  "candidate_elf_sha256": "8cb979d0aae0b450ec4578071c67e28e9ec51d69b5b354856866c2abffd18a0b",
+  "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
+  "tools": {
+    "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
+    "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
+    "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
+    "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
+  },
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "state": "matched_unintegrated",
+  "functions": [
+    {
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_002DF240",
+      "address": 3011136,
+      "size": 24,
+      "matched": true,
+      "reference_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
+      "candidate_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 24
+    },
+    {
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_002FB958",
+      "address": 3127640,
+      "size": 72,
+      "matched": true,
+      "reference_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
+      "candidate_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 72
+    }
+  ],
+  "matched_code_bytes": 96
+}

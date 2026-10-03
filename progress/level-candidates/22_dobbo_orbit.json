@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "kind": "level-native-candidate",
+  "target": "SCUS_972.68",
+  "program": "levels/22_dobbo_orbit",
+  "reference_sha256": "c609f24d897e1a82d49cdb9a8a7ece36ea83332414dc3cc6d588375e0bda55db",
+  "reference_entry": 2783752,
+  "candidate_source": "candidates/levels/22_dobbo_orbit.c",
+  "source_sha256": "fcd886e112ee5407ce93736f86634b490625f71c1e4a77c48bd145098a2dfcca",
+  "catalog_sha256": "21abff13bd3abc835d1e5116b52faebd4bf2aeec4987b471e8eb64effea9a410",
+  "object_sha256": "eacc45a445f980592609c1a3e368580c424b9a005a8a6cbbcf5851e7c704a111",
+  "candidate_elf_sha256": "2db7dc11324a50c54542850cd403ffee0213d64761c34a3622391d5fab71d109",
+  "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
+  "tools": {
+    "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
+    "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
+    "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
+    "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
+  },
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "state": "matched_unintegrated",
+  "functions": [
+    {
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DDB98",
+      "address": 3005336,
+      "size": 24,
+      "matched": true,
+      "reference_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
+      "candidate_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 24
+    },
+    {
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002F9760",
+      "address": 3118944,
+      "size": 72,
+      "matched": true,
+      "reference_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
+      "candidate_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 72
+    }
+  ],
+  "matched_code_bytes": 96
+}

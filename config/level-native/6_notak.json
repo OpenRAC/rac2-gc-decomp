@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "6_notak",
+  "program": "levels/6_notak",
+  "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
+  "entry": 3027336,
+  "source": "candidates/levels/6_notak.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_6_NOTAK_FUN_00317028",
+      "address": 3239976,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_6_NOTAK_FUN_003332A8",
+      "address": 3355304,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_6_NOTAK_D_001A8EB0": 1740464
+  }
+}

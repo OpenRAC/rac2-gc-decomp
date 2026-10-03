@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "0_aranos_tutorial",
+  "program": "levels/0_aranos_tutorial",
+  "reference_sha256": "c486f497920118066ed02076f540a5fad6811ce874d014a3a2bb18cb77714d11",
+  "entry": 2767752,
+  "source": "candidates/levels/0_aranos_tutorial.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_002D7940",
+      "address": 2980160,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_002F3DD0",
+      "address": 3096016,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_0_ARANOS_TUTORIAL_D_001A8EB0": 1740464
+  }
+}

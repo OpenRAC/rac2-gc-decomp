@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "22_dobbo_orbit",
+  "program": "levels/22_dobbo_orbit",
+  "reference_sha256": "c609f24d897e1a82d49cdb9a8a7ece36ea83332414dc3cc6d588375e0bda55db",
+  "entry": 2783752,
+  "source": "candidates/levels/22_dobbo_orbit.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DDB98",
+      "address": 3005336,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002F9760",
+      "address": 3118944,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_22_DOBBO_ORBIT_D_001A8EB0": 1740464
+  }
+}

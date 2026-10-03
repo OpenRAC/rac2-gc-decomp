@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "23_damosel_orbit",
+  "program": "levels/23_damosel_orbit",
+  "reference_sha256": "0c75617382013a703eb5fcc85845f4d1352f496bfbb4047f512454aa730d37b4",
+  "entry": 2801928,
+  "source": "candidates/levels/23_damosel_orbit.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E2278",
+      "address": 3023480,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002FDE80",
+      "address": 3137152,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_23_DAMOSEL_ORBIT_D_001A8EB0": 1740464
+  }
+}

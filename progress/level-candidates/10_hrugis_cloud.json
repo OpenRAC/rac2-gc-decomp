@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "kind": "level-native-candidate",
+  "target": "SCUS_972.68",
+  "program": "levels/10_hrugis_cloud",
+  "reference_sha256": "287e8f233f0b60cf4ccb3f0ff4dc043b907cabb7b3eff8c2229ca79cc1d19b48",
+  "reference_entry": 2877704,
+  "candidate_source": "candidates/levels/10_hrugis_cloud.c",
+  "source_sha256": "4537b3eec2b7b9544e167af43b35375160a4ea03f51cdcc071f255a7ed321870",
+  "catalog_sha256": "03483d4bb1aa80bf575d57c1ddb957659f1fcc26ffe8abc5274e2b2aced19974",
+  "object_sha256": "7012aa6cdc4d4d2724306901c41ce01f9c3bd30b4d6eb1d7f0ea506f91ed4f89",
+  "candidate_elf_sha256": "e0a407eeab9f9d1e522d2e75479e01064323f594e0fd1991a7e0a49559b502db",
+  "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
+  "tools": {
+    "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
+    "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
+    "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
+    "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
+  },
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "state": "matched_unintegrated",
+  "functions": [
+    {
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F25E0",
+      "address": 3089888,
+      "size": 24,
+      "matched": true,
+      "reference_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
+      "candidate_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 24
+    },
+    {
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_0030E810",
+      "address": 3205136,
+      "size": 72,
+      "matched": true,
+      "reference_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
+      "candidate_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 72
+    }
+  ],
+  "matched_code_bytes": 96
+}

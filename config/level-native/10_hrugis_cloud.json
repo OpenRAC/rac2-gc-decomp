@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "10_hrugis_cloud",
+  "program": "levels/10_hrugis_cloud",
+  "reference_sha256": "287e8f233f0b60cf4ccb3f0ff4dc043b907cabb7b3eff8c2229ca79cc1d19b48",
+  "entry": 2877704,
+  "source": "candidates/levels/10_hrugis_cloud.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F25E0",
+      "address": 3089888,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_0030E810",
+      "address": 3205136,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_10_HRUGIS_CLOUD_D_001A8EB0": 1740464
+  }
+}

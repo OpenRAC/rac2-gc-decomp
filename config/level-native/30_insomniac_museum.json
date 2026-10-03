@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "30_insomniac_museum",
+  "program": "levels/30_insomniac_museum",
+  "reference_sha256": "b638bb36997a9b3e8041738f45b0c624c01fe4ad9ae601ff50e305916ff3040c",
+  "entry": 2795912,
+  "source": "candidates/levels/30_insomniac_museum.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_002DE790",
+      "address": 3008400,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_002FAB30",
+      "address": 3124016,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_30_INSOMNIAC_MUSEUM_D_001A8EB0": 1740464
+  }
+}

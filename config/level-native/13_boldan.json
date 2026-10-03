@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "13_boldan",
+  "program": "levels/13_boldan",
+  "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
+  "entry": 2812680,
+  "source": "candidates/levels/13_boldan.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_13_BOLDAN_FUN_002E23C8",
+      "address": 3023816,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_13_BOLDAN_FUN_002FE420",
+      "address": 3138592,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_13_BOLDAN_D_001A8EB0": 1740464
+  }
+}

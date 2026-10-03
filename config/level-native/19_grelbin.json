@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "19_grelbin",
+  "program": "levels/19_grelbin",
+  "reference_sha256": "eeab491a667c311b024745af7173ac08371e279ade0b4ab5d48b6f81fa751aaf",
+  "entry": 2782728,
+  "source": "candidates/levels/19_grelbin.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_19_GRELBIN_FUN_002D53E8",
+      "address": 2970600,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_19_GRELBIN_FUN_002F1608",
+      "address": 3085832,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_19_GRELBIN_D_001A8EB0": 1740464
+  }
+}

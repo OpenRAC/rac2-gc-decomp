@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "14_aranos_prison",
+  "program": "levels/14_aranos_prison",
+  "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
+  "entry": 2798344,
+  "source": "candidates/levels/14_aranos_prison.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_002DF240",
+      "address": 3011136,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_002FB958",
+      "address": 3127640,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_14_ARANOS_PRISON_D_001A8EB0": 1740464
+  }
+}

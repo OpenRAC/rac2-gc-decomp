@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "16_snivelak",
+  "program": "levels/16_snivelak",
+  "reference_sha256": "ad5840ad4ebfef75199ad6196e36ba010d99970e75d0de681a050ab4c59f944b",
+  "entry": 2774024,
+  "source": "candidates/levels/16_snivelak.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_16_SNIVELAK_FUN_002D0B60",
+      "address": 2952032,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_16_SNIVELAK_FUN_002ED1C8",
+      "address": 3068360,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_16_SNIVELAK_D_001A8EB0": 1740464
+  }
+}

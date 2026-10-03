@@ -26,6 +26,14 @@ class DecompReportTests(unittest.TestCase):
         self.source = (ROOT / "candidates" / "boot.c").read_bytes()
         self.object_proof = json.loads((ROOT / "progress" / "candidates.json").read_text())
         self.level_catalog = json.loads((ROOT / "config" / "level-catalog.json").read_text())
+        # These fixtures deliberately exercise legacy shared-only proofs.
+        # Scope their counters to that subset when the committed runtime report
+        # also contains independently reviewed native C in the same overlay.
+        # Reference identities and full loaded gates remain unchanged.
+        for gate in self.progress["g3"]:
+            functions = self.level_catalog["levels"][gate["level"]]["functions"]
+            gate["integrated_c_functions"] = len(functions)
+            gate["integrated_c_bytes"] = sum(function["size"] for function in functions)
 
     def generate(self):
         return report_module.generate(self.scope, self.target, self.overlays, self.progress)
@@ -656,6 +664,25 @@ class DecompReportTests(unittest.TestCase):
         integration["functions"][0].update(reference_sha256="1" * 64, candidate_sha256="1" * 64)
         with self.assertRaisesRegex(ValueError, "function hashes disagree"):
             self.run_main(integration)
+
+
+class CommittedProofTests(unittest.TestCase):
+    def test_current_proofs_export_their_actual_shared_and_native_totals(self):
+        read = lambda relative: json.loads((ROOT / relative).read_text())
+        progress = read("progress/report.json")
+        levels = [json.loads(path.read_text()) for path in sorted((ROOT / "progress/levels").glob("*.json"))]
+        self.assertEqual(len(levels), 27)
+        boot = read("progress/integration.json")
+        result = report_module.generate(read("config/progress-scope.json"), read("config/target.json"),
+                                        read("config/overlays.json"), progress, boot, levels)
+        report_module.validate_object_proof(boot, read("progress/candidates.json"))
+        expected = boot["matched_code_bytes"] + sum(proof["matched_code_bytes"] for proof in levels)
+        self.assertEqual(int(result["measures"]["matchedCode"]), expected)
+        self.assertEqual(expected, progress["integrated_code_bytes"])
+        native_bytes = sum(row["size"] for proof in levels for row in proof["functions"]
+                           if row.get("origin") == "level-native")
+        native_units = [unit for unit in result["units"] if unit["metadata"].get("sourcePath", "").startswith("candidates/levels/")]
+        self.assertEqual(sum(int(unit["measures"]["matchedCode"]) for unit in native_units), native_bytes)
 
 
 if __name__ == "__main__":

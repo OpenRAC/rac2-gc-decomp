@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "3_endako",
+  "program": "levels/3_endako",
+  "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
+  "entry": 2794248,
+  "source": "candidates/levels/3_endako.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_3_ENDAKO_FUN_002D8418",
+      "address": 2982936,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_3_ENDAKO_FUN_002F4CD8",
+      "address": 3099864,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_3_ENDAKO_D_001A8EB0": 1740464
+  }
+}

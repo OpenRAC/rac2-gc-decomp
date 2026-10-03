@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "26_jamming_array",
+  "program": "levels/26_jamming_array",
+  "reference_sha256": "575ab90300200e2c8bd49afba637aa9212e82d2ee17af618e2ad8c5bf78bd36b",
+  "entry": 2769288,
+  "source": "candidates/levels/26_jamming_array.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_002D7FE0",
+      "address": 2981856,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_002F4030",
+      "address": 3096624,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_26_JAMMING_ARRAY_D_001A8EB0": 1740464
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "5_feltzin_system",
+  "program": "levels/5_feltzin_system",
+  "reference_sha256": "bd41a03a57871a6f33106d5277c6b4918f379ceaa5f780a84c82360b421204fb",
+  "entry": 2868232,
+  "source": "candidates/levels/5_feltzin_system.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002F00E0",
+      "address": 3080416,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030C2F8",
+      "address": 3195640,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_5_FELTZIN_SYSTEM_D_001A8EB0": 1740464
+  }
+}

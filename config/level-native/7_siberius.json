@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "7_siberius",
+  "program": "levels/7_siberius",
+  "reference_sha256": "76b77dbbc9a3e15f1c4f202a36b37d01bdaff7936142c14b5b35a1552a85287a",
+  "entry": 2769288,
+  "source": "candidates/levels/7_siberius.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_7_SIBERIUS_FUN_002CD8F0",
+      "address": 2939120,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_7_SIBERIUS_FUN_002E9FF0",
+      "address": 3055600,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_7_SIBERIUS_D_001A8EB0": 1740464
+  }
+}

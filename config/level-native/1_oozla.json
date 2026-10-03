@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "1_oozla",
+  "program": "levels/1_oozla",
+  "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
+  "entry": 2776968,
+  "source": "candidates/levels/1_oozla.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_1_OOZLA_FUN_002CD110",
+      "address": 2937104,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_1_OOZLA_FUN_002E9138",
+      "address": 3051832,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_1_OOZLA_D_001A8EB0": 1740464
+  }
+}

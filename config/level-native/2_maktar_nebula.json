@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "kind": "level-native-catalog",
+  "target": "SCUS_972.68",
+  "level": "2_maktar_nebula",
+  "program": "levels/2_maktar_nebula",
+  "reference_sha256": "ab59cf107fb30843db03cd3571af1c08d62e99e6b50594bc38dd7a70f91ac94b",
+  "entry": 2780808,
+  "source": "candidates/levels/2_maktar_nebula.c",
+  "flags": [
+    "-O2",
+    "-G0",
+    "-ffunction-sections"
+  ],
+  "gp": 0,
+  "functions": [
+    {
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_002DAE10",
+      "address": 2993680,
+      "size": 24,
+      "meaning": "clear five object fields; independently qualified in this overlay"
+    },
+    {
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_002F7CD8",
+      "address": 3112152,
+      "size": 72,
+      "meaning": "indexed copy of overlay-owned five-entry table"
+    }
+  ],
+  "externals": {
+    "LVL_2_MAKTAR_NEBULA_D_001A8EB0": 1740464
+  }
+}
