@@ -1,0 +1,70 @@
+--- a/gas/config/tc-mips.c
++++ b/gas/config/tc-mips.c
+@@ -595,7 +595,7 @@
+ 
+ static int insn_uses_fpr_exact PARAMS ((struct mips_cl_insn *ip,
+ 					      unsigned int reg));
+-static int rac2_mtc1_nop_ok PARAMS ((void));
++static int rac2_mtc1_nop_ok PARAMS ((struct mips_cl_insn *ip));
+ 
+ static int insn_uses_reg PARAMS ((struct mips_cl_insn *ip,
+ 				  unsigned int reg, enum mips_regclass class));
+@@ -1488,7 +1488,7 @@
+ 		  || insn_uses_fpr_exact (ip,
+ 					   ((prev_insn.insn_opcode >> OP_SH_FT)
+ 					    & OP_MASK_FT)))
+-					   && rac2_mtc1_nop_ok ())
++					   && rac2_mtc1_nop_ok (ip))
+ 		++nops;
+ 	    }
+ 	  else if (prev_pinfo & INSN_WRITE_FPR_S)
+@@ -1497,7 +1497,7 @@
+ 		  || insn_uses_fpr_exact (ip,
+ 					   ((prev_insn.insn_opcode >> OP_SH_FS)
+ 					    & OP_MASK_FS)))
+-					   && rac2_mtc1_nop_ok ())
++					   && rac2_mtc1_nop_ok (ip))
+ 		++nops;
+ 	    }
+ 	  else
+@@ -2407,19 +2407,30 @@
+   return 0;
+ }
+ 
+-/* RAC2 : le retail insere le nop de transfert GPR->FPR apres mtc1 des que
+-   l instruction suivante lit le FPR ecrit (587 cas sur 598 mesures), SAUF
+-   quand le mtc1 est la premiere instruction de la fonction (0x00283ce0 :
+-   pas de nop). Ne s applique qu au cas precedent == mtc1.  */
++/* Private compatibility restricted to measured producer/consumer roles.
++   Cleared history is not a function boundary. No game name/address policy. */
+ static int
+-rac2_mtc1_nop_ok ()
++rac2_mtc1_nop_ok (ip)
++     struct mips_cl_insn *ip;
+ {
++  unsigned int gpr, fpr;
+   if (prev_insn.insn_mo == 0 || strcmp (prev_insn.insn_mo->name, "mtc1") != 0)
+-    return 1;                    /* pas un mtc1 : comportement d origine */
+-  if (prev_prev_insn.insn_mo == 0 || prev_prev_insn.insn_mo == &dummy_opcode)
+-    return 0;                    /* mtc1 en tete de fonction : le retail n en met pas
+-                                    (FUN_00283CE0 ; 1 des 11 exceptions mesurees) */
+-  return 1;                      /* sinon le retail en met un : 587 cas sur 598 */
++    return 1;
++  if (prev_prev_insn.insn_mo != 0 && prev_prev_insn.insn_mo != &dummy_opcode)
++    return 1;
++  gpr = (prev_insn.insn_opcode >> OP_SH_RT) & OP_MASK_RT;
++  fpr = (prev_insn.insn_opcode >> OP_SH_FS) & OP_MASK_FS;
++  if (fpr != 0 || ip->insn_mo == 0)
++    return 1;
++  if (gpr == 4 && strcmp (ip->insn_mo->name, "cvt.s.w") == 0
++      && ((ip->insn_opcode >> OP_SH_FS) & OP_MASK_FS) == 0
++      && ((ip->insn_opcode >> OP_SH_FD) & OP_MASK_FD) == 0)
++    return 0;
++  if (gpr == 0 && strcmp (ip->insn_mo->name, "c.lt.s") == 0
++      && ((ip->insn_opcode >> OP_SH_FS) & OP_MASK_FS) == 12
++      && ((ip->insn_opcode >> OP_SH_FT) & OP_MASK_FT) == 0)
++    return 0;
++  return 1;
+ }
+ 
+ static void

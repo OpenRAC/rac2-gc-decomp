@@ -214,7 +214,7 @@ bodies placed in the levels. Method, limits and provenance in
 ## decomp.dev reporting
 
 The CI uploads `SCUS_972.68_report` in objdiff report v2 format. It records
-**192,612 integrated C bytes out of 48,788,176 executable bytes (about 0.395%)**,
+**202,356 integrated C bytes out of 48,788,176 executable bytes (about 0.415%)**,
 independently of assembly reconstruction. The measured scope includes the boot and all 27
 overlays, with executable and initialized-data section sizes, including VU code.
 Function counts are omitted until boundaries have been reviewed. Generated section

@@ -61,12 +61,20 @@ found from a witness pair in the retail image, then validated on the full corpus
    and even when that GPR is never written in the function (20 cases). The 1999
    source says the same (`gas/config/tc-mips.c`, `INSN_WRITE_FPR_T` branch: nop as
    soon as the next instruction uses the FPR). The rule is therefore the plain
-   "next instruction reads the written FPR" test, with a compatibility exemption:
+   "next instruction reads the written FPR" test. In that original survey,
    the 11 cases without a `nop` sit in 5 functions
    (`0x00283ce0`, `0x00283c28`, `0x002a677c`, `0x002e0408`, `0x002e0558`), and in
    `FUN_00283CE0` the `mtc1` is the first instruction of the function. The
-   implementation tests cleared assembler instruction history, which can also
-   occur within a function; it is not a function-boundary detector.
+   earlier compatibility implementation exempted transfers after cleared
+   assembler instruction history, which can also occur within a function;
+   it is not a function-boundary detector. Eight retail first-transfer witnesses
+   falsify that blanket exemption: four require a nop and four do not.
+   The [restricted exemption patch](../scripts/compiler/restrict_mtc1_exemption.patch)
+   retains only two measured producer/consumer patterns after cleared history:
+   `a0` to `f0` followed by `cvt.s.w f0,f0`, and zero to `f0` followed by
+   `c.lt.s f12,f0`. Other combinations retain the existing hazard logic.
+   This is an empirical compatibility rule for the qualified C corpus,
+   rather than recovery of the original compiler or ordering directives.
    An earlier attempt narrowed the rule to "the GPR was written two instructions
    back" (two data points) — it refused the `nop` in `FUN_002A7878`, where the
    retail has one.
@@ -96,7 +104,16 @@ This establishes a sufficient assembler mechanism without recovering the
 original source directives. Synthetic alignment and branch witnesses trigger
 the compatibility exemption inside a function. ISA selection supplies another
 sufficient mechanism, so source provenance remains unresolved. This diagnostic
-does not change the assembler or qualify every transfer in the game.
+does not qualify every transfer in the game. The later restricted exemption
+preserves all 165 accepted bodies and makes the two additional integer-to-float
+bodies exact. With the independently authored RLE body, the combined gate is
+168/168. All 52 original fixtures remain unchanged. Fourteen distance controls,
+twelve boundary controls and eleven first-transfer controls bring the private
+fixture suite to 89 cases. Synthetic controls have no retail oracle; the retail
+first-transfer sample contains only four distinct patterns. A conflicting exact
+body or a retail witness contradicting the restricted patterns would falsify
+the compatibility claim. The four exception functions remain explained by a
+sufficient mechanism; their original source directives remain unresolved.
 
 Source-level lessons the witnesses also pinned down:
 
@@ -121,7 +138,7 @@ archive of the Sony/Cygnus EE compiler sources, target `mips64r5900-sf-elf`).
 
 Patch stack: the cumulative `sce-991111b` stack published with the **Lombyte**
 project (github.com/mateuszklysz/Lombyte, `patches/sce-991111b/`), minus its
-`saves` widening, plus the four rules above. The build host is WSL with 32-bit
+`saves` widening, plus the qualified adjustments above. The build host is WSL with 32-bit
 support (`gcc -m32`) and bison 1.28; the compiler and assembler are hashed in the
 proofs:
 
@@ -129,7 +146,7 @@ proofs:
 |---|---|
 | `cc1` | `dff08a347efb82d33bcc921d426922a199dbcb4fe807a3662b75ce0196c6ac5f` |
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
-| `as` | `20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7` |
+| `as` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
 
 (An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
 and has been superseded. The earlier `cc1`, `3e7628b7…`, emitted the GPR save
@@ -137,7 +154,16 @@ block first. `c9952c1b…` reordered the save blocks; `158e5c20…` additionally
 restores the post-DBR loop hook. `dff08a34…` additionally counts division-guard
 expansions by their MD length. The new compiler was completely rebuilt in
 two separate source/build directories, with identical hashes. `cpp` and the
-current `as` are unchanged.)
+`as` at that compiler milestone was unchanged. The subsequent `cda1a4e4`
+assembler narrows the cleared-history exemption; `20c5f50b` is retained as its
+predecessor. Two complete builds from fresh archive extractions produce identical
+`cc1`, `cpp` and `as` hashes, and each passes 168/168 bodies and 89 fixture cases.)
+
+Apply the restricted exemption patch after the earlier transfer-hazard patch
+and before building gas. An earlier incremental diagnostic produced assembler
+hash `5a0c6e9e`; compiling the identical `tc-mips.c` as `./config/tc-mips.c`,
+as the normal Makefile does, accounts for the release hash difference. A controlled
+recompilation changing only that source argument reproduces `cda1a4e4`.
 
 The 1999 Makefile omits a dependency from `flow.o` to `insn-flags.h`, so a
 clean parallel build can race the generated headers. Generate `insn-flags.h`,

@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "3_endako",
   "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
-  "source_sha256": "5c89451de6914dfaf1046d919d74423adbde8e2018c75e0c1cdc5710e774cb1f",
-  "catalog_sha256": "2c35b1c1be47616fc76b15558d210f289e4df926f9da539383b6793e2bc93449",
+  "source_sha256": "a58f0fd74c546b0fcb3daeefa2f5a2147e7cd6c47998506960cffa6c6052b6f8",
+  "catalog_sha256": "959fab5b54fd72f371d054de2eaca5c4a23a9b58413e42e6e6f7f4a92fdaf373",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -146,6 +146,18 @@
       "matched": true,
       "reference_sha256": "d024b0f201382b8ec149b59e123966abbcce2dc27edab26b707d76ad27fc41b3",
       "candidate_sha256": "d024b0f201382b8ec149b59e123966abbcce2dc27edab26b707d76ad27fc41b3",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako"
+    },
+    {
+      "symbol": "FUN_00297550",
+      "address": 3183216,
+      "size": 280,
+      "matched": true,
+      "reference_sha256": "e7361f18d48d33f02d043a31bb6ee0ed622d3881341aa2af51759ce387aa043c",
+      "candidate_sha256": "e7361f18d48d33f02d043a31bb6ee0ed622d3881341aa2af51759ce387aa043c",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -716,6 +728,18 @@
       "program": "3_endako"
     },
     {
+      "symbol": "FUN_00336920",
+      "address": 4444600,
+      "size": 44,
+      "matched": true,
+      "reference_sha256": "ce99948b361aae85496c787884bc6734f5fe1e280efda36b2b151d8cb4ae1d82",
+      "candidate_sha256": "ce99948b361aae85496c787884bc6734f5fe1e280efda36b2b151d8cb4ae1d82",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako"
+    },
+    {
       "symbol": "FUN_00336950",
       "address": 4444648,
       "size": 24,
@@ -734,6 +758,18 @@
       "matched": true,
       "reference_sha256": "beb24a314e473a620481c7d42afcf1d5938664f66cba3f91b50130e2d691df7b",
       "candidate_sha256": "beb24a314e473a620481c7d42afcf1d5938664f66cba3f91b50130e2d691df7b",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako"
+    },
+    {
+      "symbol": "FUN_00336CC8",
+      "address": 4445536,
+      "size": 24,
+      "matched": true,
+      "reference_sha256": "f789953d41d3179c27e4a65ace33b229c6a3b2a756cfefa7f0e52e49300ba176",
+      "candidate_sha256": "f789953d41d3179c27e4a65ace33b229c6a3b2a756cfefa7f0e52e49300ba176",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -1741,15 +1777,15 @@
     "bytes_compared": 2821104,
     "segments": 1
   },
-  "matched_code_bytes": 6832,
+  "matched_code_bytes": 7180,
   "tools": {
     "cc1": "dff08a347efb82d33bcc921d426922a199dbcb4fe807a3662b75ce0196c6ac5f",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
-    "as": "20c5f50b02abbd86bf55213249995b23476d61ceec1d5eacce886bed43109dc7",
+    "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "35e5a7d1cea611ba5d77db8d8c9d4ceaacbf52fb36169f998234afda915cc632",
-  "c_object_sha256": "b9d25a8983091b323c82b96ad34f3edbd4f6892520d63725ca07e5909c6654b0",
+  "candidate_elf_sha256": "88969e7d2bf7fc273c6872f62cf22565afe6f4f078a5e06e43c2af74a3d1949b",
+  "c_object_sha256": "7f0812ed9b5a0ced9bbd9f8e7f5c001a677926d1a7f4eebeb3e9267dceb4b2d8",
   "replacement_inputs": {
     "103680.s": [
       "FUN_0026FEB8",
@@ -1764,6 +1800,7 @@
       "FUN_0028B950",
       "FUN_002934B8",
       "FUN_00295BE8",
+      "FUN_00297550",
       "FUN_0029AE78",
       "FUN_0029F978",
       "FUN_002A7790",
@@ -1811,8 +1848,10 @@
       "FUN_003364C8",
       "FUN_00336508",
       "FUN_003367B8",
+      "FUN_00336920",
       "FUN_00336950",
       "FUN_00336CC0",
+      "FUN_00336CC8",
       "FUN_00336D50",
       "FUN_00336ED0",
       "FUN_00339760",
