@@ -161,3 +161,44 @@ void LVL_24_SHIP_SHACK_FUN_002E53E0(void) {
 void LVL_24_SHIP_SHACK_FUN_002EBB68(void) {
  LVL_24_SHIP_SHACK_FUN_00372790(0x47,0x513f1UL);
 }
+
+typedef struct {
+    u8 prefix[0x1220];
+    u32 field1220;
+    u8 gap[0x20];
+    s32 field1244, field1248;
+} NativeIndexedFieldsView;
+
+u32 LVL_24_SHIP_SHACK_FUN_002ACF68(s32 index) {
+ NativeIndexedFieldsView *p=(NativeIndexedFieldsView *)((u8 *)&LVL_24_SHIP_SHACK_D_00189E20+index*0x50);
+ if(p->field1244==2) return p->field1220;
+ return 0;
+}
+
+s32 LVL_24_SHIP_SHACK_FUN_002ACFA0(s32 index) {
+ NativeIndexedFieldsView *p=(NativeIndexedFieldsView *)((u8 *)&LVL_24_SHIP_SHACK_D_00189E20+index*0x50);
+ if(p->field1244==2) return p->field1248;
+ return -1;
+}
+
+s32 LVL_24_SHIP_SHACK_FUN_002ADBC0(s32 value) {
+ switch(value) {case 1:return 0x72;case 2:return 0x70;case 3:return 0x6e;default:return 0;}
+}
+
+extern u8 LVL_24_SHIP_SHACK_D_0018B2BC[];
+extern void LVL_24_SHIP_SHACK_FUN_002ADE68(void);
+extern void LVL_24_SHIP_SHACK_FUN_002AE960(void);
+extern void LVL_24_SHIP_SHACK_FUN_002ADC18(void);
+extern void LVL_24_SHIP_SHACK_FUN_002A52C8(u64, s64, s64, s32);
+extern void LVL_24_SHIP_SHACK_FUN_002B8D58(short, short, short);
+
+void LVL_24_SHIP_SHACK_FUN_002A5288(void) {
+ LVL_24_SHIP_SHACK_FUN_002A52C8(LVL_24_SHIP_SHACK_D_0018B2BC[1],0,1,0x32);
+ LVL_24_SHIP_SHACK_FUN_002B8D58(0x16,7,0);
+}
+
+void LVL_24_SHIP_SHACK_FUN_002AECC0(void) {
+ LVL_24_SHIP_SHACK_FUN_002ADE68();
+ LVL_24_SHIP_SHACK_FUN_002AE960();
+ LVL_24_SHIP_SHACK_FUN_002ADC18();
+}

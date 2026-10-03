@@ -30,3 +30,28 @@ s32 LVL_1_OOZLA_FUN_002D9238(f32 a,f32 b,f32 t) {
  a=a+difference;
  return (s32)a;
 }
+
+extern u8 LVL_1_OOZLA_D_00189E20[];
+
+typedef struct {
+    u8 prefix[0x1220];
+    u32 field1220;
+    u8 gap[0x20];
+    s32 field1244, field1248;
+} NativeIndexedFieldsView;
+
+u32 LVL_1_OOZLA_FUN_002AE920(s32 index) {
+ NativeIndexedFieldsView *p=(NativeIndexedFieldsView *)((u8 *)&LVL_1_OOZLA_D_00189E20+index*0x50);
+ if(p->field1244==2) return p->field1220;
+ return 0;
+}
+
+s32 LVL_1_OOZLA_FUN_002AE958(s32 index) {
+ NativeIndexedFieldsView *p=(NativeIndexedFieldsView *)((u8 *)&LVL_1_OOZLA_D_00189E20+index*0x50);
+ if(p->field1244==2) return p->field1248;
+ return -1;
+}
+
+s32 LVL_1_OOZLA_FUN_002AF578(s32 value) {
+ switch(value) {case 1:return 0x72;case 2:return 0x70;case 3:return 0x6e;default:return 0;}
+}

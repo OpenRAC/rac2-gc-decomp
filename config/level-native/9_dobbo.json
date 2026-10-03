@@ -15,10 +15,28 @@
   "gp": 0,
   "functions": [
     {
+      "symbol": "LVL_9_DOBBO_FUN_002B08B8",
+      "address": 2820280,
+      "size": 52,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+    },
+    {
+      "symbol": "LVL_9_DOBBO_FUN_002B08F0",
+      "address": 2820336,
+      "size": 52,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+    },
+    {
       "symbol": "LVL_9_DOBBO_FUN_002B0A20",
       "address": 2820640,
       "size": 20,
       "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+    },
+    {
+      "symbol": "LVL_9_DOBBO_FUN_002B1510",
+      "address": 2823440,
+      "size": 88,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
     },
     {
       "symbol": "LVL_9_DOBBO_FUN_002D2990",
@@ -47,6 +65,7 @@
   ],
   "externals": {
     "LVL_9_DOBBO_D_001A8EB0": 1740464,
-    "LVL_9_DOBBO_D_0018C0B4": 1622196
+    "LVL_9_DOBBO_D_0018C0B4": 1622196,
+    "LVL_9_DOBBO_D_00189E20": 1613344
   }
 }

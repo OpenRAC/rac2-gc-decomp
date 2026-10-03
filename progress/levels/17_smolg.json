@@ -2136,12 +2136,54 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_17_SMOLG_FUN_002AF1F0",
+      "address": 2814448,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "17_smolg",
+      "candidate_source": "candidates/levels/17_smolg.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_17_SMOLG_FUN_002AF228",
+      "address": 2814504,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "17_smolg",
+      "candidate_source": "candidates/levels/17_smolg.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_17_SMOLG_FUN_002AF358",
       "address": 2814808,
       "size": 20,
       "matched": true,
       "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
       "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "17_smolg",
+      "candidate_source": "candidates/levels/17_smolg.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_17_SMOLG_FUN_002AFE48",
+      "address": 2817608,
+      "size": 88,
+      "matched": true,
+      "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+      "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -2211,14 +2253,14 @@
     "bytes_compared": 2803536,
     "segments": 1
   },
-  "matched_code_bytes": 7652,
+  "matched_code_bytes": 7844,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "f7e7a54274740643512945ab5ddfa06827f78f4fca8ad302a51bec46b346bcda",
+  "candidate_elf_sha256": "a5ba2ff0e69bc39cd1ae610ef649b2f88a3facf3961fa4e2ec992f04e3ddc126",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "FE400.s": [
@@ -2374,7 +2416,10 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_17_SMOLG_FUN_002AF1F0",
+      "LVL_17_SMOLG_FUN_002AF228",
       "LVL_17_SMOLG_FUN_002AF358",
+      "LVL_17_SMOLG_FUN_002AFE48",
       "LVL_17_SMOLG_FUN_002D7940",
       "LVL_17_SMOLG_FUN_002D8998",
       "LVL_17_SMOLG_FUN_002E4B28",
@@ -2403,7 +2448,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "f7e7a54274740643512945ab5ddfa06827f78f4fca8ad302a51bec46b346bcda",
+    "candidate_elf_sha256": "a5ba2ff0e69bc39cd1ae610ef649b2f88a3facf3961fa4e2ec992f04e3ddc126",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "FE400.s": [
@@ -2559,7 +2604,10 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_17_SMOLG_FUN_002AF1F0",
+        "LVL_17_SMOLG_FUN_002AF228",
         "LVL_17_SMOLG_FUN_002AF358",
+        "LVL_17_SMOLG_FUN_002AFE48",
         "LVL_17_SMOLG_FUN_002D7940",
         "LVL_17_SMOLG_FUN_002D8998",
         "LVL_17_SMOLG_FUN_002E4B28",
@@ -2573,13 +2621,13 @@
   },
   "reference_entry": 2773128,
   "candidate_entry": 2773128,
-  "dependency_sha256": "94804d712fe477fbb77bc53a4a3b30ba5b21c4b24c2d3469ae9952d1eaf76ede",
+  "dependency_sha256": "bc9461516fcf7ff06b24c12dd47f11d272f4304ec1ed449e6ce0416cfa592810",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/17_smolg.c",
     "catalog_path": "config/level-native/17_smolg.json",
     "review_path": "progress/level-candidates/17_smolg.json",
-    "review_sha256": "e55391f661184815046739f6e219f59df860e262d13bf636619dadccab133b30",
+    "review_sha256": "0738481cd6d5105b7287d9de3eded51cf92cea8cb60261e8d8d659fb1767e2fc",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2588,10 +2636,10 @@
       "reference_sha256": "4e1908fbc51ea0f156a32077fd20b2af755fe0b1f4aa7b1bc67967208e7e87f4",
       "reference_entry": 2773128,
       "candidate_source": "candidates/levels/17_smolg.c",
-      "source_sha256": "84cdbb86bb40e2fb5c16813d867f9aa5ffa11bc3a4958996a73ee936b280e6b1",
-      "catalog_sha256": "dfe183ed0885ae533630c6e3372aff4d960e93e560f14c4f40bc5bbb23c013d2",
-      "object_sha256": "57115cb9752597c81562db309e7df5b4fbd2204d3607902a072091b9adaaa82a",
-      "candidate_elf_sha256": "3755d3957c130aa091c5ae0e82e7e266881dde1e103b2f35c9eedcccfd5c5982",
+      "source_sha256": "b5ea5c4a4a18c59c05276d918df6947678eaeb8e147dda013e7e1af8109d1d7d",
+      "catalog_sha256": "abd9ab9976d4875aa5103119a40c1fe0c497aefe0ca8400418d5e080db0045f6",
+      "object_sha256": "b3a46a9511ddcb12c44536a17e2cfc9640ad8f23589bc06b592e881ebd29e6e4",
+      "candidate_elf_sha256": "07bb8442d16e5feb1abfd143df5ea0a6d785fa9a5b185ca527724e1250accf0b",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2607,6 +2655,28 @@
       "state": "matched_unintegrated",
       "functions": [
         {
+          "symbol": "LVL_17_SMOLG_FUN_002AF1F0",
+          "address": 2814448,
+          "size": 52,
+          "matched": true,
+          "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+          "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 52
+        },
+        {
+          "symbol": "LVL_17_SMOLG_FUN_002AF228",
+          "address": 2814504,
+          "size": 52,
+          "matched": true,
+          "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+          "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 52
+        },
+        {
           "symbol": "LVL_17_SMOLG_FUN_002AF358",
           "address": 2814808,
           "size": 20,
@@ -2616,6 +2686,17 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 20
+        },
+        {
+          "symbol": "LVL_17_SMOLG_FUN_002AFE48",
+          "address": 2817608,
+          "size": 88,
+          "matched": true,
+          "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+          "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 88
         },
         {
           "symbol": "LVL_17_SMOLG_FUN_002D7940",
@@ -2662,8 +2743,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 164
+      "matched_code_bytes": 356
     },
-    "object_sha256": "57115cb9752597c81562db309e7df5b4fbd2204d3607902a072091b9adaaa82a"
+    "object_sha256": "b3a46a9511ddcb12c44536a17e2cfc9640ad8f23589bc06b592e881ebd29e6e4"
   }
 }

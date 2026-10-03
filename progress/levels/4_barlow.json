@@ -2136,12 +2136,54 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_4_BARLOW_FUN_002D4350",
+      "address": 2966352,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "4_barlow",
+      "candidate_source": "candidates/levels/4_barlow.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_4_BARLOW_FUN_002D4388",
+      "address": 2966408,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "4_barlow",
+      "candidate_source": "candidates/levels/4_barlow.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_4_BARLOW_FUN_002D44B8",
       "address": 2966712,
       "size": 20,
       "matched": true,
       "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
       "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "4_barlow",
+      "candidate_source": "candidates/levels/4_barlow.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_4_BARLOW_FUN_002D4FA8",
+      "address": 2969512,
+      "size": 88,
+      "matched": true,
+      "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+      "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -2211,14 +2253,14 @@
     "bytes_compared": 3027792,
     "segments": 1
   },
-  "matched_code_bytes": 7652,
+  "matched_code_bytes": 7844,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "3f63366762936083192d52ed63bbb177ce7ac081445710bae07e341c3396120b",
+  "candidate_elf_sha256": "b96d160e59a7e8cf4c76a4e15f49662da5adebf739ee693c0b151cb683f42486",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "124800.s": [
@@ -2374,7 +2416,10 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_4_BARLOW_FUN_002D4350",
+      "LVL_4_BARLOW_FUN_002D4388",
       "LVL_4_BARLOW_FUN_002D44B8",
+      "LVL_4_BARLOW_FUN_002D4FA8",
       "LVL_4_BARLOW_FUN_002F70D8",
       "LVL_4_BARLOW_FUN_002F8130",
       "LVL_4_BARLOW_FUN_003042C8",
@@ -2403,7 +2448,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "3f63366762936083192d52ed63bbb177ce7ac081445710bae07e341c3396120b",
+    "candidate_elf_sha256": "b96d160e59a7e8cf4c76a4e15f49662da5adebf739ee693c0b151cb683f42486",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "124800.s": [
@@ -2559,7 +2604,10 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_4_BARLOW_FUN_002D4350",
+        "LVL_4_BARLOW_FUN_002D4388",
         "LVL_4_BARLOW_FUN_002D44B8",
+        "LVL_4_BARLOW_FUN_002D4FA8",
         "LVL_4_BARLOW_FUN_002F70D8",
         "LVL_4_BARLOW_FUN_002F8130",
         "LVL_4_BARLOW_FUN_003042C8",
@@ -2573,13 +2621,13 @@
   },
   "reference_entry": 2929800,
   "candidate_entry": 2929800,
-  "dependency_sha256": "28e307425db23229baa8a688a4242859b964e181f50197bdd8e9eedab6bc5c9d",
+  "dependency_sha256": "75bd236ae1c92a61354e3814b9ec89409944a78585c3edb9464ffc3e2fa092eb",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/4_barlow.c",
     "catalog_path": "config/level-native/4_barlow.json",
     "review_path": "progress/level-candidates/4_barlow.json",
-    "review_sha256": "6688ad17e3f6f33ee5f9a9c93af74def7ee97405430e3f0f232a7865e2801dc4",
+    "review_sha256": "6084716bb41abf1fdf9415f61f671c8d6167832e9bbca4217eff9c4d12dbde83",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2588,10 +2636,10 @@
       "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
       "reference_entry": 2929800,
       "candidate_source": "candidates/levels/4_barlow.c",
-      "source_sha256": "0d7720ce63cb2cc715491a6c0094bc33cf4c28b933e732f37089f60a8b54a1a8",
-      "catalog_sha256": "b3a25547a29db5050bfb88421b6d935f1fffee5b4c403f1f2884730994331c63",
-      "object_sha256": "646a78ec42415063bd9db3d4fc9e8d11d681947e66d2c37ba3c731945a279934",
-      "candidate_elf_sha256": "a538a1125ba55d889a37f82a1c977022fb8286c3e1447bef046c2d651849f412",
+      "source_sha256": "9b32e845a1ef892bf9ff641de723c43a0963bceb687edc0268bd0b4cfcd17b2c",
+      "catalog_sha256": "bcaf01633895b010cf89c51f67e1f5ce0ab028b8b506cb48436ed662f6ded64f",
+      "object_sha256": "f0965d4e511cb458652f2cbaf8af52f580989c919a5e6fe2047cd9427c345b87",
+      "candidate_elf_sha256": "da02f8d59897009855230a89a3f3b36cdc87772f4a9ecb097a09a193e6384422",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2607,6 +2655,28 @@
       "state": "matched_unintegrated",
       "functions": [
         {
+          "symbol": "LVL_4_BARLOW_FUN_002D4350",
+          "address": 2966352,
+          "size": 52,
+          "matched": true,
+          "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+          "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 52
+        },
+        {
+          "symbol": "LVL_4_BARLOW_FUN_002D4388",
+          "address": 2966408,
+          "size": 52,
+          "matched": true,
+          "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+          "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 52
+        },
+        {
           "symbol": "LVL_4_BARLOW_FUN_002D44B8",
           "address": 2966712,
           "size": 20,
@@ -2616,6 +2686,17 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 20
+        },
+        {
+          "symbol": "LVL_4_BARLOW_FUN_002D4FA8",
+          "address": 2969512,
+          "size": 88,
+          "matched": true,
+          "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+          "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 88
         },
         {
           "symbol": "LVL_4_BARLOW_FUN_002F70D8",
@@ -2662,8 +2743,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 164
+      "matched_code_bytes": 356
     },
-    "object_sha256": "646a78ec42415063bd9db3d4fc9e8d11d681947e66d2c37ba3c731945a279934"
+    "object_sha256": "f0965d4e511cb458652f2cbaf8af52f580989c919a5e6fe2047cd9427c345b87"
   }
 }

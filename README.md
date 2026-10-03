@@ -46,11 +46,11 @@ The native runtime remains a separate development milestone.
 Verified on **2026-10-03**: the complete boot image (**2,521,763 loaded bytes,
 two PT_LOAD segments**) and **all 27 level overlays** rebuild identically in loaded
 memory. **176 tool tests pass**. **178 C functions (9,336 bytes)** are integrated in the
-boot, with **4,251 reviewed overlay placements (207,136 bytes)**, including native C.
-The exported total is **216,472 / 48,788,176 bytes (0.4437%)**. The measured C profile
+boot, with **4,334 reviewed overlay placements (212,424 bytes)**, including native C.
+The exported total is **221,760 / 48,788,176 bytes (0.4545%)**. The measured C profile
 is documented in [compiler notes](docs/COMPILER-NOTES.md). Native gameplay remains unverified.
 
-Latest matching lot: [a 128-bit zero store at 28 locations](docs/TWENTY-FOURTH-C-LOT.md).
+Latest matching lot: [indexed resident fields and identifier selection](docs/TWENTY-SEVENTH-C-LOT.md).
 The [PCSX2 observations](docs/PCSX2-VALIDATION.md) cover the retail disc and rebuilt boot;
 visual gameplay and native PC execution remain unverified.
 
@@ -64,6 +64,10 @@ campaign continues; the first 0.5% milestone and the 100% objective remain open.
 The full gates, 176 tests and exporter pass; matching work continues.
 
 ## Requirements
+
+[Lot 27](docs/TWENTY-SEVENTH-C-LOT.md) adds three complete native families across
+27 overlays and two Ship Shack call sequences: 83 placements and 5,288 C bytes.
+The 27 full gates, 176 tests and independent exporter pass. The campaign continues.
 
 - Python 3.12 and the pinned dependencies in `requirements.txt`.
 - A local image of your own matching game disc (or a local archive of that image).

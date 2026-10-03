@@ -15,10 +15,28 @@
   "gp": 0,
   "functions": [
     {
+      "symbol": "LVL_15_GORN_FUN_002C6CE8",
+      "address": 2911464,
+      "size": 52,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002C6D20",
+      "address": 2911520,
+      "size": 52,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+    },
+    {
       "symbol": "LVL_15_GORN_FUN_002C6E50",
       "address": 2911824,
       "size": 20,
       "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002C7940",
+      "address": 2914624,
+      "size": 88,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
     },
     {
       "symbol": "LVL_15_GORN_FUN_002EF720",
@@ -47,6 +65,7 @@
   ],
   "externals": {
     "LVL_15_GORN_D_001A8EB0": 1740464,
-    "LVL_15_GORN_D_0018C0B4": 1622196
+    "LVL_15_GORN_D_0018C0B4": 1622196,
+    "LVL_15_GORN_D_00189E20": 1613344
   }
 }

@@ -6,10 +6,10 @@
   "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
   "reference_entry": 2791176,
   "candidate_source": "candidates/levels/12_todano.c",
-  "source_sha256": "2a82cd0e9248db26876ca87bfe80d82be24125f41863467d814a77ac9185f1c4",
-  "catalog_sha256": "3da33f81f523cd91be2c080d53846875afd4c53b601c27088798f0efecb13aec",
-  "object_sha256": "cce2199711c1d6ffb67683dfe8e5cebdcbdbd1b2215ad5134093ef57b7f5789e",
-  "candidate_elf_sha256": "0de1929e016121822855ce1c8de6fdb121ad6f5929524cd072fd90561ad2ea67",
+  "source_sha256": "42d3635bbb5f61a08318e43b8795c8b26fee4c562ee9e92aef4e33ba530aaa46",
+  "catalog_sha256": "f5639b7760ce7e1e07a5db085479824b2e9446d63bda76385a2c7b0af2e8b7bc",
+  "object_sha256": "3e90eae3b62cb45e78d3da756c1853da0fe1e1e8c2254a0923db31438a9cc797",
+  "candidate_elf_sha256": "c113aa913a46fd73d902742fb0dcf84d2ed72d5e2c131e22afb7329840f1aea2",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -25,6 +25,28 @@
   "state": "matched_unintegrated",
   "functions": [
     {
+      "symbol": "LVL_12_TODANO_FUN_002B36A0",
+      "address": 2832032,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 52
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_002B36D8",
+      "address": 2832088,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 52
+    },
+    {
       "symbol": "LVL_12_TODANO_FUN_002B3808",
       "address": 2832392,
       "size": 20,
@@ -34,6 +56,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 20
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_002B42F8",
+      "address": 2835192,
+      "size": 88,
+      "matched": true,
+      "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+      "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 88
     },
     {
       "symbol": "LVL_12_TODANO_FUN_002DA098",
@@ -80,5 +113,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 164
+  "matched_code_bytes": 356
 }

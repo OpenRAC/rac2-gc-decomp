@@ -6,10 +6,10 @@
   "reference_sha256": "a47999f3aa251431498e068932ac542399b5e402ab8dcddcbfe246dc220b7810",
   "reference_entry": 2782472,
   "candidate_source": "candidates/levels/9_dobbo.c",
-  "source_sha256": "69a888a47f3987c1eef3f1d1bcf24e4551fefbdc4ffe03ac2d85760c02265ece",
-  "catalog_sha256": "bf6227cf51ea961afb50e9e70effe20a25ca8f66eb4ad90f22c6347900bce14b",
-  "object_sha256": "c058a3dbcac8ab0567c6d5b8043a7e8c711cb0fd1260ec8c7e5dd727edd6e804",
-  "candidate_elf_sha256": "588f7db14089bdf3efa8ac16a9818adace33a9bf012c4be478b7012dd845c329",
+  "source_sha256": "8c1d04039087d48ffe5548139259fb76caf8527799e4a63c5d99aa16d8ec2115",
+  "catalog_sha256": "2edaea160de20d5d14b9147acd05ecba57a9365a98a5a27de1b6da3dbac08d08",
+  "object_sha256": "5a50cbacfc0ad4b50be5ab6a0c7ee4b2faaf10c9fddf63f5ee1221ae75505ce8",
+  "candidate_elf_sha256": "a542387d13279175a50801801909159c00fc6cf8c44c6a5cc66488cad69e8b26",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -25,6 +25,28 @@
   "state": "matched_unintegrated",
   "functions": [
     {
+      "symbol": "LVL_9_DOBBO_FUN_002B08B8",
+      "address": 2820280,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 52
+    },
+    {
+      "symbol": "LVL_9_DOBBO_FUN_002B08F0",
+      "address": 2820336,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 52
+    },
+    {
       "symbol": "LVL_9_DOBBO_FUN_002B0A20",
       "address": 2820640,
       "size": 20,
@@ -34,6 +56,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 20
+    },
+    {
+      "symbol": "LVL_9_DOBBO_FUN_002B1510",
+      "address": 2823440,
+      "size": 88,
+      "matched": true,
+      "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+      "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 88
     },
     {
       "symbol": "LVL_9_DOBBO_FUN_002D2990",
@@ -80,5 +113,5 @@
       "produced_size": 72
     }
   ],
-  "matched_code_bytes": 164
+  "matched_code_bytes": 356
 }

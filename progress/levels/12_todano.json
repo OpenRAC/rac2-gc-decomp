@@ -2122,12 +2122,54 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_12_TODANO_FUN_002B36A0",
+      "address": 2832032,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "12_todano",
+      "candidate_source": "candidates/levels/12_todano.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_002B36D8",
+      "address": 2832088,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "12_todano",
+      "candidate_source": "candidates/levels/12_todano.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_12_TODANO_FUN_002B3808",
       "address": 2832392,
       "size": 20,
       "matched": true,
       "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
       "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "12_todano",
+      "candidate_source": "candidates/levels/12_todano.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_002B42F8",
+      "address": 2835192,
+      "size": 88,
+      "matched": true,
+      "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+      "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -2197,14 +2239,14 @@
     "bytes_compared": 2843680,
     "segments": 1
   },
-  "matched_code_bytes": 7636,
+  "matched_code_bytes": 7828,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "bf9c1a0dde81796f6a5ac3811a608aac23f093f75a788856efd9a436b060e053",
+  "candidate_elf_sha256": "dcc3ed215fd48c609776952103dc1b42360d9110c0e8823f54af11d5114b037b",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "102A80.s": [
@@ -2359,7 +2401,10 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_12_TODANO_FUN_002B36A0",
+      "LVL_12_TODANO_FUN_002B36D8",
       "LVL_12_TODANO_FUN_002B3808",
+      "LVL_12_TODANO_FUN_002B42F8",
       "LVL_12_TODANO_FUN_002DA098",
       "LVL_12_TODANO_FUN_002DB058",
       "LVL_12_TODANO_FUN_002E7180",
@@ -2388,7 +2433,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "bf9c1a0dde81796f6a5ac3811a608aac23f093f75a788856efd9a436b060e053",
+    "candidate_elf_sha256": "dcc3ed215fd48c609776952103dc1b42360d9110c0e8823f54af11d5114b037b",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "102A80.s": [
@@ -2543,7 +2588,10 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_12_TODANO_FUN_002B36A0",
+        "LVL_12_TODANO_FUN_002B36D8",
         "LVL_12_TODANO_FUN_002B3808",
+        "LVL_12_TODANO_FUN_002B42F8",
         "LVL_12_TODANO_FUN_002DA098",
         "LVL_12_TODANO_FUN_002DB058",
         "LVL_12_TODANO_FUN_002E7180",
@@ -2557,13 +2605,13 @@
   },
   "reference_entry": 2791176,
   "candidate_entry": 2791176,
-  "dependency_sha256": "8618f0c90935a02e2ee1cd9ffc29aa1b01954c1e81d19cf690da1331eb8bc262",
+  "dependency_sha256": "b01bc4f11660cc6b4720d0840e047de28812c46c757276d0ed5159a516122b60",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/12_todano.c",
     "catalog_path": "config/level-native/12_todano.json",
     "review_path": "progress/level-candidates/12_todano.json",
-    "review_sha256": "09eeec2c04b2f9e1fe76a31a9ff0e99973f7d788d911fd0b946ea1e84f12d01e",
+    "review_sha256": "550373b6311a1e7db5fa736324e1125be44829018573d82c9fe1bd4b09758971",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2572,10 +2620,10 @@
       "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
       "reference_entry": 2791176,
       "candidate_source": "candidates/levels/12_todano.c",
-      "source_sha256": "2a82cd0e9248db26876ca87bfe80d82be24125f41863467d814a77ac9185f1c4",
-      "catalog_sha256": "3da33f81f523cd91be2c080d53846875afd4c53b601c27088798f0efecb13aec",
-      "object_sha256": "cce2199711c1d6ffb67683dfe8e5cebdcbdbd1b2215ad5134093ef57b7f5789e",
-      "candidate_elf_sha256": "0de1929e016121822855ce1c8de6fdb121ad6f5929524cd072fd90561ad2ea67",
+      "source_sha256": "42d3635bbb5f61a08318e43b8795c8b26fee4c562ee9e92aef4e33ba530aaa46",
+      "catalog_sha256": "f5639b7760ce7e1e07a5db085479824b2e9446d63bda76385a2c7b0af2e8b7bc",
+      "object_sha256": "3e90eae3b62cb45e78d3da756c1853da0fe1e1e8c2254a0923db31438a9cc797",
+      "candidate_elf_sha256": "c113aa913a46fd73d902742fb0dcf84d2ed72d5e2c131e22afb7329840f1aea2",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2591,6 +2639,28 @@
       "state": "matched_unintegrated",
       "functions": [
         {
+          "symbol": "LVL_12_TODANO_FUN_002B36A0",
+          "address": 2832032,
+          "size": 52,
+          "matched": true,
+          "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+          "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 52
+        },
+        {
+          "symbol": "LVL_12_TODANO_FUN_002B36D8",
+          "address": 2832088,
+          "size": 52,
+          "matched": true,
+          "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+          "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 52
+        },
+        {
           "symbol": "LVL_12_TODANO_FUN_002B3808",
           "address": 2832392,
           "size": 20,
@@ -2600,6 +2670,17 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 20
+        },
+        {
+          "symbol": "LVL_12_TODANO_FUN_002B42F8",
+          "address": 2835192,
+          "size": 88,
+          "matched": true,
+          "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+          "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 88
         },
         {
           "symbol": "LVL_12_TODANO_FUN_002DA098",
@@ -2646,8 +2727,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 164
+      "matched_code_bytes": 356
     },
-    "object_sha256": "cce2199711c1d6ffb67683dfe8e5cebdcbdbd1b2215ad5134093ef57b7f5789e"
+    "object_sha256": "3e90eae3b62cb45e78d3da756c1853da0fe1e1e8c2254a0923db31438a9cc797"
   }
 }

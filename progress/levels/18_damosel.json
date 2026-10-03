@@ -2136,12 +2136,54 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "LVL_18_DAMOSEL_FUN_002CB190",
+      "address": 2929040,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "18_damosel",
+      "candidate_source": "candidates/levels/18_damosel.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_18_DAMOSEL_FUN_002CB1C8",
+      "address": 2929096,
+      "size": 52,
+      "matched": true,
+      "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "18_damosel",
+      "candidate_source": "candidates/levels/18_damosel.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_18_DAMOSEL_FUN_002CB2F8",
       "address": 2929400,
       "size": 20,
       "matched": true,
       "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
       "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "18_damosel",
+      "candidate_source": "candidates/levels/18_damosel.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_18_DAMOSEL_FUN_002CBDE8",
+      "address": 2932200,
+      "size": 88,
+      "matched": true,
+      "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+      "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -2211,14 +2253,14 @@
     "bytes_compared": 2937928,
     "segments": 1
   },
-  "matched_code_bytes": 7652,
+  "matched_code_bytes": 7844,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "b7ca353891b9a6b7dc78badc652efd1cc6bfbca8f4432cac9e74a563e6b1d9f8",
+  "candidate_elf_sha256": "694f2a0787c8046b255c2123d5ca88eac5c3322a129534a85937fcc3d6a4acbe",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "11AE00.s": [
@@ -2374,7 +2416,10 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "LVL_18_DAMOSEL_FUN_002CB190",
+      "LVL_18_DAMOSEL_FUN_002CB1C8",
       "LVL_18_DAMOSEL_FUN_002CB2F8",
+      "LVL_18_DAMOSEL_FUN_002CBDE8",
       "LVL_18_DAMOSEL_FUN_002F1130",
       "LVL_18_DAMOSEL_FUN_002F2188",
       "LVL_18_DAMOSEL_FUN_002FE318",
@@ -2403,7 +2448,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "b7ca353891b9a6b7dc78badc652efd1cc6bfbca8f4432cac9e74a563e6b1d9f8",
+    "candidate_elf_sha256": "694f2a0787c8046b255c2123d5ca88eac5c3322a129534a85937fcc3d6a4acbe",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "11AE00.s": [
@@ -2559,7 +2604,10 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "LVL_18_DAMOSEL_FUN_002CB190",
+        "LVL_18_DAMOSEL_FUN_002CB1C8",
         "LVL_18_DAMOSEL_FUN_002CB2F8",
+        "LVL_18_DAMOSEL_FUN_002CBDE8",
         "LVL_18_DAMOSEL_FUN_002F1130",
         "LVL_18_DAMOSEL_FUN_002F2188",
         "LVL_18_DAMOSEL_FUN_002FE318",
@@ -2573,13 +2621,13 @@
   },
   "reference_entry": 2890376,
   "candidate_entry": 2890376,
-  "dependency_sha256": "e8ab3ada0fc879d7fd15561230c3b05de362ca8b6257a60b050ca237032976e4",
+  "dependency_sha256": "cf792e6a94bef26d67fae17cf03f11a6268854c907ddbc4ddf7a64056d850b8c",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/18_damosel.c",
     "catalog_path": "config/level-native/18_damosel.json",
     "review_path": "progress/level-candidates/18_damosel.json",
-    "review_sha256": "845a7fc015873e0f8fa1cef55986c320fd84e0ade28b5cf959e1aea0eb9ee5f1",
+    "review_sha256": "77214eb83f4404da7b588f09ba22a06834fa53c91e11f6341a0951a524810787",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2588,10 +2636,10 @@
       "reference_sha256": "61c1050b11c8bbb1674bc35107ccf83f2634ee6c8248c9983ba552343d911113",
       "reference_entry": 2890376,
       "candidate_source": "candidates/levels/18_damosel.c",
-      "source_sha256": "4db353f146adb39ab4eef5248a3a8be6be65a400544c32a51e00b83ef0207824",
-      "catalog_sha256": "8a69630038bc870e98bc5205bc91da3abb7321a93dedddcd8c3640a6590cff2c",
-      "object_sha256": "4171827b91ccd1bc3dec956bc177bda4fd4ee21f1f2d78e81f55d9202c0570dd",
-      "candidate_elf_sha256": "eaa182f80070f776f6acd8adc8fbd42c2e05a77c20f2f2ca0d2fa0f86ca10064",
+      "source_sha256": "848a5e14e9d4552b95adfa483dcba97155a7ad76fd1378e52222ea17860ad770",
+      "catalog_sha256": "b81d1ccfd6d0f777b0274726b24907e89082ad4e6aea72775722d9cb462acf0f",
+      "object_sha256": "3ee5d0c707ee2ca6083ad4160d157847bcf117256548cbc4b63d9ec587b1b5c3",
+      "candidate_elf_sha256": "96b601b4418520d7447a6f0df033e3fc667b1ba60df8c49b7bc63edbd034f8e2",
       "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -2607,6 +2655,28 @@
       "state": "matched_unintegrated",
       "functions": [
         {
+          "symbol": "LVL_18_DAMOSEL_FUN_002CB190",
+          "address": 2929040,
+          "size": 52,
+          "matched": true,
+          "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+          "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 52
+        },
+        {
+          "symbol": "LVL_18_DAMOSEL_FUN_002CB1C8",
+          "address": 2929096,
+          "size": 52,
+          "matched": true,
+          "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+          "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 52
+        },
+        {
           "symbol": "LVL_18_DAMOSEL_FUN_002CB2F8",
           "address": 2929400,
           "size": 20,
@@ -2616,6 +2686,17 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 20
+        },
+        {
+          "symbol": "LVL_18_DAMOSEL_FUN_002CBDE8",
+          "address": 2932200,
+          "size": 88,
+          "matched": true,
+          "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+          "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 88
         },
         {
           "symbol": "LVL_18_DAMOSEL_FUN_002F1130",
@@ -2662,8 +2743,8 @@
           "produced_size": 72
         }
       ],
-      "matched_code_bytes": 164
+      "matched_code_bytes": 356
     },
-    "object_sha256": "4171827b91ccd1bc3dec956bc177bda4fd4ee21f1f2d78e81f55d9202c0570dd"
+    "object_sha256": "3ee5d0c707ee2ca6083ad4160d157847bcf117256548cbc4b63d9ec587b1b5c3"
   }
 }

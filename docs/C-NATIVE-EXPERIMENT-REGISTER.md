@@ -5,7 +5,7 @@ This is the canonical index for the recorded RAC2 C experiments. The original ta
 ## Current scope and interpretation
 
 - Reference: `SCUS_972.68`, `/levels/24_ship_shack.elf`, pinned ELF SHA-256 `4afbc22add84109c84ef8ca49099fdf9863905e5f497369c207ac5cb47814740`.
-- This register inventories 139 target records across 45 functions: 27 exact results, 84 byte mismatches, 2 archived runs without proof, 9 compiler failures, 8 link failures and 9 source/catalog rejections. Shared-unit failure rows identify attempted targets and do not infer individual body measurements. Exact trial records are not integration credit.
+- This register inventories 158 target records across 53 functions: 33 exact results, 97 byte mismatches, 2 archived runs without proof, 9 compiler failures, 8 link failures and 9 source/catalog rejections. Shared-unit failure rows identify attempted targets and do not infer individual body measurements. Exact trial records are not integration credit.
 - The 51 proof-bearing trials from the original candidate bank used the historical `dff08a34` C compiler profile with `-O2 -G0 -ffunction-sections`; seven later measured `FUN_002B0408` variants, five measured `FUN_002F2718` trials, two measured `FUN_00323430` variants, and the two latest exact promotions used the current `8bed6eae` profile with the same flags. Two earlier 8bed-labelled folders do not retain qualification proofs and are explicitly marked unverified; the register-binding source was separately rejected before compilation. Other pinned tool hashes for proof-bearing trials are recorded in their local evidence. Historical exact results are not current-profile qualification; requalify a candidate with the current checker before treating an old exact result as current evidence.
 - The five historical exact targets are now present in the public level-native catalog at the repository revision where this register was created. The table records the trial result and its original profile, not a substitute for current proofs.
 - Classification uses `qualification_passed` and `proof.functions[].matched`; `proof.state` alone is not decisive. Aggregate `*-results.json` files duplicate these per-run records. Deduplicate by run directory / `work` path.
@@ -300,3 +300,88 @@ The aligned-anchor source compiled, but one 88-byte candidate for the 80-byte 00
 | `0x002AECC0` | `FUN_002AECC0` | 44 | `broader-20261003:isolated:002AECC0` | `8bed6eae` | EXACT; integration pending | 0 | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002AECC0` |
 
 Inventory: 139 target records across 45 functions, comprising 27 exact results, 84 mismatches, 2 archived runs without proof, 9 compiler failures, 8 link failures and 9 source/catalog rejections. Shared-unit failure rows do not assert individual body mismatches.
+
+## Five winners requalified in a complete source unit
+
+The three mismatches are excluded from this fresh source. All five new complete
+bodies and the 21 existing native controls now pass together: 26 functions and
+1,056 native bytes. This qualifies the authored unit without the previous
+overlap; full overlay integration remains required before credit.
+
+| Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
+|---|---|---:|---|---|---|---|---|---|
+| `0x002A5288` | `FUN_002A5288` | 60 | `lot27-five-full:002A5288` | `8bed6eae` | EXACT; integration pending | 0 | `85c805d4a898eb9a` | `nuit-codex-prologue/native-five-lot27-full-8bed-20261003/trial-five-winners-full-unit` |
+| `0x002ACF68` | `FUN_002ACF68` | 52 | `lot27-five-full:002ACF68` | `8bed6eae` | EXACT; integration pending | 0 | `85c805d4a898eb9a` | `nuit-codex-prologue/native-five-lot27-full-8bed-20261003/trial-five-winners-full-unit` |
+| `0x002ACFA0` | `FUN_002ACFA0` | 52 | `lot27-five-full:002ACFA0` | `8bed6eae` | EXACT; integration pending | 0 | `85c805d4a898eb9a` | `nuit-codex-prologue/native-five-lot27-full-8bed-20261003/trial-five-winners-full-unit` |
+| `0x002ADBC0` | `FUN_002ADBC0` | 88 | `lot27-five-full:002ADBC0` | `8bed6eae` | EXACT; integration pending | 0 | `85c805d4a898eb9a` | `nuit-codex-prologue/native-five-lot27-full-8bed-20261003/trial-five-winners-full-unit` |
+| `0x002AECC0` | `FUN_002AECC0` | 44 | `lot27-five-full:002AECC0` | `8bed6eae` | EXACT; integration pending | 0 | `85c805d4a898eb9a` | `nuit-codex-prologue/native-five-lot27-full-8bed-20261003/trial-five-winners-full-unit` |
+
+Inventory after full-unit requalification: 144 target records / 45 functions,
+including 32 exact results; all failure categories retain the counts above.
+
+## Selective first-store scheduling hypothesis
+
+Six archived pair-store bodies reverse the two stores under ordinary C. This
+new hypothesis qualifies only the first observed write as volatile and leaves
+the final write ordinary, testing whether the latter can fill the return delay
+slot. All six produce 24 bytes against complete 20-byte functions. The 26
+existing native controls stay exact. No source is integrated and no further
+qualifier permutation is justified by this result alone.
+
+| Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
+|---|---|---:|---|---|---|---|---|---|
+| `0x002AA1A8` | `FUN_002AA1A8` | 20 | `pair-first-volatile:002AA1A8` | `8bed6eae` | MISMATCH | 24 produced / 20 target bytes | `23b9fbafed6c0588` | `nuit-codex-prologue/native-selective-pair-stores-8bed-20261003/trial-selective-first-store` |
+| `0x002AA1C0` | `FUN_002AA1C0` | 20 | `pair-first-volatile:002AA1C0` | `8bed6eae` | MISMATCH | 24 produced / 20 target bytes | `23b9fbafed6c0588` | `nuit-codex-prologue/native-selective-pair-stores-8bed-20261003/trial-selective-first-store` |
+| `0x002AA1D8` | `FUN_002AA1D8` | 20 | `pair-first-volatile:002AA1D8` | `8bed6eae` | MISMATCH | 24 produced / 20 target bytes | `23b9fbafed6c0588` | `nuit-codex-prologue/native-selective-pair-stores-8bed-20261003/trial-selective-first-store` |
+| `0x002AA1F0` | `FUN_002AA1F0` | 20 | `pair-first-volatile:002AA1F0` | `8bed6eae` | MISMATCH | 24 produced / 20 target bytes | `23b9fbafed6c0588` | `nuit-codex-prologue/native-selective-pair-stores-8bed-20261003/trial-selective-first-store` |
+| `0x002B2AD8` | `FUN_002B2AD8` | 20 | `pair-first-volatile:002B2AD8` | `8bed6eae` | MISMATCH | 24 produced / 20 target bytes | `23b9fbafed6c0588` | `nuit-codex-prologue/native-selective-pair-stores-8bed-20261003/trial-selective-first-store` |
+| `0x002D1060` | `FUN_002D1060` | 20 | `pair-first-volatile:002D1060` | `8bed6eae` | MISMATCH | 24 produced / 20 target bytes | `23b9fbafed6c0588` | `nuit-codex-prologue/native-selective-pair-stores-8bed-20261003/trial-selective-first-store` |
+
+Inventory: 150 records /45 functions; 90 mismatches. Other categories unchanged.
+
+## Pair-store caller ABI audit
+
+A separate read-only audit located all 49 direct calls to the six pair-store
+targets in the pinned Ship Shack executable section and checked their bodies
+against Ghidra memory. No caller consumes the materialized base address in v0
+before a later write or an independently checked callee replaces it. A few
+paths propagate the residue through an epilogue, but their caller also leaves
+it unused. No address-word table reference to these targets was found in the
+loaded segments.
+
+| Target | Direct calls | Return-value evidence |
+|---|---:|---|
+| `002AA1A8` | 7 | no use before overwrite |
+| `002AA1C0` | 14 | no use before overwrite |
+| `002AA1D8` | 11 | no use before overwrite |
+| `002AA1F0` | 14 | no use before overwrite |
+| `002B2AD8` | 1 | no use before overwrite |
+| `002D1060` | 2 | no use before overwrite |
+
+This does not prove the original source return type absolutely, but supplies
+no justification for changing it to a pointer to force store scheduling.
+Keep these six targets parked pending new evidence. This ABI observation is
+not a compiler trial and does not change the inventory totals above.
+
+## Eight larger native hypotheses, with measured callee return corrected
+
+The pinned callee 002D5860 returns a 0/1 word. This private full-context source
+corrects its declaration to s32 rather than inventing a result or using a
+conflicting declaration. All 26 existing controls remain exact. The new
+40-record loop is exact at 76 bytes; the seven other hypotheses remain
+mismatches. Their original sources, assembly and complete results are retained.
+
+| Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
+|---|---|---:|---|---|---|---|---|---|
+| `0x002A3E18` | `FUN_002A3E18` | 152 | `next960:002A3E18` | `8bed6eae` | MISMATCH | 98 / 152 bytes | `b2a5db0c634b9b61` | `nuit-codex-prologue/native-next960-8bed-20261003/trial-eight-larger-bodies` |
+| `0x002A3F48` | `FUN_002A3F48` | 164 | `next960:002A3F48` | `8bed6eae` | MISMATCH | 160 produced / 164 target bytes | `b2a5db0c634b9b61` | `nuit-codex-prologue/native-next960-8bed-20261003/trial-eight-larger-bodies` |
+| `0x002A4468` | `FUN_002A4468` | 76 | `next960:002A4468` | `8bed6eae` | EXACT; integration pending | 0 | `b2a5db0c634b9b61` | `nuit-codex-prologue/native-next960-8bed-20261003/trial-eight-larger-bodies` |
+| `0x002A6100` | `FUN_002A6100` | 108 | `next960:002A6100` | `8bed6eae` | MISMATCH | 92 produced / 108 target bytes | `b2a5db0c634b9b61` | `nuit-codex-prologue/native-next960-8bed-20261003/trial-eight-larger-bodies` |
+| `0x002A6170` | `FUN_002A6170` | 124 | `next960:002A6170` | `8bed6eae` | MISMATCH | 39 / 124 bytes | `b2a5db0c634b9b61` | `nuit-codex-prologue/native-next960-8bed-20261003/trial-eight-larger-bodies` |
+| `0x002A67B8` | `FUN_002A67B8` | 140 | `next960:002A67B8` | `8bed6eae` | MISMATCH | 36 / 140 bytes | `b2a5db0c634b9b61` | `nuit-codex-prologue/native-next960-8bed-20261003/trial-eight-larger-bodies` |
+| `0x002AD170` | `FUN_002AD170` | 88 | `next960:002AD170` | `8bed6eae` | MISMATCH | 25 / 88 bytes | `b2a5db0c634b9b61` | `nuit-codex-prologue/native-next960-8bed-20261003/trial-eight-larger-bodies` |
+| `0x002B1D58` | `FUN_002B1D58` | 108 | `next960:002B1D58` | `8bed6eae` | MISMATCH | 14 / 108 bytes | `b2a5db0c634b9b61` | `nuit-codex-prologue/native-next960-8bed-20261003/trial-eight-larger-bodies` |
+
+Inventory: 158 target records /53 functions, including 33 exact results and
+97 mismatches. Other categories retain the counts above. A private source
+prototype correction does not change public source or integration credit.
