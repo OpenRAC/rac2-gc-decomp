@@ -46,7 +46,10 @@ exactly when sorted by offset (`offset + size == next offset`, 27/27) and partit
 file after the first sector — level 0, for example: `{1, 690}`, `{691, 6467}`,
 `{7158, 311}`, `{7469, 12}`, in a 15 319 728-byte file. The second couple is the level
 data WAD (below); the region at `{1, N}` is raw and its structure is not yet identified;
-the last couple is a small uncompressed blob. The six chunk couples are zero on 19
+the last couple is a small uncompressed blob whose first words are three counts
+(`839`, `2000`, `61` on level 0) followed by 8-byte `{bit, id}` records — the shape the
+community layout attributes to the occlusion mappings (measured morphology; the record
+semantics are not verified). The six chunk couples are zero on 19
 levels and chain in slot order on the other 8 (levels 1, 2, 4, 7, 8, 11, 19, 20 — level
 20 populates all six); the community layout for this generation carries them in the
 level header's `ChunkWadHeader` (three chunk files and three chunk sound banks). The
