@@ -38,6 +38,7 @@ This repository is part of project 45.
 ## Current status
 
 Assembly reconstruction and matching C/C++ are tracked separately.
+For native C experiments, see the [Ship Shack experiment register](docs/C-NATIVE-EXPERIMENT-REGISTER.md).
 See [the measured progress report](progress/report.json) and
 [the C integration proof](progress/integration.json) for their respective results.
 The native runtime remains a separate development milestone.
