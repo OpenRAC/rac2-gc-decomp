@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "boot",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "a58f0fd74c546b0fcb3daeefa2f5a2147e7cd6c47998506960cffa6c6052b6f8",
-  "catalog_sha256": "c6c80b6f8fc630c13bbb2dc9355b492f7a55d898996d773f65231966ed287607",
+  "source_sha256": "a23f7db942510ace77536055f00e2b909e3bc3181e7e3501a26b15d57297130e",
+  "catalog_sha256": "0fd273a33eba512c9dcc770b61356e60cc5312dcd01e73f9171ef0a156392853",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2022,6 +2022,66 @@
       "state": "integrated",
       "integrated": true,
       "program": "boot"
+    },
+    {
+      "symbol": "FUN_002B6D28",
+      "address": 2845992,
+      "size": 88,
+      "matched": true,
+      "reference_sha256": "5b883b3a41649d2f98c6047720f92e75895579864906bf6d077c65ce8d7b610e",
+      "candidate_sha256": "5b883b3a41649d2f98c6047720f92e75895579864906bf6d077c65ce8d7b610e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
+    },
+    {
+      "symbol": "FUN_00284E40",
+      "address": 2641472,
+      "size": 60,
+      "matched": true,
+      "reference_sha256": "b249b1d59add6f594d7a01af4fc328d82caadd842ecd10ff5b14ef2853350b2e",
+      "candidate_sha256": "b249b1d59add6f594d7a01af4fc328d82caadd842ecd10ff5b14ef2853350b2e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
+    },
+    {
+      "symbol": "FUN_00284000",
+      "address": 2637824,
+      "size": 108,
+      "matched": true,
+      "reference_sha256": "c2bb04e14e71ad20fa7b9c01c84dcc60cdb12aac144b1d3fa85d87f290a2e31b",
+      "candidate_sha256": "c2bb04e14e71ad20fa7b9c01c84dcc60cdb12aac144b1d3fa85d87f290a2e31b",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
+    },
+    {
+      "symbol": "FUN_002A7750",
+      "address": 2783056,
+      "size": 60,
+      "matched": true,
+      "reference_sha256": "768fb44f532fa7672eac3e982914ff21f1cbf6acadf8309c682e8e80b5bc0b33",
+      "candidate_sha256": "768fb44f532fa7672eac3e982914ff21f1cbf6acadf8309c682e8e80b5bc0b33",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
+    },
+    {
+      "symbol": "FUN_002B8888",
+      "address": 2853000,
+      "size": 100,
+      "matched": true,
+      "reference_sha256": "45f69804d42ef00fc30552f9e8d665f4e72f43b67741946d2eeb8980aec16907",
+      "candidate_sha256": "45f69804d42ef00fc30552f9e8d665f4e72f43b67741946d2eeb8980aec16907",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
     }
   ],
   "full_boot_gate": {
@@ -2029,15 +2089,15 @@
     "bytes_compared": 2521763,
     "segments": 2
   },
-  "matched_code_bytes": 8128,
+  "matched_code_bytes": 8544,
   "tools": {
     "cc1": "dff08a347efb82d33bcc921d426922a199dbcb4fe807a3662b75ce0196c6ac5f",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "e8be4dc929ba2ded767cebf8661fa53c3e09b0fae6c20702c8f4ce2a1f1ac606",
-  "c_object_sha256": "7f0812ed9b5a0ced9bbd9f8e7f5c001a677926d1a7f4eebeb3e9267dceb4b2d8",
+  "candidate_elf_sha256": "ca7f20c6a647d09be04162777ddcd77f50965d002293548077f230744edd4c51",
+  "c_object_sha256": "ce753263f59b3559d63463bc3fb091c8346c0b024b1d17418036472002d2d7b7",
   "replacement_inputs": {
     "16180.s": [
       "FUN_00115200",
@@ -2209,7 +2269,12 @@
       "FUN_00350670",
       "FUN_00336920",
       "FUN_00336CC8",
-      "FUN_00297550"
+      "FUN_00297550",
+      "FUN_002B6D28",
+      "FUN_00284E40",
+      "FUN_00284000",
+      "FUN_002A7750",
+      "FUN_002B8888"
     ]
   }
 }

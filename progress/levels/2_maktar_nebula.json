@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "2_maktar_nebula",
   "reference_sha256": "ab59cf107fb30843db03cd3571af1c08d62e99e6b50594bc38dd7a70f91ac94b",
-  "source_sha256": "a58f0fd74c546b0fcb3daeefa2f5a2147e7cd6c47998506960cffa6c6052b6f8",
-  "catalog_sha256": "959fab5b54fd72f371d054de2eaca5c4a23a9b58413e42e6e6f7f4a92fdaf373",
+  "source_sha256": "a23f7db942510ace77536055f00e2b909e3bc3181e7e3501a26b15d57297130e",
+  "catalog_sha256": "56b8a3f2d8ea1439e391d765b15410f1b59d1c14f1796399947da5c015fc0778",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -182,6 +182,18 @@
       "matched": true,
       "reference_sha256": "2988da5ea29ccf5351378ab6377792c101668d904ef8317e1fee374c323c117e",
       "candidate_sha256": "2988da5ea29ccf5351378ab6377792c101668d904ef8317e1fee374c323c117e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "2_maktar_nebula"
+    },
+    {
+      "symbol": "FUN_002A7750",
+      "address": 3270304,
+      "size": 60,
+      "matched": true,
+      "reference_sha256": "768fb44f532fa7672eac3e982914ff21f1cbf6acadf8309c682e8e80b5bc0b33",
+      "candidate_sha256": "768fb44f532fa7672eac3e982914ff21f1cbf6acadf8309c682e8e80b5bc0b33",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -422,6 +434,18 @@
       "matched": true,
       "reference_sha256": "a033f6596bebd5175d6f1cd351569066e37129bb0973c8d4c626a0e02be3e592",
       "candidate_sha256": "a033f6596bebd5175d6f1cd351569066e37129bb0973c8d4c626a0e02be3e592",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "2_maktar_nebula"
+    },
+    {
+      "symbol": "FUN_002B8888",
+      "address": 3366320,
+      "size": 100,
+      "matched": true,
+      "reference_sha256": "45f69804d42ef00fc30552f9e8d665f4e72f43b67741946d2eeb8980aec16907",
+      "candidate_sha256": "45f69804d42ef00fc30552f9e8d665f4e72f43b67741946d2eeb8980aec16907",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -1789,15 +1813,15 @@
     "bytes_compared": 2928824,
     "segments": 1
   },
-  "matched_code_bytes": 7196,
+  "matched_code_bytes": 7356,
   "tools": {
     "cc1": "dff08a347efb82d33bcc921d426922a199dbcb4fe807a3662b75ce0196c6ac5f",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "51def613f5b866c35777e87a45fa902fbf6c655db0612fa6700b9001668b01c2",
-  "c_object_sha256": "7f0812ed9b5a0ced9bbd9f8e7f5c001a677926d1a7f4eebeb3e9267dceb4b2d8",
+  "candidate_elf_sha256": "27174e1fe04cab4806dd9b3455576202b0a286405ed704539e28ae96e2ab12f6",
+  "c_object_sha256": "ce753263f59b3559d63463bc3fb091c8346c0b024b1d17418036472002d2d7b7",
   "replacement_inputs": {
     "100200.s": [
       "FUN_0026FEB8",
@@ -1815,6 +1839,7 @@
       "FUN_00297550",
       "FUN_0029AE78",
       "FUN_0029F978",
+      "FUN_002A7750",
       "FUN_002A7790",
       "FUN_002A7798",
       "FUN_002A77E0",
@@ -1835,6 +1860,7 @@
       "FUN_002B3868",
       "FUN_002B7DF8",
       "FUN_002B7FB0",
+      "FUN_002B8888",
       "FUN_002C9A98",
       "FUN_002C9AD8",
       "FUN_002CB4E8",

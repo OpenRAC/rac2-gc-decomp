@@ -48,7 +48,15 @@
     "FUN_0011AFC0": 1159104,
     "FUN_0011AFE0": 1159136,
     "FUN_00133930": 1259824,
-    "D_00188660": 1607264
+    "D_00188660": 1607264,
+    "FUN_00133400": 1258496,
+    "D_001A6480": 1729664,
+    "D_001A742C": 1733676,
+    "FUN_00125A20": 1202720,
+    "D_001A7B90": 1735568,
+    "D_001A7BB8": 1735608,
+    "FUN_00124418": 1197080,
+    "FUN_001257D0": 1202128
   },
   "functions": [
     {
@@ -1394,6 +1402,46 @@
       "ranges": 1,
       "xrefs": 0,
       "meaning": "decode quatre-bit-color RLE avec champs octets et curseur post-increment"
+    },
+    {
+      "symbol": "FUN_002B6D28",
+      "address": 2845992,
+      "size": 88,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "transmet active au callee et etape3->4"
+    },
+    {
+      "symbol": "FUN_00284E40",
+      "address": 2641472,
+      "size": 60,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "configure display depuis structure SDK et cellule pointeur absolue mesuree"
+    },
+    {
+      "symbol": "FUN_00284000",
+      "address": 2637824,
+      "size": 108,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "choisit une configuration GS depuis globales; reference utilise GP; boot seulement"
+    },
+    {
+      "symbol": "FUN_002A7750",
+      "address": 2783056,
+      "size": 60,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "update a byte state and clear its two status bits"
+    },
+    {
+      "symbol": "FUN_002B8888",
+      "address": 2853000,
+      "size": 100,
+      "ranges": 1,
+      "xrefs": 0,
+      "meaning": "reset status fields and clear two sixteen-word ranges"
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"

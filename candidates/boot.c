@@ -1270,3 +1270,47 @@ void FUN_00297550(u8 *out,s32 index,u8 *base,short *offsets) {
         }
     }
 }
+
+typedef struct { u8 before[0x68]; s32 active; u8 gap[6]; short state; } CallState;
+extern u8 D_001A63A8[];
+extern void FUN_00133400(s32);
+s32 FUN_002B6D28(void) {
+    if (((CallState *)D_001A63A8)->active==0) return 0;
+    if (((CallState *)D_001A63A8)->state!=3) return 0;
+    FUN_00133400(((CallState *)D_001A63A8)->active); ((CallState *)D_001A63A8)->state=4;
+    return 1;
+}
+
+typedef struct { u8 before[0x158]; short a,b,c; u8 gap[10]; short d,e; } DisplayState;
+extern DisplayState D_001A6480;
+extern u8 *D_001A742C;
+extern void FUN_00125A20(u8 *,short,short,short,short,short);
+void FUN_00284E40(void) {
+    FUN_00125A20(*(u8 **)0x001a742c,D_001A6480.c,D_001A6480.a,D_001A6480.b,D_001A6480.d,D_001A6480.e);
+}
+
+extern s32 D_001A7B90;
+extern s32 D_001A7BB8 __attribute__((sda));
+extern s32 FUN_00124418(void);
+extern s32 FUN_001257D0(s32,s32,s32,s32);
+void FUN_00284000(void) {
+    FUN_00124418();
+    if (D_001A7B90 != 0) D_001A7BB8 = 0;
+    if (*(s32 *)0x001a7bb8 != 0) FUN_001257D0(0,0,0x50,1);
+    else FUN_001257D0(0,1,D_001A7B90 != 0 ? 3 : 2,0);
+}
+
+void FUN_002A7750(u8 *a0,u8 a1,s32 a2) {
+ u8 old=a0[0x20];a0[0x20]=a1;a0[0x94]=old;*(short *)(a0+0x96)=0;
+ a0[0xbe]&=~1;
+ if(a2!=-1){a0[0x95]=(u8)a2;a0[0xbe]&=~2;}
+}
+
+void FUN_002B8888(u8 *a0) {
+ s32 *p=(s32 *)(a0+0x140);s32 count=15;
+ *(s32 *)(a0+0x1b0)=0;*(volatile s32 *)(a0+0x1d4)=1;
+ *(volatile s32 *)(a0+0x1a0)=0;*(volatile s32 *)(a0+0x1a4)=0;*(volatile s32 *)(a0+0x1a8)=0;
+ *(volatile s32 *)(a0+0x1d0)=1;*(volatile s32 *)(a0+0x1b4)=0;*(volatile s32 *)(a0+0x1b8)=0;
+ *(volatile s32 *)(a0+0x1c0)=0;*(volatile s32 *)(a0+0x1c4)=0;*(volatile s32 *)(a0+0x1c8)=0;*(volatile s32 *)(a0+0x1d8)=0;
+ do { p[-16]=0;count--;p[0]=0;p++; }while(count>=0);
+}
