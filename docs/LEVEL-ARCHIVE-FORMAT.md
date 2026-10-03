@@ -36,24 +36,42 @@ present; the table has room for 64 and the remaining entries are zero.
 
 ## 3. A level archive
 
-`G/LEVELn.WAD` opens with 24 32-bit words: a header size, a sector field, a level id, then
-a series of (offset, size) couples.
+`G/LEVELn.WAD` opens with 24 32-bit words: a header size (`0x60`), a sector field, a level
+id (`0x08`), then four (offset, size) couples **in sectors, relative to the start of the
+file** — `data` at `0x10`, then three more. Measured on all 27 levels of the 9 September
+disc: sorted by offset the four couples **chain exactly** (`offset + size == next offset`,
+27/27) and partition the file after the first sector. Level 0, for example: `{1, 690}`,
+`{691, 6467}`, `{7158, 311}`, `{7469, 12}`, in a 15 319 728-byte file. The second couple
+is the level data WAD (below); the region at `{1, N}` is raw and its structure is not yet
+identified; the last couple is a small uncompressed blob. The community layout for this
+generation labels the last three gameplay (NTSC, PAL) and occlusion — the `0x20` couple
+is a `"WAD"`-compressed stream on 27/27 levels, and the mapping is otherwise kept as a
+lead.
 
 **The offset of the level data is not assumed.** The extractor tries every word as an
 offset — in sectors, then in bytes — and keeps the one that makes a valid section list
 appear. On the 27 levels of the 9 September disc it is always the same position, and the
 value differs per level.
 
-At `level_start + offset * 0x800` sits a header of **12 byte-ranges**; the first is
-`ofs_overlay`. At `that header + ofs_overlay.offset` begins the section list:
+At `level_start + offset * 0x800` sits a header of twelve 8-byte (offset, size) slots, in
+bytes, relative to the header. The overlay slot is **index 0, at +0x80, on all 27 levels**
+and slots `0x50`/`0x58` are empty; slots 4 to 9 begin with the `"WAD"` LZ container on
+27/27 levels (five small ones, and the large compressed core-data stream — 9 767 866
+bytes at `0x48` on level 0). The community layout for this generation describes an
+eleven-slot (`0x58`) header whose last slot is `transition_textures`; the twelfth slot
+read here is the start of the padding before the overlay. At `that header +
+ofs_overlay.offset` begins the section list:
 
     record = dest_addr (u32), copy_size (u32), section_type (u32), entry_point (u32)
     followed by copy_size bytes of content ; the next record follows immediately.
 
-Section types seen: `1` = PROGBITS, `8` = NOBITS. **The stop criterion is not
-`entry_point == 0`** — a relocation section can carry `entry_point == 0` without ending
-the list. The extractor stops when a record stops being coherent (destination outside the
-expected window, unknown type, null size).
+Section types seen: `1` = PROGBITS, `8` = NOBITS, `9` = REL. **The stop criterion is
+documented and then measured:** every section of one overlay repeats the same
+`entry_point` (the address of `startlevel`), and the list ends **when it changes**. Each
+of the 27 levels carries exactly one distinct value. Plausibility checks (destination
+window, known type, non-null size) remain as guards, not as the stop rule — an earlier
+size threshold was silently truncating the list at a small section, cutting ten levels
+before their `.text`.
 
 Seven sections per level, in this order (addresses from level 0 of the 9 September disc):
 
@@ -67,8 +85,10 @@ Seven sections per level, in this order (addresses from level 0 of the 9 Septemb
 | 5 | `0x00286800` | `0x20` | 1 | `lvl.sndvtbl` |
 | 6 | `0x00286880` | `0x1b3cf0` | 1 | `.text` |
 
-**27 levels, 57 070 528 bytes** of section content in total. Two levels (24 and 25) carry
-only five sections — the two dispatch tables of the missing kind are absent there.
+**27 levels, 75 369 728 bytes** of section content in total, all 27 carrying seven
+sections (a first measurement of 57 070 528 bytes came from the truncating threshold
+above; the corpus grew by 18 299 200 bytes when the documented rule replaced it, and
+re-extracting reproduces it byte for byte — 190 files, 0 differing).
 
 The same reader parses the 6 August and 7 September discs without a single change: same
 table formula, same section addresses, seven sections per level.
