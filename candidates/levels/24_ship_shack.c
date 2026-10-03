@@ -43,3 +43,25 @@ s32 LVL_24_SHIP_SHACK_FUN_0034F218(s32 key) {
  }while(count<5);
  return 1;
 }
+
+typedef struct {
+    u8 prefix[0xc40];
+    s32 selected;
+    s32 index;
+    u8 gap[0x1648];
+    u8 *object;
+} NativeResidentView;
+extern NativeResidentView LVL_24_SHIP_SHACK_D_00189E20;
+
+void LVL_24_SHIP_SHACK_FUN_002D1570(s32 selected, s32 index) {
+    if (selected >= 0) {
+        u8 *object = LVL_24_SHIP_SHACK_D_00189E20.object;
+        s32 offset = object[0x43] * 4;
+        u8 *table = *(u8 **)(object + 0x24);
+        u8 *entry = *(u8 **)(table + offset + 0x48);
+        if (index < entry[0x10]) {
+            LVL_24_SHIP_SHACK_D_00189E20.selected = selected;
+            LVL_24_SHIP_SHACK_D_00189E20.index = index;
+        }
+    }
+}
