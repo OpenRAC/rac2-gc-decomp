@@ -14,13 +14,19 @@ need, in what order, what each command must print, and what to do when it does n
 | Python 3.12 + `requirements.txt` | `pip` | tests, report export, everything |
 | **Your own** disc image of the USA **v1.01** release (`SCUS_972.68`) | your legally obtained copy | the reference bytes |
 | **SN ProDG 2.0** EE toolchain (`ee/bin/Ps2EeAs.exe`, `ee/bin/ld.exe`) | you supply it | assembly reconstruction, the build gate |
-| **SN ProDG 3.01** EE toolchain (`bin/ee-gcc2953.exe`, `bin/ee-as.exe`, `lib/gcc-lib/ee/2.95.3/cc1.exe`) | you supply it | C candidate qualification |
+| **Reconstructed GNU EE 2.9-ee-991111b** `cpp`/`cc1`/`as` profile | locally rebuilt; see [compiler notes](COMPILER-NOTES.md) | current authored-C compilation and assembly |
+| **SN ProDG 3.01** EE toolchain (`ee/bin/ld.exe`; earlier compiler profile `ee-gcc2953`) | you supply it | linking the current C objects; retaining the earlier SN profile |
 | **Wrench** (`wrenchbuild`) | you supply it | unpacking the 27 level overlays |
 | A runtime directory **outside** this repository | you create it | every generated file lands there |
 
 Greatest Hits **v2.00** and other regions are **different targets** — the pinned hashes in
 `config/target.json` reject them. The tests and `scripts/decomp_report.py` need **none** of the
 proprietary entries above; a bare Python 3.12 runs them (that is what CI does).
+
+The current C checker compiles through `scripts/wsl_chain.py` and uses the SN
+toolchain directory for its linker. `8bed6eae` in a proof is the SHA-256 prefix
+of the reconstructed `cc1`, not a compiler version. Compatibility with the
+qualified retail bodies does not establish the original game's compiler identity.
 
 ## 0. Python
 

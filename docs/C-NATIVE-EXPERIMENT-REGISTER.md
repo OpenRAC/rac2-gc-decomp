@@ -137,3 +137,32 @@ PCSX2 session bank. See [the validation record](../progress/pcsx2/boot-lot24.jso
 |---|---|---|---|
 | Retail ISO | PCSX2 d75a0ad, DebugServer 21512, PINE 28012 | SCUS-97268 v1.01; loaded function sample equals pinned bytes; breakpoint hit not observed | `20261003-162346-bf1dbc7d/mcp-reference-observations.json` |
 | Lot 24 rebuilt ELF + same ISO | Same dedicated profile | SCUS-97268 v1.01; loaded function sample equals retail/pinned/rebuilt bytes; gameplay unverified | `20261003-163125-1a5e81ad/mcp-rebuilt-observations.json` |
+
+## Tail-pointer state experiment — current 8bed profile
+
+This ordinary-C hypothesis computes the next state in the switch, then forms a partial-structure pointer in the shared tail before writing state and clearing field4. It preserves the void return and the observed fields. The six integrated native controls remain exact. Both measurements produce a complete 128-byte symbol against the pinned 136-byte function; explicit placement of the generated table also changes its entries. Neither result is integrated.
+
+| Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
+|---|---|---:|---|---|---|---|---|---|
+| `0x002F2B48` | `FUN_002F2B48` | 136 | `tail-pointer-020b639a:normal` | `8bed6eae` | MISMATCH | 128 produced / 136 target bytes | `9f1af555c54beee60` | `nuit-codex-prologue/native-2f2b48-tail-pointer-8bed-020b639a/trial-tail-pointer` |
+| `0x002F2B48` | `FUN_002F2B48` | 136 | `tail-pointer-020b639a:table-placement` | `8bed6eae` | MISMATCH (generated-table placement) | 128 produced / 136 target bytes; generated table differs | `9f1af555c54beee60` | `nuit-codex-prologue/native-2f2b48-tail-pointer-8bed-020b639a/trial-table-placement` |
+
+Inventory after these appended measurements: 80 native records across the same 12 functions, comprising 7 exact results, 69 mismatches, 2 archived runs without proof, 1 compiler failure and 1 source rejection. The original inventory above describes its historical checkpoint.
+
+## Boot zero-TI loop requalification
+
+The preserved volatile zero-store loop was rejected at 44/40 bytes under dff08a34. Recompiling the identical source under the current profile still produces 44 bytes. This tests the architectural-zero store correction on a volatile loop rather than assuming the scalar zero-store result generalizes. The complete source SHA-256 is unchanged: `c94397760c68bc0484540232954e915c5058381292dc827c0b5abe67809fc0c2`.
+
+| Target | Program | Trial record | C profile | Result | Produced / target bytes | Source SHA prefix | Evidence directory |
+|---|---|---|---|---|---|---|---|
+| `FUN_00282A88` | boot | `ti-loop-a2f8e58d:FUN_00282A88` | `8bed6eae` | MISMATCH | 44 / 40 | `c94397760c68bc04` | `nuit-codex-prologue/boot-ti-loop-8bed-020b639a/run-ti-loop-a2f8e58d` |
+
+## Frame-bearing native requalification — current 8bed profile
+
+The preserved `002E7A08` source contains a 48-byte frame and a call, so the current frame-scheduler default is relevant to its qualification. Its source SHA-256 remains `b84f46ffe3f8a5feb1cb0b7fc661f9f4a1d485a114da07a660948a1edd8f1e65`. The current-profile measurement retains the prior 17-byte difference at the complete 156-byte size; no source or compiler change was made to force a result.
+
+| Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
+|---|---|---:|---|---|---|---|---|---|
+| `0x002E7A08` | `FUN_002E7A08` | 156 | `frame-020b639a:preserved-source-current-profile` | `8bed6eae` | MISMATCH | 17 / 156 bytes | `b84f46ffe3f8a5fe` | `nuit-codex-prologue/native-2e7a08-frame-8bed-020b639a/trial-preserved-source-current-profile` |
+
+Inventory after this measurement: 81 native records, including 70 mismatches; other categories and the 12-function scope are unchanged. Nine boot records and two separate PCSX2 observations are also indexed.

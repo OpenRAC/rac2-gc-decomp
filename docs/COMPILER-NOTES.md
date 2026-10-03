@@ -1,4 +1,4 @@
-# The retail compiler, identified and reproduced
+# Reconstructed GNU EE compiler: provenance and measured compatibility
 
 **Measured 2026-10-03 against the pinned retail boot** (`SCUS_972.68`, USA v1.01,
 sha256 `36d5814d…`, `config/target.json`).
@@ -14,6 +14,14 @@ three families, which is what drove the move:
 | callee-saved register saves | `sd` in 8-byte slots | `sq` in 16-byte slots |
 | calls at the end of a function | plain `jal` + full epilogue | sibling call (`j target`) |
 | GP→FP transfers (`mtc1`) | a `nop` in *some* cases only | n/a (different assembler) |
+
+## Instrument identity and provenance
+
+`8bed6eae` is the SHA-256 prefix of the locally rebuilt `cc1` binary, not a compiler name or version. The source lineage is GNU EE 2.9-ee-991111b. The local build recipe starts from `gnu-ee-binutils-gcc-1.1.tar.gz`, applies the RAC1/Lombyte `sce-991111b` patch stack, and makes the measured RAC2 adjustments described below. The profile was introduced for this repository in commit `b2b9101` after comparing the earlier SN ProDG 3.01 GCC 2.95.3 profile against call-bearing retail bodies.
+
+Matching the qualified bodies establishes compatibility with those bodies. It does not establish the exact compiler binary, patch set, flags or source directives used by Insomniac for the original game. Future bodies can falsify this compatibility profile.
+
+Authored C uses the reconstructed GNU `cpp`/`cc1`/`as` through `scripts/wsl_chain.py`. Linking still uses the SN SDK `ld.exe`. The reconstructed assembly path uses `Ps2EeAs.exe` separately. The prior SN compiler remains available locally; the SN toolchain directory passed to the current C checker supplies its linker, and does not mean that the checker invokes `ee-gcc2953`.
 
 ## The evidence
 

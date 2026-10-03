@@ -60,8 +60,10 @@ visual gameplay and native PC execution remain unverified.
 - A local image of your own matching game disc (or a local archive of that image).
 - Wrench `wrenchbuild` for unpacking level executables.
 - Windows and a locally supplied **SN ProDG 2.0** EE toolchain containing `ee/bin/Ps2EeAs.exe`
-  and `ee/bin/ld.exe`, plus the **SN ProDG 3.01** C toolchain (`bin/ee-gcc2953.exe`,
-  `bin/ee-as.exe`, `lib/gcc-lib/ee/2.95.3/cc1.exe`) to prove matching C.
+  and `ee/bin/ld.exe`. Current C qualification uses the locally reconstructed
+  **GNU EE 2.9-ee-991111b** `cpp`/`cc1`/`as` profile and the **SN ProDG 3.01**
+  `ee/bin/ld.exe` linker; the earlier SN `ee-gcc2953` profile remains documented.
+  See [compiler provenance and compatibility](docs/COMPILER-NOTES.md).
   No SDK is supplied or downloaded by these scripts.
 
 The target's size and disc hashes are pinned in `config/target.json` against
