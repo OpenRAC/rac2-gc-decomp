@@ -5,7 +5,7 @@ This is the canonical index for the recorded RAC2 C experiments. The original ta
 ## Current scope and interpretation
 
 - Reference: `SCUS_972.68`, `/levels/24_ship_shack.elf`, pinned ELF SHA-256 `4afbc22add84109c84ef8ca49099fdf9863905e5f497369c207ac5cb47814740`.
-- This register inventories 115 target records across 37 functions: 22 exact results, 81 byte mismatches, 2 archived runs without proof, 9 compiler failures, and 1 source rejected before compilation. Eight compiler-failure records belong to one shared failed source unit; no individual body measurement is inferred. Exact trial records are not integration credit.
+- This register inventories 139 target records across 45 functions: 27 exact results, 84 byte mismatches, 2 archived runs without proof, 9 compiler failures, 8 link failures and 9 source/catalog rejections. Shared-unit failure rows identify attempted targets and do not infer individual body measurements. Exact trial records are not integration credit.
 - The 51 proof-bearing trials from the original candidate bank used the historical `dff08a34` C compiler profile with `-O2 -G0 -ffunction-sections`; seven later measured `FUN_002B0408` variants, five measured `FUN_002F2718` trials, two measured `FUN_00323430` variants, and the two latest exact promotions used the current `8bed6eae` profile with the same flags. Two earlier 8bed-labelled folders do not retain qualification proofs and are explicitly marked unverified; the register-binding source was separately rejected before compilation. Other pinned tool hashes for proof-bearing trials are recorded in their local evidence. Historical exact results are not current-profile qualification; requalify a candidate with the current checker before treating an old exact result as current evidence.
 - The five historical exact targets are now present in the public level-native catalog at the repository revision where this register was created. The table records the trial result and its original profile, not a substitute for current proofs.
 - Classification uses `qualification_passed` and `proof.functions[].matched`; `proof.state` alone is not decisive. Aggregate `*-results.json` files duplicate these per-run records. Deduplicate by run directory / `work` path.
@@ -249,3 +249,54 @@ Removing the duplicate typedef declarations creates a separate full-context sour
 | `0x002F1B80` | `FUN_002F1B80` | 20 | `eight-new-20261003:reuse-types:002F1B80` | `8bed6eae` | EXACT; integration pending | 0 | `344c526d2936c8f0` | `nuit-codex-prologue/native-eight-lot26-8bed-20261003-v2/trial-eight-new-bodies` |
 
 Inventory: 115 target records across 37 functions, comprising 22 exact results, 81 mismatches, 2 archived runs without proof, 9 compiler failures and 1 source rejection. Eight compiler-failure records refer to one shared source-unit failure; they do not establish individual body mismatches.
+
+
+## Broader source-unit catalog rejection
+
+The first catalog for the eight new targets included the byte address 0x0018b2bd as an external symbol. The native checker requires aligned external anchors and rejected the unit before compilation. All eight attempted target records describe this shared catalog rejection; no compiler or individual body result is inferred. The original source, catalog and preflight error remain private. A corrected source can address the measured byte as offset one from aligned anchor 0x0018b2bc without relaxing the guard.
+
+| Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
+|---|---|---:|---|---|---|---|---|---|
+| `0x002A40E8` | `FUN_002A40E8` | 96 | `broader-20261003:unaligned-anchor:002A40E8` | not invoked | REJECTED (shared catalog) | byte external is unaligned; no body measurement | `bb84263567c2b91e` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003` |
+| `0x002A5288` | `FUN_002A5288` | 60 | `broader-20261003:unaligned-anchor:002A5288` | not invoked | REJECTED (shared catalog) | byte external is unaligned; no body measurement | `bb84263567c2b91e` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003` |
+| `0x002AA4E0` | `FUN_002AA4E0` | 60 | `broader-20261003:unaligned-anchor:002AA4E0` | not invoked | REJECTED (shared catalog) | byte external is unaligned; no body measurement | `bb84263567c2b91e` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003` |
+| `0x002ACF68` | `FUN_002ACF68` | 52 | `broader-20261003:unaligned-anchor:002ACF68` | not invoked | REJECTED (shared catalog) | byte external is unaligned; no body measurement | `bb84263567c2b91e` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003` |
+| `0x002ACFA0` | `FUN_002ACFA0` | 52 | `broader-20261003:unaligned-anchor:002ACFA0` | not invoked | REJECTED (shared catalog) | byte external is unaligned; no body measurement | `bb84263567c2b91e` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003` |
+| `0x002AD080` | `FUN_002AD080` | 80 | `broader-20261003:unaligned-anchor:002AD080` | not invoked | REJECTED (shared catalog) | byte external is unaligned; no body measurement | `bb84263567c2b91e` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003` |
+| `0x002ADBC0` | `FUN_002ADBC0` | 88 | `broader-20261003:unaligned-anchor:002ADBC0` | not invoked | REJECTED (shared catalog) | byte external is unaligned; no body measurement | `bb84263567c2b91e` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003` |
+| `0x002AECC0` | `FUN_002AECC0` | 44 | `broader-20261003:unaligned-anchor:002AECC0` | not invoked | REJECTED (shared catalog) | byte external is unaligned; no body measurement | `bb84263567c2b91e` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003` |
+
+Inventory: 123 target records across 45 functions, with 22 exact results, 81 mismatches, 2 archived runs without proof, 9 compiler failures and 9 source/catalog rejections. Eight new rejection rows concern this one uncompiled catalog.
+
+
+## Broader unit link refusal and isolated complete-body measurements
+
+The aligned-anchor source compiled, but one 88-byte candidate for the 80-byte 002AD080 slot overlapped its next function and blocked the full-unit linker. The source and failed link remain unchanged. Each new complete body was then linked separately from that same compiled object, without trimming, patching or recompiling its code. Five bodies are exact and three remain mismatches. Only new full-unit qualification after excluding failed bodies can authorize integration.
+
+### Shared link-failure records
+
+| Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
+|---|---|---:|---|---|---|---|---|---|
+| `0x002A40E8` | `FUN_002A40E8` | 96 | `broader-20261003:union-link:002A40E8` | `8bed6eae` | LINK FAIL (shared unit) | 002AD080 section extends into next function; no union body measurement | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/trial-broader-native-family` |
+| `0x002A5288` | `FUN_002A5288` | 60 | `broader-20261003:union-link:002A5288` | `8bed6eae` | LINK FAIL (shared unit) | 002AD080 section extends into next function; no union body measurement | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/trial-broader-native-family` |
+| `0x002AA4E0` | `FUN_002AA4E0` | 60 | `broader-20261003:union-link:002AA4E0` | `8bed6eae` | LINK FAIL (shared unit) | 002AD080 section extends into next function; no union body measurement | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/trial-broader-native-family` |
+| `0x002ACF68` | `FUN_002ACF68` | 52 | `broader-20261003:union-link:002ACF68` | `8bed6eae` | LINK FAIL (shared unit) | 002AD080 section extends into next function; no union body measurement | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/trial-broader-native-family` |
+| `0x002ACFA0` | `FUN_002ACFA0` | 52 | `broader-20261003:union-link:002ACFA0` | `8bed6eae` | LINK FAIL (shared unit) | 002AD080 section extends into next function; no union body measurement | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/trial-broader-native-family` |
+| `0x002AD080` | `FUN_002AD080` | 80 | `broader-20261003:union-link:002AD080` | `8bed6eae` | LINK FAIL (shared unit) | 002AD080 section extends into next function; no union body measurement | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/trial-broader-native-family` |
+| `0x002ADBC0` | `FUN_002ADBC0` | 88 | `broader-20261003:union-link:002ADBC0` | `8bed6eae` | LINK FAIL (shared unit) | 002AD080 section extends into next function; no union body measurement | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/trial-broader-native-family` |
+| `0x002AECC0` | `FUN_002AECC0` | 44 | `broader-20261003:union-link:002AECC0` | `8bed6eae` | LINK FAIL (shared unit) | 002AD080 section extends into next function; no union body measurement | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/trial-broader-native-family` |
+
+### Isolated measurements
+
+| Target | Function | Bytes | Trial | C profile | Outcome | Diff | Source SHA-256 prefix | Evidence directory |
+|---|---|---:|---|---|---|---|---|---|
+| `0x002A40E8` | `FUN_002A40E8` | 96 | `broader-20261003:isolated:002A40E8` | `8bed6eae` | MISMATCH | 9 / 96 bytes | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002A40E8` |
+| `0x002A5288` | `FUN_002A5288` | 60 | `broader-20261003:isolated:002A5288` | `8bed6eae` | EXACT; integration pending | 0 | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002A5288` |
+| `0x002AA4E0` | `FUN_002AA4E0` | 60 | `broader-20261003:isolated:002AA4E0` | `8bed6eae` | MISMATCH | 13 / 60 bytes | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002AA4E0` |
+| `0x002ACF68` | `FUN_002ACF68` | 52 | `broader-20261003:isolated:002ACF68` | `8bed6eae` | EXACT; integration pending | 0 | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002ACF68` |
+| `0x002ACFA0` | `FUN_002ACFA0` | 52 | `broader-20261003:isolated:002ACFA0` | `8bed6eae` | EXACT; integration pending | 0 | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002ACFA0` |
+| `0x002AD080` | `FUN_002AD080` | 80 | `broader-20261003:isolated:002AD080` | `8bed6eae` | MISMATCH | 88 produced / 80 target bytes | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002AD080` |
+| `0x002ADBC0` | `FUN_002ADBC0` | 88 | `broader-20261003:isolated:002ADBC0` | `8bed6eae` | EXACT; integration pending | 0 | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002ADBC0` |
+| `0x002AECC0` | `FUN_002AECC0` | 44 | `broader-20261003:isolated:002AECC0` | `8bed6eae` | EXACT; integration pending | 0 | `c9bc32200b3a6e0a` | `nuit-codex-prologue/native-broader-lot27-8bed-20261003-v2/isolated-bodies-gp0/002AECC0` |
+
+Inventory: 139 target records across 45 functions, comprising 27 exact results, 84 mismatches, 2 archived runs without proof, 9 compiler failures, 8 link failures and 9 source/catalog rejections. Shared-unit failure rows do not assert individual body mismatches.

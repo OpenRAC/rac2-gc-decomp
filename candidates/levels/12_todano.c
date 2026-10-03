@@ -1,3 +1,4 @@
+typedef float f32;
 typedef unsigned char u8;
 typedef int s32;
 typedef unsigned int u32;
@@ -19,4 +20,13 @@ u32 LVL_12_TODANO_FUN_002B3808(u8 *object,u32 value) {
 extern u32 LVL_12_TODANO_D_0018C0B4;
 u32 LVL_12_TODANO_FUN_002DA098(void) {
     return LVL_12_TODANO_D_0018C0B4;
+}
+
+s32 LVL_12_TODANO_FUN_002E7180(f32 a,f32 b,f32 t) {
+ f32 difference=b-a;
+ f32 squared=t*t;
+ a=a*t;
+ difference=difference*squared;
+ a=a+difference;
+ return (s32)a;
 }

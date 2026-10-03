@@ -1,3 +1,4 @@
+typedef float f32;
 typedef unsigned char u8;
 typedef int s32;
 typedef unsigned int u32;
@@ -19,4 +20,13 @@ u32 LVL_26_JAMMING_ARRAY_FUN_002AE5D0(u8 *object,u32 value) {
 extern u32 LVL_26_JAMMING_ARRAY_D_0018C0B4;
 u32 LVL_26_JAMMING_ARRAY_FUN_002D7020(void) {
     return LVL_26_JAMMING_ARRAY_D_0018C0B4;
+}
+
+s32 LVL_26_JAMMING_ARRAY_FUN_002E4108(f32 a,f32 b,f32 t) {
+ f32 difference=b-a;
+ f32 squared=t*t;
+ a=a*t;
+ difference=difference*squared;
+ a=a+difference;
+ return (s32)a;
 }

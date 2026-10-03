@@ -1,3 +1,4 @@
+typedef float f32;
 typedef unsigned char u8;
 typedef int s32;
 typedef unsigned int u32;
@@ -19,4 +20,13 @@ u32 LVL_22_DOBBO_ORBIT_FUN_002B2688(u8 *object,u32 value) {
 extern u32 LVL_22_DOBBO_ORBIT_D_0018C0B4;
 u32 LVL_22_DOBBO_ORBIT_FUN_002DCBD8(void) {
     return LVL_22_DOBBO_ORBIT_D_0018C0B4;
+}
+
+s32 LVL_22_DOBBO_ORBIT_FUN_002E9CC0(f32 a,f32 b,f32 t) {
+ f32 difference=b-a;
+ f32 squared=t*t;
+ a=a*t;
+ difference=difference*squared;
+ a=a+difference;
+ return (s32)a;
 }
