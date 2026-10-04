@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. One hundred eighty-four contextual native bodies remain distinct in the
+family has 26. Two hundred sixty-two contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,23 +80,33 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 192 family-or-singleton items, 193 contextual variants | 21,336 across 399 placements |
+| Native overlays | 270 family-or-singleton items, 271 contextual variants | 28,912 across 477 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 12,152, or 12,176 when both clear
+Native representative catalogued bytes total 19,728, or 19,752 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **232,784 / 48,788,176 bytes (0.4771%)**.
-The latest matching lot adds nine complete 36-byte scalar cubic helpers,
-totaling 324 bytes. The canonical body preserves the measured float operation
-order: square the input, multiply the input by negative two, add three, then
-multiply the two results. All 132 complete functions in the nine changed
-standalone units match, including 123 prior controls. Fresh boot and all 27
-overlay loaded-byte and metadata gates pass. The seed shape is absent in 18
-programs, which receive no inferred placement or credit.
+The current integration exporter accepts **240,360 / 48,788,176 bytes (0.4927%)**.
+The latest matching lot adds 78 placements totaling 7,576 bytes: 23 signed
+index clamp/wrap algorithms of 100 bytes, 27 record-key updates of 116 bytes,
+27 resident bitmap getters of 72 bytes and the 200-byte Barlow queue launcher.
+The three independently qualified worker packets were combined with the launcher;
+all 477 complete functions in the final 27 standalone units match. Fresh boot
+and all 27 overlay loaded-byte and metadata gates pass. The index shape is absent
+in four programs, which receive no inferred placement or credit.
+
+Barlow uses the separately qualified small-data profile and the measured GP;
+its far four-byte control object has an explicit NOSDA binding. Boot and the
+other 26 native programs retain the default flags. Reviews and loaded-image
+proofs bind each program's actual flags, source and checker. This does not infer
+original SDK compilation flags or recovered object boundaries.
+
+The previous lot added nine complete 36-byte scalar cubic helpers, totaling
+324 bytes. Their float operation order is preserved; the shape is absent in
+18 programs and no copies are inferred there.
 
 The previous scalar lot added 101 placements totaling 4,468 bytes: 15 output
 wrappers of 56 bytes, 27 status classifiers of 56 bytes, 27 classifiers of 36
@@ -104,12 +114,12 @@ bytes, 27 object-identifier checks of 32 bytes and five header getters of 56
 bytes. Earlier lots added 27 136-byte GS buffer setup wrappers, 27 92-byte
 floating-field guards and the 76-byte Ship Shack traversal.
 
-Six canonical fragments supply the scalar bodies with explicit placements.
+Nine canonical fragments supply the scalar bodies with explicit placements.
 Status classifiers call each unit's existing indexed status getter definition;
 the output wrappers bind measured per-program floating helper addresses.
 The output wrapper is absent in 12 programs and the header getter is absent in
 22 programs; no placement or credit is inferred there. The inventory's eight
-base-family categories remain fixed, so these 110 scalar additions remain contextual
+base-family categories remain fixed, so the added scalar bodies remain contextual
 items in its conservative counters despite their canonical fragment reuse.
 This bookkeeping distinction does not change the exporter or matching numerator.
 
@@ -118,6 +128,6 @@ placements were already integrated through boot-shared `FUN_0027F128`. A propose
 native alias for each placement triggered the integration overlap guard. The
 private trials and refusal are retained; the redundant native rows and fragments
 are excluded from the current source inventory and matching total.
-Refactoring sources adds zero matching credit. The earlier pilot regenerated all 28
-standalone C files identically; boot/native catalogs, checker and compiler profile
-retain their existing bytes. Complete image checks remain the final acceptor.
+Refactoring sources adds zero matching credit. The earlier organization-only pilot regenerated all 28
+standalone C files identically while preserving its catalogs, checker and flags.
+The later small-data extension separately qualifies per-program native flags. Complete image checks remain the final acceptor.

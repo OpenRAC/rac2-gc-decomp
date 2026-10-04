@@ -662,6 +662,22 @@ Require all sixteen complete functions exact. Any private success remains uninte
 
 Reopen condition: New independently measured compiler or ABI evidence; no arbitrary threshold/flag cycling.
 
+## barlow-nosda-g0-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve all artifacts; G0 stage qualifies controls only. G8 success remains private until separately reviewed per-program flag tooling and full gates.
+
+Reopen condition: New independently measured compiler/source binding or ABI evidence; no arbitrary flag/declaration cycling.
+
+## barlow-nosda-g8-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Preserve all artifacts; G0 stage qualifies controls only. G8 success remains private until separately reviewed per-program flag tooling and full gates.
+
+Reopen condition: New independently measured compiler/source binding or ABI evidence; no arbitrary flag/declaration cycling.
+
 ## barlow-packed-header-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -1615,6 +1631,1497 @@ Compare all complete symbols and object hash with the pre-lot committed native r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
+## native-review-endako-cosine-c-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park cosine interpolation family without equivalent expression/store-order variants or bulkaliases; continue a new uncovered algorithm.
+
+Reopen condition: Independent original declaration/context or compiler scheduling mechanism explaining save placement; no forced FPR/save ordering or padding.
+
+## native-review-endako-decimal-20261004
+
+State: `queued`. Kind: `research`.
+
+Verify full live reference, callers and converter ABI; author complete unit preserving current Endako controls, then qualify exact bytes.
+
+Reopen condition: New measured type/lifetime/ABI evidence, never equivalent expression or allocation cycling.
+
+- `private-work:parallel-20261004/native_review/CURRENT.md`
+
+## native-review-endako-decimal-c-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Compare every complete control and new128-byte function from the same intended object; retain all refusals.
+
+Reopen condition: Independent measured type/lifetime/ABI or algorithm evidence; no expression/register cycles.
+
+- `private-work:parallel-20261004/native_review/decimal-pin.json`
+
+## native-review-endako-decimal-c-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Compare every complete control and new128-byte function from the same intended object; retain all refusals.
+
+Reopen condition: Independent measured type/lifetime/ABI or algorithm evidence; no expression/register cycles.
+
+- `private-work:parallel-20261004/native_review/decimal-pin.json`
+
+## native-review-endako-float-setup-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park scalar-field-setup physicalfamily without store-order expression variants; select a larger fresh algorithm.
+
+Reopen condition: Independent original source memory-alias/declaration or optimizer scheduling evidence for field writes; arbitrary independent-store reordering, volatile or register forcing insufficient.
+
+## native-review-endako-index-c-v1-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure all complete14symbols in intendedunit; preserve refusal or qualifyfamilyonlyafterseedexact.
+
+Reopen condition: New independently measured count/index/delta widths or sourceCFG evidence; no expression/register cycles.
+
+## native-review-endako-path-walk-static-20261004
+
+State: `stopped`. Kind: `research`.
+
+Preserve static refusal; choose another algorithm without unqualified128-bit copies.
+
+Reopen condition: An independently byte-qualified standard-C aligned128-bit copy witness with current instruments; no intrinsic/ASM/forced-register substitution.
+
+## native-review-endako-unlink-20261004
+
+State: `queued`. Kind: `research`.
+
+Pin complete boundaries and callers, then author private whole Endako unit and maintained trial preserving13controls.
+
+Reopen condition: New measured types, CFG/lifetime or helperABI evidence, no source allocation cycles.
+
+## native-review-endako-unlink-c-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Measure all complete14symbols in intended unit; preserve refused source without alias bulk.
+
+Reopen condition: Independent measured node layout/CFG/lifetime evidence, no equivalent expression or register cycles.
+
+## native-review-endako-unlink-c-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park this physical linked-removal family and proceed to a new uncovered algorithm; no third allocation/CFG spelling cycle or familybulk.
+
+Reopen condition: Independent original source/type/optimizer phase evidence that explains remaining owner/head traversal allocation and branch-delay scheduling; equivalent expressions or renamed locals are insufficient.
+
+## native-review-index-family-0_aranos_tutorial-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-10_hrugis_cloud-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-11_joba-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-12_todano-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-13_boldan-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-14_aranos_prison-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-15_gorn-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-16_snivelak-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-17_smolg-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-18_damosel-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-1_oozla-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-20261004
+
+State: `queued`. Kind: `research`.
+
+Qualify all23 complete raw-identical entries and ordinary4wordcaller ABI; compile each current wholeunit onlyafter static qualification.
+
+Reopen condition: Raw absence stays excluded; no variantclaim without independent measured completebody evidence.
+
+- `private-work:parallel-20261004/native_review/index-family-scan.json`
+
+## native-review-index-family-20_yeedil-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-22_dobbo_orbit-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-23_damosel_orbit-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-24_ship_shack-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-25_wupash_nebula-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-26_jamming_array-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-2_maktar_nebula-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-30_insomniac_museum-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-3_endako-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-5_feltzin_system-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-6_notak-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-index-family-9_dobbo-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete currentcontrol and one new100-byte symbol in intendedunit.
+
+Reopen condition: New measured input/binding evidence only; no physicalsourcecycle or flagmatrix.
+
+- `private-work:parallel-20261004/native_review/index-family-qualified.json`
+
+## native-review-joba-class-map-20261004
+
+State: `queued`. Kind: `research`.
+
+Complete pin/source/types/private wholecurrentJobaunit; compile one fresh measured seed; familyonlyifexact.
+
+Reopen condition: New measured classrecord/playerlayout/ABI or sourcephase evidence, no branch/register/expression cycling.
+
+## native-review-joba-class-map-c-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all complete currentcontrol symbols plus new500-byte algorithm; preserve negative and familyonlyafterexactseed.
+
+Reopen condition: Independent original case/source ordering, record/player layout or compiler CFG evidence; no register/branch/expression-cycle guesses.
+
+## native-review-joba-class-map-c-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park completeclassmapping physicalfamily; preserve immutablev1/v2 and exactcurrentcontrols. No third case-order/branch/address-association/register source permutation or aliasbulk.
+
+Reopen condition: Independent original source case-block ordering and actualclassrecord source-binding/backend witness retaining rowbase+field14 address form; current observed equivalent case/body semantics alone insufficient. No forcedregisters,padding,volatile or flagsmatrix.
+
+## native-review-joba-frame-table-20261004
+
+State: `queued`. Kind: `research`.
+
+Exclude this already-owned physical family and continue a different uncovered algorithm; no candidate plan/compile or alias replay.
+
+Reopen condition: Owner supplies genuinely new algorithm/source evidence or completed transferable qualification; currentworker does not replay ownerfamily.
+
+## native-review-joba-material-patch-c-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Measure every complete control plusnew260-byte algorithm from maintained object; preserve negative or qualifyfamiliesonlyifexactseed.
+
+Reopen condition: New independently measured record/block alias/layout or originalsourcephase evidence; no register/volatile/padding/expressioncycle.
+
+## native-review-joba-material-patch-c-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park this materialpatch physicalfamily, keep both immutable sources/objects and fullwidth/layout/caller evidence. No third equivalent-source cycle or bulkaliases.
+
+Reopen condition: Independent original wireheader/source declaration or qualified compiler CFG/allocation witness explaining remaining differences; no register forcing, padding, volatile or arithmetic-equivalent association cycles.
+
+## native-review-joba-stream-relocation-20261004
+
+State: `queued`. Kind: `research`.
+
+Verify caller32-bit ABI and complete pin uniqueness/history, then author privateintendedJobaunit and qualifyallcurrentcontrols.
+
+Reopen condition: Independent header/record alias/layout/source-phase evidence, no names/registers/expressioncycle.
+
+## native-review-joba-stream-relocation-c-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Measure every complete control plus new352-byte algorithm; preserve all failures and condition any secondhypothesis on substantive measured alias/type evidence.
+
+Reopen condition: Independent header/record alias/layout/source-phase evidence; no register/expression cycles.
+
+## native-review-joba-stream-relocation-c-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park complete two-stream-relocation physicalfamily, retain both distinct sources and identicalobjects; no thirdalias/storage spelling or bulkplacement trials.
+
+Reopen condition: Independently measured current-backend memory-alias optimization/source-binding witness reproducing required postwrite global reloads; no volatile, fakeaggregate, forcedregisters, flagsmatrix or expressioncycling.
+
+## orbital-bitmap-getter-family-20261004
+
+State: `done`. Kind: `research`.
+
+Verify every complete live boundary and pin, preserve CURRENT wholeunitcontrols and qualify all27 complete units through maintained plan/trial.
+
+Reopen condition: Current source/catalog/reference drift only; no code variation.
+
+- `private-work:parallel-20261004/orbital_lots/bitmap-family-pending.json`
+
+## orbital-bitmap-getter-family-20261004-0_aranos_tutorial
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/0_aranos_tutorial/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-11_joba
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/11_joba/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-12_todano
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/12_todano/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-13_boldan
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/13_boldan/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-14_aranos_prison
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/14_aranos_prison/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-15_gorn
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/15_gorn/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-16_snivelak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/16_snivelak/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-17_smolg
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/17_smolg/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-18_damosel
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/18_damosel/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-19_grelbin
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/19_grelbin/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-1_oozla
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/1_oozla/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-20_yeedil
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/20_yeedil/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-22_dobbo_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/22_dobbo_orbit/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-23_damosel_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/23_damosel_orbit/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-24_ship_shack
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/24_ship_shack/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-25_wupash_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/25_wupash_nebula/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-26_jamming_array
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/26_jamming_array/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-2_maktar_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/2_maktar_nebula/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-30_insomniac_museum
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/30_insomniac_museum/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-3_endako
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/3_endako/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-4_barlow
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/4_barlow/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-5_feltzin_system
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/5_feltzin_system/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-6_notak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/6_notak/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-7_siberius
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/7_siberius/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-8_tabora
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/8_tabora/evidence.json`
+
+## orbital-bitmap-getter-family-20261004-9_dobbo
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete intended current source unit; publish only after root full image gates.
+
+Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-family/9_dobbo/evidence.json`
+
+## orbital-hrugis-angle-distance-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Measured original compiler/constant-definition and float local lifetime evidence. No blind expression retries.
+
+- `runtime:bank/parallel-orbital_lots-angle-distance-v1/evidence.json`
+
+## orbital-hrugis-bitmap-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Setter requires independent original ABI/layout/access-phase evidence; no equivalentexpressionorphysicalaliasretries.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-v1/evidence.json`
+
+## orbital-hrugis-bitmap-getter-20261004-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify intended whole17functionunit, then map only complete pinned uncovered family placements and trial every current unit.
+
+Reopen condition: New ABI/layout/reference or current unit evidence only.
+
+- `runtime:bank/parallel-orbital_lots-bitmap-v1/evidence.json`
+- `private-work:parallel-20261004/orbital_lots/bitmap-caller-0x320450.json`
+
+## orbital-hrugis-callback-queue-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independently measured original queue-state declaration/access contract or qualified compiler model explaining address rematerialization. No alias bulk or sourcecycles.
+
+- `runtime:bank/parallel-orbital_lots-callback-queue-v1/evidence.json`
+
+## orbital-hrugis-interval-chain-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Compile complete seed with controls; qualify aliases only if exact.
+
+Reopen condition: Measured original storage/alias contract explaining independent field-base lifetimes; no local expression cycling.
+
+- `private-work:parallel-20261004/orbital_lots/chain-seed-disasm.json`
+- `runtime:bank/parallel-orbital_lots-chain-v1/evidence.json`
+
+## orbital-hrugis-key-lookup-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed lookup with current controls; only if exact qualify relocated aliases.
+
+Reopen condition: Independent original declaration/access-phase evidence. No third local permutation.
+
+- `runtime:bank/parallel-orbital_lots-scalars-v1/evidence.json`
+- `private-work:parallel-20261004/orbital_lots/small-0x2FE398.json`
+
+## orbital-hrugis-object-state-init-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original storage/layout/access-phase evidence only; no sourcepermutation.
+
+- `runtime:bank/parallel-orbital_lots-object-state-init-v1/evidence.json`
+
+## orbital-hrugis-record-chain-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original layout/ABI/access-phase evidence only; no alias bulk.
+
+- `runtime:bank/parallel-orbital_lots-record-chain-v1/evidence.json`
+
+## orbital-hrugis-record-chain-20261004-v2-current
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seeds and allcurrentcontrols independently, isolate any exact winner into intended whole unit before family aliases.
+
+Reopen condition: Independent original column storage/ABI/layout evidence; no thirdlocalpermutation.
+
+- `runtime:bank/parallel-orbital_lots-record-chain-v1/evidence.json`
+
+## orbital-hrugis-record-header-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original storage/access-phase/compiler evidence; no nearcredit.
+
+- `runtime:bank/parallel-orbital_lots-record-header-v1/evidence.json`
+
+## orbital-hrugis-record-header-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: No replay of this administrative task.
+
+- `runtime:bank/parallel-orbital_lots-record-header-v1/evidence.json`
+
+## orbital-hrugis-record-header-20261004-v2-current
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original storage/access-phase/compiler evidence. No third representation permutation.
+
+- `runtime:bank/parallel-orbital_lots-record-header-v1/evidence.json`
+
+## orbital-hrugis-scalar-lookups-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure both independent complete seed helpers and fifteen controls together; isolate winners if any refusal, then qualify exact family placements.
+
+Reopen condition: Original global declaration or access-phase evidence; localnear-matchoperand adjustment is not evidence.
+
+- `runtime:bank/parallel-orbital_lots-scalars-v1/evidence.json`
+
+## orbital-hrugis-spatial-lookup-20261004-research
+
+State: `done`. Kind: `research`.
+
+Pin complete instructions and callers, qualify ordinary unsigned-short table offsets measured in four-byte units, preserve all current unit controls and compile one seed before family aliases.
+
+Reopen condition: New measured ABI or table layout evidence only; no expression cycling.
+
+## orbital-hrugis-spatial-lookup-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Compile complete seed with controls; qualify aliases only if exact.
+
+Reopen condition: Independently measured original type/layout or source-phase/compiler evidence. No equivalent expressions or aliases.
+
+- `private-work:parallel-20261004/orbital_lots/spatial-seed-disasm.json`
+- `runtime:bank/parallel-orbital_lots-spatial-v1/evidence.json`
+
+## orbital-hrugis-spatial-lookup-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Compile complete seed with controls; qualify aliases only if exact.
+
+Reopen condition: Independent original declaration/source-phase evidence. No third local permutation.
+
+- `private-work:parallel-20261004/orbital_lots/spatial-seed-disasm.json`
+- `runtime:bank/parallel-orbital_lots-spatial-v1/evidence.json`
+
+## orbital-hrugis-status-counts-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original loop-storage/ABI/layout evidence; no bulkaliases.
+
+- `runtime:bank/parallel-orbital_lots-status-counts-v1/evidence.json`
+
+## orbital-hrugis-status-mode-count-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify complete104byte seed with18controls. Only exact seed may proceed to family mapping/alias units.
+
+Reopen condition: Independent original signed-width/type or qualified compiler evidence; no thirdlocalpermutation.
+
+- `runtime:bank/parallel-orbital_lots-status-counts-v1/evidence.json`
+- `private-work:parallel-20261004/orbital_lots/small-0x33F050.json`
+
+## orbital-hrugis-table-clear-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original record/base declaration evidence only.
+
+- `runtime:bank/parallel-orbital_lots-table-clear-v1/evidence.json`
+
+## orbital-hrugis-table-clear-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original record/base declaration evidence; no near-match credit or third localexpressioncycle.
+
+- `runtime:bank/parallel-orbital_lots-table-clear-v1/evidence.json`
+
+## orbital-hrugis-vertex-inits-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-vertex-inits-v1/evidence.json`
+
+## parallel-boot-analysis-aranos-channel-records-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-channel-records-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park this complete channel-record loop and physical aliases; continue new scalar target.
+
+Reopen condition: Independent original counter declarations/accessphase evidence; no source cycling or forced layout.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-chunk-fields-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-chunk-fields-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-chunk-fields-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-chunk-fields-v3
+
+State: `stopped`. Kind: `candidate`.
+
+Park signed-sentinel field patcher and physical aliases; select a genuinely independent scalar target.
+
+Reopen condition: Independent original declaration/alias/layout or qualified compilerpass evidence; no pointer/counter/locals permutations or bulkalias trials.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-dispatch-init-research
+
+State: `done`. Kind: `research`.
+
+Verify pinned complete boundary/caller ABI and table/code-address roles; author and trial a genuine C seed privately through the maintained wrapper if supported.
+
+Reopen condition: Independent table layout/address-role evidence, not source permutations or callback alias assumptions
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-dispatch-init-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park this complete initializer and its physical aliases; select a new independent scalar target.
+
+Reopen condition: Independent original initialization grouping/alias semantics or qualified source-phase scheduling evidence, excluding assignment/local/register permutations and padding.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+- `runtime:bank/parallel-boot_analysis-dispatch-init-20261004/table-measurement.json`
+
+## parallel-boot-analysis-aranos-slot-insert-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-slot-insert-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-aranos-slot-insert-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Park mapped-object slot insertion and physicalaliases; continue genuinely new ordinary C target.
+
+Reopen condition: Independent original bound/object declaration evidence or qualified compilerpass evidence, no fabricated endalias/local/register forcing or padding.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-grid-blend-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-grid-blend-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park scalar grid blend908 and physicalaliases after measured924byte complete refusal; continue new independently bounded scalar target.
+
+Reopen condition: Independent original vectoraggregate/qualified inline-copy or sourcephase evidence; no forced pointer/register/local or equivalent expression cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-nibble-threshold-research
+
+State: `queued`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-nibble-threshold-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-nibble-threshold-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-template-apply-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-template-apply-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-template-apply-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-template-apply-v2-gnu0
+
+State: `stopped`. Kind: `candidate`.
+
+Park complete template616 and physicalaliases after typed-header experiment; select a genuinely independent scalar body.
+
+Reopen condition: Independent original headercapacity/layout or qualified byte-exact104-byte aggregatecopy/scheduling witness, no pointer/loop/local/register forcing or equivalent source cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-debit-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-debit-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-debit-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Park complete debit128 and physicalaliases; select an independent target rather than force remaining register placement.
+
+Reopen condition: Independent original object/address-type/sourcephase or qualified lowering evidence, no forcedpointer/register or arbitrary locals/type permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-packet-choice-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-packet-choice-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-packet-choice-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Park packet-choice128 and physicalaliases; continue new ordinary scalar target.
+
+Reopen condition: Independent qualified declaration/profile/sourcephase witness for highaddressrematerialization, no occurrencealiases/volatile/forcedregisters or flagmatrix.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-pool-init-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-pool-init-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park152-byte pool initializer and physicalaliases; select new independent scalar target.
+
+Reopen condition: Independent original nestedaggregate/assignmentgrouping or qualified scheduling evidence, no permutation of equivalent stores.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-record-update-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-record-update-v1
+
+State: `exact_private`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-record-update116-family
+
+State: `done`. Kind: `research`.
+
+Qualify27liveboundaries then instantiateCURRENTprivatewholeunits preservingprofiles and compile/compare each complete unit.
+
+Reopen condition: Freshreference/layout/ABI/source evidence only
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-static.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-0-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-1-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Complete one fresh measured wholeunit seed repeat with explicit positive semanticduplicate reason; prior two family preparation rejections did not compile.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-10-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-11-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-12-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-13-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-14-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-15-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-16-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-17-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-18-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-19-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-2-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-20-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-22-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-23-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-24-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-25-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-26-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-3-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-30-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-4-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-5-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-6-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-7-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-8-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-update116-9-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Maintainedwholeunittrial; handoff root exactsource/catalog onlyafterALLcompletecontrols and new116 agree.
+
+Reopen condition: Freshindependent source/layout/reference evidence; no variantcycling
+
+- `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## prototype-byte-correspondence-naming
 
 State: `queued`. Kind: `research`.
@@ -1624,6 +3131,438 @@ Use the 3359 rows with prototype offsets as naming anchors; verify each program,
 Reopen condition: A validated name transfer with independent semantic evidence
 
 - `private-work:croise-aug6-retail.tsv`
+
+## root-g8-support-review-19_grelbin-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact units before frozen boot and all27overlay gates.
+
+Reopen condition: New measured compiler/source evidence, not duplicate replay.
+
+## root-g8-support-review-4_barlow-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact units before frozen boot and all27overlay gates.
+
+Reopen condition: New measured compiler/source evidence, not duplicate replay.
+
+## root-g8-support-review-7_siberius-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact units before frozen boot and all27overlay gates.
+
+Reopen condition: New measured compiler/source evidence, not duplicate replay.
+
+## root-g8-support-review-8_tabora-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact units before frozen boot and all27overlay gates.
+
+Reopen condition: New measured compiler/source evidence, not duplicate replay.
+
+## root-index-lf-0_aranos_tutorial-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-10_hrugis_cloud-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-11_joba-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-12_todano-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-13_boldan-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-14_aranos_prison-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-15_gorn-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-16_snivelak-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-17_smolg-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-18_damosel-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-1_oozla-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-20_yeedil-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-22_dobbo_orbit-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-23_damosel_orbit-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-24_ship_shack-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-25_wupash_nebula-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-26_jamming_array-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-2_maktar_nebula-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-30_insomniac_museum-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-3_endako-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-5_feltzin_system-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-6_notak-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-index-lf-9_dobbo-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require complete exact unit and identical old object; regenerate current native review and full gates.
+
+Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
+
+## root-parallel-combined-0_aranos_tutorial-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-10_hrugis_cloud-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-11_joba-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-12_todano-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-13_boldan-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-14_aranos_prison-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-15_gorn-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-16_snivelak-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-17_smolg-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-18_damosel-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-19_grelbin-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-1_oozla-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-20_yeedil-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-22_dobbo_orbit-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-23_damosel_orbit-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-24_ship_shack-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-25_wupash_nebula-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-26_jamming_array-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-2_maktar_nebula-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-30_insomniac_museum-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-3_endako-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-4_barlow-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-5_feltzin_system-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-6_notak-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-7_siberius-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-8_tabora-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-parallel-combined-9_dobbo-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
+
+Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
 
 ## scalar-cubic-10_hrugis_cloud-20261004
 

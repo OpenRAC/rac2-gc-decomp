@@ -261,3 +261,51 @@ s32 LVL_24_SHIP_SHACK_FUN_002B2348(u8 *object) {
  if(object==0) return 0;
  return *(short *)(object+0xaa)==71;
 }
+
+/* Advances a signed index, wrapping or clamping to the measured count. */
+s32 LVL_24_SHIP_SHACK_FUN_003390C8(const s32 *count, s32 index, s32 delta, s32 wrap) {
+    if (wrap != 0) {
+        index = (index + delta + *count) % *count;
+    } else {
+        index += delta;
+        if (delta < 0) {
+            if (index < 0) index = 0;
+        } else if (index > *count - 1) {
+            index = *count - 1;
+        }
+    }
+    return index;
+}
+
+/* Update the measured fields of the first matching key among13records. */
+typedef struct { unsigned int fields[25]; int key; unsigned int busy; unsigned int tail[9]; } UpdateRecord;
+typedef char UpdateRecordSize[(sizeof(UpdateRecord) == 144) ? 1 : -1];
+extern UpdateRecord LVL_24_SHIP_SHACK_D_0027D600[13];
+void LVL_24_SHIP_SHACK_FUN_002F5618(int key, unsigned int value)
+{
+    int i;
+    for (i = 0; i < 13; i++) {
+        if (LVL_24_SHIP_SHACK_D_0027D600[i].key == key) break;
+    }
+    if (i < 13) {
+        LVL_24_SHIP_SHACK_D_0027D600[i].fields[9] = value;
+        if (LVL_24_SHIP_SHACK_D_0027D600[i].busy == 0)
+            LVL_24_SHIP_SHACK_D_0027D600[i].fields[1] = value;
+    }
+}
+
+typedef struct {
+    u8 prefix[0xa7];
+    u8 fielda7;
+} OrbitalBitmapView;
+extern u8 LVL_24_SHIP_SHACK_D_001395B8[];
+u32 LVL_24_SHIP_SHACK_FUN_00303C88(s32 index) {
+    s32 slot=index/8;
+    u32 bit=index%8;
+    u32 previous=0;
+    if(bit<8) {
+        OrbitalBitmapView *state=(OrbitalBitmapView *)(LVL_24_SHIP_SHACK_D_001395B8+slot);
+        previous=((s32)state->fielda7>>bit)&1;
+    }
+    return previous;
+}

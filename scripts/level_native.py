@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 HASH = re.compile(r"[0-9a-f]{64}")
 LEVEL = re.compile(r"[0-9]+_[a-z0-9_]+")
 C_ONLY = re.compile(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|\.byte|\.word")
+DEFAULT_FLAGS = ["-O2", "-G0", "-ffunction-sections"]
+SMALL_DATA_FLAGS = ["-O2", "-G8", "-ffunction-sections"]
 
 
 def digest(value: object) -> str:
@@ -71,9 +73,12 @@ def load_catalog(level: str, root: Path = ROOT) -> dict:
             or catalog.get("target") != target["serial"] or overlays["target"] != target["serial"]
             or catalog.get("level") != level or catalog.get("program") != "levels/" + level
             or catalog.get("reference_sha256") != pinned.get(level)
-            or catalog.get("source") != source_path or catalog.get("flags") != boot["flags"]
+            or catalog.get("source") != source_path
             or type(catalog.get("entry")) is not int or catalog["entry"] < 0 or catalog["entry"] % 4):
         raise ValueError("Native catalog programme, source, entry or pinned identity mismatch")
+    if catalog.get("flags") != boot["flags"] and not (
+            boot["flags"] == DEFAULT_FLAGS and catalog.get("flags") == SMALL_DATA_FLAGS):
+        raise ValueError("Native compiler flags lack a supported per-program profile")
     require_hash(catalog["reference_sha256"])
     functions = catalog.get("functions")
     if not isinstance(functions, list) or not functions or any(not isinstance(item, dict) for item in functions):

@@ -9,7 +9,7 @@ u32 LVL_4_BARLOW_FUN_002D44B8(u8 *object,u32 value) {
     return value;
 }
 
-extern u32 LVL_4_BARLOW_D_0018C0B4;
+extern u32 LVL_4_BARLOW_D_0018C0B4 __attribute__((nosda));
 u32 LVL_4_BARLOW_FUN_002F70D8(void) {
     return LVL_4_BARLOW_D_0018C0B4;
 }

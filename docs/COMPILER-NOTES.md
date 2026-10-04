@@ -17,6 +17,31 @@ three families, which is what drove the move:
 
 ## Instrument identity and provenance
 
+Native programs may use the default `-O2 -G0 -ffunction-sections` or the narrowly
+supported `-O2 -G8 -ffunction-sections` profile with the same pinned instruments.
+The boot retains its default flags. Every native review binds its own catalog
+flags, source, checker and object, and still requires complete byte equality.
+Other optimization or small-data flag variants are rejected by the native loader.
+
+The Barlow queue launcher provides the measured small-data case. Its reference
+loads a four-byte mode word at `0x001A8F00` relative to pinned GP `0x001AEFF0`.
+The reconstructed backend disables GP optimization and early known-size SDA
+extern emission at `-G0`; positive `-G8` with optimization enables that path.
+The maintained assembler uses its eight-byte default threshold. This changes
+address generation, not the compiler binary or the source algorithm.
+
+A separate four-byte control object at `0x0018C0B4` lies outside that GP's signed
+16-bit reach and has a pinned absolute getter. An explicit `nosda` declaration
+preserves this measured binding instead of allowing the positive-G size heuristic
+to select an impossible relocation. All fifteen existing Barlow controls remain
+exact at `-G0` with that binding. The same source at `-G8` matches all sixteen
+complete functions, including the 200-byte launcher. Failed unbound qualification
+and the default-profile launcher refusal remain in the campaign register.
+
+This per-program qualification does not establish original SDK flags or make a
+near-match acceptable. Fresh reviews and complete loaded-byte/metadata gates are
+required before integration; GP, declarations and flags remain explicit proof inputs.
+
 `8bed6eae` is the SHA-256 prefix of the locally rebuilt `cc1` binary, not a compiler name or version. The source lineage is GNU EE 2.9-ee-991111b. The local build recipe starts from `gnu-ee-binutils-gcc-1.1.tar.gz`, applies the RAC1/Lombyte `sce-991111b` patch stack, and makes the measured RAC2 adjustments described below. The profile was introduced for this repository in commit `b2b9101` after comparing the earlier SN ProDG 3.01 GCC 2.95.3 profile against call-bearing retail bodies.
 
 Matching the qualified bodies establishes compatibility with those bodies. It does not establish the exact compiler binary, patch set, flags or source directives used by Insomniac for the original game. Future bodies can falsify this compatibility profile.

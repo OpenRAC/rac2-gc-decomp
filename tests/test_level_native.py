@@ -80,6 +80,30 @@ class NativeTests(unittest.TestCase):
     def test_valid_review(self):
         native.validate_review(self.review, self.load(), self.level, self.root)
 
+    def test_small_data_native_profile_keeps_boot_default_and_binds_review(self):
+        self.catalog["flags"] = ["-O2", "-G8", "-ffunction-sections"]
+        self.write(self.catalog_path, self.catalog)
+        loaded = self.load()
+        self.assertEqual(self.boot["flags"], ["-O2", "-G0", "-ffunction-sections"])
+        with self.assertRaisesRegex(ValueError, "identity, source, catalog or checker"):
+            native.validate_review(self.review, loaded, self.level, self.root)
+        self.review["flags"] = loaded["flags"]
+        self.review["catalog_sha256"] = loaded["_catalog_sha256"]
+        native.validate_review(self.review, loaded, self.level, self.root)
+        self.review["functions"][0]["different_bytes"] = 1
+        with self.assertRaises(ValueError):
+            native.validate_review(self.review, loaded, self.level, self.root)
+
+    def test_other_native_flag_variants_are_rejected(self):
+        for flags in (["-O2", "-G4", "-ffunction-sections"],
+                      ["-O1", "-G8", "-ffunction-sections"],
+                      ["-O2", "-G8"], None):
+            with self.subTest(flags=flags):
+                self.catalog["flags"] = flags
+                self.write(self.catalog_path, self.catalog)
+                with self.assertRaisesRegex(ValueError, "compiler flags"):
+                    self.load()
+
     def test_wrong_program_and_boot_catalog_rejected(self):
         for field, value in (("program", "boot"), ("kind", "boot-catalog"), ("reference_sha256", "d" * 64)):
             with self.subTest(field=field):

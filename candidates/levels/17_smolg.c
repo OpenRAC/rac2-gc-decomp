@@ -106,3 +106,51 @@ f32 LVL_17_SMOLG_FUN_0041D0D8(f32 value) {
     value = value + 3.0f;
     return squared * value;
 }
+
+/* Advances a signed index, wrapping or clamping to the measured count. */
+s32 LVL_17_SMOLG_FUN_00344B80(const s32 *count, s32 index, s32 delta, s32 wrap) {
+    if (wrap != 0) {
+        index = (index + delta + *count) % *count;
+    } else {
+        index += delta;
+        if (delta < 0) {
+            if (index < 0) index = 0;
+        } else if (index > *count - 1) {
+            index = *count - 1;
+        }
+    }
+    return index;
+}
+
+/* Update the measured fields of the first matching key among13records. */
+typedef struct { unsigned int fields[25]; int key; unsigned int busy; unsigned int tail[9]; } UpdateRecord;
+typedef char UpdateRecordSize[(sizeof(UpdateRecord) == 144) ? 1 : -1];
+extern UpdateRecord LVL_17_SMOLG_D_0027EC00[13];
+void LVL_17_SMOLG_FUN_002F7D48(int key, unsigned int value)
+{
+    int i;
+    for (i = 0; i < 13; i++) {
+        if (LVL_17_SMOLG_D_0027EC00[i].key == key) break;
+    }
+    if (i < 13) {
+        LVL_17_SMOLG_D_0027EC00[i].fields[9] = value;
+        if (LVL_17_SMOLG_D_0027EC00[i].busy == 0)
+            LVL_17_SMOLG_D_0027EC00[i].fields[1] = value;
+    }
+}
+
+typedef struct {
+    u8 prefix[0xa7];
+    u8 fielda7;
+} OrbitalBitmapView;
+extern u8 LVL_17_SMOLG_D_001395B8[];
+u32 LVL_17_SMOLG_FUN_003063B8(s32 index) {
+    s32 slot=index/8;
+    u32 bit=index%8;
+    u32 previous=0;
+    if(bit<8) {
+        OrbitalBitmapView *state=(OrbitalBitmapView *)(LVL_17_SMOLG_D_001395B8+slot);
+        previous=((s32)state->fielda7>>bit)&1;
+    }
+    return previous;
+}

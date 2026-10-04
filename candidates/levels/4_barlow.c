@@ -17,7 +17,7 @@ u32 LVL_4_BARLOW_FUN_002D44B8(u8 *object,u32 value) {
     return value;
 }
 
-extern u32 LVL_4_BARLOW_D_0018C0B4;
+extern u32 LVL_4_BARLOW_D_0018C0B4 __attribute__((nosda));
 u32 LVL_4_BARLOW_FUN_002F70D8(void) {
     return LVL_4_BARLOW_D_0018C0B4;
 }
@@ -118,4 +118,96 @@ f32 LVL_4_BARLOW_FUN_004554F8(f32 value) {
     value = value * -2.0f;
     value = value + 3.0f;
     return squared * value;
+}
+
+/* Ordinary integer controller and queue-launch algorithm; static proposals. */
+typedef struct {
+    u8 prefix[0x30];
+    s32 field30;
+    s32 field34;
+    s32 field38;
+    s32 field3c;
+    s32 field40;
+    s32 field44;
+} BarlowUtilityQueueView;
+
+typedef struct {
+    u8 prefix[0x20];
+    u8 field20;
+    u8 gap21[0x47];
+    u8 *field68;
+    u8 gap6c[0x44];
+    u8 fieldb0;
+} BarlowMoby4439View;
+
+extern s32 LVL_4_BARLOW_D_001A8F00 __attribute__((sda));
+extern s32 LVL_4_BARLOW_D_001A79F0;
+extern u8 LVL_4_BARLOW_D_0019B2E8[];
+extern u8 *LVL_4_BARLOW_D_001B24DC;
+extern BarlowUtilityQueueView LVL_4_BARLOW_D_001BF880;
+
+extern s32 LVL_4_BARLOW_FUN_00314DB0(BarlowUtilityQueueView *, s32 *, s32 *);
+extern s32 LVL_4_BARLOW_FUN_0034E170(s32, s32, u32, u32, u8 *);
+extern void LVL_4_BARLOW_FUN_00314EC8(BarlowUtilityQueueView *);
+extern u32 LVL_4_BARLOW_FUN_0034C4C8(const u8 *);
+extern void LVL_4_BARLOW_FUN_00333408(u32);
+extern s32 LVL_4_BARLOW_FUN_00314E50(BarlowUtilityQueueView *, s32);
+extern void LVL_4_BARLOW_FUN_00394268(void);
+extern void LVL_4_BARLOW_FUN_003317E8(u8 *);
+
+s32 LVL_4_BARLOW_FUN_00314F98(BarlowUtilityQueueView *queue) {
+    if (queue->field38 != 0) {
+        s32 request[2];
+        s32 status;
+        s32 mode;
+        queue->field3c = 0;
+        queue->field44 = 1;
+        request[0] = 0;
+        request[1] = 0;
+        LVL_4_BARLOW_FUN_00314DB0(queue, &request[0], &request[1]);
+        status = 0;
+        mode = 1;
+        if ((u32)(LVL_4_BARLOW_D_001A8F00 - 1) < 2) mode = 2;
+        queue->field40 = mode;
+        if (request[1] == 0)
+            status = LVL_4_BARLOW_FUN_0034E170(1, mode, 0, request[0], 0);
+        else if (request[1] == 1)
+            status = LVL_4_BARLOW_FUN_0034E170(2, mode, request[0], 0, 0);
+        if (status < 0) LVL_4_BARLOW_FUN_00314EC8(queue);
+        return status == 0;
+    }
+    return 0;
+}
+
+/* Update the measured fields of the first matching key among13records. */
+typedef struct { unsigned int fields[25]; int key; unsigned int busy; unsigned int tail[9]; } UpdateRecord;
+typedef char UpdateRecordSize[(sizeof(UpdateRecord) == 144) ? 1 : -1];
+extern UpdateRecord LVL_4_BARLOW_D_00296C00[13];
+void LVL_4_BARLOW_FUN_00317C20(int key, unsigned int value)
+{
+    int i;
+    for (i = 0; i < 13; i++) {
+        if (LVL_4_BARLOW_D_00296C00[i].key == key) break;
+    }
+    if (i < 13) {
+        LVL_4_BARLOW_D_00296C00[i].fields[9] = value;
+        if (LVL_4_BARLOW_D_00296C00[i].busy == 0)
+            LVL_4_BARLOW_D_00296C00[i].fields[1] = value;
+    }
+}
+
+typedef struct {
+    u8 prefix[0xa7];
+    u8 fielda7;
+} OrbitalBitmapView;
+extern u8 LVL_4_BARLOW_D_001395B8[];
+u32 LVL_4_BARLOW_FUN_00326290(s32 index) {
+    s32 slot=index/8;
+    u32 bit=index%8;
+    u32 previous=0;
+    if(bit<8) {
+        OrbitalBitmapView *state=(OrbitalBitmapView *)(LVL_4_BARLOW_D_001395B8+slot);
+        previous=((s32)state->fielda7>>bit)&1;
+    }
+    return previous;
 }

@@ -112,3 +112,36 @@ s32 LVL_8_TABORA_FUN_0038C158(const PackedHeaderCountView *header) {
     s32 total = header->data_offset + fixed + header->length;
     return ((total + 15) / 16) * 4;
 }
+
+/* Update the measured fields of the first matching key among13records. */
+typedef struct { unsigned int fields[25]; int key; unsigned int busy; unsigned int tail[9]; } UpdateRecord;
+typedef char UpdateRecordSize[(sizeof(UpdateRecord) == 144) ? 1 : -1];
+extern UpdateRecord LVL_8_TABORA_D_00288480[13];
+void LVL_8_TABORA_FUN_00302E70(int key, unsigned int value)
+{
+    int i;
+    for (i = 0; i < 13; i++) {
+        if (LVL_8_TABORA_D_00288480[i].key == key) break;
+    }
+    if (i < 13) {
+        LVL_8_TABORA_D_00288480[i].fields[9] = value;
+        if (LVL_8_TABORA_D_00288480[i].busy == 0)
+            LVL_8_TABORA_D_00288480[i].fields[1] = value;
+    }
+}
+
+typedef struct {
+    u8 prefix[0xa7];
+    u8 fielda7;
+} OrbitalBitmapView;
+extern u8 LVL_8_TABORA_D_001395B8[];
+u32 LVL_8_TABORA_FUN_00311FA0(s32 index) {
+    s32 slot=index/8;
+    u32 bit=index%8;
+    u32 previous=0;
+    if(bit<8) {
+        OrbitalBitmapView *state=(OrbitalBitmapView *)(LVL_8_TABORA_D_001395B8+slot);
+        previous=((s32)state->fielda7>>bit)&1;
+    }
+    return previous;
+}
