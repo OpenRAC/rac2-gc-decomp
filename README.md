@@ -64,15 +64,23 @@ identities are pinned in [target configuration](config/target.json); all
 
 ## Start or resume work
 
-**New to programming or PS2 decompilation? You can start with a coding AI.**
-You need an AI that can edit files and run commands, plus a GitHub account to
-submit changes. **Contribution requires your own legally acquired USA v1.01 ISO
-and the complete qualified tool suite.** The AI helps you prepare and verify that
-environment before selecting a task.
+### Your first contribution, guided by an AI
 
-1. Open your coding AI and give it the short request below.
-2. Let it check your computer and explain any login/install step it needs you to do.
-3. Review its small change and draft pull request; the maintainer reviews the PR.
+**No programming or PS2 experience needed to get started.** Bring a coding AI
+that can edit files and run commands, and a GitHub account to submit your work.
+
+> [!IMPORTANT]
+> **Bring your own legally acquired USA v1.01 ISO and the complete qualified tool suite.**
+> Your AI guides installation and verification. Finish setup before selecting a contribution.
+
+| ① Start your AI | ② Verify your setup | ③ Submit for review |
+| :--- | :--- | :--- |
+| Copy the request below into your coding assistant. | Let it verify your ISO, tools and baseline, and explain any step that needs you. | Review the change and draft PR. The maintainer reviews it before merging. |
+
+**Your guides:** [Beginner walkthrough](docs/CONTRIBUTOR-QUICKSTART.md) ·
+[Tools & official sources](toolchain/README.md) · [Contribution rules](CONTRIBUTING.md)
+
+### Copy this request into your AI
 
 ```text
 I am a beginner. Help me make one contribution to
@@ -86,19 +94,21 @@ Preserve existing work, run the real gates/tests, show the diff, and use
 detailed English commits. Never upload private/game/SDK files or invent a match.
 ```
 
-The [step-by-step beginner guide](docs/CONTRIBUTOR-QUICKSTART.md) explains forks,
-branches, PRs and the full prerequisite checks. The [toolchain guide](toolchain/README.md)
-lists official public sources and clearly marks locally supplied legacy tools.
-Matching game code additionally requires the exact qualified setup; it is not
-an automatic SDK download or something an AI can prove without reference bytes.
+The walkthrough explains forks, branches and PRs. The tool guide distinguishes
+public downloads from locally supplied legacy tools. An AI cannot supply missing
+rights or prove matching code without the qualified tools and reference bytes.
+
+<details>
+<summary><strong>Already set up? Resume the campaign →</strong></summary>
+
+### Pick up the current task
 
 Open the local checkout on branch **`RAC2`** and read [AGENTS.md](AGENTS.md),
-then the [short continuation guide](docs/CONTINUE.md). The repository contains
-the method, task decisions and proof history; a long pasted session prompt is
-unnecessary. Machine-specific tool paths, references and current private state
-are supplied through the ignored `.local/ENVIRONMENT.md` pointer when available.
+then the [continuation guide](docs/CONTINUE.md). The repository holds the method,
+task decisions and proof history. Your ignored `.local/ENVIRONMENT.md` pointer
+supplies machine-specific paths and private operational state when available.
 
-Use the [maintained campaign workflow](docs/CAMPAIGN-WORKFLOW.md):
+Use the [campaign workflow](docs/CAMPAIGN-WORKFLOW.md) to check progress and select a task:
 
 ```powershell
 python scripts/campaign.py --runtime <private-campaign-directory> status
@@ -111,6 +121,8 @@ and experiment authority. The [queue view](docs/CAMPAIGN-QUEUE.md) and
 [historical experiment view](docs/C-NATIVE-EXPERIMENT-REGISTER.md) are derived
 from it. Prior refusals and reopening conditions remain recorded. Trial sources,
 objects, assembly, logs and immutable UUID evidence packages stay private.
+
+</details>
 
 ## Requirements
 
