@@ -112,3 +112,10 @@ s32 LVL_4_BARLOW_FUN_003A1540(const PackedHeaderCountView *header) {
     s32 total = header->data_offset + fixed + header->length;
     return ((total + 15) / 16) * 4;
 }
+
+f32 LVL_4_BARLOW_FUN_004554F8(f32 value) {
+    f32 squared = value * value;
+    value = value * -2.0f;
+    value = value + 3.0f;
+    return squared * value;
+}

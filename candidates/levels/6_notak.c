@@ -118,3 +118,10 @@ s32 LVL_6_NOTAK_FUN_003BEF00(const PackedHeaderCountView *header) {
     s32 total = header->data_offset + fixed + header->length;
     return ((total + 15) / 16) * 4;
 }
+
+f32 LVL_6_NOTAK_FUN_00460B50(f32 value) {
+    f32 squared = value * value;
+    value = value * -2.0f;
+    value = value + 3.0f;
+    return squared * value;
+}

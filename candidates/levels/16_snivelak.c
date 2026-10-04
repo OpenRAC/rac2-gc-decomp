@@ -99,3 +99,10 @@ s32 LVL_16_SNIVELAK_FUN_002B3760(u8 *object) {
  if(object==0) return 0;
  return *(short *)(object+0xaa)==71;
 }
+
+f32 LVL_16_SNIVELAK_FUN_0041C678(f32 value) {
+    f32 squared = value * value;
+    value = value * -2.0f;
+    value = value + 3.0f;
+    return squared * value;
+}

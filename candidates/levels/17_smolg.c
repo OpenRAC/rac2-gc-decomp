@@ -99,3 +99,10 @@ s32 LVL_17_SMOLG_FUN_002B4750(u8 *object) {
  if(object==0) return 0;
  return *(short *)(object+0xaa)==71;
 }
+
+f32 LVL_17_SMOLG_FUN_0041D0D8(f32 value) {
+    f32 squared = value * value;
+    value = value * -2.0f;
+    value = value + 3.0f;
+    return squared * value;
+}

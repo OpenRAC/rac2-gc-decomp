@@ -654,6 +654,14 @@ Require all eleven complete symbols exact before authoring and full-image gates.
 
 Reopen condition: New measured ABI, header layout or source-phase evidence.
 
+## barlow-launcher-g8-qualification-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all sixteen complete functions exact. Any private success remains unintegrated until separately reviewed per-program flag tooling and all required fresh proofs; otherwise park without a flag matrix.
+
+Reopen condition: New independently measured compiler or ABI evidence; no arbitrary threshold/flag cycling.
+
 ## barlow-packed-header-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -677,6 +685,14 @@ State: `stopped`. Kind: `candidate`.
 Require all twelve complete symbols exact. Park selector after this single lifetime experiment if it remains mismatched.
 
 Reopen condition: Independent measured layout, ABI or source lifetime evidence; no further equivalent expression permutations.
+
+## barlow-utility-launch-dispatch-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure all seventeen complete functions in the intended unit. Retain refusals, isolate an overlap-blocked target only from the same object, and grant no credit before image gates.
+
+Reopen condition: Independent measured type, layout, ABI or source lifetime evidence; no expression or register forcing.
 
 ## boot-00293000-record-packets-v1
 
@@ -1543,6 +1559,46 @@ Qualify the full frozen native compilation unit and existing controls, retaining
 
 Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
 
+## hrugis-interleaved-block-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure only the complete seed unit first. Retain any refusal before considering independent type/layout/loop evidence; no alias bulk trials until exact.
+
+Reopen condition: New independently measured ABI, layout or source access-phase evidence; no volatile, pointer/register forcing or expression cycling.
+
+## hrugis-interleaved-mode-dispatch-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure the complete seed once. If refused, park without further loop/register/source permutations or alias bulk trials.
+
+Reopen condition: New independently measured ABI, layout or source access-phase evidence; no volatile, pointer/register forcing or expression cycling.
+
+## hrugis-record-insert-20261004-v1
+
+State: `queued`. Kind: `candidate`.
+
+Qualify only the seed complete unit first. Measure other data-relocated placements only if the seed is exact; retain any refusal without bulk alias retries.
+
+Reopen condition: New independently measured alias/layout/ABI or source-phase evidence; no register forcing or equivalent expression cycling.
+
+## hrugis-record-insert-byte-storage-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure the complete seed and all fourteen controls once. Park if this representation hypothesis remains refused; no alias bulk trials until exact.
+
+Reopen condition: New independently measured alias/layout/ABI or source-phase evidence; no register forcing or equivalent expression cycling.
+
+## hrugis-record-insert-safe-field-names-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify only the seed complete unit first. Measure other data-relocated placements only if the seed is exact; retain any refusal without bulk alias retries.
+
+Reopen condition: New independently measured alias/layout/ABI or source-phase evidence; no register forcing or equivalent expression cycling.
+
 ## known-boot-controls-20261003
 
 State: `integrated`. Kind: `candidate`.
@@ -1571,7 +1627,7 @@ Reopen condition: A validated name transfer with independent semantic evidence
 
 ## scalar-cubic-10_hrugis_cloud-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
@@ -1579,7 +1635,7 @@ Reopen condition: New measured ABI, type or expression-lifetime evidence; no alg
 
 ## scalar-cubic-12_todano-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
@@ -1587,7 +1643,7 @@ Reopen condition: New measured ABI, type or expression-lifetime evidence; no alg
 
 ## scalar-cubic-13_boldan-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
@@ -1595,7 +1651,7 @@ Reopen condition: New measured ABI, type or expression-lifetime evidence; no alg
 
 ## scalar-cubic-14_aranos_prison-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
@@ -1603,7 +1659,7 @@ Reopen condition: New measured ABI, type or expression-lifetime evidence; no alg
 
 ## scalar-cubic-16_snivelak-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
@@ -1611,7 +1667,7 @@ Reopen condition: New measured ABI, type or expression-lifetime evidence; no alg
 
 ## scalar-cubic-17_smolg-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
@@ -1619,7 +1675,7 @@ Reopen condition: New measured ABI, type or expression-lifetime evidence; no alg
 
 ## scalar-cubic-4_barlow-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
@@ -1627,7 +1683,7 @@ Reopen condition: New measured ABI, type or expression-lifetime evidence; no alg
 
 ## scalar-cubic-6_notak-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
@@ -1635,11 +1691,83 @@ Reopen condition: New measured ABI, type or expression-lifetime evidence; no alg
 
 ## scalar-cubic-9_dobbo-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require every complete symbol exact before authoring and the next full image lot.
 
 Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-eof-10_hrugis_cloud-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
+
+## scalar-cubic-eof-12_todano-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
+
+## scalar-cubic-eof-13_boldan-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
+
+## scalar-cubic-eof-14_aranos_prison-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
+
+## scalar-cubic-eof-16_snivelak-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
+
+## scalar-cubic-eof-17_smolg-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
+
+## scalar-cubic-eof-4_barlow-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
+
+## scalar-cubic-eof-6_notak-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
+
+## scalar-cubic-eof-9_dobbo-20261004-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Require the complete intended unit exact and object identical to prior qualification, then regenerate full loaded-byte gates and provenance.
+
+Reopen condition: New independently measured source or compiler evidence; formatting is not matching credit.
 
 ## scalar-families-0_aranos_tutorial-20261004
 

@@ -105,3 +105,10 @@ s32 LVL_12_TODANO_FUN_002B8B40(u8 *object) {
  if(object==0) return 0;
  return *(short *)(object+0xaa)==71;
 }
+
+f32 LVL_12_TODANO_FUN_00423FE8(f32 value) {
+    f32 squared = value * value;
+    value = value * -2.0f;
+    value = value + 3.0f;
+    return squared * value;
+}
