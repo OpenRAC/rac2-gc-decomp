@@ -211,3 +211,11 @@ void LVL_24_SHIP_SHACK_FUN_002A4468(void) {
  u8 *end=p+0x1b80;
  do {LVL_24_SHIP_SHACK_FUN_002A4148(p);p+=0xb0;}while((s32)p<(s32)end);
 }
+
+extern void LVL_24_SHIP_SHACK_FUN_002D66B8(f32, f32, f32, f32, s32, s32);
+
+void LVL_24_SHIP_SHACK_FUN_002D6160(u8 *object) {
+ object[0x1d]=0;
+ if (*(f32 *)(object+0x10)>=0.0f)
+  LVL_24_SHIP_SHACK_FUN_002D66B8(1.1243411302566528f,0.005f,0.2f,0.0f,0,3);
+}

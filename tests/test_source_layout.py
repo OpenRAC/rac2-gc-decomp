@@ -23,9 +23,11 @@ class SourceLayoutTest(unittest.TestCase):
     def test_all_28_standalone_sources_are_byte_identical(self):
         result = tool.verify(REPO, self.layout, self.layout / "generated")
         self.assertEqual(result["byte_identical_sources"], 28)
-        self.assertEqual(result["metrics"]["native_explicit_base_source_families"], 8)
-        self.assertEqual(result["metrics"]["native_base_family_placements"], 215)
         inventory = json.loads((REPO / "progress/source-inventory.json").read_bytes())
+        self.assertEqual(result["metrics"]["native_explicit_base_source_families"],
+                         inventory["metrics"]["native_explicit_base_source_families"])
+        self.assertEqual(result["metrics"]["native_base_family_placements"],
+                         inventory["metrics"]["native_base_family_placements"])
         self.assertEqual(result["metrics"]["native_unique_authored_source_variants"],
                          inventory["metrics"]["native_unique_authored_source_variants"])
 

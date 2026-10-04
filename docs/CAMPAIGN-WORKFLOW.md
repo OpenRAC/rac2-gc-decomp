@@ -95,7 +95,14 @@ must remain standalone C. The default profile is `progress/candidates.json`, and
 actual cc1/cpp/as/linker hashes must agree. Research tasks carry analysis or naming
 work without compiler targets. Historical source rows were conservatively seeded
 as research tasks: accepted functions are closed by current validated proofs,
-the private 76-byte candidate awaits isolation, and unresolved trials stay parked.
+trial-only winners retain no credit before integration, and unresolved trials stay parked.
+
+Before selecting a new matching target, check its complete program/address/size
+span against every published function in that program's `progress/levels` proof,
+including both `boot-shared` and `level-native` origins. A new native symbol or
+an unrecorded trial does not establish an uncovered body. Already integrated C
+may be recompiled as a stated control, with zero new credit. Keep duplicate-source
+trials and the integration overlap refusal rather than weakening that gate.
 
 `private-work:` pointers bind to the project's private work bank; `prepared-run:`
 pointers bind to the preparation-manifest directory used by a build. These are

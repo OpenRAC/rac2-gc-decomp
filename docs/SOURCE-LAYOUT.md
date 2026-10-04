@@ -34,8 +34,11 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Twenty additional native bodies remain distinct. Only the clear
-family is factored into a shared body in this pilot. Expand factorization after
+family has 26. Forty-seven contextual native bodies remain distinct in the
+inventory. The clear family and the floating-field guard have canonical shared
+fragments. The guard retains explicit per-program helper bindings; its 27 forms
+remain separate inventory items because external addresses are part of the
+current normalization. Expand factorization after
 the same source-identity and complete-image checks, rather than assuming every
 similarly sized body belongs to one family.
 
@@ -76,18 +79,25 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 28 family-or-singleton items, 29 textual variants | 10,388 across 235 placements |
+| Native overlays | 55 family-or-singleton items, 56 contextual variants | 12,872 across 262 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 1,204, or 1,228 when both clear
+Native representative catalogued bytes total 3,688, or 3,712 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **221,836 / 48,788,176 bytes (0.4547%)**.
-The latest matching lot adds the complete 76-byte Ship Shack array traversal,
-with all 26 prior native controls exact and fresh boot plus 27 overlay gates.
+The current integration exporter accepts **224,320 / 48,788,176 bytes (0.4598%)**.
+The latest matching lot adds 27 complete 92-byte floating-field guards, with all
+prior controls exact and fresh boot plus 27 overlay gates. The previous lot added
+the complete 76-byte Ship Shack array traversal.
+
+The independently requalified 80-byte signed-weight loop adds no credit: all 27
+placements were already integrated through boot-shared `FUN_0027F128`. A proposed
+native alias for each placement triggered the integration overlap guard. The
+private trials and refusal are retained; the redundant native rows and fragments
+are excluded from the current source inventory and matching total.
 Refactoring sources adds zero matching credit. The earlier pilot regenerated all 28
 standalone C files identically; boot/native catalogs, checker and compiler profile
 retain their existing bytes. Complete image checks remain the final acceptor.

@@ -55,3 +55,11 @@ s32 LVL_13_BOLDAN_FUN_002B8CA8(s32 index) {
 s32 LVL_13_BOLDAN_FUN_002B98C8(s32 value) {
  switch(value) {case 1:return 0x72;case 2:return 0x70;case 3:return 0x6e;default:return 0;}
 }
+
+extern void LVL_13_BOLDAN_FUN_002E2120(f32, f32, f32, f32, s32, s32);
+
+void LVL_13_BOLDAN_FUN_002E1BC8(u8 *object) {
+ object[0x1d]=0;
+ if (*(f32 *)(object+0x10)>=0.0f)
+  LVL_13_BOLDAN_FUN_002E2120(1.1243411302566528f,0.005f,0.2f,0.0f,0,3);
+}

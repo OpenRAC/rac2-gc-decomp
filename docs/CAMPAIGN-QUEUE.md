@@ -839,6 +839,438 @@ Closed by the measured compiler rule; consult the recorded exception limits befo
 - `docs/COMPILER-NOTES.md`
 - `scripts/compiler/restrict_mtc1_exemption.py`
 
+## float-guard-only-0_aranos_tutorial-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-10_hrugis_cloud-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-11_joba-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-12_todano-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-13_boldan-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-14_aranos_prison-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-15_gorn-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-16_snivelak-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-17_smolg-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-18_damosel-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-19_grelbin-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-1_oozla-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-20_yeedil-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-22_dobbo_orbit-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-23_damosel_orbit-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-24_ship_shack-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-25_wupash_nebula-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-26_jamming_array-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-2_maktar_nebula-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-30_insomniac_museum-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-3_endako-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-4_barlow-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-5_feltzin_system-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-6_notak-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-7_siberius-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-8_tabora-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## float-guard-only-9_dobbo-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
+
+Reopen condition: New measured ABI, boundary or source context evidence
+
+## glyph-family-0_aranos_tutorial-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-10_hrugis_cloud-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-11_joba-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-12_todano-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-13_boldan-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-14_aranos_prison-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-15_gorn-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-16_snivelak-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-17_smolg-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-18_damosel-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-19_grelbin-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-1_oozla-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-20_yeedil-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-22_dobbo_orbit-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-23_damosel_orbit-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-24_ship_shack-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-25_wupash_nebula-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-26_jamming_array-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-2_maktar_nebula-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-30_insomniac_museum-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-3_endako-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-4_barlow-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-5_feltzin_system-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-6_notak-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-7_siberius-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-8_tabora-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## glyph-family-9_dobbo-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the complete standalone per-program unit, then integrate through fresh full-image gates.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
 ## known-boot-controls-20261003
 
 State: `integrated`. Kind: `candidate`.
@@ -865,6 +1297,22 @@ Reopen condition: A validated name transfer with independent semantic evidence
 
 - `private-work:croise-aug6-retail.tsv`
 
+## ship-shack-002e4828-gs-setup-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete136-byte target with all28current native controls; published boot-shared/native spans checked for zero overlap.
+
+Reopen condition: Measured source lifetime, sum-clamp scheduling, helper prototype or64bit constant construction discrepancy from immutablev1.
+
+## ship-shack-002e4828-gs-setup-v2
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure complete136-byte target with all28current native controls; published boot-shared/native spans checked for zero overlap.
+
+Reopen condition: Measured source lifetime, sum-clamp scheduling, helper prototype or64bit constant construction discrepancy from immutablev1.
+
 ## ship-shack-a4468-isolated-controls
 
 State: `integrated`. Kind: `candidate`.
@@ -872,3 +1320,243 @@ State: `integrated`. Kind: `candidate`.
 Qualify every complete symbol, then author and integrate only after exact equality.
 
 Reopen condition: New measured ABI or boundary evidence
+
+## ship-shack-anchor-three-bodies-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure both complete bodies and27integrated native controls in the same compilation unit.
+
+Reopen condition: New measured ABI, field type or loop scheduling evidence
+
+## ship-shack-anchor-two-bodies-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure both complete bodies and27integrated native controls in the same compilation unit.
+
+Reopen condition: New measured ABI, field type or loop scheduling evidence
+
+## ship-shack-rle-record-phi-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure both complete bodies and27integrated native controls in the same compilation unit.
+
+Reopen condition: New measured ABI, field type or loop scheduling evidence
+
+## two-native-families-0_aranos_tutorial-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-10_hrugis_cloud-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-11_joba-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-12_todano-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-13_boldan-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-14_aranos_prison-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-15_gorn-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-16_snivelak-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-17_smolg-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-18_damosel-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-19_grelbin-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-1_oozla-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-20_yeedil-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-22_dobbo_orbit-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-23_damosel_orbit-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-24_ship_shack-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-25_wupash_nebula-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-26_jamming_array-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-2_maktar_nebula-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-30_insomniac_museum-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-3_endako-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-4_barlow-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-5_feltzin_system-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-6_notak-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-7_siberius-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-8_tabora-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## two-native-families-9_dobbo-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all complete symbols exact, then author shared fragments and integrate all27programs.
+
+Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
