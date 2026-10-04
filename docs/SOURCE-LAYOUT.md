@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Two hundred sixty-three contextual native bodies remain distinct in the
+family has 26. Two hundred ninety-two contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,26 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 271 family-or-singleton items, 272 contextual variants | 29,180 across 478 placements |
+| Native overlays | 300 family-or-singleton items, 301 contextual variants | 31,284 across 507 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 19,996, or 20,020 when both clear
+Native representative catalogued bytes total 22,100, or 22,124 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **240,628 / 48,788,176 bytes (0.4932%)**.
-The latest matching lot adds one 268-byte Joba class-counter consumer. It
+The current integration exporter accepts **242,732 / 48,788,176 bytes (0.4975%)**.
+The latest matching lot adds 29 placements totaling 2,104 bytes: 27 two-key
+table lookups of 68 bytes, a 188-byte Joba counter increment and an 80-byte
+indexed polygon-query dispatcher. All 507 complete native functions in the
+final 27 units match, including 478 controls; the combined Joba source contains
+21 exact functions. The other 26 units preserve their previously qualified
+source/catalog bytes exactly. Fresh boot and all 27 loaded-byte and metadata
+gates pass. The two Joba bodies are absent in the other programs; the existing
+204-byte crossing-parity helper receives no additional credit.
+
+The preceding singleton lot added one 268-byte Joba class-counter consumer. It
 selects one of six measured signed state counters, decrements a positive count,
 and returns success. All 18 complete functions in the current Joba source match,
 including 17 controls. Its raw body is absent from the other 26 programs, which
@@ -121,7 +130,7 @@ bytes, 27 object-identifier checks of 32 bytes and five header getters of 56
 bytes. Earlier lots added 27 136-byte GS buffer setup wrappers, 27 92-byte
 floating-field guards and the 76-byte Ship Shack traversal.
 
-Nine canonical fragments supply the scalar bodies with explicit placements.
+Ten canonical fragments supply the scalar bodies with explicit placements.
 Status classifiers call each unit's existing indexed status getter definition;
 the output wrappers bind measured per-program floating helper addresses.
 The output wrapper is absent in 12 programs and the header getter is absent in

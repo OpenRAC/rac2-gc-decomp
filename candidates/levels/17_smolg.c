@@ -154,3 +154,20 @@ u32 LVL_17_SMOLG_FUN_003063B8(s32 index) {
     }
     return previous;
 }
+
+typedef struct {
+    u32 field00,field04;
+    s32 field08;
+    u8 gap0c[4];
+} OrbitalPairTableView16;
+extern u8 LVL_17_SMOLG_D_00232140[];
+s32 LVL_17_SMOLG_FUN_00381410(u32 key,u32 owner) {
+    OrbitalPairTableView16 *entry=(OrbitalPairTableView16 *)LVL_17_SMOLG_D_00232140;
+    s32 checked=0;
+    do {
+        ++checked;
+        if(entry->field04==key && entry->field00==owner) return entry->field08;
+        ++entry;
+    } while(checked<32);
+    return -1;
+}

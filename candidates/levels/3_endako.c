@@ -147,3 +147,20 @@ u32 LVL_3_ENDAKO_FUN_00306BE8(s32 index) {
     }
     return previous;
 }
+
+typedef struct {
+    u32 field00,field04;
+    s32 field08;
+    u8 gap0c[4];
+} OrbitalPairTableView16;
+extern u8 LVL_3_ENDAKO_D_00231FC0[];
+s32 LVL_3_ENDAKO_FUN_0037F358(u32 key,u32 owner) {
+    OrbitalPairTableView16 *entry=(OrbitalPairTableView16 *)LVL_3_ENDAKO_D_00231FC0;
+    s32 checked=0;
+    do {
+        ++checked;
+        if(entry->field04==key && entry->field00==owner) return entry->field08;
+        ++entry;
+    } while(checked<32);
+    return -1;
+}

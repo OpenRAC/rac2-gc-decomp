@@ -184,3 +184,52 @@ s32 LVL_11_JOBA_FUN_00441868(u8 *object, s32 class_id) {
     }
     return 0;
 }
+
+/* Increments the state counter selected by the measured class identifier. */
+void LVL_11_JOBA_FUN_00441978(u8 *object, s32 class_id) {
+    JobaClassCounterView *state = *(JobaClassCounterView **)(object + 0x68);
+    switch (class_id) {
+        case 0xd98: state->fielde0++; break;
+        case 0xdcf: state->fielde4++; break;
+        case 0xdf4: state->fielde8++; break;
+        case 0xdf7: state->fieldec++; break;
+        case 0xdf9: state->fieldf0++; break;
+        case 0xd37: state->fieldf4++; break;
+    }
+}
+
+/* Dispatches an indexed polygon query through the already integrated helper. */
+typedef struct { s32 field00; u8 remainder[12]; } JobaPolygonHeaderView;
+extern JobaPolygonHeaderView *LVL_11_JOBA_D_001FF580[];
+extern s32 LVL_11_JOBA_FUN_0032E110(f32 *point, f32 *vertices, s32 count);
+
+s32 LVL_11_JOBA_FUN_00441808(u8 *object, f32 *point) {
+    u8 *state = *(u8 **)(object + 0x68);
+    s32 index = *(s32 *)(state + 0x164);
+    JobaPolygonHeaderView *header;
+    s32 result;
+    if (index == -1) {
+        result = 0;
+    } else {
+        header = LVL_11_JOBA_D_001FF580[index];
+        result = LVL_11_JOBA_FUN_0032E110(point, (f32 *)(header + 1), header->field00);
+    }
+    return result;
+}
+
+typedef struct {
+    u32 field00,field04;
+    s32 field08;
+    u8 gap0c[4];
+} OrbitalPairTableView16;
+extern u8 LVL_11_JOBA_D_00232E40[];
+s32 LVL_11_JOBA_FUN_00392650(u32 key,u32 owner) {
+    OrbitalPairTableView16 *entry=(OrbitalPairTableView16 *)LVL_11_JOBA_D_00232E40;
+    s32 checked=0;
+    do {
+        ++checked;
+        if(entry->field04==key && entry->field00==owner) return entry->field08;
+        ++entry;
+    } while(checked<32);
+    return -1;
+}
