@@ -42,9 +42,16 @@ qualified retail bodies does not establish the original game's compiler identity
 ## 0. Python
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
+python --version
+python scripts/doctor.py
+# Only if required package versions are missing:
+python -m pip install -r requirements.txt
 ```
+
+Reuse your configured interpreter when it has the required versions. A virtual
+environment is optional for dependency isolation, not required by the project.
+Use the same interpreter for installation and all commands. Preserve other
+projects' dependencies; do not force changes into a system-managed Python.
 
 `scripts/build.py` refuses to run unless `splat64`, `spimdisasm` and `rabbitizer` are exactly
 the pinned versions. `scripts/doctor.py` checks that for you.
@@ -52,7 +59,7 @@ the pinned versions. `scripts/doctor.py` checks that for you.
 ## 1. Ask your machine what it can do
 
 ```powershell
-.venv\Scripts\python.exe scripts/doctor.py
+python scripts/doctor.py
 ```
 
 With your inputs it prints the same list, all `ok`, and a verdict:
@@ -82,7 +89,7 @@ finds the manifest and will not ask you to re-verify 3.8 GB of disc.
 ## 2. Prepare the reference from your own disc
 
 ```powershell
-.venv\Scripts\python.exe scripts/setup.py --iso <disc.iso> --runtime <runtime> --wrench <wrenchbuild.exe>
+python scripts/setup.py --iso <disc.iso> --runtime <runtime> --wrench <wrenchbuild.exe>
 ```
 
 For an archive, use `--archive <archive.7z> --sevenzip <7z.exe>` instead of `--iso`. On success
@@ -98,7 +105,7 @@ On failure it prints `Preparation failed: <reason>` and exits **2**. A wrong dis
 ## 3. Rebuild, and gate every byte
 
 ```powershell
-.venv\Scripts\python.exe scripts/build.py --manifest <runtime>\runs\<id>\manifest.json --toolchain <ProDG-2.0> --all-levels
+python scripts/build.py --manifest <runtime>\runs\<id>\manifest.json --toolchain <ProDG-2.0> --all-levels
 ```
 
 Add `--c-toolchain <ProDG-3.01>` to link the reviewed C bodies into the boot as well. A good run
@@ -115,7 +122,7 @@ boot gate inside every one of the 27 overlays; on a cold cache that is roughly 4
 ## 4. Run the tests
 
 ```powershell
-.venv\Scripts\python.exe -m unittest discover -s tests -v
+python -m unittest discover -s tests -v
 ```
 
 The suite must end with `OK`. It needs no disc, no toolchain, no network.
@@ -123,7 +130,7 @@ The suite must end with `OK`. It needs no disc, no toolchain, no network.
 ## 5. The per-function loop
 
 ```powershell
-.venv\Scripts\python.exe scripts/check_candidates.py --reference <runtime>\runs\<id>\reference\boot.elf --toolchain <ProDG-3.01> --runtime <runtime>
+python scripts/check_candidates.py --reference <runtime>\runs\<id>\reference\boot.elf --toolchain <ProDG-3.01> --runtime <runtime>
 ```
 
 It compiles `candidates/boot.c`, links a standalone candidate, and compares **every catalogued

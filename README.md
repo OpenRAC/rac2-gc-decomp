@@ -139,10 +139,14 @@ and underlying gates. Check the environment first:
 
 ```powershell
 python scripts/doctor.py
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe scripts/setup.py --iso <disc.iso> --runtime <private-runtime-directory> --wrench <wrenchbuild.exe>
+# Install only if required package versions are missing:
+python -m pip install -r requirements.txt
+python scripts/setup.py --iso <disc.iso> --runtime <private-runtime-directory> --wrench <wrenchbuild.exe>
 ```
+
+Reuse a configured Python interpreter; a virtual environment is optional for
+dependency isolation. Use that same interpreter throughout and preserve other
+projects' package requirements when choosing where to install dependencies.
 
 For an archive, replace `--iso` with `--archive <archive.7z> --sevenzip <7z.exe>`.
 Preparation verifies the disc and extracts the pinned boot and all 27 overlays.
@@ -152,7 +156,7 @@ Keep source, game images, toolchains and generated runtime outputs separate.
 For a complete build with reviewed C, use the explicit preparation manifest:
 
 ```powershell
-.venv\Scripts\python.exe scripts/campaign.py --runtime <private-campaign-directory> integrate -- --manifest <manifest.json> --toolchain <SN-ProDG-2.0-EE-gcc-directory> --c-toolchain <SN-ProDG-3.01-EE-gcc-directory> --program-jobs 4 --jobs 2
+python scripts/campaign.py --runtime <private-campaign-directory> integrate -- --manifest <manifest.json> --toolchain <SN-ProDG-2.0-EE-gcc-directory> --c-toolchain <SN-ProDG-3.01-EE-gcc-directory> --program-jobs 4 --jobs 2
 ```
 
 This runs fresh boot and 27-overlay gates with bounded parallelism. It produces

@@ -54,7 +54,7 @@ maintainer's private paths or open-ended campaign permissions.
 | --- | --- |
 | Your legally acquired Going Commando USA v1.01 ISO | Verify the pinned size and hashes from `config/target.json` |
 | GitHub account and coding AI with local access | Guide login; create your fork and task branch |
-| Git, Python 3.12 and pinned Python packages | Install public dependencies in a virtual environment |
+| Git, Python 3.12 and pinned Python packages | Reuse the configured interpreter and check required package versions |
 | Wrench `wrenchbuild` | Check the executable used to extract your reference |
 | Windows + WSL and qualified GNU EE `cpp`/`cc1`/`as` | Check the current actual instrument hashes |
 | Authorized SN EE C linker and reconstruction tools | Check the distinct profiles and actual hashes |
@@ -72,12 +72,20 @@ the contributor's responsibility.
 
 The AI can install the Python dependencies and run the software tests during
 preparation. That alone does not satisfy the contribution prerequisite.
+Use your existing configured Python first. Run the diagnostic before installing
+anything; install only when required packages/versions are missing. A virtual
+environment is optional when isolation is needed, not a mandatory setup step.
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe scripts/doctor.py --contributor-check --iso <your-iso> --runtime <private-runtime> --wrench <wrenchbuild> --toolchain <ASM-root> --c-toolchain <C-linker-root> --ghidra <ghidra-launcher> --pcsx2 <pcsx2-executable> --bios <your-bios>
+python scripts/doctor.py
+# Only if the diagnostic reports missing/incompatible packages:
+python -m pip install -r requirements.txt
+python scripts/doctor.py --contributor-check --iso <your-iso> --runtime <private-runtime> --wrench <wrenchbuild> --toolchain <ASM-root> --c-toolchain <C-linker-root> --ghidra <ghidra-launcher> --pcsx2 <pcsx2-executable> --bios <your-bios>
 ```
+
+Use the same interpreter for `pip`, diagnostics, tests and builds. If it is shared
+with another project or system-managed, resolve dependency conflicts first rather
+than overwriting its packages or bypassing the system's installation protections.
 
 Replace placeholders with the verified local paths; the AI should do that for
 you after locating your files. `--contributor-check` returns nonzero when required
