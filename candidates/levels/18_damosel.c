@@ -63,3 +63,24 @@ void LVL_18_DAMOSEL_FUN_002F1988(u8 *object) {
  if (*(f32 *)(object+0x10)>=0.0f)
   LVL_18_DAMOSEL_FUN_002F1EE0(1.1243411302566528f,0.005f,0.2f,0.0f,0,3);
 }
+
+/* Scalar GS setup wrapper; pinned standard integer arguments and helper calls. */
+extern void LVL_18_DAMOSEL_FUN_0030AE30(int width, int height, int address, int mode);
+extern void LVL_18_DAMOSEL_FUN_003976B0(unsigned int reg, unsigned long value);
+extern void LVL_18_DAMOSEL_FUN_0030B198(int width, int height);
+
+void LVL_18_DAMOSEL_FUN_003000B8(int width, int height)
+{
+    int sum = width + height;
+    int address;
+
+    if (sum > 16)
+        sum = 16;
+    address = 0x3ff000 - (4 << sum);
+    address = (address >> 13) << 13;
+    LVL_18_DAMOSEL_FUN_0030AE30(width, height, address, 1);
+    LVL_18_DAMOSEL_FUN_003976B0(0x47, 0x30000UL);
+    LVL_18_DAMOSEL_FUN_003976B0(0x42, 0x8000000044UL);
+    LVL_18_DAMOSEL_FUN_0030B198(0x100, 0x100);
+    LVL_18_DAMOSEL_FUN_003976B0(0x42, 0x8000000044UL);
+}

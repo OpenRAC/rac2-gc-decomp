@@ -63,3 +63,24 @@ void LVL_5_FELTZIN_SYSTEM_FUN_002EF8E0(u8 *object) {
  if (*(f32 *)(object+0x10)>=0.0f)
   LVL_5_FELTZIN_SYSTEM_FUN_002EFE38(1.1243411302566528f,0.005f,0.2f,0.0f,0,3);
 }
+
+/* Scalar GS setup wrapper; pinned standard integer arguments and helper calls. */
+extern void LVL_5_FELTZIN_SYSTEM_FUN_00308B50(int width, int height, int address, int mode);
+extern void LVL_5_FELTZIN_SYSTEM_FUN_003906F8(unsigned int reg, unsigned long value);
+extern void LVL_5_FELTZIN_SYSTEM_FUN_00308EB8(int width, int height);
+
+void LVL_5_FELTZIN_SYSTEM_FUN_002FE030(int width, int height)
+{
+    int sum = width + height;
+    int address;
+
+    if (sum > 16)
+        sum = 16;
+    address = 0x3ff000 - (4 << sum);
+    address = (address >> 13) << 13;
+    LVL_5_FELTZIN_SYSTEM_FUN_00308B50(width, height, address, 1);
+    LVL_5_FELTZIN_SYSTEM_FUN_003906F8(0x47, 0x30000UL);
+    LVL_5_FELTZIN_SYSTEM_FUN_003906F8(0x42, 0x8000000044UL);
+    LVL_5_FELTZIN_SYSTEM_FUN_00308EB8(0x100, 0x100);
+    LVL_5_FELTZIN_SYSTEM_FUN_003906F8(0x42, 0x8000000044UL);
+}

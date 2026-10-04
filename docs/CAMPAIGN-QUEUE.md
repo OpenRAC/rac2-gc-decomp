@@ -1271,6 +1271,222 @@ Qualify the complete standalone per-program unit, then integrate through fresh f
 
 Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
 
+## gs-family-0_aranos_tutorial-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-10_hrugis_cloud-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-11_joba-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-12_todano-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-13_boldan-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-14_aranos_prison-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-15_gorn-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-16_snivelak-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-17_smolg-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-18_damosel-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-19_grelbin-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-1_oozla-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-20_yeedil-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-22_dobbo_orbit-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-23_damosel_orbit-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-24_ship_shack-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-25_wupash_nebula-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-26_jamming_array-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-2_maktar_nebula-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-30_insomniac_museum-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-3_endako-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-4_barlow-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-5_feltzin_system-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-6_notak-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-7_siberius-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-8_tabora-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
+## gs-family-9_dobbo-136-v2
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.
+
+Reopen condition: New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.
+
 ## known-boot-controls-20261003
 
 State: `integrated`. Kind: `candidate`.
@@ -1344,6 +1560,22 @@ State: `stopped`. Kind: `candidate`.
 Measure both complete bodies and27integrated native controls in the same compilation unit.
 
 Reopen condition: New measured ABI, field type or loop scheduling evidence
+
+## ship-shack-two-scalar-cfg-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure both complete bodies with all29current native controls; preserve every refusal.
+
+Reopen condition: Measured original scheduling, access-order or source lifetime context; no padding, volatile assumptions or equivalent-source cycling
+
+## ship-shack-two-scalar-leaves-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure both complete bodies with all29current native controls; preserve every refusal.
+
+Reopen condition: Measured original types, context or CFG evidence beyond the preserved source forms
 
 ## two-native-families-0_aranos_tutorial-20261004
 

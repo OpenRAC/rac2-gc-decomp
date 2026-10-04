@@ -63,3 +63,24 @@ void LVL_20_YEEDIL_FUN_002EB0E0(u8 *object) {
  if (*(f32 *)(object+0x10)>=0.0f)
   LVL_20_YEEDIL_FUN_002EB638(1.1243411302566528f,0.005f,0.2f,0.0f,0,3);
 }
+
+/* Scalar GS setup wrapper; pinned standard integer arguments and helper calls. */
+extern void LVL_20_YEEDIL_FUN_003047A0(int width, int height, int address, int mode);
+extern void LVL_20_YEEDIL_FUN_003913B0(unsigned int reg, unsigned long value);
+extern void LVL_20_YEEDIL_FUN_00304B08(int width, int height);
+
+void LVL_20_YEEDIL_FUN_002F9810(int width, int height)
+{
+    int sum = width + height;
+    int address;
+
+    if (sum > 16)
+        sum = 16;
+    address = 0x3ff000 - (4 << sum);
+    address = (address >> 13) << 13;
+    LVL_20_YEEDIL_FUN_003047A0(width, height, address, 1);
+    LVL_20_YEEDIL_FUN_003913B0(0x47, 0x30000UL);
+    LVL_20_YEEDIL_FUN_003913B0(0x42, 0x8000000044UL);
+    LVL_20_YEEDIL_FUN_00304B08(0x100, 0x100);
+    LVL_20_YEEDIL_FUN_003913B0(0x42, 0x8000000044UL);
+}

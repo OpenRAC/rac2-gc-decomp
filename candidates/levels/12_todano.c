@@ -63,3 +63,24 @@ void LVL_12_TODANO_FUN_002DA858(u8 *object) {
  if (*(f32 *)(object+0x10)>=0.0f)
   LVL_12_TODANO_FUN_002DADB0(1.1243411302566528f,0.005f,0.2f,0.0f,0,3);
 }
+
+/* Scalar GS setup wrapper; pinned standard integer arguments and helper calls. */
+extern void LVL_12_TODANO_FUN_002F3E80(int width, int height, int address, int mode);
+extern void LVL_12_TODANO_FUN_00380D80(unsigned int reg, unsigned long value);
+extern void LVL_12_TODANO_FUN_002F41E8(int width, int height);
+
+void LVL_12_TODANO_FUN_002E8F20(int width, int height)
+{
+    int sum = width + height;
+    int address;
+
+    if (sum > 16)
+        sum = 16;
+    address = 0x3ff000 - (4 << sum);
+    address = (address >> 13) << 13;
+    LVL_12_TODANO_FUN_002F3E80(width, height, address, 1);
+    LVL_12_TODANO_FUN_00380D80(0x47, 0x30000UL);
+    LVL_12_TODANO_FUN_00380D80(0x42, 0x8000000044UL);
+    LVL_12_TODANO_FUN_002F41E8(0x100, 0x100);
+    LVL_12_TODANO_FUN_00380D80(0x42, 0x8000000044UL);
+}

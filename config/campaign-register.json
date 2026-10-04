@@ -33,6 +33,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "51f7b31ec40e401cacc187945de60f7a": {
+      "artifact": "runtime:actions/51f7b31ec40e401cacc187945de60f7a/report.json",
+      "artifact_sha256": "396c5e930cfc501878f70b7d6a1dda8728095d6472c8c1b09790495102132e31",
+      "directory": "runtime:actions/51f7b31ec40e401cacc187945de60f7a",
+      "finished": "2026-10-04T06:19:06.498469+00:00",
+      "id": "51f7b31ec40e401cacc187945de60f7a",
+      "integration_credit": 0,
+      "kind": "report",
+      "returncode": 0,
+      "state": "passed"
+    },
     "6a3b57102efb4810a294db8e0cdc186f": {
       "artifact": "runtime:actions/6a3b57102efb4810a294db8e0cdc186f/report.json",
       "artifact_sha256": "7930006c4923d8c4af4b398a4b6345cb0baf90706c607519c0145d24f85ed479",
@@ -74,6 +85,17 @@
       "kind": "integrate",
       "returncode": 1,
       "state": "failed"
+    },
+    "909614e782f94e7da713bdf92d4e73b0": {
+      "artifact": "prepared-run:builds/campaign-909614e782f94e7da713bdf92d4e73b0/report.json",
+      "artifact_sha256": "f86608686fe3c1d88ba8596f4edf9ce32fe435a4285d6daefef6f5a3684312a0",
+      "directory": "runtime:actions/909614e782f94e7da713bdf92d4e73b0",
+      "finished": "2026-10-04T06:18:00.275487+00:00",
+      "id": "909614e782f94e7da713bdf92d4e73b0",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
     },
     "eaa843f3cb9e4584b8bffd0921452d71": {
       "artifact": "runtime:actions/eaa843f3cb9e4584b8bffd0921452d71/report.json",
@@ -3461,7 +3483,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 353,
+  "revision": 448,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -8814,6 +8836,1896 @@
         }
       ]
     },
+    "gs-family-0_aranos_tutorial-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-0_aranos_tutorial-136-v2",
+      "kind": "candidate",
+      "last_trial": "50a60c47692e4000a60bd1b5f023954a",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/0_aranos_tutorial/0_aranos_tutorial.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_0_ARANOS_TUTORIAL_FUN_002E5890"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/0_aranos_tutorial/0_aranos_tutorial.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:bank/gs-family-20261004/0_aranos_tutorial/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:16.553485+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "50a60c47692e4000a60bd1b5f023954a"
+        },
+        {
+          "at": "2026-10-04T06:19:07.259116+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-10_hrugis_cloud-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-10_hrugis_cloud-136-v2",
+      "kind": "candidate",
+      "last_trial": "3d50e5ee33f64381af9ec688db819395",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/10_hrugis_cloud/10_hrugis_cloud.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_00300530"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/10_hrugis_cloud/10_hrugis_cloud.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:bank/gs-family-20261004/10_hrugis_cloud/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:17.046381+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3d50e5ee33f64381af9ec688db819395"
+        },
+        {
+          "at": "2026-10-04T06:19:07.601464+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-11_joba-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-11_joba-136-v2",
+      "kind": "candidate",
+      "last_trial": "4b241e6e2f0848cfa32e4ac653bd21b5",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/11_joba/11_joba.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_11_JOBA_FUN_002F7670"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/11_joba/11_joba.json",
+          "id": "11_joba",
+          "reference": "runtime:bank/gs-family-20261004/11_joba/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:17.563528+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "4b241e6e2f0848cfa32e4ac653bd21b5"
+        },
+        {
+          "at": "2026-10-04T06:19:07.945708+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-12_todano-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-12_todano-136-v2",
+      "kind": "candidate",
+      "last_trial": "89cfe10c96604fe28d6f3ad94229033f",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/12_todano/12_todano.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_12_TODANO_FUN_002E8F20"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/12_todano/12_todano.json",
+          "id": "12_todano",
+          "reference": "runtime:bank/gs-family-20261004/12_todano/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:18.090382+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "89cfe10c96604fe28d6f3ad94229033f"
+        },
+        {
+          "at": "2026-10-04T06:19:08.287587+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-13_boldan-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-13_boldan-136-v2",
+      "kind": "candidate",
+      "last_trial": "9671e656a5344477befea7f73e4a86ec",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/13_boldan/13_boldan.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_13_BOLDAN_FUN_002F02F8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/13_boldan/13_boldan.json",
+          "id": "13_boldan",
+          "reference": "runtime:bank/gs-family-20261004/13_boldan/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:18.606813+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "9671e656a5344477befea7f73e4a86ec"
+        },
+        {
+          "at": "2026-10-04T06:19:08.642720+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-14_aranos_prison-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-14_aranos_prison-136-v2",
+      "kind": "candidate",
+      "last_trial": "92a73d9031db4a77887fa0a20c4bf6fa",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/14_aranos_prison/14_aranos_prison.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_14_ARANOS_PRISON_FUN_002ED190"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/14_aranos_prison/14_aranos_prison.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:bank/gs-family-20261004/14_aranos_prison/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:19.128547+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "92a73d9031db4a77887fa0a20c4bf6fa"
+        },
+        {
+          "at": "2026-10-04T06:19:08.998213+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-15_gorn-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-15_gorn-136-v2",
+      "kind": "candidate",
+      "last_trial": "ffe98a783e2f46178a2facc60c2c0365",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/15_gorn/15_gorn.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_15_GORN_FUN_002FE630"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/15_gorn/15_gorn.json",
+          "id": "15_gorn",
+          "reference": "runtime:bank/gs-family-20261004/15_gorn/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:19.618978+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "ffe98a783e2f46178a2facc60c2c0365"
+        },
+        {
+          "at": "2026-10-04T06:19:09.345375+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-16_snivelak-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-16_snivelak-136-v2",
+      "kind": "candidate",
+      "last_trial": "30e0fc1456d04cc99a6a09df55536723",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/16_snivelak/16_snivelak.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_16_SNIVELAK_FUN_002DEAE8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/16_snivelak/16_snivelak.json",
+          "id": "16_snivelak",
+          "reference": "runtime:bank/gs-family-20261004/16_snivelak/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:20.114523+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "30e0fc1456d04cc99a6a09df55536723"
+        },
+        {
+          "at": "2026-10-04T06:19:09.692306+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-17_smolg-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-17_smolg-136-v2",
+      "kind": "candidate",
+      "last_trial": "18ef65e7a83c43d2be34f46205389ea7",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/17_smolg/17_smolg.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_17_SMOLG_FUN_002E68C8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/17_smolg/17_smolg.json",
+          "id": "17_smolg",
+          "reference": "runtime:bank/gs-family-20261004/17_smolg/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:20.611619+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "18ef65e7a83c43d2be34f46205389ea7"
+        },
+        {
+          "at": "2026-10-04T06:19:10.044106+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-18_damosel-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-18_damosel-136-v2",
+      "kind": "candidate",
+      "last_trial": "d34c711248564cf0b2aeab90a72aecca",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/18_damosel/18_damosel.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_18_DAMOSEL_FUN_003000B8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/18_damosel/18_damosel.json",
+          "id": "18_damosel",
+          "reference": "runtime:bank/gs-family-20261004/18_damosel/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:21.110157+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d34c711248564cf0b2aeab90a72aecca"
+        },
+        {
+          "at": "2026-10-04T06:19:10.390951+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-19_grelbin-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-19_grelbin-136-v2",
+      "kind": "candidate",
+      "last_trial": "cdabea5c41c64fa89ab8c0b6609b5237",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/19_grelbin/19_grelbin.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_19_GRELBIN_FUN_002E32B0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/19_grelbin/19_grelbin.json",
+          "id": "19_grelbin",
+          "reference": "runtime:bank/gs-family-20261004/19_grelbin/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:21.583905+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "cdabea5c41c64fa89ab8c0b6609b5237"
+        },
+        {
+          "at": "2026-10-04T06:19:10.768823+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-1_oozla-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-1_oozla-136-v2",
+      "kind": "candidate",
+      "last_trial": "9135544e9088456aae753c66f7c0ae85",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/1_oozla/1_oozla.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_1_OOZLA_FUN_002DAFD8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/1_oozla/1_oozla.json",
+          "id": "1_oozla",
+          "reference": "runtime:bank/gs-family-20261004/1_oozla/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:22.098976+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "9135544e9088456aae753c66f7c0ae85"
+        },
+        {
+          "at": "2026-10-04T06:19:11.126336+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-20_yeedil-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-20_yeedil-136-v2",
+      "kind": "candidate",
+      "last_trial": "cc9ae81d4bef41ab9cad0bbbe5cb9573",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/20_yeedil/20_yeedil.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_20_YEEDIL_FUN_002F9810"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/20_yeedil/20_yeedil.json",
+          "id": "20_yeedil",
+          "reference": "runtime:bank/gs-family-20261004/20_yeedil/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:22.590726+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "cc9ae81d4bef41ab9cad0bbbe5cb9573"
+        },
+        {
+          "at": "2026-10-04T06:19:11.464698+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-22_dobbo_orbit-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-22_dobbo_orbit-136-v2",
+      "kind": "candidate",
+      "last_trial": "22a28ae0944042c08207785e14b479bc",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/22_dobbo_orbit/22_dobbo_orbit.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_22_DOBBO_ORBIT_FUN_002EBA60"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/22_dobbo_orbit/22_dobbo_orbit.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:bank/gs-family-20261004/22_dobbo_orbit/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:23.071899+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "22a28ae0944042c08207785e14b479bc"
+        },
+        {
+          "at": "2026-10-04T06:19:11.806322+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-23_damosel_orbit-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-23_damosel_orbit-136-v2",
+      "kind": "candidate",
+      "last_trial": "3f77bb8fecb740a9935114cf28bb4b20",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/23_damosel_orbit/23_damosel_orbit.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_23_DAMOSEL_ORBIT_FUN_002F0140"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/23_damosel_orbit/23_damosel_orbit.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:bank/gs-family-20261004/23_damosel_orbit/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:23.560432+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3f77bb8fecb740a9935114cf28bb4b20"
+        },
+        {
+          "at": "2026-10-04T06:19:12.160585+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-24_ship_shack-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-24_ship_shack-136-v2",
+      "kind": "candidate",
+      "last_trial": "4210ac1938db45e4b77c1804260fadd7",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/24_ship_shack/24_ship_shack.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_24_SHIP_SHACK_FUN_002E4828"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/24_ship_shack/24_ship_shack.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:bank/gs-family-20261004/24_ship_shack/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:24.113909+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "4210ac1938db45e4b77c1804260fadd7"
+        },
+        {
+          "at": "2026-10-04T06:19:12.504036+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-25_wupash_nebula-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-25_wupash_nebula-136-v2",
+      "kind": "candidate",
+      "last_trial": "e58b1d622a204ce9ae93883728665f62",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/25_wupash_nebula/25_wupash_nebula.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_25_WUPASH_NEBULA_FUN_002F89B0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/25_wupash_nebula/25_wupash_nebula.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:bank/gs-family-20261004/25_wupash_nebula/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:24.595097+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "e58b1d622a204ce9ae93883728665f62"
+        },
+        {
+          "at": "2026-10-04T06:19:12.852105+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-26_jamming_array-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-26_jamming_array-136-v2",
+      "kind": "candidate",
+      "last_trial": "9c94ebd8b10d498fbbf281e01f1971ba",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/26_jamming_array/26_jamming_array.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_26_JAMMING_ARRAY_FUN_002E5EA8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/26_jamming_array/26_jamming_array.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:bank/gs-family-20261004/26_jamming_array/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:25.081154+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "9c94ebd8b10d498fbbf281e01f1971ba"
+        },
+        {
+          "at": "2026-10-04T06:19:13.223830+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-2_maktar_nebula-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-2_maktar_nebula-136-v2",
+      "kind": "candidate",
+      "last_trial": "d5939b4579cd453e9cb8afcadf72641b",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/2_maktar_nebula/2_maktar_nebula.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_2_MAKTAR_NEBULA_FUN_002E8D20"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/2_maktar_nebula/2_maktar_nebula.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:bank/gs-family-20261004/2_maktar_nebula/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:25.596251+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d5939b4579cd453e9cb8afcadf72641b"
+        },
+        {
+          "at": "2026-10-04T06:19:13.560579+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-30_insomniac_museum-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-30_insomniac_museum-136-v2",
+      "kind": "candidate",
+      "last_trial": "3b3bd6bc08654849ae00c0f78b1e94ab",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/30_insomniac_museum/30_insomniac_museum.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_30_INSOMNIAC_MUSEUM_FUN_002EC6C0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/30_insomniac_museum/30_insomniac_museum.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:bank/gs-family-20261004/30_insomniac_museum/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:26.138959+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3b3bd6bc08654849ae00c0f78b1e94ab"
+        },
+        {
+          "at": "2026-10-04T06:19:13.908648+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-3_endako-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-3_endako-136-v2",
+      "kind": "candidate",
+      "last_trial": "d9f21c414e734f7582b975518a87a11f",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/3_endako/3_endako.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_002E6390"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/3_endako/3_endako.json",
+          "id": "3_endako",
+          "reference": "runtime:bank/gs-family-20261004/3_endako/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:26.616934+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d9f21c414e734f7582b975518a87a11f"
+        },
+        {
+          "at": "2026-10-04T06:19:14.252403+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-4_barlow-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-4_barlow-136-v2",
+      "kind": "candidate",
+      "last_trial": "371943e2ecd0476c802fffc87b545968",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/4_barlow/4_barlow.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_4_BARLOW_FUN_00306068"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/4_barlow/4_barlow.json",
+          "id": "4_barlow",
+          "reference": "runtime:bank/gs-family-20261004/4_barlow/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:27.104897+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "371943e2ecd0476c802fffc87b545968"
+        },
+        {
+          "at": "2026-10-04T06:19:14.608674+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-5_feltzin_system-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-5_feltzin_system-136-v2",
+      "kind": "candidate",
+      "last_trial": "251eddf2e0d140a3ac1ad7ed63ff6f60",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/5_feltzin_system/5_feltzin_system.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_5_FELTZIN_SYSTEM_FUN_002FE030"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/5_feltzin_system/5_feltzin_system.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:bank/gs-family-20261004/5_feltzin_system/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:27.634001+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "251eddf2e0d140a3ac1ad7ed63ff6f60"
+        },
+        {
+          "at": "2026-10-04T06:19:14.961897+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-6_notak-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-6_notak-136-v2",
+      "kind": "candidate",
+      "last_trial": "22241ce09c9648a3a7359746bb1eedd6",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/6_notak/6_notak.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_6_NOTAK_FUN_00324EF0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/6_notak/6_notak.json",
+          "id": "6_notak",
+          "reference": "runtime:bank/gs-family-20261004/6_notak/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:28.155415+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "22241ce09c9648a3a7359746bb1eedd6"
+        },
+        {
+          "at": "2026-10-04T06:19:15.316709+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-7_siberius-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-7_siberius-136-v2",
+      "kind": "candidate",
+      "last_trial": "c96ee41cc2fb44f6bab6337f21a4591a",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/7_siberius/7_siberius.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_7_SIBERIUS_FUN_002DB868"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/7_siberius/7_siberius.json",
+          "id": "7_siberius",
+          "reference": "runtime:bank/gs-family-20261004/7_siberius/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:28.665403+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "c96ee41cc2fb44f6bab6337f21a4591a"
+        },
+        {
+          "at": "2026-10-04T06:19:15.685203+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-8_tabora-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-8_tabora-136-v2",
+      "kind": "candidate",
+      "last_trial": "afe2ab8aa3e84d84b5519d86cec2ec37",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/8_tabora/8_tabora.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_8_TABORA_FUN_002F1658"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/8_tabora/8_tabora.json",
+          "id": "8_tabora",
+          "reference": "runtime:bank/gs-family-20261004/8_tabora/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:29.197036+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "afe2ab8aa3e84d84b5519d86cec2ec37"
+        },
+        {
+          "at": "2026-10-04T06:19:16.041342+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "gs-family-9_dobbo-136-v2": {
+      "budget": 3,
+      "created": "2026-10-04T05:54:13.782105+00:00",
+      "hypothesis": "Qualified scalar136-byte seed instantiated with measured per-program four-word, two-word and GS32/64 helper ABI bindings; all integrated spans excluded.",
+      "id": "gs-family-9_dobbo-136-v2",
+      "kind": "candidate",
+      "last_trial": "8bed027a64994da4aa2eff163db9e38c",
+      "next_action": "Qualify the full frozen native compilation unit and existing controls, retaining every per-program refusal.",
+      "pointers": [],
+      "reopen_condition": "New measured per-program helper ABI, source context or compiler schedule evidence after the immutable trial.",
+      "source": "runtime:bank/gs-family-20261004/9_dobbo/9_dobbo.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_9_DOBBO_FUN_002E1918"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-family-20261004/9_dobbo/9_dobbo.json",
+          "id": "9_dobbo",
+          "reference": "runtime:bank/gs-family-20261004/9_dobbo/reference.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T05:54:29.715852+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "8bed027a64994da4aa2eff163db9e38c"
+        },
+        {
+          "at": "2026-10-04T06:19:16.382904+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "8a5c6096b2f18806d2f831c16f802f4208ed7ec3ff183b90a36143c0caf94741",
+            "progress/levels/0_aranos_tutorial.json": "b4ec92c5f32779702a15377b0edcb1921f8b89a5870bbe15310eddb5fdb035a5",
+            "progress/levels/10_hrugis_cloud.json": "c999345bfe1227c5f57979622714f466036ce283019b064ef971fd802b1ac162",
+            "progress/levels/11_joba.json": "a08bce196d842c84bd79b5f405f9cd6da2683486b7c59991d91b1469538a8c31",
+            "progress/levels/12_todano.json": "77969e3447e1fbd45e4a458c3f99c85b02e1c8d113a516ac64a51ac230253ebb",
+            "progress/levels/13_boldan.json": "df2da622c95a7fe0fb02ea5cf1719c57e7e231ee1ed335d25493e9ee06811ff0",
+            "progress/levels/14_aranos_prison.json": "5ca63223a28f161d59f3140be8fcc11a5d18f5e2b61ea8179c4a08be3008d723",
+            "progress/levels/15_gorn.json": "b4dd6844ccec6aa29077d38231772c8ffb7780c41a51658561b65e9deca369ac",
+            "progress/levels/16_snivelak.json": "551b0ec1c15ccc8ef2dfea41e501a92b4818b6dd4fb9e876626e791a695bdcd9",
+            "progress/levels/17_smolg.json": "93155053ae824f1da64e43e28f7480548b48c3a74de1302f0627af874e178073",
+            "progress/levels/18_damosel.json": "9525e41a27537e9e40d68f3c7b45fb27ef9c8948f054c1a30d26cd258683eae0",
+            "progress/levels/19_grelbin.json": "085409e5e33b3b193400ec86d553df71406506ec1785ea9cd8a6b104ff40b36b",
+            "progress/levels/1_oozla.json": "c53d46f1a00f8f720288fa23a2fc132ecb0e73405fb8874dfae41f7640a1a1b3",
+            "progress/levels/20_yeedil.json": "1dc8bc05cc56c0970c6a5ff4c4637c22ef81fa1f327d2bce440a47ac3f149623",
+            "progress/levels/22_dobbo_orbit.json": "f6c19d7009d45d1e712131649f1db5f556a1ed79d29392550069d3f413951baf",
+            "progress/levels/23_damosel_orbit.json": "9ef28781e13779656294370154094cb7f20c1e22a978841f63a87febec111dd1",
+            "progress/levels/24_ship_shack.json": "f093d8ef5665ffb74a3c3a549fb7ae78c8b48ef4b0f7cdf1b7700fc9daa495d0",
+            "progress/levels/25_wupash_nebula.json": "421f887159090069113ac12677b07732278db2a5a896d563497eed4e4642f1b5",
+            "progress/levels/26_jamming_array.json": "336719c368b360a1716f0d711b784e375a5debc0647032d1da828a3eadce2ccb",
+            "progress/levels/2_maktar_nebula.json": "5216377734d2ce1b4e0e10c30d30782cea8ba2e8fe7c5415c01ce7b89433b9ea",
+            "progress/levels/30_insomniac_museum.json": "ec23d0ecde61819d0524adfa1c74f8c657abea266506a7e9a974d93fbf243e0c",
+            "progress/levels/3_endako.json": "07f3a68c5f321e787aea4000dfd355552d60cd242c39a9dfa789cb7dfc1f8b5d",
+            "progress/levels/4_barlow.json": "d402368e2daf96f28eab33d7b3d7cbf51fa8251f5a6556397ddc4ab29e2ed0a3",
+            "progress/levels/5_feltzin_system.json": "a51fd4f1bfe913ffa85042d1c1f1a13b3e9f34084fc08eafe82f601e9af72f41",
+            "progress/levels/6_notak.json": "7acb46e0e9f0ead1d9bb9721e3facebc04edee3cff1aadb24d8183d4b2f5119a",
+            "progress/levels/7_siberius.json": "3f993ceff54fc9adc0101cf633b2fd7b1bd5ed9ece33814a55452a7ed61d8e5e",
+            "progress/levels/8_tabora.json": "785432c5c38449a32b4354e43582630add563d20e7ec1941c56c2bddc825e321",
+            "progress/levels/9_dobbo.json": "830b293b5a5c63a1085601b3a2f27ff2357cd4c9a053b9d1420edb33889276da",
+            "progress/report.json": "c122438153aa640a75a9e0c359ebee8ba712c7c7ca834bd04d04da038d05ce66"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
     "known-boot-controls-20261003": {
       "budget": 2,
       "created": "2026-10-04T03:51:43.792881+00:00",
@@ -9226,6 +11138,86 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "6d89c73a7033433bb0023e3afa67bb21"
+        }
+      ]
+    },
+    "ship-shack-two-scalar-cfg-20261004-v2": {
+      "budget": 1,
+      "created": "2026-10-04T06:04:19.430300+00:00",
+      "hypothesis": "Measured ratio CFG has an early zero-result store/return before quotient region; ring reference has one shared final zero return. Correct only those exit layouts, preserving all pinned types/arithmetic and29exact controls.",
+      "id": "ship-shack-two-scalar-cfg-20261004-v2",
+      "kind": "candidate",
+      "last_trial": "19ceadbd1251452b9920e62c006b7e77",
+      "next_action": "Measure both complete bodies with all29current native controls; preserve every refusal.",
+      "pointers": [],
+      "reopen_condition": "Measured original scheduling, access-order or source lifetime context; no padding, volatile assumptions or equivalent-source cycling",
+      "source": "runtime:bank/two-scalar-cfg-v2/24_ship_shack.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_24_SHIP_SHACK_FUN_0040B3A8",
+        "LVL_24_SHIP_SHACK_FUN_00425B38"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/two-scalar-cfg-v2/catalog.json",
+          "id": "ship-shack",
+          "reference": "runtime:references/24_ship_shack.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T06:04:19.972545+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "19ceadbd1251452b9920e62c006b7e77"
+        },
+        {
+          "at": "2026-10-04T06:08:53.214992+00:00",
+          "from": "stopped",
+          "reason": "Ratio288/296 lacks two measured pre-divide nops; ring340/340 differs by46bytes across20words. All29controls exact. No new ABI/type correction or exact full body.",
+          "reopen_condition": "Measured original scheduling, access-order or source lifetime context; no padding, volatile assumptions or equivalent-source cycling",
+          "to": "stopped"
+        }
+      ]
+    },
+    "ship-shack-two-scalar-leaves-20261004-v1": {
+      "budget": 2,
+      "created": "2026-10-04T06:00:30.888725+00:00",
+      "hypothesis": "Pinned unsigned quantity/scale/limit conversions and independently corroborated24-byte circular entries with signed64tags; no helper calls or nonstandardABI. Both fullreference spans are uncovered and untried.",
+      "id": "ship-shack-two-scalar-leaves-20261004-v1",
+      "kind": "candidate",
+      "last_trial": "7f0cd13e88084fd9af56aa93c5191d37",
+      "next_action": "Measure both complete bodies with all29current native controls; preserve every refusal.",
+      "pointers": [],
+      "reopen_condition": "Measured original types, context or CFG evidence beyond the preserved source forms",
+      "source": "runtime:bank/two-scalar-leaves-20261004/24_ship_shack.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_24_SHIP_SHACK_FUN_0040B3A8",
+        "LVL_24_SHIP_SHACK_FUN_00425B38"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/two-scalar-leaves-20261004/catalog.json",
+          "id": "ship-shack",
+          "reference": "runtime:references/24_ship_shack.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T06:00:33.622990+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "7f0cd13e88084fd9af56aa93c5191d37"
+        },
+        {
+          "at": "2026-10-04T06:04:31.025864+00:00",
+          "from": "stopped",
+          "reason": "Ratio284/296 and ring344/340 complete-size refusals retained; all29current controls exact.",
+          "reopen_condition": "Measured original types, context or CFG evidence beyond the preserved source forms",
+          "to": "stopped"
         }
       ]
     },
@@ -10428,6 +12420,32 @@
       "state": "exact_private",
       "task": "two-native-families-0_aranos_tutorial-20261004"
     },
+    "18ef65e7a83c43d2be34f46205389ea7": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/18ef65e7a83c43d2be34f46205389ea7",
+      "finished": "2026-10-04T05:54:20.597759+00:00",
+      "id": "18ef65e7a83c43d2be34f46205389ea7",
+      "manifest_sha256": "8a9e1af609d79ea2854ab9ebdb17127f00b04971c90c09e610eda0f98a670fc8",
+      "measured_functions": 10,
+      "outcome_sha256": "def61ed03625340e1e6363eaac307771b73250f2fe4375530c19c6fd3a6cba19",
+      "semantic_key": "961b47d1ca2e464c0c489f16121580703cb9980b2176d4ee198d87a2524265fa",
+      "started": "2026-10-04T05:54:20.324623+00:00",
+      "state": "exact_private",
+      "task": "gs-family-17_smolg-136-v2"
+    },
+    "19ceadbd1251452b9920e62c006b7e77": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/19ceadbd1251452b9920e62c006b7e77",
+      "finished": "2026-10-04T06:04:19.958545+00:00",
+      "id": "19ceadbd1251452b9920e62c006b7e77",
+      "manifest_sha256": "3ad7cfa074e06d6ed7be6d1ad8d8e4ceeb9733bc546fc75bdf53f04848d78fca",
+      "measured_functions": 31,
+      "outcome_sha256": "a2c18f1223ebbea005ea2066b0cd8992d2378fb968e95acf3079405c6874ef6e",
+      "semantic_key": "47956552b8a048325bf3da5076f8535d7c00e2c39a5de176c910055402fccca7",
+      "started": "2026-10-04T06:04:19.642520+00:00",
+      "state": "mismatch",
+      "task": "ship-shack-two-scalar-cfg-20261004-v2"
+    },
     "1e74a08094dd4f4e9aae606493b2647b": {
       "compile_attempted": true,
       "directory": "runtime:trials/1e74a08094dd4f4e9aae606493b2647b",
@@ -10454,6 +12472,19 @@
       "state": "exact_private",
       "task": "glyph-family-15_gorn-20261004"
     },
+    "22241ce09c9648a3a7359746bb1eedd6": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/22241ce09c9648a3a7359746bb1eedd6",
+      "finished": "2026-10-04T05:54:28.142415+00:00",
+      "id": "22241ce09c9648a3a7359746bb1eedd6",
+      "manifest_sha256": "ddce8aa980569c57e632a6d2553c86cbc3d25126d242b461a65b90c6e1ca9b4c",
+      "measured_functions": 10,
+      "outcome_sha256": "1420ff1970e923485319896797cc828883f9f6425814de8d3d609cbcf40e5909",
+      "semantic_key": "f7268d909ae11089e81bc98d071153ccfcc6e88c4b41b4074cfd4582337a2bac",
+      "started": "2026-10-04T05:54:27.864282+00:00",
+      "state": "exact_private",
+      "task": "gs-family-6_notak-136-v2"
+    },
     "2253bf2601114b6ba077d21af937210e": {
       "compile_attempted": true,
       "directory": "runtime:trials/2253bf2601114b6ba077d21af937210e",
@@ -10467,6 +12498,19 @@
       "state": "exact_private",
       "task": "two-native-families-7_siberius-20261004"
     },
+    "22a28ae0944042c08207785e14b479bc": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/22a28ae0944042c08207785e14b479bc",
+      "finished": "2026-10-04T05:54:23.059897+00:00",
+      "id": "22a28ae0944042c08207785e14b479bc",
+      "manifest_sha256": "2695abb78e4a202169da7c7666f53d6905dca2c51cafd9815139fb36883956db",
+      "measured_functions": 10,
+      "outcome_sha256": "8be383788068686596ecc919381de4d0bd7040e294a48b909d05f6d6ce08541f",
+      "semantic_key": "937bec0ef64499095a958de8bfd670caa2680c62a3d5485d9ed12c0591d557dd",
+      "started": "2026-10-04T05:54:22.802605+00:00",
+      "state": "exact_private",
+      "task": "gs-family-22_dobbo_orbit-136-v2"
+    },
     "24354ef96a304e6bb520be17edd7c726": {
       "compile_attempted": true,
       "directory": "runtime:trials/24354ef96a304e6bb520be17edd7c726",
@@ -10479,6 +12523,19 @@
       "started": "2026-10-04T04:41:24.735805+00:00",
       "state": "exact_private",
       "task": "two-native-families-30_insomniac_museum-20261004"
+    },
+    "251eddf2e0d140a3ac1ad7ed63ff6f60": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/251eddf2e0d140a3ac1ad7ed63ff6f60",
+      "finished": "2026-10-04T05:54:27.620490+00:00",
+      "id": "251eddf2e0d140a3ac1ad7ed63ff6f60",
+      "manifest_sha256": "0f1faeaaba5e911b1bfb5b7fbaa26d0d124e9502fd491873a8a38a5ff48b1361",
+      "measured_functions": 10,
+      "outcome_sha256": "285519914c1bc5f6419b15b9745215d59869624f3f2fd87f8c676d731996b4fa",
+      "semantic_key": "7ec02d8df16b0fbfa59975d2034d39a69d907189632ada19c0686bdeddfa97e8",
+      "started": "2026-10-04T05:54:27.330311+00:00",
+      "state": "exact_private",
+      "task": "gs-family-5_feltzin_system-136-v2"
     },
     "285cb0c52db24f08a145e68faff79aef": {
       "compile_attempted": true,
@@ -10532,6 +12589,19 @@
       "state": "exact_private",
       "task": "float-guard-only-2_maktar_nebula-20261004"
     },
+    "30e0fc1456d04cc99a6a09df55536723": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/30e0fc1456d04cc99a6a09df55536723",
+      "finished": "2026-10-04T05:54:20.101523+00:00",
+      "id": "30e0fc1456d04cc99a6a09df55536723",
+      "manifest_sha256": "d04f8447270c68c7795f6a698cf545c127b11e086d83302c8571a75017f7c1e6",
+      "measured_functions": 10,
+      "outcome_sha256": "c6ec5714c6011ed3677142bc444034690076f83ec90e9766fded13a7506588a2",
+      "semantic_key": "e551dd2026e03c0938630d531d4a79cec2621eaa2b10e3764eeeb9aabcd44b56",
+      "started": "2026-10-04T05:54:19.848202+00:00",
+      "state": "exact_private",
+      "task": "gs-family-16_snivelak-136-v2"
+    },
     "317aab53e573446e91ade1368838e637": {
       "compile_attempted": true,
       "directory": "runtime:trials/317aab53e573446e91ade1368838e637",
@@ -10557,6 +12627,19 @@
       "started": "2026-10-04T04:23:17.700318+00:00",
       "state": "exact_private",
       "task": "glyph-family-20_yeedil-20261004"
+    },
+    "371943e2ecd0476c802fffc87b545968": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/371943e2ecd0476c802fffc87b545968",
+      "finished": "2026-10-04T05:54:27.091897+00:00",
+      "id": "371943e2ecd0476c802fffc87b545968",
+      "manifest_sha256": "097730403e5b141456cdea97216089fe8b6b56c797ceddfa5ad0c4a969f5ccc4",
+      "measured_functions": 10,
+      "outcome_sha256": "964f2e1ebca0c2dd1bc91d9f050598f449aca4c97f76c55ed34e5a308c87833f",
+      "semantic_key": "7255138c3c2bebb5c8ec958965969c352e9f5395e4d90fee8d703c90cb0ba7ba",
+      "started": "2026-10-04T05:54:26.826990+00:00",
+      "state": "exact_private",
+      "task": "gs-family-4_barlow-136-v2"
     },
     "37736bc7194b445499ef85ad39d87dad": {
       "compile_attempted": true,
@@ -10623,6 +12706,45 @@
       "state": "exact_private",
       "task": "two-native-families-9_dobbo-20261004"
     },
+    "3b3bd6bc08654849ae00c0f78b1e94ab": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3b3bd6bc08654849ae00c0f78b1e94ab",
+      "finished": "2026-10-04T05:54:26.125960+00:00",
+      "id": "3b3bd6bc08654849ae00c0f78b1e94ab",
+      "manifest_sha256": "acf0b350407d0e44b62bad6b50f4f71fd07c8b994070039c9018668880c6d72e",
+      "measured_functions": 10,
+      "outcome_sha256": "018704a744474762421158973c71af97c20fd1ade232d0ab2f3faa266a21a776",
+      "semantic_key": "1671b2b2fa1880fea5dabed8a685b8664d35c96d844e361f0a039a05e0d85d0b",
+      "started": "2026-10-04T05:54:25.828930+00:00",
+      "state": "exact_private",
+      "task": "gs-family-30_insomniac_museum-136-v2"
+    },
+    "3d50e5ee33f64381af9ec688db819395": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3d50e5ee33f64381af9ec688db819395",
+      "finished": "2026-10-04T05:54:17.032380+00:00",
+      "id": "3d50e5ee33f64381af9ec688db819395",
+      "manifest_sha256": "4d0c9b2539315f3847bf932d4f6ce88ceef9e25d9c1b76b8fd3a9e4d9026bcb8",
+      "measured_functions": 10,
+      "outcome_sha256": "6d1b513dd7c9c13e5ecc1eaffc2a626e11474b872bc76a0dfa8ebbea16e130eb",
+      "semantic_key": "b5e4bfc83fcd5802a9ed2a3ec5251e1e424da314ca2384ca4e50c5b461fdb43a",
+      "started": "2026-10-04T05:54:16.771674+00:00",
+      "state": "exact_private",
+      "task": "gs-family-10_hrugis_cloud-136-v2"
+    },
+    "3f77bb8fecb740a9935114cf28bb4b20": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3f77bb8fecb740a9935114cf28bb4b20",
+      "finished": "2026-10-04T05:54:23.547433+00:00",
+      "id": "3f77bb8fecb740a9935114cf28bb4b20",
+      "manifest_sha256": "203849c38eb976e353560ead76e945430875d7e22be8227f83191259b3224e64",
+      "measured_functions": 10,
+      "outcome_sha256": "28df7ae6d393b249ac0e5e52d006747be5f2a312f46a14f6b1c1eb57ef41afb8",
+      "semantic_key": "065ae7d0b82863cdc06d196b37a408fc1eabf05e24020a04af71520b479ca282",
+      "started": "2026-10-04T05:54:23.300143+00:00",
+      "state": "exact_private",
+      "task": "gs-family-23_damosel_orbit-136-v2"
+    },
     "404613be3b014de783bb064a7d2866b1": {
       "compile_attempted": true,
       "directory": "runtime:trials/404613be3b014de783bb064a7d2866b1",
@@ -10635,6 +12757,19 @@
       "started": "2026-10-04T05:07:15.784065+00:00",
       "state": "exact_private",
       "task": "float-guard-only-4_barlow-20261004"
+    },
+    "4210ac1938db45e4b77c1804260fadd7": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4210ac1938db45e4b77c1804260fadd7",
+      "finished": "2026-10-04T05:54:24.099910+00:00",
+      "id": "4210ac1938db45e4b77c1804260fadd7",
+      "manifest_sha256": "481b2cb8c9a0feea812c66611da684cb0c214bd9369a5083b7f4f2f17b1fa331",
+      "measured_functions": 29,
+      "outcome_sha256": "d18f16e2179db9a85a3398904047cc695ded4282165c68c44fdc3050d0ec7eb9",
+      "semantic_key": "da159dab4284b20bd7ff05028c8f14607fcc1712bf544389808d8ed420f5a8be",
+      "started": "2026-10-04T05:54:23.794763+00:00",
+      "state": "exact_private",
+      "task": "gs-family-24_ship_shack-136-v2"
     },
     "42adc0d6c5714f1cac2940d92263e92a": {
       "compile_attempted": true,
@@ -10726,6 +12861,32 @@
       "started": "2026-10-04T03:56:16.789302+00:00",
       "state": "mismatch",
       "task": "boot-003427c0-alpha-helper-v3"
+    },
+    "4b241e6e2f0848cfa32e4ac653bd21b5": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4b241e6e2f0848cfa32e4ac653bd21b5",
+      "finished": "2026-10-04T05:54:17.549530+00:00",
+      "id": "4b241e6e2f0848cfa32e4ac653bd21b5",
+      "manifest_sha256": "55c1740f786a1b6e482d8edfe3ae88562e865bafa71094434990af0c386954e3",
+      "measured_functions": 10,
+      "outcome_sha256": "b36e9c188fbd49f3479ad14c41852f28b2f4eea225f8c77d606d3039fd6335cd",
+      "semantic_key": "0a6e2b357ac0adfad9a6b97685b3fe2701bcee23b0d1ee4d14aa3693064d4e77",
+      "started": "2026-10-04T05:54:17.273899+00:00",
+      "state": "exact_private",
+      "task": "gs-family-11_joba-136-v2"
+    },
+    "50a60c47692e4000a60bd1b5f023954a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/50a60c47692e4000a60bd1b5f023954a",
+      "finished": "2026-10-04T05:54:16.538484+00:00",
+      "id": "50a60c47692e4000a60bd1b5f023954a",
+      "manifest_sha256": "616e931665f0d9817acd0176f33f47c2a88dcd3d47a1a3a0953932a44ca3ae40",
+      "measured_functions": 10,
+      "outcome_sha256": "2f5cd41b90707f2a2096a8e44ecd318655f4ebe96cfe9c4f4f52bd25e0a5497d",
+      "semantic_key": "1a68789111f7369d401e3114a9cf6167941959495015759b0713fd2bdd5e3887",
+      "started": "2026-10-04T05:54:16.235277+00:00",
+      "state": "exact_private",
+      "task": "gs-family-0_aranos_tutorial-136-v2"
     },
     "57a65432a42c4b01a755fce4819d617f": {
       "compile_attempted": true,
@@ -10909,6 +13070,19 @@
       "state": "exact_private",
       "task": "glyph-family-4_barlow-20261004"
     },
+    "7f0cd13e88084fd9af56aa93c5191d37": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/7f0cd13e88084fd9af56aa93c5191d37",
+      "finished": "2026-10-04T06:00:33.608448+00:00",
+      "id": "7f0cd13e88084fd9af56aa93c5191d37",
+      "manifest_sha256": "d0ed52cb04175613518bb052c9c8603f1a12a319b38c55ef7673359ac8722f9a",
+      "measured_functions": 31,
+      "outcome_sha256": "192710676c634e4073863e8d8baabd3d503734cf4b4a28451e2113fa4fb6fd02",
+      "semantic_key": "c2555381da9aacac4cd60b3eb06a76c18fdaa5030adc275f88037988322dd33a",
+      "started": "2026-10-04T06:00:33.257316+00:00",
+      "state": "mismatch",
+      "task": "ship-shack-two-scalar-leaves-20261004-v1"
+    },
     "814cd85b00044094b95add3fb78daf89": {
       "compile_attempted": true,
       "directory": "runtime:trials/814cd85b00044094b95add3fb78daf89",
@@ -10961,6 +13135,19 @@
       "state": "exact_private",
       "task": "glyph-family-14_aranos_prison-20261004"
     },
+    "89cfe10c96604fe28d6f3ad94229033f": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/89cfe10c96604fe28d6f3ad94229033f",
+      "finished": "2026-10-04T05:54:18.075923+00:00",
+      "id": "89cfe10c96604fe28d6f3ad94229033f",
+      "manifest_sha256": "d49e474fc6ff1ff31ee41ac3968d212678413fe9ccd90bebe7dc76fd82e036b3",
+      "measured_functions": 10,
+      "outcome_sha256": "174c815d8a7a39985e764ce25d69f2350e49e6eae25c51f36422b11c3ec6bacd",
+      "semantic_key": "ae5507007a9a1c7a1748bdb8e86c981c619479e6eba9e15d185b7659225cf4cf",
+      "started": "2026-10-04T05:54:17.795708+00:00",
+      "state": "exact_private",
+      "task": "gs-family-12_todano-136-v2"
+    },
     "8a662ea99afa4ced82df5db9f1f16b3a": {
       "compile_attempted": true,
       "directory": "runtime:trials/8a662ea99afa4ced82df5db9f1f16b3a",
@@ -10973,6 +13160,19 @@
       "started": "2026-10-04T04:36:29.511021+00:00",
       "state": "exact_private",
       "task": "two-native-families-17_smolg-20261004"
+    },
+    "8bed027a64994da4aa2eff163db9e38c": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8bed027a64994da4aa2eff163db9e38c",
+      "finished": "2026-10-04T05:54:29.701854+00:00",
+      "id": "8bed027a64994da4aa2eff163db9e38c",
+      "manifest_sha256": "5348b8d4935ad7ee0c9aa27c64031f49c733c9071a8217dda2c70cd5f28a4cf3",
+      "measured_functions": 10,
+      "outcome_sha256": "9ad3392efac33dac285d18434c110259f71967d9c0a9f8fd9d51fcb9f44687ab",
+      "semantic_key": "6ee5a657d5d6707625921659eed1041f730e96941be1225f9b8b7f1c53ab58d7",
+      "started": "2026-10-04T05:54:29.420857+00:00",
+      "state": "exact_private",
+      "task": "gs-family-9_dobbo-136-v2"
     },
     "8e7e7bcaf0e9487f91d4149c55615848": {
       "compile_attempted": true,
@@ -11000,6 +13200,19 @@
       "state": "mismatch",
       "task": "ship-shack-anchor-two-bodies-v1"
     },
+    "9135544e9088456aae753c66f7c0ae85": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/9135544e9088456aae753c66f7c0ae85",
+      "finished": "2026-10-04T05:54:22.086976+00:00",
+      "id": "9135544e9088456aae753c66f7c0ae85",
+      "manifest_sha256": "5b0b9ce6e4fcee1208c206d42f54089fff874be9c4426b819a19c2f582f555c5",
+      "measured_functions": 10,
+      "outcome_sha256": "f136d4b34d14857917762fdd092099a385a1f34d932341f21dd2bbc789d4ca0b",
+      "semantic_key": "fb75f3136c923a8cf4f7c3a4ef508eed05e1d58060ccb8daa56be541c6849a5a",
+      "started": "2026-10-04T05:54:21.824275+00:00",
+      "state": "exact_private",
+      "task": "gs-family-1_oozla-136-v2"
+    },
     "91aed8efa6fd49b981ebca16142293ff": {
       "compile_attempted": true,
       "directory": "runtime:trials/91aed8efa6fd49b981ebca16142293ff",
@@ -11012,6 +13225,19 @@
       "started": "2026-10-04T04:36:28.485253+00:00",
       "state": "exact_private",
       "task": "two-native-families-15_gorn-20261004"
+    },
+    "92a73d9031db4a77887fa0a20c4bf6fa": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/92a73d9031db4a77887fa0a20c4bf6fa",
+      "finished": "2026-10-04T05:54:19.115772+00:00",
+      "id": "92a73d9031db4a77887fa0a20c4bf6fa",
+      "manifest_sha256": "339db72fdcb79d5e1329c11c8d467bf843af4e7dd7b35f1fd198c5c587f3c797",
+      "measured_functions": 10,
+      "outcome_sha256": "6cbcd220a850f7ab3ac12d199ec3de5ca26e6cd93a07b31dcd63fdfd61f9cc36",
+      "semantic_key": "08ba7e7e98fcd6ee7f0063c807421e26ced885b30a4bfb6352598c31af8ee05e",
+      "started": "2026-10-04T05:54:18.851523+00:00",
+      "state": "exact_private",
+      "task": "gs-family-14_aranos_prison-136-v2"
     },
     "92b5f188c0a24587afa9592cb32c0d58": {
       "compile_attempted": true,
@@ -11053,6 +13279,32 @@
       "started": "2026-10-04T05:07:08.991451+00:00",
       "state": "exact_private",
       "task": "float-guard-only-16_snivelak-20261004"
+    },
+    "9671e656a5344477befea7f73e4a86ec": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/9671e656a5344477befea7f73e4a86ec",
+      "finished": "2026-10-04T05:54:18.594208+00:00",
+      "id": "9671e656a5344477befea7f73e4a86ec",
+      "manifest_sha256": "b77bb08a1f4337d4990769047dab9c66e4a5d9091ed736584000313965ce1ce9",
+      "measured_functions": 10,
+      "outcome_sha256": "7bc96b61625e4f390b80b197b2279ba1a442093f6238e62e3a6610caeee90047",
+      "semantic_key": "2e2eb334336f28e40f2cdc28e0e40169ef1d6ee90c63f65cb3560175c1dd4c62",
+      "started": "2026-10-04T05:54:18.317004+00:00",
+      "state": "exact_private",
+      "task": "gs-family-13_boldan-136-v2"
+    },
+    "9c94ebd8b10d498fbbf281e01f1971ba": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/9c94ebd8b10d498fbbf281e01f1971ba",
+      "finished": "2026-10-04T05:54:25.068152+00:00",
+      "id": "9c94ebd8b10d498fbbf281e01f1971ba",
+      "manifest_sha256": "461bf46910bc4c808b1d056211cded4e2dd2625043ab40a941fe005630c6e29b",
+      "measured_functions": 10,
+      "outcome_sha256": "4548cac6d884b46f55b11e62ace7ffa1e4bf6bbda25368e3cfa0e4ad7abeae9c",
+      "semantic_key": "e8db73434a6b83352007c36b3e2cdb39d35e2e5e9a7b2ac66756db1a2dc7ff1b",
+      "started": "2026-10-04T05:54:24.818896+00:00",
+      "state": "exact_private",
+      "task": "gs-family-26_jamming_array-136-v2"
     },
     "9cbf18969a2a438a9115d1ab63abdf32": {
       "compile_attempted": true,
@@ -11170,6 +13422,19 @@
       "started": "2026-10-04T03:45:02.833237+00:00",
       "state": "mismatch",
       "task": "boot-00293000-record-packets-v1"
+    },
+    "afe2ab8aa3e84d84b5519d86cec2ec37": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/afe2ab8aa3e84d84b5519d86cec2ec37",
+      "finished": "2026-10-04T05:54:29.184036+00:00",
+      "id": "afe2ab8aa3e84d84b5519d86cec2ec37",
+      "manifest_sha256": "3da90323e63730ddf93d0823f8e0775172d39ec4397347b76d5b3c98fce7d49d",
+      "measured_functions": 10,
+      "outcome_sha256": "b67713a776b3d3e74ac43b147f9100428cd96bbfa0d4e67d164b978f507db336",
+      "semantic_key": "de3f83867a855df5e264b0625c09a5001ac86da572198c8249fc0eedc83fdbdb",
+      "started": "2026-10-04T05:54:28.902116+00:00",
+      "state": "exact_private",
+      "task": "gs-family-8_tabora-136-v2"
     },
     "b13e277672b7409ab65e1a5139dd7ea5": {
       "compile_attempted": true,
@@ -11334,6 +13599,32 @@
       "state": "mismatch",
       "task": "boot-00351578-timestamp-ring-v2"
     },
+    "c96ee41cc2fb44f6bab6337f21a4591a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/c96ee41cc2fb44f6bab6337f21a4591a",
+      "finished": "2026-10-04T05:54:28.652402+00:00",
+      "id": "c96ee41cc2fb44f6bab6337f21a4591a",
+      "manifest_sha256": "3cf095a9df4001dcecd5f5e8f31cc2015282d542ae85e81b281df4eb67cf0721",
+      "measured_functions": 10,
+      "outcome_sha256": "b898335846a650f84598d11a9394f27820a67581364030f794609672d91186e3",
+      "semantic_key": "bb8ea35ce43198d23e9e9ea47bb746b06b003beff95801b8a63fd6581189cf70",
+      "started": "2026-10-04T05:54:28.380084+00:00",
+      "state": "exact_private",
+      "task": "gs-family-7_siberius-136-v2"
+    },
+    "cc9ae81d4bef41ab9cad0bbbe5cb9573": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/cc9ae81d4bef41ab9cad0bbbe5cb9573",
+      "finished": "2026-10-04T05:54:22.577110+00:00",
+      "id": "cc9ae81d4bef41ab9cad0bbbe5cb9573",
+      "manifest_sha256": "5234170dcab239b490b38682a556ecc16926f7fde285600097a12e69e78e34d9",
+      "measured_functions": 10,
+      "outcome_sha256": "dd4234e8bce53bec9e5d2f76f20acfbb752015a3b2088ceac44f5130f896e0f5",
+      "semantic_key": "9223bfe890a004d7a2eda6adf1d0c777e555c464250256f60d90134456152a78",
+      "started": "2026-10-04T05:54:22.314215+00:00",
+      "state": "exact_private",
+      "task": "gs-family-20_yeedil-136-v2"
+    },
     "cd0ea2d5c21f423d9e4ae77218717bb5": {
       "compile_attempted": true,
       "directory": "runtime:trials/cd0ea2d5c21f423d9e4ae77218717bb5",
@@ -11346,6 +13637,19 @@
       "started": "2026-10-04T04:23:11.741955+00:00",
       "state": "exact_private",
       "task": "glyph-family-0_aranos_tutorial-20261004"
+    },
+    "cdabea5c41c64fa89ab8c0b6609b5237": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/cdabea5c41c64fa89ab8c0b6609b5237",
+      "finished": "2026-10-04T05:54:21.570906+00:00",
+      "id": "cdabea5c41c64fa89ab8c0b6609b5237",
+      "manifest_sha256": "f701df49157e042bfd05155fc6570983f6700d153275d25a5dccfc005b0fe663",
+      "measured_functions": 10,
+      "outcome_sha256": "cbeaf69f1ac87878a24bc76607756614921c8caade59d8ade371eb50d936d4b0",
+      "semantic_key": "3ac20d65fced8d3d569d5a712e282158d8212f3a725d01d09cd4edaa8bca12df",
+      "started": "2026-10-04T05:54:21.323142+00:00",
+      "state": "exact_private",
+      "task": "gs-family-19_grelbin-136-v2"
     },
     "ce3d34f88fd24d4a888d31df41a6aa3e": {
       "compile_attempted": true,
@@ -11399,6 +13703,19 @@
       "state": "exact_private",
       "task": "glyph-family-5_feltzin_system-20261004"
     },
+    "d34c711248564cf0b2aeab90a72aecca": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d34c711248564cf0b2aeab90a72aecca",
+      "finished": "2026-10-04T05:54:21.096156+00:00",
+      "id": "d34c711248564cf0b2aeab90a72aecca",
+      "manifest_sha256": "f6fc1ef116e0aba6c900cf2d57488a8d57cae2c07ac9a6010224a19cb8b19be0",
+      "measured_functions": 10,
+      "outcome_sha256": "c43b7458df7e3b8d7248341323b7bf0a0cb7856ed2590bb85c83007acfb4df02",
+      "semantic_key": "4776d5a983ef6041e2472b04209c7f4062348491f2cb5a168ff16703244236a7",
+      "started": "2026-10-04T05:54:20.832054+00:00",
+      "state": "exact_private",
+      "task": "gs-family-18_damosel-136-v2"
+    },
     "d42a49afc1ee41128555bf83d6f5fe0b": {
       "compile_attempted": true,
       "directory": "runtime:trials/d42a49afc1ee41128555bf83d6f5fe0b",
@@ -11411,6 +13728,32 @@
       "started": "2026-10-04T05:07:14.838616+00:00",
       "state": "exact_private",
       "task": "float-guard-only-30_insomniac_museum-20261004"
+    },
+    "d5939b4579cd453e9cb8afcadf72641b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d5939b4579cd453e9cb8afcadf72641b",
+      "finished": "2026-10-04T05:54:25.582250+00:00",
+      "id": "d5939b4579cd453e9cb8afcadf72641b",
+      "manifest_sha256": "8e3e5199ab52c3af6165d9ced6da18e9f0f300ca75195383c642f23d19916beb",
+      "measured_functions": 10,
+      "outcome_sha256": "abf9ecef219119dc37ef50fa428ed104dac89083daf1535c14a7ecf124bfa5fa",
+      "semantic_key": "04ce5eabcbafbcb35d468a2af733c44251de17802317eb706dab6ac1a350998e",
+      "started": "2026-10-04T05:54:25.289436+00:00",
+      "state": "exact_private",
+      "task": "gs-family-2_maktar_nebula-136-v2"
+    },
+    "d9f21c414e734f7582b975518a87a11f": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d9f21c414e734f7582b975518a87a11f",
+      "finished": "2026-10-04T05:54:26.603933+00:00",
+      "id": "d9f21c414e734f7582b975518a87a11f",
+      "manifest_sha256": "434a99f019047b3b72f508f43c1b7c14a984b4fbea5daf89fae305a654412b47",
+      "measured_functions": 10,
+      "outcome_sha256": "d0ace6f989d69b49c698fa11777c79e8bd9e684882f43e7f15905d153554f729",
+      "semantic_key": "cc2302452c3534e8fa5950ceedd9ed8043916e6455846140d35898b653927407",
+      "started": "2026-10-04T05:54:26.353521+00:00",
+      "state": "exact_private",
+      "task": "gs-family-3_endako-136-v2"
     },
     "ddd6d0a3f9a94ce1aa317198182e7cd0": {
       "compile_attempted": true,
@@ -11463,6 +13806,19 @@
       "started": "2026-10-04T05:25:31.781300+00:00",
       "state": "exact_private",
       "task": "ship-shack-002e4828-gs-setup-v2"
+    },
+    "e58b1d622a204ce9ae93883728665f62": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/e58b1d622a204ce9ae93883728665f62",
+      "finished": "2026-10-04T05:54:24.582097+00:00",
+      "id": "e58b1d622a204ce9ae93883728665f62",
+      "manifest_sha256": "e591ea2c2a1eda9566b4a7a7369a8a29a379c15145f7c7316ae00de5009ec71b",
+      "measured_functions": 10,
+      "outcome_sha256": "5c0818b82ac23f4a12afde3907f41569a40c196af24b3b7024a5f1ca9bfa3453",
+      "semantic_key": "e2cac368045f3fa3e2b6e705c0d130c07985667aed72f8e903f262940a176581",
+      "started": "2026-10-04T05:54:24.322089+00:00",
+      "state": "exact_private",
+      "task": "gs-family-25_wupash_nebula-136-v2"
     },
     "ea54faa89d754ce696814ed8c058cab9": {
       "compile_attempted": true,
@@ -11632,10 +13988,23 @@
       "started": "2026-10-04T04:16:08.514278+00:00",
       "state": "mismatch",
       "task": "ship-shack-anchor-three-bodies-v2"
+    },
+    "ffe98a783e2f46178a2facc60c2c0365": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/ffe98a783e2f46178a2facc60c2c0365",
+      "finished": "2026-10-04T05:54:19.605979+00:00",
+      "id": "ffe98a783e2f46178a2facc60c2c0365",
+      "manifest_sha256": "00c59e0e25ef94bcf22b51941b8b375681c9b82e407f1c3b9f6c8c42d24dd272",
+      "measured_functions": 10,
+      "outcome_sha256": "7b6a4bb9b50341e3b6bc3ebf3e0975dcf1382ae1047a9b6d3f7e5dafeaa35fa1",
+      "semantic_key": "3f65ed1fe61ec8d508f18f858771486be80ba781bd6675f7dd84166c3ae839d1",
+      "started": "2026-10-04T05:54:19.353696+00:00",
+      "state": "exact_private",
+      "task": "gs-family-15_gorn-136-v2"
     }
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "00e911927d205a0e1c53e0b9a814a4d1d4808cc01e6f65d5f6fb028da604cc3e"
+    "docs/CAMPAIGN-QUEUE.md": "253f8ef09ba5f4e4bac0c70a175ef6756e377981c001e1c070c03e95e8a4b4ae"
   }
 }

@@ -63,3 +63,24 @@ void LVL_11_JOBA_FUN_002E8F38(u8 *object) {
  if (*(f32 *)(object+0x10)>=0.0f)
   LVL_11_JOBA_FUN_002E9490(1.1243411302566528f,0.005f,0.2f,0.0f,0,3);
 }
+
+/* Scalar GS setup wrapper; pinned standard integer arguments and helper calls. */
+extern void LVL_11_JOBA_FUN_00302AD8(int width, int height, int address, int mode);
+extern void LVL_11_JOBA_FUN_0038FD70(unsigned int reg, unsigned long value);
+extern void LVL_11_JOBA_FUN_00302E40(int width, int height);
+
+void LVL_11_JOBA_FUN_002F7670(int width, int height)
+{
+    int sum = width + height;
+    int address;
+
+    if (sum > 16)
+        sum = 16;
+    address = 0x3ff000 - (4 << sum);
+    address = (address >> 13) << 13;
+    LVL_11_JOBA_FUN_00302AD8(width, height, address, 1);
+    LVL_11_JOBA_FUN_0038FD70(0x47, 0x30000UL);
+    LVL_11_JOBA_FUN_0038FD70(0x42, 0x8000000044UL);
+    LVL_11_JOBA_FUN_00302E40(0x100, 0x100);
+    LVL_11_JOBA_FUN_0038FD70(0x42, 0x8000000044UL);
+}
