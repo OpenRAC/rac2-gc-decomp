@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Check authored source inventory
+        run: python scripts/source_layout.py --check --inventory-check progress/source-inventory.json
+
       - name: Export verified RAC2 progress (objdiff v2)
         run: |
           python scripts/decomp_report.py --output build/decomp/report.json \
@@ -30,6 +33,13 @@ jobs:
         with:
           name: SCUS_972.68_report
           path: build/decomp/report.json
+          if-no-files-found: error
+
+      - name: Upload separate authored-source inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: SCUS_972.68_authored_source
+          path: progress/source-inventory.json
           if-no-files-found: error
 
       - name: Post Job Summary
