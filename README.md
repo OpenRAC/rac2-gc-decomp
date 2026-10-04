@@ -37,6 +37,10 @@ This repository is part of project 45.
 
 ## Current status
 
+<p align="center">
+  <a href="progress/report.json"><img src="progress/decompilation.svg" alt="Validated matching C/C++ progress across the boot and 27 overlays" width="760"></a>
+</p>
+
 Assembly reconstruction and matching C/C++ are tracked separately.
 For current tasks and C experiments, use the
 [campaign workflow](docs/CAMPAIGN-WORKFLOW.md) and its single

@@ -28,6 +28,9 @@ jobs:
           python scripts/decomp_report.py --output build/decomp/report.json \
             $(for f in progress/levels/*.json; do printf -- '--level-proof %s ' "$f"; done)
 
+      - name: Check README progress bar
+        run: python scripts/readme_progress.py --check
+
       - name: Upload decomp.dev progress artifact
         uses: actions/upload-artifact@v4
         with:

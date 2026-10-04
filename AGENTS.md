@@ -13,6 +13,10 @@ Source modules do not prove original object boundaries. A source inventory count
 authored variants separately from replicated loaded-code coverage and adds no credit.
 Runtime/tool paths and trial inputs remain private outside the repository.
 
+After updating integrated progress, run `python scripts/readme_progress.py` and
+include `progress/decompilation.svg` in the same lot. Its byte counts come from
+the validated boot and all 27 overlay proofs; CI rejects a stale README bar.
+
 Write all repository documentation, code comments, user-facing messages,
 catalogue descriptions and commit messages in English. Preserve measured game
 identifiers, symbol names, program identities and pinned reference hashes.
