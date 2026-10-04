@@ -3615,7 +3615,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 1338,
+  "revision": 1365,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -16434,6 +16434,50 @@
         }
       ]
     },
+    "orbital-hrugis-short-pair-lookup-20261004-v1": {
+      "budget": 1,
+      "created": "2026-10-04T11:31:13.583284+00:00",
+      "hypothesis": "Owned seed10 new ordinary96-byte nullable signed-short pair lookup. Beforefirstcompile callerABI qualification replaces defaultGhidra-narrowedshortkey draft with safe fullsigned32 A0key: wrapper2ECD58 preserves incomingA0withouttruncation and branchesonV0/readss32stackoutput; wrapper2ECDF0 supplies LBU43 key, fittingworddomain, branchesonV0. Tablekeys/values remain signed16, stride4, key-1 sentinel; nullpointer leavesoutputunchanged. Current18controls andallqualifiedflags/tools, fullpin/bounds/historyexclusions; no aliasbulk beforeexactseed.",
+      "id": "orbital-hrugis-short-pair-lookup-20261004-v1",
+      "kind": "candidate",
+      "last_trial": "eb67e35a9a094b87b4fa984a775a9491",
+      "next_action": "Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-short-pair-lookup-v1/evidence.json",
+        "private-work:parallel-20261004/orbital_lots/pair-lookup-caller-2ecd58.json",
+        "private-work:parallel-20261004/orbital_lots/pair-lookup-caller-2ecdf0.json"
+      ],
+      "program": "levels/10_hrugis_cloud",
+      "reopen_condition": "Independent original table/input access-phase or compiler evidence; no key-width or expressioncycle.",
+      "source": "runtime:bank/parallel-orbital_lots-short-pair-lookup-safe-v1/10_hrugis_cloud.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_002ECCF8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-short-pair-lookup-safe-v1/catalog.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:31:16.561350+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "eb67e35a9a094b87b4fa984a775a9491"
+        },
+        {
+          "at": "2026-10-04T11:37:30.867379+00:00",
+          "from": "stopped",
+          "reason": "Caller-qualified safe32bitkey firstseedcomplete96 symbol-size refusal;18currentcontrolsexact. Uncompiled defaultGhidra-narrowedshort draft retained only asdiscardedABIproposal.",
+          "reopen_condition": "Independent original table/input access-phase or compiler evidence; no key-width or expressioncycle.",
+          "to": "stopped"
+        }
+      ]
+    },
     "orbital-hrugis-spatial-lookup-20261004-research": {
       "address": 3141504,
       "budget": 1,
@@ -16731,7 +16775,7 @@
         "runtime:bank/parallel-orbital_lots-vertex-inits-v1/evidence.json"
       ],
       "program": "levels/10_hrugis_cloud",
-      "reopen_condition": "Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.",
+      "reopen_condition": "Independent original packet storage-layout/access-phase evidence; no storeordercycle.",
       "source": "runtime:bank/parallel-orbital_lots-vertex-inits-v1/10_hrugis_cloud.c",
       "state": "stopped",
       "symbols": [
@@ -16752,6 +16796,13 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "4dd5d3f5310f4ef2be103be5c7f210bc"
+        },
+        {
+          "at": "2026-10-04T11:28:26.371929+00:00",
+          "from": "stopped",
+          "reason": "Both complete104/136scalarinitializer sizes agree but differ21/36bytes;18controls exact. Originalstore-layout/phase unknown; no aliasbulk or localstorepermutation.",
+          "reopen_condition": "Independent original packet storage-layout/access-phase evidence; no storeordercycle.",
+          "to": "stopped"
         }
       ]
     },
@@ -17201,6 +17252,26 @@
         }
       ]
     },
+    "parallel-boot-analysis-maktar-default-records-research": {
+      "address": 4329872,
+      "created": "2026-10-04T11:40:13.495751+00:00",
+      "hypothesis": "Owner boot_analysis seed2. New568-byte scalar allocator/descriptor initialization and30record pluspaired119record defaults; verifiedbootREGINFO GP1AEFF0, explicitqualifiedSDA data declarations under unchangedG0, fingerprint 84234ca8cf279b7113ee1395af86cf5c6961b8cbf9abee26c89dd53745cbdbe3. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no MMI/VU. Separate from all prior parked families.",
+      "id": "parallel-boot-analysis-maktar-default-records-research",
+      "kind": "research",
+      "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "size": 568,
+      "state": "queued",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_00421190"
+      ],
+      "transitions": []
+    },
     "parallel-boot-analysis-maktar-grid-blend-research": {
       "address": 3733136,
       "created": "2026-10-04T10:44:55.761430+00:00",
@@ -17298,11 +17369,19 @@
       "program": "levels/2_maktar_nebula",
       "reopen_condition": "New independent count/layout/sourcephase evidence only",
       "size": 588,
-      "state": "queued",
+      "state": "done",
       "symbols": [
         "LVL_0_MAKTAR_NEBULA_FUN_0030CDC0"
       ],
-      "transitions": []
+      "transitions": [
+        {
+          "at": "2026-10-04T11:27:39.681727+00:00",
+          "from": "queued",
+          "reason": "Full pins, normal fillhelper ABI, two complete measurements and reopening condition retained",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
     },
     "parallel-boot-analysis-maktar-nibble-threshold-v1": {
       "address": 3198400,
@@ -17344,19 +17423,36 @@
     },
     "parallel-boot-analysis-maktar-nibble-threshold-v2": {
       "address": 3198400,
+      "amendments": [
+        {
+          "at": "2026-10-04T11:27:39.495956+00:00",
+          "before": {
+            "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+            "remaining_difference": null,
+            "reopen_condition": "New independent count/layout/sourcephase evidence only"
+          },
+          "changes": {
+            "next_action": "Park complete nibble-threshold588 and physicalaliases after one supported bytepacking-width experiment; choose new independent scalar target.",
+            "remaining_difference": "V1trial4da6ddb845588size82diff; byte-phasev2trial644efaa4ba588size47diff, both17controls exact. Packingleftfold restored, initialloadorder and transientregister roles differ; no independent counter/sourcephase witness.",
+            "reopen_condition": "Independent original loop/counter/coefficient-sourcephase or qualified packing macro/type witness, no operand/counter/local/register permutations or alias bulk."
+          },
+          "reason": "Same-size47byte strictrefusal after supported8bit packing phase; no new independent witness"
+        }
+      ],
       "budget": 2,
       "created": "2026-10-04T11:18:23.432793+00:00",
       "hypothesis": "Owner boot_analysis seed2. New588-byte scalar nibble lookup accumulation, fourpass threshold128scores and sixteen packed outputbytes pergroup,512passes with one512byte clearhelper; distinctfrom parked audio588 andRLE276, fingerprint b0b3af6fff7d457790a482ec59b7efead62bd32b91d1c9e3945ce534f0cc6bab. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no GP/MMI/VU. Separate from all prior parked families. Fullcaller30C8FC outputbufferA0/no return use. Helper2F1CC8full40-bytewordfill A0destination/A1word/A2bytecount decrement4 with512-bytezero fill, pin 433faef45fffbeb688668b01ebcffa5e6230774905428cfe684fe109540e0e93. Int32scores/coeftable pinwidth128/16, copied64via nativebuiltin; no rawopcodes/padding/flagchanges. V1complete588size82diff, all17controls exact. Independent pinnedbytepacking phase reads8lowbytes viaLBU andleftfolds7OR thenSB; wordexpression compilesbalancedORtree with reorderedloads. V2explicitunsigned-byte accumulator models measured8-bit phase, preservesallint32score/coefficient arithmetic/counters/copy/helper/flags. This is one packing-width/sourcephase hypothesis, not register/loop/pointer forcing; park ifrefused.",
       "id": "parallel-boot-analysis-maktar-nibble-threshold-v2",
       "kind": "candidate",
       "last_trial": "644efaa4ba2243d1b95812fb7e8dc6c6",
-      "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+      "next_action": "Park complete nibble-threshold588 and physicalaliases after one supported bytepacking-width experiment; choose new independent scalar target.",
       "pointers": [
         "private-work:parallel-20261004/boot_analysis/CURRENT.md"
       ],
       "priority": 80,
       "program": "levels/2_maktar_nebula",
-      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "remaining_difference": "V1trial4da6ddb845588size82diff; byte-phasev2trial644efaa4ba588size47diff, both17controls exact. Packingleftfold restored, initialloadorder and transientregister roles differ; no independent counter/sourcephase witness.",
+      "reopen_condition": "Independent original loop/counter/coefficient-sourcephase or qualified packing macro/type witness, no operand/counter/local/register permutations or alias bulk.",
       "size": 588,
       "source": "runtime:bank/parallel-boot_analysis-nibble-threshold-v2/2_maktar_nebula.c",
       "state": "stopped",
@@ -20071,6 +20167,163 @@
       "state": "queued",
       "transitions": []
     },
+    "root-boot-record-leaf-20261004": {
+      "address": 3013088,
+      "created": "2026-10-04T11:33:33.268819+00:00",
+      "hypothesis": "Root-owned fresh boot leaf002DF9E0, actual Ghidra extent through002DFBAB (460bytes), nextentry464 estimate includes4padding. Current published boot spans and737 unique historical/qualified catalog bodies plus canonical task reservations filtered; no physical alias in complete460-byte span. Ordinary integer no-call loop selected; ABI and source layout still unproven.",
+      "id": "root-boot-record-leaf-20261004",
+      "kind": "research",
+      "next_action": "Pin full instructions and caller ABI, recover ordinary C record/loop semantics, qualify full existing boot source controls with default tools/profile; preserve whole-symbol refusal.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/boot-eligible-filtered.json"
+      ],
+      "priority": 85,
+      "program": "boot",
+      "reopen_condition": "Independent source/cursor layout and loop lifetime evidence, no source or flags cycles",
+      "size": 460,
+      "state": "stopped",
+      "transitions": [
+        {
+          "at": "2026-10-04T11:39:18.335924+00:00",
+          "from": "queued",
+          "reason": "Both complete C hypotheses refused and retained,178controls exact each",
+          "reopen_condition": "Independent source/cursor layout and loop lifetime evidence, no source or flags cycles",
+          "to": "stopped"
+        }
+      ]
+    },
+    "root-boot-record460-storage-v2-20261004": {
+      "amendments": [
+        {
+          "at": "2026-10-04T11:39:17.830408+00:00",
+          "before": {
+            "next_action": "Bounded source-binding qualification only; refuse fullsymbol if any size/byte differs and park without loop/register permutations.",
+            "pointers": [
+              "private-work:parallel-20261004/root-gp/boot-record-leaf-pin.json",
+              "private-work:parallel-20261004/root-gp/boot-leaf-ghidra-0.json"
+            ],
+            "remaining_difference": null,
+            "reopen_condition": "Independent source/layout/ABI or lifetime evidence, no equivalent expression/register allocation cycles."
+          },
+          "changes": {
+            "next_action": "Keep both immutable trials stopped; continue a different independent target.",
+            "pointers": [
+              "private-work:parallel-20261004/root-gp/record460-final-refusal.json"
+            ],
+            "remaining_difference": "Full460-byte packet constructor refused: 408/460 in5aa5bfcf00344b9ea396de8d832a89cb, 440/460 ine04cffdcdc9f4351a4d85adfe10b00e5;178 unchanged boot controls exact in each.",
+            "reopen_condition": "Independently recovered cursor/object source binding and loop induction/lifetime evidence explaining remaining size and access-phase differences; no equivalent expressions, register allocation or flag cycles."
+          },
+          "reason": "Measured both complete target refusals with178 exact unchanged boot controls; preserve source binding result and concrete reopening evidence"
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-04T11:38:20.017820+00:00",
+      "hypothesis": "Independent qualified compiler source ENCODE_SECTION_INFO and positive-size earlyextern rules plus178 exact boot controls with incomplete SDA arrays establish source binding mechanism: unmarked cursor storage v1 exposes and hoists highpage, producing408/460; reference repeatedly rematerializes same absolute cursor page. Mark only the same pinned incomplete cursor storage as SDA, which remains unknown-size absolute to assembler under unchangedG0. No width/arithmetic/order/loop/register/GP/tool changes. Preserve v1 and all178 fullunit controls; this is a measured source-binding hypothesis, not an exactness claim.",
+      "id": "root-boot-record460-storage-v2-20261004",
+      "kind": "candidate",
+      "last_trial": "e04cffdcdc9f4351a4d85adfe10b00e5",
+      "next_action": "Keep both immutable trials stopped; continue a different independent target.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/record460-final-refusal.json"
+      ],
+      "remaining_difference": "Full460-byte packet constructor refused: 408/460 in5aa5bfcf00344b9ea396de8d832a89cb, 440/460 ine04cffdcdc9f4351a4d85adfe10b00e5;178 unchanged boot controls exact in each.",
+      "reopen_condition": "Independent source/cursor layout and loop lifetime evidence, no source or flags cycles",
+      "source": "runtime:bank/root-boot-record460-storage-v2-20261004/boot.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_002DF9E0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-boot-record460-storage-v2-20261004/catalog.json",
+          "id": "boot-record460",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:38:23.225657+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "e04cffdcdc9f4351a4d85adfe10b00e5"
+        },
+        {
+          "at": "2026-10-04T11:39:18.166960+00:00",
+          "from": "stopped",
+          "reason": "Park measured storage-binding refusal,178 boot controls exact,zero credit",
+          "reopen_condition": "Independent source/cursor layout and loop lifetime evidence, no source or flags cycles",
+          "to": "stopped"
+        }
+      ]
+    },
+    "root-boot-record460-v1-20261004": {
+      "budget": 1,
+      "created": "2026-10-04T11:35:45.628678+00:00",
+      "hypothesis": "Fresh complete460-byte boot GS packet loop with signedshort dimensions atstate150/152, signeddivision32 and64-bit packet words. Cursor raw storage view independently matches pinned repeatedabsolute reload pattern; A0 stored asfull64-bit value, sole directcaller setszero and does notconsume return. Preserve full178boot source prefix/controls and defaultG0 tools. No prior physical alias, no forced registers/padding/ASM.",
+      "id": "root-boot-record460-v1-20261004",
+      "kind": "candidate",
+      "last_trial": "5aa5bfcf00344b9ea396de8d832a89cb",
+      "next_action": "Require full179-symbol equality; preserve target refusal and allcontrols. No bulkreplication unless complete seedexact.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/boot-record-leaf-pin.json",
+        "private-work:parallel-20261004/root-gp/boot-leaf-ghidra-0.json"
+      ],
+      "reopen_condition": "Independent source/cursor layout and loop lifetime evidence, no source or flags cycles",
+      "source": "runtime:bank/root-boot-record460-v1-20261004/boot.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_002DF9E0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-boot-record460-v1-20261004/catalog.json",
+          "id": "boot-record460",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:35:48.807855+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "5aa5bfcf00344b9ea396de8d832a89cb"
+        },
+        {
+          "at": "2026-10-04T11:39:17.988796+00:00",
+          "from": "stopped",
+          "reason": "Park complete460-byte target refusal,178 boot controls exact",
+          "reopen_condition": "Independent source/cursor layout and loop lifetime evidence, no source or flags cycles",
+          "to": "stopped"
+        }
+      ]
+    },
+    "root-core-wide-gp-witness-20261004": {
+      "address": 1259952,
+      "created": "2026-10-04T11:26:49.782924+00:00",
+      "hypothesis": "Independent uncovered core64-byte counter leaf1339B0 fingerprintaa30922f8e8780e1ed0f2e0e8d0e1e81977b62b5b23c1650879af92ad13fb87d. Two absolute64-bit counter reads/increment and hardware unsigned32-bit timer read at10000800; final64-bit store GP-7DE0 separately binds1A7210. Root compiler research ownership, exclude all prior physical refusals. Qualification only after complete caller/ABI/binding evidence; no reopening GS680 yet.",
+      "id": "root-core-wide-gp-witness-20261004",
+      "kind": "research",
+      "next_action": "Verify materializing registration caller and counter layouts. Then bounded immutable C witness with unchanged qualified tools and known documented G8 profile, retain whole-symbol refusal and controls.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/wide-witness-pin.json"
+      ],
+      "priority": 85,
+      "program": "boot",
+      "reopen_condition": "Independent source/global layout or object context evidence; no source/flags cycles",
+      "size": 64,
+      "state": "stopped",
+      "transitions": [
+        {
+          "at": "2026-10-04T11:29:51.028517+00:00",
+          "from": "queued",
+          "reason": "Park research after qualification0526cfae4ff94c4fa2b350fbeb56f77a refused60/64; wide mechanism insufficient",
+          "reopen_condition": "Independent source/global layout or object context evidence; no source/flags cycles",
+          "to": "stopped"
+        }
+      ]
+    },
     "root-g8-support-review-19_grelbin-20261004": {
       "budget": 1,
       "created": "2026-10-04T10:18:00.896146+00:00",
@@ -20248,6 +20501,69 @@
           "reason": "exact_private",
           "to": "exact_private",
           "trial": "1ad34d01a5f448d7b0ad38d036c5e8bb"
+        }
+      ]
+    },
+    "root-independent-wide-g8-20261004": {
+      "amendments": [
+        {
+          "at": "2026-10-04T11:29:37.195242+00:00",
+          "before": {
+            "next_action": "Compare both complete symbols under already qualified G8 tools; preserve refusal. A positive independent witness does not reopen GS680 without remaining alias and source-layout evidence.",
+            "pointers": [],
+            "remaining_difference": null,
+            "reopen_condition": "New independently measured ABI/layout/backend evidence; no source or flags matrix."
+          },
+          "changes": {
+            "next_action": "Keep parked; continue a different independent target. Do not reopen GS680 from this partial mechanism.",
+            "pointers": [
+              "private-work:parallel-20261004/root-gp/wide-refusal.json"
+            ],
+            "remaining_difference": "Independent G8 leaf produces60/64bytes;36-byte argument-wide control exact. Wide GP store emitted but complete leaf refused; no qualified wide-SDA witness.",
+            "reopen_condition": "Independently recovered source/global layout or object compilation context explaining absolute counter rematerialization and live registers; no name/expression/flag cycling."
+          },
+          "reason": "Complete60/64-byte refusal retained with unchanged36-byte exact wide control; GP wide-store mechanism alone is insufficient"
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-04T11:28:05.323092+00:00",
+      "hypothesis": "Pinned complete64-byte reference and interrupt-registration caller; documented G8 and absolute/NOSDA bindings versus separate SDA output. Existing wide argument-pointer C control retained unchanged. Private witness, no integrated credit.",
+      "id": "root-independent-wide-g8-20261004",
+      "kind": "candidate",
+      "last_trial": "0526cfae4ff94c4fa2b350fbeb56f77a",
+      "next_action": "Keep parked; continue a different independent target. Do not reopen GS680 from this partial mechanism.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/wide-refusal.json"
+      ],
+      "remaining_difference": "Independent G8 leaf produces60/64bytes;36-byte argument-wide control exact. Wide GP store emitted but complete leaf refused; no qualified wide-SDA witness.",
+      "reopen_condition": "Independent source/global layout or object context evidence explaining rematerialization and register lifetimes; no source/flags cycles",
+      "source": "runtime:bank/root-independent-wide-g8-20261004/boot.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_001339B0",
+        "FUN_00350878"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-independent-wide-g8-20261004/catalog.json",
+          "id": "boot-wide-witness",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:28:07.910281+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "0526cfae4ff94c4fa2b350fbeb56f77a"
+        },
+        {
+          "at": "2026-10-04T11:29:50.870167+00:00",
+          "from": "stopped",
+          "reason": "Park complete60/64-byte refusal; independent36-byte wide control exact; no qualified wide-SDA witness",
+          "reopen_condition": "Independent source/global layout or object context evidence explaining rematerialization and register lifetimes; no source/flags cycles",
+          "to": "stopped"
         }
       ]
     },
@@ -28258,6 +28574,19 @@
       "state": "exact_private",
       "task": "root-index-lf-13_boldan-20261004"
     },
+    "0526cfae4ff94c4fa2b350fbeb56f77a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/0526cfae4ff94c4fa2b350fbeb56f77a",
+      "finished": "2026-10-04T11:28:07.890411+00:00",
+      "id": "0526cfae4ff94c4fa2b350fbeb56f77a",
+      "manifest_sha256": "347f483c96343b43d28886e1c9455ba700711ee43b441b9c88f09fbfed59c5b1",
+      "measured_functions": 2,
+      "outcome_sha256": "ac342e8d94591592e6e2997e47121dc66ebe2438489a1f34f655ddcb33bff3e8",
+      "semantic_key": "8b5afb3e11aa455a1f1ed38aa1793bc90ca40aca54a4b8d978b58810a778c9a9",
+      "started": "2026-10-04T11:28:07.562426+00:00",
+      "state": "mismatch",
+      "task": "root-independent-wide-g8-20261004"
+    },
     "0688b5e2917444bd9ae08eab501f549b": {
       "compile_attempted": true,
       "directory": "runtime:trials/0688b5e2917444bd9ae08eab501f549b",
@@ -29876,6 +30205,19 @@
       "started": "2026-10-04T07:27:49.770165+00:00",
       "state": "exact_private",
       "task": "scalar-families-10_hrugis_cloud-20261004"
+    },
+    "5aa5bfcf00344b9ea396de8d832a89cb": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5aa5bfcf00344b9ea396de8d832a89cb",
+      "finished": "2026-10-04T11:35:48.794239+00:00",
+      "id": "5aa5bfcf00344b9ea396de8d832a89cb",
+      "manifest_sha256": "a413a91f4396b2c8416caa675e945c13578e4c63b3c85f8efa321bd5a603be23",
+      "measured_functions": 179,
+      "outcome_sha256": "602915e25ab86c15691cd6aae8fd7794e90cfcc490a1e3013927dfb588690da4",
+      "semantic_key": "034a4b76434dd236440faf519d894439e085a45db93f48a77876e5b42cf7d288",
+      "started": "2026-10-04T11:35:47.896437+00:00",
+      "state": "mismatch",
+      "task": "root-boot-record460-v1-20261004"
     },
     "5b8d3a67d4a543629b7c226722c0d9ef": {
       "compile_attempted": true,
@@ -32526,6 +32868,19 @@
       "state": "exact_private",
       "task": "root-parallel-combined-7_siberius-20261004"
     },
+    "e04cffdcdc9f4351a4d85adfe10b00e5": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/e04cffdcdc9f4351a4d85adfe10b00e5",
+      "finished": "2026-10-04T11:38:23.200408+00:00",
+      "id": "e04cffdcdc9f4351a4d85adfe10b00e5",
+      "manifest_sha256": "f955f15493b1445e375880d893a48e41c257b6ed8e0e88e98140a2f617aac44f",
+      "measured_functions": 179,
+      "outcome_sha256": "e1bb4e904127562db86c9a85bb9b29364df2c1024393bca5b1ebe1197ede99ec",
+      "semantic_key": "3422edacea0d470035518016799a9bfc57226f2cb4b7d897c67107a7e3bbca72",
+      "started": "2026-10-04T11:38:22.329707+00:00",
+      "state": "mismatch",
+      "task": "root-boot-record460-storage-v2-20261004"
+    },
     "e116af4994b84cb4b2d5dd024d965ad9": {
       "compile_attempted": true,
       "directory": "runtime:trials/e116af4994b84cb4b2d5dd024d965ad9",
@@ -32772,6 +33127,19 @@
       "started": "2026-10-04T04:23:24.693035+00:00",
       "state": "exact_private",
       "task": "glyph-family-8_tabora-20261004"
+    },
+    "eb67e35a9a094b87b4fa984a775a9491": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/eb67e35a9a094b87b4fa984a775a9491",
+      "finished": "2026-10-04T11:31:16.547949+00:00",
+      "id": "eb67e35a9a094b87b4fa984a775a9491",
+      "manifest_sha256": "0a61a212fb1949bad26d3f462b0bff28795e4cf7c30f65829afee9c78a501b10",
+      "measured_functions": 19,
+      "outcome_sha256": "aeda8bbe50b951126710526a99f375f38cb04af2edfd23df2a39d77619ae445d",
+      "semantic_key": "266017d0d87aca624ed2b8efe9f6821a50b1300b87ef62dceb5ab5d59cd12100",
+      "started": "2026-10-04T11:31:16.242302+00:00",
+      "state": "mismatch",
+      "task": "orbital-hrugis-short-pair-lookup-20261004-v1"
     },
     "eb919164d4b74734873bc18fd9b5477f": {
       "compile_attempted": true,
@@ -33207,6 +33575,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "1a27d8ad174fb8ef550c31484f8f61efb77ca92a255fce923c166c6019536c2e"
+    "docs/CAMPAIGN-QUEUE.md": "38f22ff77596227b5d00a009a9532f95eea05653a47511c9160a88321ad487b3"
   }
 }

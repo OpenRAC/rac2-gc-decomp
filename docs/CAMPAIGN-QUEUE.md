@@ -2432,6 +2432,18 @@ Reopen condition: Original global declaration or access-phase evidence; localnea
 
 - `runtime:bank/parallel-orbital_lots-scalars-v1/evidence.json`
 
+## orbital-hrugis-short-pair-lookup-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original table/input access-phase or compiler evidence; no key-width or expressioncycle.
+
+- `runtime:bank/parallel-orbital_lots-short-pair-lookup-v1/evidence.json`
+- `private-work:parallel-20261004/orbital_lots/pair-lookup-caller-2ecd58.json`
+- `private-work:parallel-20261004/orbital_lots/pair-lookup-caller-2ecdf0.json`
+
 ## orbital-hrugis-spatial-lookup-20261004-research
 
 State: `done`. Kind: `research`.
@@ -2509,7 +2521,7 @@ State: `stopped`. Kind: `candidate`.
 
 Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
 
-Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+Reopen condition: Independent original packet storage-layout/access-phase evidence; no storeordercycle.
 
 - `runtime:bank/parallel-orbital_lots-vertex-inits-v1/evidence.json`
 
@@ -2624,6 +2636,16 @@ Reopen condition: Independent original bound/object declaration evidence or qual
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-maktar-default-records-research
+
+State: `queued`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## parallel-boot-analysis-maktar-grid-blend-research
 
 State: `done`. Kind: `research`.
@@ -2646,7 +2668,7 @@ Reopen condition: Independent original vectoraggregate/qualified inline-copy or 
 
 ## parallel-boot-analysis-maktar-nibble-threshold-research
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
 Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
 
@@ -2668,9 +2690,9 @@ Reopen condition: New independent count/layout/sourcephase evidence only
 
 State: `stopped`. Kind: `candidate`.
 
-Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+Park complete nibble-threshold588 and physicalaliases after one supported bytepacking-width experiment; choose new independent scalar target.
 
-Reopen condition: New independent count/layout/sourcephase evidence only
+Reopen condition: Independent original loop/counter/coefficient-sourcephase or qualified packing macro/type witness, no operand/counter/local/register permutations or alias bulk.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -3132,6 +3154,47 @@ Reopen condition: A validated name transfer with independent semantic evidence
 
 - `private-work:croise-aug6-retail.tsv`
 
+## root-boot-record-leaf-20261004
+
+State: `stopped`. Kind: `research`.
+
+Pin full instructions and caller ABI, recover ordinary C record/loop semantics, qualify full existing boot source controls with default tools/profile; preserve whole-symbol refusal.
+
+Reopen condition: Independent source/cursor layout and loop lifetime evidence, no source or flags cycles
+
+- `private-work:parallel-20261004/root-gp/boot-eligible-filtered.json`
+
+## root-boot-record460-storage-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Keep both immutable trials stopped; continue a different independent target.
+
+Reopen condition: Independent source/cursor layout and loop lifetime evidence, no source or flags cycles
+
+- `private-work:parallel-20261004/root-gp/record460-final-refusal.json`
+
+## root-boot-record460-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require full179-symbol equality; preserve target refusal and allcontrols. No bulkreplication unless complete seedexact.
+
+Reopen condition: Independent source/cursor layout and loop lifetime evidence, no source or flags cycles
+
+- `private-work:parallel-20261004/root-gp/boot-record-leaf-pin.json`
+- `private-work:parallel-20261004/root-gp/boot-leaf-ghidra-0.json`
+
+## root-core-wide-gp-witness-20261004
+
+State: `stopped`. Kind: `research`.
+
+Verify materializing registration caller and counter layouts. Then bounded immutable C witness with unchanged qualified tools and known documented G8 profile, retain whole-symbol refusal and controls.
+
+Reopen condition: Independent source/global layout or object context evidence; no source/flags cycles
+
+- `private-work:parallel-20261004/root-gp/wide-witness-pin.json`
+
 ## root-g8-support-review-19_grelbin-20261004
 
 State: `exact_private`. Kind: `candidate`.
@@ -3163,6 +3226,16 @@ State: `exact_private`. Kind: `candidate`.
 Require complete exact units before frozen boot and all27overlay gates.
 
 Reopen condition: New measured compiler/source evidence, not duplicate replay.
+
+## root-independent-wide-g8-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Keep parked; continue a different independent target. Do not reopen GS680 from this partial mechanism.
+
+Reopen condition: Independent source/global layout or object context evidence explaining rematerialization and register lifetimes; no source/flags cycles
+
+- `private-work:parallel-20261004/root-gp/wide-refusal.json`
 
 ## root-index-lf-0_aranos_tutorial-20261004
 
