@@ -1981,6 +1981,22 @@ Park completeclassmapping physicalfamily; preserve immutablev1/v2 and exactcurre
 
 Reopen condition: Independent original source case-block ordering and actualclassrecord source-binding/backend witness retaining rowbase+field14 address form; current observed equivalent case/body semantics alone insufficient. No forcedregisters,padding,volatile or flagsmatrix.
 
+## native-review-joba-counter-add-v1-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Verify caller ABI then maintained whole-unit trial of all current controls and new188-byte body. Replicate only if exact seed.
+
+Reopen condition: Independent actual state layout, ABI or original source phase evidence; no case/register/expression permutations.
+
+## native-review-joba-counter-consume-v1-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Verify caller ABI then maintained whole-unit trial of all current controls and new268-byte body. Replicate only if exact seed.
+
+Reopen condition: Independent actual state layout, ABI or original source phase evidence; no case/register/expression permutations.
+
 ## native-review-joba-frame-table-20261004
 
 State: `queued`. Kind: `research`.
@@ -2004,6 +2020,30 @@ State: `stopped`. Kind: `candidate`.
 Park this materialpatch physicalfamily, keep both immutable sources/objects and fullwidth/layout/caller evidence. No third equivalent-source cycle or bulkaliases.
 
 Reopen condition: Independent original wireheader/source declaration or qualified compiler CFG/allocation witness explaining remaining differences; no register forcing, padding, volatile or arithmetic-equivalent association cycles.
+
+## native-review-joba-object-bits-c-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park this object-bit family, retain the immutable source and compiler outputs, then select another uncovered algorithm. No equivalent data-view/register/branch permutation or family bulk.
+
+Reopen condition: Independent original declaration or qualified source-binding/optimizer evidence explaining base-address preparation and delay scheduling; no volatile, forced registers, padding or equivalent-expression cycles.
+
+## native-review-joba-polygon-dispatch-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Verify caller ABI then compare all complete controls and new80-byte body in maintained whole unit; replicate only if exact.
+
+Reopen condition: Independent state/header/helper ABI or source phase evidence; no register, padding or equivalent-expression cycling.
+
+## native-review-joba-polygon-dispatch-v2-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Verify caller ABI then compare all complete controls and new80-byte body in maintained whole unit; replicate only if exact.
+
+Reopen condition: Independent state/header/helper ABI or source phase evidence; no register, padding or equivalent-expression cycling.
 
 ## native-review-joba-stream-relocation-20261004
 
@@ -2299,6 +2339,36 @@ Reopen condition: Current source/catalog/reference drift or independently measur
 
 - `runtime:bank/parallel-orbital_lots-bitmap-family/9_dobbo/evidence.json`
 
+## orbital-gorn-pair-table-lookup-20261004-v1
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-gorn-pair-table-lookup-v1/evidence.json`
+
+## orbital-gorn-pool-release-20261004-catalog-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original pool/ABI/access-phase evidence; no equivalentexpressioncycle.
+
+- `runtime:bank/parallel-orbital_lots-gorn-pool-release-v1/evidence.json`
+
+## orbital-gorn-pool-release-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: No replay of incorrectmetadata; correctnamespacefollowupiscanonical.
+
+- `runtime:bank/parallel-orbital_lots-gorn-pool-release-v1/evidence.json`
+
 ## orbital-hrugis-angle-distance-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -2371,6 +2441,30 @@ Measure complete seed and all current controls; if exact then qualify aliases ag
 Reopen condition: Independent original storage/layout/access-phase evidence only; no sourcepermutation.
 
 - `runtime:bank/parallel-orbital_lots-object-state-init-v1/evidence.json`
+
+## orbital-hrugis-pool-word-getter-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original index/storage ABI evidence only; no castcycles.
+
+- `runtime:bank/parallel-orbital_lots-pool-word-getter-v1/evidence.json`
+
+## orbital-hrugis-pool-word-getter-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original record/output access-phase or compiler evidence; no thirdlocalpermutation.
+
+- `runtime:bank/parallel-orbital_lots-pool-word-getter-v1/evidence.json`
+- `private-work:parallel-20261004/orbital_lots/pool-wrapper-callers.json`
+- `private-work:parallel-20261004/orbital_lots/pool-wrapper-caller-310ec8.json`
+- `private-work:parallel-20261004/orbital_lots/pool-wrapper-caller-320a00.json`
+- `private-work:parallel-20261004/orbital_lots/pool-wrapper-caller-364700.json`
 
 ## orbital-hrugis-record-chain-20261004-v1
 
@@ -2525,6 +2619,276 @@ Reopen condition: Independent original packet storage-layout/access-phase eviden
 
 - `runtime:bank/parallel-orbital_lots-vertex-inits-v1/evidence.json`
 
+## orbital-pair-lookup-family-20261004-0_aranos_tutorial
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/0_aranos_tutorial/evidence.json`
+
+## orbital-pair-lookup-family-20261004-10_hrugis_cloud
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/10_hrugis_cloud/evidence.json`
+
+## orbital-pair-lookup-family-20261004-11_joba
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/11_joba/evidence.json`
+
+## orbital-pair-lookup-family-20261004-12_todano
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/12_todano/evidence.json`
+
+## orbital-pair-lookup-family-20261004-13_boldan
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/13_boldan/evidence.json`
+
+## orbital-pair-lookup-family-20261004-14_aranos_prison
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/14_aranos_prison/evidence.json`
+
+## orbital-pair-lookup-family-20261004-16_snivelak
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/16_snivelak/evidence.json`
+
+## orbital-pair-lookup-family-20261004-17_smolg
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/17_smolg/evidence.json`
+
+## orbital-pair-lookup-family-20261004-18_damosel
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/18_damosel/evidence.json`
+
+## orbital-pair-lookup-family-20261004-19_grelbin
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/19_grelbin/evidence.json`
+
+## orbital-pair-lookup-family-20261004-1_oozla
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/1_oozla/evidence.json`
+
+## orbital-pair-lookup-family-20261004-20_yeedil
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/20_yeedil/evidence.json`
+
+## orbital-pair-lookup-family-20261004-22_dobbo_orbit
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/22_dobbo_orbit/evidence.json`
+
+## orbital-pair-lookup-family-20261004-23_damosel_orbit
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/23_damosel_orbit/evidence.json`
+
+## orbital-pair-lookup-family-20261004-24_ship_shack
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/24_ship_shack/evidence.json`
+
+## orbital-pair-lookup-family-20261004-25_wupash_nebula
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/25_wupash_nebula/evidence.json`
+
+## orbital-pair-lookup-family-20261004-26_jamming_array
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/26_jamming_array/evidence.json`
+
+## orbital-pair-lookup-family-20261004-2_maktar_nebula
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/2_maktar_nebula/evidence.json`
+
+## orbital-pair-lookup-family-20261004-30_insomniac_museum
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/30_insomniac_museum/evidence.json`
+
+## orbital-pair-lookup-family-20261004-3_endako
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/3_endako/evidence.json`
+
+## orbital-pair-lookup-family-20261004-4_barlow
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/4_barlow/evidence.json`
+
+## orbital-pair-lookup-family-20261004-5_feltzin_system
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/5_feltzin_system/evidence.json`
+
+## orbital-pair-lookup-family-20261004-6_notak
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/6_notak/evidence.json`
+
+## orbital-pair-lookup-family-20261004-7_siberius
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/7_siberius/evidence.json`
+
+## orbital-pair-lookup-family-20261004-8_tabora
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/8_tabora/evidence.json`
+
+## orbital-pair-lookup-family-20261004-9_dobbo
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `runtime:bank/parallel-orbital_lots-pair-lookup-family/9_dobbo/evidence.json`
+
+## orbital-pair-table-lookup-family-20261004
+
+State: `queued`. Kind: `research`.
+
+Verifyeachlivepin/boundary/callerABI and qualify all27CURRENTwholeunits through maintainedCLI, preserveflags/GP/sourcebasenames.
+
+Reopen condition: Current source/catalog/reference drift or independentlymeasuredABI/layout only.
+
+- `private-work:parallel-20261004/orbital_lots/pair-lookup-family-pending.json`
+
 ## parallel-boot-analysis-aranos-channel-records-research
 
 State: `done`. Kind: `research`.
@@ -2636,13 +3000,43 @@ Reopen condition: Independent original bound/object declaration evidence or qual
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
-## parallel-boot-analysis-maktar-default-records-research
+## parallel-boot-analysis-maktar-allocator-wrapper-research
 
 State: `queued`. Kind: `research`.
 
 Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
 
 Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-default-records-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-default-records-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-default-records-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Park scalar defaults568 and physicalaliases; keep G0SDA address-taking evidence for root compilerqualification and select a new independent body.
+
+Reopen condition: Root-qualified SDA address-taking/profile witness and independent original descriptor/loop sourcephase evidence; no ownflagmatrix, type/local/register/alias/store permutations.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -2663,6 +3057,76 @@ State: `stopped`. Kind: `candidate`.
 Park scalar grid blend908 and physicalaliases after measured924byte complete refusal; continue new independently bounded scalar target.
 
 Reopen condition: Independent original vectoraggregate/qualified inline-copy or sourcephase evidence; no forced pointer/register/local or equivalent expression cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-group-range-advance-research
+
+State: `done`. Kind: `research`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-group-range-advance-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-group-range-pinrepair
+
+State: `stopped`. Kind: `candidate`.
+
+Park corrected228rangehelper andphysicalaliases; retain exactsigned-address repair and qualify a new independent target.
+
+Reopen condition: Independent original arithmetic/operand-type/sourcephase evidence; no equivalent expression/local/register permutations. Correctstate/table bindings1BD940/1BDCC8 mandatory.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-grouped-cursor-pinrepair
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-grouped-cursor-research
+
+State: `done`. Kind: `research`.
+
+Author semantic groupedcursorC with verified int32 helper outputs and requalify allCURRENTcontrols before any family work.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-grouped-cursor-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
+
+Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-grouped-cursor-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Park groupedcursor432 and physicalaliases after snapshotphase hypothesis collapses to identicalobject; choose independent body.
+
+Reopen condition: Independent original mode-declaration/sourcephase or qualified rematerialization witness, no volatile/alias/local/register/counter permutation.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -3154,6 +3618,37 @@ Reopen condition: A validated name transfer with independent semantic evidence
 
 - `private-work:croise-aug6-retail.tsv`
 
+## root-boot-packet332-20261004
+
+State: `stopped`. Kind: `research`.
+
+Pin full332-byte body and directcallers, verify six argument widths and table/special descriptor bindings, then author one complete defaultG0 boot unit preserving178controls.
+
+Reopen condition: Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles
+
+- `private-work:parallel-20261004/root-gp/boot-eligible-filtered.json`
+
+## root-boot-packet332-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require complete179symbols equality; retain refusal, no bulkalias until seedexact.
+
+Reopen condition: Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles
+
+- `private-work:parallel-20261004/root-gp/packet332-pin.json`
+- `private-work:parallel-20261004/root-gp/packet332-dis.json`
+
+## root-boot-packet332-wide-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Keep both immutable trials stopped, continue another genuine target or independently qualify compiler/source context.
+
+Reopen condition: Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles
+
+- `private-work:parallel-20261004/root-gp/packet332-final-refusal.json`
+
 ## root-boot-record-leaf-20261004
 
 State: `stopped`. Kind: `research`.
@@ -3184,6 +3679,37 @@ Reopen condition: Independent source/cursor layout and loop lifetime evidence, n
 
 - `private-work:parallel-20261004/root-gp/boot-record-leaf-pin.json`
 - `private-work:parallel-20261004/root-gp/boot-leaf-ghidra-0.json`
+
+## root-boot-sprite396-20261004
+
+State: `stopped`. Kind: `research`.
+
+Pin entire body, cursor/global read widths and representative callers with ten arguments; author ordinary C packet fields, defaultG0 full178boot controls mandatory.
+
+Reopen condition: Independent source object layout/ABI/lifetime evidence; no source or flags cycles
+
+- `private-work:parallel-20261004/root-gp/boot-eligible-filtered.json`
+
+## root-boot-sprite396-storage-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Keep both immutable sources/trials stopped; continue a genuinely different target, no physical aliases.
+
+Reopen condition: Independent source object layout/ABI/lifetime evidence; no source or flags cycles
+
+- `private-work:parallel-20261004/root-gp/sprite-final-refusal.json`
+
+## root-boot-sprite396-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Compare complete179symbols; retain whole-symbol refusal, no aliasbulk until seedexact.
+
+Reopen condition: Independent source object layout/ABI/lifetime evidence; no source or flags cycles
+
+- `private-work:parallel-20261004/root-gp/sprite-pin.json`
+- `private-work:parallel-20261004/root-gp/boot-sprite-ghidra-dis.json`
 
 ## root-core-wide-gp-witness-20261004
 

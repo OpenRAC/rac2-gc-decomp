@@ -71,7 +71,7 @@
     "candidates/boot.c": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
     "candidates/levels/0_aranos_tutorial.c": "e8a5c8d71347d6829e9ff0c040792381ee16d6a12a4f05c745073a82bfa1c579",
     "candidates/levels/10_hrugis_cloud.c": "c128f87a7a5bddf2d9a8e1ab6cc6616e1230c610600ab9f3eecd69bce840361f",
-    "candidates/levels/11_joba.c": "97bac6dbae47d3ec8c1943fce316f6ac4641a49a501df5f0b7773530f7c1d8fa",
+    "candidates/levels/11_joba.c": "b18c42f3c5655a027d812349200d0451ca3320549defd401495c3e81362ca94d",
     "candidates/levels/12_todano.c": "9ff48240e70d8fcb9f042225fc33e32971848af7f6ba578ba95a0ed6caf846e7",
     "candidates/levels/13_boldan.c": "e2de6e74fff739a62128c67b6c40ed139caecfaa5274b3155f7060643761e2db",
     "candidates/levels/14_aranos_prison.c": "6dd8f2463f49ec55558619b444c699d648eba42eb7aa754132a715c5deb7efb0",
@@ -99,7 +99,7 @@
     "config/candidate-catalog.json": "5a21c7d2bed33a6ff469bb4ee8b6dc6247ff76320c2402b01c7ced40ed7d817c",
     "config/level-native/0_aranos_tutorial.json": "0b893fb58ba66e43dff80d805eda1a3237d01bc50b369b9ab006da04162cbc0e",
     "config/level-native/10_hrugis_cloud.json": "fe31790e21bf61ba89b31bcad5d87d0b9d000625f99eb1a08ea25b3bad035498",
-    "config/level-native/11_joba.json": "94448c3c1afc59e2e2ba9944d0c4d5e4968128234d7a8f71d49d979fddb70e4f",
+    "config/level-native/11_joba.json": "1e8039fb782fb7bf4c6e8f6dd75b0be85780b75075f25274362bf5b30126b7f8",
     "config/level-native/12_todano.json": "84b3985eb7fb5379a262bf742d25a9daffe0dba93e8b3947060736b748003b61",
     "config/level-native/13_boldan.json": "2f57c3d30ed5d3f89bd8c925f45877857abb73e9bd37d07b06fd17638b1a7024",
     "config/level-native/14_aranos_prison.json": "061a78a6ea402803a0a2716fabf86f68b441da913a86a52588d947bb5a500c7c",
@@ -130,22 +130,22 @@
     "boot_authored_functions": 178,
     "boot_catalogued_machine_bytes": 9336,
     "identity_basis": "catalogued definitions compared as exact source bytes after recorded symbol-only substitutions; not a new machine proof",
-    "native_authored_variant_catalogued_bytes_upper_bound": 19752,
+    "native_authored_variant_catalogued_bytes_upper_bound": 20020,
     "native_base_family_placements": 215,
     "native_explicit_base_source_families": 8,
-    "native_replicated_catalogued_bytes": 28912,
-    "native_replicated_placements": 477,
-    "native_unique_authored_source_variants": 271,
-    "native_unique_family_or_singleton_work_items": 270,
-    "native_unique_representative_catalogued_bytes": 19728,
-    "native_unmerged_singletons": 262,
+    "native_replicated_catalogued_bytes": 29180,
+    "native_replicated_placements": 478,
+    "native_unique_authored_source_variants": 272,
+    "native_unique_family_or_singleton_work_items": 271,
+    "native_unique_representative_catalogued_bytes": 19996,
+    "native_unmerged_singletons": 263,
     "pilot_family_authored_source_variants": 2,
     "pilot_family_placements": 27,
     "pilot_family_replicated_catalogued_bytes": 648,
     "pilot_family_unique_catalogued_bytes": 24,
     "scope": "authored boot and native candidate catalogues only; excludes replicated boot/common overlay coverage",
     "shared_native_prelude_variants": 1,
-    "total_unique_authored_source_variants_in_scope": 449,
+    "total_unique_authored_source_variants_in_scope": 450,
     "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report."
   },
   "native_source_families": [
@@ -3746,6 +3746,20 @@
       "program": "levels/11_joba",
       "source": "candidates/levels/11_joba.c",
       "symbol": "LVL_11_JOBA_FUN_00317D08"
+    },
+    {
+      "address": 4462696,
+      "body_sha256": "d984e3977da8a51079738383d7ced6fd159a6e0cc733c960961deeb2aaad48ac",
+      "catalogue": "config/level-native/11_joba.json",
+      "catalogued_size": 268,
+      "explicit_symbol_substitutions": {
+        "LVL_11_JOBA_FUN_00441868": "@@FUNCTION@@"
+      },
+      "level": "11_joba",
+      "normalized_body_sha256": "df7ea8fedb23936247a5d57bb64cec3550148446433fef61880b31b17389fdae",
+      "program": "levels/11_joba",
+      "source": "candidates/levels/11_joba.c",
+      "symbol": "LVL_11_JOBA_FUN_00441868"
     },
     {
       "address": 2992216,
@@ -7653,10 +7667,15 @@
           },
           "sha256": "130ee912983978b792504f7722534e932f4247df5913c4329b37b2cbe8085d9f",
           "source_text_bytes": 360
+        },
+        {
+          "fragment": "src/levels/placements/11_joba-class-counter-consume.cfrag",
+          "sha256": "658bbbbdc87c7f8c367d14e80d16ab0dfd5f9d9917cc891967486cc132ae897b",
+          "source_text_bytes": 1027
         }
       ],
-      "sha256": "97bac6dbae47d3ec8c1943fce316f6ac4641a49a501df5f0b7773530f7c1d8fa",
-      "source_text_bytes": 4520
+      "sha256": "b18c42f3c5655a027d812349200d0451ca3320549defd401495c3e81362ca94d",
+      "source_text_bytes": 5547
     },
     "candidates/levels/12_todano.c": {
       "pieces": [

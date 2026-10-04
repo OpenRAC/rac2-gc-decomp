@@ -77,6 +77,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "5f2650f0d6e64a72a0e44e034a84a145": {
+      "artifact": "runtime:actions/5f2650f0d6e64a72a0e44e034a84a145/report.json",
+      "artifact_sha256": "1618073055176df49abf85fb757f353b3e803a0eb4dd522ee9b4ec4aa1dcb862",
+      "directory": "runtime:actions/5f2650f0d6e64a72a0e44e034a84a145",
+      "finished": "2026-10-04T12:43:06.864689+00:00",
+      "id": "5f2650f0d6e64a72a0e44e034a84a145",
+      "integration_credit": 0,
+      "kind": "report",
+      "returncode": 0,
+      "state": "passed"
+    },
     "6a3b57102efb4810a294db8e0cdc186f": {
       "artifact": "runtime:actions/6a3b57102efb4810a294db8e0cdc186f/report.json",
       "artifact_sha256": "7930006c4923d8c4af4b398a4b6345cb0baf90706c607519c0145d24f85ed479",
@@ -185,6 +196,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "bf994c3d821045ae98e26e8d336e8c3d": {
+      "artifact": "prepared-run:builds/campaign-bf994c3d821045ae98e26e8d336e8c3d/report.json",
+      "artifact_sha256": "dc379f03619ded85273e8b4325a4b696510e35b9448c0eedf2731693900b5cf1",
+      "directory": "runtime:actions/bf994c3d821045ae98e26e8d336e8c3d",
+      "finished": "2026-10-04T12:35:40.063671+00:00",
+      "id": "bf994c3d821045ae98e26e8d336e8c3d",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "cc3c89a5251b4c419a9040e2619b49ad": {
       "artifact": "prepared-run:builds/campaign-cc3c89a5251b4c419a9040e2619b49ad/report.json",
       "artifact_sha256": "ed95e7c818c73d8db78627bfec774229c27dfefac01a696a39bb29542e10997c",
@@ -193,6 +215,17 @@
       "id": "cc3c89a5251b4c419a9040e2619b49ad",
       "integration_credit": 0,
       "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
+    "d2dabefb201145ab8271b41c0500c651": {
+      "artifact": "runtime:actions/d2dabefb201145ab8271b41c0500c651/report.json",
+      "artifact_sha256": "1618073055176df49abf85fb757f353b3e803a0eb4dd522ee9b4ec4aa1dcb862",
+      "directory": "runtime:actions/d2dabefb201145ab8271b41c0500c651",
+      "finished": "2026-10-04T12:43:07.787995+00:00",
+      "id": "d2dabefb201145ab8271b41c0500c651",
+      "integration_credit": 0,
+      "kind": "report",
       "returncode": 0,
       "state": "passed"
     },
@@ -3615,7 +3648,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 1365,
+  "revision": 1515,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -13636,6 +13669,108 @@
         }
       ]
     },
+    "native-review-joba-counter-add-v1-20261004": {
+      "budget": 1,
+      "created": "2026-10-04T12:12:58.805723+00:00",
+      "hypothesis": "Owned seed11 fresh complete188-byte class-selected counter increment. Independently pinned state pointer68, six signedword counters E0..F4 and void return. Actual six case blocks follow counter-address order; no globals, helpers, GP or SIMD. Full entry/return/live pin, historical and pending catalog physical exclusions and current complete Joba controls preserved.",
+      "id": "native-review-joba-counter-add-v1-20261004",
+      "kind": "candidate",
+      "last_trial": "33869b6a7ede4e83b489ac963caba5f3",
+      "next_action": "Verify caller ABI then maintained whole-unit trial of all current controls and new188-byte body. Replicate only if exact seed.",
+      "pointers": [],
+      "reopen_condition": "Independent actual state layout, ABI or original source phase evidence; no case/register/expression permutations.",
+      "source": "runtime:bank/parallel-native-review-counter-add-v1/11_joba.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_11_JOBA_FUN_00441978"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-counter-add-v1/catalog.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:13:18.949006+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "33869b6a7ede4e83b489ac963caba5f3"
+        }
+      ]
+    },
+    "native-review-joba-counter-consume-v1-20261004": {
+      "budget": 1,
+      "created": "2026-10-04T12:01:43.990958+00:00",
+      "hypothesis": "Owned seed11 fresh complete268-byte class-selected positive-counter consumption. Independently pinned state pointer68, six signedword counters E0..F4 and boolean return. Actual six case blocks follow counter-address order; no globals, helpers, GP or SIMD. Full entry/return/live pin, historical and pending catalog physical exclusions and current complete Joba controls preserved.",
+      "id": "native-review-joba-counter-consume-v1-20261004",
+      "kind": "candidate",
+      "last_trial": "26aa4cf43ebf490a8fc49795d5bbc8c6",
+      "next_action": "Verify caller ABI then maintained whole-unit trial of all current controls and new268-byte body. Replicate only if exact seed.",
+      "pointers": [],
+      "reopen_condition": "Independent actual state layout, ABI or original source phase evidence; no case/register/expression permutations.",
+      "source": "runtime:bank/parallel-native-review-counter-consume-v1/11_joba.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_11_JOBA_FUN_00441868"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-counter-consume-v1/catalog.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:01:54.721641+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "26aa4cf43ebf490a8fc49795d5bbc8c6"
+        },
+        {
+          "at": "2026-10-04T12:43:08.499047+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
+            "progress/integration.json": "9e11d351bf00d78eb50962910c80319f024671f57378f5f55e36f193c38f63df",
+            "progress/levels/0_aranos_tutorial.json": "bc2eacb33e081a3735d800bdecc54a97f9b1e7e95a6044df8101ae24997271e2",
+            "progress/levels/10_hrugis_cloud.json": "f6cd0b2305a2f8b526c00a34da9d8243557df7c4ea0e7f0e8286cded201f8657",
+            "progress/levels/11_joba.json": "bb650c26aefe86c3c61fe01a2c10a6014a20e5b1f1d423a9ea1e4f60fecc1e25",
+            "progress/levels/12_todano.json": "ef870df5b4bc4308b3ad4a53aebad1ec4e760a11bd586f48e0bcfcd6412a9b22",
+            "progress/levels/13_boldan.json": "93b360263a098d65dd1458a679f3533ef50d6289ec8a6bf8bb0044e0582776ef",
+            "progress/levels/14_aranos_prison.json": "8c1eea045f4ba1efa658504d7ee3112266a360040b3e62232c372fc161689d6e",
+            "progress/levels/15_gorn.json": "1db1f1891055aaee67ff9392eed96641956e47fed736e271f9b1bb42d7b17305",
+            "progress/levels/16_snivelak.json": "845c6d59482bc05ea3ce075496c728b32cd162bb06b492f1eab890608b92e21c",
+            "progress/levels/17_smolg.json": "d9fb5d353cdf926ad8f904687363b6b510f510b05062e993c22f326fc431c4d8",
+            "progress/levels/18_damosel.json": "4b25e8b4d7bc9bf87107fc0f81673f61da111b08f1d5e637e5879def626a2ade",
+            "progress/levels/19_grelbin.json": "24d9b340a381cc3ccdc913d3a7548ed3ab73525c1801861187498c29f7b0b788",
+            "progress/levels/1_oozla.json": "cbe54cdfc9afca30f03250c5e69de09448ca2454de7e83500d501d04a4a89622",
+            "progress/levels/20_yeedil.json": "41289037b53fe56ef587764aead1a61b926bea78169c4156e82fcf07b1d491af",
+            "progress/levels/22_dobbo_orbit.json": "4a5ec66fe944096b463b31a027b2b3f4c1f81cf12c8e73e53cdfec8e0b3a2055",
+            "progress/levels/23_damosel_orbit.json": "714e1cb46855a835c6d8f0cd284975962cb948f37212d2aaa5c4b7ebcfa97f46",
+            "progress/levels/24_ship_shack.json": "a2ab3dd6fd46f9e55ba64fbb43679f48e40dc687b375643c67c56dd7cbfd8025",
+            "progress/levels/25_wupash_nebula.json": "20d40547e03ec00cbee176cafc9e5885d91fc14f798e764c0e0dd2bec67ee9db",
+            "progress/levels/26_jamming_array.json": "2ba6c5a41918f1712ea55f77dd80bd8945b016717faf433de30adcbeec9a72b2",
+            "progress/levels/2_maktar_nebula.json": "a95e6919c3c525e6673a46c6b43f17381858afec7b3590af8396c6d77d26c761",
+            "progress/levels/30_insomniac_museum.json": "d75c7ba9ba9846dbc8ae3e3c553d620b5af0a66010457362fd235a838477f6ee",
+            "progress/levels/3_endako.json": "342b16a95958f563567afa424143fb4725d7377a9f53f7456c6d15824ee3bcc3",
+            "progress/levels/4_barlow.json": "efe8f6383f14f49f26bfaf97f97b6b4b0fc4a7f161420cc52b337c8209460f21",
+            "progress/levels/5_feltzin_system.json": "2aa00c54846ab39e9f1084a8d874598485ecbaf94f7c4b54cfc094dccbaa5026",
+            "progress/levels/6_notak.json": "fa9b3609ece9d100185d5d61398c4e9fbecf5e499ea0e6804823e03fbad673a6",
+            "progress/levels/7_siberius.json": "ef16e86550883e56d799b1634dbfa5174d526ede92f1cd3b31fae4ffdcf8c07d",
+            "progress/levels/8_tabora.json": "c4660c8b356f7d38435ea4a5bb56fc052460033ef59114a9fd35d77e779fe824",
+            "progress/levels/9_dobbo.json": "cebd7cd792fae6b0878151f6a02082bce796f6253425dd204d155ca03b2e9d15",
+            "progress/report.json": "a05f90079ff460be2f16f6a2d6e0889630d53fab846104b988e6ef0ce53ea8f3"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
     "native-review-joba-frame-table-20261004": {
       "address": 3588376,
       "amendments": [
@@ -13746,6 +13881,119 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "84415a72febf4f9fbff972d783b650fe"
+        }
+      ]
+    },
+    "native-review-joba-object-bits-c-v1-20261004": {
+      "amendments": [
+        {
+          "at": "2026-10-04T11:53:46.989849+00:00",
+          "before": {
+            "next_action": "Verify caller side-effect ABI then qualify every current complete control plus new356-byte algorithm in maintained whole unit. Family only after seed exact.",
+            "remaining_difference": null,
+            "reopen_condition": "Independent measured data/object alias, layout or source-phase evidence; no memory volatility assumptions, register forcing, padding or equivalent expression cycles."
+          },
+          "changes": {
+            "next_action": "Park this object-bit family, retain the immutable source and compiler outputs, then select another uncovered algorithm. No equivalent data-view/register/branch permutation or family bulk.",
+            "remaining_difference": "Trial9e45f7a779704ac2abdd3a692490c129 produces the complete356-byte body but67differing bytes, with all17 current controls exact. Field widths, seven-row signed comparison and flag masks agree; resident-base register allocation and recomputation/conditional-delay scheduling differ. No independent type or ABI error found.",
+            "reopen_condition": "Independent original declaration or qualified source-binding/optimizer evidence explaining base-address preparation and delay scheduling; no volatile, forced registers, padding or equivalent-expression cycles."
+          },
+          "reason": "Complete356-byte source remains67bytes different with17 controls exact; no measured ABI/type correction."
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-04T11:46:17.230915+00:00",
+      "hypothesis": "Owned seed11 fresh complete356-byte object state-bit algorithm, seven-row signed-word address scan plus resident scalar gates. Actual anchored data fields, unsigned halfword masks, byte gates and signed short/word widths derive complete pinned instructions; all addresses use existing189E20 binding. No incoming state/helper/GP/SIMD. Current whole Joba controls retained; physical historical/pending catalog, uniqueness and published overlap checks passed. Exact complete equality only.",
+      "id": "native-review-joba-object-bits-c-v1-20261004",
+      "kind": "candidate",
+      "last_trial": "9e45f7a779704ac2abdd3a692490c129",
+      "next_action": "Park this object-bit family, retain the immutable source and compiler outputs, then select another uncovered algorithm. No equivalent data-view/register/branch permutation or family bulk.",
+      "pointers": [],
+      "remaining_difference": "Trial9e45f7a779704ac2abdd3a692490c129 produces the complete356-byte body but67differing bytes, with all17 current controls exact. Field widths, seven-row signed comparison and flag masks agree; resident-base register allocation and recomputation/conditional-delay scheduling differ. No independent type or ABI error found.",
+      "reopen_condition": "Independent original declaration or qualified source-binding/optimizer evidence explaining base-address preparation and delay scheduling; no volatile, forced registers, padding or equivalent-expression cycles.",
+      "source": "runtime:bank/parallel-native-review-object-bits-v1/11_joba.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_11_JOBA_FUN_002E4E60"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-object-bits-v1/catalog.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:46:27.467034+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "9e45f7a779704ac2abdd3a692490c129"
+        }
+      ]
+    },
+    "native-review-joba-polygon-dispatch-v1-20261004": {
+      "budget": 1,
+      "created": "2026-10-04T12:33:04.895537+00:00",
+      "hypothesis": "Owned seed11 fresh complete80-byte indexed polygon-query dispatcher. State164 signed index -1 returns0; otherwise pointer table header count0 and vertexoffset16 call already-integrated boot-shared helper FUN002A8AF0 atJoba32E110. Actual helper source/proof and three-word ABI qualified; never duplicate204-byte helper or count new credit. Current whole Joba controls plus pending exact188 retained. Full live bounds, unique reference, published and historical/pending physical exclusions passed.",
+      "id": "native-review-joba-polygon-dispatch-v1-20261004",
+      "kind": "candidate",
+      "last_trial": "d830ea17cb40482280e214d57e530462",
+      "next_action": "Verify caller ABI then compare all complete controls and new80-byte body in maintained whole unit; replicate only if exact.",
+      "pointers": [],
+      "reopen_condition": "Independent state/header/helper ABI or source phase evidence; no register, padding or equivalent-expression cycling.",
+      "source": "runtime:bank/parallel-native-review-polygon-dispatch-v1/11_joba.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_11_JOBA_FUN_00441808"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-polygon-dispatch-v1/catalog.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:33:17.722673+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "d830ea17cb40482280e214d57e530462"
+        }
+      ]
+    },
+    "native-review-joba-polygon-dispatch-v2-20261004": {
+      "budget": 1,
+      "created": "2026-10-04T12:35:49.429744+00:00",
+      "hypothesis": "Measured common-epilogue CFG correction to d830ea17cb40482280e214d57e530462: all19 controls exact, wrapper84/80. Source early zero return produces separate RA-load epilogues and BEQ invalid path; full reference has BNE valid, explicit zero-result path and exactly one shared RA-load epilogue after helper. Assign result in both branches and return through common endpoint, preserving types/header/ABI/helper/flags and full80 boundary. No register, padding or expression permutation.",
+      "id": "native-review-joba-polygon-dispatch-v2-20261004",
+      "kind": "candidate",
+      "last_trial": "4f785b28cc0542e192cfd09297e4d1a6",
+      "next_action": "Verify caller ABI then compare all complete controls and new80-byte body in maintained whole unit; replicate only if exact.",
+      "pointers": [],
+      "reopen_condition": "Independent state/header/helper ABI or source phase evidence; no register, padding or equivalent-expression cycling.",
+      "source": "runtime:bank/parallel-native-review-polygon-dispatch-v2/11_joba.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_11_JOBA_FUN_00441808"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-polygon-dispatch-v2/catalog.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:36:01.703081+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "4f785b28cc0542e192cfd09297e4d1a6"
         }
       ]
     },
@@ -15846,6 +16094,125 @@
         }
       ]
     },
+    "orbital-gorn-pair-table-lookup-20261004-v1": {
+      "budget": 1,
+      "created": "2026-10-04T12:28:33.332365+00:00",
+      "hypothesis": "Owned seed15. New ordinary68byte two-word-key lookup across32records ofstride16 at231F40. Measuredkeyword4,ownerword0,valueword8,32iterationguard; A0/A1wordkeys,V0signedword or-1. No calls/customincomingstate/GP/MMI/VU/FPU; completepinned/livebody andcallerABI qualification before firsttrial. Rootdatawordwidth andstride alsoseenin neighboringinsert100/has104/delete52helpers; these arenot trialedaliases. AllCURRENTGorn17controls/flags retained, shared/native/history/catalog reservations excluded; seed before family.",
+      "id": "orbital-gorn-pair-table-lookup-20261004-v1",
+      "kind": "candidate",
+      "last_trial": "fde7371a6d2744758f21edaad10ec79d",
+      "next_action": "Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-gorn-pair-table-lookup-v1/evidence.json"
+      ],
+      "program": "levels/15_gorn",
+      "reopen_condition": "Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.",
+      "source": "runtime:bank/parallel-orbital_lots-gorn-pair-table-lookup-v1/15_gorn.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_15_GORN_FUN_00399940"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-gorn-pair-table-lookup-v1/catalog.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:28:36.500890+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "fde7371a6d2744758f21edaad10ec79d"
+        }
+      ]
+    },
+    "orbital-gorn-pool-release-20261004-catalog-v1": {
+      "budget": 1,
+      "created": "2026-10-04T12:16:03.947411+00:00",
+      "hypothesis": "Metadata-only correction after firsttrial6803e8791a8c4fba858c171669ad0e0c measured17controls exact but newfunctionunmeasured because generatedcatalog wrongly usedHrugisnamespace. Correctcatalog toactualdefined Gornsymbol, byte-identical authoredC/current17controls/flags. Ordinary48byte pairedpoolslot release, signedindex/wordcounter andlastactiveflag, callerABI pinned. No sourcecode refinement or flag/tool/acceptance change.",
+      "id": "orbital-gorn-pool-release-20261004-catalog-v1",
+      "kind": "candidate",
+      "last_trial": "b7868c090c054c8d854266bd281820de",
+      "next_action": "Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-gorn-pool-release-v1/evidence.json"
+      ],
+      "program": "levels/15_gorn",
+      "reopen_condition": "Independent original pool/ABI/access-phase evidence; no equivalentexpressioncycle.",
+      "source": "runtime:bank/parallel-orbital_lots-gorn-pool-release-catalog-v1/15_gorn.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_15_GORN_FUN_0039B7B8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-gorn-pool-release-catalog-v1/catalog.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:16:06.724540+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "b7868c090c054c8d854266bd281820de"
+        },
+        {
+          "at": "2026-10-04T12:20:48.096797+00:00",
+          "from": "stopped",
+          "reason": "Correctnamespace makescomplete48bytepoolrelease symbol-size refusal,17controls exact. No localregister/sourcepermutation.",
+          "reopen_condition": "Independent original pool/ABI/access-phase evidence; no equivalentexpressioncycle.",
+          "to": "stopped"
+        }
+      ]
+    },
+    "orbital-gorn-pool-release-20261004-v1": {
+      "budget": 1,
+      "created": "2026-10-04T12:12:47.872020+00:00",
+      "hypothesis": "Owned seed15. New ordinary48byte poolrelease counterpart to independentlyqualified bootinsert FUN00300280: A0poolpointer,A1signed32index; clears indexed word columns0/40,decrements signed word88,andclears word89when countzero. No globals/calls/customregs/GP/FPU/MMI/VU; completepin/liveboundary andcaller/outputABI before trial. Preserveall CURRENTGorncontrols/flags; allshared/native/catalog/register/history physicalaliases excluded. Seed only before aliases, no uncompiled proposal handoff.",
+      "id": "orbital-gorn-pool-release-20261004-v1",
+      "kind": "candidate",
+      "last_trial": "6803e8791a8c4fba858c171669ad0e0c",
+      "next_action": "Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-gorn-pool-release-v1/evidence.json"
+      ],
+      "program": "levels/15_gorn",
+      "reopen_condition": "No replay of incorrectmetadata; correctnamespacefollowupiscanonical.",
+      "source": "runtime:bank/parallel-orbital_lots-gorn-pool-release-v1/15_gorn.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_0039B7B8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-gorn-pool-release-v1/catalog.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:12:52.399081+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "6803e8791a8c4fba858c171669ad0e0c"
+        },
+        {
+          "at": "2026-10-04T12:20:47.938810+00:00",
+          "from": "stopped",
+          "reason": "Privatecatalog namespacegenerationerror:actualCdefinesGornbutcatalog requestedHrugis,17controls exact,newfunctionunmeasured. Metadata-correctedfirstsource trial preserved separately.",
+          "reopen_condition": "No replay of incorrectmetadata; correctnamespacefollowupiscanonical.",
+          "to": "stopped"
+        }
+      ]
+    },
     "orbital-hrugis-angle-distance-20261004-v1": {
       "budget": 1,
       "created": "2026-10-04T10:13:02.503182+00:00",
@@ -16178,6 +16545,94 @@
           "from": "stopped",
           "reason": "Complete96byte object initializer symbol-size refusal,18CURRENTcontrols exact. Correct directUpdateMoby3784caller0x4103D0 pointerABI verifiedaftercorrecting initiallymisconvertedcallerreference; no positiveclaim.",
           "reopen_condition": "Independent original storage/layout/access-phase evidence only; no sourcepermutation.",
+          "to": "stopped"
+        }
+      ]
+    },
+    "orbital-hrugis-pool-word-getter-20261004-v1": {
+      "budget": 1,
+      "created": "2026-10-04T11:46:37.715721+00:00",
+      "hypothesis": "Owned seed10. New ordinary40byte boundedpoolwordgetter: fullunsignedA0<64 before narrowing to32bitaddressindex,SLLstride16,LWfield4,V0word or-3. Indexedbyte-storageview with16byte stride; neighboring pinnedclear37FBA0 independently walks64records withstride16 and clearswords0/4. No calls/GP/customincomingstate/reservedregs; allCURRENT18controls/profile preserved. Fullpin/boundary/callerABI/fullhistoryexclusion before seedqualification; no aliases before exactseed.",
+      "id": "orbital-hrugis-pool-word-getter-20261004-v1",
+      "kind": "candidate",
+      "last_trial": "c03141f295384463b13520b17632b891",
+      "next_action": "Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pool-word-getter-v1/evidence.json"
+      ],
+      "program": "levels/10_hrugis_cloud",
+      "reopen_condition": "Independent original index/storage ABI evidence only; no castcycles.",
+      "source": "runtime:bank/parallel-orbital_lots-pool-word-getter-v1/10_hrugis_cloud.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_0037FE78"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pool-word-getter-v1/catalog.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:46:39.439537+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "c03141f295384463b13520b17632b891"
+        },
+        {
+          "at": "2026-10-04T11:57:24.554132+00:00",
+          "from": "stopped",
+          "reason": "First40bytegetter withdefaultGhidraulongindex producedextra64to32casts andcomplete-size refusal;18controls exact. IndependentsixcallerLWwordABI followup preserved.",
+          "reopen_condition": "Independent original index/storage ABI evidence only; no castcycles.",
+          "to": "stopped"
+        }
+      ]
+    },
+    "orbital-hrugis-pool-word-getter-20261004-v2": {
+      "budget": 1,
+      "created": "2026-10-04T11:52:28.158046+00:00",
+      "hypothesis": "Independent caller-derived ABI correction: all six direct callers of wrapper37FD68 load A1 with LW (recordoffsets94/9C/A0/A4 or238); wrappermovesA1toS0 thenpassesS0asA0to40byte getter, retaining32bitwordcontract. DefaultGhidraulongassumptioninV1 introduced DSLL/DSRA64to32casts andwrongsize; nativeusesSLLwordaddressingwithoutcasts. Model unsigned32 index and signed32return, same64bound/16stride/field4/-3error. Unknowntailbytes modeledasbytes. No flag/tool/reg/operandforcing; all18currentcontrols preserved. Sixcallerwindows independently pinned andsaved before thisoneABI-refinement trial.",
+      "id": "orbital-hrugis-pool-word-getter-20261004-v2",
+      "kind": "candidate",
+      "last_trial": "04680975b87f4938af93a9f47e6797d3",
+      "next_action": "Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pool-word-getter-v1/evidence.json",
+        "private-work:parallel-20261004/orbital_lots/pool-wrapper-callers.json",
+        "private-work:parallel-20261004/orbital_lots/pool-wrapper-caller-310ec8.json",
+        "private-work:parallel-20261004/orbital_lots/pool-wrapper-caller-320a00.json",
+        "private-work:parallel-20261004/orbital_lots/pool-wrapper-caller-364700.json"
+      ],
+      "program": "levels/10_hrugis_cloud",
+      "reopen_condition": "Independent original record/output access-phase or compiler evidence; no thirdlocalpermutation.",
+      "source": "runtime:bank/parallel-orbital_lots-pool-word-getter-v2/10_hrugis_cloud.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_0037FE78"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pool-word-getter-v2/catalog.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:52:31.043529+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "04680975b87f4938af93a9f47e6797d3"
+        },
+        {
+          "at": "2026-10-04T11:57:24.701890+00:00",
+          "from": "stopped",
+          "reason": "Sixcaller-qualified unsigned32index removescasts;complete40bytes stilldiff24,18controls exact. No thirdsource oraliasbulk.",
+          "reopen_condition": "Independent original record/output access-phase or compiler evidence; no thirdlocalpermutation.",
           "to": "stopped"
         }
       ]
@@ -16806,6 +17261,1014 @@
         }
       ]
     },
+    "orbital-pair-lookup-family-20261004-0_aranos_tutorial": {
+      "address": 3661288,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-0_aranos_tutorial",
+      "kind": "candidate",
+      "last_trial": "d9294ffe28d0479cac8c13a52704925b",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/0_aranos_tutorial/evidence.json"
+      ],
+      "program": "levels/0_aranos_tutorial",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/0_aranos_tutorial/0_aranos_tutorial.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_0_ARANOS_TUTORIAL_FUN_0037DDE8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/0_aranos_tutorial/catalog.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:14.319956+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d9294ffe28d0479cac8c13a52704925b"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-10_hrugis_cloud": {
+      "address": 3755192,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All18CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-10_hrugis_cloud",
+      "kind": "candidate",
+      "last_trial": "5448d5cc242d4beea17bf45b57817696",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/10_hrugis_cloud/evidence.json"
+      ],
+      "program": "levels/10_hrugis_cloud",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/10_hrugis_cloud/10_hrugis_cloud.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_00394CB8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/10_hrugis_cloud/catalog.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:14.978368+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "5448d5cc242d4beea17bf45b57817696"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-11_joba": {
+      "address": 3745360,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All18CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-11_joba",
+      "kind": "candidate",
+      "last_trial": "7193eb4dcae549568d7f29e324dcd897",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/11_joba/evidence.json"
+      ],
+      "program": "levels/11_joba",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/11_joba/11_joba.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_11_JOBA_FUN_00392650"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/11_joba/catalog.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:15.640247+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "7193eb4dcae549568d7f29e324dcd897"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-12_todano": {
+      "address": 3683936,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All18CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-12_todano",
+      "kind": "candidate",
+      "last_trial": "128f47c7c12545f2b1334bd055ef7f02",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/12_todano/evidence.json"
+      ],
+      "program": "levels/12_todano",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/12_todano/12_todano.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_12_TODANO_FUN_00383660"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/12_todano/catalog.json",
+          "id": "12_todano",
+          "reference": "runtime:references/levels/12_todano/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:16.282432+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "128f47c7c12545f2b1334bd055ef7f02"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-13_boldan": {
+      "address": 3700552,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-13_boldan",
+      "kind": "candidate",
+      "last_trial": "c708220731ea4f48a68ad1270d3bf909",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/13_boldan/evidence.json"
+      ],
+      "program": "levels/13_boldan",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/13_boldan/13_boldan.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_13_BOLDAN_FUN_00387748"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/13_boldan/catalog.json",
+          "id": "13_boldan",
+          "reference": "runtime:references/levels/13_boldan/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:16.923603+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "c708220731ea4f48a68ad1270d3bf909"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-14_aranos_prison": {
+      "address": 3704216,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All18CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-14_aranos_prison",
+      "kind": "candidate",
+      "last_trial": "a59487fe09504eceb00715162f4aac4e",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/14_aranos_prison/evidence.json"
+      ],
+      "program": "levels/14_aranos_prison",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/14_aranos_prison/14_aranos_prison.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_14_ARANOS_PRISON_FUN_00388598"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/14_aranos_prison/catalog.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:17.546089+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "a59487fe09504eceb00715162f4aac4e"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-16_snivelak": {
+      "address": 3627696,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-16_snivelak",
+      "kind": "candidate",
+      "last_trial": "0d9946d4b2c04179802875755be9eaca",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/16_snivelak/evidence.json"
+      ],
+      "program": "levels/16_snivelak",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/16_snivelak/16_snivelak.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_16_SNIVELAK_FUN_00375AB0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/16_snivelak/catalog.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:18.186748+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "0d9946d4b2c04179802875755be9eaca"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-17_smolg": {
+      "address": 3675152,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-17_smolg",
+      "kind": "candidate",
+      "last_trial": "2305cf93e9db40b381955f4cc6c3bc68",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/17_smolg/evidence.json"
+      ],
+      "program": "levels/17_smolg",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/17_smolg/17_smolg.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_17_SMOLG_FUN_00381410"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/17_smolg/catalog.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:18.794773+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "2305cf93e9db40b381955f4cc6c3bc68"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-18_damosel": {
+      "address": 3785240,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-18_damosel",
+      "kind": "candidate",
+      "last_trial": "45d648497b3643caae39534a4a5c7790",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/18_damosel/evidence.json"
+      ],
+      "program": "levels/18_damosel",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/18_damosel/18_damosel.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_18_DAMOSEL_FUN_0039C218"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/18_damosel/catalog.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:19.421026+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "45d648497b3643caae39534a4a5c7790"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-19_grelbin": {
+      "address": 3653440,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All15CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-19_grelbin",
+      "kind": "candidate",
+      "last_trial": "b50cd18f84b94253aefbcb2da99ec134",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/19_grelbin/evidence.json"
+      ],
+      "program": "levels/19_grelbin",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/19_grelbin/19_grelbin.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_19_GRELBIN_FUN_0037BF40"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/19_grelbin/catalog.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:20.051177+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "b50cd18f84b94253aefbcb2da99ec134"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-1_oozla": {
+      "address": 3621032,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All16CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-1_oozla",
+      "kind": "candidate",
+      "last_trial": "3793cb89bec24bf0a2758613da6388a3",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/1_oozla/evidence.json"
+      ],
+      "program": "levels/1_oozla",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/1_oozla/1_oozla.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_1_OOZLA_FUN_003740A8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/1_oozla/catalog.json",
+          "id": "1_oozla",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:20.667691+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3793cb89bec24bf0a2758613da6388a3"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-20_yeedil": {
+      "address": 3759896,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-20_yeedil",
+      "kind": "candidate",
+      "last_trial": "48ef714e69164bebbfdda52d85e77e68",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/20_yeedil/evidence.json"
+      ],
+      "program": "levels/20_yeedil",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/20_yeedil/20_yeedil.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_20_YEEDIL_FUN_00395F18"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/20_yeedil/catalog.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:21.303514+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "48ef714e69164bebbfdda52d85e77e68"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-22_dobbo_orbit": {
+      "address": 3675496,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-22_dobbo_orbit",
+      "kind": "candidate",
+      "last_trial": "0340475264334dfb94e41d1e6d387bb9",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/22_dobbo_orbit/evidence.json"
+      ],
+      "program": "levels/22_dobbo_orbit",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/22_dobbo_orbit/22_dobbo_orbit.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_22_DOBBO_ORBIT_FUN_00381568"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/22_dobbo_orbit/catalog.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:21.928095+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "0340475264334dfb94e41d1e6d387bb9"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-23_damosel_orbit": {
+      "address": 3693696,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-23_damosel_orbit",
+      "kind": "candidate",
+      "last_trial": "21f792be2c8c43c4a868503c5cbeb699",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/23_damosel_orbit/evidence.json"
+      ],
+      "program": "levels/23_damosel_orbit",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/23_damosel_orbit/23_damosel_orbit.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_23_DAMOSEL_ORBIT_FUN_00385C80"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/23_damosel_orbit/catalog.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:references/levels/23_damosel_orbit/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:22.588684+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "21f792be2c8c43c4a868503c5cbeb699"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-24_ship_shack": {
+      "address": 3625072,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All36CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-24_ship_shack",
+      "kind": "candidate",
+      "last_trial": "eb1e9e7f4f0347c0aca94ae4c15f2050",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/24_ship_shack/evidence.json"
+      ],
+      "program": "levels/24_ship_shack",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/24_ship_shack/24_ship_shack.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_24_SHIP_SHACK_FUN_00375070"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/24_ship_shack/catalog.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:references/levels/24_ship_shack/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:23.292703+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "eb1e9e7f4f0347c0aca94ae4c15f2050"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-25_wupash_nebula": {
+      "address": 3722880,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-25_wupash_nebula",
+      "kind": "candidate",
+      "last_trial": "7da160193ab34f7697261ccad20b136b",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/25_wupash_nebula/evidence.json"
+      ],
+      "program": "levels/25_wupash_nebula",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/25_wupash_nebula/25_wupash_nebula.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_25_WUPASH_NEBULA_FUN_0038CE80"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/25_wupash_nebula/catalog.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:23.879312+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "7da160193ab34f7697261ccad20b136b"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-26_jamming_array": {
+      "address": 3659152,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-26_jamming_array",
+      "kind": "candidate",
+      "last_trial": "a0ce81e52f0444b086ba607b3b0df1c9",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/26_jamming_array/evidence.json"
+      ],
+      "program": "levels/26_jamming_array",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/26_jamming_array/26_jamming_array.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_26_JAMMING_ARRAY_FUN_0037D590"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/26_jamming_array/catalog.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:24.484282+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "a0ce81e52f0444b086ba607b3b0df1c9"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-2_maktar_nebula": {
+      "address": 3691928,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-2_maktar_nebula",
+      "kind": "candidate",
+      "last_trial": "3e79947acf3a4e0ea6beb3f3218197a1",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/2_maktar_nebula/evidence.json"
+      ],
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/2_maktar_nebula/2_maktar_nebula.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_2_MAKTAR_NEBULA_FUN_00385598"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/2_maktar_nebula/catalog.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:25.100902+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3e79947acf3a4e0ea6beb3f3218197a1"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-30_insomniac_museum": {
+      "address": 3663128,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-30_insomniac_museum",
+      "kind": "candidate",
+      "last_trial": "7829a6fc1a6c477baa272032bab72845",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/30_insomniac_museum/evidence.json"
+      ],
+      "program": "levels/30_insomniac_museum",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/30_insomniac_museum/30_insomniac_museum.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_30_INSOMNIAC_MUSEUM_FUN_0037E518"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/30_insomniac_museum/catalog.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:25.715626+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "7829a6fc1a6c477baa272032bab72845"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-3_endako": {
+      "address": 3666776,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All16CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-3_endako",
+      "kind": "candidate",
+      "last_trial": "dfeeb6ca964b492380ffdaffb2b3ff40",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/3_endako/evidence.json"
+      ],
+      "program": "levels/3_endako",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/3_endako/3_endako.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_0037F358"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/3_endako/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:26.316588+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "dfeeb6ca964b492380ffdaffb2b3ff40"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-4_barlow": {
+      "address": 3816200,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All18CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-4_barlow",
+      "kind": "candidate",
+      "last_trial": "718fd238329e438fa27aa2316842f194",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/4_barlow/evidence.json"
+      ],
+      "program": "levels/4_barlow",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/4_barlow/4_barlow.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_4_BARLOW_FUN_003A3B08"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/4_barlow/catalog.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:26.938467+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "718fd238329e438fa27aa2316842f194"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-5_feltzin_system": {
+      "address": 3747800,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-5_feltzin_system",
+      "kind": "candidate",
+      "last_trial": "604912d6a2574152bbc1846b8e4c8c10",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/5_feltzin_system/evidence.json"
+      ],
+      "program": "levels/5_feltzin_system",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/5_feltzin_system/5_feltzin_system.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_5_FELTZIN_SYSTEM_FUN_00392FD8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/5_feltzin_system/catalog.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:27.562422+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "604912d6a2574152bbc1846b8e4c8c10"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-6_notak": {
+      "address": 3937480,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All19CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-6_notak",
+      "kind": "candidate",
+      "last_trial": "b42fcab1d20244cbb1bfc5e319769122",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/6_notak/evidence.json"
+      ],
+      "program": "levels/6_notak",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/6_notak/6_notak.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_6_NOTAK_FUN_003C14C8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/6_notak/catalog.json",
+          "id": "6_notak",
+          "reference": "runtime:references/levels/6_notak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:28.204557+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "b42fcab1d20244cbb1bfc5e319769122"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-7_siberius": {
+      "address": 3620544,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All15CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-7_siberius",
+      "kind": "candidate",
+      "last_trial": "239cfa6457f0441b85894f350a3d6f4e",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/7_siberius/evidence.json"
+      ],
+      "program": "levels/7_siberius",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/7_siberius/7_siberius.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_7_SIBERIUS_FUN_00373EC0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/7_siberius/catalog.json",
+          "id": "7_siberius",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:28.820208+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "239cfa6457f0441b85894f350a3d6f4e"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-8_tabora": {
+      "address": 3729184,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All16CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-8_tabora",
+      "kind": "candidate",
+      "last_trial": "7af38300e1004aad8eab1ed40361c5e2",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/8_tabora/evidence.json"
+      ],
+      "program": "levels/8_tabora",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/8_tabora/8_tabora.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_8_TABORA_FUN_0038E720"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/8_tabora/catalog.json",
+          "id": "8_tabora",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:29.436763+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "7af38300e1004aad8eab1ed40361c5e2"
+        }
+      ]
+    },
+    "orbital-pair-lookup-family-20261004-9_dobbo": {
+      "address": 3650320,
+      "budget": 1,
+      "created": "2026-10-04T12:40:11.256450+00:00",
+      "hypothesis": "Reserved complete68byte two-key lookupfamily, seedfde7371a6d2744758f21edaad10ec79d18/18exact. Complete livebody/pin/callerABI independentlyverified, onlytwoLUI/ADDI relocationimmediates0/8 vary and resolveone512byte32x16table. All17CURRENTcontrols/catalogflags/GP preserved, no overlaps/reservations or source/profilevariation.",
+      "id": "orbital-pair-lookup-family-20261004-9_dobbo",
+      "kind": "candidate",
+      "last_trial": "fd9750dbfec545c5bcc97b20443fb5e9",
+      "next_action": "Qualify this complete intended current source unit; preserve any refusal and publish only after rootfullimagegates.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-pair-lookup-family/9_dobbo/evidence.json"
+      ],
+      "program": "levels/9_dobbo",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "source": "runtime:bank/parallel-orbital_lots-pair-lookup-family/9_dobbo/9_dobbo.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_9_DOBBO_FUN_0037B310"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-pair-lookup-family/9_dobbo/catalog.json",
+          "id": "9_dobbo",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:40:30.061382+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "fd9750dbfec545c5bcc97b20443fb5e9"
+        }
+      ]
+    },
+    "orbital-pair-table-lookup-family-20261004": {
+      "address": 3774784,
+      "budget": 1,
+      "created": "2026-10-04T12:36:46.730585+00:00",
+      "hypothesis": "Global reservation ofordinarytwo-key tablelookup68family, seedfde7371a6d2744758f21edaad10ec79d18/18exact.27completeinstructionshapes differonly measuredLUI/ADDI relocationimmediates0/8, one512byte32x16table perprogram. orbital_lots ownsprivatequalification, rootpublicintegration. Excludesallpublished/currentcatalog/task spans.",
+      "id": "orbital-pair-table-lookup-family-20261004",
+      "kind": "research",
+      "next_action": "Verifyeachlivepin/boundary/callerABI and qualify all27CURRENTwholeunits through maintainedCLI, preserveflags/GP/sourcebasenames.",
+      "pointers": [
+        "private-work:parallel-20261004/orbital_lots/pair-lookup-family-pending.json"
+      ],
+      "program": "levels/15_gorn",
+      "reopen_condition": "Current source/catalog/reference drift or independentlymeasuredABI/layout only.",
+      "size": 68,
+      "state": "queued",
+      "symbols": [
+        "LVL_0_ARANOS_TUTORIAL_FUN_0037DDE8",
+        "LVL_10_HRUGIS_CLOUD_FUN_00394CB8",
+        "LVL_11_JOBA_FUN_00392650",
+        "LVL_12_TODANO_FUN_00383660",
+        "LVL_13_BOLDAN_FUN_00387748",
+        "LVL_14_ARANOS_PRISON_FUN_00388598",
+        "LVL_15_GORN_FUN_00399940",
+        "LVL_16_SNIVELAK_FUN_00375AB0",
+        "LVL_17_SMOLG_FUN_00381410",
+        "LVL_18_DAMOSEL_FUN_0039C218",
+        "LVL_19_GRELBIN_FUN_0037BF40",
+        "LVL_1_OOZLA_FUN_003740A8",
+        "LVL_20_YEEDIL_FUN_00395F18",
+        "LVL_22_DOBBO_ORBIT_FUN_00381568",
+        "LVL_23_DAMOSEL_ORBIT_FUN_00385C80",
+        "LVL_24_SHIP_SHACK_FUN_00375070",
+        "LVL_25_WUPASH_NEBULA_FUN_0038CE80",
+        "LVL_26_JAMMING_ARRAY_FUN_0037D590",
+        "LVL_2_MAKTAR_NEBULA_FUN_00385598",
+        "LVL_30_INSOMNIAC_MUSEUM_FUN_0037E518",
+        "LVL_3_ENDAKO_FUN_0037F358",
+        "LVL_4_BARLOW_FUN_003A3B08",
+        "LVL_5_FELTZIN_SYSTEM_FUN_00392FD8",
+        "LVL_6_NOTAK_FUN_003C14C8",
+        "LVL_7_SIBERIUS_FUN_00373EC0",
+        "LVL_8_TABORA_FUN_0038E720",
+        "LVL_9_DOBBO_FUN_0037B310"
+      ],
+      "transitions": []
+    },
     "parallel-boot-analysis-aranos-channel-records-research": {
       "address": 3504128,
       "created": "2026-10-04T10:09:36.769292+00:00",
@@ -17252,6 +18715,26 @@
         }
       ]
     },
+    "parallel-boot-analysis-maktar-allocator-wrapper-research": {
+      "address": 4329808,
+      "created": "2026-10-04T12:41:06.099867+00:00",
+      "hypothesis": "Owner boot_analysis seed2. New64-byte allocatorwrapper3332byte allocation, pointerreturn, qualifiedG0SDAheapwordstore andthree scalarobject defaults. Rootsuggested independenttarget, no priortrial/ownership., fingerprint 02b1c8282941838c853ecb07df0b574fce2070a87017add469e4383fca8793a6. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no MMI/VU. Separate from all prior parked families.",
+      "id": "parallel-boot-analysis-maktar-allocator-wrapper-research",
+      "kind": "research",
+      "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "size": 64,
+      "state": "queued",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_00421150"
+      ],
+      "transitions": []
+    },
     "parallel-boot-analysis-maktar-default-records-research": {
       "address": 4329872,
       "created": "2026-10-04T11:40:13.495751+00:00",
@@ -17266,11 +18749,112 @@
       "program": "levels/2_maktar_nebula",
       "reopen_condition": "New independent count/layout/sourcephase evidence only",
       "size": 568,
-      "state": "queued",
+      "state": "done",
       "symbols": [
         "LVL_0_MAKTAR_NEBULA_FUN_00421190"
       ],
-      "transitions": []
+      "transitions": [
+        {
+          "at": "2026-10-04T11:53:59.661465+00:00",
+          "from": "queued",
+          "reason": "FullABI/GPidentity plus two complete current-control measurements retained; no manualcredit",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
+    "parallel-boot-analysis-maktar-default-records-v1": {
+      "address": 4329872,
+      "budget": 2,
+      "created": "2026-10-04T11:43:05.658520+00:00",
+      "hypothesis": "Owner boot_analysis seed2. New568-byte scalar allocator/descriptor initialization and30record pluspaired119record defaults; verifiedbootREGINFO GP1AEFF0, explicitqualifiedSDA data declarations under unchangedG0, fingerprint 84234ca8cf279b7113ee1395af86cf5c6961b8cbf9abee26c89dd53745cbdbe3. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no MMI/VU. Separate from all prior parked families. GP linkerbinding1AEFF0 is observed directlyin pinnedbootREGINFO, nottuning; flagsunchangedG0. FourexplicitSDAobjects use ordinary word/addressrelocations,no wideSDA. All17currentcontrols preserved. Helper421150full64 ignoresincomingA0 andreturns pointerunused; knowncallerargument0 retained. Datarecordsizes32/16/descriptor32 asserted, clearwords andSFdefaults representedas ordinaryscalarstorage. No occurrencealiases/volatile/padding/ASM/forcedregs.",
+      "id": "parallel-boot-analysis-maktar-default-records-v1",
+      "kind": "candidate",
+      "last_trial": "4d5e0cc0dfac432bbbd7a91858312474",
+      "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "size": 568,
+      "source": "runtime:bank/parallel-boot_analysis-defaults-v1/2_maktar_nebula.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_00421190"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot_analysis-defaults-v1/catalog.json",
+          "id": "maktar",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:43:08.258001+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "4d5e0cc0dfac432bbbd7a91858312474"
+        }
+      ]
+    },
+    "parallel-boot-analysis-maktar-default-records-v2": {
+      "address": 4329872,
+      "amendments": [
+        {
+          "at": "2026-10-04T11:53:59.493915+00:00",
+          "before": {
+            "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+            "remaining_difference": null,
+            "reopen_condition": "New independent count/layout/sourcephase evidence only"
+          },
+          "changes": {
+            "next_action": "Park scalar defaults568 and physicalaliases; keep G0SDA address-taking evidence for root compilerqualification and select a new independent body.",
+            "remaining_difference": "V14d5e0cc0 anddecl-modev24818e8fe both548/568 with IDENTICALobject46e632558433e8acebcc9c840499966acde7296b3ff778c91370a9bec7890d1a; all17controls exact at observedGP1AEFF0. GPwordstorecorrect but three address-taking forms remainabsolute; S0save/descriptorbase/storeorder also differ.",
+            "reopen_condition": "Root-qualified SDA address-taking/profile witness and independent original descriptor/loop sourcephase evidence; no ownflagmatrix, type/local/register/alias/store permutations."
+          },
+          "reason": "Identical object proves opaqueSDAaddress decl-mode hypothesis does not alter G0 lowering"
+        }
+      ],
+      "budget": 2,
+      "created": "2026-10-04T11:50:50.507445+00:00",
+      "hypothesis": "Owner boot_analysis seed2. New568-byte scalar allocator/descriptor initialization and30record pluspaired119record defaults; verifiedbootREGINFO GP1AEFF0, explicitqualifiedSDA data declarations under unchangedG0, fingerprint 84234ca8cf279b7113ee1395af86cf5c6961b8cbf9abee26c89dd53745cbdbe3. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no MMI/VU. Separate from all prior parked families. GP linkerbinding1AEFF0 is observed directlyin pinnedbootREGINFO, nottuning; flagsunchangedG0. FourexplicitSDAobjects use ordinary word/addressrelocations,no wideSDA. All17currentcontrols preserved. Helper421150full64 ignoresincomingA0 andreturns pointerunused; knowncallerargument0 retained. Datarecordsizes32/16/descriptor32 asserted, clearwords andSFdefaults representedas ordinaryscalarstorage. No occurrencealiases/volatile/padding/ASM/forcedregs. V1produced548/568, all17controls exact. ObservedG0declmode: explicitSDA pointerwordstore emitsGP+2F78 correctly butthree array-address expressions emitabsoluteLA rather thanpinnedGP+2F80/90/98. Thoseobjects are addressedonly viaopaquevoid* fields; sizes16/8/8were inferredspacing,notaccessedABIwidth. V2 usesminimalopaque byteprefix storage anchors andaddress-ofscalar, preservingalladdresses andno datareads, to testqualifiedSDA address-declaration mode. This is one measuredmode hypothesis,no G8/flags/tool/regs changes; parkifrefused.",
+      "id": "parallel-boot-analysis-maktar-default-records-v2",
+      "kind": "candidate",
+      "last_trial": "4818e8fe65024c11ab12a46ed718642b",
+      "next_action": "Park scalar defaults568 and physicalaliases; keep G0SDA address-taking evidence for root compilerqualification and select a new independent body.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "remaining_difference": "V14d5e0cc0 anddecl-modev24818e8fe both548/568 with IDENTICALobject46e632558433e8acebcc9c840499966acde7296b3ff778c91370a9bec7890d1a; all17controls exact at observedGP1AEFF0. GPwordstorecorrect but three address-taking forms remainabsolute; S0save/descriptorbase/storeorder also differ.",
+      "reopen_condition": "Root-qualified SDA address-taking/profile witness and independent original descriptor/loop sourcephase evidence; no ownflagmatrix, type/local/register/alias/store permutations.",
+      "size": 568,
+      "source": "runtime:bank/parallel-boot_analysis-defaults-v2/2_maktar_nebula.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_00421190"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot_analysis-defaults-v2/catalog.json",
+          "id": "maktar",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:50:53.053242+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "4818e8fe65024c11ab12a46ed718642b"
+        }
+      ]
     },
     "parallel-boot-analysis-maktar-grid-blend-research": {
       "address": 3733136,
@@ -17352,6 +18936,320 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "4638a716f8304ab69cba461f8e5c1692"
+        }
+      ]
+    },
+    "parallel-boot-analysis-maktar-group-range-advance-research": {
+      "address": 3042504,
+      "created": "2026-10-04T12:26:39.854106+00:00",
+      "hypothesis": "Owner boot_analysis seed2. New228-byte call-free scalar integer-delta grouped-range advancement withI32outputpointers andsigned16initialcursorfields; independentlyboundedcallee ofparked432, not a physicalalias, fingerprint 9af18c66f6f24f29351cb30e4ba561b80e5e5c2a9d0104d69fbb4d8bcb63fcc5. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no GP/MMI/VU. Separate from all prior parked families.",
+      "id": "parallel-boot-analysis-maktar-group-range-advance-research",
+      "kind": "research",
+      "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "size": 228,
+      "state": "done",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_002E6CC8"
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:39:43.428375+00:00",
+          "from": "queued",
+          "reason": "Corrected228pins/fullABI and retained measurements complete, zero credit",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
+    "parallel-boot-analysis-maktar-group-range-advance-v1": {
+      "address": 3042504,
+      "budget": 2,
+      "created": "2026-10-04T12:28:03.421115+00:00",
+      "hypothesis": "Owner boot_analysis seed2. New228-byte call-free scalar integer-delta grouped-range advancement withI32outputpointers andsigned16initialcursorfields; independentlyboundedcallee ofparked432, not a physicalalias, fingerprint 9af18c66f6f24f29351cb30e4ba561b80e5e5c2a9d0104d69fbb4d8bcb63fcc5. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no GP/MMI/VU. Separate from all prior parked families. Complete228boundary2E6CC8..2E6DAB, caller2E6DD0 passes integerdelta andtwo distinctstackword outputs. Datawidths proven bySW outputs/LH state/LWstart-limit-key-count; no callbacks/GP/MMI/VU. Initialreference was only ABI helper pin, never priorprimarytrial. AllCURRENTcontrols preserved.",
+      "id": "parallel-boot-analysis-maktar-group-range-advance-v1",
+      "kind": "candidate",
+      "last_trial": "323afc129363498c9f6b65e227ac1fcf",
+      "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "size": 228,
+      "source": "runtime:bank/parallel-boot_analysis-range-v1/2_maktar_nebula.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_002E6CC8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot_analysis-range-v1/catalog.json",
+          "id": "maktar",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:28:05.840867+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "323afc129363498c9f6b65e227ac1fcf"
+        }
+      ]
+    },
+    "parallel-boot-analysis-maktar-group-range-pinrepair": {
+      "address": 3042504,
+      "amendments": [
+        {
+          "at": "2026-10-04T12:39:43.261671+00:00",
+          "before": {
+            "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+            "remaining_difference": null,
+            "reopen_condition": "New independent count/layout/sourcephase evidence only"
+          },
+          "changes": {
+            "next_action": "Park corrected228rangehelper andphysicalaliases; retain exactsigned-address repair and qualify a new independent target.",
+            "remaining_difference": "Correctpintrial a2f6c826f89544e3957426d8b1b8adf1:228size11differences, all17controls exact. Earlier323afc12 hadtwo additionalwrong-high bytes. Remainingarithmetic/equality registerassociation has no independent sourcewitness.",
+            "reopen_condition": "Independent original arithmetic/operand-type/sourcephase evidence; no equivalent expression/local/register permutations. Correctstate/table bindings1BD940/1BDCC8 mandatory."
+          },
+          "reason": "Corrected signeddata bindings measured; strict11-byte refusal no arithmeticcycling"
+        }
+      ],
+      "budget": 2,
+      "created": "2026-10-04T12:32:01.864435+00:00",
+      "hypothesis": "Owner boot_analysis seed2. New228-byte call-free scalar integer-delta grouped-range advancement withI32outputpointers andsigned16initialcursorfields; independentlyboundedcallee ofparked432, not a physicalalias, fingerprint 9af18c66f6f24f29351cb30e4ba561b80e5e5c2a9d0104d69fbb4d8bcb63fcc5. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no GP/MMI/VU. Separate from all prior parked families. Complete228boundary2E6CC8..2E6DAB, caller2E6DD0 passes integerdelta andtwo distinctstackword outputs. Datawidths proven bySW outputs/LH state/LWstart-limit-key-count; no callbacks/GP/MMI/VU. Initialreference was only ABI helper pin, never priorprimarytrial. AllCURRENTcontrols preserved. Pinbinding repair ONLY: negative lowimmediates mustsignextend. PinnedLUI1C+ADDIU-26C0=>1BD940 and-2338=>1BDCC8, notprior1CD... references. Wholeworddiff directlyshowswronghighfields. Correctsource labels/catalogaddresses; preservealltypes/algorithm/flags. Priorv1isretainednegative, notcorrectfullpinclaim.",
+      "id": "parallel-boot-analysis-maktar-group-range-pinrepair",
+      "kind": "candidate",
+      "last_trial": "a2f6c826f89544e3957426d8b1b8adf1",
+      "next_action": "Park corrected228rangehelper andphysicalaliases; retain exactsigned-address repair and qualify a new independent target.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "remaining_difference": "Correctpintrial a2f6c826f89544e3957426d8b1b8adf1:228size11differences, all17controls exact. Earlier323afc12 hadtwo additionalwrong-high bytes. Remainingarithmetic/equality registerassociation has no independent sourcewitness.",
+      "reopen_condition": "Independent original arithmetic/operand-type/sourcephase evidence; no equivalent expression/local/register permutations. Correctstate/table bindings1BD940/1BDCC8 mandatory.",
+      "size": 228,
+      "source": "runtime:bank/parallel-boot_analysis-range-pinrepair/2_maktar_nebula.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_002E6CC8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot_analysis-range-pinrepair/catalog.json",
+          "id": "maktar",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:32:04.393884+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "a2f6c826f89544e3957426d8b1b8adf1"
+        }
+      ]
+    },
+    "parallel-boot-analysis-maktar-grouped-cursor-pinrepair": {
+      "address": 3042768,
+      "budget": 2,
+      "created": "2026-10-04T12:35:21.461755+00:00",
+      "hypothesis": "Owner boot_analysis seed2. Grouped-table cursor432 fingerprint6034c6d269ef06025a978596f4141bfe4fbb0c4df0d5875d8b9bb406a5cbc70b. Full helper2E6CC8(228bytes) audit corrects initial pointer interpretation: record1C is signed32 advancement delta, NOT scriptpointer. HelperA0delta/A1int32outputcurrent/A2int32outputaux andV0status; outputsSW thencallertruncates viaSH. Record0key,4start,8limit,1Cdelta,stride40;32records+count500. Caller2E5D48 noinputs consumesV0boolean. NoGP/MMI/VU or customcalling convention. Boundaries/pins and structural distinction fromGS432verified. Helperpin 9af18c66f6f24f29351cb30e4ba561b80e5e5c2a9d0104d69fbb4d8bcb63fcc5. Genuine authoredC uses int32outputlocals, truncatinghalfword assignments, signedgroup skip/status; allCURRENTcontrols preserved under unchangedG0/GP0. No pointer/type/counter/register forcing. CorrectsignedLUI/low bindings ONLY after helperwholeword comparison: state1BD940/table1BDCC8; earlier1CD labels/bindings off10000. SameABI/layout/algorithm/flags/currentcontrols. Preserveoldnegatives; no othercodevariant.",
+      "id": "parallel-boot-analysis-maktar-grouped-cursor-pinrepair",
+      "kind": "candidate",
+      "last_trial": "7937b38d259d4ab897a0545c353e0e8b",
+      "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "size": 432,
+      "source": "runtime:bank/parallel-boot_analysis-cursor-pinrepair/2_maktar_nebula.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_002E6DD0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot_analysis-cursor-pinrepair/catalog.json",
+          "id": "maktar",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:35:23.660177+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "7937b38d259d4ab897a0545c353e0e8b"
+        }
+      ]
+    },
+    "parallel-boot-analysis-maktar-grouped-cursor-research": {
+      "abi": {
+        "caller": "no arguments, int32 V0 status consumed",
+        "helper": "A0 signed32 delta, A1/A2 pointers to signed32 output words, V0 status"
+      },
+      "address": 3042768,
+      "amendments": [
+        {
+          "at": "2026-10-04T12:07:10.865029+00:00",
+          "before": {
+            "abi": null,
+            "hypothesis": "Owner boot_analysis seed2. New432-byte scalar grouped-table cursor transition with signed16current/auxiliary fields,32entries of40bytes and normal three-word parser helper, distinctfromGS432, fingerprint 6034c6d269ef06025a978596f4141bfe4fbb0c4df0d5875d8b9bb406a5cbc70b. Zero published overlap, one directcaller, ordinary32bit and scalarfloat operations and no GP/MMI/VU. Separate from all prior parked families.",
+            "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+            "types": null
+          },
+          "changes": {
+            "abi": {
+              "caller": "no arguments, int32 V0 status consumed",
+              "helper": "A0 signed32 delta, A1/A2 pointers to signed32 output words, V0 status"
+            },
+            "hypothesis": "Owner boot_analysis seed2. Grouped-table cursor432 fingerprint6034c6d269ef06025a978596f4141bfe4fbb0c4df0d5875d8b9bb406a5cbc70b. Full helper2E6CC8(228bytes) audit corrects initial pointer interpretation: record1C is signed32 advancement delta, NOT scriptpointer. HelperA0delta/A1int32outputcurrent/A2int32outputaux andV0status; outputsSW thencallertruncates viaSH. Record0key,4start,8limit,1Cdelta,stride40;32records+count500. Caller2E5D48 noinputs consumesV0boolean. NoGP/MMI/VU or customcalling convention. Boundaries/pins and structural distinction fromGS432verified.",
+            "next_action": "Author semantic groupedcursorC with verified int32 helper outputs and requalify allCURRENTcontrols before any family work.",
+            "types": {
+              "record": "key0/start4/limit8/delta1C, stride40",
+              "state": "signed16current20/aux22",
+              "table": "32records andsigned32count at500"
+            }
+          },
+          "reason": "Complete helper audit proves scalar delta and word outputs, replacing initial unqualified pointer hypothesis"
+        }
+      ],
+      "created": "2026-10-04T12:02:12.500153+00:00",
+      "hypothesis": "Owner boot_analysis seed2. Grouped-table cursor432 fingerprint6034c6d269ef06025a978596f4141bfe4fbb0c4df0d5875d8b9bb406a5cbc70b. Full helper2E6CC8(228bytes) audit corrects initial pointer interpretation: record1C is signed32 advancement delta, NOT scriptpointer. HelperA0delta/A1int32outputcurrent/A2int32outputaux andV0status; outputsSW thencallertruncates viaSH. Record0key,4start,8limit,1Cdelta,stride40;32records+count500. Caller2E5D48 noinputs consumesV0boolean. NoGP/MMI/VU or customcalling convention. Boundaries/pins and structural distinction fromGS432verified.",
+      "id": "parallel-boot-analysis-maktar-grouped-cursor-research",
+      "kind": "research",
+      "next_action": "Author semantic groupedcursorC with verified int32 helper outputs and requalify allCURRENTcontrols before any family work.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "size": 432,
+      "state": "done",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_002E6DD0"
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:22:11.926655+00:00",
+          "from": "queued",
+          "reason": "Complete corrected int-delta ABI, current-control measurements and explicit parking retained",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ],
+      "types": {
+        "record": "key0/start4/limit8/delta1C, stride40",
+        "state": "signed16current20/aux22",
+        "table": "32records andsigned32count at500"
+      }
+    },
+    "parallel-boot-analysis-maktar-grouped-cursor-v1": {
+      "address": 3042768,
+      "budget": 2,
+      "created": "2026-10-04T12:09:11.084374+00:00",
+      "hypothesis": "Owner boot_analysis seed2. Grouped-table cursor432 fingerprint6034c6d269ef06025a978596f4141bfe4fbb0c4df0d5875d8b9bb406a5cbc70b. Full helper2E6CC8(228bytes) audit corrects initial pointer interpretation: record1C is signed32 advancement delta, NOT scriptpointer. HelperA0delta/A1int32outputcurrent/A2int32outputaux andV0status; outputsSW thencallertruncates viaSH. Record0key,4start,8limit,1Cdelta,stride40;32records+count500. Caller2E5D48 noinputs consumesV0boolean. NoGP/MMI/VU or customcalling convention. Boundaries/pins and structural distinction fromGS432verified. Helperpin 9af18c66f6f24f29351cb30e4ba561b80e5e5c2a9d0104d69fbb4d8bcb63fcc5. Genuine authoredC uses int32outputlocals, truncatinghalfword assignments, signedgroup skip/status; allCURRENTcontrols preserved under unchangedG0/GP0. No pointer/type/counter/register forcing.",
+      "id": "parallel-boot-analysis-maktar-grouped-cursor-v1",
+      "kind": "candidate",
+      "last_trial": "6d15f8e2771d4ce787552b39d6647e67",
+      "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "reopen_condition": "New independent count/layout/sourcephase evidence only",
+      "size": 432,
+      "source": "runtime:bank/parallel-boot_analysis-cursor-v1/2_maktar_nebula.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_002E6DD0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot_analysis-cursor-v1/catalog.json",
+          "id": "maktar",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:10:01.114068+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "6d15f8e2771d4ce787552b39d6647e67"
+        }
+      ]
+    },
+    "parallel-boot-analysis-maktar-grouped-cursor-v2": {
+      "address": 3042768,
+      "amendments": [
+        {
+          "at": "2026-10-04T12:22:11.759866+00:00",
+          "before": {
+            "next_action": "Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.",
+            "remaining_difference": null,
+            "reopen_condition": "New independent count/layout/sourcephase evidence only"
+          },
+          "changes": {
+            "next_action": "Park groupedcursor432 and physicalaliases after snapshotphase hypothesis collapses to identicalobject; choose independent body.",
+            "remaining_difference": "v16d15f8e2 andv2a99bb220 both428/432 objectidentical45f904bca6e02e73deca3a60c625e3e1899f65b559a244a78418e8a6ed4f9f28; all17controls exact. Cachedmodehigh/initialloadphase differs fromreference; no sourcephaseeffect measured.",
+            "reopen_condition": "Independent original mode-declaration/sourcephase or qualified rematerialization witness, no volatile/alias/local/register/counter permutation."
+          },
+          "reason": "Supported snapshotphase collapses to identical428byte object; stop physicalfamily"
+        }
+      ],
+      "budget": 2,
+      "created": "2026-10-04T12:13:20.830060+00:00",
+      "hypothesis": "Owner boot_analysis seed2. Grouped-table cursor432 fingerprint6034c6d269ef06025a978596f4141bfe4fbb0c4df0d5875d8b9bb406a5cbc70b. Full helper2E6CC8(228bytes) audit corrects initial pointer interpretation: record1C is signed32 advancement delta, NOT scriptpointer. HelperA0delta/A1int32outputcurrent/A2int32outputaux andV0status; outputsSW thencallertruncates viaSH. Record0key,4start,8limit,1Cdelta,stride40;32records+count500. Caller2E5D48 noinputs consumesV0boolean. NoGP/MMI/VU or customcalling convention. Boundaries/pins and structural distinction fromGS432verified. Helperpin 9af18c66f6f24f29351cb30e4ba561b80e5e5c2a9d0104d69fbb4d8bcb63fcc5. Genuine authoredC uses int32outputlocals, truncatinghalfword assignments, signedgroup skip/status; allCURRENTcontrols preserved under unchangedG0/GP0. No pointer/type/counter/register forcing. Concretev1produces428/432, all17controls exact, matching64frame/sixsavedregisters/helperstackoutputs. Pinnedinitialcase loads mode BEFORE eitherhalfword clear; v1C clearscurrentfirst and readsconditionlate, retainingmodehighbase forwrite. V2initial-mode snapshot restores that observed read-before-clear phase only; no aliases/flags/types/loops/forcedregs. Parkifrefused.",
+      "id": "parallel-boot-analysis-maktar-grouped-cursor-v2",
+      "kind": "candidate",
+      "last_trial": "a99bb2207e364ec9b0e20f7c2ba7779b",
+      "next_action": "Park groupedcursor432 and physicalaliases after snapshotphase hypothesis collapses to identicalobject; choose independent body.",
+      "pointers": [
+        "private-work:parallel-20261004/boot_analysis/CURRENT.md"
+      ],
+      "priority": 80,
+      "program": "levels/2_maktar_nebula",
+      "remaining_difference": "v16d15f8e2 andv2a99bb220 both428/432 objectidentical45f904bca6e02e73deca3a60c625e3e1899f65b559a244a78418e8a6ed4f9f28; all17controls exact. Cachedmodehigh/initialloadphase differs fromreference; no sourcephaseeffect measured.",
+      "reopen_condition": "Independent original mode-declaration/sourcephase or qualified rematerialization witness, no volatile/alias/local/register/counter permutation.",
+      "size": 432,
+      "source": "runtime:bank/parallel-boot_analysis-cursor-v2/2_maktar_nebula.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_0_MAKTAR_NEBULA_FUN_002E6DD0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot_analysis-cursor-v2/catalog.json",
+          "id": "maktar",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:13:21.479737+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "a99bb2207e364ec9b0e20f7c2ba7779b"
         }
       ]
     },
@@ -20167,6 +22065,138 @@
       "state": "queued",
       "transitions": []
     },
+    "root-boot-packet332-20261004": {
+      "address": 2698928,
+      "created": "2026-10-04T11:52:20.429323+00:00",
+      "hypothesis": "Root fresh boot00292EB0 actual332-byte packet descriptor leaf through292FFB (336nextentryestimate includes4padding). Currentpublished spans/trial/task physical filter excluded aliases. Six ordinary GP arguments, indexed24-byte three-u64 descriptor table and negative selector fallbacks; no calls/SIMD/GP data access. Source argument widths/table read phases still require pinned instruction/caller evidence.",
+      "id": "root-boot-packet332-20261004",
+      "kind": "research",
+      "next_action": "Pin full332-byte body and directcallers, verify six argument widths and table/special descriptor bindings, then author one complete defaultG0 boot unit preserving178controls.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/boot-eligible-filtered.json"
+      ],
+      "priority": 85,
+      "program": "boot",
+      "reopen_condition": "Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles",
+      "size": 332,
+      "state": "stopped",
+      "transitions": [
+        {
+          "at": "2026-10-04T12:02:37.533329+00:00",
+          "from": "queued",
+          "reason": "Both complete sources refused and retained with concrete reopening,continue genuinely new body",
+          "reopen_condition": "Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles",
+          "to": "stopped"
+        }
+      ]
+    },
+    "root-boot-packet332-v1-20261004": {
+      "budget": 1,
+      "created": "2026-10-04T11:57:17.268628+00:00",
+      "hypothesis": "Fresh complete332-byte boot descriptor builder. Solecaller293378 suppliesA0objectpacket;fiveword args fromLWfields andT1 signedLWselector orLBUmapping. Bodyreads three64-bit tablefields beforeselectorbranch, outputpayload64bitsat0/16/32/48, negative-3rowvsothernegativefallback and-1literal. Preserve measuredwordindex/64bitcast semantics, no source objectboundary claim. DefaultG0 tools and178unchangedbootcontrols, fullreference/Ghidra332byteequality verified. No physicalalias or forcedregister/padding/ASM.",
+      "id": "root-boot-packet332-v1-20261004",
+      "kind": "candidate",
+      "last_trial": "6011cbb5bebd4860844c987b14ab5f68",
+      "next_action": "Require complete179symbols equality; retain refusal, no bulkalias until seedexact.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/packet332-pin.json",
+        "private-work:parallel-20261004/root-gp/packet332-dis.json"
+      ],
+      "reopen_condition": "Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles",
+      "source": "runtime:bank/root-boot-packet332-v1-20261004/boot.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_00292EB0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-boot-packet332-v1-20261004/catalog.json",
+          "id": "boot-packet332",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:57:20.459281+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "6011cbb5bebd4860844c987b14ab5f68"
+        },
+        {
+          "at": "2026-10-04T12:02:37.218978+00:00",
+          "from": "stopped",
+          "reason": "Park complete symbol refusal;178bootcontrols exact,no newcredit",
+          "reopen_condition": "Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles",
+          "to": "stopped"
+        }
+      ]
+    },
+    "root-boot-packet332-wide-v2-20261004": {
+      "amendments": [
+        {
+          "at": "2026-10-04T12:02:37.056324+00:00",
+          "before": {
+            "next_action": "Bounded whole-symbol width-contract qualification; no third source/index-expression/register/flags cycle.",
+            "pointers": [
+              "private-work:parallel-20261004/root-gp/packet332-pin.json",
+              "private-work:parallel-20261004/root-gp/packet332-dis.json"
+            ],
+            "remaining_difference": null,
+            "reopen_condition": "Independent measured ABI/layout/address-binding evidence, no equivalent expression/register/flag cycles."
+          },
+          "changes": {
+            "next_action": "Keep both immutable trials stopped, continue another genuine target or independently qualify compiler/source context.",
+            "pointers": [
+              "private-work:parallel-20261004/root-gp/packet332-final-refusal.json"
+            ],
+            "remaining_difference": "Full332-byte descriptor builder refused: 328/332 trial6011cbb5bebd4860844c987b14ab5f68, 320/332 trial22db66753f984a0894fecbd1eaf2bc5f;178oldbootcontrols exact each. Reference first record uses distinct MULT24; compiled source reuses32bit3x index thenshift3. Do not inline/index-cycle to chase registers.",
+            "reopen_condition": "Independent original table source declaration/index-width/layout or compiler context explaining distinct first-record MULT24 versus indexed word-address calculation and complete operand scheduling. No index-expression, register-name, source order or flags cycles."
+          },
+          "reason": "Two immutable complete descriptor refusals qualify178 oldbootcontrols and constrain firstrecord address/operand codegen; no further source index cycle"
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-04T12:01:17.282796+00:00",
+      "hypothesis": "Independent pinned callee width contract: descriptor BLTZ and DSLL/OR consume full64-bit naturalregister parameters, but table MULT/SLL/ADDU explicitly narrow index arithmetic to32bits. SolecallerLW values constrain current inputs without proving narrowed formal declaration. Preserve fullregisterfield semantics with long/unsignedlong parameters, and explicit intmode cast only for measured tablewordindex. Change no descriptor layout/store order/expressions/bindings/flags/tools/GP. Retain328/332v1 plus178exactcontrols; qualify completefullunit once thenpark any refusal.",
+      "id": "root-boot-packet332-wide-v2-20261004",
+      "kind": "candidate",
+      "last_trial": "22db66753f984a0894fecbd1eaf2bc5f",
+      "next_action": "Keep both immutable trials stopped, continue another genuine target or independently qualify compiler/source context.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/packet332-final-refusal.json"
+      ],
+      "remaining_difference": "Full332-byte descriptor builder refused: 328/332 trial6011cbb5bebd4860844c987b14ab5f68, 320/332 trial22db66753f984a0894fecbd1eaf2bc5f;178oldbootcontrols exact each. Reference first record uses distinct MULT24; compiled source reuses32bit3x index thenshift3. Do not inline/index-cycle to chase registers.",
+      "reopen_condition": "Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles",
+      "source": "runtime:bank/root-boot-packet332-wide-v2-20261004/boot.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_00292EB0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-boot-packet332-wide-v2-20261004/catalog.json",
+          "id": "boot-packet332",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T12:01:20.469142+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "22db66753f984a0894fecbd1eaf2bc5f"
+        },
+        {
+          "at": "2026-10-04T12:02:37.374730+00:00",
+          "from": "stopped",
+          "reason": "Park complete width-contract refusal;178bootcontrols exact,no newcredit",
+          "reopen_condition": "Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles",
+          "to": "stopped"
+        }
+      ]
+    },
     "root-boot-record-leaf-20261004": {
       "address": 3013088,
       "created": "2026-10-04T11:33:33.268819+00:00",
@@ -20295,6 +22325,138 @@
           "from": "stopped",
           "reason": "Park complete460-byte target refusal,178 boot controls exact",
           "reopen_condition": "Independent source/cursor layout and loop lifetime evidence, no source or flags cycles",
+          "to": "stopped"
+        }
+      ]
+    },
+    "root-boot-sprite396-20261004": {
+      "address": 2683512,
+      "created": "2026-10-04T11:43:33.815523+00:00",
+      "hypothesis": "Root-owned fresh boot0028F278 actual396-byte GS packet leaf, Ghidra end28F403; nextentry estimate408 includes12trailing bytes. Current738 historical catalog bodies/canonical task reservations and published spans exclude physical aliases at all0/4/8/12padding extents. One64-bit payload plus mixed scalar register/stack arguments; exact argument widths still require pinned caller/ABI review before C.",
+      "id": "root-boot-sprite396-20261004",
+      "kind": "research",
+      "next_action": "Pin entire body, cursor/global read widths and representative callers with ten arguments; author ordinary C packet fields, defaultG0 full178boot controls mandatory.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/boot-eligible-filtered.json"
+      ],
+      "priority": 85,
+      "program": "boot",
+      "reopen_condition": "Independent source object layout/ABI/lifetime evidence; no source or flags cycles",
+      "size": 396,
+      "state": "stopped",
+      "transitions": [
+        {
+          "at": "2026-10-04T11:49:57.748825+00:00",
+          "from": "queued",
+          "reason": "Both measured source hypotheses refused and retained; move to genuinely different target",
+          "reopen_condition": "Independent source object layout/ABI/lifetime evidence; no source or flags cycles",
+          "to": "stopped"
+        }
+      ]
+    },
+    "root-boot-sprite396-storage-v2-20261004": {
+      "amendments": [
+        {
+          "at": "2026-10-04T11:49:57.229580+00:00",
+          "before": {
+            "next_action": "Bounded independently measured storage/alias-phase qualification; retain complete refusal and park without further permutations.",
+            "pointers": [
+              "private-work:parallel-20261004/root-gp/sprite-pin.json",
+              "private-work:parallel-20261004/root-gp/boot-sprite-ghidra-dis.json"
+            ],
+            "remaining_difference": null,
+            "reopen_condition": "Independent measured field/argument width or source binding evidence, no equivalent source/register/flags cycling."
+          },
+          "changes": {
+            "next_action": "Keep both immutable sources/trials stopped; continue a genuinely different target, no physical aliases.",
+            "pointers": [
+              "private-work:parallel-20261004/root-gp/sprite-final-refusal.json"
+            ],
+            "remaining_difference": "Complete396-byte target refused: 380/396 trial6382e25dec3943e2a760bfeafafd95a1, 356/396 trial886eee1607644da08cd946d36f88b7c9;178 existingbootcontrols exact each.",
+            "reopen_condition": "Independent recovered source object layout, full argument-width contract or compiler alias/lifetime evidence explaining remaining complete-symbol difference; no equivalent expressions/store-order/register/flag cycles."
+          },
+          "reason": "Measured two immutable complete symbol refusals with178 exact unchanged boot controls and pinned caller/store phase evidence"
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-04T11:48:23.963457+00:00",
+      "hypothesis": "Measured v1 source binds three32-bit state reads as distinct complete scalar objects; compiler hoists/caches allglobals before widepacket stores and produces380/396 with178controls exact. Reference independently reads allthree globals in two separate phases after intervening64-bit stores, with absolute page rematerialization. Bind SAMEpinnedfields as incomplete byte-storage views using alreadyqualified SDAarray mechanism and preserve aliasable enclosing storage; no original objectboundary claim. Reference also reads secondphase before finalzero store, so place zero after coordinatefieldread rather than before potentiallyaliasing storage. Payload/arguments/arithmetic/profile/GP/tools unchanged; full178controls mandatory. No register/expression/flags cycles.",
+      "id": "root-boot-sprite396-storage-v2-20261004",
+      "kind": "candidate",
+      "last_trial": "886eee1607644da08cd946d36f88b7c9",
+      "next_action": "Keep both immutable sources/trials stopped; continue a genuinely different target, no physical aliases.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/sprite-final-refusal.json"
+      ],
+      "remaining_difference": "Complete396-byte target refused: 380/396 trial6382e25dec3943e2a760bfeafafd95a1, 356/396 trial886eee1607644da08cd946d36f88b7c9;178 existingbootcontrols exact each.",
+      "reopen_condition": "Independent source object layout/ABI/lifetime evidence; no source or flags cycles",
+      "source": "runtime:bank/root-boot-sprite396-storage-v2-20261004/boot.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_0028F278"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-boot-sprite396-storage-v2-20261004/catalog.json",
+          "id": "boot-sprite396",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:48:27.058455+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "886eee1607644da08cd946d36f88b7c9"
+        },
+        {
+          "at": "2026-10-04T11:49:57.580390+00:00",
+          "from": "stopped",
+          "reason": "Park bounded source-binding refinement refusal with178 controls exact,zero credit",
+          "reopen_condition": "Independent source object layout/ABI/lifetime evidence; no source or flags cycles",
+          "to": "stopped"
+        }
+      ]
+    },
+    "root-boot-sprite396-v1-20261004": {
+      "budget": 1,
+      "created": "2026-10-04T11:45:49.031058+00:00",
+      "hypothesis": "Independent fresh396-byte boot packet leaf pinnedraw/Ghidra identical; all3directcallers useLD64payloadA0, eightnaturalGP arguments and32-bit stackargumentsat0/8. Coordinates originatewordshifts/subtractions, completebodyusesADDU/SLLV and64bitcasts/SDfields. Existing qualified incompleteSDAarray mechanism preserves repeatedabsolute cursoraccess; unchanged178bootcontrols/defaultG0 tools. No known physicalalias or source/flags permutation.",
+      "id": "root-boot-sprite396-v1-20261004",
+      "kind": "candidate",
+      "last_trial": "6382e25dec3943e2a760bfeafafd95a1",
+      "next_action": "Compare complete179symbols; retain whole-symbol refusal, no aliasbulk until seedexact.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/sprite-pin.json",
+        "private-work:parallel-20261004/root-gp/boot-sprite-ghidra-dis.json"
+      ],
+      "reopen_condition": "Independent source object layout/ABI/lifetime evidence; no source or flags cycles",
+      "source": "runtime:bank/root-boot-sprite396-v1-20261004/boot.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_0028F278"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-boot-sprite396-v1-20261004/catalog.json",
+          "id": "boot-sprite396",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T11:45:52.139414+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "6382e25dec3943e2a760bfeafafd95a1"
+        },
+        {
+          "at": "2026-10-04T11:49:57.399644+00:00",
+          "from": "stopped",
+          "reason": "Park complete symbol refusal with178 controls exact,zero credit",
+          "reopen_condition": "Independent source object layout/ABI/lifetime evidence; no source or flags cycles",
           "to": "stopped"
         }
       ]
@@ -28548,6 +30710,19 @@
       "state": "exact_private",
       "task": "root-index-lf-17_smolg-20261004"
     },
+    "0340475264334dfb94e41d1e6d387bb9": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/0340475264334dfb94e41d1e6d387bb9",
+      "finished": "2026-10-04T12:40:21.924031+00:00",
+      "id": "0340475264334dfb94e41d1e6d387bb9",
+      "manifest_sha256": "8edc4e26fca2d0dac0fc76f6b8bde37cfd2ecd06f68883eaa63eb874d59fb55c",
+      "measured_functions": 18,
+      "outcome_sha256": "935bdd5821328854c714eef56714ad0e8368faeff93a94239676ef6425a2a392",
+      "semantic_key": "2a82f99c5e2332240f899f3d6121f37efc2bd87eb8343a609dd5ad815fb4aafd",
+      "started": "2026-10-04T12:40:21.620803+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-22_dobbo_orbit"
+    },
     "042158e666f24365ad6b65a790e5279b": {
       "compile_attempted": true,
       "directory": "runtime:trials/042158e666f24365ad6b65a790e5279b",
@@ -28560,6 +30735,19 @@
       "started": "2026-10-04T03:50:42.629935+00:00",
       "state": "mismatch",
       "task": "boot-003427c0-alpha-helper-v2"
+    },
+    "04680975b87f4938af93a9f47e6797d3": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/04680975b87f4938af93a9f47e6797d3",
+      "finished": "2026-10-04T11:52:31.024740+00:00",
+      "id": "04680975b87f4938af93a9f47e6797d3",
+      "manifest_sha256": "b94f66d656e712bd8756eca874c1ffb41343523da7834115def02b13fe800918",
+      "measured_functions": 19,
+      "outcome_sha256": "caafdb13c3efd94572e5580de5183c337e8b99a297b0d1d2c8f1d03929d93baa",
+      "semantic_key": "4b9797ca6d2e3a3c2593c08e05a932abb1f90c8b4874455a085f52d0c4d0ffa0",
+      "started": "2026-10-04T11:52:30.731141+00:00",
+      "state": "mismatch",
+      "task": "orbital-hrugis-pool-word-getter-20261004-v2"
     },
     "04a41eabbc5e472e8877eb77d5b8c52f": {
       "compile_attempted": true,
@@ -28678,6 +30866,19 @@
       "state": "exact_private",
       "task": "glyph-family-6_notak-20261004"
     },
+    "0d9946d4b2c04179802875755be9eaca": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/0d9946d4b2c04179802875755be9eaca",
+      "finished": "2026-10-04T12:40:18.166964+00:00",
+      "id": "0d9946d4b2c04179802875755be9eaca",
+      "manifest_sha256": "ad29c3f1f349e1da65c180d986e8591cde4336a8d0f05dded03cef0dc531d9b7",
+      "measured_functions": 18,
+      "outcome_sha256": "9a4d4a1e8fd3c5424b29e090b27a0c5b88f2d25f8f84e8c5b06cc9d5fd67ec6e",
+      "semantic_key": "96f60efea40db3d03c55b4a7c004566382c573adaa8ff93e0504148fe435ce39",
+      "started": "2026-10-04T12:40:17.861483+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-16_snivelak"
+    },
     "0ffcddc61b3141c587d91821dc11a4e8": {
       "compile_attempted": true,
       "directory": "runtime:trials/0ffcddc61b3141c587d91821dc11a4e8",
@@ -28716,6 +30917,19 @@
       "started": "2026-10-04T10:47:07.726149+00:00",
       "state": "exact_private",
       "task": "root-parallel-combined-5_feltzin_system-20261004"
+    },
+    "128f47c7c12545f2b1334bd055ef7f02": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/128f47c7c12545f2b1334bd055ef7f02",
+      "finished": "2026-10-04T12:40:16.261443+00:00",
+      "id": "128f47c7c12545f2b1334bd055ef7f02",
+      "manifest_sha256": "aa66b931d1f535e8891002823ead0f237cf27296e95df00da8cc61a53af27784",
+      "measured_functions": 19,
+      "outcome_sha256": "546794b59c355ac34b8edec35e6247d21af8ca998622d0c8a9d92c78adefe709",
+      "semantic_key": "25dcb6a39411315e46420613baa4cd80ae256ac3a837a67a242732beeeb78736",
+      "started": "2026-10-04T12:40:15.950304+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-12_todano"
     },
     "12dfa1c4470a46bfa80b58a8633545ea": {
       "compile_attempted": true,
@@ -29042,6 +31256,19 @@
       "state": "exact_private",
       "task": "scalar-cubic-12_todano-20261004"
     },
+    "21f792be2c8c43c4a868503c5cbeb699": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/21f792be2c8c43c4a868503c5cbeb699",
+      "finished": "2026-10-04T12:40:22.561387+00:00",
+      "id": "21f792be2c8c43c4a868503c5cbeb699",
+      "manifest_sha256": "2aa41f22afdc9b963ea9bbd2a7a0982aece267bb36ffbc3c26369389ff18ce7b",
+      "measured_functions": 18,
+      "outcome_sha256": "2f8904dcf5a0c3607979db00b9df5b1779abaa41b335513bf5ff98037368764f",
+      "semantic_key": "f56a4044d4c8fdf75c060751f12379976505ef3f56394684671ed4805045da5e",
+      "started": "2026-10-04T12:40:22.260297+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-23_damosel_orbit"
+    },
     "220d19ff15794cafb39540ce168ef0c4": {
       "compile_attempted": true,
       "directory": "runtime:trials/220d19ff15794cafb39540ce168ef0c4",
@@ -29094,6 +31321,45 @@
       "state": "exact_private",
       "task": "gs-family-22_dobbo_orbit-136-v2"
     },
+    "22db66753f984a0894fecbd1eaf2bc5f": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/22db66753f984a0894fecbd1eaf2bc5f",
+      "finished": "2026-10-04T12:01:20.454001+00:00",
+      "id": "22db66753f984a0894fecbd1eaf2bc5f",
+      "manifest_sha256": "cc37244b7ff1bb3f1165ae107f4cbe141ed354343c9ed6e9da0caa2424c01d67",
+      "measured_functions": 179,
+      "outcome_sha256": "5e24a4bc1e23bfab027f49b97b738fe7b7a20fdcff87b2ddcacfe73ae979b0ea",
+      "semantic_key": "bc6d5a79a1385f007879a7740aeb6cda89e44f9282990a7dcac742e828120398",
+      "started": "2026-10-04T12:01:19.592389+00:00",
+      "state": "mismatch",
+      "task": "root-boot-packet332-wide-v2-20261004"
+    },
+    "2305cf93e9db40b381955f4cc6c3bc68": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/2305cf93e9db40b381955f4cc6c3bc68",
+      "finished": "2026-10-04T12:40:18.782958+00:00",
+      "id": "2305cf93e9db40b381955f4cc6c3bc68",
+      "manifest_sha256": "34c8447e2709b122074e52e16b264e2fb8514a06776c2e42e6f935bf15265109",
+      "measured_functions": 18,
+      "outcome_sha256": "481b5723b65c992dafc727dfc77b0f0420affdeec91ec84103b0fcb13d034382",
+      "semantic_key": "f42ecf1caf8c7c03d56043a1fb5d5074b6117f56823ad02bc9599fad16ce0350",
+      "started": "2026-10-04T12:40:18.489847+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-17_smolg"
+    },
+    "239cfa6457f0441b85894f350a3d6f4e": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/239cfa6457f0441b85894f350a3d6f4e",
+      "finished": "2026-10-04T12:40:28.803561+00:00",
+      "id": "239cfa6457f0441b85894f350a3d6f4e",
+      "manifest_sha256": "0c718dc1cc5a37ea25f443baa487da47e2daa585365141173d688020bf7debfb",
+      "measured_functions": 16,
+      "outcome_sha256": "9fe2c5243ebe65bc6be20320b94f7375381f3d8531743384d3b5b19bad8094df",
+      "semantic_key": "913c2c2cb3c262e4f5fc0ad8e3230564fe5a2cedcbd284bce6a6a17efdf8c73f",
+      "started": "2026-10-04T12:40:28.494697+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-7_siberius"
+    },
     "24354ef96a304e6bb520be17edd7c726": {
       "compile_attempted": true,
       "directory": "runtime:trials/24354ef96a304e6bb520be17edd7c726",
@@ -29145,6 +31411,19 @@
       "started": "2026-10-04T05:54:27.330311+00:00",
       "state": "exact_private",
       "task": "gs-family-5_feltzin_system-136-v2"
+    },
+    "26aa4cf43ebf490a8fc49795d5bbc8c6": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/26aa4cf43ebf490a8fc49795d5bbc8c6",
+      "finished": "2026-10-04T12:01:54.702097+00:00",
+      "id": "26aa4cf43ebf490a8fc49795d5bbc8c6",
+      "manifest_sha256": "ed7d61fd5d68b84fac54418b85a4faee2cedde0d4a590d504914914f784d02ac",
+      "measured_functions": 18,
+      "outcome_sha256": "d45e4570fd17d73f99fd40d378781e2e57999a1e5e884f219343d56e7ed10887",
+      "semantic_key": "9e6e64245e560106c2a8fd2870c064efcd121dc2e2bdbe03dc6707c65decd906",
+      "started": "2026-10-04T12:01:54.375811+00:00",
+      "state": "exact_private",
+      "task": "native-review-joba-counter-consume-v1-20261004"
     },
     "285cb0c52db24f08a145e68faff79aef": {
       "compile_attempted": true,
@@ -29354,6 +31633,32 @@
       "state": "exact_private",
       "task": "glyph-family-20_yeedil-20261004"
     },
+    "323afc129363498c9f6b65e227ac1fcf": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/323afc129363498c9f6b65e227ac1fcf",
+      "finished": "2026-10-04T12:28:05.824179+00:00",
+      "id": "323afc129363498c9f6b65e227ac1fcf",
+      "manifest_sha256": "e1c6825327f7d3e78eafc0ce2924f226facb0bc2301bf32fea72dfd4d1ee0dcf",
+      "measured_functions": 18,
+      "outcome_sha256": "0cef1d3f2a4a48b480561cf715c994cb5128ce6386ffc5a89674d5cad05fe4de",
+      "semantic_key": "833a3433efff5cb0776d4e4d8f02ed7edc833f008cb8b1c98cde1cb1057683d0",
+      "started": "2026-10-04T12:28:05.499173+00:00",
+      "state": "mismatch",
+      "task": "parallel-boot-analysis-maktar-group-range-advance-v1"
+    },
+    "33869b6a7ede4e83b489ac963caba5f3": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/33869b6a7ede4e83b489ac963caba5f3",
+      "finished": "2026-10-04T12:13:18.929978+00:00",
+      "id": "33869b6a7ede4e83b489ac963caba5f3",
+      "manifest_sha256": "05a552b18e42e98a653a7d78912f8352e0fd0d47ba18ffc720b9ae360a5b29c6",
+      "measured_functions": 19,
+      "outcome_sha256": "1ff036a948f70d97a99805be6d9416196c4d9d63ec6cf59b0031f1150ea9a697",
+      "semantic_key": "06b363dab63ad355ef79c04597c35ab704b599b28df33870cd590599523a4083",
+      "started": "2026-10-04T12:13:18.615109+00:00",
+      "state": "exact_private",
+      "task": "native-review-joba-counter-add-v1-20261004"
+    },
     "33f8ea310c7f435e84298fd30254ede8": {
       "compile_attempted": true,
       "directory": "runtime:trials/33f8ea310c7f435e84298fd30254ede8",
@@ -29431,6 +31736,19 @@
       "started": "2026-10-04T05:07:10.433467+00:00",
       "state": "exact_private",
       "task": "float-guard-only-19_grelbin-20261004"
+    },
+    "3793cb89bec24bf0a2758613da6388a3": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3793cb89bec24bf0a2758613da6388a3",
+      "finished": "2026-10-04T12:40:20.644999+00:00",
+      "id": "3793cb89bec24bf0a2758613da6388a3",
+      "manifest_sha256": "977bacf24b9ed1f57fdab939dad1d85ea7c9451493aaa783f9526220aba39b2d",
+      "measured_functions": 17,
+      "outcome_sha256": "31c64138ec30f4416b78eb0f50791dba9b1b444cd7264bbc4fe005a851dd5f99",
+      "semantic_key": "574208eb5e7e7c4382c7ff0e8d8d9e02058fb4ab8b5d8ed08a0e501e737791d4",
+      "started": "2026-10-04T12:40:20.370707+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-1_oozla"
     },
     "382eefa8699041b6b9912a3dd60e3916": {
       "compile_attempted": true,
@@ -29640,6 +31958,19 @@
       "state": "exact_private",
       "task": "root-index-lf-9_dobbo-20261004"
     },
+    "3e79947acf3a4e0ea6beb3f3218197a1": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3e79947acf3a4e0ea6beb3f3218197a1",
+      "finished": "2026-10-04T12:40:25.081210+00:00",
+      "id": "3e79947acf3a4e0ea6beb3f3218197a1",
+      "manifest_sha256": "5a5ad53b9f93d2031f8eca7fde1298e94fc575bf779f253a0c3919a99be969dd",
+      "measured_functions": 18,
+      "outcome_sha256": "3ee7dd3710be15df4059d6d4f48fd1c12dd329d4f3bc0c51d198b6fb44e011f3",
+      "semantic_key": "a8124a2dc4484eb4752cd1c2b8fecabc3b998c17cd2f419fc94c5e08acd71f3d",
+      "started": "2026-10-04T12:40:24.770186+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-2_maktar_nebula"
+    },
     "3eefc36ad07d40c08b77a9049f73aca5": {
       "compile_attempted": true,
       "directory": "runtime:trials/3eefc36ad07d40c08b77a9049f73aca5",
@@ -29783,6 +32114,19 @@
       "state": "exact_private",
       "task": "glyph-family-2_maktar_nebula-20261004"
     },
+    "45d648497b3643caae39534a4a5c7790": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/45d648497b3643caae39534a4a5c7790",
+      "finished": "2026-10-04T12:40:19.394754+00:00",
+      "id": "45d648497b3643caae39534a4a5c7790",
+      "manifest_sha256": "730480b4ae64acb91df3e2a2c85734c80f88a73c51fcd02bda8ce864e5d7acd4",
+      "measured_functions": 18,
+      "outcome_sha256": "d7e54a2891b19164104287020cec6289390893dc515f149bcb9c1fef5a0ca580",
+      "semantic_key": "fc35a8d9d7be6c09913d3e525457574fb96fa134c5e8df9fb8e7b7661e00ca44",
+      "started": "2026-10-04T12:40:19.094762+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-18_damosel"
+    },
     "4638a716f8304ab69cba461f8e5c1692": {
       "compile_attempted": true,
       "directory": "runtime:trials/4638a716f8304ab69cba461f8e5c1692",
@@ -29822,6 +32166,19 @@
       "state": "mismatch",
       "task": "native-review-joba-stream-relocation-c-v1-20261004"
     },
+    "4818e8fe65024c11ab12a46ed718642b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4818e8fe65024c11ab12a46ed718642b",
+      "finished": "2026-10-04T11:50:53.034150+00:00",
+      "id": "4818e8fe65024c11ab12a46ed718642b",
+      "manifest_sha256": "1198a992b35b676623bb86bf379ab32d984ea79cc4e392d7808174361db9d4fa",
+      "measured_functions": 18,
+      "outcome_sha256": "f679c1fd780e40bef0308cf40abb4d0d02342d86405b2d368b056ae2ee628905",
+      "semantic_key": "14cc989368a74e67ac57387a793b41dad804d68c9a0abfc589989256153af4a1",
+      "started": "2026-10-04T11:50:52.736486+00:00",
+      "state": "mismatch",
+      "task": "parallel-boot-analysis-maktar-default-records-v2"
+    },
     "484d8984d19f438bb46dcdcdf21e81c5": {
       "compile_attempted": true,
       "directory": "runtime:trials/484d8984d19f438bb46dcdcdf21e81c5",
@@ -29847,6 +32204,19 @@
       "started": "2026-10-04T10:23:11.464264+00:00",
       "state": "exact_private",
       "task": "root-index-lf-23_damosel_orbit-20261004"
+    },
+    "48ef714e69164bebbfdda52d85e77e68": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/48ef714e69164bebbfdda52d85e77e68",
+      "finished": "2026-10-04T12:40:21.291654+00:00",
+      "id": "48ef714e69164bebbfdda52d85e77e68",
+      "manifest_sha256": "31a914b76b22cd4b3a61d5f4242b4db672a01c029ff70bfba1db358f7f50aef1",
+      "measured_functions": 18,
+      "outcome_sha256": "52762a8ee796893376d0aabe63733da00086aff049beb78196714a32deb71841",
+      "semantic_key": "735f3718f4a4701e8213594ff3f462c9fb6a254dc4bfbb26b38b9a2ca91cfde5",
+      "started": "2026-10-04T12:40:20.978702+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-20_yeedil"
     },
     "494548cf6d6d4fc292701c9645b15c9f": {
       "compile_attempted": true,
@@ -29926,6 +32296,19 @@
       "state": "mismatch",
       "task": "parallel-boot-analysis-oozla-pool-init-v1"
     },
+    "4d5e0cc0dfac432bbbd7a91858312474": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4d5e0cc0dfac432bbbd7a91858312474",
+      "finished": "2026-10-04T11:43:08.235157+00:00",
+      "id": "4d5e0cc0dfac432bbbd7a91858312474",
+      "manifest_sha256": "3a7c934870c3590d63c3d268b9db002802b20f6540bdd836d947d91432340ce3",
+      "measured_functions": 18,
+      "outcome_sha256": "c99c7223c6da06ea5b28bebc30f8b48b48b4889658b655cec966ace914e238c0",
+      "semantic_key": "11047e3a301fcb86d04d1a6642eb86f9dbf6a76371bd2cc10f692bd107f6ba74",
+      "started": "2026-10-04T11:43:07.876929+00:00",
+      "state": "mismatch",
+      "task": "parallel-boot-analysis-maktar-default-records-v1"
+    },
     "4da6ddb845b34d0cbe4a038936fee9c9": {
       "compile_attempted": true,
       "directory": "runtime:trials/4da6ddb845b34d0cbe4a038936fee9c9",
@@ -29990,6 +32373,19 @@
       "started": "2026-10-04T10:09:48.455573+00:00",
       "state": "exact_private",
       "task": "native-review-index-family-17_smolg-20261004"
+    },
+    "4f785b28cc0542e192cfd09297e4d1a6": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4f785b28cc0542e192cfd09297e4d1a6",
+      "finished": "2026-10-04T12:36:01.686665+00:00",
+      "id": "4f785b28cc0542e192cfd09297e4d1a6",
+      "manifest_sha256": "286ad18c26cc9d1be8433838585efe04d66438312e4e6ef276d6ce8b9c3aa1ea",
+      "measured_functions": 20,
+      "outcome_sha256": "ff40e82065ab1869d60eb67d318ed3bda6e5046d5a86fc9ad911e9a1e2c2121a",
+      "semantic_key": "33c25db5ed3cc7f30c67c997da587805999af6852bedbbcb333326fe0bd0ee1c",
+      "started": "2026-10-04T12:36:01.329652+00:00",
+      "state": "exact_private",
+      "task": "native-review-joba-polygon-dispatch-v2-20261004"
     },
     "4fd324cae0ae4049b397a7168d6eaf43": {
       "compile_attempted": true,
@@ -30075,6 +32471,19 @@
       "semantic_key": "25e6e6359f0361841690de5655e9c297727b52bb7e82864a09fcb22a9b3409c7",
       "state": "preparation_rejected",
       "task": "parallel-boot-analysis-update116-1-v1"
+    },
+    "5448d5cc242d4beea17bf45b57817696": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5448d5cc242d4beea17bf45b57817696",
+      "finished": "2026-10-04T12:40:14.959417+00:00",
+      "id": "5448d5cc242d4beea17bf45b57817696",
+      "manifest_sha256": "1e36eb8dc7a247d46eb4125618c63446f5d0cc4a319364ee9d57172654e5be50",
+      "measured_functions": 19,
+      "outcome_sha256": "43a7bfdbb348349c613c809ae71e7e5bad3dad0473c9644f2c5a985b45c18edd",
+      "semantic_key": "dc1e20970b5b12531fa6184e9934f5b432c794426e5ffd0ff4f2c3a4a9e33740",
+      "started": "2026-10-04T12:40:14.628133+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-10_hrugis_cloud"
     },
     "54889f44efd149a4b080e4166e27ff74": {
       "compile_attempted": true,
@@ -30278,6 +32687,32 @@
       "state": "preparation_rejected",
       "task": "hrugis-record-insert-20261004-v1"
     },
+    "6011cbb5bebd4860844c987b14ab5f68": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/6011cbb5bebd4860844c987b14ab5f68",
+      "finished": "2026-10-04T11:57:20.435219+00:00",
+      "id": "6011cbb5bebd4860844c987b14ab5f68",
+      "manifest_sha256": "41b98b5570aef7b43f5fa979c7712fe92aee185e96de112e6d6cbd1a12dbf484",
+      "measured_functions": 179,
+      "outcome_sha256": "71bf0c2ddd365f4605fe956ec8aaea9de66507a7d700193c2ba110e63afa6e16",
+      "semantic_key": "6831e66819b97d42925c5999f88a0a3505de50746a7f53d98946f6c136b3bab1",
+      "started": "2026-10-04T11:57:19.556788+00:00",
+      "state": "mismatch",
+      "task": "root-boot-packet332-v1-20261004"
+    },
+    "604912d6a2574152bbc1846b8e4c8c10": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/604912d6a2574152bbc1846b8e4c8c10",
+      "finished": "2026-10-04T12:40:27.547882+00:00",
+      "id": "604912d6a2574152bbc1846b8e4c8c10",
+      "manifest_sha256": "c332ca03645bfaf141731550cfd40923ae7944c3c0c7369035790fdfdf9e0d02",
+      "measured_functions": 18,
+      "outcome_sha256": "2ac96ed39051e26ac53784ce810f5cb8809194061fd4bcd6f9cda784d2a3cdff",
+      "semantic_key": "e4091c31de48be9c4c7d301420eac3a34289cc82749b621f7939f6f32591feb6",
+      "started": "2026-10-04T12:40:27.256388+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-5_feltzin_system"
+    },
     "60e6ba6efbfd4705960df7a35cf896cc": {
       "compile_attempted": true,
       "directory": "runtime:trials/60e6ba6efbfd4705960df7a35cf896cc",
@@ -30363,6 +32798,19 @@
       "state": "exact_private",
       "task": "orbital-bitmap-getter-family-20261004-8_tabora"
     },
+    "6382e25dec3943e2a760bfeafafd95a1": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/6382e25dec3943e2a760bfeafafd95a1",
+      "finished": "2026-10-04T11:45:52.117720+00:00",
+      "id": "6382e25dec3943e2a760bfeafafd95a1",
+      "manifest_sha256": "b1df082d3cf775ed5e6ca1c17f4fd0884b18a89beb416272cc21fec1bd5a29e5",
+      "measured_functions": 179,
+      "outcome_sha256": "848af7768f137a84209757b837ea05ca8ce01cee5c76a01af11ef48b0a844124",
+      "semantic_key": "85ddb0cfac3f9bb994030d13a40ec2a00d26084a05bd3046e3c0a71f79b2d852",
+      "started": "2026-10-04T11:45:51.275967+00:00",
+      "state": "mismatch",
+      "task": "root-boot-sprite396-v1-20261004"
+    },
     "644efaa4ba2243d1b95812fb7e8dc6c6": {
       "compile_attempted": true,
       "directory": "runtime:trials/644efaa4ba2243d1b95812fb7e8dc6c6",
@@ -30440,6 +32888,19 @@
       "started": "2026-10-04T10:35:51.916988+00:00",
       "state": "exact_private",
       "task": "orbital-bitmap-getter-family-20261004-25_wupash_nebula"
+    },
+    "6803e8791a8c4fba858c171669ad0e0c": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/6803e8791a8c4fba858c171669ad0e0c",
+      "finished": "2026-10-04T12:12:52.380059+00:00",
+      "id": "6803e8791a8c4fba858c171669ad0e0c",
+      "manifest_sha256": "4f8b65221cd65006d93a836c42f70c2e68018dab3a7b73d5fd2d4aed5de0ad7e",
+      "measured_functions": 18,
+      "outcome_sha256": "377fb2453b3440ceb9c56a64f09090def0d391bda4baaa20e29f94deeae627b9",
+      "semantic_key": "a7127bb53f1683e70ed2e84601b3e4dd7e17fa732c6bb6e5d8c260cbc44102b7",
+      "started": "2026-10-04T12:12:52.072040+00:00",
+      "state": "mismatch",
+      "task": "orbital-gorn-pool-release-20261004-v1"
     },
     "6822038144e9423280bb638c8e5f9314": {
       "compile_attempted": true,
@@ -30545,6 +33006,19 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-update116-23-v1"
     },
+    "6d15f8e2771d4ce787552b39d6647e67": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/6d15f8e2771d4ce787552b39d6647e67",
+      "finished": "2026-10-04T12:10:01.089581+00:00",
+      "id": "6d15f8e2771d4ce787552b39d6647e67",
+      "manifest_sha256": "10126134534f5a7139f107ac8f93303dcc3fbd0c64e395386914e1416b15fdfe",
+      "measured_functions": 18,
+      "outcome_sha256": "740596b668479672e27747c414e0803890e816008bd1a471c3a2e9b0900edbc3",
+      "semantic_key": "854857be471ef760ff97dbb85cc2984129a62792c07ba04fa9ad20c568ab1ca7",
+      "started": "2026-10-04T12:10:00.762993+00:00",
+      "state": "mismatch",
+      "task": "parallel-boot-analysis-maktar-grouped-cursor-v1"
+    },
     "6d89c73a7033433bb0023e3afa67bb21": {
       "compile_attempted": true,
       "directory": "runtime:trials/6d89c73a7033433bb0023e3afa67bb21",
@@ -30596,6 +33070,32 @@
       "started": "2026-10-04T10:46:57.135778+00:00",
       "state": "exact_private",
       "task": "root-parallel-combined-17_smolg-20261004"
+    },
+    "718fd238329e438fa27aa2316842f194": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/718fd238329e438fa27aa2316842f194",
+      "finished": "2026-10-04T12:40:26.917474+00:00",
+      "id": "718fd238329e438fa27aa2316842f194",
+      "manifest_sha256": "1eb5eaf4500edba36eb85c09aa1feb42f18d2f27eeaa1ea407fc944f23177b40",
+      "measured_functions": 19,
+      "outcome_sha256": "63c73a980c3997955febd243b48dbf727ed5d4f77b6b3da4f9a92f4465c64444",
+      "semantic_key": "63803babd53eb14f86a3af49b12dc2dc29890d9baeb45c826e854cb0d023bd64",
+      "started": "2026-10-04T12:40:26.595348+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-4_barlow"
+    },
+    "7193eb4dcae549568d7f29e324dcd897": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/7193eb4dcae549568d7f29e324dcd897",
+      "finished": "2026-10-04T12:40:15.625010+00:00",
+      "id": "7193eb4dcae549568d7f29e324dcd897",
+      "manifest_sha256": "3793d3d6ae5ada14322e9557947b4f7825fe659ac303f738994d310054db43e8",
+      "measured_functions": 19,
+      "outcome_sha256": "45e6f4960f0a999529b4f527d379b8beb73adabee1206a941337ca8e6a1bf6aa",
+      "semantic_key": "1eabda63f79f6df52ec42986e7191f76f8a56c878e8ece6bc9039be5240562d1",
+      "started": "2026-10-04T12:40:15.297710+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-11_joba"
     },
     "71f41372896845ceb3be40727053e040": {
       "compile_attempted": true,
@@ -30727,6 +33227,19 @@
       "state": "exact_private",
       "task": "root-parallel-combined-12_todano-20261004"
     },
+    "7829a6fc1a6c477baa272032bab72845": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/7829a6fc1a6c477baa272032bab72845",
+      "finished": "2026-10-04T12:40:25.694707+00:00",
+      "id": "7829a6fc1a6c477baa272032bab72845",
+      "manifest_sha256": "a30dde17b1184984afc16a57313ecf44a2c83b914b593cbc95d6a9f6db4345b4",
+      "measured_functions": 18,
+      "outcome_sha256": "988e53a1da111599f1d2cfcbe70e2d02f5f372cb727eb2522dd2a014bf4ba7c5",
+      "semantic_key": "9a63c9d6d82959bb754be9e1d967ec2447e47815f30c681fe830b213628c8e4a",
+      "started": "2026-10-04T12:40:25.395298+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-30_insomniac_museum"
+    },
     "782c2259af0b418eb0e1a13d72c806ef": {
       "children": [],
       "compile_attempted": false,
@@ -30794,6 +33307,19 @@
       "state": "exact_private",
       "task": "root-parallel-combined-19_grelbin-20261004"
     },
+    "7937b38d259d4ab897a0545c353e0e8b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/7937b38d259d4ab897a0545c353e0e8b",
+      "finished": "2026-10-04T12:35:23.631866+00:00",
+      "id": "7937b38d259d4ab897a0545c353e0e8b",
+      "manifest_sha256": "c61998a8fbca281229752b1f724774c44b0ec8174592fed626f16f84233b6c0d",
+      "measured_functions": 18,
+      "outcome_sha256": "548a06e1d08e31c1ae27c12a4d96ba96801e6e665ff0901873def15c0fb5d110",
+      "semantic_key": "395eec83c7ede0a5bae8063fd3ed6f11a4327a88b6738fbfc47bbbcad84d7734",
+      "started": "2026-10-04T12:35:23.317444+00:00",
+      "state": "mismatch",
+      "task": "parallel-boot-analysis-maktar-grouped-cursor-pinrepair"
+    },
     "79520c3085114c45a17b26ec2b643760": {
       "compile_attempted": true,
       "directory": "runtime:trials/79520c3085114c45a17b26ec2b643760",
@@ -30819,6 +33345,19 @@
       "started": "2026-10-04T10:47:04.695254+00:00",
       "state": "exact_private",
       "task": "root-parallel-combined-2_maktar_nebula-20261004"
+    },
+    "7af38300e1004aad8eab1ed40361c5e2": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/7af38300e1004aad8eab1ed40361c5e2",
+      "finished": "2026-10-04T12:40:29.424935+00:00",
+      "id": "7af38300e1004aad8eab1ed40361c5e2",
+      "manifest_sha256": "b7e87604b07320b41da9c6bf95a26130bd6a8531978cccbe33811c56a2f6f45e",
+      "measured_functions": 17,
+      "outcome_sha256": "6958f286c8317b6ff4e434a10a58974241d7229e343a02423bdf408a9c0f4e41",
+      "semantic_key": "2ea40060862fa3714e2680ec29dc4a344de2aff157ffe0650816f4b79c35c4bc",
+      "started": "2026-10-04T12:40:29.126508+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-8_tabora"
     },
     "7c6600e91e254fc8932e81ca63626136": {
       "compile_attempted": true,
@@ -30897,6 +33436,19 @@
       "started": "2026-10-04T10:09:44.126588+00:00",
       "state": "exact_private",
       "task": "native-review-index-family-10_hrugis_cloud-20261004"
+    },
+    "7da160193ab34f7697261ccad20b136b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/7da160193ab34f7697261ccad20b136b",
+      "finished": "2026-10-04T12:40:23.860323+00:00",
+      "id": "7da160193ab34f7697261ccad20b136b",
+      "manifest_sha256": "1c01cc75ffb61c4252c69259c284006cc2407ff5249685ea46001e4be0c14f01",
+      "measured_functions": 18,
+      "outcome_sha256": "655b0ccefb14c3736d790693265837f29be99c8f78deeed62592791b29725cc9",
+      "semantic_key": "fce0bd686aa0d4dbcfd97a5fa0df105b8fafd16da0cc61fdc992464875d5e19c",
+      "started": "2026-10-04T12:40:23.581315+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-25_wupash_nebula"
     },
     "7df7d6ee56054f47b0fc680237805853": {
       "compile_attempted": true,
@@ -31125,6 +33677,19 @@
       "started": "2026-10-04T10:35:54.325325+00:00",
       "state": "exact_private",
       "task": "orbital-bitmap-getter-family-20261004-3_endako"
+    },
+    "886eee1607644da08cd946d36f88b7c9": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/886eee1607644da08cd946d36f88b7c9",
+      "finished": "2026-10-04T11:48:27.030108+00:00",
+      "id": "886eee1607644da08cd946d36f88b7c9",
+      "manifest_sha256": "0c8bb35374efa92599e26e183a04714dca0bc6aeb45471d49d26c1db25489c9e",
+      "measured_functions": 179,
+      "outcome_sha256": "e440fad8a3a124d80bceb919b2e3715b1c4e0df67afcf90f9096329cfbfc6aff",
+      "semantic_key": "1c7bc730119420f67db30b5f04d80699b0a946e1b60a011b6cb7879463816689",
+      "started": "2026-10-04T11:48:26.139187+00:00",
+      "state": "mismatch",
+      "task": "root-boot-sprite396-storage-v2-20261004"
     },
     "88f88f0a8cb6428ea61252dab4f36ef4": {
       "compile_attempted": true,
@@ -31585,6 +34150,19 @@
       "state": "exact_private",
       "task": "two-native-families-3_endako-20261004"
     },
+    "9e45f7a779704ac2abdd3a692490c129": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/9e45f7a779704ac2abdd3a692490c129",
+      "finished": "2026-10-04T11:46:27.442462+00:00",
+      "id": "9e45f7a779704ac2abdd3a692490c129",
+      "manifest_sha256": "63e924bf9f24369e9b59026f7b5e9baefcfb3d2c74b106d5a19bbd5b6e46a8a3",
+      "measured_functions": 18,
+      "outcome_sha256": "710a65c0de243783d24e297f48f1a65190ffbfad3908f5661ce15d571bd8489a",
+      "semantic_key": "ecbc198de9ce6e9f2bbd722dc738d4479ef9c6dadfbf6dcbe1b30313e18507e0",
+      "started": "2026-10-04T11:46:27.099402+00:00",
+      "state": "mismatch",
+      "task": "native-review-joba-object-bits-c-v1-20261004"
+    },
     "9e7c41ad8cb14702883aaa9b8714b8a7": {
       "compile_attempted": true,
       "directory": "runtime:trials/9e7c41ad8cb14702883aaa9b8714b8a7",
@@ -31626,6 +34204,19 @@
       "state": "preparation_rejected",
       "task": "orbital-hrugis-record-header-20261004-v2"
     },
+    "a0ce81e52f0444b086ba607b3b0df1c9": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/a0ce81e52f0444b086ba607b3b0df1c9",
+      "finished": "2026-10-04T12:40:24.466167+00:00",
+      "id": "a0ce81e52f0444b086ba607b3b0df1c9",
+      "manifest_sha256": "e0615297ef726fa10be3921ed83bde7b0092d946e2cb840427d9100d622a7fb0",
+      "measured_functions": 18,
+      "outcome_sha256": "52c960449fba2199724b52134e1049f210215151d85686b73ba3c594c5cdef40",
+      "semantic_key": "55230eb1281f7170f8f1c6fb7c1f770cbf17ae0599a8fc4f7e01d90ad977c2b8",
+      "started": "2026-10-04T12:40:24.161380+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-26_jamming_array"
+    },
     "a29eb070825649c49b0dce8d2794bb3d": {
       "compile_attempted": true,
       "directory": "runtime:trials/a29eb070825649c49b0dce8d2794bb3d",
@@ -31651,6 +34242,19 @@
       "started": "2026-10-04T07:28:01.489650+00:00",
       "state": "exact_private",
       "task": "scalar-families-6_notak-20261004"
+    },
+    "a2f6c826f89544e3957426d8b1b8adf1": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/a2f6c826f89544e3957426d8b1b8adf1",
+      "finished": "2026-10-04T12:32:04.372211+00:00",
+      "id": "a2f6c826f89544e3957426d8b1b8adf1",
+      "manifest_sha256": "430f854932d4facbc5eb4cf74012116ebc3ea17fd327e5545af113a74614c511",
+      "measured_functions": 18,
+      "outcome_sha256": "136261a31eb983a21849623cc01ea74d791a15ab06f76e5d386af78dc0cf8711",
+      "semantic_key": "24be76532e2e14bd9c1ded062847069e0eccde7b69870edc42aad9aa95ed7345",
+      "started": "2026-10-04T12:32:04.034481+00:00",
+      "state": "mismatch",
+      "task": "parallel-boot-analysis-maktar-group-range-pinrepair"
     },
     "a2f8edf0a7c84eefa1aec72fbb7cc733": {
       "compile_attempted": true,
@@ -31743,6 +34347,19 @@
       "state": "exact_private",
       "task": "orbital-bitmap-getter-family-20261004-12_todano"
     },
+    "a59487fe09504eceb00715162f4aac4e": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/a59487fe09504eceb00715162f4aac4e",
+      "finished": "2026-10-04T12:40:17.527255+00:00",
+      "id": "a59487fe09504eceb00715162f4aac4e",
+      "manifest_sha256": "0910f387c7380841a678273cbcedf6ae371f287474df40ff2ad738720c5708e1",
+      "measured_functions": 19,
+      "outcome_sha256": "239f368213b5dba04e6940705db43a1bdd35de343986731ee4d16ecbac9920a8",
+      "semantic_key": "b6bd11beb0ca00b5fc732ac54d4487c3f274d980dd2ebda99da9ef98a876a5b7",
+      "started": "2026-10-04T12:40:17.236498+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-14_aranos_prison"
+    },
     "a5ed4077d50a4da8984ca152d5168fcc": {
       "compile_attempted": true,
       "directory": "runtime:trials/a5ed4077d50a4da8984ca152d5168fcc",
@@ -31794,6 +34411,19 @@
       "started": "2026-10-04T03:45:02.833237+00:00",
       "state": "mismatch",
       "task": "boot-00293000-record-packets-v1"
+    },
+    "a99bb2207e364ec9b0e20f7c2ba7779b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/a99bb2207e364ec9b0e20f7c2ba7779b",
+      "finished": "2026-10-04T12:13:21.459692+00:00",
+      "id": "a99bb2207e364ec9b0e20f7c2ba7779b",
+      "manifest_sha256": "f45a137c2f023f7fdca7d6bccabde10a87476719e358e7a4f5a5353ec61c0d83",
+      "measured_functions": 18,
+      "outcome_sha256": "e27ade030b488fe97b661b7a8d549900c7d6b1ca5cd726750027e87e2d0d7a1b",
+      "semantic_key": "1d11ba1ef0160eb10a4ab7fc05947b70f8ba07f93aee77c5193b5b2854633a2f",
+      "started": "2026-10-04T12:13:21.138849+00:00",
+      "state": "mismatch",
+      "task": "parallel-boot-analysis-maktar-grouped-cursor-v2"
     },
     "ab0d299bf5154abcb8966fd51bc46285": {
       "compile_attempted": true,
@@ -31971,6 +34601,19 @@
       "state": "preparation_rejected",
       "task": "two-native-families-24_ship_shack-20261004"
     },
+    "b42fcab1d20244cbb1bfc5e319769122": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/b42fcab1d20244cbb1bfc5e319769122",
+      "finished": "2026-10-04T12:40:28.184549+00:00",
+      "id": "b42fcab1d20244cbb1bfc5e319769122",
+      "manifest_sha256": "b3e8d3612e22982dba694ecb7581e404497cb3d9aa67a1099891cef069f919f4",
+      "measured_functions": 20,
+      "outcome_sha256": "6d3fe330d29c8352b660de2033582986bc57ec26bac47dbbb07b301e020378c6",
+      "semantic_key": "7d6ae7222c9e570e54f4c2ed5813626f8a320f9635f4078574c4f1052f3630e5",
+      "started": "2026-10-04T12:40:27.860219+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-6_notak"
+    },
     "b45d073f273a4eeabf1ab46aee25ef74": {
       "compile_attempted": true,
       "directory": "runtime:trials/b45d073f273a4eeabf1ab46aee25ef74",
@@ -31996,6 +34639,19 @@
       "started": "2026-10-04T04:23:15.771686+00:00",
       "state": "exact_private",
       "task": "glyph-family-17_smolg-20261004"
+    },
+    "b50cd18f84b94253aefbcb2da99ec134": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/b50cd18f84b94253aefbcb2da99ec134",
+      "finished": "2026-10-04T12:40:20.024181+00:00",
+      "id": "b50cd18f84b94253aefbcb2da99ec134",
+      "manifest_sha256": "aa334a80bd3210a818f914028523b0d4f4fa4f2414004053ac9742332690f6cb",
+      "measured_functions": 16,
+      "outcome_sha256": "033e797b3e4322341e1a618070e12ce52fca297f33c07f239d1edb6ae159dc1b",
+      "semantic_key": "10ad18cf6e070616b5b91256782584bf20c40aa87aecba913b822e0447fcc6de",
+      "started": "2026-10-04T12:40:19.714191+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-19_grelbin"
     },
     "b55167e2f2fb4ba3916e177601c56242": {
       "compile_attempted": true,
@@ -32035,6 +34691,19 @@
       "started": "2026-10-04T10:29:09.509444+00:00",
       "state": "mismatch",
       "task": "orbital-hrugis-bitmap-20261004-v1"
+    },
+    "b7868c090c054c8d854266bd281820de": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/b7868c090c054c8d854266bd281820de",
+      "finished": "2026-10-04T12:16:06.695221+00:00",
+      "id": "b7868c090c054c8d854266bd281820de",
+      "manifest_sha256": "6def2563b2a341289133c9237eea68673fbf5531596cd1eee837aa9262df0e49",
+      "measured_functions": 18,
+      "outcome_sha256": "1be60990b413e0b4480ca0c7fa309aae1e3988f11382ad00ff66b14c69fde884",
+      "semantic_key": "8f45f75326b08b1fa0599f33f89fd3d25d7ea194b96e49226c0eef473867c7cc",
+      "started": "2026-10-04T12:16:06.281837+00:00",
+      "state": "mismatch",
+      "task": "orbital-gorn-pool-release-20261004-catalog-v1"
     },
     "b8080e36ab824bffae79f12d09140d70": {
       "compile_attempted": true,
@@ -32192,6 +34861,19 @@
       "state": "mismatch",
       "task": "orbital-hrugis-status-counts-20261004-v1"
     },
+    "c03141f295384463b13520b17632b891": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/c03141f295384463b13520b17632b891",
+      "finished": "2026-10-04T11:46:39.422909+00:00",
+      "id": "c03141f295384463b13520b17632b891",
+      "manifest_sha256": "85666395bc6253bb73a1043e4a065fad76201218e01fcbb3f11db553606c48b4",
+      "measured_functions": 19,
+      "outcome_sha256": "2920164fc62d2a2a00112937bfe7c21a88639e9c392547fd6dca772762efd6a6",
+      "semantic_key": "fb0d98c1b10834f361e2cf0c908c3eb7c1cd5a807fc66778eb61ff19ffd72a68",
+      "started": "2026-10-04T11:46:39.099345+00:00",
+      "state": "mismatch",
+      "task": "orbital-hrugis-pool-word-getter-20261004-v1"
+    },
     "c03b5e601dd24e8ab729c3e2704a468b": {
       "compile_attempted": true,
       "directory": "runtime:trials/c03b5e601dd24e8ab729c3e2704a468b",
@@ -32334,6 +35016,19 @@
       "started": "2026-10-04T07:27:59.354184+00:00",
       "state": "exact_private",
       "task": "scalar-families-30_insomniac_museum-20261004"
+    },
+    "c708220731ea4f48a68ad1270d3bf909": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/c708220731ea4f48a68ad1270d3bf909",
+      "finished": "2026-10-04T12:40:16.903628+00:00",
+      "id": "c708220731ea4f48a68ad1270d3bf909",
+      "manifest_sha256": "b98922a786b36e23c91185d04bcf2fadfabcd681bc53929a721a7cc091ccbdad",
+      "measured_functions": 18,
+      "outcome_sha256": "dd490f8dcf3d66cb38d5b2213fa25e2957f52be0cf8fa845adec2575d161f88f",
+      "semantic_key": "996a4e0ecf0f2c9ada98a259d41bfac77d42751ad43ce3733610f2f3d3ca7014",
+      "started": "2026-10-04T12:40:16.584446+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-13_boldan"
     },
     "c85cffea16da4306947d8c26bb8c8ea7": {
       "compile_attempted": true,
@@ -32712,6 +35407,19 @@
       "state": "exact_private",
       "task": "native-review-index-family-9_dobbo-20261004"
     },
+    "d830ea17cb40482280e214d57e530462": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d830ea17cb40482280e214d57e530462",
+      "finished": "2026-10-04T12:33:17.697325+00:00",
+      "id": "d830ea17cb40482280e214d57e530462",
+      "manifest_sha256": "6d57f6894a6efe6f6899a9080e2bbafff2f930129e7d3e4718b865990b947f8a",
+      "measured_functions": 20,
+      "outcome_sha256": "c349353521c3c0c88ccbe1bccbe1a7becca278802ab7c4cca13b53808c457d8c",
+      "semantic_key": "a78d49f94043a06796143155652d15ade9a7dd5cd3bdb58ba6aa9d7f8ab3243c",
+      "started": "2026-10-04T12:33:17.331136+00:00",
+      "state": "mismatch",
+      "task": "native-review-joba-polygon-dispatch-v1-20261004"
+    },
     "d85c32814a284986ade6b19e1d708607": {
       "compile_attempted": true,
       "directory": "runtime:trials/d85c32814a284986ade6b19e1d708607",
@@ -32724,6 +35432,19 @@
       "started": "2026-10-04T08:00:15.956580+00:00",
       "state": "mismatch",
       "task": "hrugis-record-insert-safe-field-names-20261004"
+    },
+    "d9294ffe28d0479cac8c13a52704925b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d9294ffe28d0479cac8c13a52704925b",
+      "finished": "2026-10-04T12:40:14.300140+00:00",
+      "id": "d9294ffe28d0479cac8c13a52704925b",
+      "manifest_sha256": "441d035902b0dab896db23e4c1ea2f595153ed1375e2fe150039f68096f5a849",
+      "measured_functions": 18,
+      "outcome_sha256": "5630003f904fc1547e5075ef48b0dca33c54ebdc2f7bb47564f8f8b8dd9b3ed3",
+      "semantic_key": "cdf5921df3df4cf9fe156578eb04006cfc0562e792693fc5d87d8d66852c437e",
+      "started": "2026-10-04T12:40:13.982650+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-0_aranos_tutorial"
     },
     "d92ec91c0fae4d1b9cfc098ded0657ce": {
       "compile_attempted": true,
@@ -32867,6 +35588,19 @@
       "started": "2026-10-04T10:47:09.235636+00:00",
       "state": "exact_private",
       "task": "root-parallel-combined-7_siberius-20261004"
+    },
+    "dfeeb6ca964b492380ffdaffb2b3ff40": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/dfeeb6ca964b492380ffdaffb2b3ff40",
+      "finished": "2026-10-04T12:40:26.294707+00:00",
+      "id": "dfeeb6ca964b492380ffdaffb2b3ff40",
+      "manifest_sha256": "985f9710296bd28d46bfd31ff96eb2f3afa9702dc663aaf7ad341b202ed64aa0",
+      "measured_functions": 17,
+      "outcome_sha256": "b5d067b2027644e5b5b8a6a7ccdc268f02546f05e1316037c60fdd2e8a58d993",
+      "semantic_key": "fed305033c63e11e0715662e1aa171ba762886c1d3f3da125d2ed058c1c863ee",
+      "started": "2026-10-04T12:40:26.012761+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-3_endako"
     },
     "e04cffdcdc9f4351a4d85adfe10b00e5": {
       "compile_attempted": true,
@@ -33127,6 +35861,19 @@
       "started": "2026-10-04T04:23:24.693035+00:00",
       "state": "exact_private",
       "task": "glyph-family-8_tabora-20261004"
+    },
+    "eb1e9e7f4f0347c0aca94ae4c15f2050": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/eb1e9e7f4f0347c0aca94ae4c15f2050",
+      "finished": "2026-10-04T12:40:23.261404+00:00",
+      "id": "eb1e9e7f4f0347c0aca94ae4c15f2050",
+      "manifest_sha256": "f45a27b3deb76709d7e9f1907a94953ffb07320317416835bea7166b1b205c94",
+      "measured_functions": 37,
+      "outcome_sha256": "daa6d25021fb75e0a8ff3b386c2d216473240774d57bf1cda35cb08640ea9051",
+      "semantic_key": "fe118a339fced486e4f37b98982d66d1f897902c7507c0b322ebd5d59852d4bc",
+      "started": "2026-10-04T12:40:22.916362+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-24_ship_shack"
     },
     "eb67e35a9a094b87b4fa984a775a9491": {
       "compile_attempted": true,
@@ -33455,6 +36202,32 @@
       "state": "exact_private",
       "task": "float-guard-only-26_jamming_array-20261004"
     },
+    "fd9750dbfec545c5bcc97b20443fb5e9": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/fd9750dbfec545c5bcc97b20443fb5e9",
+      "finished": "2026-10-04T12:40:30.049500+00:00",
+      "id": "fd9750dbfec545c5bcc97b20443fb5e9",
+      "manifest_sha256": "a4b5846dcff6bc96b001fdd45ac7e8525e105512ffae0b860322d030a8c6e7ce",
+      "measured_functions": 18,
+      "outcome_sha256": "af947e275d9399a4ebd7bb46f2eba4e2ed4305646b3974f86c6c54bd10576e61",
+      "semantic_key": "818be75863996e7aac6c29417a9838c1855921fac414397194dcb205277996c0",
+      "started": "2026-10-04T12:40:29.746138+00:00",
+      "state": "exact_private",
+      "task": "orbital-pair-lookup-family-20261004-9_dobbo"
+    },
+    "fde7371a6d2744758f21edaad10ec79d": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/fde7371a6d2744758f21edaad10ec79d",
+      "finished": "2026-10-04T12:28:36.492887+00:00",
+      "id": "fde7371a6d2744758f21edaad10ec79d",
+      "manifest_sha256": "33205492e42c7af424c58f50727427a3086cd9061f78d1427b4ce625c04b9dec",
+      "measured_functions": 18,
+      "outcome_sha256": "86357df4d3f6bde0018be24da44d480c6b399c3436385219aa6d2afb4235844d",
+      "semantic_key": "f0b35a76d9bee16901905e6bd7164100fc902fc96e4e859c001ebabc1985c9a1",
+      "started": "2026-10-04T12:28:36.165667+00:00",
+      "state": "exact_private",
+      "task": "orbital-gorn-pair-table-lookup-20261004-v1"
+    },
     "fe05f25c124f4ead964612fea7c3149e": {
       "compile_attempted": true,
       "directory": "runtime:trials/fe05f25c124f4ead964612fea7c3149e",
@@ -33575,6 +36348,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "38f22ff77596227b5d00a009a9532f95eea05653a47511c9160a88321ad487b3"
+    "docs/CAMPAIGN-QUEUE.md": "8f822e37d38f334227b8995768519aed16e71a30e92efc20ce1dcce4b1c36f85"
   }
 }

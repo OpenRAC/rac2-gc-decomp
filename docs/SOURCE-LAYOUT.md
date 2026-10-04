@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Two hundred sixty-two contextual native bodies remain distinct in the
+family has 26. Two hundred sixty-three contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,24 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 270 family-or-singleton items, 271 contextual variants | 28,912 across 477 placements |
+| Native overlays | 271 family-or-singleton items, 272 contextual variants | 29,180 across 478 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 19,728, or 19,752 when both clear
+Native representative catalogued bytes total 19,996, or 20,020 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **240,360 / 48,788,176 bytes (0.4927%)**.
-The latest matching lot adds 78 placements totaling 7,576 bytes: 23 signed
+The current integration exporter accepts **240,628 / 48,788,176 bytes (0.4932%)**.
+The latest matching lot adds one 268-byte Joba class-counter consumer. It
+selects one of six measured signed state counters, decrements a positive count,
+and returns success. All 18 complete functions in the current Joba source match,
+including 17 controls. Its raw body is absent from the other 26 programs, which
+gain no inferred placement. Fresh boot and all 27 overlay loaded-byte and metadata
+gates pass; the total native catalog holds 478 complete placements.
+
+The preceding parallel lot added 78 placements totaling 7,576 bytes: 23 signed
 index clamp/wrap algorithms of 100 bytes, 27 record-key updates of 116 bytes,
 27 resident bitmap getters of 72 bytes and the 200-byte Barlow queue launcher.
 The three independently qualified worker packets were combined with the launcher;
