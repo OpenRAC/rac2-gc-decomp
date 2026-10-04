@@ -25,7 +25,9 @@ class SourceLayoutTest(unittest.TestCase):
         self.assertEqual(result["byte_identical_sources"], 28)
         self.assertEqual(result["metrics"]["native_explicit_base_source_families"], 8)
         self.assertEqual(result["metrics"]["native_base_family_placements"], 215)
-        self.assertEqual(result["metrics"]["native_unique_authored_source_variants"], 28)
+        inventory = json.loads((REPO / "progress/source-inventory.json").read_bytes())
+        self.assertEqual(result["metrics"]["native_unique_authored_source_variants"],
+                         inventory["metrics"]["native_unique_authored_source_variants"])
 
     def test_changed_fragment_is_rejected(self):
         fragment = self.layout / "src/levels/shared/clear-five-words.cfrag"
@@ -109,7 +111,8 @@ class SourceLayoutTest(unittest.TestCase):
         expected["config/candidate-catalog.json"] = tool.digest(catalogue_path.read_bytes())
         expected["config/source-layout.json"] = tool.digest((self.layout / "config/source-layout.json").read_bytes())
         tool.author(repo, self.layout, None, expected)
-        self.assertEqual(tool.verify(repo, self.layout)["metrics"]["boot_authored_functions"], 179)
+        self.assertEqual(tool.verify(repo, self.layout)["metrics"]["boot_authored_functions"],
+                         len(catalogue["functions"]))
 
     def test_authoring_refuses_overwrite_without_current_source_hash(self):
         repo, manifest = self.fixture_repo()
@@ -129,7 +132,8 @@ class SourceLayoutTest(unittest.TestCase):
         tool.author(repo, self.layout, None, expected)
         metrics = tool.verify(repo, self.layout)["metrics"]
         self.assertEqual(metrics["pilot_family_placements"], 26)
-        self.assertEqual(metrics["native_unmerged_singletons"], 20)
+        self.assertEqual(metrics["native_unmerged_singletons"],
+                         manifest["metrics"]["native_unmerged_singletons"] + 1)
 
 
 if __name__ == "__main__":

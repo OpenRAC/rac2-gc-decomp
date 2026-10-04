@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Nineteen additional native bodies remain distinct. Only the clear
+family has 26. Twenty additional native bodies remain distinct. Only the clear
 family is factored into a shared body in this pilot. Expand factorization after
 the same source-identity and complete-image checks, rather than assuming every
 similarly sized body belongs to one family.
@@ -76,16 +76,18 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 27 family-or-singleton items, 28 textual variants | 10,312 across 234 placements |
+| Native overlays | 28 family-or-singleton items, 29 textual variants | 10,388 across 235 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 1,128, or 1,152 when both clear
+Native representative catalogued bytes total 1,204, or 1,228 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The integration exporter remains **221,760 / 48,788,176 bytes (0.4545%)**.
-Refactoring sources adds zero matching credit. The pilot regenerated all 28
+The current integration exporter accepts **221,836 / 48,788,176 bytes (0.4547%)**.
+The latest matching lot adds the complete 76-byte Ship Shack array traversal,
+with all 26 prior native controls exact and fresh boot plus 27 overlay gates.
+Refactoring sources adds zero matching credit. The earlier pilot regenerated all 28
 standalone C files identically; boot/native catalogs, checker and compiler profile
 retain their existing bytes. Complete image checks remain the final acceptor.

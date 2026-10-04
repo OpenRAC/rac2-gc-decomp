@@ -40,7 +40,7 @@ Reopen condition: A concrete new ABI/type/layout/compiler or algorithm observati
 
 ## 24_ship_shack-fun_002a4468
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
 Isolate the recorded private 76-byte winner and qualify its complete unit before integration.
 
@@ -622,6 +622,86 @@ Closed: the public inventory includes all 495 later annotations plus the origina
 - `docs/ASSERT-MESSAGE-NAMES.md`
 - `docs/assert-message-names.tsv`
 
+## boot-00293000-record-packets-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete 604-byte symbol with all 178 existing boot controls.
+
+Reopen condition: Measured source layout, alias or register-lifetime evidence
+
+## boot-00293000-record-packets-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete 604-byte symbol with all 178 existing boot controls.
+
+Reopen condition: Measured evidence explaining remaining saved-register and global-store scheduling differences
+
+## boot-003427c0-alpha-gofast-aliases
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full284-byte symbol and every existing boot control from the standalone compilation unit.
+
+Reopen condition: Measured mixed integer/float ABI, helper-result width, expression schedule or float conversion difference from immutable v1.
+
+## boot-003427c0-alpha-helper-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full284-byte symbol and every existing boot control from the standalone compilation unit.
+
+Reopen condition: Measured mixed integer/float ABI, helper-result width, expression schedule or float conversion difference from immutable v1.
+
+## boot-003427c0-alpha-helper-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full284-byte symbol and every existing boot control from the standalone compilation unit.
+
+Reopen condition: Measured mixed integer/float ABI, helper-result width, expression schedule or float conversion difference from immutable v1.
+
+## boot-003427c0-alpha-helper-v3
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full284-byte symbol and every existing boot control from the standalone compilation unit.
+
+Reopen condition: Measured mixed integer/float ABI, helper-result width, expression schedule or float conversion difference from immutable v1.
+
+## boot-00350460-segment-copy-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the whole 304-byte target plus every existing boot control from the same complete standalone compilation unit.
+
+Reopen condition: New measured original-source or callee ABI evidence beyond equivalent guard rewrites
+
+## boot-00350460-segment-copy-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify the whole 304-byte target plus every existing boot control from the same complete standalone compilation unit.
+
+Reopen condition: New measured source context or callee ABI explaining guard and register lifetime
+
+## boot-00351578-timestamp-ring-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Compare full 420-byte target and all existing boot controls in one maintained trial.
+
+Reopen condition: Measured source lifetime or signedness evidence against retained object
+
+## boot-00351578-timestamp-ring-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Compare full 420-byte target and all existing boot controls in one maintained trial.
+
+Reopen condition: New measured type, lifetime or division-control evidence
+
 ## boot-fun_00282a88
 
 State: `stopped`. Kind: `research`.
@@ -658,11 +738,11 @@ Reopen condition: A concrete new ABI/type/layout/compiler or algorithm observati
 
 ## boot-fun_00293000
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
 Inspect current Ghidra ABI and call boundaries, then plan one complete-unit C trial.
 
-Reopen condition: A measured call/ABI or source-shape hypothesis
+Reopen condition: New measured counter lifetime, helper ABI or source layout explaining saved s8 and startup store scheduling
 
 - `config/candidate-catalog.json`
 
@@ -699,13 +779,14 @@ Reopen condition: A concrete new ABI/type/layout/compiler or algorithm observati
 
 ## boot-fun_003427c0
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Inspect current Ghidra ABI and call boundaries, then plan one complete-unit C trial.
+Test measured native conversion casts with verified runtime helper bindings; park if the complete symbol remains unequal.
 
-Reopen condition: A measured call/ABI or source-shape hypothesis
+Reopen condition: Measured source or compiler evidence explaining divide/call hazard padding and FPR conversion routing
 
-- `config/candidate-catalog.json`
+- `runtime:trials/ba063e600cc84ff4b49dd3f8dc2d6740`
+- `runtime:trials/042158e666f24365ad6b65a790e5279b`
 
 ## boot-fun_003495a0
 
@@ -731,21 +812,21 @@ Reopen condition: A concrete new ABI/type/layout/compiler or algorithm observati
 
 ## boot-fun_00350460
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
 Inspect current Ghidra ABI and call boundaries, then plan one complete-unit C trial.
 
-Reopen condition: A measured call/ABI or source-shape hypothesis
+Reopen condition: Measured original source or callee ABI evidence addressing the missing destination move and prologue schedule
 
 - `config/candidate-catalog.json`
 
 ## boot-fun_00351578
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
 Inspect current Ghidra ABI and call boundaries, then plan one complete-unit C trial.
 
-Reopen condition: A measured call/ABI or source-shape hypothesis
+Reopen condition: Measured division guard, loop CFG or original type evidence addressing the remaining complete-size refusal
 
 - `config/candidate-catalog.json`
 
@@ -758,6 +839,22 @@ Closed by the measured compiler rule; consult the recorded exception limits befo
 - `docs/COMPILER-NOTES.md`
 - `scripts/compiler/restrict_mtc1_exemption.py`
 
+## known-boot-controls-20261003
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol and exact object hash against the committed boot review.
+
+Reopen condition: User-requested compiler regression check or measured tool drift
+
+## known-native-controls-20261003
+
+State: `integrated`. Kind: `candidate`.
+
+Compare all complete symbols and object hash with the pre-lot committed native review.
+
+Reopen condition: User-requested compiler regression check or measured tool drift
+
 ## prototype-byte-correspondence-naming
 
 State: `queued`. Kind: `research`.
@@ -767,3 +864,11 @@ Use the 3359 rows with prototype offsets as naming anchors; verify each program,
 Reopen condition: A validated name transfer with independent semantic evidence
 
 - `private-work:croise-aug6-retail.tsv`
+
+## ship-shack-a4468-isolated-controls
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify every complete symbol, then author and integrate only after exact equality.
+
+Reopen condition: New measured ABI or boundary evidence

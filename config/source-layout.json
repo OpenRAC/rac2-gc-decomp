@@ -84,7 +84,7 @@
     "candidates/levels/20_yeedil.c": "5afa0d571480cf3e55f943667ff511693dee22deca157d811edc7af7b5647c1f",
     "candidates/levels/22_dobbo_orbit.c": "9edc76a2b300afc25f3723e4a794f754cd37d2b4e22d20a4c495e74fe25c2d1e",
     "candidates/levels/23_damosel_orbit.c": "dd7b0eda6079603b55be536aa4da20aa87c5a938b9d2db6eb4efc8c6e80fd304",
-    "candidates/levels/24_ship_shack.c": "6f217213dd7db70a79080c0aaad16f46503bcae8650c564a92e4b906b7bbd9b0",
+    "candidates/levels/24_ship_shack.c": "47bdc9026b13fdc0ff52bd926fce11415930e8791c73c4a73c53a61eb402a44d",
     "candidates/levels/25_wupash_nebula.c": "8c4aca479ec3858edbf69c70f167a5d0407991d81586e696e7918759ee49be99",
     "candidates/levels/26_jamming_array.c": "227b64e99824185f1d77be811b7be64d05ed608bf95b1f7b94095fc9d602651f",
     "candidates/levels/2_maktar_nebula.c": "c68a09b8ee4bff8f7e586dbf549d2a66980c8105a43d2a63437ca663e8454239",
@@ -112,7 +112,7 @@
     "config/level-native/20_yeedil.json": "eafd8bbc8fef8724769e03f627c6ac5f87f8c783cda1dc892ec4f98678ca99aa",
     "config/level-native/22_dobbo_orbit.json": "572c8a345d2e95800b14ded3599c75138c4a7693339749bf346559e8106d3b72",
     "config/level-native/23_damosel_orbit.json": "36c1b5924e7168763f3b2e157875b2339c7286e1b468b525d5353a78f2b52897",
-    "config/level-native/24_ship_shack.json": "64ca24e057f4e045d39d97028c83dfa79414e4e43ef520af8fb5229a66971140",
+    "config/level-native/24_ship_shack.json": "c0724492674e425de6cd14feb435ed117348e98c022ea22e2a8d6ddd04e874a0",
     "config/level-native/25_wupash_nebula.json": "e9a6852d72a659365cef2b1a50e417e73d4d8d4ef7ae692f2f3f61e535480345",
     "config/level-native/26_jamming_array.json": "ca2ce8dce090d34b35c5dde29322f4633e74b5f35250d3f6b6848793b69d2de2",
     "config/level-native/2_maktar_nebula.json": "7cb4ebfbfa6a532e39ec5c6e663ae1d483bea181041777b5bf44b8df91aeddd4",
@@ -130,22 +130,22 @@
     "boot_authored_functions": 178,
     "boot_catalogued_machine_bytes": 9336,
     "identity_basis": "catalogued definitions compared as exact source bytes after recorded symbol-only substitutions; not a new machine proof",
-    "native_authored_variant_catalogued_bytes_upper_bound": 1152,
+    "native_authored_variant_catalogued_bytes_upper_bound": 1228,
     "native_base_family_placements": 215,
     "native_explicit_base_source_families": 8,
-    "native_replicated_catalogued_bytes": 10312,
-    "native_replicated_placements": 234,
-    "native_unique_authored_source_variants": 28,
-    "native_unique_family_or_singleton_work_items": 27,
-    "native_unique_representative_catalogued_bytes": 1128,
-    "native_unmerged_singletons": 19,
+    "native_replicated_catalogued_bytes": 10388,
+    "native_replicated_placements": 235,
+    "native_unique_authored_source_variants": 29,
+    "native_unique_family_or_singleton_work_items": 28,
+    "native_unique_representative_catalogued_bytes": 1204,
+    "native_unmerged_singletons": 20,
     "pilot_family_authored_source_variants": 2,
     "pilot_family_placements": 27,
     "pilot_family_replicated_catalogued_bytes": 648,
     "pilot_family_unique_catalogued_bytes": 24,
     "scope": "authored boot and native candidate catalogues only; excludes replicated boot/common overlay coverage",
     "shared_native_prelude_variants": 1,
-    "total_unique_authored_source_variants_in_scope": 206,
+    "total_unique_authored_source_variants_in_scope": 207,
     "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report."
   },
   "native_source_families": [
@@ -3624,6 +3624,22 @@
       "program": "levels/24_ship_shack",
       "source": "candidates/levels/24_ship_shack.c",
       "symbol": "LVL_24_SHIP_SHACK_FUN_0035E348"
+    },
+    {
+      "address": 2770024,
+      "body_sha256": "9d7a36bedf7adf4d3b92b55c2d474441519b96dab2f25ec82be5faefefad9af2",
+      "catalogue": "config/level-native/24_ship_shack.json",
+      "catalogued_size": 76,
+      "explicit_symbol_substitutions": {
+        "LVL_24_SHIP_SHACK_D_0025B710": "@@EXTERNAL_0025B710@@",
+        "LVL_24_SHIP_SHACK_FUN_002A4148": "@@EXTERNAL_002A4148@@",
+        "LVL_24_SHIP_SHACK_FUN_002A4468": "@@FUNCTION@@"
+      },
+      "level": "24_ship_shack",
+      "normalized_body_sha256": "2c6a32cff0055c3dd3bd818d6c68a097716776289f3e44eaa5c55bf09a4ad346",
+      "program": "levels/24_ship_shack",
+      "source": "candidates/levels/24_ship_shack.c",
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002A4468"
     }
   ],
   "promotion": "Pilot only. Generated C must stay byte-identical; compiler/checker unchanged. Parent reruns full gates if public integration changes any proof input.",
@@ -4151,12 +4167,12 @@
         },
         {
           "fragment": "src/levels/placements/24_ship_shack-after.cfrag",
-          "sha256": "0640ac45cda93928b0201d1092dec7aad7fa22b0e7789ba8d019faec950330f0",
-          "source_text_bytes": 5743
+          "sha256": "1cc034ee3b55fca36f1b42fee2ef30a4f576cd716f4d0390304f2c29fa439279",
+          "source_text_bytes": 6010
         }
       ],
-      "sha256": "6f217213dd7db70a79080c0aaad16f46503bcae8650c564a92e4b906b7bbd9b0",
-      "source_text_bytes": 5959
+      "sha256": "47bdc9026b13fdc0ff52bd926fce11415930e8791c73c4a73c53a61eb402a44d",
+      "source_text_bytes": 6226
     },
     "candidates/levels/25_wupash_nebula.c": {
       "pieces": [
