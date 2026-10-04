@@ -170,3 +170,42 @@ s32 LVL_25_WUPASH_NEBULA_FUN_0038CE80(u32 key,u32 owner) {
     } while(checked<32);
     return -1;
 }
+
+/* Apply nonzero signed halfword overrides to indexed rows of selected objects. */
+typedef struct {
+    unsigned int first;
+    unsigned char reserved04[0x1c];
+    unsigned int second;
+    unsigned char reserved24[0x0f];
+    unsigned char key;
+    unsigned char reserved34[0x1c];
+} ListOverrideRow;
+typedef struct {
+    unsigned char reserved00[0x0f];
+    unsigned char count;
+    unsigned char reserved10[0x0c];
+    ListOverrideRow *rows;
+} ListOverrideObject;
+typedef struct { short first; short second; } ListOverridePair;
+extern int LVL_25_WUPASH_NEBULA_D_0022E240[];
+extern ListOverrideObject *LVL_25_WUPASH_NEBULA_D_00226D40[];
+extern ListOverridePair LVL_25_WUPASH_NEBULA_D_0022DC40[];
+void LVL_25_WUPASH_NEBULA_FUN_00379E58(void)
+{
+    int *selected = LVL_25_WUPASH_NEBULA_D_0022E240;
+    while (*selected >= 0) {
+        ListOverrideObject *object = LVL_25_WUPASH_NEBULA_D_00226D40[*selected];
+        int i = 0;
+        ListOverrideRow *row = object->rows;
+        while (i < object->count) {
+            ListOverridePair *pair = &LVL_25_WUPASH_NEBULA_D_0022DC40[row->key];
+            if (pair->first != 0)
+                row->first = (row->first & 0xffffc000u) | pair->first;
+            if (pair->second != 0)
+                row->second = (row->second & 0xffffc000u) | pair->second;
+            i++;
+            row++;
+        }
+        selected++;
+    }
+}

@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Two hundred ninety-two contextual native bodies remain distinct in the
+family has 26. Three hundred nineteen contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,26 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 300 family-or-singleton items, 301 contextual variants | 31,284 across 507 placements |
+| Native overlays | 327 family-or-singleton items, 328 contextual variants | 36,468 across 534 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 22,100, or 22,124 when both clear
+Native representative catalogued bytes total 27,284, or 27,308 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **242,732 / 48,788,176 bytes (0.4975%)**.
-The latest matching lot adds 29 placements totaling 2,104 bytes: 27 two-key
+The current integration exporter accepts **247,916 / 48,788,176 bytes (0.5081%)**.
+The latest matching lot adds 27 selected-object row override loops of 192
+bytes, totaling 5,184 bytes. Each signed sentinel list selects objects with
+measured byte counts and row pointers. A row key indexes two signed halfword
+overrides; nonzero values are merged with retained upper word bits. All 534
+complete native functions in the current 27 units match, including 507 prior
+controls, with source/catalog bytes identical to their immutable qualifications.
+Fresh boot and all 27 loaded-byte and metadata gates pass. No field projection
+or canonical fragment establishes an original source name or object boundary.
+
+The preceding pair/query lot added 29 placements totaling 2,104 bytes: 27 two-key
 table lookups of 68 bytes, a 188-byte Joba counter increment and an 80-byte
 indexed polygon-query dispatcher. All 507 complete native functions in the
 final 27 units match, including 478 controls; the combined Joba source contains
@@ -130,7 +139,7 @@ bytes, 27 object-identifier checks of 32 bytes and five header getters of 56
 bytes. Earlier lots added 27 136-byte GS buffer setup wrappers, 27 92-byte
 floating-field guards and the 76-byte Ship Shack traversal.
 
-Ten canonical fragments supply the scalar bodies with explicit placements.
+Eleven canonical fragments supply the scalar bodies with explicit placements.
 Status classifiers call each unit's existing indexed status getter definition;
 the output wrappers bind measured per-program floating helper addresses.
 The output wrapper is absent in 12 programs and the header getter is absent in

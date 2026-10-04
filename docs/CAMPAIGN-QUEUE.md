@@ -2189,6 +2189,382 @@ Park this target-reference bookkeeping body and preserve its immutable source/ob
 
 Reopen condition: Independent original memory qualifier, inter-thread/hardware publication contract or measured source initialization/alias structure explaining required store order; equivalent statement permutations are insufficient.
 
+## native-review-prison-category-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current19 controls and complete88-byte seed, no family until exact.
+
+Reopen condition: Independent source layout/ABI/storage phase evidence only; no equivalent source or register cycles.
+
+## native-review-prison-category-value-20261004
+
+State: `queued`. Kind: `research`.
+
+Verify callerwordoutputABI andactual tableword layout, authorCURRENT20controls+pendingexactsearch88+new92 thenmaintainedstricttrial.
+
+Reopen condition: Independent source/table/ABI/lifetime evidence only, no association/register/expression cycling.
+
+## native-review-prison-duel-outcome-20261004
+
+State: `queued`. Kind: `research`.
+
+VerifycallerABI thenauthorprivatewholeCURRENTPrison19-controlunit andmaintainedexacttrial withdefaultG0.
+
+Reopen condition: Independent state/layout/ABI/sourcephaseevidenceonly, no branch/reg/expression cycling.
+
+## native-review-prison-duel-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park this immutable physical cyclic-outcome family; no equivalent boolean-expression/branch ordering, register or padding variants. Continue a genuinely different owned algorithm.
+
+Reopen condition: Independent original source control-lifetime or qualified optimizer CFG evidence; no register forcing, volatile, explicit padding or equivalent-expression cycling.
+
+## native-review-prison-entry-select-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutable pointer-entry selection family, no localrenames/base-index load ordering or return-tail spelling permutations. Continue a different ordinary C body; source layout evidence remains usable for a distinct called table selector.
+
+Reopen condition: Independent original access/lifetime/caller layout evidence explaining load phases and shared return placement; no forcedregisters, padding or equivalent-source cycling.
+
+## native-review-prison-entry-selection-20261004
+
+State: `queued`. Kind: `research`.
+
+Verifycallerstateargument and20-byte returnedrecordconsumer, authorcurrent20controls+pendingsearch88+new88 inprivateunit thenmaintainedtrial.
+
+Reopen condition: Independent originalstate/entrylayout/ABI/sourcephaseevidence only, no allocation/branchspellingcycles.
+
+## native-review-prison-list-propagation-20261004
+
+State: `queued`. Kind: `research`.
+
+Verifycaller object ABI then author typed actual256-byte object/state partial views andmaintained fullunit trial, preserving listed null/termination gates.
+
+Reopen condition: Independent original storage/alias/layout/sourcephase evidence only, no loop/register permutations.
+
+## native-review-prison-propagate-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutable list-propagation family, no OR-to-switch/duplicatedstatement/cursor-lifetime variants without original source evidence. Continue another genuine ordinary C body.
+
+Reopen condition: Independent original per-class source boundaries/inlined accessor contract or qualified optimizer phase evidence; no equivalentexpression cycling, padding, volatility or forcedregisters.
+
+## native-review-prison-record-color-20261004
+
+State: `queued`. Kind: `research`.
+
+Verify callerrecordpointer and complete helperpin ABI, author current20-control Prison plus pending exactsearch88 andnew128, thenmaintainedstricttrial.
+
+Reopen condition: Independent union/layout/ABI/accessphase evidence only; no arbitrary stores/register/padding or sourcecycles.
+
+## native-review-prison-record-color-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutable physical color-propagation family with strict1-byte mismatch/zero credit; no volatile qualifier, artificial temporary use, forced loadwidth, byte/half declaration cycling or aliasbulk. Continue a different ordinary C algorithm.
+
+Reopen condition: Independent original access qualifier or qualified compiler/source-binding evidence explaining an observable16-bit read despite final byte truncation. Ordinary type spelling already reflects halfword source; no unsupported volatile assumptions or manual instructions.
+
+## native-review-prison-record-search-20261004
+
+State: `queued`. Kind: `research`.
+
+Verify caller input/result andreal recordarray view; author privateCURRENT19-controlunit withoneboundedCsearch thenmaintainedstricttrial.
+
+Reopen condition: Independent original record layout/access/control-lifetime evidence only; no anchor/register/loopspellingcycles.
+
+## native-review-prison-search-v1-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all current19 controls and complete88-byte seed, no family until exact.
+
+Reopen condition: Independent source layout/ABI/storage phase evidence only; no equivalent source or register cycles.
+
+## native-review-record-search-family-20261004
+
+State: `queued`. Kind: `research`.
+
+Finish independent27 program qualification, author private intended current full units and maintained exact trials autonomously; no public credit before root gates.
+
+Reopen condition: Independent full pin/source/catalog changes, not equivalent source permutations or flags matrices.
+
+- `private-work:parallel-20261004/native_review/search-family-scan.json`
+
+## native-review-search-family-0_aranos_tutorial-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-10_hrugis_cloud-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-11_joba-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-12_todano-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-13_boldan-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-14_aranos_prison-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-15_gorn-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-16_snivelak-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-17_smolg-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-18_damosel-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-19_grelbin-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-1_oozla-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-20_yeedil-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-22_dobbo_orbit-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-23_damosel_orbit-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-24_ship_shack-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-25_wupash_nebula-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-26_jamming_array-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-2_maktar_nebula-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-30_insomniac_museum-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-3_endako-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-4_barlow-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-5_feltzin_system-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-6_notak-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-7_siberius-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-8_tabora-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
+## native-review-search-family-9_dobbo-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify all complete current controls and new88 body in intended unit.
+
+Reopen condition: Independent changed source/catalog/binding evidence only, not flags or equivalent-source cycling.
+
+- `private-work:parallel-20261004/native_review/search-family-qualified.json`
+
 ## orbital-bitmap-getter-family-20261004
 
 State: `done`. Kind: `research`.
@@ -2459,6 +2835,16 @@ Reopen condition: Current source/catalog/reference drift or independently measur
 
 - `runtime:bank/parallel-orbital_lots-bitmap-family/9_dobbo/evidence.json`
 
+## orbital-gorn-descriptor-remap-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original descriptor layout, access phase or caller ABI evidence beyond the measured source model.
+
+- `runtime:bank/parallel-orbital_lots-gorn-descriptor-remap-v1/evidence.json`
+
 ## orbital-gorn-pair-table-insert-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -2515,7 +2901,7 @@ State: `stopped`. Kind: `candidate`.
 
 Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
 
-Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+Reopen condition: Independent original storage, ABI, or qualified compiler evidence beyond the already measured access phase.
 
 - `runtime:bank/parallel-orbital_lots-gorn-record-mark-v1/evidence.json`
 
@@ -3172,7 +3558,7 @@ Reopen condition: Independent reference/layout/source/ABI evidence.
 
 ## parallel-boot-analysis-list192-0-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3182,7 +3568,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-1-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3192,7 +3578,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-10-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3202,7 +3588,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-11-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3212,7 +3598,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-12-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3222,7 +3608,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-13-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3232,7 +3618,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-14-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3242,7 +3628,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-15-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3252,7 +3638,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-16-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3262,7 +3648,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-17-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3272,7 +3658,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-18-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3282,7 +3668,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-19-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3292,7 +3678,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-2-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3302,7 +3688,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-20-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3312,7 +3698,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-22-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3322,7 +3708,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-23-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3332,7 +3718,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-24-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3342,7 +3728,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-25-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3352,7 +3738,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-26-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3362,7 +3748,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-3-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3372,7 +3758,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-30-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3382,7 +3768,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-4-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3392,7 +3778,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-5-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3402,7 +3788,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-6-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3412,7 +3798,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-8-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3422,7 +3808,7 @@ Reopen condition: Independent new reference/layout/source/ABI witness only.
 
 ## parallel-boot-analysis-list192-9-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Maintained whole current unit qualification before root integration.
 
@@ -3577,6 +3963,26 @@ State: `stopped`. Kind: `candidate`.
 Park groupedcursor432 and physicalaliases after snapshotphase hypothesis collapses to identicalobject; choose independent body.
 
 Reopen condition: Independent original mode-declaration/sourcephase or qualified rematerialization witness, no volatile/alias/local/register/counter permutation.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-nearest-modifier-research
+
+State: `done`. Kind: `research`.
+
+Verify full helper/caller/data roles then author private current whole-unit C/trial.
+
+Reopen condition: Independent original layout/type/control/access-phase or qualified lowering witness; no pointer/local/register/source permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-maktar-nearest-modifier-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park nearest modifier family; select genuinely new scalar target.
+
+Reopen condition: Independent original scope/declaration/access phase or qualified lowering witness, no initialization-scope/local/pointer/branch/register permutations.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -3761,6 +4167,16 @@ Reopen condition: Freshreference/layout/ABI/source evidence only
 - `runtime:bank/parallel-boot_analysis-update-family/placements-static.json`
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-siberius-buffer-submit-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park transfer submission family; choose fresh independent scalar target.
+
+Reopen condition: Independent original declaration/access phase or qualified address-lifetime lowering witness, no pointer/local/register/flag permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## parallel-boot-analysis-siberius-chain-select-research
 
 State: `done`. Kind: `research`.
@@ -3791,9 +4207,49 @@ Reopen condition: Independent original source/control/type/access phase or quali
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-siberius-descriptor-slot-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park descriptor slot physical family; choose independent new algorithm.
+
+Reopen condition: Independent original declaration/access phase or qualified lowering witness, no pointer/local/register/store/loop permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-siberius-entry-select-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Run maintained full current unit and inspect complete260-byte instruction outcome.
+
+Reopen condition: Independent original layout/source/access-phase or qualified lowering witness only; no locals/registers/pointers/branch/loop cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-siberius-entry-select-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Park entry selection physical family; choose independent genuinely untried algorithm.
+
+Reopen condition: Independent original loop/control/declaration or qualified lowering evidence, no loop/base/pointer/global/local/register/flag permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-siberius-group-overrides-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park nested-group override physical family; choose independent scalar algorithm.
+
+Reopen condition: Independent subheader declaration/construction/consumer evidence or qualified lowering witness; no pointer/base/local/register/loop/order/flag permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## parallel-boot-analysis-siberius-list-overrides-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure complete full CURRENT unit; only evidence-backed substantive correction, otherwise park.
 
@@ -3828,6 +4284,16 @@ State: `stopped`. Kind: `candidate`.
 Park residentflags356 andphysicalaliases after one supportedstructured-group experiment; continue independenttarget.
 
 Reopen condition: Independentoriginal residentgroup/layout/accessphase orqualifiedlowering witness; no sourceview/loop/pointer/counter/register/expression cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-siberius-status-predicate-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Park predicate physical family; choose independent scalar algorithm.
+
+Reopen condition: Independent original declaration/source/access-phase or qualified lowering witness, no base/type/local/register/return-block/condition-order permutations.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -4209,6 +4675,16 @@ Reopen condition: Independent original table source/index-width/layout or compil
 
 - `private-work:parallel-20261004/root-gp/packet332-final-refusal.json`
 
+## root-boot-quad24-witness-20261004
+
+State: `stopped`. Kind: `research`.
+
+Verify actual caller or indirect-table ABI and pinned live bytes; then bounded CmodeTI data-copy qualification with unchangedG0/tools, no forcedalignment/nops/registers.
+
+Reopen condition: Independent original storage/observable write qualifier or compilation-context evidence; no volatile/register/padding/flags cycles
+
+- `private-work:parallel-20261004/root-gp/quad24-pin.json`
+
 ## root-boot-record-leaf-20261004
 
 State: `stopped`. Kind: `research`.
@@ -4312,6 +4788,27 @@ State: `exact_private`. Kind: `candidate`.
 Require complete exact units before frozen boot and all27overlay gates.
 
 Reopen condition: New measured compiler/source evidence, not duplicate replay.
+
+## root-independent-ti-copy24-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all179complete symbols exact; preserve any size/byte refusal and do notcycle field/local/flags choices.
+
+Reopen condition: Independent measured source/ABI/alignment/compiler evidence, no source/register/flags cycles.
+
+- `private-work:parallel-20261004/root-gp/quad24-pin.json`
+- `private-work:parallel-20261004/root-gp/quad-primary-details.txt`
+
+## root-independent-ti-copy24-syntax-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Keep immutable syntax failure/refusal stopped; continue new target or integrate completed worker packets.
+
+Reopen condition: Independent original storage/observable write qualifier or compilation-context evidence, not byte chasing
+
+- `private-work:parallel-20261004/root-gp/quad24-final-refusal.json`
 
 ## root-independent-wide-g8-20261004
 

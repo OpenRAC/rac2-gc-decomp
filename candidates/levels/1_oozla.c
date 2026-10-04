@@ -164,3 +164,42 @@ s32 LVL_1_OOZLA_FUN_003740A8(u32 key,u32 owner) {
     } while(checked<32);
     return -1;
 }
+
+/* Apply nonzero signed halfword overrides to indexed rows of selected objects. */
+typedef struct {
+    unsigned int first;
+    unsigned char reserved04[0x1c];
+    unsigned int second;
+    unsigned char reserved24[0x0f];
+    unsigned char key;
+    unsigned char reserved34[0x1c];
+} ListOverrideRow;
+typedef struct {
+    unsigned char reserved00[0x0f];
+    unsigned char count;
+    unsigned char reserved10[0x0c];
+    ListOverrideRow *rows;
+} ListOverrideObject;
+typedef struct { short first; short second; } ListOverridePair;
+extern int LVL_1_OOZLA_D_0022E300[];
+extern ListOverrideObject *LVL_1_OOZLA_D_00226E00[];
+extern ListOverridePair LVL_1_OOZLA_D_0022DD00[];
+void LVL_1_OOZLA_FUN_00360FD8(void)
+{
+    int *selected = LVL_1_OOZLA_D_0022E300;
+    while (*selected >= 0) {
+        ListOverrideObject *object = LVL_1_OOZLA_D_00226E00[*selected];
+        int i = 0;
+        ListOverrideRow *row = object->rows;
+        while (i < object->count) {
+            ListOverridePair *pair = &LVL_1_OOZLA_D_0022DD00[row->key];
+            if (pair->first != 0)
+                row->first = (row->first & 0xffffc000u) | pair->first;
+            if (pair->second != 0)
+                row->second = (row->second & 0xffffc000u) | pair->second;
+            i++;
+            row++;
+        }
+        selected++;
+    }
+}

@@ -170,3 +170,42 @@ s32 LVL_22_DOBBO_ORBIT_FUN_00381568(u32 key,u32 owner) {
     } while(checked<32);
     return -1;
 }
+
+/* Apply nonzero signed halfword overrides to indexed rows of selected objects. */
+typedef struct {
+    unsigned int first;
+    unsigned char reserved04[0x1c];
+    unsigned int second;
+    unsigned char reserved24[0x0f];
+    unsigned char key;
+    unsigned char reserved34[0x1c];
+} ListOverrideRow;
+typedef struct {
+    unsigned char reserved00[0x0f];
+    unsigned char count;
+    unsigned char reserved10[0x0c];
+    ListOverrideRow *rows;
+} ListOverrideObject;
+typedef struct { short first; short second; } ListOverridePair;
+extern int LVL_22_DOBBO_ORBIT_D_0022EAC0[];
+extern ListOverrideObject *LVL_22_DOBBO_ORBIT_D_002275C0[];
+extern ListOverridePair LVL_22_DOBBO_ORBIT_D_0022E4C0[];
+void LVL_22_DOBBO_ORBIT_FUN_0036E4D0(void)
+{
+    int *selected = LVL_22_DOBBO_ORBIT_D_0022EAC0;
+    while (*selected >= 0) {
+        ListOverrideObject *object = LVL_22_DOBBO_ORBIT_D_002275C0[*selected];
+        int i = 0;
+        ListOverrideRow *row = object->rows;
+        while (i < object->count) {
+            ListOverridePair *pair = &LVL_22_DOBBO_ORBIT_D_0022E4C0[row->key];
+            if (pair->first != 0)
+                row->first = (row->first & 0xffffc000u) | pair->first;
+            if (pair->second != 0)
+                row->second = (row->second & 0xffffc000u) | pair->second;
+            i++;
+            row++;
+        }
+        selected++;
+    }
+}

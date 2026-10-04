@@ -177,3 +177,42 @@ s32 LVL_14_ARANOS_PRISON_FUN_00388598(u32 key,u32 owner) {
     } while(checked<32);
     return -1;
 }
+
+/* Apply nonzero signed halfword overrides to indexed rows of selected objects. */
+typedef struct {
+    unsigned int first;
+    unsigned char reserved04[0x1c];
+    unsigned int second;
+    unsigned char reserved24[0x0f];
+    unsigned char key;
+    unsigned char reserved34[0x1c];
+} ListOverrideRow;
+typedef struct {
+    unsigned char reserved00[0x0f];
+    unsigned char count;
+    unsigned char reserved10[0x0c];
+    ListOverrideRow *rows;
+} ListOverrideObject;
+typedef struct { short first; short second; } ListOverridePair;
+extern int LVL_14_ARANOS_PRISON_D_0022E340[];
+extern ListOverrideObject *LVL_14_ARANOS_PRISON_D_00226E40[];
+extern ListOverridePair LVL_14_ARANOS_PRISON_D_0022DD40[];
+void LVL_14_ARANOS_PRISON_FUN_003752F8(void)
+{
+    int *selected = LVL_14_ARANOS_PRISON_D_0022E340;
+    while (*selected >= 0) {
+        ListOverrideObject *object = LVL_14_ARANOS_PRISON_D_00226E40[*selected];
+        int i = 0;
+        ListOverrideRow *row = object->rows;
+        while (i < object->count) {
+            ListOverridePair *pair = &LVL_14_ARANOS_PRISON_D_0022DD40[row->key];
+            if (pair->first != 0)
+                row->first = (row->first & 0xffffc000u) | pair->first;
+            if (pair->second != 0)
+                row->second = (row->second & 0xffffc000u) | pair->second;
+            i++;
+            row++;
+        }
+        selected++;
+    }
+}
