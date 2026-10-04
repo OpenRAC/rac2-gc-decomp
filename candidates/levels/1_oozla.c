@@ -265,3 +265,110 @@ void *LVL_1_OOZLA_FUN_002A73C0(int kind)
         return LVL_1_OOZLA_D_0018B040;
     return 0;
 }
+
+/* Find a mapped record by its unsigned halfword class and return its opaque word. */
+typedef struct {
+    unsigned int marker;
+    unsigned char reserved04[0x38];
+    unsigned short class_code;
+    unsigned char reserved3E[0xa2];
+} MappedClassEntry;
+typedef char MappedClassStride[(sizeof(MappedClassEntry) == 0xe0) ? 1 : -1];
+extern unsigned char LVL_1_OOZLA_D_00139568[];
+extern MappedClassEntry LVL_1_OOZLA_D_002637A0[];
+unsigned int LVL_1_OOZLA_FUN_002E8E10(unsigned int key)
+{
+    int i;
+    for (i = 0; i < 56; i++) {
+        MappedClassEntry *record = &LVL_1_OOZLA_D_002637A0[LVL_1_OOZLA_D_00139568[i]];
+        if (record->class_code == key)
+            return record->marker;
+    }
+    return 0;
+}
+
+/* Relocates serialized header offsets and compacts each row in its original storage. */
+typedef unsigned long long NativeCompactU64;
+typedef union {
+    s32 field00[4];
+    struct {
+        NativeCompactU64 field00;
+        short field08;
+        short field0A;
+        unsigned short field0C;
+        unsigned short field0E;
+    } compact;
+} NativeCompactRow16;
+typedef struct {
+    u8 field00[6];
+    short field06;
+    u8 field08[4];
+    f32 field0C;
+    u32 field10;
+    u32 field14;
+    u32 field18;
+    u32 field1C;
+    u32 field20;
+} NativeCompactHeader;
+extern s32 LVL_1_OOZLA_FUN_002E31B0(s32 value);
+NativeCompactHeader *LVL_1_OOZLA_FUN_00376408(NativeCompactHeader *header) {
+    u32 base = (u32)header;
+    NativeCompactRow16 *source;
+    s32 index;
+    header->field10 += base;
+    header->field14 += base;
+    header->field18 += base;
+    header->field1C += base;
+    if (header->field20 != 0) header->field20 += base;
+    index = 0;
+    source = (NativeCompactRow16 *)header->field18;
+    header->field0C *= 0.0032116016f;
+    if (header->field06 > 0) {
+        do {
+            s32 first = source->field00[0];
+            s32 second = source->field00[1];
+            s32 third = source->field00[2];
+            s32 fourth = source->field00[3];
+            ((NativeCompactRow16 *)header->field18)[index].compact.field0A = first >> 4;
+            source++;
+            ((NativeCompactRow16 *)header->field18)[index].compact.field08 = second >> 4;
+            ((NativeCompactRow16 *)header->field18)[index].compact.field0C = LVL_1_OOZLA_FUN_002E31B0(third);
+            ((NativeCompactRow16 *)header->field18)[index].compact.field0E = LVL_1_OOZLA_FUN_002E31B0(fourth);
+            ((NativeCompactRow16 *)header->field18)[index].compact.field00 = 0;
+            index++;
+        } while (index < header->field06);
+    }
+    return header;
+}
+
+extern s32 LVL_1_OOZLA_D_001A79F0;
+s32 LVL_1_OOZLA_FUN_002CBEF8(void) {
+    s32 found = 0;
+    if (LVL_1_OOZLA_D_001A79F0 == 25 || LVL_1_OOZLA_D_001A79F0 == 5 ||
+        LVL_1_OOZLA_D_001A79F0 == 10 || LVL_1_OOZLA_D_001A79F0 == 15) {
+        found = 1;
+    }
+    return found;
+}
+
+typedef struct {
+    u8 field0;
+    u8 active;
+    u8 middle[4];
+    unsigned short count;
+    u8 trailing[8];
+} ConditionalResetSlot;
+typedef char ConditionalResetSlotSize[(sizeof(ConditionalResetSlot) == 16) ? 1 : -1];
+extern ConditionalResetSlot LVL_1_OOZLA_D_001B9300[8];
+void LVL_1_OOZLA_FUN_002CC340(void) {
+    ConditionalResetSlot *slot = LVL_1_OOZLA_D_001B9300;
+    s32 remaining = 7;
+    do {
+        if (slot->active) {
+            slot->active = 0;
+            slot->count = 0;
+        }
+        --remaining;
+        ++slot;
+    } while (remaining >= 0);
+}

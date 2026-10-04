@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Four hundred contextual native bodies remain distinct in the
+family has 26. Five hundred forty-four contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,30 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 408 family-or-singleton items, 409 contextual variants | 45,756 across 615 placements |
+| Native overlays | 552 family-or-singleton items, 553 contextual variants | 61,172 across 759 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 36,572, or 36,596 when both clear
+Native representative catalogued bytes total 51,988, or 52,012 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **257,204 / 48,788,176 bytes (0.5272%)**.
-The latest matching lot adds three complete families across all 27 overlays:
+The current integration exporter accepts **272,620 / 48,788,176 bytes (0.5588%)**.
+The latest matching lot adds 144 complete placements totaling 15,416 bytes:
+27 mapped-class queries of 84 bytes, 27 serialized-header relocation and row
+compaction bodies of 300 bytes, 27 resident-mode predicates of 60 bytes,
+19 pairs of 56-byte object flag setters and clearers, and 25 conditional
+eight-slot resets of 52 bytes. Joint flag sources share their declarations
+once; measured Ship Shack storage spellings retain separate exact variants.
+All 759 complete native functions match, including 615 prior controls, followed
+by fresh boot and all 27 loaded-byte and metadata gates. Compaction calls the
+original measured PLZCW helper as an external and adds zero helper credit.
+The reset family excludes Barlow and Notak because one raw caller in each lacks
+a stored complete function boundary; no placement or credit is inferred.
+Current per-program flags, GP and far-data attributes remain qualified.
+
+The preceding matching lot added three complete families across all 27 overlays:
 88-byte record-object searches, 160-byte object-class filters and 96-byte
 kind-pointer selectors. The 81 new placements total 9,288 bytes. All 615
 complete native functions match, including 534 prior controls, with fresh
@@ -149,7 +162,7 @@ bytes, 27 object-identifier checks of 32 bytes and five header getters of 56
 bytes. Earlier lots added 27 136-byte GS buffer setup wrappers, 27 92-byte
 floating-field guards and the 76-byte Ship Shack traversal.
 
-Fourteen canonical fragments supply the scalar bodies with explicit placements.
+Twenty-one canonical fragments supply the scalar bodies with explicit placements.
 Status classifiers call each unit's existing indexed status getter definition;
 the output wrappers bind measured per-program floating helper addresses.
 The output wrapper is absent in 12 programs and the header getter is absent in

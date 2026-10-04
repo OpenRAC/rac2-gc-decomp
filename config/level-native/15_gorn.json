@@ -145,6 +145,42 @@
       "address": 2874984,
       "size": 96,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_0030C5D0",
+      "address": 3196368,
+      "size": 84,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_0039BCA0",
+      "address": 3783840,
+      "size": 300,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002EF560",
+      "address": 3077472,
+      "size": 60,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002EC050",
+      "address": 3063888,
+      "size": 56,
+      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002EC088",
+      "address": 3063944,
+      "size": 56,
+      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002EF9A8",
+      "address": 3078568,
+      "size": 52,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
     }
   ],
   "externals": {
@@ -165,6 +201,11 @@
     "LVL_15_GORN_D_00262A70": 2501232,
     "LVL_15_GORN_D_0018C0B0": 1622192,
     "LVL_15_GORN_D_0018B134": 1618228,
-    "LVL_15_GORN_D_0018B040": 1617984
+    "LVL_15_GORN_D_0018B040": 1617984,
+    "LVL_15_GORN_D_00139568": 1283432,
+    "LVL_15_GORN_D_00276FF0": 2584560,
+    "LVL_15_GORN_FUN_00306970": 3172720,
+    "LVL_15_GORN_D_001A79F0": 1735152,
+    "LVL_15_GORN_D_001B9600": 1807872
   }
 }
