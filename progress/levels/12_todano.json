@@ -2400,6 +2400,48 @@
       "program": "12_todano",
       "candidate_source": "candidates/levels/12_todano.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_003FB878",
+      "address": 4175992,
+      "size": 88,
+      "matched": true,
+      "reference_sha256": "4c184aed953f01333db60be07363552d8562f4e850fdbed068b233d7c061a4d4",
+      "candidate_sha256": "4c184aed953f01333db60be07363552d8562f4e850fdbed068b233d7c061a4d4",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "12_todano",
+      "candidate_source": "candidates/levels/12_todano.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_002D9F58",
+      "address": 2989912,
+      "size": 160,
+      "matched": true,
+      "reference_sha256": "939ea2083a9852c4abd21886b83e7dffed53dffd8a74910835bfc5d0a2583778",
+      "candidate_sha256": "939ea2083a9852c4abd21886b83e7dffed53dffd8a74910835bfc5d0a2583778",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "12_todano",
+      "candidate_source": "candidates/levels/12_todano.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_002AAB68",
+      "address": 2796392,
+      "size": 96,
+      "matched": true,
+      "reference_sha256": "9c76c0104b501c71e20fd6151ed9b3823715be6b14ebf1afe74f0448524052ff",
+      "candidate_sha256": "9c76c0104b501c71e20fd6151ed9b3823715be6b14ebf1afe74f0448524052ff",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "12_todano",
+      "candidate_source": "candidates/levels/12_todano.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2407,14 +2449,14 @@
     "bytes_compared": 2843680,
     "segments": 1
   },
-  "matched_code_bytes": 8820,
+  "matched_code_bytes": 9164,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "d223d823f4d8d85af1548756614590a5832d3e5428d4bf7336e81ae551902d38",
+  "candidate_elf_sha256": "2a76eb4f54d1737df1e5d915357334cd197e76054822e7407411ded93267c055",
   "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
   "replacement_inputs": {
     "102A80.s": [
@@ -2588,7 +2630,10 @@
       "LVL_12_TODANO_FUN_002FA730",
       "LVL_12_TODANO_FUN_003094F8",
       "LVL_12_TODANO_FUN_00383660",
-      "LVL_12_TODANO_FUN_00370590"
+      "LVL_12_TODANO_FUN_00370590",
+      "LVL_12_TODANO_FUN_003FB878",
+      "LVL_12_TODANO_FUN_002D9F58",
+      "LVL_12_TODANO_FUN_002AAB68"
     ]
   },
   "schema": 2,
@@ -2613,7 +2658,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "d223d823f4d8d85af1548756614590a5832d3e5428d4bf7336e81ae551902d38",
+    "candidate_elf_sha256": "2a76eb4f54d1737df1e5d915357334cd197e76054822e7407411ded93267c055",
     "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
     "replacement_inputs": {
       "102A80.s": [
@@ -2787,7 +2832,10 @@
         "LVL_12_TODANO_FUN_002FA730",
         "LVL_12_TODANO_FUN_003094F8",
         "LVL_12_TODANO_FUN_00383660",
-        "LVL_12_TODANO_FUN_00370590"
+        "LVL_12_TODANO_FUN_00370590",
+        "LVL_12_TODANO_FUN_003FB878",
+        "LVL_12_TODANO_FUN_002D9F58",
+        "LVL_12_TODANO_FUN_002AAB68"
       ]
     }
   },
@@ -2797,13 +2845,13 @@
   },
   "reference_entry": 2791176,
   "candidate_entry": 2791176,
-  "dependency_sha256": "9728c50033907055490f5b343239dfc7733407f6d704bdf8d98c0c1f3b17a231",
+  "dependency_sha256": "ec58bf5148652a5c7636b34a2431a620f30d5cd39c54cd8eaf3a0949e4551b0e",
   "boot_review_sha256": "edd31e53f8d1c443382afa6cc96c1ebb3b612d90d6052c92ae799fda8de0391b",
   "native": {
     "source": "candidates/levels/12_todano.c",
     "catalog_path": "config/level-native/12_todano.json",
     "review_path": "progress/level-candidates/12_todano.json",
-    "review_sha256": "17a6847abb8e4a11acdd56d4a96e82ff4d3d233edd66cca3c9ad03686f95e8a1",
+    "review_sha256": "3930684f4ab4a730a9b15370449689ecb21233cba6bf4b3139c48ea398a4a497",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2812,10 +2860,10 @@
       "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
       "reference_entry": 2791176,
       "candidate_source": "candidates/levels/12_todano.c",
-      "source_sha256": "a6c6927482f39557616b2a9cd00df1cfc8ab0a9313914fa1f60e5669ea3d0488",
-      "catalog_sha256": "339d02903a95773d857c149f176bfc61f6eda4ef4d7b83f9d8a06fe2d5e08dfa",
-      "object_sha256": "a0bd672a1efb71882714d11883f5a2b6ecc20f8b78b3631dbcd5c2d145041d5e",
-      "candidate_elf_sha256": "0c1e8f7c8de5d491de3c2295093fde0ac4fcc0e35fb36b2cb9fd0e6a23223353",
+      "source_sha256": "667b5cc9d02742f6560f17259c42bde574d4e4698c71e479ae79d7d67ea5b157",
+      "catalog_sha256": "666407980568c5bedf779d10e0f45781e79a5c8a85521fa5e7056e027fd1544e",
+      "object_sha256": "c718ce3d8b44d09bda1d044398ecc3c48334a7b35e94650af9df906d220d36a2",
+      "candidate_elf_sha256": "148dd8d487e2ec81047b01de6e2f0c13096beaeb08eaaf57bd32782abf28e830",
       "checker_sha256": "8e4575c3350d8d548abfcbbea48a16c0aa83a60a66b6e2f4ecafcaefef2346e0",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3049,10 +3097,43 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 192
+        },
+        {
+          "symbol": "LVL_12_TODANO_FUN_003FB878",
+          "address": 4175992,
+          "size": 88,
+          "matched": true,
+          "reference_sha256": "4c184aed953f01333db60be07363552d8562f4e850fdbed068b233d7c061a4d4",
+          "candidate_sha256": "4c184aed953f01333db60be07363552d8562f4e850fdbed068b233d7c061a4d4",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 88
+        },
+        {
+          "symbol": "LVL_12_TODANO_FUN_002D9F58",
+          "address": 2989912,
+          "size": 160,
+          "matched": true,
+          "reference_sha256": "939ea2083a9852c4abd21886b83e7dffed53dffd8a74910835bfc5d0a2583778",
+          "candidate_sha256": "939ea2083a9852c4abd21886b83e7dffed53dffd8a74910835bfc5d0a2583778",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 160
+        },
+        {
+          "symbol": "LVL_12_TODANO_FUN_002AAB68",
+          "address": 2796392,
+          "size": 96,
+          "matched": true,
+          "reference_sha256": "9c76c0104b501c71e20fd6151ed9b3823715be6b14ebf1afe74f0448524052ff",
+          "candidate_sha256": "9c76c0104b501c71e20fd6151ed9b3823715be6b14ebf1afe74f0448524052ff",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 96
         }
       ],
-      "matched_code_bytes": 1348
+      "matched_code_bytes": 1692
     },
-    "object_sha256": "a0bd672a1efb71882714d11883f5a2b6ecc20f8b78b3631dbcd5c2d145041d5e"
+    "object_sha256": "c718ce3d8b44d09bda1d044398ecc3c48334a7b35e94650af9df906d220d36a2"
   }
 }

@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Three hundred nineteen contextual native bodies remain distinct in the
+family has 26. Four hundred contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,27 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 327 family-or-singleton items, 328 contextual variants | 36,468 across 534 placements |
+| Native overlays | 408 family-or-singleton items, 409 contextual variants | 45,756 across 615 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 27,284, or 27,308 when both clear
+Native representative catalogued bytes total 36,572, or 36,596 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **247,916 / 48,788,176 bytes (0.5081%)**.
-The latest matching lot adds 27 selected-object row override loops of 192
+The current integration exporter accepts **257,204 / 48,788,176 bytes (0.5272%)**.
+The latest matching lot adds three complete families across all 27 overlays:
+88-byte record-object searches, 160-byte object-class filters and 96-byte
+kind-pointer selectors. The 81 new placements total 9,288 bytes. All 615
+complete native functions match, including 534 prior controls, with fresh
+combined source/object qualifications and boot plus all 27 loaded-byte and
+metadata gates. Ship Shack retains its measured typed-root expression and
+removes only the external binding now supplied by its new definition; Barlow
+retains its qualified G8 profile and three far-pointer NOSDA declarations.
+These explicit storage and call bindings do not infer original module boundaries.
+
+The preceding matching lot added 27 selected-object row override loops of 192
 bytes, totaling 5,184 bytes. Each signed sentinel list selects objects with
 measured byte counts and row pointers. A row key indexes two signed halfword
 overrides; nonzero values are merged with retained upper word bits. All 534
@@ -139,7 +149,7 @@ bytes, 27 object-identifier checks of 32 bytes and five header getters of 56
 bytes. Earlier lots added 27 136-byte GS buffer setup wrappers, 27 92-byte
 floating-field guards and the 76-byte Ship Shack traversal.
 
-Eleven canonical fragments supply the scalar bodies with explicit placements.
+Fourteen canonical fragments supply the scalar bodies with explicit placements.
 Status classifiers call each unit's existing indexed status getter definition;
 the output wrappers bind measured per-program floating helper addresses.
 The output wrapper is absent in 12 programs and the header getter is absent in

@@ -210,3 +210,65 @@ void LVL_16_SNIVELAK_FUN_00362A20(void)
         selected++;
     }
 }
+
+/* Finds the first matching object in the thirty resident records. */
+typedef struct {
+    u8 field00[0x14];
+    void *field14;
+    u8 field18[8];
+} NativeObjectSearchRecord32;
+extern NativeObjectSearchRecord32 LVL_16_SNIVELAK_D_00254CF0[];
+s32 LVL_16_SNIVELAK_FUN_003E94C0(void *object) {
+    s32 result = -1;
+    s32 index;
+    for (index = 0; index < 30; index++) {
+        if (LVL_16_SNIVELAK_D_00254CF0[index].field14 == object) {
+            result = index;
+            break;
+        }
+    }
+    return result;
+}
+
+typedef struct { u8 prefix[0xaa]; short class_id; } ClassFilterObject;
+typedef struct {
+    u8 prefix[0x33c];
+    ClassFilterObject *fallback;
+    u8 middle[0x14f0];
+    ClassFilterObject *primary;
+    u8 trailing[0xa60];
+    s32 mode;
+} ClassFilterRoot;
+
+s32 LVL_16_SNIVELAK_FUN_002CF9C8(s32 selection) {
+    s32 found = 0;
+    ClassFilterObject *primary = ((ClassFilterRoot *)LVL_16_SNIVELAK_D_00189E20)->primary;
+    ClassFilterObject *fallback = ((ClassFilterRoot *)LVL_16_SNIVELAK_D_00189E20)->fallback;
+    if (((ClassFilterRoot *)LVL_16_SNIVELAK_D_00189E20)->mode == 0x31) {
+        if (primary) {
+            switch (selection) {
+                case 0: found = primary->class_id == 0xfbf; break;
+                case 1: found = primary->class_id == 0x905; break;
+                case 2: found = primary->class_id == 0xeef; break;
+            }
+        } else if (fallback && selection == 3) {
+            found = fallback->class_id == 0xc20;
+        }
+    }
+    return found;
+}
+
+/* Select one of three measured pointer slots for the requested kind. */
+extern void *LVL_16_SNIVELAK_D_0018C0B0;
+extern void *LVL_16_SNIVELAK_D_0018B134;
+extern void *LVL_16_SNIVELAK_D_0018B040;
+void *LVL_16_SNIVELAK_FUN_002A6840(int kind)
+{
+    if (kind == 0 || kind == 2 || kind == 3 || kind == 4 || kind == 5)
+        return LVL_16_SNIVELAK_D_0018C0B0;
+    if (kind == 1)
+        return LVL_16_SNIVELAK_D_0018B134;
+    if (kind == 6)
+        return LVL_16_SNIVELAK_D_0018B040;
+    return 0;
+}
