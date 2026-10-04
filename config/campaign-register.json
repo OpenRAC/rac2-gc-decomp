@@ -3483,7 +3483,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 448,
+  "revision": 465,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -11107,6 +11107,125 @@
         }
       ]
     },
+    "ship-shack-gs-helper-680-20261004-v1": {
+      "budget": 2,
+      "created": "2026-10-04T06:27:36.259580+00:00",
+      "hypothesis": "Full680-byte scalar packet constructor, actualGP0x1AEFF0 and independently measured direct/SDA aliases to the same cursor plus64-bit TEX0 field. Pinned helper returns8, fields signedshorts, complete uncovered scope. Qualify everyexistingcontrol with measured GP.",
+      "id": "ship-shack-gs-helper-680-20261004-v1",
+      "kind": "candidate",
+      "last_trial": "c0460dff590044b58395cd9c3ab25f13",
+      "next_action": "Compare complete680-byte helper and all29currentcontrols from one standalone object; retain refusals.",
+      "pointers": [],
+      "reopen_condition": "New measured storage/declaration or packet-layout context",
+      "source": "runtime:bank/gs-helper-680-20261004/24_ship_shack.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_24_SHIP_SHACK_FUN_002EED68"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-helper-680-20261004/catalog.json",
+          "id": "ship-shack",
+          "reference": "runtime:references/24_ship_shack.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T06:27:38.771364+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "c0460dff590044b58395cd9c3ab25f13"
+        },
+        {
+          "at": "2026-10-04T06:41:02.372179+00:00",
+          "from": "stopped",
+          "reason": "Measured actualGP preserves29exactcontrols but helper652/680 failscomplete size; cursoraddress hoisting differs from retail.",
+          "reopen_condition": "New measured storage/declaration or packet-layout context",
+          "to": "stopped"
+        }
+      ]
+    },
+    "ship-shack-gs-helper-storage-view-20261004-v2": {
+      "budget": 1,
+      "created": "2026-10-04T06:35:53.774574+00:00",
+      "hypothesis": "Measured v1 hoists cursor address page into extra saved register; qualified compiler rules for incomplete SDA storage views may leave absolute expansion to assembler and preserve retail rematerialization. Change only the physical pointer storage view and alias binding, with unchanged GP/flags/state/ABI and29controls.",
+      "id": "ship-shack-gs-helper-storage-view-20261004-v2",
+      "kind": "candidate",
+      "last_trial": "d92ec91c0fae4d1b9cfc098ded0657ce",
+      "next_action": "Compare complete680-byte helper and all29currentcontrols from one standalone object; retain refusals.",
+      "pointers": [],
+      "reopen_condition": "New substantive packet access/order, ABI or source context evidence; no padding/flag/source permutation",
+      "source": "runtime:bank/gs-helper-storage-view-v2/24_ship_shack.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_24_SHIP_SHACK_FUN_002EED68"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/gs-helper-storage-view-v2/catalog.json",
+          "id": "ship-shack",
+          "reference": "runtime:references/24_ship_shack.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T06:35:56.365342+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "d92ec91c0fae4d1b9cfc098ded0657ce"
+        },
+        {
+          "at": "2026-10-04T06:41:02.461852+00:00",
+          "from": "stopped",
+          "reason": "IncompleteSDA storage view preserves29exactcontrols but helper692/680 stillfails complete-size equality; retain source/object and emittedlayout for review.",
+          "reopen_condition": "New substantive packet access/order, ABI or source context evidence; no padding/flag/source permutation",
+          "to": "stopped"
+        }
+      ]
+    },
+    "ship-shack-integer-loop-lifetimes-20261004-v2": {
+      "budget": 1,
+      "created": "2026-10-04T06:30:42.015057+00:00",
+      "hypothesis": "Measured relocation counter starts after optional reference fixup; coordinate counter/cursor begin only inside nonzero byte-count region. Correct those two phase lifetimes only, retaining types/arithmetic and unchanged refused initializer plus29exact controls.",
+      "id": "ship-shack-integer-loop-lifetimes-20261004-v2",
+      "kind": "candidate",
+      "last_trial": "e4c389c5e30e4a8b86f8287b7783569d",
+      "next_action": "Measure all32complete symbols, including29currentnativecontrols, from one standalone compilation.",
+      "pointers": [],
+      "reopen_condition": "New substantive ABI or source/data-access evidence; no commuted operand/local/register forcing",
+      "source": "runtime:bank/integer-loop-lifetimes-v2/24_ship_shack.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_24_SHIP_SHACK_FUN_002FD2A8",
+        "LVL_24_SHIP_SHACK_FUN_0030EB90",
+        "LVL_24_SHIP_SHACK_FUN_0030F388"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/integer-loop-lifetimes-v2/catalog.json",
+          "id": "ship-shack",
+          "reference": "runtime:references/24_ship_shack.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T06:30:46.765075+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "e4c389c5e30e4a8b86f8287b7783569d"
+        },
+        {
+          "at": "2026-10-04T06:41:02.277596+00:00",
+          "from": "stopped",
+          "reason": "Relocation still differs4bytes across3instructions after counterphase correction; coordinatesdiff25bytes; initializer remainsidentical92/100. All29controls exact. No ABI delta supports a further source rewrite.",
+          "reopen_condition": "New substantive ABI or source/data-access evidence; no commuted operand/local/register forcing",
+          "to": "stopped"
+        }
+      ]
+    },
     "ship-shack-rle-record-phi-v2": {
       "budget": 1,
       "created": "2026-10-04T04:27:32.752604+00:00",
@@ -11138,6 +11257,47 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "6d89c73a7033433bb0023e3afa67bb21"
+        }
+      ]
+    },
+    "ship-shack-three-integer-control-20261004-v1": {
+      "budget": 2,
+      "created": "2026-10-04T06:25:12.024546+00:00",
+      "hypothesis": "Independently pinned88/116/100-byte called bodies with ordinary positional ABI, measured byte-counted references/packed coordinates/scalar fields. All integrated/pending/history spans excluded.",
+      "id": "ship-shack-three-integer-control-20261004-v1",
+      "kind": "candidate",
+      "last_trial": "35c07e7aa4f84a30a6bd7692f5876755",
+      "next_action": "Measure all32complete symbols, including29currentnativecontrols, from one standalone compilation.",
+      "pointers": [],
+      "reopen_condition": "New measured type, source phase or compiler/access context",
+      "source": "runtime:bank/three-integer-control-20261004/24_ship_shack.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_24_SHIP_SHACK_FUN_002FD2A8",
+        "LVL_24_SHIP_SHACK_FUN_0030EB90",
+        "LVL_24_SHIP_SHACK_FUN_0030F388"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/three-integer-control-20261004/catalog.json",
+          "id": "ship-shack",
+          "reference": "runtime:references/24_ship_shack.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-04T06:25:15.489890+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "35c07e7aa4f84a30a6bd7692f5876755"
+        },
+        {
+          "at": "2026-10-04T06:41:02.185188+00:00",
+          "from": "stopped",
+          "reason": "Relocation88/88diff22, coordinates116/116diff15 and initializer92/100 are strictrefusals. All29controls exact; immutableoriginal sources retained.",
+          "reopen_condition": "New measured type, source phase or compiler/access context",
+          "to": "stopped"
         }
       ]
     },
@@ -12628,6 +12788,19 @@
       "state": "exact_private",
       "task": "glyph-family-20_yeedil-20261004"
     },
+    "35c07e7aa4f84a30a6bd7692f5876755": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/35c07e7aa4f84a30a6bd7692f5876755",
+      "finished": "2026-10-04T06:25:15.475890+00:00",
+      "id": "35c07e7aa4f84a30a6bd7692f5876755",
+      "manifest_sha256": "c132386d47556ea987db1e8d183080315ea96bf646642a4e3b2292c83e2adfd1",
+      "measured_functions": 32,
+      "outcome_sha256": "1dcfc5ff2bc1bf6c2a26610f428f9172b292d864b76e1877281d154fe3e82dd1",
+      "semantic_key": "5067e0923c53f91fc05d7e280e8da78aeaa5c9e07fe51d57bc4b64ccd22e4a8f",
+      "started": "2026-10-04T06:25:15.072993+00:00",
+      "state": "mismatch",
+      "task": "ship-shack-three-integer-control-20261004-v1"
+    },
     "371943e2ecd0476c802fffc87b545968": {
       "compile_attempted": true,
       "directory": "runtime:trials/371943e2ecd0476c802fffc87b545968",
@@ -13534,6 +13707,19 @@
       "state": "exact_private",
       "task": "float-guard-only-1_oozla-20261004"
     },
+    "c0460dff590044b58395cd9c3ab25f13": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/c0460dff590044b58395cd9c3ab25f13",
+      "finished": "2026-10-04T06:27:38.757364+00:00",
+      "id": "c0460dff590044b58395cd9c3ab25f13",
+      "manifest_sha256": "8471c957698e0994ec9929894ce2dabf24dbc6af6e4e6784d60a93b01683e91b",
+      "measured_functions": 30,
+      "outcome_sha256": "c4c4a79634dc0f3d12912ac0bd01e55c59f0415b5a556e7ef9aafe6e5cf68772",
+      "semantic_key": "ebacd20955c2a952fa157663586d8d0c899a45cc60b99e1baaf17136f6264536",
+      "started": "2026-10-04T06:27:38.414621+00:00",
+      "state": "mismatch",
+      "task": "ship-shack-gs-helper-680-20261004-v1"
+    },
     "c24beaa5c4ae4d56b92034a125d80547": {
       "compile_attempted": true,
       "directory": "runtime:trials/c24beaa5c4ae4d56b92034a125d80547",
@@ -13742,6 +13928,19 @@
       "state": "exact_private",
       "task": "gs-family-2_maktar_nebula-136-v2"
     },
+    "d92ec91c0fae4d1b9cfc098ded0657ce": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d92ec91c0fae4d1b9cfc098ded0657ce",
+      "finished": "2026-10-04T06:35:56.351341+00:00",
+      "id": "d92ec91c0fae4d1b9cfc098ded0657ce",
+      "manifest_sha256": "fb19288bcce6b2ffb222f343b6aaf5c6222801f1f3a9ec02faae4659049d4d8b",
+      "measured_functions": 30,
+      "outcome_sha256": "0d382e793ee643397ba9062f9b39599725688937dfd60cadfceb58a533cafe03",
+      "semantic_key": "16746d6f702e7d9c9b3142dc60352f31222459f26bab5c2a9144dc20869dcb32",
+      "started": "2026-10-04T06:35:56.039275+00:00",
+      "state": "mismatch",
+      "task": "ship-shack-gs-helper-storage-view-20261004-v2"
+    },
     "d9f21c414e734f7582b975518a87a11f": {
       "compile_attempted": true,
       "directory": "runtime:trials/d9f21c414e734f7582b975518a87a11f",
@@ -13806,6 +14005,19 @@
       "started": "2026-10-04T05:25:31.781300+00:00",
       "state": "exact_private",
       "task": "ship-shack-002e4828-gs-setup-v2"
+    },
+    "e4c389c5e30e4a8b86f8287b7783569d": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/e4c389c5e30e4a8b86f8287b7783569d",
+      "finished": "2026-10-04T06:30:46.751075+00:00",
+      "id": "e4c389c5e30e4a8b86f8287b7783569d",
+      "manifest_sha256": "9dad59b3d7b54280814e5256d4eaa0b741264cd2ecffd3f121b1ae8b42a684f3",
+      "measured_functions": 32,
+      "outcome_sha256": "49a33711559d2e33b5d211fe6c8afe8b81ec3e433999b311ce71baeb6efd0a1a",
+      "semantic_key": "b99fc5726c1fedf7a0062d97e2447e6f23d1909145ee1239926d3d990745943c",
+      "started": "2026-10-04T06:30:46.430037+00:00",
+      "state": "mismatch",
+      "task": "ship-shack-integer-loop-lifetimes-20261004-v2"
     },
     "e58b1d622a204ce9ae93883728665f62": {
       "compile_attempted": true,
@@ -14005,6 +14217,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "253f8ef09ba5f4e4bac0c70a175ef6756e377981c001e1c070c03e95e8a4b4ae"
+    "docs/CAMPAIGN-QUEUE.md": "786f165c84cdd82bbc3a0f0d0ec989470d2bf35cd55bc98ab2a759d5d2e1043f"
   }
 }

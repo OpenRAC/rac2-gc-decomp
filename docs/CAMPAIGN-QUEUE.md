@@ -1553,6 +1553,30 @@ Measure both complete bodies and27integrated native controls in the same compila
 
 Reopen condition: New measured ABI, field type or loop scheduling evidence
 
+## ship-shack-gs-helper-680-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Compare complete680-byte helper and all29currentcontrols from one standalone object; retain refusals.
+
+Reopen condition: New measured storage/declaration or packet-layout context
+
+## ship-shack-gs-helper-storage-view-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Compare complete680-byte helper and all29currentcontrols from one standalone object; retain refusals.
+
+Reopen condition: New substantive packet access/order, ABI or source context evidence; no padding/flag/source permutation
+
+## ship-shack-integer-loop-lifetimes-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Measure all32complete symbols, including29currentnativecontrols, from one standalone compilation.
+
+Reopen condition: New substantive ABI or source/data-access evidence; no commuted operand/local/register forcing
+
 ## ship-shack-rle-record-phi-v2
 
 State: `stopped`. Kind: `candidate`.
@@ -1560,6 +1584,14 @@ State: `stopped`. Kind: `candidate`.
 Measure both complete bodies and27integrated native controls in the same compilation unit.
 
 Reopen condition: New measured ABI, field type or loop scheduling evidence
+
+## ship-shack-three-integer-control-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure all32complete symbols, including29currentnativecontrols, from one standalone compilation.
+
+Reopen condition: New measured type, source phase or compiler/access context
 
 ## ship-shack-two-scalar-cfg-20261004-v2
 
