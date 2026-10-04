@@ -31,17 +31,19 @@
   <a href="progress/report.json"><img src="progress/decompilation.svg" alt="Validated matching C/C++ progress across the boot and 27 overlays" width="760"></a>
 </p>
 
-Recorded validation on **3 October 2026**:
+<!-- generated-progress:start -->
+Recorded validation on **4 October 2026**:
 
 | Scope | Integrated C functions / placements | Matched C bytes |
 | --- | ---: | ---: |
 | Boot | 178 functions | 9,336 |
-| 27 level overlays | 4,334 placements | 212,424 |
-| Native overlay subset, included above | 234 placements | 10,312 |
-| **Total C coverage** | **Boot + all 27 overlays** | **221,760 / 48,788,176 (0.4545%)** |
+| 27 level overlays | 4,859 placements | 263,284 |
+| Native overlay subset, included above | 759 placements | 61,172 |
+| **Total C coverage** | **Boot + all 27 overlays** | **272,620 / 48,788,176 (0.5588%)** |
+<!-- generated-progress:end -->
 
 The complete boot (**2,521,763 loaded bytes, two PT_LOAD segments**) and all
-27 overlays pass loaded-byte and metadata equality gates. **222 tool tests pass.**
+27 overlays pass loaded-byte and metadata equality gates. Tool tests run in CI.
 Assembly reconstruction and naming research are tracked separately from matching C.
 Native PC execution and visual gameplay remain unverified; recorded emulator
 observations and their limits are in [PCSX2 validation](docs/PCSX2-VALIDATION.md).
@@ -49,7 +51,8 @@ observations and their limits are in [PCSX2 validation](docs/PCSX2-VALIDATION.md
 Current evidence: [runtime gates](progress/report.json),
 [boot integration](progress/integration.json), [level integrations](progress/levels/)
 and [independent C qualification](progress/candidates.json).
-The progress bar is generated from those validated proofs; CI checks its freshness.
+The progress bar and table are generated together from those validated proofs;
+CI rejects either one if stale. Run `python scripts/readme_progress.py` after a validated lot.
 Its fill uses the full 0–100% scale.
 
 ## Supported version

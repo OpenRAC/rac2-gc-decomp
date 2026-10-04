@@ -27,8 +27,9 @@ authored variants separately from replicated loaded-code coverage and adds no cr
 Runtime/tool paths and trial inputs remain private outside the repository.
 
 After updating integrated progress, run `python scripts/readme_progress.py` and
-include `progress/decompilation.svg` in the same lot. Its byte counts come from
-the validated boot and all 27 overlay proofs; CI rejects a stale README bar.
+include `README.md` and `progress/decompilation.svg` in the same lot. The generated
+table and bar use the validated boot and all 27 overlay proofs; CI rejects either
+if stale. Keep the generated progress block markers and do not hand-edit its counts.
 
 Write all repository documentation, code comments, user-facing messages,
 catalogue descriptions and commit messages in English. Preserve measured game
