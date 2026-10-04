@@ -6,6 +6,13 @@ contains. Analysis, tooling and documentation are welcome, but they never count 
 
 Full walkthrough: **[docs/START-HERE.md](docs/START-HERE.md)**.
 
+Before choosing a function, inspect the single register through
+`scripts/campaign.py --runtime <private-runtime> queue` and the corresponding `packet`. Use the
+[maintained campaign workflow](docs/CAMPAIGN-WORKFLOW.md) for new trials.
+Edit authored modules under `src/`, then regenerate the standalone compilation
+units using the [source layout workflow](docs/SOURCE-LAYOUT.md). Preserve the
+complete compilation context and refresh affected proofs after source changes.
+
 ## The three things this repository cannot ship
 
 1. **Your own copy of the game** — the USA v1.01 disc (`SCUS_972.68`), verified against the

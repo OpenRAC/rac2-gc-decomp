@@ -38,14 +38,17 @@ This repository is part of project 45.
 ## Current status
 
 Assembly reconstruction and matching C/C++ are tracked separately.
-For recorded C experiments, see the [experiment register](docs/C-NATIVE-EXPERIMENT-REGISTER.md).
+For current tasks and C experiments, use the
+[campaign workflow](docs/CAMPAIGN-WORKFLOW.md) and its single
+[structured register](config/campaign-register.json). The
+[historical experiment view](docs/C-NATIVE-EXPERIMENT-REGISTER.md) retains earlier results.
 See [the measured progress report](progress/report.json) and
 [the C integration proof](progress/integration.json) for their respective results.
 The native runtime remains a separate development milestone.
 
 Verified on **2026-10-03**: the complete boot image (**2,521,763 loaded bytes,
 two PT_LOAD segments**) and **all 27 level overlays** rebuild identically in loaded
-memory. **176 tool tests pass**. **178 C functions (9,336 bytes)** are integrated in the
+memory. **214 tool tests pass**. **178 C functions (9,336 bytes)** are integrated in the
 boot, with **4,334 reviewed overlay placements (212,424 bytes)**, including native C.
 The exported total is **221,760 / 48,788,176 bytes (0.4545%)**. The measured C profile
 is documented in [compiler notes](docs/COMPILER-NOTES.md). Native gameplay remains unverified.
@@ -123,6 +126,25 @@ only the reviewed assembly bodies, retains padding and remaining assembly
 fragments, and preserves original call names as linker aliases to C symbols.
 Both PT_LOAD segments and each C STT_FUNC body must still match before a proof
 is emitted. No bytes are patched or trimmed after the link.
+
+## Campaign organization
+
+Authored source is organized in `src/boot/` and `src/levels/`. The standalone
+units in `candidates/` retain the compilation context used by the strict gates.
+The [source layout](config/source-layout.json) records ordered modules and
+explicit family placements. Its pilot regenerates all 28 units byte for byte;
+module boundaries do not claim original retail object boundaries.
+
+```powershell
+python scripts/source_layout.py --check
+python scripts/campaign.py --runtime <private-campaign-directory> status
+python scripts/campaign.py --runtime <private-campaign-directory> queue
+```
+
+The separate authored-source inventory counts verified families once and
+preserves textual variants. It does not replace the integrated C coverage
+counter or change its denominator. See [source organization](docs/SOURCE-LAYOUT.md)
+for authoring, regeneration and required proof refreshes.
 
 ## Community
 

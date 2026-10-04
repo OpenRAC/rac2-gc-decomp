@@ -9,6 +9,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -v
+      - name: Check authored source and campaign views
+        run: |
+          python scripts/source_layout.py --check --inventory-check progress/source-inventory.json
+          python scripts/campaign.py --runtime /tmp/rac2-campaign-ci views --check
       - name: Export verified RAC2 progress
         run: |
           python scripts/decomp_report.py --output build/decomp/report.json \

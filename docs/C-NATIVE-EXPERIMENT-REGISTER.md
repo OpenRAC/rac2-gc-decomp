@@ -1,3 +1,13 @@
+# Historical C experiment view
+
+Generated from the immutable legacy documents in
+`config/campaign-register.json`. This file is a historical view;
+current tasks and new trials live only in that structured register.
+
+The original text below is preserved verbatim, including dated terminology.
+
+Original document SHA-256: `e40363e07a64355915836420caf5116d940cb730cbd06d5628c3aad938f0c19b`.
+
 # C Experiment Register
 
 This is the canonical index for the recorded RAC2 C experiments. The original table covers `levels/24_ship_shack`; boot requalifications are appended below. Check it before proposing or running a new source variant. Add one row immediately after each trial; never overwrite a prior row. The run directory is the evidence package and retains the exact source, catalog, object, assembly, logs, and qualification result. Ghidra remains the place for function analysis and annotations; this register records compiler experiments and their outcomes. The repository tracks this index; generated game objects, binaries, and runtime artifacts remain local.

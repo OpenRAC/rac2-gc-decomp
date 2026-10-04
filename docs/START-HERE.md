@@ -7,6 +7,12 @@ you can go from a fresh clone to a proven match without asking anyone.
 The rules are in [CONTRIBUTING.md](../CONTRIBUTING.md). This page is the long version: what you
 need, in what order, what each command must print, and what to do when it does not.
 
+The [maintained campaign workflow](CAMPAIGN-WORKFLOW.md) is the current entry point
+for target selection, packets, immutable trials and the complete build batch.
+[Source organization](SOURCE-LAYOUT.md) explains `src/` and generated standalone
+units. Commands below describe the underlying strict gates; do not create a
+separate runner or queue for each target.
+
 ## What you need, and where it comes from
 
 | You need | Where it comes from | What it unlocks |
