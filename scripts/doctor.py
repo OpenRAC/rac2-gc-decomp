@@ -6,7 +6,7 @@ are at, and what a missing piece actually blocks:
 
   1. tooling only   the unit tests and the report export -- nothing proprietary needed
   2. + build        reconstruct assembly and gate a program -- SN ProDG 2.0
-  3. + C            prove matching C -- SN ProDG 3.01 as well
+  3. + C            current GNU WSL profile + SN linker; actual byte gates still required
 
 It always ends with the single next command to type. Nothing here replaces the gates: a
 green doctor is an environment statement, never evidence about a match.
@@ -15,10 +15,15 @@ from __future__ import annotations
 
 import argparse
 import importlib.metadata
+import hashlib
 import json
 import os
+import re
+import subprocess
 import sys
 from pathlib import Path
+
+from wsl_chain import tool_hashes
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -30,10 +35,9 @@ MINIMUM_PYTHON = (3, 12)
 REQUIRED_PACKAGES = ("splat64", "spimdisasm", "rabbitizer")
 
 # The instrument layout the other scripts already expect, verbatim:
-# build.py uses the assembler and the linker, check_candidates.py uses all five.
+# build.py uses the reconstruction pair; current C uses the GNU WSL tools and SN linker.
 ASSEMBLY_INSTRUMENTS = ("ee/bin/Ps2EeAs.exe", "ee/bin/ld.exe")
-C_INSTRUMENTS = ("bin/ee-gcc2953.exe", "bin/ee-as.exe", "ee/bin/ld.exe",
-                 "lib/gcc-lib/ee/2.95.3/cc1.exe", "lib/gcc-lib/ee/2.95.3/cpp.exe")
+C_INSTRUMENTS = ("ee/bin/ld.exe",)
 
 
 def pinned_versions(requirements: Path) -> dict:
@@ -138,6 +142,46 @@ def report_toolchain(lines: list, label: str, root: Path | None, instruments: tu
     return True
 
 
+def report_c_chain(lines: list, root: Path | None) -> bool:
+    if not report_toolchain(lines, "C linker", root, C_INSTRUMENTS, "SN EE linker path; see toolchain/README.md"):
+        return False
+    try:
+        expected = json.loads((ROOT / "progress/candidates.json").read_bytes())["tools"]
+        if (set(expected) != {"cc1", "cpp", "as", "ld.exe"}
+                or any(not isinstance(value, str) or not re.fullmatch(r"[0-9a-f]{64}", value)
+                       for value in expected.values())):
+            raise ValueError("Invalid current instrument hash profile")
+        actual = tool_hashes(root)
+        if actual != expected:
+            different = sorted(key for key in expected if actual.get(key) != expected[key])
+            lines.append("GNU WSL profile   hash mismatch: " + ", ".join(different or ["unexpected instruments"]))
+            return False
+    except (OSError, ValueError, KeyError, subprocess.TimeoutExpired) as error:
+        lines.append(f"GNU WSL profile   unavailable ({error}); see toolchain/README.md")
+        return False
+    lines.append("GNU WSL profile   actual cpp/cc1/as/linker hashes agree; compilation not tested")
+    return True
+
+
+def report_assembly_hashes(lines: list, root: Path | None) -> bool:
+    if root is None or missing_instruments(root, ASSEMBLY_INSTRUMENTS):
+        return False
+    expected = json.loads((ROOT / "progress/report.json").read_bytes())["tools"]
+    for relative in ASSEMBLY_INSTRUMENTS:
+        path = root / relative
+        if hashlib.sha256(path.read_bytes()).hexdigest() != expected.get(path.name):
+            lines.append("ASM profile       hash mismatch: " + path.name)
+            return False
+    lines.append("ASM profile       actual reconstruction instrument hashes agree; execution not tested")
+    return True
+
+
+def report_local_file(lines: list, label: str, path: Path | None) -> bool:
+    present = path is not None and path.is_file()
+    lines.append(f"{label:<17} {'present; usability must be checked' if present else 'missing (required for contributor setup)'}")
+    return present
+
+
 def report_wrench(lines: list, wrench: Path | None) -> bool:
     if wrench is None:
         lines.append("wrench            not given (needed to unpack the 27 level overlays)")
@@ -189,9 +233,13 @@ def doctor(argv: list | None = None) -> int:
         description="Report what this machine can do with this repository, and the next command to run")
     parser.add_argument("--iso", type=Path, help="your own disc image, verified against config/target.json")
     parser.add_argument("--toolchain", type=Path, help="SN ProDG 2.0 EE toolchain (assembly and link)")
-    parser.add_argument("--c-toolchain", type=Path, help="SN ProDG 3.01 EE toolchain (C candidates)")
+    parser.add_argument("--c-toolchain", type=Path, help="SN EE linker root; also probe actual GNU WSL profile hashes")
     parser.add_argument("--wrench", type=Path, help="wrenchbuild, to unpack the level overlays")
     parser.add_argument("--runtime", type=Path, help="working directory outside this repository")
+    parser.add_argument("--contributor-check", action="store_true", help="require own matching ISO and complete tool suite before contribution")
+    parser.add_argument("--ghidra", type=Path, help="Ghidra launcher; separately verify R5900 language and analysis access")
+    parser.add_argument("--pcsx2", type=Path, help="PCSX2 executable; separately verify emulator configuration")
+    parser.add_argument("--bios", type=Path, help="your permitted local PS2 BIOS; never upload it")
     args = parser.parse_args(argv)
 
     lines = ["RAC2 environment", "-----------------"]
@@ -204,8 +252,16 @@ def doctor(argv: list | None = None) -> int:
     manifest = report_manifest(lines, args.runtime)
     assembly_ok = report_toolchain(lines, "ProDG 2.0", args.toolchain, ASSEMBLY_INSTRUMENTS,
                                    "needed to reconstruct assembly")
-    c_ok = report_toolchain(lines, "ProDG 3.01", args.c_toolchain, C_INSTRUMENTS,
-                            "needed to prove C candidates")
+    c_ok = report_c_chain(lines, args.c_toolchain)
+    contributor_ready = False
+    if args.contributor_check:
+        asm_hashes_ok = report_assembly_hashes(lines, args.toolchain)
+        ghidra_ok = report_local_file(lines, "Ghidra", args.ghidra)
+        pcsx2_ok = report_local_file(lines, "PCSX2", args.pcsx2)
+        bios_ok = report_local_file(lines, "PS2 BIOS", args.bios)
+        contributor_ready = all((python_ok, packages_ok, target_ok, disc_ok, wrench_ok,
+                                 runtime_ok, assembly_ok, asm_hashes_ok, c_ok,
+                                 ghidra_ok, pcsx2_ok, bios_ok))
 
     lines.append("")
     tooling = python_ok and target_ok
@@ -217,19 +273,33 @@ def doctor(argv: list | None = None) -> int:
 
     prepared = manifest is not None or (disc_ok and wrench_ok and runtime_ok)
     build_ok = prepared and runtime_ok and assembly_ok
-    c_ready = build_ok and c_ok
+    c_ready = prepared and runtime_ok and c_ok
+    integration_ready = build_ok and packages_ok and c_ready
 
     lines.append("VERDICT")
     lines.append("  tooling (tests + report export)  yes -- needs nothing proprietary")
     lines.append(f"  build (assembly reconstruction)  {'yes' if build_ok else 'not yet'}")
     lines.append(f"  C candidates (byte proofs)       {'yes' if c_ready else 'not yet'}")
+    lines.append(f"  full C integration               {'yes' if integration_ready else 'not yet'}")
+    lines.append("  Availability/profile checks only; matching still requires the actual byte gates.")
+    if args.contributor_check:
+        lines.append(f"  contributor prerequisites        {'present' if contributor_ready else 'incomplete'}")
+        lines.append("  Legal acquisition, Ghidra R5900 support and emulator usability require separate verification.")
     lines.append("")
     lines.append("NEXT COMMAND")
     if not packages_ok:
         lines.append("  pip install -r requirements.txt")
+    elif args.contributor_check and not contributor_ready:
+        lines.append("  python scripts/doctor.py --help    # complete the missing prerequisites in toolchain/README.md, then rerun --contributor-check")
+    elif args.iso is None and manifest is None:
+        lines.append("  python scripts/doctor.py --help    # contribution requires your matching ISO and complete tool suite")
     elif not prepared or not runtime_ok:
         lines.append(f"  python scripts/setup.py --iso <disc.iso> --runtime {args.runtime or '<runtime>'} "
                      f"--wrench <wrenchbuild.exe>")
+    elif c_ready:
+        reference = (manifest.parent / "reference" / "boot.elf") if manifest else Path("<runtime>/runs/<id>/reference/boot.elf")
+        lines.append(f"  python scripts/check_candidates.py --reference {reference} "
+                     f"--toolchain {args.c_toolchain} --runtime {args.runtime or '<runtime>'}")
     elif not assembly_ok:
         lines.append("  python -m unittest discover -s tests -v"
                      "    # assembly build needs a ProDG 2.0 toolchain (--toolchain)")
@@ -244,7 +314,7 @@ def doctor(argv: list | None = None) -> int:
                      f"--toolchain {args.c_toolchain} --runtime {args.runtime or '<runtime>'}")
 
     print("\n".join(lines))
-    return 0
+    return (0 if contributor_ready else 1) if args.contributor_check else 0
 
 
 def main() -> int:

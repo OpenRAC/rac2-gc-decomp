@@ -1,5 +1,13 @@
 # Repository language and commit messages
 
+For a first-time contributor, read [docs/CONTRIBUTOR-QUICKSTART.md](docs/CONTRIBUTOR-QUICKSTART.md)
+and [toolchain/README.md](toolchain/README.md). Default to a fork/topic branch and
+draft PR targeting `RAC2`; do not inherit the maintainer's direct-push permissions
+or private environment. Every contributor must supply a legally acquired matching
+ISO and the full tool suite before contribution work. Missing prerequisites block
+that work; assist with setup, not an alternative contribution route. Never fabricate
+matching claims or download an SDK from an unverified source.
+
 Start or resume through [docs/CONTINUE.md](docs/CONTINUE.md). Read the optional
 ignored `.local/ENVIRONMENT.md` pointer for machine-specific tools and current
 private operational state. The public repository owns methods, task decisions

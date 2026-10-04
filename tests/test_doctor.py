@@ -51,8 +51,8 @@ class ParsingTests(unittest.TestCase):
             root = Path(name)
             self.assertEqual(doctor.missing_instruments(root, doctor.C_INSTRUMENTS),
                              list(doctor.C_INSTRUMENTS))
-            touch(root, "bin/ee-gcc2953.exe")
-            self.assertNotIn("bin/ee-gcc2953.exe",
+            touch(root, "ee/bin/ld.exe")
+            self.assertNotIn("ee/bin/ld.exe",
                              doctor.missing_instruments(root, doctor.C_INSTRUMENTS))
 
     def test_inside_repository_accepts_the_checkout_and_rejects_a_sibling(self):
@@ -116,18 +116,58 @@ class DoctorTests(unittest.TestCase):
         last = output.rstrip().splitlines()[-1].strip()
         self.assertTrue(last.startswith(("python", "pip")), f"verdict must end with a command, got: {last}")
 
-    def test_a_prepared_environment_asks_for_the_disc_next(self):
+    def test_a_no_game_environment_points_to_required_setup(self):
         with mock.patch.object(doctor, "installed_version",
                                side_effect=lambda package: doctor.pinned_versions(
                                    doctor.ROOT / "requirements.txt").get(package)):
             code, output = gather([])
         self.assertEqual(code, 0)
-        self.assertTrue(output.rstrip().splitlines()[-1].strip().startswith("python scripts/setup.py"))
+        self.assertTrue(output.rstrip().splitlines()[-1].strip().startswith("python scripts/doctor.py --help"))
+
+    def test_contributor_check_cannot_use_prepared_manifest_to_bypass_iso(self):
+        with mock.patch.object(doctor, "tool_hashes", return_value=json.loads(
+                (doctor.ROOT / "progress/candidates.json").read_bytes())["tools"]):
+            code, output = gather(["--contributor-check", "--runtime", str(self.runtime),
+                                   "--toolchain", str(self.assembly), "--c-toolchain", str(self.compiler)])
+        self.assertEqual(code, 1)
+        self.assertIn("contributor prerequisites        incomplete", output)
+        self.assertIn("disc image        not checked", output)
+
+    def test_reconstruction_files_with_wrong_hashes_fail_full_setup(self):
+        lines = []
+        self.assertFalse(doctor.report_assembly_hashes(lines, self.assembly))
+        self.assertIn("hash mismatch", "\n".join(lines))
+
+    def test_complete_contributor_presence_and_missing_emulator_are_distinct(self):
+        ghidra = touch(self.directory, "ghidra/ghidraRun.bat")
+        pcsx2 = touch(self.directory, "pcsx2/pcsx2-qt.exe")
+        bios = touch(self.directory, "private/bios.bin")
+        iso = touch(self.directory, "private/game.iso")
+        args = ["--contributor-check", "--iso", str(iso), "--runtime", str(self.runtime),
+                "--wrench", str(self.wrench), "--toolchain", str(self.assembly),
+                "--c-toolchain", str(self.compiler), "--ghidra", str(ghidra),
+                "--pcsx2", str(pcsx2), "--bios", str(bios)]
+        hashes = json.loads((doctor.ROOT / "progress/candidates.json").read_bytes())["tools"]
+        with mock.patch.object(doctor, "report_disc", return_value=True), \
+                mock.patch.object(doctor, "report_assembly_hashes", return_value=True), \
+                mock.patch.object(doctor, "tool_hashes", return_value=hashes), \
+                mock.patch.object(doctor, "installed_version", side_effect=lambda name:
+                                  doctor.pinned_versions(doctor.ROOT / "requirements.txt").get(name)):
+            code, output = gather(args)
+            self.assertEqual(code, 0)
+            self.assertIn("contributor prerequisites        present", output)
+            self.assertIn("require separate verification", output)
+            # Put the missing path last so argparse's final occurrence is effective.
+            code, output = gather([*args, "--pcsx2", str(self.directory / "missing.exe")])
+            self.assertEqual(code, 1)
+            self.assertIn("contributor prerequisites        incomplete", output)
 
     def test_a_complete_environment_reaches_the_candidates(self):
         with mock.patch.object(doctor, "installed_version",
                                side_effect=lambda package: doctor.pinned_versions(
-                                   doctor.ROOT / "requirements.txt").get(package)):
+                                   doctor.ROOT / "requirements.txt").get(package)), \
+                mock.patch.object(doctor, "tool_hashes", return_value=json.loads(
+                    (doctor.ROOT / "progress/candidates.json").read_bytes())["tools"]):
             code, output = gather(["--toolchain", str(self.assembly), "--c-toolchain", str(self.compiler),
                                    "--wrench", str(self.wrench), "--runtime", str(self.runtime)])
         self.assertEqual(code, 0)
@@ -135,6 +175,41 @@ class DoctorTests(unittest.TestCase):
         self.assertIn("C candidates (byte proofs)       yes", output)
         self.assertIn("check_candidates.py", output.rstrip().splitlines()[-1])
         self.assertIn(str(self.manifest.parent / "reference" / "boot.elf"), output)
+
+    def test_linker_only_and_current_gnu_can_check_candidates_without_asm(self):
+        hashes = json.loads((doctor.ROOT / "progress/candidates.json").read_bytes())["tools"]
+        with mock.patch.object(doctor, "tool_hashes", return_value=hashes):
+            code, output = gather(["--c-toolchain", str(self.compiler), "--runtime", str(self.runtime)])
+        self.assertEqual(code, 0)
+        self.assertIn("C candidates (byte proofs)       yes", output)
+        self.assertIn("full C integration               not yet", output)
+        self.assertIn("compilation not tested", output)
+
+    def test_legacy_sn_frontends_without_gnu_are_not_c_ready(self):
+        for relative in ("bin/ee-gcc2953.exe", "lib/gcc-lib/ee/2.95.3/cc1.exe"):
+            touch(self.compiler, relative)
+        with mock.patch.object(doctor, "tool_hashes", side_effect=OSError("WSL missing")):
+            code, output = gather(["--c-toolchain", str(self.compiler), "--runtime", str(self.runtime)])
+        self.assertEqual(code, 0)
+        self.assertIn("C candidates (byte proofs)       not yet", output)
+        self.assertIn("WSL missing", output)
+
+    def test_wrong_or_incomplete_current_tool_hashes_are_rejected(self):
+        expected = json.loads((doctor.ROOT / "progress/candidates.json").read_bytes())["tools"]
+        for actual in ({**expected, "as": "0" * 64}, {"cc1": expected["cc1"]}):
+            with mock.patch.object(doctor, "tool_hashes", return_value=actual):
+                lines = []
+                self.assertFalse(doctor.report_c_chain(lines, self.compiler))
+                self.assertIn("hash mismatch", "\n".join(lines))
+
+    def test_tool_probe_timeout_is_reported_without_c_readiness(self):
+        with mock.patch.object(doctor, "tool_hashes", side_effect=doctor.subprocess.TimeoutExpired("wsl", 300)):
+            self.assertFalse(doctor.report_c_chain([], self.compiler))
+
+    def test_plain_doctor_does_not_probe_wsl(self):
+        with mock.patch.object(doctor, "tool_hashes") as probe:
+            gather([])
+        probe.assert_not_called()
 
     def test_an_incomplete_toolchain_does_not_count_as_present(self):
         touch(self.directory / "half", "ee/bin/Ps2EeAs.exe")

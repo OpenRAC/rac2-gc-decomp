@@ -1,5 +1,9 @@
 # Continue the decompilation
 
+If this is your first contribution, use [CONTRIBUTOR-QUICKSTART.md](CONTRIBUTOR-QUICKSTART.md)
+first. Its fork/PR route is separate from an owner-authorized ongoing campaign.
+Tool acquisition and setup levels are described in [toolchain/README.md](../toolchain/README.md).
+
 Open this repository's local checkout on branch `RAC2`. A short request to
 continue matching decompilation is sufficient when the repository instructions
 and the private machine environment are available. No long pasted prompt is

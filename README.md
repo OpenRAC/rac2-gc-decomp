@@ -41,7 +41,7 @@ Recorded validation on **3 October 2026**:
 | **Total C coverage** | **Boot + all 27 overlays** | **221,760 / 48,788,176 (0.4545%)** |
 
 The complete boot (**2,521,763 loaded bytes, two PT_LOAD segments**) and all
-27 overlays pass loaded-byte and metadata equality gates. **214 tool tests pass.**
+27 overlays pass loaded-byte and metadata equality gates. **222 tool tests pass.**
 Assembly reconstruction and naming research are tracked separately from matching C.
 Native PC execution and visual gameplay remain unverified; recorded emulator
 observations and their limits are in [PCSX2 validation](docs/PCSX2-VALIDATION.md).
@@ -63,6 +63,34 @@ identities are pinned in [target configuration](config/target.json); all
 27 extracted overlay identities are in [overlay configuration](config/overlays.json).
 
 ## Start or resume work
+
+**New to programming or PS2 decompilation? You can start with a coding AI.**
+You need an AI that can edit files and run commands, plus a GitHub account to
+submit changes. **Contribution requires your own legally acquired USA v1.01 ISO
+and the complete qualified tool suite.** The AI helps you prepare and verify that
+environment before selecting a task.
+
+1. Open your coding AI and give it the short request below.
+2. Let it check your computer and explain any login/install step it needs you to do.
+3. Review its small change and draft pull request; the maintainer reviews the PR.
+
+```text
+I am a beginner. Help me make one contribution to
+https://github.com/llesieur99/rac2-decomp from branch RAC2.
+Read AGENTS.md, docs/CONTRIBUTOR-QUICKSTART.md and toolchain/README.md.
+Use my fork and a topic branch; I authorize pushing the tested change to my
+fork and opening a draft PR to upstream RAC2, not pushing or merging upstream.
+Verify my legally acquired matching ISO and complete tool suite first.
+If anything is missing, finish setup before selecting a contribution.
+Preserve existing work, run the real gates/tests, show the diff, and use
+detailed English commits. Never upload private/game/SDK files or invent a match.
+```
+
+The [step-by-step beginner guide](docs/CONTRIBUTOR-QUICKSTART.md) explains forks,
+branches, PRs and the full prerequisite checks. The [toolchain guide](toolchain/README.md)
+lists official public sources and clearly marks locally supplied legacy tools.
+Matching game code additionally requires the exact qualified setup; it is not
+an automatic SDK download or something an AI can prove without reference bytes.
 
 Open the local checkout on branch **`RAC2`** and read [AGENTS.md](AGENTS.md),
 then the [short continuation guide](docs/CONTINUE.md). The repository contains
@@ -86,12 +114,18 @@ objects, assembly, logs and immutable UUID evidence packages stay private.
 
 ## Requirements
 
+For acquisition links, component roles, versions and hash sources, start with
+[toolchain/README.md](toolchain/README.md) and [requirements metadata](toolchain/requirements.json).
+The folder hosts documentation only; `toolchain/local/` is ignored by Git.
+
 - Python 3.12 and the pinned dependencies in [requirements.txt](requirements.txt).
-- Your own matching disc image and a runtime directory outside this repository.
+- Your own legally acquired matching ISO and a runtime directory outside this repository.
 - Wrench `wrenchbuild` for unpacking the level executables.
 - Windows and a supplied **SN ProDG 2.0** EE toolchain for assembly reconstruction.
 - WSL and the qualified **GNU EE 2.9-ee-991111b** `cpp`/`cc1`/`as` profile for C,
   plus the **SN ProDG 3.01** EE linker.
+- Ghidra with verified R5900 support and analysis access for the AI.
+- PCSX2 with a usable configuration and your own permitted local PS2 BIOS.
 
 The current C flags are `-O2 -G0 -ffunction-sections`. The original game's compiler
 identity is not established by the matching corpus. The earlier SN compiler

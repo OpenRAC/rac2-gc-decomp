@@ -1,5 +1,10 @@
 # Start here
 
+New contributor? Start with the [AI beginner guide](CONTRIBUTOR-QUICKSTART.md)
+and [toolchain acquisition list](../toolchain/README.md). Every contributor needs
+their own legally acquired matching ISO and complete tool suite before selecting
+a contribution. This page covers reference preparation and matching validation.
+
 This repository reconstructs *Ratchet & Clank: Going Commando* (PS2, USA v1.01) into C that a
 compiler turns into **exactly** the bytes of the retail executable. Everything below exists so
 you can go from a fresh clone to a proven match without asking anyone.
@@ -151,7 +156,8 @@ The rules are deliberate; each one exists because a wrong result once got throug
 | What you see | What it means | What to do |
 | --- | --- | --- |
 | `Use pinned splat64 0.50.0` | your environment has another version | `pip install -r requirements.txt` |
-| `Missing instrument ee-gcc2953.exe` | `--toolchain` points at the wrong root | point it at the folder **containing** `bin/` and `ee/` |
+| `C linker ... is missing ee/bin/ld.exe` | the C linker root is incomplete or incorrect | use the root containing `ee/bin/ld.exe`; the old SN frontend is not required |
+| `GNU WSL profile unavailable` or `hash mismatch` | the actual GNU tools are missing or differ from the current qualified hashes | see [toolchain setup](../toolchain/README.md); do not substitute another compiler |
 | `ISO: wrong size, sha1, …` | not the supported release | USA v1.01, `SCUS_972.68`; v2.00 is another target |
 | `Runtime must be outside the source repository` | your `--runtime` is inside the clone | pick a directory elsewhere |
 | `Wrong RAC2 reference identity` | `--reference` is not the pinned boot | use the `boot.elf` that `setup.py` extracted |
@@ -161,17 +167,17 @@ The rules are deliberate; each one exists because a wrong result once got throug
 | `Every integrated function requires a complete candidate match` | catalogue and checker disagree | the catalogue lists a symbol the checker does not fully match |
 | `C candidates must not embed assembly or retail bytes` | the C uses inline asm or raw bytes | a match must come from the compiler |
 | `G3 requires all 27 verified overlays` | a level build was asked for before every overlay is verified | run `--all-levels` first |
-| `Candidate is older than an input` | a stale object/output was reused | delete the run directory and rebuild |
+| `Candidate is older than an input` | a stale object/output was reused | retain the old run and create a fresh trial/batch |
 
-## What is not reproducible here
+## Current limits
 
-- **The retail compiler.** Part of the game's code was built by a patched `cc1` that is not
-  redistributable. Some functions cannot be reproduced with the SN toolchains at all; those
-  targets are coordinated before anyone spends a day on them.
-- **Level-only bodies.** The counting path admits bodies reviewed against the **boot**; three
-  measured bodies that exist only inside level overlays are documented in
-  [THIRD-C-LOT.md](THIRD-C-LOT.md) and wait for a level-body lot to be wired through
-  `check_candidates.py`, `integration.py`, `build.py` and `decomp_report.py`.
+- **Exact tools and original identity.** The current reconstructed GNU EE profile
+  reproduces the accepted corpus, without establishing the original Insomniac
+  compiler identity. The exact public rebuild/acquisition path still has missing
+  inputs and legacy licensed components; see [toolchain status](../toolchain/README.md).
+- **Native level bodies.** Native overlay C is supported and integrated through
+  [LEVEL-NATIVE-C.md](LEVEL-NATIVE-C.md) and [SOURCE-LAYOUT.md](SOURCE-LAYOUT.md).
+  Every new program placement still requires its own reviewed boundary and full gate.
 - **Community reference material.** [COMMUNITY-ENGINE-REFERENCE.md](COMMUNITY-ENGINE-REFERENCE.md)
   collects engine intelligence from the wider community. It is a **reference**, never evidence:
   nothing in it can make a match, and the gate never reads it.
