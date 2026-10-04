@@ -84,3 +84,24 @@ void LVL_5_FELTZIN_SYSTEM_FUN_002FE030(int width, int height)
     LVL_5_FELTZIN_SYSTEM_FUN_00308EB8(0x100, 0x100);
     LVL_5_FELTZIN_SYSTEM_FUN_003906F8(0x42, 0x8000000044UL);
 }
+
+extern void LVL_5_FELTZIN_SYSTEM_FUN_002EBF60(f32, f32, f32, f32 *, s32);
+
+void LVL_5_FELTZIN_SYSTEM_FUN_002C6578(f32 *output) {
+ LVL_5_FELTZIN_SYSTEM_FUN_002EBF60(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_5_FELTZIN_SYSTEM_FUN_002C6758(s32 index) {
+ s32 value=LVL_5_FELTZIN_SYSTEM_FUN_002C6720(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_5_FELTZIN_SYSTEM_FUN_002C6790(s32 index) {
+ return LVL_5_FELTZIN_SYSTEM_FUN_002C6720(index)==47;
+}
+
+s32 LVL_5_FELTZIN_SYSTEM_FUN_002CBAC8(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

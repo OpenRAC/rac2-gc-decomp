@@ -84,3 +84,24 @@ void LVL_12_TODANO_FUN_002E8F20(int width, int height)
     LVL_12_TODANO_FUN_002F41E8(0x100, 0x100);
     LVL_12_TODANO_FUN_00380D80(0x42, 0x8000000044UL);
 }
+
+extern void LVL_12_TODANO_FUN_002D6E40(f32, f32, f32, f32 *, s32);
+
+void LVL_12_TODANO_FUN_002B3530(f32 *output) {
+ LVL_12_TODANO_FUN_002D6E40(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_12_TODANO_FUN_002B3710(s32 index) {
+ s32 value=LVL_12_TODANO_FUN_002B36D8(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_12_TODANO_FUN_002B3748(s32 index) {
+ return LVL_12_TODANO_FUN_002B36D8(index)==47;
+}
+
+s32 LVL_12_TODANO_FUN_002B8B40(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

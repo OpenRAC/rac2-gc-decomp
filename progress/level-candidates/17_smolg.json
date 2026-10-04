@@ -6,10 +6,10 @@
   "reference_sha256": "4e1908fbc51ea0f156a32077fd20b2af755fe0b1f4aa7b1bc67967208e7e87f4",
   "reference_entry": 2773128,
   "candidate_source": "candidates/levels/17_smolg.c",
-  "source_sha256": "f4b5b30c6d531395b2bb13ed93b1b42dda7e5ac11936a9f9b04bd9cf9a46e63c",
-  "catalog_sha256": "c4904fc61250facbbfe789688ee44f43b354034fdaedb2f6d73176f9c6be3ceb",
-  "object_sha256": "5b34306295b01fbce92b95aa364edbb5d5a8820987ef2f97fe624da96642d401",
-  "candidate_elf_sha256": "0a8d6513f67a1d5672c545a82adf2ddfc4db8ffa217a99b73e171af421fdf291",
+  "source_sha256": "67831286708d27d706cc41b124867e3c416c1866e1d7529f477b63dcc37ba916",
+  "catalog_sha256": "7ba199accaab7a652a8e99aeac76e6939c506a1297f7618ecd7f245df95ce96c",
+  "object_sha256": "ac7020407818b4315f00bf453e6f9460e6e37b18d279baa20e1f44c4a25331d9",
+  "candidate_elf_sha256": "fdc14a54bd439eae78a21e42b20f40a3d6ae1f0406d976cc1c6479d35d1b31be",
   "checker_sha256": "b4586e2963bfdd25e3b024c92caa573a3c98ac3b585c38383b0dcaa426dc7181",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -133,7 +133,40 @@
       "state": "matched_unintegrated",
       "symbol": "LVL_17_SMOLG_FUN_002E68C8",
       "produced_size": 136
+    },
+    {
+      "address": 2814560,
+      "candidate_sha256": "b2fec2e3a72b4a73d5ff2162d1b194edaf9532a3a0a20d220e842b31c0fe6960",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "b2fec2e3a72b4a73d5ff2162d1b194edaf9532a3a0a20d220e842b31c0fe6960",
+      "size": 56,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_17_SMOLG_FUN_002AF260",
+      "produced_size": 56
+    },
+    {
+      "address": 2814616,
+      "candidate_sha256": "11ae96bdcbf7ededfabe6db6fd97f2b8dcfb02957d488b2ca119d5b0319d3e26",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "11ae96bdcbf7ededfabe6db6fd97f2b8dcfb02957d488b2ca119d5b0319d3e26",
+      "size": 36,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_17_SMOLG_FUN_002AF298",
+      "produced_size": 36
+    },
+    {
+      "address": 2836304,
+      "candidate_sha256": "44096337db3ef2dead087fe4023d99ef94fef08cdc91bbbefc8f38dc33eb7522",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "44096337db3ef2dead087fe4023d99ef94fef08cdc91bbbefc8f38dc33eb7522",
+      "size": 32,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_17_SMOLG_FUN_002B4750",
+      "produced_size": 32
     }
   ],
-  "matched_code_bytes": 584
+  "matched_code_bytes": 708
 }

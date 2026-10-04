@@ -84,3 +84,18 @@ void LVL_17_SMOLG_FUN_002E68C8(int width, int height)
     LVL_17_SMOLG_FUN_002F1800(0x100, 0x100);
     LVL_17_SMOLG_FUN_0037EB30(0x42, 0x8000000044UL);
 }
+
+s32 LVL_17_SMOLG_FUN_002AF260(s32 index) {
+ s32 value=LVL_17_SMOLG_FUN_002AF228(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_17_SMOLG_FUN_002AF298(s32 index) {
+ return LVL_17_SMOLG_FUN_002AF228(index)==47;
+}
+
+s32 LVL_17_SMOLG_FUN_002B4750(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

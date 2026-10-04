@@ -84,3 +84,18 @@ void LVL_3_ENDAKO_FUN_002E6390(int width, int height)
     LVL_3_ENDAKO_FUN_002F1898(0x100, 0x100);
     LVL_3_ENDAKO_FUN_0037CA78(0x42, 0x8000000044UL);
 }
+
+s32 LVL_3_ENDAKO_FUN_002B3798(s32 index) {
+ s32 value=LVL_3_ENDAKO_FUN_002B3760(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_3_ENDAKO_FUN_002B37D0(s32 index) {
+ return LVL_3_ENDAKO_FUN_002B3760(index)==47;
+}
+
+s32 LVL_3_ENDAKO_FUN_002B8C60(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

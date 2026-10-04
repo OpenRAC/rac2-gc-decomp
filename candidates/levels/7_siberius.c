@@ -84,3 +84,18 @@ void LVL_7_SIBERIUS_FUN_002DB868(int width, int height)
     LVL_7_SIBERIUS_FUN_002E6BB0(0x100, 0x100);
     LVL_7_SIBERIUS_FUN_003715E0(0x42, 0x8000000044UL);
 }
+
+s32 LVL_7_SIBERIUS_FUN_002ACCF8(s32 index) {
+ s32 value=LVL_7_SIBERIUS_FUN_002ACCC0(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_7_SIBERIUS_FUN_002ACD30(s32 index) {
+ return LVL_7_SIBERIUS_FUN_002ACCC0(index)==47;
+}
+
+s32 LVL_7_SIBERIUS_FUN_002B1FE0(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

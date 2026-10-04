@@ -84,3 +84,24 @@ void LVL_10_HRUGIS_CLOUD_FUN_00300530(int width, int height)
     LVL_10_HRUGIS_CLOUD_FUN_0030B3D0(0x100, 0x100);
     LVL_10_HRUGIS_CLOUD_FUN_003923D8(0x42, 0x8000000044UL);
 }
+
+extern void LVL_10_HRUGIS_CLOUD_FUN_002EE460(f32, f32, f32, f32 *, s32);
+
+void LVL_10_HRUGIS_CLOUD_FUN_002C8A78(f32 *output) {
+ LVL_10_HRUGIS_CLOUD_FUN_002EE460(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_10_HRUGIS_CLOUD_FUN_002C8C58(s32 index) {
+ s32 value=LVL_10_HRUGIS_CLOUD_FUN_002C8C20(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_10_HRUGIS_CLOUD_FUN_002C8C90(s32 index) {
+ return LVL_10_HRUGIS_CLOUD_FUN_002C8C20(index)==47;
+}
+
+s32 LVL_10_HRUGIS_CLOUD_FUN_002CDFC8(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

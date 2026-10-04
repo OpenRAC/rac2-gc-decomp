@@ -84,3 +84,18 @@ void LVL_19_GRELBIN_FUN_002E32B0(int width, int height)
     LVL_19_GRELBIN_FUN_002EE1C8(0x100, 0x100);
     LVL_19_GRELBIN_FUN_00379558(0x42, 0x8000000044UL);
 }
+
+s32 LVL_19_GRELBIN_FUN_002B0CE0(s32 index) {
+ s32 value=LVL_19_GRELBIN_FUN_002B0CA8(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_19_GRELBIN_FUN_002B0D18(s32 index) {
+ return LVL_19_GRELBIN_FUN_002B0CA8(index)==47;
+}
+
+s32 LVL_19_GRELBIN_FUN_002B61C8(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

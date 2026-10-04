@@ -84,3 +84,24 @@ void LVL_15_GORN_FUN_002FE630(int width, int height)
     LVL_15_GORN_FUN_003094B8(0x100, 0x100);
     LVL_15_GORN_FUN_00397060(0x42, 0x8000000044UL);
 }
+
+extern void LVL_15_GORN_FUN_002EC560(f32, f32, f32, f32 *, s32);
+
+void LVL_15_GORN_FUN_002C6B78(f32 *output) {
+ LVL_15_GORN_FUN_002EC560(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_15_GORN_FUN_002C6D58(s32 index) {
+ s32 value=LVL_15_GORN_FUN_002C6D20(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_15_GORN_FUN_002C6D90(s32 index) {
+ return LVL_15_GORN_FUN_002C6D20(index)==47;
+}
+
+s32 LVL_15_GORN_FUN_002CC0C8(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

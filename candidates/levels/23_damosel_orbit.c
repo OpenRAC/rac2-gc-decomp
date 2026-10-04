@@ -84,3 +84,24 @@ void LVL_23_DAMOSEL_ORBIT_FUN_002F0140(int width, int height)
     LVL_23_DAMOSEL_ORBIT_FUN_002FAA40(0x100, 0x100);
     LVL_23_DAMOSEL_ORBIT_FUN_003833A0(0x42, 0x8000000044UL);
 }
+
+extern void LVL_23_DAMOSEL_ORBIT_FUN_002DE0F8(f32, f32, f32, f32 *, s32);
+
+void LVL_23_DAMOSEL_ORBIT_FUN_002B6AB0(f32 *output) {
+ LVL_23_DAMOSEL_ORBIT_FUN_002DE0F8(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_23_DAMOSEL_ORBIT_FUN_002B6C90(s32 index) {
+ s32 value=LVL_23_DAMOSEL_ORBIT_FUN_002B6C58(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_23_DAMOSEL_ORBIT_FUN_002B6CC8(s32 index) {
+ return LVL_23_DAMOSEL_ORBIT_FUN_002B6C58(index)==47;
+}
+
+s32 LVL_23_DAMOSEL_ORBIT_FUN_002BC2C0(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

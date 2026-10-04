@@ -613,6 +613,30 @@ Reopen condition: A concrete new ABI/type/layout/compiler or algorithm observati
 - `private-work:native-24-0035e348-8bed/native-candidates/ae6987b9`
 - `progress/levels/24_ship_shack.json`
 
+## aranos-explicit-return-phases-20261004-v2
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure all14complete symbols with10existingnativecontrols in one standalone unit.
+
+Reopen condition: New measured ABI,type or source phase evidence
+
+## aranos-four-scalar-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure all14complete symbols with10existingnativecontrols in one standalone unit.
+
+Reopen condition: New measured ABI,type or source phase evidence
+
+## aranos-independent-symbol-scopes-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Measure all14complete symbols with10existingnativecontrols in one standalone unit.
+
+Reopen condition: New measured ABI,type or source phase evidence
+
 ## assert-message-names-publication
 
 State: `done`. Kind: `research`.
@@ -621,6 +645,38 @@ Closed: the public inventory includes all 495 later annotations plus the origina
 
 - `docs/ASSERT-MESSAGE-NAMES.md`
 - `docs/assert-message-names.tsv`
+
+## barlow-header-count-isolated-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require all eleven complete symbols exact before authoring and full-image gates.
+
+Reopen condition: New measured ABI, header layout or source-phase evidence.
+
+## barlow-packed-header-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Compare every complete symbol in the standalone Barlow unit. No credit before complete image gates.
+
+Reopen condition: New measured layout, ABI, lifetime or source-phase evidence; retain mismatches without equivalent-expression cycling.
+
+## barlow-periodic-envelope-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure every complete symbol in the intended unit; preserve refusals and isolate blocked targets from the same object if collective link overlap occurs.
+
+Reopen condition: New independently measured ABI, layout, source lifetime or compiler context evidence; no equivalent-expression cycling.
+
+## barlow-selector-lifetime-20261004-v2
+
+State: `stopped`. Kind: `candidate`.
+
+Require all twelve complete symbols exact. Park selector after this single lifetime experiment if it remains mismatched.
+
+Reopen condition: Independent measured layout, ABI or source lifetime evidence; no further equivalent expression permutations.
 
 ## boot-00293000-record-packets-v1
 
@@ -1513,6 +1569,294 @@ Reopen condition: A validated name transfer with independent semantic evidence
 
 - `private-work:croise-aug6-retail.tsv`
 
+## scalar-cubic-10_hrugis_cloud-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-12_todano-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-13_boldan-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-14_aranos_prison-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-16_snivelak-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-17_smolg-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-4_barlow-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-6_notak-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-cubic-9_dobbo-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Require every complete symbol exact before authoring and the next full image lot.
+
+Reopen condition: New measured ABI, type or expression-lifetime evidence; no algebraic/source permutation cycling.
+
+## scalar-families-0_aranos_tutorial-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-10_hrugis_cloud-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-11_joba-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-12_todano-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-13_boldan-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-14_aranos_prison-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-15_gorn-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-16_snivelak-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-17_smolg-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-18_damosel-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-19_grelbin-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-1_oozla-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-20_yeedil-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-22_dobbo_orbit-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-23_damosel_orbit-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-24_ship_shack-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-25_wupash_nebula-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-26_jamming_array-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-2_maktar_nebula-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-30_insomniac_museum-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-3_endako-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-4_barlow-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-5_feltzin_system-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-6_notak-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-7_siberius-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-8_tabora-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## scalar-families-9_dobbo-20261004
+
+State: `integrated`. Kind: `candidate`.
+
+Compare every complete symbol in the intended standalone unit before full frozen image gates.
+
+Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
 ## ship-shack-002e4828-gs-setup-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -1552,6 +1896,14 @@ State: `stopped`. Kind: `candidate`.
 Measure both complete bodies and27integrated native controls in the same compilation unit.
 
 Reopen condition: New measured ABI, field type or loop scheduling evidence
+
+## ship-shack-float-pool-initializers-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Compare both complete112/88-byte bodies with all29current native controls in one immutable trial.
+
+Reopen condition: New measured type, source phase, alias/access or initializer ordering evidence
 
 ## ship-shack-gs-helper-680-20261004-v1
 

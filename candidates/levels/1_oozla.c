@@ -84,3 +84,18 @@ void LVL_1_OOZLA_FUN_002DAFD8(int width, int height)
     LVL_1_OOZLA_FUN_002E5CF8(0x100, 0x100);
     LVL_1_OOZLA_FUN_003717C8(0x42, 0x8000000044UL);
 }
+
+s32 LVL_1_OOZLA_FUN_002AE990(s32 index) {
+ s32 value=LVL_1_OOZLA_FUN_002AE958(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_1_OOZLA_FUN_002AE9C8(s32 index) {
+ return LVL_1_OOZLA_FUN_002AE958(index)==47;
+}
+
+s32 LVL_1_OOZLA_FUN_002B3C78(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

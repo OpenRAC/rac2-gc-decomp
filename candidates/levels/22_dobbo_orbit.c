@@ -84,3 +84,24 @@ void LVL_22_DOBBO_ORBIT_FUN_002EBA60(int width, int height)
     LVL_22_DOBBO_ORBIT_FUN_002F6320(0x100, 0x100);
     LVL_22_DOBBO_ORBIT_FUN_0037EC88(0x42, 0x8000000044UL);
 }
+
+extern void LVL_22_DOBBO_ORBIT_FUN_002D9A18(f32, f32, f32, f32 *, s32);
+
+void LVL_22_DOBBO_ORBIT_FUN_002B23B0(f32 *output) {
+ LVL_22_DOBBO_ORBIT_FUN_002D9A18(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_22_DOBBO_ORBIT_FUN_002B2590(s32 index) {
+ s32 value=LVL_22_DOBBO_ORBIT_FUN_002B2558(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_22_DOBBO_ORBIT_FUN_002B25C8(s32 index) {
+ return LVL_22_DOBBO_ORBIT_FUN_002B2558(index)==47;
+}
+
+s32 LVL_22_DOBBO_ORBIT_FUN_002B7BC0(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

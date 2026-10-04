@@ -84,3 +84,18 @@ void LVL_16_SNIVELAK_FUN_002DEAE8(int width, int height)
     LVL_16_SNIVELAK_FUN_002E9D88(0x100, 0x100);
     LVL_16_SNIVELAK_FUN_003731D0(0x42, 0x8000000044UL);
 }
+
+s32 LVL_16_SNIVELAK_FUN_002AE3B8(s32 index) {
+ s32 value=LVL_16_SNIVELAK_FUN_002AE380(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_16_SNIVELAK_FUN_002AE3F0(s32 index) {
+ return LVL_16_SNIVELAK_FUN_002AE380(index)==47;
+}
+
+s32 LVL_16_SNIVELAK_FUN_002B3760(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

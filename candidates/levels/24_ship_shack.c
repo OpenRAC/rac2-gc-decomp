@@ -240,3 +240,24 @@ void LVL_24_SHIP_SHACK_FUN_002E4828(int width, int height)
     LVL_24_SHIP_SHACK_FUN_002EF0D0(0x100, 0x100);
     LVL_24_SHIP_SHACK_FUN_00372790(0x42, 0x8000000044UL);
 }
+
+extern void LVL_24_SHIP_SHACK_FUN_002D27E0(f32, f32, f32, f32 *, s32);
+
+void LVL_24_SHIP_SHACK_FUN_002ACDF8(f32 *output) {
+ LVL_24_SHIP_SHACK_FUN_002D27E0(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_24_SHIP_SHACK_FUN_002ACFD8(s32 index) {
+ s32 value=LVL_24_SHIP_SHACK_FUN_002ACFA0(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_24_SHIP_SHACK_FUN_002AD010(s32 index) {
+ return LVL_24_SHIP_SHACK_FUN_002ACFA0(index)==47;
+}
+
+s32 LVL_24_SHIP_SHACK_FUN_002B2348(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

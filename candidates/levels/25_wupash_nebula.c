@@ -84,3 +84,24 @@ void LVL_25_WUPASH_NEBULA_FUN_002F89B0(int width, int height)
     LVL_25_WUPASH_NEBULA_FUN_00303488(0x100, 0x100);
     LVL_25_WUPASH_NEBULA_FUN_0038A5A0(0x42, 0x8000000044UL);
 }
+
+extern void LVL_25_WUPASH_NEBULA_FUN_002E68E0(f32, f32, f32, f32 *, s32);
+
+void LVL_25_WUPASH_NEBULA_FUN_002C0EF8(f32 *output) {
+ LVL_25_WUPASH_NEBULA_FUN_002E68E0(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_25_WUPASH_NEBULA_FUN_002C10D8(s32 index) {
+ s32 value=LVL_25_WUPASH_NEBULA_FUN_002C10A0(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_25_WUPASH_NEBULA_FUN_002C1110(s32 index) {
+ return LVL_25_WUPASH_NEBULA_FUN_002C10A0(index)==47;
+}
+
+s32 LVL_25_WUPASH_NEBULA_FUN_002C6448(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

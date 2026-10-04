@@ -84,3 +84,31 @@ void LVL_8_TABORA_FUN_002F1658(int width, int height)
     LVL_8_TABORA_FUN_002FC678(0x100, 0x100);
     LVL_8_TABORA_FUN_00389AB0(0x42, 0x8000000044UL);
 }
+
+s32 LVL_8_TABORA_FUN_002BF588(s32 index) {
+ s32 value=LVL_8_TABORA_FUN_002BF550(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_8_TABORA_FUN_002BF5C0(s32 index) {
+ return LVL_8_TABORA_FUN_002BF550(index)==47;
+}
+
+s32 LVL_8_TABORA_FUN_002C4898(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}
+
+typedef struct {
+    u32 unknown;
+    s32 data_offset;
+    s32 length;
+    s32 extra;
+} PackedHeaderCountView;
+
+s32 LVL_8_TABORA_FUN_0038C158(const PackedHeaderCountView *header) {
+    s32 fixed = header->extra + 16;
+    s32 total = header->data_offset + fixed + header->length;
+    return ((total + 15) / 16) * 4;
+}

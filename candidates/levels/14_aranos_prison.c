@@ -84,3 +84,24 @@ void LVL_14_ARANOS_PRISON_FUN_002ED190(int width, int height)
     LVL_14_ARANOS_PRISON_FUN_002F8518(0x100, 0x100);
     LVL_14_ARANOS_PRISON_FUN_00385CB8(0x42, 0x8000000044UL);
 }
+
+extern void LVL_14_ARANOS_PRISON_FUN_002DAFE0(f32, f32, f32, f32 *, s32);
+
+void LVL_14_ARANOS_PRISON_FUN_002B5478(f32 *output) {
+ LVL_14_ARANOS_PRISON_FUN_002DAFE0(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_14_ARANOS_PRISON_FUN_002B5658(s32 index) {
+ s32 value=LVL_14_ARANOS_PRISON_FUN_002B5620(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_14_ARANOS_PRISON_FUN_002B5690(s32 index) {
+ return LVL_14_ARANOS_PRISON_FUN_002B5620(index)==47;
+}
+
+s32 LVL_14_ARANOS_PRISON_FUN_002BAB48(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

@@ -84,3 +84,18 @@ void LVL_13_BOLDAN_FUN_002F02F8(int width, int height)
     LVL_13_BOLDAN_FUN_002FAFE0(0x100, 0x100);
     LVL_13_BOLDAN_FUN_00384E68(0x42, 0x8000000044UL);
 }
+
+s32 LVL_13_BOLDAN_FUN_002B8CE0(s32 index) {
+ s32 value=LVL_13_BOLDAN_FUN_002B8CA8(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_13_BOLDAN_FUN_002B8D18(s32 index) {
+ return LVL_13_BOLDAN_FUN_002B8CA8(index)==47;
+}
+
+s32 LVL_13_BOLDAN_FUN_002BE1D0(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

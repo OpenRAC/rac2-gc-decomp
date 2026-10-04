@@ -84,3 +84,18 @@ void LVL_9_DOBBO_FUN_002E1918(int width, int height)
     LVL_9_DOBBO_FUN_002ECD10(0x100, 0x100);
     LVL_9_DOBBO_FUN_00378928(0x42, 0x8000000044UL);
 }
+
+s32 LVL_9_DOBBO_FUN_002B0928(s32 index) {
+ s32 value=LVL_9_DOBBO_FUN_002B08F0(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_9_DOBBO_FUN_002B0960(s32 index) {
+ return LVL_9_DOBBO_FUN_002B08F0(index)==47;
+}
+
+s32 LVL_9_DOBBO_FUN_002B5C38(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

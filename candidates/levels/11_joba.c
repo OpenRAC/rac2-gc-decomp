@@ -84,3 +84,24 @@ void LVL_11_JOBA_FUN_002F7670(int width, int height)
     LVL_11_JOBA_FUN_00302E40(0x100, 0x100);
     LVL_11_JOBA_FUN_0038FD70(0x42, 0x8000000044UL);
 }
+
+extern void LVL_11_JOBA_FUN_002E54D8(f32, f32, f32, f32 *, s32);
+
+void LVL_11_JOBA_FUN_002C6080(f32 *output) {
+ LVL_11_JOBA_FUN_002E54D8(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_11_JOBA_FUN_002C6260(s32 index) {
+ s32 value=LVL_11_JOBA_FUN_002C6228(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_11_JOBA_FUN_002C6298(s32 index) {
+ return LVL_11_JOBA_FUN_002C6228(index)==47;
+}
+
+s32 LVL_11_JOBA_FUN_002CB668(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}

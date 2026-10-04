@@ -84,3 +84,37 @@ void LVL_6_NOTAK_FUN_00324EF0(int width, int height)
     LVL_6_NOTAK_FUN_0032FE68(0x100, 0x100);
     LVL_6_NOTAK_FUN_003BC960(0x42, 0x8000000044UL);
 }
+
+extern void LVL_6_NOTAK_FUN_00312E60(f32, f32, f32, f32 *, s32);
+
+void LVL_6_NOTAK_FUN_002ED2F8(f32 *output) {
+ LVL_6_NOTAK_FUN_00312E60(0.3f,0.0f,1.34f,output,1);
+}
+
+s32 LVL_6_NOTAK_FUN_002ED4D8(s32 index) {
+ s32 value=LVL_6_NOTAK_FUN_002ED4A0(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_6_NOTAK_FUN_002ED510(s32 index) {
+ return LVL_6_NOTAK_FUN_002ED4A0(index)==47;
+}
+
+s32 LVL_6_NOTAK_FUN_002F29C8(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}
+
+typedef struct {
+    u32 unknown;
+    s32 data_offset;
+    s32 length;
+    s32 extra;
+} PackedHeaderCountView;
+
+s32 LVL_6_NOTAK_FUN_003BEF00(const PackedHeaderCountView *header) {
+    s32 fixed = header->extra + 16;
+    s32 total = header->data_offset + fixed + header->length;
+    return ((total + 15) / 16) * 4;
+}

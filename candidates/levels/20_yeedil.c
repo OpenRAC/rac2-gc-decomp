@@ -84,3 +84,31 @@ void LVL_20_YEEDIL_FUN_002F9810(int width, int height)
     LVL_20_YEEDIL_FUN_00304B08(0x100, 0x100);
     LVL_20_YEEDIL_FUN_003913B0(0x42, 0x8000000044UL);
 }
+
+s32 LVL_20_YEEDIL_FUN_002C0C68(s32 index) {
+ s32 value=LVL_20_YEEDIL_FUN_002C0C30(index);
+ if(value==12 || value==17) return 1;
+ return 0;
+}
+
+s32 LVL_20_YEEDIL_FUN_002C0CA0(s32 index) {
+ return LVL_20_YEEDIL_FUN_002C0C30(index)==47;
+}
+
+s32 LVL_20_YEEDIL_FUN_002C6340(u8 *object) {
+ if(object==0) return 0;
+ return *(short *)(object+0xaa)==71;
+}
+
+typedef struct {
+    u32 unknown;
+    s32 data_offset;
+    s32 length;
+    s32 extra;
+} PackedHeaderCountView;
+
+s32 LVL_20_YEEDIL_FUN_00393950(const PackedHeaderCountView *header) {
+    s32 fixed = header->extra + 16;
+    s32 total = header->data_offset + fixed + header->length;
+    return ((total + 15) / 16) * 4;
+}
