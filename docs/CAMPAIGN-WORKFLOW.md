@@ -105,6 +105,32 @@ private continuation prompt supplies the exact roots. The import retained all
 
 ## Complete build and closure
 
+Before compiling, establish function boundaries and ABI from the pinned
+instructions and relevant callers/callees. A default Ghidra signature or unused
+register residue does not justify an invented return value. Prototype changes
+require requalification of affected controls. Reuse existing typedefs and use
+the native catalog loader's defaults rather than assuming raw JSON contains `gp`.
+
+Measure complete symbols independently from the same compiled object when an
+oversized body would prevent linking the other candidates. Retain every refusal,
+then qualify all winners and existing controls together in the intended unit.
+Do not trim a section, patch bytes or promote an isolated private match directly.
+
+Write versioned sources and reviews as UTF-8/LF. Install the fresh boot review
+before a reconstruction that depends on it; normalizing its line endings after
+the build changes dependency hashes. Freeze sources, catalogs, reviews, tools and
+flags during a batch. Follow long WSL jobs in a supervised foreground process;
+do not rely on a detached `nohup` job surviving the `wsl.exe` session.
+
+For proof publication, first validate the new private boot/level integration
+proofs with `decomp_report.py --integration-proof ... --progress-proof ...` and
+the complete set of affected `--level-proof` paths. Back up public destinations
+before copying reviewed proof metadata. Publish a coherent `progress/report.json`,
+boot integration and per-level proofs, retaining unaffected proofs when their
+inputs are unchanged. The report's boot counters must agree with its measured
+G1 result; neither counters nor a process exit code can substitute for the gates.
+Retired batch scripts and finalizers are historical evidence, not the active path.
+
 ```powershell
 python scripts/campaign.py --runtime <private-runtime> integrate -- --manifest <private-manifest.json> --toolchain <ASM-toolchain> --c-toolchain <C-linker-toolchain> --program-jobs 4 --jobs 2
 python scripts/campaign.py --runtime <private-runtime> report -- --level-proof progress/levels/<level>.json

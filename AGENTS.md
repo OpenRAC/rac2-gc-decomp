@@ -1,5 +1,10 @@
 # Repository language and commit messages
 
+Start or resume through [docs/CONTINUE.md](docs/CONTINUE.md). Read the optional
+ignored `.local/ENVIRONMENT.md` pointer for machine-specific tools and current
+private operational state. The public repository owns methods, task decisions
+and proofs; no long pasted prompt or personal workspace details belong here.
+
 Use the maintained [campaign workflow](docs/CAMPAIGN-WORKFLOW.md) for task selection,
 packets, trials and complete batches. `config/campaign-register.json` is the one
 authority for experiment history and task decisions. Generate queue/history views

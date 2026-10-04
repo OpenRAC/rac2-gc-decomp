@@ -33,7 +33,6 @@
 | Ratchet & Clank: Going Commando (2003) | PlayStation 2 | USA / NTSC-U | 1.01 | `SCUS_972.68` |
 
 Greatest Hits v2.00 and other regions are different targets.
-This repository is part of project 45.
 
 ## Current status
 
@@ -166,6 +165,10 @@ intelligence contributed here is credited the same way in
 [docs/COMMUNITY-ENGINE-REFERENCE.md](docs/COMMUNITY-ENGINE-REFERENCE.md).
 
 ## Contributing
+
+To resume an agent session, start with [the short continuation guide](docs/CONTINUE.md)
+and the repository's `AGENTS.md`. Machine-specific tools and references stay in
+an ignored local environment pointer.
 
 Contributions are welcome. The rules are in [CONTRIBUTING.md](CONTRIBUTING.md); the full
 walkthrough — what you need, the order to run things in, what each command must print, and what
