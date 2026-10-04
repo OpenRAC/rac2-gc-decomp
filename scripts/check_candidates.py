@@ -88,12 +88,83 @@ def run(arguments: list[str], log: Path, directory: Path | None = None) -> None:
         raise ValueError(f"Tool failed ({result.returncode}); see {log}")
 
 
+def readonly_sections(catalog: dict) -> list[dict]:
+    """Review one whole compiler-generated table, never a guessed subsection."""
+    placements = catalog.get("read_only_sections", [])
+    if not isinstance(placements, list) or len(placements) > 1:
+        raise ValueError("Only one whole generated readonly section is supported")
+    for item in placements:
+        if (not isinstance(item, dict) or set(item) != {"section", "address", "size", "sha256"}
+                or item["section"] != ".rodata"
+                or type(item["address"]) is not int or item["address"] < 0 or item["address"] % 4
+                or type(item["size"]) is not int or item["size"] <= 0 or item["size"] % 4
+                or item["address"] + item["size"] > 1 << 32
+                or not isinstance(item["sha256"], str) or not re.fullmatch(r"[0-9a-f]{64}", item["sha256"])):
+            raise ValueError("Invalid whole generated readonly section placement")
+        for function in catalog["functions"]:
+            if function["address"] < item["address"] + item["size"] and item["address"] < function["address"] + function["size"]:
+                raise ValueError("Generated readonly section overlaps a complete function")
+    return placements
+
+
+def compare_readonly(reference: Path, candidate: Path, catalog: dict, obj: Path) -> list[dict]:
+    placements = readonly_sections(catalog)
+    if not placements:
+        return []
+    object_elf, linked_elf, reference_elf = (read_elf(path) for path in (obj, candidate, reference))
+    if object_elf["type"] != 1 or linked_elf["type"] != 2 or reference_elf["type"] != 2:
+        raise ValueError("Generated readonly data needs an unchanged object and linked reference/candidate")
+    generated = [section for section in object_elf["sections"]
+                 if section["size"] and section["type"] in (1, 8)
+                 and section["flags"] & 2 and not section["flags"] & 4]
+    results = []
+    for item in placements:
+        result = {"section": item["section"], "address": item["address"], "size": item["size"], "matched": False}
+        owners = [section for section in reference_elf["sections"] if section["type"] == 1
+                  and section["address"] <= item["address"] and item["address"] + item["size"] <= section["address"] + section["size"]]
+        if len(owners) != 1:
+            raise ValueError("Generated readonly reference extent lacks one mapped PROGBITS owner")
+        original = address_bytes(reference, item["address"], item["size"])
+        reference_hash = hashlib.sha256(original).hexdigest()
+        if reference_hash != item["sha256"]:
+            raise ValueError("Generated readonly reference pin differs")
+        inputs = [section for section in generated if section["name"] == item["section"]]
+        outputs = [section for section in linked_elf["sections"] if section["name"] == item["section"]]
+        if (len(generated) != 1 or len(inputs) != 1 or len(outputs) != 1
+                or inputs[0]["type"] != 1 or inputs[0]["flags"] != 2 or inputs[0]["size"] != item["size"]
+                or outputs[0]["type"] != 1 or outputs[0]["flags"] != 2
+                or outputs[0]["address"] != item["address"] or outputs[0]["size"] != item["size"]
+                or item["address"] % max(1, inputs[0]["alignment"])):
+            result["reason"] = "missing, extra, writable, misplaced or incomplete generated readonly section"
+        else:
+            produced = address_bytes(candidate, item["address"], item["size"])
+            result.update(reference_sha256=reference_hash, candidate_sha256=hashlib.sha256(produced).hexdigest(),
+                          different_bytes=sum(before != after for before, after in zip(original, produced)),
+                          matched=original == produced)
+        results.append(result)
+    return results
+
+
+def require_exact_readonly(catalog: dict, results: list[dict]) -> None:
+    placements = readonly_sections(catalog)
+    if not isinstance(results, list) or len(results) != len(placements):
+        raise ValueError("Review omitted or duplicated generated readonly data")
+    for item, result in zip(placements, results):
+        if (not isinstance(result, dict) or any(result.get(key) != item[key] for key in ("section", "address", "size"))
+                or result.get("matched") is not True or type(result.get("different_bytes")) is not int
+                or result["different_bytes"] != 0 or result.get("reference_sha256") != item["sha256"]
+                or result.get("candidate_sha256") != item["sha256"]):
+            raise ValueError("Review requires every generated readonly byte to match")
+
+
 def linker_script(catalog: dict) -> str:
     functions = sorted(catalog["functions"], key=lambda function: function["address"])
     sections = "".join(f"    .text.{function['symbol']} 0x{function['address']:08X} : "
                        f"{{ *(.text.{function['symbol']}) }}\n" for function in functions)
     definitions = "".join(f"{name} = 0x{address:08X};\n" for name, address in catalog["externals"].items())
-    return (f"ENTRY({functions[0]['symbol']})\nSECTIONS\n{{\n" + sections +
+    readonly = "".join(f"    {item['section']} 0x{item['address']:08X} : {{ *({item['section']}) }}\n"
+                       for item in readonly_sections(catalog))
+    return (f"ENTRY({functions[0]['symbol']})\nSECTIONS\n{{\n" + readonly + sections +
             "    .data : { *(.data) *(.rodata) *(.rdata) *(.lit4) *(.lit8) *(.sdata) }\n"
             "    .bss : { *(.bss) *(.sbss) *(COMMON) }\n"
             "    /DISCARD/ : { *(.reginfo) }\n}\n" + definitions +
@@ -146,17 +217,18 @@ def main() -> int:
     assert_fresh(candidate, [source, object_path, script])
     results = [compare_function(reference, candidate, function["symbol"], function["address"], function["size"])
                for function in functions]
+    data_results = compare_readonly(reference, candidate, catalog, object_path)
     report = {"target": catalog["target"], "verified_at": datetime.now(timezone.utc).isoformat(),
               "reference_sha256": file_hash(reference), "source_sha256": file_hash(source),
               "candidate_elf_sha256": file_hash(candidate), "object_sha256": file_hash(object_path),
               "catalog_sha256": file_hash(ROOT / "config" / "candidate-catalog.json"),
               "checker_sha256": file_hash(Path(__file__)),
               "flags": flags, "tools": tool_hashes(args.toolchain),
-              "functions": results, "integrated_functions": 0,
+            "functions": results, "read_only_sections": data_results, "integrated_functions": 0,
               "profile_scope": "Only the fully matched functions below; not a general RAC2 compiler qualification"}
     (work / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"report": str(work / "report.json"), "results": results}, indent=2))
-    return 0 if all(result["matched"] for result in results) else 1
+    return 0 if all(result["matched"] for result in results + data_results) else 1
 
 
 if __name__ == "__main__":

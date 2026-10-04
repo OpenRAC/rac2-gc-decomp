@@ -97,6 +97,19 @@ work without compiler targets. Historical source rows were conservatively seeded
 as research tasks: accepted functions are closed by current validated proofs,
 trial-only winners retain no credit before integration, and unresolved trials stay parked.
 
+A native catalog may pin one whole compiler-generated `.rodata` section with
+`read_only_sections`: `section`, `address`, `size` and `sha256` are required.
+The unchanged compiled object must contain exactly that allocated non-executable
+data section, with readonly flags and the complete reviewed size. The linked
+table must occupy the reviewed address and match every pinned reference byte.
+Reference tables may reside in the original writable `.data`; this does not
+change their loaded metadata. A missing table, other generated data, a truncated
+extent or one different byte is a refusal even when every function matches.
+Data adds no C code coverage. This placement qualifies an object only; source
+publication still requires replacement of the original data extent and the
+complete loaded-image and metadata gates. Do not embed a retail table in C or
+rewrite the switch to avoid its generated data.
+
 Before selecting a new matching target, check its complete program/address/size
 span against every published function in that program's `progress/levels` proof,
 including both `boot-shared` and `level-native` origins. A new native symbol or

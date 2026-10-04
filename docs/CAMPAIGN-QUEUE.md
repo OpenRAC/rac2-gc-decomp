@@ -2007,6 +2007,46 @@ Reopen condition: Independent actualchangedsource/catalog/reference/ABI evidence
 
 - `private-work:parallel-20261004/native_review/compact-family-scan.json`
 
+## native-review-endako-axis-input-20261004
+
+State: `queued`. Kind: `research`.
+
+Pin completehelper/caller/livebounds andFPR+pointerreturn ABI; author typedC snapshots/currentwholeunit then maintainedtrial.
+
+Reopen condition: Independent originalfloat/array/state layout/ABI/snapshot/lifetime evidence only, no clamp/expression/FPR/register/localorder/qualifier/flags cycles.
+
+## native-review-endako-axis-input-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full30controls andcomplete248 target; family onlyafterexact. Retainrefusal andcontinuefresh.
+
+Reopen condition: Independent originaltyped stackmatrix/point extent, helper ABI or source-lifetime evidence only, no equivalentdeclaration/register/localorder/padding/volatile/flags cycles.
+
+## native-review-endako-axis-input-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park both immutable axisinput248 physicalfamily/aliases withfulltarget/helper84/caller24860 pins andcomplete28controls. No positive/familybulk/partialcredit; continue new owned algorithm.
+
+Reopen condition: Independent original prototype/mangled argumentorder or qualified compiler/source-binding witness explaining GPR/FPR preserve order, beyond alreadymeasured inputbank ABI and8-byte initializer temporary; no equivalent parameter/declaration/register/localorder/qualifier/flags cycles.
+
+## native-review-endako-clamped-length-20261004
+
+State: `queued`. Kind: `research`.
+
+Pin completehelpers/caller/reference andalignedordinarypointer/F0 ABI; authorCURRENT Endako28controls +216 andmaintainedwholeunittrial.
+
+Reopen condition: Independent originalowner/state/point storage/ABI orinput sampling/clamp lifetime evidence only,no clampbranch/array/field/register/localorder/volatile/padding/flags cycles.
+
+## native-review-endako-clamped-length-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all28current controls andfull216body; no familyuntilseed exact. Preserve refusal andcontinuefresh.
+
+Reopen condition: Independent originalowner/state/point storage/ABI orinputsampling/clamp lifetime evidence only,no clampbranch/array/field/register/localorder/volatile/padding/flags cycles.
+
 ## native-review-endako-cosine-c-v1-20261004
 
 State: `stopped`. Kind: `candidate`.
@@ -2053,6 +2093,22 @@ Park scalar-field-setup physicalfamily without store-order expression variants; 
 
 Reopen condition: Independent original source memory-alias/declaration or optimizer scheduling evidence for field writes; arbitrary independent-store reordering, volatile or register forcing insufficient.
 
+## native-review-endako-hermite-20261004
+
+State: `queued`. Kind: `research`.
+
+Preserve fulltarget/caller pins and originalSDK assertion entry/pointer ABI, author private ordinary5float C with allCURRENT Endako controls; no table data or previoustarget aliases. Afterroottool HOLD release, qualify wholeunit via maintained CLI.
+
+Reopen condition: Independent originalfloat parameter/storage/ABI/guard or polynomial source lifetime evidence only; no expression association, parameter-order, FPR/register/localname/qualifier/flags cycles.
+
+## native-review-endako-hermite-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutableHermite224 physicalfamily/aliases withfulltarget/caller408/SDKentry48/primaryqualifiedEABI8 proof and28controls, zeroCcredit; no second parameter/expression/lifetime cycle. Continue genuinelynew owned target. Primaryfivefloat ordinaryABI evidence may aid NEWtargeteligibility withoutflag/profilechange.
+
+Reopen condition: Independent originalpolynomial/source variable/storage/lifetime orprototype evidence, not measuredFPRallocation alone or equivalent formalassignment/expression/localname/register/qualifier/flags changes.
+
 ## native-review-endako-index-c-v1-20261004
 
 State: `exact_private`. Kind: `candidate`.
@@ -2085,6 +2141,22 @@ Parkboth immutableoptioncontroller variants andallphysicalaliases; no third equi
 
 Reopen condition: Independent original object/option-storage sourcebinding orqualified compiler lifetime witness explaining field8projection thenconditionaladvance4 andcountinit phase, notdeclarationcycling.
 
+## native-review-endako-packed-texture-20261004
+
+State: `queued`. Kind: `research`.
+
+Save fulltarget/caller/livepins andtypes; authorCURRENT Endako prefix/allcontrols andmaintainedtrial ifhistory/public eligible.
+
+Reopen condition: Independent actualword/64type/ABI/recordlayout/access lifetime evidence only,no expression/register/localorder/volatile/padding/flags cycles.
+
+## native-review-endako-packed-texture-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutable packedtexture196 physicalfamily/aliases with fulltarget/caller/livepins andcurrent28controls. No newCcredit orfamilybulk. Continue genuinely new owned control/loop algorithm.
+
+Reopen condition: Independent originalGS inputdomain/type orpackedexpression/source capture lifetime witness, no mask/OR/grouping/localname/store-order/volatile/padding/forcedregister/flags permutations.
+
 ## native-review-endako-pair-miss-v2-20261004
 
 State: `stopped`. Kind: `candidate`.
@@ -2101,6 +2173,38 @@ Preserve static refusal; choose another algorithm without unqualified128-bit cop
 
 Reopen condition: An independently byte-qualified standard-C aligned128-bit copy witness with current instruments; no intrinsic/ASM/forced-register substitution.
 
+## native-review-endako-relative-map-20261004
+
+State: `queued`. Kind: `research`.
+
+Pin fulltarget/caller/helper/liveidentity andpointer/word ABI; author freshEndako28controls +228 thenmaintainedtrial. No parkedrebase372 orotherphysicalaliases.
+
+Reopen condition: Independent originaltyped header/relativeoffset/translationtable/ABI/access lifetime evidence only,no loop/branch/store/base/globalview/register/qualifier/flags cycles.
+
+## native-review-endako-relative-map-context-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park all3 immutable relative-map physicalfamily trials andfullindependentcontext witness, zeroCcredit. Continue genuinely new owned standard-C body; no fourth source trial.
+
+Reopen condition: New independent originalsource/ABI/storage evidence beyondthealreadymeasured156window context initializer andrawword aliaswitness; no binding/alias/localorder/register/loop/cursor/volatile/padding/flags cycles.
+
+## native-review-endako-relative-map-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full30controls andcomplete228 target; family onlyafterexact. Retainrefusal andcontinuefresh.
+
+Reopen condition: Independent originaltyped stackmatrix/point extent, helper ABI or source-lifetime evidence only, no equivalentdeclaration/register/localorder/padding/volatile/flags cycles.
+
+## native-review-endako-relative-map-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park both immutable relative-map228 physicalfamily/aliases, fullpins/caller/helper276/currentcontrols andrawwordalias correction. Zero newCcredit; proceed genuinely fresh owned target.
+
+Reopen condition: Independent originalencodedstream/context global layout orremaprecord sourcepointer lifetime evidence; no fakeaggregateanchor, globalview/split/declaration/localorder/register/volatile/padding/flags cycles.
+
 ## native-review-endako-selection-cache-20261004
 
 State: `queued`. Kind: `research`.
@@ -2116,6 +2220,62 @@ State: `stopped`. Kind: `candidate`.
 Parkallthree physical/logicalselection/cache bodies andboth pairmissvariants. Preserve completepins/caller/outflag semantics andunchangedintegratedmetric68. No third common-result/base/loop/register/type/declaration/qualifier/flags cycle. Continue anotherfresh ownedalgorithm.
 
 Reopen condition: Independent original array/global-storage/source-lifetime orsourcebinding witness explaining arraybase rematerialization/dualinduction andsavedresult/metricinit phases; no equivalentsourcecycling.
+
+## native-review-endako-seven-queue-20261004
+
+State: `queued`. Kind: `research`.
+
+Save fulltarget/caller/livepins, authorCURRENT786Endako28controls +240 andmaintainedwholeunittrial, no unsupportedglobalview ormodulus cycles.
+
+Reopen condition: Independent originalword/half/globalqueue/storage/access lifetime evidence only,no branch/register/modulus/expression/localorder/volatile/padding/flags cycles.
+
+## native-review-endako-seven-queue-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full30controls andcomplete240 target; family onlyafterexact. Retainrefusal andcontinuefresh.
+
+Reopen condition: Independent originaltyped stackmatrix/point extent, helper ABI or source-lifetime evidence only, no equivalentdeclaration/register/localorder/padding/volatile/flags cycles.
+
+## native-review-endako-seven-queue-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park both immutable sevenqueue240 physicalfamily/aliases with fullwordABI correction andretail signedhalf storage evidence; do not promote partialsize or familybulk. Continue fresh owned standard C body.
+
+Reopen condition: Independent originalqueue source count/head snapshot ortypedglobal storage lifetime evidence; no equivalentfor/do/index caching/globalalias/localorder/register/volatile/padding/flags cycles.
+
+## native-review-endako-switch-data-open-20261004
+
+State: `queued`. Kind: `research`.
+
+Keep staticexcluded pending root-owned generatedread-only placement support qualifiedwithallcurrentcontrols andloaded-image gates. Do not author/compile switchuntilsupport exists; continue anothereligiblefreshbody.
+
+Reopen condition: Qualified maintained compiler-generated readonly table placement andrelocation binding, with originaltable boundaries/pins andallunitcontrols exact; no manualtableaddress/sourcebranch/register/ASM/padding workaround.
+
+## native-review-endako-texture-group-20261004
+
+State: `queued`. Kind: `research`.
+
+Pin fullhelpers/callers/reference andword/pointertypes, prepareCURRENT786Endako28controls +292 andmaintainedtrial.
+
+Reopen condition: Independent originaldescriptor/header/count/type/ABI/access lifetime evidence only,no loop/base/shift/register/store/localorder/volatile/padding/flags cycles.
+
+## native-review-endako-texture-group-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full30controls andcomplete292 target; family onlyafterexact. Retainrefusal andcontinuefresh.
+
+Reopen condition: Independent originaltyped stackmatrix/point extent, helper ABI or source-lifetime evidence only, no equivalentdeclaration/register/localorder/padding/volatile/flags cycles.
+
+## native-review-endako-texture-group-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park both immutable texturegroup292 physicalfamily/aliases withfullactual3wordtarget/2wordloader/6wordtransfer ABI andcaller/descriptor pins. No newCcredit orfamilybulk. Continue fresh owned algorithm.
+
+Reopen condition: Independent originalasset-header/descriptor globalstorage orsource allocation/call ABI evidence beyondalreadymeasuredwordcount timing; no header/bank/globalview/type/localorder/loop/register/volatile/padding/flags cycles.
 
 ## native-review-endako-unlink-20261004
 
@@ -2661,6 +2821,22 @@ Park immutable menu-cycle physical family, no second equivalent-loop/ternary/reg
 
 Reopen condition: Independent original object alias/access or loop-lifetime evidence; no volatile, padding, forced registers or flags changes.
 
+## native-review-notak-model-cache-20261004
+
+State: `queued`. Kind: `research`.
+
+Pin fulltarget/representativecaller/livebounds andtypedpartialnode/modeldata view; authorprivateC/current30controls thenmaintainedtrial.
+
+Reopen condition: Independent originalnode/modelbank layout/ABI/alias/access lifetime evidence only,no bank/pointer/member/register/localorder/volatile/padding/flags cycles.
+
+## native-review-notak-model-cache-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutablemodelcache188 physicalfamily/aliases withfulltarget/caller624/partialview/livepins and30controls. No positive/familybulk/newcredit; continue new owned algorithm.
+
+Reopen condition: Independent originalowner/modeldescriptor typedlayout/source access lifetime orprototype witness, no booleaninversion/branchblock/fieldtype/localname/store/register/volatile/padding/flags permutations.
+
 ## native-review-notak-vector-bank-init-20261004
 
 State: `queued`. Kind: `research`.
@@ -2677,6 +2853,22 @@ Park immutablepairedvectorbank physicalfamily; no floatconstant/loop/register/st
 
 Reopen condition: Independent qualified compiler/source-binding ororiginallifetime evidence explaining firstMTC1/loop hazard scheduling andindependent resetword phase, notequivalent sourcecycling.
 
+## native-review-prison-cache-promote-20261004
+
+State: `queued`. Kind: `research`.
+
+Preservefulltarget/caller/helper live/reference boundary pins andactualword/types/return ABI; authorcurrent78630controls then maintainedwholeunittrial ifeligible.
+
+Reopen condition: Independent typedentry/globalroot/helperABI/access lifetime evidence only,no index/loop/register/equivalentdeclaration/volatile/padding/flags cycles.
+
+## native-review-prison-cache-promote-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutable cachepromotion288 physicalfamily/aliases with fullpins/caller/helper/wholeunit controls. No task replay atotheraddresses/programs; continue genuinely fresh eligibility.
+
+Reopen condition: Independent originalcache globalstorage/type/access lifetime or source binding evidence for separatelyformedroot/entry/timestampbase; no fakeaggregateanchor, equivalent split/globalview/localorder, volatile/padding/flags/register cycles.
+
 ## native-review-prison-category-v1-20261004
 
 State: `stopped`. Kind: `candidate`.
@@ -2692,6 +2884,14 @@ State: `queued`. Kind: `research`.
 Verify callerwordoutputABI andactual tableword layout, authorCURRENT20controls+pendingexactsearch88+new92 thenmaintainedstricttrial.
 
 Reopen condition: Independent source/table/ABI/lifetime evidence only, no association/register/expression cycling.
+
+## native-review-prison-class-point-effects-20261004
+
+State: `queued`. Kind: `research`.
+
+Retainfullhelper/caller/alignment/word+mixedfloat ABI pins, authorfreshCURRENT78630controls +228 thenmaintainedwholeunittrial. Familyonlyafterexact, neverreplaygroundcontact/otherparkedaliases.
+
+Reopen condition: Independent actualdescriptor/point/onceflag layout/ABI/access/lifetime evidence only,no class/pointer/loop/register/qualifier/flags sourcecycles.
 
 ## native-review-prison-duel-outcome-20261004
 
@@ -2725,6 +2925,30 @@ Verifycallerstateargument and20-byte returnedrecordconsumer, authorcurrent20cont
 
 Reopen condition: Independent originalstate/entrylayout/ABI/sourcephaseevidence only, no allocation/branchspellingcycles.
 
+## native-review-prison-ground-contact-20261004
+
+State: `queued`. Kind: `research`.
+
+Pinhelper/caller/query-outputalignment/wordfloat ABI andlargecontext offsets, authorfreshCURRENT78630controls +436 usingqualifiedTI unionmemorycopies andactualscalarfields. Maintainedwholeunit trial, exactseedonlythenfamily. Neverreplayparkedquad24 orEndako616families.
+
+Reopen condition: Independent actualcontext/stack/output layout/ABI/alignment/source-lifetime evidence only,no volatile/fixedregs/ASM/padding/flags orG0globalview cycles.
+
+## native-review-prison-ground-contact-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+QualifyeverycompleteCURRENT30control andnew436; familyonlyafterexactseed, preserveeverynegative.
+
+Reopen condition: Independent actualcontext/stack/output layout/ABI/alignment/source-lifetime evidence only,no volatile/fixedregs/ASM/padding/flags orG0globalview/source cycles.
+
+## native-review-prison-ground-contact-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Parkboth immutable436groundcontact physicalfamily andaliases; no thirdview/phase/sourcecycle. KeepindependentqualifiedTI memory witness andwiderNEWeligibility, notpackedMMI/VU/128byvalueABI. Continuefreshalignment-proven classfilteredpoint-effect loop2C1A38 iffullpins/history/ABI eligible.
+
+Reopen condition: Independent originalcontext/sourcepoint storage orobservable metadata/validity write lifetime witness; no globalview/alias/volatile/fixedregs/ASM/padding/flags sourcecycles.
+
 ## native-review-prison-list-propagation-20261004
 
 State: `queued`. Kind: `research`.
@@ -2733,6 +2957,38 @@ Verifycaller object ABI then author typed actual256-byte object/state partial vi
 
 Reopen condition: Independent original storage/alias/layout/sourcephase evidence only, no loop/register permutations.
 
+## native-review-prison-point-effects-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutablepoint-effects228 physicalfamily withallfullpins/helperABI/source/catalog/control proof preserved, no second equivalent-source variant. Continue genuinely NEW owned alignedTI-memory/scalar algorithm after actual-size history audit.
+
+Reopen condition: Independent originaltyped source alias/storage/access lifetime evidence explaining classifiedobjectbank reload andmemorycopy phase; no branch/register/local-name/volatile/padding/flags/source-equivalence cycling.
+
+## native-review-prison-point-rotation-20261004
+
+State: `queued`. Kind: `research`.
+
+Pin fulltarget/caller/helper boundaries and livebytes; verify helper ABI ordinary pointer arguments and return usage. Author fullCURRENT78630controls and maintain wholeunit trial only if defensible.
+
+Reopen condition: Independent measured typed stackmatrix/point extent, helper ABI or source-lifetime evidence only, no unsupported packedMMI/VU/ASM/forcedregister/padding/volatile/newflags cycles.
+
+## native-review-prison-point-rotation-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full30controls andcomplete260 target; family onlyafterexact. Retainrefusal andcontinuefresh.
+
+Reopen condition: Independent originaltyped stackmatrix/point extent, helper ABI or source-lifetime evidence only, no equivalentdeclaration/register/localorder/padding/volatile/flags cycles.
+
+## native-review-prison-point-rotation-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park both immutable rotation260 physicalfamily/aliases, preserve fullcaller/helper/livepins andwholeunit controls. No prologue/register/localorder/type/prototype cycling; continue genuinely new eligible owned body.
+
+Reopen condition: Independent original source parameter/storage/lifetime or compiler qualification evidence explaining initialscalarfloat save phase, not equivalent prototype/declaration/source order or forcedregister/padding/volatile/flags permutations.
+
 ## native-review-prison-propagate-v1-20261004
 
 State: `stopped`. Kind: `candidate`.
@@ -2740,6 +2996,30 @@ State: `stopped`. Kind: `candidate`.
 Park immutable list-propagation family, no OR-to-switch/duplicatedstatement/cursor-lifetime variants without original source evidence. Continue another genuine ordinary C body.
 
 Reopen condition: Independent original per-class source boundaries/inlined accessor contract or qualified optimizer phase evidence; no equivalentexpression cycling, padding, volatility or forcedregisters.
+
+## native-review-prison-quad-state-20261004
+
+State: `queued`. Kind: `research`.
+
+Pin target/callers/external64template withcompleteboundaries andtypedlayout; authorCURRENT78630controls then maintainedtrial.
+
+Reopen condition: Independent originaltemplate/destination typedstorage/ABI/source lifetime evidence only, no storeorder/register/localorder/volatile/padding/flags cycles.
+
+## native-review-prison-quad-state-typefix-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Park188quadstate initializer physicalfamily andbothcompilefailed/measuredtrial artifacts; no rowinitializer/type/qualifier/sourcecycle toforceMUL or16-byteaggregate schedule. Continuefreshbody avoidingknownaggregate/floatconstant transformationrefusal.
+
+Reopen condition: Independent originaltemplate storage/type ormultiplier source/lifetime/compiler qualification evidence, not equivalent fieldwise copy/expression/volatile/padding/forcedregister/flags changes.
+
+## native-review-prison-quad-state-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify full30controls andcomplete188 target; family onlyafterexact. Retainrefusal andcontinuefresh.
+
+Reopen condition: Independent originaltyped stackmatrix/point extent, helper ABI or source-lifetime evidence only, no equivalentdeclaration/register/localorder/padding/volatile/flags cycles.
 
 ## native-review-prison-record-color-20261004
 
@@ -2801,9 +3081,9 @@ Reopen condition: Independent actualsignedhalf/owner-state layout/ABI/access/lif
 
 State: `stopped`. Kind: `candidate`.
 
-Qualifyone measuredword-carrier/half-storage view hypothesis, parkbothifrefused; no third width/cast/loop/register sourcecycle.
+Parkboth immutable212ringindexvariants andallphysical/logicalcopies; preserveoriginalstatehelper60zeroCcredit andallboundary/halfwordphase evidence. Continuefreshownedordinarylarger algorithm; firstboundedread-only check of existingprojectqualified16-byte C-copy capabilities mayjustify widereligibility onlyifindependentwitness exists.
 
-Reopen condition: Independent actualsignedhalf/owner-state layout/ABI/access/lifetime evidence only,no index/modulus/loop/parity/branch/register/qualifier/flags sourcecycles.
+Reopen condition: Independent original local/storage/source-lifetime orqualified compiler binding witness explainingheight/index/base preloop allocation, no equivalentvariable/declaration/register cycles.
 
 ## native-review-prison-search-v1-20261004
 
@@ -4004,6 +4284,16 @@ Qualify complete current unit; root owns integration and full image gates.
 Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 - `runtime:bank/parallel-orbital_lots-conditional-reset-family-v3/9_dobbo/evidence.json`
+
+## orbital-damosel-bitmap-rectangle-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-damosel-bitmap-rectangle-v1/evidence.json`
 
 ## orbital-flag-clear-family-20261004
 
@@ -5345,6 +5635,36 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 - `runtime:bank/parallel-orbital_lots-mode-set-family/9_dobbo/evidence.json`
 
+## orbital-museum-creation-retry-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-museum-creation-retry-v1/evidence.json`
+
+## orbital-museum-dma-send-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-museum-dma-send-v1/evidence.json`
+
+## orbital-museum-grid-descriptor-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-museum-grid-descriptor-v1/evidence.json`
+
 ## orbital-pair-lookup-family-20261004-0_aranos_tutorial
 
 State: `integrated`. Kind: `candidate`.
@@ -5624,6 +5944,16 @@ Measure complete seed and all current controls; if exact then qualify aliases ag
 Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
 
 - `runtime:bank/parallel-orbital_lots-snivelak-cubic-vector-v1/evidence.json`
+
+## orbital-snivelak-event-counters-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-snivelak-event-counters-v1/evidence.json`
 
 ## orbital-snivelak-group-flag-propagation-20261004-v1
 
@@ -5925,6 +6255,56 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 - `runtime:bank/parallel-orbital_lots-state-transition-family-759/9_dobbo/evidence.json`
 
+## orbital-yeedil-audio-launch-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-yeedil-audio-launch-v1/evidence.json`
+
+## orbital-yeedil-eligibility-queue-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-yeedil-eligibility-queue-v1/evidence.json`
+
+## orbital-yeedil-progress-flag-count-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-yeedil-progress-flag-count-v1/evidence.json`
+
+## orbital-yeedil-rank-menu-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-yeedil-rank-menu-v1/evidence.json`
+
+## orbital-yeedil-selection-state-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Keep stopped as the same complete physical family as earlier boot_analysis Maktar grouped-cursor v1/v2/pinrepair refusals. My private exclusion fingerprint missed absolute LUI-AT stores and copied-LUI ADDIU address relocations; this Yeedil trial should have been excluded. Preserve immutable measured refusal, zero credit, no further aliases or source cycles.
+
+Reopen condition: Independent original source, type, layout or API evidence addressing the existing shared grouped-cursor refusal; relocation-only program aliases and expression/register/width/phase/profile permutations do not reopen it.
+
+- `runtime:bank/parallel-orbital_lots-yeedil-selection-state-v1/evidence.json`
+
 ## parallel-boot-analysis-aranos-channel-records-research
 
 State: `done`. Kind: `research`.
@@ -6033,6 +6413,98 @@ State: `stopped`. Kind: `candidate`.
 Park mapped-object slot insertion and physicalaliases; continue genuinely new ordinary C target.
 
 Reopen condition: Independent original bound/object declaration evidence or qualified compilerpass evidence, no fabricated endalias/local/register forcing or padding.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-boot-rpc112-halfword-v2
+
+State: `stopped`. Kind: `candidate`.
+
+One final halfword-component whole-unit qualification; fullsize/everybyte only, no aliases or more width/source variants on refusal.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no callback/width/returncast/local/array/field/order/register/flags cycles.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+- `private-work:parallel-20261004/orbital_lots/yeedil-audio-sdk-133350.json`
+
+## parallel-boot-analysis-boot-rpc112-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Maintained wholeCURRENT179-symbol firstseed; exact fullsize/bytes prerequisite to any aliases, preserve refusal otherwise.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no callback/width/returncast/local/array/field/order/register/flags cycles.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+- `private-work:parallel-20261004/orbital_lots/yeedil-audio-sdk-133350.json`
+
+## parallel-boot-analysis-dobbo-blend408-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Maintained first full-unit trial; exact complete size and every byte plus all controls prerequisite to family. Preserve refusal otherwise.
+
+Reopen condition: Independent original source/declaration/access-phase or qualified lowering evidence; no source, alias, flag, register, padding or pointer variants.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-gradient-quad-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholecurrentunit764 firstseed; exactcompletebytes prerequisite tofamily, preservepark otherwise.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no signature/operand/constant/pointer/layout/order/register/flags cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-height-response520-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Root checker transition hold: no compiler launch untilrelease; then freshprefix assertions, one fullunit firstseed afterpendingmerge336 result.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualifiedlowering; no equivalent source/reg/pointer/volatile/layout/flag/permutation cycles.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-merge336-v1
+
+State: `stopped`. Kind: `candidate`.
+
+After root checker transition release, refresh source/catalog hashes then one maintained wholeunit seedtrial; exactcomplete prerequisite tofamily, otherwise preserve refusal.
+
+Reopen condition: Independent original declaration/accessphase/ABI/qualifiedlowering witness, no source/pointer/local/volatile/flag/register/padding cycles.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-palette300-compatible-types-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholeunit300firstseed; exactcompletebytes+allcontrols prerequisite tofamily, preservepark otherwise.
+
+Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifiedlowering witness; no source/struct/pointer/counter/local/volatile/flag/register/padding permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-palette300-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholeunit300firstseed; exactcompletebytes+allcontrols prerequisite tofamily, preservepark otherwise.
+
+Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifiedlowering witness; no source/struct/pointer/counter/local/volatile/flag/register/padding permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-sparse560-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained fullunit560 seed trial; exactcompletebytes plusallcontrols prerequisite tofamily, preservepark otherwise.
+
+Reopen condition: Independent original source/declaration/ABI/accessphase/qualifiedlowering witness; no counter/pointer/for/while/local/type/volatile/flag/register/padding cycles.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -7577,6 +8049,16 @@ Reopen condition: Independent original control/access phase or qualified lowerin
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-tabora-gs-descriptor-literal-fix-v2
+
+State: `stopped`. Kind: `candidate`.
+
+One semantic-literal-corrected full-unit trial, strictrefusal then park without sourcephase cycling.
+
+Reopen condition: Independent original declaration/source/accessphase/ABI or qualified lowering witness; no literals/fields/type/views/order/locals/pointers/register/flags cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## parallel-boot-analysis-tabora-gs-descriptor-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -7584,6 +8066,56 @@ State: `stopped`. Kind: `candidate`.
 One maintained full-current-unit804 seed, preservefullsize/bytes, noaliasesuntilseedexact.
 
 Reopen condition: Independent original declaration/source/accessphase/ABI or qualified lowering witness; no literals/fields/type/views/order/locals/pointers/register/flags cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-tabora-guarded-request-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholecurrentunit128 seed; exactsize+everybyte thenfamily, strictrefusalpreserved otherwise.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no guards/pointer/type/layout/counter/local/order/register/flags cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-tabora-linked-depth-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained currentwholeunit152 seed; exactcomplete symbol required before anyfamily; preservepark otherwise.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no pointer/loop/cachedfield/type/cursor/local/order/register/flags cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-tabora-mask-history-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained currentwholeunit160 seed; exactcomplete bytes mandatory, preservepark otherwise/noaliases.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no modulo/type/volatile/cache/loop/local/order/register/flags cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-tabora-mixed-query-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained full-current-unit304 seed; inspect actual fiveFPR+eightGPR call and complete size/bytes before family.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no return casts/float/local/layout/cursor/register/order/condition/flags cycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-tabora-tagged-count-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained whole-current-unit140 seed; ifexact qualify family against allcurrentproofs/ABI, otherwise preservepark/no sourcecycling.
+
+Reopen condition: Independent original declaration/source/accessphase/ABI or qualified lowering witness; no signedness/cast/condition/local/cursor/register/order/flags permutations.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -7904,6 +8436,85 @@ Reopen condition: Independent recovered source or compiler-scheduling evidence; 
 
 - `private-work:parallel-20261004/root-gp/boot248-full-history.log`
 
+## root-boldan-hue224-first-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve complete228/224 refusal and all29 exact controls. Whole function size refusal and generated24-byte table differs at6 bytes, caused by different internal block positions. Preserve ordinary six-case source, ABI and every generated artifact; do not change float order, parameter ordering or case spelling to chase equality. No table/branch/local/register/float/parameter/profile cycles; choose another physically new body.
+
+Reopen condition: Independent original source/type/ABI or qualified compiler evidence explaining the measured full-function mismatch; not equivalent expression, branch, label, source-order or flags changes.
+
+- `private-work:parallel-20261004/native_review/HUE224-STATIC-PACKET.json`
+- `private-work:parallel-20261004/root-gp/hue-abi-primary.txt`
+
+## root-boot-dma-packet92-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve trial2fe7d1ca4b364d6fb1259c5a97fef42c complete68/92 refusal; all178 current boot controls exact. Compiler caches shared cursor after second word, reorders final two stores and retains advanced cursor register; reference reloads cursor before each field and advances after allfour stores. No alias type, pointer cast, volatile, store-order, register, expression or profile permutations. Choose a physically new body.
+
+Reopen condition: Independent original packet storage/type/alias or compiler/source evidence that explains reference cursor reload phases. No equivalent expression, pointer type, volatile, register or flags cycling.
+
+- `private-work:parallel-20261004/root-gp/dma-packet92-static.json`
+- `private-work:parallel-20261004/root-gp/dma-packet92-live-memory.json`
+
+## root-boot-g8-absolute-controls-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Compile this unchanged prepared context once, require every complete178 control byte exact, preserve any refusal and stop without variants. Public boot remains G0; no new target or profile publication yet.
+
+Reopen condition: New measured compiler metadata or external storage evidence; never equivalent source or flags permutations.
+
+- `docs/COMPILER-NOTES.md`
+- `runtime:bank/root-boot-g8-absolute-controls-20261004/context-audit.json`
+
+## root-boot-gp-selection220-20261004
+
+State: `stopped`. Kind: `research`.
+
+Preserve uncompiled target and missing-owner evidence; select another independent GP body with complete caller proof. Reopen only after caller boundary or non-call data evidence is independently established.
+
+Reopen condition: Independent complete caller ownership/calling contract at31944C or proof of non-call data.
+
+- `private-work:parallel-20261004/root-gp/gp220-live-memory.json`
+- `private-work:parallel-20261004/root-gp/inspect_gp_selection220.py`
+- `runtime:bank/root-boot-g8-absolute-controls-20261004/context-audit.json`
+
+## root-boot-modeconfig268-switch-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve supported switch-lowering refusal212/268 and prior nested-if204/268; no third structure/order/type/register/flags variant or aliases. Move to genuinely new body.
+
+Reopen condition: Independently established original storage or ABI evidence beyond the already measured switch range dispatch.
+
+- `private-work:parallel-20261004/root-gp/config268-live-memory.json`
+- `private-work:parallel-20261004/root-gp/config268-history.log`
+- `private-work:parallel-20261004/root-gp/config268-switch-primary.txt`
+
+## root-boot-modeconfig268-syntax-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve first actual size/byte refusal after syntax-only unsigned-short repair; no new source/flags/type/order/volatile/register cycles. Move to genuinely independent target.
+
+Reopen condition: New measured source storage or observable access-phase evidence independent of temporary allocation wishes.
+
+- `private-work:parallel-20261004/root-gp/config268-live-memory.json`
+- `private-work:parallel-20261004/root-gp/config268-history.log`
+
+## root-boot-modeconfig268-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all179 complete symbol sizes and every byte exact; preserve first refusal and stop without source-order/type/volatile/register/flags cycles.
+
+Reopen condition: New independently pinned original storage/ABI/observable access phase or backend evidence, not equivalent expressions or allocation guessing.
+
+- `private-work:parallel-20261004/root-gp/config268-live-memory.json`
+- `private-work:parallel-20261004/root-gp/config268-history.log`
+
 ## root-boot-packet332-20261004
 
 State: `stopped`. Kind: `research`.
@@ -7934,6 +8545,17 @@ Keep both immutable trials stopped, continue another genuine target or independe
 Reopen condition: Independent original table source/index-width/layout or compiler context evidence, no source/register/flag cycles
 
 - `private-work:parallel-20261004/root-gp/packet332-final-refusal.json`
+
+## root-boot-preset260-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Retain first full-size refusal and all178 exact controls; do not replay physical aliases or equivalent source variants. Select another unreserved target.
+
+Reopen condition: Independent original layout/access-phase/prototype or backend evidence beyond the already authored scalar model.
+
+- `private-work:parallel-20261004/root-gp/preset260-live-memory.json`
+- `private-work:parallel-20261004/root-gp/preset260-history.log`
 
 ## root-boot-quad24-witness-20261004
 
@@ -8017,6 +8639,17 @@ Reopen condition: Independent source/global layout or object context evidence; n
 
 - `private-work:parallel-20261004/root-gp/wide-witness-pin.json`
 
+## root-endako-switch188-first-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve complete180/188 refusal and all28 exact controls. Compiler forms MOVZ mode selection instead of original branch/join, routes special flag through A3 instead of A1, and schedules the helper argument in its call delay. Whole generated168-byte table nevertheless exact; this does not qualify the function. No table/branch/local/register/float/parameter/profile cycles; choose another physically new body.
+
+Reopen condition: Independent original source/type/ABI or qualified compiler evidence explaining the measured full-function mismatch; not equivalent expression, branch, label, source-order or flags changes.
+
+- `private-work:parallel-20261004/native_review/SWITCH188-STATIC-PACKET.json`
+- `private-work:parallel-20261004/root-gp/readonly-switch-primary.txt`
+
 ## root-g8-support-review-19_grelbin-20261004
 
 State: `exact_private`. Kind: `candidate`.
@@ -8048,6 +8681,19 @@ State: `exact_private`. Kind: `candidate`.
 Require complete exact units before frozen boot and all27overlay gates.
 
 Reopen condition: New measured compiler/source evidence, not duplicate replay.
+
+## root-generated-readonly-layout-20261004
+
+State: `queued`. Kind: `research`.
+
+Whole generated-readonly candidate qualification is implemented and tested with complete reference bytes; first Endako188 and Boldan224 sources are measured refusals. Preserve these without source cycles. Original reconstructed-data replacement during full source integration remains OPEN until an independently qualified complete table-using C body is available. No data or tooling C credit.
+
+Reopen condition: Qualified maintained whole-generated-readonly placement and integration with exact compiled table and complete function equality; no source/register/flags cycles or embedded tables.
+
+- `private-work:parallel-20261004/native_review/SWITCH188-STATIC-PACKET.json`
+- `private-work:parallel-20261004/native_review/HUE224-STATIC-PACKET.json`
+- `private-work:parallel-20261004/root-gp/readonly-switch-primary.txt`
+- `private-work:parallel-20261004/root-gp/readonly-context-audit.json`
 
 ## root-independent-ti-copy24-20261004
 
@@ -8724,6 +9370,230 @@ State: `integrated`. Kind: `candidate`.
 Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
 
 Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-readonly-controls-0_aranos_tutorial-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-10_hrugis_cloud-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-11_joba-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-12_todano-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-13_boldan-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-14_aranos_prison-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-15_gorn-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-16_snivelak-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-17_smolg-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-18_damosel-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-19_grelbin-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-1_oozla-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-20_yeedil-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-22_dobbo_orbit-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-23_damosel_orbit-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-24_ship_shack-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-25_wupash_nebula-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-26_jamming_array-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-2_maktar_nebula-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-30_insomniac_museum-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-3_endako-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-4_barlow-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-5_feltzin_system-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-6_notak-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-7_siberius-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-8_tabora-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-9_dobbo-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
+
+## root-readonly-controls-boot-20261004
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
+
+Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
 
 ## root-resume-three-combined-0_aranos_tutorial-20261004
 

@@ -268,7 +268,9 @@ class PublicBackend:
         self.check.run([str(toolchain / "ee/bin/ld.exe"), "-T", str(script), "-o", str(linked), str(obj)], work / "link.log")
         results = [self.check.compare_function(reference, linked, f["symbol"], f["address"], f["size"])
                    for f in catalog["functions"]]
-        return {"functions": results, "candidate_elf_sha256": digest(linked.read_bytes())}
+        data = self.check.compare_readonly(reference, linked, catalog, obj)
+        return {"functions": results, "read_only_sections": data,
+                "candidate_elf_sha256": digest(linked.read_bytes())}
 
 
 def absolute(path, repo, runtime=None):
@@ -403,6 +405,12 @@ def _trial(store, repo, task_id, toolchain, profile, repeat_reason="", backend=N
                     raise ValueError("Checker omitted or duplicated a complete target function")
                 exact = all(f.get("matched") is True and HASH.fullmatch(f.get("reference_sha256", ""))
                             and f.get("reference_sha256") == f.get("candidate_sha256") for f in functions)
+                if target["catalog"].get("read_only_sections"):
+                    from check_candidates import require_exact_readonly
+                    try:
+                        require_exact_readonly(target["catalog"], measured.get("read_only_sections", []))
+                    except ValueError:
+                        exact = False
                 outcome = {"id": target["id"], "state": "exact_private" if exact else "mismatch", **measured}
                 result["measured_functions"] += len(functions)
             except (OSError, ValueError, KeyError) as error:
