@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Five hundred forty-four contextual native bodies remain distinct in the
+family has 26. Five hundred seventy-one contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,35 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 178 definitions | 9,336 |
-| Native overlays | 552 family-or-singleton items, 553 contextual variants | 61,172 across 759 placements |
+| Native overlays | 579 family-or-singleton items, 580 contextual variants | 62,468 across 786 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 51,988, or 52,012 when both clear
+Native representative catalogued bytes total 53,284, or 53,308 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **272,620 / 48,788,176 bytes (0.5588%)**.
-The latest matching lot adds 144 complete placements totaling 15,416 bytes:
+The current integration exporter accepts **273,916 / 48,788,176 bytes (0.5614%)**.
+The latest matching lot adds 27 complete 48-byte resident state transitions,
+adding 1,296 bytes. A signed mode value of seven and state value of one cause
+the state to become two; all 54 measured callers overwrite the unused result.
+All 786 complete native functions, including 759 prior controls, are exact.
+Generated C and catalogs are byte-identical to the independently qualified
+whole units, so their verified immutable object proofs are reused rather than
+repeating an identical compiler trial. Fresh boot and all 27 complete loaded-byte
+and metadata gates qualify the new source and indexed integration parser.
+
+The strict integration parser now indexes original definition positions once,
+selects catalog entries from one complete definition scan and renames crossing
+local labels in one pass. Duplicate, missing or noncontiguous definitions and
+invalid body addresses remain errors. Complete original and indexed splitter
+pieces agree in a measured 180-function, 326-piece sample; regression tests
+cover duplicate definitions, longer-symbol near misses and cross-object label
+ownership. No input cache or acceptance relaxation is introduced. Tooling
+changes add zero C matching credit.
+
+The preceding matching lot added 144 complete placements totaling 15,416 bytes:
 27 mapped-class queries of 84 bytes, 27 serialized-header relocation and row
 compaction bodies of 300 bytes, 27 resident-mode predicates of 60 bytes,
 19 pairs of 56-byte object flag setters and clearers, and 25 conditional
@@ -162,7 +180,7 @@ bytes, 27 object-identifier checks of 32 bytes and five header getters of 56
 bytes. Earlier lots added 27 136-byte GS buffer setup wrappers, 27 92-byte
 floating-field guards and the 76-byte Ship Shack traversal.
 
-Twenty-one canonical fragments supply the scalar bodies with explicit placements.
+Twenty-two canonical fragments supply the scalar bodies with explicit placements.
 Status classifiers call each unit's existing indexed status getter definition;
 the output wrappers bind measured per-program floating helper addresses.
 The output wrapper is absent in 12 programs and the header getter is absent in

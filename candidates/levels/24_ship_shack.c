@@ -559,3 +559,17 @@ void LVL_24_SHIP_SHACK_FUN_002D5C28(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_24_SHIP_SHACK_D_001BE800;
+void LVL_24_SHIP_SHACK_FUN_002F1B50(void) {
+    if (LVL_24_SHIP_SHACK_D_001BE800.mode == 7 && LVL_24_SHIP_SHACK_D_001BE800.state == 1) {
+        LVL_24_SHIP_SHACK_D_001BE800.state = 2;
+    }
+}

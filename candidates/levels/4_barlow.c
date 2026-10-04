@@ -414,3 +414,17 @@ s32 LVL_4_BARLOW_FUN_002F6F18(void) {
     }
     return found;
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_4_BARLOW_D_001BF7C0;
+void LVL_4_BARLOW_FUN_00314158(void) {
+    if (LVL_4_BARLOW_D_001BF7C0.mode == 7 && LVL_4_BARLOW_D_001BF7C0.state == 1) {
+        LVL_4_BARLOW_D_001BF7C0.state = 2;
+    }
+}

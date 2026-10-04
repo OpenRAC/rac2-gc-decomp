@@ -405,3 +405,17 @@ void LVL_13_BOLDAN_FUN_002E15F8(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_13_BOLDAN_D_001BFA00;
+void LVL_13_BOLDAN_FUN_002FDA60(void) {
+    if (LVL_13_BOLDAN_D_001BFA00.mode == 7 && LVL_13_BOLDAN_D_001BFA00.state == 1) {
+        LVL_13_BOLDAN_D_001BFA00.state = 2;
+    }
+}

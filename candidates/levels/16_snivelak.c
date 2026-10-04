@@ -379,3 +379,17 @@ void LVL_16_SNIVELAK_FUN_002CFD90(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_16_SNIVELAK_D_001BFC40;
+void LVL_16_SNIVELAK_FUN_002EC808(void) {
+    if (LVL_16_SNIVELAK_D_001BFC40.mode == 7 && LVL_16_SNIVELAK_D_001BFC40.state == 1) {
+        LVL_16_SNIVELAK_D_001BFC40.state = 2;
+    }
+}

@@ -404,3 +404,17 @@ void LVL_23_DAMOSEL_ORBIT_FUN_002E1540(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_23_DAMOSEL_ORBIT_D_001C0780;
+void LVL_23_DAMOSEL_ORBIT_FUN_002FD4C0(void) {
+    if (LVL_23_DAMOSEL_ORBIT_D_001C0780.mode == 7 && LVL_23_DAMOSEL_ORBIT_D_001C0780.state == 1) {
+        LVL_23_DAMOSEL_ORBIT_D_001C0780.state = 2;
+    }
+}

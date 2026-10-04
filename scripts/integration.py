@@ -22,6 +22,11 @@ HEADER = '.set noat\n.set noreorder\n.section .text, "ax"\n'
 
 def split_assembly(content: str, functions: list[dict], relocated: bool = False) -> list[dict]:
     lines = content.splitlines(keepends=True)
+    starts_by_address = {}
+    for index, line in enumerate(lines):
+        match = re.fullmatch(r"\.globl func_([0-9A-F]{8})", line.strip())
+        if match:
+            starts_by_address.setdefault(int(match.group(1), 16), []).append(index)
     selected = sorted(functions, key=lambda function: function["address"])
     if len({function["address"] for function in selected}) != len(selected):
         raise ValueError("Duplicate integration address")
@@ -39,7 +44,7 @@ def split_assembly(content: str, functions: list[dict], relocated: bool = False)
             raise ValueError("Integration symbol does not identify its address")
         previous_end = address + size
         original_symbol = f"func_{address:08X}"
-        starts = [index for index, line in enumerate(lines) if line.strip() == f".globl {original_symbol}"]
+        starts = starts_by_address.get(address, [])
         if len(starts) != 1:
             raise ValueError(f"Expected one original assembly definition: {original_symbol}")
         start = starts[0]
@@ -93,13 +98,19 @@ def split_assembly(content: str, functions: list[dict], relocated: bool = False)
         for match in re.finditer(r"\.?L([0-9A-Fa-f]+)\b", fragment):
             if defined.get(match.group(1), index) != index:
                 crossing.add(match.group(1))
-    for name in sorted(crossing):
-        for index, fragment in enumerate(fragments):
-            renomme = re.sub(r"\.?L" + re.escape(name) + r"\b", "XL_" + name, fragment)
-            if defined.get(name) == index:
-                renomme = re.sub(r"(?m)^(\s*)XL_" + re.escape(name) + r":",
-                                 r"\1.globl XL_" + name + "\n\\1XL_" + name + ":", renomme, count=1)
-            fragments[index] = renomme
+    for index, fragment in enumerate(fragments):
+        def rename_reference(match):
+            name = match.group(1)
+            return "XL_" + name if name in crossing else match.group(0)
+        fragment = re.sub(r"\.?L([0-9A-Fa-f]+)\b", rename_reference, fragment)
+        declared = set()
+        def declare_definition(match):
+            indent, name = match.group(1), match.group(2)
+            if name not in crossing or defined.get(name) != index or name in declared:
+                return match.group(0)
+            declared.add(name)
+            return indent + ".globl XL_" + name + "\n" + indent + "XL_" + name + ":"
+        fragments[index] = re.sub(r"(?m)^(\s*)XL_([0-9A-Fa-f]+):", declare_definition, fragment)
     for index, fragment in enumerate(fragments):
         pieces[positions[index]]["content"] = fragment
     return pieces
@@ -333,8 +344,10 @@ def replace_inputs(directory: Path, sources: list[Path], catalog: dict, c_object
     found = set()
     for source in sources:
         original = source.read_text(encoding="ascii")
+        addresses = {int(value, 16) for value in re.findall(
+            r"^\s*\.globl\s+func_([0-9A-F]{8})\s*$", original, re.MULTILINE)}
         functions = [function for function in catalog["functions"]
-                     if re.search(r"^\s*\.globl\s+func_" + f"{function['address']:08X}" + r"\s*$", original, re.MULTILINE)]
+                     if function["address"] in addresses]
         if not functions:
             unchanged.append(source)
             continue

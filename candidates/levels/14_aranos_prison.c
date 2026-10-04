@@ -411,3 +411,17 @@ void LVL_14_ARANOS_PRISON_FUN_002DE470(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_14_ARANOS_PRISON_D_001BF640;
+void LVL_14_ARANOS_PRISON_FUN_002FAF98(void) {
+    if (LVL_14_ARANOS_PRISON_D_001BF640.mode == 7 && LVL_14_ARANOS_PRISON_D_001BF640.state == 1) {
+        LVL_14_ARANOS_PRISON_D_001BF640.state = 2;
+    }
+}

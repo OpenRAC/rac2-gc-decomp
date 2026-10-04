@@ -411,3 +411,17 @@ void LVL_10_HRUGIS_CLOUD_FUN_002F18A8(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_10_HRUGIS_CLOUD_D_001BF7C0;
+void LVL_10_HRUGIS_CLOUD_FUN_0030DE50(void) {
+    if (LVL_10_HRUGIS_CLOUD_D_001BF7C0.mode == 7 && LVL_10_HRUGIS_CLOUD_D_001BF7C0.state == 1) {
+        LVL_10_HRUGIS_CLOUD_D_001BF7C0.state = 2;
+    }
+}

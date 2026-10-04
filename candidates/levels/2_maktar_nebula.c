@@ -404,3 +404,17 @@ void LVL_2_MAKTAR_NEBULA_FUN_002DA040(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_2_MAKTAR_NEBULA_D_001C0640;
+void LVL_2_MAKTAR_NEBULA_FUN_002F7318(void) {
+    if (LVL_2_MAKTAR_NEBULA_D_001C0640.mode == 7 && LVL_2_MAKTAR_NEBULA_D_001C0640.state == 1) {
+        LVL_2_MAKTAR_NEBULA_D_001C0640.state = 2;
+    }
+}

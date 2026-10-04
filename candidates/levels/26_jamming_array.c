@@ -404,3 +404,17 @@ void LVL_26_JAMMING_ARRAY_FUN_002D72A8(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_26_JAMMING_ARRAY_D_001BECC0;
+void LVL_26_JAMMING_ARRAY_FUN_002F3670(void) {
+    if (LVL_26_JAMMING_ARRAY_D_001BECC0.mode == 7 && LVL_26_JAMMING_ARRAY_D_001BECC0.state == 1) {
+        LVL_26_JAMMING_ARRAY_D_001BECC0.state = 2;
+    }
+}

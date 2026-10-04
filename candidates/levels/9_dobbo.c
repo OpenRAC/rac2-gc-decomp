@@ -379,3 +379,17 @@ void LVL_9_DOBBO_FUN_002D2C18(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_9_DOBBO_D_001BFB40;
+void LVL_9_DOBBO_FUN_002EF790(void) {
+    if (LVL_9_DOBBO_D_001BFB40.mode == 7 && LVL_9_DOBBO_D_001BFB40.state == 1) {
+        LVL_9_DOBBO_D_001BFB40.state = 2;
+    }
+}

@@ -404,3 +404,17 @@ void LVL_0_ARANOS_TUTORIAL_FUN_002D6B70(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_0_ARANOS_TUTORIAL_D_001BEF00;
+void LVL_0_ARANOS_TUTORIAL_FUN_002F3410(void) {
+    if (LVL_0_ARANOS_TUTORIAL_D_001BEF00.mode == 7 && LVL_0_ARANOS_TUTORIAL_D_001BEF00.state == 1) {
+        LVL_0_ARANOS_TUTORIAL_D_001BEF00.state = 2;
+    }
+}

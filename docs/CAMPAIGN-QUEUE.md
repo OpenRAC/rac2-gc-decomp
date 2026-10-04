@@ -2765,6 +2765,46 @@ Verify caller input/result andreal recordarray view; author privateCURRENT19-con
 
 Reopen condition: Independent original record layout/access/control-lifetime evidence only; no anchor/register/loopspellingcycles.
 
+## native-review-prison-ring-child-colors-20261004
+
+State: `queued`. Kind: `research`.
+
+Pinactualcaller/childtype/colorstate andringstorage, authorfreshCURRENT786program14controls (30 expected) andmaintainedwholeunit firsttrial. Familyonlyaftercompleteexactseed, no parameter/halfword/register/store/qualifier cycles.
+
+Reopen condition: Independent actualring/childstorage/layout/ABI/access/lifetime evidence only,no parity/modulus/color/float/store/register/qualifier/flags sourcecycles.
+
+## native-review-prison-ring-child-colors-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Parkimmutable372ringchildcolor physicalfamily/no2 arithmetic/packing/float/store/register/qualifier/flags sourcecycle. Retainwordbitsdefinedunsignedshift semantics ratherthanintroducesignednegative-shift UB. Continuefresh216ring-index/state updater3E50B8 ifcompletehistoryeligible.
+
+Reopen condition: Independent originalcolor storage/type/source-phase orqualified compiler-lifetime witness; equivalentcommutativeexpression/store-order cycling isnotnewsourceevidence.
+
+## native-review-prison-ring-index-state-20261004
+
+State: `queued`. Kind: `research`.
+
+Retainfullcaller/helper/statepins, authorfreshCURRENT786program14controls30+new212, maintainedwholeunit firsttrial. Familyonlyafterexactseed.
+
+Reopen condition: Independent actualsignedhalf/owner-state layout/ABI/access/lifetime evidence only,no index/modulus/loop/parity/branch/register/qualifier/flags sourcecycles.
+
+## native-review-prison-ring-index-v1-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+QualifyeverycompleteCURRENT30control andnew212; familyonlyafterexactseed, preserveeverynegative.
+
+Reopen condition: Independent actualsignedhalf/owner-state layout/ABI/access/lifetime evidence only,no index/modulus/loop/parity/branch/register/qualifier/flags sourcecycles.
+
+## native-review-prison-ring-index-v2-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Qualifyone measuredword-carrier/half-storage view hypothesis, parkbothifrefused; no third width/cast/loop/register sourcecycle.
+
+Reopen condition: Independent actualsignedhalf/owner-state layout/ABI/access/lifetime evidence only,no index/modulus/loop/parity/branch/register/qualifier/flags sourcecycles.
+
 ## native-review-prison-search-v1-20261004
 
 State: `exact_private`. Kind: `candidate`.
@@ -3065,9 +3105,9 @@ Reopen condition: Independent originalcopied-data extent/storage/layout/ABI/sour
 
 State: `stopped`. Kind: `candidate`.
 
-QualifyeverycompleteCURRENT29control andnew804; familyonlyafterexactseed, preserveeverynegative.
+Parkimmutable804metrics physicalfamily/no2 globalview/aggregate/scalar/localorder/register/branch/qualifier/flags cycle. Preservefull9arg F0/mixedfloathelper andpartial12-byteconstant-copy witness forfuture genuinelynewtargets. Continuefreshowned14 scalaralgorithm;refresh759prefixesbeforetrial.
 
-Reopen condition: Independent originalcopied-data extent/storage/layout/ABI/source-lifetime evidence only,no aggregate/scalar/float/branch/register/qualifier/flags sourcecycles.
+Reopen condition: Independent originalglobalassetstorage/sourcebinding orqualified compiler-lifetime witness forHIGH rematerialization/save/init phase, no fake aggregate anchor or equivalentsource/flag cycling.
 
 ## native-review-todano-novel-choice-20261004
 
@@ -4761,7 +4801,7 @@ State: `stopped`. Kind: `candidate`.
 
 Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
 
-Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+Reopen condition: Independent original record storage/access-phase or qualified source witness beyond measured8-byte sentinel record view.
 
 - `runtime:bank/parallel-orbital_lots-gorn-sentinel-key-query-v1/evidence.json`
 
@@ -5575,6 +5615,36 @@ Reopen condition: Current source/catalog/reference drift or independentlymeasure
 
 - `private-work:parallel-20261004/orbital_lots/pair-lookup-family-pending.json`
 
+## orbital-snivelak-cubic-vector-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-snivelak-cubic-vector-v1/evidence.json`
+
+## orbital-snivelak-group-flag-propagation-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-snivelak-group-flag-propagation-v1/evidence.json`
+
+## orbital-snivelak-tristate-comparison-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-snivelak-tristate-comparison-v1/evidence.json`
+
 ## orbital-state-transition-family-20261004
 
 State: `done`. Kind: `research`.
@@ -5587,7 +5657,7 @@ Reopen condition: Current input drift or independent original ABI/storage only; 
 
 ## orbital-state-transition-family-759-20261004-0_aranos_tutorial
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5597,7 +5667,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-10_hrugis_cloud
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5607,7 +5677,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-11_joba
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5617,7 +5687,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-12_todano
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5627,7 +5697,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-13_boldan
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5637,7 +5707,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-14_aranos_prison
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5647,7 +5717,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-15_gorn
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5657,7 +5727,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-16_snivelak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5667,7 +5737,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5677,7 +5747,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-18_damosel
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5687,7 +5757,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-19_grelbin
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5697,7 +5767,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-1_oozla
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5707,7 +5777,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-20_yeedil
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5717,7 +5787,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-22_dobbo_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5727,7 +5797,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-23_damosel_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5737,7 +5807,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-24_ship_shack
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5747,7 +5817,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-25_wupash_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5757,7 +5827,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-26_jamming_array
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5767,7 +5837,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-2_maktar_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5777,7 +5847,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-30_insomniac_museum
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5787,7 +5857,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-3_endako
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5797,7 +5867,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-4_barlow
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5807,7 +5877,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-5_feltzin_system
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5817,7 +5887,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-6_notak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5827,7 +5897,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-7_siberius
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5837,7 +5907,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-8_tabora
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5847,7 +5917,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-state-transition-family-759-20261004-9_dobbo
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -7116,6 +7186,16 @@ Reopen condition: Independent reference/source/type/access-phase evidence only.
 
 - `runtime:bank/parallel-boot_analysis-mapped-class-family/placements-qualified.json`
 
+## parallel-boot-analysis-oozla-class-object-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Maintained wholeunit first624 seed; noaliases unlesscompletebyteexact.
+
+Reopen condition: Independent original declaration/source/accessphase/ABI or qualified lowering witness; no field/local/byteview/pointer/register/order/flags sourcecycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## parallel-boot-analysis-oozla-debit-research
 
 State: `done`. Kind: `research`.
@@ -7196,6 +7276,26 @@ Reopen condition: Independent original nestedaggregate/assignmentgrouping or qua
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-oozla-quaternion-direct-assign-v2
+
+State: `stopped`. Kind: `candidate`.
+
+One final supported full-current-unit v2, park physical family on any refusal/no aliasbulk.
+
+Reopen condition: Independent original declaration/source/accessphase/ABI or qualified lowering witness; no float/temp/array/cursor/register/order/condition/type/flags sourcecycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-quaternion-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained currentwholeunit644 seed; fullsize/bytes equality mandatory before aliases.
+
+Reopen condition: Independent original declaration/source/accessphase/ABI or qualified lowering witness; no float/temp/array/cursor/register/order/condition/type/flags sourcecycling.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## parallel-boot-analysis-oozla-record-update-research
 
 State: `done`. Kind: `research`.
@@ -7213,6 +7313,16 @@ State: `exact_private`. Kind: `candidate`.
 Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
 
 Reopen condition: New independent count/layout/sourcephase evidence only
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-three-pass-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Maintained full-current-unit first412 seed; inspect complete size/bytes, strictrefusal/noaliases ifnotexact.
+
+Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no type/view/volatile/cursor/local/condition/returncast/register/order/flags cycling.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -7464,6 +7574,16 @@ State: `stopped`. Kind: `candidate`.
 Park ticket reset physical family; select independent untried scalar body.
 
 Reopen condition: Independent original control/access phase or qualified lowering evidence, no pointer/local/counter/register permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-tabora-gs-descriptor-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained full-current-unit804 seed, preservefullsize/bytes, noaliasesuntilseedexact.
+
+Reopen condition: Independent original declaration/source/accessphase/ABI or qualified lowering witness; no literals/fields/type/views/order/locals/pointers/register/flags cycling.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -8144,6 +8264,19 @@ Require complete exact unit and identical old object; regenerate current native 
 
 Reopen condition: New measured source/compiler evidence; formatting adds zero credit.
 
+## root-indexed-assembly-integration-20261004
+
+State: `done`. Kind: `research`.
+
+Require all227 tool tests and fresh boot plus27 full loaded-byte and metadata gates with frozen indexed integration and current786 functions before qualification/publication. Qualify tool change independently of the 1296-byte State48 numerator.
+
+Reopen condition: A concrete strict parsing regression or independently measured performance bottleneck; never relax accepted symbol boundaries or exact loaded-byte comparisons.
+
+- `scripts/integration.py`
+- `tests/test_integration_indexing.py`
+- `private-work:parallel-20261004/root-gp/assembly-selection-profile.json`
+- `private-work:parallel-20261004/root-gp/split-index-equivalence.json`
+
 ## root-next-five-combined-0_aranos_tutorial-20261004
 
 State: `integrated`. Kind: `candidate`.
@@ -8807,6 +8940,14 @@ State: `integrated`. Kind: `candidate`.
 Require all615complete functions exact before frozen boot/all27loaded-image gates and public credit.
 
 Reopen condition: New independently measured ABI/layout/source/backend evidence, no expression/register/flags cycles.
+
+## root-state-next-combined-0_aranos_tutorial-20261004
+
+State: `stopped`. Kind: `candidate`.
+
+Require all786complete functions exact before frozen boot/all27loaded-image gates and public credit.
+
+Reopen condition: New compiler input or a concrete candidate proof freshness issue, not a duplicate unchanged trial.
 
 ## scalar-cubic-10_hrugis_cloud-20261004
 

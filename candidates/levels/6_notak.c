@@ -402,3 +402,17 @@ void LVL_6_NOTAK_FUN_00312988(void) {
     secondary = root->secondary;
     if (secondary) secondary->flags &= ~1;
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_6_NOTAK_D_001BF980;
+void LVL_6_NOTAK_FUN_003328E8(void) {
+    if (LVL_6_NOTAK_D_001BF980.mode == 7 && LVL_6_NOTAK_D_001BF980.state == 1) {
+        LVL_6_NOTAK_D_001BF980.state = 2;
+    }
+}

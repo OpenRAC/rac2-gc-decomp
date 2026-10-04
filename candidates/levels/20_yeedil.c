@@ -411,3 +411,17 @@ void LVL_20_YEEDIL_FUN_002EAB10(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_20_YEEDIL_D_001C0100;
+void LVL_20_YEEDIL_FUN_00307588(void) {
+    if (LVL_20_YEEDIL_D_001C0100.mode == 7 && LVL_20_YEEDIL_D_001C0100.state == 1) {
+        LVL_20_YEEDIL_D_001C0100.state = 2;
+    }
+}

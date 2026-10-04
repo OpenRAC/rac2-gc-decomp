@@ -372,3 +372,17 @@ void LVL_1_OOZLA_FUN_002CC340(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_1_OOZLA_D_001BF600;
+void LVL_1_OOZLA_FUN_002E8778(void) {
+    if (LVL_1_OOZLA_D_001BF600.mode == 7 && LVL_1_OOZLA_D_001BF600.state == 1) {
+        LVL_1_OOZLA_D_001BF600.state = 2;
+    }
+}

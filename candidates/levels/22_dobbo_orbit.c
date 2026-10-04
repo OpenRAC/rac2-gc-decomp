@@ -404,3 +404,17 @@ void LVL_22_DOBBO_ORBIT_FUN_002DCE60(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_22_DOBBO_ORBIT_D_001BFDC0;
+void LVL_22_DOBBO_ORBIT_FUN_002F8DA0(void) {
+    if (LVL_22_DOBBO_ORBIT_D_001BFDC0.mode == 7 && LVL_22_DOBBO_ORBIT_D_001BFDC0.state == 1) {
+        LVL_22_DOBBO_ORBIT_D_001BFDC0.state = 2;
+    }
+}

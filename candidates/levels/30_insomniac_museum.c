@@ -404,3 +404,17 @@ void LVL_30_INSOMNIAC_MUSEUM_FUN_002DD9C0(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_30_INSOMNIAC_MUSEUM_D_001BFF00;
+void LVL_30_INSOMNIAC_MUSEUM_FUN_002FA170(void) {
+    if (LVL_30_INSOMNIAC_MUSEUM_D_001BFF00.mode == 7 && LVL_30_INSOMNIAC_MUSEUM_D_001BFF00.state == 1) {
+        LVL_30_INSOMNIAC_MUSEUM_D_001BFF00.state = 2;
+    }
+}

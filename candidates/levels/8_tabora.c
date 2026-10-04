@@ -370,3 +370,17 @@ void LVL_8_TABORA_FUN_002E2958(void) {
         ++slot;
     } while (remaining >= 0);
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_8_TABORA_D_001BFC40;
+void LVL_8_TABORA_FUN_002FF0F8(void) {
+    if (LVL_8_TABORA_D_001BFC40.mode == 7 && LVL_8_TABORA_D_001BFC40.state == 1) {
+        LVL_8_TABORA_D_001BFC40.state = 2;
+    }
+}
