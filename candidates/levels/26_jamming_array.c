@@ -470,3 +470,15 @@ void LVL_26_JAMMING_ARRAY_FUN_00309138(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_26_JAMMING_ARRAY_FUN_002B4118(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_26_JAMMING_ARRAY_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

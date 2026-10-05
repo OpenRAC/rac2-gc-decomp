@@ -625,3 +625,15 @@ void LVL_24_SHIP_SHACK_FUN_00307308(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_24_SHIP_SHACK_FUN_002B2A98(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)&LVL_24_SHIP_SHACK_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

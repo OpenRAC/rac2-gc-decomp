@@ -423,3 +423,15 @@ void LVL_7_SIBERIUS_FUN_002FF370(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_7_SIBERIUS_FUN_002B2690(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_7_SIBERIUS_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

@@ -464,3 +464,15 @@ void LVL_3_ENDAKO_FUN_0030A268(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_3_ENDAKO_FUN_002B9358(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_3_ENDAKO_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

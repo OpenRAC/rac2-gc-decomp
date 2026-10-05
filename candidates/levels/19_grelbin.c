@@ -423,3 +423,15 @@ void LVL_19_GRELBIN_FUN_00306B10(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_19_GRELBIN_FUN_002B68C0(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_19_GRELBIN_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

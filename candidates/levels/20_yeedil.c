@@ -520,3 +520,15 @@ void LVL_20_YEEDIL_FUN_0031D4D0(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_20_YEEDIL_FUN_002C6AC8(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_20_YEEDIL_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

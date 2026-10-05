@@ -470,3 +470,15 @@ void LVL_15_GORN_FUN_00321B58(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_15_GORN_FUN_002CC818(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_15_GORN_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

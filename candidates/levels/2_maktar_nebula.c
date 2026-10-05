@@ -470,3 +470,15 @@ void LVL_2_MAKTAR_NEBULA_FUN_0030D010(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_2_MAKTAR_NEBULA_FUN_002B6E18(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_2_MAKTAR_NEBULA_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

@@ -471,3 +471,15 @@ void LVL_13_BOLDAN_FUN_00313288(int index, unsigned char *output)
         *output++ = *source++;
     *output = 0;
 }
+
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
+
+int LVL_13_BOLDAN_FUN_002BE920(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_13_BOLDAN_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}

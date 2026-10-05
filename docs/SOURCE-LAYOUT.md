@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Six hundred contextual native bodies remain distinct in the
+family has 26. Six hundred twenty-seven contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,29 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 180 definitions | 9,520 |
-| Native overlays | 608 family-or-singleton items, 609 contextual variants | 73,664 across 815 placements |
+| Native overlays | 635 family-or-singleton items, 636 contextual variants | 75,392 across 842 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 64,480, or 64,504 when both clear
+Native representative catalogued bytes total 66,208, or 66,232 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **290,264 / 48,788,176 bytes (0.5949%)**.
-The latest lot adds 28 complete 64-byte resident channel updates and 27
+The current integration exporter accepts **291,992 / 48,788,176 bytes (0.5985%)**.
+The latest lot adds 27 complete 64-byte scalar interval predicates, totaling
+1,728 bytes. The scalar must lie below a resident plane within its configured
+depth. The original ordered comparisons reject unordered values. All 308
+actual caller sites confirm the single F12 argument and integer result.
+
+Two authored fragments retain the 26 array-based resident projections and
+Ship Shack's existing typed-root address expression. Every generated unit and
+catalog is byte-identical to its immutable qualification: all 842 whole native
+functions match, including 815 controls, with unchanged flags, GP and externals.
+Fresh boot and all 27 loaded-byte and metadata gates, independent exports and
+the full test suite qualify integration. No helper or data credit is added.
+
+The preceding lot added 28 complete 64-byte resident channel updates and 27
 complete 396-byte record text substitutions, totaling 12,484 bytes. Channel
 flag bit fifteen controls a halfword value update in the observed order.
 Text substitution copies a localized string to its first percent selector,
