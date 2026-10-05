@@ -1,18 +1,18 @@
 /*
- * kernel_interrupts.h – Gestión de interrupciones (adaptación PS2 → PC)
+ * kernel_interrupts.h – Interrupt management (PS2 → PC adaptation)
  *
- * En PS2 (MIPS R5900):
+ * On PS2 (MIPS R5900):
  *   _EnableIntc() / _DisableIntc()
- *   Togan el bit IE del CP0 Status para habilitar/deshabilitar
- *   IRQs a nivel de hardware. Retornan el valor anterior.
+ *   Toggle the CP0 Status IE bit to enable/disable
+ *   IRQs at hardware level. They return the previous value.
  *
- * En PC (x86-64):
- *   Las interrupciones las controla el SO (IDT, IRQ controller).
- *   En user-space no existe equivalente.
- *   Esta función es un no-op que preserva la firma para que
- *   el código descompilado compile sin modificación.
+ * On PC (x86-64):
+ *   Interrupts are controlled by the OS (IDT, IRQ controller).
+ *   There is no user-space equivalent.
+ *   This function is a no-op that preserves the signature so that
+ *   the decompiled code compiles unmodified.
  *
- * XREF original: FUN_00126dc0 (llamada a FUN_0011b5f0)
+ * Original XREF: FUN_00126dc0 (call to FUN_0011b5f0)
  */
 
 #ifndef CORE_SYS_KERNEL_INTERRUPTS_H
@@ -21,21 +21,21 @@
 #include <stdint.h>
 
  /*
-  * Habilita interrupciones del CPU (equivalente a _EnableIntc en PS2).
+  * Enables CPU interrupts (equivalent to _EnableIntc on PS2).
   *
   * PS2:  Status.IE = 1; return old_ie;
-  * PC:   no-op. Retorna 0.
+  * PC:   no-op. Returns 0.
   *
-  * @return  Valor anterior del bit IE (siempre 0 en PC)
+  * @return  Previous value of the IE bit (always 0 on PC)
   */
 uint64_t kernel_enable_interrupts(void);
 
 /*
- * Deshabilita interrupciones del CPU (equivalente a _DisableIntc en PS2).
- * Se anticipa porque probablemente aparezca en otra FUN_.
+ * Disables CPU interrupts (equivalent to _DisableIntc on PS2).
+ * Declared ahead because it will probably appear in another FUN_.
  *
  * PS2:  Status.IE = 0; return old_ie;
- * PC:   no-op. Retorna 0.
+ * PC:   no-op. Returns 0.
  */
 uint64_t kernel_disable_interrupts(void);
 

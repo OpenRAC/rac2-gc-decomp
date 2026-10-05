@@ -10,57 +10,57 @@ extern int g_GraphicsSifInitialized;
 extern unsigned int g_GraphicsVideoFormat;
 static unsigned char g_Ps2ScratchpadMemory[0x200] = { 0 };
 
-// Agrega esta línea en la sección de variables globales arriba del todo:
+// Add this line to the global variable section at the very top:
 unsigned char g_GraphicsIopCommandBuffers[0x440 * 4] = { 0 };
 
-// Definición de variables globales identificadas en el SIF gráfico
-unsigned int g_SifClientStructure[16] = { 0 }; // Mapea DAT_00140100
-int g_SifSessionReady = 1;                   // Mapea DAT_00140124 (Forzamos '1' para romper el bucle en PC)
-int g_GraphicsSifInitialized = 0;            // Mapea DAT_001347ac
-unsigned int g_GraphicsVideoFormat = 0;      // Mapea DAT_001347b0
+// Global variables identified in the graphics SIF
+unsigned int g_SifClientStructure[16] = { 0 }; // Maps DAT_00140100
+int g_SifSessionReady = 1;                   // Maps DAT_00140124 (forced to '1' to break the loop on PC)
+int g_GraphicsSifInitialized = 0;            // Maps DAT_001347ac
+unsigned int g_GraphicsVideoFormat = 0;      // Maps DAT_001347b0
 
-// Inicializamos los modos de video virtuales (puedes usar números de control para PC)
+// Initialize the virtual video modes (control numbers can be used for PC)
 unsigned int g_VideoMode_Current = 0;
 unsigned int g_VideoMode_Target = 0;
 unsigned int g_VideoMode_Fallback = 0;
 
-// Instanciamos las variables globales identificadas
-char g_GraphicsResourcePath[1024] = { 0 }; // Mapea DAT_0013ea14
-unsigned int g_GraphicsCanvasFlags = 0;   // Mapea DAT_0013ea0c
-unsigned int g_GraphicsCanvasParam3 = 0;  // Mapea DAT_0013ea10
-int g_GraphicsScratchpadIndex = 0;        // Mapea DAT_0013ee14
+// Instances of the identified global variables
+char g_GraphicsResourcePath[1024] = { 0 }; // Maps DAT_0013ea14
+unsigned int g_GraphicsCanvasFlags = 0;   // Maps DAT_0013ea0c
+unsigned int g_GraphicsCanvasParam3 = 0;  // Maps DAT_0013ea10
+int g_GraphicsScratchpadIndex = 0;        // Maps DAT_0013ee14
 
-int g_GraphicsTempSemaID = 0;             // Mapea DAT_0013ea00
-int g_GraphicsContextState = 0;           // Mapea DAT_0013ea08
-void* g_GraphicsStackBufferPtr = NULL;     // Mapea DAT_0013ea04
+int g_GraphicsTempSemaID = 0;             // Maps DAT_0013ea00
+int g_GraphicsContextState = 0;           // Maps DAT_0013ea08
+void* g_GraphicsStackBufferPtr = NULL;     // Maps DAT_0013ea04
 
 unsigned long long sceGsDefDispEnv(unsigned long long* out_env, short mode_flags, short width, short height, short dx, short dy) {
-	LOG_SUCCESS("GRAPHICS", "Sintetizador Gráfico interceptado: %dx%d (Modo original: %d)", width, height, mode_flags);
+	LOG_SUCCESS("GRAPHICS", "Graphics Synthesizer intercepted: %dx%d (original mode: %d)", width, height, mode_flags);
 	if (out_env == NULL) return 0;
 
-	// 1. Ejecutamos los guardianes de sincronización que limpiamos en los pasos anteriores
+	// 1. Run the synchronization guards cleaned up in the previous steps
 	Sys_CheckConsoleVersion();
 	sceFlushCache(0);
 
-	// 2. Interceptamos las dimensiones que el motor de Ratchet & Clank 2 solicita de origen
+	// 2. Intercept the dimensions originally requested by the Ratchet & Clank 2 engine
 	g_GraphicsCanvasData.width_native = (int)width;
 	g_GraphicsCanvasData.height_native = (int)height;
 
-	// --- MEJORA PARA PC MODERNA (ALTA RESOLUCIÓN) ---
-	// Si el usuario no ha configurado una resolución personalizada, escalamos dinámicamente.
-	// Evitamos los límites físicos de la TV de tubo (CRT) de la PS2.
+	// --- MODERN PC IMPROVEMENT (HIGH RESOLUTION) ---
+	// If the user has not configured a custom resolution, scale dynamically.
+	// This avoids the physical limits of the PS2's CRT television.
 	if (g_GraphicsCanvasData.width_modern == 512 && g_GraphicsCanvasData.height_modern == 288) {
-		g_GraphicsCanvasData.width_modern = 1920;  // Forzamos 1080p por defecto en PC
+		g_GraphicsCanvasData.width_modern = 1920;  // Force 1080p by default on PC
 		g_GraphicsCanvasData.height_modern = 1080;
 	}
 
-	// 3. Replicamos el llenado estructural básico que el juego espera leer en memoria
-	out_env[0] = 0x66; // Código identificador interno del buffer de despliegue
+	// 3. Replicate the basic structural fill the game expects to read in memory
+	out_env[0] = 0x66; // Internal identifier code of the display buffer
 	out_env[1] = (mode_flags == 0) ? 1 : 3;
 	out_env[2] = ((unsigned long long)(mode_flags & 0xF) << 15) | ((unsigned long long)((width + 0x3F) >> 6) << 9);
 
-	// 4. Simulamos el empaquetado matemático de 64 bits para el registro GS DISPLAY
-	// Esto previene que las funciones secundarias del juego hagan un "trap" (crasheen) por leer 0.
+	// 4. Simulate the 64-bit packing of the GS DISPLAY register
+	// This prevents secondary game functions from trapping (crashing) when they read 0.
 	unsigned long long calculated_display_reg = 0;
 	int frame_calc = (width + 0x9FF) / (width == 0 ? 1 : width);
 
@@ -70,147 +70,147 @@ unsigned long long sceGsDefDispEnv(unsigned long long* out_env, short mode_flags
 		(dx & 0xFFF);
 
 	out_env[3] = calculated_display_reg;
-	out_env[4] = 0; // Registro de control superior en cero
+	out_env[4] = 0; // Upper control register set to zero
 
-	// Impresión de depuración en la terminal de la PC para verificar que todo fluye en tiempo real
-	printf("[Graphics] Entorno de Pantalla Configurado Nativo: %dx%d | Escalado en PC a: %dx%d (%s)\n",
+	// Debug print in the PC terminal to verify that everything flows in real time
+	printf("[Graphics] Native display environment configured: %dx%d | scaled on PC to: %dx%d (%s)\n",
 		width, height, g_GraphicsCanvasData.width_modern, g_GraphicsCanvasData.height_modern,
-		(g_GraphicsCanvasData.target_fps == 0.0f) ? "FPS Desbloqueados" : "FPS Limitados");
+		(g_GraphicsCanvasData.target_fps == 0.0f) ? "FPS unlocked" : "FPS limited");
 
 	return calculated_display_reg;
 }
 
-int g_GraphicsCanvasActiveIndex = 0; // Mapea DAT_0013ea1c
+int g_GraphicsCanvasActiveIndex = 0; // Maps DAT_0013ea1c
 
 int Graphics_CloseCanvasTransaction(unsigned long slot_index) {
-	// 1. Localizamos la dirección de la ranura del Scratchpad virtual a partir del índice
+	// 1. Locate the virtual Scratchpad slot address from the index
 	unsigned int scratchpad_addr = Graphics_GetScratchpadSlotAddress(slot_index);
 	unsigned int* slot_ptr = (unsigned int*)(uintptr_t)scratchpad_addr;
 
 	Sys_WaitGraphicsFrame();
 
-	// 2. Validación: Si el sistema SIF gráfico general no está activo
+	// 2. Validation: if the general graphics SIF system is not active
 	if (g_GraphicsSifInitialized == 0) {
 		Sys_ReleaseGraphicsSemaphore();
 		return -1;
 	}
 
-	// 3. Validación: Si la ranura no es válida o ya estaba vacía (puVar1[1] == 0)
+	// 3. Validation: if the slot is invalid or already empty (puVar1[1] == 0)
 	if (scratchpad_addr == 0 || slot_ptr == NULL || slot_ptr[1] == 0) {
 		Sys_ReleaseGraphicsSemaphore();
 		return -9;
 	}
 
-	// 4. Mapeo de parámetros globales imitando el flujo original
+	// 4. Map the global parameters, imitating the original flow
 	g_GraphicsCanvasFlags = slot_ptr[0];
 	g_GraphicsCanvasParam3 = (int)((scratchpad_addr - 0x13ff00) / 0x10);
 
-	// Simulamos variables de contexto de la llamada por consistencia estructural
+	// Simulate the call's context variables for structural consistency
 	g_GraphicsTempSemaID = g_GraphicsSemaphoreID;
 	g_GraphicsContextState = 4;
 
-	// 5. El paso clave: Marcamos la ranura como LIBRE (puVar1[1] = 0)
-	// En PC modificamos directamente la posición correcta en nuestro arreglo virtual
+	// 5. The key step: mark the slot as FREE (puVar1[1] = 0)
+	// On PC, modify the correct position in our virtual array directly
 	int local_offset = scratchpad_addr - 0x13ff00;
 
-	// Corregido: Obtenemos el puntero sumando el offset en bytes a la base del arreglo
+	// Fixed: get the pointer by adding the byte offset to the base of the array
 	unsigned int* local_slot = (unsigned int*)(g_Ps2ScratchpadMemory + local_offset);
 	local_slot[1] = 0;
 
-	// 6. Simulación de la Transacción SIF 1 (Cierre de Entorno en IOP)
-	// Forzamos la respuesta positiva del hardware simulado
-	int simulated_iop_status = 1; // 1 = Éxito devuelto en DAT_2013f640
+	// 6. Simulate SIF transaction 1 (environment close on the IOP)
+	// Force a positive response from the simulated hardware
+	int simulated_iop_status = 1; // 1 = success returned in DAT_2013f640
 
 	Sys_ReleaseGraphicsSemaphore();
 
 	if (simulated_iop_status == 0) {
-		return -11; // Error en la comunicación virtual (-0xb)
+		return -11; // Virtual communication error (-0xb)
 	}
 
-	// Espera del semáforo y borrado del contexto temporal de sincronización
+	// Wait for the semaphore and delete the temporary synchronization context
 	sceWaitSema(g_RenderSemaphoreID_A);
 	sceDeleteSema(g_GraphicsTempSemaID);
 
-	return 0; // Retorna éxito limpio: Ranura liberada y lista en PC
+	return 0; // Clean success: slot released and ready on PC
 }
 
-int Graphics_DispatchCanvasTransaction(unsigned long slot_index, unsigned int param_2, long param_3) {	// 1. Obtenemos la dirección del Scratchpad virtual a partir del índice
+int Graphics_DispatchCanvasTransaction(unsigned long slot_index, unsigned int param_2, long param_3) { // 1. Get the virtual Scratchpad address from the index
 	unsigned int scratchpad_addr = Graphics_GetScratchpadSlotAddress(slot_index);
 	unsigned int* slot_ptr = (unsigned int*)(uintptr_t)scratchpad_addr;
 
 	Sys_WaitGraphicsFrame();
 
-	// 2. Validación de inicialización del subsistema
+	// 2. Validate the subsystem initialization
 	if (g_GraphicsSifInitialized == 0) {
 		Sys_ReleaseGraphicsSemaphore();
-		return -1; // Error: SIF no inicializado
+		return -1; // Error: SIF not initialized
 	}
 
-	// 3. Validación de la ranura de comando
+	// 3. Validate the command slot
 	if (scratchpad_addr == 0 || slot_ptr == NULL || slot_ptr[1] == 0) {
 		Sys_ReleaseGraphicsSemaphore();
-		return -9; // Error: Ranura inválida o inactiva (0xfffffff7)
+		return -9; // Error: invalid or inactive slot (0xfffffff7)
 	}
 
 	unsigned int uVar1 = slot_ptr[1];
 
-	// 4. Mapeo de parámetros globales replicando la aritmética original
+	// 4. Map the global parameters, replicating the original arithmetic
 	g_GraphicsCanvasFlags = slot_ptr[0];
 
-	// Originalmente calculaba: (int)(puVar2 + -0x4ffc0) >> 4;
+	// Originally computed: (int)(puVar2 + -0x4ffc0) >> 4;
 	g_GraphicsCanvasActiveIndex = (int)((scratchpad_addr - 0x13ff00) / 0x10);
 
-	// Corregido: Si param_3 es un puntero o dirección, aplicamos el casteo seguro de PC
+	// Fixed: if param_3 is a pointer or address, apply the safe PC cast
 	*(uintptr_t*)&g_GraphicsResourcePath = (uintptr_t)param_3;
 	g_GraphicsCanvasParam3 = param_2;
 
-	// 5. Gestión asíncrona original (Flags de control de hilos en PS2)
-	// En PC no necesitamos enmascarar transacciones en la tabla g_GraphicsActiveTransactions
-	// ya que nuestra ejecución moderna es síncrona y determinista a nivel de hilos de software.
+	// 5. Original asynchronous handling (thread control flags on PS2)
+	// On PC there is no need to mask transactions in g_GraphicsActiveTransactions
+	// because modern execution is synchronous and deterministic at the software-thread level.
 	if ((uVar1 & 0x8000) != 0) {
-		// Simulación pasiva de la sección asíncrona si el motor lo requiere en sus banderas
+		// Passive simulation of the asynchronous section if the engine requires it in its flags
 		sceWaitSema(g_RenderSemaphoreID_A);
 		sceSignalSema(g_RenderSemaphoreID_A);
 	}
 
-	// 6. Omitimos las llamadas de hardware específicas de MIPS:
+	// 6. Skip the MIPS-specific hardware calls:
 	// sys_kernel_flush_dcache_range(param_2, param_3);
 	// sys_kernel_flush_dcache_range(0x13ea00, 0x20);
 
-	// 7. Simulación de la Transacción SIF 2 (Dibujado/Render)
-	// Forzamos la respuesta de éxito instantáneo del coprocesador virtual
-	int simulated_iop_status = 1; // 1 = Éxito devuelto en DAT_2013f640
+	// 7. Simulate SIF transaction 2 (draw/render)
+	// Force an immediate success response from the virtual coprocessor
+	int simulated_iop_status = 1; // 1 = success returned in DAT_2013f640
 
 	Sys_ReleaseGraphicsSemaphore();
 
 	if (simulated_iop_status == 0) {
-		return -11; // Fallo en transacción (0xfffffff5)
+		return -11; // Transaction failure (0xfffffff5)
 	}
 
-	// Si el modo requiere sincronización explícita inmediata (síncrono)
+	// If the mode requires immediate explicit (synchronous) synchronization
 	if ((uVar1 & 0x8000) == 0) {
 		sceWaitSema(g_RenderSemaphoreID_A);
-		sceDeleteSema(g_GraphicsTempSemaID); // Limpieza virtual segura
+		sceDeleteSema(g_GraphicsTempSemaID); // Safe virtual cleanup
 	}
 
-	return 0; // Éxito total: El cuadro se despachó de forma correcta
+	return 0; // Complete success: the frame was dispatched correctly
 }
 
 unsigned int Graphics_GetScratchpadSlotAddress(unsigned long slot_index) {
 	int calculated_address = 0;
 
-	// 1. Pide acceso exclusivo al semáforo de control de renderizado A
+	// 1. Request exclusive access to render-control semaphore A
 	Sys_InitRenderBuffers();
 	sceWaitSema(g_RenderSemaphoreID_A);
 
-	// 2. Validación de límites: El Scratchpad de Insomniac soporta un máximo de 32 ranuras (0x20)
+	// 2. Bounds check: the Insomniac Scratchpad supports at most 32 slots (0x20)
 	if (slot_index < 0x20) {
-		// Replicamos el cálculo original: index * 16 + Base_Scratchpad
+		// Replicate the original computation: index * 16 + Base_Scratchpad
 		calculated_address = (int)slot_index * 0x10 + 0x13ff00;
 		sceSignalSema(g_RenderSemaphoreID_A);
 	}
 	else {
-		// Índice fuera de rango seguro
+		// Safe out-of-range index
 		sceSignalSema(g_RenderSemaphoreID_A);
 		calculated_address = 0;
 	}
@@ -221,60 +221,60 @@ unsigned int Graphics_GetScratchpadSlotAddress(unsigned long slot_index) {
 int Graphics_SetupCanvasEnvironment(const char* resource_path, unsigned int flags, unsigned int param_3) {
 	int result_code = 0;
 
-	// 1. Sincronización e inicialización perezosa de la capa SIF
+	// 1. Synchronization and lazy initialization of the SIF layer
 	Sys_WaitGraphicsFrame();
 	if (g_GraphicsSifInitialized == 0) {
 		Graphics_InitSifInterface();
 	}
 
-	// 2. Validación de cambios en el modo de video
+	// 2. Validate changes of the video mode
 	if (Graphics_CheckVideoModeChange()) {
 		Sys_ReleaseGraphicsSemaphore();
-		return -0x10004; // Error: Modo de video inconsistente
+		return -0x10004; // Error: inconsistent video mode
 	}
 
-	// 3. Reserva de ranura de comandos en el Scratchpad Virtual
-	// Obtenemos la dirección simulada compatible con PS2 (0x13ff00 + offset)
+	// 3. Reserve a command slot in the virtual Scratchpad
+	// Get the simulated PS2-compatible address (0x13ff00 + offset)
 	unsigned int scratchpad_addr = Graphics_AllocateScratchpadSlot();
 	int* slot_ptr = (int*)(uintptr_t)scratchpad_addr;
 
 	if (scratchpad_addr == 0) {
 		Sys_ReleaseGraphicsSemaphore();
-		return -0x13; // Error: Cola de comandos rápidos llena
+		return -0x13; // Error: fast command queue full
 	}
 
-	// 4. Copiado seguro de la ruta del recurso (Reemplaza el bucle For original de Ghidra)
-	// Garantizamos que no sobrepase los 1024 bytes y termine con carácter nulo
+	// 4. Safe copy of the resource path (replaces Ghidra's original for loop)
+	// Guarantees it does not exceed 1024 bytes and ends with a null character
 	strncpy(g_GraphicsResourcePath, resource_path, 1023);
 	g_GraphicsResourcePath[1023] = '\0';
 
-	// 5. Traducción de la aritmética de punteros original de MIPS
-	// En la PS2 real, calculaba el índice de la ranura basándose en la distancia a la RAM base
+	// 5. Translation of the original MIPS pointer arithmetic
+	// On a real PS2 it computed the slot index from the distance to the RAM base
 	// iVar6 = (int)(piVar4 + -0x4ffc0) >> 4;
 	g_GraphicsScratchpadIndex = (int)((scratchpad_addr - 0x13ff00) / 0x10);
 
-	// Guardamos los metadatos en las variables de control globales
+	// Store the metadata in the global control variables
 	g_GraphicsCanvasFlags = flags & 0x6FFFFFFF;
 	g_GraphicsCanvasParam3 = param_3;
 	g_GraphicsScratchpadIndex = g_GraphicsScratchpadIndex;
 
-	// 6. Simulación de la Transacción SIF en PC
-	// Omitimos la creación de semáforos temporales y llamadas RPC de Sony.
-	// Forzamos un comportamiento exitoso simulando que el IOP respondió con éxito.
-	int simulated_stack_response = 0; // Simulamos que aiStack_120[0] devolvió 0 (Éxito)
+	// 6. Simulate the SIF transaction on PC
+	// Skip creating temporary semaphores and Sony RPC calls.
+	// Force a successful behaviour, simulating that the IOP answered successfully.
+	int simulated_stack_response = 0; // Simulate aiStack_120[0] returning 0 (success)
 
 	Sys_ReleaseGraphicsSemaphore();
 
-	// Replicamos la lógica del bloque de éxito original:
-	// Pide acceso exclusivo para escribir en la ranura del Scratchpad
+	// Replicate the logic of the original success block:
+	// Request exclusive access to write to the Scratchpad slot
 	sceWaitSema(g_RenderSemaphoreID_A);
 
-	// Aplicamos la máscara de bits solicitada por el juego sobre el estado de la ranura
+	// Apply the bit mask requested by the game to the slot state
 	// piVar4[1] = piVar4[1] | param_2;
 	// *piVar4 = aiStack_120[0];
 	if (slot_ptr != NULL) {
-		// Como estamos operando sobre nuestra memoria mapeada, modificamos los offsets correctos
-		// En nuestro arreglo virtual g_Ps2ScratchpadMemory
+		// Since we operate on our mapped memory, modify the correct offsets
+		// in our virtual array g_Ps2ScratchpadMemory
 		int local_offset = scratchpad_addr - 0x13ff00;
 		int* local_slot = (int*)&g_Ps2ScratchpadMemory[local_offset];
 
@@ -288,125 +288,125 @@ int Graphics_SetupCanvasEnvironment(const char* resource_path, unsigned int flag
 	return result_code;
 }
 
-// Recordatorio: g_Ps2ScratchpadMemory ya fue declarado previamente en este archivo como:
+// Reminder: g_Ps2ScratchpadMemory was already declared earlier in this file as:
 // static unsigned char g_Ps2ScratchpadMemory[0x200]; 
 
 unsigned int Graphics_AllocateScratchpadSlot(void) {
-	// 1. Asegura la inicialización y pide acceso exclusivo al semáforo de renderizado
+	// 1. Make sure of initialization and request exclusive access to the render semaphore
 	Sys_InitRenderBuffers();
 	sceWaitSema(g_RenderSemaphoreID_A);
 
-	// Mapeamos los rangos físicos originales a offsets locales de nuestro arreglo en PC
+	// Map the original physical ranges to local offsets of our PC array
 	// Base original PS2: 0x13ff00 -> Offset PC: 0
-	// Límite original PS2: 0x1400ff -> Offset PC: 0x1FF
+	// Original PS2 limit: 0x1400ff -> PC offset: 0x1FF
 	int local_offset = 0;
 
 	while (true) {
-		// Leemos el estado de la ranura actual en el offset correspondiente
-		// Originalmente leía el offset +4 del puntero de control (iVar1 = DAT_0013ff04 en la primera iteración)
+		// Read the state of the current slot at the corresponding offset
+		// Originally it read offset +4 of the control pointer (iVar1 = DAT_0013ff04 in the first iteration)
 		unsigned int slot_status = *(unsigned int*)&g_Ps2ScratchpadMemory[local_offset + 4];
 
 		if (slot_status == 0) {
-			// Encontramos ranura libre: Escribimos el flag de control de ocupado
+			// Free slot found: write the busy control flag
 			*(unsigned int*)&g_Ps2ScratchpadMemory[local_offset + 4] = 0x10000000;
 
-			// Liberamos el semáforo y devolvemos la dirección simulada compatible con PS2
+			// Release the semaphore and return the simulated PS2-compatible address
 			sceSignalSema(g_RenderSemaphoreID_A);
 			return 0x13ff00 + local_offset;
 		}
 
-		// Condición de parada si el siguiente incremento de 16 bytes supera el límite del búfer
+		// Stop condition if the next 16-byte increment exceeds the buffer limit
 		if (0x1400ff < (0x13ff00 + local_offset + 0x10)) {
 			break;
 		}
 
-		// Avanzamos a la siguiente ranura (16 bytes adelante)
+		// Advance to the next slot (16 bytes ahead)
 		local_offset += 0x10;
 	}
 
-	// Si salimos del ciclo, el búfer de comandos rápidos está lleno
+	// Leaving the loop means the fast command buffer is full
 	sceSignalSema(g_RenderSemaphoreID_A);
 	return 0;
 }
 
 bool Graphics_CheckVideoModeChange(void) {
-	// En PC, en lugar de llamar a memcmp para solo 4 bytes, 
-	// comparamos directamente los valores numéricos de los enteros.
-	// Esto produce exactamente el mismo resultado lógico pero de forma nativa y ultra-rápida.
+	// On PC, instead of calling memcmp for just 4 bytes,
+	// compare the integer values directly.
+	// This gives exactly the same logical result, natively and very fast.
 
 	if (g_VideoMode_Current != g_VideoMode_Target) {
 		if (g_VideoMode_Current != g_VideoMode_Fallback) {
 			if (g_VideoMode_Target != g_VideoMode_Fallback) {
-				return true; // Los tres buffers difieren, el modo de video cambió
+				return true; // The three buffers differ, the video mode changed
 			}
 		}
 	}
 
-	return false; // El entorno gráfico se mantiene estable
+	return false; // The graphics environment is stable
 }
 
-// Estructuras de punteros temporales del motor
-void* g_GfxBufferPtrA = NULL; // Mapea DAT_0013e9c0
-void* g_GfxBufferPtrB = NULL; // Mapea DAT_0013e9c4
+// Temporary pointer structures of the engine
+void* g_GfxBufferPtrA = NULL; // Maps DAT_0013e9c0
+void* g_GfxBufferPtrB = NULL; // Maps DAT_0013e9c4
 
-// Simulación del bloque de memoria física 0x13ff00 de la PS2
+// Simulation of the PS2's physical memory block 0x13ff00
 //static unsigned char g_Ps2ScratchpadMemory[0x200] = { 0 };
 
 int Graphics_InitSifInterface(void) {
-	// 1. Omitimos inicializaciones de hardware RPC/SIF de PS2 de forma segura
+	// 1. Safely skip the PS2 RPC/SIF hardware initializations
 	// sys_sif_rpc_init_client();
 	// kernel_system_sync_guard();
 	// sys_sif_register_callback(...);
 
-	// 2. Simulación del bucle de apertura de sesión
-	// En PC, al forzar g_SifSessionReady = 1, evitamos congelar la ejecución
+	// 2. Simulation of the session-open loop
+	// On PC, forcing g_SifSessionReady = 1 avoids freezing execution
 	while (true) {
-		int session_status = 0; // Simulamos éxito de sys_sif_rpc_open_transaction_session
+		int session_status = 0; // Simulate success of sys_sif_rpc_open_transaction_session
 		if (session_status < 0) {
 			return -1;
 		}
 		if (g_SifSessionReady != 0) break;
 	}
 
-	// 3. Inicialización del Double Buffer y Sincronización Inicial
+	// 3. Double-buffer initialization and initial synchronization
 	Sys_InitRenderBuffers();
 
-	// El motor bloquea temporalmente usando el primer semáforo de renderizado
+	// The engine blocks temporarily on the first render semaphore
 	sceWaitSema(g_RenderSemaphoreID_A);
 
-	// 4. Limpieza del bloque de comandos gráficos (Originalmente entre 0x13ff00 y DAT_00140100)
-	// El juego salta de 16 en 16 bytes (0x10) y pone a cero el offset +4
+	// 4. Clear the graphics command block (originally between 0x13ff00 and DAT_00140100)
+	// The game steps 16 bytes (0x10) at a time and zeroes offset +4
 	for (int offset = 0; offset < 0x200; offset += 0x10) {
 		*(unsigned int*)&g_Ps2ScratchpadMemory[offset + 4] = 0;
 	}
 
-	// Desbloqueamos el semáforo para continuar el flujo
+	// Unlock the semaphore to continue the flow
 	sceSignalSema(g_RenderSemaphoreID_A);
 
-	// 5. Configuración de buffers de intercambio de comandos
+	// 5. Configure the command exchange buffers
 	g_GfxBufferPtrA = &g_GraphicsIopCommandBuffers;
-	g_GfxBufferPtrB = NULL; // Mapea tu DAT_0013fac0 de forma segura en PC
+	g_GfxBufferPtrB = NULL; // Maps DAT_0013fac0 safely on PC
 
-	// 6. Configuración de banderas finales de éxito
-	// En PC forzamos el modo exitoso e inyectamos el formato PAL (1) o NTSC (0)
+	// 6. Configure the final success flags
+	// On PC the successful mode is forced; the video format flag is set to 1 (valid/active)
 	g_GraphicsSifInitialized = 1;
-	g_GraphicsVideoFormat = 1; // 1 = El juego asume formato de video válido/activo
+	g_GraphicsVideoFormat = 1; // 1 = the game assumes a valid/active video format
 
-	return 0; // Retorna éxito limpio
+	return 0; // Clean success
 }
 
 /**
- * @brief Inicializa el canal SIF/RPC virtual para los gráficos en PC.
- * @return 0 para éxito, o código de error negativo.
+ * @brief Initializes the virtual SIF/RPC channel for graphics on PC.
+ * @return 0 on success, or a negative error code.
  */
 int Graphics_InitSifInterface(void);
 
 void Graphics_SifCallback_Dispatch(void* param_1, unsigned int* param_2) {
-	(void)param_1; // Evitamos advertencia de parámetro no usado
+	(void)param_1; // Avoids an unused-parameter warning
 
 	if (param_2 != NULL) {
-		// En tu descompilación original: param_2[0] es la dirección de la función a invocar
-		// y param_2[1] es el argumento que se le inyecta a esa función.
+		// In the original decompilation: param_2[0] is the address of the function to invoke
+		// and param_2[1] is the argument injected into that function.
 		typedef void (*GraphicsSubRoutine)(unsigned int);
 		GraphicsSubRoutine funcion_a_ejecutar = (GraphicsSubRoutine)((uintptr_t)param_2[0]);
 
@@ -415,11 +415,11 @@ void Graphics_SifCallback_Dispatch(void* param_1, unsigned int* param_2) {
 		}
 	}
 
-	// Las instrucciones SYNC(0) y EI() se omiten en PC por ser específicas 
-	// del pipeline de ejecución y control de interrupciones de la CPU MIPS.
+	// The SYNC(0) and EI() instructions are skipped on PC because they are specific
+	// to the MIPS CPU execution pipeline and interrupt control.
 }
 
-// Inicializamos con valores por defecto (ej. 1080p a 60 FPS por defecto)
+// Initialize with default values (e.g. 1080p at 60 FPS by default)
 GraphicsCanvas g_GraphicsCanvasData = {
 	.width_native = 512,
 	.height_native = 288,
@@ -438,7 +438,7 @@ void Graphics_SetCustomResolution(int width, int height, float fps) {
 	g_GraphicsCanvasData.target_fps = fps;
 }
 
-// Instanciamos el índice y los buffers globales simulados (ajusta los tamaños si Ghidra te revela más)
+// Instances of the index and the simulated global buffers (adjust the sizes if Ghidra reveals more)
 int g_GraphicsTransactionIndex = 0;
 //unsigned char g_GraphicsIopCommandBuffers[0x440 * 4] = { 0 };
 int g_GraphicsActiveTransactions[32] = { 0 };
@@ -446,23 +446,23 @@ int g_GraphicsActiveTransactions[32] = { 0 };
 void Graphics_ProcessIopTransaction(void* packet_ptr) {
 	if (packet_ptr == NULL) return;
 
-	// Estructuramos el acceso al puntero del paquete recibido
+	// Structure access to the received packet pointer
 	unsigned int* rpc_packet = (unsigned int*)packet_ptr;
 
 	g_GraphicsTransactionIndex = 0;
 	if (g_GraphicsVideoFormat != 0) {
-		// En la PS2 original leía el offset 0xC del paquete SIF
+		// On the original PS2 it read offset 0xC of the SIF packet
 		g_GraphicsTransactionIndex = (int)rpc_packet[3];
 	}
 
-	// Calculamos el puntero al bloque de comandos del IOP correspondiente
-	// Nota: En PC removemos la máscara de memoria virtual '| 0x20000000' de PS2
+	// Compute the pointer to the corresponding IOP command block
+	// Note: on PC the PS2 virtual memory mask '| 0x20000000' is removed
 	int* cmd_buffer = (int*)(&g_GraphicsIopCommandBuffers[g_GraphicsTransactionIndex * 0x440]);
 
 	int cmd_id = cmd_buffer[0];
 	int cmd_type = cmd_buffer[1];
 
-	// Copia inicial si el ID es válido
+	// Initial copy if the ID is valid
 	if (cmd_id > -1) {
 		void* dest = (void*)(uintptr_t)cmd_buffer[2];
 		void* src = (void*)&cmd_buffer[4];
@@ -470,7 +470,7 @@ void Graphics_ProcessIopTransaction(void* packet_ptr) {
 		memcpy(dest, src, size);
 	}
 
-	// Procesador de tipos de comando del motor
+	// Engine command type processor
 	switch (cmd_type) {
 	case 2: {
 		int len_a = cmd_buffer[5];
@@ -491,7 +491,7 @@ void Graphics_ProcessIopTransaction(void* packet_ptr) {
 
 	case 0xB:
 	case 0xC: {
-		// Simplificación limpia de la copia alineada de 64 bytes (8 quadwords)
+		// Clean simplification of the aligned 64-byte copy (8 quadwords)
 		void* dest_bulk = (void*)(uintptr_t)cmd_buffer[5];
 		void* src_bulk = (void*)&cmd_buffer[6];
 		memcpy(dest_bulk, src_bulk, 64);
@@ -502,7 +502,7 @@ void Graphics_ProcessIopTransaction(void* packet_ptr) {
 	case 0x19:
 	case 0x1A: {
 		size_t size_cap = (size_t)cmd_buffer[6];
-		if (size_cap > 0x400) size_cap = 0x400; // Límite de seguridad original
+		if (size_cap > 0x400) size_cap = 0x400; // Original safety limit
 
 		void* dest_cap = (void*)(uintptr_t)cmd_buffer[5];
 		void* src_cap = (void*)&cmd_buffer[7];
@@ -511,9 +511,9 @@ void Graphics_ProcessIopTransaction(void* packet_ptr) {
 	}
 	}
 
-	// Lógica de salida: Control y liberación de hilos del motor
+	// Exit logic: control and release of the engine threads
 	if (cmd_id < 0) {
-		// Limpieza de la tabla de transacciones activas
+		// Clear the active transaction table
 		if (g_GraphicsActiveTransactions[0] == -cmd_id) {
 			g_GraphicsActiveTransactions[0] = -1;
 		}
@@ -527,7 +527,7 @@ void Graphics_ProcessIopTransaction(void* packet_ptr) {
 		}
 	}
 	else {
-		// ¡Señal activa! Despierta el lazo del juego en PC de manera segura
+		// Signal active: safely wakes the game loop on PC
 		iSignalSema(g_GraphicsSemaphoreID);
 	}
 }

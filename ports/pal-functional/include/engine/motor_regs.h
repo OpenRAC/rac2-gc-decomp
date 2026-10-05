@@ -3,9 +3,9 @@
 
 #include <stdint.h>
 
-/* [CONFIRM] Registro del canal de display del motor Insomniac.
- *   Bit 0x100 = "canal inicializado" (guard de idempotencia).
- *   Los demás bits se irán revelando al descifrar más funciones. */
+/* [CONFIRM] Display channel register of the Insomniac engine.
+ *   Bit 0x100 = "channel initialized" (idempotence guard).
+ *   The other bits will be revealed as more functions are decoded. */
 extern uint32_t g_rcnt3_mode;
 
 #define RCNT3_FLAG_INIT   0x100u

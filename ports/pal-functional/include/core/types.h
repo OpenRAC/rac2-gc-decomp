@@ -5,16 +5,16 @@
 #include <stdint.h>
 #include <stddef.h>
 
-// Tipos de datos estándar de PlayStation 2 (Emotion Engine)
-typedef unsigned char      u8;   // 8 bits sin signo (0 a 255)
-typedef unsigned short     u16;  // 16 bits sin signo
-typedef unsigned int       u32;  // 32 bits sin signo (Direcciones de memoria)
-typedef unsigned long long u64;  // 64 bits sin signo
+// Standard PlayStation 2 data types (Emotion Engine)
+typedef unsigned char      u8;   // unsigned 8 bits (0 to 255)
+typedef unsigned short     u16;  // unsigned 16 bits
+typedef unsigned int       u32;  // unsigned 32 bits (memory addresses)
+typedef unsigned long long u64;  // unsigned 64 bits
 
-typedef signed char        s8;   // 8 bits con signo
-typedef signed short       s16;  // 16 bits con signo
-typedef signed int         s32;  // 32 bits con signo
-typedef signed long long   s64;  // 64 bits con signo
+typedef signed char        s8;   // signed 8 bits
+typedef signed short       s16;  // signed 16 bits
+typedef signed int         s32;  // signed 32 bits
+typedef signed long long   s64;  // signed 64 bits
 
 typedef uint8_t   u8;
 typedef uint16_t  u16;
@@ -24,14 +24,14 @@ typedef int8_t    i8;
 typedef int16_t   i16;
 typedef int32_t   i32;
 typedef int64_t   i64;
-typedef float     f32; // Punto flotante estándar de 32 bits
+typedef float     f32; // standard 32-bit floating point
 typedef double    f64;
 
 typedef int       bool_t;
 #define TRUE  1
 #define FALSE 0
 
-// Estructuras matemáticas vectoriales comunes en el motor de Insomniac
+// Common vector math structures of the Insomniac engine
 typedef struct {
     f32 x;
     f32 y;

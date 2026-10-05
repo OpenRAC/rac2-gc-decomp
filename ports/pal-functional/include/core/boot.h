@@ -2,19 +2,19 @@
 #define CORE_BOOT_H
 
 /**
- * Inicialización completa del display al arrancar.
+ * Complete display initialization at startup.
  *
- * Port de FUN_002848C0 (0x002848C0, PS2 ELF).
+ * Port of FUN_002848C0 (0x002848C0, PS2 ELF).
  *
- * Secuencia:
+ * Sequence:
  *   1. gpu_init_context()         ← reset GS/VU1/GIF
- *   2. Limpiar flag dev si aplica
- *   3. core_display_set(...)      ← configurar CRT + screen on
+ *   2. Clear the dev flag if applicable
+ *   3. core_display_set(...)      ← configure the CRT + screen on
  *
- * Llamar UNA VEZ al inicio, después de SDL_Init + GL context.
- * No es re-entrante.
+ * Call ONCE at startup, after SDL_Init + GL context.
+ * Not re-entrant.
  *
- * XREFs en el ELF:
+ * XREFs in the ELF:
  *   FUN_00286078 (main init)
  *   FUN_002914E0 (re-init tras save/load)
  */

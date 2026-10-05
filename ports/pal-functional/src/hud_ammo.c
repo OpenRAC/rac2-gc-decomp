@@ -1,20 +1,20 @@
 // src/hud_ammo.c
 #include "hud_ammo.h"
-#include <math.h> // Requerido para invocar a sinf() de forma nativa
+#include <math.h> // Required to call sinf() natively
 
-// Dirección física de la tabla global de estado de armas en la RAM de la PS2
+// Physical address of the global weapon state table in PS2 RAM
 #define INVENTORY_WEAPONS_DATA_PTR     ((const u8*)0x0019B2F8)
-#define MAX_WEAPONS_LIMIT_CONFIG       28 // 0x1B + 1 posiciones de ranuras base
+#define MAX_WEAPONS_LIMIT_CONFIG       28 // 0x1B + 1 base slot positions
 
-// Dirección global de la memoria RAM de la PS2 que almacena el ID del arma activa
+// Global PS2 RAM address that stores the ID of the active weapon
 #define GLOBAL_ACTIVE_WEAPON_ID_PTR    ((const u8*)0x001396C8)
 
-// Definición de recursos estáticos del Canvas Principal
+// Definition of the main canvas static resources
 #define RECURSO_HUD_CANVAS          ((const char*)0x001AE6D8) // "HudBase"
 #define RECURSO_HEALTH_OUTLINE      ((const char*)0x001AE6E8) // "HealthBarOutline"
 #define RECURSO_HEALTH_FILL         ((const char*)0x001AE6F8) // "HealthBarFill"
 
-// Definiciones del set extendido de recursos estáticos del HUD
+// Definitions of the extended set of HUD static resources
 #define RECURSO_WEAPON_NAME         ((const char*)0x001AE700) // "WeaponName"
 #define RECURSO_WEAPON_XP           ((const char*)0x001AE710) // "WeaXP"
 #define RECURSO_AMMO_ICON           ((const char*)0x001AE720) // "AmmoIcon"
@@ -27,38 +27,38 @@
 #define FORMATO_ICONO_RADIAL    ((const char*)0x001AE098) // "QSelIco%d"
 
 /**
- * @brief Recupera el identificador único (ID) del arma que el jugador tiene equipada actualmente en tiempo real.
- * Utilizada por el subsistema de munición y renderizado del HUD para sincronizar los contadores visuales.
- * Dirección original en Ghidra: 0x002B18D8 (PAL)
+ * @brief Returns the unique identifier (ID) of the weapon the player currently has equipped, in real time.
+ * Used by the ammo and HUD rendering subsystem to synchronize the visual counters.
+ * Original Ghidra address: 0x002B18D8 (PAL)
  *
- * @return u8 ID numérico del arma activa (ej. 0 = Llave, 1 = Lancer, etc.).
+ * @return u8 Numeric ID of the active weapon (e.g. 0 = wrench, 1 = Lancer, etc.).
  */
 u8 inv_get_active_weapon_id(void) {
-	// Retorna de forma directa el byte de estado global de la RAM
+	// Returns the global RAM status byte directly
 	return *GLOBAL_ACTIVE_WEAPON_ID_PTR;
 }
 
 /**
- * @brief Calcula el desplazamiento espacial o ranuras restantes en el menú radial a partir del arma equipada.
- * Utiliza el conteo global y el ID activo para coordinar los límites de rotación de la interfaz Quick Select.
- * Dirección original en Ghidra: 0x002B18E8 (PAL)
+ * @brief Computes the spatial offset or remaining slots in the radial menu from the equipped weapon.
+ * Uses the global count and the active ID to coordinate the rotation limits of the Quick Select interface.
+ * Original Ghidra address: 0x002B18E8 (PAL)
  *
- * @return s32 Distancia o ranuras restantes indexadas (Clamped entre 0 y 40).
+ * @return s32 Indexed distance or remaining slots (clamped between 0 and 40).
  */
 s32 inv_get_quick_select_remaining_space(void) {
-	// 1. Recupera el total de armas desbloqueadas y el ID del armamento en mano
+	// 1. Retrieve the total of unlocked weapons and the ID of the weapon in hand
 	s32 total_weapons = inv_count_unlocked_weapons();
 	u8 active_weapon_id = inv_get_active_weapon_id();
 
-	// 2. Calcula la distancia diferencial en el anillo de selección
+	// 2. Compute the differential distance in the selection ring
 	s32 remaining_slots = total_weapons - (s32)active_weapon_id;
 
-	// Regla de salvaguarda contra desbordamientos negativos
+	// Safeguard rule against negative overflows
 	if (remaining_slots < 0) {
 		remaining_slots = 0;
 	}
 
-	// Aplica el clamp estándar de 40 posiciones (0x28) del HUD de Insomniac
+	// Apply the standard 40-position (0x28) clamp of the Insomniac HUD
 	s32 clamped_offset = 0x28;
 	if (remaining_slots < 0x29) {
 		clamped_offset = remaining_slots;
@@ -68,40 +68,40 @@ s32 inv_get_quick_select_remaining_space(void) {
 }
 
 /**
- * @brief Cuenta la cantidad total de armas válidas y desbloqueadas actualmente en el inventario del jugador.
- * Peina la matriz de datos globales aplicando límites de control para definir el tamaño de la interfaz del HUD.
- * Dirección original en Ghidra: 0x002B1930 (PAL)
+ * @brief Counts the total number of valid weapons currently unlocked in the player's inventory.
+ * Scans the global data array applying control limits to define the size of the HUD interface.
+ * Original Ghidra address: 0x002B1930 (PAL)
  *
- * @return s32 Cantidad final de ranuras de armas activas listas para renderizarse (Clamped entre 0 y 40).
+ * @return s32 Final number of active weapon slots ready to render (clamped between 0 and 40).
  */
 s32 inv_count_unlocked_weapons(void) {
 	s32 total_active_elements = 0;
 	s32 memory_offset = 0;
 
-	// Bucle general que peina secuencialmente las 28 ranuras de armas del motor de Insomniac
+	// General loop that sequentially scans the 28 weapon slots of the Insomniac engine
 	for (s32 weapon_idx = 1; weapon_idx <= MAX_WEAPONS_LIMIT_CONFIG; weapon_idx++) {
 		const u8* p_weapon_bytes = INVENTORY_WEAPONS_DATA_PTR + memory_offset;
 
-		// Cada ranura de arma almacena un bloque contiguo de 4 bytes con flags de estado
+		// Each weapon slot stores a contiguous 4-byte block of state flags
 		for (s32 byte_idx = 0; byte_idx < 4; byte_idx++) {
 			u8 flag_byte = p_weapon_bytes[byte_idx];
 
-			// Si el flag contiene datos válidos, se contabiliza como un componente activo
+			// If the flag holds valid data, it is counted as an active component
 			if (flag_byte != 0) {
 				total_active_elements++;
 			}
 		}
 
-		// Calcula el paso de alineación de memoria indexada para la siguiente ranura (weapon_idx * 4)
+		// Compute the indexed memory alignment step for the next slot (weapon_idx * 4)
 		memory_offset = weapon_idx * 4;
 	}
 
-	// Regla de salvaguarda: El conteo no puede ser menor a cero absoluto
+	// Safeguard rule: the count cannot be below absolute zero
 	if (total_active_elements < 0) {
 		total_active_elements = 0;
 	}
 
-	// Aplica un clamp matemático estricto: El HUD comercial de la PS2 soporta hasta 40 ranuras gráficas (0x28)
+	// Apply a strict mathematical clamp: the retail PS2 HUD supports up to 40 graphic slots (0x28)
 	s32 clamped_count = 0x28;
 	if (total_active_elements < 0x29) {
 		clamped_count = total_active_elements;
@@ -111,123 +111,123 @@ s32 inv_count_unlocked_weapons(void) {
 }
 
 /**
- * @brief Modifica la posición física de anclaje de los componentes del HUD según el modo de video (4:3 o 16:9/PAL).
- * Inyecta las coordenadas de píxeles empaquetadas correspondientes para corregir la distorsión de la pantalla.
- * Dirección original en Ghidra: 0x0034EC58 (PAL)
+ * @brief Changes the physical anchor position of the HUD components according to the video mode (4:3 or 16:9/PAL).
+ * Injects the corresponding packed pixel coordinates to correct screen distortion.
+ * Original Ghidra address: 0x0034EC58 (PAL)
  *
- * @param p_hud_main_struct Dirección base de la estructura central de la interfaz (param_1).
- * @param video_mode ID del modo de video activo (0 para NTSC/4:3, 1 para PAL/16:9) (param_2).
+ * @param p_hud_main_struct Base address of the central interface structure (param_1).
+ * @param video_mode ID of the active video mode (0 for NTSC/4:3, 1 for PAL/16:9) (param_2).
  */
 void hud_update_layout_aspect_ratio(u32* p_hud_main_struct, s32 video_mode) {
 	if (p_hud_main_struct == NULL) {
 		return;
 	}
 
-	// El offset 0x15A4 equivale al índice 1385 en enteros de 32 bits (1385 * 4 = 5540 bytes)
+	// Offset 0x15A4 is index 1385 in 32-bit integers (1385 * 4 = 5540 bytes)
 	u8* p_base = (u8*)p_hud_main_struct;
 	*(s32*)(p_base + 0x15A4) = video_mode;
 
 	u32* p_sub_widget = (u32*)(p_base + 0x2A0);
 
-	// Caso A: Modo Estándar NTSC / 4:3 (Valores extraídos de la máscara 0x7567)
+	// Case A: standard NTSC / 4:3 mode (values extracted from mask 0x7567)
 	if (video_mode == 0) {
-		s16 x_pos = 103; // 0x67 en hexadecimal (píxeles horizontales)
-		s16 y_pos = 117; // 0x75 en hexadecimal (píxeles verticales)
+		s16 x_pos = 103; // 0x67 in hexadecimal (horizontal pixels)
+		s16 y_pos = 117; // 0x75 in hexadecimal (vertical pixels)
 		hud_set_widget_position_2d(p_sub_widget, (s32)x_pos, (s32)y_pos);
 	}
-	// Caso B: Modo Panorámico 16:9 / PAL (Valores extraídos de la máscara 0xEAA2)
+	// Case B: widescreen 16:9 / PAL mode (values extracted from mask 0xEAA2)
 	else if (video_mode == 1) {
-		s16 x_pos = 162; // 0xA2 en hexadecimal
-		s16 y_pos = 234; // 0xEA en hexadecimal
+		s16 x_pos = 162; // 0xA2 in hexadecimal
+		s16 y_pos = 234; // 0xEA in hexadecimal
 		hud_set_widget_position_2d(p_sub_widget, (s32)x_pos, (s32)y_pos);
 	}
 }
 
 /**
- * @brief Configura el multiplicador de capacidad o modificador base del subsistema de munición en el offset 0x18.
- * Dirección original en Ghidra: 0x0034BCE0 (PAL)
+ * @brief Configures the capacity multiplier or base modifier of the ammo subsystem at offset 0x18.
+ * Original Ghidra address: 0x0034BCE0 (PAL)
  *
- * @param multiplier_val Valor de control o dirección de escala a inyectar (param_1).
- * @param p_extended_ammo_struct Dirección de memoria base de la subestructura de munición (param_2).
+ * @param multiplier_val Control value or scale address to inject (param_1).
+ * @param p_extended_ammo_struct Base memory address of the ammo substructure (param_2).
  */
 void inv_set_ammo_capacity_multiplier(u32 multiplier_val, u32* p_extended_ammo_struct) {
 	if (p_extended_ammo_struct != NULL) {
-		// El offset 0x18 equivale al índice 6 en un arreglo de enteros de 32 bits (6 * 4 = 24 bytes)
-		// Nota: Ghidra invirtió el orden de los argumentos en el descompilador original (param_1 es el valor, param_2 es el puntero)
+		// Offset 0x18 is index 6 in an array of 32-bit integers (6 * 4 = 24 bytes)
+		// Note: Ghidra swapped the argument order in the original decompiler (param_1 is the value, param_2 the pointer)
 		p_extended_ammo_struct[0x06] = multiplier_val;
 	}
 }
 
 /**
- * @brief Recupera el puntero al vector principal de transformación (Posición) de un widget del HUD.
- * Lee directamente la dirección física almacenada en el offset +0 de la estructura.
- * Dirección original en Ghidra: 0x00337AF0 (PAL)
+ * @brief Returns the pointer to the main transformation (position) vector of a HUD widget.
+ * Reads the physical address stored at offset +0 of the structure directly.
+ * Original Ghidra address: 0x00337AF0 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @return f32* Puntero al vector de posición (X, Y, Z, W) del widget, o NULL si no está asignado.
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @return f32* Pointer to the widget's position vector (X, Y, Z, W), or NULL if unassigned.
  */
 f32* hud_get_widget_position_vector_ptr(u32* p_widget) {
 	if (p_widget == NULL) {
 		return NULL;
 	}
 
-	// Retorna de forma directa el puntero almacenado en el índice 0 (+0 bytes)
+	// Returns the pointer stored at index 0 (+0 bytes) directly
 	return (f32*)(*p_widget);
 }
 
 /**
- * @brief Configura un estado o atributo en ráfaga indexada de 4 bytes en el offset 0x8C del subsistema de munición.
- * Dirección original en Ghidra: 0x0034BC70 (PAL)
+ * @brief Configures a state or attribute in an indexed 4-byte burst at offset 0x8C of the ammo subsystem.
+ * Original Ghidra address: 0x0034BC70 (PAL)
  *
- * @param p_extended_ammo_struct Dirección base de la subestructura de munición (param_1).
- * @param group_index Índice de la ranura o grupo a modificar en pasos de 4 bytes (param_2).
- * @param attribute_val Valor de estado, bandera o atributo a inyectar (param_3).
+ * @param p_extended_ammo_struct Base address of the ammo substructure (param_1).
+ * @param group_index Index of the slot or group to modify, in 4-byte steps (param_2).
+ * @param attribute_val State value, flag or attribute to inject (param_3).
  */
 void inv_set_ammo_matrix_group_state(void* p_extended_ammo_struct, s32 group_index, u32 attribute_val) {
 	if (p_extended_ammo_struct == NULL) {
 		return;
 	}
 
-	// Calcula el offset exacto aplicando el paso de 4 bytes desplazado a 0x8C
+	// Compute the exact offset applying the 4-byte step shifted to 0x8C
 	u8* p_target_slot = (u8*)p_extended_ammo_struct + (group_index * 4) + 0x8C;
 
-	// Inyecta el valor de control de forma directa
+	// Inject the control value directly
 	*(u32*)p_target_slot = attribute_val;
 }
 
 /**
- * @brief Configura un puntero de grupo o índice de control en ráfaga indexada de 4 bytes en el offset 0x20 del subsistema de munición.
- * Dirección original en Ghidra: 0x0034BC28 (PAL)
+ * @brief Configures a group pointer or control index in an indexed 4-byte burst at offset 0x20 of the ammo subsystem.
+ * Original Ghidra address: 0x0034BC28 (PAL)
  *
- * @param p_extended_ammo_struct Dirección base de la subestructura de munición (param_1).
- * @param group_index Índice de la ranura o grupo a modificar en pasos de 4 bytes (param_2).
- * @param p_group_data Dirección de memoria del bloque de datos o parámetro a enlazar (param_3).
+ * @param p_extended_ammo_struct Base address of the ammo substructure (param_1).
+ * @param group_index Index of the slot or group to modify, in 4-byte steps (param_2).
+ * @param p_group_data Memory address of the data block or parameter to link (param_3).
  */
 void inv_set_ammo_matrix_group_ptr(void* p_extended_ammo_struct, s32 group_index, u32 p_group_data) {
 	if (p_extended_ammo_struct == NULL) {
 		return;
 	}
 
-	// Calcula el offset exacto aplicando el paso de 4 bytes desplazado a 0x20
+	// Compute the exact offset applying the 4-byte step shifted to 0x20
 	u8* p_target_slot = (u8*)p_extended_ammo_struct + (group_index * 4) + 0x20;
 
-	// Inyecta la dirección o valor de control de forma directa
+	// Inject the address or control value directly
 	*(u32*)p_target_slot = p_group_data;
 }
 
 /**
- * @brief Inicializa por defecto y pone a cero el estado del subsistema de la matriz de munición extendida.
- * Configura los factores flotantes de escala (1.0f) e interpolación fina de cuadros (0.0666f) del HUD.
- * Dirección original en Ghidra: 0x0034BB38 (PAL)
+ * @brief Initializes to defaults and zeroes the state of the extended ammo array subsystem.
+ * Configures the floating-point scale factors (1.0f) and fine frame interpolation (0.0666f) of the HUD.
+ * Original Ghidra address: 0x0034BB38 (PAL)
  *
- * @param p_extended_ammo_struct Dirección base de la subestructura de munición (param_1).
+ * @param p_extended_ammo_struct Base address of the ammo substructure (param_1).
  */
 void inv_reset_extended_ammo_subsystem(u32* p_extended_ammo_struct) {
 	if (p_extended_ammo_struct == NULL) {
 		return;
 	}
 
-	// 1. Limpieza de variables de estado secundarias
+	// 1. Clear the secondary state variables
 	p_extended_ammo_struct[4] = 0;
 	u32 zero_token = p_extended_ammo_struct[4];
 
@@ -236,15 +236,15 @@ void inv_reset_extended_ammo_subsystem(u32* p_extended_ammo_struct) {
 	p_extended_ammo_struct[9] = 0;
 	p_extended_ammo_struct[10] = 0;
 
-	// 2. Inyección de factores de escala (1.0f) y tasa de animación (0x3d88882f = 0.0666667f)
+	// 2. Inject the scale factors (1.0f) and animation rate (0x3d88882f = 0.0666667f)
 	p_extended_ammo_struct[3] = 0x3F800000; // 1.0f
-	p_extended_ammo_struct[6] = 0x3D88882F; // 0.0666667f (Tasa de interpolación para 60 FPS)
+	p_extended_ammo_struct[6] = 0x3D88882F; // 0.0666667f (interpolation rate for 60 FPS)
 
-	p_extended_ammo_struct[0] = 0x3F800000; // Escala X = 1.0f
-	p_extended_ammo_struct[1] = 0x3F800000; // Escala Y = 1.0f
-	p_extended_ammo_struct[2] = 0x3F800000; // Escala Z = 1.0f
+	p_extended_ammo_struct[0] = 0x3F800000; // X scale = 1.0f
+	p_extended_ammo_struct[1] = 0x3F800000; // Y scale = 1.0f
+	p_extended_ammo_struct[2] = 0x3F800000; // Z scale = 1.0f
 
-	// 3. Vaciado masivo inicial de la cuadrícula tridimensional combinada (Slots 0-1, Grupos 0-1)
+	// 3. Initial bulk clear of the combined three-dimensional grid (slots 0-1, groups 0-1)
 	inv_set_extended_ammo_slot_data(zero_token, zero_token, zero_token, zero_token, (void*)p_extended_ammo_struct, 0, 0);
 	inv_set_extended_ammo_slot_data(zero_token, zero_token, zero_token, zero_token, (void*)p_extended_ammo_struct, 0, 1);
 	inv_set_extended_ammo_slot_data(zero_token, zero_token, zero_token, zero_token, (void*)p_extended_ammo_struct, 1, 0);
@@ -252,17 +252,17 @@ void inv_reset_extended_ammo_subsystem(u32* p_extended_ammo_struct) {
 }
 
 /**
- * @brief Configura las estadísticas de munición dentro de la matriz extendida del inventario (Paso multidimensional de 0x10 y 0x30).
- * Inyecta en ráfaga contigua los parámetros de balas calculando el offset exacto por grupo y ranura.
- * Dirección original en Ghidra: 0x0034BC38 (PAL)
+ * @brief Configures the ammo statistics in the extended inventory array (multidimensional steps of 0x10 and 0x30).
+ * Injects the bullet parameters contiguously, computing the exact offset per group and slot.
+ * Original Ghidra address: 0x0034BC38 (PAL)
  *
- * @param ammo_type ID o tipo de munición asignada (param_1).
- * @param current_ammo Cantidad de balas actuales (param_2).
- * @param max_ammo Capacidad máxima del cargador (param_3).
- * @param upgrade_state Estado de mejora o nivel del componente (param_4).
- * @param p_matrix_base Dirección de memoria base de la estructura del inventario (param_5).
- * @param slot_index Índice de la ranura secundaria (param_6).
- * @param group_index Índice de la categoría o grupo superior de armas (param_7).
+ * @param ammo_type Assigned ammo ID or type (param_1).
+ * @param current_ammo Current number of bullets (param_2).
+ * @param max_ammo Maximum magazine capacity (param_3).
+ * @param upgrade_state Upgrade state or level of the component (param_4).
+ * @param p_matrix_base Base memory address of the inventory structure (param_5).
+ * @param slot_index Index of the secondary slot (param_6).
+ * @param group_index Index of the upper weapon category or group (param_7).
  */
 void inv_set_extended_ammo_slot_data(u32 ammo_type, u32 current_ammo, u32 max_ammo, u32 upgrade_state,
 	void* p_matrix_base, s32 slot_index, s32 group_index) {
@@ -270,47 +270,47 @@ void inv_set_extended_ammo_slot_data(u32 ammo_type, u32 current_ammo, u32 max_am
 		return;
 	}
 
-	// Calcula la dirección física de la celda aplicando los pasos indexados de 16 y 48 bytes
+	// Compute the physical cell address applying the indexed steps of 16 and 48 bytes
 	u8* p_data_cell = (u8*)p_matrix_base + (slot_index * 0x10) + (group_index * 0x30);
 
-	// Almacena en ráfaga contigua las estadísticas en los desplazamientos indicados
-	*(u32*)(p_data_cell + 0x2C) = ammo_type;     // ID/Tipo de Munición
-	*(u32*)(p_data_cell + 0x30) = current_ammo;  // Balas Actuales
-	*(u32*)(p_data_cell + 0x34) = max_ammo;      // Capacidad Máxima
-	*(u32*)(p_data_cell + 0x38) = upgrade_state; // Estado o Multiplicador
+	// Store the statistics contiguously at the indicated offsets
+	*(u32*)(p_data_cell + 0x2C) = ammo_type;     // Ammo ID/type
+	*(u32*)(p_data_cell + 0x30) = current_ammo;  // Current bullets
+	*(u32*)(p_data_cell + 0x34) = max_ammo;      // Maximum capacity
+	*(u32*)(p_data_cell + 0x38) = upgrade_state; // State or multiplier
 }
 
 /**
- * @brief Configura un par de datos contiguos de 32 bits (X, Y) dentro de la estructura de control de munición (offset +8).
- * Utilizado por el bucle de actualización en vivo para inyectar coordenadas de ráfaga o límites del HUD.
- * Dirección original en Ghidra: 0x0034D1B0 (PAL)
+ * @brief Configures a pair of contiguous 32-bit values (X, Y) in the ammo control structure (offset +8).
+ * Used by the live update loop to inject burst coordinates or HUD limits.
+ * Original Ghidra address: 0x0034D1B0 (PAL)
  *
- * @param val_x Primer componente o dato de control (param_1).
- * @param val_y Segundo componente o dato de control contiguo (param_2).
- * @param p_dest_struct Dirección base de la estructura contenedora (param_3).
+ * @param val_x First component or control value (param_1).
+ * @param val_y Second, contiguous component or control value (param_2).
+ * @param p_dest_struct Base address of the containing structure (param_3).
  */
 void hud_set_ammo_widget_context_2d(u32 val_x, u32 val_y, void* p_dest_struct) {
 	if (p_dest_struct != NULL) {
-		// Recupera el puntero físico real almacenado en el desplazamiento +8
+		// Retrieve the real physical pointer stored at offset +8
 		u32** pp_context_target = (u32**)((u8*)p_dest_struct + 8);
 		u32* p_context = *pp_context_target;
 
 		if (p_context != NULL) {
-			p_context[0] = val_x;   // Almacena en el offset +0 del bloque apuntado
-			p_context[1] = val_y;   // Almacena en el offset +4 del bloque apuntado
+			p_context[0] = val_x;   // Stores at offset +0 of the pointed block
+			p_context[1] = val_y;   // Stores at offset +4 of the pointed block
 		}
 	}
 }
 
 /**
- * @brief Inicializa por completo el layout visual de la munición y las matrices del inventario de armas.
- * Orquesta el registro de widgets (Fondo, Borde, Texto, Deslizador) y configura las estadísticas base de las ranuras.
- * Dirección original en Ghidra: 0x0034BF20 (PAL)
+ * @brief Fully initializes the visual ammo layout and the weapon inventory arrays.
+ * Orchestrates widget registration (background, border, text, slider) and configures the base slot statistics.
+ * Original Ghidra address: 0x0034BF20 (PAL)
  */
 void hud_init_ammo_layout(void* p_hud_main_struct, long param_2, long p_hud_pool, long p4, long p5, long p6, long p7, long p8) {
 	u8* p_base = (u8*)p_hud_main_struct;
 
-	// 1. Reserva inicial y limpieza de nodos de transformación en el pool
+	// 1. Initial reservation and clearing of transformation nodes in the pool
 	*(u32*)(p_base + 0x13C) = (u32)p_hud_pool;
 	if (p_hud_pool != 0) {
 		int* node0 = hud_allocate_node((int*)p_hud_pool, param_2, p_hud_pool, p4, p5, p6, p7, p8);
@@ -324,12 +324,12 @@ void hud_init_ammo_layout(void* p_hud_main_struct, long param_2, long p_hud_pool
 		vec1[0] = 0; vec1[1] = 0; vec1[2] = 0; vec1[3] = 0;
 	}
 
-	// 2. Registro de componentes visuales (Widgets) de la munición
+	// 2. Registration of the ammo visual components (widgets)
 	hud_register_widget_asset((u32*)(p_base + 0x10), (const char*)0x001AE668, p_hud_pool, p4, p5, p6, p7, p8); // "AmmoBack"
 	hud_register_widget_asset((u32*)(p_base + 0x5C), (const char*)0x001AE678, p_hud_pool, p4, p5, p6, p7, p8); // "AmmoOutline"
 	hud_register_widget_asset((u32*)(p_base + 0xA8), (const char*)0x001AE680, p_hud_pool, p4, p5, p6, p7, p8); // "AmmoText"
 
-	// 3. Inicialización y configuración estética del deslizador/medidor de balas
+	// 3. Initialization and aesthetic configuration of the bullet slider/meter
 	u32* p_slider = (u32*)(p_base + 0xF4);
 	hud_init_slider_widget(p_slider, 0x92, 0, (const char*)0x001AE688, p_hud_pool, p4, p5, p6); // "AmmoBar"
 
@@ -338,22 +338,22 @@ void hud_init_ammo_layout(void* p_hud_main_struct, long param_2, long p_hud_pool
 	hud_set_widget_color_alt(p_slider, 0x60442d00);
 	hud_set_widget_render_mode_alt(p_slider, 100);
 
-	// Escalado vertical Y del medidor dinámico
-	f32 scale_y = 1.5f; // Valor estimado basado en la interpolación original
+	// Vertical Y scaling of the dynamic meter
+	f32 scale_y = 1.5f; // Value estimated from the original interpolation
 	hud_set_widget_scale_y(p_slider, (s32)scale_y);
 
-	// 4. Configuración secuencial de las ranuras del inventario de armas (Capa A)
+	// 4. Sequential configuration of the weapon inventory slots (layer A)
 	void* p_inv_a = (void*)(p_base + 0x140);
 	inv_reset_weapon_inventory(p_inv_a);
 	inv_set_weapon_inventory_mode(p_inv_a, 2);
 	inv_set_active_weapon_slot(p_inv_a, (p_base + 0x1CC));
 	inv_set_animation_factor(p_inv_a, 0.005f);
 	inv_set_quick_select_open_state(p_inv_a, 2);
-	inv_set_weapon_slot_data(0, 0x80f0c070, 0x42480000, 0, 0, p_inv_a, 0); // Capacidad 50.0f
+	inv_set_weapon_slot_data(0, 0x80f0c070, 0x42480000, 0, 0, p_inv_a, 0); // Capacity 50.0f
 	inv_update_weapon_visual_pointers(0, 0, p_inv_a, 0);
 	inv_set_weapon_inventory_visibility(p_inv_a, 1);
 
-	// 5. Configuración secuencial de las ranuras del inventario de armas (Capa B)
+	// 5. Sequential configuration of the weapon inventory slots (layer B)
 	void* p_inv_b = (void*)(p_base + 0x1D4);
 	inv_reset_weapon_inventory(p_inv_b);
 	inv_set_weapon_inventory_mode(p_inv_b, 3);
@@ -364,143 +364,143 @@ void hud_init_ammo_layout(void* p_hud_main_struct, long param_2, long p_hud_pool
 	inv_set_active_weapon_slot(p_inv_b, (p_base + 0x1CC));
 	inv_set_weapon_inventory_visibility(p_inv_b, -1);
 
-	// Inicialización de banderas de control secundarias finales
+	// Initialization of the final secondary control flags
 	*(u32*)(p_base + 0x3F4) = 0;
 	*(u32*)(p_base + 0x400) = 0xFFFFFFFF;
 	*(u32*)(p_base + 0x3F8) = 0;
 }
 
 /**
- * @brief Intercambia el valor del candado de animación del inventario (offset 0x28) y retorna su estado previo.
- * Utilizado por el motor para liberar transiciones y verificar estados de sincronización en el HUD.
- * Dirección original en Ghidra: 0x0034B790 (PAL)
+ * @brief Swaps the value of the inventory animation lock (offset 0x28) and returns its previous state.
+ * Used by the engine to release transitions and check synchronization states in the HUD.
+ * Original Ghidra address: 0x0034B790 (PAL)
  *
- * @param p_inventory_base Dirección de memoria base de la estructura global del inventario (param_1).
- * @param new_lock_state Nuevo valor de control que se inyectará en la bandera (param_2).
- * @return u32 El estado previo que tenía la bandera antes de ser sobreescrita.
+ * @param p_inventory_base Base memory address of the global inventory structure (param_1).
+ * @param new_lock_state New control value injected into the flag (param_2).
+ * @return u32 The previous state of the flag before it was overwritten.
  */
 u32 inv_swap_animation_lock(u32* p_inventory_base, u32 new_lock_state) {
 	if (p_inventory_base == NULL) {
 		return 0;
 	}
 
-	// El offset 0x28 equivale al índice 10 en un arreglo de enteros de 32 bits (10 * 4 = 40 bytes)
+	// Offset 0x28 is index 10 in an array of 32-bit integers (10 * 4 = 40 bytes)
 	u32 old_lock_state = p_inventory_base[0x0A];
 
-	// Sobreescribe la bandera con el nuevo estado solicitado
+	// Overwrite the flag with the requested new state
 	p_inventory_base[0x0A] = new_lock_state;
 
-	// Devuelve el valor antiguo al pipeline de renderizado
+	// Return the old value to the rendering pipeline
 	return old_lock_state;
 }
 
 /**
- * @brief Configura y despacha la transición de visibilidad (Fade In/Out) para la interfaz del inventario de armas.
- * Establece los límites de animación flotante en el offset 0x18 dependiendo del estado solicitado.
- * Dirección original en Ghidra: 0x0034B7F8 (PAL)
+ * @brief Configures and dispatches the visibility transition (fade in/out) of the weapon inventory interface.
+ * Sets the floating-point animation limits at offset 0x18 depending on the requested state.
+ * Original Ghidra address: 0x0034B7F8 (PAL)
  *
- * @param p_inventory_base Dirección de memoria base de la estructura global del inventario (param_1).
- * @param visibility_state Nuevo estado de visibilidad (1 para visible, 0 para ocultar) (param_2).
+ * @param p_inventory_base Base memory address of the global inventory structure (param_1).
+ * @param visibility_state New visibility state (1 for visible, 0 to hide) (param_2).
  */
 void inv_set_weapon_inventory_visibility(u32* p_inventory_base, long visibility_state) {
 	if (p_inventory_base == NULL) {
 		return;
 	}
 
-	// El offset 0x1C equivale al índice 7 en un arreglo de enteros de 32 bits (7 * 4 = 28 bytes)
+	// Offset 0x1C is index 7 in an array of 32-bit integers (7 * 4 = 28 bytes)
 	p_inventory_base[0x07] = (s32)visibility_state;
 
-	// Offset 0x28 equivale al índice 10 (10 * 4 = 40 bytes), controla el bloqueo de interpolación
+	// Offset 0x28 is index 10 (10 * 4 = 40 bytes), controls the interpolation lock
 	if (p_inventory_base[0x0A] == 0) {
-		// Si el estado es 1 (Aparecer), arranca la animación desde 0.0f
+		// If the state is 1 (appear), start the animation from 0.0f
 		if (visibility_state == 1) {
-			p_inventory_base[0x06] = 0; // Offset 0x18 (Índice 6)
+			p_inventory_base[0x06] = 0; // Offset 0x18 (index 6)
 		}
-		// Si no (Ocultar), arranca la animación de desvanecimiento desde 1.0f (0x3f800000)
+		// Otherwise (hide), start the fade-out animation from 1.0f (0x3f800000)
 		else {
-			p_inventory_base[0x06] = 0x3F800000; // Offset 0x18 (Índice 6)
+			p_inventory_base[0x06] = 0x3F800000; // Offset 0x18 (index 6)
 		}
 
-		p_inventory_base[0x0A] = 1; // Activa la bandera de inicio de ciclo de animación
+		p_inventory_base[0x0A] = 1; // Sets the animation-cycle start flag
 	}
 }
 
 /**
- * @brief Configura el estado de visibilidad o apertura del menú radial de selección rápida en el offset 0x20.
- * Dirección original en Ghidra: 0x0034B838 (PAL)
+ * @brief Configures the visibility or open state of the quick-select radial menu at offset 0x20.
+ * Original Ghidra address: 0x0034B838 (PAL)
  *
- * @param p_inventory_base Dirección de memoria base de la estructura global del inventario (param_1).
- * @param open_state Nuevo valor de control (1 para abierto/visible, 0 para cerrado/oculto) (param_2).
+ * @param p_inventory_base Base memory address of the global inventory structure (param_1).
+ * @param open_state New control value (1 for open/visible, 0 for closed/hidden) (param_2).
  */
 void inv_set_quick_select_open_state(u32* p_inventory_base, u32 open_state) {
 	if (p_inventory_base != NULL) {
-		// El offset 0x20 equivale al índice 8 en un arreglo de enteros de 32 bits (8 * 4 = 32 bytes)
+		// Offset 0x20 is index 8 in an array of 32-bit integers (8 * 4 = 32 bytes)
 		p_inventory_base[0x08] = open_state;
 	}
 }
 
 /**
- * @brief Configura la velocidad de interpolación o factor de animación de la interfaz en el offset 0x24 del inventario.
- * Dirección original en Ghidra: 0x0034B840 (PAL)
+ * @brief Configures the interpolation speed or animation factor of the interface at inventory offset 0x24.
+ * Original Ghidra address: 0x0034B840 (PAL)
  *
- * @param animation_val Factor flotante o de control destinado a la velocidad de la interfaz (param_1).
- * @param p_inventory_base Dirección de memoria base de la estructura global del inventario (param_2).
+ * @param animation_val Floating-point or control factor for the interface speed (param_1).
+ * @param p_inventory_base Base memory address of the global inventory structure (param_2).
  */
 void inv_set_animation_factor(u32* p_inventory_base, f32 animation_val) {
 	if (p_inventory_base != NULL) {
-		// El offset 0x24 equivale al índice 9 en un arreglo de enteros de 32 bits (9 * 4 = 36 bytes)
+		// Offset 0x24 is index 9 in an array of 32-bit integers (9 * 4 = 36 bytes)
 		p_inventory_base[9] = *(u32*)&animation_val;
 	}
 }
 
 /**
- * @brief Configura el índice del slot del arma activa o seleccionada en el offset 0x80 del inventario.
- * Dirección original en Ghidra: 0x0034B788 (PAL)
+ * @brief Configures the slot index of the active or selected weapon at inventory offset 0x80.
+ * Original Ghidra address: 0x0034B788 (PAL)
  *
- * @param p_inventory_base Dirección de memoria base de la estructura global del inventario (param_1).
- * @param slot_index Índice de la ranura o identificación del arma que se va a equipar (param_2).
+ * @param p_inventory_base Base memory address of the global inventory structure (param_1).
+ * @param slot_index Slot index or identification of the weapon to equip (param_2).
  */
 void inv_set_active_weapon_slot(u32* p_inventory_base, u32 slot_index) {
 	if (p_inventory_base != NULL) {
-		// El offset 0x80 equivale al índice 32 en un arreglo de enteros de 32 bits (32 * 4 = 128 bytes)
+		// Offset 0x80 is index 32 in an array of 32-bit integers (32 * 4 = 128 bytes)
 		p_inventory_base[0x20] = slot_index;
 	}
 }
 
 /**
- * @brief Configura la bandera de transición o estado de carga del inventario de armas en el offset 0x2C.
- * Dirección original en Ghidra: 0x0034B758 (PAL)
+ * @brief Configures the transition flag or loading state of the weapon inventory at offset 0x2C.
+ * Original Ghidra address: 0x0034B758 (PAL)
  *
- * @param p_inventory_base Dirección de memoria base de la estructura global del inventario (param_1).
- * @param transition_flag Nuevo valor de control o bandera de estado a inyectar (param_2).
+ * @param p_inventory_base Base memory address of the global inventory structure (param_1).
+ * @param transition_flag New control value or state flag to inject (param_2).
  */
 void inv_set_weapon_inventory_transition_flag(u32* p_inventory_base, u32 transition_flag) {
 	if (p_inventory_base != NULL) {
-		// El offset 0x2C equivale al índice 11 en un arreglo de enteros de 32 bits (11 * 4 = 44 bytes)
+		// Offset 0x2C is index 11 in an array of 32-bit integers (11 * 4 = 44 bytes)
 		p_inventory_base[0x0B] = transition_flag;
 	}
 }
 
 /**
- * @brief Configura el modo de visualización o el estado secundario del inventario de armas en el offset 0x84.
- * Dirección original en Ghidra: 0x0034B7F0 (PAL)
+ * @brief Configures the display mode or secondary state of the weapon inventory at offset 0x84.
+ * Original Ghidra address: 0x0034B7F0 (PAL)
  *
- * @param p_inventory_base Dirección de memoria base de la estructura global del inventario (param_1).
- * @param inventory_mode Nuevo valor de estado o modo lúdico a inyectar (param_2).
+ * @param p_inventory_base Base memory address of the global inventory structure (param_1).
+ * @param inventory_mode New state value or game mode to inject (param_2).
  */
 void inv_set_weapon_inventory_mode(u32* p_inventory_base, u32 inventory_mode) {
 	if (p_inventory_base != NULL) {
-		// El offset 0x84 equivale al índice 33 en un arreglo de enteros de 32 bits (33 * 4 = 132 bytes)
+		// Offset 0x84 is index 33 in an array of 32-bit integers (33 * 4 = 132 bytes)
 		p_inventory_base[33] = inventory_mode;
 	}
 }
 
 /**
- * @brief Reinicia el estado global del inventario de armas a sus valores predeterminados de fábrica.
- * Limpia las propiedades dinámicas e inicializa las primeras ranuras de la matriz del arsenal.
- * Dirección original en Ghidra: 0x0034B698 (PAL)
+ * @brief Resets the global weapon inventory state to its factory defaults.
+ * Clears the dynamic properties and initializes the first slots of the arsenal array.
+ * Original Ghidra address: 0x0034B698 (PAL)
  *
- * @param p_inventory_base Dirección de memoria base de la estructura global del inventario (param_1).
+ * @param p_inventory_base Base memory address of the global inventory structure (param_1).
  */
 void inv_reset_weapon_inventory(void* p_inventory_base) {
 	if (p_inventory_base == NULL) {
@@ -509,7 +509,7 @@ void inv_reset_weapon_inventory(void* p_inventory_base) {
 
 	u8* p_inv = (u8*)p_inventory_base;
 
-	// 1. Limpieza de banderas de estado e inicialización de variables base
+	// 1. Clear the state flags and initialize the base variables
 	*(u32*)(p_inv + 0x18) = 0;
 	*(u32*)(p_inv + 0x28) = 0;
 	u32 zero_token = *(u32*)(p_inv + 0x18);
@@ -517,33 +517,33 @@ void inv_reset_weapon_inventory(void* p_inventory_base) {
 	*(u32*)(p_inv + 0x2C) = 0;
 	*(u32*)(p_inv + 0x80) = 0;
 
-	// 2. Inyección del factor de animación fina (0x3ba3d70a = 0.005f)
+	// 2. Inject the fine animation factor (0x3ba3d70a = 0.005f)
 	*(f32*)(p_inv + 0x24) = 0.005f;
 
-	// 3. Inicialización condicional de las ranuras de la matriz utilizando tus funciones
+	// 3. Conditional initialization of the array slots with the helper functions
 	inv_set_weapon_slot_data(zero_token, zero_token, zero_token, zero_token, zero_token, p_inventory_base, 0);
 
-	// Inyecta el valor flotante 1.0f (0x3f800000) de forma masiva en el slot 1
+	// Inject the floating-point value 1.0f (0x3f800000) in bulk into slot 1
 	u32 float_one_token = 0x3F800000;
 	inv_set_weapon_slot_data(float_one_token, float_one_token, float_one_token, float_one_token, float_one_token, p_inventory_base, 1);
 
-	// 4. Configuración de banderas secundarias e inicialización de punteros visuales
-	*(u32*)(p_inv + 0x84) = 2; // Selector o contador secundario por defecto
+	// 4. Configuration of secondary flags and initialization of visual pointers
+	*(u32*)(p_inv + 0x84) = 2; // Default secondary selector or counter
 	inv_update_weapon_visual_pointers(zero_token, zero_token, p_inventory_base, 0);
 
 	*(u32*)(p_inv + 0x20) = 0;
-	*(u32*)(p_inv + 0x1C) = 1; // Bandera de activación o visibilidad inicial
+	*(u32*)(p_inv + 0x1C) = 1; // Initial activation or visibility flag
 }
 
 /**
- * @brief Actualiza los punteros a los recursos gráficos (assets/texturas) vinculados a una ranura específica del arsenal.
- * Escribe las direcciones en ráfagas indexadas de 4 bytes para el pipeline de renderizado del inventario.
- * Dirección original en Ghidra: 0x0034B7D8 (PAL)
+ * @brief Updates the pointers to the graphic resources (assets/textures) linked to a specific arsenal slot.
+ * Writes the addresses in indexed 4-byte bursts for the inventory rendering pipeline.
+ * Original Ghidra address: 0x0034B7D8 (PAL)
  *
- * @param p_primary_asset Puntero al recurso gráfico base o textura principal del arma (param_1).
- * @param p_secondary_asset Puntero al recurso gráfico secundario o máscara de interfaz (param_2).
- * @param p_array_base Dirección de memoria base del arreglo de punteros visuales (param_3).
- * @param slot_index Índice de la ranura o columna a modificar (param_4).
+ * @param p_primary_asset Pointer to the weapon's base graphic resource or main texture (param_1).
+ * @param p_secondary_asset Pointer to the secondary graphic resource or interface mask (param_2).
+ * @param p_array_base Base memory address of the visual pointer array (param_3).
+ * @param slot_index Index of the slot or column to modify (param_4).
  */
 void inv_update_weapon_visual_pointers(u32 p_primary_asset, u32 p_secondary_asset,
 	void* p_array_base, s32 slot_index) {
@@ -551,194 +551,194 @@ void inv_update_weapon_visual_pointers(u32 p_primary_asset, u32 p_secondary_asse
 		return;
 	}
 
-	// Calcula el puntero exacto a la ranura seleccionada (Paso de 4 bytes)
+	// Compute the exact pointer to the selected slot (4-byte step)
 	u32* p_slot_target = (u32*)((u8*)p_array_base + slot_index * 4);
 
-	p_slot_target[0] = p_primary_asset;   // Inyecta en el offset base +0
-	p_slot_target[3] = p_secondary_asset; // Inyecta en el offset +12 bytes (índice 3 en u32)
+	p_slot_target[0] = p_primary_asset;   // Injects at base offset +0
+	p_slot_target[3] = p_secondary_asset; // Injects at offset +12 bytes (index 3 as u32)
 }
 
 /**
- * @brief Inicializa e inyecta los parámetros estadísticos y visuales de un arma dentro de la matriz indexada de inventario.
- * Calcula los offsets contiguos de 16 bytes (0x10) para almacenar munición, IDs y referencias del HUD.
- * Dirección original en Ghidra: 0x0034B7A0 (PAL)
+ * @brief Initializes and injects the statistical and visual parameters of a weapon in the indexed inventory array.
+ * Computes the contiguous 16-byte (0x10) offsets that store ammo, IDs and HUD references.
+ * Original Ghidra address: 0x0034B7A0 (PAL)
  *
- * @param p_asset_ptr Puntero al nombre o recurso visual del widget del arma (param_1).
- * @param current_ammo Cantidad de balas actuales (param_2).
- * @param max_ammo Capacidad máxima del cargador (param_3).
- * @param weapon_id Identificador único del tipo de arma/munición (param_4).
- * @param experience_val Progreso de experiencia o nivel del arma (param_5).
- * @param p_matrix_base Dirección de memoria base de la tabla de datos del inventario (param_6).
- * @param slot_index Índice de la ranura o columna a modificar (param_7).
+ * @param p_asset_ptr Pointer to the name or visual resource of the weapon widget (param_1).
+ * @param current_ammo Current number of bullets (param_2).
+ * @param max_ammo Maximum magazine capacity (param_3).
+ * @param weapon_id Unique identifier of the weapon/ammo type (param_4).
+ * @param experience_val Experience progress or level of the weapon (param_5).
+ * @param p_matrix_base Base memory address of the inventory data table (param_6).
+ * @param slot_index Index of the slot or column to modify (param_7).
  */
 void inv_set_weapon_slot_data(u32 p_asset_ptr, u32 current_ammo, u32 max_ammo, u32 weapon_id,
 	u32 experience_val, void* p_matrix_base, s32 slot_index) {
 
-	// Calcula la dirección física de la estructura de datos del arma (Paso de 16 bytes)
+	// Compute the physical address of the weapon data structure (16-byte step)
 	u8* p_data_row = (u8*)p_matrix_base + ((s32)p_matrix_base + slot_index * 0x10);
 
-	// Inyecta en ráfaga contigua las estadísticas dinámicas del cargador en los desplazamientos +0x30
-	*(u32*)(p_data_row + 0x30) = current_ammo;    // Munición Actual
-	*(u32*)(p_data_row + 0x34) = max_ammo;        // Munición Máxima
-	*(u32*)(p_data_row + 0x38) = weapon_id;       // ID del Arma
-	*(u32*)(p_data_row + 0x3C) = experience_val;  // Valor de XP / Modificador
+	// Inject the dynamic magazine statistics contiguously at offsets +0x30
+	*(u32*)(p_data_row + 0x30) = current_ammo;    // Current ammo
+	*(u32*)(p_data_row + 0x34) = max_ammo;        // Maximum ammo
+	*(u32*)(p_data_row + 0x38) = weapon_id;       // Weapon ID
+	*(u32*)(p_data_row + 0x3C) = experience_val;  // XP value / modifier
 
-	// Enlaza el recurso o asset gráfico del widget en la sección de punteros visuales (+0x70)
+	// Link the widget's graphic resource or asset in the visual pointer section (+0x70)
 	u8* p_visual_row = (u8*)p_matrix_base + slot_index * 4;
 	*(u32*)(p_visual_row + 0x70) = p_asset_ptr;
 }
 
 /**
- * @brief Configura de forma aislada el componente vertical Y (Escala/Orientación) del vector secundario de un widget.
- * Convierte el valor entero a punto flotante y lo inyecta en el desplazamiento +4 del vector del offset +4.
- * Dirección original en Ghidra: 0x00338A20 (PAL)
+ * @brief Configures in isolation the vertical Y component (scale/orientation) of a widget's secondary vector.
+ * Converts the integer to floating point and injects it at offset +4 of the vector at offset +4.
+ * Original Ghidra address: 0x00338A20 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @param y_scale Factor de escala o dimensión vertical en enteros que será convertida a flotante (param_2).
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @param y_scale Integer scale factor or vertical dimension converted to floating point (param_2).
  */
 void hud_set_widget_scale_y(u32* p_widget, s32 y_scale) {
 	if (p_widget != NULL) {
-		// El offset +4 de la estructura base almacena el puntero al vector de transformación
+		// Offset +4 of the base structure stores the pointer to the transformation vector
 		f32** pp_vector_target = (f32**)((u8*)p_widget + 4);
 		f32* p_vector = *pp_vector_target;
 
 		if (p_vector != NULL) {
-			// El desplazamiento +4 dentro del propio vector corresponde al componente Y (índice 1 en f32)
+			// Offset +4 inside the vector itself is the Y component (index 1 as f32)
 			p_vector[1] = (f32)y_scale;
 		}
 	}
 }
 
 /**
- * @brief Configura las banderas de renderizado o modo de mezcla (Alias alternativo de hud_set_widget_render_mode).
- * Escribe directamente en la propiedad de control gráfico ubicada en el offset 0x40.
- * Dirección original en Ghidra: 0x003388E8 (PAL)
+ * @brief Configures the render flags or blend mode (alternate alias of hud_set_widget_render_mode).
+ * Writes directly to the graphics control property at offset 0x40.
+ * Original Ghidra address: 0x003388E8 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @param render_flags Máscara de bits con las opciones de dibujado y transparencia (param_2).
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @param render_flags Bit mask with the drawing and transparency options (param_2).
  */
 void hud_set_widget_render_mode_alt(u32* p_widget, u32 render_flags) {
 	if (p_widget != NULL) {
-		// El offset 0x40 equivale al índice 0x10 en un arreglo de enteros de 32 bits (16 * 4 = 64 bytes)
+		// Offset 0x40 is index 0x10 in an array of 32-bit integers (16 * 4 = 64 bytes)
 		p_widget[0x10] = render_flags;
 	}
 }
 
 /**
- * @brief Configura el color o la opacidad de un componente visual (Alias alternativo de hud_set_widget_color).
- * Escribe directamente en la propiedad ubicada en el offset 0x44 de la estructura.
- * Dirección original en Ghidra: 0x00338A38 (PAL)
+ * @brief Configures the colour or opacity of a visual component (alternate alias of hud_set_widget_color).
+ * Writes directly to the property at offset 0x44 of the structure.
+ * Original Ghidra address: 0x00338A38 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @param color_rgba Valor de 32-bits que codifica el color y opacidad (param_2).
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @param color_rgba 32-bit value encoding the colour and opacity (param_2).
  */
 void hud_set_widget_color_alt(u32* p_widget, u32 color_rgba) {
 	if (p_widget != NULL) {
-		// El offset 0x44 equivale al índice 11 en un arreglo de enteros de 32 bits (17 * 4 = 68 bytes)
+		// Offset 0x44 is index 17 in an array of 32-bit integers (17 * 4 = 68 bytes)
 		p_widget[0x11] = color_rgba;
 	}
 }
 
 /**
- * @brief Inicializa una estructura de widget destinada a deslizadores lógicos o selectores de valor en la interfaz.
- * Configura los parámetros iniciales de escala y establece el límite superior por defecto al 100%.
- * Dirección original en Ghidra: 0x003380E8 (PAL)
+ * @brief Initializes a widget structure intended for logical sliders or value selectors in the interface.
+ * Configures the initial scale parameters and sets the default upper limit to 100%.
+ * Original Ghidra address: 0x003380E8 (PAL)
  *
- * @param p_widget Dirección base de la estructura del widget de la interfaz (param_1).
- * @param value_id Identificador o valor inicial asignado al deslizador (param_2).
- * @param p_data_source Puntero de control o fuente de datos del elemento (param_3).
+ * @param p_widget Base address of the interface widget structure (param_1).
+ * @param value_id Identifier or initial value assigned to the slider (param_2).
+ * @param p_data_source Control pointer or data source of the element (param_3).
  */
 void hud_init_slider_widget(u32* p_widget, u32 value_id, u32 p_data_source, uintptr_t asset_name_ptr,
 	uintptr_t p_hud_pool, long p6, long p7, long p8) {
 
-	// 1. Invoca al constructor base para inicializar las matrices espaciales
-	// Ajustamos los casteos de los parámetros para que coincidan con la llamada matemática original
+	// 1. Call the base constructor to initialize the spatial matrices
+	// The parameter casts are adjusted to match the original math call
 	hud_clear_widget_matrices(p_widget, (void*)asset_name_ptr, (void*)p_hud_pool,
 		(long)asset_name_ptr, p_hud_pool, p6, p7, p8);
 
-	// 2. Inyecta los parámetros de estado y enlaces de control
+	// 2. Inject the state parameters and control links
 	p_widget[0x0F] = value_id;      // Offset 0x3C
 	p_widget[0x0D] = p_data_source; // Offset 0x34
 
-	// 3. Establece los límites y banderas iniciales por defecto del motor
-	p_widget[0x11] = 0x80000000;    // Offset 0x44 (Máscara de actualización)
-	p_widget[0x10] = 100;           // Offset 0x40 (Límite máximo del 100%)
+	// 3. Set the engine's default initial limits and flags
+	p_widget[0x11] = 0x80000000;    // Offset 0x44 (update mask)
+	p_widget[0x10] = 100;           // Offset 0x40 (maximum limit of 100%)
 }
 
 /**
- * @brief Configura el segundo par de datos de 32 bits (offsets +8 y +12) dentro de la estructura del contexto del widget (offset 0x0C).
- * Utilizado usualmente para definir los límites de recorte UV o las dimensiones secundarias de una textura.
- * Dirección original en Ghidra: 0x00338190 (PAL)
+ * @brief Configures the second pair of 32-bit values (offsets +8 and +12) in the widget context structure (offset 0x0C).
+ * Usually used to define UV clipping limits or the secondary dimensions of a texture.
+ * Original Ghidra address: 0x00338190 (PAL)
  *
- * @param p_widget Dirección base de la estructura del widget de la interfaz (param_1).
- * @param val_z Tercer componente o dato de control (param_2).
- * @param val_w Cuarto componente o dato de control contiguo (param_3).
+ * @param p_widget Base address of the interface widget structure (param_1).
+ * @param val_z Third component or control value (param_2).
+ * @param val_w Fourth, contiguous component or control value (param_3).
  */
 void hud_set_widget_context_2d_ext(u32* p_widget, u32 val_z, u32 val_w) {
 	if (p_widget != NULL) {
-		// El offset 0x0C equivale al índice 3 en enteros de 32 bits (3 * 4 = 12 bytes)
+		// Offset 0x0C is index 3 in 32-bit integers (3 * 4 = 12 bytes)
 		u32** pp_context_target = (u32**)((u8*)p_widget + 0x0C);
 		u32* p_context = *pp_context_target;
 
 		if (p_context != NULL) {
-			p_context[2] = val_z;   // Almacena en el offset +8 del bloque de contexto
-			p_context[3] = val_w;   // Almacena en el offset +12 del bloque de contexto
+			p_context[2] = val_z;   // Stores at offset +8 of the context block
+			p_context[3] = val_w;   // Stores at offset +12 of the context block
 		}
 	}
 }
 
 /**
- * @brief Configura un par de datos contiguos de 32 bits (X, Y) dentro de la estructura del contexto del widget (offset 0x0C).
- * Dirección original en Ghidra: 0x00338178 (PAL)
+ * @brief Configures a pair of contiguous 32-bit values (X, Y) in the widget context structure (offset 0x0C).
+ * Original Ghidra address: 0x00338178 (PAL)
  *
- * @param p_widget Dirección base de la estructura del widget de la interfaz (param_1).
- * @param val_x Primer componente o dato de control (param_2).
- * @param val_y Segundo componente o dato de control contiguo (param_3).
+ * @param p_widget Base address of the interface widget structure (param_1).
+ * @param val_x First component or control value (param_2).
+ * @param val_y Second, contiguous component or control value (param_3).
  */
 void hud_set_widget_context_2d(u32* p_widget, u32 val_x, u32 val_y) {
 	if (p_widget != NULL) {
-		// El offset 0x0C equivale al índice 3 en enteros de 32 bits (3 * 4 = 12 bytes)
+		// Offset 0x0C is index 3 in 32-bit integers (3 * 4 = 12 bytes)
 		u32** pp_context_target = (u32**)((u8*)p_widget + 0x0C);
 		u32* p_context = *pp_context_target;
 
 		if (p_context != NULL) {
-			p_context = val_x;   // Almacena en el offset +0 del bloque de contexto
-			p_context = val_y;   // Almacena en el offset +4 del bloque de contexto
+			p_context = val_x;   // Stores at offset +0 of the context block
+			p_context = val_y;   // Stores at offset +4 of the context block
 		}
 	}
 }
 
 /**
- * @brief Actualiza de forma dinámica el vector de transformación asignado en el offset +4 de un widget.
- * Libera de forma automática el nodo previo mediante hud_free_node si detecta un cambio posicional o de escala.
- * Dirección original en Ghidra: 0x00337B90 (PAL)
+ * @brief Dynamically updates the transformation vector assigned at offset +4 of a widget.
+ * Automatically frees the previous node with hud_free_node if it detects a position or scale change.
+ * Original Ghidra address: 0x00337B90 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @param p_new_vector Puntero al nuevo vector matemático de 4 componentes a renderizar (param_2).
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @param p_new_vector Pointer to the new 4-component math vector to render (param_2).
  */
 void hud_update_widget_vector(u32* p_widget, u32* p_new_vector) {
 	if (p_widget == NULL) {
 		return;
 	}
 
-	// El offset +4 equivale al índice 1 en un arreglo de enteros de 32 bits (1 * 4 = 4 bytes)
+	// Offset +4 is index 1 in an array of 32-bit integers (1 * 4 = 4 bytes)
 	u32** pp_current_vector = (u32**)((u8*)p_widget + 4);
 
-	// Valida si el nuevo vector es diferente al que ya está cargado en la estructura
+	// Check whether the new vector differs from the one already loaded in the structure
 	if (p_new_vector != *pp_current_vector) {
 
-		// Offset 0x2C equivale al índice 11 (11 * 4 = 44 bytes), que almacena el puntero del pool
+		// Offset 0x2C is index 11 (11 * 4 = 44 bytes), which stores the pool pointer
 		u32* p_hud_pool = (u32*)p_widget[0x0B];
 
 		if (p_hud_pool == 0) {
 			*pp_current_vector = p_new_vector;
 		}
-		// Offset 0x18 equivale al índice 6 (6 * 4 = 24 bytes), bandera de refresco/ciclo secundaria
+		// Offset 0x18 is index 6 (6 * 4 = 24 bytes), secondary refresh/cycle flag
 		else if (p_widget[0x06] == 0) {
-			// Invoca a tu rutina de reciclaje para liberar el nodo de memoria anterior
+			// Call the recycling routine to free the previous memory node
 			hud_free_node((int*)p_hud_pool, (int*)*pp_current_vector);
 
-			p_widget[0x06] = 1; // Activa la bandera de refresco/redibujado del layout vectorial
+			p_widget[0x06] = 1; // Sets the refresh/redraw flag of the vector layout
 			*pp_current_vector = p_new_vector;
 		}
 		else {
@@ -748,70 +748,70 @@ void hud_update_widget_vector(u32* p_widget, u32* p_new_vector) {
 }
 
 /**
- * @brief Recupera el puntero al vector secundario de transformación (Escala/Orientación) de un widget del HUD.
- * Lee directamente la dirección física almacenada en el offset +4 de la estructura.
- * Dirección original en Ghidra: 0x00337AF8 (PAL)
+ * @brief Returns the pointer to the secondary transformation (scale/orientation) vector of a HUD widget.
+ * Reads the physical address stored at offset +4 of the structure directly.
+ * Original Ghidra address: 0x00337AF8 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @return f32* Puntero al vector de escala (X, Y, Z, W) del widget, o NULL si no está asignado.
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @return f32* Pointer to the widget's scale vector (X, Y, Z, W), or NULL if unassigned.
  */
 f32* hud_get_widget_vector_ptr(u32* p_widget) {
 	if (p_widget == NULL) {
 		return NULL;
 	}
 
-	// El offset +4 equivale al índice 1 en un arreglo de enteros de 32 bits (1 * 4 = 4 bytes)
+	// Offset +4 is index 1 in an array of 32-bit integers (1 * 4 = 4 bytes)
 	return (f32*)((long)p_widget[1]);
 }
 
 /**
- * @brief Calcula el coseno matemático utilizando optimización por hardware (Originalmente vía VU0 Coprocessor 2).
- * Reemplaza de forma portátil las llamadas a microcódigo vectorial e instrucciones _vcallms de la PS2.
- * Dirección original en Ghidra: 0x00283A58 (PAL)
+ * @brief Computes the mathematical cosine with hardware optimization (originally through VU0, coprocessor 2).
+ * Portably replaces the PS2's vector microcode calls and _vcallms instructions.
+ * Original Ghidra address: 0x00283A58 (PAL)
  *
- * @param radians Ángulo en radianes normalizado previamente (param_1).
- * @return f32 El resultado del coseno calculado de forma nativa por hardware.
+ * @param radians Previously normalized angle in radians (param_1).
+ * @return f32 The cosine computed natively by the hardware.
  */
 f32 math_vu0_cos(f32 radians) {
-	// En el hardware original de la PS2 se llamaba a la microrutina 0xC90 en la VU0.
-	// De manera portable para sistemas modernos, la FPU del PC lo resuelve al instante:
+	// On the original PS2 hardware the microroutine 0xC90 in VU0 was called.
+	// Portably on modern systems, the PC FPU computes it instantly:
 	return cosf(radians);
 }
 
 /**
- * @brief Calcula el seno matemático utilizando optimización por hardware (Originalmente vía VU0 Coprocessor 2).
- * Reemplaza de forma portátil las llamadas a microcódigo vectorial e instrucciones _vcallms de la PS2.
- * Dirección original en Ghidra: 0x00283A40 (PAL)
+ * @brief Computes the mathematical sine with hardware optimization (originally through VU0, coprocessor 2).
+ * Portably replaces the PS2's vector microcode calls and _vcallms instructions.
+ * Original Ghidra address: 0x00283A40 (PAL)
  *
- * @param radians Ángulo en radianes normalizado previamente (param_1).
- * @return f32 El resultado del seno calculado de forma nativa por hardware.
+ * @param radians Previously normalized angle in radians (param_1).
+ * @return f32 The sine computed natively by the hardware.
  */
 f32 math_vu0_sin_cos(f32 radians) {
-	// En el hardware original, se inyecta el ángulo al Coprocesador 2 vía _qmtc2,
-	// se llama a la microrutina 0xC80 en la VU0 y se extrae el resultado con _qmfc2.
-	// De manera portable para sistemas modernos, la FPU del PC lo resuelve al instante:
+	// On the original hardware the angle is injected into coprocessor 2 through _qmtc2,
+	// the microroutine 0xC80 in VU0 is called and the result extracted with _qmfc2.
+	// Portably on modern systems, the PC FPU computes it instantly:
 	return sinf(radians);
 }
 
 #define MATH_PI 3.14159265358979323846f
 
 /**
- * @brief Normaliza la suma de dos ángulos en radianes para mantener el resultado en el rango [-PI, PI].
- * Corrige desbordamientos angulares circulares sumando o restando una revolución completa (2*PI).
- * Dirección original en Ghidra: 0x00284458 (PAL)
+ * @brief Normalizes the sum of two angles in radians to keep the result in the range [-PI, PI].
+ * Corrects circular angle overflows by adding or subtracting a full revolution (2*PI).
+ * Original Ghidra address: 0x00284458 (PAL)
  *
- * @param angle_alpha Primer componente angular en radianes (param_1).
- * @param angle_beta Segundo componente angular en radianes a adicionar (param_2).
- * @return f32 El ángulo resultante normalizado.
+ * @param angle_alpha First angular component in radians (param_1).
+ * @param angle_beta Second angular component in radians to add (param_2).
+ * @return f32 The resulting normalized angle.
  */
 f32 math_normalize_angle_rad(f32 angle_alpha, f32 angle_beta) {
 	f32 result_angle = angle_alpha + angle_beta;
 
-	// Si el ángulo es mayor o igual a PI, le resta una revolución completa (2 * PI)
+	// If the angle is greater than or equal to PI, subtract a full revolution (2 * PI)
 	if (result_angle >= (f32)MATH_PI) {
 		result_angle = (result_angle - (f32)MATH_PI) - (f32)MATH_PI;
 	}
-	// Si el ángulo es menor a -PI, le adiciona una revolución completa (2 * PI)
+	// If the angle is less than -PI, add a full revolution (2 * PI)
 	if (result_angle < -(f32)MATH_PI) {
 		result_angle = result_angle + (f32)MATH_PI + (f32)MATH_PI;
 	}
@@ -820,24 +820,24 @@ f32 math_normalize_angle_rad(f32 angle_alpha, f32 angle_beta) {
 }
 
 /**
- * @brief Inicializa y registra una estructura de widget destinada a albergar un recurso visual o textura (Asset).
- * Configura las matrices base estableciendo una escala inicial uniforme de 1.0f (100%) para evitar distorsiones.
- * Dirección original en Ghidra: 0x003381B0 / Línea 274 aproximada (PAL)
+ * @brief Initializes and registers a widget structure intended to hold a visual resource or texture (asset).
+ * Configures the base matrices with a uniform initial scale of 1.0f (100%) to avoid distortion.
+ * Original Ghidra address: 0x003381B0 / approximate line 274 (PAL)
  */
 void hud_register_widget_asset(u32* p_widget, const char* asset_name_ptr, long p_hud_pool,
 	long p4, long p5, long p6, long p7, long p8) {
 
-	// 1. Invoca al constructor base para limpiar e inicializar las matrices espaciales
+	// 1. Call the base constructor to clear and initialize the spatial matrices
 	hud_clear_widget_matrices(p_widget, asset_name_ptr, p_hud_pool, p4, p5, p6, p7, p8);
 
-	// El offset 0x0B equivale al índice 11, almacena el puntero del pool de memoria
+	// Offset 0x0B is index 11; it stores the memory pool pointer
 	if ((int*)p_widget[0x0B] == NULL) {
-		p_widget[0x12] = 0; // Inicializa en cero la bandera de estado secundario (offset 0x48)
+		p_widget[0x12] = 0; // Zeroes the secondary state flag (offset 0x48)
 	}
 	else {
 		u32* p_vector_node;
 
-		// 2. Reserva y limpia el primer nodo auxiliar en el offset 0x0D
+		// 2. Reserve and clear the first auxiliary node at offset 0x0D
 		int* p_node1 = hud_allocate_node((int*)p_widget[0x0B], 0, 0, p4, p5, p6, p7, p8);
 		p_vector_node = (u32*)core_identity_stub(0x10, p_node1);
 		p_widget[0x0D] = (u32)p_vector_node;
@@ -847,7 +847,7 @@ void hud_register_widget_asset(u32* p_widget, const char* asset_name_ptr, long p
 		p_vector_node[2] = 0;
 		p_vector_node[3] = 0;
 
-		// 3. Reserva y limpia el segundo nodo auxiliar en el offset 0x0E
+		// 3. Reserve and clear the second auxiliary node at offset 0x0E
 		int* p_node2 = hud_allocate_node((int*)p_widget[0x0B], 0, 0, 0, 0, 0, 0, 0);
 		p_vector_node = (u32*)core_identity_stub(0x10, p_node2);
 		p_widget[0x0E] = (u32)p_vector_node;
@@ -857,52 +857,52 @@ void hud_register_widget_asset(u32* p_widget, const char* asset_name_ptr, long p
 		p_vector_node[2] = 0;
 		p_vector_node[3] = 0;
 
-		// 4. Configura la escala base predeterminada en 1.0f (0x3f800000) en el segundo vector indexado (param_1[1])
+		// 4. Set the default base scale to 1.0f (0x3f800000) in the second indexed vector (param_1[1])
 		f32* p_scale_vector = *(f32**)(&p_widget[1]);
 		if (p_scale_vector != NULL) {
-			p_scale_vector[0] = 1.0f; // Escala X
-			p_scale_vector[1] = 1.0f; // Escala Y
-			p_scale_vector[2] = 1.0f; // Escala Z
+			p_scale_vector[0] = 1.0f; // X scale
+			p_scale_vector[1] = 1.0f; // Y scale
+			p_scale_vector[2] = 1.0f; // Z scale
 		}
 
 		p_widget[0x12] = 0;
 	}
 
-	// Inicializa en cero la propiedad del offset 0x11 (44 bytes)
+	// Zero the property at offset 0x11 (44 bytes)
 	p_widget[0x11] = 0;
 }
 
 /**
- * @brief Actualiza de forma dinámica el recurso de datos o contexto asignado a un widget del HUD.
- * Libera de forma automática el nodo previo mediante hud_free_node si detecta un cambio de recurso visual.
- * Dirección original en Ghidra: 0x00337C00 (PAL)
+ * @brief Dynamically updates the data resource or context assigned to a HUD widget.
+ * Automatically frees the previous node with hud_free_node if it detects a change of visual resource.
+ * Original Ghidra address: 0x00337C00 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @param p_new_resource Puntero al nuevo dato, string o ícono gráfico a renderizar (param_2).
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @param p_new_resource Pointer to the new data, string or graphic icon to render (param_2).
  */
 void hud_update_widget_context(u32* p_widget, u32* p_new_resource) {
 	if (p_widget == NULL) {
 		return;
 	}
 
-	// El offset 0x10 equivale al índice 4 en un arreglo de enteros de 32 bits (4 * 4 = 16 bytes)
+	// Offset 0x10 is index 4 in an array of 32-bit integers (4 * 4 = 16 bytes)
 	u32** pp_current_resource = (u32**)((u8*)p_widget + 0x10);
 
-	// Valida si el nuevo recurso es diferente al que ya está cargado en pantalla
+	// Check whether the new resource differs from the one already on screen
 	if (p_new_resource != *pp_current_resource) {
 
-		// Offset 0x2C equivale al índice 11 (11 * 4 = 44 bytes), que almacena el puntero del pool
-		u32* p_hud_pool = (u32*)p_widget[0x0B]; // Usando el índice 11 indexado
+		// Offset 0x2C is index 11 (11 * 4 = 44 bytes), which stores the pool pointer
+		u32* p_hud_pool = (u32*)p_widget[0x0B]; // Using indexed index 11
 
 		if (p_hud_pool == 0) {
 			*pp_current_resource = p_new_resource;
 		}
-		// Offset 0x24 equivale al índice 9 (9 * 4 = 36 bytes), bandera de refresco/ciclo
+		// Offset 0x24 is index 9 (9 * 4 = 36 bytes), refresh/cycle flag
 		else if (p_widget[0x09] == 0) {
-			// Invoca a tu rutina del HUD para reciclar y liberar el nodo de memoria anterior
+			// Call the HUD routine to recycle and free the previous memory node
 			hud_free_node((int*)p_hud_pool, (int*)*pp_current_resource);
 
-			p_widget[0x09] = 1; // Activa la bandera de refresco/redibujado del layout
+			p_widget[0x09] = 1; // Sets the layout refresh/redraw flag
 			*pp_current_resource = p_new_resource;
 		}
 		else {
@@ -912,84 +912,84 @@ void hud_update_widget_context(u32* p_widget, u32* p_new_resource) {
 }
 
 /**
- * @brief Libera un nodo de memoria del HUD y lo devuelve a la lista de reusables (Free List).
- * Decrementa el contador de widgets activos y reestructura los punteros de la cabecera del pool.
- * Dirección original en Ghidra: 0x00338C28 (PAL)
+ * @brief Frees a HUD memory node and returns it to the reusable list (free list).
+ * Decrements the active widget counter and restructures the pool header pointers.
+ * Original Ghidra address: 0x00338C28 (PAL)
  *
- * @param p_hud_pool Estructura de cabecera del pool de memoria de la interfaz (param_1).
- * @param p_node_to_free Puntero al bloque de memoria del nodo que se va a liberar (param_2).
+ * @param p_hud_pool Header structure of the interface memory pool (param_1).
+ * @param p_node_to_free Pointer to the memory block of the node to free (param_2).
  */
 void hud_free_node(int* p_hud_pool, int* p_node_to_free) {
 	if (p_hud_pool == NULL || p_node_to_free == NULL) {
 		return;
 	}
 
-	// El offset 0x14 corresponde al índice 5 en enteros de 32 bits (5 * 4 = 20 bytes)
+	// Offset 0x14 is index 5 in 32-bit integers (5 * 4 = 20 bytes)
 	int* p_current_free_head = (int*)p_hud_pool[5];
 
-	// Enlaza el nodo que se libera al frente de la lista de reusables anterior
+	// Link the freed node in front of the previous reusable list
 	*p_node_to_free = (int)p_current_free_head;
 
-	// Coloca el nodo liberado como la nueva cabecera de elementos disponibles en el pool
+	// Make the freed node the new head of available elements in the pool
 	p_hud_pool[5] = (int)p_node_to_free;
 
-	// El offset 0x10 (índice 4, 16 bytes) reduce el contador de widgets del HUD en uso
+	// Offset 0x10 (index 4, 16 bytes) decrements the counter of HUD widgets in use
 	p_hud_pool[4] = p_hud_pool[4] - 1;
 }
 
 /**
- * @brief Configura la posición bidimensional (X, Y) en punto flotante para un componente del HUD.
- * Convierte las coordenadas enteras y las almacena secuencialmente en el puntero del offset 0x34.
- * Dirección original en Ghidra: 0x00338600 (PAL)
+ * @brief Configures the two-dimensional floating-point position (X, Y) of a HUD component.
+ * Converts the integer coordinates and stores them sequentially in the pointer at offset 0x34.
+ * Original Ghidra address: 0x00338600 (PAL)
  *
- * @param p_widget Dirección base de la estructura del widget de la interfaz (param_1).
- * @param x_coord Coordenada horizontal en píxeles (param_2).
- * @param y_coord Coordenada vertical en píxeles (param_3).
+ * @param p_widget Base address of the interface widget structure (param_1).
+ * @param x_coord Horizontal coordinate in pixels (param_2).
+ * @param y_coord Vertical coordinate in pixels (param_3).
  */
 void hud_set_widget_position_2d(u32* p_widget, s32 x_coord, s32 y_coord) {
 	if (p_widget != NULL) {
-		// El offset 0x34 equivale al índice 13 en un arreglo de enteros de 32 bits (13 * 4 = 52 bytes)
+		// Offset 0x34 is index 13 in an array of 32-bit integers (13 * 4 = 52 bytes)
 		f32** pp_vector_target = (f32**)((u8*)p_widget + 0x34);
 		f32* p_vector = *pp_vector_target;
 
 		if (p_vector != NULL) {
-			p_vector[0] = (f32)x_coord; // Inyecta la coordenada X como flotante
-			p_vector[1] = (f32)y_coord; // Inyecta la coordenada Y como flotante contigua (+4 bytes)
+			p_vector[0] = (f32)x_coord; // Injects the X coordinate as a float
+			p_vector[1] = (f32)y_coord; // Injects the Y coordinate as a contiguous float (+4 bytes)
 		}
 	}
 }
 
 /**
- * @brief Recupera el puntero de datos dinámicos o contexto enlazado a un widget del HUD.
- * Lee directamente la dirección física almacenada en el offset 0x0C de la estructura.
- * Dirección original en Ghidra: 0x00337B00 (PAL)
+ * @brief Returns the dynamic data pointer or context linked to a HUD widget.
+ * Reads the physical address stored at offset 0x0C of the structure directly.
+ * Original Ghidra address: 0x00337B00 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @return void* Puntero al contexto de datos del widget, o NULL si no está asignado.
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @return void* Pointer to the widget's data context, or NULL if unassigned.
  */
 void* hud_get_widget_data_ptr(u32* p_widget) {
 	if (p_widget == NULL) {
 		return NULL;
 	}
 
-	// El offset 0x0C equivale al índice 3 en un arreglo de enteros de 32 bits (3 * 4 = 12 bytes)
+	// Offset 0x0C is index 3 in an array of 32-bit integers (3 * 4 = 12 bytes)
 	return (void*)((long)p_widget[3]);
 }
 
 /**
- * @brief Inicializa una estructura de widget destinada a medidores o barras del HUD (ej. Barra de Experiencia).
- * Configura los vectores base con escalas flotantes predeterminadas (100.0f y 64.0f) y reserva su nodo de estado.
- * Dirección original en Ghidra: 0x003383F0 (PAL)
+ * @brief Initializes a widget structure intended for HUD meters or bars (e.g. the experience bar).
+ * Configures the base vectors with default floating-point scales (100.0f and 64.0f) and reserves their state node.
+ * Original Ghidra address: 0x003383F0 (PAL)
  */
 void hud_init_meter_widget(u32* p_widget, const char* text_ptr, long p_hud_pool,
 	long p4, long p5, long p6, long p7, long p8) {
 
-	// 1. Invoca al constructor base del widget para limpiar e inicializar las matrices espaciales
+	// 1. Call the widget base constructor to clear and initialize the spatial matrices
 	hud_clear_widget_matrices(p_widget, text_ptr, p_hud_pool, p4, p5, p6, p7, p8);
 
 	u32* p_state_vector;
 
-	// 2. Si el pool está activo, reserva y limpia el bloque de estado del medidor en el offset 0xD
+	// 2. If the pool is active, reserve and clear the meter state block at offset 0xD
 	if (p_hud_pool == 0) {
 		p_state_vector = (u32*)p_widget[0x0D];
 	}
@@ -1009,125 +1009,125 @@ void hud_init_meter_widget(u32* p_widget, const char* text_ptr, long p_hud_pool,
 	p_state_vector[0] = 0;
 	p_state_vector[1] = 0;
 
-	// 3. Inyecta los valores mágicos flotantes de inicialización (100.0f y 64.0f)
-	f32* p_vector_pos = *(f32**)p_widget;       // Primer vector indexado
-	f32* p_vector_scale = *(f32**)(&p_widget[1]); // Segundo vector indexado
+	// 3. Inject the magic floating-point initialization values (100.0f and 64.0f)
+	f32* p_vector_pos = *(f32**)p_widget;       // First indexed vector
+	f32* p_vector_scale = *(f32**)(&p_widget[1]); // Second indexed vector
 
 	if (p_vector_pos != NULL) {
-		p_vector_pos[0] = 100.0f; // 0x42c80000 en la PS2
+		p_vector_pos[0] = 100.0f; // 0x42c80000 on the PS2
 		p_vector_pos[1] = 100.0f;
 	}
 
 	if (p_vector_scale != NULL) {
-		p_vector_scale[0] = 64.0f; // 0x42800000 en la PS2
+		p_vector_scale[0] = 64.0f; // 0x42800000 on the PS2
 		p_vector_scale[1] = 64.0f;
 	}
 
-	// Inicializa en cero la bandera de animación o temporizador
+	// Zero the animation or timer flag
 	p_widget[0x0E] = 0;
 }
 
 
 /**
- * @brief Configura el color base o el tinte de transparencia (Alpha) de un widget del HUD.
- * Escribe directamente en la propiedad de control cromático ubicada en el offset 0x44.
- * Dirección original en Ghidra: 0x00338728 (PAL)
+ * @brief Configures the base colour or alpha transparency tint of a HUD widget.
+ * Writes directly to the chromatic control property at offset 0x44.
+ * Original Ghidra address: 0x00338728 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @param color_rgba Valor de 32-bits que codifica el color y opacidad en formato RGBA/Color-ID (param_2).
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @param color_rgba 32-bit value encoding the colour and opacity in RGBA/colour-ID format (param_2).
  */
 void hud_set_widget_color(u32* p_widget, u32 color_rgba) {
 	if (p_widget != NULL) {
-		// El offset 0x44 equivale al índice 0x11 en un arreglo de enteros de 32 bits (17 * 4 = 68 bytes)
+		// Offset 0x44 is index 0x11 in an array of 32-bit integers (17 * 4 = 68 bytes)
 		p_widget[0x11] = color_rgba;
 	}
 }
 
 /**
- * @brief Configura las banderas de renderizado o modo de mezcla Alpha en la estructura de un widget del HUD.
- * Escribe directamente en la propiedad de control gráfico ubicada en el offset 0x40.
- * Dirección original en Ghidra: 0x00338730 (PAL)
+ * @brief Configures the render flags or alpha blend mode in a HUD widget structure.
+ * Writes directly to the graphics control property at offset 0x40.
+ * Original Ghidra address: 0x00338730 (PAL)
  *
- * @param p_widget Dirección base de la estructura del componente de la interfaz (param_1).
- * @param render_flags Máscara de bits con las opciones de dibujado y transparencia (param_2).
+ * @param p_widget Base address of the interface component structure (param_1).
+ * @param render_flags Bit mask with the drawing and transparency options (param_2).
  */
 void hud_set_widget_render_mode(u32* p_widget, u32 render_flags) {
 	if (p_widget != NULL) {
-		// El offset 0x40 equivale al índice 0x10 en un arreglo de enteros de 32 bits (16 * 4 = 64 bytes)
+		// Offset 0x40 is index 0x10 in an array of 32-bit integers (16 * 4 = 64 bytes)
 		p_widget[0x10] = render_flags;
 	}
 }
 
 /**
- * @brief Almacena de forma directa cuatro componentes individuales (X, Y, Z, W) en un puntero vectorial indexado.
- * Utilizado por el motor para actualizar las coordenadas físicas de transformación de los widgets del HUD.
- * Dirección original en Ghidra: 0x00337C68 (PAL)
+ * @brief Stores four individual components (X, Y, Z, W) directly through an indexed vector pointer.
+ * Used by the engine to update the physical transformation coordinates of HUD widgets.
+ * Original Ghidra address: 0x00337C68 (PAL)
  *
- * @param x Componente físico X o canal de color Red (param_1).
- * @param y Componente físico Y o canal de color Green (param_2).
- * @param z Componente físico Z o canal de color Blue (param_3).
- * @param w Componente físico W o canal de control Alpha (param_4).
- * @param p_dest_struct Estructura contenedora del puntero destino real (param_5).
+ * @param x Physical X component or red colour channel (param_1).
+ * @param y Physical Y component or green colour channel (param_2).
+ * @param z Physical Z component or blue colour channel (param_3).
+ * @param w Physical W component or alpha control channel (param_4).
+ * @param p_dest_struct Structure containing the real destination pointer (param_5).
  */
 void math_set_vector4_ptr(u32 x, u32 y, u32 z, u32 w, void* p_dest_struct) {
-	// Recupera el puntero físico real almacenado en el desplazamiento +4
+	// Retrieve the real physical pointer stored at offset +4
 	u32** pp_vector_target = (u32**)((u8*)p_dest_struct + 4);
 	u32* p_vector = *pp_vector_target;
 
 	if (p_vector != NULL) {
-		p_vector[0] = x;   // Componente X / R
-		p_vector[1] = y;   // Componente Y / G
-		p_vector[2] = z;   // Componente Z / B
-		p_vector[3] = w;   // Componente W / A
+		p_vector[0] = x;   // X / R component
+		p_vector[1] = y;   // Y / G component
+		p_vector[2] = z;   // Z / B component
+		p_vector[3] = w;   // W / A component
 	}
 }
 
 /**
- * @brief Inicializa las matrices de transformación espacial y vectores tridimensionales de un Widget del HUD.
- * Reserva los bloques de memoria requeridos en el pool y activa la visibilidad del componente.
- * Dirección original en Ghidra: 0x00337CA8 (PAL)
+ * @brief Initializes the spatial transformation matrices and three-dimensional vectors of a HUD widget.
+ * Reserves the required memory blocks in the pool and enables the component's visibility.
+ * Original Ghidra address: 0x00337CA8 (PAL)
  */
 void hud_clear_widget_matrices(u32* p_widget_transform, const char* text_ptr, long p_hud_pool,
 	long p4, long p5, long p6, long p7, long p8) {
 
-	// Guarda la dirección del pool de memoria de la interfaz en el offset 0xB
+	// Store the address of the interface memory pool at offset 0xB
 	p_widget_transform[0x0B] = (u32)p_hud_pool;
 
 	if (p_hud_pool != 0) {
 		u32* p_vector;
 
-		// 1. Asignar y limpiar Vector 0 (Posición Inicial)
+		// 1. Allocate and clear vector 0 (initial position)
 		int* node0 = hud_allocate_node((int*)p_hud_pool, (long)text_ptr, p_hud_pool, p4, p5, p6, p7, p8);
 		p_vector = (u32*)core_identity_stub(0x10, node0);
 		p_widget_transform[0] = (u32)p_vector;
 		p_vector[0] = 0; p_vector[1] = 0; p_vector[2] = 0; p_vector[3] = 0;
 
-		// 2. Asignar y limpiar Vector 2 (Rotación)
+		// 2. Allocate and clear vector 2 (rotation)
 		int* node1 = hud_allocate_node((int*)p_widget_transform[0x0B], 0, 0, 0, 0, 0, 0, 0);
 		p_vector = (u32*)core_identity_stub(0x10, node1);
 		p_widget_transform[2] = (u32)p_vector;
 		p_vector[0] = 0; p_vector[1] = 0; p_vector[2] = 0; p_vector[3] = 0;
 
-		// 3. Asignar y limpiar Vector 1 (Escala)
+		// 3. Allocate and clear vector 1 (scale)
 		int* node2 = hud_allocate_node((int*)p_widget_transform[0x0B], 0, 0, 0, 0, 0, 0, 0);
 		p_vector = (u32*)core_identity_stub(0x10, node2);
 		p_widget_transform[1] = (u32)p_vector;
 		p_vector[0] = 0; p_vector[1] = 0; p_vector[2] = 0; p_vector[3] = 0;
 
-		// 4. Asignar y limpiar Vector 3 (Velocidad / Interpolación)
+		// 4. Allocate and clear vector 3 (velocity / interpolation)
 		int* node3 = hud_allocate_node((int*)p_widget_transform[0x0B], 0, 0, 0, 0, 0, 0, 0);
 		p_vector = (u32*)core_identity_stub(0x10, node3);
 		p_widget_transform[3] = (u32)p_vector;
 		p_vector[0] = 0; p_vector[1] = 0; p_vector[2] = 0; p_vector[3] = 0;
 
-		// 5. Asignar y limpiar Vector 4 (Desplazamiento Secundario)
+		// 5. Allocate and clear vector 4 (secondary offset)
 		int* node4 = hud_allocate_node((int*)p_widget_transform[0x0B], 0, 0, 0, 0, 0, 0, 0);
 		p_vector = (u32*)core_identity_stub(0x10, node4);
 		p_widget_transform[4] = (u32)p_vector;
 		p_vector[0] = 0; p_vector[1] = 0; p_vector[2] = 0; p_vector[3] = 0;
 	}
 
-	// Inicialización de flags físicos y offsets lógicos del motor gráfico
+	// Initialization of the graphics engine's physical flags and logical offsets
 	p_widget_transform[10] = (u32)text_ptr;
 	p_widget_transform[8] = 0;
 	p_widget_transform[5] = 0;
@@ -1135,46 +1135,46 @@ void hud_clear_widget_matrices(u32* p_widget_transform, const char* text_ptr, lo
 	p_widget_transform[6] = 0;
 	p_widget_transform[9] = 0;
 
-	// Fuerza la activación de visibilidad para renderizar el componente en pantalla
+	// Force visibility on so the component is rendered on screen
 	hud_set_widget_visibility(p_widget_transform, 1);
 }
 
 
 /**
- * @brief Asigna u obtiene un nodo de memoria libre para un componente visual del HUD (Pool Allocator).
- * Realiza comprobaciones estrictas de límites físicos y dispara aserciones ante desbordamientos de memoria del HUD.
- * Dirección original en Ghidra: 0x00338B98 (PAL)
+ * @brief Allocates or obtains a free memory node for a HUD visual component (pool allocator).
+ * Performs strict physical bound checks and fires assertions on HUD memory overflows.
+ * Original Ghidra address: 0x00338B98 (PAL)
  *
- * @param p_hud_pool Estructura de cabecera del pool de memoria de la interfaz (param_1).
- * @return int* Puntero al bloque de memoria del nodo inicializado listo para el widget.
+ * @param p_hud_pool Header structure of the interface memory pool (param_1).
+ * @return int* Pointer to the initialized node memory block, ready for the widget.
  */
 int* hud_allocate_node(int* p_hud_pool, long p2, long p3, long param_4,
 	long param_5, long param_6, long param_7, long param_8) {
 	int* p_allocated_node = (int*)p_hud_pool[5];
 
-	// Caso A: No hay nodos libres reusables en la lista, se debe recortar memoria nueva
+	// Case A: no reusable free nodes in the list; new memory must be carved out
 	if (p_allocated_node == NULL) {
 		int current_offset = p_hud_pool[3];
 		u32 next_target_size = current_offset + p_hud_pool[2];
 
-		// Comprobación de desbordamiento de memoria del Pool de la interfaz
+		// Overflow check of the interface memory pool
 		if ((u32)p_hud_pool[1] < next_target_size) {
-			// Invoca a tu manejador del kernel para congelar el software e informar la línea del bug
+			// Call the kernel handler to freeze the software and report the bug's line
 			sys_assert_dispatch((const char*)0x001adb18, 0x53, (const char*)0x001adb60,
 				param_4, param_5, param_6, param_7, param_8);
 			p_allocated_node = NULL;
 		}
 		else {
-			p_hud_pool[3] = next_target_size;     // Avanza el puntero de asignación de memoria
-			p_hud_pool[4] = p_hud_pool[4] + 1;     // Incrementa el contador de widgets activos
-			p_allocated_node = (int*)(*p_hud_pool + current_offset); // Dirección física calculada
+			p_hud_pool[3] = next_target_size;     // Advances the memory allocation pointer
+			p_hud_pool[4] = p_hud_pool[4] + 1;     // Increments the active widget counter
+			p_allocated_node = (int*)(*p_hud_pool + current_offset); // Computed physical address
 		}
 	}
-	// Caso B: Camino rápido (Recicla un nodo previamente liberado en la Free List)
+	// Case B: fast path (recycles a node previously freed into the free list)
 	else {
 		int next_free_node = *p_allocated_node;
-		p_hud_pool[4] = p_hud_pool[4] + 1;         // Incrementa widgets activos
-		p_hud_pool[5] = next_free_node;           // Mueve la cabecera al siguiente nodo libre
+		p_hud_pool[4] = p_hud_pool[4] + 1;         // Increments the active widgets
+		p_hud_pool[5] = next_free_node;           // Moves the head to the next free node
 	}
 
 	return p_allocated_node;
@@ -1182,55 +1182,55 @@ int* hud_allocate_node(int* p_hud_pool, long p2, long p3, long param_4,
 
 
 /**
- * @brief Enlaza el recurso tipográfico y configura las propiedades visuales del texto del HUD.
- * Establece fuentes, escalas iniciales (1.0f), espaciado (0.7f) y banderas de renderizado.
- * Dirección original en Ghidra: 0x00338688 (PAL)
+ * @brief Links the typographic resource and configures the visual properties of HUD text.
+ * Sets fonts, initial scales (1.0f), spacing (0.7f) and render flags.
+ * Original Ghidra address: 0x00338688 (PAL)
  */
 void hud_link_widget_text(u32* p_widget, const char* text_resource, long param_3,
 	long p4, long p5, long p6, long p7, long p8) {
 
-	// 1. Llama a la subrutina interna para limpiar las matrices de transformación
+	// 1. Call the internal subroutine to clear the transformation matrices
 	hud_clear_widget_matrices(p_widget, text_resource, param_3, p4, p5, p6, p7, p8);
 
-	// 2. Asigna el puntero del recurso de la fuente tipográfica global (offset 0xd)
+	// 2. Assign the pointer of the global typographic font resource (offset 0xd)
 	p_widget[0xD] = 0x002638D0;
 
-	// 3. Configura las escalas iniciales de renderizado X e Y a 1.0f (0x3f800000)
+	// 3. Set the initial X and Y render scales to 1.0f (0x3f800000)
 	f32* p_scale = (f32*)p_widget[1];
-	p_scale[0] = 1.0f; // Escala X
-	p_scale[1] = 1.0f; // Escala Y
+	p_scale[0] = 1.0f; // X scale
+	p_scale[1] = 1.0f; // Y scale
 
-	// 4. Configura propiedades de formato y espaciado (0x3f333333 = 0.7f)
-	p_widget[0xE] = 1;          // Flag de inicialización o visibilidad activa
-	p_widget[0x10] = 0;          // Offset de desplazamiento de renderizado
-	p_widget[0x14] = 0x3f333333; // Espaciado entre caracteres / Kerning (0.7f)
-	p_widget[0x11] = 1;          // Modo de alineación (ej. Centrado)
-	p_widget[0x13] = 0x200;      // Flags de renderizado adicionales (ej. Activar Sombra)
-	p_widget[0x12] = 0;          // Rotación o inclinación del texto
+	// 4. Configure the format and spacing properties (0x3f333333 = 0.7f)
+	p_widget[0xE] = 1;          // Initialization or active visibility flag
+	p_widget[0x10] = 0;          // Render displacement offset
+	p_widget[0x14] = 0x3f333333; // Character spacing / kerning (0.7f)
+	p_widget[0x11] = 1;          // Alignment mode (e.g. centred)
+	p_widget[0x13] = 0x200;      // Additional render flags (e.g. enable shadow)
+	p_widget[0x12] = 0;          // Rotation or slant of the text
 }
 
 
 /**
- * @brief Inicializa por completo el núcleo central de los widgets y medidores gráficos del HUD (Parte 1).
- * Da de alta el lienzo maestro y las coordenadas de la barra de Nanotecnología (vida) en ráfagas vectoriales.
- * Dirección original en Ghidra: 0x0034B860 / Línea de entrada aproximada (PAL)
+ * @brief Fully initializes the central core of the HUD widgets and graphic meters (part 1).
+ * Registers the master canvas and the coordinates of the Nanotech (health) bar in vector bursts.
+ * Original Ghidra address: 0x0034B860 / approximate entry line (PAL)
  */
 void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hud_pool,
 	long p4, long p5, long p6, long p7, long p8) {
 
-	// Declaramos el flag simulado para el refresco de animación en PC
-	static u32 DAT_001a7c18 = 1; // Forzamos 1 (Modo fluido de refresco activo)
+	// Simulated flag for the animation refresh on PC
+	static u32 DAT_001a7c18 = 1; // Forced to 1 (smooth refresh mode active)
 
-	// Declaramos las variables de pila simuladas que Ghidra extrajo del Emotion Engine
+	// Simulated stack variables that Ghidra extracted from the Emotion Engine
 	u32 piStack_c0[16] = { 0 };
 	u32 piStack_c4[16] = { 0 };
 	u32 piStack_c8[16] = { 0 };
 	u32 piStack_d8[16] = { 0 };
 	u32 piStack_dc[16] = { 0 };
-	u32 piStack_e0[16] = { 0 }; // Añadido preventivamente para la línea 1411
+	u32 piStack_e0[16] = { 0 }; // Added pre-emptively for line 1411
 	u32 piStack_e4[16] = { 0 };
 	u32 piStack_ec[16] = { 0 };
-	u32 piStack_f0[16] = { 0 }; // Inicializado seguro como un búfer contiguo
+	u32 piStack_f0[16] = { 0 }; // Safely initialized as a contiguous buffer
 	u32 piStack_f4[16] = { 0 };
 	u32 piStack_fc[16] = { 0 };
 	u32 piStack_100[16] = { 0 };
@@ -1245,42 +1245,42 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	u32 piStack_128[16] = { 0 };
 	u32 piStack_130[16] = { 0 };
 
-	// Declaramos las variables locales de soporte de la PS2 para las matrices de munición extendida
+	// Local PS2 support variables for the extended ammo arrays
 	u32 piStack_10c = { 0 };
 	u32 piStack_f8 = { 0 };
 	u32 piStack_cc = { 0 };
 
-	// Declaramos la variable temporal de control que Ghidra extrajo para la matriz de munición
+	// Temporary control variable that Ghidra extracted for the ammo array
 	int iVar25 = 0;
 
-	// 1. Limpieza de los contadores maestros de refresco del canvas en los offsets +0x567 y +0x568
+	// 1. Clear the master canvas refresh counters at offsets +0x567 and +0x568
 	p_hud_context[0x567] = 0;
 	p_hud_context[0x568] = 0;
 
-	// Cálculo del offset dinámico de búsqueda de estado de producción de Insomniac
+	// Computation of the dynamic offset for Insomniac's production state lookup
 	s32 state_lookup_id = state_offset + 0x8710;
 
-	// 2. Registro e inyección de coordenadas del Widget 0 (Lienzo Maestro del HUD)
+	// 2. Registration and coordinate injection of widget 0 (HUD master canvas)
 	hud_register_widget_asset(p_hud_context, RECURSO_HUD_CANVAS, p_hud_pool, p4, p5, p6, p7, p8);
 	hud_set_state_from_lookup((int)p_hud_context, state_lookup_id, 1);
 	math_set_vector4(10.0f, 10.0f, 0.0f, 0.0f, p_hud_context); // 0x41200000 = 10.0f
 
-	// 3. Registro e inyección de coordenadas del Widget 1 (Contorno de Barra de Vida)
-	u32* p_health_outline_widget = p_hud_context + 0x13; // Offset indexado param_1 + 0x13
+	// 3. Registration and coordinate injection of widget 1 (health bar outline)
+	u32* p_health_outline_widget = p_hud_context + 0x13; // Indexed offset param_1 + 0x13
 	hud_register_widget_asset(p_health_outline_widget, RECURSO_HEALTH_OUTLINE, p_hud_pool, p4, p5, p6, p7, p8);
 	hud_set_state_from_lookup((int)p_health_outline_widget, state_lookup_id, 2);
 	math_set_vector4(10.0f, 10.0f, 0.0f, 0.0f, p_health_outline_widget);
 
-	// 4. Registro e inyección de coordenadas del Widget 2 (Relleno de Barra de Vida)
-	u32* p_health_fill_widget = p_hud_context + 0x26; // Offset indexado param_1 + 0x26
+	// 4. Registration and coordinate injection of widget 2 (health bar fill)
+	u32* p_health_fill_widget = p_hud_context + 0x26; // Indexed offset param_1 + 0x26
 	hud_register_widget_asset(p_health_fill_widget, RECURSO_HEALTH_FILL, p_hud_pool, p4, p5, p6, p7, p8);
-	// (La inyección de coordenadas y el set_state continúan en el siguiente frame/bloque de código)
+	// (The coordinate injection and set_state continue in the next frame/code block)
 	math_set_vector4(10.0f, 18.5f, 0.0f, 0.0f, p_health_fill_widget); // 0x41940000 = 18.5f
 
-	// (Esta sección continúa de forma directa el flujo dentro de hud_initialize_main_widgets)
+	// (This section directly continues the flow inside hud_initialize_main_widgets)
 	hud_set_state_from_lookup((int)p_health_fill_widget, state_lookup_id, 5);
 
-	// 5. Configuración e inicialización del Widget del Nombre del Arma / AmmoText
+	// 5. Configuration and initialization of the weapon name / AmmoText widget
 	u32* p_wpn_name_widget = p_hud_context + 0x40; // piVar14
 	ee_memset((p_hud_context + 0x39), 0, 0x18);
 	hud_link_widget_text(p_wpn_name_widget, RECURSO_WEAPON_NAME, p_hud_pool, p4, p5, p6, p7, p8);
@@ -1289,15 +1289,15 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	math_set_vector4(64.0f, 150.0f, 0.0f, 0.0f, p_wpn_name_widget); // 0x42800000 = 64.0f
 	hud_set_widget_color(p_wpn_name_widget, 0);
 
-	// 6. Registro del Medidor de Barra de Experiencia del Arma (WeaXP)
+	// 6. Registration of the weapon experience bar meter (WeaXP)
 	u32* p_wpn_xp_widget = p_hud_context + 0x56; // piStack_144
 	hud_init_meter_widget(p_wpn_xp_widget, RECURSO_WEAPON_XP, p_hud_pool, p4, p5, p6, p7, p8);
 	math_set_vector4_ptr(0x42000000, 0x42000000, 0, 0, p_wpn_xp_widget);
 	math_set_vector4(20.0f, 150.0f, 0.0f, 0.0f, p_wpn_xp_widget); // 0x41a00000 = 20.0f
 	u32* p_xp_data = (u32*)hud_get_widget_data_ptr(p_wpn_xp_widget);
-	*p_xp_data = 0x60f0f0b0; // Inicialización cromática del color de la experiencia
+	*p_xp_data = 0x60f0f0b0; // Colour initialization of the experience bar
 
-	// 7. Registro de los Widgets de Iconografía de Balas
+	// 7. Registration of the bullet iconography widgets
 	u32* p_ammo_icon = p_hud_context + 0x65; // piStack_140
 	hud_register_widget_asset(p_ammo_icon, RECURSO_AMMO_ICON, p_hud_pool, p4, p5, p6, p7, p8);
 	math_set_vector4(498.0f, 10.0f, 0.0f, 0.0f, p_ammo_icon); // 0x43f90000 = 498.0f
@@ -1308,7 +1308,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	math_set_vector4(498.0f, 10.0f, 0.0f, 0.0f, p_ammo_icon_back);
 	hud_set_state_from_lookup((int)p_ammo_icon_back, state_lookup_id, 4);
 
-	// 8. Registro del Medidor de Billetera de Guitones (BoltText y BoltIcon)
+	// 8. Registration of the bolt wallet meter (BoltText and BoltIcon)
 	u32* p_bolt_text_widget = p_hud_context + 0x92; // piVar16
 	ee_memset((p_hud_context + 0x8b), 0, 0x18);
 	hud_link_widget_text(p_bolt_text_widget, RECURSO_BOLT_TEXT, p_hud_pool, p4, p5, p6, p7, p8);
@@ -1323,7 +1323,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	math_set_vector4(457.0f, 150.0f, 0.0f, 0.0f, p_bolt_icon_widget); // 0x43e48000 = 457.0f
 	hud_set_widget_position_2d(p_bolt_icon_widget, 103, 117); // 0x7567 regional plano
 
-	// 9. Registro del Menú Radial de Selección Rápida (Quick Select Base & Anillo)
+	// 9. Registration of the Quick Select radial menu (base and ring)
 	u32* p_qsel_back = p_hud_context + 0xb8; // piVar2
 	hud_register_widget_asset(p_qsel_back, RECURSO_QSEL_BACK, p_hud_pool, p4, p5, p6, p7, p8);
 	hud_set_state_from_lookup((int)p_qsel_back, state_lookup_id, 7);
@@ -1342,22 +1342,22 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	*p_qsel_bord_data = 0xf0c070;
 	hud_update_widget_context(p_qsel_bord, (u32*)p_hud_context[0x201]);
 
-	// 10. BUCLE DE GENERACIÓN Y REGISTRO EN RÁFAGA DE LAS RANURAS RADIALES (QSelBI0 - QSelBI27)
+	// 10. GENERATION AND BURST REGISTRATION LOOP OF THE RADIAL SLOTS (QSelBI0 - QSelBI27)
 	char name_construction_buffer[16];
 	u32 loop_iterator = 0;
 	u32* p_dynamic_slot_widget = NULL;
 
 	do {
-		// Tu función vsnprintf interna construyendo secuencialmente los identificadores
-		// Simulamos la llamada pasando la lista de argumentos para dar formato a "QSelBI%d"
+		// The internal vsnprintf builds the identifiers sequentially
+		// The call is simulated by passing the argument list to format "QSelBI%d"
 		// txt_vsnprintf_internal(name_construction_buffer, FORMATO_SLOT_RADIAL, loop_iterator);
 
-		p_dynamic_slot_widget = p_hud_context + (loop_iterator * 0x13) + 0xde; // piVar2 dinámico
+		p_dynamic_slot_widget = p_hud_context + (loop_iterator * 0x13) + 0xde; // dynamic piVar2
 		hud_register_widget_asset(p_dynamic_slot_widget, name_construction_buffer, p_hud_pool, p4, p5, p6, p7, p8);
 
 		loop_iterator++;
 
-		// (Esta sección continúa de forma directa la lógica interna de hud_initialize_main_widgets)
+		// (This section directly continues the internal logic of hud_initialize_main_widgets)
 		hud_set_state_from_lookup((int)p_dynamic_slot_widget, state_lookup_id, loop_iterator + 8);
 		math_set_vector4_ptr(1.0f, 1.0f, 0, 0, p_dynamic_slot_widget);
 		math_set_vector4(500.0f, 208.0f, 0, 0, p_dynamic_slot_widget);
@@ -1365,21 +1365,21 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 		u32* p_dynamic_slot_data = (u32*)hud_get_widget_data_ptr(p_dynamic_slot_widget);
 		*p_dynamic_slot_data = 0x442d00;
 
-		// Construcción dinámica de la string del icono "QSelIco%d"
+		// Dynamic construction of the icon string "QSelIco%d"
 		// txt_vsnprintf_internal(name_construction_buffer, FORMATO_ICONO_RADIAL, loop_iterator);
 
-		u32* p_dynamic_icon_widget = p_hud_context + (loop_iterator * 0x0F) + 0x189; // piVar2 de icono
+		u32* p_dynamic_icon_widget = p_hud_context + (loop_iterator * 0x0F) + 0x189; // icon piVar2
 		hud_init_meter_widget(p_dynamic_icon_widget, name_construction_buffer, p_hud_pool, p4, p5, p6, p7, p8);
 		hud_set_widget_visibility(p_dynamic_icon_widget, 0);
 
-		// CÁLCULO GEOMÉTRICO DE PROYECIÓN RADIAL EN LA VU0 POR HARDWARE
+		// GEOMETRIC COMPUTATION OF THE RADIAL PROJECTION ON THE VU0 HARDWARE
 		f32 base_angle = ((f32)loop_iterator + (f32)loop_iterator) * 0.3926991f - 3.1415927f;
 		f32 normal_angle = math_normalize_angle_rad(base_angle, 1.5707964f);
 
 		f32 sin_val = math_vu0_sin_cos(normal_angle);
 		f32 cos_val = math_vu0_cos(normal_angle);
 
-		// Proyecta las coordenadas elípticas horizontales (X) y verticales (Y) en la pantalla
+		// Project the horizontal (X) and vertical (Y) elliptical coordinates onto the screen
 		f32 projected_x = (f32)((s32)(sin_val * 82.14f) + 109); // 0x6d = 109
 		f32 projected_y = (f32)((s32)(cos_val * 76.442f) + 189); // 0xbd = 189
 		math_set_vector4(projected_x, projected_y, 0, 0, p_dynamic_icon_widget);
@@ -1391,7 +1391,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 		loop_iterator++;
 	} while (loop_iterator < 8);
 
-	// 11. Bucle en ráfaga de sincronización y acoplamiento de vectores del HUD (Free List)
+	// 11. Burst loop synchronizing and coupling the HUD vectors (free list)
 	u32* p_sync_vector_src = p_hud_context + 0xde; // piStack_12c
 	u32* p_sync_target_a = p_hud_context + 0xf1;   // piVar2
 	u32* p_sync_target_b = p_hud_context + 0x198;  // piVar12
@@ -1408,17 +1408,17 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 		p_sync_target_b += 0x0F;
 	} while (sync_iterator > 0);
 
-	// Sincroniza el candado vectorial final en el anclaje perimetral
+	// Synchronize the final vector lock at the perimeter anchor
 	u32* p_final_shared_vec = (u32*)hud_get_widget_vector_ptr(p_sync_vector_src);
 	hud_update_widget_vector((u32*)(p_hud_context + 0xb8), p_final_shared_vec); // piStack_d4
 
-	// 12. Inicialización del layout maestro de la munición y ráfaga de sub-inventarios secundios
+	// 12. Initialization of the master ammo layout and burst of secondary sub-inventories
 	u32* p_ammo_layout_container = p_hud_context + 0x202; // piStack_e8
 	hud_init_ammo_layout(p_ammo_layout_container, (long)state_offset, p_hud_pool, p4, p5, p6, p7, p8);
 	hud_set_ammo_widget_context_2d(0x43130000, 0x41200000, p_ammo_layout_container);
 	p_ammo_layout_container[3] = 0;
 
-	// Inicialización del Inventario de Soporte Secundario (Capa de Dispositivos / Gadgets)
+	// Initialization of the secondary support inventory (devices / gadgets layer)
 	u32* p_sub_inv_gadgets = p_hud_context + 0x40; // piVar14
 	inv_reset_weapon_inventory(p_sub_inv_gadgets);
 	inv_set_weapon_inventory_mode(p_sub_inv_gadgets, 3);
@@ -1433,17 +1433,17 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_active_weapon_slot(p_sub_inv_gadgets, (p_hud_context + 0x11c));
 	inv_set_weapon_inventory_visibility(p_sub_inv_gadgets, -1);
 
-	// Ajusta la aceleración dinámica de interpolación según las banderas globales del sistema
-	f32 anim_speed = (DAT_001a7c18 != 0) ? 0.035f : 0.029f; // Valores estimados de interpolación fina
+	// Adjust the dynamic interpolation acceleration according to the global system flags
+	f32 anim_speed = (DAT_001a7c18 != 0) ? 0.035f : 0.029f; // Estimated fine interpolation values
 	inv_set_animation_factor(p_sub_inv_gadgets, anim_speed);
 	inv_swap_animation_lock(p_sub_inv_gadgets, 0);
 
-	// (Esta sección continúa de forma directa la lógica interna de hud_initialize_main_widgets)
+	// (This section directly continues the internal logic of hud_initialize_main_widgets)
 	f32 alt_anim_speed = (DAT_001a7c18 != 0) ? 0.035f : 0.029f;
 	inv_set_animation_factor((u32*)piStack_f0, alt_anim_speed);
 	inv_swap_animation_lock((u32*)piStack_f0, 0);
 
-	// Inicialización del Inventario de Soporte Secundario (Capa C)
+	// Initialization of the secondary support inventory (layer C)
 	u32* p_sub_inv_c = (u32*)piStack_e0;
 	inv_reset_weapon_inventory(p_sub_inv_c);
 	inv_set_weapon_inventory_mode(p_sub_inv_c, 3);
@@ -1458,7 +1458,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_animation_factor(p_sub_inv_c, alt_anim_speed);
 	inv_swap_animation_lock(p_sub_inv_c, 0);
 
-	// Inicialización del Inventario de Soporte Secundario (Capa D - Dispositivos Especiales)
+	// Initialization of the secondary support inventory (layer D - special devices)
 	u32* p_sub_inv_d = (u32*)piStack_128;
 	inv_reset_weapon_inventory(p_sub_inv_d);
 	inv_set_weapon_inventory_mode(p_sub_inv_d, 3);
@@ -1472,7 +1472,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_animation_factor(p_sub_inv_d, alt_anim_speed);
 	inv_swap_animation_lock(p_sub_inv_d, 0);
 
-	// 13. CONFIGURACIÓN Y DESPACHO DE LA MATRIZ DE MUNICIÓN EXTENDIDA (Bloque de Control 1)
+	// 13. CONFIGURATION AND DISPATCH OF THE EXTENDED AMMO ARRAY (control block 1)
 	u32* p_ammo_matrix_1 = (u32*)piStack_10c;
 	inv_reset_extended_ammo_subsystem(p_ammo_matrix_1);
 	u32* p_widget_data_1 = (u32*)hud_get_widget_data_ptr((u32*)p_hud_context);
@@ -1487,10 +1487,10 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_extended_ammo_slot_data(0x3F800000, 0x3F800000, 0, 0, p_ammo_matrix_1, 1, 1);
 	u32* p_widget_pos_1 = (u32*)hud_get_widget_position_vector_ptr((u32*)p_hud_context);
 	inv_set_ammo_matrix_group_ptr(p_ammo_matrix_1, 2, (u32)p_widget_pos_1);
-	inv_set_extended_ammo_slot_data(0x42480000, 0x41c80000, 0, 0, p_ammo_matrix_1, 2, 0); // 50.0f y 25.0f
-	inv_set_extended_ammo_slot_data(0x41200000, 0x41200000, 0, 0, p_ammo_matrix_1, 2, 1); // 10.0f y 10.0f
+	inv_set_extended_ammo_slot_data(0x42480000, 0x41c80000, 0, 0, p_ammo_matrix_1, 2, 0); // 50.0f and 25.0f
+	inv_set_extended_ammo_slot_data(0x41200000, 0x41200000, 0, 0, p_ammo_matrix_1, 2, 1); // 10.0f and 10.0f
 
-	// 14. CONFIGURACIÓN Y DESPACHO DE LA MATRIZ DE MUNICIÓN EXTENDIDA (Bloque de Control 2)
+	// 14. CONFIGURATION AND DISPATCH OF THE EXTENDED AMMO ARRAY (control block 2)
 	u32* p_ammo_matrix_2 = (u32*)piStack_f8;
 	inv_reset_extended_ammo_subsystem(p_ammo_matrix_2);
 	u32* p_widget_data_2 = (u32*)hud_get_widget_data_ptr((u32*)piStack_cc);
@@ -1508,7 +1508,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_extended_ammo_slot_data(0, 0, 0, 0, p_ammo_matrix_2, 2, 0);
 	inv_set_extended_ammo_slot_data(0x41200000, 0x41200000, 0, 0, p_ammo_matrix_2, 2, 1);
 
-	// 15. CONFIGURACIÓN Y DESPACHO DE LA MATRIZ DE MUNICIÓN EXTENDIDA (Bloque de Control 3)
+	// 15. CONFIGURATION AND DISPATCH OF THE EXTENDED AMMO ARRAY (control block 3)
 	u32* p_ammo_matrix_3 = (u32*)piStack_e4;
 	inv_reset_extended_ammo_subsystem(p_ammo_matrix_3);
 	u32* p_widget_data_3 = (u32*)hud_get_widget_data_ptr((u32*)piStack_114);
@@ -1518,7 +1518,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	p_ammo_matrix_3[3] = (u32)iVar25;
 	p_ammo_matrix_3[2] = 0;
 
-	// Inicialización del Inventario Complementario de Balas (Capa E)
+	// Initialization of the complementary bullet inventory (layer E)
 	u32* p_sub_inv_e = (u32*)piStack_c8;
 	inv_reset_weapon_inventory(p_sub_inv_e);
 	inv_set_weapon_inventory_mode(p_sub_inv_e, 3);
@@ -1532,7 +1532,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_weapon_inventory_visibility(p_sub_inv_e, 1);
 	inv_set_animation_factor(p_sub_inv_e, 0.0666f); // 0x3d88850a \approx 0.0666f
 
-	// 16. CONFIGURACIÓN Y DESPACHO DE LA MATRIZ DE MUNICIÓN EXTENDIDA (Bloque de Control 4 y 5)
+	// 16. CONFIGURATION AND DISPATCH OF THE EXTENDED AMMO ARRAY (control blocks 4 and 5)
 	u32* p_ammo_matrix_4 = (u32*)piStack_124;
 	inv_reset_extended_ammo_subsystem(p_ammo_matrix_4);
 	u32* p_widget_data_4 = (u32*)hud_get_widget_data_ptr((u32*)piStack_110);
@@ -1541,8 +1541,8 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_ammo_matrix_group_state(p_ammo_matrix_4, 1, 0x60f0f0b0);
 	p_ammo_matrix_4[2] = 0;
 	p_ammo_matrix_4[3] = (u32)iVar25;
-	// Corregido: Pasamos el valor numérico crudo de forma directa sin punteros imposibles
-	inv_set_ammo_capacity_multiplier(0x0000666f, p_ammo_matrix_4); // Mochila de...
+	// Fixed: pass the raw numeric value directly, without impossible pointers
+	inv_set_ammo_capacity_multiplier(0x0000666f, p_ammo_matrix_4); // Backpack of...
 
 	u32* p_ammo_matrix_5 = (u32*)piStack_108;
 	inv_reset_extended_ammo_subsystem(p_ammo_matrix_5);
@@ -1551,7 +1551,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_ammo_matrix_group_state(p_ammo_matrix_5, 0, 0x442d00);
 	inv_set_ammo_matrix_group_state(p_ammo_matrix_5, 1, 0x60442d00);
 
-	// (Esta sección cierra de forma definitiva la lógica interna de hud_initialize_main_widgets)
+	// (This section definitively closes the internal logic of hud_initialize_main_widgets)
 	u32* p_ammo_matrix_5_base = (u32*)piStack_108;
 	p_ammo_matrix_5_base[3] = 0x40000000;
 	p_ammo_matrix_5_base[2] = 0; // iVar17 = 0
@@ -1561,10 +1561,10 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_extended_ammo_slot_data(0x3F800000, 0x3F800000, 0, 0, p_ammo_matrix_5_base, 1, 1);
 	u32* p_widget_pos_5 = (u32*)hud_get_widget_position_vector_ptr((u32*)piStack_100);
 	inv_set_ammo_matrix_group_ptr(p_ammo_matrix_5_base, 2, (u32)p_widget_pos_2);
-	inv_set_extended_ammo_slot_data(0x43E50000, 0x41C80000, 0, 0, p_ammo_matrix_5_base, 2, 0); // 458.0f y 25.0f
+	inv_set_extended_ammo_slot_data(0x43E50000, 0x41C80000, 0, 0, p_ammo_matrix_5_base, 2, 0); // 458.0f and 25.0f
 	inv_set_extended_ammo_slot_data(0x3F666666, 0x41200000, 0, 0, p_ammo_matrix_5_base, 2, 1);
 
-	// 17. CONFIGURACIÓN Y DESPACHO DE LA MATRIZ DE MUNICIÓN EXTENDIDA (Bloque de Control 6 y 7)
+	// 17. CONFIGURATION AND DISPATCH OF THE EXTENDED AMMO ARRAY (control blocks 6 and 7)
 	u32* p_ammo_matrix_6 = (u32*)piStack_f4;
 	inv_reset_extended_ammo_subsystem(p_ammo_matrix_6);
 	u32* p_widget_data_6 = (u32*)hud_get_widget_data_ptr((u32*)piStack_fc);
@@ -1581,7 +1581,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	p_ammo_matrix_6[1] = (u32)iVar25;
 	u32* p_widget_pos_6 = (u32*)hud_get_widget_position_vector_ptr((u32*)piStack_fc);
 	inv_set_ammo_matrix_group_ptr(p_ammo_matrix_6, 2, (u32)p_widget_pos_6);
-	inv_set_extended_ammo_slot_data(0x44008000, 0x40800000, 0, 0, p_ammo_matrix_6, 2, 0); // 514.0f y 4.0f
+	inv_set_extended_ammo_slot_data(0x44008000, 0x40800000, 0, 0, p_ammo_matrix_6, 2, 0); // 514.0f and 4.0f
 	inv_set_extended_ammo_slot_data(0x3F666666, 0x41200000, 0, 0, p_ammo_matrix_6, 2, 1);
 
 	inv_reset_extended_ammo_subsystem((u32*)piStack_dc);
@@ -1600,7 +1600,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	((u32*)piStack_c4)[3] = (u32)iVar25;
 	((u32*)piStack_c4)[2] = 0;
 
-	// 18. ASIGNACIÓN DE LAS CAPAS DE INVENTARIO ACTIVAS PRINCIPALES
+	// 18. ASSIGNMENT OF THE MAIN ACTIVE INVENTORY LAYERS
 	u32* p_main_inv_1 = (u32*)piStack_118;
 	inv_reset_weapon_inventory(p_main_inv_1);
 	inv_set_weapon_inventory_mode(p_main_inv_1, 2);
@@ -1627,59 +1627,59 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	inv_set_weapon_inventory_visibility(p_main_inv_2, 1);
 	inv_swap_animation_lock(p_main_inv_2, 0);
 
-	// 19. RELLENO DE FLAGS GLOBALES DE TRANSICIÓN DEL EMOTION ENGINE
-	p_hud_context[0xB7] = 0x001A7A80; // Dirección de tabla estática estricta
+	// 19. FILL OF THE EMOTION ENGINE GLOBAL TRANSITION FLAGS
+	p_hud_context[0xB7] = 0x001A7A80; // Strict static table address
 	p_hud_context[0x561] = 0;
 	p_hud_context[0x563] = 0;
 	p_hud_context[0x565] = 0;
-	p_hud_context[0x566] = -1; // Fuerza la carga limpia sin valores basura
+	p_hud_context[0x566] = -1; // Forces a clean load without garbage values
 	p_hud_context[0x562] = -1;
 	p_hud_context[0x564] = -1;
 
-	// 20. FUERZA LA ACTUALIZACIÓN REGIONAL EN PÍXELES DEL CANVASES
+	// 20. FORCE THE REGIONAL PIXEL UPDATE OF THE CANVASES
 	hud_update_layout_aspect_ratio(p_hud_context, 0);
 
-	// 21. GUARDA EL PARÁMETRO DE GIRO DINÁMICO DEL ANILLO QUICK SELECT
+	// 21. STORE THE DYNAMIC ROTATION PARAMETER OF THE QUICK SELECT RING
 	s32 remaining_slots_count = inv_get_quick_select_remaining_space();
 	p_hud_context[0x56A] = remaining_slots_count;
 
 }
 
 /**
- * @brief Busca un identificador específico dentro de una estructura de tabla indexada.
- * Operación matemática en un arreglo con saltos de 8 bytes (Estructura de pares Clave/Valor).
- * Dirección original en Ghidra: 0x00338AA8 (PAL)
+ * @brief Looks up a specific identifier in an indexed table structure.
+ * Arithmetic over an array with 8-byte steps (key/value pair structure).
+ * Original Ghidra address: 0x00338AA8 (PAL)
  *
- * @param table_ptr Puntero a la estructura de la tabla base.
- * @param target_id ID o clave que estamos buscando.
- * @return s32 El valor asociado al ID encontrado, o 0 si no existe/se sale de los límites.
+ * @param table_ptr Pointer to the base table structure.
+ * @param target_id ID or key being searched for.
+ * @return s32 The value associated with the ID found, or 0 if absent or out of bounds.
  */
 s32 game_lookup_id_in_table(u8* table_ptr, s32 target_id) {
 	s32 index = 0;
 
-	// El offset +0x18 almacena la cantidad máxima de elementos válidos en la tabla
+	// Offset +0x18 stores the maximum number of valid elements in the table
 	s32 total_elements = *(s32*)(table_ptr + 0x18);
 
 	if (0 < total_elements) {
 		index = 1;
 
-		// Optimización del motor: Comprobar directamente el primer elemento (+0x1c)
+		// Engine optimization: check the first element directly (+0x1c)
 		if (*(s32*)(table_ptr + 0x1c) == target_id) {
-			index = *(s32*)(table_ptr + 0x20); // Devuelve el valor asociado en +0x20
+			index = *(s32*)(table_ptr + 0x20); // Returns the associated value at +0x20
 		}
 		else {
-			// Bucle de búsqueda lineal (do-while)
+			// Linear search loop (do-while)
 			do {
 				if (*(s32*)(table_ptr + 0x18) <= index) {
-					return 0; // Fuera de los límites de la tabla, no encontrado
+					return 0; // Outside the table bounds, not found
 				}
 
-				// Estructura de par Clave-Valor de 8 bytes: 4 bytes para ID, 4 bytes para Datos
+				// 8-byte key/value pair structure: 4 bytes for the ID, 4 bytes for the data
 				s32* pair_ptr = (s32*)(index * 8 + (table_ptr + 0x1c));
 				index++;
 
 				if (*pair_ptr == target_id) {
-					return pair_ptr[1]; // Devuelve el valor contiguo en memoria
+					return pair_ptr[1]; // Returns the contiguous value in memory
 				}
 			} while (1);
 		}
@@ -1689,33 +1689,33 @@ s32 game_lookup_id_in_table(u8* table_ptr, s32 target_id) {
 }
 
 /**
- * @brief Obtiene un valor de configuración mediante búsqueda e inicializa el campo del HUD.
- * Dirección original en Ghidra: 0x00338070 (PAL)
+ * @brief Gets a configuration value by lookup and initializes the HUD field.
+ * Original Ghidra address: 0x00338070 (PAL)
  */
 void hud_set_state_from_lookup(u8* p_hudState, u8* table_ptr, s32 target_id) {
-	// Realiza la búsqueda en la tabla lógica
+	// Perform the lookup in the logical table
 	s32 result_value = game_lookup_id_in_table(table_ptr, target_id);
 
-	// Almacena el resultado en el offset de configuración +0x40 del componente del HUD
+	// Store the result at configuration offset +0x40 of the HUD component
 	*(s32*)(p_hudState + 0x40) = result_value;
 }
 
 /**
- * @brief Asigna cuatro valores de 32 bits de forma consecutiva en una estructura de datos.
- * Comportamiento estándar para configurar vectores espaciales (X, Y, Z, W) o colores (R, G, B, A).
- * Dirección original en Ghidra: 0x00337B18 (PAL)
+ * @brief Assigns four 32-bit values consecutively in a data structure.
+ * Standard behaviour for configuring spatial vectors (X, Y, Z, W) or colours (R, G, B, A).
+ * Original Ghidra address: 0x00337B18 (PAL)
  *
- * @param val1 Primer componente (ej. coordenada X o canal Rojo)
- * @param val2 Segundo componente (ej. coordenada Y o canal Verde)
- * @param val3 Tercer componente (ej. coordenada Z o canal Azul)
- * @param val4 Cuarto componente (ej. coordenada W o canal Alfa/Transparencia)
- * @param p_targetDestination Puntero que contiene la dirección de la estructura destino.
+ * @param val1 First component (e.g. X coordinate or red channel)
+ * @param val2 Second component (e.g. Y coordinate or green channel)
+ * @param val3 Third component (e.g. Z coordinate or blue channel)
+ * @param val4 Fourth component (e.g. W coordinate or alpha/transparency channel)
+ * @param p_targetDestination Pointer holding the address of the destination structure.
  */
 void math_set_vector4(u32 val1, u32 val2, u32 val3, u32 val4, u32* p_targetDestination) {
-	// Obtiene la dirección base real del objeto destino
+	// Get the real base address of the destination object
 	u32 base_address = *p_targetDestination;
 
-	// Almacena los 4 componentes de manera contigua en la memoria de la PS2 (saltos de 4 bytes)
+	// Store the 4 components contiguously in PS2 memory (4-byte steps)
 	*(u32*)(base_address + 0x0) = val1;
 	*(u32*)(base_address + 0x4) = val2;
 	*(u32*)(base_address + 0x8) = val3;
@@ -1723,21 +1723,21 @@ void math_set_vector4(u32 val1, u32 val2, u32 val3, u32 val4, u32* p_targetDesti
 }
 
 /**
- * @brief Rellena un bloque de memoria con un valor específico (Memset).
- * Versión funcional simplificada de la rutina optimizada para los registros multimedia de la PS2.
- * Dirección original en Ghidra: 0x00115484 (PAL)
+ * @brief Fills a memory block with a specific value (memset).
+ * Simplified functional version of the routine optimized for the PS2 multimedia registers.
+ * Original Ghidra address: 0x00115484 (PAL)
  *
- * @param dest Puntero al bloque de memoria a rellenar.
- * @param value Valor de byte con el que se va a rellenar.
- * @param size Cantidad de bytes a escribir.
- * @return void* Puntero a la memoria de destino.
+ * @param dest Pointer to the memory block to fill.
+ * @param value Byte value to fill it with.
+ * @param size Number of bytes to write.
+ * @return void* Pointer to the destination memory.
  */
 void* ee_memset(void* dest, u8 value, u32 size) {
 	u8* ptr = (u8*)dest;
 
-	// En la PS2 real, aquí se ejecuta un bucle optimizado de 32 y 8 bytes
-	// usando instrucciones vectoriales si el puntero está alineado a 16 bytes.
-	// Para efectos funcionales, el comportamiento exacto es:
+	// On a real PS2 an optimized 32- and 8-byte loop runs here,
+	// using vector instructions if the pointer is 16-byte aligned.
+	// Functionally, the exact behaviour is:
 	for (u32 i = 0; i < size; i++) {
 		ptr[i] = value;
 	}
@@ -1746,39 +1746,39 @@ void* ee_memset(void* dest, u8 value, u32 size) {
 }
 
 /**
- * @brief Controla la visibilidad o factor de escala de un componente del HUD.
- * Escribe 1.0f (0x3f800000) o 0.0f en la propiedad de transformación del elemento.
- * Dirección original en Ghidra: 0x00337B48 (PAL)
+ * @brief Controls the visibility or scale factor of a HUD component.
+ * Writes 1.0f (0x3f800000) or 0.0f into the element's transformation property.
+ * Original Ghidra address: 0x00337B48 (PAL)
  *
- * @param p_widget Destino del componente visual (param_1 / registro a0)
- * @param enable Estado booleano para activar o desactivar (param_2 / registro a1)
+ * @param p_widget Destination visual component (param_1 / register a0)
+ * @param enable Boolean state to enable or disable (param_2 / register a1)
  */
 void hud_set_widget_visibility(u32* p_widget, long enable) {
-	// El offset +0x10 (16 bytes) contiene un puntero a la propiedad flotante (ej. Opacidad/Alpha o Escala)
+	// Offset +0x10 (16 bytes) holds a pointer to the floating-point property (e.g. opacity/alpha or scale)
 	f32** p_target_property = (f32**)((u8*)p_widget + 0x10);
 
 	if (enable != 0) {
-		// En la PS2 escribe 0x3f800000, lo que equivale a 1.0f (Visibilidad/Escala Máxima)
+		// On the PS2 it writes 0x3f800000, which equals 1.0f (maximum visibility/scale)
 		**p_target_property = 1.0f;
 		return;
 	}
 
-	// Si es falso, escribe 0.0f (Completamente oculto/Desactivado)
+	// If false, write 0.0f (completely hidden/disabled)
 	**p_target_property = 0.0f;
 	return;
 }
 
 /**
- * @brief Función stub de paso directo de puntero (Identity Function).
- * Utilizada originalmente en el motor para macros de validación o abstracción de nodos.
- * Dirección original en Ghidra: 0x00338B00 (PAL)
+ * @brief Pointer pass-through stub function (identity function).
+ * Originally used in the engine for validation macros or node abstraction.
+ * Original Ghidra address: 0x00338B00 (PAL)
  *
- * @param param_1 Primer parámetro (omitido en el retorno)
- * @param p_node Puntero de nodo secundario que es devuelto de forma directa (param_2)
- * @return void* El mismo puntero recibido en param_2.
+ * @param param_1 First parameter (omitted from the return value)
+ * @param p_node Secondary node pointer returned directly (param_2)
+ * @return void* The same pointer received in param_2.
  */
 void* core_identity_stub(long param_1, void* p_node) {
-	// El descompilador de Ghidra demuestra que la PS2 simplemente mueve el registro de entrada
-	// al registro de salida de inmediato (move $v0, $a1).
+	// The Ghidra decompiler shows that the PS2 simply moves the input register
+	// to the output register immediately (move $v0, $a1).
 	return p_node;
 }

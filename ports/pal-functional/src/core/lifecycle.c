@@ -2,8 +2,8 @@
 
 #define CLEANUP_TABLE_MAX   128
 void (*g_cleanup_table[CLEANUP_TABLE_MAX + 1])(void) = { 0 };
-/* [0] = count memoizado (N). En el ELF el writer (IOP) lo pone a N;
- *   el -1 era solo el modo "scan dinámico" que usaba cuando no lo sabía. */
+/* [0] = memoized count (N). In the ELF the writer (IOP) sets it to N;
+ *   -1 was only the "dynamic scan" mode used when the count was unknown. */
 
 static int cleanup_count = 0;
 
@@ -14,18 +14,18 @@ int cleanup_register(void (*fn)(void))
 
 	cleanup_count++;
 	g_cleanup_table[cleanup_count] = fn;   /* slot 1-based */
-	g_cleanup_table[0] = cleanup_count;    /* memoizado: LIFO limpio, sin scan */
+	g_cleanup_table[0] = cleanup_count;    /* memoized: clean LIFO, no scan */
 	return cleanup_count;
 }
 
 void run_cleanup_callbacks(void)
 {
-	int count = g_cleanup_table[0];   /* N (memoizado) */
+	int count = g_cleanup_table[0];   /* N (memoized) */
 	int i;
 
-	/* [Fiel al asm] Si por alguna vía el header está a -1 (modo scan del ELF),
-	 *   reproducimos el conteo dinámico, PERO saltando la entrada nula
-	 *   (el quirk del jalr a 0 que en PC sería segfault). */
+	/* [Faithful to the asm] If the header is -1 by any path (the ELF's scan mode),
+	 *   reproduce the dynamic count, BUT skip the null entry
+	 *   (the jalr-to-0 quirk that would segfault on PC). */
 	if (count == -1)
 	{
 		count = 0;
@@ -34,7 +34,7 @@ void run_cleanup_callbacks(void)
 	}
 
 	for (i = count; i >= 1; --i)
-		if (g_cleanup_table[i] != 0)        /* <- tapón del off-by-one del asm */
+		if (g_cleanup_table[i] != 0)        /* <- plugs the asm's off-by-one */
 			g_cleanup_table[i]();
 }
 
@@ -44,8 +44,8 @@ void cleanup_run_once(void)
 {
 	if (g_cleanup_done == 0)
 	{
-		g_cleanup_done = 1;        /* set ANTES de limpiar (anti-re-entrancia) */
+		g_cleanup_done = 1;        /* set BEFORE cleaning up (anti re-entrancy) */
 		run_cleanup_callbacks();
 	}
-	/* si ya = 1, no hace nada: idempotente */
+	/* if already 1, does nothing: idempotent */
 }

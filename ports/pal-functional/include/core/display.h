@@ -4,39 +4,39 @@
 #include <stdint.h>
 
 /**
- * Comandos de configuración de display.
- * Mapeo directo del "param_1" de FUN_001257d0.
+ * Display configuration commands.
+ * Direct mapping of "param_1" of FUN_001257d0.
  */
 typedef enum {
 	DISPLAY_CMD_CONFIGURE = 0,  /* Full setup + screen on  */
 	DISPLAY_CMD_DISABLE = 1,  /* Screen off (GS_CSR=0x100) */
-	DISPLAY_CMD_RECONFIGURE = 5   /* Update + apply CRT, sin limpiar IRQ */
+	DISPLAY_CMD_RECONFIGURE = 5   /* Update + apply CRT, without clearing the IRQ */
 } display_command_t;
 
 /**
- * Configura o controla el output de video.
+ * Configures or controls the video output.
  *
- * Port de FUN_001257d0 (0x001257D0, PS2 ELF).
+ * Port of FUN_001257d0 (0x001257D0, PS2 ELF).
  *
- * @param command    Qué hacer (DISPLAY_CMD_*)
- * @param mode       Resolución / display mode (u16, PS2: bits de GS_CSR + timing)
- * @param timing     Parámetro de timing (u16, PS2: HSYNC/VSYNC lines)
+ * @param command    What to do (DISPLAY_CMD_*)
+ * @param mode       Resolution / display mode (u16, PS2: GS_CSR bits + timing)
+ * @param timing     Timing parameter (u16, PS2: HSYNC/VSYNC lines)
  * @param interlace  1 = interlaced, 0 = progressive
  *
- * En PS2:
+ * On PS2:
  *   - Escribe REG_GS_CSR (0x100 off, 0x200 on)
- *   - Llena g_GraphicsCanvasData con mode/timing/flags
- *   - Configura IMR (glColorMask equivalente)
- *   - Si era un reconfigure (cmd=0) y había IRQ activo:
+ *   - Fills g_GraphicsCanvasData with mode/timing/flags
+ *   - Configures the IMR (glColorMask equivalent)
+ *   - If it was a reconfigure (cmd=0) and an IRQ was active:
  *     critical_enter → RemoveIntcHandler(2) → clear flags
- *   - SetGsCrt() → aplica los timings al hardware
+ *   - SetGsCrt() → applies the timings to the hardware
  *
- * En PC (SDL2):
+ * On PC (SDL2):
  *   - DISPLAY_CMD_CONFIGURE  → SDL_SetWindowMode + glViewport + glEnable
  *   - DISPLAY_CMD_DISABLE    → SDL_HideWindow / glClear + no render
- *   - DISPLAY_CMD_RECONFIGURE → SDL_SetWindowMode (resize) sin re-init de IRQ
+ *   - DISPLAY_CMD_RECONFIGURE → SDL_SetWindowMode (resize) without IRQ re-init
  *
- * Thread-safety: llamar solo desde el thread de render.
+ * Thread safety: call only from the render thread.
  */
 void core_display_set(display_command_t command,
 	uint16_t mode,

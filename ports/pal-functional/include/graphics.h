@@ -3,113 +3,113 @@
 
 #include <stdbool.h>
 
-// Estructura que simula el bloque de memoria de PS2, pero añade campos para PC
+// Structure that mirrors the PS2 memory block, with extra fields for PC
 typedef struct {
-	// --- Campos Originales PS2 (Valores nativos del juego) ---
-	int width_native;       // Resolución original (ej. 512)
-	int height_native;      // Resolución original (ej. 288 o 512)
+	// --- Original PS2 fields (native game values) ---
+	int width_native;       // Original resolution (e.g. 512)
+	int height_native;      // Original resolution (e.g. 288 or 512)
 
-	// --- Campos Extendidos para PC (Modificables por el usuario) ---
-	int width_modern;       // Resolución modificada (ej. 1920 o 3840)
-	int height_modern;      // Resolución modificada (ej. 1080 o 2160)
-	float target_fps;       // Tasa de cuadros (ej. 60.0, 144.0, 0 para ilimitado)
+	// --- Extended PC fields (user-modifiable) ---
+	int width_modern;       // Modified resolution (e.g. 1920 or 3840)
+	int height_modern;      // Modified resolution (e.g. 1080 or 2160)
+	float target_fps;       // Frame rate (e.g. 60.0, 144.0, 0 for unlimited)
 } GraphicsCanvas;
 
-// ... Mantener lo anterior ...
+// ... Keep the previous declarations ...
 
 /**
- * @brief Busca y reserva una ranura de comando libre en la memoria del Scratchpad virtual.
- * @return Dirección virtual asignada (offset simulado), o 0 si el búfer está lleno.
+ * @brief Finds and reserves a free command slot in the virtual Scratchpad memory.
+ * @return Assigned virtual address (simulated offset), or 0 if the buffer is full.
  */
 unsigned int Graphics_AllocateScratchpadSlot(void);
 
-// Declaración global para que otros subsistemas la lean
+// Global declaration so other subsystems can read it
 extern GraphicsCanvas g_GraphicsCanvasData;
 
 /**
- * @brief Obtiene el puntero al contexto de datos gráficos configurables.
+ * @brief Returns the pointer to the configurable graphics data context.
  */
 GraphicsCanvas* Graphics_GetCanvasData(void);
 
 /**
- * @brief Configura la resolución personalizada del juego para PC.
+ * @brief Configures the game's custom PC resolution.
  */
 void Graphics_SetCustomResolution(int width, int height, float fps);
 
 /**
- * @brief Ejecuta el procesamiento de paquetes de datos devueltos por el subsistema de video.
- * @param packet_ptr Puntero al paquete de datos de la transacción SIF.
+ * @brief Processes the data packets returned by the video subsystem.
+ * @param packet_ptr Pointer to the data packet of the SIF transaction.
  */
 void Graphics_ProcessIopTransaction(void* packet_ptr);
 
 /**
- * @brief Segundo callback del SIF encargado de despachar sub-rutinas gráficas asíncronas.
+ * @brief Second SIF callback, dispatching asynchronous graphics subroutines.
  */
 void Graphics_SifCallback_Dispatch(void* param_1, unsigned int* param_2);
 
-// ... Mantener lo anterior ...
+// ... Keep the previous declarations ...
 
 extern unsigned int g_VideoMode_Current;
 extern unsigned int g_VideoMode_Target;
 extern unsigned int g_VideoMode_Fallback;
 
 /**
- * @brief Compara los registros de modo de video para detectar inconsistencias o cambios de pantalla.
- * @return true si los tres modos difieren entre sí (requiere reconfiguración), false de lo contrario.
+ * @brief Compares the video mode registers to detect inconsistencies or screen changes.
+ * @return true if the three modes all differ (reconfiguration required), false otherwise.
  */
 bool Graphics_CheckVideoModeChange(void);
 
-// ... Mantener lo anterior ...
+// ... Keep the previous declarations ...
 
 /**
- * @brief Configura el entorno gráfico moderno y procesa la carga de metadatos de recursos.
- * @param resource_path Ruta del recurso/mapa a cargar.
- * @param flags Máscaras de configuración gráfica del motor.
- * @param param_3 Parámetros adicionales de contexto.
- * @return 0 para éxito, o código de error negativo.
+ * @brief Configures the modern graphics environment and loads the resource metadata.
+ * @param resource_path Path of the resource/map to load.
+ * @param flags Graphics configuration masks of the engine.
+ * @param param_3 Additional context parameters.
+ * @return 0 on success, or a negative error code.
  */
 int Graphics_SetupCanvasEnvironment(const char* resource_path, unsigned int flags, unsigned int param_3);
 
-// ... Mantener lo anterior ...
+// ... Keep the previous declarations ...
 
 /**
- * @brief Obtiene la dirección virtual simulada de una ranura del Scratchpad basándose en su índice.
- * @param slot_index Índice de la ranura solicitada (0-31).
- * @return Dirección virtual calculada (0x13ff00 + offset), o 0 si el índice es inválido.
+ * @brief Returns the simulated virtual address of a Scratchpad slot from its index.
+ * @param slot_index Index of the requested slot (0-31).
+ * @return Computed virtual address (0x13ff00 + offset), or 0 if the index is invalid.
  */
 unsigned int Graphics_GetScratchpadSlotAddress(unsigned long slot_index);
 
-// ... Mantener lo anterior ...
+// ... Keep the previous declarations ...
 
 /**
- * @brief Despacha la transacción gráfica acumulada en el Scratchpad hacia el entorno moderno.
- * @param slot_index Índice de la ranura a procesar.
- * @param param_2 Parámetro de control/dirección de datos.
- * @param param_3 Tamaño o puntero de metadatos de recursos.
- * @return 0 para éxito, o código de error negativo en caso de fallo.
+ * @brief Dispatches the graphics transaction accumulated in the Scratchpad to the modern environment.
+ * @param slot_index Index of the slot to process.
+ * @param param_2 Data control/address parameter.
+ * @param param_3 Size or pointer of the resource metadata.
+ * @return 0 on success, or a negative error code on failure.
  */
 int Graphics_DispatchCanvasTransaction(unsigned long slot_index, unsigned int param_2, long param_3);
 
-// ... Mantener lo anterior ...
+// ... Keep the previous declarations ...
 
 /**
- * @brief Cierra un contexto de transacción gráfica activo y libera su ranura en el Scratchpad.
- * @param slot_index Índice de la ranura a liberar (0-31).
- * @return 0 para éxito, o código de error negativo en caso de fallo.
+ * @brief Closes an active graphics transaction context and frees its Scratchpad slot.
+ * @param slot_index Index of the slot to free (0-31).
+ * @return 0 on success, or a negative error code on failure.
  */
 int Graphics_CloseCanvasTransaction(unsigned long slot_index);
 
-// ... Mantener lo anterior (GraphicsCanvas, etc.) ...
+// ... Keep the previous declarations (GraphicsCanvas, etc.) ...
 
 /**
- * @brief Configura el entorno de despliegue en PC interceptando los registros de la PS2.
- * @param out_env Puntero al buffer donde el juego guarda la estructura del entorno de pantalla.
- * @param mode_flags Flags de inicialización.
- * @param width Ancho nativo solicitado (ej. 512).
- * @param height Alto nativo solicitado (ej. 288 o 512).
- * @param dx Desplazamiento horizontal.
- * @param dy Desplazamiento vertical.
- * @return Estructura binaria de control compatible empaquetada.
+ * @brief Configures the PC display environment by intercepting the PS2 registers.
+ * @param out_env Pointer to the buffer where the game stores the display environment structure.
+ * @param mode_flags Initialization flags.
+ * @param width Requested native width (e.g. 512).
+ * @param height Requested native height (e.g. 288 or 512).
+ * @param dx Horizontal offset.
+ * @param dy Vertical offset.
+ * @return Packed binary control structure, compatible with the original.
  */
 unsigned long long sceGsDefDispEnv(unsigned long long* out_env, short mode_flags, short width, short height, short dx, short dy);
 

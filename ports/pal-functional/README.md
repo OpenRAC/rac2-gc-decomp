@@ -1,139 +1,86 @@
-# Ratchet \& Clank 2: Going Commando (PAL) - Functional Decompilation \& Reverse Engineering
+# Ratchet & Clank 2 (PAL) - Functional Decompilation & Reverse Engineering
 
-# English
+This tree is dedicated to the **reverse engineering, logical analysis and functional
+decompilation** of the European (PAL) version of *Ratchet & Clank 2* (game ID
+`SCES-516.07`) for the PlayStation 2.
 
-This repository is dedicated to the \*\*reverse engineering, logical analysis, and functional decompilation\*\* of the European (PAL) version of \*Ratchet \& Clank 2: Going Commando\* (Game ID: `SCES-516.07`) for the PlayStation 2 console.
+It was imported with its full history from
+[platypet2217-star/RAC2Decomp](https://github.com/platypet2217-star/RAC2Decomp) and
+keeps that project's [MIT licence](LICENSE). The surrounding repository is a
+byte-matching decompilation of USA v1.01 (`SCUS_972.68`); this tree is not part of
+its matching sources, catalogues or progress. The addresses quoted here are PAL
+addresses and do not correspond to USA placements.
 
-Unlike strict \*byte-matching\* projects, the main goal of this lab is to \*\*understand, document, and extract the logical subsystems of the Insomniac Games engine\*\* (physics, weapon behavior, inventory management, state flows) and translate them into clean, modern C/C++ code. This will serve as a solid documentary foundation for future preservation efforts, advanced modifications, or an eventual native port.
+Unlike strict *byte-matching* projects, the main goal of this work is to
+**understand, document and extract the logical subsystems of the Insomniac Games
+engine** (physics, weapon behaviour, inventory management, state flows) and
+translate them into clean, modern C/C++ code. This serves as a documentary
+foundation for future preservation efforts, advanced modifications or an eventual
+native port.
 
-> \\\[!IMPORTANT] 
+> [!IMPORTANT]
+> This tree **does not host or distribute copyrighted material**. You will not find
+> any ISOs, textures, music, 3D models or commercial executables owned by Insomniac
+> Games or Sony Interactive Entertainment here.
 
-> This repository \*\*does not host or distribute copyrighted material\*\*. You will not find any ISOs, textures, music, 3D models, or commercial executables owned by Insomniac Games or Sony Interactive Entertainment here.
+---
 
-\---
+## Tools Used in the Workflow
 
-## 🛠️ Tools Used in the Workflow
+- **Ghidra (v11.x or higher):** static analysis of the executable (`SCES_516.07`),
+  configured with analyzers specific to the **MIPS-R5900 (Emotion Engine)**
+  architecture to mitigate alignment and constant issues and obtain clean C
+  pseudocode in the decompiler.
+- **PCSX2 debugger:** real-time dynamic analysis. It pauses the game, injects values
+  into PS2 RAM, traces pointers and validates hypotheses about function behaviour
+  before they are documented.
 
-To move forward with this project step by step, we rely on the following suite of free, professional-grade tools:
+---
 
-\*   \*\*Ghidra (v11.x or higher):\*\* Used for static analysis of the executable binary (`SCES\_516.07`). Configured with extensions and analyzers specific to the \*\*MIPS-R5900 (Emotion Engine)\*\* architecture, which allows us to mitigate alignment and constant issues to obtain clean C pseudocode in the decompiler.
+## Structure
 
-\*   \*\*PCSX2 Debugger:\*\* Used for real-time dynamic analysis. It allows us to pause the game’s execution, inject values into the PS2’s RAM, trace pointers, and validate hypotheses about function behavior before documenting them.
+- `docs/`: research notes, RAM maps found with the debugger, flowcharts and
+  documentation of engine structures.
+- `include/`: headers (`.h`) with PS2 data type definitions (`u32`, `f32`, etc.)
+  and reconstructed game data structures (e.g. vectors, actor components).
+- `src/`: functional reconstruction of the game's logic functions in C/C++.
+- `tools/`: scripts for processing data, formatting text or assisting with
+  repetitive reverse-engineering tasks.
 
-\---
+---
 
-## 📂 Repository Structure
+## Getting Started
 
-\*   `docs/`: Research notes, RAM maps found using the debugger, flowcharts, and documentation of engine structures.
+1. **Clone** the repository.
+2. **Set up the analysis environment:**
+   - Import your legally obtained executable `SCES_516.07` into Ghidra.
+   - Enable the MIPS-R5900 analyzers (`Constant Reference Analyzer` and
+     `Unaligned Instruction Fix`) so that the functions follow the project
+     standard.
+3. **Explore the structures:** `include/core/types.h` contains the primitive types
+   used to document local and global variables in Ghidra.
 
-\*   `include/`: Header files (`.h`) containing PS2 data type definitions (`u32`, `f32`, etc.) and reconstructed game data structures (e.g., vectors, actor components).
+---
 
-\*   `src/`: Functional reconstruction of the game’s logic functions in C/C++ source code.
-
-\*   `tools/`: Automated Python scripts for processing data, formatting text, or assisting with repetitive reverse-engineering tasks.
-
-\---
-
-## 🚀 Getting Started (For Contributors)
-
-If you want to study the code or contribute to the analysis of a particular function, set up your environment as follows:
-
-1\.  \*\*Clone the project\*\* to your local machine using GitHub Desktop or Git via the command line.
-
-2\.  \*\*Set up your analysis environment:\*\*
-
-&#x20;   \*   Import your legal executable `SCES\_516.07` into Ghidra.
-
-&#x20;   \*   Make sure to enable the MIPS-R5900 analyzers (`Constant Reference Analyzer` and `Unaligned Instruction Fix`) so that the functions comply with the project standard.
-
-3\.  \*\*Explore the structures:\*\* The `include/types.h` file contains the primitive types we use to document local and global variables in Ghidra.
-
-\---
-
-## 🤝 Contributions and Progress
+## Contributions
 
 Any findings are valuable. Contributions fall into the following categories:
 
-\*   \*\*Documentation:\*\* Map variables in memory space and record their behavior in the `docs/` folder.
+- **Documentation:** map variables in memory and record their behaviour in `docs/`.
+- **Code translation:** take the pseudocode generated by the Ghidra decompiler,
+  clean it up, rename generic variables to descriptive, functional names and place
+  it in `src/`.
 
-\*   \*\*Code Translation:\*\* Take the pseudocode generated by the Ghidra decompiler, clean it up, rename generic variables to descriptive, functional names, and place it in `src/`.
+---
 
-\---
+## Licence
 
-## 📄 License
+The research code and community-developed tools in this tree are distributed under
+the MIT Licence, copyright platypet2217-star. The trademarks, names and assets of
+the original game belong exclusively to their respective rights holders.
 
-The research code and community-developed tools in this repository are distributed under the MIT License. The trademarks, names, and assets of the original game belong exclusively to their respective rights holders.
+## Original Author's Note
 
-## Notice
-
-I'm completely new to this, so there may be better ports out there than what this repository has to offer. In any case, this is an attempt to preserve one of my favorite games so it can run natively. I'll be checking the “Issues” section regularly so we can all work together to answer any questions we have.
-
-
-
-# Español
-
-Este repositorio está dedicado a la \*\*ingeniería inversa, análisis lógico y decompilación funcional\*\* de la versión europea (PAL) de \*Ratchet \& Clank 2: Going Commando\* (ID del juego: `SCES-516.07`) para la consola PlayStation 2.
-
-A diferencia de los proyectos de alineación estricta (\*byte-matching\*), el objetivo principal de este laboratorio es \*\*comprender, documentar y extraer los subsistemas lógicos del motor de Insomniac Games\*\* (físicas, comportamiento de armas, gestión de inventario, flujos de estados) y traducirlos a código C/C++ limpio y moderno. Esto servirá como base documental sólida para futuros esfuerzos de preservación, modificaciones avanzadas o un eventual port nativo.
-
-> \[!IMPORTANT]  
-
-> Este repositorio \*\*no aloja ni distribuirá material protegido por derechos de autor\*\*. No encontrarás aquí ISOs, texturas, música, modelos tridimensionales ni ejecutables comerciales propiedad de Insomniac Games o Sony Interactive Entertainment. 
-
-\---
-
-## 🛠️ Herramientas Utilizadas en el Flujo de Trabajo
-
-Para avanzar en este proyecto paso a paso, nos apoyamos en el siguiente kit de herramientas gratuitas de grado profesional:
-
-\*   \*\*Ghidra (v11.x o superior):\*\* Utilizado para el análisis estático del binario ejecutable (`SCES\_516.07`). Configurado con extensiones y analizadores específicos para la arquitectura \*\*MIPS-R5900 (Emotion Engine)\*\*, lo que nos permite mitigar problemas de alineación y constantes para obtener un pseudocódigo C limpio en el descompilador.
-
-\*   \*\*PCSX2 Debugger:\*\* Utilizado para el análisis dinámico en tiempo real. Nos permite pausar la ejecución del juego, inyectar valores en la memoria RAM de la PS2, rastrear \*pointers\* y validar hipótesis sobre el comportamiento de las funciones antes de documentarlas.
-
-\---
-
-## 📂 Estructura del Repositorio
-
-\*   `docs/`: Notas de investigación, mapas de memoria RAM encontrados con el debugger, diagramas de flujo y documentación de estructuras del motor.
-
-\*   `include/`: Archivos de cabecera (`.h`) que contienen las definiciones de tipos de datos de la PS2 (`u32`, `f32`, etc.) y las estructuras de datos reconstruidas del juego (ej. vectores, componentes de actores).
-
-\*   `src/`: Reconstrucción funcional de las funciones lógicas del juego en código fuente de C/C++.
-
-\*   `tools/`: Scripts automatizados en Python para procesar datos, formatear texto o asistir en tareas repetitivas de ingeniería inversa.
-
-\---
-
-## 🚀 Cómo Empezar (Para Colaboradores)
-
-Si deseas estudiar el código o aportar al análisis de alguna función, prepara tu entorno de la siguiente manera:
-
-1\.  \*\*Clona el proyecto\*\* en tu máquina local usando GitHub Desktop o Git por consola.
-
-2\.  \*\*Configura tu entorno de análisis:\*\*
-
-&#x20;   \*   Importa tu ejecutable legal `SCES\_516.07` en Ghidra.
-
-&#x20;   \*   Asegúrate de activar los analizadores de MIPS-R5900 (`Constant Reference Analyzer` y `Unaligned Instruction Fix`) para que las funciones coincidan con el estándar del proyecto.
-
-3\.  \*\*Explora las estructuras:\*\* El archivo `include/types.h` contiene los tipos primitivos que usamos para documentar las variables locales y globales en Ghidra.
-
-\---
-
-## 🤝 Contribuciones y Avances
-
-Cualquier hallazgo es valioso. Las contribuciones se dividen en:
-
-\*   \*\*Documentación:\*\* Mapear variables en el espacio de memoria y registrar su comportamiento en la carpeta `docs/`.
-
-\*   \*\*Traducción de Código:\*\* Tomar el pseudocódigo generado por el descompilador de Ghidra, limpiarlo, renombrar variables genéricas a nombres descriptivos funcionales, y alojarlo en `src/`.
-
-\---
-
-## 📄 Licencia
-
-El código de investigación y las herramientas escritas por la comunidad en este repositorio se distribuyen bajo la Licencia MIT. Las marcas, nombres y assets del juego original pertenecen exclusivamente a sus titulares de derechos.
-
-## Aviso
-
-Soy completamente nuevo en esto, puede que existan mejores avances de lo que puede ofrecer este repositorio, de todos modos es un intento de preservar un juego de mis favoritos y pueda salir de manera nativa, igual cualquier cosa estaré revisando en la parte de issues para que entre todos resolvamos nuestras dudas.
+"I'm completely new to this, so there may be better ports out there than what this
+repository has to offer. In any case, this is an attempt to preserve one of my
+favorite games so it can run natively."

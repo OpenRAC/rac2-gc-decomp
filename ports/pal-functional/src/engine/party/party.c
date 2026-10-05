@@ -34,37 +34,37 @@ void party_update(float dt)
 		player_update_camera(&g_players[i], dt);
 		player_update_hud(&g_players[i], dt);
 	}
-	/* [TODO] Llamar a world_update_physics / world_update_ai
-	 *   del motor original (por descifrar). UNA vez, no por
-	 *   jugador. El mundo es compartido. */
+	/* [TODO] Call world_update_physics / world_update_ai
+	 *   of the original engine (to be decoded). ONCE, not per
+	 *   player. The world is shared. */
 }
 
 void party_render(void)
 {
 	if (!g_party_active) return;
 
-	/* Recalcular viewports con el layout actual */
+	/* Recompute the viewports with the current layout */
 	int sw, sh;
-	SDL_GetWindowSize(NULL, &sw, &sh);   /* [TODO] pasar la ventana */
+	SDL_GetWindowSize(NULL, &sw, &sh);   /* [TODO] pass the window */
 	viewport_compute(g_layout, g_player_count, sw, sh, g_viewports);
 
-	/* [TODO] Clear completo (una vez) */
+	/* [TODO] Full clear (once) */
 	glClearColor(0, 0, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	/* Render por jugador */
+	/* Per-player render */
 	for (int i = 0; i < g_player_count; i++)
 	{
 		if (!g_players[i].active) continue;
 
 		viewport_apply(&g_viewports[i]);
 
-		/* [TODO] glClearColor(0.1 + i*0.1, 0.2, 0.3, 1); -- para test */
+		/* [TODO] glClearColor(0.1 + i*0.1, 0.2, 0.3, 1); -- for testing */
 		/* [TODO] render_world(g_players[i].cam_pos, g_players[i].cam_rot) */
 		/* [TODO] render_hud(&g_players[i]) */
 
-		/* Placeholder: dibuja un color sólido por viewport
-		   para validar la división de pantalla. */
+		/* Placeholder: draws a solid colour per viewport
+		   to validate the screen split. */
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 

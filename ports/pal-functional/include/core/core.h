@@ -12,8 +12,8 @@ typedef enum {
 	PRIORITY_HIGH
 } ThreadPriority;
 
-/* Global de estado compartido. 0x20c/0x168 eran offsets
- * de cabezal en el anillo SIF. En PC se fija a 0. */
+/* Shared global state. 0x20c/0x168 were head
+ * offsets in the SIF ring. On PC it is fixed to 0. */
 int  g_sync_state;
 
 s32 sceSemaCreate(void);
@@ -28,22 +28,22 @@ int ProcessData(void);
 
 void render_init_semas(void);
 
-/* Barrera de sincronización EE<->IOP (spin-wait original).
- *   En PC: no-op + escribir g_sync_state para que los
- *   readers posteriores no vean 0. */
+/* EE<->IOP synchronization barrier (original spin-wait).
+ *   On PC: no-op + write g_sync_state so that the
+ *   later readers do not see 0. */
 void sce_sync_barrier(void);
 
-/* Inicializa el canal de display (GS) del motor.
- *   Idempotente: solo corre si RCNT3_FLAG_INIT no está set.
- *   [MOD-PENDING] El nº de buffers (6) es hardcode; para mods
- *   de render (triple/quad buffer) externalizar a data/. */
+/* Initializes the engine's display channel (GS).
+ *   Idempotent: only runs if RCNT3_FLAG_INIT is not set.
+ *   [MOD-PENDING] The number of buffers (6) is hard-coded; for render
+ *   mods (triple/quad buffering) move it out to data/. */
 void display_init_channel(void);
 
-/* [CONFIRM] Canal mínimo (1 buffer) del motor, gateado por MODO.
- *   A diferencia del canal A (guard idempotente) y del B (sin guard),
- *   esta entra solo si sys_config_init() == 1 (modo default).
- *   En PC siempre entra (config default). En PS2, si el modo es
- *   avanzado, otro canal ya cubre el render y este no corre. */
+/* [CONFIRM] Minimal engine channel (1 buffer), gated by MODE.
+ *   Unlike channel A (idempotent guard) and channel B (no guard),
+ *   this one runs only if sys_config_init() == 1 (default mode).
+ *   On PC it always runs (default config). On PS2, if the mode is
+ *   advanced, another channel already covers rendering and this one does not run. */
 void display_init_channel_min(void);
 
 void display_init_channel_b(void);
@@ -68,17 +68,17 @@ void ProcessFunction(void);
 
 void SetVSyncFlag(SDL_Window* window);
 
-/* [CONFIRM] Handshake de VSync del motor: setea la flag de VSync,
- *   habilita la línea de interrupción del EE (INTSTAT bit 2 = 0x4),
- *   espera al PRIMER vblank (bit 2 limpio O handler escribiendo en
- *   buffer[0]), hace el ack (INTCONT) y devuelve el handle/estado del
- *   VSync (buffer[8], el uStack_18 del C de Ghidra).
+/* [CONFIRM] Engine VSync handshake: sets the VSync flag,
+ *   enables the EE interrupt line (INTSTAT bit 2 = 0x4),
+ *   waits for the FIRST vblank (bit 2 clear OR the handler writing to
+ *   buffer[0]), acknowledges it (INTCONT) and returns the VSync
+ *   handle/state (buffer[8], uStack_18 in Ghidra's C).
  *   PS2:  vent. 0x0010f000 (INTSTAT) + 0x001000000 (ack) +
- *         kernel_system_sync_guard/release (protección de IRQ).
- *   PC:   no hay EE/INTSTAT. No-op, devuelve 0 (handle nulo).
- *   [MOD-PENDING] Cuando exista render real, esto se mapea a la
- *         sincronización vertical nativa (glXSwapInterval / DWM /
- *         SDL_WaitEvent) del canal activo. */
+ *         kernel_system_sync_guard/release (IRQ protection).
+ *   PC:   there is no EE/INTSTAT. No-op, returns 0 (null handle).
+ *   [MOD-PENDING] Once real rendering exists, this maps to the
+ *         native vertical synchronization (glXSwapInterval / DWM /
+ *         SDL_WaitEvent) of the active channel. */
 int vsync_wait_first(void);
 
 

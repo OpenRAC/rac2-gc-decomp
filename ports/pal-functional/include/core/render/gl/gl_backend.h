@@ -3,10 +3,10 @@
 
 #include "core/render/render.h"
 #include <SDL.h>
-#include <GL/gl.h>   /* GLAD lo redefine; este header solo para tipos base */
+#include <GL/gl.h>   /* GLAD redefines it; this header is only for the base types */
 
 /* ========================================================================
- *  Tipos internos – expanden los opacos de render.h
+ *  Internal types – expand the opaque types of render.h
  * ======================================================================== */
 
 struct RenderHandle {
@@ -20,7 +20,7 @@ struct RenderHandle {
     GLuint               current_vao;
     ShaderHandle* current_shader;
     Camera               current_cam;
-    GLuint               tex_units[8];  /* track si hay textura cargada en cada unit */
+    GLuint               tex_units[8];  /* tracks whether each unit has a texture loaded */
 };
 
 struct ShaderHandle {
@@ -45,7 +45,7 @@ struct TextureHandle {
 };
 
 /* ========================================================================
- *  Funciones internas (llamadas desde render_dispatch.c)
+ *  Internal functions (called from render_dispatch.c)
  * ======================================================================== */
 
 RenderHandle* GL_Init(u32 width, u32 height, u32 flags);

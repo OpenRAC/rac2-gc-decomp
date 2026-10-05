@@ -2,31 +2,31 @@
 #define LIFECYCLE_H
 
 /*
- * Lista de callbacks de cierre del motor (LIFO).
- *   g_cleanup_table[0]  = header (-1 = "lista terminada en 0")
- *   g_cleanup_table[1..N] = punteros a funciones de cleanup
- *   g_cleanup_table[N+1]  = 0 (sentinela)
+ * List of engine shutdown callbacks (LIFO).
+ *   g_cleanup_table[0]  = header (-1 = "zero-terminated list")
+ *   g_cleanup_table[1..N] = pointers to cleanup functions
+ *   g_cleanup_table[N+1]  = 0 (sentinel)
  *
- * En PS2 la llenaba el loader del IOP (otro binario, vía SIF/RPC).
- * En PC la llenamos nosotros: cada recurso que se crea registra aquí
- * su destructor, y run_cleanup_callbacks() los ejecuta en reversa al salir.
+ * On PS2 it was filled by the IOP loader (another binary, via SIF/RPC).
+ * On PC we fill it ourselves: every resource that is created registers
+ * its destructor here, and run_cleanup_callbacks() runs them in reverse on exit.
  */
 extern void (*g_cleanup_table[])(void);
 
-/* Registra un destructor. Devuelve el slot asignado, o -1 si el array está lleno. */
+/* Registers a destructor. Returns the assigned slot, or -1 if the array is full. */
 int  cleanup_register(void (*fn)(void));
 
-/* Ejecuta todos los callbacks registrados, del último al primero (LIFO).
- *   Con la tabla vacía (BSS=0) es un no-op seguro. */
+/* Runs every registered callback, from last to first (LIFO).
+ *   With an empty table (BSS=0) it is a safe no-op. */
 void run_cleanup_callbacks(void);
 
-/* Flag "¿ya ejecuté el cleanup?" (DAT_0014186c).
- *   0 = pendiente, 1 = ya corrió los destructores. */
+/* "Has the cleanup already run?" flag (DAT_0014186c).
+ *   0 = pending, 1 = the destructors have already run. */
 extern int g_cleanup_done;
 
-/* Ejecuta run_cleanup_callbacks() UNA sola vez.
- *   El guard se setea ANTES de ejecutar (protección anti-re-entrancia:
- *   un callback que llame a cleanup_run_once de nuevo no re-entra). */
+/* Runs run_cleanup_callbacks() only ONCE.
+ *   The guard is set BEFORE running (re-entrancy protection:
+ *   a callback that calls cleanup_run_once again does not re-enter). */
 void cleanup_run_once(void);
 
 #endif /* LIFECYCLE_H */

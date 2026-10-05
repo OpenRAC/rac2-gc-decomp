@@ -1,38 +1,24 @@
-# English
+# Mod: Party Mode — Local Multiplayer
 
-# Memory Card Subsystem Documentation - Ratchet & Clank 2 (PAL)
+## Goal
 
-This document compiles the text strings and calls to the Sony SDK (`libmc`) used to manage game progress.
+Allow 2 to 4 local players in split screen.
+Each player controls an independent Ratchet (or Clank),
+with their own input, camera and HUD, while sharing
+the same world, the same AI and the same physics.
 
-## File Format Templates (Memory Card Path Template)
+## Scope
 
-| Memory Address | Data Type | Static String Value | Purpose / Use in the Engine |
-| :--- | :--- | :--- | :--- |
-| **`0x001A9AA2`** | `char[]` (String) | `“BESCES-50916RATCHET/save%d.bin”` | Format mask used by vsnprintf to define the path of the game’s binary file in the slot (`mc0:` / `mc1:`). |
-
-# Español
-
-# Mod: Party Mode — Multi-Jugador Local
-
-## Objetivo
-
-Permitir 2 a 4 jugadores locales en pantalla dividida.
-Cada jugador controla un Ratchet (o un Clank) independiente,
-con input propio, cámara propia, HUD propio, pero comparten
-el mismo mundo, la misma IA, la misma física.
-
-## Alcance
-
-| Sí | No (por ahora) |
+| Yes | No (for now) |
 |---|---|
-| 2-4 jugadores locales | Multiplayer online / red |
-| Split-screen 2×1, 1×2, 2×2 | Pantalla completa por jugador |
-| Inputs por controlador | Inputs por teclado+mouse (opcional futuro) |
-| HUD independiente por jugador | Menú de pausa compartido (por ahora sí) |
-| Mismo mundo, misma IA | Mundos separados / co-op asimétrico |
-| Armas compartidas (mismo pool) | Armas únicas por jugador (opcional) |
+| 2-4 local players | Online / network multiplayer |
+| Split screen 2×1, 1×2, 2×2 | Full screen per player |
+| Per-controller input | Keyboard+mouse input (optional, future) |
+| Independent HUD per player | Shared pause menu (shared for now) |
+| Same world, same AI | Separate worlds / asymmetric co-op |
+| Shared weapons (same pool) | Unique weapons per player (optional) |
 
-## Configuración
+## Configuration
 
 `data/mods/party_mode/config.json`:
 
@@ -58,26 +44,29 @@ el mismo mundo, la misma IA, la misma física.
     }
   ]
 }
+```
 
-Game loop (multi)
+## Game loop (multi)
+
+```
 main_loop:
     dt = timer()
 
-    // 1. Inputs (por jugador)
+    // 1. Inputs (per player)
     for p in 0..N-1:
         party_update_input(p)
 
-    // 2. Lógica de mundo (UNA VEZ, no por jugador)
+    // 2. World logic (ONCE, not per player)
     world_update_physics(dt)
     world_update_ai(dt)
     world_update_collisions()
 
-    // 3. Estados por jugador (cámara, HUD, animación)
+    // 3. Per-player state (camera, HUD, animation)
     for p in 0..N-1:
         player_update_camera(p, dt)
         player_update_hud(p, dt)
 
-    // 4. Render (por viewport)
+    // 4. Render (per viewport)
     for p in 0..N-1:
         glViewport(vp[p].x, vp[p].y, vp[p].w, vp[p].h)
         glScissor(vp[p].x, vp[p].y, vp[p].w, vp[p].h)
@@ -87,9 +76,11 @@ main_loop:
         glDisable(GL_SCISSOR_TEST)
 
     SDL_GL_SwapWindow()
+```
 
+## CMake (added to the root CMakeLists.txt)
 
-CMake (se agrega a CMakeLists.txt raíz)
+```cmake
 # --- engine/party ---
 add_library(engine_party STATIC
     src/engine/party/party.c
@@ -106,3 +97,4 @@ target_link_libraries(engine_party
     SDL2::SDL2
     OpenGL::GL
 )
+```

@@ -6,7 +6,7 @@
 
 /*
  * ------------------------------------------------------------------
- *  PORT de FUN_0011b588 (0x0011B588)
+ *  PORT of FUN_0011b588 (0x0011B588)
  * ------------------------------------------------------------------
  *
  *  ASM original:
@@ -17,7 +17,7 @@
  *    if (flag)  kernel_system_sync_release();
  *    return prev;
  *
- *  PC single-thread:  no-op, retorna 0.
+ *  PC single-thread:  no-op, returns 0.
  *  PC multi-thread:   mutex (futuro).
  * ------------------------------------------------------------------
  */

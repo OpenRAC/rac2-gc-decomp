@@ -11,28 +11,28 @@ extern "C" {
 #endif
 
 /* ------------------------------------------------------------------------
- * Funciones externas del motor / SDK (definidas en otra unidad del
- * proyecto). No se cuenta con su cabecera original, así que se declaran
- * aquí para que el compilador conozca su firma real.
+ * External engine / SDK functions (defined in another unit of the
+ * project). Their original header is not available, so they are declared
+ * here so the compiler knows their real signature.
  * ------------------------------------------------------------------------ */
 void  sys_assert_dispatch(const char* p_file, s32 line, const char* p_assertion,
-          long p4, long p5, long p6, long p7, long p8); // Firma confirmada contra su definición real en kernel_sys.c (no es variádica)
+          long p4, long p5, long p6, long p7, long p8); // Signature confirmed against its real definition in kernel_sys.c (not variadic)
 s32   txt_vsnprintf_internal(char* p_dest_buffer, const char* p_format_str, va_list args_list);
 
-/* Declaradas pero no utilizadas actualmente en hud_ammo.c; se conservan
- * por si otra unidad del proyecto las necesita. Si no es el caso, se
- * pueden eliminar sin riesgo. */
+/* Declared but currently unused in hud_ammo.c; kept in case
+ * another unit of the project needs them. Otherwise they can be
+ * removed safely. */
 void* hud_allocate_or_get_node(int* source, ...);
 u32   hud_initialize_subsystem(u32 size, long address);
 
 /* ------------------------------------------------------------------------
- * Funciones de hud_ammo.c usadas antes de su propia definición en el .c
- * (por eso necesitan prototipo). La firma aquí es la de su DEFINICIÓN
- * real; los comentarios "MISMATCH" señalan casos donde el prototipo
- * original en el .c no coincidía con la definición.
+ * hud_ammo.c functions used before their own definition in the .c
+ * (hence the prototypes). The signature here is the one of the real
+ * DEFINITION; "MISMATCH" comments mark cases where the original
+ * prototype in the .c did not agree with the definition.
  * ------------------------------------------------------------------------ */
 
-/* Inventario / armas */
+/* Inventory / weapons */
 u8    inv_get_active_weapon_id(void);
 s32   inv_count_unlocked_weapons(void);
 s32   inv_get_quick_select_remaining_space(void);
@@ -51,7 +51,7 @@ void  inv_set_active_weapon_slot(u32* p_inventory_base, u32 slot_index);        
 void  inv_set_weapon_inventory_mode(u32* p_inventory_base, u32 inventory_mode);
 void  inv_reset_weapon_inventory(void* p_inventory_base);                      // MISMATCH: antes "u32* p_inventory_base"
 
-/* Widgets del HUD */
+/* HUD widgets */
 void  hud_set_widget_position_2d(u32* p_widget, s32 x_coord, s32 y_coord);
 void  hud_set_widget_scale_y(u32* p_widget, s32 y_scale);
 void  hud_set_widget_render_mode_alt(u32* p_widget, u32 render_flags);
@@ -68,16 +68,16 @@ void  hud_link_widget_text(u32* p_widget, const char* text_ptr, long param_3,
 void  hud_init_meter_widget(u32* p_widget, const char* text_ptr, long p_hud_pool,
           long p4, long p5, long p6, long p7, long p8);
 void  hud_register_widget_asset(u32* p_widget, const char* asset_name_ptr, long p_hud_pool,
-          long p4, long p5, long p6, long p7, long p8); // MISMATCH: antes variádica y con "void*" en el primer parámetro
+          long p4, long p5, long p6, long p7, long p8); // MISMATCH: previously variadic and with "void*" as the first parameter
 void  hud_clear_widget_matrices(u32* p_widget_transform, const char* text_ptr, long p_hud_pool,
-          long p4, long p5, long p6, long p7, long p8); // MISMATCH: existía además una redeclaración variádica incompatible
+          long p4, long p5, long p6, long p7, long p8); // MISMATCH: there was also an incompatible variadic redeclaration
 void inv_set_weapon_inventory_transition_flag(u32* p_inventory_base, u32 transition_flag);
 
-/* Memoria / pool de nodos */
+/* Memory / node pool */
 int*  hud_allocate_node(int* p_hud_pool, long p2, long p3, long p4, long p5, long p6, long p7, long p8);
 void  hud_free_node(int* p_hud_pool, int* p_node_to_free);
 void* core_identity_stub(long param_1, void* p_node);
-void* ee_memset(void* dest, u8 value, u32 size); // MISMATCH: antes también declarada con "s32 value"
+void* ee_memset(void* dest, u8 value, u32 size); // MISMATCH: previously also declared with "s32 value"
 
 void hud_set_state_from_lookup(u8* p_hudState, u8* table_ptr, s32 target_id);
 void math_set_vector4(u32 val1, u32 val2, u32 val3, u32 val4, u32* p_targetDestination);

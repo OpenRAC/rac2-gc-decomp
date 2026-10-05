@@ -1,207 +1,197 @@
-# English
+# Ratchet & Clank 2 - Functional Decompilation
 
-# Español
+## Project Status
 
-# Ratchet & Clank 2 - Decompilación funcional
+The project is in the initial stage of functional reconstruction.
 
-## Estado del proyecto
+The goal is to progressively recover the behaviour of the original
+Ratchet & Clank 2 game (PS2 PAL), adapting the decompiled functions
+to C for modern PC systems.
 
-Proyecto en etapa inicial de reconstrucción funcional.
-
-El objetivo es recuperar progresivamente el comportamiento del juego
-original de Ratchet & Clank 2 (PS2 PAL), adaptando las funciones
-decompiladas a C para sistemas modernos de PC.
-
-La implementación busca mantener el comportamiento y la lógica del
-juego lo más fiel posible al original, sustituyendo únicamente las
-partes dependientes del hardware y APIs específicas de PlayStation 2
-por equivalentes adecuados para PC.
+The implementation aims to keep the game's behaviour and logic as
+faithful to the original as possible, replacing only the parts that
+depend on PlayStation 2 hardware and APIs with suitable PC
+equivalents.
 
 ---
 
-## Infraestructura recuperada
+## Recovered Infrastructure
 
-### Kernel portátil
+### Portable Kernel
 
-- [x] Kernel portátil
-- [x] Sistema de hilos virtuales
-- [x] Semáforos virtuales
-- Archivo: `ps2_kernel.c`
-- Referencia: `[INDEX]`
+- [x] Portable kernel
+- [x] Virtual thread system
+- [x] Virtual semaphores
+- File: `ps2_kernel.c`
+- Reference: `[INDEX]`
 
-Esta capa proporciona una representación portable de algunos servicios
-del kernel de PS2 necesarios para ejecutar la lógica recuperada.
-
----
-
-### Bus de comunicaciones y sistema de almacenamiento
-
-- [x] Bus de comunicaciones
-- [x] Simulación del lector de DVD
-- [x] Esqueleto del sistema de Memory Card
-- Archivo: `ps2_sif.c`
-- Referencia: `[INDEX]`
-
-Esta capa reproduce las interfaces necesarias para que el código
-recuperado pueda interactuar con los sistemas de comunicación y
-almacenamiento originales.
+This layer provides a portable representation of some PS2 kernel
+services needed to run the recovered logic.
 
 ---
 
-### Utilerías de texto
+### Communication Bus and Storage System
 
-- [x] Utilerías aceleradas de texto
-- Archivo: `ps2_string.c`
-- Referencia: `[INDEX]`
+- [x] Communication bus
+- [x] DVD reader simulation
+- [x] Memory Card system skeleton
+- File: `ps2_sif.c`
+- Reference: `[INDEX]`
 
-Adaptación de las utilerías de manipulación de texto utilizadas
-por el código original.
-
----
-
-## Lógica del sistema
-
-### Secuencia de arranque / Intro
-
-- [x] Máquina de estados raíz de la intro
-- Función: `sys_boot_intro_state_machine`
-- Referencia: `[INDEX]`
-
-Esta función representa la máquina de estados principal utilizada
-durante la secuencia inicial del juego.
+This layer reproduces the interfaces the recovered code needs to
+interact with the original communication and storage systems.
 
 ---
 
-## Sistemas pendientes
+### Text Utilities
 
-### Plataforma
+- [x] Accelerated text utilities
+- File: `ps2_string.c`
+- Reference: `[INDEX]`
+
+Adaptation of the text manipulation utilities used by the original
+code.
+
+---
+
+## System Logic
+
+### Boot Sequence / Intro
+
+- [x] Root state machine of the intro
+- Function: `sys_boot_intro_state_machine`
+- Reference: `[INDEX]`
+
+This function is the main state machine used during the game's
+initial sequence.
+
+---
+
+## Pending Systems
+
+### Platform
 
 - [ ] Graphics Canvas Init
 - [ ] Game Frame / V-Sync / Engine Clock
 - [ ] Pad Input Subsystem
-- [ ] Punto de entrada / ejecutable
+- [ ] Entry point / executable
 
-### Gráficos
+### Graphics
 
-- [ ] Inicialización del sistema gráfico
+- [ ] Graphics system initialization
 - [ ] Canvas / framebuffer
-- [ ] Renderizado
-- [ ] Presentación del frame
+- [ ] Rendering
+- [ ] Frame presentation
 
-### Entrada
+### Input
 
-- [ ] Lectura del mando
-- [ ] Estado de botones
-- [ ] Sticks analógicos
-- [ ] Adaptación del DualShock 2 a PC
+- [ ] Controller reading
+- [ ] Button state
+- [ ] Analog sticks
+- [ ] DualShock 2 adaptation for PC
 
-### Tiempo
+### Time
 
-- [ ] Reloj del motor
-- [ ] Sincronización de frames
+- [ ] Engine clock
+- [ ] Frame synchronization
 - [ ] V-Sync
-- [ ] Delta time / temporización
+- [ ] Delta time / timing
 
 ---
 
-## Funciones decompiladas
+## Decompiled Functions
 
-Las funciones recuperadas se mantendrán inicialmente con su nombre
-original de Ghidra cuando su propósito o estructura todavía no haya
-sido confirmado.
+Recovered functions initially keep their original Ghidra name while
+their purpose or structure has not been confirmed.
 
-Una función podrá recibir un nombre descriptivo posteriormente cuando
-exista suficiente evidencia sobre su comportamiento.
+A function may receive a descriptive name later, once there is
+enough evidence about its behaviour.
 
-Ejemplo:
+Example:
 
     FUN_80012340
         ↓
-    actualizar_reloj_motor
+    update_engine_clock
 
-No se deben asumir nombres, estructuras o significados de offsets
-sin evidencia suficiente.
+Names, structures or offset meanings must not be assumed without
+sufficient evidence.
 
 ---
 
-## Documentación
+## Documentation
 
-La documentación de las funciones y sistemas recuperados se
-almacenará en:
+Documentation of the recovered functions and systems is stored in:
 
     docs/
 
-La implementación en C se almacenará principalmente en:
+The C implementation is stored mainly in:
 
     src/
 
-Las declaraciones y estructuras compartidas se almacenarán en:
+Shared declarations and structures are stored in:
 
     include/
 
-Las herramientas auxiliares utilizadas durante la investigación
-se almacenarán en:
+Auxiliary tools used during the research are stored in:
 
     tools/
 
 ---
 
-## Criterio de adaptación
+## Adaptation Criteria
 
-El código de PS2 se utilizará como referencia del comportamiento
-original.
+The PS2 code is used as the reference for the original behaviour.
 
-La adaptación para PC puede reemplazar:
+The PC adaptation may replace:
 
-- APIs específicas de PS2
-- hardware de PS2
-- sistema gráfico
-- sistema de entrada
-- temporización
-- servicios del kernel
+- PS2-specific APIs
+- PS2 hardware
+- the graphics system
+- the input system
+- timing
+- kernel services
 
-Sin embargo, la lógica propia del juego debe conservarse siempre
-que sea posible.
+However, the game's own logic must be preserved whenever possible.
 
-Cuando el comportamiento de una función todavía no esté confirmado,
-se debe documentar la incertidumbre en lugar de introducir una
-suposición como si fuera un hecho.
+When the behaviour of a function is not yet confirmed, the
+uncertainty must be documented instead of presenting an assumption
+as a fact.
 
 ---
 
-## Progreso actual
+## Current Progress
 
-### Infraestructura
+### Infrastructure
 
 - [x] `ps2_kernel.c`
 - [x] `ps2_sif.c`
 - [x] `ps2_string.c`
 
-### Sistema de arranque
+### Boot System
 
 - [x] `sys_boot_intro_state_machine`
 
-### Ejecución en PC
+### Running on PC
 
-- [ ] Inicialización gráfica
-- [ ] Reloj del motor
-- [ ] Entrada
-- [ ] Entry Point
-- [ ] Primer arranque funcional
+- [ ] Graphics initialization
+- [ ] Engine clock
+- [ ] Input
+- [ ] Entry point
+- [ ] First functional boot
 
 ---
 
-## Próximo objetivo
+## Next Goal
 
-Implementar progresivamente las capas necesarias para conseguir
-el primer arranque observable del juego en PC.
+Progressively implement the layers needed for the game's first
+observable boot on PC.
 
-Orden inicial previsto:
+Initially planned order:
 
 1. Graphics Canvas Init
 2. Game Frame / V-Sync / Engine Clock
 3. Pad Input Subsystem
-4. Entry Point / ejecutable
+4. Entry Point / executable
 
-El orden puede modificarse según las dependencias descubiertas
-durante la decompilación.
+The order may change according to the dependencies discovered
+during decompilation.

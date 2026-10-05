@@ -6,10 +6,10 @@
 PlayerState g_players[MAX_PLAYERS];
 int         g_player_count = 1;
 
-/* [SIMPLIFICADO] Parser de config.
- * [MOD-PENDING] Para producción: usar cJSON (single-header) o
- * un parser propio. Por ahora, hardcodeo 2 jugadores como default
- * para validar el pipeline. */
+/* [SIMPLIFIED] Config parser.
+ * [MOD-PENDING] For production: use cJSON (single header) or
+ * a custom parser. For now 2 players are hard-coded as the default
+ * to validate the pipeline. */
 int player_init_from_config(const char* config_path, int* out_count)
 {
 	(void)config_path;
@@ -76,10 +76,10 @@ void player_update_input(PlayerState* p)
 void player_update_camera(PlayerState* p, float dt)
 {
 	(void)dt;
-	/* [TODO] Derivar cam_pos/rot de pos/rot + offset de cámara.
-	 *   Cuando descifremos la función de cámara del motor
-	 *   (la que lee el estado del player y setea la matriz
-	 *   de vista), la llamamos aquí por jugador. */
+	/* [TODO] Derive cam_pos/rot from pos/rot + the camera offset.
+	 *   Once the engine's camera function is decoded
+	 *   (the one that reads the player state and sets the view
+	 *   matrix), call it here per player. */
 	p->cam_pos[0] = p->pos[0] + p->rot[0] * 2.0f;
 	p->cam_pos[1] = p->pos[1] + 3.0f;
 	p->cam_pos[2] = p->pos[2] - 4.0f;
@@ -89,9 +89,9 @@ void player_update_hud(PlayerState* p, float dt)
 {
 	(void)p;
 	(void)dt;
-	/* [TODO] Cuando descifremos el HUD del motor,
-	 *   renderizamos una instancia por jugador dentro de
-	 *   su viewport. */
+	/* [TODO] Once the engine's HUD is decoded,
+	 *   render one instance per player inside
+	 *   its viewport. */
 }
 
 void player_reset(PlayerState* p, const float spawn_pos[3])

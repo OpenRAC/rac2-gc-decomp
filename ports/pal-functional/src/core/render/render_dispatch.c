@@ -1,7 +1,7 @@
 /*
- *  render_dispatch.c – ruta única para engine/ y game/.
- *  Aquí se decide GL vs VK. Ningún otro archivo del proyecto
- *  incluye headers de GL o VK.
+ *  render_dispatch.c – single path for engine/ and game/.
+ *  GL vs VK is decided here. No other file of the project
+ *  includes GL or VK headers.
  *
  *  Uso:
  *    #include "core/render/render.h"
@@ -15,7 +15,7 @@
 #include "core/render/gl/gl_backend.h"
 #endif
 
- /* VK headers se incluirán cuando escribamos el backend VK */
+ /* VK headers will be included once the VK backend is written */
 #if defined(RENDER_USE_VK)
   /* #include "core/render/vk/vk_backend.h" */
 #endif
@@ -40,7 +40,7 @@ void Render_Destroy(RenderHandle* h)
 {
     if (!h) return;
 #if defined(RENDER_USE_GL)
-    /* En fase 1 solo GL; cuando VK entre, se hace dispatch por backend */
+    /* Phase 1 is GL only; once VK arrives, dispatch per backend */
     GL_Destroy(h);
 #endif
 }
@@ -144,7 +144,7 @@ TextureHandle* Render_CreateTextureFromData(RenderHandle* h, const u8* data,
 TextureHandle* Render_LoadTextureFile(RenderHandle* h, const char* path)
 {
     (void)h;
-    /* Placeholder: usar stb_image aquí. Se implementa cuando lleguemos a assets. */
+    /* Placeholder: use stb_image here. Implemented when assets are reached. */
     (void)path;
     return NULL;
 }

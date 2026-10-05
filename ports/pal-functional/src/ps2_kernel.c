@@ -1,27 +1,27 @@
 #include "ps2_kernel.h"
-#include "system.h"     // Necesario para acceder a g_GraphicsSemaphore y g_GraphicsSemaphoreID
+#include "system.h"     // Required to access g_GraphicsSemaphore and g_GraphicsSemaphoreID
 #include <SDL.h>
-#include "graphics.h"   // Necesario para verificar target_fps
+#include "graphics.h"   // Required to check target_fps
 #include <string.h>
-#include <stdlib.h>     // Requerido para atoi() en ee_atoi
+#include <stdlib.h>     // Required for atoi() in ee_atoi
 
 int ee_memcmp(const void* ptr1, const void* ptr2, size_t num) {
-	// En PC, la función estándar 'memcmp' de string.h está optimizada a nivel 
-	// de ensamblador moderno (SSE/AVX) y produce exactamente el mismo resultado
-	// matemático que el bucle vectorial de la PS2, pero de forma nativa y segura.
+	// On PC, the standard 'memcmp' from string.h is optimized at the level
+	// of modern assembly (SSE/AVX) and produces exactly the same
+	// mathematical result as the PS2 vector loop, natively and safely.
 	return memcmp(ptr1, ptr2, num);
 }
 
 #if !defined(PLATFORM_PS2)
-// Estructura de control interna simulada para emular los semáforos del Kernel de Sony en PC
+// Simulated internal control structure that emulates Sony's kernel semaphores on PC
 typedef struct {
 	s32 count;
 	s32 max_count;
 } PS2_Simulated_Semaphore;
 
-// Tabla estática de semáforos virtuales para el entorno portátil del port
+// Static table of virtual semaphores for the portable port environment
 static PS2_Simulated_Semaphore g_virtual_semaphores[16] = {
-	{0, 1}, // ID 0: General / Sistema
+	{0, 1}, // ID 0: general / system
 	{1, 1}, // ID 1: IO Lock Sema
 	{1, 1}, // ID 2: IO Wait Sema
 	{1, 1}  // ID 3: IO DMA Sema
@@ -29,21 +29,21 @@ static PS2_Simulated_Semaphore g_virtual_semaphores[16] = {
 #endif
 
 /**
- * @brief Pausa la ejecución del hilo actual en el Kernel de la PS2...
+ * @brief Pauses execution of the current thread in the PS2 kernel...
  */
 s32 sceWaitSema(s32 sema_id) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, esto suspende la CPU mediante ensamblador inline:
+	// On the real console this suspends the CPU through inline assembly:
 	// __asm__ volatile("li $v0, 68 \n syscall");
 	return 0;
 #else
-	// Para el port a PC, emulamos la espera de forma pasiva y segura.
+	// For the PC port, the wait is emulated passively and safely.
 
-	// Si el usuario configuró los FPS como '0' (ilimitados), no bloqueamos.
-	// De lo contrario, respetamos el semáforo para sincronizar el motor.
+	// If the user set the FPS to '0' (unlimited), do not block.
+	// Otherwise, honour the semaphore to synchronize the engine.
 	if (g_GraphicsCanvasData.target_fps != 0.0f) {
-		// En un motor real de PS2, sema_id suele mapearse a un semáforo específico.
-		// Dado que este es el semáforo principal de sincronización gráfica:
+		// In a real PS2 engine, sema_id usually maps to a specific semaphore.
+		// Since this is the main graphics synchronization semaphore:
 		if (g_GraphicsSemaphore != NULL) {
 			SDL_SemWait(g_GraphicsSemaphore);
 		}
@@ -54,20 +54,20 @@ s32 sceWaitSema(s32 sema_id) {
 }
 
 /**
- * @brief Envía una señal a un semáforo del Kernel para incrementar su conteo y despertar hilos en...
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (0x42 MIPS Syscall) (PAL)
+ * @brief Signals a kernel semaphore to increment its count and wake waiting threads...
+ * Original Ghidra address: syscall stub sector (0x42 MIPS syscall) (PAL)
  *
- * @param sema_id Identificador único del semáforo al que se le enviará la señal de liberación.
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param sema_id Unique identifier of the semaphore to signal.
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 sceSignalSema(s32 sema_id) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, esto se ejecuta mediante ensamblador inline de MIPS:
+	// On the real console this runs as MIPS inline assembly:
 	// __asm__ volatile("li $v0, 66 \n syscall");
 	return 0;
 #else
-	// Para el port moderno a PC, emulamos la liberación de forma activa.
-	// Si el ID corresponde al semáforo gráfico, notificamos al sistema moderno
+	// For the modern PC port, the release is emulated actively.
+	// If the ID is the graphics semaphore, notify the modern system
 	if (sema_id == g_GraphicsSemaphoreID && g_GraphicsSemaphore != NULL) {
 		SDL_SemPost(g_GraphicsSemaphore);
 	}
@@ -77,60 +77,60 @@ s32 sceSignalSema(s32 sema_id) {
 }
 
 /**
- * @brief Verifica de forma no bloqueante si un semáforo está disponible en el Kernel de la PS2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (0x45 MIPS Syscall) (PAL)
+ * @brief Checks without blocking whether a semaphore is available in the PS2 kernel.
+ * Original Ghidra address: syscall stub sector (0x45 MIPS syscall) (PAL)
  *
- * @param sema_id Identificador único del semáforo a consultar.
- * @return s32 El conteo actual del semáforo si tuvo éxito, o un valor negativo si está bloqueado.
+ * @param sema_id Unique identifier of the semaphore to query.
+ * @return s32 The current semaphore count on success, or a negative value if it is locked.
  */
 s32 scePollSema(s32 sema_id) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, esto se traduce a la instrucción nativa:
-	// __asm__ volatile("li $v0, 69 \n syscall"); // 69 en decimal es 0x45
+	// On the real console this translates to the native instruction:
+	// __asm__ volatile("li $v0, 69 \n syscall"); // 69 decimal is 0x45
 	return 0;
 #else
-	// Para el port de PC, validamos primero que el ID sea correcto dentro de nuestro rango virtual
+	// For the PC port, first check that the ID is within our virtual range
 	if (sema_id == SYS_SEMAPHORE_INVALID || sema_id >= 16) {
-		return -113; // ID inválido del SDK de Sony
+		return -113; // Invalid ID per the Sony SDK
 	}
 
-	// Buscamos cuál de nuestros semáforos de SDL2 quiere inspeccionar el motor
+	// Find which of our SDL2 semaphores the engine wants to inspect
 	SDL_sem* target_sem = NULL;
 	if (sema_id == g_GraphicsSemaphoreID)    target_sem = g_GraphicsSemaphore;
 	else if (sema_id == g_RenderSemaphoreID_A) target_sem = g_RenderSemaphore_A;
 	else if (sema_id == g_RenderSemaphoreID_B) target_sem = g_RenderSemaphore_B;
 
 	if (target_sem != NULL) {
-		// SDL_SemTryWait intenta tomar el semáforo de inmediato:
-		// Retorna 0 si estaba libre (éxito). Retorna SDL_MUTEX_TIMEDOUT si estaba ocupado.
+		// SDL_SemTryWait tries to take the semaphore immediately:
+		// returns 0 if it was free (success), SDL_MUTEX_TIMEDOUT if it was busy.
 		if (SDL_SemTryWait(target_sem) == 0) {
-			return 0; // Éxito: El semáforo estaba libre y lo tomamos sin bloquear
+			return 0; // Success: the semaphore was free and was taken without blocking
 		}
 		else {
-			return -489; // Código oficial de Sony para "Semáforo bloqueado/Cerrado" (Signaled/Wait state)
+			return -489; // Official Sony code for "semaphore locked/closed" (signaled/wait state)
 		}
 	}
 
-	// Si es un semáforo secundario que aún no enlazamos, devolvemos éxito por defecto para no colgar el flujo
+	// A secondary semaphore not linked yet returns success by default so the flow does not hang
 	return 0;
 #endif
 }
 
 /**
- * @brief Envía una señal de liberación a un semáforo de forma segura desde un contexto de interrupción.
- * Dirección original en Ghidra: Sector de Internal Hooks (Syscall MIPS -67 / 0xFFFFFFFFFFFFFFBD) (PAL)
+ * @brief Safely signals a semaphore from an interrupt context.
+ * Original Ghidra address: internal hooks sector (MIPS syscall -67 / 0xFFFFFFFFFFFFFFBD) (PAL)
  *
- * @param sema_id Identificador único del semáforo asignado por el Kernel al canal.
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param sema_id Unique identifier of the semaphore assigned by the kernel to the channel.
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 iSignalSema(s32 sema_id) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, esto se ejecuta invocando el hook del Kernel mediante assembly:
+	// On the real console this invokes the kernel hook through assembly:
 	// __asm__ volatile("li $v0, -67 \n syscall");
 	return 0;
 #else
-	// Para el port moderno a PC, al no existir interrupciones físicas de MIPS,
-	// emulamos la liberación llamando a la misma lógica activa del semáforo:
+	// For the modern PC port, since there are no physical MIPS interrupts,
+	// the release is emulated by calling the same active semaphore logic:
 	if (sema_id == g_GraphicsSemaphoreID && g_GraphicsSemaphore != NULL) {
 		SDL_SemPost(g_GraphicsSemaphore);
 	}
@@ -142,76 +142,76 @@ s32 iSignalSema(s32 sema_id) {
 int ee_atoi(const char* str) {
 	if (str == NULL) return 0;
 
-	// En PC nativo, 'atoi' realiza la conversión en base 10 de forma idéntica
-	// al comportamiento esperado por el truncado de 32 bits del Emotion Engine.
+	// On native PC, 'atoi' performs the base-10 conversion identically
+	// to the behaviour expected from the Emotion Engine's 32-bit truncation.
 	return atoi(str);
 }
 
 /**
- * @brief Despierta un hilo de ejecución específico que se encontraba en estado de suspensión en el Kernel de la PS2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (0x33 MIPS Syscall) (PAL)
+ * @brief Wakes a specific execution thread that was suspended in the PS2 kernel.
+ * Original Ghidra address: syscall stub sector (0x33 MIPS syscall) (PAL)
  *
- * @param thread_id Identificador único del hilo de ejecución que se desea reactivar.
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param thread_id Unique identifier of the thread to reactivate.
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 sceWakeupThread(s32 thread_id) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, se invoca mediante ensamblador inline:
+	// On the real console it is invoked through inline assembly:
 	// __asm__ volatile("li $v0, 51 \n syscall");
 	return 0;
 #else
-	// Para el port a PC, emulamos la reactivación de hilos de forma pasiva.
-	// Como la multitarea moderna de los sistemas operativos gestiona los hilos de fondo,
-	// confirmamos la señal de reactivación inmediatamente para mantener el flujo limpio:
+	// For the PC port, thread wake-up is emulated passively.
+	// Since modern operating system multitasking manages the background threads,
+	// the wake-up signal is confirmed immediately to keep the flow clean:
 	(void)thread_id;
 	return 0;
 #endif
 }
 
 /**
- * @brief Reactiva y despierta de forma segura un hilo de ejecución suspendido desde un contexto de interrupción (ISR).
- * Dirección original en Ghidra: Sector de Internal Hooks (Syscall MIPS -52 / 0xFFFFFFFFFFFFFFCC) (PAL)
+ * @brief Safely resumes a suspended execution thread from an interrupt context (ISR).
+ * Original Ghidra address: internal hooks sector (MIPS syscall -52 / 0xFFFFFFFFFFFFFFCC) (PAL)
  *
- * @param thread_id Identificador único del hilo de ejecución que se va a despertar de urgencia.
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param thread_id Unique identifier of the thread to wake urgently.
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 iWakeupThread(s32 thread_id) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, esto se ejecuta invocando el hook del Kernel mediante assembly:
+	// On the real console this invokes the kernel hook through assembly:
 	// __asm__ volatile("li $v0, -52 \n syscall");
 	return 0;
 #else
-	// Para el port moderno a PC, emulamos la reanudación de forma pasiva
-	// confirmando la señal de éxito inmediato del hilo:
+	// For the modern PC port, resumption is emulated passively
+	// by confirming the thread's immediate success signal:
 	(void)thread_id;
 	return 0;
 #endif
 }
 
 /**
- * @brief Consulta el estado actual de un hilo de ejecución específico en el Kernel de la PlayStation 2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (0x30 MIPS Syscall) (PAL)
+ * @brief Queries the current state of a specific thread in the PlayStation 2 kernel.
+ * Original Ghidra address: syscall stub sector (0x30 MIPS syscall) (PAL)
  *
- * @param thread_id Identificador único del hilo a inspeccionar.
- * @param status_ptr Puntero a la estructura donde el Kernel vuelca el estado del hilo (sceThreadStatus).
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param thread_id Unique identifier of the thread to inspect.
+ * @param status_ptr Pointer to the structure where the kernel writes the thread state (sceThreadStatus).
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 sceReferThreadStatus(s32 thread_id, void* status_ptr) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, se invoca mediante ensamblador inline:
+	// On the real console it is invoked through inline assembly:
 	// __asm__ volatile("li $v0, 48 \n syscall");
 	return 0;
 #else
-	// Para el port a PC, emulamos la consulta devolviendo éxito inmediato (0).
-	// Esto le indica al motor de Insomniac que los hilos están corriendo de forma óptima
+	// For the PC port, the query is emulated by returning immediate success (0).
+	// This tells the Insomniac engine that the threads are running optimally
 
-	// Evitamos advertencias de parámetros no utilizados en el compilador moderno de PC
+	// Avoid unused-parameter warnings in the modern PC compiler
 	(void)thread_id;
 
 	if (status_ptr != NULL) {
-		// En la PS2 real, la estructura limpia tiene un campo de estado (status).
-		// El valor '1' típicamente representa el estado "RUN" (Corriendo).
-		// Llenamos los primeros 4 bytes con 1 de forma segura por si el juego valida que el hilo no esté muerto.
+		// On a real PS2 the clean structure has a status field.
+		// The value '1' typically represents the "RUN" state.
+		// The first 4 bytes are safely filled with 1 in case the game checks that the thread is alive.
 		*(s32*)status_ptr = 1;
 	}
 
@@ -220,23 +220,23 @@ s32 sceReferThreadStatus(s32 thread_id, void* status_ptr) {
 }
 
 /**
- * @brief Programa una alarma por interrupción basada en tiempo dentro del Kernel de la PlayStation 2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (252 MIPS Syscall / 0xFC) (PAL)
+ * @brief Schedules a time-based interrupt alarm in the PlayStation 2 kernel.
+ * Original Ghidra address: syscall stub sector (252 MIPS syscall / 0xFC) (PAL)
  *
- * @param microseconds Tiempo exacto en microsegundos antes de disparar la alarma por hardware.
- * @param alarm_callback Puntero a la función que actuará como manejador de la interrupción al expirar el tiempo.
- * @param callback_arg Argumento opcional de control que se le pasará a la función manejadora.
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param microseconds Exact time in microseconds before the hardware alarm fires.
+ * @param alarm_callback Pointer to the function that handles the interrupt when the time expires.
+ * @param callback_arg Optional control argument passed to the handler.
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 sceSetAlarm(u32 microseconds, void* alarm_callback, void* callback_arg) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, esto se ejecuta mediante la instrucción inline:
+	// On the real console this runs through the inline instruction:
 	// __asm__ volatile("li $v0, 252 \n syscall");
 	return 0;
 #else
-	// Para el port a PC, dado que el sistema de archivos del sistema operativo moderno
-	// resuelve las transacciones instantáneamente sin esperas físicas de hardware de tarjetas,
-	// la alarma virtual confirma el agendamiento de forma inmediata:
+	// For the PC port, since the modern operating system's file system
+	// resolves transactions instantly without physical memory-card hardware waits,
+	// the virtual alarm confirms the scheduling immediately:
 	(void)microseconds;
 	(void)alarm_callback;
 	(void)callback_arg;
@@ -245,48 +245,48 @@ s32 sceSetAlarm(u32 microseconds, void* alarm_callback, void* callback_arg) {
 }
 
 /**
- * @brief Suspende voluntariamente la ejecución del hilo de control activo en el Kernel de la PS2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (0x32 MIPS Syscall) (PAL)
+ * @brief Voluntarily suspends execution of the active control thread in the PS2 kernel.
+ * Original Ghidra address: syscall stub sector (0x32 MIPS syscall) (PAL)
  *
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 sceSleepThread(void) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, se invoca mediante ensamblador inline:
+	// On the real console it is invoked through inline assembly:
 	// __asm__ volatile("li $v0, 50 \n syscall");
 	return 0;
 #else
-	// Para el port a PC, emulamos la suspensión de forma pasiva devolviendo éxito inmediato.
-	// Dado que el sistema de archivos de PC no requiere retardos de hardware físicos de 8MB,
-	// el hilo virtual fluye de largo sin congelar o ralentizar la tasa de cuadros del motor:
+	// For the PC port, suspension is emulated passively by returning immediate success.
+	// Since the PC file system needs no physical 8MB hardware delays,
+	// the virtual thread continues without freezing or slowing the engine's frame rate:
 	return 0;
 #endif
 }
 
-// 1. Simulación de la función del menú principal y ciclo de la intro
+// 1. Simulation of the main menu function and the intro cycle
 void game_main_menu_and_intro_loop(void) {
-	// Aquí es donde eventualmente se quedará enganchado el bucle lúdico principal
+	// This is where the main game loop will eventually hook in
 }
 
-// 2. Simulación de registros de la SDK de Sony
+// 2. Simulation of Sony SDK registers
 uint32_t sceSifGetReg(void) {
-	return 1; // Devolvemos 1 para simular que el coprocesador IOP respondió al saludo
+	return 1; // Return 1 to simulate that the IOP coprocessor answered the handshake
 }
 
-// 3. Simulación de retrasos de temporizador de hardware (Equivalente nativo a nanosleep en Windows)
+// 3. Simulation of hardware timer delays (native equivalent of nanosleep on Windows)
 void nanosleep(void* req, void* rem) {
-	// En Windows se simula de forma ultra-precisa usando las herramientas nativas:
-	// (Puedes dejarlo vacío o mapearlo con un sub-retraso si el motor lo exige)
+	// On Windows it is simulated very precisely with the native tools:
+	// (It can be left empty or mapped to a sub-delay if the engine requires it)
 	(void)req; (void)rem;
 }
 
-// 4. Decodificador de caracteres personalizados del HUD (Para el conversor de texto extendido)
+// 4. Decoder of custom HUD characters (for the extended text converter)
 void custom_hud_glyph_decoder(void* param_1, void* param_2) {
 	(void)param_1; (void)param_2;
 }
 
-// 5. Variables y stubs del subsistema de la Tarjeta de Memoria (Memory Card - sceMc)
-// El juego consulta el estado de la tarjeta antes de cargar la intro. Las creamos vacías:
+// 5. Variables and stubs of the memory card subsystem (Memory Card - sceMc)
+// The game checks the card state before loading the intro. They are created empty:
 int g_sys_mc_is_bound_flag = 0;
 int g_sys_mc_mutex_sema_id = -1;
 int g_sys_mc_active_command_id = 0;
@@ -294,57 +294,57 @@ int g_sys_mc_channel_widget_handle = 0;
 
 int sceMcGetInfo(int channel, int slot, void* type, void* free, void* format) {
 	(void)channel; (void)slot; (void)type; (void)free; (void)format;
-	return 0; // Devolvemos 0 (Tarjeta de memoria no insertada o simulada pasivamente)
+	return 0; // Return 0 (memory card not inserted, or passively simulated)
 }
 
 // ============================================================================
-// STUBS FINALES DE PLATAFORMA PARA CIERRE DE ENLAZADO (PC PORT)
+// FINAL PLATFORM STUBS TO COMPLETE LINKING (PC PORT)
 // ============================================================================
 
-// 1. Variables globales del sistema de Entrada/Salida (I/O) y Sonido del IOP
+// 1. Global variables of the IOP Input/Output (I/O) and sound system
 int g_sys_io_wait_sema_id = -1;
 int g_sys_io_queue_lock_flag = 0;
 int g_sys_sound_channel_widget_handle = 0;
 int g_sys_io_reconfig_flag = 0;
 
-// 2. Funciones de control de interrupciones físicas del chip Emotion Engine (MIPS)
-// En PC no hay registros de interrupción de hardware directo; devolvemos éxito inmediato.
+// 2. Physical interrupt control functions of the Emotion Engine chip (MIPS)
+// On PC there are no direct hardware interrupt registers; return immediate success.
 int DI(void) { return 0; }
 int EI(void) { return 0; }
 int SYNC(void) { return 0; }
 int Status(void) { return 0; }
 
-// 3. Variables de control del inicializador de la tabla de paginación de hardware (TLB)
-// El juego limpia la TLB original al arrancar la RAM. En PC creamos los índices ficticios:
+// 3. Control variables of the hardware paging table (TLB) initializer
+// The game clears the original TLB when starting RAM. On PC dummy indices are created:
 int g_tlb_wired_index = 0;
 int g_tlb_bound_index = 0;
 int g_tlb_status_sync = 0;
 int g_tlb_extra_flags = 0;
 
-// 4. Función de sincronización del paquete gráfico del bus de la PS2
+// 4. Synchronization function of the PS2 bus graphics packet
 void ps2_sync(void) {
-	// En la PS2 real, esto esperaba que el bus GIF/VIF se vaciara. 
-	// En PC, al procesarse de forma síncrona en el hilo, es una operación instantánea.
+	// On a real PS2 this waited for the GIF/VIF bus to drain.
+	// On PC, since processing is synchronous on the thread, it is instantaneous.
 }
 
 // ============================================================================
-// STUBS FINALES ABSOLUTOS DE ENTRADA/SALIDA Y MEMORY CARD (PC PORT)
+// FINAL INPUT/OUTPUT AND MEMORY CARD STUBS (PC PORT)
 // ============================================================================
 
-// 1. Variables del estado de lectura del sistema de archivos de la PS2
-int g_sys_io_is_ready_flag = 1; // 1 = El lector virtual siempre está listo en PC
+// 1. Read-state variables of the PS2 file system
+int g_sys_io_is_ready_flag = 1; // 1 = the virtual reader is always ready on PC
 int g_sys_io_lock_sema_id = -1;
 int g_sys_io_dma_sema_id = -1;
 
-// 2. Descriptores de archivo y tamaños del subsistema de Tarjeta de Memoria (sceMc)
-// El motor los utiliza para guardar/cargar partidas. Los inicializamos en cero seguros.
+// 2. File descriptors and sizes of the memory card subsystem (sceMc)
+// The engine uses them to save/load games. They are initialized to safe zeros.
 int g_sys_mc_read_fd = -1;
 int g_sys_mc_read_size = 0;
 int g_sys_mc_write_fd = -1;
 void* g_sys_mc_write_src_ptr = NULL;
 int g_sys_mc_write_size = 0;
 
-// 3. Stubs complementarios para llamadas de tarjeta de memoria detectadas en ps2_sif
+// 3. Complementary stubs for memory card calls found in ps2_sif
 int sceMcChdir(int channel, int slot, const char* path, char* current_dir) {
 	(void)channel; (void)slot; (void)path; (void)current_dir;
 	return 0;
@@ -356,23 +356,23 @@ int sceMcWriteExtended(int channel, int slot, const char* filename, void* buffer
 }
 
 /**
- * @brief Registra un manejador de eventos o interrupción (Callback) para un canal específico del controlador DMA (DMAC).
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (18 MIPS Syscall / 0x12) (PAL)
+ * @brief Registers an event or interrupt handler (callback) for a specific DMA controller (DMAC) channel.
+ * Original Ghidra address: syscall stub sector (18 MIPS syscall / 0x12) (PAL)
  *
- * @param dma_channel Canal DMA correspondiente de la PS2 (ej: 5 para el bus SIF).
- * @param p_handler Puntero a la función que actuará como manejador de la interrupción.
- * @param arg Argumento opcional de control que se le pasará a la función manejadora.
- * @return s32 ID de la ranura o manejador asignado (positivo para éxito, o negativo si ocurre un error).
+ * @param dma_channel Corresponding PS2 DMA channel (e.g. 5 for the SIF bus).
+ * @param p_handler Pointer to the function that handles the interrupt.
+ * @param arg Optional control argument passed to the handler.
+ * @return s32 ID of the assigned slot or handler (positive on success, or negative on error).
  */
 s32 sceAddDmacHandler(s32 dma_channel, void* p_handler, s32 arg) {
 #if defined(PLATFORM_PS2)
-	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// On a real PlayStation 2 the inline assembly instruction runs:
 	// __asm__ volatile("li $v1, 18 \n syscall");
 	return 0;
 #else
-	// Para el port nativo de PC, al ser una emulación de alto nivel por software,
-	// interceptamos la llamada para confirmar que el canal lúdico simulado se enlazó.
-	// Devolvemos un ID de ranura positivo fijo (ej: 1) para dar luz verde de largo:
+	// For the native PC port, being a high-level software emulation,
+	// the call is intercepted to confirm that the simulated channel was linked.
+	// A fixed positive slot ID (e.g. 1) is returned to give the green light:
 	(void)dma_channel;
 	(void)p_handler;
 	(void)arg;
@@ -382,21 +382,21 @@ s32 sceAddDmacHandler(s32 dma_channel, void* p_handler, s32 arg) {
 }
 
 /**
- * @brief Remueve un manejador de canal DMA registrado previamente en el controlador de hardware (DMAC) de la PS2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (19 MIPS Syscall / 0x13) (PAL)
+ * @brief Removes a DMA channel handler previously registered in the PS2 hardware controller (DMAC).
+ * Original Ghidra address: syscall stub sector (19 MIPS syscall / 0x13) (PAL)
  *
- * @param dma_channel Canal DMA correspondiente (param_1).
- * @param handler_id Identificador numérico o ranura asignada al manejador que se desea liberar (param_2).
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param dma_channel Corresponding DMA channel (param_1).
+ * @param handler_id Numeric identifier or slot assigned to the handler to release (param_2).
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 RemoveDmacHandler(s32 dma_channel, s32 handler_id) {
 #if defined(PLATFORM_PS2)
-	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// On a real PlayStation 2 the inline assembly instruction runs:
 	// __asm__ volatile("li $v1, 19 \n syscall");
 	return 0;
 #else
-	// Para el port nativo de PC, el sistema operativo moderno gestiona las colas de ráfaga 
-	// en nanosegundos de forma transparente, por lo que confirmamos éxito inmediato:
+	// For the native PC port, the modern operating system manages burst queues
+	// transparently in nanoseconds, so success is confirmed immediately:
 	(void)dma_channel;
 	(void)handler_id;
 	return 0;
@@ -404,21 +404,21 @@ s32 RemoveDmacHandler(s32 dma_channel, s32 handler_id) {
 }
 
 /**
- * @brief Remueve un manejador de interrupciones físicas registrado previamente en la CPU Emotion Engine.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (17 MIPS Syscall / 0x11) (PAL)
+ * @brief Removes a physical interrupt handler previously registered in the Emotion Engine CPU.
+ * Original Ghidra address: syscall stub sector (17 MIPS syscall / 0x11) (PAL)
  *
- * @param intc_id Identificador de la interrupción física (param_1).
- * @param handler_id Identificador o ranura del manejador a remover (param_2).
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param intc_id Identifier of the physical interrupt (param_1).
+ * @param handler_id Identifier or slot of the handler to remove (param_2).
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 RemoveIntcHandler(s32 intc_id, s32 handler_id) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, esto se ejecuta mediante la instrucción inline:
+	// On the real console this runs through the inline instruction:
 	// __asm__ volatile("li $v1, 17 \n syscall");
 	return 0;
 #else
-	// Para el port a PC, dado que el sistema operativo moderno gestiona el hardware
-	// de fondo de forma nativa, emulamos la remoción devolviendo éxito inmediato:
+	// For the PC port, since the modern operating system manages the
+	// background hardware natively, removal is emulated by returning immediate success:
 	(void)intc_id;
 	(void)handler_id;
 	return 0;
@@ -426,80 +426,80 @@ s32 RemoveIntcHandler(s32 intc_id, s32 handler_id) {
 }
 
 /**
- * @brief Activa una línea de interrupción por hardware específica en el procesador Emotion Engine.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (20 MIPS Syscall / 0x14) (PAL)
+ * @brief Enables a specific hardware interrupt line in the Emotion Engine processor.
+ * Original Ghidra address: syscall stub sector (20 MIPS syscall / 0x14) (PAL)
  *
- * @param intc_id Identificador de la interrupción física a encender (param_1).
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param intc_id Identifier of the physical interrupt to enable (param_1).
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 _EnableIntc(s32 intc_id) {
 #if defined(PLATFORM_PS2)
-	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// On a real PlayStation 2 the inline assembly instruction runs:
 	// __asm__ volatile("li $v1, 20 \n syscall");
 	return 0;
 #else
-	// Para el port nativo de PC, el sistema operativo moderno gestiona el hardware
-	// de fondo de forma nativa, por lo que confirmamos éxito inmediato:
+	// For the native PC port, the modern operating system manages the
+	// background hardware natively, so success is confirmed immediately:
 	(void)intc_id;
 	return 0;
 #endif
 }
 
 /**
- * @brief Desactiva una línea de interrupción por hardware específica en el procesador Emotion Engine.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (21 MIPS Syscall / 0x15) (PAL)
+ * @brief Disables a specific hardware interrupt line in the Emotion Engine processor.
+ * Original Ghidra address: syscall stub sector (21 MIPS syscall / 0x15) (PAL)
  *
- * @param intc_id Identificador de la interrupción física a apagar (param_1).
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param intc_id Identifier of the physical interrupt to disable (param_1).
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 _DisableIntc(s32 intc_id) {
 #if defined(PLATFORM_PS2)
-	// En la consola real, esto se ejecuta mediante la instrucción inline:
+	// On the real console this runs through the inline instruction:
 	// __asm__ volatile("li $v1, 21 \n syscall");
 	return 0;
 #else
-	// Para el port a PC, dado que el sistema operativo moderno gestiona el hardware
-	// de fondo de forma nativa, emulamos la desactivación devolviendo éxito inmediato:
+	// For the PC port, since the modern operating system manages the
+	// background hardware natively, disabling is emulated by returning immediate success:
 	(void)intc_id;
 	return 0;
 #endif
 }
 
 /**
- * @brief Activa o habilita un canal específico del controlador DMA (DMAC) en el Kernel de la PlayStation 2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (22 MIPS Syscall / 0x16) (PAL)
+ * @brief Enables a specific DMA controller (DMAC) channel in the PlayStation 2 kernel.
+ * Original Ghidra address: syscall stub sector (22 MIPS syscall / 0x16) (PAL)
  *
- * @param dma_channel El identificador del canal DMA a encender (param_1).
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param dma_channel Identifier of the DMA channel to enable (param_1).
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 sceEnableDmac(s32 dma_channel) {
 #if defined(PLATFORM_PS2)
-	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// On a real PlayStation 2 the inline assembly instruction runs:
 	// __asm__ volatile("li $v1, 22 \n syscall");
 	return 0;
 #else
-	// Para tu port nativo de PC con SDL 2.32.2, el sistema operativo gestiona el hardware
-	// de fondo de forma inmediata y automática, por lo que confirmamos éxito de largo:
+	// For the native PC port with SDL 2.32.2, the operating system manages the
+	// background hardware immediately and automatically, so success is confirmed:
 	(void)dma_channel;
 	return 0;
 #endif
 }
 
 /**
- * @brief Desactiva o inhabilita un canal específico del controlador DMA (DMAC) en el Kernel de la PlayStation 2.
- * Dirección original en Ghidra: Sector de Stubs de Syscalls (23 MIPS Syscall / 0x17) (PAL)
+ * @brief Disables a specific DMA controller (DMAC) channel in the PlayStation 2 kernel.
+ * Original Ghidra address: syscall stub sector (23 MIPS syscall / 0x17) (PAL)
  *
- * @param dma_channel El identificador del canal DMA a apagar (param_1).
- * @return s32 Código de estado del Kernel (0 para éxito, o valor negativo si ocurre un error).
+ * @param dma_channel Identifier of the DMA channel to disable (param_1).
+ * @return s32 Kernel status code (0 on success, or a negative value on error).
  */
 s32 _DisableDmac(s32 dma_channel) {
 #if defined(PLATFORM_PS2)
-	// En la PlayStation 2 real, se ejecuta la instrucción ensamblador inline:
+	// On a real PlayStation 2 the inline assembly instruction runs:
 	// __asm__ volatile("li $v1, 23 \n syscall");
 	return 0;
 #else
-	// Para el port nativo de PC, dado que el hardware moderno no requiere sincronías
-	// manuales de buses de consola, confirmamos el apagado simulado de inmediato:
+	// For the native PC port, since modern hardware needs no manual console
+	// bus synchronization, the simulated shutdown is confirmed immediately:
 	(void)dma_channel;
 	return 0;
 #endif

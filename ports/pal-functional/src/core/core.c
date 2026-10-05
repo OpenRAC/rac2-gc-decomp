@@ -22,12 +22,12 @@ static void* thread_wrapper(void* arg) {
 	ThreadData* data = (ThreadData*)arg;
 	void* (*thread_func)(void*) = data->func;
 	void* func_arg = data->arg;
-	free(arg); // Liberar memoria del argumento
+	free(arg); // Free the argument memory
 	return thread_func(func_arg);
 }
 
 s32 sceSemaCreate(void) {
-	// Implementación de la creación de un semáforo
+	// Semaphore creation
 	SDL_Semaphore* sema = SDL_CreateSemaphore(1);
 	if (sema != NULL) {
 		return (s32)(intptr_t)sema;
@@ -38,9 +38,9 @@ s32 sceSemaCreate(void) {
 s32 sceDeleteSema(SDL_Semaphore* sema) {
 	if (sema != NULL) {
 		SDL_DestroySemaphore(sema);
-		return 0; // Confirmamos el borrado exitoso
+		return 0; // Deletion succeeded
 	}
-	return -1; // Retorna un código de error si el semáforo es NULL
+	return -1; // Returns an error code if the semaphore is NULL
 }
 
 int CreateThread(void) {
@@ -55,18 +55,18 @@ void _StartThread(void* (*thread_func)(void*), void* arg) {
 	pthread_t thread;
 	ThreadData* data = (ThreadData*)malloc(sizeof(ThreadData));
 	if (data == NULL) {
-		perror("Error al asignar memoria para ThreadData");
+		perror("Failed to allocate memory for ThreadData");
 		return;
 	}
 	data->func = thread_func;
 	data->arg = arg;
 
 	if (pthread_create(&thread, NULL, thread_wrapper, data) != 0) {
-		perror("Error al crear hilo");
+		perror("Failed to create thread");
 		free(data);
 		return;
 	}
-	pthread_detach(thread); // El hilo se desasocia después de su terminación
+	pthread_detach(thread); // The thread is detached after it terminates
 }
 
 s32 sceGetThreadId(void) {
@@ -79,14 +79,14 @@ void ChangeThreadPriority(pthread_t thread, ThreadPriority priority) {
 	int policy;
 	int ret;
 
-	// Obtener la política actual
+	// Get the current policy
 	ret = pthread_getschedparam(thread, &policy, &param);
 	if (ret != 0) {
-		perror("Error al obtener la política del hilo");
+		perror("Failed to get the thread policy");
 		return;
 	}
 
-	// Establecer la nueva prioridad según el enum ThreadPriority
+	// Set the new priority from the ThreadPriority enum
 	switch (priority) {
 	case PRIORITY_LOW:
 		param.sched_priority = sched_get_priority_min(policy);
@@ -98,14 +98,14 @@ void ChangeThreadPriority(pthread_t thread, ThreadPriority priority) {
 		param.sched_priority = sched_get_priority_max(policy);
 		break;
 	default:
-		perror("Prioridad no válida");
+		perror("Invalid priority");
 		return;
 	}
 
-	// Establecer la nueva política y prioridad
+	// Set the new policy and priority
 	ret = pthread_setschedparam(thread, policy, &param);
 	if (ret != 0) {
-		perror("Error al establecer la nueva prioridad del hilo");
+		perror("Failed to set the new thread priority");
 		return;
 	}
 }
@@ -132,7 +132,7 @@ int InitializeThreadManagement(void) {
 }
 
 void render_init_semas(void) {
-	// Implementación de la inicialización de semáforos de renderizado
+	// Initialization of the render semaphores
 	g_GraphicsSemaphore = SDL_CreateSemaphore(1);
 	g_RenderSemaphore_A = SDL_CreateSemaphore(1);
 	g_RenderSemaphore_B = SDL_CreateSemaphore(1);
@@ -142,9 +142,9 @@ void render_init_semas(void) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Global de estado (DAT_00134e20 en el ELF)                         */
-/*  [MOD-PENDING] Identificar quién lee esta global y ponerle el      */
-/*  nombre real del motor Insomniac.                                   */
+/*  State global (DAT_00134e20 in the ELF)                            */
+/*  [MOD-PENDING] Identify who reads this global and give it the      */
+/*  real Insomniac engine name.                                        */
 /* ------------------------------------------------------------------ */
 int g_sync_state = 0;
 
@@ -158,9 +158,9 @@ int g_sync_state = 0;
 /*    while (head_a != head_b) { spin... }                            */
 /*    DAT_00134e20 = head_a;                                          */
 /*                                                                     */
-/*  PC: no hay IOP ni anillo SIF. El "spin" es inútil (ambos          */
-/*  stubs devuelven 0 → convergen al instante).  Solo escribimos      */
-/*  la global para no romper la cadena de dependencias.               */
+/*  PC: there is no IOP or SIF ring. The "spin" is useless (both      */
+/*  stubs return 0 → they converge immediately). We only write        */
+/*  the global so the dependency chain is not broken.                 */
 /* ------------------------------------------------------------------ */
 void sce_sync_barrier(void)
 {
@@ -173,7 +173,7 @@ void sce_sync_barrier(void)
 	head_a = sce_stub_syscall131() - 0x20c;
 	head_b = sce_stub_syscall131() - 0x168;
 
-	/* Spin-wait: re-poll el cabezal que va "detrás" hasta converger */
+	/* Spin-wait: re-poll the head that lags "behind" until they converge */
 	while (head_a != head_b) {
 		if (head_a < head_b)
 			head_a = sce_stub_syscall131() - 0x20c;
@@ -181,14 +181,14 @@ void sce_sync_barrier(void)
 			head_b = sce_stub_syscall131() - 0x168;
 	}
 #else
-	/* PC: ambos stubs devuelven 0, el while no se entra nunca.
-	   Se deja el código para que la lógica sea 1:1 con el ELF
-	   y sirva de referencia si alguien emula. */
+	/* PC: both stubs return 0, the while loop is never entered.
+	   The code is kept so that the logic is 1:1 with the ELF
+	   and serves as a reference for an emulator. */
 	(void)head_a;
 	(void)head_b;
 	head_a = sce_stub_syscall131() - 0x20c;  /* 0 - 0x20c */
 	head_b = sce_stub_syscall131() - 0x168;  /* 0 - 0x168 */
-	/* head_a != head_b → se entra al while → convergen en 1 iter */
+	/* head_a != head_b → the while loop is entered → converges in 1 iteration */
 	while (head_a != head_b) {
 		if (head_a < head_b)
 			head_a = sce_stub_syscall131() - 0x20c;
@@ -208,7 +208,7 @@ void display_init_channel(void)
 	{
 		cnt = 2u;
 
-		/* Fase 1: kicks + waits + flushes (handshake inicial EE<->IOP) */
+		/* Phase 1: kicks + waits + flushes (initial EE<->IOP handshake) */
 		sce_stub_syscall116();      /* kick  */
 		sce_stub_syscall90();       /* wait  */
 		sce_stub_syscall90();       /* wait  */
@@ -216,19 +216,19 @@ void display_init_channel(void)
 		sceFlushCache(0, 0, 0);     /* flush */
 		sce_stub_syscall116();      /* kick  */
 
-		/* Fase 2: handshake por buffer (6 iteraciones) */
+		/* Phase 2: per-buffer handshake (6 iterations) */
 		do {
 			cnt = cnt + 1u;
-			sce_stub_syscall91();      /* signal: libera el buffer anterior */
-			sce_stub_syscall116();     /* kick:   arranca el buffer siguiente */
+			sce_stub_syscall91();      /* signal: releases the previous buffer */
+			sce_stub_syscall116();     /* kick:   starts the next buffer */
 		} while (cnt < DISPLAY_INIT_BUFFERS);
 
-		/* [CONFIRM] Marcar canal como inicializado (guard de idempotencia).
-		 * El ELF probablemente lo hace vía write a un registro que Ghidra
-		 * no resolvió; lo seteo aquí para que la 2ª llamada no re-inicie. */
+		/* [CONFIRM] Mark the channel as initialized (idempotence guard).
+		 * The ELF probably does it through a register write that Ghidra
+		 * did not resolve; it is set here so a second call does not re-initialize. */
 		g_rcnt3_mode |= RCNT3_FLAG_INIT;
 	}
-	/* Si ya estaba set, no se hace nada: idempotente. */
+	/* If it was already set, nothing happens: idempotent. */
 }
 
 int InitializeThreadManagement(void) {
@@ -256,28 +256,28 @@ void display_init_channel_min(void)
 {
 	uint32_t cnt;
 
-	if (sys_config_init() != 0)        /* guard por MODO, no por idempotencia */
+	if (sys_config_init() != 0)        /* guarded by MODE, not by idempotence */
 	{
-		cnt = 2u;                       /* uVar2 = 2 del asm */
+		cnt = 2u;                       /* uVar2 = 2 in the asm */
 
-		/* Setup (116,90,100,100,116) — misma forma que A/B, args distintos */
+		/* Setup (116,90,100,100,116) — same shape as A/B, different args */
 		sce_stub_syscall116(0x5A);                       /* kick, op=0x5A */
 		sce_stub_syscall90(0x80074000u, 0x134e40, 0x7a8);/* wait, a2=1960 */
 		sceFlushCache(0, 0, 0);
 		sceFlushCache(2, 0, 0);
 		sce_stub_syscall116(0x5B);                       /* kick, op=0x5B */
 
-		/* Bucle: 1 iteración (cnt 2→3, sale en 3<3 falso) */
+		/* Loop: 1 iteration (cnt 2→3, exits on 3<3 false) */
 		do {
 			cnt = cnt + 1u;
 			sce_stub_syscall91(0x5A);                    /* signal */
-			sce_stub_syscall116(0x5A);                   /* kick siguiente */
+			sce_stub_syscall116(0x5A);                   /* next kick */
 		} while (cnt < 3u);
 
-		/* No guarda global al final (a diferencia del canal B).
-		   Termina directo en jr ra. */
+		/* Does not store a global at the end (unlike channel B).
+		   Ends directly with jr ra. */
 	}
-	/* si sys_config_init() == 0: no hace nada (modo avanzado, otro canal rinde) */
+	/* if sys_config_init() == 0: does nothing (advanced mode, another channel renders) */
 }
 
 void display_init_channel_b(void)
@@ -286,20 +286,20 @@ void display_init_channel_b(void)
 
 	/* Setup: 116(0x5A) → 90 → flush(0) → flush(2) → 116(0x5B) → 116(0x54) */
 	sce_stub_syscall116(0x5A);          /* kick, op=90 */
-	sce_stub_syscall90(0x80075000, 0x1347d0, 0x330);  /* wait con flags */
+	sce_stub_syscall90(0x80075000, 0x1347d0, 0x330);  /* wait with flags */
 	sceFlushCache(0, 0, 0);
 	sceFlushCache(2, 0, 0);
 	sce_stub_syscall116(0x5B);          /* kick, op=91 */
 	sce_stub_syscall116(0x54);          /* kick, op=84 */
 
-	/* Bucle: 5 iteraciones, cada una: signal(op) + kick(op+1) */
+	/* Loop: 5 iterations, each one: signal(op) + kick(op+1) */
 	do {
 		cnt = cnt + 1u;
-		sce_stub_syscall91(0x55 + (cnt - 3));   /* op avanza 0x55→0x56 */
-		sce_stub_syscall116(0x55 + (cnt - 3));  /* kick siguiente */
+		sce_stub_syscall91(0x55 + (cnt - 3));   /* op advances 0x55→0x56 */
+		sce_stub_syscall116(0x55 + (cnt - 3));  /* next kick */
 	} while (cnt < 8u);
 
-	/* [Corregido] DAT_00134b48 = 3 (literal del asm), no el retorno del signal */
+	/* [Fixed] DAT_00134b48 = 3 (literal from the asm), not the signal's return value */
 	g_display_channel_b = 3;
 }
 
@@ -313,7 +313,7 @@ void InitializeDisplayAndThreads(void) {
 	display_init_channel_b();
 }
 
-static uint32_t* DAT_001a7308 = NULL;  // Asegúrate de inicializar esto adecuadamente
+static uint32_t* DAT_001a7308 = NULL;  // Make sure this is initialized appropriately
 
 int ProcessData(void) {
 	uint32_t uVar1;
@@ -324,7 +324,7 @@ int ProcessData(void) {
 	uint32_t* puVar6;
 	uint64_t* puVar7;
 	int iVar8;
-	int exit_condition = 0;  // Condición de salida para el bucle infinito
+	int exit_condition = 0;  // Exit condition for the infinite loop
 
 	iVar8 = 0;
 	puVar6 = (uint32_t*)(*DAT_001a7308 + (int)DAT_001a7308);
@@ -370,14 +370,14 @@ int ProcessData(void) {
 		}
 		puVar6 = (uint32_t*)((int)puVar7 + iVar2);
 
-		// Condición de salida del bucle infinito
+		// Exit condition of the infinite loop
 		exit_condition++;
-		if (exit_condition > 1000) {  // Ajusta esta condición según tus necesidades
+		if (exit_condition > 1000) {  // Adjust this condition as needed
 			break;
 		}
 	} while (true);
 
-	return 0;  // Retorna un valor apropiado
+	return 0;  // Returns an appropriate value
 }
 
 static int g_deci2_is_initialized = 0;
@@ -387,70 +387,70 @@ void ResetInitializationFlag(void) {
 }
 
 void NoOperation(void) {
-	// No se realiza ninguna operación
+	// No operation is performed
 }
 
 #include "core.h"
 #include <stdint.h>
 
-// Define la dirección de REG_INTC_STAT
+// Defines the REG_INTC_STAT address
 #define REG_INTC_STAT (*(volatile uint32_t *)0x1000f000)
 
-// Función para simular la operación de sincronización
+// Simulates the synchronization operation
 bool WaitForInterruptStatus(SDL_Window* window) {
 	if (!window) {
-		fprintf(stderr, "Ventana SDL no inicializada.\n");
+		fprintf(stderr, "SDL window not initialized.\n");
 		return false;
 	}
 
-	// Simulación de adquirir el bloqueo de sincronización
-	bool guard_success = true; // Suponemos que siempre se puede adquirir el bloqueo
+	// Simulates acquiring the synchronization lock
+	bool guard_success = true; // Assume the lock can always be acquired
 
 	if (guard_success) {
-		// Simulación de establecer REG_INTC_STAT a 4
-		SDL_GL_SetSwapInterval(4); // Simulación de registro REG_INTC_STAT
-		// Asegurar que la escritura se complete
+		// Simulates setting REG_INTC_STAT to 4
+		SDL_GL_SetSwapInterval(4); // Simulates the REG_INTC_STAT register
+		// Make sure the write completes
 		SDL_GL_SwapWindow(window);
 
-		// Simulación de liberar el bloqueo de sincronización
+		// Simulates releasing the synchronization lock
 	}
 
-	// Esperar hasta que el bit 2 de REG_INTC_STAT esté establecido
+	// Wait until bit 2 of REG_INTC_STAT is set
 	uint32_t intc_stat;
 	do {
-		// Simulación de leer REG_INTC_STAT
-		intc_stat = SDL_GL_GetSwapInterval(); // Simulación de registro REG_INTC_STAT
+		// Simulates reading REG_INTC_STAT
+		intc_stat = SDL_GL_GetSwapInterval(); // Simulates the REG_INTC_STAT register
 	} while ((intc_stat & 4) == 0);
 
-	// Simulación de adquirir nuevamente el bloqueo de sincronización
-	guard_success = true; // Suponemos que siempre se puede adquirir el bloqueo
+	// Simulates acquiring the synchronization lock again
+	guard_success = true; // Assume the lock can always be acquired
 
 	if (guard_success) {
-		// Simulación de establecer REG_INTC_STAT a 4 nuevamente
-		SDL_GL_SetSwapInterval(4); // Simulación de registro REG_INTC_STAT
-		// Asegurar que la escritura se complete
+		// Simulates setting REG_INTC_STAT to 4 again
+		SDL_GL_SetSwapInterval(4); // Simulates the REG_INTC_STAT register
+		// Make sure the write completes
 		SDL_GL_SwapWindow(window);
 
-		// Simulación de liberar el bloqueo de sincronización
+		// Simulates releasing the synchronization lock
 	}
 
 	return true;
 }
 
 /**
- * @brief Rutina de bloqueo y sincronización del procesador Emotion Engine.
- * Monitorea el estado de las banderas del procesador mediante un spinlock seguro.
- * Dirección original en Ghidra: 0x0011F5E0 (PAL)
+ * @brief Emotion Engine processor lock and synchronization routine.
+ * Monitors the processor flag state through a safe spinlock.
+ * Original Ghidra address: 0x0011F5E0 (PAL)
  *
- * @return bool Devuelve el estado final de la bandera de diagnóstico del procesador.
+ * @return bool Returns the final state of the processor diagnostic flag.
  */
 bool kernel_system_sync_guard(void) {
-	// 0x10000 corresponde a una bandera de estado de interrupción/diagnóstico en el Coprocesador 0 de MIPS
+	// 0x10000 is an interrupt/diagnostic status flag in MIPS Coprocessor 0
 	if ((Status & 0x10000) != 0) {
 		do {
-			DI();        // Desactivar interrupciones de hardware en la PS2
-			SYNC(0x10);  // Forzar la sincronización del pipeline de datos del procesador
-		} while ((Status & 0x10000) != 0); // Repetir hasta que el hardware se estabilice
+			DI();        // Disable hardware interrupts on the PS2
+			SYNC(0x10);  // Force synchronization of the processor data pipeline
+		} while ((Status & 0x10000) != 0); // Repeat until the hardware settles
 
 		return (Status & 0x10000) != 0;
 	}
@@ -459,48 +459,48 @@ bool kernel_system_sync_guard(void) {
 }
 
 /**
- * @brief Rutina de liberación y activación de interrupciones del procesador Emotion Engine.
- * Reactiva los hilos del sistema de la PS2 tras una operación crítica de sincronización.
- * Dirección original en Ghidra: 0x0011F628 (PAL)
+ * @brief Emotion Engine processor release and interrupt-enable routine.
+ * Re-enables the PS2 system threads after a critical synchronization operation.
+ * Original Ghidra address: 0x0011F628 (PAL)
  *
- * @return bool Devuelve el estado de la bandera de diagnóstico del procesador.
+ * @return bool Returns the state of the processor diagnostic flag.
  */
 bool kernel_system_sync_release(void) {
-	// Reactiva las interrupciones generales en el hardware de la PlayStation 2
+	// Re-enables the general interrupts in the PlayStation 2 hardware
 	EI();
 
-	// Evalúa y retorna el estado del bit 16 del registro Status del Coprocesador 0
+	// Evaluates and returns bit 16 of the Coprocessor 0 Status register
 	return (Status & 0x10000) != 0;
 }
 
 static uint32_t DAT_001b1880;
 static uint32_t DAT_001b1884;
-static uint32_t DAT_001baf3c = 0x12345678;  // Asegúrate de inicializar esto adecuadamente
+static uint32_t DAT_001baf3c = 0x12345678;  // Make sure this is initialized appropriately
 
 void InitializePointers(void) {
 	DAT_001b1880 = DAT_001baf3c;
 	DAT_001b1884 = DAT_001baf3c + 0x64000;
 }
 
-// Define las operaciones de cache y TagLo
+// Defines the cache and TagLo operations
 #define CACHE_OP_DXLtg 0x10
 #define CACHE_OP_DXWbin 0x14
 #define TAGLO_MASK 0xfffff000
 
-// Simulación de operaciones de cache
+// Simulated cache operations
 void cacheOp(uint op, int index) {
-	// Aquí puedes implementar la lógica de cache según tus necesidades
+	// Cache logic can be implemented here as needed
 	printf("Cache operation: 0x%x, Index: %d\n", op, index);
 }
 
-// Simulación de la operación SYNC
+// Simulated SYNC operation
 void SYNC(int arg) {
-	// Aquí puedes implementar la lógica de sincronización según tus necesidades
+	// Synchronization logic can be implemented here as needed
 	printf("SYNC operation with argument: %d\n", arg);
 }
 
-// Define la variable TagLo
-static uint32_t TagLo = 0x12345678;  // Asegúrate de inicializar esto adecuadamente
+// Defines the TagLo variable
+static uint32_t TagLo = 0x12345678;  // Make sure this is initialized appropriately
 
 void ProcessCache(uint param_1, uint param_2) {
 	uint uVar1;
@@ -535,7 +535,7 @@ void ProcessCache(uint param_1, uint param_2) {
 }
 
 void InitializeStruct(int param_1) {
-	// Inicializar los campos específicos del struct
+	// Initialize the specific struct fields
 	*((uint32_t*)(param_1 + 0x1b0)) = 0;
 	*((uint32_t*)(param_1 + 0x1d4)) = 1;
 	uint32_t* puVar1 = (uint32_t*)(param_1 + 0x140);
@@ -551,7 +551,7 @@ void InitializeStruct(int param_1) {
 	*((uint32_t*)(param_1 + 0x1c8)) = 0;
 	*((uint32_t*)(param_1 + 0x1d8)) = 0;
 
-	// Bucle para inicializar los campos adicionales
+	// Loop initializing the additional fields
 	do {
 		*(puVar1 - 0x10) = 0;
 		iVar2 = iVar2 + -1;
@@ -560,7 +560,7 @@ void InitializeStruct(int param_1) {
 	} while (-1 < iVar2);
 }
 
-// Define las variables globales
+// Defines the global variables
 static int DAT_001395cc = 0;
 static int DAT_00139470 = 0;
 static int DAT_00139484 = 0;
@@ -571,8 +571,8 @@ static int iGpffff8430 = 0;
 static int DAT_001b1a38 = 0;
 static int iGp000029c8 = 0;
 
-// Define los punteros a funciones
-static void (*PTR_LAB_002560d0[])(void) = { /* Inicializa con las funciones correspondientes */ };
+// Defines the function pointers
+static void (*PTR_LAB_002560d0[])(void) = { /* Initialize with the corresponding functions */ };
 
 void ProcessFunction(void) {
 	int iVar1;
@@ -598,21 +598,21 @@ void ProcessFunction(void) {
 
 void SetVSyncFlag(SDL_Window* window) {
 	if (window) {
-		// Habilitar la sincronización vertical
+		// Enable vertical synchronization
 		if (SDL_GL_SetSwapInterval(1) != 0) {
-			fprintf(stderr, "No se pudo habilitar la sincronización vertical: %s\n", SDL_GetError());
+			fprintf(stderr, "Could not enable vertical synchronization: %s\n", SDL_GetError());
 		}
 		else {
-			printf("Sincronización vertical habilitada.\n");
+			printf("Vertical synchronization enabled.\n");
 		}
 	}
 	else {
-		fprintf(stderr, "Ventana SDL no inicializada.\n");
+		fprintf(stderr, "SDL window not initialized.\n");
 	}
 }
 
-/* [CONFIRM] Registros de interrupciones del EE (ventanas de memoria).
- *   INTSTAT = 0x0010f000 (estado de líneas) ; bit 2 = VSync (0x4).
+/* [CONFIRM] EE interrupt registers (memory windows).
+ *   INTSTAT = 0x0010f000 (line status) ; bit 2 = VSync (0x4).
  *   INTCONT = 0x001000000 (control / ack). */
 #define EE_INTSTAT   (*(volatile unsigned int *)0x0010f000u)
 #define EE_INTCONT   (*(volatile unsigned int *)0x001000000u)
@@ -620,28 +620,28 @@ void SetVSyncFlag(SDL_Window* window) {
 
 int vsync_wait_first(void)
 {
-	unsigned int buf0 = 0;   /* buffer[0]: flag escrita por el handler de IRQ */
-	unsigned int handle = 0; /* buffer[8]: handle/estado devuelto           */
+	unsigned int buf0 = 0;   /* buffer[0]: flag written by the IRQ handler */
+	unsigned int handle = 0; /* buffer[8]: returned handle/state            */
 	int guard;
 
 #if defined(PLATFORM_PS2)
-	/* 1) SetVSyncFlag(sp, sp+8): le pasa al motor los dos slots del buffer */
+	/* 1) SetVSyncFlag(sp, sp+8): passes both buffer slots to the engine */
 	SetVSyncFlag(&buf0, &handle);
 
-	/* 2) Protege IRQ + habilita la línea de VSync en INTSTAT */
+	/* 2) Protect IRQs + enable the VSync line in INTSTAT */
 	guard = kernel_system_sync_guard();
 	EE_INTSTAT |= EE_INT_VSYNC;
 	__asm__ __volatile__("sync\n" ::: "memory");
 	if (guard) kernel_system_sync_release();
 
-	/* 3) Espera al primer vblank: bit 2 limpio O handler en buf0 */
+	/* 3) Wait for the first vblank: bit 2 clear OR handler wrote buf0 */
 	for (;;)
 	{
-		if ((EE_INTSTAT & EE_INT_VSYNC) != 0) break;   /* vblank llegó */
-		if (buf0 != 0) break;                          /* handler escribió */
+		if ((EE_INTSTAT & EE_INT_VSYNC) != 0) break;   /* vblank arrived */
+		if (buf0 != 0) break;                          /* handler wrote */
 	}
 
-	/* 4) Ack de la interrupción (con IRQ protegidas) */
+	/* 4) Acknowledge the interrupt (with IRQs protected) */
 	guard = kernel_system_sync_guard();
 	EE_INTCONT |= EE_INT_VSYNC;
 	__asm__ __volatile__("sync\n" ::: "memory");
@@ -649,11 +649,11 @@ int vsync_wait_first(void)
 
 	return (int)handle;
 #else
-	/* PC: sin EE, sin INTSTAT/INTCONT, sin handler de IRQ del motor.
-	   [MOD-PENDING] Cuando exista render real, esto se mapea a la
-	   sincronización vertical nativa del canal activo
-	   (glXSwapInterval / DWM / SDL_WaitEvent) y devuelve un handle
-	   nativo en lugar de 0. */
+	/* PC: no EE, no INTSTAT/INTCONT, no engine IRQ handler.
+	   [MOD-PENDING] Once real rendering exists, this maps to the
+	   native vertical synchronization of the active channel
+	   (glXSwapInterval / DWM / SDL_WaitEvent) and returns a native
+	   handle instead of 0. */
 	(void)buf0;
 	(void)handle;
 	return 0;

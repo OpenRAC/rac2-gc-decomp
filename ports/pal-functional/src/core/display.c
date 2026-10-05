@@ -5,17 +5,17 @@
 #include <SDL.h>
 
 /*
- * Funciones externas del GS (PS2). En PC son wrappers o no-ops.
- * Declaradas en ps2_graphics.h (ver abajo).
+ * External GS functions (PS2). On PC they are wrappers or no-ops.
+ * Declared in ps2_graphics.h (see below).
  */
 #include "ps2_graphics.h"
 
  /*
   * ------------------------------------------------------------------
-  *  PORT de FUN_001257d0 (0x001257D0)
+  *  PORT of FUN_001257d0 (0x001257D0)
   * ------------------------------------------------------------------
   *
-  *  Pseudocódigo original (resumen):
+  *  Original pseudocode (summary):
   *    switch (param_1):
   *      case 0:  // CONFIGURE + ENABLE
   *        canvas = g_GraphicsCanvasData();
@@ -50,8 +50,8 @@
   *  PC:
   *    - GS_CSR 0x100/0x200 → SDL_HideWindow / SDL_ShowWindow
   *    - GsPutIMR → glClearColor / glColorMask / glBlendFunc
-  *    - SetGsCrt → SDL_SetWindowMode (resolución) + glViewport
-  *    - RemoveIntcHandler(2) → no-op (SDL maneja vsync)
+  *    - SetGsCrt → SDL_SetWindowMode (resolution) + glViewport
+  *    - RemoveIntcHandler(2) → no-op (SDL handles vsync)
   * ------------------------------------------------------------------
   */
 
@@ -69,23 +69,23 @@ void core_display_set(display_command_t command,
     {
         /*
          * GS_CSR = 0x200 → "screen ON"
-         * PC: mostrar la ventana + activar el framebuffer
+         * PC: show the window + enable the framebuffer
          */
-        SDL_ShowWindow(NULL);  /* o SDL_SetWindowOpacity(win, 1.0f) */
+        SDL_ShowWindow(NULL);  /* or SDL_SetWindowOpacity(win, 1.0f) */
 
         /*
          * canvas->display_mode = param_2
          * canvas->timing_param = param_3
          * canvas->csr_high = (GS_CSR >> 16) & 0xFF
          *
-         * En PC estos valores determinan la resolución y refresh.
-         * El struct se llena para que vsync_wait() y el renderer
-         * puedan leerlos.
+         * On PC these values determine the resolution and refresh.
+         * The struct is filled so that vsync_wait() and the renderer
+         * can read them.
          */
          /*
-          * NOTA: graphics_canvas_data() retorna const en la API pública.
-          * Internamente hay un setter. Por ahora lo casteamos (igual
-          * que en PS2 donde era una global mutable).
+          * NOTE: graphics_canvas_data() returns const in the public API.
+          * Internally there is a setter. For now we cast it (as on
+          * the PS2, where it was a mutable global).
           */
         graphics_canvas_data_t* c = (graphics_canvas_data_t*)canvas;
         c->display_mode = mode;
@@ -94,21 +94,21 @@ void core_display_set(display_command_t command,
 
         /*
          * csr_high_byte = (GS_CSR >> 16) & 0xFF
-         * En PS2: byte de estado del GS (qué pipeline está activo).
-         * En PC: lo derivamos de SDL_GetWindowFlags o lo dejamos 0.
+         * On PS2: GS status byte (which pipeline is active).
+         * On PC: derived from SDL_GetWindowFlags or left at 0.
          */
-        c->csr_high_byte = 0x00;  /* TODO: derivar de estado GL */
+        c->csr_high_byte = 0x00;  /* TODO: derive from the GL state */
 
         /*
          * GsPutIMR() → Image Mask Register
-         * Controla qué canales RGBA se transfieren.
-         * PC equivalente: glColorMask + glBlendFunc
+         * Controls which RGBA channels are transferred.
+         * PC equivalent: glColorMask + glBlendFunc
          */
-        gputimr();  /* ← wrapper en ps2_graphics.c (ver abajo) */
+        gputimr();  /* ← wrapper in ps2_graphics.c (see below) */
 
         /*
          * canvas->flag = (param_4 != 0)
-         * (ya escrito arriba como flag_interlace)
+         * (already written above as flag_interlace)
          */
 
          /*
@@ -118,8 +118,8 @@ void core_display_set(display_command_t command,
           *   handler_data = 0;
           *   irq_active   = 0;
           *
-          * "Si había un handler de VS IRQ activo, desactívalo
-          *  de forma atómica antes de reconfigurar el CRT."
+          * "If a VS IRQ handler was active, disable it
+          *  atomically before reconfiguring the CRT."
           */
         if (c->irq_active != 0) {
             uint32_t prev = core_critical_enter(2);
@@ -130,11 +130,11 @@ void core_display_set(display_command_t command,
         }
 
         /*
-         * SetGsCrt() → aplica los timings al hardware del GS.
-         * En PS2: escribe HSYNC, VSYNC, total lines, resolution.
-         * En PC: SDL_SetWindowMode + glViewport.
+         * SetGsCrt() → applies the timings to the GS hardware.
+         * On PS2: writes HSYNC, VSYNC, total lines, resolution.
+         * On PC: SDL_SetWindowMode + glViewport.
          */
-        set_gs_crt();  /* ← wrapper en ps2_graphics.c */
+        set_gs_crt();  /* ← wrapper in ps2_graphics.c */
 
         return;
     }
@@ -144,11 +144,11 @@ void core_display_set(display_command_t command,
     {
         /*
          * GS_CSR = 0x100 → "screen OFF"
-         * En PS2: el GS deja de escanear, el CRT muestra negro.
-         * En PC: ocultar ventana o simplemente no renderizar.
+         * On PS2: the GS stops scanning out, the CRT shows black.
+         * On PC: hide the window or simply do not render.
          */
         SDL_HideWindow(NULL);
-        /* Alternativa más suave:
+        /* Gentler alternative:
          * SDL_Window *win = SDL_GL_GetWindow();
          * SDL_SetWindowOpacity(win, 0.0f);
          */
@@ -159,9 +159,9 @@ void core_display_set(display_command_t command,
     case DISPLAY_CMD_RECONFIGURE:
     {
         /*
-         * Igual que CONFIGURE pero SIN la sección de IRQ cleanup.
-         * Se usa para cambiar de resolución a mitad de gameplay
-         * sin perder el vsync handler.
+         * Same as CONFIGURE but WITHOUT the IRQ cleanup section.
+         * Used to change resolution in the middle of gameplay
+         * without losing the vsync handler.
          */
         graphics_canvas_data_t* c = (graphics_canvas_data_t*)canvas;
         c->flag_interlace = (interlace != 0);
@@ -169,14 +169,14 @@ void core_display_set(display_command_t command,
         c->timing_param = timing;
         c->csr_high_byte = 0x00;
 
-        /* Sin GsPutIMR aquí (el mask no cambia en un reconfigure) */
-        /* Sin IRQ cleanup (el handler sigue activo) */
+        /* No GsPutIMR here (the mask does not change on a reconfigure) */
+        /* No IRQ cleanup (the handler stays active) */
 
         set_gs_crt();
         return;
     }
 
     default:
-        return;  /* no-op, fiel al original */
+        return;  /* no-op, faithful to the original */
     }
 }

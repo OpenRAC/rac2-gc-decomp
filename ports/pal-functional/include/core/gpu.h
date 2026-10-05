@@ -4,23 +4,23 @@
 #include <stdint.h>
 
 /**
- * Inicializa el contexto de render (reset + subida de estado inicial).
+ * Initializes the render context (reset + upload of the initial state).
  *
- * Port de FUN_00124418 (0x00124418, PS2 ELF).
+ * Port of FUN_00124418 (0x00124418, PS2 ELF).
  *
- * En PS2:
+ * On PS2:
  *   - Reset VIF1 (front buffer + error)
- *   - Config VU1 (R12 = 0x404, poll R13 hasta ready)
- *   - KICK 2x GIF DMA packets (contexto + data)
+ *   - VU1 config (R12 = 0x404, poll R13 until ready)
+ *   - KICK 2x GIF DMA packets (context + data)
  *   - GIF_CTRL = 1
  *
- * En PC (SDL2 + OpenGL):
+ * On PC (SDL2 + OpenGL):
  *   - glViewport + glClear
- *   - Setup de pipeline (shader, VAO, uniforms)
- *   - Upload de contexto (texturas, buffers)
+ *   - Pipeline setup (shader, VAO, uniforms)
+ *   - Context upload (textures, buffers)
  *
- * Llamar UNA VEZ al arranque, antes del primer frame.
- * No es thread-safe (no llamar desde audio thread).
+ * Call ONCE at startup, before the first frame.
+ * Not thread-safe (do not call from the audio thread).
  */
 void gpu_init_context(void);
 

@@ -1,14 +1,14 @@
-#include <stdint.h> // ¡ESTA LÍNEA REPARA LOS TIPOS COMO uint32_t y uint64_t!
+#include <stdint.h> // Defines types such as uint32_t and uint64_t
 
-// Declaramos la estructura para que el compilador sepa de qué tamaño es.
-// Si ya la tienes definida en un archivo .h (ej. ps2_gs.h), pon el include correspondiente:
+// Declare the structure so the compiler knows its size.
+// If it is already defined in a .h file (e.g. ps2_gs.h), include it instead:
 // #include "ps2_gs.h"
-// De lo contrario, puedes poner este cascarón estructural arriba para cumplir con el enlace:
-// Definimos la estructura real del paquete del sintetizador gráfico (GS) para PC
+// Otherwise this structural shell satisfies the link:
+// Real structure of the graphics synthesizer (GS) packet for PC
 typedef struct {
-	// Un qword de PS2 (128 bits) empaquetado se representa en PC moderna como 
-	// un arreglo de enteros de 64 bits. Le asignamos un tamaño lo suficientemente
-	// grande (por ejemplo, 16 o 32 elementos) para cubrir los índices [0] a [12] que usa el juego.
+	// A packed 128-bit PS2 qword is represented on a modern PC as
+	// an array of 64-bit integers, large enough
+	// (e.g. 16 or 32 elements) to cover indices [0] to [12] used by the game.
 	uint64_t qword[32];
 } Ps2GsLoadImagePacket;
 
@@ -72,7 +72,7 @@ uint32_t sceGsSetDefLoadImage(
 	}
 
 	/*
-	 * Inicialización del paquete.
+	 * Packet initialization.
 	 */
 	for (int i = 0; i < 12; ++i) {
 		packet->qword[i] = 0;

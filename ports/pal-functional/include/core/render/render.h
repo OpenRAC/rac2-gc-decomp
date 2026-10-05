@@ -4,13 +4,13 @@
 #include "core/types.h"
 
 /* ========================================================================
- *  Render API – agnóstica de backend.
- *  engine/ y game/ incluyen SOLO este header.
- *  Nunca incluyen <GL/gl.h> ni <vulkan/vulkan.h> directamente.
+ *  Render API – backend-agnostic.
+ *  engine/ and game/ include ONLY this header.
+ *  They never include <GL/gl.h> or <vulkan/vulkan.h> directly.
  * ======================================================================== */
 
  /* ----------------------------------------------------------------------
-  *  Tipos opacos – el struct real vive en el .c del backend
+  *  Opaque types – the real struct lives in the backend's .c
   * ---------------------------------------------------------------------- */
 typedef struct RenderHandle   RenderHandle;
 typedef struct ShaderHandle   ShaderHandle;
@@ -27,7 +27,7 @@ typedef enum {
 } RenderBackend;
 
 /* ----------------------------------------------------------------------
- *  Flags para Render_Init
+ *  Flags for Render_Init
  * ---------------------------------------------------------------------- */
 #define RENDER_FLAG_NONE        0x00
 #define RENDER_FLAG_VSYNC       0x01
@@ -36,14 +36,14 @@ typedef enum {
 #define RENDER_FLAG_SRGB        0x08   /* framebuffer sRGB (GL) / swapchain sRGB (VK) */
 
  /* ----------------------------------------------------------------------
-  *  Flags para Render_BeginFrame (qué limpiar)
+  *  Flags for Render_BeginFrame (what to clear)
   * ---------------------------------------------------------------------- */
 #define CLEAR_COLOR             0x01
 #define CLEAR_DEPTH             0x02
 #define CLEAR_STENCIL           0x04
 
   /* ----------------------------------------------------------------------
-   *  Vertex layout (lo que el vertex shader espera)
+   *  Vertex layout (what the vertex shader expects)
    * ---------------------------------------------------------------------- */
 typedef struct Vertex {
     f32 position[3];
@@ -54,7 +54,7 @@ typedef struct Vertex {
 } Vertex;
 
 /* ----------------------------------------------------------------------
- *  Pixel format (para texturas)
+ *  Pixel format (for textures)
  * ---------------------------------------------------------------------- */
 typedef enum {
     PIX_RGBA8,
@@ -77,15 +77,15 @@ typedef struct Camera {
  * ====================================================================== */
 
  /**
-  *  Crea ventana SDL + contexto del backend (GL 3.3 / VK 1.2).
-  *  Debe llamarse UNA vez al inicio.
-  *  @return  RenderHandle* o NULL si falló.
+  *  Creates the SDL window + backend context (GL 3.3 / VK 1.2).
+  *  Must be called ONCE at startup.
+  *  @return  RenderHandle* or NULL on failure.
   */
 RenderHandle* Render_Init(RenderBackend backend, u32 width, u32 height, u32 flags);
 
 /**
- *  Destruye todo: GL context, buffers, texturas, window, SDL.
- *  @param   h  handle de Render_Init (NULL-safe).
+ *  Destroys everything: GL context, buffers, textures, window, SDL.
+ *  @param   h  handle from Render_Init (NULL-safe).
  */
 void Render_Destroy(RenderHandle* h);
 
@@ -115,7 +115,7 @@ void Render_DrawMesh(RenderHandle* h, MeshHandle* mesh);
 void Render_DrawMeshRange(RenderHandle* h, MeshHandle* mesh, u32 first, u32 count);
 
 /* ======================================================================
- *  Resource creation (llamar antes del primer BeginFrame, o durante)
+ *  Resource creation (call before the first BeginFrame, or during it)
  * ====================================================================== */
 
 ShaderHandle* Render_CreateShader(RenderHandle* h, const char* vert_src, const char* frag_src);

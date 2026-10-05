@@ -1,7 +1,7 @@
 #include "core/sce_compat.h"
 
 /* ------------------------------------------------------------------ */
-/*  Stub: syscall 116 – "kick" de transferencia SIF/DMA               */
+/*  Stub: syscall 116 – SIF/DMA transfer "kick"                       */
 /*  PS2:  li v1, 0x74 ; syscall                                       */
 /*  PC:   no-op                                                       */
 /* ------------------------------------------------------------------ */
@@ -16,9 +16,9 @@ int sceSifCheckM_S(void)
 }
 
 /* ------------------------------------------------------------------ */
-/*  Stub: syscall 131 – "poll" de estado del anillo                   */
+/*  Stub: syscall 131 – ring status "poll"                            */
 /*  PS2:  li v1, 0x83 ; syscall                                       */
-/*  PC:   no-op, devuelve 0                                           */
+/*  PC:   no-op, returns 0                                            */
 /* ------------------------------------------------------------------ */
 int sceSifSetM_S(void)
 {
@@ -35,9 +35,9 @@ int sceSifSetM_S(void)
 
 /* ------------------------------------------------------------------ */
 /*  Stub: syscall 64 – sceSemaCreate (kernel semaphore)              */
-/*  PS2:  li v0, 0x40 ; syscall   (param en $a0)                     */
-/*  PC:   devuelve un ID virtual estable. No crea SDL_Semaphore:     */
-/*  eso lo hace la capa engine (Sys_InitGraphicsSemaphore).          */
+/*  PS2:  li v0, 0x40 ; syscall   (param in $a0)                     */
+/*  PC:   returns a stable virtual ID. Does not create SDL_Semaphore: */
+/*  the engine layer does that (Sys_InitGraphicsSemaphore).          */
 /* ------------------------------------------------------------------ */
 int sceSemaCreate(void* param)
 {
@@ -51,7 +51,7 @@ int sceSemaCreate(void* param)
 	return r;
 #else
 	(void)param;
-	static int virtual_sema_counter = 4;   /* 4 = 1-based; 0 reservado como invalid */
+	static int virtual_sema_counter = 4;   /* 4 = 1-based; 0 reserved as invalid */
 	return virtual_sema_counter++;
 #endif
 }
@@ -59,13 +59,13 @@ int sceSemaCreate(void* param)
 /*
  * sceFlushCache
  * ------------------------------------------------------------------
- * PS2:  li $v0, 100 ; syscall   (coherencia de i/d-cache sobre [addr,addr+size])
- * PC:   la coherencia la garantiza el hardware (MESI/MOESI). No-op seguro.
+ * PS2:  li $v0, 100 ; syscall   (i/d-cache coherence over [addr,addr+size])
+ * PC:   coherence is guaranteed by the hardware (MESI/MOESI). Safe no-op.
  *
- * Se deja el cuerpo vacío a propósito: en x86_64/ARM no hay que forzar
- * un wbinvd/clflush por región como en PS2, y hacerlo penalizaría sin
- * aportar nada. Si en el futuro se detecta un bug de coherencia al
- * compartir memoria con la GPU, se rellena aquí y en ningún otro sitio.
+ * The body is intentionally empty: x86_64/ARM do not need a per-region
+ * wbinvd/clflush as the PS2 does, and doing it would cost time without
+ * any benefit. If a coherence bug is ever found when sharing memory
+ * with the GPU, fill it in here and nowhere else.
  */
 int sceFlushCache(int mode, void* addr, int size)
 {
@@ -89,9 +89,9 @@ int sceFlushCache(int mode, void* addr, int size)
 
 
 /* ------------------------------------------------------------------ */
-/*  Stub: syscall 90 – event-set / cola de eventos del kernel         */
+/*  Stub: syscall 90 – kernel event-set / event queue                */
 /*  PS2:  li v0, 0x5a ; syscall                                       */
-/*  PC:   no-op (no hay event-sets del IOP que esperar)               */
+/*  PC:   no-op (there are no IOP event-sets to wait for)            */
 /* ------------------------------------------------------------------ */
 int sceSifSetRpcQueue(void)
 {
@@ -104,9 +104,9 @@ int sceSifSetRpcQueue(void)
 }
 
 /* ------------------------------------------------------------------ */
-/*  Stub: syscall 91 – signal de event-set (libera el evento)         */
+/*  Stub: syscall 91 – event-set signal (releases the event)         */
 /*  PS2:  li v0, 0x5b ; syscall                                       */
-/*  PC:   no-op (no hay event-sets del IOP que liberar)               */
+/*  PC:   no-op (there are no IOP event-sets to release)             */
 /* ------------------------------------------------------------------ */
 int sceSifInitRpc(void)
 {
@@ -124,20 +124,20 @@ void display_init_channel_b(void)
 
 	/* Setup: 116(0x5A) → 90 → flush(0) → flush(2) → 116(0x5B) → 116(0x54) */
 	sceSifCheckM_S(0x5A);          /* kick, op=90 */
-	sceSifSetRpcQueue(0x80075000, 0x1347d0, 0x330);  /* wait con flags */
+	sceSifSetRpcQueue(0x80075000, 0x1347d0, 0x330);  /* wait with flags */
 	sceFlushCache(0, 0, 0);
 	sceFlushCache(2, 0, 0);
 	sceSifCheckM_S(0x5B);          /* kick, op=91 */
 	sceSifCheckM_S(0x54);          /* kick, op=84 */
 
-	/* Bucle: 5 iteraciones, cada una: signal(op) + kick(op+1) */
+	/* Loop: 5 iterations, each one: signal(op) + kick(op+1) */
 	do {
 		cnt = cnt + 1u;
-		sceSifInitRpc(0x55 + (cnt - 3));   /* op avanza 0x55→0x56 */
-		sceSifCheckM_S(0x55 + (cnt - 3));  /* kick siguiente */
+		sceSifInitRpc(0x55 + (cnt - 3));   /* op advances 0x55→0x56 */
+		sceSifCheckM_S(0x55 + (cnt - 3));  /* next kick */
 	} while (cnt < 8u);
 
-	/* [Corregido] DAT_00134b48 = 3 (literal del asm), no el retorno del signal */
+	/* [Fixed] DAT_00134b48 = 3 (literal from the asm), not the signal's return value */
 	g_display_channel_b = 3;
 
 }
@@ -148,7 +148,7 @@ int GetOsdConfigParam(void* out_buf)
 	register void* r __asm__("a0") = out_buf;
 	__asm__ volatile ("li v0, 0x4b\n\t syscall\n\t" : : "r"(r) : "memory", "v0");
 #else
-	/* PC: no hay kernel. El buffer queda a 0 (estado "default"). */
+	/* PC: there is no kernel. The buffer stays 0 ("default" state). */
 	if (out_buf) *(unsigned int*)out_buf = 0;
 #endif
 	return 0;
@@ -161,7 +161,7 @@ int SetOsdConfigParam(const void* in_buf)
 	__asm__ volatile ("li v0, 0x4a\n\t syscall\n\t"
 		: : "r"(r) : "memory", "v0");
 #else
-	/* PC: no hay kernel que escribir. No-op seguro. */
+	/* PC: there is no kernel to write to. Safe no-op. */
 	(void)in_buf;
 #endif
 	return 0;
@@ -175,8 +175,8 @@ int SetOsdConfigParam(const void* in_buf)
 /*    v   = Get(sp+4);      campo = (v>>13) & 7;                      */
 /*    return (campo < 1);                                                     */
 /*                                                                     */
-/*  PC: config empieza a 0 → campo = 0 → devuelve 1 (modo default).    */
-/*  El bit 13 forzado no tiene efecto observable (no hay kernel).      */
+/*  PC: config starts at 0 → field = 0 → returns 1 (default mode).     */
+/*  The forced bit 13 has no observable effect (there is no kernel).  */
 /* ------------------------------------------------------------------ */
 int sys_config_init(void)
 {
@@ -184,16 +184,16 @@ int sys_config_init(void)
 
 #if defined(PLATFORM_PS2)
 	GetOsdConfigParam(&v);          /* 1) leer estado actual        */
-	v |= 0x2000u;                   /* 2) forzar el bit 13          */
-	SetOsdConfigParam(&v);          /* 3) escribir de vuelta        */
+	v |= 0x2000u;                   /* 2) force bit 13              */
+	SetOsdConfigParam(&v);          /* 3) write it back             */
 	GetOsdConfigParam(&v);          /* 4) re-leer                   */
-	v = (v >> 13) & 0x7u;           /* 5) extraer campo 13-15 (0..7)*/
+	v = (v >> 13) & 0x7u;           /* 5) extract field 13-15 (0..7) */
 	return (v < 1) ? 1 : 0;         /* 6) == 0 ? 1 : 0              */
 #else
 	(void)v;
-	/* PC: sin kernel. El "campo de modo" termina en 0 (default) y la
-	   función devuelve 1 (== modo default OK). Idéntico resultado al
-	   original en la vía "PAL / config no forzada". */
+	/* PC: no kernel. The "mode field" ends up 0 (default) and the
+	   function returns 1 (== default mode OK). Same result as the
+	   original on the "PAL / config not forced" path. */
 	return 1;
 #endif
 }

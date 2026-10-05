@@ -10,15 +10,15 @@ extern "C" {
 #endif
 
 /* ------------------------------------------------------------------------
- * Utilidades de bajo nivel del Emotion Engine (equivalentes a funciones de
- * libc, reimplementadas para dejar explícito que sustituyen a la versión
- * nativa de la PS2).
+ * Low-level Emotion Engine utilities (equivalents of libc functions,
+ * reimplemented to make explicit that they replace the native PS2
+ * version).
  * ------------------------------------------------------------------------ */
 int ee_memcmp(const void* ptr1, const void* ptr2, size_t num);
 int ee_atoi(const char* str);
 
 /* ------------------------------------------------------------------------
- * Semáforos del Kernel de la PS2 (o su emulación con SDL2 en el port a PC).
+ * PS2 kernel semaphores (or their SDL2 emulation in the PC port).
  * ------------------------------------------------------------------------ */
 s32 sceWaitSema(s32 sema_id);
 s32 sceSignalSema(s32 sema_id);
@@ -26,7 +26,7 @@ s32 iSignalSema(s32 sema_id);
 s32 scePollSema(s32 sema_id);
 
 /* ------------------------------------------------------------------------
- * Hilos del Kernel de la PS2.
+ * PS2 kernel threads.
  * ------------------------------------------------------------------------ */
 s32 sceWakeupThread(s32 thread_id);
 s32 iWakeupThread(s32 thread_id);
@@ -34,7 +34,7 @@ s32 sceReferThreadStatus(s32 thread_id, void* status_ptr);
 s32 sceSleepThread(void);
 
 /* ------------------------------------------------------------------------
- * Alarmas, caché y otras utilidades del Kernel.
+ * Kernel alarms, cache and other utilities.
  * ------------------------------------------------------------------------ */
 s32  sceSetAlarm(u32 microseconds, void* alarm_callback, void* callback_arg);
 

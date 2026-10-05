@@ -5,19 +5,19 @@
 #include "types.h"
 #include <stdarg.h>  // va_list
 #include <stddef.h>  // size_t
-#include <stdbool.h> // ¡ESTO ENSEÑA QUÉ ES 'bool'!
-#include <stdint.h>  // ¡REQUERIDO PARA TIPOS DE ENTEROS FIJOS!
+#include <stdbool.h> // Defines 'bool'
+#include <stdint.h>  // Required for the fixed-width integer types
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 	/* ------------------------------------------------------------------------
-	 * Funciones externas de otras unidades del proyecto. No se cuenta con sus
-	 * cabeceras originales, así que se declaran aquí.
+	 * External functions of other project units. Their original headers
+	 * are not available, so they are declared here.
 	 * ------------------------------------------------------------------------ */
 
-	 // Definimos los alias de tipo para que el compilador entienda tus firmas matemáticas
+	 // Type aliases so the compiler understands the math signatures
 	typedef uint32_t u32;
 	typedef int32_t  s32;
 	typedef uint64_t u64;
@@ -26,21 +26,21 @@ extern "C" {
 
 	void  sys_safe_exit_stub(void);
 	s32   game_sprintf(s32* p_buffer_struct, const char* p_format_str, ...);
-	u64   ee_atoll_wrapper(const char* p_srcString, char** p_end_ptr, s32 base); // No se usa en math_util.c; se conserva por si otra unidad la necesita
-	void* ee_memcpy(void* dest, const void* src, u32 num); // Usada en math_double_to_digits() sin declarar en el archivo original; tipo corregido a u32 para coincidir con kernel_sys.c (su definición real)
+	u64   ee_atoll_wrapper(const char* p_srcString, char** p_end_ptr, s32 base); // Not used in math_util.c; kept in case another unit needs it
+	void* ee_memcpy(void* dest, const void* src, u32 num); // Used in math_double_to_digits() without a declaration in the original file; type corrected to u32 to agree with kernel_sys.c (its real definition)
 
-	/* CONFLICTO ENTRE ARCHIVOS: en ps2_sif.c/ps2_kernel.h esta función se usa
-	 * como "void kernel_system_sync_release(void)", pero aquí en math_util.c
-	 * el original la declaraba como "bool". Ambos archivos ignoran el valor
-	 * de retorno al llamarla, así que no rompe nada dejarla en "void" aquí
-	 * (para no chocar con ps2_sif.h) — pero confirma cuál es la firma real. */
-	 /* Firmas confirmadas contra su definición real en kernel_sys.c: ambas devuelven bool. */
+	/* CROSS-FILE CONFLICT: in ps2_sif.c/ps2_kernel.h this function is used
+	 * as "void kernel_system_sync_release(void)", but here in math_util.c
+	 * the original declared it as "bool". Both files ignore the return
+	 * value when calling it, so leaving it as "void" here breaks nothing
+	 * (to avoid clashing with ps2_sif.h) — but confirm the real signature. */
+	 /* Signatures confirmed against their real definition in kernel_sys.c: both return bool. */
 	bool kernel_system_sync_guard(void);
 	bool kernel_system_sync_release(void);
 
 	/* ------------------------------------------------------------------------
-	 * API pública de este módulo (conversión, empaquetado IEEE 754, aritmética
-	 * de 64 bits y utilidades de texto científico para el HUD).
+	 * Public API of this module (conversion, IEEE 754 packing, 64-bit
+	 * arithmetic and scientific-text utilities for the HUD).
 	 * ------------------------------------------------------------------------ */
 	s32    math_double_to_int32_signed(double param_1);
 	double math_fmod_double64(double x, double y);
@@ -65,12 +65,12 @@ extern "C" {
 	double math_sub_double64(double minuend, double subtrahend);
 	double math_div_double64(double dividend, double divisor);
 
-	void* math_add_sub_double64(u32* p_unpack1, u32* p_unpack2, u32* p_out_unpack); // Ver nota de bug más abajo
+	void* math_add_sub_double64(u32* p_unpack1, u32* p_unpack2, u32* p_out_unpack); // See the bug note further below
 	s32    math_compare_double64_wrapper(u64 param_1, u64 param_2);
 	s32    math_compare_double64(u32* p_unpack1, u32* p_unpack2);
 	void   math_unpack_double64(u64* p_double_bits, u32* p_output_struct);
 
-	double math_float_to_double(f32 param_1); // Firma real: devuelve double, NO u64 (el .c original tenía un prototipo en conflicto)
+	double math_float_to_double(f32 param_1); // Real signature: returns double, NOT u64 (the original .c had a conflicting prototype)
 
 	void   math_pack_double64_wrapper(u32 param_1, u32 param_2, u32 param_3, u64 param_4);
 	u64    math_pack_double64(u32* p_input_struct);

@@ -5,58 +5,58 @@
 #include <stdbool.h>
 #include <string.h>
 
-int g_CdvdNcmdInitialized = -1; // -1 significa NO inicializado, tal como la PS2
+int g_CdvdNcmdInitialized = -1; // -1 means NOT initialized, as on the PS2
 int g_CdvdCurrentCommand = 0;
 
 int sceCdInit(int mode) {
-	// 1. Si ya estaba inicializado previamente, retornamos éxito directo
+	// 1. If it was already initialized, return success directly
 	if (g_CdvdNcmdInitialized > -1) {
 		return 1;
 	}
 
-	// 2. Simulamos de forma segura las comprobaciones del Kernel de E/S
+	// 2. Safely simulate the I/O kernel checks
 	// sys_io_init_kernel_semaphores();
-	// En PC, asumimos que nuestros semáforos de gráficos/render ya controlan el flujo
+	// On PC, assume our graphics/render semaphores already control the flow
 
-	// Simulación exitosa de scePollSema() para el candado de I/O
+	// Successful simulation of scePollSema() for the I/O lock
 	g_CdvdCurrentCommand = mode;
 
-	// 3. Omitimos por completo los bucles 'while(true)' de apertura de sesión RPC SIF.
-	// En la PS2 real, esto se colgaba esperando al hardware físico.
-	// En PC, forzamos el estado de éxito instantáneo.
-	LOG_SUCCESS("CDVD", "Sistema de archivos mapeado correctamente. Modo original: %d\n", mode);
-	//printf("[CDVD] Sistema de archivos mapeado correctamente. Modo original: %d\n", mode);
+	// 3. Skip the 'while(true)' loops that open the SIF RPC session entirely.
+	// On a real PS2 this blocked waiting for the physical hardware.
+	// On PC, force immediate success.
+	LOG_SUCCESS("CDVD", "File system mapped correctly. Original mode: %d\n", mode);
+	//printf("[CDVD] File system mapped correctly. Original mode: %d\n", mode);
 
-	// 4. Marcamos el subsistema como LISTO
+	// 4. Mark the subsystem as READY
 	g_CdvdNcmdInitialized = 0;
 
-	return 1; // Retorna 1 (Éxito total en el arranque del lector)
+	return 1; // Returns 1 (reader start-up fully successful)
 }
 
 int sceCdStop(void) {
-	// 1. Forzamos la inicialización en modo 2 tal como hace el juego
+	// 1. Force initialization in mode 2, as the game does
 	sceCdInit(2);
 
-	// 2. Omitimos la transacción SIF 0x0E (Stop/Standby de hardware)
-	// En PC no hay partes mecánicas que desacelerar.
+	// 2. Skip SIF transaction 0x0E (hardware Stop/Standby)
+	// On PC there are no mechanical parts to slow down.
 
-	// 3. Emulamos la liberación del semáforo del bus de Entrada/Salida 
-	// para mantener la coherencia con el candado que abrió sceCdInit.
-	// Usamos el ID de I/O virtual simulado si lo tienes acoplado en ps2_kernel.c
+	// 3. Emulate releasing the Input/Output bus semaphore
+	// to stay consistent with the lock opened by sceCdInit.
+	// Use the simulated virtual I/O ID if it is wired up in ps2_kernel.c
 	// sceSignalSema(g_sys_io_lock_sema_id);
 
-	LOG_INFO("CDVD", "Comando de reposo (Stop/Standby) procesado de forma nativa.\n");
+	LOG_INFO("CDVD", "Stop/Standby command handled natively.\n");
 
-	return 0; // Retorno oficial del stub de Sony
+	return 0; // Official return value of the Sony stub
 }
 
-// Puntero global al gran contenedor de datos extraído de tu ISO
+// Global pointer to the large data container extracted from the ISO
 static FILE* g_GameDataFile = NULL;
 static FILE* g_CurrentWadFile = NULL;
 static char g_ActiveWadPath[256] = "";
 
 int sceCdRead(unsigned int sector_start, int sector_count, unsigned int dest_buffer, unsigned char* mode_struct) {
-	LOG_INFO("CDVD", "Solicitud de lectura: Sector inicial %u | Cantidad: %d sectores.", sector_start, sector_count);
+	LOG_INFO("CDVD", "Read request: first sector %u | count: %d sectors.", sector_start, sector_count);
 
 	sceCdStop();
 	sceCdInit(4);
@@ -68,34 +68,34 @@ int sceCdRead(unsigned int sector_start, int sector_count, unsigned int dest_buf
 
 	if (real_pc_destination == NULL) return 0;
 
-	// --- SISTEMA DE ENLAZADO LOCAL PROTEGIDO ---
-	// El motor descompilado buscará sectores. En un paso posterior mapearemos 
-	// RC2.HDR para saber a qué .wad exacto de 'orig/G/' pertenece cada sector.
-	// Por ahora, apuntamos por defecto al contenedor principal para la carga de la intro.
+	// --- PROTECTED LOCAL LINKING SYSTEM ---
+	// The decompiled engine will look for sectors. A later step will map
+	// RC2.HDR to know which exact .wad of 'orig/G/' each sector belongs to.
+	// For now, default to the main container for loading the intro.
 	if (g_CurrentWadFile == NULL) {
-		snprintf(g_ActiveWadPath, sizeof(g_ActiveWadPath), "orig/G/audio0.wad"); // Ejemplo de ruta local en orig/
+		snprintf(g_ActiveWadPath, sizeof(g_ActiveWadPath), "orig/G/audio0.wad"); // Example local path in orig/
 		g_CurrentWadFile = fopen(g_ActiveWadPath, "rb");
 
 		if (g_CurrentWadFile == NULL) {
-			// Fallback al ejecutable base si el juego pide sectores del binario principal
+			// Fall back to the boot executable if the game requests sectors of the main binary
 			snprintf(g_ActiveWadPath, sizeof(g_ActiveWadPath), "orig/SCES_516.07");
 			g_CurrentWadFile = fopen(g_ActiveWadPath, "rb");
 		}
 	}
 
 	if (g_CurrentWadFile != NULL) {
-		// Multiplicamos el sector original por 2048 bytes para posicionarnos en tu archivo protegido
+		// Multiply the original sector by 2048 bytes to seek within the protected file
 		long long byte_offset = (long long)sector_start * 2048;
 
 		fseek(g_CurrentWadFile, byte_offset, SEEK_SET);
 		size_t bytes_read = fread(real_pc_destination, 1, bytes_to_read, g_CurrentWadFile);
 
 		if (bytes_read > 0) {
-			LOG_SUCCESS("CDVD", "Leyendo desde: %s | %zu bytes cargados desde el sector %u.\n", g_ActiveWadPath, bytes_read, sector_start);
-			return 1; // Éxito de volcado en la RAM de PC
+			LOG_SUCCESS("CDVD", "Reading from: %s | %zu bytes loaded from sector %u.\n", g_ActiveWadPath, bytes_read, sector_start);
+			return 1; // Successfully copied into PC RAM
 		}
 	}
 
-	LOG_ERROR("CDVD", "No se pudo leer el sector %u en la ruta local protegida.\n", sector_start);
+	LOG_ERROR("CDVD", "Could not read sector %u from the protected local path.\n", sector_start);
 	return 0;
 }

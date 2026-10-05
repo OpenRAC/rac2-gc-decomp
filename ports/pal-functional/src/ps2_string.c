@@ -2,14 +2,14 @@
 #include "types.h"
 
 /**
- * @brief Copia de forma segura una cadena de texto hacia un búfer de destino aplicando optimización
- * vectorial MIPS por hardware e inflado de nulos (\0) remanentes.
- * Dirección original en Ghidra: 0x00115AC0 (PAL)
+ * @brief Safely copies a text string into a destination buffer, applying the MIPS
+ * hardware vector optimization and padding the remainder with nulls (\0).
+ * Original Ghidra address: 0x00115AC0 (PAL)
  *
- * @param dest_addr Dirección del buffer de destino en la RAM (param_1).
- * @param src_addr Dirección de la string de origen a copiar (param_2).
- * @param max_len Límite máximo total de caracteres a transferir para evitar desbordamientos (param_3).
- * @return u32 Retorna el puntero base del buffer de destino.
+ * @param dest_addr Address of the destination buffer in RAM (param_1).
+ * @param src_addr Address of the source string to copy (param_2).
+ * @param max_len Maximum total number of characters to transfer, preventing overflows (param_3).
+ * @return u32 Returns the base pointer of the destination buffer.
  */
 u32 sys_strncpy_safe(u32 dest_addr, const char* src_addr, u32 max_len) {
 	if (dest_addr == 0 || src_addr == NULL || max_len == 0) {
@@ -18,13 +18,13 @@ u32 sys_strncpy_safe(u32 dest_addr, const char* src_addr, u32 max_len) {
 
 	char* p_dest = (char*)(uintptr_t)dest_addr;
 
-	// En PC emulamos de forma nativa y portátil el comportamiento exacto de ráfaga
-	// de la CPU MIPS de 128 bits utilizando la optimización estándar de la librería de C:
+	// On PC the exact burst behaviour of the 128-bit MIPS CPU is emulated
+	// natively and portably with the standard C library optimization:
 	strncpy(p_dest, src_addr, max_len);
 
-	// El binario original de Insomniac Games garantiza que si la string es más corta 
-	// que max_len, el espacio restante del búfer se rellenará forzosamente con bytes nulos (\0).
-	// strncpy hace esto por especificación oficial, manteniendo la paridad del 100% con Ghidra.
+	// The original Insomniac Games binary guarantees that if the string is shorter
+	// than max_len, the remaining buffer space is always filled with null bytes (\0).
+	// strncpy does this by specification, keeping full parity with Ghidra.
 
 	return dest_addr;
 }

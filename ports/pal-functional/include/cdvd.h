@@ -5,27 +5,27 @@ extern int g_CdvdNcmdInitialized;
 extern int g_CdvdCurrentCommand;
 
 /**
- * @brief Inicializa el sistema de lectura de archivos emulado para PC.
- * @param mode Modo de inicialización original de la PS2.
- * @return 1 para éxito, 0 para fallo.
+ * @brief Initializes the emulated file-reading system for PC.
+ * @param mode Original PS2 initialization mode.
+ * @return 1 on success, 0 on failure.
  */
 int sceCdInit(int mode);
 
-// ... Mantener lo anterior (sceCdInit, etc.) ...
+// ... Keep the previous declarations (sceCdInit, etc.) ...
 
 /**
- * @brief Detiene el motor de rotación virtual del lector de discos en PC.
- * @return Siempre retorna 0 por compatibilidad con el Kernel original.
+ * @brief Stops the virtual spindle motor of the PC disc reader.
+ * @return Always returns 0 for compatibility with the original kernel.
  */
 int sceCdStop(void);
 
 /**
- * @brief Lee un bloque de sectores de datos simulados desde la carpeta extraída en PC.
- * @param sector_start Sector lógico inicial (Logical Sector Number).
- * @param sector_count Cantidad de sectores de 2048 bytes a leer.
- * @param dest_buffer Puntero de destino en la memoria RAM del juego.
- * @param mode_struct Estructura con flags del modo de lectura.
- * @return 1 para éxito en el inicio de la transferencia, 0 para fallo.
+ * @brief Reads a block of simulated data sectors from the extracted folder on PC.
+ * @param sector_start First logical sector (Logical Sector Number).
+ * @param sector_count Number of 2048-byte sectors to read.
+ * @param dest_buffer Destination pointer in the game's RAM.
+ * @param mode_struct Structure holding the read-mode flags.
+ * @return 1 if the transfer started successfully, 0 on failure.
  */
 int sceCdRead(unsigned int sector_start, int sector_count, unsigned int dest_buffer, unsigned char* mode_struct);
 

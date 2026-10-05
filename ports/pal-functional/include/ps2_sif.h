@@ -1,8 +1,8 @@
 // src/ps2_sif.h
 #ifndef PS2_SIF_H
 #define PS2_SIF_H
-#include <stdbool.h> // ¡ESTO LE ENSEÑA AL COMPILADOR QUÉ ES 'bool'!
-#include <stdint.h>  // ¡REQUERIDO PARA LOS ENTEROS DE TAMAÑO FIJO!
+#include <stdbool.h> // Defines 'bool' for the compiler
+#include <stdint.h>  // Required for the fixed-width integers
 
 #include "types.h"
 #include "ps2_kernel.h" // sceSignalSema, sceDeleteSema, scePollSema, sceGetThreadId, sceFlushCache
@@ -11,7 +11,7 @@
 extern "C" {
 #endif
 
-	// Definimos los alias de tipo para que el compilador entienda tus firmas del bus SIF
+	// Type aliases so the compiler understands the SIF bus signatures
 	typedef uint32_t u32;
 	typedef int32_t  s32;
 	typedef uint64_t u64;
@@ -19,20 +19,20 @@ extern "C" {
 	typedef uint8_t  u8;
 
 	/* ------------------------------------------------------------------------
-	 * Funciones oficiales del SDK de Sony (solo bajo PLATFORM_PS2, sin
-	 * emulación en PC en este archivo).
+	 * Official Sony SDK functions (only under PLATFORM_PS2, without
+	 * PC emulation in this file).
 	 * ------------------------------------------------------------------------ */
 	u64 sceSifSetDma(void);
 	u64 isceSifSetDma(void);
 	s32 sceAddDmacHandler(s32 channel, void* handler, s32 arg);
 
 	/* ------------------------------------------------------------------------
-	 * Funciones externas de otras unidades del proyecto (kernel, RPC del bus
-	 * SIF, sonido, texto de arranque). No se cuenta con sus cabeceras
-	 * originales, así que se declaran aquí. "kernel_system_sync_guard" y
-	 * "kernel_system_sync_release" viven en kernel_sys.c (confirmado); su
-	 * firma real es "bool" para ambas. "sys_kernel_enable_dmac" sigue sin
-	 * localizarse.
+	 * External functions of other project units (kernel, SIF bus RPC,
+	 * sound, boot text). Their original headers are not available,
+	 * so they are declared here. "kernel_system_sync_guard" and
+	 * "kernel_system_sync_release" live in kernel_sys.c (confirmed); their
+	 * real signature is "bool" for both. "sys_kernel_enable_dmac" is still without
+	 * a known location.
 	 * ------------------------------------------------------------------------ */
 	bool kernel_system_sync_guard(void);
 	bool kernel_system_sync_release(void);
@@ -52,17 +52,17 @@ extern "C" {
 
 	void sys_io_init_kernel_semaphores(void);
 
-	/* CONFLICTO SIN RESOLVER: el .c original declaraba esta función de 3 formas
-	 * distintas e incompatibles:
+	/* UNRESOLVED CONFLICT: the original .c declared this function in 3 ways
+	 * different and incompatible ways:
 	 *   void sys_strncpy_safe(void* dest,   const void* src, size_t max_len);
-	 *   u32  sys_strncpy_safe(u32  dest_addr, const char* src_addr, u32 max_len);  <- se usó esta (aparecía 2 de 3 veces)
-	 * Su definición real no está en ps2_sif.c, así que no se pudo verificar cuál
-	 * es la correcta. Confírmalo contra el archivo donde vive de verdad.
+	 *   u32  sys_strncpy_safe(u32  dest_addr, const char* src_addr, u32 max_len);  <- this one was used (it appeared 2 out of 3 times)
+	 * Its real definition is not in ps2_sif.c, so it could not be verified which
+	 * one is correct. Confirm it against the file where it actually lives.
 	 */
 	u32 sys_strncpy_safe(u32 dest_addr, const char* src_addr, u32 max_len);
 
 	/* ------------------------------------------------------------------------
-	 * API pública de este módulo (bus SIF, canal IO, libcdvd y Memory Card).
+	 * Public API of this module (SIF bus, IO channel, libcdvd and Memory Card).
 	 * ------------------------------------------------------------------------ */
 	void sys_io_iop_interrupt_handler(void);
 
@@ -95,9 +95,9 @@ extern "C" {
 		long clusters_count, u32 fat_buffer_addr);
 
 	/* ------------------------------------------------------------------------
-	 * Variables globales del subsistema (definidas en otra unidad del
-	 * proyecto; antes se re-declaraban como "extern" en casi cada función
-	 * de este archivo).
+	 * Global variables of the subsystem (defined in another unit of the
+	 * project; they used to be re-declared as "extern" in almost every function
+	 * of this file).
 	 * ------------------------------------------------------------------------ */
 	extern s32 g_sys_io_reconfig_flag;
 	extern s32 g_sys_io_is_ready_flag;
@@ -110,7 +110,7 @@ extern "C" {
 	extern s32 g_sys_mc_active_command_id;
 	extern u32 g_sys_mc_channel_widget_handle;
 	extern u32 g_sys_mc_read_fd;
-	extern u32 g_sys_mc_read_size;  // Compartido con el buffer DAT_00141c08
+	extern u32 g_sys_mc_read_size;  // Shared with the DAT_00141c08 buffer
 	extern u32 g_sys_mc_write_fd;
 	extern u32 g_sys_mc_write_src_ptr;
 	extern u32 g_sys_mc_write_size;

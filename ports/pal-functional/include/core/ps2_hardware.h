@@ -1,4 +1,4 @@
-// include/core/ps2_hardware.h  (solo referencia, no se compila en PC)
+// include/core/ps2_hardware.h  (reference only, not compiled on PC)
 #define PS2_DMAC_CTRL       0x1000E000
 #define PS2_DMAC_PCR        0x1000E020
 #define PS2_CH0_VIF0_QWC    0x10008020
