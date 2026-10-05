@@ -61,7 +61,9 @@ rac1-decomp `main` at `cb22f0b0d3a171d1fd4b6851b86fe214a22c9822`:
 | `src/libgcc/README.md` | provenance and per-module results |
 | `Makefile.sn`, lines 128-158 | the exact build lines |
 
-The sources are GPL v2 with the libgcc linking exception. Until the trial ran,
+The sources are GPL version 2 or later with their original libgcc linking
+permissions and exception. The complete notices and [COPYING](../src/libgcc/COPYING)
+accompany the vendored and generated copies. Until the trial ran,
 they were referenced here and not copied; the trial's exact input is now
 published under its own licence in [`src/libgcc/`](../src/libgcc/README.md).
 
@@ -83,9 +85,14 @@ The refusal is confined to delay-slot filling around the `jal` to
 `__unpack_f`: retail stores `s.s $f12,16($sp)` before the call and keeps
 `daddu a1,sp,zero` in the delay slot, while this chain emits the two in the
 opposite order. Size and instruction set agree; only the ordering does not.
-The reopening condition is therefore a compiler hypothesis, not a source
-permutation: the retail libgcc objects may come from Sony's own `2.9-ee-991111`
-rather than the SN 2.95.3 build, as the `rac1-decomp` libgcc README suggests.
+The qualified compiler in this trial is already the reconstructed GNU EE
+`2.9-ee-991111b` (`cc1` SHA-256 prefix `8bed6eae`), as recorded in
+[COMPILER-NOTES.md](COMPILER-NOTES.md). The SN directory supplies the linker;
+it does not mean that this trial used the earlier SN GCC 2.95.3 compiler.
+The remaining difference is evidence for a scheduling or compilation-context
+question, not proof of a different retail compiler. A reopening requires a
+specific independent compiler or context witness, with the unchanged source
+and current exact controls retained; no source or flag permutations were run.
 
 The refused body stays in the published source instead of being edited down to
 the part that matched, because the campaign requires the published file to be

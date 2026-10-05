@@ -1454,29 +1454,77 @@ double FUN_00123268(s32 kind, u32 sign, s32 exponent, unsigned long long fractio
 }
 /* libgcc single-precision software floating point, EE build - vendored copy.
  *
- * This file is a distribution of GCC 2.95.3's libgcc fp-bit.c, and it is
- * licensed under the GNU General Public License version 2, with the libgcc
- * linking exception. It is NOT covered by this repository's MIT licence.
- * The exception permits this file's compiled output to be linked into a
- * program without that program falling under the GPL; the file itself stays
- * GPL v2.
+ * Modified distribution prepared by the RAC2 decompilation campaign on
+ * 5 October 2026: upstream fp-bit.c was preprocessed for the EE single-float
+ * configuration and one symbol was renamed. The original copyright,
+ * GPL version 2-or-later notice, additional permissions, linking exception,
+ * warranty disclaimer and author credits are retained below. Only
+ * trailing whitespace on added comment lines is normalized.
+ * See COPYING in this directory for the GNU GPL version 2 text. The root
+ * MIT licence does not relicense this source or its generated copy within
+ * candidates/boot.c.
  *
- * Provenance, all measured rather than inherited:
+ * Provenance:
  *   upstream   rac1-decomp src/libgcc/fp-bit.c, commit
  *              cb22f0b0d3a171d1fd4b6851b86fe214a22c9822, sha256
  *              3069e3a1385e9b2d316929a676a71e2af8a834666b7388a89f10c52ae0e17336
- *   transform  one pass of the campaign's own reconstructed 2.9-ee cpp:
+ *   transform  one pass of the campaign's reconstructed 2.9-ee cpp:
  *              cpp -P -DFLOAT -DFLOAT_BIT_ORDER_MISMATCH -DNO_DENORMALS
  *                  -DUS_SOFTWARE_GOFAST
- *   rename     ONE symbol name, applied to the cpp output below and
- *              reversible by substituting it back: __unpack_f becomes
- *              FUN_00123400, the name this campaign measured it under. A C
- *              symbol name changes no emitted byte.
+ *   rename     __unpack_f becomes FUN_00123400 at 16 occurrences in the
+ *              preprocessed body. This is a mechanical, reversible rename;
+ *              fptodp and every other body keep their original names.
  *
- * The rest of the cpp output, including the refused fptodp body, keeps its
- * original names and is not edited. See README.md in this directory and
- * docs/RAC1-FP-BIT-EVIDENCE.md.
+ * The published body is derived from the immutable two-symbol private trial;
+ * it is independently qualified in the generated complete boot unit. The
+ * refused fptodp body remains present and receives no matching credit.
+ * The body between the markers is unchanged from the published PR13 source
+ * at f39ac431876c1e05e88b9a2e28dce855a1e4f9cb. Only notices were restored.
+ * See README.md in this directory and docs/RAC1-FP-BIT-EVIDENCE.md.
  */
+
+/* This is a software floating point library which can be used instead of
+   the floating point routines in libgcc1.c for targets without hardware
+   floating point.
+ Copyright (C) 1994, 1995, 1996, 1997, 1998 Free Software Foundation, Inc.
+
+This file is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2, or (at your option) any
+later version.
+
+In addition to the permissions in the GNU General Public License, the
+Free Software Foundation gives you unlimited permission to link the
+compiled version of this file with other programs, and to distribute
+those programs without any restriction coming from the use of this
+file.  (The General Public License restrictions do apply in other
+respects; for example, they cover modification of the file, and
+distribution when not linked into another program.)
+
+This file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; see the file COPYING.  If not, write to
+the Free Software Foundation, 59 Temple Place - Suite 330,
+Boston, MA 02111-1307, USA.  */
+
+/* As a special exception, if you link this library with other files,
+   some of which are compiled with GCC, to produce an executable,
+   this library does not by itself cause the resulting executable
+   to be covered by the GNU General Public License.
+   This exception does not however invalidate any other reasons why
+   the executable file might be covered by the GNU General Public License.  */
+
+/* This implements IEEE 754 format arithmetic, but does not provide a
+   mechanism for setting the rounding mode, or for generating or handling
+   exceptions.
+
+   The original code by Steve Chamberlain, hacked by Mark Eichin and Jim
+   Wilson, all of Cygnus Support.  */
+
 /* --- verbatim preprocessed fp-bit.c begins here --- */
  
 
