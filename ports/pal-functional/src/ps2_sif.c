@@ -1,14 +1,21 @@
+#include "core/ee_memory.h"
 #include "types.h"
 #include "ps2_kernel.h"
 #include "ps2_sif.h"
 
 // Global state variables of the SIF bus tables mapped in PS2 RAM
-#define SIF_GENERAL_CALLBACK_TABLE     (*(u32*)0x0013CFEC)
-#define SIF_SYSTEM_CALLBACK_TABLE      (*(u32*)0x0013CFE4)
+#define SIF_GENERAL_CALLBACK_TABLE     (*(u32*)EE_ADDR(0x0013CFEC))
+#define SIF_SYSTEM_CALLBACK_TABLE      (*(u32*)EE_ADDR(0x0013CFE4))
 
 // Definition of the global interrupt variables mapped in PS2 RAM
-#define IO_INTERRUPT_CALLBACK       (*(void(**)(u32))(long)0x001418C4)
-#define IO_INTERRUPT_ARGUMENT       (*(u32*)0x001418C8)
+#if defined(PLATFORM_PS2)
+#define IO_INTERRUPT_CALLBACK       (*(void(**)(u32))0x001418C4)
+#else
+/* A code pointer: on PC it holds a host function, never a MIPS address from EE RAM. */
+static void (*g_io_interrupt_callback)(u32) = NULL;
+#define IO_INTERRUPT_CALLBACK       g_io_interrupt_callback
+#endif
+#define IO_INTERRUPT_ARGUMENT       (*(u32*)EE_ADDR(0x001418C8))
 
 /**
  * @brief Low-level interrupt handler (callback) of the SIF IO bus.
@@ -121,7 +128,7 @@ bool sys_sif_init_manager(void) {
 	}
 
 #if defined(PLATFORM_PS2)
-	g_sys_sif_handler_id = sceAddDmacHandler(5, (void*)0x0011C8A0, 0);
+	g_sys_sif_handler_id = sceAddDmacHandler(5, (void*)EE_ADDR(0x0011C8A0), 0);
 #endif
 	sys_kernel_enable_dmac();
 
@@ -144,7 +151,7 @@ void sys_sif_register_callback(long command_id, void* callback_ptr, void* callba
 	if (command_id < 0) {
 		table_base_address = SIF_SYSTEM_CALLBACK_TABLE;
 	}
-	u32* p_callback_slot = (u32*)(long)((s32)command_id * 8 + table_base_address);
+	u32* p_callback_slot = (u32*)EE_ADDR((s32)command_id * 8 + table_base_address);
 	p_callback_slot[0] = (u32)(long)callback_ptr;
 	p_callback_slot[1] = (u32)(long)callback_arg;
 }
@@ -158,13 +165,13 @@ void sys_sif_unregister_callback(long command_id) {
 	if (command_id < 0) {
 		table_base_address = SIF_SYSTEM_CALLBACK_TABLE;
 	}
-	u32* p_callback_slot = (u32*)(long)((s32)command_id * 8 + table_base_address);
+	u32* p_callback_slot = (u32*)EE_ADDR((s32)command_id * 8 + table_base_address);
 	*p_callback_slot = 0;
 }
 
 // Definition of the global IO control flags mapped in PS2 RAM
-#define IO_INTERRUPT_ACTIVE_FLAG    (*(s32*)0x00136414)
-#define IO_THREAD_RESET_DESCRIPTOR  (*(s32*)0x00136454)
+#define IO_INTERRUPT_ACTIVE_FLAG    (*(s32*)EE_ADDR(0x00136414))
+#define IO_THREAD_RESET_DESCRIPTOR  (*(s32*)EE_ADDR(0x00136454))
 
 /**
  * @brief Shuts down, dismantles and fully releases the resources and semaphores of the Input/Output (IO) subsystem.
@@ -204,8 +211,8 @@ bool sys_io_shutdown_subsystem(void) {
 }
 
 // Definition of the global IO variables mapped in PS2 RAM
-#define IO_RECONFIG_FLAG            (*(s32*)0x00136424)
-#define IO_IS_READY_FLAG            (*(s32*)0x0013643C)
+#define IO_RECONFIG_FLAG            (*(s32*)EE_ADDR(0x00136424))
+#define IO_IS_READY_FLAG            (*(s32*)EE_ADDR(0x0013643C))
 
 /**
  * @brief Initializes and configures the asynchronous Input/Output (IO) service channel in the kernel.
@@ -235,14 +242,14 @@ s32 sys_io_init_subsystem(void) {
 }
 
 // Definition of the static DVD reader registers and buffers mapped in PS2 RAM
-#define CDVD_INIT_MODE_BUFFER_PTR   (*(u32*)0x00141B40)
-#define CDVD_BACKUP_METADATA_1      (*(u32*)0x00136440)
-#define CDVD_BACKUP_METADATA_2      (*(u32*)0x00136438)
-#define CDVD_BACKUP_METADATA_3      (*(u32*)0x00136448)
-#define CDVD_BACKUP_METADATA_4      (*(u32*)0x00136444)
-#define CDVD_BACKUP_STATUS_1        (*(u32*)0x00136434)
-#define CDVD_BACKUP_STATUS_2        (*(s32*)0x0013644C)
-#define DEBUG_NET_LOG_LEVEL         (*(s32*)0x00136410)
+#define CDVD_INIT_MODE_BUFFER_PTR   (*(u32*)EE_ADDR(0x00141B40))
+#define CDVD_BACKUP_METADATA_1      (*(u32*)EE_ADDR(0x00136440))
+#define CDVD_BACKUP_METADATA_2      (*(u32*)EE_ADDR(0x00136438))
+#define CDVD_BACKUP_METADATA_3      (*(u32*)EE_ADDR(0x00136448))
+#define CDVD_BACKUP_METADATA_4      (*(u32*)EE_ADDR(0x00136444))
+#define CDVD_BACKUP_STATUS_1        (*(u32*)EE_ADDR(0x00136434))
+#define CDVD_BACKUP_STATUS_2        (*(s32*)EE_ADDR(0x0013644C))
+#define DEBUG_NET_LOG_LEVEL         (*(s32*)EE_ADDR(0x00136410))
 
 // Global DVD subsystem variables mapped from Ghidra
 s32 g_sys_cdvd_thread_owner_id = 0;
@@ -344,8 +351,8 @@ u32 sys_cdvd_init_filesystem(s32 init_mode) {
 }
 
 // Definition of the static disc-check registers and buffers mapped in PS2 RAM
-#define CDVD_READY_MODE_BUFFER_VAL  (*(u32*)0x00141B50)
-#define CDVD_READY_STATUS_BACKUP    (*(s32*)0x00136444)
+#define CDVD_READY_MODE_BUFFER_VAL  (*(u32*)EE_ADDR(0x00141B50))
+#define CDVD_READY_STATUS_BACKUP    (*(s32*)EE_ADDR(0x00136444))
 
 // Global variables of the secondary libcdvd channel mapped from Ghidra
 u32 g_sys_cdvd_ready_channel_handle = 0;
@@ -439,11 +446,11 @@ u32 sys_cdvd_check_disk_ready(long check_mode) {
 }
 
 // Definition of the read descriptor variables mapped in PS2 RAM
-#define MC_READ_FD_VAL              (*(u32*)0x00141C04)
-#define MC_READ_SIZE_VAL            (*(u32*)0x00141C08)
-#define MC_READ_BUFFER_PTR          (*(u32*)0x00141BA8)
-#define MC_READ_LEN_VAL             (*(u32*)0x00141BAC)
-#define MC_READ_OFFSET_VAL          (*(u32*)0x00141BB0)
+#define MC_READ_FD_VAL              (*(u32*)EE_ADDR(0x00141C04))
+#define MC_READ_SIZE_VAL            (*(u32*)EE_ADDR(0x00141C08))
+#define MC_READ_BUFFER_PTR          (*(u32*)EE_ADDR(0x00141BA8))
+#define MC_READ_LEN_VAL             (*(u32*)EE_ADDR(0x00141BAC))
+#define MC_READ_OFFSET_VAL          (*(u32*)EE_ADDR(0x00141BB0))
 
 /**
  * @brief Sends the block-read command of a Memory Card file (command 1) to the hardware bus.
@@ -504,9 +511,9 @@ s32 sceMcRead(u32 file_descriptor, u32 read_size, long p_dest_buffer, long block
 }
 
 // Definition of the write descriptor variables mapped in PS2 RAM
-#define MC_WRITE_FD_VAL             (*(u32*)0x00141C00)
-#define MC_WRITE_SRC_PTR            (*(u32*)0x00141C18)
-#define MC_WRITE_SIZE_VAL           (*(u32*)0x00141C0C)
+#define MC_WRITE_FD_VAL             (*(u32*)EE_ADDR(0x00141C00))
+#define MC_WRITE_SRC_PTR            (*(u32*)EE_ADDR(0x00141C18))
+#define MC_WRITE_SIZE_VAL           (*(u32*)EE_ADDR(0x00141C0C))
 
 /**
  * @brief Sends the block-write command of a file to the Memory Card (command 5) over the hardware bus.
@@ -562,8 +569,8 @@ s32 sceMcWrite(u32 file_descriptor, u32 src_ram_addr, long write_size) {
 }
 
 // Definition of the extended write descriptor variables in PS2 RAM
-#define MC_EXT_ALIGNMENT_OFFSET    (*(u32*)0x00141C14)
-#define MC_EXT_ALIGNED_BUFFER_PTR  ((u8*)0x00141C20)
+#define MC_EXT_ALIGNMENT_OFFSET    (*(u32*)EE_ADDR(0x00141C14))
+#define MC_EXT_ALIGNED_BUFFER_PTR  ((u8*)EE_ADDR(0x00141C20))
 
 /**
  * @brief Creates a new directory or active working folder on the Memory Card (command 0x11).
@@ -610,9 +617,9 @@ s32 sceMcMkdir(u32 slot_index, const char* p_dir_path) {
 }
 
 // Definition of the delete descriptor variables mapped in PS2 RAM
-#define MC_DELETE_SLOT_VAL          (*(u32*)0x00141C30)
-#define MC_DELETE_CONTEXT_VAL       (*(u32*)0x00141C34)
-#define MC_DELETE_FILENAME_BUFFER   ((u8*)0x00141C44)
+#define MC_DELETE_SLOT_VAL          (*(u32*)EE_ADDR(0x00141C30))
+#define MC_DELETE_CONTEXT_VAL       (*(u32*)EE_ADDR(0x00141C34))
+#define MC_DELETE_FILENAME_BUFFER   ((u8*)EE_ADDR(0x00141C44))
 
 /**
  * @brief Sends the delete command of a Memory Card file (command 0x0F) to the hardware bus.
@@ -673,10 +680,10 @@ s32 sceMcDelete(u32 slot_index, u32 context_val, const char* p_filename_path) {
 }
 
 // Definitions of the shared Memory Card buffer offsets (already mapped in the suite)
-#define MC_GETDIR_SLOT_VAL          (*(u32*)0x00141C30)
-#define MC_GETDIR_CONTEXT_VAL       (*(u32*)0x00141C34)
-#define MC_GETDIR_MAX_ENTRIES       (*(u32*)0x00141C38)
-#define MC_GETDIR_PATTERN_BUFFER    ((u8*)0x00141C44)
+#define MC_GETDIR_SLOT_VAL          (*(u32*)EE_ADDR(0x00141C30))
+#define MC_GETDIR_CONTEXT_VAL       (*(u32*)EE_ADDR(0x00141C34))
+#define MC_GETDIR_MAX_ENTRIES       (*(u32*)EE_ADDR(0x00141C38))
+#define MC_GETDIR_PATTERN_BUFFER    ((u8*)EE_ADDR(0x00141C44))
 
 /**
  * @brief Sends the Memory Card directory scan and listing command (command 2) to the hardware bus.
@@ -760,12 +767,12 @@ s32 sceMcCheckMc(u32 slot_index, u32 context_val, const char* p_dir_path) {
 }
 
 // Definitions of the extended formatting buffer offsets (already mapped in the suite)
-#define MC_FORMAT_SLOT_VAL          (*(u32*)0x00141C30)
-#define MC_FORMAT_CONTEXT_VAL       (*(u32*)0x00141C34)
-#define MC_FORMAT_MAX_ENTRIES       (*(u32*)0x00141C38)
-#define MC_FORMAT_CLUSTERS_VAL      (*(s32*)0x00141C3C)
-#define MC_FORMAT_FAT_BUFFER_PTR    (*(u32*)0x00141C40)
-#define MC_FORMAT_PATTERN_BUFFER    ((u8*)0x00141C44)
+#define MC_FORMAT_SLOT_VAL          (*(u32*)EE_ADDR(0x00141C30))
+#define MC_FORMAT_CONTEXT_VAL       (*(u32*)EE_ADDR(0x00141C34))
+#define MC_FORMAT_MAX_ENTRIES       (*(u32*)EE_ADDR(0x00141C38))
+#define MC_FORMAT_CLUSTERS_VAL      (*(s32*)EE_ADDR(0x00141C3C))
+#define MC_FORMAT_FAT_BUFFER_PTR    (*(u32*)EE_ADDR(0x00141C40))
+#define MC_FORMAT_PATTERN_BUFFER    ((u8*)EE_ADDR(0x00141C44))
 
 /**
  * @brief Sends the Memory Card format and structural initialization command (command 0x0D) to the hardware bus.

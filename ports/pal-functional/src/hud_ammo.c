@@ -1,30 +1,31 @@
 // src/hud_ammo.c
+#include "core/ee_memory.h"
 #include "hud_ammo.h"
 #include <math.h> // Required to call sinf() natively
 
 // Physical address of the global weapon state table in PS2 RAM
-#define INVENTORY_WEAPONS_DATA_PTR     ((const u8*)0x0019B2F8)
+#define INVENTORY_WEAPONS_DATA_PTR     ((const u8*)EE_ADDR(0x0019B2F8))
 #define MAX_WEAPONS_LIMIT_CONFIG       28 // 0x1B + 1 base slot positions
 
 // Global PS2 RAM address that stores the ID of the active weapon
-#define GLOBAL_ACTIVE_WEAPON_ID_PTR    ((const u8*)0x001396C8)
+#define GLOBAL_ACTIVE_WEAPON_ID_PTR    ((const u8*)EE_ADDR(0x001396C8))
 
 // Definition of the main canvas static resources
-#define RECURSO_HUD_CANVAS          ((const char*)0x001AE6D8) // "HudBase"
-#define RECURSO_HEALTH_OUTLINE      ((const char*)0x001AE6E8) // "HealthBarOutline"
-#define RECURSO_HEALTH_FILL         ((const char*)0x001AE6F8) // "HealthBarFill"
+#define RECURSO_HUD_CANVAS          ((const char*)EE_ADDR(0x001AE6D8)) // "HudBase"
+#define RECURSO_HEALTH_OUTLINE      ((const char*)EE_ADDR(0x001AE6E8)) // "HealthBarOutline"
+#define RECURSO_HEALTH_FILL         ((const char*)EE_ADDR(0x001AE6F8)) // "HealthBarFill"
 
 // Definitions of the extended set of HUD static resources
-#define RECURSO_WEAPON_NAME         ((const char*)0x001AE700) // "WeaponName"
-#define RECURSO_WEAPON_XP           ((const char*)0x001AE710) // "WeaXP"
-#define RECURSO_AMMO_ICON           ((const char*)0x001AE720) // "AmmoIcon"
-#define RECURSO_AMMO_ICON_BACK      ((const char*)0x001AE730) // "AmmoIconBack"
-#define RECURSO_BOLT_TEXT           ((const char*)0x001AE740) // "BoltText"
-#define RECURSO_BOLT_ICON           ((const char*)0x001AE750) // "BoltIcon"
-#define RECURSO_QSEL_BACK         ((const char*)0x001AE058) // "QSEL_BACK"
-#define RECURSO_QSEL_BORD         ((const char*)0x001AE068) // "QSelBI%d"
-#define FORMATO_SLOT_RADIAL         ((const char*)0x001AE088) // "QSelBI%d"
-#define FORMATO_ICONO_RADIAL    ((const char*)0x001AE098) // "QSelIco%d"
+#define RECURSO_WEAPON_NAME         ((const char*)EE_ADDR(0x001AE700)) // "WeaponName"
+#define RECURSO_WEAPON_XP           ((const char*)EE_ADDR(0x001AE710)) // "WeaXP"
+#define RECURSO_AMMO_ICON           ((const char*)EE_ADDR(0x001AE720)) // "AmmoIcon"
+#define RECURSO_AMMO_ICON_BACK      ((const char*)EE_ADDR(0x001AE730)) // "AmmoIconBack"
+#define RECURSO_BOLT_TEXT           ((const char*)EE_ADDR(0x001AE740)) // "BoltText"
+#define RECURSO_BOLT_ICON           ((const char*)EE_ADDR(0x001AE750)) // "BoltIcon"
+#define RECURSO_QSEL_BACK         ((const char*)EE_ADDR(0x001AE058)) // "QSEL_BACK"
+#define RECURSO_QSEL_BORD         ((const char*)EE_ADDR(0x001AE068)) // "QSelBI%d"
+#define FORMATO_SLOT_RADIAL         ((const char*)EE_ADDR(0x001AE088)) // "QSelBI%d"
+#define FORMATO_ICONO_RADIAL    ((const char*)EE_ADDR(0x001AE098)) // "QSelIco%d"
 
 /**
  * @brief Returns the unique identifier (ID) of the weapon the player currently has equipped, in real time.
@@ -325,13 +326,13 @@ void hud_init_ammo_layout(void* p_hud_main_struct, long param_2, long p_hud_pool
 	}
 
 	// 2. Registration of the ammo visual components (widgets)
-	hud_register_widget_asset((u32*)(p_base + 0x10), (const char*)0x001AE668, p_hud_pool, p4, p5, p6, p7, p8); // "AmmoBack"
-	hud_register_widget_asset((u32*)(p_base + 0x5C), (const char*)0x001AE678, p_hud_pool, p4, p5, p6, p7, p8); // "AmmoOutline"
-	hud_register_widget_asset((u32*)(p_base + 0xA8), (const char*)0x001AE680, p_hud_pool, p4, p5, p6, p7, p8); // "AmmoText"
+	hud_register_widget_asset((u32*)(p_base + 0x10), (const char*)EE_ADDR(0x001AE668), p_hud_pool, p4, p5, p6, p7, p8); // "AmmoBack"
+	hud_register_widget_asset((u32*)(p_base + 0x5C), (const char*)EE_ADDR(0x001AE678), p_hud_pool, p4, p5, p6, p7, p8); // "AmmoOutline"
+	hud_register_widget_asset((u32*)(p_base + 0xA8), (const char*)EE_ADDR(0x001AE680), p_hud_pool, p4, p5, p6, p7, p8); // "AmmoText"
 
 	// 3. Initialization and aesthetic configuration of the bullet slider/meter
 	u32* p_slider = (u32*)(p_base + 0xF4);
-	hud_init_slider_widget(p_slider, 0x92, 0, (uintptr_t)0x001AE688, (uintptr_t)p_hud_pool, p4, p5, p6); // "AmmoBar"
+	hud_init_slider_widget(p_slider, 0x92, 0, (uintptr_t)EE_ADDR(0x001AE688), (uintptr_t)p_hud_pool, p4, p5, p6); // "AmmoBar"
 
 	hud_set_widget_context_2d(p_slider, 0x8049c1ff, 0x80001eff);
 	hud_set_widget_context_2d_ext(p_slider, 0x50f0c070, 0x50f0c070);
@@ -1160,7 +1161,7 @@ int* hud_allocate_node(int* p_hud_pool, long p2, long p3, long param_4,
 		// Overflow check of the interface memory pool
 		if ((u32)p_hud_pool[1] < next_target_size) {
 			// Call the kernel handler to freeze the software and report the bug's line
-			sys_assert_dispatch((const char*)0x001adb18, 0x53, (const char*)0x001adb60,
+			sys_assert_dispatch((const char*)EE_ADDR(0x001adb18), 0x53, (const char*)EE_ADDR(0x001adb60),
 				param_4, param_5, param_6, param_7, param_8);
 			p_allocated_node = NULL;
 		}

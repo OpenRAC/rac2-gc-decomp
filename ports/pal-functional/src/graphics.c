@@ -1,4 +1,5 @@
 #include "graphics.h"
+#include "core/ee_memory.h"
 #include "core/sce_compat.h"
 
 int Graphics_InitSifInterface(void);
@@ -88,7 +89,7 @@ int g_GraphicsCanvasActiveIndex = 0; // Maps DAT_0013ea1c
 int Graphics_CloseCanvasTransaction(unsigned long slot_index) {
 	// 1. Locate the virtual Scratchpad slot address from the index
 	unsigned int scratchpad_addr = Graphics_GetScratchpadSlotAddress(slot_index);
-	unsigned int* slot_ptr = (unsigned int*)(uintptr_t)scratchpad_addr;
+	unsigned int* slot_ptr = (unsigned int*)EE_ADDR(scratchpad_addr);
 
 	Sys_WaitGraphicsFrame();
 
@@ -139,7 +140,7 @@ int Graphics_CloseCanvasTransaction(unsigned long slot_index) {
 
 int Graphics_DispatchCanvasTransaction(unsigned long slot_index, unsigned int param_2, long param_3) { // 1. Get the virtual Scratchpad address from the index
 	unsigned int scratchpad_addr = Graphics_GetScratchpadSlotAddress(slot_index);
-	unsigned int* slot_ptr = (unsigned int*)(uintptr_t)scratchpad_addr;
+	unsigned int* slot_ptr = (unsigned int*)EE_ADDR(scratchpad_addr);
 
 	Sys_WaitGraphicsFrame();
 
@@ -239,7 +240,7 @@ int Graphics_SetupCanvasEnvironment(const char* resource_path, unsigned int flag
 	// 3. Reserve a command slot in the virtual Scratchpad
 	// Get the simulated PS2-compatible address (0x13ff00 + offset)
 	unsigned int scratchpad_addr = Graphics_AllocateScratchpadSlot();
-	int* slot_ptr = (int*)(uintptr_t)scratchpad_addr;
+	int* slot_ptr = (int*)EE_ADDR(scratchpad_addr);
 
 	if (scratchpad_addr == 0) {
 		Sys_ReleaseGraphicsSemaphore();

@@ -1,4 +1,5 @@
 // src/math_util.c
+#include "core/ee_memory.h"
 #include "types.h"   // So that types such as u8, s32 and bool are recognized
 #include "math_util.h"
 #include <math.h>    // Required to call log() natively on modern systems
@@ -107,7 +108,8 @@ void sys_assert_fail(const char* p_assertion, const char* p_file, s32 line) {
 	sys_safe_exit_stub();
 
 	// 2. Format the alert and inject it into the logs with the game's sprintf
-	s32* p_error_stream = *(s32**)(0x00133EF4 + 0xC);
+	/* The stream pointer is a 32-bit EE address stored at 0x00133F00 */
+	s32* p_error_stream = (s32*)EE_ADDR(*(u32*)EE_ADDR(0x00133EF4 + 0xC));
 	game_sprintf(p_error_stream, "assertion \"%s\" failed: file \"%s\", line %d\n", p_assertion, p_file, line);
 
 	// 3. On a real PS2 a recursive infinite loop freezes the hardware here.
@@ -434,7 +436,7 @@ void* math_add_sub_double64(u32* p_unpack1, u32* p_unpack2, u32* p_out_unpack) {
 		if (state1 == 4) {
 			if ((state2 ^ 4) != 0) return p_unpack1;
 			if (sign1 == sign2) return p_unpack1;
-			return (void*)0x141890; // SDK math error address
+			return (void*)EE_ADDR(0x141890); // SDK math error address
 		}
 
 		// Case B: the second operand is a floating-point zero; copy the first operand to the destination

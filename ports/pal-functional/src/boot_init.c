@@ -1,3 +1,4 @@
+#include "core/ee_memory.h"
 #include "types.h"
 #include <stdarg.h>
 #include <stdio.h>
@@ -10,34 +11,41 @@
 int sys_sif_rpc_init_client(void);   /* defined further below */
 
 // Definitions of the static audio and interrupt offsets in PS2 RAM
-#define IO_WAIT_SEMA_ID             (*(s32*)0x0013642C)
-#define CURRENT_AUDIO_CMD_ID        (*(s32*)0x00136418)
-#define AUDIO_SESSION_STATUS_FLAG   (*(s32*)0x00136448)
-#define DEBUG_NET_LOG_LEVEL         (*(s32*)0x00136410)
+#define IO_WAIT_SEMA_ID             (*(s32*)EE_ADDR(0x0013642C))
+#define CURRENT_AUDIO_CMD_ID        (*(s32*)EE_ADDR(0x00136418))
+#define AUDIO_SESSION_STATUS_FLAG   (*(s32*)EE_ADDR(0x00136448))
+#define DEBUG_NET_LOG_LEVEL         (*(s32*)EE_ADDR(0x00136410))
 
 // Definition of the global stage-transition variables in PS2 RAM
-#define BOOT_INTRO_DELAY_STATE       (*(s32*)0x001A642C)
-#define BOOT_INTRO_TRANSITION_FLAG   (*(u8*)0x001A642E)
-#define NEXT_GAME_STAGE_CALLBACK     (*(void**)(long)0x001A6440)
-#define NEXT_GAME_STAGE_ARGUMENT     (*(u32*)0x001A6444)
+#define BOOT_INTRO_DELAY_STATE       (*(s32*)EE_ADDR(0x001A642C))
+#define BOOT_INTRO_TRANSITION_FLAG   (*(u8*)EE_ADDR(0x001A642E))
+#if defined(PLATFORM_PS2)
+#define NEXT_GAME_STAGE_CALLBACK     (*(void**)0x001A6440)
+#else
+/* A code pointer: on PC it holds a host function installed by PC code, never the
+ * MIPS address the boot executable's data may hold at 0x001A6440. */
+static void* g_next_game_stage_callback = NULL;
+#define NEXT_GAME_STAGE_CALLBACK     g_next_game_stage_callback
+#endif
+#define NEXT_GAME_STAGE_ARGUMENT     (*(u32*)EE_ADDR(0x001A6444))
 
 // Definition of the Memory Card state variables in PS2 RAM
-#define MC_ACTIVE_COMMAND_ID        (*(s32*)0x00137EE8)
-#define MC_CHANNEL_WIDGET_HANDLE    (*(u32*)0x00141B80)
-#define MC_RESULT_METADATA_VAL      (*(u32*)0x00143140)
+#define MC_ACTIVE_COMMAND_ID        (*(s32*)EE_ADDR(0x00137EE8))
+#define MC_CHANNEL_WIDGET_HANDLE    (*(u32*)EE_ADDR(0x00141B80))
+#define MC_RESULT_METADATA_VAL      (*(u32*)EE_ADDR(0x00143140))
 
 // Definition of the global Memory Card driver version variables on the PS2
-#define MC_MUTEX_SEMA_ID            (*(s32*)0x00137EEC)
-#define MC_IS_BOUND_FLAG            (*(s32*)0x00141BA4)
-#define MC_MCSERV_VERSION           (*(u32*)0x00143144)
-#define MC_MCMAN_VERSION            (*(u32*)0x00143148)
+#define MC_MUTEX_SEMA_ID            (*(s32*)EE_ADDR(0x00137EEC))
+#define MC_IS_BOUND_FLAG            (*(s32*)EE_ADDR(0x00141BA4))
+#define MC_MCSERV_VERSION           (*(u32*)EE_ADDR(0x00143144))
+#define MC_MCMAN_VERSION            (*(u32*)EE_ADDR(0x00143148))
 
 // Definitions of the mapped physical registers and global buffers of the Memory Card
-#define MC_SLOT_INPUT_BUFFER_PTR    (*(u32*)0x00141C00)
+#define MC_SLOT_INPUT_BUFFER_PTR    (*(u32*)EE_ADDR(0x00141C00))
 
 // Definition of the open-descriptor variables mapped in PS2 RAM
-#define MC_OPEN_PATH_PTR            (*(u32*)0x00141C10)
-#define MC_OPEN_FLAGS_MASK          (*(u32*)0x00141C14)
+#define MC_OPEN_PATH_PTR            (*(u32*)EE_ADDR(0x00141C10))
+#define MC_OPEN_FLAGS_MASK          (*(u32*)EE_ADDR(0x00141C14))
 
 // References to the external global callback tables already defined in the repository
 extern u32 g_sys_sif_general_callback_table;
@@ -356,11 +364,11 @@ s32  scePollSema(s32 sema_id);
 //void sceSignalSema(s32 sema_id);
 
 // Definitions of the static audio and interrupt offsets in PS2 RAM
-#define IO_WAIT_SEMA_ID             (*(s32*)0x0013642C)
-#define CURRENT_AUDIO_CMD_ID        (*(s32*)0x00136418)
-#define AUDIO_SESSION_STATUS_FLAG   (*(s32*)0x00136448)
-#define DEBUG_NET_LOG_LEVEL         (*(s32*)0x00136410)
-#define AUDIO_HARDWARE_READY_FLAG   (*(s32*)0x00137E6C)
+#define IO_WAIT_SEMA_ID             (*(s32*)EE_ADDR(0x0013642C))
+#define CURRENT_AUDIO_CMD_ID        (*(s32*)EE_ADDR(0x00136418))
+#define AUDIO_SESSION_STATUS_FLAG   (*(s32*)EE_ADDR(0x00136448))
+#define DEBUG_NET_LOG_LEVEL         (*(s32*)EE_ADDR(0x00136410))
+#define AUDIO_HARDWARE_READY_FLAG   (*(s32*)EE_ADDR(0x00137E6C))
 
 // References to the low-level components and kernel infrastructure
 void sys_io_init_kernel_semaphores(void);
@@ -382,10 +390,10 @@ s32 sceWaitSema(s32 sema_id);
 s32 sceDeleteSema(s32 sema_id);
 
 // Physical destination address of the audio buffer in PS2 RAM
-#define SOUND_IOP_STATUS_BUFFER_PTR    ((void*)0x00137600)
+#define SOUND_IOP_STATUS_BUFFER_PTR    ((void*)EE_ADDR(0x00137600))
 
 // Definition of the audio state reserve variable in PS2 RAM
-#define SIF_SOUND_BACKUP_IOP_STATUS     (*(u32*)0x001A7190)
+#define SIF_SOUND_BACKUP_IOP_STATUS     (*(u32*)EE_ADDR(0x001A7190))
 
 // Reference to the global lock flag of the external IO queue
 extern s32 g_sys_io_queue_lock_flag;
@@ -784,7 +792,7 @@ u32 hud_allocate_linear_node_slot(s32* p_master_alloc_struct) {
 	s32 max_slots_limit = p_master_alloc_struct[2];
 
 	if (max_slots_limit > 0) {
-		u8* p_node_cursor = (u8*)(long)p_node_array_base;
+		u8* p_node_cursor = (u8*)EE_ADDR(p_node_array_base);
 
 		do {
 			// Offset 0x10 (index 4 as u32) holds the widget state flags
@@ -848,7 +856,7 @@ void sys_sif_rpc_on_queue_request(void* p_packet_req) {
 
 	// Offset 0x34 holds the physical address of the internal data node to process (int)
 	s32 p_node_addr = *(s32*)(p_pkt + 0x34);
-	u8* p_node = (u8*)(long)p_node_addr;
+	u8* p_node = (u8*)EE_ADDR(p_node_addr);
 
 	// Offset 0x40 inside the node points to the master SIF channel descriptor (int**)
 	s32** pp_channel_master = *(s32***)(p_node + 0x40);
@@ -860,7 +868,7 @@ void sys_sif_rpc_on_queue_request(void* p_packet_req) {
 	}
 	else {
 		// Index 4 (4 * 4 = 16 bytes) is the pointer to the previous rear output node
-		u8* p_last_rear_node = (u8*)(long)p_channel[4];
+		u8* p_last_rear_node = (u8*)EE_ADDR(p_channel[4]);
 		*(s32*)(p_last_rear_node + 0x3C) = p_node_addr; // FIFO bridge link
 	}
 
@@ -888,8 +896,8 @@ void sys_sif_rpc_on_queue_request(void* p_packet_req) {
 }
 
 // Definition of the global keyboard buffer variables in PS2 RAM
-#define KEYBOARD_BUFFER_INDEX       (*(s32*)0x0013C68C)
-#define KEYBOARD_STATIC_BUFFER_PTR  ((u16*)0x0013C690)
+#define KEYBOARD_BUFFER_INDEX       (*(s32*)EE_ADDR(0x0013C68C))
+#define KEYBOARD_STATIC_BUFFER_PTR  ((u16*)EE_ADDR(0x0013C690))
 
 // Reference to the already integrated console character counter
 extern s32 g_debug_console_char_count;
@@ -1064,20 +1072,20 @@ u32 hud_alloc_ring_buffer_node(u32* p_ring_struct) {
 }
 
 // Definition of the global command filter variables in PS2 RAM
-#define IO_QUEUE_LOCK_FLAG         (*(s32*)0x001A750C)
-#define IO_BACKUP_COMMAND_ID       (*(u32*)0x001A7510)
+#define IO_QUEUE_LOCK_FLAG         (*(s32*)EE_ADDR(0x001A750C))
+#define IO_BACKUP_COMMAND_ID       (*(u32*)EE_ADDR(0x001A7510))
 
 // Definition of the semaphore identifiers in PS2 RAM
-#define IO_LOCK_SEMA_ID             (*(s32*)0x00136428)
-#define IO_WAIT_SEMA_ID             (*(s32*)0x0013642C)
-#define IO_DMA_SEMA_ID              (*(s32*)0x00136420)
+#define IO_LOCK_SEMA_ID             (*(s32*)EE_ADDR(0x00136428))
+#define IO_WAIT_SEMA_ID             (*(s32*)EE_ADDR(0x0013642C))
+#define IO_DMA_SEMA_ID              (*(s32*)EE_ADDR(0x00136420))
 
 // Reference to the already integrated global pending-command variable
-#define IO_PENDING_COMMANDS_COUNT   (*(s32*)0x00136430)
+#define IO_PENDING_COMMANDS_COUNT   (*(s32*)EE_ADDR(0x00136430))
 
 // Definition of the sound channel offset in PS2 RAM
-#define SOUND_CHANNEL_WIDGET_HANDLE    (*(u32*)0x00137E48)
-#define DEBUG_NET_LOG_LEVEL            (*(s32*)0x00136410)
+#define SOUND_CHANNEL_WIDGET_HANDLE    (*(u32*)EE_ADDR(0x00137E48))
+#define DEBUG_NET_LOG_LEVEL            (*(s32*)EE_ADDR(0x00136410))
 
 // Simulated RPC subsystem state control variables for the PC port
 u8  g_sys_sif_rpc_is_initialized = 0;
@@ -1358,11 +1366,11 @@ u64  sys_kernel_enable_dmac(void);
 s32 sceAddDmacHandler(s32 channel, void* handler, s32 arg);
 
 // Definition of the global callback descriptor tables in PS2 RAM
-#define SIF_GENERAL_CALLBACK_TABLE     (*(u32*)0x0013CFEC)
-#define SIF_SYSTEM_CALLBACK_TABLE      (*(u32*)0x0013CFE4)
+#define SIF_GENERAL_CALLBACK_TABLE     (*(u32*)EE_ADDR(0x0013CFEC))
+#define SIF_SYSTEM_CALLBACK_TABLE      (*(u32*)EE_ADDR(0x0013CFE4))
 
 // Definition of the physical address of the channel descriptor table in PS2 RAM
-#define SIF_CHANNEL_DESCRIPTOR_TABLE_PTR   ((const u32*)0x0013D100)
+#define SIF_CHANNEL_DESCRIPTOR_TABLE_PTR   ((const u32*)EE_ADDR(0x0013D100))
 
 /**
  * @brief Returns, by index, the pointer to the control descriptor of a SIF subsystem channel.
@@ -1555,7 +1563,7 @@ u32 sys_io_queue_command_filter(u32 target_command_id, long p2, long p3, long p4
 }
 
 // Definition of the active command offset in PS2 RAM
-#define IO_ACTIVE_COMMAND_ID        (*(u32*)0x001418C0)
+#define IO_ACTIVE_COMMAND_ID        (*(u32*)EE_ADDR(0x001418C0))
 
 // Reference to the IO command guard
 s32 sys_io_sync_command_guard(long command_type, long p2, long p3, long p4, long p5, long p6, long p7, long p8);
@@ -1590,9 +1598,9 @@ u32 sys_io_submit_command(u32 new_command_id, long p2, long p3, long p4, long p5
 }
 
 // Definition of the IO state variables in PS2 RAM
-#define DEBUG_NET_LOG_LEVEL         (*(s32*)0x00136410)
-#define IO_PENDING_COMMANDS_COUNT   (*(s32*)0x00136430)
-#define IO_CHANNEL_WIDGET_HANDLE    (*(u32*)0x001375D0)
+#define DEBUG_NET_LOG_LEVEL         (*(s32*)EE_ADDR(0x00136410))
+#define IO_PENDING_COMMANDS_COUNT   (*(s32*)EE_ADDR(0x00136430))
+#define IO_CHANNEL_WIDGET_HANDLE    (*(u32*)EE_ADDR(0x001375D0))
 
 // References to the helpers already integrated in the repository
 //bool boot_txt_render_extended_string(const u8* p_src_str, long param_2, long param_3, long param_4, long param_5, long param_6, long param_7, long param_8);
@@ -1714,17 +1722,17 @@ void sys_debug_console_write_char(s32 character) {
 
 
 // Global address definitions mapped from the Ghidra capture
-#define GLOBAL_THREAD_STATE_ID     (*(u32*)0x001A6464)
-#define GLOBAL_PAL_FRAME_RATE      (*(u32*)0x001A6468)
-#define GLOBAL_INTRO_MANAGER_PTR   (*(u32*)0x001A646C)
-#define GLOBAL_PLANET_LOAD_FLAG    (*(u32*)0x001A6470)
-#define GLOBAL_INVENTORY_BASE_PTR  (*(u32*)0x001A64B4)
+#define GLOBAL_THREAD_STATE_ID     (*(u32*)EE_ADDR(0x001A6464))
+#define GLOBAL_PAL_FRAME_RATE      (*(u32*)EE_ADDR(0x001A6468))
+#define GLOBAL_INTRO_MANAGER_PTR   (*(u32*)EE_ADDR(0x001A646C))
+#define GLOBAL_PLANET_LOAD_FLAG    (*(u32*)EE_ADDR(0x001A6470))
+#define GLOBAL_INVENTORY_BASE_PTR  (*(u32*)EE_ADDR(0x001A64B4))
 
 // Internal hardware prototypes of the PS2 compiler
 void ee_fpu_setup_init(void); // FUN_0026f438
 s32  custom_vsprintf_engine_alt(void* output_dest, int* p_state_struct, const char* p_format_str, va_list args_list); // approximately FUN_002b74f0
 // Definition of the global dynamic typographic pointer in PS2 RAM
-void* g_hud_typography_callback_ptr = (void*)0x00134718;
+void* g_hud_typography_callback_ptr = (void*)EE_ADDR(0x00134718);
 
 // Required prototypes of the mapped string ecosystem
 bool txt_render_scientific_string(const u8* p_src_str, float* p_args_stack);

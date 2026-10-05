@@ -3,6 +3,7 @@
 #include <SDL.h>
 #include "types.h"
 #include "core/region.h"
+#include "core/ee_memory.h"
 
 // Enumeration for the dynamic PC renderer selector
 typedef enum {
@@ -23,6 +24,13 @@ int main(int argc, char* argv[]) {
     (void)argc; (void)argv; // Avoids compiler warnings
 
     printf("[PORT START] Starting native Ratchet & Clank 2 (PC Port v1.0, %s, %s)...\n", RAC2_REGION_NAME, RAC2_BOOT_SERIAL);
+
+    // 0. Load the static data of the user's own boot executable into the emulated EE RAM
+    int boot_segments = ee_memory_load_boot_elf("orig/" RAC2_BOOT_SERIAL);
+    if (boot_segments < 0)
+        printf("[PORT START] orig/%s not found or not a PS2 ELF; the emulated EE RAM starts empty.\n", RAC2_BOOT_SERIAL);
+    else
+        printf("[PORT START] Loaded %d segments of orig/%s into the emulated EE RAM.\n", boot_segments, RAC2_BOOT_SERIAL);
 
     // 1. Initialize the essential SDL 2.32.2 subsystems (video and controller)
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) < 0) {
@@ -48,6 +56,18 @@ int main(int argc, char* argv[]) {
         1024, 768, window_flags
     );
 
+    // Without Vulkan support (driver, SDL build or platform), fall back to OpenGL
+    if (p_window == NULL && g_selected_pc_renderer == RENDERER_VULKAN) {
+        printf("[SDL VIDEO] Vulkan window unavailable (%s); falling back to OPENGL.\n", SDL_GetError());
+        g_selected_pc_renderer = RENDERER_OPENGL;
+        window_flags = (window_flags & ~(Uint32)SDL_WINDOW_VULKAN) | SDL_WINDOW_OPENGL;
+        p_window = SDL_CreateWindow(
+            "Ratchet & Clank 2: Going Commando - Native PC Port",
+            SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+            1024, 768, window_flags
+        );
+    }
+
     if (p_window == NULL) {
         printf("[SDL ERROR] Could not create the window: %s\n", SDL_GetError());
         SDL_Quit();
@@ -58,7 +78,9 @@ int main(int argc, char* argv[]) {
     SDL_Renderer* p_renderer = NULL;
     if (g_selected_pc_renderer == RENDERER_OPENGL) {
         p_renderer = SDL_CreateRenderer(p_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-        printf("[SDL RENDER] OpenGL backend active with adapted V-Sync.\n");
+        if (p_renderer == NULL)   // e.g. no GPU: SDL's software renderer still presents frames
+            p_renderer = SDL_CreateRenderer(p_window, -1, SDL_RENDERER_SOFTWARE);
+        printf("[SDL RENDER] OpenGL backend active with adapted V-Sync%s.\n", p_renderer ? "" : " (no renderer available)");
     }
     else {
         printf("[SDL RENDER] Vulkan backend active (direct pipeline initialized).\n");

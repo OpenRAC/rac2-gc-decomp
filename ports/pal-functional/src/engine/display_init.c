@@ -1,3 +1,4 @@
+#include "core/ee_memory.h"
 #include "engine/display_init.h"
 #include "engine/motor_regs.h"
 #include "core/sce_compat.h"
@@ -34,7 +35,7 @@ void display_b_vu_config(void)
 		"eret\n"
 		: : : "memory");
 
-	g_display_b_state = *(int*)0x141660;   /* [CONFIRM] */
+	g_display_b_state = *(int*)EE_ADDR(0x141660);   /* [CONFIRM] */
 #else
 	/* PC: no VU, CP0 or EE exceptions. Safe no-op.
 	   [MOD-PENDING] Uniform hook: once real channel B rendering exists,

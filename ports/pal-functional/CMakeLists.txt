@@ -59,6 +59,7 @@ set(RAC2_SOURCES
     src/core/core.c
     src/core/critical.c
     src/core/display.c
+    src/core/ee_memory.c
     src/core/gpu.c
     src/core/lifecycle.c
     src/core/mem.c

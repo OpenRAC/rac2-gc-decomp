@@ -40,8 +40,36 @@ GS output mode, the engine frame clock (PAL 50 Hz = 20 ms, NTSC 59.94 Hz ≈ 16.
 and the base display height (512 or 448 lines). Function and RAM addresses quoted
 in the sources and documents are PAL addresses: the direct RAM accesses, such as
 the frame-rate global in `src/boot_init.c`, stay PAL-only until a PAL-to-USA
-address map exists. The CMake build itself is still incomplete: the
-`src/*/CMakeLists.txt` files it adds do not exist yet.
+address map exists.
+
+---
+
+## Building and Running
+
+Requirements: CMake 3.16+, a C11 compiler and SDL2 (tested with 2.30 headers and 2.32). OpenGL is
+loaded at run time through SDL, so no OpenGL development files are needed.
+
+```sh
+cmake -S . -B build              # finds SDL2 through its CMake package
+cmake -S . -B build -DSDL2_INCLUDE_DIR=/path/to/SDL2 -DSDL2_LIBRARY=/path/to/libSDL2.so
+cmake --build build
+```
+
+On Windows, point `SDL2_DIR` at the `cmake` directory of the SDL2 development
+archive, or set `SDL2_INCLUDE_DIR` and `SDL2_LIBRARY` as above.
+
+The reconstructed functions still access the game's globals at their PS2
+addresses. `src/core/ee_memory.c` provides a 32 MB emulated EE RAM and every
+such access goes through `EE_ADDR()`. At start-up the port copies the loadable
+segments of your own boot executable, `orig/SCES_516.07` (or
+`orig/SCUS_972.68` for NTSC), into that memory so the original static data
+sits at its addresses; without the file the memory starts empty. Code pointers
+the engine keeps in RAM (for example the next-stage callback) are host
+variables instead, since MIPS code cannot run on PC.
+
+The executable opens a window, runs the boot state machine in the fixed-rate
+loop and exits with Escape or by closing the window. It does not draw the game
+yet. If a Vulkan window cannot be created, it falls back to OpenGL.
 
 ---
 

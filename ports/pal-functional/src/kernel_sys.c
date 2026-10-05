@@ -1,4 +1,5 @@
 // src/kernel_sys.c
+#include "core/ee_memory.h"
 #include "types.h"
 #include "kernel_sys.h"
 #include "math_util.h"  // sys_assert_fail, txt_format_scientific_wrapper
@@ -387,7 +388,8 @@ void sys_assert_dispatch(const char* p_file, s32 line, const char* p_assertion,
 	long p4, long p5, long p6, long p7, long p8) {
 
 	// 1. Collect the formatted information and inject it into the kernel logs
-	s32* p_error_stream = *(s32**)(0x00133EF4 + 0xC);
+	/* The stream pointer is a 32-bit EE address stored at 0x00133F00 */
+	s32* p_error_stream = (s32*)EE_ADDR(*(u32*)EE_ADDR(0x00133EF4 + 0xC));
 	game_sprintf(p_error_stream, "assertion \"%s\" failed: file \"%s\", line %d\n", p_assertion, p_file, line);
 
 	// 2. Transfer the execution flow to the definitive panic and freeze handler
@@ -395,7 +397,7 @@ void sys_assert_dispatch(const char* p_file, s32 line, const char* p_assertion,
 }
 
 // Physical address of the PS2 locale pointer array
-const u32* g_locale_ctype_array = (const u32*)0x0013A388;
+const u32* g_locale_ctype_array = (const u32*)EE_ADDR(0x0013A388);
 
 /**
  * @brief Returns the base pointer of the character locale table array (CTYPE pointer array).
@@ -473,7 +475,7 @@ void sys_kernel_panic_abort(s32 exit_code) {
 long kernel_tlb_cache_sync(void) {
 	s32 total_pages = g_tlb_wired_index + g_tlb_bound_index;
 
-	txt_format_scientific_wrapper((const u8*)0x13AC50, (long)(g_tlb_wired_index - 1), (long)g_tlb_wired_index, (long)(total_pages - 1));
+	txt_format_scientific_wrapper((const u8*)EE_ADDR(0x13AC50), (long)(g_tlb_wired_index - 1), (long)g_tlb_wired_index, (long)(total_pages - 1));
 
 #if defined(PLATFORM_PS2)
 	SYNC(0x10);
@@ -483,7 +485,7 @@ long kernel_tlb_cache_sync(void) {
 
 	// Control block A: fixed-entry overflow
 	if (g_tlb_wired_index > 0x30) {
-		txt_format_scientific_wrapper((const u8*)0x13AC88);
+		txt_format_scientific_wrapper((const u8*)EE_ADDR(0x13AC88));
 		sys_kernel_panic_abort(1); // Connected to the identified panic function
 	}
 
@@ -496,7 +498,7 @@ long kernel_tlb_cache_sync(void) {
 
 	// Control block B: checks the second page section
 	if (total_pages > 0x30) {
-		txt_format_scientific_wrapper((const u8*)0x13ACA0);
+		txt_format_scientific_wrapper((const u8*)EE_ADDR(0x13ACA0));
 		sys_kernel_panic_abort(1); // Connected to the identified panic function
 	}
 
@@ -517,7 +519,7 @@ long kernel_tlb_cache_sync(void) {
 	if (g_tlb_extra_flags > 0) {
 		s32 extra_limit = (s32)iterator + g_tlb_extra_flags;
 		if (extra_limit > 0x30) {
-			txt_format_scientific_wrapper((const u8*)0x13ACB8);
+			txt_format_scientific_wrapper((const u8*)EE_ADDR(0x13ACB8));
 			sys_kernel_panic_abort(1); // Connected to the identified panic function
 		}
 		while (iterator < extra_limit) {
@@ -549,7 +551,7 @@ long kernel_tlb_cache_sync(void) {
  */
 u64 ee_atoll_wrapper(const char* p_srcString, char** p_end_ptr, s32 base) {
 	// Uses the global error pointer of the kernel thread (PTR_DAT_00133ef4)
-	s32* p_global_errno = (s32*)0x00133EF4;
+	s32* p_global_errno = (s32*)EE_ADDR(0x00133EF4);
 
 	// Dispatch the operation directly to the master function
 	return (u64)ee_strtoll(p_global_errno, p_srcString, p_end_ptr, base);
@@ -967,8 +969,8 @@ bool sys_deci2_subsystem_init(void) {
 		g_deci2_var3 = 0;
 
 		// Assign the global buffers of the diagnostic system
-		g_deci2_buffer_a = (void*)0x2013CD40;
-		g_deci2_buffer_b = (void*)0x2013CC00;
+		g_deci2_buffer_a = (void*)EE_ADDR(0x2013CD40);
+		g_deci2_buffer_b = (void*)EE_ADDR(0x2013CC00);
 
 		// Write the network protocol header values of the Insomniac Games engine
 		g_net_packet_size = 0x210; // Network packet size
