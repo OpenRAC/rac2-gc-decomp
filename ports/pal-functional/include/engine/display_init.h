@@ -13,7 +13,7 @@ void display_b_vu_config(void);
 
 /* [CONFIRM] Contextual return value of the ELF (DAT_00141660). Check
  *   whether any caller consumes it before fixing a value. */
-int g_display_b_state;
+extern int g_display_b_state;
 
 /* [CONFIRM] Engine VSync handshake: sets the VSync flag,
  *   enables the EE interrupt line (INTSTAT bit 2 = 0x4),

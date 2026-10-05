@@ -2,7 +2,7 @@
  * kernel_interrupts.c – PC implementation of _EnableIntc / _DisableIntc
  *
  * PS2 original (MIPS R5900):
- *   FUN_0011b5f0  →  lee Status[16], lock, _EnableIntc(), sync 0, unlock
+ *   FUN_0011b5f0  →  reads Status[16], lock, _EnableIntc(), sync 0, unlock
  *
  * PC (x86-64):
  *   IRQs are the responsibility of the OS (IDT, LAPIC/IOAPIC).

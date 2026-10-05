@@ -18,7 +18,7 @@
  *    return prev;
  *
  *  PC single-thread:  no-op, returns 0.
- *  PC multi-thread:   mutex (futuro).
+ *  PC multi-thread:   mutex (future).
  * ------------------------------------------------------------------
  */
 

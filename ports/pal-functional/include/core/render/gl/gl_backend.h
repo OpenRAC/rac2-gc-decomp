@@ -3,7 +3,7 @@
 
 #include "core/render/render.h"
 #include <SDL.h>
-#include <GL/gl.h>   /* GLAD redefines it; this header is only for the base types */
+#include "core/render/gl/gl_loader.h"   /* GL types, enums and run-time entry points */
 
 /* ========================================================================
  *  Internal types – expand the opaque types of render.h

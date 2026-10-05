@@ -1,6 +1,8 @@
 #ifndef PS2_GRAPHICS_H
 #define PS2_GRAPHICS_H
 
+#include <stdint.h>
+
 /**
  * Wrappers of the PS2 GS (Graphics Synthesizer) functions.
  * On PC: they map to OpenGL / SDL calls.

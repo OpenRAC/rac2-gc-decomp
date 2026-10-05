@@ -42,7 +42,7 @@ extern "C" {
 	s32  sys_sound_sync_command_guard(long command_type, long p2, long p3, long p4,
 		long p5, long p6, long p7, long p8);
 
-	bool sys_sif_rpc_init_client(void);
+	int  sys_sif_rpc_init_client(void);
 	s32  sys_sif_rpc_open_transaction_session(u32* p_session_handle, u32 command_id, u64 sync_flags);
 	s32  sys_sif_rpc_send_transaction_data(u32* p_session_handle, u32 command_id, u64 sync_flags,
 		long src_addr, long src_size, long dest_addr, long dest_size, long p8, u32 extra_arg);

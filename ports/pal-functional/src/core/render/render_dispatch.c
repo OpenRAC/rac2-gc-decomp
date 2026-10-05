@@ -3,13 +3,18 @@
  *  GL vs VK is decided here. No other file of the project
  *  includes GL or VK headers.
  *
- *  Uso:
+ *  Usage:
  *    #include "core/render/render.h"
  *    RenderHandle* h = Render_Init(BACKEND_OPENGL, 1920, 1080, RENDER_FLAG_VSYNC);
  */
 
 #include "core/render/render.h"
 #include <stddef.h>
+
+/* OpenGL is the only backend written so far, so it is the default. */
+#if !defined(RENDER_USE_GL) && !defined(RENDER_USE_VK)
+#define RENDER_USE_GL 1
+#endif
 
 #if defined(RENDER_USE_GL)
 #include "core/render/gl/gl_backend.h"
@@ -135,10 +140,10 @@ MeshHandle* Render_CreateMesh(RenderHandle* h, const Vertex* v, u32 vc,
 }
 
 TextureHandle* Render_CreateTextureFromData(RenderHandle* h, const u8* data,
-    u32 w, u32 h, PixelFormat fmt)
+    u32 w, u32 height, PixelFormat fmt)
 {
     (void)h;
-    return GL_CreateTextureFromData(data, w, h, fmt);
+    return GL_CreateTextureFromData(data, w, height, fmt);
 }
 
 TextureHandle* Render_LoadTextureFile(RenderHandle* h, const char* path)

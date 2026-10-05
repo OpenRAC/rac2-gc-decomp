@@ -1,5 +1,5 @@
 #include "engine/party/viewport.h"
-#include <GL/gl.h>
+#include "core/render/gl/gl_loader.h"
 
 void viewport_compute(ViewportLayout layout, int n,
 	int sw, int sh, ViewportRect* out)

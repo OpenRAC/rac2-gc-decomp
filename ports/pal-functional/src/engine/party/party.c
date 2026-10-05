@@ -1,8 +1,9 @@
 #include "engine/party/party.h"
-#include "engine/party/player.h"
+#include "engine/party/party_player.h"
 #include "engine/party/viewport.h"
-#include <GL/gl.h>
+#include "core/render/gl/gl_loader.h"
 #include <stdio.h>
+#include <string.h>
 
 static ViewportLayout g_layout = VIEWPORT_LAYOUT_1X2;
 static ViewportRect   g_viewports[MAX_PLAYERS];

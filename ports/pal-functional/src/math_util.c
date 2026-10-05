@@ -419,10 +419,11 @@ double math_div_double64(double dividend, double divisor) {
  * @return void* Pointer to the destination structure holding the computed result.
  */
 void* math_add_sub_double64(u32* p_unpack1, u32* p_unpack2, u32* p_out_unpack) {
-	u32 state1 = p_unpack1;
-	u32 state2 = p_unpack2;
-	u32 sign1 = p_unpack1;
-	u32 sign2 = p_unpack2;
+	/* Unpacked layout (math_unpack_double64): [0] state, [1] sign, [2] exponent, [4..5] mantissa */
+	u32 state1 = p_unpack1[0];
+	u32 state2 = p_unpack2[0];
+	u32 sign1 = p_unpack1[1];
+	u32 sign2 = p_unpack2[1];
 
 	// Case A: the first operand is a NaN or a zero; return the operand directly per the engine's rules
 	if (state1 < 2) {
@@ -498,7 +499,7 @@ void* math_add_sub_double64(u32* p_unpack1, u32* p_unpack2, u32* p_out_unpack) {
 				res_mant = out_mant;
 			}
 
-			p_out_unpack = 3; // FLOAT_STATE_NORMAL
+			p_out_unpack[0] = 3; // FLOAT_STATE_NORMAL
 			if (res_mant > 0x1FFFFFFFFFFFFFFFULL) {
 				*(u64*)(p_out_unpack + 4) = (res_mant & 1) | (res_mant >> 1);
 				*(s32*)(p_out_unpack + 2) += 1;

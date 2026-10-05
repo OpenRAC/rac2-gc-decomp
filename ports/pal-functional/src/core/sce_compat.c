@@ -1,12 +1,15 @@
 #include "core/sce_compat.h"
 
+int g_display_channel_b = 0;   /* DAT_00134b48 */
+
 /* ------------------------------------------------------------------ */
 /*  Stub: syscall 116 – SIF/DMA transfer "kick"                       */
 /*  PS2:  li v1, 0x74 ; syscall                                       */
 /*  PC:   no-op                                                       */
 /* ------------------------------------------------------------------ */
-int sceSifCheckM_S(void)
+int sceSifCheckM_S(int op_code)
 {
+	(void)op_code;
 #if defined(PLATFORM_PS2)
 	__asm__ volatile ("li v0, 0x74\n\t syscall\n\t" : : : "memory", "v0");
 	return 1;
@@ -93,8 +96,9 @@ int sceFlushCache(int mode, void* addr, int size)
 /*  PS2:  li v0, 0x5a ; syscall                                       */
 /*  PC:   no-op (there are no IOP event-sets to wait for)            */
 /* ------------------------------------------------------------------ */
-int sceSifSetRpcQueue(void)
+int sceSifSetRpcQueue(int a0, int a1, int a2)
 {
+	(void)a0; (void)a1; (void)a2;
 #if defined(PLATFORM_PS2)
 	__asm__ volatile ("li v0, 0x5a\n\t syscall\n\t" : : : "memory", "v0");
 	return 0;
@@ -108,8 +112,9 @@ int sceSifSetRpcQueue(void)
 /*  PS2:  li v0, 0x5b ; syscall                                       */
 /*  PC:   no-op (there are no IOP event-sets to release)             */
 /* ------------------------------------------------------------------ */
-int sceSifInitRpc(void)
+int sceSifInitRpc(int op_code)
 {
+	(void)op_code;
 #if defined(PLATFORM_PS2)
 	__asm__ volatile ("li v0, 0x5b\n\t syscall\n\t" : : : "memory", "v0");
 	return 0;
@@ -124,7 +129,7 @@ void display_init_channel_b(void)
 
 	/* Setup: 116(0x5A) → 90 → flush(0) → flush(2) → 116(0x5B) → 116(0x54) */
 	sceSifCheckM_S(0x5A);          /* kick, op=90 */
-	sceSifSetRpcQueue(0x80075000, 0x1347d0, 0x330);  /* wait with flags */
+	sceSifSetRpcQueue((int)0x80075000u, 0x1347d0, 0x330);  /* wait with flags */
 	sceFlushCache(0, 0, 0);
 	sceFlushCache(2, 0, 0);
 	sceSifCheckM_S(0x5B);          /* kick, op=91 */
@@ -172,7 +177,7 @@ int SetOsdConfigParam(const void* in_buf)
 /*                                                                     */
 /*  PS2 original:                                                     */
 /*    v   = Get(sp);        v |= 0x2000;   Set(sp+4 = v);             */
-/*    v   = Get(sp+4);      campo = (v>>13) & 7;                      */
+/*    v   = Get(sp+4);      field = (v>>13) & 7;                      */
 /*    return (campo < 1);                                                     */
 /*                                                                     */
 /*  PC: config starts at 0 → field = 0 → returns 1 (default mode).     */
@@ -183,10 +188,10 @@ int sys_config_init(void)
 	unsigned int v;
 
 #if defined(PLATFORM_PS2)
-	GetOsdConfigParam(&v);          /* 1) leer estado actual        */
+	GetOsdConfigParam(&v);          /* 1) read the current state    */
 	v |= 0x2000u;                   /* 2) force bit 13              */
 	SetOsdConfigParam(&v);          /* 3) write it back             */
-	GetOsdConfigParam(&v);          /* 4) re-leer                   */
+	GetOsdConfigParam(&v);          /* 4) read it again             */
 	v = (v >> 13) & 0x7u;           /* 5) extract field 13-15 (0..7) */
 	return (v < 1) ? 1 : 0;         /* 6) == 0 ? 1 : 0              */
 #else

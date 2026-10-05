@@ -39,7 +39,7 @@ bool kernel_cache_sync(u32 addr, u32 size);
  *
  * @return  0 if it could be acquired (always 0 on PC)
  */
-int kernel_system_sync_guard(void);
+bool kernel_system_sync_guard(void);
 
 /*
  * System unlock (equivalent to kernel_system_sync_release on PS2).
@@ -47,6 +47,6 @@ int kernel_system_sync_guard(void);
  *
  * @return  0 if it could be released (always 0 on PC)
  */
-int kernel_system_sync_release(void);
+bool kernel_system_sync_release(void);
 
 #endif /* CORE_SYS_KERNEL_CACHE_H */

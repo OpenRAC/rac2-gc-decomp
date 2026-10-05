@@ -1,4 +1,4 @@
-#include "engine/party/player.h"
+#include "engine/party/party_player.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -53,9 +53,20 @@ void player_shutdown(void)
 	g_player_count = 1;
 }
 
+/* SDL2 has no lookup by device index: open each controller once and keep it. */
+static SDL_GameController* controller_for(int index)
+{
+	static SDL_GameController* opened[MAX_PLAYERS];
+	if (index < 0 || index >= MAX_PLAYERS)
+		return NULL;
+	if (!opened[index] && index < SDL_NumJoysticks() && SDL_IsGameController(index))
+		opened[index] = SDL_GameControllerOpen(index);
+	return opened[index];
+}
+
 void player_update_input(PlayerState* p)
 {
-	SDL_GameController* gc = SDL_GameControllerFromIndex(p->controller_id);
+	SDL_GameController* gc = controller_for(p->controller_id);
 	if (!gc) return;
 
 	p->stick_lx = (float)SDL_GameControllerGetAxis(gc, SDL_CONTROLLER_AXIS_LEFTX) / 32767.0f;

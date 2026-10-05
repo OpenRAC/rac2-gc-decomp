@@ -10,4 +10,9 @@ extern uint32_t g_rcnt3_mode;
 
 #define RCNT3_FLAG_INIT   0x100u
 
+/* Number of display buffers the handshake initializes (2..7 = 6 buffers).
+ * [MOD-PENDING] Hard-coded in the ELF. For mods → load from data/levels or
+ * config. Meanwhile it is a macro so the change stays local. */
+#define DISPLAY_INIT_BUFFERS  8u
+
 #endif

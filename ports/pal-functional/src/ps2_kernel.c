@@ -1,4 +1,5 @@
 #include "ps2_kernel.h"
+#include "core/sce_compat.h"
 #include "system.h"     // Required to access g_GraphicsSemaphore and g_GraphicsSemaphoreID
 #include <SDL.h>
 #include "graphics.h"   // Required to check target_fps
@@ -148,6 +149,32 @@ int ee_atoi(const char* str) {
 }
 
 /**
+ * @brief Creates a kernel semaphore and returns its ID (sceCreateSema).
+ * On PC the ID is a virtual handle from the sceSemaCreate stub; the semaphores
+ * that really block are the SDL ones registered by Sys_InitGraphicsSemaphore.
+ */
+s32 sceCreateSema(void) {
+	return (s32)sceSemaCreate(NULL);
+}
+
+/**
+ * @brief Deletes a kernel semaphore (sceDeleteSema).
+ * Virtual IDs own no PC resource, so deleting one only reports success.
+ */
+s32 sceDeleteSema(s32 sema_id) {
+	return sema_id >= 0 ? 0 : -1;
+}
+
+/**
+ * @brief Returns the ID of the calling thread (sceGetThreadId).
+ * The engine compares it against a stored owner; on PC a stable non-zero
+ * value derived from the SDL thread ID serves the same purpose.
+ */
+s32 sceGetThreadId(void) {
+	return (s32)(SDL_ThreadID() & 0x7FFFFFFF);
+}
+
+/**
  * @brief Wakes a specific execution thread that was suspended in the PS2 kernel.
  * Original Ghidra address: syscall stub sector (0x33 MIPS syscall) (PAL)
  *
@@ -291,6 +318,7 @@ int g_sys_mc_is_bound_flag = 0;
 int g_sys_mc_mutex_sema_id = -1;
 int g_sys_mc_active_command_id = 0;
 int g_sys_mc_channel_widget_handle = 0;
+s32 g_sys_mc_result_metadata_val = 0;   /* metadata returned with the driver version query */
 
 int sceMcGetInfo(int channel, int slot, void* type, void* free, void* format) {
 	(void)channel; (void)slot; (void)type; (void)free; (void)format;
@@ -309,10 +337,10 @@ int g_sys_io_reconfig_flag = 0;
 
 // 2. Physical interrupt control functions of the Emotion Engine chip (MIPS)
 // On PC there are no direct hardware interrupt registers; return immediate success.
-int DI(void) { return 0; }
-int EI(void) { return 0; }
-int SYNC(void) { return 0; }
-int Status(void) { return 0; }
+u32 Status = 0;
+void DI(void) {}
+void EI(void) {}
+void SYNC(int type) { (void)type; }
 
 // 3. Control variables of the hardware paging table (TLB) initializer
 // The game clears the original TLB when starting RAM. On PC dummy indices are created:

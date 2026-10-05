@@ -8,10 +8,10 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <SDL.h>
-#include <SDL_opengl.h>
+#include "core/render/gl/gl_loader.h"
 
 // Reference to the shared virtual static variable in this same suite
-extern u64 g_virtual_gs_imr_mask;
+static u64 g_virtual_gs_imr_mask;
 
 /**
  * @brief Returns the current value of the graphics chip's hardware interrupt mask register (IMR).
@@ -53,7 +53,6 @@ void SetGsCrt(s16 interlace, s16 omode, s16 ffmd) {
 }
 
 // Internal virtual variable simulating the graphics chip's interrupt mask register
-static u64 g_virtual_gs_imr_mask = 0;
 
 /**
  * @brief Modifies the hardware interrupt mask register (IMR) of the Graphics Synthesizer (GS).
@@ -111,9 +110,9 @@ void set_gs_crt(void)
 	 *
 	 * For now: the region's base PS2 resolution (see core/region.h)
 	 */
-	SDL_Window* win = SDL_GL_GetWindow();
+	SDL_Window* win = SDL_GL_GetCurrentWindow();
 	if (win) {
-		SDL_SetWindowMode(win, SDL_WINDOW_FULLSCREEN_DESKTOP);
+		SDL_SetWindowFullscreen(win, SDL_WINDOW_FULLSCREEN_DESKTOP);
 		SDL_SetWindowMinimumSize(win, RAC2_DISPLAY_WIDTH, RAC2_DISPLAY_HEIGHT);
 		/* SDL_SetWindowAspectRatio(win, RAC2_DISPLAY_WIDTH, RAC2_DISPLAY_HEIGHT); ← SDL 2.0.18+ */
 	}

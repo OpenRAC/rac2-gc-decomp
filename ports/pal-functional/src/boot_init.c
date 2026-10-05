@@ -5,6 +5,9 @@
 #include <assert.h>
 #include <stdbool.h>
 #include "ps2_kernel.h"
+#include "core/sce_compat.h"
+
+int sys_sif_rpc_init_client(void);   /* defined further below */
 
 // Definitions of the static audio and interrupt offsets in PS2 RAM
 #define IO_WAIT_SEMA_ID             (*(s32*)0x0013642C)
@@ -315,7 +318,7 @@ void sys_boot_intro_state_machine(s32 execution_stage) {
 
 		if (audio_status == 0) {
 			// Clear the instruction cache before the atomic jump
-			sceFlushCache(0);
+			sceFlushCache(0, NULL, 0);
 
 			// Keep the descriptors of the next game stage in local variables
 			u32 stage_arg = NEXT_GAME_STAGE_ARGUMENT;
@@ -473,7 +476,7 @@ s32 sys_sif_rpc_send_transaction_data(u32* p_session_handle, u32 command_id, u64
 	} SifRpcClientData;
 
 	// The original code now compiles:
-	extern SifRpcClientData g_sys_sif_rpc_client_struct;
+	extern u32 g_sys_sif_rpc_client_struct[16];   /* SifRpcClientData storage */
 	u32* p_node_slot = (u32*)hud_allocate_linear_node_slot((s32*)&g_sys_sif_rpc_client_struct);
 
 	if (p_node_slot == NULL) {
@@ -696,7 +699,7 @@ s32 sys_sif_rpc_open_transaction_session(u32* p_session_handle, u32 command_id, 
 	} SifRpcClientData;
 
 	// The original code now compiles:
-	extern SifRpcClientData g_sys_sif_rpc_client_struct;
+	extern u32 g_sys_sif_rpc_client_struct[16];   /* SifRpcClientData storage */
 	u32* p_node_slot = (u32*)hud_allocate_linear_node_slot((s32*)&g_sys_sif_rpc_client_struct);
 
 	s32 status_code = 0xFFFFFFFF; // Default error if the buffer is full
@@ -1085,7 +1088,6 @@ u32 g_sys_sif_rpc_dummy_packet = 0;
 bool kernel_system_sync_guard(void);
 void kernel_system_sync_release(void);
 bool sys_sif_init_manager(void);
-void sys_sif_register_callback(long command_id, u32 callback_ptr, u32 callback_arg);
 u32  sys_sif_get_channel_descriptor_ptr(s32 channel_index);
 //void sys_sif_submit_dma_packet_simple(u32 command_type, u32* p_packet_header, long packet_size, u32 src_addr, u32 dest_addr, long transfer_len);
 
@@ -1354,7 +1356,6 @@ u64  sys_kernel_enable_dmac(void);
 
 // Emulation stubs for native Sony SDK APIs
 s32 sceAddDmacHandler(s32 channel, void* handler, s32 arg);
-u32 sceSifGetReg(u32 reg_id);
 
 // Definition of the global callback descriptor tables in PS2 RAM
 #define SIF_GENERAL_CALLBACK_TABLE     (*(u32*)0x0013CFEC)

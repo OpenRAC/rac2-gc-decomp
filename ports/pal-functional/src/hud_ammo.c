@@ -331,7 +331,7 @@ void hud_init_ammo_layout(void* p_hud_main_struct, long param_2, long p_hud_pool
 
 	// 3. Initialization and aesthetic configuration of the bullet slider/meter
 	u32* p_slider = (u32*)(p_base + 0xF4);
-	hud_init_slider_widget(p_slider, 0x92, 0, (const char*)0x001AE688, p_hud_pool, p4, p5, p6); // "AmmoBar"
+	hud_init_slider_widget(p_slider, 0x92, 0, (uintptr_t)0x001AE688, (uintptr_t)p_hud_pool, p4, p5, p6); // "AmmoBar"
 
 	hud_set_widget_context_2d(p_slider, 0x8049c1ff, 0x80001eff);
 	hud_set_widget_context_2d_ext(p_slider, 0x50f0c070, 0x50f0c070);
@@ -346,7 +346,7 @@ void hud_init_ammo_layout(void* p_hud_main_struct, long param_2, long p_hud_pool
 	void* p_inv_a = (void*)(p_base + 0x140);
 	inv_reset_weapon_inventory(p_inv_a);
 	inv_set_weapon_inventory_mode(p_inv_a, 2);
-	inv_set_active_weapon_slot(p_inv_a, (p_base + 0x1CC));
+	inv_set_active_weapon_slot(p_inv_a, (u32)(uintptr_t)(p_base + 0x1CC));
 	inv_set_animation_factor(p_inv_a, 0.005f);
 	inv_set_quick_select_open_state(p_inv_a, 2);
 	inv_set_weapon_slot_data(0, 0x80f0c070, 0x42480000, 0, 0, p_inv_a, 0); // Capacity 50.0f
@@ -361,7 +361,7 @@ void hud_init_ammo_layout(void* p_hud_main_struct, long param_2, long p_hud_pool
 	inv_set_weapon_slot_data(0x3E99999A, 0x60442d00, 0, 0, 0, p_inv_b, 1);
 	inv_update_weapon_visual_pointers(0, 0x40000000, p_inv_b, 1);
 	inv_set_quick_select_open_state(p_inv_b, 0);
-	inv_set_active_weapon_slot(p_inv_b, (p_base + 0x1CC));
+	inv_set_active_weapon_slot(p_inv_b, (u32)(uintptr_t)(p_base + 0x1CC));
 	inv_set_weapon_inventory_visibility(p_inv_b, -1);
 
 	// Initialization of the final secondary control flags
@@ -653,7 +653,7 @@ void hud_init_slider_widget(u32* p_widget, u32 value_id, u32 p_data_source, uint
 
 	// 1. Call the base constructor to initialize the spatial matrices
 	// The parameter casts are adjusted to match the original math call
-	hud_clear_widget_matrices(p_widget, (void*)asset_name_ptr, (void*)p_hud_pool,
+	hud_clear_widget_matrices(p_widget, (const char*)asset_name_ptr, (long)p_hud_pool,
 		(long)asset_name_ptr, p_hud_pool, p6, p7, p8);
 
 	// 2. Inject the state parameters and control links
@@ -702,8 +702,8 @@ void hud_set_widget_context_2d(u32* p_widget, u32 val_x, u32 val_y) {
 		u32* p_context = *pp_context_target;
 
 		if (p_context != NULL) {
-			p_context = val_x;   // Stores at offset +0 of the context block
-			p_context = val_y;   // Stores at offset +4 of the context block
+			p_context[0] = val_x;   // Stores at offset +0 of the context block
+			p_context[1] = val_y;   // Stores at offset +4 of the context block
 		}
 	}
 }
@@ -1262,13 +1262,13 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 
 	// 2. Registration and coordinate injection of widget 0 (HUD master canvas)
 	hud_register_widget_asset(p_hud_context, RECURSO_HUD_CANVAS, p_hud_pool, p4, p5, p6, p7, p8);
-	hud_set_state_from_lookup((int)p_hud_context, state_lookup_id, 1);
+	hud_set_state_from_lookup((u8*)p_hud_context, (u8*)(uintptr_t)state_lookup_id, 1);
 	math_set_vector4(10.0f, 10.0f, 0.0f, 0.0f, p_hud_context); // 0x41200000 = 10.0f
 
 	// 3. Registration and coordinate injection of widget 1 (health bar outline)
 	u32* p_health_outline_widget = p_hud_context + 0x13; // Indexed offset param_1 + 0x13
 	hud_register_widget_asset(p_health_outline_widget, RECURSO_HEALTH_OUTLINE, p_hud_pool, p4, p5, p6, p7, p8);
-	hud_set_state_from_lookup((int)p_health_outline_widget, state_lookup_id, 2);
+	hud_set_state_from_lookup((u8*)p_health_outline_widget, (u8*)(uintptr_t)state_lookup_id, 2);
 	math_set_vector4(10.0f, 10.0f, 0.0f, 0.0f, p_health_outline_widget);
 
 	// 4. Registration and coordinate injection of widget 2 (health bar fill)
@@ -1278,7 +1278,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	math_set_vector4(10.0f, 18.5f, 0.0f, 0.0f, p_health_fill_widget); // 0x41940000 = 18.5f
 
 	// (This section directly continues the flow inside hud_initialize_main_widgets)
-	hud_set_state_from_lookup((int)p_health_fill_widget, state_lookup_id, 5);
+	hud_set_state_from_lookup((u8*)p_health_fill_widget, (u8*)(uintptr_t)state_lookup_id, 5);
 
 	// 5. Configuration and initialization of the weapon name / AmmoText widget
 	u32* p_wpn_name_widget = p_hud_context + 0x40; // piVar14
@@ -1301,12 +1301,12 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	u32* p_ammo_icon = p_hud_context + 0x65; // piStack_140
 	hud_register_widget_asset(p_ammo_icon, RECURSO_AMMO_ICON, p_hud_pool, p4, p5, p6, p7, p8);
 	math_set_vector4(498.0f, 10.0f, 0.0f, 0.0f, p_ammo_icon); // 0x43f90000 = 498.0f
-	hud_set_state_from_lookup((int)p_ammo_icon, state_lookup_id, 3);
+	hud_set_state_from_lookup((u8*)p_ammo_icon, (u8*)(uintptr_t)state_lookup_id, 3);
 
 	u32* p_ammo_icon_back = p_hud_context + 0x78; // piStack_13c
 	hud_register_widget_asset(p_ammo_icon_back, RECURSO_AMMO_ICON_BACK, p_hud_pool, p4, p5, p6, p7, p8);
 	math_set_vector4(498.0f, 10.0f, 0.0f, 0.0f, p_ammo_icon_back);
-	hud_set_state_from_lookup((int)p_ammo_icon_back, state_lookup_id, 4);
+	hud_set_state_from_lookup((u8*)p_ammo_icon_back, (u8*)(uintptr_t)state_lookup_id, 4);
 
 	// 8. Registration of the bolt wallet meter (BoltText and BoltIcon)
 	u32* p_bolt_text_widget = p_hud_context + 0x92; // piVar16
@@ -1326,7 +1326,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	// 9. Registration of the Quick Select radial menu (base and ring)
 	u32* p_qsel_back = p_hud_context + 0xb8; // piVar2
 	hud_register_widget_asset(p_qsel_back, RECURSO_QSEL_BACK, p_hud_pool, p4, p5, p6, p7, p8);
-	hud_set_state_from_lookup((int)p_qsel_back, state_lookup_id, 7);
+	hud_set_state_from_lookup((u8*)p_qsel_back, (u8*)(uintptr_t)state_lookup_id, 7);
 	math_set_vector4_ptr(1.0f, 1.0f, 0, 0, p_qsel_back);
 	math_set_vector4(500.0f, 208.0f, 0, 0, p_qsel_back); // 0x42fa0000 = 500.0f, 0x43500000 = 208.0f
 	u32* p_qsel_back_data = (u32*)hud_get_widget_data_ptr(p_qsel_back);
@@ -1335,7 +1335,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 
 	u32* p_qsel_bord = p_hud_context + 0xcb; // piVar12
 	hud_register_widget_asset(p_qsel_bord, RECURSO_QSEL_BORD, p_hud_pool, p4, p5, p6, p7, p8);
-	hud_set_state_from_lookup((int)p_qsel_bord, state_lookup_id, 6);
+	hud_set_state_from_lookup((u8*)p_qsel_bord, (u8*)(uintptr_t)state_lookup_id, 6);
 	math_set_vector4_ptr(1.0f, 1.0f, 0, 0, p_qsel_bord);
 	math_set_vector4(500.0f, 208.0f, 0, 0, p_qsel_bord);
 	u32* p_qsel_bord_data = (u32*)hud_get_widget_data_ptr(p_qsel_bord);
@@ -1358,7 +1358,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 		loop_iterator++;
 
 		// (This section directly continues the internal logic of hud_initialize_main_widgets)
-		hud_set_state_from_lookup((int)p_dynamic_slot_widget, state_lookup_id, loop_iterator + 8);
+		hud_set_state_from_lookup((u8*)p_dynamic_slot_widget, (u8*)(uintptr_t)state_lookup_id, loop_iterator + 8);
 		math_set_vector4_ptr(1.0f, 1.0f, 0, 0, p_dynamic_slot_widget);
 		math_set_vector4(500.0f, 208.0f, 0, 0, p_dynamic_slot_widget);
 		hud_update_widget_context(p_dynamic_slot_widget, (u32*)p_hud_context[0x201]);
@@ -1430,7 +1430,7 @@ void hud_initialize_main_widgets(u32* p_hud_context, s32 state_offset, long p_hu
 	u32 context_data_res = (u32)hud_get_widget_data_ptr(p_sync_vector_src);
 	inv_set_weapon_inventory_transition_flag(p_sub_inv_gadgets, context_data_res);
 	inv_set_quick_select_open_state(p_sub_inv_gadgets, 0);
-	inv_set_active_weapon_slot(p_sub_inv_gadgets, (p_hud_context + 0x11c));
+	inv_set_active_weapon_slot(p_sub_inv_gadgets, (u32)(uintptr_t)(p_hud_context + 0x11c));
 	inv_set_weapon_inventory_visibility(p_sub_inv_gadgets, -1);
 
 	// Adjust the dynamic interpolation acceleration according to the global system flags

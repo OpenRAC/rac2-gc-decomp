@@ -1,4 +1,5 @@
 #include "core/lifecycle.h"
+#include <stdint.h>
 
 #define CLEANUP_TABLE_MAX   128
 void (*g_cleanup_table[CLEANUP_TABLE_MAX + 1])(void) = { 0 };
@@ -14,13 +15,13 @@ int cleanup_register(void (*fn)(void))
 
 	cleanup_count++;
 	g_cleanup_table[cleanup_count] = fn;   /* slot 1-based */
-	g_cleanup_table[0] = cleanup_count;    /* memoized: clean LIFO, no scan */
+	g_cleanup_table[0] = (void (*)(void))(intptr_t)cleanup_count;    /* memoized: clean LIFO, no scan */
 	return cleanup_count;
 }
 
 void run_cleanup_callbacks(void)
 {
-	int count = g_cleanup_table[0];   /* N (memoized) */
+	int count = (int)(intptr_t)g_cleanup_table[0];   /* N (memoized) */
 	int i;
 
 	/* [Faithful to the asm] If the header is -1 by any path (the ELF's scan mode),

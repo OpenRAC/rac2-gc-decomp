@@ -2,10 +2,7 @@
 #include "engine/motor_regs.h"
 #include "core/sce_compat.h"
 
-/* Number of display buffers the handshake initializes (2..7 = 6 buffers).
- * [MOD-PENDING] Hard-coded in the ELF. For mods → load from data/levels or
- * config. Meanwhile it is a macro so the change stays local. */
-#define DISPLAY_INIT_BUFFERS  8u
+int g_display_b_state = 0;   /* DAT_00141660 */
 
 void display_b_vu_config(void)
 {

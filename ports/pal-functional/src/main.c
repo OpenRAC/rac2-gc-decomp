@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     // 2. Create the native PC window
     SDL_Window* p_window = SDL_CreateWindow(
         "Ratchet & Clank 2: Going Commando - Native PC Port",
-        SDL_WINDOWPOS_CENTERED, SDL_WINDOW_POS_CENTERED,
+        SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
         1024, 768, window_flags
     );
 

@@ -1,6 +1,6 @@
 #include "core/gpu.h"
 #include <SDL.h>
-#include <SDL_opengl.h>   /* for classic GL; for GLES use <GLES3/gl3.h> */
+#include "core/render/gl/gl_loader.h"
 
 /*
  * ------------------------------------------------------------------

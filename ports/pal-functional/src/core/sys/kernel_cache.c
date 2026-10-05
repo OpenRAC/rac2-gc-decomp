@@ -2,7 +2,7 @@
  * kernel_cache.c – PC implementation of __cache / cache coherence
  *
  * PS2 original (MIPS R5900):
- *   FUN_0011b3d0  →  lee Status[16], lock, ProcessCache(a&0x..C0, b&0x..C0), unlock
+ *   FUN_0011b3d0  →  reads Status[16], lock, ProcessCache(a&0x..C0, b&0x..C0), unlock
  *
  * PC (x86-64):
  *   Coherence is guaranteed by the hardware. We only emit an
@@ -34,17 +34,17 @@ bool kernel_cache_sync(u32 addr, u32 size)
 	return true;
 }
 
-int kernel_system_sync_guard(void)
+bool kernel_system_sync_guard(void)
 {
 	/* PS2: EIC / kernel lock.
 	   PC: no-op. If a mutex is ever used for
 	   multi-threaded rendering, it goes here. */
-	return 0;
+	return false;
 }
 
-int kernel_system_sync_release(void)
+bool kernel_system_sync_release(void)
 {
 	/* PS2: EIC / kernel unlock.
 	   PC: no-op. */
-	return 0;
+	return false;
 }

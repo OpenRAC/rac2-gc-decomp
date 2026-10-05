@@ -1,4 +1,7 @@
 #include "graphics.h"
+#include "core/sce_compat.h"
+
+int Graphics_InitSifInterface(void);
 #include "system.h"
 #include "ps2_kernel.h"
 #include <string.h>
@@ -40,7 +43,7 @@ unsigned long long sceGsDefDispEnv(unsigned long long* out_env, short mode_flags
 
 	// 1. Run the synchronization guards cleaned up in the previous steps
 	Sys_CheckConsoleVersion();
-	sceFlushCache(0);
+	sceFlushCache(0, NULL, 0);
 
 	// 2. Intercept the dimensions originally requested by the Ratchet & Clank 2 engine
 	g_GraphicsCanvasData.width_native = (int)width;

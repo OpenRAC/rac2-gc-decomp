@@ -1,6 +1,9 @@
 #include "engine/render_init.h"
 #include "core/sce_compat.h"
 
+int g_render_sema_a = -1;   /* DAT_00134e38 */
+int g_render_sema_b = -1;   /* DAT_00134e3c */
+
 /* Parameter structure of sceSemaCreate (libkernel).
  * Fields per the PS2 SDK: initCount, maxCount, flags. */
 typedef struct {

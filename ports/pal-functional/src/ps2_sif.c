@@ -44,12 +44,13 @@ u64 sys_sif_submit_dma_packet(u32 command_type, u64 sync_flags, u32* p_packet_he
 	}
 
 	s32 calculated_offset = 0;
+	/* SIF command header (PS2SDK SifCmdHeader): [0] psize:8 | dsize:24, [1] dest, [2] cid, [3] opt */
 	if (transfer_len < 1) {
-		p_packet_header = 0;
+		p_packet_header[1] = 0;
 		*p_packet_header = (u32)(u8)(*p_packet_header);
 	}
 	else {
-		p_packet_header = dest_addr;
+		p_packet_header[1] = dest_addr;
 		calculated_offset = 1;
 		*p_packet_header = (u32)(u8)(*p_packet_header) | ((u32)transfer_len << 8);
 
@@ -61,7 +62,7 @@ u64 sys_sif_submit_dma_packet(u32 command_type, u64 sync_flags, u32* p_packet_he
 	calculated_offset = calculated_offset << 4;
 
 finalize_packet:
-	p_packet_header = command_type;
+	p_packet_header[2] = command_type;
 	*(u8*)p_packet_header = (u8)packet_size;
 
 	u64 transaction_id;
