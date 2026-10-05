@@ -4209,7 +4209,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 4971,
+  "revision": 4973,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -6496,6 +6496,29 @@
           "to": "stopped"
         }
       ]
+    },
+    "boot-fp-bit-verbatim-source-rac1-evidence-20261005": {
+      "address": 1192960,
+      "created": "2026-10-05T17:11:33.110639+00:00",
+      "hypothesis": "FUN_00123400 (144) and FUN_001234F0 (64) are fp-bit __unpack_f and fptodp from Sony's libgcc fp-bit.o, next to the integrated __make_dp FUN_00123268 (44). rac1-decomp matched all three on RAC1 SCES_509.16 (same sizes and order) by compiling verbatim GCC 2.95.3 fp-bit.c whole with Sony 2.9-ee-991111 through its driver: -DFLOAT -DFLOAT_BIT_ORDER_MISMATCH -DNO_DENORMALS (2000-03-16 trunk hunk backported) -DUS_SOFTWARE_GOFAST. Supplies the independent original source/compiler evidence named by the stopped root-boot-unpack-single144-* and root-boot-fptodp64-* tasks; not a RAC2 match.",
+      "id": "boot-fp-bit-verbatim-source-rac1-evidence-20261005",
+      "kind": "research",
+      "next_action": "Maintainer review of docs/RAC1-FP-BIT-EVIDENCE.md. If accepted, reopen the two stopped tasks for one trial: rac1-decomp fp-bit.c (sha256 3069e3a1...) preprocessed with the fp-bit configuration macros and EE target predefines into a standalone unit, compiled once with the qualified GNU profile, a fresh catalogue for both complete symbols and full gates. Preserve any refusal; no flag, alias or source-shape permutations.",
+      "pointers": [
+        "docs/RAC1-FP-BIT-EVIDENCE.md",
+        "https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/src/libgcc/README.md",
+        "https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/Makefile.sn#L128-L158"
+      ],
+      "priority": 80,
+      "program": "boot",
+      "reopen_condition": "A RAC2 trial of the verbatim source refused, or evidence that RAC2's runtime library is not fp-bit.",
+      "size": 208,
+      "state": "queued",
+      "symbols": [
+        "FUN_00123400",
+        "FUN_001234F0"
+      ],
+      "transitions": []
     },
     "boot-fun_00282a88": {
       "address": 2632328,
@@ -112926,6 +112949,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "a713f6d0835d4add3cbf5475c4dfc1ab917f956239a62037909370ee5cda3315"
+    "docs/CAMPAIGN-QUEUE.md": "582c3ac7b82c8539291772b3110986ddb9ed809962d4d09eaea6bf24f30023b4"
   }
 }
