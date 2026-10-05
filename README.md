@@ -134,6 +134,11 @@ and experiment authority. The [queue view](docs/CAMPAIGN-QUEUE.md) and
 from it. Prior refusals and reopening conditions remain recorded. Trial sources,
 objects, assembly, logs and immutable UUID evidence packages stay private.
 
+The [shared-family workflow](docs/NORMALIZED-FAMILY-WORKFLOW.md) discovers candidate
+copies and prepares reviewed canonical C controls with explicit per-level bindings.
+It retains constants and uses the existing unmasked exact checks; its discovery
+reports and private banks add no matching credit.
+
 </details>
 
 ## Requirements
@@ -216,8 +221,8 @@ Keep every source, catalog, tool and proof dependency coherent after an edit.
 ## Progress reporting and research
 
 CI exports **`SCUS_972.68_report`** in objdiff report v2 format from the boot and
-all 27 level integration proofs. This independently validates the **221,760-byte**
-C total, source/catalog hashes, object provenance and non-overlapping ranges.
+all 27 level integration proofs. This independently validates the current
+integrated C total, source/catalog hashes, object provenance and non-overlapping ranges.
 Generated section units are remaining work, not completed C translation units.
 CI also publishes the separate authored-source inventory.
 

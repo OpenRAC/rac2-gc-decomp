@@ -1429,6 +1429,34 @@ Qualify the complete standalone per-program unit, then integrate through fresh f
 
 Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
 
+## gs-buffer-setup-control-public-family-v2-20261005-g0
+
+State: `stopped`. Kind: `candidate`.
+
+Completed public-tool control: one unchanged compiled object reproduces all 26 G0 complete 136-byte placements; intentional wrong-helper child links and is rejected by two bytes. Retain aggregate mismatch/children and zero new credit. Do not integrate generic aliases.
+
+Reopen condition: Independent measured ABI/source/compiler evidence; no profile rescue or equivalent source permutations.
+
+- `docs/NORMALIZED-FAMILY-WORKFLOW.md`
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `config/family-candidates/gs-buffer-setup.json`
+- `private-work:public-family-tools-20261005/feature-receipt.json`
+- `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
+
+## gs-buffer-setup-control-public-family-v2-20261005-g8
+
+State: `stopped`. Kind: `candidate`.
+
+Completed public-tool control: qualified Barlow G8 reproduces all 136 bytes, with object hash identical to G0. Existing integrated family; zero new credit. No source, profile or alias integration change.
+
+Reopen condition: Independent measured ABI/source/compiler evidence; no profile rescue or equivalent source permutations.
+
+- `docs/NORMALIZED-FAMILY-WORKFLOW.md`
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `config/family-candidates/gs-buffer-setup.json`
+- `private-work:public-family-tools-20261005/feature-receipt.json`
+- `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
+
 ## gs-family-0_aranos_tutorial-136-v2
 
 State: `integrated`. Kind: `candidate`.
@@ -4170,6 +4198,45 @@ State: `stopped`. Kind: `candidate`.
 Park both immutable tri-state physical/logical-family variants includingrawduplicateTodano400900 andsame semanticother-program copies. No third command-cache/byte/flag/predicate/register/branch spelling cycle orbulk aliases. Continue genuinelydifferent ownedalgorithm.
 
 Reopen condition: Independent original commandrecord source/storage/qualifier or qualified access/lifetime mechanism evidence; no unsupported volatile, forced registers, padding, macro/expression permutations or flagchanges.
+
+## normalized-family-validation-20261005
+
+State: `done`. Kind: `research`.
+
+Bounded pilot complete: 27 exact GS placements, one same-shape wrong-helper refusal and a retained real packet-constant variant collision. Keep current progress and provisional unique metric unchanged; only a separately authorized new family may extend this experiment.
+
+Reopen condition: New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.
+
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `src/levels/shared/gs-buffer-setup.cfrag`
+- `private-work:normalized-family-validation-20261005/verified-control-receipt.json`
+- `private-work:normalized-family-validation-20261005/real-mask-review`
+
+## normalized-gs-binding-control-g0-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Control complete: all 26 G0 positive placements exactly match from one unchanged object; the intentional Aranos wrong-helper child links but is refused with two differing bytes at offset 0x34. Preserve aggregate mismatch and individual results. Already covered family; zero new credit and no integration.
+
+Reopen condition: New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.
+
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `src/levels/shared/gs-buffer-setup.cfrag`
+- `private-work:normalized-family-validation-20261005/verified-control-receipt.json`
+- `private-work:normalized-family-validation-20261005/real-mask-review`
+
+## normalized-gs-binding-control-g8-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Control complete: Barlow matches all 136 bytes under its qualified G8 profile; object hash equals the G0 control object. Existing integrated family; retain exact trial with zero new credit, no alias integration or source change.
+
+Reopen condition: New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.
+
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `src/levels/shared/gs-buffer-setup.cfrag`
+- `private-work:normalized-family-validation-20261005/verified-control-receipt.json`
+- `private-work:normalized-family-validation-20261005/real-mask-review`
 
 ## orbital-320388-family-20261005-10_hrugis_cloud
 
@@ -11956,6 +12023,20 @@ Use the 3359 rows with prototype offsets as naming anchors; verify each program,
 Reopen condition: A validated name transfer with independent semantic evidence
 
 - `private-work:croise-aug6-retail.tsv`
+
+## public-normalized-family-workflow-20261005
+
+State: `done`. Kind: `research`.
+
+Public conservative discovery, reviewed role-binding preparer, GS spec and workflow are implemented. Fresh CLI controls: 27 exact positives and expected two-byte wrong-binding refusal; real constant variants stay separate. 308 Windows tests pass with two symlink skips; all 24 discovery tests pass on Linux; fresh batch 8209ac0d24a5462c8933a65cf59006ad passes boot plus all 27 full-image gates. Publish the tested topic branch/draft PR, preserve current C coverage and wait for human review.
+
+Reopen condition: Concrete independently reviewed family/binding or instrument evidence; preserve prior counterexamples and no source cycling.
+
+- `docs/NORMALIZED-FAMILY-WORKFLOW.md`
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `config/family-candidates/gs-buffer-setup.json`
+- `private-work:public-family-tools-20261005/feature-receipt.json`
+- `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
 
 ## root-bit-runs248-v1-20261004
 
