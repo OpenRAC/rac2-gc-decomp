@@ -4308,7 +4308,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 5115,
+  "revision": 5126,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -25593,6 +25593,312 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "19316df19a1547b5bd3d1c2144ccaa92"
+        }
+      ]
+    },
+    "normalized-family-validation-20261005": {
+      "amendments": [
+        {
+          "at": "2026-10-05T22:48:45.769300+00:00",
+          "before": {
+            "next_action": "Review same-object positive/negative GS controls and bounded real-mask collisions; preserve receipts and report limits. Do not change progress or restart the general campaign.",
+            "pointers": [
+              "private-work:normalized-family-validation-20261005"
+            ],
+            "reopen_condition": "New independently measured family or binding evidence for a separately scoped follow-up."
+          },
+          "changes": {
+            "next_action": "Bounded pilot complete: 27 exact GS placements, one same-shape wrong-helper refusal and a retained real packet-constant variant collision. Keep current progress and provisional unique metric unchanged; only a separately authorized new family may extend this experiment.",
+            "pointers": [
+              "docs/NORMALIZED-FAMILY-VALIDATION.md",
+              "src/levels/shared/gs-buffer-setup.cfrag",
+              "private-work:normalized-family-validation-20261005/verified-control-receipt.json",
+              "private-work:normalized-family-validation-20261005/real-mask-review"
+            ],
+            "reopen_condition": "New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control."
+          },
+          "reason": "Fresh complete-symbol controls and independent receipts establish the bounded pilot outcome; no new C credit."
+        }
+      ],
+      "created": "2026-10-05T22:44:13.220089+00:00",
+      "hypothesis": "LP requested a bounded practical test of normalized copy discovery followed by exact per-placement C validation; initial heuristic 5.14 MB is not a certified denominator.",
+      "id": "normalized-family-validation-20261005",
+      "kind": "research",
+      "next_action": "Bounded pilot complete: 27 exact GS placements, one same-shape wrong-helper refusal and a retained real packet-constant variant collision. Keep current progress and provisional unique metric unchanged; only a separately authorized new family may extend this experiment.",
+      "pointers": [
+        "docs/NORMALIZED-FAMILY-VALIDATION.md",
+        "src/levels/shared/gs-buffer-setup.cfrag",
+        "private-work:normalized-family-validation-20261005/verified-control-receipt.json",
+        "private-work:normalized-family-validation-20261005/real-mask-review"
+      ],
+      "reopen_condition": "New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-05T22:48:46.159614+00:00",
+          "from": "queued",
+          "reason": "Requested bounded validation completed: 27 exact placements, expected unmasked rejection and retained real constant collision; no official metric change.",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
+    "normalized-gs-binding-control-g0-20261005": {
+      "amendments": [
+        {
+          "at": "2026-10-05T22:48:45.368931+00:00",
+          "before": {
+            "next_action": "Run one maintained campaign trial; retain every child result. Existing C controls and expected negative receive zero new integration credit.",
+            "pointers": [
+              "src/levels/shared/gs-buffer-setup.cfrag",
+              "private-work:normalized-family-validation-20261005/preparation.json"
+            ],
+            "reopen_condition": "Only changed instrument, measured binding or ABI evidence; no source cycling."
+          },
+          "changes": {
+            "next_action": "Control complete: all 26 G0 positive placements exactly match from one unchanged object; the intentional Aranos wrong-helper child links but is refused with two differing bytes at offset 0x34. Preserve aggregate mismatch and individual results. Already covered family; zero new credit and no integration.",
+            "pointers": [
+              "docs/NORMALIZED-FAMILY-VALIDATION.md",
+              "src/levels/shared/gs-buffer-setup.cfrag",
+              "private-work:normalized-family-validation-20261005/verified-control-receipt.json",
+              "private-work:normalized-family-validation-20261005/real-mask-review"
+            ],
+            "reopen_condition": "New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control."
+          },
+          "reason": "Fresh complete-symbol controls and independent receipts establish the bounded pilot outcome; no new C credit."
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-05T22:44:13.220089+00:00",
+      "hypothesis": "Explicitly requested control: one canonical integrated C family is compiled once per qualified profile, then the unchanged object is rebound to measured per-level helper roles. G0 includes one deliberate wrong-helper link which must fail the unmasked full-body check.",
+      "id": "normalized-gs-binding-control-g0-20261005",
+      "kind": "candidate",
+      "last_trial": "4606c478593a42b0861786621daa872c",
+      "next_action": "Control complete: all 26 G0 positive placements exactly match from one unchanged object; the intentional Aranos wrong-helper child links but is refused with two differing bytes at offset 0x34. Preserve aggregate mismatch and individual results. Already covered family; zero new credit and no integration.",
+      "pointers": [
+        "docs/NORMALIZED-FAMILY-VALIDATION.md",
+        "src/levels/shared/gs-buffer-setup.cfrag",
+        "private-work:normalized-family-validation-20261005/verified-control-receipt.json",
+        "private-work:normalized-family-validation-20261005/real-mask-review"
+      ],
+      "reopen_condition": "New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.",
+      "source": "runtime:bank/normalized-family-validation-20261005/gs_family_control.c",
+      "state": "stopped",
+      "symbols": [
+        "rac2_gs_buffer_setup_control"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/0_aranos_tutorial.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/10_hrugis_cloud.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/11_joba.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/12_todano.json",
+          "id": "12_todano",
+          "reference": "runtime:references/levels/12_todano/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/13_boldan.json",
+          "id": "13_boldan",
+          "reference": "runtime:references/levels/13_boldan/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/14_aranos_prison.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/15_gorn.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/16_snivelak.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/17_smolg.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/18_damosel.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/19_grelbin.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/1_oozla.json",
+          "id": "1_oozla",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/20_yeedil.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/22_dobbo_orbit.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/23_damosel_orbit.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:references/levels/23_damosel_orbit/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/24_ship_shack.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:references/levels/24_ship_shack/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/25_wupash_nebula.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/26_jamming_array.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/2_maktar_nebula.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/30_insomniac_museum.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/3_endako.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/5_feltzin_system.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/6_notak.json",
+          "id": "6_notak",
+          "reference": "runtime:references/levels/6_notak/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/7_siberius.json",
+          "id": "7_siberius",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/8_tabora.json",
+          "id": "8_tabora",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/9_dobbo.json",
+          "id": "9_dobbo",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/aranos-wrong-helper.json",
+          "id": "aranos-wrong-helper",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T22:44:48.931339+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "4606c478593a42b0861786621daa872c"
+        }
+      ]
+    },
+    "normalized-gs-binding-control-g8-20261005": {
+      "amendments": [
+        {
+          "at": "2026-10-05T22:48:45.568081+00:00",
+          "before": {
+            "next_action": "Run one maintained campaign trial; retain every child result. Existing C controls and expected negative receive zero new integration credit.",
+            "pointers": [
+              "src/levels/shared/gs-buffer-setup.cfrag",
+              "private-work:normalized-family-validation-20261005/preparation.json"
+            ],
+            "reopen_condition": "Only changed instrument, measured binding or ABI evidence; no source cycling."
+          },
+          "changes": {
+            "next_action": "Control complete: Barlow matches all 136 bytes under its qualified G8 profile; object hash equals the G0 control object. Existing integrated family; retain exact trial with zero new credit, no alias integration or source change.",
+            "pointers": [
+              "docs/NORMALIZED-FAMILY-VALIDATION.md",
+              "src/levels/shared/gs-buffer-setup.cfrag",
+              "private-work:normalized-family-validation-20261005/verified-control-receipt.json",
+              "private-work:normalized-family-validation-20261005/real-mask-review"
+            ],
+            "reopen_condition": "New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control."
+          },
+          "reason": "Fresh complete-symbol controls and independent receipts establish the bounded pilot outcome; no new C credit."
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-05T22:44:13.220089+00:00",
+      "hypothesis": "Explicitly requested control: one canonical integrated C family is compiled once per qualified profile, then the unchanged object is rebound to measured per-level helper roles. G0 includes one deliberate wrong-helper link which must fail the unmasked full-body check.",
+      "id": "normalized-gs-binding-control-g8-20261005",
+      "kind": "candidate",
+      "last_trial": "f0563448d9e74362bcea7a649bd1cfdd",
+      "next_action": "Control complete: Barlow matches all 136 bytes under its qualified G8 profile; object hash equals the G0 control object. Existing integrated family; retain exact trial with zero new credit, no alias integration or source change.",
+      "pointers": [
+        "docs/NORMALIZED-FAMILY-VALIDATION.md",
+        "src/levels/shared/gs-buffer-setup.cfrag",
+        "private-work:normalized-family-validation-20261005/verified-control-receipt.json",
+        "private-work:normalized-family-validation-20261005/real-mask-review"
+      ],
+      "reopen_condition": "New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.",
+      "source": "runtime:bank/normalized-family-validation-20261005/gs_family_control.c",
+      "state": "stopped",
+      "symbols": [
+        "rac2_gs_buffer_setup_control"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/normalized-family-validation-20261005/catalogs/4_barlow.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T22:45:04.058978+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "f0563448d9e74362bcea7a649bd1cfdd"
+        },
+        {
+          "at": "2026-10-05T22:48:45.967424+00:00",
+          "from": "exact_private",
+          "reason": "Successful known-family control is complete; its original spans are already integrated. Preserve exact trial but do not queue generic alias integration.",
+          "reopen_condition": "",
+          "to": "stopped"
         }
       ]
     },
@@ -101807,6 +102113,19 @@
       "state": "exact_private",
       "task": "orbital-grid52-family-934-20261005-7_siberius"
     },
+    "4606c478593a42b0861786621daa872c": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4606c478593a42b0861786621daa872c",
+      "finished": "2026-10-05T22:44:48.888695+00:00",
+      "id": "4606c478593a42b0861786621daa872c",
+      "manifest_sha256": "f57f9465f75b598fd0c83feac54e1dd8dd0c6362bf5e165163e9c461942689f0",
+      "measured_functions": 27,
+      "outcome_sha256": "61b27ddcba8e08b3afa073787d3d70bb7a515e6759b8d418c6b208a3bc462d6d",
+      "semantic_key": "e7f8c320a5a503ef2e3c195d692afd8c0db155946ea3b4a48be6ddf69a265021",
+      "started": "2026-10-05T22:44:47.965842+00:00",
+      "state": "mismatch",
+      "task": "normalized-gs-binding-control-g0-20261005"
+    },
     "46210371b36246c3bd9c546c4b697860": {
       "compile_attempted": true,
       "directory": "runtime:trials/46210371b36246c3bd9c546c4b697860",
@@ -113771,6 +114090,19 @@
       "state": "exact_private",
       "task": "orbital-grid52-family-934-20261005-10_hrugis_cloud"
     },
+    "f0563448d9e74362bcea7a649bd1cfdd": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/f0563448d9e74362bcea7a649bd1cfdd",
+      "finished": "2026-10-05T22:45:04.017015+00:00",
+      "id": "f0563448d9e74362bcea7a649bd1cfdd",
+      "manifest_sha256": "62a78ca916ddfab5315fd3d9c4f4d5f858bf320376d59cf1e3f026f092dd3d82",
+      "measured_functions": 1,
+      "outcome_sha256": "29885c67ef4226cc3fb75c3db09ede422605752b0ecc33b420fa3fdc23503642",
+      "semantic_key": "b1b66b4dac913db70821a85d5330371294db179d6675b03eedffd151fb2e290f",
+      "started": "2026-10-05T22:45:03.665162+00:00",
+      "state": "exact_private",
+      "task": "normalized-gs-binding-control-g8-20261005"
+    },
     "f085b8b9065147678f6a291e55b19e0a": {
       "compile_attempted": true,
       "directory": "runtime:trials/f085b8b9065147678f6a291e55b19e0a",
@@ -114942,6 +115274,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "760059627fab65230fbeb15ab03eab45a24b4829f898c61b21a412f724ccf322"
+    "docs/CAMPAIGN-QUEUE.md": "5fc72be2f73fea8c460dc6bbd3c7cd261197be90dce4278bd6fc024045674020"
   }
 }

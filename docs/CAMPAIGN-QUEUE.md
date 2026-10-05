@@ -4171,6 +4171,45 @@ Park both immutable tri-state physical/logical-family variants includingrawdupli
 
 Reopen condition: Independent original commandrecord source/storage/qualifier or qualified access/lifetime mechanism evidence; no unsupported volatile, forced registers, padding, macro/expression permutations or flagchanges.
 
+## normalized-family-validation-20261005
+
+State: `done`. Kind: `research`.
+
+Bounded pilot complete: 27 exact GS placements, one same-shape wrong-helper refusal and a retained real packet-constant variant collision. Keep current progress and provisional unique metric unchanged; only a separately authorized new family may extend this experiment.
+
+Reopen condition: New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.
+
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `src/levels/shared/gs-buffer-setup.cfrag`
+- `private-work:normalized-family-validation-20261005/verified-control-receipt.json`
+- `private-work:normalized-family-validation-20261005/real-mask-review`
+
+## normalized-gs-binding-control-g0-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Control complete: all 26 G0 positive placements exactly match from one unchanged object; the intentional Aranos wrong-helper child links but is refused with two differing bytes at offset 0x34. Preserve aggregate mismatch and individual results. Already covered family; zero new credit and no integration.
+
+Reopen condition: New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.
+
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `src/levels/shared/gs-buffer-setup.cfrag`
+- `private-work:normalized-family-validation-20261005/verified-control-receipt.json`
+- `private-work:normalized-family-validation-20261005/real-mask-review`
+
+## normalized-gs-binding-control-g8-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Control complete: Barlow matches all 136 bytes under its qualified G8 profile; object hash equals the G0 control object. Existing integrated family; retain exact trial with zero new credit, no alias integration or source change.
+
+Reopen condition: New independently measured family, binding or instrument evidence for a separately scoped follow-up; no repeat of this completed control.
+
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `src/levels/shared/gs-buffer-setup.cfrag`
+- `private-work:normalized-family-validation-20261005/verified-control-receipt.json`
+- `private-work:normalized-family-validation-20261005/real-mask-review`
+
 ## orbital-320388-family-20261005-10_hrugis_cloud
 
 State: `exact_private`. Kind: `candidate`.
