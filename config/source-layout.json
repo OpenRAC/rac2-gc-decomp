@@ -105,7 +105,7 @@
     "candidates/levels/2_maktar_nebula.c": "4096cc33123e66a9f1eb070cc5199c540ebd8cf797f3d04482237b53d3d3ddbb",
     "candidates/levels/30_insomniac_museum.c": "2744b953fa94f28a4929f51ad3ed8607b19dbee8e485ee1014ce8480ac32efd5",
     "candidates/levels/3_endako.c": "881e8621af6df3428262b1697733f36afbb4ede28e326caa19cc234fb2da2375",
-    "candidates/levels/4_barlow.c": "958aea5fc4db17ff407166df39f967f54e0ab66f3b2bbc4c55b1cd3280e0624a",
+    "candidates/levels/4_barlow.c": "d8ffc3675df99feb0fdaa0544d92808ce296411068ee4aed5bcef0077acb2c00",
     "candidates/levels/5_feltzin_system.c": "d609be13fa751ac06004eb0b5b7253dd72c6f1fdd86c11ed72b7abad329d3fc1",
     "candidates/levels/6_notak.c": "3bc59c6780606271a1a4c84f06ec1df5376a327fe2e8c815edadbde19761d55c",
     "candidates/levels/7_siberius.c": "de885ad5a6a6be0509f5ec83fe74291f8f89b09db27f93a2a886a9ef4fa4ebab",
@@ -133,7 +133,7 @@
     "config/level-native/2_maktar_nebula.json": "721345eeb503543ff3def02c75bb2a384cc7fdaa57d334fc6db55099d714e0b3",
     "config/level-native/30_insomniac_museum.json": "a8fa34c8d6b4d738d9468efb48ae234780c3f771647893979a451769e9fd7860",
     "config/level-native/3_endako.json": "7a87764bb6d5dd81c62c06c241a0ac435b651a882110f10687ad156c24ded627",
-    "config/level-native/4_barlow.json": "986eb4dfdad608b6d4e266747dd8c5bab6e5c3c597a5f479f1ac4a85ed6ec7a6",
+    "config/level-native/4_barlow.json": "e908d9677f51140f0a127ce0a5ac58b6b8033a2af628aed17a8bd3b56d08671e",
     "config/level-native/5_feltzin_system.json": "d873501b857f6ade41439d0b5f1c7c8eb87b8155703d4a52fd8985425e1882d4",
     "config/level-native/6_notak.json": "135fb5701afefb39293ffba64afc5ff21506318314caf48fff458bb4deb8415e",
     "config/level-native/7_siberius.json": "e09db3dd35339bf8590a1ef32d49147d1c4f7da6ccafb32eab2c2a47526305c5",
@@ -145,22 +145,22 @@
     "boot_authored_functions": 181,
     "boot_catalogued_machine_bytes": 9564,
     "identity_basis": "catalogued definitions compared as exact source bytes after recorded symbol-only substitutions; not a new machine proof",
-    "native_authored_variant_catalogued_bytes_upper_bound": 85612,
+    "native_authored_variant_catalogued_bytes_upper_bound": 85696,
     "native_base_family_placements": 215,
     "native_explicit_base_source_families": 8,
-    "native_replicated_catalogued_bytes": 94772,
-    "native_replicated_placements": 988,
-    "native_unique_authored_source_variants": 782,
-    "native_unique_family_or_singleton_work_items": 781,
-    "native_unique_representative_catalogued_bytes": 85588,
-    "native_unmerged_singletons": 773,
+    "native_replicated_catalogued_bytes": 94856,
+    "native_replicated_placements": 989,
+    "native_unique_authored_source_variants": 783,
+    "native_unique_family_or_singleton_work_items": 782,
+    "native_unique_representative_catalogued_bytes": 85672,
+    "native_unmerged_singletons": 774,
     "pilot_family_authored_source_variants": 2,
     "pilot_family_placements": 27,
     "pilot_family_replicated_catalogued_bytes": 648,
     "pilot_family_unique_catalogued_bytes": 24,
     "scope": "authored boot and native candidate catalogues only; excludes replicated boot/common overlay coverage",
     "shared_native_prelude_variants": 1,
-    "total_unique_authored_source_variants_in_scope": 963,
+    "total_unique_authored_source_variants_in_scope": 964,
     "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report."
   },
   "native_source_families": [
@@ -13177,6 +13177,22 @@
       "symbol": "LVL_4_BARLOW_FUN_00482A70"
     },
     {
+      "address": 4633832,
+      "body_sha256": "e40e5279d600f0ee856729a00635aae49946f3cf53c80108e2caae7c96624eba",
+      "catalogue": "config/level-native/4_barlow.json",
+      "catalogued_size": 84,
+      "explicit_symbol_substitutions": {
+        "LVL_4_BARLOW_D_001B1C88": "@@EXTERNAL_001B1C88@@",
+        "LVL_4_BARLOW_D_001B98E0": "@@EXTERNAL_001B98E0@@",
+        "LVL_4_BARLOW_FUN_0046B4E8": "@@FUNCTION@@"
+      },
+      "level": "4_barlow",
+      "normalized_body_sha256": "fd8a4914880af54716855981751c47043619da4d2223e851c6ce075b12e79e67",
+      "program": "levels/4_barlow",
+      "source": "candidates/levels/4_barlow.c",
+      "symbol": "LVL_4_BARLOW_FUN_0046B4E8"
+    },
+    {
       "address": 3078368,
       "body_sha256": "fa5353c5447ad5b74ba732b0e950bc7259e1359bed0612de0b742fdf82123eb3",
       "catalogue": "config/level-native/5_feltzin_system.json",
@@ -22930,10 +22946,22 @@
           },
           "sha256": "62229dd9eb389ceaeef8cc4a3eb9a9d316eed4826eaf3579eb3be81cd93104c6",
           "source_text_bytes": 463
+        },
+        {
+          "fragment": "src/levels/shared/barlow-callback-timer84-b6934f02802d.cfrag",
+          "replacements": {
+            "@@BIND_0@@": "LVL_4_BARLOW_D_001B98E0",
+            "@@BIND_1@@": "LVL_4_BARLOW_D_001B1C88",
+            "@@BIND_2@@": "LVL_4_BARLOW_FUN_0046B4E8",
+            "@@BIND_3@@": "LVL_4_BARLOW_D_001B98E0",
+            "@@BIND_4@@": "LVL_4_BARLOW_D_001B1C88"
+          },
+          "sha256": "b6934f02802d9f8f306c27f5f796f9658d5a8e791cda0db7cdc7bf21b3c0d582",
+          "source_text_bytes": 514
         }
       ],
-      "sha256": "958aea5fc4db17ff407166df39f967f54e0ab66f3b2bbc4c55b1cd3280e0624a",
-      "source_text_bytes": 20596
+      "sha256": "d8ffc3675df99feb0fdaa0544d92808ce296411068ee4aed5bcef0077acb2c00",
+      "source_text_bytes": 21177
     },
     "candidates/levels/5_feltzin_system.c": {
       "pieces": [

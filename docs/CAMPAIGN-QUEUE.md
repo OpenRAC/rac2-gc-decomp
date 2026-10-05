@@ -1593,11 +1593,11 @@ Reopen condition: New independently measured ABI, layout or source access-phase 
 
 ## hrugis-record-insert-20261004-v1
 
-State: `queued`. Kind: `candidate`.
+State: `stopped`. Kind: `candidate`.
 
 Qualify only the seed complete unit first. Measure other data-relocated placements only if the seed is exact; retain any refusal without bulk alias retries.
 
-Reopen condition: New independently measured alias/layout/ABI or source-phase evidence; no register forcing or equivalent expression cycling.
+Reopen condition: Independent original storage/layout/alias-access evidence or qualified source witness beyond the measured views.
 
 ## hrugis-record-insert-byte-storage-20261004-v2
 
@@ -9087,11 +9087,11 @@ Reopen condition: Independent original declaration/source/helper ABI/accessphase
 
 ## parallel-boot-analysis-feltzin-strip-packet-v1
 
-State: `queued`. Kind: `candidate`.
+State: `stopped`. Kind: `candidate`.
 
 One maintained whole-current-unit trial, inspect complete emitted size/byte outcome; seedexact prerequisite to families.
 
-Reopen condition: Independent original declaration/source/helper ABI/accessphase/qualified lowering witness; no literal/local/pointer/register/store-order/flag permutations.
+Reopen condition: Independent original declaration/source/helper ABI/access-phase or qualified lowering witness; no literal/local/pointer/register/store-order/flag permutations.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
@@ -12227,6 +12227,26 @@ Reopen condition: Independent originalsource/layout/ABI/compiler witness address
 - `private-work:parallel-20261004/root-gp/fptodp64-helper-live-00123400.json`
 - `private-work:parallel-20261004/root-gp/fptodp64-existing-receipt.txt`
 
+## root-compound-barlow-callback-timer84-4_barlow-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full unit measurement; preserve the result whether exact or refused. No literal/local/pointer/register/store-order/flag permutations.
+
+Reopen condition: Independent original declaration/source/ABI/access-phase or qualified lowering evidence; no equivalent expression cycling.
+
+- `private-work:parallel-20261004/root-gp/lot3-preflight.json`
+
+## root-compound-feltzin-strip-5_feltzin_system-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+One full compound unit measurement; preserve the result whether exact or refused. No literal/local/pointer/register/store-order/flag permutations.
+
+Reopen condition: Independent original declaration/source/helper ABI/access-phase or qualified lowering witness; no literal/local/pointer/register/store-order/flag permutations.
+
+- `private-work:parallel-20261004/root-gp/lot2-preflight.json`
+
 ## root-compound-grid-slot-angles-0_aranos_tutorial-20261005
 
 State: `integrated`. Kind: `candidate`.
@@ -12497,6 +12517,16 @@ Reopen condition: Independent original/context/type/ABI/compiler evidence accoun
 
 - `private-work:parallel-20261004/root-gp/compound11492-preflight.json`
 
+## root-compound-hrugis-insert-10_hrugis_cloud-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+One full compound unit measurement; preserve the result whether exact or refused. No literal/local/pointer/register/store-order/flag permutations.
+
+Reopen condition: Independent original storage/layout/alias-access evidence or qualified source witness beyond the measured views.
+
+- `private-work:parallel-20261004/root-gp/lot2-preflight.json`
+
 ## root-compound-rowgrid52-0_aranos_tutorial-20261005
 
 State: `integrated`. Kind: `candidate`.
@@ -12766,6 +12796,16 @@ One full compound unit measurement; preserve all results and refuse any whole di
 Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
 
 - `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-yeedil-event-counters348-20_yeedil-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+One full unit measurement; preserve the result whether exact or refused. No literal/local/pointer/register/store-order/flag permutations.
+
+Reopen condition: Independent original declaration, layout, access-phase or source-quality evidence beyond this measured view; do not cycle equivalent expressions.
+
+- `private-work:parallel-20261004/root-gp/lot3-preflight.json`
 
 ## root-core-wide-gp-witness-20261004
 
@@ -13530,6 +13570,16 @@ State: `integrated`. Kind: `candidate`.
 Require all complete combined symbols exact before frozen boot/all27image gates and public credit.
 
 Reopen condition: New measured type/ABI/source/compiler evidence, not prefix or source cycling.
+
+## root-probe-timer-g0-endako-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+One full unit measurement; preserve the result either way and do not cycle expressions, registers or flags.
+
+Reopen condition: A separately qualified small-data path for a G0 program, or independent original evidence that the eleven published G0 profiles must become G8; no flag matrix and no per-program flag flip without full gates.
+
+- `private-work:parallel-20261004/root-gp/timer84-family-addresses.json`
 
 ## root-readonly-controls-0_aranos_tutorial-20261004
 

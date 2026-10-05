@@ -639,3 +639,24 @@ void LVL_4_BARLOW_FUN_00482A70(f32 x, f32 y, f32 z, f32 w, JammingGridObject *ob
     object->groups[group].rows[row].z = z;
     object->groups[group].rows[row].w = w;
 }
+
+typedef struct {
+    u32 field00;
+    u32 field04;
+    f32 field08;
+    f32 field0C;
+} NativeCallbackTimer;
+extern NativeCallbackTimer LVL_4_BARLOW_D_001B98E0;
+extern f32 LVL_4_BARLOW_D_001B1C88 __attribute__((sda));
+void LVL_4_BARLOW_FUN_0046B4E8(void) {
+    NativeCallbackTimer *state = &LVL_4_BARLOW_D_001B98E0;
+    u32 mode = state->field04;
+    state->field08 = 10000.0f;
+    if (mode == 0) {
+        state->field0C -= LVL_4_BARLOW_D_001B1C88;
+        if (state->field0C < 0.0f) state->field0C = 0.0f;
+    } else {
+        state->field04 = 0;
+    }
+    state->field00 = 0;
+}

@@ -143,6 +143,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "2a6fd8841f5a4db381b5ecff8ccdd14d": {
+      "artifact": "prepared-run:builds/campaign-2a6fd8841f5a4db381b5ecff8ccdd14d/report.json",
+      "artifact_sha256": "d9db955bebf823a69acd7e77fad1eb1934567c00d781ea6f0a242dcaacbd6195",
+      "directory": "runtime:actions/2a6fd8841f5a4db381b5ecff8ccdd14d",
+      "finished": "2026-10-05T16:56:25.825757+00:00",
+      "id": "2a6fd8841f5a4db381b5ecff8ccdd14d",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "2bb0760a1b6c4c8baa45c749d00df18b": {
       "artifact": "runtime:actions/2bb0760a1b6c4c8baa45c749d00df18b/report.json",
       "artifact_sha256": "1c2dca661ad00c81281e3a66ec01415addc9bfc6f56445efa9605f5b69d3f179",
@@ -292,6 +303,17 @@
       "directory": "runtime:actions/563dab4bdce641f58f221e56eb1da682",
       "finished": "2026-10-05T04:02:28.662767+00:00",
       "id": "563dab4bdce641f58f221e56eb1da682",
+      "integration_credit": 0,
+      "kind": "report",
+      "returncode": 0,
+      "state": "passed"
+    },
+    "58d93b6fb511471fa0626582e0df586c": {
+      "artifact": "runtime:actions/58d93b6fb511471fa0626582e0df586c/report.json",
+      "artifact_sha256": "5368ace8af172aff75de04e5ee44c4b01d0af37fde78e88e289ad86ff6f06ec0",
+      "directory": "runtime:actions/58d93b6fb511471fa0626582e0df586c",
+      "finished": "2026-10-05T16:58:08.814332+00:00",
+      "id": "58d93b6fb511471fa0626582e0df586c",
       "integration_credit": 0,
       "kind": "report",
       "returncode": 0,
@@ -589,6 +611,17 @@
       "id": "c16120c9b369469496e1c49664bb2869",
       "integration_credit": 0,
       "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
+    "c26d7265c9774f229338092529ba073b": {
+      "artifact": "runtime:actions/c26d7265c9774f229338092529ba073b/report.json",
+      "artifact_sha256": "5368ace8af172aff75de04e5ee44c4b01d0af37fde78e88e289ad86ff6f06ec0",
+      "directory": "runtime:actions/c26d7265c9774f229338092529ba073b",
+      "finished": "2026-10-05T16:58:07.398229+00:00",
+      "id": "c26d7265c9774f229338092529ba073b",
+      "integration_credit": 0,
+      "kind": "report",
       "returncode": 0,
       "state": "passed"
     },
@@ -4176,7 +4209,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 4941,
+  "revision": 4971,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -11899,9 +11932,9 @@
       "kind": "candidate",
       "next_action": "Qualify only the seed complete unit first. Measure other data-relocated placements only if the seed is exact; retain any refusal without bulk alias retries.",
       "pointers": [],
-      "reopen_condition": "New independently measured alias/layout/ABI or source-phase evidence; no register forcing or equivalent expression cycling.",
+      "reopen_condition": "Independent original storage/layout/alias-access evidence or qualified source witness beyond the measured views.",
       "source": "runtime:bank/hrugis-record-insert-20261004-v1/10_hrugis_cloud.c",
-      "state": "queued",
+      "state": "stopped",
       "symbols": [
         "LVL_10_HRUGIS_CLOUD_FUN_002F16D0"
       ],
@@ -11912,7 +11945,15 @@
           "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
         }
       ],
-      "transitions": []
+      "transitions": [
+        {
+          "at": "2026-10-05T16:38:04.923415+00:00",
+          "from": "queued",
+          "reason": "Duplicate of the already-refused model: hrugis-record-insert-safe-field-names-20261004, trial d85c32814a284986ade6b19e1d708607, differs only by field naming (byte->field), which cannot affect codegen; the byte-storage v2 model was also refused (feb87529ad1d428d9e65ae7e68aa5063). Preparation also rejected because the .byte field token trips the maintained anti-assembly guard. Parked, no variant cycle.",
+          "reopen_condition": "Independent original storage/layout/alias-access evidence or qualified source witness beyond the measured views.",
+          "to": "stopped"
+        }
+      ]
     },
     "hrugis-record-insert-byte-storage-20261004-v2": {
       "budget": 1,
@@ -56032,10 +56073,10 @@
       ],
       "priority": 80,
       "program": "levels/5_feltzin_system",
-      "reopen_condition": "Independent original declaration/source/helper ABI/accessphase/qualified lowering witness; no literal/local/pointer/register/store-order/flag permutations.",
+      "reopen_condition": "Independent original declaration/source/helper ABI/access-phase or qualified lowering witness; no literal/local/pointer/register/store-order/flag permutations.",
       "size": 432,
       "source": "runtime:bank/parallel-boot_analysis-strip-packet-v1/5_feltzin_system.c",
-      "state": "queued",
+      "state": "stopped",
       "symbols": [
         "LVL_5_FELTZIN_SYSTEM_FUN_00308EB8"
       ],
@@ -56046,7 +56087,15 @@
           "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
         }
       ],
-      "transitions": []
+      "transitions": [
+        {
+          "at": "2026-10-05T16:38:04.683583+00:00",
+          "from": "queued",
+          "reason": "Algorithm already measured and refused through its catalogue-fixed twin parallel-boot-analysis-feltzin-strip-packet-catalog-fixed, trial 7dbb6b0ce307469e90fd87c1110dcdb4: 384 of 432 bytes emitted, complete-symbol size refusal, 28 CURRENT controls exact. This queued draft is the same algorithm; its own preparation was rejected for the inherited newdefinition extern collision. Parked, no variant cycle.",
+          "reopen_condition": "Independent original declaration/source/helper ABI/access-phase or qualified lowering witness; no literal/local/pointer/register/store-order/flag permutations.",
+          "to": "stopped"
+        }
+      ]
     },
     "parallel-boot-analysis-feltzin-texture-rectangle-v1": {
       "address": 3221144,
@@ -71749,6 +71798,40 @@
         }
       ]
     },
+    "private-row360-aranos-flag-sweep-0_aranos_tutorial-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T16:59:35.827944+00:00",
+      "hypothesis": "Single whole-unit trial for the 360-byte body shared byte-identically by the level overlays (reference sha256 1477a66fe3d689b13c3801efc5722ab63ca1d17bf1c9b43a0296d0f49d57ef5c at 0_aranos_tutorial 0x2D3068..0x2D31CF). It clears bit 0 of the 16-bit field at +0x34 of the resident object held at block+0xc18, sweeps seven 0x50-stride slot rows clearing the same bit on the three conditional pointers at block+0x1220/+0x1224/+0x1228, then applies the measured conditional clear and set 0x41 passes over the remaining resident pointer and flag words. Modelled once as ordinary C over the LVL_0_ARANOS_TUTORIAL_D_00189E20 resident block external; no flags, profile, register, literal, cast or source-order permutation.",
+      "id": "private-row360-aranos-flag-sweep-0_aranos_tutorial-20261005",
+      "kind": "candidate",
+      "last_trial": "1ffc846168d74cad8fd87524a52708be",
+      "next_action": "One full unit measurement of the single first natural C model; preserve the result whether exact or refused. No equivalent expression cycling on mismatch.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/family-scan.json"
+      ],
+      "reopen_condition": "Independent original declaration, source, ABI or access-phase evidence; no equivalent expression cycling.",
+      "source": "runtime:bank/private-row360-aranos-20261005/0_aranos_tutorial/0_aranos_tutorial.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_0_ARANOS_TUTORIAL_FUN_002D3068"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/private-row360-aranos-20261005/0_aranos_tutorial/catalog.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T16:59:47.523701+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "1ffc846168d74cad8fd87524a52708be"
+        }
+      ]
+    },
     "prototype-byte-correspondence-naming": {
       "anchored_rows": 3359,
       "bank_rows": 33252,
@@ -74773,6 +74856,111 @@
         }
       ]
     },
+    "root-compound-barlow-callback-timer84-4_barlow-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T16:43:56.898068+00:00",
+      "hypothesis": "Whole-current-unit trial for native-review-barlow-callback-timer-qualified-20261005: registered gameplay callback that sets a 10000 tick target, decrements the remaining time by the resident delta with a zero floor, or clears the active mode, then clears the first field. Already measured exact private in 38d5f02a098344b8bbfd99485eec72cb on its bd50a5fc9034 baseline; this unit only rebases that unchanged algorithm onto the current source and re-measures the whole unit. Every current control and the published row52/grid52 placements are preserved; no flags, profile, register or source-order permutation.",
+      "id": "root-compound-barlow-callback-timer84-4_barlow-20261005",
+      "kind": "candidate",
+      "last_trial": "417ef5d1eb0f47ec83b958e63b08411a",
+      "next_action": "One full unit measurement; preserve the result whether exact or refused. No literal/local/pointer/register/store-order/flag permutations.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/lot3-preflight.json"
+      ],
+      "reopen_condition": "Independent original declaration/source/ABI/access-phase or qualified lowering evidence; no equivalent expression cycling.",
+      "source": "runtime:bank/root-lot-timer-yeedil-20261005/4_barlow/4_barlow.c",
+      "state": "integrated",
+      "symbols": [
+        "LVL_4_BARLOW_FUN_0046B4E8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-lot-timer-yeedil-20261005/4_barlow/catalog.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T16:44:00.590179+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "417ef5d1eb0f47ec83b958e63b08411a"
+        },
+        {
+          "at": "2026-10-05T16:58:09.503343+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "7664c0b5dd178fb37b2b4a079bb21078dab655a9418c140e26cea728a226ad7a",
+            "progress/integration.json": "1063c7eb7632a6d3ea3e520a38d3bbc65c4868c3fbb0c9cc260440492896089e",
+            "progress/levels/0_aranos_tutorial.json": "9b9f642815d810ef3f40ecb45bbd55840a3dd31df511304102108d688ef1d732",
+            "progress/levels/10_hrugis_cloud.json": "b5f8a6a82e62f0add8e9d34e2d78dca0045f6129d24d5e21e6054ee26826f0fb",
+            "progress/levels/11_joba.json": "f5692bfd5a8fef97fe7ba1eea4cb5c8e1e6cff362c002c02aaff3e8d068b2620",
+            "progress/levels/12_todano.json": "28e89154df3fafe89ed247f2d17d86922abfa99b90b8312bdeaf5bd5e36b6b45",
+            "progress/levels/13_boldan.json": "7f98cd4bf6f5ce2a6d73ed8d630b123ec15e35c18d99b183a40e657392bd2e5c",
+            "progress/levels/14_aranos_prison.json": "96e0766b1c4fbd1d0b1260b5b531e33ca44fa27bbde81a5450d4de04c5fed15f",
+            "progress/levels/15_gorn.json": "105b600cd631462cb713fac5f44d28ab70d29b4456fa487e0bac628e1b650871",
+            "progress/levels/16_snivelak.json": "a2f6b91ab99de01186698d31d500a4d53008e415bf8e4e5ef522c7aed6fd8574",
+            "progress/levels/17_smolg.json": "18f01f6fa44de0ea8500a0dda13aefb7f67f33644048dd5d3e046b368275c846",
+            "progress/levels/18_damosel.json": "ed87bd8f726125e44abcc6648d4bb2e77f9398f1ed2e509df4b7ca0db3fccea7",
+            "progress/levels/19_grelbin.json": "ecce3a2d1007d015f23a261f85d718b8ec12e3d2eddd58cd1ced835b2679f034",
+            "progress/levels/1_oozla.json": "804a5d415de24cbffdb2a641fcb97341584863d6cff93153a32dc3042f969e84",
+            "progress/levels/20_yeedil.json": "f2946983d0af52e2f525308101038e0937aecdd680c94aa3e4e89a330de98ac2",
+            "progress/levels/22_dobbo_orbit.json": "8c4dc198be7c78eced0c4aa5eaf24b1c24a85082631a85cae1ee55dcb2c72913",
+            "progress/levels/23_damosel_orbit.json": "dad9b5c8a7800aaf7deb0271a3659ca1be8af70b5ac9b2d52d9006a2973e40f7",
+            "progress/levels/24_ship_shack.json": "173adfc7d95458ed67814c942ce5b2f75d8dc34b5aba9b0ebd52799ac1614f9d",
+            "progress/levels/25_wupash_nebula.json": "21727959e947a8d005fbce9fc73623a9b291866fedb546d629c3f29de7ff4e1c",
+            "progress/levels/26_jamming_array.json": "4a9f641abd4933b2e7e3f34f40f40d7f4fa120d0c5e23f97fc9d153ba1022b83",
+            "progress/levels/2_maktar_nebula.json": "91baf1a6fb761bd557f41b7306923c8e7c4004336cc4f96d7f4d61a2b546dbe6",
+            "progress/levels/30_insomniac_museum.json": "49af0c03ecaf6782bb6770eacfae08afc4757dd176f92b73fbeffd0cafe32bc3",
+            "progress/levels/3_endako.json": "692a28915e93a1d7d14ef91ebef53c03e53db51cb91370881472883e021832f2",
+            "progress/levels/4_barlow.json": "7e258d98f3768bfd29c96362260c3cbec44ce7e05aa1b7e4e42baf1d7fb16c53",
+            "progress/levels/5_feltzin_system.json": "c792c01669fabcee44dd1ca17f691bbe0d2d7f095209db8a86758aef6530cae9",
+            "progress/levels/6_notak.json": "81cfa58601f8e53c03c53b3d67717531a6c3171484d512fb607bc743444898da",
+            "progress/levels/7_siberius.json": "d217af0a642d1aaf03479a85dbcf2bc0d72fe954f80460ead766863a7baff1ee",
+            "progress/levels/8_tabora.json": "787267d2fbc74dd165f40732baf97e3eae3afee47747b141647000b4b4fd1619",
+            "progress/levels/9_dobbo.json": "7089b2e791d6091ec91e2c669bd80a97b18e890d555c956b89956bdf83bd012e",
+            "progress/report.json": "f8ea0fed9fe580ec547dc4d093d82a86cc4bfbb4e3bc244cbc080c1cd8759cae"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "root-compound-feltzin-strip-5_feltzin_system-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T16:36:05.543826+00:00",
+      "hypothesis": "First maintained whole-current-unit trial of the queued parallel-boot-analysis-feltzin-strip-packet-v1 candidate as part of the current compound source context: emit paired strip packet with signed width division and height-scaled positions. Every CURRENT whole-unit control and the previously published row52/grid52 placements are preserved; the addition is the recorded draft extended on its pinned historical baseline with no source/flag permutation.",
+      "id": "root-compound-feltzin-strip-5_feltzin_system-20261005",
+      "kind": "candidate",
+      "next_action": "One full compound unit measurement; preserve the result whether exact or refused. No literal/local/pointer/register/store-order/flag permutations.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/lot2-preflight.json"
+      ],
+      "reopen_condition": "Independent original declaration/source/helper ABI/access-phase or qualified lowering witness; no literal/local/pointer/register/store-order/flag permutations.",
+      "source": "runtime:bank/root-lot-strip-insert-20261005/5_feltzin_system/5_feltzin_system.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_5_FELTZIN_SYSTEM_FUN_00308EB8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-lot-strip-insert-20261005/5_feltzin_system/catalog.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T16:38:04.184671+00:00",
+          "from": "queued",
+          "reason": "Preparation rejected, compile not attempted: the authored catalogue still carried the inherited LVL_5_FELTZIN_SYSTEM_FUN_00308EB8 external now defined by the new 432-byte body. The identical algorithm was already measured and refused under its catalogue-fixed twin parallel-boot-analysis-feltzin-strip-packet-catalog-fixed, trial 7dbb6b0ce307469e90fd87c1110dcdb4 (384 of 432 bytes emitted, complete-symbol size refusal, 28 controls exact). No new independent witness; do not replay.",
+          "reopen_condition": "Independent original declaration/source/helper ABI/access-phase or qualified lowering witness; no literal/local/pointer/register/store-order/flag permutations.",
+          "to": "stopped"
+        }
+      ]
+    },
     "root-compound-grid-slot-angles-0_aranos_tutorial-20261005": {
       "budget": 1,
       "created": "2026-10-05T03:45:50.638535+00:00",
@@ -76747,6 +76935,39 @@
         }
       ]
     },
+    "root-compound-hrugis-insert-10_hrugis_cloud-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T16:36:06.153924+00:00",
+      "hypothesis": "First maintained whole-current-unit trial of the queued hrugis-record-insert-20261004-v1 candidate as part of the current compound source context: insert one record into an eight-slot table with complete preflight checks. Every CURRENT whole-unit control and the previously published row52/grid52 placements are preserved; the addition is the recorded draft extended on its pinned historical baseline with no source/flag permutation.",
+      "id": "root-compound-hrugis-insert-10_hrugis_cloud-20261005",
+      "kind": "candidate",
+      "next_action": "One full compound unit measurement; preserve the result whether exact or refused. No literal/local/pointer/register/store-order/flag permutations.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/lot2-preflight.json"
+      ],
+      "reopen_condition": "Independent original storage/layout/alias-access evidence or qualified source witness beyond the measured views.",
+      "source": "runtime:bank/root-lot-strip-insert-20261005/10_hrugis_cloud/10_hrugis_cloud.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_002F16D0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-lot-strip-insert-20261005/10_hrugis_cloud/catalog.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T16:38:04.430075+00:00",
+          "from": "queued",
+          "reason": "Preparation rejected, compile not attempted: the draft field names byte0..byteF trip the maintained anti-assembly guard (the .byte token). Its source is identical to the already-refused hrugis-record-insert-safe-field-names-20261004 draft, trial d85c32814a284986ade6b19e1d708607, which differs only by field naming and cannot change codegen; the byte-storage v2 model was also refused (trial feb87529ad1d428d9e65ae7e68aa5063). No new independent witness; do not replay.",
+          "reopen_condition": "Independent original storage/layout/alias-access evidence or qualified source witness beyond the measured views.",
+          "to": "stopped"
+        }
+      ]
+    },
     "root-compound-rowgrid52-0_aranos_tutorial-20261005": {
       "budget": 1,
       "created": "2026-10-05T16:22:16.397364+00:00",
@@ -78715,6 +78936,47 @@
           },
           "reason": "Current published source/object/full-image proofs validated",
           "to": "integrated"
+        }
+      ]
+    },
+    "root-compound-yeedil-event-counters348-20_yeedil-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T16:44:00.899283+00:00",
+      "hypothesis": "Whole-current-unit trial for orbital-yeedil-event-counters-20261004-v1: event and statistics counter update with scene-specific elapsed threshold, per-mode increments and a pending-flag clear through an original void helper. First maintained measurement of the preserved uncompiled draft; the body boundary, live pin and caller list were verified before authoring. Every current control and the published row52/grid52 placements are preserved; no flags, profile, register or source-order permutation.",
+      "id": "root-compound-yeedil-event-counters348-20_yeedil-20261005",
+      "kind": "candidate",
+      "last_trial": "04eb4f7e971f451ba97632df050ae285",
+      "next_action": "One full unit measurement; preserve the result whether exact or refused. No literal/local/pointer/register/store-order/flag permutations.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/lot3-preflight.json"
+      ],
+      "reopen_condition": "Independent original declaration, layout, access-phase or source-quality evidence beyond this measured view; do not cycle equivalent expressions.",
+      "source": "runtime:bank/root-lot-timer-yeedil-20261005/20_yeedil/20_yeedil.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_20_YEEDIL_FUN_002C61E0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-lot-timer-yeedil-20261005/20_yeedil/catalog.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T16:44:01.921270+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "04eb4f7e971f451ba97632df050ae285"
+        },
+        {
+          "at": "2026-10-05T16:46:05.919033+00:00",
+          "from": "stopped",
+          "reason": "Measured mismatch: the rebased 348-byte event/statistics counter draft was compiled for the first time and refused with a complete symbol size mismatch; all 37 other functions of the current Yeedil unit stayed exact. The body was authored as direct ordinary C from the measured shape and had never been compiled; no register, flag or expression permutation is attempted now. Preserve bank root-lot-timer-yeedil-20261005/trial 04eb4f7e971f451ba97632df050ae285 and the source draft.",
+          "reopen_condition": "Independent original declaration, layout, access-phase or source-quality evidence beyond this measured view; do not cycle equivalent expressions.",
+          "to": "stopped"
         }
       ]
     },
@@ -85316,6 +85578,47 @@
           },
           "reason": "Current published source/object/full-image proofs validated",
           "to": "integrated"
+        }
+      ]
+    },
+    "root-probe-timer-g0-endako-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T16:45:32.463822+00:00",
+      "hypothesis": "Measured instrument probe: the same timer callback that is exact under the qualified Barlow G8 small-data profile is present byte-identically in 12 native programs, 11 of them on the default G0 profile. This unit tests whether the reconstructed backend emits the measured GP-relative resident-float load at G0 when the catalogue carries the boot GP 0x1AEFF0, with the object marked as an explicit small-data extern. No flag, profile or source-order variant: exactly one measurement.",
+      "id": "root-probe-timer-g0-endako-20261005",
+      "kind": "candidate",
+      "last_trial": "b07a898507014e3298530a6a67186504",
+      "next_action": "One full unit measurement; preserve the result either way and do not cycle expressions, registers or flags.",
+      "pointers": [
+        "private-work:parallel-20261004/root-gp/timer84-family-addresses.json"
+      ],
+      "reopen_condition": "A separately qualified small-data path for a G0 program, or independent original evidence that the eleven published G0 profiles must become G8; no flag matrix and no per-program flag flip without full gates.",
+      "source": "runtime:bank/root-probe-timer-g0-endako-20261005/3_endako/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_0043ACD8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/root-probe-timer-g0-endako-20261005/3_endako/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T16:45:35.205978+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "b07a898507014e3298530a6a67186504"
+        },
+        {
+          "at": "2026-10-05T16:46:06.218963+00:00",
+          "from": "stopped",
+          "reason": "Measured instrument result: the timer callback that is exact under the qualified Barlow G8 small-data profile compiles to 88 bytes instead of the 84-byte reference on the default G0 profile even when the catalogue carries the boot GP 0x1AEFF0 and the resident float is an explicit small-data extern, because the reconstructed backend emits an absolute address pair at -G0. All 37 other Endako functions stayed exact. The 11 G0 placements of the timer84 family are therefore blocked by the instrument, not by the source; do not retry them or flip per-program flags without a separately qualified small-data path.",
+          "reopen_condition": "A separately qualified small-data path for a G0 program, or independent original evidence that the eleven published G0 profiles must become G8; no flag matrix and no per-program flag flip without full gates.",
+          "to": "stopped"
         }
       ]
     },
@@ -95168,6 +95471,19 @@
       "state": "exact_private",
       "task": "root-index-lf-13_boldan-20261004"
     },
+    "04eb4f7e971f451ba97632df050ae285": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/04eb4f7e971f451ba97632df050ae285",
+      "finished": "2026-10-05T16:44:01.879763+00:00",
+      "id": "04eb4f7e971f451ba97632df050ae285",
+      "manifest_sha256": "84a61d042132ed320444b30d9fa0e19ba00d4434fe1479225dbf5f8801136900",
+      "measured_functions": 38,
+      "outcome_sha256": "2ec3ba68caa2046e9738696ae91243d4b12d03763a8b83772c4b97e17dd22e55",
+      "semantic_key": "b663f717bd99775e1524d625bb13ca307b51c202f2211e6369e477978d193962",
+      "started": "2026-10-05T16:44:01.358628+00:00",
+      "state": "mismatch",
+      "task": "root-compound-yeedil-event-counters348-20_yeedil-20261005"
+    },
     "0526cfae4ff94c4fa2b350fbeb56f77a": {
       "compile_attempted": true,
       "directory": "runtime:trials/0526cfae4ff94c4fa2b350fbeb56f77a",
@@ -96860,6 +97176,19 @@
       "started": "2026-10-04T07:48:35.306437+00:00",
       "state": "exact_private",
       "task": "scalar-cubic-12_todano-20261004"
+    },
+    "1ffc846168d74cad8fd87524a52708be": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/1ffc846168d74cad8fd87524a52708be",
+      "finished": "2026-10-05T16:59:47.479701+00:00",
+      "id": "1ffc846168d74cad8fd87524a52708be",
+      "manifest_sha256": "f5a5dadfe56a4f05c2567935f322795c1ffa488bcd999039cfa51c30992cbf97",
+      "measured_functions": 38,
+      "outcome_sha256": "ac4d2fe6f5be3e518b06e0ae3e3d4bc9bd4f5324b559287c5342df30d94b37e1",
+      "semantic_key": "580141cabd134c6b0734f08bf8ce31835728652c8ca8dcee3ca5891028b5cc55",
+      "started": "2026-10-05T16:59:47.001022+00:00",
+      "state": "mismatch",
+      "task": "private-row360-aranos-flag-sweep-0_aranos_tutorial-20261005"
     },
     "20460361e6be49f9b9cfd9bb1313db79": {
       "compile_attempted": true,
@@ -99488,6 +99817,19 @@
       "state": "exact_private",
       "task": "root-readonly-controls-10_hrugis_cloud-20261004"
     },
+    "417ef5d1eb0f47ec83b958e63b08411a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/417ef5d1eb0f47ec83b958e63b08411a",
+      "finished": "2026-10-05T16:44:00.543658+00:00",
+      "id": "417ef5d1eb0f47ec83b958e63b08411a",
+      "manifest_sha256": "fb67b3a922976397e4264bf94dec820ba8914b2f9921dce12efd90b6d25db7c0",
+      "measured_functions": 36,
+      "outcome_sha256": "956b4e3599b3d19aa194844e6d21410fd0053695ae049f17ea386f59fd6f4fb0",
+      "semantic_key": "dfafd3d54a499d7e3e2723af3bd3f84ff9bfe0314b657c14eece389ed3b0764b",
+      "started": "2026-10-05T16:44:00.052643+00:00",
+      "state": "exact_private",
+      "task": "root-compound-barlow-callback-timer84-4_barlow-20261005"
+    },
     "418238348872464d98606cb1d48c8cee": {
       "compile_attempted": true,
       "directory": "runtime:trials/418238348872464d98606cb1d48c8cee",
@@ -99851,6 +100193,26 @@
       "started": "2026-10-04T15:44:41.590341+00:00",
       "state": "exact_private",
       "task": "root-resume-three-combined-16_snivelak-20261004"
+    },
+    "468a909f0aed4c79bf8e34ca81a52fae": {
+      "children": [
+        {
+          "id": "10_hrugis_cloud",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/468a909f0aed4c79bf8e34ca81a52fae",
+      "error": "Candidate embeds assembly or retail bytes",
+      "finished": "2026-10-05T16:36:06.496949+00:00",
+      "id": "468a909f0aed4c79bf8e34ca81a52fae",
+      "integration_credit": 0,
+      "manifest_sha256": "7c71d90208a46e7880273c3f5a1f6c1c0466a687e18019e022871204ef7cb775",
+      "measured_functions": 0,
+      "outcome_sha256": "7d27b2fe1d8bdae79c29a8326b365bd9f65c61eb5c7fd898a924ba2cf2043cb9",
+      "semantic_key": "1acb2eec4b8d7311fa20c3307e4f6ae9b711e9922a35ce66855aa6ca3a72b788",
+      "state": "preparation_rejected",
+      "task": "root-compound-hrugis-insert-10_hrugis_cloud-20261005"
     },
     "46a47abe74e04e92a9f87a2da196fb54": {
       "compile_attempted": true,
@@ -101595,6 +101957,26 @@
       "started": "2026-10-04T23:49:49.581019+00:00",
       "state": "mismatch",
       "task": "parallel-boot-analysis-dobbo-select352-v1"
+    },
+    "610aeaa318694889b63dd93113eed2bc": {
+      "children": [
+        {
+          "id": "5_feltzin_system",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/610aeaa318694889b63dd93113eed2bc",
+      "error": "Invalid external identity or defined/external symbol collision",
+      "finished": "2026-10-05T16:36:05.848922+00:00",
+      "id": "610aeaa318694889b63dd93113eed2bc",
+      "integration_credit": 0,
+      "manifest_sha256": "e11ecde7aae0c327aaef71f0998cfbf42df56416e4df8708c246a39214cd599c",
+      "measured_functions": 0,
+      "outcome_sha256": "83276cc6e50050fb1ea17c4d7517bba3cc51d21b61040d65b74458398eaf6658",
+      "semantic_key": "61d590420e36f73f76b1241371aa61a494f2312c8f7a8f75268d4f050d0e4ec9",
+      "state": "preparation_rejected",
+      "task": "root-compound-feltzin-strip-5_feltzin_system-20261005"
     },
     "619177614a1640c1bd1507ceb61f174c": {
       "compile_attempted": true,
@@ -106825,6 +107207,19 @@
       "started": "2026-10-04T17:48:29.031218+00:00",
       "state": "exact_private",
       "task": "orbital-flag-clear-family-20261004-10_hrugis_cloud"
+    },
+    "b07a898507014e3298530a6a67186504": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/b07a898507014e3298530a6a67186504",
+      "finished": "2026-10-05T16:45:35.161265+00:00",
+      "id": "b07a898507014e3298530a6a67186504",
+      "manifest_sha256": "3bbfd4e26a3094001edce2fce1ef418f8a21e477138ab70fd9d9ef94b8967ca0",
+      "measured_functions": 36,
+      "outcome_sha256": "f244a818c7962674d88e9fceabefeef4cfd40c73228c49cee6238cd43d8149c2",
+      "semantic_key": "0eedc7fc41447ed4ab62eb97f5381c217b331537bd38c8f0c73f46aca44c8713",
+      "started": "2026-10-05T16:45:34.681094+00:00",
+      "state": "mismatch",
+      "task": "root-probe-timer-g0-endako-20261005"
     },
     "b0bdba4f902343378def9073c21d606c": {
       "compile_attempted": true,
@@ -112531,6 +112926,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "78454d79410cebb16559de2f155b5bd02f56dc847a1103d3d953dd85216047b9"
+    "docs/CAMPAIGN-QUEUE.md": "a713f6d0835d4add3cbf5475c4dfc1ab917f956239a62037909370ee5cda3315"
   }
 }
