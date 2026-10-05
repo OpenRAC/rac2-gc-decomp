@@ -500,3 +500,97 @@ int LVL_9_DOBBO_FUN_002B6300(f32 value)
     }
     return 0;
 }
+
+/* Update the observed two-axis selection fields and their combined index. */
+typedef struct {
+    unsigned char gap0[0x43c];
+    int column, row, index, mode;
+} DobboGridState312;
+extern int LVL_9_DOBBO_FUN_0035C990(int, unsigned int, void *);
+void LVL_9_DOBBO_FUN_00448778(DobboGridState312 *state, unsigned int buttons)
+{
+    if (buttons & 0x1000) {
+        LVL_9_DOBBO_FUN_0035C990(3, 0, 0);
+        --state->row;
+        if (state->row < 0) {
+            if (state->column == 0) {
+                state->mode = 2;
+                state->row = 1;
+                state->column = 3;
+            } else if (state->column == 1) {
+                state->row = state->column;
+            }
+        }
+    } else if (buttons & 0x4000) {
+        int row;
+        LVL_9_DOBBO_FUN_0035C990(3, 0, 0);
+        row = state->row + 1;
+        state->row = row > 1 ? 0 : row;
+    } else if (buttons & 0x8000) {
+        LVL_9_DOBBO_FUN_0035C990(3, 0, 0);
+        --state->column;
+        if (state->column < 0) {
+            state->column = 3;
+            state->row = 1;
+            state->mode = 2;
+        }
+    } else if (buttons & 0x2000) {
+        LVL_9_DOBBO_FUN_0035C990(3, 0, 0);
+        ++state->column;
+        if (state->column >= 2)
+            state->column = 0;
+    }
+    state->index = state->column + state->row * 2;
+}
+
+extern void *LVL_9_DOBBO_D_001B27C0[16];
+extern u32 LVL_9_DOBBO_D_001B2800[16];
+
+int LVL_9_DOBBO_FUN_0030D698(void *object)
+{
+    int index;
+    for (index = 0; index < 16; ++index) {
+        if (LVL_9_DOBBO_D_001B27C0[index] == 0 ||
+            LVL_9_DOBBO_D_001B27C0[index] == object) {
+            LVL_9_DOBBO_D_001B27C0[index] = object;
+            LVL_9_DOBBO_D_001B2800[index] = 0;
+            return index;
+        }
+    }
+    return -1;
+}
+
+typedef struct {
+    u8 field00[0x1f0];
+    f32 field1F0[4];
+    u8 field200[0xe0];
+    f32 field2E0;
+    u8 field2E4[4];
+    f32 field2E8;
+} NativeAngleState __attribute__((aligned(16)));
+typedef struct {
+    u8 field00[0x10];
+    f32 field10[4];
+    u8 field20[0x48];
+    NativeAngleState *field68;
+} NativeAngleOwner __attribute__((aligned(16)));
+extern void LVL_9_DOBBO_FUN_002EA4A0(f32 *output, const f32 *left, const f32 *right);
+extern void LVL_9_DOBBO_FUN_00321470(NativeAngleOwner *owner, f32 *output, const f32 *input, s32 mode);
+extern f32 LVL_9_DOBBO_FUN_002EAB28(f32 x, f32 y);
+extern f32 LVL_9_DOBBO_FUN_002EA5E8(const f32 *vector);
+void LVL_9_DOBBO_FUN_004051F8(NativeAngleOwner *owner) {
+    f32 direction[4] __attribute__((aligned(16)));
+    NativeAngleState *state = owner->field68;
+    f32 angle, xy_length;
+    LVL_9_DOBBO_FUN_002EA4A0(direction, state->field1F0, owner->field10);
+    LVL_9_DOBBO_FUN_00321470(owner, direction, direction, 0);
+    angle = LVL_9_DOBBO_FUN_002EAB28(direction[0], direction[1]);
+    state->field2E0 = angle;
+    if (0.78539824f < angle) state->field2E0 = 0.78539824f;
+    else if (angle < -0.78539824f) state->field2E0 = -0.78539824f;
+    xy_length = LVL_9_DOBBO_FUN_002EA5E8(direction);
+    angle = -LVL_9_DOBBO_FUN_002EAB28(xy_length, direction[2]);
+    state->field2E8 = angle;
+    if (0.52359885f < angle) state->field2E8 = 0.52359885f;
+    else if (angle < -0.52359885f) state->field2E8 = -0.52359885f;
+}

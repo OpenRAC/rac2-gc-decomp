@@ -489,3 +489,97 @@ int LVL_12_TODANO_FUN_002B9290(f32 value)
     }
     return 0;
 }
+
+/* Update the observed two-axis selection fields and their combined index. */
+typedef struct {
+    unsigned char gap0[0x43c];
+    int column, row, index, mode;
+} DobboGridState312;
+extern int LVL_12_TODANO_FUN_00364F58(int, unsigned int, void *);
+void LVL_12_TODANO_FUN_00450230(DobboGridState312 *state, unsigned int buttons)
+{
+    if (buttons & 0x1000) {
+        LVL_12_TODANO_FUN_00364F58(3, 0, 0);
+        --state->row;
+        if (state->row < 0) {
+            if (state->column == 0) {
+                state->mode = 2;
+                state->row = 1;
+                state->column = 3;
+            } else if (state->column == 1) {
+                state->row = state->column;
+            }
+        }
+    } else if (buttons & 0x4000) {
+        int row;
+        LVL_12_TODANO_FUN_00364F58(3, 0, 0);
+        row = state->row + 1;
+        state->row = row > 1 ? 0 : row;
+    } else if (buttons & 0x8000) {
+        LVL_12_TODANO_FUN_00364F58(3, 0, 0);
+        --state->column;
+        if (state->column < 0) {
+            state->column = 3;
+            state->row = 1;
+            state->mode = 2;
+        }
+    } else if (buttons & 0x2000) {
+        LVL_12_TODANO_FUN_00364F58(3, 0, 0);
+        ++state->column;
+        if (state->column >= 2)
+            state->column = 0;
+    }
+    state->index = state->column + state->row * 2;
+}
+
+extern void *LVL_12_TODANO_D_001B2E00[16];
+extern u32 LVL_12_TODANO_D_001B2E40[16];
+
+int LVL_12_TODANO_FUN_00314F10(void *object)
+{
+    int index;
+    for (index = 0; index < 16; ++index) {
+        if (LVL_12_TODANO_D_001B2E00[index] == 0 ||
+            LVL_12_TODANO_D_001B2E00[index] == object) {
+            LVL_12_TODANO_D_001B2E00[index] = object;
+            LVL_12_TODANO_D_001B2E40[index] = 0;
+            return index;
+        }
+    }
+    return -1;
+}
+
+typedef struct {
+    u8 field00[0x1f0];
+    f32 field1F0[4];
+    u8 field200[0xe0];
+    f32 field2E0;
+    u8 field2E4[4];
+    f32 field2E8;
+} NativeAngleState __attribute__((aligned(16)));
+typedef struct {
+    u8 field00[0x10];
+    f32 field10[4];
+    u8 field20[0x48];
+    NativeAngleState *field68;
+} NativeAngleOwner __attribute__((aligned(16)));
+extern void LVL_12_TODANO_FUN_002F1958(f32 *output, const f32 *left, const f32 *right);
+extern void LVL_12_TODANO_FUN_00327DB8(NativeAngleOwner *owner, f32 *output, const f32 *input, s32 mode);
+extern f32 LVL_12_TODANO_FUN_002F2000(f32 x, f32 y);
+extern f32 LVL_12_TODANO_FUN_002F1AA0(const f32 *vector);
+void LVL_12_TODANO_FUN_00427F40(NativeAngleOwner *owner) {
+    f32 direction[4] __attribute__((aligned(16)));
+    NativeAngleState *state = owner->field68;
+    f32 angle, xy_length;
+    LVL_12_TODANO_FUN_002F1958(direction, state->field1F0, owner->field10);
+    LVL_12_TODANO_FUN_00327DB8(owner, direction, direction, 0);
+    angle = LVL_12_TODANO_FUN_002F2000(direction[0], direction[1]);
+    state->field2E0 = angle;
+    if (0.78539824f < angle) state->field2E0 = 0.78539824f;
+    else if (angle < -0.78539824f) state->field2E0 = -0.78539824f;
+    xy_length = LVL_12_TODANO_FUN_002F1AA0(direction);
+    angle = -LVL_12_TODANO_FUN_002F2000(xy_length, direction[2]);
+    state->field2E8 = angle;
+    if (0.52359885f < angle) state->field2E8 = 0.52359885f;
+    else if (angle < -0.52359885f) state->field2E8 = -0.52359885f;
+}

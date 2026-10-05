@@ -448,3 +448,62 @@ int LVL_8_TABORA_FUN_002C4FA0(f32 value)
     }
     return 0;
 }
+
+/* Update the observed two-axis selection fields and their combined index. */
+typedef struct {
+    unsigned char gap0[0x43c];
+    int column, row, index, mode;
+} DobboGridState312;
+extern int LVL_8_TABORA_FUN_0036DA40(int, unsigned int, void *);
+void LVL_8_TABORA_FUN_00455980(DobboGridState312 *state, unsigned int buttons)
+{
+    if (buttons & 0x1000) {
+        LVL_8_TABORA_FUN_0036DA40(3, 0, 0);
+        --state->row;
+        if (state->row < 0) {
+            if (state->column == 0) {
+                state->mode = 2;
+                state->row = 1;
+                state->column = 3;
+            } else if (state->column == 1) {
+                state->row = state->column;
+            }
+        }
+    } else if (buttons & 0x4000) {
+        int row;
+        LVL_8_TABORA_FUN_0036DA40(3, 0, 0);
+        row = state->row + 1;
+        state->row = row > 1 ? 0 : row;
+    } else if (buttons & 0x8000) {
+        LVL_8_TABORA_FUN_0036DA40(3, 0, 0);
+        --state->column;
+        if (state->column < 0) {
+            state->column = 3;
+            state->row = 1;
+            state->mode = 2;
+        }
+    } else if (buttons & 0x2000) {
+        LVL_8_TABORA_FUN_0036DA40(3, 0, 0);
+        ++state->column;
+        if (state->column >= 2)
+            state->column = 0;
+    }
+    state->index = state->column + state->row * 2;
+}
+
+extern void *LVL_8_TABORA_D_001B2940[16];
+extern u32 LVL_8_TABORA_D_001B2980[16];
+
+int LVL_8_TABORA_FUN_0031E448(void *object)
+{
+    int index;
+    for (index = 0; index < 16; ++index) {
+        if (LVL_8_TABORA_D_001B2940[index] == 0 ||
+            LVL_8_TABORA_D_001B2940[index] == object) {
+            LVL_8_TABORA_D_001B2940[index] = object;
+            LVL_8_TABORA_D_001B2980[index] = 0;
+            return index;
+        }
+    }
+    return -1;
+}

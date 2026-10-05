@@ -60,7 +60,8 @@
     "FUN_00132AC8": 1256136,
     "FUN_00133310": 1258256,
     "FUN_00133490": 1258640,
-    "D_001A6488": 1729672
+    "D_001A6488": 1729672,
+    "FUN_00122630": 1189424
   },
   "functions": [
     {
@@ -1498,6 +1499,12 @@
       "address": 2847552,
       "size": 64,
       "meaning": "Set halfword channel values when resident signed flags contain bit fifteen; measured three fields in native update order, result unused."
+    },
+    {
+      "symbol": "FUN_00123268",
+      "address": 1192552,
+      "size": 44,
+      "meaning": "Build original double parts from four scalar arguments and return the original packing helper result."
     }
   ],
   "state": "candidates_unintegrated; flags qualified only for functions that pass this byte gate"

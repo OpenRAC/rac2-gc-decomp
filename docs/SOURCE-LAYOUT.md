@@ -12,12 +12,12 @@ python scripts/source_layout.py --check --inventory-check progress/source-invent
 
 ## Boot pilot
 
-Fifteen ordered fragments in `src/boot/` group layouts, resident accessors,
+Sixteen ordered fragments in `src/boot/` group layouts, resident accessors,
 utilities, object operations, callbacks and the packed-pixel decoder. The
 generator concatenates them without introducing includes, line directives,
 whitespace or additional compiler invocations. Types and declarations retain
 their original order and scope. The output is still one `boot.c` translation
-unit containing 180 catalogued definitions.
+unit containing 181 catalogued definitions.
 
 These are authored organizational boundaries. They do not establish original
 retail modules, object files or independently compilable units. Independent
@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Six hundred twenty-nine contextual native bodies remain distinct in the
+family has 26. Six hundred eighty-six contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -79,18 +79,35 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
-| Boot | 180 definitions | 9,520 |
-| Native overlays | 637 family-or-singleton items, 638 contextual variants | 75,704 across 844 placements |
+| Boot | 181 definitions | 9,564 |
+| Native overlays | 694 family-or-singleton items, 695 contextual variants | 87,152 across 901 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 66,520, or 66,544 when both clear
+Native representative catalogued bytes total 77,968, or 77,992 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **292,304 / 48,788,176 bytes (0.5991%)**.
-The latest lot adds two complete 156-byte status queries in Gorn and Hrugis
+The current integration exporter accepts **303,796 / 48,788,176 bytes (0.6227%)**.
+The latest lot adds one 44-byte boot double constructor, 27 selection-grid
+updates of 312 bytes, 27 slot reservation/reuse routines of 84 bytes and three
+clamped local-target angle routines of 252 bytes, totaling 11,492 bytes.
+The grid event helper's signed return is independently proven by an actual
+consumer; correcting only its declaration restores the original allocation.
+The earlier void-prototype refusal remains recorded. Slot updates preserve
+separate sixteen-entry object and state arrays and return a signed index.
+
+All 27 compound source units are newly qualified together: 901 whole native
+functions match, including 844 prior controls. The boot constructor qualifies
+181 complete functions including 180 controls, with original packing helpers
+remaining external. The angle family excludes the other 24 programs; its
+original math helpers and coefficient table receive no additional credit.
+Generated source/catalog bytes equal the immutable final qualifications.
+Fresh boot and all 27 loaded-byte and metadata gates, independent exports and
+the full test suite qualify integration. Per-program flags and GP are unchanged.
+
+The preceding lot added two complete 156-byte status queries in Gorn and Hrugis
 Cloud, totaling 312 bytes. Each reports whether any of eleven selected
 40-byte records has a nonzero first word. Actual callers use no arguments and
 test the integer result. The complete body scan excludes the other 25 programs.

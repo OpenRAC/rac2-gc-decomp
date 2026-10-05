@@ -2,7 +2,7 @@
   "target": "SCUS_972.68",
   "program": "4_barlow",
   "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
-  "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
+  "source_sha256": "9eb82f39913ace0a1e34f6a620d40d2b92add9e3e4cc1919eb5751a846732036",
   "catalog_sha256": "ec73169690ac7c2c1fcc9f23d29ca865cec3080e59983578929ef7c0be98408b",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
@@ -2568,6 +2568,34 @@
       "program": "4_barlow",
       "candidate_source": "candidates/levels/4_barlow.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_4_BARLOW_FUN_0047D160",
+      "address": 4706656,
+      "size": 312,
+      "matched": true,
+      "reference_sha256": "7acd23bed56d84267af38acdbedfb04e78b3887ef42bdb6cbdfa4d6221340520",
+      "candidate_sha256": "7acd23bed56d84267af38acdbedfb04e78b3887ef42bdb6cbdfa4d6221340520",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "4_barlow",
+      "candidate_source": "candidates/levels/4_barlow.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_4_BARLOW_FUN_003326F0",
+      "address": 3352304,
+      "size": 84,
+      "matched": true,
+      "reference_sha256": "0d4eb86602013ede2a4e84b0043bcd614937de55929c826c6e2f5cb21cc58e48",
+      "candidate_sha256": "0d4eb86602013ede2a4e84b0043bcd614937de55929c826c6e2f5cb21cc58e48",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "4_barlow",
+      "candidate_source": "candidates/levels/4_barlow.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2575,15 +2603,15 @@
     "bytes_compared": 3027792,
     "segments": 1
   },
-  "matched_code_bytes": 10416,
+  "matched_code_bytes": 10812,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "d31308b98cc1ff77266d8402242235d8cc152d97e3b43cc047d00714cad004f7",
-  "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
+  "candidate_elf_sha256": "9eb8f8789283f00ed831046822ab927fde23d8bbea0421632e94d3f2eeb0517e",
+  "c_object_sha256": "e6d601c5bf5ec8f23ca33853f969fdedd0ceea9a847e57cc31cc7b58be756156",
   "replacement_inputs": {
     "124800.s": [
       "FUN_0026FEB8",
@@ -2768,7 +2796,9 @@
       "LVL_4_BARLOW_FUN_002F6F18",
       "LVL_4_BARLOW_FUN_00314158",
       "LVL_4_BARLOW_FUN_00329910",
-      "LVL_4_BARLOW_FUN_002D9DD8"
+      "LVL_4_BARLOW_FUN_002D9DD8",
+      "LVL_4_BARLOW_FUN_0047D160",
+      "LVL_4_BARLOW_FUN_003326F0"
     ]
   },
   "schema": 2,
@@ -2777,7 +2807,7 @@
     "target": "SCUS_972.68",
     "program": "4_barlow",
     "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
-    "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
+    "source_sha256": "9eb82f39913ace0a1e34f6a620d40d2b92add9e3e4cc1919eb5751a846732036",
     "catalog_sha256": "ec73169690ac7c2c1fcc9f23d29ca865cec3080e59983578929ef7c0be98408b",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
@@ -2793,8 +2823,8 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "d31308b98cc1ff77266d8402242235d8cc152d97e3b43cc047d00714cad004f7",
-    "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
+    "candidate_elf_sha256": "9eb8f8789283f00ed831046822ab927fde23d8bbea0421632e94d3f2eeb0517e",
+    "c_object_sha256": "e6d601c5bf5ec8f23ca33853f969fdedd0ceea9a847e57cc31cc7b58be756156",
     "replacement_inputs": {
       "124800.s": [
         "FUN_0026FEB8",
@@ -2979,7 +3009,9 @@
         "LVL_4_BARLOW_FUN_002F6F18",
         "LVL_4_BARLOW_FUN_00314158",
         "LVL_4_BARLOW_FUN_00329910",
-        "LVL_4_BARLOW_FUN_002D9DD8"
+        "LVL_4_BARLOW_FUN_002D9DD8",
+        "LVL_4_BARLOW_FUN_0047D160",
+        "LVL_4_BARLOW_FUN_003326F0"
       ]
     }
   },
@@ -2989,13 +3021,13 @@
   },
   "reference_entry": 2929800,
   "candidate_entry": 2929800,
-  "dependency_sha256": "7d7a7247b474130f258f53d84dc933c643438848ae93f89fd5a481548fe27803",
-  "boot_review_sha256": "07ac867ac9508af5e8c2c12a83330f946df78a31286d6677056b6549ebffc78a",
+  "dependency_sha256": "f8ddd820c22e263f4e48a301db97a5fdc510ec423406e11f4f83b5d65000e3b2",
+  "boot_review_sha256": "7664c0b5dd178fb37b2b4a079bb21078dab655a9418c140e26cea728a226ad7a",
   "native": {
     "source": "candidates/levels/4_barlow.c",
     "catalog_path": "config/level-native/4_barlow.json",
     "review_path": "progress/level-candidates/4_barlow.json",
-    "review_sha256": "20681c8634975247d8bcc141d7841683450598345fe9aa954268795c69935aaa",
+    "review_sha256": "ea17da3a11ad997349c4dc77e23effb253372ef570383c4d9b22b6c05f30c024",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3004,10 +3036,10 @@
       "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
       "reference_entry": 2929800,
       "candidate_source": "candidates/levels/4_barlow.c",
-      "source_sha256": "d159868d73045217060f299b3a89da0a6ad15a5f76df39c3613cd69ae71ad1af",
-      "catalog_sha256": "e172005759b2e0143b6b2c09c639960676f27c13f7517877f59bb71b2131d41a",
-      "object_sha256": "3b340bb73f2e4c1eec28f440f526fb55365bc0dcd409d6250d18efbd4b63a3d7",
-      "candidate_elf_sha256": "41974d6a7a70e2f376d744984efb4cf4c349c6b3af996336159ef902fdae7b41",
+      "source_sha256": "2faafcfb49133f095b21c32af906c2fc97edd40bcbe997bb26cfb9216521fa16",
+      "catalog_sha256": "b5e8db2032b13900f94fa645b2076b1bbf50921ac4b0a87a085504bd1e46c564",
+      "object_sha256": "2b1d746fd85e4b89b23570d862e3185068bb4d1a291a429136e40a32f4bfc8b0",
+      "candidate_elf_sha256": "4cacd0afcfac3dc1c0a512b94176f4482d9ac10a74d722b1c83564032232c985",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3340,11 +3372,33 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 64
+        },
+        {
+          "symbol": "LVL_4_BARLOW_FUN_0047D160",
+          "address": 4706656,
+          "size": 312,
+          "matched": true,
+          "reference_sha256": "7acd23bed56d84267af38acdbedfb04e78b3887ef42bdb6cbdfa4d6221340520",
+          "candidate_sha256": "7acd23bed56d84267af38acdbedfb04e78b3887ef42bdb6cbdfa4d6221340520",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 312
+        },
+        {
+          "symbol": "LVL_4_BARLOW_FUN_003326F0",
+          "address": 3352304,
+          "size": 84,
+          "matched": true,
+          "reference_sha256": "0d4eb86602013ede2a4e84b0043bcd614937de55929c826c6e2f5cb21cc58e48",
+          "candidate_sha256": "0d4eb86602013ede2a4e84b0043bcd614937de55929c826c6e2f5cb21cc58e48",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 84
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 2744
+      "matched_code_bytes": 3140
     },
-    "object_sha256": "3b340bb73f2e4c1eec28f440f526fb55365bc0dcd409d6250d18efbd4b63a3d7"
+    "object_sha256": "2b1d746fd85e4b89b23570d862e3185068bb4d1a291a429136e40a32f4bfc8b0"
   }
 }

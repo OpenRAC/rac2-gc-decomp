@@ -1433,3 +1433,22 @@ void FUN_002B7340(s32 value)
     if (state->channels[1].flags & 0x8000)
         state->channels[1].value = value;
 }
+
+/* Construct a double through the original runtime packing routine. */
+typedef struct DoubleParts44 {
+    s32 kind;
+    u32 sign;
+    s32 exponent;
+    unsigned long long fraction;
+} DoubleParts44;
+extern double FUN_00122630(DoubleParts44 *);
+
+double FUN_00123268(s32 kind, u32 sign, s32 exponent, unsigned long long fraction)
+{
+    DoubleParts44 parts;
+    parts.kind = kind;
+    parts.sign = sign;
+    parts.exponent = exponent;
+    parts.fraction = fraction;
+    return FUN_00122630(&parts);
+}

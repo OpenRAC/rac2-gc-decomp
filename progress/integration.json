@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "boot",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
-  "catalog_sha256": "eea7708887051527eeb729e702277b33d0a50b83ad09e84323ec30c57f9527f5",
+  "source_sha256": "9eb82f39913ace0a1e34f6a620d40d2b92add9e3e4cc1919eb5751a846732036",
+  "catalog_sha256": "61c249f59e535480d39c195918e9c3272c928c315a5d26725c4ef5bef73d75cb",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2166,6 +2166,18 @@
       "state": "integrated",
       "integrated": true,
       "program": "boot"
+    },
+    {
+      "symbol": "FUN_00123268",
+      "address": 1192552,
+      "size": 44,
+      "matched": true,
+      "reference_sha256": "a5b8042c3b5113bcf53a96cbae661269395f3bb5d5e0ac970330a4a2407b2090",
+      "candidate_sha256": "a5b8042c3b5113bcf53a96cbae661269395f3bb5d5e0ac970330a4a2407b2090",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
     }
   ],
   "full_boot_gate": {
@@ -2173,15 +2185,15 @@
     "bytes_compared": 2521763,
     "segments": 2
   },
-  "matched_code_bytes": 9520,
+  "matched_code_bytes": 9564,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "cd85fbe50f2a86f947488fed5f1c791f09ef4e693acbd1f7e9436fa82f4d6a1f",
-  "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
+  "candidate_elf_sha256": "1ca12ed1355d7776cd5efabf047682d04f0b685db143316c3831d3ca7dc14e45",
+  "c_object_sha256": "e6d601c5bf5ec8f23ca33853f969fdedd0ceea9a847e57cc31cc7b58be756156",
   "replacement_inputs": {
     "16180.s": [
       "FUN_00115200",
@@ -2191,7 +2203,8 @@
       "FUN_00120BC8",
       "FUN_00125960",
       "FUN_0012DA98",
-      "FUN_0012F9A8"
+      "FUN_0012F9A8",
+      "FUN_00123268"
     ],
     "16F980.s": [
       "FUN_0026F710",

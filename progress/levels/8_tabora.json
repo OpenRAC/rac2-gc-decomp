@@ -2,7 +2,7 @@
   "target": "SCUS_972.68",
   "program": "8_tabora",
   "reference_sha256": "37c1b1c86b8800fb3930b539fe4b5c94dccf42e7bb5960154477f63731dd48a5",
-  "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
+  "source_sha256": "9eb82f39913ace0a1e34f6a620d40d2b92add9e3e4cc1919eb5751a846732036",
   "catalog_sha256": "ec73169690ac7c2c1fcc9f23d29ca865cec3080e59983578929ef7c0be98408b",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
@@ -2554,6 +2554,34 @@
       "program": "8_tabora",
       "candidate_source": "candidates/levels/8_tabora.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_8_TABORA_FUN_00455980",
+      "address": 4544896,
+      "size": 312,
+      "matched": true,
+      "reference_sha256": "0e1057185b62b0341bfb6afed9dcfd8b324b401fc208ae7bb65cc795673e0aac",
+      "candidate_sha256": "0e1057185b62b0341bfb6afed9dcfd8b324b401fc208ae7bb65cc795673e0aac",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "8_tabora",
+      "candidate_source": "candidates/levels/8_tabora.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_8_TABORA_FUN_0031E448",
+      "address": 3269704,
+      "size": 84,
+      "matched": true,
+      "reference_sha256": "07b8d2714d973d5865026677e0fc814d43543fb103d7f4ef120693a593637ddf",
+      "candidate_sha256": "07b8d2714d973d5865026677e0fc814d43543fb103d7f4ef120693a593637ddf",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "8_tabora",
+      "candidate_source": "candidates/levels/8_tabora.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2561,15 +2589,15 @@
     "bytes_compared": 2866032,
     "segments": 1
   },
-  "matched_code_bytes": 10232,
+  "matched_code_bytes": 10628,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "97795042a2066923344df2b4cc099dd7a6569714e8ef086d869d48f36c72b216",
-  "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
+  "candidate_elf_sha256": "e9c04e3c798c70da19fe3dbf721ba85efa524e0562442e4e703fb0255c2ff7bd",
+  "c_object_sha256": "e6d601c5bf5ec8f23ca33853f969fdedd0ceea9a847e57cc31cc7b58be756156",
   "replacement_inputs": {
     "10F800.s": [
       "FUN_0026FEB8",
@@ -2753,7 +2781,9 @@
       "LVL_8_TABORA_FUN_002E2958",
       "LVL_8_TABORA_FUN_002FF0F8",
       "LVL_8_TABORA_FUN_00315620",
-      "LVL_8_TABORA_FUN_002C4FA0"
+      "LVL_8_TABORA_FUN_002C4FA0",
+      "LVL_8_TABORA_FUN_00455980",
+      "LVL_8_TABORA_FUN_0031E448"
     ]
   },
   "schema": 2,
@@ -2762,7 +2792,7 @@
     "target": "SCUS_972.68",
     "program": "8_tabora",
     "reference_sha256": "37c1b1c86b8800fb3930b539fe4b5c94dccf42e7bb5960154477f63731dd48a5",
-    "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
+    "source_sha256": "9eb82f39913ace0a1e34f6a620d40d2b92add9e3e4cc1919eb5751a846732036",
     "catalog_sha256": "ec73169690ac7c2c1fcc9f23d29ca865cec3080e59983578929ef7c0be98408b",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
@@ -2778,8 +2808,8 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "97795042a2066923344df2b4cc099dd7a6569714e8ef086d869d48f36c72b216",
-    "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
+    "candidate_elf_sha256": "e9c04e3c798c70da19fe3dbf721ba85efa524e0562442e4e703fb0255c2ff7bd",
+    "c_object_sha256": "e6d601c5bf5ec8f23ca33853f969fdedd0ceea9a847e57cc31cc7b58be756156",
     "replacement_inputs": {
       "10F800.s": [
         "FUN_0026FEB8",
@@ -2963,7 +2993,9 @@
         "LVL_8_TABORA_FUN_002E2958",
         "LVL_8_TABORA_FUN_002FF0F8",
         "LVL_8_TABORA_FUN_00315620",
-        "LVL_8_TABORA_FUN_002C4FA0"
+        "LVL_8_TABORA_FUN_002C4FA0",
+        "LVL_8_TABORA_FUN_00455980",
+        "LVL_8_TABORA_FUN_0031E448"
       ]
     }
   },
@@ -2973,13 +3005,13 @@
   },
   "reference_entry": 2843784,
   "candidate_entry": 2843784,
-  "dependency_sha256": "1853d463da0132eec6974acc0f14b1650a4a234f94e3c4c4b4ae76273515b317",
-  "boot_review_sha256": "07ac867ac9508af5e8c2c12a83330f946df78a31286d6677056b6549ebffc78a",
+  "dependency_sha256": "f6dae57984e2b88e6e24d6051916d6bca16a31ab6d2012d498223b7c91dec0ee",
+  "boot_review_sha256": "7664c0b5dd178fb37b2b4a079bb21078dab655a9418c140e26cea728a226ad7a",
   "native": {
     "source": "candidates/levels/8_tabora.c",
     "catalog_path": "config/level-native/8_tabora.json",
     "review_path": "progress/level-candidates/8_tabora.json",
-    "review_sha256": "a978a9fef1e6b0f6ff8fc2cc8a310c29b24d42df8bb26bc6fd4fa834c509512b",
+    "review_sha256": "aa0af9a5f19049de1845be3df9a572ab5fbc96129f76585d4bd881f76b48de56",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2988,10 +3020,10 @@
       "reference_sha256": "37c1b1c86b8800fb3930b539fe4b5c94dccf42e7bb5960154477f63731dd48a5",
       "reference_entry": 2843784,
       "candidate_source": "candidates/levels/8_tabora.c",
-      "source_sha256": "9b288c89c77eb9c1597b0475f2a3cac807dd7e5173760106a4870777876690e7",
-      "catalog_sha256": "c736709313ff8d8ead5b87864059a4f341489a8f77ee7bc1770fa9a055f2589b",
-      "object_sha256": "fafe14bef2723aacc1cdbdb061d6a0f8696efff3076ee8bd018fc195763b9ed2",
-      "candidate_elf_sha256": "0b98478fb33ad1f1d62d093ab8f9c38a49033b64e185b00bdfe4e461da98cf25",
+      "source_sha256": "16b23140fecc74f93548b54cf7bdd32e5f92eec47d0f12ba8d0bc606755848d0",
+      "catalog_sha256": "114e83cdf1d2d54566d220e0ccb1d887489afe5221ea4e387913dc120e146ab1",
+      "object_sha256": "fd2fd04b22eeea6bc94314695d7a33e2df95250dd4fe15615bd74900c4f81e87",
+      "candidate_elf_sha256": "77dfbfa4ccf56e5851f266006f957022feee2df901130c70f7fe9a96065f5fb7",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3313,11 +3345,33 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 64
+        },
+        {
+          "symbol": "LVL_8_TABORA_FUN_00455980",
+          "address": 4544896,
+          "size": 312,
+          "matched": true,
+          "reference_sha256": "0e1057185b62b0341bfb6afed9dcfd8b324b401fc208ae7bb65cc795673e0aac",
+          "candidate_sha256": "0e1057185b62b0341bfb6afed9dcfd8b324b401fc208ae7bb65cc795673e0aac",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 312
+        },
+        {
+          "symbol": "LVL_8_TABORA_FUN_0031E448",
+          "address": 3269704,
+          "size": 84,
+          "matched": true,
+          "reference_sha256": "07b8d2714d973d5865026677e0fc814d43543fb103d7f4ef120693a593637ddf",
+          "candidate_sha256": "07b8d2714d973d5865026677e0fc814d43543fb103d7f4ef120693a593637ddf",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 84
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 2560
+      "matched_code_bytes": 2956
     },
-    "object_sha256": "fafe14bef2723aacc1cdbdb061d6a0f8696efff3076ee8bd018fc195763b9ed2"
+    "object_sha256": "fd2fd04b22eeea6bc94314695d7a33e2df95250dd4fe15615bd74900c4f81e87"
   }
 }

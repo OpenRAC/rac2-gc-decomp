@@ -482,3 +482,62 @@ int LVL_23_DAMOSEL_ORBIT_FUN_002BCA50(f32 value)
     }
     return 0;
 }
+
+/* Update the observed two-axis selection fields and their combined index. */
+typedef struct {
+    unsigned char gap0[0x43c];
+    int column, row, index, mode;
+} DobboGridState312;
+extern int LVL_23_DAMOSEL_ORBIT_FUN_003675B0(int, unsigned int, void *);
+void LVL_23_DAMOSEL_ORBIT_FUN_0044FAC8(DobboGridState312 *state, unsigned int buttons)
+{
+    if (buttons & 0x1000) {
+        LVL_23_DAMOSEL_ORBIT_FUN_003675B0(3, 0, 0);
+        --state->row;
+        if (state->row < 0) {
+            if (state->column == 0) {
+                state->mode = 2;
+                state->row = 1;
+                state->column = 3;
+            } else if (state->column == 1) {
+                state->row = state->column;
+            }
+        }
+    } else if (buttons & 0x4000) {
+        int row;
+        LVL_23_DAMOSEL_ORBIT_FUN_003675B0(3, 0, 0);
+        row = state->row + 1;
+        state->row = row > 1 ? 0 : row;
+    } else if (buttons & 0x8000) {
+        LVL_23_DAMOSEL_ORBIT_FUN_003675B0(3, 0, 0);
+        --state->column;
+        if (state->column < 0) {
+            state->column = 3;
+            state->row = 1;
+            state->mode = 2;
+        }
+    } else if (buttons & 0x2000) {
+        LVL_23_DAMOSEL_ORBIT_FUN_003675B0(3, 0, 0);
+        ++state->column;
+        if (state->column >= 2)
+            state->column = 0;
+    }
+    state->index = state->column + state->row * 2;
+}
+
+extern void *LVL_23_DAMOSEL_ORBIT_D_001B2700[16];
+extern u32 LVL_23_DAMOSEL_ORBIT_D_001B2740[16];
+
+int LVL_23_DAMOSEL_ORBIT_FUN_0031B010(void *object)
+{
+    int index;
+    for (index = 0; index < 16; ++index) {
+        if (LVL_23_DAMOSEL_ORBIT_D_001B2700[index] == 0 ||
+            LVL_23_DAMOSEL_ORBIT_D_001B2700[index] == object) {
+            LVL_23_DAMOSEL_ORBIT_D_001B2700[index] = object;
+            LVL_23_DAMOSEL_ORBIT_D_001B2740[index] = 0;
+            return index;
+        }
+    }
+    return -1;
+}
