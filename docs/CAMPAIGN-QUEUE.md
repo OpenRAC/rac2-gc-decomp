@@ -1631,6 +1631,54 @@ Compare all complete symbols and object hash with the pre-lot committed native r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
+## native-review-barlow-frame-reset-20261005
+
+State: `queued`. Kind: `research`.
+
+Pincomplete target/caller/header layouts/reference/GPrelocations andcurrentBarlowprefix; authorprivate plainC loops andmeasuredSDA/NOSDA declarations only, thenmaintainedcurrentwholeunit firsttrial.
+
+Reopen condition: Independent original global/record/header/loop/ABI/source lifetime evidence only; no annotations/aggregate-anchor/loop/register/flags/sourcecycles solely for matching.
+
+## native-review-barlow-frame-reset-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Park unchanged firstsource with current27controls/target288/caller1800/livepins/exactGPoffset bindings, immutablebankframe-reset-v1/object/assembly/outcome. Continue another genuinelynew BarlowG8 or owned ordinaryC target underunchanged qualifiedprofiles. Do not cycle qualifier/aliasview/loops/source.
+
+Reopen condition: Independent original tag/header/global overlap or asynchronous producer/source declaration/lifetime evidence must justify observedreloads. Do not addvolatile, rawalias/union/aggregateanchor, changeSDA/NOSDA orflags/iteration shape simply toprevent optimization or force288.
+
+## native-review-barlow-rectangle-slot-20261005
+
+State: `queued`. Kind: `research`.
+
+Pincomplete160target/252caller/live/ref/uniqueness/currentprefix andtypedpointer+ushort ABI; authorprivate standardC loop/table andmaintainedfirstwholeunittrial.
+
+Reopen condition: Independent original typedslot/table/caller/ABI/layout evidence only; no scan direction/condition/register/formal/storeorder/flags/sourcecycling.
+
+## native-review-barlow-rectangle-slot-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Park unchanged firstsource andpreservefulltarget160/caller252/live/ref/unique/history pins/current27controls, immutablebankrectangle-slot-v1/object/assembly/outcome; continuefreshownedalgorithm.
+
+Reopen condition: Independent original argument/lifetime/fieldownership/sourcephase evidence mustjustifyreopening. No formaloverwrite, differentlocalnames, iteration/conditional/registerforcing orarbitrary independentstore reordering/flags/sourcecycles.
+
+## native-review-barlow-scaled-statistics-20261005
+
+State: `queued`. Kind: `research`.
+
+Pinfulltarget/caller664/live/ref/source-pointer/return use; authorprivate straightforwardintegerC withmeasuredlayout/NOSDAABS globals andfirstmaintainedwholeunittrial.
+
+Reopen condition: Independent original integerwidth/layout/arithmetic/ABI/sourcephase evidence only; no customdivisor/volatile/manualshift/trap/reg/storeorder/flags/sourcecycles.
+
+## native-review-barlow-scaled-statistics-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Park firstsource unchanged, preservefull132target/664caller/live/ref/uniqueness/27controls andimmutablebankscaled-statistics-v1/object/assembly/outcome. Continue freshownedC target.
+
+Reopen condition: Independent original source/prototype/arithmetic/fieldlayout evidence required. Do not switchto void/changeconstantdivisor/localscope/store order/addvolatile/manualshifts/traps orflags/register/sourcecycling toremove4bytes.
+
 ## native-review-boldan-compact-record-v1-20261004
 
 State: `stopped`. Kind: `candidate`.
@@ -6171,6 +6219,36 @@ Reopen condition: Current source/catalog/reference drift or independentlymeasure
 
 - `private-work:parallel-20261004/orbital_lots/pair-lookup-family-pending.json`
 
+## orbital-smolg-nearest-actor-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-smolg-nearest-actor-v1/evidence.json`
+
+## orbital-smolg-player-rollback-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-smolg-player-rollback-v1/evidence.json`
+
+## orbital-smolg-seven-vertices-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-smolg-seven-vertices-v1/evidence.json`
+
 ## orbital-snivelak-cubic-vector-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -6491,6 +6569,16 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 - `runtime:bank/parallel-orbital_lots-state-transition-family-759/9_dobbo/evidence.json`
 
+## orbital-wupash-class-cleanup-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-wupash-class-cleanup-v1/evidence.json`
+
 ## orbital-yeedil-audio-launch-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -6704,6 +6792,16 @@ Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifi
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-dobbo-descriptor276-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholecurrentunit276firstseed; exactcompletebytes+allcontrols prerequisite tofamily, preservepark otherwise.
+
+Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifiedlowering witness only; no word/selector/row/view/pointer/loop/local/scope/order/qualifier/flags/register/padding permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## parallel-boot-analysis-dobbo-effect756-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -6765,6 +6863,16 @@ Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifi
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-dobbo-parts252-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained wholecurrentunit252firstseed; fullsize/everybyte+allcontrols exact prerequisite tofamily, preservepark otherwise.
+
+Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifiedlowering witness only; no descriptor/parent/part/row/views/pointer/loop/scopes/locals/condition/qualifier/flags/register/padding permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
 ## parallel-boot-analysis-dobbo-rate592-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -6774,6 +6882,17 @@ One maintained fullunit592+whole124generatedrodata firstseed; completecode+data 
 Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifiedlowering witness only; no switch/float/constant/root/view/scope/pointer/local/boolean/qualifier/flags/register/padding source cycles.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-rates544-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained whole current unit first C trial; park refusal absent independent evidence.
+
+Reopen condition: Independent source/layout/ABI/qualifiedlowering witness only; no mode/branch/root/scopes/lifetimes/constant/flags/register permutations.
+
+- `private-work:parallel-20261004/boot_analysis/rates544-abi.json`
+- `private-work:parallel-20261004/boot_analysis/rates544-forwarded-fp.json`
 
 ## parallel-boot-analysis-dobbo-select352-v1
 
@@ -6814,6 +6933,26 @@ One maintained fullunit560 seed trial; exactcompletebytes plusallcontrols prereq
 Reopen condition: Independent original source/declaration/ABI/accessphase/qualifiedlowering witness; no counter/pointer/for/while/local/type/volatile/flag/register/padding cycles.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-tri156-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholecurrentunit156firstseed; exactcompleteeverybyte+allcontrols prerequisite tofamily, preservepark otherwise.
+
+Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifiedlowering witness only; no bool/flag masks/row/views/pointer/scopes/local/branch/ordering/qualifier/flags/register/padding permutations.
+
+- `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-weighted564-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholecurrentunit trial; preserve refusal and continue fresh body.
+
+Reopen condition: Independent original type/layout/ABI/sourcephase witness only; no equivalent loop/condition/local/register/flags/storage permutations.
+
+- `private-work:parallel-20261004/boot_analysis/weighted564-abi.json`
 
 ## parallel-boot-analysis-feltzin-collect-rows-v1
 
@@ -8105,6 +8244,26 @@ Reopen condition: Independent original source/declaration/accessphase/ABI or qua
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-parts252-20-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification; park any mismatch.
+
+Reopen condition: Independent new original/layout/ABI/compiler evidence only; no source/flag permutations.
+
+- `runtime:bank/parallel-boot_analysis-parts-family/placements-static.json`
+
+## parallel-boot-analysis-parts252-family
+
+State: `done`. Kind: `research`.
+
+Qualify Yeedil whole current unit then deliver two-placement portable packet.
+
+Reopen condition: Independent new semantic/reference evidence only.
+
+- `runtime:bank/parallel-boot_analysis-parts-family/placements-qualified.json`
+
 ## parallel-boot-analysis-record-update116-family
 
 State: `done`. Kind: `research`.
@@ -8753,6 +8912,44 @@ Reopen condition: Independent original source/type/ABI or qualified compiler evi
 
 - `private-work:parallel-20261004/native_review/HUE224-STATIC-PACKET.json`
 - `private-work:parallel-20261004/root-gp/hue-abi-primary.txt`
+
+## root-boot-bounded-pointer64-first-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve first ordinary pointer model and all179 controls exact. Stop without alternate integer-address casts, commuted additions, output types, field declarations, branch forms or register/profile variants. Continue genuinely new body.
+
+Reopen condition: Independent original producer/type/prototype/source or compiler evidence addressing full measured differences; not equivalent expression or relocation-only aliases.
+
+- `private-work:parallel-20261004/root-gp/getter64-live-memory.json`
+- `private-work:parallel-20261004/root-gp/getter64-caller-00298e08.json`
+- `private-work:parallel-20261004/root-gp/getter64-caller-00298f00.json`
+
+## root-boot-bounded-pointer64-producers-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve both immutable models and all producer/caller evidence; stop without source, branch, cast, qualifier, operand order, register or flag cycles.
+
+Reopen condition: Independent original source/compiler or stronger ABI/layout provenance accounting for the complete mismatch; scalar offset evidence alone has now been measured and is insufficient.
+
+- `private-work:parallel-20261004/root-gp/getter64-live-memory.json`
+- `private-work:parallel-20261004/root-gp/getter64-caller-00298e08.json`
+- `private-work:parallel-20261004/root-gp/getter64-caller-00298f00.json`
+- `private-work:parallel-20261004/root-gp/getter64-producer-002ca070.json`
+- `private-work:parallel-20261004/root-gp/getter64-producer-002e6d88.json`
+
+## root-boot-bounded-pointer64-research-20261005
+
+State: `done`. Kind: `research`.
+
+Verify live/reference bytes, fresh published/catalog/task/physical history, all5 actualcall input/output/return use andtwo originalglobal widths/layout. Then ONE ordinary bounded subtraction C plus all179 currentbootcontrols underunchangedG0; no prototype name inference, physicalregister or branch variants.
+
+Reopen condition: Independent original source/type/ABI/storage/compiler evidence addressing full measured refusal, not equivalent expressions or flags cycling.
+
+- `private-work:parallel-20261004/root-gp/getter64-live-memory.json`
+- `private-work:parallel-20261004/root-gp/getter64-caller-00298e08.json`
+- `private-work:parallel-20261004/root-gp/getter64-caller-00298f00.json`
 
 ## root-boot-dma-packet92-v1-20261004
 

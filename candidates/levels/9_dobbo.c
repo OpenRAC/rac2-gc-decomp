@@ -393,3 +393,46 @@ void LVL_9_DOBBO_FUN_002EF790(void) {
         LVL_9_DOBBO_D_001BFB40.state = 2;
     }
 }
+
+/* Update two linked parts from a valid parent and propagate object state and color. */
+typedef struct DobboPartsObject252 DobboPartsObject252;
+typedef struct DobboPartsDescriptor252 {
+    unsigned char gap0[0x2f0];
+    DobboPartsObject252 *parts[2];
+    DobboPartsObject252 *parent;
+} DobboPartsDescriptor252;
+struct DobboPartsObject252 {
+    unsigned char gap0[0x20];
+    unsigned char status;
+    unsigned char gap21[0x10];
+    unsigned char disabled;
+    unsigned char gap32[2];
+    unsigned short flags;
+    unsigned char gap36[0x32];
+    DobboPartsDescriptor252 *descriptor;
+    unsigned char gap6c[0x3e];
+    short class_code;
+};
+extern void LVL_9_DOBBO_FUN_003205C8(void *, void *, int, int);
+extern void LVL_9_DOBBO_FUN_003F7788(void *, void *);
+void LVL_9_DOBBO_FUN_003F9468(DobboPartsObject252 *object)
+{
+    DobboPartsDescriptor252 *descriptor = object->descriptor;
+    DobboPartsObject252 *parent = descriptor->parent;
+    int i;
+    if (!parent || parent->class_code != 0xd0e || parent->status == 0xfe || parent->status == 0xfd)
+        return;
+    for (i = 0; i < 2; ++i) {
+        if (descriptor->parts[i]) {
+            LVL_9_DOBBO_FUN_003205C8(descriptor->parent, descriptor->parts[i], i, i == 1 ? 6 : 0);
+            if (object->disabled) {
+                descriptor->parts[i]->flags &= ~1U;
+                descriptor->parts[i]->disabled = 1;
+            } else {
+                descriptor->parts[i]->flags |= 1;
+                descriptor->parts[i]->disabled = 0;
+            }
+            LVL_9_DOBBO_FUN_003F7788(object, descriptor->parts[i]);
+        }
+    }
+}

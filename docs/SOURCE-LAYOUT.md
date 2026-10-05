@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Five hundred seventy-one contextual native bodies remain distinct in the
+family has 26. Five hundred seventy-three contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,24 +80,30 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 179 definitions | 9,456 |
-| Native overlays | 579 family-or-singleton items, 580 contextual variants | 62,468 across 786 placements |
+| Native overlays | 581 family-or-singleton items, 582 contextual variants | 62,972 across 788 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 53,284, or 53,308 when both clear
+Native representative catalogued bytes total 53,788, or 53,812 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **273,916 / 48,788,176 bytes (0.5614%)**.
-The latest matching lot adds 27 complete 48-byte resident state transitions,
-adding 1,296 bytes. A signed mode value of seven and state value of one cause
-the state to become two; all 54 measured callers overwrite the unused result.
-All 786 complete native functions, including 759 prior controls, are exact.
-Generated C and catalogs are byte-identical to the independently qualified
-whole units, so their verified immutable object proofs are reused rather than
-repeating an identical compiler trial. Fresh boot and all 27 complete loaded-byte
-and metadata gates qualify the new source and indexed integration parser.
+The current integration exporter accepts **277,780 / 48,788,176 bytes (0.5694%)**.
+The latest native lot adds two complete 252-byte linked-part updates in Dobbo
+and Yeedil, totaling 504 bytes. A measured descriptor supplies two optional
+parts and a parent; the parent class and status guards control attachment,
+disabled-state propagation and color updates. The original attachment and
+color helpers remain external and receive no matching credit. The complete
+scan excludes the other 25 overlays. Both current standalone units qualify
+58 exact complete functions, including 56 controls. Generated C and catalogs
+remain byte-identical to the independently qualified immutable units; fresh
+boot and all 27 loaded-byte and metadata gates validate their integration.
+
+The preceding resident GS configuration lot added 28 complete 120-byte
+placements, totaling 3,360 bytes. Its authored boot source configures volatile
+64-bit privileged registers using three measured resident configuration words.
+All boot and overlay image bytes and metadata match; gameplay remains unverified.
 
 The strict integration parser now indexes original definition positions once,
 selects catalog entries from one complete definition scan and renames crossing
