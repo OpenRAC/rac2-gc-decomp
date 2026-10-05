@@ -305,16 +305,19 @@ def _trial(store, repo, task_id, toolchain, profile, repeat_reason="", backend=N
                                               for name in ("cc1", "cpp", "as", "ld.exe")):
         raise ValueError("Trials require the pinned current GNU8bed profile")
     targets, flags = [], None
-    pinned = read(repo / "config/target.json")
-    refs = {"boot": pinned["boot"]["sha256"]}
-    refs.update({"levels/" + level["level"]: level["sha256"] for level in read(repo / "config/overlays.json")["levels"]})
     for descriptor in task["targets"]:
         catalog_path = absolute(descriptor["catalog"], repo, store.runtime)
         reference_path = absolute(descriptor["reference"], repo, store.runtime)
         catalog_bytes, reference_bytes = catalog_path.read_bytes(), reference_path.read_bytes()
         catalog = json.loads(catalog_bytes)
         program = catalog.get("program", "boot")
-        if (catalog.get("target") != pinned["serial"] or program not in refs
+        # The catalogue names its own release; only that region's pinned identities apply.
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        try:
+            refs = importlib.import_module("region").by_serial(catalog.get("target"), repo).program_pins()
+        except ValueError as error:
+            raise ValueError(f"Reference/catalog is not a pinned RAC2 program ({error})") from error
+        if (program not in refs
                 or digest(reference_bytes) != refs[program] or catalog.get("reference_sha256") != refs[program]):
             raise ValueError("Reference/catalog is not a pinned RAC2 program")
         current_flags = catalog.get("flags")

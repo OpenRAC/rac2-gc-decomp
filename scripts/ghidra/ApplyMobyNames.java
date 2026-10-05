@@ -11,6 +11,11 @@
 //
 // A function that already carries a name (not FUN_*) is left alone, and a function shared by
 // several classes keeps the first name it is given: both are counted and reported.
+//
+// The TSV addresses are USA v1.01 (SCUS_972.68) addresses. Before renaming anything, the
+// overlay ELF on disk must have the SHA-256 pinned for that level in config/overlays.json (a
+// third optional argument overrides that path). A PAL or otherwise different overlay is refused
+// rather than named at addresses that belong to another build.
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -18,6 +23,9 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.MessageDigest;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.HashSet;
 import java.util.Set;
 import ghidra.app.script.GhidraScript;
@@ -32,16 +40,18 @@ public class ApplyMobyNames extends GhidraScript {
     public void run() throws Exception {
         String[] argv = getScriptArgs();
         if (argv.length < 1) {
-            println("usage: ApplyMobyNames <level name> [tsv path]");
+            println("usage: ApplyMobyNames <level name> [tsv path] [overlays.json path]");
             return;
         }
         String level = argv[0];
         String tsv = argv.length > 1 ? argv[1] : "docs/moby-dispatch.tsv";
+        String pins = argv.length > 2 ? argv[2] : "config/overlays.json";
 
         String elfPath = currentProgram.getExecutablePath();
         if (elfPath.startsWith("/")) {
             elfPath = elfPath.substring(1);
         }
+        requirePinnedOverlay(level, elfPath, pins);
         long[] text = textSection(elfPath);
         println("level " + level + " : .text vaddr=0x" + Long.toHexString(text[0])
                 + " file offset=0x" + Long.toHexString(text[1]));
@@ -85,6 +95,26 @@ public class ApplyMobyNames extends GhidraScript {
                 + " | already named: " + alreadyNamed + " | no function at that address: " + noFunction
                 + " | shared handler: " + shared);
         println("names are not saved until the program is saved.");
+    }
+
+    /** Refuses an overlay whose bytes are not the pinned USA v1.01 build of this level. */
+    private void requirePinnedOverlay(String level, String elfPath, String pins) throws Exception {
+        String json = new String(Files.readAllBytes(Paths.get(pins)), "UTF-8");
+        Matcher m = Pattern.compile("\\{\\s*\"level\":\\s*\"" + Pattern.quote(level)
+                + "\",\\s*\"sha256\":\\s*\"([0-9a-f]{64})\"").matcher(json);
+        if (!m.find()) {
+            throw new IllegalArgumentException("level " + level + " is not pinned in " + pins);
+        }
+        byte[] digest = MessageDigest.getInstance("SHA-256").digest(
+            Files.readAllBytes(Paths.get(new File(elfPath).getAbsolutePath())));
+        StringBuilder actual = new StringBuilder();
+        for (byte b : digest) {
+            actual.append(String.format("%02x", b));
+        }
+        if (!actual.toString().equals(m.group(1))) {
+            throw new IllegalArgumentException("overlay " + elfPath + " is not the pinned USA v1.01 build of "
+                + level + "; the dispatch addresses would not apply");
+        }
     }
 
     /** Returns { .text virtual address, .text file offset } read from the ELF on disk. */

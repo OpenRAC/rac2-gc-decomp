@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from elf_tools import assert_fresh, compare_loads, read_elf
+import region as regions
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = json.loads((ROOT / "config" / "target.json").read_text(encoding="utf-8"))
@@ -298,6 +299,7 @@ def main() -> int:
     parser.add_argument("--c-all-levels", action="store_true", help="integrate shared and available native C in all overlays")
     parser.add_argument("--candidate-review", type=Path, help="explicit fresh boot object review; does not overwrite prior provenance")
     parser.add_argument("--jobs", type=int, default=8)
+    regions.add_argument(parser)
     args = parser.parse_args()
     if args.jobs < 1:
         raise ValueError("jobs must be positive")
@@ -313,17 +315,34 @@ def main() -> int:
     if ROOT == manifest_path.parent or ROOT in manifest_path.parents:
         raise ValueError("Private manifest and builds must remain outside source repository")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest["target"] != "SCUS_972.68":
-        raise ValueError("Wrong manifest target")
-    if manifest["boot"]["sha256"] != TARGET["boot"]["sha256"]:
-        raise ValueError("Manifest boot identity is not the pinned RAC2 baseline")
-    baseline = json.loads((ROOT / "config" / "overlays.json").read_text(encoding="utf-8"))
-    expected_overlays = {entry["level"]: entry["sha256"] for entry in baseline["levels"]}
+    try:
+        region = regions.by_serial(manifest["target"])
+    except ValueError as error:
+        raise ValueError("Wrong manifest target") from error
+    if args.region and regions.canonical(args.region) != region.name:
+        raise ValueError(f"Manifest target {region.serial} belongs to region {region.name}, not {args.region}")
+    if (args.c_toolchain or args.c_level or args.candidate_review) and not region.matching:
+        region.require_matching("C integration")
+    if region.pinned:
+        if manifest["boot"]["sha256"] != region.target["boot"]["sha256"]:
+            raise ValueError(f"Manifest boot identity is not the pinned {region.label} baseline")
+        expected_overlays = region.overlay_pins()
+        expected_count = region.expected_levels
+    elif manifest.get("pinned") is False and manifest.get("region") == region.name:
+        # An unpinned region: setup.py --measure-identity recorded these identities
+        # privately. The byte gates still compare every loaded byte, but against an
+        # unreviewed reference, so the report says so and no proof is produced.
+        print(f"WARNING: {region.label} identities are unpinned; gates are a round trip only", flush=True)
+        expected_overlays = None
+        expected_count = len(manifest.get("level_wads", []))
+    else:
+        region.require_pinned("boot identity")
     actual_overlays = {entry["level"]: entry["sha256"] for entry in manifest["overlays"]}
     if any(not re.fullmatch(r"\d+_[a-z0-9_]+", level) for level in actual_overlays):
         raise ValueError("Invalid level identifier")
-    if args.all_levels and (len(manifest["overlays"]) != len(actual_overlays) or actual_overlays != expected_overlays):
-        raise ValueError("Overlay identities do not match the pinned RAC2 baseline")
+    if args.all_levels and (len(manifest["overlays"]) != len(actual_overlays)
+                            or (expected_overlays is not None and actual_overlays != expected_overlays)):
+        raise ValueError(f"Overlay identities do not match the pinned {region.label} baseline")
     toolchain = args.toolchain.resolve()
     instruments = {name: toolchain / "ee" / "bin" / name for name in ("Ps2EeAs.exe", "ld.exe")}
     for instrument in instruments.values():
@@ -334,6 +353,8 @@ def main() -> int:
               "packages": versions, "tools": {name: hashlib.sha256(path.read_bytes()).hexdigest()
                                              for name, path in instruments.items()},
               "g1": None, "g3": [], "decompiled_functions": 0, "compiler_flags": None}
+    if not region.matching:
+        report.update({"region": region.name, "pinned": region.pinned})
     report["g1"] = rebuild(Path(manifest["boot"]["path"]), manifest["boot"]["sha256"],
                            builds / "boot", toolchain, args.jobs, "boot",
                            args.c_toolchain.resolve() if args.c_toolchain else None, candidate_review=args.candidate_review)
@@ -353,8 +374,8 @@ def main() -> int:
         result["level"] = c_level["level"]
         report["g3"].append(result)
     if args.all_levels:
-        if len(manifest["overlays"]) != 27:
-            raise ValueError("G3 requires all 27 verified overlays")
+        if not expected_count or len(manifest["overlays"]) != expected_count:
+            raise ValueError(f"G3 requires all {expected_count} verified overlays")
         for overlay in manifest["overlays"]:
             if c_level is not None and overlay["level"] == c_level["level"]:
                 continue
