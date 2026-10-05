@@ -24,6 +24,7 @@ import sys
 from pathlib import Path
 
 from wsl_chain import tool_hashes
+import region as regions
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -95,38 +96,49 @@ def report_packages(lines: list, requirements: Path) -> tuple:
     return ok, missing
 
 
-def report_target(lines: list) -> bool:
-    path = ROOT / "config" / "target.json"
-    if not path.is_file():
-        lines.append("config/target.json missing -- is this a complete checkout?")
-        return False
-    target = json.loads(path.read_text(encoding="utf-8"))
-    lines.append(f"target            {target['game']} {target['region']} v{target['version']} "
-                 f"({target['serial']}, {target['expected_levels']} levels)")
-    lines.append(f"disc expected     {target['iso']['size']} bytes, sha256 {target['iso']['sha256']}")
-    lines.append(f"boot expected     {target['boot']['size']} bytes, sha256 {target['boot']['sha256']}")
-    return True
+def report_target(lines: list, name: str | None = None) -> regions.Region | None:
+    try:
+        region = regions.load(name, ROOT)
+    except (OSError, ValueError, KeyError, json.JSONDecodeError) as error:
+        lines.append(f"target            unreadable ({error}) -- is this a complete checkout?")
+        return None
+    target = region.target
+    if region.pinned:
+        lines.append(f"target            {target['game']} {target['region']} v{target['version']} "
+                     f"({target['serial']}, {target['expected_levels']} levels)")
+        lines.append(f"disc expected     {target['iso']['size']} bytes, sha256 {target['iso']['sha256']}")
+        lines.append(f"boot expected     {target['boot']['size']} bytes, sha256 {target['boot']['sha256']}")
+    else:
+        lines.append(f"target            {target['game']} {target['region']} ({target['serial']}, region {region.name})")
+        lines.append("identity          unmeasured -- disc, boot and overlays are not pinned yet")
+    if not region.matching:
+        lines.append("matching proofs   none for this region; C catalogues exist only for the matching region")
+    return region
 
 
-def report_disc(lines: list, iso: Path | None) -> bool:
+def report_disc(lines: list, iso: Path | None, region: regions.Region | None = None) -> bool:
+    region = region or regions.load(None, ROOT)
     if iso is None:
         lines.append("disc image        not checked (pass --iso to verify your own copy)")
         return False
     if not iso.is_file():
         lines.append(f"disc image        {iso} not found")
         return False
+    if region.target.get("iso") is None:
+        lines.append(f"disc image        {iso} present; {region.label} identity is unpinned, "
+                     "setup.py --measure-identity records it for review")
+        return True
     try:
         from setup import hashes, require_identity  # same verification path as setup.py
     except ImportError as error:
         lines.append(f"disc image        cannot import setup.py ({error})")
         return False
     try:
-        require_identity(hashes(iso), json.loads(
-            (ROOT / "config" / "target.json").read_text(encoding="utf-8"))["iso"], "ISO")
+        require_identity(hashes(iso), region.target["iso"], "ISO")
     except (OSError, ValueError) as error:
         lines.append(f"disc image        {iso}: {error} -- this is not the supported release")
         return False
-    lines.append(f"disc image        {iso} matches the pinned USA v1.01 release")
+    lines.append(f"disc image        {iso} matches the pinned {region.label} release")
     return True
 
 
@@ -184,7 +196,7 @@ def report_local_file(lines: list, label: str, path: Path | None) -> bool:
 
 def report_wrench(lines: list, wrench: Path | None) -> bool:
     if wrench is None:
-        lines.append("wrench            not given (needed to unpack the 27 level overlays)")
+        lines.append("wrench            not given (needed to unpack the level overlays)")
         return False
     if not wrench.is_file():
         lines.append(f"wrench            {wrench} not found")
@@ -231,7 +243,7 @@ def report_manifest(lines: list, runtime: Path | None) -> Path | None:
 def doctor(argv: list | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Report what this machine can do with this repository, and the next command to run")
-    parser.add_argument("--iso", type=Path, help="your own disc image, verified against config/target.json")
+    parser.add_argument("--iso", type=Path, help="your own disc image, verified against the region target")
     parser.add_argument("--toolchain", type=Path, help="SN ProDG 2.0 EE toolchain (assembly and link)")
     parser.add_argument("--c-toolchain", type=Path, help="SN EE linker root; also probe actual GNU WSL profile hashes")
     parser.add_argument("--wrench", type=Path, help="wrenchbuild, to unpack the level overlays")
@@ -240,13 +252,15 @@ def doctor(argv: list | None = None) -> int:
     parser.add_argument("--ghidra", type=Path, help="Ghidra launcher; separately verify R5900 language and analysis access")
     parser.add_argument("--pcsx2", type=Path, help="PCSX2 executable; separately verify emulator configuration")
     parser.add_argument("--bios", type=Path, help="your permitted local PS2 BIOS; never upload it")
+    regions.add_argument(parser, ROOT)
     args = parser.parse_args(argv)
 
     lines = ["RAC2 environment", "-----------------"]
     python_ok = report_python(lines)
     packages_ok, _ = report_packages(lines, ROOT / "requirements.txt")
-    target_ok = report_target(lines)
-    disc_ok = report_disc(lines, args.iso)
+    region = report_target(lines, args.region)
+    target_ok = region is not None
+    disc_ok = report_disc(lines, args.iso, region) if target_ok else False
     wrench_ok = report_wrench(lines, args.wrench)
     runtime_ok = report_runtime(lines, args.runtime)
     manifest = report_manifest(lines, args.runtime)
@@ -272,15 +286,19 @@ def doctor(argv: list | None = None) -> int:
         return 2
 
     prepared = manifest is not None or (disc_ok and wrench_ok and runtime_ok)
+    # Name a non-default region explicitly so a copied command never falls back to another target.
+    selector = "" if region.name == regions.registry(ROOT)["default"] else f" --region {region.name}"
+    if not region.pinned:
+        selector += " --measure-identity"
     build_ok = prepared and runtime_ok and assembly_ok
-    c_ready = prepared and runtime_ok and c_ok
+    c_ready = prepared and runtime_ok and c_ok and region.matching
     integration_ready = build_ok and packages_ok and c_ready
 
     lines.append("VERDICT")
     lines.append("  tooling (tests + report export)  yes -- needs nothing proprietary")
     lines.append(f"  build (assembly reconstruction)  {'yes' if build_ok else 'not yet'}")
-    lines.append(f"  C candidates (byte proofs)       {'yes' if c_ready else 'not yet'}")
-    lines.append(f"  full C integration               {'yes' if integration_ready else 'not yet'}")
+    lines.append(f"  C candidates (byte proofs)       {'yes' if c_ready else 'not yet' if region.matching else 'no catalogues for this region'}")
+    lines.append(f"  full C integration               {'yes' if integration_ready else 'not yet' if region.matching else 'no catalogues for this region'}")
     lines.append("  Availability/profile checks only; matching still requires the actual byte gates.")
     if args.contributor_check:
         lines.append(f"  contributor prerequisites        {'present' if contributor_ready else 'incomplete'}")
@@ -295,7 +313,11 @@ def doctor(argv: list | None = None) -> int:
         lines.append("  python scripts/doctor.py --help    # contribution requires your matching ISO and complete tool suite")
     elif not prepared or not runtime_ok:
         lines.append(f"  python scripts/setup.py --iso <disc.iso> --runtime {args.runtime or '<runtime>'} "
-                     f"--wrench <wrenchbuild.exe>")
+                     f"--wrench <wrenchbuild.exe>{selector}")
+    elif not region.matching and assembly_ok:
+        where = manifest or Path(str(args.runtime or "<runtime>")) / "latest.json"
+        lines.append(f"  python scripts/build.py --manifest {where} --toolchain {args.toolchain} "
+                     f"--all-levels    # assembly round trip only; {region.label} has no C catalogues")
     elif c_ready:
         reference = (manifest.parent / "reference" / "boot.elf") if manifest else Path("<runtime>/runs/<id>/reference/boot.elf")
         lines.append(f"  python scripts/check_candidates.py --reference {reference} "

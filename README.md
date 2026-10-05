@@ -60,10 +60,19 @@ Its fill uses the full 0–100% scale.
 | Game | Platform | Region | Version | Boot executable |
 | --- | --- | --- | --- | --- |
 | Ratchet & Clank: Going Commando (2003) | PlayStation 2 | USA / NTSC-U | 1.01 | `SCUS_972.68` |
+| Ratchet & Clank 2: Locked and Loaded (2003) | PlayStation 2 | Europe / PAL | unmeasured | `SCES_516.07` |
 
-Other regions and Greatest Hits v2.00 are different targets. Disc and boot
-identities are pinned in [target configuration](config/target.json); all
-27 extracted overlay identities are in [overlay configuration](config/overlays.json).
+Matching proofs exist for USA v1.01 only. Disc and boot identities are pinned in
+[target configuration](config/target.json); all 27 extracted overlay identities
+are in [overlay configuration](config/overlays.json). The PAL release is a
+registered but unpinned region: `--region pal` lets the preparation and
+reconstruction tools measure and round-trip it, without C catalogues or credit.
+See [game regions](docs/REGIONS.md). Greatest Hits v2.00 is a different target.
+
+The functional, non-matching PAL reconstruction and native-port skeleton from
+[platypet2217-star/RAC2Decomp](https://github.com/platypet2217-star/RAC2Decomp)
+are imported with their history under [ports/pal-functional/](ports/pal-functional/).
+They are outside the matching sources and add no progress.
 
 ## Start or resume work
 
@@ -255,3 +264,5 @@ Intermediate percentages are milestones, not completion of the project.
 
 MIT — see [LICENSE](LICENSE). It covers the repository's code, never the game,
 its assets or proprietary toolchains. Contributions use the same terms.
+`ports/pal-functional/` keeps its own MIT notice, copyright platypet2217-star,
+in [its LICENSE](ports/pal-functional/LICENSE).

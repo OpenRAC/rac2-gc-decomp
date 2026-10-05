@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from elf_tools import read_elf
+import region as regions
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = json.loads((ROOT / "config" / "target.json").read_text(encoding="utf-8"))
@@ -34,6 +35,16 @@ def require_identity(actual: dict, expected: dict, label: str) -> None:
     failures = [name for name, value in expected.items() if actual.get(name) != value]
     if failures:
         raise ValueError(f"{label}: wrong {', '.join(failures)}")
+
+
+def check_or_measure(actual, expected, label: str, measured: dict, key: str) -> None:
+    """Compare a pinned identity; an unmeasured one (null) is only recorded for review."""
+    if expected is None:
+        measured[key] = actual
+    elif isinstance(expected, dict):
+        require_identity(actual, expected, label)
+    elif actual != expected:
+        raise ValueError(f"Wrong {label}")
 
 
 def command(arguments: list[str], log: Path, allow_warning: bool = False) -> None:
@@ -104,14 +115,21 @@ def find_entry(entries: list[dict], name: str) -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Verify and prepare RAC2 v1.01 locally")
+    parser = argparse.ArgumentParser(description="Verify and prepare one RAC2 release locally")
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--iso", type=Path)
     source.add_argument("--archive", type=Path)
     parser.add_argument("--runtime", required=True, type=Path)
     parser.add_argument("--sevenzip", type=Path)
     parser.add_argument("--wrench", type=Path)
+    regions.add_argument(parser)
+    parser.add_argument("--measure-identity", action="store_true",
+                        help="record unpinned identities of this region in a private review proposal")
     args = parser.parse_args()
+    region = regions.load(args.region)
+    target = region.target
+    if not region.pinned and not args.measure_identity:
+        region.require_pinned("disc, boot and overlay identity")
     runtime = args.runtime.resolve()
     if runtime == ROOT or runtime in ROOT.parents or ROOT in runtime.parents:
         raise ValueError("Runtime must be outside the source repository")
@@ -132,46 +150,48 @@ def main() -> int:
         iso = images[0]
     if iso is None or not iso.is_file():
         raise ValueError("ISO missing")
-    print("Verifying entire ISO: size, SHA-1, MD5, CRC32, SHA-256", flush=True)
+    measured = {}
+    print(f"Verifying entire {region.label} ISO: size, SHA-1, MD5, CRC32, SHA-256", flush=True)
     iso_hashes = hashes(iso)
-    require_identity(iso_hashes, TARGET["iso"], "ISO")
+    check_or_measure(iso_hashes, target["iso"], "ISO", measured, "iso")
     with iso.open("rb") as stream:
         stream.seek(16 * 2048)
         descriptor = stream.read(2048)
     if descriptor[:7] != b"\x01CD001\x01":
         raise ValueError("Expected ISO9660 primary volume descriptor")
     label = descriptor[40:72].decode("ascii").strip()
-    if label != TARGET["volume_label"]:
-        raise ValueError("Wrong volume label")
+    check_or_measure(label, target["volume_label"], "volume label", measured, "volume_label")
     root = iso_entries(iso, iso_record(descriptor[156:156 + descriptor[156]]))
     reference = run / "reference"
     reference.mkdir()
     cnf = reference / "SYSTEM.CNF"
     extract_record(iso, find_entry(root, "SYSTEM.CNF"), cnf)
     cnf_text = cnf.read_text(encoding="ascii")
-    if not re.search(r"BOOT2\s*=\s*cdrom0:\\" + re.escape(TARGET["serial"]) + r";1", cnf_text):
+    if not re.search(r"BOOT2\s*=\s*cdrom0:\\" + re.escape(region.serial) + r";1", cnf_text):
         raise ValueError("Wrong boot serial")
-    if not re.search(r"VER\s*=\s*1\.01\b", cnf_text):
-        raise ValueError("Wrong SYSTEM.CNF version")
+    version = re.search(r"VER\s*=\s*([0-9.]+)", cnf_text)
+    check_or_measure(version.group(1) if version else None, target["version"], "SYSTEM.CNF version",
+                     measured, "version")
     boot = reference / "boot.elf"
-    extract_record(iso, find_entry(root, TARGET["serial"]), boot)
+    extract_record(iso, find_entry(root, region.serial), boot)
     boot_hashes = hashes(boot)
-    require_identity(boot_hashes, TARGET["boot"], "boot ELF")
+    check_or_measure(boot_hashes, target["boot"], "boot ELF", measured, "boot")
     structure = read_elf(boot)
     (reference / "boot-structure.json").write_text(json.dumps(structure, indent=2) + "\n", encoding="utf-8")
     game_files = iso_entries(iso, find_entry(root, "G"))
     level_files = sorted(entry["name"] for entry in game_files if re.fullmatch(r"LEVEL\d+\.WAD", entry["name"]))
-    if len(level_files) != TARGET["expected_levels"]:
-        raise ValueError("Unexpected LEVEL WAD count")
+    check_or_measure(len(level_files), target["expected_levels"], "LEVEL WAD count", measured, "expected_levels")
     gp_sections = [section for section in structure["sections"] if section["name"] == ".reginfo"]
     if len(gp_sections) != 1 or gp_sections[0]["size"] != 24:
         raise ValueError("Missing or malformed MIPS .reginfo")
     gp = struct.unpack_from("<I", boot.read_bytes(), gp_sections[0]["offset"] + 20)[0]
     manifest = {"schema": 1, "verified_at": datetime.now(timezone.utc).isoformat(),
-                "target": TARGET["serial"], "iso": {"path": str(iso), **iso_hashes},
+                "target": region.serial, "iso": {"path": str(iso), **iso_hashes},
                 "boot": {"path": str(boot), **boot_hashes, "entry": structure["entry"], "gp": gp},
                 "level_wads": level_files, "overlays": [], "g1": "not_run", "g3": "not_run",
                 "decompiled_functions": 0, "compiler_flags": None}
+    if not region.matching:
+        manifest.update({"region": region.name, "pinned": region.pinned})
     if args.wrench:
         if not args.wrench.is_file():
             raise ValueError("Wrench executable missing")
@@ -180,7 +200,7 @@ def main() -> int:
         command([str(args.wrench.resolve()), "unpack", str(iso), "-o", str(destination), "-s"],
                 run / "wrench.log")
         overlays = sorted(destination.glob("*/levels/*/overlay.elf"))
-        if len(overlays) != TARGET["expected_levels"]:
+        if len(overlays) != len(level_files):
             raise ValueError("Unexpected overlay count")
         extracted_boots = list(destination.glob("*/boot_elf.elf"))
         if len(extracted_boots) != 1 or extracted_boots[0].read_bytes() != boot.read_bytes():
@@ -195,19 +215,28 @@ def main() -> int:
             manifest["overlays"].append({"level": overlay.parent.name, "path": str(private_copy),
                                           "sha256": overlay_info["sha256"]})
         manifest["wrench"] = {"sha256": hashes(args.wrench)["sha256"], "exit_code": 0}
-        baseline_path = ROOT / "config" / "overlays.json"
-        if baseline_path.is_file():
-            baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
-            expected = {entry["level"]: entry["sha256"] for entry in baseline["levels"]}
-            actual = {entry["level"]: entry["sha256"] for entry in manifest["overlays"]}
-            if actual != expected:
-                raise ValueError("Extracted overlays differ from the pinned RAC2 baseline")
+        actual = {entry["level"]: entry["sha256"] for entry in manifest["overlays"]}
+        if region.overlays is None:
+            measured["overlays"] = {"target": region.serial,
+                                    "levels": [{"level": level, "sha256": digest} for level, digest in actual.items()]}
+        elif actual != {entry["level"]: entry["sha256"] for entry in region.overlays["levels"]}:
+            raise ValueError(f"Extracted overlays differ from the pinned {region.label} baseline")
+    elif args.measure_identity and region.overlays is None:
+        raise ValueError("Measuring an unpinned region needs --wrench to record its overlay identities")
+    if measured:
+        proposal = {"schema": 1, "kind": "region-identity-proposal", "region": region.name,
+                    "serial": region.serial, "measured_at": manifest["verified_at"], "measured": measured,
+                    "review": "Measured from one local disc. Confirm the dump against a public catalogue "
+                              "before pinning it in the region target; it is not evidence of a match."}
+        (run / "identity-proposal.json").write_text(json.dumps(proposal, indent=2) + "\n", encoding="utf-8")
     manifest_path = run / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     (runtime / "latest.json").write_text(json.dumps({"manifest": str(manifest_path)}, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"manifest": str(manifest_path), "boot_sha256": boot_hashes["sha256"],
-                      "gp": f"0x{gp:08X}", "level_wads": len(level_files),
-                      "overlays": len(manifest["overlays"])}, indent=2))
+    summary = {"manifest": str(manifest_path), "boot_sha256": boot_hashes["sha256"],
+               "gp": f"0x{gp:08X}", "level_wads": len(level_files), "overlays": len(manifest["overlays"])}
+    if measured:
+        summary.update({"region": region.name, "pinned": False, "identity_proposal": str(run / "identity-proposal.json")})
+    print(json.dumps(summary, indent=2))
     return 0
 
 
