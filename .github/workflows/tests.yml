@@ -17,6 +17,16 @@ jobs:
         run: |
           python scripts/decomp_report.py --output build/decomp/report.json \
             $(for f in progress/levels/*.json; do printf -- '--level-proof %s ' "$f"; done)
+      - name: Validate the report with objdiff
+        # decomp.dev parses this artifact with objdiff; reject a report it cannot load.
+        # The release binary is pinned by version and SHA-256.
+        run: |
+          curl --fail --location --retry 3 -o "$RUNNER_TEMP/objdiff-cli" \
+            https://github.com/encounter/objdiff/releases/download/v3.8.1/objdiff-cli-linux-x86_64
+          echo "c8290281e82114bcc1a06ff73061110d3902a177822e750337de2537188e358f  $RUNNER_TEMP/objdiff-cli" | sha256sum --check
+          chmod +x "$RUNNER_TEMP/objdiff-cli"
+          "$RUNNER_TEMP/objdiff-cli" report changes build/decomp/report.json build/decomp/report.json \
+            -o "$RUNNER_TEMP/objdiff-validation.json"
       - uses: actions/upload-artifact@v4
         with:
           name: SCUS_972.68_report
