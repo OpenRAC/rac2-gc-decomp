@@ -2666,6 +2666,20 @@
       "program": "11_joba",
       "candidate_source": "candidates/levels/11_joba.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_11_JOBA_FUN_002EE888",
+      "address": 3074184,
+      "size": 164,
+      "matched": true,
+      "reference_sha256": "128ffe218718460aab1177838a388977cecc79ae90f04576cfc592fc0f109d10",
+      "candidate_sha256": "128ffe218718460aab1177838a388977cecc79ae90f04576cfc592fc0f109d10",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "11_joba",
+      "candidate_source": "candidates/levels/11_joba.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2673,14 +2687,14 @@
     "bytes_compared": 3151320,
     "segments": 1
   },
-  "matched_code_bytes": 11376,
+  "matched_code_bytes": 11540,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "09a66025f264adfb9773b762d8d0db45d96adaff6ed280dc94f9e8e8a60e0c95",
+  "candidate_elf_sha256": "cf5998e7aa81378ffacc541e54bce115804b0cde11fb796b198bd0f137ed2e43",
   "c_object_sha256": "e6d601c5bf5ec8f23ca33853f969fdedd0ceea9a847e57cc31cc7b58be756156",
   "replacement_inputs": {
     "116180.s": [
@@ -2873,7 +2887,8 @@
       "LVL_11_JOBA_FUN_0031B388",
       "LVL_11_JOBA_FUN_002CBD60",
       "LVL_11_JOBA_FUN_0049B3E8",
-      "LVL_11_JOBA_FUN_00323720"
+      "LVL_11_JOBA_FUN_00323720",
+      "LVL_11_JOBA_FUN_002EE888"
     ]
   },
   "schema": 2,
@@ -2898,7 +2913,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "09a66025f264adfb9773b762d8d0db45d96adaff6ed280dc94f9e8e8a60e0c95",
+    "candidate_elf_sha256": "cf5998e7aa81378ffacc541e54bce115804b0cde11fb796b198bd0f137ed2e43",
     "c_object_sha256": "e6d601c5bf5ec8f23ca33853f969fdedd0ceea9a847e57cc31cc7b58be756156",
     "replacement_inputs": {
       "116180.s": [
@@ -3091,7 +3106,8 @@
         "LVL_11_JOBA_FUN_0031B388",
         "LVL_11_JOBA_FUN_002CBD60",
         "LVL_11_JOBA_FUN_0049B3E8",
-        "LVL_11_JOBA_FUN_00323720"
+        "LVL_11_JOBA_FUN_00323720",
+        "LVL_11_JOBA_FUN_002EE888"
       ]
     }
   },
@@ -3101,13 +3117,13 @@
   },
   "reference_entry": 2870792,
   "candidate_entry": 2870792,
-  "dependency_sha256": "018fe79360719825a5ef000b082dfebb46ee9b74d2ec40fbeda1b3e309e28d0b",
+  "dependency_sha256": "07bee240bb975c9abe2ecce5a5eff11d0f2dac1862aec504102342a5108e0bd3",
   "boot_review_sha256": "7664c0b5dd178fb37b2b4a079bb21078dab655a9418c140e26cea728a226ad7a",
   "native": {
     "source": "candidates/levels/11_joba.c",
     "catalog_path": "config/level-native/11_joba.json",
     "review_path": "progress/level-candidates/11_joba.json",
-    "review_sha256": "e10dcd2a5c48ef85c08f0523c7cf12a4e098e991c2629d9ee7b17fb5e81e224e",
+    "review_sha256": "7dff861059d4fbc135d376b06f8ee4a1bd4846dbdb638105a233d5a51482bdc6",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3116,10 +3132,10 @@
       "reference_sha256": "c6cf24ac0591c78ae6a5320a333b4465f54969ab91e0f42f52fcb7fc95f2f00e",
       "reference_entry": 2870792,
       "candidate_source": "candidates/levels/11_joba.c",
-      "source_sha256": "3bbf074a1605eeadfe12f281d8d75a073992e6457d38144dfdedd9164b6312ed",
-      "catalog_sha256": "615e733785428185199350c13cbe65239dc8cbdaa973e3be6e8112791cf57c29",
-      "object_sha256": "784c6477571734626361d3b924139b6ba9942389e77f39a570f99d57d1bf02a9",
-      "candidate_elf_sha256": "f65952b4389708d42bd289eaad672604f861b7305aab1c688855141d5431bac1",
+      "source_sha256": "e9b6ca53f7834e68b9fbd573f8b4f0ee085de2ee88c6be925d74be44d3447e9e",
+      "catalog_sha256": "e60be3c3efa6552251a0e20d3c0fbccc8b1c935b08c1702acf968cdbfc626119",
+      "object_sha256": "8ed50e89295993e75a7c7d018293e19af385ef04e4ed5f3e0481c9f1b2daf4ca",
+      "candidate_elf_sha256": "16f94f0e8901ac4e7a74281683bb0eb485d242ee1e365d9410fab72762fbbc25",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3529,11 +3545,22 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 84
+        },
+        {
+          "symbol": "LVL_11_JOBA_FUN_002EE888",
+          "address": 3074184,
+          "size": 164,
+          "matched": true,
+          "reference_sha256": "128ffe218718460aab1177838a388977cecc79ae90f04576cfc592fc0f109d10",
+          "candidate_sha256": "128ffe218718460aab1177838a388977cecc79ae90f04576cfc592fc0f109d10",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 164
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 3704
+      "matched_code_bytes": 3868
     },
-    "object_sha256": "784c6477571734626361d3b924139b6ba9942389e77f39a570f99d57d1bf02a9"
+    "object_sha256": "8ed50e89295993e75a7c7d018293e19af385ef04e4ed5f3e0481c9f1b2daf4ca"
   }
 }

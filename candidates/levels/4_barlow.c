@@ -579,3 +579,39 @@ void LVL_4_BARLOW_FUN_003461E0(GornRecordWrite64 *record, u32 selector,
         } while (marker != 1);
     }
 }
+
+/* Append an observed point index and update the original geometric descriptor. */
+typedef struct {
+    unsigned char gap0[0x10];
+    float plane[4];
+    unsigned char gap20[0x10];
+    float (*points)[4];
+    unsigned char gap34[0x25];
+    unsigned char indices[3];
+    unsigned char count;
+} OozlaAppendDescriptor164;
+typedef struct {
+    unsigned char gap0[0x68];
+    OozlaAppendDescriptor164 *descriptor;
+    unsigned char gap6c[0x54];
+    float transform[3][4];
+} OozlaAppendObject164;
+typedef char OozlaAppendDescriptorCount164[((int)&((OozlaAppendDescriptor164 *)0)->count == 0x5c) ? 1 : -1];
+extern void LVL_4_BARLOW_FUN_002FD328(OozlaAppendObject164 *, int, const float *);
+extern void LVL_4_BARLOW_FUN_0030EDC8(float *, const float *, const float *);
+extern void LVL_4_BARLOW_FUN_0030F270(float *, const float *, const float *);
+extern void LVL_4_BARLOW_FUN_002FD670(OozlaAppendObject164 *, float *, const float *);
+unsigned int LVL_4_BARLOW_FUN_002FD280(OozlaAppendObject164 *object, unsigned int index, const float *direction)
+{
+    float difference[4];
+    OozlaAppendDescriptor164 *descriptor = object->descriptor;
+    descriptor->indices[descriptor->count] = index;
+    ++descriptor->count;
+    LVL_4_BARLOW_FUN_002FD328(object, (int)descriptor->count - 1, direction);
+    if (descriptor->count != 1) {
+        LVL_4_BARLOW_FUN_0030EDC8(difference, descriptor->points[descriptor->indices[0]], descriptor->points[descriptor->indices[1]]);
+        LVL_4_BARLOW_FUN_0030F270(difference, difference, &object->transform[0][0]);
+        LVL_4_BARLOW_FUN_002FD670(object, descriptor->plane, difference);
+    }
+    return descriptor->count;
+}

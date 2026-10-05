@@ -594,3 +594,39 @@ void LVL_9_DOBBO_FUN_004051F8(NativeAngleOwner *owner) {
     if (0.52359885f < angle) state->field2E8 = 0.52359885f;
     else if (angle < -0.52359885f) state->field2E8 = -0.52359885f;
 }
+
+/* Append an observed point index and update the original geometric descriptor. */
+typedef struct {
+    unsigned char gap0[0x10];
+    float plane[4];
+    unsigned char gap20[0x10];
+    float (*points)[4];
+    unsigned char gap34[0x25];
+    unsigned char indices[3];
+    unsigned char count;
+} OozlaAppendDescriptor164;
+typedef struct {
+    unsigned char gap0[0x68];
+    OozlaAppendDescriptor164 *descriptor;
+    unsigned char gap6c[0x54];
+    float transform[3][4];
+} OozlaAppendObject164;
+typedef char OozlaAppendDescriptorCount164[((int)&((OozlaAppendDescriptor164 *)0)->count == 0x5c) ? 1 : -1];
+extern void LVL_9_DOBBO_FUN_002D8BD8(OozlaAppendObject164 *, int, const float *);
+extern void LVL_9_DOBBO_FUN_002EA4A0(float *, const float *, const float *);
+extern void LVL_9_DOBBO_FUN_002EA930(float *, const float *, const float *);
+extern void LVL_9_DOBBO_FUN_002D8F20(OozlaAppendObject164 *, float *, const float *);
+unsigned int LVL_9_DOBBO_FUN_002D8B30(OozlaAppendObject164 *object, unsigned int index, const float *direction)
+{
+    float difference[4];
+    OozlaAppendDescriptor164 *descriptor = object->descriptor;
+    descriptor->indices[descriptor->count] = index;
+    ++descriptor->count;
+    LVL_9_DOBBO_FUN_002D8BD8(object, (int)descriptor->count - 1, direction);
+    if (descriptor->count != 1) {
+        LVL_9_DOBBO_FUN_002EA4A0(difference, descriptor->points[descriptor->indices[0]], descriptor->points[descriptor->indices[1]]);
+        LVL_9_DOBBO_FUN_002EA930(difference, difference, &object->transform[0][0]);
+        LVL_9_DOBBO_FUN_002D8F20(object, descriptor->plane, difference);
+    }
+    return descriptor->count;
+}

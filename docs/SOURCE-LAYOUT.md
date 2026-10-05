@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Six hundred ninety-two contextual native bodies remain distinct in the
+family has 26. Seven hundred nineteen contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,31 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 181 definitions | 9,564 |
-| Native overlays | 700 family-or-singleton items, 701 contextual variants | 87,536 across 907 placements |
+| Native overlays | 727 family-or-singleton items, 728 contextual variants | 91,964 across 934 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 78,352, or 78,376 when both clear
+Native representative catalogued bytes total 82,780, or 82,804 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **304,180 / 48,788,176 bytes (0.6235%)**.
-The latest lot adds six complete 64-byte record-pointer writers, totaling
+The current integration exporter accepts **308,608 / 48,788,176 bytes (0.6325%)**.
+The latest lot adds 27 complete 164-byte point-index append/update routines,
+totaling 4,428 bytes. A byte index is appended through the observed descriptor,
+its byte count increments, and original registration and geometric helpers
+update the descriptor. The registration helper consumes a third ordinary
+direction-pointer argument, proven before the first C trial. The final byte
+count is returned explicitly; no incidental helper result is inferred.
+
+One authored fragment retains explicit per-program bindings. All 934 complete
+native functions match, including 907 controls. Generated source/catalog bytes
+equal immutable qualifications and every original flag, GP and helper binding
+remains unchanged, including Barlow G8. The original four helpers and their
+MMI/VU work receive no additional C credit. Fresh boot and all 27 loaded-byte
+and metadata gates, independent exports and the full test suite qualify integration.
+
+The preceding lot added six complete 64-byte record-pointer writers, totaling
 384 bytes. A zero initial marker skips the scan. Otherwise the full selector
 word and signed promoted key select the first matching 80-byte record; its
 payload pointer is written, with the original marker-one termination order.

@@ -1647,6 +1647,46 @@ PARK trial3c7625a5c9f44e45a7a0f6d30796da39 complete168/160 size refusal withALL3
 
 Reopen condition: Independent original root/global/prototype/source-effect/alias/lifetime evidence only; no equivalent base-initializer/branch/type/qualifier/register orpadding/flags choices.
 
+## native-review-barlow-callback-register-20261005
+
+State: `stopped`. Kind: `research`.
+
+PARK trialc72530f3403d43b3a60a9543adefd207 complete100/104 size refusal withALL32CURRENTBarlow907G8controls exact. Count/table/codepointer ABI/value/loop correct; compilerretainscountglobalHI inT0 andusesonecountregister insteadreferenceA2bound/A0count copies andlastLUIAT/SWABS. No independently proven original object/globaldeclaration/alias/lifetime correction; no pointer/int/qualifier/countlocal/loop/register/source/flags v2. Manualfull92caller46B488 passedcodepointer46B4E8, executor108 ordinaryJALR corroboratespointertable; evidence retained.
+
+Reopen condition: Independent original callback/count/table binding/type/alias/lifetime/sourceeffect evidence only; no qualifier/pointer/int/countcapture or register/loop choices.
+
+## native-review-barlow-callback-register-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+PARK trialc72530f3403d43b3a60a9543adefd207 complete100/104 size refusal withALL32CURRENTBarlow907G8controls exact. Count/table/codepointer ABI/value/loop correct; compilerretainscountglobalHI inT0 andusesonecountregister insteadreferenceA2bound/A0count copies andlastLUIAT/SWABS. No independently proven original object/globaldeclaration/alias/lifetime correction; no pointer/int/qualifier/countlocal/loop/register/source/flags v2. Manualfull92caller46B488 passedcodepointer46B4E8, executor108 ordinaryJALR corroboratespointertable; evidence retained.
+
+Reopen condition: Independent original callback/count/table binding/type/alias/lifetime/sourceeffect evidence only; no qualifier/pointer/int/countcapture or register/loop choices.
+
+## native-review-barlow-callback-run-20261005
+
+State: `queued`. Kind: `research`.
+
+Fullcurrent33Barlow934G8unit+new108/84 firstnaturalC; pinexecutorcaller/body/registercaller92/callback84/sharedmemory. Strictcompletebytes only.
+
+Reopen condition: Independent original callback/global/header ABI/layout/alias/lifetime/sourceeffect evidence only; no counter/view/qualifier/branch/FPR/register/flags cycles.
+
+## native-review-barlow-callback-run-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+FirstnaturalC/wholeCURRENTG8unit strictqualification; preserve negatives, familyonlyifseedexact.
+
+Reopen condition: Independent original callback/global/header ABI/layout/alias/lifetime/sourceeffect evidence only; no counter/view/qualifier/branch/FPR/register/flags cycles.
+
+## native-review-barlow-callback-timer-qualified-20261005
+
+State: `exact_private`. Kind: `candidate`.
+
+FirstnaturalC/wholeCURRENTG8unit strictqualification; preserve negatives, familyonlyifseedexact.
+
+Reopen condition: Independent original callback/global/header ABI/layout/alias/lifetime/sourceeffect evidence only; no counter/view/qualifier/branch/FPR/register/flags cycles.
+
 ## native-review-barlow-frame-reset-20261005
 
 State: `queued`. Kind: `research`.
@@ -1665,11 +1705,19 @@ Reopen condition: Independent original tag/header/global overlap or asynchronous
 
 ## native-review-barlow-mode-predicate-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Fulltarget/caller544 livepins andfreshCURRENT32G8controls, firstnaturalC; strict188 allbytesonly.
+PARK triale934829a91554dfebbff8e8dbbd291ba complete180/188 size refusal withALL32CURRENTBarlow907controls exact underqualifiedG8/GP1AEFF0. CorrectABS1A8FF0/ABSbyte1A7B0B/SDA1A8FF4 andresidentLH/LBU/LW values/orderedpredicate/MOVZ/MOVN. Candidate keepsonecomplete residentpointerA2 whereasreference retainsinitialhighaddressA3 andremakesbase forlast149Acheck; read/branch scheduling/counter34E load movedintobranchdelay differ. No independently measured originalreturnprototype or globalpointer/view/lifetime effect; calleronlyobserveslowbyte, doesnotauthorize returnshort/byte narrowing. No qualifier/view/returntype/branch/local/reg/flags v2.
 
-Reopen condition: Independent original resident/global/object ABI/sourcebinding/effect evidence only; no qualifier/view/branch/local/register/flags cycling.
+Reopen condition: Independent original resident/global binding/prototype/type/alias/lifetime/sourceeffect evidence only; no equivalent pointer/view/returntype or branch/register allocation choices.
+
+## native-review-barlow-mode-predicate-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+PARK triale934829a91554dfebbff8e8dbbd291ba complete180/188 size refusal withALL32CURRENTBarlow907controls exact underqualifiedG8/GP1AEFF0. CorrectABS1A8FF0/ABSbyte1A7B0B/SDA1A8FF4 andresidentLH/LBU/LW values/orderedpredicate/MOVZ/MOVN. Candidate keepsonecomplete residentpointerA2 whereasreference retainsinitialhighaddressA3 andremakesbase forlast149Acheck; read/branch scheduling/counter34E load movedintobranchdelay differ. No independently measured originalreturnprototype or globalpointer/view/lifetime effect; calleronlyobserveslowbyte, doesnotauthorize returnshort/byte narrowing. No qualifier/view/returntype/branch/local/reg/flags v2.
+
+Reopen condition: Independent original resident/global binding/prototype/type/alias/lifetime/sourceeffect evidence only; no equivalent pointer/view/returntype or branch/register allocation choices.
 
 ## native-review-barlow-rectangle-slot-20261005
 
@@ -5931,6 +5979,16 @@ Reopen condition: Independent original record storage/access-phase or qualified 
 
 - `runtime:bank/parallel-orbital_lots-gorn-sentinel-key-query-v1/evidence.json`
 
+## orbital-gorn-short-enqueue76-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-gorn-short-enqueue76-v1/evidence.json`
+
 ## orbital-gorn-slot-reset60-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -7642,6 +7700,276 @@ Keep stopped as the same complete physical family as earlier boot_analysis Makta
 Reopen condition: Independent original source, type, layout or API evidence addressing the existing shared grouped-cursor refusal; relocation-only program aliases and expression/register/width/phase/profile permutations do not reopen it.
 
 - `runtime:bank/parallel-orbital_lots-yeedil-selection-state-v1/evidence.json`
+
+## parallel-boot-analysis-append164-0-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-10-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-11-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-12-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-13-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-14-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-15-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-16-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-17-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-18-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-19-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-2-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-20-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-22-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-23-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-24-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-25-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-26-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-3-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-30-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-4-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-5-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-6-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-7-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-8-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-9-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification before rootintegration; exactallbytes only.
+
+Reopen condition: Independent original ABI/layout/type/source/qualifiedlowering witness only; no pointer/list/count/return/branch/flags/register cycles.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
+
+## parallel-boot-analysis-append164-family
+
+State: `done`. Kind: `research`.
+
+26nonseed wholecurrentunit maintainedtrials/unchangedseedreuse thenportableREADYpacket.
+
+Reopen condition: Independent new original/source/ABI evidence only.
+
+- `runtime:bank/parallel-boot_analysis-append-family/placements-qualified.json`
 
 ## parallel-boot-analysis-aranos-channel-records-research
 
@@ -9757,6 +10085,16 @@ Reopen condition: Independent reference/source/type/access-phase evidence only.
 
 - `runtime:bank/parallel-boot_analysis-mapped-class-family/placements-qualified.json`
 
+## parallel-boot-analysis-oozla-append164-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit firstC trial; exactbody beforefamily, parkanyrefusal withoutcount/return/descriptor/array/loop variants.
+
+Reopen condition: Independent original source/type/layout/ABI/qualifiedlowering evidence only; no scalarreturncasts/localview/count/array/pointer/branch/flags/register permutations.
+
+- `private-work:parallel-20261004/boot_analysis/append164-abi.json`
+
 ## parallel-boot-analysis-oozla-class-object-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -10645,6 +10983,42 @@ Reopen condition: Independent original packet storage/type/alias or compiler/sou
 - `private-work:parallel-20261004/root-gp/dma-packet92-static.json`
 - `private-work:parallel-20261004/root-gp/dma-packet92-live-memory.json`
 
+## root-boot-fixed-record-search52-cursor-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve both bounded indexed and pointer-traversal algorithms, allpins/callers/allocated7680/tablelayout and181exactcontrols. Stop without a third loop/do form, address casts, signedness, declarations/register or profile variants.
+
+Reopen condition: Independent original source/declaration/compiler-context evidence accounting for initial guard and signed-end comparison, not equivalent pointer/index expressions.
+
+- `private-work:parallel-20261004/root-gp/search52-static.json`
+- `private-work:parallel-20261004/root-gp/search52-live-memory.json`
+- `private-work:parallel-20261004/root-gp/search52-callers.json`
+
+## root-boot-fixed-record-search52-first-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve both bounded indexed and pointer-traversal algorithms, allpins/callers/allocated7680/tablelayout and181exactcontrols. Stop without a third loop/do form, address casts, signedness, declarations/register or profile variants.
+
+Reopen condition: Independent original source/declaration/compiler-context evidence accounting for initial guard and signed-end comparison, not equivalent pointer/index expressions.
+
+- `private-work:parallel-20261004/root-gp/search52-static.json`
+- `private-work:parallel-20261004/root-gp/search52-live-memory.json`
+- `private-work:parallel-20261004/root-gp/search52-callers.json`
+
+## root-boot-fixed-record-search52-research-20261005
+
+State: `done`. Kind: `research`.
+
+ONE natural fixed-size record search C; requireall182 complete sizes/bytes. Preserve refusal andstopwithout iterator/endpointer/cast/keytype/loop/locals/register/profile cycles.
+
+Reopen condition: Independent original source/type/ABI/compiler witness explaining fullmeasured differences.
+
+- `private-work:parallel-20261004/root-gp/search52-static.json`
+- `private-work:parallel-20261004/root-gp/search52-live-memory.json`
+- `private-work:parallel-20261004/root-gp/search52-callers.json`
+
 ## root-boot-fptodp64-first-20261005
 
 State: `stopped`. Kind: `candidate`.
@@ -10940,6 +11314,32 @@ Verify actual caller or indirect-table ABI and pinned live bytes; then bounded C
 Reopen condition: Independent original storage/observable write qualifier or compilation-context evidence; no volatile/register/padding/flags cycles
 
 - `private-work:parallel-20261004/root-gp/quad24-pin.json`
+
+## root-boot-record-index108-first-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+ONE ordinary dynamic record-index C plus181controls; full182complete sizes/bytes required. Preserve anyrefusalwithout countqualifier/caching/looppeel/type/iterator/local/register/profile cycles.
+
+Reopen condition: Independent original source/type/ABI/compiler context evidence explaining complete mismatch.
+
+- `private-work:parallel-20261004/root-gp/index108-static.json`
+- `private-work:parallel-20261004/root-gp/index108-live-memory.json`
+- `private-work:parallel-20261004/root-gp/index108-caller-00288fb8.json`
+- `private-work:parallel-20261004/root-gp/index108-caller-00289178.json`
+
+## root-boot-record-index108-research-20261005
+
+State: `queued`. Kind: `research`.
+
+ONE ordinary dynamic record-index C plus181controls; full182complete sizes/bytes required. Preserve anyrefusalwithout countqualifier/caching/looppeel/type/iterator/local/register/profile cycles.
+
+Reopen condition: Independent original source/type/ABI/compiler context evidence explaining complete mismatch.
+
+- `private-work:parallel-20261004/root-gp/index108-static.json`
+- `private-work:parallel-20261004/root-gp/index108-live-memory.json`
+- `private-work:parallel-20261004/root-gp/index108-caller-00288fb8.json`
+- `private-work:parallel-20261004/root-gp/index108-caller-00289178.json`
 
 ## root-boot-record-leaf-20261004
 
