@@ -79,11 +79,16 @@
       "boundary_evidence": "authoritative contiguous source fragment; not an original object boundary",
       "fragment": "src/boot/15-double-parts-construction.cfrag",
       "name": "15-double-parts-construction"
+    },
+    {
+      "boundary_evidence": "authoritative contiguous source fragment; not an original object boundary",
+      "fragment": "src/libgcc/fp-bit-ee.c",
+      "name": "fp-bit-ee"
     }
   ],
   "generator_sha256": "5dea27fffe81f262f02029ff2126bf1a673c4edad860b34e46850a69156d8a9f",
   "input_sha256": {
-    "candidates/boot.c": "9eb82f39913ace0a1e34f6a620d40d2b92add9e3e4cc1919eb5751a846732036",
+    "candidates/boot.c": "b1e38dcefa2b827a736b104072d5280b015e865c9572acf6c3f04e3a7fdfa12b",
     "candidates/levels/0_aranos_tutorial.c": "df82c4871f2157e755b7ace7e9230a337aeed4dafa47374539b8feeca53bd244",
     "candidates/levels/10_hrugis_cloud.c": "85a6ab65e7483b8a586973d7b09803ba5a45bcbd8e58c0517a476b63b4350a5c",
     "candidates/levels/11_joba.c": "87c9210766af7f83ef0f86f458fe8922a7805399734eab8d95a88aad8df32eb4",
@@ -111,7 +116,7 @@
     "candidates/levels/7_siberius.c": "de885ad5a6a6be0509f5ec83fe74291f8f89b09db27f93a2a886a9ef4fa4ebab",
     "candidates/levels/8_tabora.c": "15f68b7c453066704314fca8f7d95e95757236b1c89d2842617c481932dd9694",
     "candidates/levels/9_dobbo.c": "933ea95b5c9801a65c90d58c345296178281dbbfb93ff1f0fb4856ed233beb60",
-    "config/candidate-catalog.json": "61c249f59e535480d39c195918e9c3272c928c315a5d26725c4ef5bef73d75cb",
+    "config/candidate-catalog.json": "3d74d437c621c39e2f2b7cdeda2883c13223dcdf07b26c451b1246b84a6bb85f",
     "config/level-native/0_aranos_tutorial.json": "357120b8a1b48decab16cd4b0b1b8b20b573588b8b1fbed3af3e46d1f4ceb000",
     "config/level-native/10_hrugis_cloud.json": "add409f7f710cb5f390a7cbbe4d98c25d75d344e6cbb339f16161f301e1245e1",
     "config/level-native/11_joba.json": "f2f4ab4fa39465f7fde2b3f94a506ff6beeebc146d6cc1efbb54a52364db1ec1",
@@ -142,8 +147,8 @@
   },
   "machine_proof_status": "unverified after authoring; regenerate all affected reviews and loaded-byte gates",
   "metrics": {
-    "boot_authored_functions": 181,
-    "boot_catalogued_machine_bytes": 9564,
+    "boot_authored_functions": 182,
+    "boot_catalogued_machine_bytes": 9708,
     "identity_basis": "catalogued definitions compared as exact source bytes after recorded symbol-only substitutions; not a new machine proof",
     "native_authored_variant_catalogued_bytes_upper_bound": 85696,
     "native_base_family_placements": 215,
@@ -160,7 +165,7 @@
     "pilot_family_unique_catalogued_bytes": 24,
     "scope": "authored boot and native candidate catalogues only; excludes replicated boot/common overlay coverage",
     "shared_native_prelude_variants": 1,
-    "total_unique_authored_source_variants_in_scope": 964,
+    "total_unique_authored_source_variants_in_scope": 965,
     "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report."
   },
   "native_source_families": [
@@ -15343,10 +15348,15 @@
           "fragment": "src/boot/15-double-parts-construction.cfrag",
           "sha256": "dfefcc4c7ce79349b9b505d2906c860084a746da7094876425fa332fa83cc3f2",
           "source_text_bytes": 498
+        },
+        {
+          "fragment": "src/libgcc/fp-bit-ee.c",
+          "sha256": "7e7e49188eda6e599e47d8c237a860b7ede3c5b6926a33a4c71ab45bffe9116d",
+          "source_text_bytes": 18132
         }
       ],
-      "sha256": "9eb82f39913ace0a1e34f6a620d40d2b92add9e3e4cc1919eb5751a846732036",
-      "source_text_bytes": 41326
+      "sha256": "b1e38dcefa2b827a736b104072d5280b015e865c9572acf6c3f04e3a7fdfa12b",
+      "source_text_bytes": 59458
     },
     "candidates/levels/0_aranos_tutorial.c": {
       "pieces": [

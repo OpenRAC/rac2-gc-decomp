@@ -17,7 +17,10 @@ utilities, object operations, callbacks and the packed-pixel decoder. The
 generator concatenates them without introducing includes, line directives,
 whitespace or additional compiler invocations. Types and declarations retain
 their original order and scope. The output is still one `boot.c` translation
-unit containing 181 catalogued definitions.
+unit containing 182 catalogued definitions. The recipe also appends the
+vendored libgcc source in `src/libgcc/fp-bit-ee.c`; its one accepted definition
+is upstream library code, separately licensed, rather than campaign-authored
+code. Its complete notices also accompany the generated copy in `boot.c`.
 
 These are authored organizational boundaries. They do not establish original
 retail modules, object files or independently compilable units. Independent
@@ -79,7 +82,7 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
-| Boot | 181 definitions | 9,564 |
+| Boot | 182 catalogued definitions (181 campaign-authored, one vendored) | 9,708 |
 | Native overlays | 782 family-or-singleton items, 783 contextual variants | 94,856 across 989 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 

@@ -11,6 +11,22 @@ import campaign_build
 
 
 class CampaignBuildTests(unittest.TestCase):
+    def test_vendored_source_changes_invalidate_batch_inputs(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "src/libgcc/fp-bit-ee.c"
+            source.parent.mkdir(parents=True)
+            source.write_bytes(b"int library_helper(void) { return 1; }\n")
+            generated = root / "candidates/boot.c"
+            generated.parent.mkdir()
+            generated.write_bytes(source.read_bytes())
+            before = campaign_build.input_hashes(root)
+            source.write_bytes(b"int library_helper(void) { return 2; }\n")
+            after = campaign_build.input_hashes(root)
+            self.assertNotEqual(before["src/libgcc/fp-bit-ee.c"],
+                                after["src/libgcc/fp-bit-ee.c"])
+            self.assertEqual(before["candidates/boot.c"], after["candidates/boot.c"])
+
     def test_region_policy_and_identity_changes_invalidate_provenance(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

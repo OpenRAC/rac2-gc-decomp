@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "boot",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "9eb82f39913ace0a1e34f6a620d40d2b92add9e3e4cc1919eb5751a846732036",
-  "catalog_sha256": "61c249f59e535480d39c195918e9c3272c928c315a5d26725c4ef5bef73d75cb",
+  "source_sha256": "b1e38dcefa2b827a736b104072d5280b015e865c9572acf6c3f04e3a7fdfa12b",
+  "catalog_sha256": "3d74d437c621c39e2f2b7cdeda2883c13223dcdf07b26c451b1246b84a6bb85f",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -62,6 +62,18 @@
       "matched": true,
       "reference_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
       "candidate_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot"
+    },
+    {
+      "symbol": "FUN_00123400",
+      "address": 1192960,
+      "size": 144,
+      "matched": true,
+      "reference_sha256": "8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54",
+      "candidate_sha256": "8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -2185,15 +2197,15 @@
     "bytes_compared": 2521763,
     "segments": 2
   },
-  "matched_code_bytes": 9564,
+  "matched_code_bytes": 9708,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "dd75e6260b4a5d48742317eb2909813cbf5ceca937c2003a0faa6aa75a28923c",
-  "c_object_sha256": "e6d601c5bf5ec8f23ca33853f969fdedd0ceea9a847e57cc31cc7b58be756156",
+  "candidate_elf_sha256": "4832cd6758be1a8d5ce36f38482b65c470baafd77f831f9fadabd1c630358430",
+  "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
   "replacement_inputs": {
     "16180.s": [
       "FUN_00115200",
@@ -2201,6 +2213,7 @@
       "FUN_0011C880",
       "FUN_0011C8A0",
       "FUN_00120BC8",
+      "FUN_00123400",
       "FUN_00125960",
       "FUN_0012DA98",
       "FUN_0012F9A8",

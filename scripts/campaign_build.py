@@ -21,7 +21,7 @@ def input_hashes(root: Path) -> dict:
         "scripts/build.py", "scripts/integration.py", "scripts/level_native.py",
         "scripts/check_candidates.py", "scripts/elf_tools.py", "scripts/wsl_chain.py",
         "scripts/campaign_build.py", "scripts/source_layout.py")]
-    for directory, pattern in (("candidates", "*.c"), ("src", "*.cfrag"),
+    for directory, pattern in (("candidates", "*.c"), ("src", "*.cfrag"), ("src", "*.c"),
                                ("config/level-native", "*.json"), ("config/regions", "*.json"),
                                ("progress/level-candidates", "*.json")):
         paths.extend((root / directory).rglob(pattern))
