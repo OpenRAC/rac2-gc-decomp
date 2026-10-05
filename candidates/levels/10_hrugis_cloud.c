@@ -489,3 +489,24 @@ int LVL_10_HRUGIS_CLOUD_FUN_002CE718(f32 value)
     }
     return 0;
 }
+
+typedef struct { int status; u8 reserved[36]; } GornStatusRecord156;
+typedef char GornStatusRecord156Size[(sizeof(GornStatusRecord156) == 40) ? 1 : -1];
+extern GornStatusRecord156 LVL_10_HRUGIS_CLOUD_D_002A3C70[];
+
+int LVL_10_HRUGIS_CLOUD_FUN_0037F510(void)
+{
+    if (LVL_10_HRUGIS_CLOUD_D_002A3C70[2].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[3].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[4].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[5].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[8].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[9].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[10].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[11].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[12].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[13].status != 0 ||
+        LVL_10_HRUGIS_CLOUD_D_002A3C70[14].status != 0)
+        return 1;
+    return 0;
+}

@@ -37,9 +37,9 @@ Recorded validation on **5 October 2026**:
 | Scope | Integrated C functions / placements | Matched C bytes |
 | --- | ---: | ---: |
 | Boot | 180 functions | 9,520 |
-| 27 level overlays | 4,996 placements | 282,472 |
-| Native overlay subset, included above | 842 placements | 75,392 |
-| **Total C coverage** | **Boot + all 27 overlays** | **291,992 / 48,788,176 (0.5985%)** |
+| 27 level overlays | 4,998 placements | 282,784 |
+| Native overlay subset, included above | 844 placements | 75,704 |
+| **Total C coverage** | **Boot + all 27 overlays** | **292,304 / 48,788,176 (0.5991%)** |
 <!-- generated-progress:end -->
 
 The complete boot (**2,521,763 loaded bytes, two PT_LOAD segments**) and all

@@ -1703,6 +1703,22 @@ Park firstsource unchanged, preservefull132target/664caller/live/ref/uniqueness/
 
 Reopen condition: Independent original source/prototype/arithmetic/fieldlayout evidence required. Do not switchto void/changeconstantdivisor/localscope/store order/addvolatile/manualshifts/traps orflags/register/sourcecycling toremove4bytes.
 
+## native-review-boldan-clamped-angles-20261005
+
+State: `queued`. Kind: `research`.
+
+Pinfulltarget/caller3048/helpers/secondarytransform ABI/current31prefix andreference uniqueness; authorprivate plainC vectorcomposition+orderedNaN-preserving rangechecks, maintainedfirstwholeunittrial.
+
+Reopen condition: Independent original direction/state/helperABI/prototype/alignment/lifetime evidence only; no clamp-expression/branch/formal/FPR/float-association/flags/source cycles.
+
+## native-review-boldan-clamped-angles-v1-20261005
+
+State: `exact_private`. Kind: `candidate`.
+
+MaintainedALL31CURRENTcontrols/full252body; exactseedonlythenfamily. Preservefirstnegativewithoutclamp/branch/FPR/formal/association/flags/sourcecycles.
+
+Reopen condition: Independent original direction/state/helperABI/prototype/alignment/lifetime evidence only; no clamp-expression/branch/formal/FPR/float-association/flags/source cycles.
+
 ## native-review-boldan-compact-record-v1-20261004
 
 State: `stopped`. Kind: `candidate`.
@@ -1791,6 +1807,14 @@ Park immutable randomized-state physicalfamily withoutv2store/array/structspelli
 
 Reopen condition: Independent original statealias/storage/qualifier contract or qualified compiler schedulingwitness requiringthosefour finalstorephases; no arbitraryreordering, forcedregisters, padding or equivalentexpressions.
 
+## native-review-boldan-random-state-20261005
+
+State: `queued`. Kind: `research`.
+
+Pin full216/helper60/caller1008 live/reference/unique andordinaryword-to-float ABI, author private standardC loops/floatfields withcurrent31prefix andrun maintainedfirstwholeunittrial.
+
+Reopen condition: Independent original state/RNG/type/alignment/caller/source-lifetime evidence only; no integer-bit float writes, arbitrary store/loop/register/FPR/formal/profile/sourcecycling.
+
 ## native-review-boldan-random-state-init-20261004
 
 State: `queued`. Kind: `research`.
@@ -1798,6 +1822,14 @@ State: `queued`. Kind: `research`.
 VerifycallerownerABI/fullhelperpin then author privateCURRENTBoldan20controls pluspendingexactsearch88 andnew212, runmaintainedstricttrial.
 
 Reopen condition: Independent original state/layout/ABI/sourcephase evidence only; no store/register/padding/sourcecycles.
+
+## native-review-boldan-random-state-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Park firstsource unchanged with216target/RNG60/caller1008/fullpins/31controls andimmutablebankrandom-state-v1/object/assembly/outcome. Continue another freshownedbody; do not reorderindependentstores/localinit toforcebytes.
+
+Reopen condition: Independent original source/prototype/fieldownership/layout/lifetime evidence required; no arbitrary store order, flatarray-to-scalar/aggregate/declaration orloop/FPR/register/profile/source permutations solely toalter scheduler.
 
 ## native-review-compact-family-0_aranos_tutorial-20261004
 
@@ -5403,6 +5435,16 @@ Reopen condition: Independent original ABI/layout/access-phase evidence only; no
 
 - `runtime:bank/parallel-orbital_lots-gorn-conditional-slot-reset-v1/evidence.json`
 
+## orbital-gorn-count-positive148-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-gorn-count-positive148-v1/evidence.json`
+
 ## orbital-gorn-descriptor-remap-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -5593,6 +5635,16 @@ Reopen condition: No replay of incorrectmetadata; correctnamespacefollowupiscano
 
 - `runtime:bank/parallel-orbital_lots-gorn-pool-release-v1/evidence.json`
 
+## orbital-gorn-priority-chooser144-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-gorn-priority-chooser144-v1/evidence.json`
+
 ## orbital-gorn-record-mark-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -5655,7 +5707,7 @@ Reopen condition: Independent original ABI/layout/access-phase evidence only; no
 
 ## orbital-gorn-status-query156-20261004-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
 
@@ -5923,6 +5975,16 @@ Reopen condition: Independent original signed-width/type or qualified compiler e
 
 - `runtime:bank/parallel-orbital_lots-status-counts-v1/evidence.json`
 - `private-work:parallel-20261004/orbital_lots/small-0x33F050.json`
+
+## orbital-hrugis-status-query156-20261004-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Perform the FIRST actual compilation/byte measurement of unchanged natural source after retaining two zero-measured preparation rejections fc5f1106f66244c989e5237254212404 (unknown task after missing private bank) and c61a79d279704b02881dba5715fee0a5 (budget consumed by the first administrative rejection). Both compile_attempted=false/measured_functions=0. No source/catalog/flags/toolchain/ABI/layout change or repeated measured candidate. Qualify complete156 and all32 CURRENT842 controls, then root owns integration/gates.
+
+Reopen condition: Independent ABI/layout/current-input evidence only. This budget update accounts two zero-measured administrative attempts and one first compiler run; no source cycles or masked credit.
+
+- `runtime:bank/parallel-orbital_lots-hrugis-status-query156-v1/evidence.json`
 
 ## orbital-hrugis-table-clear-20261004-v1
 
@@ -7229,6 +7291,18 @@ One maintained wholecurrentunit764 firstseed; exactcompletebytes prerequisite to
 Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no signature/operand/constant/pointer/layout/order/register/flags cycling.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-grid312-return-abi-v2
+
+State: `exact_private`. Kind: `candidate`.
+
+One maintained wholecurrentunit measurement of corrected external return prototype; park ifrefused, no further variants.
+
+Reopen condition: No third variant after this supported ABI correction without genuinely new original source/type/layout/qualified compiler evidence.
+
+- `private-work:parallel-20261004/boot_analysis/grid312-return-abi-witness.json`
+- `private-work:parallel-20261004/boot_analysis/grid312-actual-ticket-use.json`
+- `runtime:trials/d1ec5a84228b45b6a6e8d996d8c039e8/outcome.json`
 
 ## parallel-boot-analysis-dobbo-grid312-v1
 
@@ -9861,6 +9935,32 @@ Reopen condition: Independent original type/layout/ABI/source/compiler evidence 
 - `private-work:parallel-20261004/root-gp/pair64-live-memory.json`
 - `private-work:parallel-20261004/root-gp/pair64-0028a2f8.json`
 - `private-work:parallel-20261004/root-gp/pair64-producer-0029cd48.json`
+
+## root-boot-packed-palette92-first-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve complete first C/source/catalog/object/reference/pins and180exactcontrols. Stop without packed-byte width/cast, branch, locals/argument-order or flags/profile cycles.
+
+Reopen condition: Independent original source/type/prototype/compiler witness accounting for the full branch/address/guard phase; equivalent bit-extraction or arithmetic forms are insufficient.
+
+- `private-work:parallel-20261004/root-gp/nibble92-static.json`
+- `private-work:parallel-20261004/root-gp/nibble92-live-memory.json`
+- `private-work:parallel-20261004/root-gp/nibble92-caller-002a6c58.json`
+- `private-work:parallel-20261004/root-gp/nibble92-callers.json`
+
+## root-boot-packed-palette92-research-20261005
+
+State: `done`. Kind: `research`.
+
+ONE ordinary packed-nibble extraction andsignedpercentage arithmetic C; strictwhole181functionsize/bytes, preserve anyrefusalwithout type/promotions/branch/store/locals/profile permutations.
+
+Reopen condition: Independent original source/type/ABI/compiler provenance accounting forcomplete mismatch.
+
+- `private-work:parallel-20261004/root-gp/nibble92-static.json`
+- `private-work:parallel-20261004/root-gp/nibble92-live-memory.json`
+- `private-work:parallel-20261004/root-gp/nibble92-caller-002a6c58.json`
+- `private-work:parallel-20261004/root-gp/nibble92-callers.json`
 
 ## root-boot-packet332-20261004
 

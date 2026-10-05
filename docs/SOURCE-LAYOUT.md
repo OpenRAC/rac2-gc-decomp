@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Six hundred twenty-seven contextual native bodies remain distinct in the
+family has 26. Six hundred twenty-nine contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,29 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 180 definitions | 9,520 |
-| Native overlays | 635 family-or-singleton items, 636 contextual variants | 75,392 across 842 placements |
+| Native overlays | 637 family-or-singleton items, 638 contextual variants | 75,704 across 844 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 66,208, or 66,232 when both clear
+Native representative catalogued bytes total 66,520, or 66,544 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **291,992 / 48,788,176 bytes (0.5985%)**.
-The latest lot adds 27 complete 64-byte scalar interval predicates, totaling
+The current integration exporter accepts **292,304 / 48,788,176 bytes (0.5991%)**.
+The latest lot adds two complete 156-byte status queries in Gorn and Hrugis
+Cloud, totaling 312 bytes. Each reports whether any of eleven selected
+40-byte records has a nonzero first word. Actual callers use no arguments and
+test the integer result. The complete body scan excludes the other 25 programs.
+
+One authored fragment retains explicit per-program function and status-array
+bindings. Both generated units and catalogs equal immutable qualifications:
+65 whole functions match, including 63 previous controls. Existing profiles
+and GP are unchanged; only the measured status-array externals are added.
+Fresh boot and all 27 loaded-byte and metadata gates, independent exports and
+the full test suite qualify integration. No data or helper credit is added.
+
+The preceding lot added 27 complete 64-byte scalar interval predicates, totaling
 1,728 bytes. The scalar must lie below a resident plane within its configured
 depth. The original ordered comparisons reject unordered values. All 308
 actual caller sites confirm the single F12 argument and integer result.

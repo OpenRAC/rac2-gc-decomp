@@ -482,3 +482,24 @@ int LVL_15_GORN_FUN_002CC818(f32 value)
     }
     return 0;
 }
+
+typedef struct { int status; u8 reserved[36]; } GornStatusRecord156;
+typedef char GornStatusRecord156Size[(sizeof(GornStatusRecord156) == 40) ? 1 : -1];
+extern GornStatusRecord156 LVL_15_GORN_D_0029FD80[];
+
+int LVL_15_GORN_FUN_00384038(void)
+{
+    if (LVL_15_GORN_D_0029FD80[2].status != 0 ||
+        LVL_15_GORN_D_0029FD80[3].status != 0 ||
+        LVL_15_GORN_D_0029FD80[4].status != 0 ||
+        LVL_15_GORN_D_0029FD80[5].status != 0 ||
+        LVL_15_GORN_D_0029FD80[8].status != 0 ||
+        LVL_15_GORN_D_0029FD80[9].status != 0 ||
+        LVL_15_GORN_D_0029FD80[10].status != 0 ||
+        LVL_15_GORN_D_0029FD80[11].status != 0 ||
+        LVL_15_GORN_D_0029FD80[12].status != 0 ||
+        LVL_15_GORN_D_0029FD80[13].status != 0 ||
+        LVL_15_GORN_D_0029FD80[14].status != 0)
+        return 1;
+    return 0;
+}
