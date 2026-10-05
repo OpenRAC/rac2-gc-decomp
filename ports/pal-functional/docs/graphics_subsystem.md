@@ -10,7 +10,7 @@ This document documents the control points of the Graphics Synthesizer (GS) and 
 | **`0x0013B5D1`** | `char[]` | `“sceGsExecStoreImage: GS does not terminate...\r\n”` | Critical error when the graphics pipeline crashes while attempting to flush the draw buffer. |
 
 ## Dynamic FPS Strategy for the PC Port
-* **Game Loop (Engine Tick):** Logically fixed to fixed intervals equivalent to the original rate (16.66 ms to emulate native 60 Hz).
+* **Game Loop (Engine Tick):** Logically fixed to intervals equivalent to the original field rate of the selected region (`RAC2_FRAME_TARGET_MS` in `include/core/region.h`: 20 ms for PAL 50 Hz, about 16.68 ms for NTSC 59.94 Hz).
 * **Visual Loop (Render Frame Rate):** Decoupled via linear interpolation of gameplay variables (`DeltaTime` on PC), allowing for user-configurable scalable refresh rates (60 Hz, 144 Hz, Uncapped).
 
 ## Language Selector Diagnostics

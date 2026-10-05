@@ -1,6 +1,7 @@
 #include "cdvd.h"
 #include "ps2_kernel.h"
 #include "system.h"
+#include "core/region.h"
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
@@ -78,7 +79,7 @@ int sceCdRead(unsigned int sector_start, int sector_count, unsigned int dest_buf
 
 		if (g_CurrentWadFile == NULL) {
 			// Fall back to the boot executable if the game requests sectors of the main binary
-			snprintf(g_ActiveWadPath, sizeof(g_ActiveWadPath), "orig/SCES_516.07");
+			snprintf(g_ActiveWadPath, sizeof(g_ActiveWadPath), "orig/" RAC2_BOOT_SERIAL);
 			g_CurrentWadFile = fopen(g_ActiveWadPath, "rb");
 		}
 	}

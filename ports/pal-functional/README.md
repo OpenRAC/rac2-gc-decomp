@@ -25,6 +25,26 @@ native port.
 
 ---
 
+## Region Selection
+
+The port is configured for either release; PAL remains the default because the
+reconstruction was made from it:
+
+```sh
+cmake -S . -B build                      # PAL, SCES_516.07
+cmake -S . -B build -DRAC2_REGION=NTSC   # USA, SCUS_972.68
+```
+
+`include/core/region.h` switches the boot executable expected under `orig/`, the
+GS output mode, the engine frame clock (PAL 50 Hz = 20 ms, NTSC 59.94 Hz ≈ 16.68 ms)
+and the base display height (512 or 448 lines). Function and RAM addresses quoted
+in the sources and documents are PAL addresses: the direct RAM accesses, such as
+the frame-rate global in `src/boot_init.c`, stay PAL-only until a PAL-to-USA
+address map exists. The CMake build itself is still incomplete: the
+`src/*/CMakeLists.txt` files it adds do not exist yet.
+
+---
+
 ## Tools Used in the Workflow
 
 - **Ghidra (v11.x or higher):** static analysis of the executable (`SCES_516.07`),

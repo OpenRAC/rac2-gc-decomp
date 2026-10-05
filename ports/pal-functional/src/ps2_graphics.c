@@ -2,6 +2,7 @@
 #include "graphics.h"
 #include "system.h"
 #include "ps2_kernel.h"
+#include "core/region.h"
 #include <string.h>
 #include <stddef.h>
 #include <stdbool.h>
@@ -46,8 +47,8 @@ void SetGsCrt(s16 interlace, s16 omode, s16 ffmd) {
 	// For the native PC port, the window size and refresh rate are already controlled
 	// natively by SDL2 in main.c. The call is intercepted to log
 	// which video mode the original Insomniac Games engine requests:
-	printf("[GRAPHICS HAL] SetGsCrt called -> interlace: %d, original mode: %d (PAL target), field: %d\n",
-		interlace, omode, ffmd);
+	printf("[GRAPHICS HAL] SetGsCrt called -> interlace: %d, original mode: %d (%s build expects %d), field: %d\n",
+		interlace, omode, RAC2_REGION_NAME, RAC2_GS_OMODE, ffmd);
 #endif
 }
 
@@ -113,8 +114,8 @@ void set_gs_crt(void)
 	SDL_Window* win = SDL_GL_GetWindow();
 	if (win) {
 		SDL_SetWindowMode(win, SDL_WINDOW_FULLSCREEN_DESKTOP);
-		SDL_SetWindowMinimumSize(win, 640, 448);
-		/* SDL_SetWindowAspectRatio(win, 640, 448); ← SDL 2.0.18+ */
+		SDL_SetWindowMinimumSize(win, RAC2_DISPLAY_WIDTH, RAC2_DISPLAY_HEIGHT);
+		/* SDL_SetWindowAspectRatio(win, RAC2_DISPLAY_WIDTH, RAC2_DISPLAY_HEIGHT); ← SDL 2.0.18+ */
 	}
 
 	int w, h;

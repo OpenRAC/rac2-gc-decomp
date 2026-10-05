@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <SDL.h>
 #include "types.h"
+#include "core/region.h"
 
 // Enumeration for the dynamic PC renderer selector
 typedef enum {
@@ -12,8 +13,8 @@ typedef enum {
 // Global port configuration (starts with Vulkan by default; switch to OPENGL if desired)
 static PC_RendererType g_selected_pc_renderer = RENDERER_VULKAN;
 
-// Timing constants that emulate the PS2's native frame clock of the selected region
-#define PAL_FRAME_TARGET_MS  20.0  // 50Hz = 1 frame every 20 milliseconds
+// The PS2's native frame clock of the selected region: RAC2_FRAME_TARGET_MS in core/region.h
+// (PAL 50Hz = 20 ms per frame, NTSC 59.94Hz = about 16.68 ms per frame)
 
 // References to the infrastructure functions already consolidated in the repository
 void sys_boot_intro_state_machine(s32 execution_stage);
@@ -21,7 +22,7 @@ void sys_boot_intro_state_machine(s32 execution_stage);
 int main(int argc, char* argv[]) {
     (void)argc; (void)argv; // Avoids compiler warnings
 
-    printf("[PORT START] Starting native Ratchet & Clank 2 (PC Port v1.0)...\n");
+    printf("[PORT START] Starting native Ratchet & Clank 2 (PC Port v1.0, %s, %s)...\n", RAC2_REGION_NAME, RAC2_BOOT_SERIAL);
 
     // 1. Initialize the essential SDL 2.32.2 subsystems (video and controller)
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) < 0) {
@@ -97,15 +98,15 @@ int main(int argc, char* argv[]) {
         // Accumulate the time elapsed on the modern PC
         accumulated_time_ms += frame_time_ms;
 
-        // C) Execution in fixed logic steps (exact emulation of the PAL 50Hz rhythm)
+        // C) Execution in fixed logic steps (exact emulation of the region's field rate)
         // If the modern PC runs very fast (e.g. at 144Hz), this loop processes the game ticks
         // exactly, keeping physics and the intro stable without speeding up
-        while (accumulated_time_ms >= PAL_FRAME_TARGET_MS) {
+        while (accumulated_time_ms >= RAC2_FRAME_TARGET_MS) {
 
             // MASTER TRIGGER: invokes the root intro state machine with the active state (1)
             sys_boot_intro_state_machine(1);
 
-            accumulated_time_ms -= PAL_FRAME_TARGET_MS;
+            accumulated_time_ms -= RAC2_FRAME_TARGET_MS;
         }
 
         // D) On-screen visual rendering (PC frame rate)
