@@ -790,6 +790,18 @@ Compare full 420-byte target and all existing boot controls in one maintained tr
 
 Reopen condition: New measured type, lifetime or division-control evidence
 
+## boot-fp-bit-verbatim-source-rac1-evidence-20261005
+
+State: `queued`. Kind: `research`.
+
+Maintainer review of docs/RAC1-FP-BIT-EVIDENCE.md. If accepted, reopen the two stopped tasks for one trial: rac1-decomp fp-bit.c (sha256 3069e3a1...) preprocessed with the fp-bit configuration macros and EE target predefines into a standalone unit, compiled once with the qualified GNU profile, a fresh catalogue for both complete symbols and full gates. Preserve any refusal; no flag, alias or source-shape permutations.
+
+Reopen condition: A RAC2 trial of the verbatim source refused, or evidence that RAC2's runtime library is not fp-bit.
+
+- `docs/RAC1-FP-BIT-EVIDENCE.md`
+- `https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/src/libgcc/README.md`
+- `https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/Makefile.sn#L128-L158`
+
 ## boot-fun_00282a88
 
 State: `stopped`. Kind: `research`.
@@ -11574,6 +11586,16 @@ Reopen condition: Freshindependent source/layout/reference evidence; no variantc
 
 - `runtime:bank/parallel-boot_analysis-update-family/placements-qualified.json`
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## private-row360-aranos-flag-sweep-0_aranos_tutorial-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+One full unit measurement of the single first natural C model; preserve the result whether exact or refused. No equivalent expression cycling on mismatch.
+
+Reopen condition: Independent original declaration, source, ABI or access-phase evidence; no equivalent expression cycling.
+
+- `private-work:parallel-20261004/root-gp/family-scan.json`
 
 ## prototype-byte-correspondence-naming
 
