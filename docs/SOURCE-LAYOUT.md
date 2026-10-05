@@ -80,29 +80,39 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 181 definitions | 9,564 |
-| Native overlays | 727 family-or-singleton items, 728 contextual variants | 91,964 across 934 placements |
+| Native overlays | 781 family-or-singleton items, 782 contextual variants | 94,772 across 988 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 82,780, or 82,804 when both clear
+Native representative catalogued bytes total 85,588, or 85,612 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **308,608 / 48,788,176 bytes (0.6325%)**.
-The latest lot adds 27 complete 164-byte point-index append/update routines,
+The current integration exporter accepts **311,416 / 48,788,176 bytes (0.6383%)**.
+The latest lot adds two complete 52-byte float families, one per program and
+2,808 bytes in total. An indexed parameter-row setter stores four row components
+and one weight through ordinary typed field assignments; a nested grid setter
+stores four components for a row inside a group. Both shapes are byte-identical
+in all 27 programs. Their argument registers are proven from every actual
+caller: five floats with the object and a signed index, or four floats with the
+object and two signed selectors.
+
+Two authored fragments retain explicit per-program function bindings. All 988
+complete native functions match, including 934 controls. Generated source and
+catalog bytes equal the immutable qualifications, and every original flag, GP
+and external binding remains unchanged, including Barlow G8. Fresh boot and all
+27 loaded-byte and metadata gates, independent exports and the full test suite
+qualify integration.
+
+The preceding lot added 27 complete 164-byte point-index append/update routines,
 totaling 4,428 bytes. A byte index is appended through the observed descriptor,
 its byte count increments, and original registration and geometric helpers
 update the descriptor. The registration helper consumes a third ordinary
 direction-pointer argument, proven before the first C trial. The final byte
-count is returned explicitly; no incidental helper result is inferred.
-
-One authored fragment retains explicit per-program bindings. All 934 complete
-native functions match, including 907 controls. Generated source/catalog bytes
-equal immutable qualifications and every original flag, GP and helper binding
-remains unchanged, including Barlow G8. The original four helpers and their
-MMI/VU work receive no additional C credit. Fresh boot and all 27 loaded-byte
-and metadata gates, independent exports and the full test suite qualify integration.
+count is returned explicitly; no incidental helper result is inferred. One
+authored fragment retains explicit per-program bindings; the original four
+helpers and their MMI/VU work receive no additional C credit.
 
 The preceding lot added six complete 64-byte record-pointer writers, totaling
 384 bytes. A zero initial marker skips the scan. Otherwise the full selector

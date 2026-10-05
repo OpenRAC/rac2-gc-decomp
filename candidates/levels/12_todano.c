@@ -619,3 +619,27 @@ unsigned int LVL_12_TODANO_FUN_002E0138(OozlaAppendObject164 *object, unsigned i
     }
     return descriptor->count;
 }
+
+typedef struct { f32 x, y, z, w; } JammingParameterRow;
+typedef struct {
+    u8 prefix[0x30];
+    JammingParameterRow rows[4];
+    f32 weights[3];
+} JammingParameterRows;
+void LVL_12_TODANO_FUN_004556A8(f32 weight, f32 x, f32 y, f32 z, f32 w, JammingParameterRows *object, s32 index) {
+    object->rows[index].x = x;
+    object->rows[index].y = y;
+    object->rows[index].z = z;
+    object->rows[index].w = w;
+    object->weights[index] = weight;
+}
+
+typedef struct { f32 x, y, z, w; } JammingGridRow;
+typedef struct { JammingGridRow rows[3]; } JammingGridGroup;
+typedef struct { u8 prefix[0x2c]; JammingGridGroup groups[2]; } JammingGridObject;
+void LVL_12_TODANO_FUN_00455B40(f32 x, f32 y, f32 z, f32 w, JammingGridObject *object, s32 row, s32 group) {
+    object->groups[group].rows[row].x = x;
+    object->groups[group].rows[row].y = y;
+    object->groups[group].rows[row].z = z;
+    object->groups[group].rows[row].w = w;
+}

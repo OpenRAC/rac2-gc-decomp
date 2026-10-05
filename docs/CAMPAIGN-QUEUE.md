@@ -4829,6 +4829,16 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 - `runtime:bank/parallel-orbital_lots-conditional-reset-family-v3/9_dobbo/evidence.json`
 
+## orbital-damosel-angle72-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-damosel-angle72-v1/evidence.json`
+
 ## orbital-damosel-bitmap-rectangle-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -4838,6 +4848,16 @@ Measure complete seed and all current controls; if exact then qualify aliases ag
 Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
 
 - `runtime:bank/parallel-orbital_lots-damosel-bitmap-rectangle-v1/evidence.json`
+
+## orbital-damosel-unlink288-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-damosel-unlink288-v1/evidence.json`
 
 ## orbital-dobbo-orbit-range-choice-20261004-v1
 
@@ -5689,6 +5709,16 @@ Reopen condition: Independent original ABI/layout evidence or current input drif
 
 - `runtime:bank/parallel-orbital_lots-float-interval-family-815-v2/9_dobbo/evidence.json`
 
+## orbital-gorn-camera364-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-gorn-camera364-v1/evidence.json`
+
 ## orbital-gorn-conditional-slot-reset-20261004-v1
 
 State: `integrated`. Kind: `candidate`.
@@ -5729,6 +5759,16 @@ Reopen condition: Independent original descriptor layout, access phase or caller
 
 - `runtime:bank/parallel-orbital_lots-gorn-descriptor-remap-v1/evidence.json`
 
+## orbital-gorn-effect-constructor316-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-gorn-effect-constructor316-v1/evidence.json`
+
 ## orbital-gorn-float-interval64-20261004-v1
 
 State: `integrated`. Kind: `candidate`.
@@ -5748,6 +5788,16 @@ Measure complete seed and all current controls; if exact then qualify aliases ag
 Reopen condition: Independent original object/slot layout or caller storage/access evidence beyond this measured model.
 
 - `runtime:bank/parallel-orbital_lots-gorn-free-slot-query-v1/evidence.json`
+
+## orbital-gorn-header-binding112-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-gorn-header-binding112-v1/evidence.json`
 
 ## orbital-gorn-inverse-rate48-20261004-v1
 
@@ -6080,6 +6130,266 @@ Reopen condition: Independent original ABI/layout/access-phase evidence only; no
 - `runtime:bank/parallel-orbital_lots-grelbin-particle-create-declaration-repair/evidence.json`
 - `runtime:bank/parallel-orbital_lots-grelbin-particle-create-declaration-repair/declaration-repair.json`
 
+## orbital-grid52-family-934-20261005-0_aranos_tutorial
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/0_aranos_tutorial/evidence.json`
+
+## orbital-grid52-family-934-20261005-10_hrugis_cloud
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/10_hrugis_cloud/evidence.json`
+
+## orbital-grid52-family-934-20261005-11_joba
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/11_joba/evidence.json`
+
+## orbital-grid52-family-934-20261005-12_todano
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/12_todano/evidence.json`
+
+## orbital-grid52-family-934-20261005-13_boldan
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/13_boldan/evidence.json`
+
+## orbital-grid52-family-934-20261005-14_aranos_prison
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/14_aranos_prison/evidence.json`
+
+## orbital-grid52-family-934-20261005-15_gorn
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/15_gorn/evidence.json`
+
+## orbital-grid52-family-934-20261005-16_snivelak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/16_snivelak/evidence.json`
+
+## orbital-grid52-family-934-20261005-17_smolg
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/17_smolg/evidence.json`
+
+## orbital-grid52-family-934-20261005-18_damosel
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/18_damosel/evidence.json`
+
+## orbital-grid52-family-934-20261005-19_grelbin
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/19_grelbin/evidence.json`
+
+## orbital-grid52-family-934-20261005-1_oozla
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/1_oozla/evidence.json`
+
+## orbital-grid52-family-934-20261005-20_yeedil
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/20_yeedil/evidence.json`
+
+## orbital-grid52-family-934-20261005-22_dobbo_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/22_dobbo_orbit/evidence.json`
+
+## orbital-grid52-family-934-20261005-23_damosel_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/23_damosel_orbit/evidence.json`
+
+## orbital-grid52-family-934-20261005-24_ship_shack
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/24_ship_shack/evidence.json`
+
+## orbital-grid52-family-934-20261005-25_wupash_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/25_wupash_nebula/evidence.json`
+
+## orbital-grid52-family-934-20261005-2_maktar_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/2_maktar_nebula/evidence.json`
+
+## orbital-grid52-family-934-20261005-30_insomniac_museum
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/30_insomniac_museum/evidence.json`
+
+## orbital-grid52-family-934-20261005-3_endako
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/3_endako/evidence.json`
+
+## orbital-grid52-family-934-20261005-4_barlow
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/4_barlow/evidence.json`
+
+## orbital-grid52-family-934-20261005-5_feltzin_system
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/5_feltzin_system/evidence.json`
+
+## orbital-grid52-family-934-20261005-6_notak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/6_notak/evidence.json`
+
+## orbital-grid52-family-934-20261005-7_siberius
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/7_siberius/evidence.json`
+
+## orbital-grid52-family-934-20261005-8_tabora
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/8_tabora/evidence.json`
+
+## orbital-grid52-family-934-20261005-9_dobbo
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-grid52-family-934/9_dobbo/evidence.json`
+
 ## orbital-hrugis-angle-distance-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -6339,6 +6649,56 @@ Measure complete seed and all current controls; if exact then qualify aliases ag
 Reopen condition: Independent original packet storage-layout/access-phase evidence; no storeordercycle.
 
 - `runtime:bank/parallel-orbital_lots-vertex-inits-v1/evidence.json`
+
+## orbital-jamming-allfilled56-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-jamming-allfilled56-v1/evidence.json`
+
+## orbital-jamming-blend396-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-jamming-blend396-v1/evidence.json`
+
+## orbital-jamming-grid52-20261005-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-jamming-grid52-v1/evidence.json`
+
+## orbital-jamming-rank72-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-jamming-rank72-v1/evidence.json`
+
+## orbital-jamming-row52-20261005-v1
+
+State: `integrated`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-jamming-row52-v1/evidence.json`
 
 ## orbital-mode-set-family-20261004
 
@@ -7011,6 +7371,266 @@ Reopen condition: Independent original ABI/layout or currentinput drift only.
 
 - `runtime:bank/parallel-orbital_lots-record-write-family-901/4_barlow/evidence.json`
 
+## orbital-row52-family-934-20261005-0_aranos_tutorial
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/0_aranos_tutorial/evidence.json`
+
+## orbital-row52-family-934-20261005-10_hrugis_cloud
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/10_hrugis_cloud/evidence.json`
+
+## orbital-row52-family-934-20261005-11_joba
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/11_joba/evidence.json`
+
+## orbital-row52-family-934-20261005-12_todano
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/12_todano/evidence.json`
+
+## orbital-row52-family-934-20261005-13_boldan
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/13_boldan/evidence.json`
+
+## orbital-row52-family-934-20261005-14_aranos_prison
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/14_aranos_prison/evidence.json`
+
+## orbital-row52-family-934-20261005-15_gorn
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/15_gorn/evidence.json`
+
+## orbital-row52-family-934-20261005-16_snivelak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/16_snivelak/evidence.json`
+
+## orbital-row52-family-934-20261005-17_smolg
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/17_smolg/evidence.json`
+
+## orbital-row52-family-934-20261005-18_damosel
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/18_damosel/evidence.json`
+
+## orbital-row52-family-934-20261005-19_grelbin
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/19_grelbin/evidence.json`
+
+## orbital-row52-family-934-20261005-1_oozla
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/1_oozla/evidence.json`
+
+## orbital-row52-family-934-20261005-20_yeedil
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/20_yeedil/evidence.json`
+
+## orbital-row52-family-934-20261005-22_dobbo_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/22_dobbo_orbit/evidence.json`
+
+## orbital-row52-family-934-20261005-23_damosel_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/23_damosel_orbit/evidence.json`
+
+## orbital-row52-family-934-20261005-24_ship_shack
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/24_ship_shack/evidence.json`
+
+## orbital-row52-family-934-20261005-25_wupash_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/25_wupash_nebula/evidence.json`
+
+## orbital-row52-family-934-20261005-2_maktar_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/2_maktar_nebula/evidence.json`
+
+## orbital-row52-family-934-20261005-30_insomniac_museum
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/30_insomniac_museum/evidence.json`
+
+## orbital-row52-family-934-20261005-3_endako
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/3_endako/evidence.json`
+
+## orbital-row52-family-934-20261005-4_barlow
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/4_barlow/evidence.json`
+
+## orbital-row52-family-934-20261005-5_feltzin_system
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/5_feltzin_system/evidence.json`
+
+## orbital-row52-family-934-20261005-6_notak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/6_notak/evidence.json`
+
+## orbital-row52-family-934-20261005-7_siberius
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/7_siberius/evidence.json`
+
+## orbital-row52-family-934-20261005-8_tabora
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/8_tabora/evidence.json`
+
+## orbital-row52-family-934-20261005-9_dobbo
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify whole current unit; root owns public integration/full loaded-image gates.
+
+Reopen condition: Independent actual ABI/layout evidence or current input drift only.
+
+- `runtime:bank/parallel-orbital_lots-row52-family-934/9_dobbo/evidence.json`
+
 ## orbital-slot-reuse-family-844-20261004-0_aranos_tutorial
 
 State: `integrated`. Kind: `candidate`.
@@ -7661,6 +8281,16 @@ Reopen condition: Independent original ABI/layout/access-phase evidence only; no
 
 - `runtime:bank/parallel-orbital_lots-yeedil-audio-launch-v1/evidence.json`
 
+## orbital-yeedil-class240-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-yeedil-class240-v1/evidence.json`
+
 ## orbital-yeedil-eligibility-queue-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -7680,6 +8310,26 @@ Measure complete seed and all current controls; if exact then qualify aliases ag
 Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
 
 - `runtime:bank/parallel-orbital_lots-yeedil-progress-flag-count-v1/evidence.json`
+
+## orbital-yeedil-quadratic264-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-yeedil-quadratic264-v1/evidence.json`
+
+## orbital-yeedil-range72-20261005-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-yeedil-range72-v1/evidence.json`
 
 ## orbital-yeedil-rank-menu-20261004-v1
 
@@ -10336,6 +10986,17 @@ Reopen condition: Independent original source/control/type/access phase or quali
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-siberius-composite368-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained fullcurrentunit firstC trial; qualifyfamilyonlyafterexactcomplete368, elsepreservestrictrefusal andcontinuefreshbody.
+
+Reopen condition: Independentoriginaltype/layout/ABI/sourcephase or qualifiedlowering witness only; no equivalent source/per-pointer/regforcing/array/count/cast/flag cycles.
+
+- `private-work:parallel-20261004/boot_analysis/composite368-abi.json`
+- `private-work:parallel-20261004/boot_analysis/composite368-base.json`
+
 ## parallel-boot-analysis-siberius-descriptor-slot-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -10415,6 +11076,17 @@ Maintained current whole-unit qualification; family onlyifseedfull84exact.
 Reopen condition: Independent original declaration/type/accessphase orqualified lowering witness; no pointer/local/register/loop/field/order permutations.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-siberius-menu312-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained full currentunit firstC trial, exactfullbody beforefamily; parkrefusal unless independentlynew originaltype/layout/ABI/compilerlowering evidence.
+
+Reopen condition: Independent originalsource/layout/ABI or qualifiedlowering witness only; no equivalent sourcepermutation, returncasts, pointer/regforcing orflagprofilecycles.
+
+- `private-work:parallel-20261004/boot_analysis/menu312-abi.json`
+- `private-work:parallel-20261004/boot_analysis/menu312-caller-return-audit.json`
 
 ## parallel-boot-analysis-siberius-record-advance-research
 
@@ -11319,9 +11991,9 @@ Reopen condition: Independent original storage/observable write qualifier or com
 
 State: `stopped`. Kind: `candidate`.
 
-ONE ordinary dynamic record-index C plus181controls; full182complete sizes/bytes required. Preserve anyrefusalwithout countqualifier/caching/looppeel/type/iterator/local/register/profile cycles.
+Preserve first dynamic-index C andcomplete108pin/twoactualcallers/record16/countword evidence, all181exactcontrols. Stop without qualifiers, manual peel, caches/cursors/locals/type or profile cycles.
 
-Reopen condition: Independent original source/type/ABI/compiler context evidence explaining complete mismatch.
+Reopen condition: Independent original declaration/algorithm/compiler context explaining complete native first-probe/count-reload phase, not equivalent loop/qualifier spelling.
 
 - `private-work:parallel-20261004/root-gp/index108-static.json`
 - `private-work:parallel-20261004/root-gp/index108-live-memory.json`
@@ -11330,7 +12002,7 @@ Reopen condition: Independent original source/type/ABI/compiler context evidence
 
 ## root-boot-record-index108-research-20261005
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
 ONE ordinary dynamic record-index C plus181controls; full182complete sizes/bytes required. Preserve anyrefusalwithout countqualifier/caching/looppeel/type/iterator/local/register/profile cycles.
 
@@ -11824,6 +12496,276 @@ One full compound unit measurement; preserve all results/refuse anywhole differe
 Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for actual compound refusal.
 
 - `private-work:parallel-20261004/root-gp/compound11492-preflight.json`
+
+## root-compound-rowgrid52-0_aranos_tutorial-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-10_hrugis_cloud-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-11_joba-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-12_todano-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-13_boldan-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-14_aranos_prison-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-15_gorn-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-16_snivelak-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-17_smolg-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-18_damosel-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-19_grelbin-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-1_oozla-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-20_yeedil-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-22_dobbo_orbit-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-23_damosel_orbit-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-24_ship_shack-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-25_wupash_nebula-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-26_jamming_array-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-2_maktar_nebula-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-30_insomniac_museum-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-3_endako-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-4_barlow-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-5_feltzin_system-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-6_notak-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-7_siberius-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-8_tabora-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
+
+## root-compound-rowgrid52-9_dobbo-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+One full compound unit measurement; preserve all results and refuse any whole difference. No flags/type/branch/register/source permutations.
+
+Reopen condition: Independent original/context/type/ABI/compiler evidence accounting for an actual compound refusal.
+
+- `private-work:parallel-20261004/root-gp/rowgrid52-preflight.json`
 
 ## root-core-wide-gp-witness-20261004
 
