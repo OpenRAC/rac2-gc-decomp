@@ -64,11 +64,16 @@
       "boundary_evidence": "authoritative contiguous source fragment; not an original object boundary",
       "fragment": "src/boot/12-aligned-clear.cfrag",
       "name": "12-aligned-clear"
+    },
+    {
+      "boundary_evidence": "authoritative contiguous source fragment; not an original object boundary",
+      "fragment": "src/boot/13-gs-register-configuration.cfrag",
+      "name": "13-gs-register-configuration"
     }
   ],
   "generator_sha256": "5dea27fffe81f262f02029ff2126bf1a673c4edad860b34e46850a69156d8a9f",
   "input_sha256": {
-    "candidates/boot.c": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
+    "candidates/boot.c": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
     "candidates/levels/0_aranos_tutorial.c": "31524b1b6791887ce034eb8d5e3139326a74666c7f4761e063340fac5c43b71a",
     "candidates/levels/10_hrugis_cloud.c": "b2a4d6cb66fdd037cf2d1e021651c892e04da5c3a6b2ff9518e18c48160a7dc8",
     "candidates/levels/11_joba.c": "389aa82bb70ea3b662ba5c1c56f6a91a9289d6cfcc85aa076dd738b779bd339e",
@@ -96,7 +101,7 @@
     "candidates/levels/7_siberius.c": "15d6bd6da85b4801d4491557aca71f8dad6f1868dcecdf5a79960de51814c7e8",
     "candidates/levels/8_tabora.c": "8f61f05efd9a6d7615279f315f897c7a51710a0a7fca9136d469bb441d2f6ae5",
     "candidates/levels/9_dobbo.c": "134487ea342d9176484c4b418377cfc77eee9cbfc017ac828fa7607aeda69767",
-    "config/candidate-catalog.json": "5a21c7d2bed33a6ff469bb4ee8b6dc6247ff76320c2402b01c7ced40ed7d817c",
+    "config/candidate-catalog.json": "7aacba27832f3b08a6c7dc481c5b5d09bf532144c4d222661aaa32efe5b63fc7",
     "config/level-native/0_aranos_tutorial.json": "005a715a3bab6a653add55e493a8d542ff300ee96a14e6d0e5bba6efaae79670",
     "config/level-native/10_hrugis_cloud.json": "be9d7b57df6e6f8245428590c2c190eaa1af0e939f5bfda6fe25dd59dde3ad55",
     "config/level-native/11_joba.json": "8efc9bcae048510c6bb329320d9cad8409b0e9ab93e754022005d3c62faccb1c",
@@ -127,8 +132,8 @@
   },
   "machine_proof_status": "unverified after authoring; regenerate all affected reviews and loaded-byte gates",
   "metrics": {
-    "boot_authored_functions": 178,
-    "boot_catalogued_machine_bytes": 9336,
+    "boot_authored_functions": 179,
+    "boot_catalogued_machine_bytes": 9456,
     "identity_basis": "catalogued definitions compared as exact source bytes after recorded symbol-only substitutions; not a new machine proof",
     "native_authored_variant_catalogued_bytes_upper_bound": 53308,
     "native_base_family_placements": 215,
@@ -145,7 +150,7 @@
     "pilot_family_unique_catalogued_bytes": 24,
     "scope": "authored boot and native candidate catalogues only; excludes replicated boot/common overlay coverage",
     "shared_native_prelude_variants": 1,
-    "total_unique_authored_source_variants_in_scope": 758,
+    "total_unique_authored_source_variants_in_scope": 759,
     "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report."
   },
   "native_source_families": [
@@ -12046,10 +12051,15 @@
           "fragment": "src/boot/12-aligned-clear.cfrag",
           "sha256": "eaebef827b0c985bb1023d41c01972e3848fa488a09bf7e438a2f548c8985ea4",
           "source_text_bytes": 106
+        },
+        {
+          "fragment": "src/boot/13-gs-register-configuration.cfrag",
+          "sha256": "02ba341127eb6babeb6db9162521fcdad5b9bd54158df9576defdc2464fdc609",
+          "source_text_bytes": 736
         }
       ],
-      "sha256": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
-      "source_text_bytes": 39426
+      "sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
+      "source_text_bytes": 40162
     },
     "candidates/levels/0_aranos_tutorial.c": {
       "pieces": [

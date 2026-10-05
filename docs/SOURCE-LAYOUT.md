@@ -12,12 +12,12 @@ python scripts/source_layout.py --check --inventory-check progress/source-invent
 
 ## Boot pilot
 
-Thirteen ordered fragments in `src/boot/` group layouts, resident accessors,
+Fourteen ordered fragments in `src/boot/` group layouts, resident accessors,
 utilities, object operations, callbacks and the packed-pixel decoder. The
 generator concatenates them without introducing includes, line directives,
 whitespace or additional compiler invocations. Types and declarations retain
 their original order and scope. The output is still one `boot.c` translation
-unit containing 178 catalogued definitions.
+unit containing 179 catalogued definitions.
 
 These are authored organizational boundaries. They do not establish original
 retail modules, object files or independently compilable units. Independent
@@ -79,7 +79,7 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
-| Boot | 178 definitions | 9,336 |
+| Boot | 179 definitions | 9,456 |
 | Native overlays | 579 family-or-singleton items, 580 contextual variants | 62,468 across 786 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 

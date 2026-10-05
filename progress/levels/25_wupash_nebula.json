@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "25_wupash_nebula",
   "reference_sha256": "075a0a55f83fd7d35957af62eeac8e911357cee2fa6119edd9f2cfcdea7e9cdc",
-  "source_sha256": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
-  "catalog_sha256": "1d8fd8eab1e75283b6fdccf0d24e0cc9ad2a24150aee0d32f0a7891c9214e084",
+  "source_sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
+  "catalog_sha256": "6974c186727ce54bea116b3cb0a3b52fc0297b17d347198f278dd83520feccdf",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2136,6 +2136,20 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "FUN_0027B948",
+      "address": 3115320,
+      "size": 120,
+      "matched": true,
+      "reference_sha256": "d4411d7ace01ad58aa846443e4a135c934220a8a331cdd99f82fd18cc47659e4",
+      "candidate_sha256": "d4411d7ace01ad58aa846443e4a135c934220a8a331cdd99f82fd18cc47659e4",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "25_wupash_nebula",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_002C1068",
       "address": 2887784,
       "size": 52,
@@ -2547,15 +2561,15 @@
     "bytes_compared": 2802432,
     "segments": 1
   },
-  "matched_code_bytes": 9800,
+  "matched_code_bytes": 9920,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "a9da58146ec1428fa140646ccbb03838b72049e59b17dcd0962cb009b086a61a",
-  "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
+  "candidate_elf_sha256": "60445e3deb73b2d5021f85ccd7002de2ec657048dfe84177ebc6f80e3bb0b997",
+  "c_object_sha256": "8010c046efe99dcfb5fa1c29e0708b0a57682b2f78d732aa2a9113dbb8eb322f",
   "replacement_inputs": {
     "110100.s": [
       "FUN_0026FEB8",
@@ -2710,6 +2724,7 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "FUN_0027B948",
       "LVL_25_WUPASH_NEBULA_FUN_002C1068",
       "LVL_25_WUPASH_NEBULA_FUN_002C10A0",
       "LVL_25_WUPASH_NEBULA_FUN_002C11D0",
@@ -2747,8 +2762,8 @@
     "target": "SCUS_972.68",
     "program": "25_wupash_nebula",
     "reference_sha256": "075a0a55f83fd7d35957af62eeac8e911357cee2fa6119edd9f2cfcdea7e9cdc",
-    "source_sha256": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
-    "catalog_sha256": "1d8fd8eab1e75283b6fdccf0d24e0cc9ad2a24150aee0d32f0a7891c9214e084",
+    "source_sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
+    "catalog_sha256": "6974c186727ce54bea116b3cb0a3b52fc0297b17d347198f278dd83520feccdf",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_level_gate": {
@@ -2756,15 +2771,15 @@
       "bytes_compared": 2802432,
       "segments": 1
     },
-    "matched_code_bytes": 7488,
+    "matched_code_bytes": 7608,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "a9da58146ec1428fa140646ccbb03838b72049e59b17dcd0962cb009b086a61a",
-    "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
+    "candidate_elf_sha256": "60445e3deb73b2d5021f85ccd7002de2ec657048dfe84177ebc6f80e3bb0b997",
+    "c_object_sha256": "8010c046efe99dcfb5fa1c29e0708b0a57682b2f78d732aa2a9113dbb8eb322f",
     "replacement_inputs": {
       "110100.s": [
         "FUN_0026FEB8",
@@ -2919,6 +2934,7 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "FUN_0027B948",
         "LVL_25_WUPASH_NEBULA_FUN_002C1068",
         "LVL_25_WUPASH_NEBULA_FUN_002C10A0",
         "LVL_25_WUPASH_NEBULA_FUN_002C11D0",
@@ -2957,8 +2973,8 @@
   },
   "reference_entry": 2846088,
   "candidate_entry": 2846088,
-  "dependency_sha256": "3901609a272d320ae12a4b45f7c865779f9f37a8e1ba151c3c9491a30920789d",
-  "boot_review_sha256": "4170303d57a3449ed7fd2a9cd38a9c1b722b53cea8f55e2c81d3e6c89a5ca932",
+  "dependency_sha256": "053ddd397f05cb246c47aabb4047e7d8b6942ad5d31438ac7b200d70042d69ed",
+  "boot_review_sha256": "ab78804849db6dd3518be4bc2c561425674ac0d88d5b4ce12ef199729d579377",
   "native": {
     "source": "candidates/levels/25_wupash_nebula.c",
     "catalog_path": "config/level-native/25_wupash_nebula.json",

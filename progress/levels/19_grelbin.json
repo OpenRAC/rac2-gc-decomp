@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "19_grelbin",
   "reference_sha256": "eeab491a667c311b024745af7173ac08371e279ade0b4ab5d48b6f81fa751aaf",
-  "source_sha256": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
-  "catalog_sha256": "1d8fd8eab1e75283b6fdccf0d24e0cc9ad2a24150aee0d32f0a7891c9214e084",
+  "source_sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
+  "catalog_sha256": "6974c186727ce54bea116b3cb0a3b52fc0297b17d347198f278dd83520feccdf",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2136,6 +2136,20 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "FUN_0027B948",
+      "address": 3027512,
+      "size": 120,
+      "matched": true,
+      "reference_sha256": "d4411d7ace01ad58aa846443e4a135c934220a8a331cdd99f82fd18cc47659e4",
+      "candidate_sha256": "d4411d7ace01ad58aa846443e4a135c934220a8a331cdd99f82fd18cc47659e4",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "19_grelbin",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
       "symbol": "LVL_19_GRELBIN_FUN_002B0C70",
       "address": 2821232,
       "size": 52,
@@ -2491,15 +2505,15 @@
     "bytes_compared": 2822184,
     "segments": 1
   },
-  "matched_code_bytes": 9532,
+  "matched_code_bytes": 9652,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "9b791425b9a63843cfae9d86823fe1f80764e18482cfc8e09b779d848dc871ea",
-  "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
+  "candidate_elf_sha256": "b6b95fe98be550eea7911dedb1bb16e615f2ebc914699be0430da26ad3c5092f",
+  "c_object_sha256": "8010c046efe99dcfb5fa1c29e0708b0a57682b2f78d732aa2a9113dbb8eb322f",
   "replacement_inputs": {
     "100980.s": [
       "FUN_0026FEB8",
@@ -2654,6 +2668,7 @@
       "FUN_00351E70",
       "FUN_00351F28",
       "FUN_00351FA0",
+      "FUN_0027B948",
       "LVL_19_GRELBIN_FUN_002B0C70",
       "LVL_19_GRELBIN_FUN_002B0CA8",
       "LVL_19_GRELBIN_FUN_002B0DD8",
@@ -2687,8 +2702,8 @@
     "target": "SCUS_972.68",
     "program": "19_grelbin",
     "reference_sha256": "eeab491a667c311b024745af7173ac08371e279ade0b4ab5d48b6f81fa751aaf",
-    "source_sha256": "0de6cd7c5c971515dfd7c6b88213557202867bfc6c44a3fd4551afdaa12e5611",
-    "catalog_sha256": "1d8fd8eab1e75283b6fdccf0d24e0cc9ad2a24150aee0d32f0a7891c9214e084",
+    "source_sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
+    "catalog_sha256": "6974c186727ce54bea116b3cb0a3b52fc0297b17d347198f278dd83520feccdf",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_level_gate": {
@@ -2696,15 +2711,15 @@
       "bytes_compared": 2822184,
       "segments": 1
     },
-    "matched_code_bytes": 7488,
+    "matched_code_bytes": 7608,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "9b791425b9a63843cfae9d86823fe1f80764e18482cfc8e09b779d848dc871ea",
-    "c_object_sha256": "7760a9f10191f7c0c59f9968edf49d03783e86d10d379a817188a8cdee3e611b",
+    "candidate_elf_sha256": "b6b95fe98be550eea7911dedb1bb16e615f2ebc914699be0430da26ad3c5092f",
+    "c_object_sha256": "8010c046efe99dcfb5fa1c29e0708b0a57682b2f78d732aa2a9113dbb8eb322f",
     "replacement_inputs": {
       "100980.s": [
         "FUN_0026FEB8",
@@ -2859,6 +2874,7 @@
         "FUN_00351E70",
         "FUN_00351F28",
         "FUN_00351FA0",
+        "FUN_0027B948",
         "LVL_19_GRELBIN_FUN_002B0C70",
         "LVL_19_GRELBIN_FUN_002B0CA8",
         "LVL_19_GRELBIN_FUN_002B0DD8",
@@ -2893,8 +2909,8 @@
   },
   "reference_entry": 2782728,
   "candidate_entry": 2782728,
-  "dependency_sha256": "e9164eac19f67acf38adc3c75bee12455069b98f1e7ffcb5ef3eb0795bbe6a3d",
-  "boot_review_sha256": "4170303d57a3449ed7fd2a9cd38a9c1b722b53cea8f55e2c81d3e6c89a5ca932",
+  "dependency_sha256": "b27b74ee7ac50dea9c9296b29efc916d75a00567b5127f0d3022a3b2ab491bbf",
+  "boot_review_sha256": "ab78804849db6dd3518be4bc2c561425674ac0d88d5b4ce12ef199729d579377",
   "native": {
     "source": "candidates/levels/19_grelbin.c",
     "catalog_path": "config/level-native/19_grelbin.json",
