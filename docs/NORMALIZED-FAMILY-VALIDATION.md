@@ -5,6 +5,11 @@ reusable C body while acceptance still requires every unmasked reference byte.
 This is one already integrated family, not a certified unique-code denominator
 or new C progress.
 
+The maintained [normalized family workflow](NORMALIZED-FAMILY-WORKFLOW.md)
+provides public discovery and reviewed binding-preparation tools. The checked GS
+spec reproduces this method through the existing campaign trial route, with
+private immutable evidence and unchanged exact acceptance.
+
 ## Fresh control results, 5 October 2026
 
 The unchanged authored [GS fragment](../src/levels/shared/gs-buffer-setup.cfrag)
@@ -59,3 +64,22 @@ separate measurements. See [the campaign workflow](CAMPAIGN-WORKFLOW.md).
 Private sources, objects, references, logs and independent receipts remain in
 the runtime bank referenced by the register; only this method and proof metadata
 are versioned.
+
+## Public-tool qualification
+
+The maintained discovery CLI finds one GS candidate group with 27 distinct raw
+body hashes. The reviewed preparer then generates one canonical source and
+separate G0/G8 tasks from the checked spec. Fresh trials
+`ab600bb9b89748ba8a07e02af53a006a` and
+`c5ad09efb8c649bdb2c1ebfd2ed1dd18` reproduce all 27 complete placements and retain
+the expected two-byte wrong-binding refusal. Both compilations produce object
+SHA-256 `70bacba3d9be539ad04e33b8549587d1821f521e825d75e5ba2982bd1ee7e5f7`.
+The narrower discovery tool also keeps the two real constant variants separate.
+
+308 local tool tests pass, with two Windows symlink-privilege skips; all 24
+discovery tests pass on Linux. Fresh frozen campaign
+`8209ac0d24a5462c8933a65cf59006ad` passes the boot and all 27 complete loaded-byte
+and metadata gates, including the final public workflow scripts in its input
+inventory. Gate artifact SHA-256:
+`ab80511654d966d0bfed1e5c5765e473be3ef15f60cc5987e39fa079d06ab3d3`.
+Integrated coverage remains 311,644 / 48,788,176 bytes; no new C credit is added.

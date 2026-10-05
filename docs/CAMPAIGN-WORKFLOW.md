@@ -47,6 +47,13 @@ The commands and authoring safeguards are documented in
 
 ## Commands and task packets
 
+For candidate copy discovery and reviewed same-object binding controls, use the
+[normalized family workflow](NORMALIZED-FAMILY-WORKFLOW.md). Its conservative
+J/JAL-only signatures retain constants and other fields. Preparation produces
+private immutable banks and portable task specs; compilation still uses `trial`,
+and acceptance remains complete unmasked equality. Discovery adds no credit or
+new progress denominator.
+
 Run commands from the repository with an explicit private runtime. That runtime
 holds immutable trial/action directories, registry revisions and view backups.
 `--registry` is a test/bootstrap override; the live default remains the one

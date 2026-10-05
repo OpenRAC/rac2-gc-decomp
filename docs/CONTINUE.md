@@ -26,6 +26,10 @@ required. The game target is Going Commando USA v1.01, `SCUS_972.68`.
 
 Read compiler, native-overlay and source-layout documentation when a concrete
 technical question requires it. Archive files are evidence, not startup instructions.
+When a task concerns shared copies, use the
+[normalized family workflow](NORMALIZED-FAMILY-WORKFLOW.md) for candidate discovery
+and reviewed binding controls. It retains exact acceptance and the one register;
+its signatures never reopen a parked source trial or add matching credit.
 Verify a stale environment pointer and update its private source as soon as it
 changes; do not repeatedly rediscover an already documented tool.
 

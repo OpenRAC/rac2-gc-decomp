@@ -1429,6 +1429,34 @@ Qualify the complete standalone per-program unit, then integrate through fresh f
 
 Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
 
+## gs-buffer-setup-control-public-family-v2-20261005-g0
+
+State: `stopped`. Kind: `candidate`.
+
+Completed public-tool control: one unchanged compiled object reproduces all 26 G0 complete 136-byte placements; intentional wrong-helper child links and is rejected by two bytes. Retain aggregate mismatch/children and zero new credit. Do not integrate generic aliases.
+
+Reopen condition: Independent measured ABI/source/compiler evidence; no profile rescue or equivalent source permutations.
+
+- `docs/NORMALIZED-FAMILY-WORKFLOW.md`
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `config/family-candidates/gs-buffer-setup.json`
+- `private-work:public-family-tools-20261005/feature-receipt.json`
+- `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
+
+## gs-buffer-setup-control-public-family-v2-20261005-g8
+
+State: `stopped`. Kind: `candidate`.
+
+Completed public-tool control: qualified Barlow G8 reproduces all 136 bytes, with object hash identical to G0. Existing integrated family; zero new credit. No source, profile or alias integration change.
+
+Reopen condition: Independent measured ABI/source/compiler evidence; no profile rescue or equivalent source permutations.
+
+- `docs/NORMALIZED-FAMILY-WORKFLOW.md`
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `config/family-candidates/gs-buffer-setup.json`
+- `private-work:public-family-tools-20261005/feature-receipt.json`
+- `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
+
 ## gs-family-0_aranos_tutorial-136-v2
 
 State: `integrated`. Kind: `candidate`.
@@ -11995,6 +12023,20 @@ Use the 3359 rows with prototype offsets as naming anchors; verify each program,
 Reopen condition: A validated name transfer with independent semantic evidence
 
 - `private-work:croise-aug6-retail.tsv`
+
+## public-normalized-family-workflow-20261005
+
+State: `done`. Kind: `research`.
+
+Public conservative discovery, reviewed role-binding preparer, GS spec and workflow are implemented. Fresh CLI controls: 27 exact positives and expected two-byte wrong-binding refusal; real constant variants stay separate. 308 Windows tests pass with two symlink skips; all 24 discovery tests pass on Linux; fresh batch 8209ac0d24a5462c8933a65cf59006ad passes boot plus all 27 full-image gates. Publish the tested topic branch/draft PR, preserve current C coverage and wait for human review.
+
+Reopen condition: Concrete independently reviewed family/binding or instrument evidence; preserve prior counterexamples and no source cycling.
+
+- `docs/NORMALIZED-FAMILY-WORKFLOW.md`
+- `docs/NORMALIZED-FAMILY-VALIDATION.md`
+- `config/family-candidates/gs-buffer-setup.json`
+- `private-work:public-family-tools-20261005/feature-receipt.json`
+- `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
 
 ## root-bit-runs248-v1-20261004
 
