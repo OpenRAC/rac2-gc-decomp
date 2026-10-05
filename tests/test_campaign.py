@@ -92,6 +92,19 @@ class CampaignTests(unittest.TestCase):
         self.assertEqual((work / "manifest.json").read_bytes(), manifest_bytes)
         self.assertEqual(campaign.summary(self.store.load())["compilation_attempts"], 1)
 
+    def test_nonmatching_region_is_rejected_before_compilation(self):
+        self.dump(self.repo / "config/regions.json", {
+            "schema": 1, "default": "ntsc-u", "regions": {"ntsc-u": {
+                "serial": "SCUS_972.68", "label": "Unqualified region",
+                "target": "config/target.json", "overlays": "config/overlays.json",
+                "matching": False}}})
+        campaign.plan(self.store, self.task)
+        backend = Backend(self.tools)
+        result = self.attempt(backend)
+        self.assertEqual(result["state"], "preparation_rejected")
+        self.assertIn("C trials exists only for a matching region", result["error"])
+        self.assertEqual(backend.compilations, 0)
+
     def test_compile_failure_is_one_failure_not_two_body_measurements(self):
         self.task["targets"].append({**self.task["targets"][0], "id": "second-placement"})
         campaign.plan(self.store, self.task)

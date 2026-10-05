@@ -86,6 +86,24 @@ class ManifestTests(unittest.TestCase):
             self.assertIn("missing manifest", "\n".join(lines))
 
 
+    def test_selected_region_rejects_other_region_and_wrong_boot(self):
+        with tempfile.TemporaryDirectory() as name:
+            runtime = Path(name)
+            manifest = runtime / "manifest.json"
+            (runtime / "latest.json").write_text(json.dumps({"manifest": str(manifest)}))
+            region = doctor.regions.load("ntsc-u", ROOT)
+            for document in ({"target": "SCES_516.07"},
+                             {"target": region.serial, "boot": {"sha256": "0" * 64}}):
+                with self.subTest(document=document):
+                    manifest.write_text(json.dumps(document))
+                    lines = []
+                    self.assertIsNone(doctor.report_manifest(lines, runtime, region))
+                    self.assertIn("is unusable", "\n".join(lines))
+            manifest.write_text(json.dumps({"target": region.serial,
+                                           "boot": {"sha256": region.target["boot"]["sha256"]}}))
+            self.assertEqual(doctor.report_manifest([], runtime, region), manifest)
+
+
 class DoctorTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
@@ -94,7 +112,7 @@ class DoctorTests(unittest.TestCase):
         self.runtime = self.directory / "runtime"
         manifest = self.runtime / "runs" / "20261001T000000Z-abcdef01" / "manifest.json"
         manifest.parent.mkdir(parents=True)
-        manifest.write_text("{}", encoding="utf-8")
+        manifest.write_text(json.dumps({"target": "SCUS_972.68", "boot": {"sha256": doctor.regions.load("ntsc-u", ROOT).target["boot"]["sha256"]}}), encoding="utf-8")
         (self.runtime / "latest.json").write_text(json.dumps({"manifest": str(manifest)}), encoding="utf-8")
         self.manifest = manifest
         self.assembly = self.directory / "prodg2"

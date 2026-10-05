@@ -16,13 +16,13 @@ import region as regions
 
 def input_hashes(root: Path) -> dict:
     paths = [root / name for name in (
-        "config/target.json", "config/overlays.json", "config/candidate-catalog.json",
+        "config/target.json", "config/overlays.json", "config/regions.json", "config/candidate-catalog.json",
         "config/level-catalog.json", "config/source-layout.json", "progress/candidates.json",
         "scripts/build.py", "scripts/integration.py", "scripts/level_native.py",
         "scripts/check_candidates.py", "scripts/elf_tools.py", "scripts/wsl_chain.py",
         "scripts/campaign_build.py", "scripts/source_layout.py")]
     for directory, pattern in (("candidates", "*.c"), ("src", "*.cfrag"),
-                               ("config/level-native", "*.json"),
+                               ("config/level-native", "*.json"), ("config/regions", "*.json"),
                                ("progress/level-candidates", "*.json")):
         paths.extend((root / directory).rglob(pattern))
     paths.extend((root / "scripts").rglob("*.py"))

@@ -11,6 +11,23 @@ import campaign_build
 
 
 class CampaignBuildTests(unittest.TestCase):
+    def test_region_policy_and_identity_changes_invalidate_provenance(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            identity = root / "config/regions/pal/target.json"
+            identity.parent.mkdir(parents=True)
+            identity.write_text('{"serial": "SCES_516.07"}')
+            policy = root / "config/regions.json"
+            policy.write_text('{"default": "ntsc-u"}')
+            before = campaign_build.input_hashes(root)
+            policy.write_text('{"default": "pal"}')
+            changed_policy = campaign_build.input_hashes(root)
+            self.assertNotEqual(before["config/regions.json"], changed_policy["config/regions.json"])
+            identity.write_text('{"serial": "SCES_516.07", "expected_levels": 27}')
+            changed_identity = campaign_build.input_hashes(root)
+            self.assertNotEqual(changed_policy["config/regions/pal/target.json"],
+                                changed_identity["config/regions/pal/target.json"])
+
     def batch(self, failing=False):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary) / "repo"

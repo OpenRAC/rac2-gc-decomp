@@ -219,7 +219,7 @@ def report_runtime(lines: list, runtime: Path | None) -> bool:
     return True
 
 
-def report_manifest(lines: list, runtime: Path | None) -> Path | None:
+def report_manifest(lines: list, runtime: Path | None, region=None) -> Path | None:
     """A previous setup.py run leaves <runtime>/latest.json -> manifest. Then the disc does not
     have to be verified again: re-hashing 3.8 GB is not a useful thing to ask of a contributor."""
     if runtime is None:
@@ -236,6 +236,16 @@ def report_manifest(lines: list, runtime: Path | None) -> Path | None:
     if not manifest.is_file():
         lines.append(f"manifest          {latest} points at a missing manifest ({manifest})")
         return None
+    if region is not None:
+        try:
+            document = json.loads(manifest.read_bytes())
+            if document.get("target") != region.serial:
+                raise ValueError(f"manifest target does not match selected region {region.serial}")
+            if region.pinned and document.get("boot", {}).get("sha256") != region.target["boot"]["sha256"]:
+                raise ValueError("manifest boot identity does not match the selected region")
+        except (OSError, ValueError, AttributeError) as error:
+            lines.append(f"manifest          {manifest} is unusable ({error})")
+            return None
     lines.append(f"manifest          {manifest} (a previous setup.py run; the disc need not be re-verified)")
     return manifest
 
@@ -263,7 +273,7 @@ def doctor(argv: list | None = None) -> int:
     disc_ok = report_disc(lines, args.iso, region) if target_ok else False
     wrench_ok = report_wrench(lines, args.wrench)
     runtime_ok = report_runtime(lines, args.runtime)
-    manifest = report_manifest(lines, args.runtime)
+    manifest = report_manifest(lines, args.runtime, region)
     assembly_ok = report_toolchain(lines, "ProDG 2.0", args.toolchain, ASSEMBLY_INSTRUMENTS,
                                    "needed to reconstruct assembly")
     c_ok = report_c_chain(lines, args.c_toolchain)

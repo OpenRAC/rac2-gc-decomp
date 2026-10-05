@@ -14,23 +14,25 @@ use still needs its own catalogue, fresh objects and complete loaded-byte gates.
 
 RAC1's retail `core_text` links GCC's runtime library. rac1-decomp rebuilds it
 from GCC's own sources rather than decompiling it
-([`src/libgcc/README.md`](https://github.com/OpenRAC/rac1-decomp/blob/main/src/libgcc/README.md),
-[`docs/DECOMP_PROGRESS.md`](https://github.com/OpenRAC/rac1-decomp/blob/main/docs/DECOMP_PROGRESS.md),
+([`src/libgcc/README.md`](https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/src/libgcc/README.md),
+[`docs/DECOMP_PROGRESS.md`](https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/docs/DECOMP_PROGRESS.md),
 "libgcc is 2.9-ee").
 
 - **Compiler.** Sony's **gcc 2.9-ee-991111**, the lineage of this repository's
   current GNU EE profile, not the SN 2.95.3 that built RAC1's game code.
-- **Sources.** The unmodified `fp-bit.c` of GCC 2.95.3 and the unmodified
-  `libgcc2.c`/`longlong.h` of GCC trunk 1999-11-02 (the revision just before the
-  2.9-ee-991111 snapshot). Two measured adjustments: `__pack_d` needs
-  `-DFLOAT_BIT_ORDER_MISMATCH` (GCC's little-endian MIPS fragment), and
-  `__unpack_d`/`__unpack_f` need `-DNO_DENORMALS` plus that option's one-hunk
-  implementation, backported from trunk 2000-03-16.
+- **Sources.** At commit `cb22f0b0d3a171d1fd4b6851b86fe214a22c9822`,
+  `libgcc2.c` and `longlong.h` come from GCC trunk `31cf01446d`
+  (1999-09-09). GCC 2.95.3's `fp-bit.c` has two marked changes: shared
+  `__thenan_df` storage and the `NO_DENORMALS` backport from trunk
+  `2672543458` (2000-03-16). The build also selects
+  `FLOAT_BIT_ORDER_MISMATCH` and the GOFAST names.
 - **Result.** fp-bit (`_fpadd_parts`, `__adddf3`, `__subdf3`, `__muldf3`,
   `__divdf3`, `__fpcmp_parts_d`, `__cmpdf2`, `__floatsidf`, `__fixdfsi`, ...)
   and libgcc2's `__divdi3`, `__muldi3`, `__floatdidf` and `__fixunsdfdi` match
   RAC1 byte for byte, relocations included, with no post-processing. Across
   0x11DFE8-0x1206A0, 2,478 words compare equal.
+  That whole-image total includes the remaining assembly stubs and linker
+  fill; it is not a claim that every byte in the region comes from C.
 - **Build through the driver, not `cc1`.** The driver passes the target
   predefines (`__mips__`, `__R5900__`, ...) from which `longlong.h` selects its
   MIPS multiply and divide primitives. Called through `cc1` directly,
@@ -39,9 +41,10 @@ from GCC's own sources rather than decompiling it
   `.text` alignment reproduces retail's gaps between modules. Linker fill
   between some modules is `0xCDCDCDCD`, which splat had split out as tiny
   "functions". Each division module owns a static `__clz_tab`.
-- **Still open in RAC1.** `__moddi3`, `__udivdi3` and `__umoddi3` compile to
-  Sony's instructions but not Sony's frame (one extra stack local in retail),
-  across every 1999 revision and flag tried.
+- **Still open in RAC1.** `__moddi3`, `__udivdi3` and `__umoddi3` remain
+  assembly stubs. Retail reserves additional unused stack space: 0x20,
+  0x10 and 0x20 bytes respectively. The source and flag trials recorded
+  upstream did not resolve those frame differences.
 - **How it was found.** A family of near-misses shared one "known residual".
   Compiling one member with every available EE `cc1` showed that only 2.9-ee
   produced retail's prologue. A family-wide residual can point to a different
@@ -91,13 +94,14 @@ not adoption.
 
 ## 4. Candidate-generation aids
 
-rac1-decomp uses these to propose candidates. Here they would only produce
-inputs for the normal campaign trials and gates.
+rac1-decomp uses these to propose candidates. These observations do not
+permit source permutations on parked RAC2 targets: the concrete reopening
+evidence required by [CAMPAIGN-WORKFLOW.md](CAMPAIGN-WORKFLOW.md) still applies.
 
 - **m2c with generated context** for a first C sketch. Its output is never
   matching as emitted and mis-decodes branch-likely conditions.
 - **[decomp-permuter](https://github.com/simonlindholm/decomp-permuter)**
-  ([`docs/PERMUTER.md`](https://github.com/OpenRAC/rac1-decomp/blob/main/docs/PERMUTER.md)).
+  ([`docs/PERMUTER.md`](https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/docs/PERMUTER.md)).
   Effective on store-order and small register-allocation near-misses: one RAC1
   function reached an exact candidate at iteration 105, under two minutes, by
   reordering two stores. Less effective on control-flow shapes such as loop

@@ -314,7 +314,9 @@ def _trial(store, repo, task_id, toolchain, profile, repeat_reason="", backend=N
         # The catalogue names its own release; only that region's pinned identities apply.
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         try:
-            refs = importlib.import_module("region").by_serial(catalog.get("target"), repo).program_pins()
+            owner = importlib.import_module("region").by_serial(catalog.get("target"), repo)
+            owner.require_matching("C trials")
+            refs = owner.program_pins()
         except ValueError as error:
             raise ValueError(f"Reference/catalog is not a pinned RAC2 program ({error})") from error
         if (program not in refs
