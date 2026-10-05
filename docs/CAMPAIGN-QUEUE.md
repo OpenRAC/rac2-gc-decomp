@@ -1631,6 +1631,22 @@ Compare all complete symbols and object hash with the pre-lot committed native r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
+## native-review-barlow-action-gate-20261005
+
+State: `stopped`. Kind: `research`.
+
+PARK trial3c7625a5c9f44e45a7a0f6d30796da39 complete168/160 size refusal withALL32CURRENTBarlow controls exact underqualifiedG8/fixedGP1AEFF0. ScalarABS1A7908/objectABS1B96D0 andexistingSDA1A8F00 bindings correct, rootfields/LBU/LH/integerorder exact. Compilerhoistsresident189E20base beforeguards/usesA1 insteadreferenceA0 acquiredlater; movesbyte22B4 load intobothbranchdelay slots theninserts THREE ordinarydata-load-useNOPs atmerge vsreferenceoneNOP afterordinaryLBU. Original3pollNOP generation isqualifiedcompilerhazard/scheduling evidence, notvolatilityexclusive/sourcepadding. No independent layout/prototype/alias/lifetime/sourcebinding correction. No NOSDA/SDA/qualifier/globalview/initializer/branch/register/flags v2.
+
+Reopen condition: Independent original root/global/prototype/source-effect/alias/lifetime evidence only; no equivalent base-initializer/branch/type/qualifier/register orpadding/flags choices.
+
+## native-review-barlow-action-gate-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+PARK trial3c7625a5c9f44e45a7a0f6d30796da39 complete168/160 size refusal withALL32CURRENTBarlow controls exact underqualifiedG8/fixedGP1AEFF0. ScalarABS1A7908/objectABS1B96D0 andexistingSDA1A8F00 bindings correct, rootfields/LBU/LH/integerorder exact. Compilerhoistsresident189E20base beforeguards/usesA1 insteadreferenceA0 acquiredlater; movesbyte22B4 load intobothbranchdelay slots theninserts THREE ordinarydata-load-useNOPs atmerge vsreferenceoneNOP afterordinaryLBU. Original3pollNOP generation isqualifiedcompilerhazard/scheduling evidence, notvolatilityexclusive/sourcepadding. No independent layout/prototype/alias/lifetime/sourcebinding correction. No NOSDA/SDA/qualifier/globalview/initializer/branch/register/flags v2.
+
+Reopen condition: Independent original root/global/prototype/source-effect/alias/lifetime evidence only; no equivalent base-initializer/branch/type/qualifier/register orpadding/flags choices.
+
 ## native-review-barlow-frame-reset-20261005
 
 State: `queued`. Kind: `research`.
@@ -1646,6 +1662,14 @@ State: `stopped`. Kind: `candidate`.
 Park unchanged firstsource with current27controls/target288/caller1800/livepins/exactGPoffset bindings, immutablebankframe-reset-v1/object/assembly/outcome. Continue another genuinelynew BarlowG8 or owned ordinaryC target underunchanged qualifiedprofiles. Do not cycle qualifier/aliasview/loops/source.
 
 Reopen condition: Independent original tag/header/global overlap or asynchronous producer/source declaration/lifetime evidence must justify observedreloads. Do not addvolatile, rawalias/union/aggregateanchor, changeSDA/NOSDA orflags/iteration shape simply toprevent optimization or force288.
+
+## native-review-barlow-mode-predicate-20261005
+
+State: `queued`. Kind: `research`.
+
+Fulltarget/caller544 livepins andfreshCURRENT32G8controls, firstnaturalC; strict188 allbytesonly.
+
+Reopen condition: Independent original resident/global/object ABI/sourcebinding/effect evidence only; no qualifier/view/branch/local/register/flags cycling.
 
 ## native-review-barlow-rectangle-slot-20261005
 
@@ -3209,33 +3233,33 @@ Reopen condition: Independent originalowner/modeldescriptor typedlayout/source a
 
 State: `stopped`. Kind: `candidate`.
 
-FirstnaturalC/wholeCURRENTunit strictqualification; preserve negatives, familyonlyifseedexact.
+PARK combined315b6d80f8ea48b0851b16af5eda7356 compiledbutlinkoverlap0measured becauseallocation212>208distance tonextentry. Identicalbodies splitsolely for independentwholecontrolmeasurement: allocatorf4422720c76e4cc3a9daf97746f64b58 produces212/204, ALL34controls exact; updated5ba6a27b5d24d6d9a17651255146d4e248/264 ALL34controls exact. Firstnatural recordloop updateframe64/fiveS vsoriginal80/sixS, recomputesposition/unit pointers insteadretainingthreeiterators; allocation prologue/loopconditional schedule8bytegap. No independent original type/source-phase correction, no iterator/arrayview/record/rawbytes/store/reg/flags v2.
 
-Reopen condition: Independent original record/helper layout/alias/lifetime/ABI/sourceeffect evidence only; no store/iterator/loop/FPR/reg/flags cycling.
+Reopen condition: Independent original record/view/prototype/alias/lifetime source evidence. No changedbounds/BSSclaim/iterator/registerforcing or equivalent source loops/stores.
 
 ## native-review-notak-orbit-pool-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Complete target/caller1644? actualfullUpdate/array64x100/originalhelpers pins; one natural sameunitC lot/full34controls andtwo completefunctions.
+PARK combined315b6d80f8ea48b0851b16af5eda7356 compiledbutlinkoverlap0measured becauseallocation212>208distance tonextentry. Identicalbodies splitsolely for independentwholecontrolmeasurement: allocatorf4422720c76e4cc3a9daf97746f64b58 produces212/204, ALL34controls exact; updated5ba6a27b5d24d6d9a17651255146d4e248/264 ALL34controls exact. Firstnatural recordloop updateframe64/fiveS vsoriginal80/sixS, recomputesposition/unit pointers insteadretainingthreeiterators; allocation prologue/loopconditional schedule8bytegap. No independent original type/source-phase correction, no iterator/arrayview/record/rawbytes/store/reg/flags v2.
 
-Reopen condition: Independent original record/matrix/helperABI/layout/alias/lifetime/sourceeffect evidence only; no pointeriterator/store/FPR/register/flags cycles.
+Reopen condition: Independent original record/view/prototype/alias/lifetime source evidence. No changedbounds/BSSclaim/iterator/registerforcing or equivalent source loops/stores.
 
 ## native-review-notak-orbit-pool-v1-20261005
 
 State: `stopped`. Kind: `candidate`.
 
-FirstnaturalC/wholeCURRENTunit strictqualification; preserve negatives, familyonlyifseedexact.
+PARK combined315b6d80f8ea48b0851b16af5eda7356 compiledbutlinkoverlap0measured becauseallocation212>208distance tonextentry. Identicalbodies splitsolely for independentwholecontrolmeasurement: allocatorf4422720c76e4cc3a9daf97746f64b58 produces212/204, ALL34controls exact; updated5ba6a27b5d24d6d9a17651255146d4e248/264 ALL34controls exact. Firstnatural recordloop updateframe64/fiveS vsoriginal80/sixS, recomputesposition/unit pointers insteadretainingthreeiterators; allocation prologue/loopconditional schedule8bytegap. No independent original type/source-phase correction, no iterator/arrayview/record/rawbytes/store/reg/flags v2.
 
-Reopen condition: Independent original record/helper layout/alias/lifetime/ABI/sourceeffect evidence only; no store/iterator/loop/FPR/reg/flags cycling.
+Reopen condition: Independent original record/view/prototype/alias/lifetime source evidence. No changedbounds/BSSclaim/iterator/registerforcing or equivalent source loops/stores.
 
 ## native-review-notak-orbit-update-isolated-20261005
 
 State: `stopped`. Kind: `candidate`.
 
-FirstnaturalC/wholeCURRENTunit strictqualification; preserve negatives, familyonlyifseedexact.
+PARK combined315b6d80f8ea48b0851b16af5eda7356 compiledbutlinkoverlap0measured becauseallocation212>208distance tonextentry. Identicalbodies splitsolely for independentwholecontrolmeasurement: allocatorf4422720c76e4cc3a9daf97746f64b58 produces212/204, ALL34controls exact; updated5ba6a27b5d24d6d9a17651255146d4e248/264 ALL34controls exact. Firstnatural recordloop updateframe64/fiveS vsoriginal80/sixS, recomputesposition/unit pointers insteadretainingthreeiterators; allocation prologue/loopconditional schedule8bytegap. No independent original type/source-phase correction, no iterator/arrayview/record/rawbytes/store/reg/flags v2.
 
-Reopen condition: Independent original record/helper layout/alias/lifetime/ABI/sourceeffect evidence only; no store/iterator/loop/FPR/reg/flags cycling.
+Reopen condition: Independent original record/view/prototype/alias/lifetime source evidence. No changedbounds/BSSclaim/iterator/registerforcing or equivalent source loops/stores.
 
 ## native-review-notak-particle-refresh-20261005
 
@@ -3300,6 +3324,30 @@ State: `stopped`. Kind: `candidate`.
 Park immutablepairedvectorbank physicalfamily; no floatconstant/loop/register/store/qualifier cycles, no assembly/padding orprofile changes. Continuegenuinelynew algorithm.
 
 Reopen condition: Independent qualified compiler/source-binding ororiginallifetime evidence explaining firstMTC1/loop hazard scheduling andindependent resetword phase, notequivalent sourcecycling.
+
+## native-review-notak-water-transition-20261005
+
+State: `stopped`. Kind: `research`.
+
+PARK FIRSTactual compilertriald85186456b0345429f15baa1a58f410d produces240/236 withALL34CURRENTNotak901controls exact. Same32frame/twoS andstate/global/byte/halfword/helperABI correct; missing-vars diagnostic path movedearlier withadditionalepiloguejump insteadreferencecoldend placement; no originalsourceCFG/prototype/layout effect correction. Preserve precompiler97d8e38missingunplannedtask and2fe128dcbudget rejected0compiler, reviewedfirstmeasurement unchangedC/catalog. No branch/goto/label/else inversion/qualifier/local/reg/flags cycles.
+
+Reopen condition: Independent original state/context/varargs ABI or actualsource-effect/alias/lifetime evidence only; no equivalent coldpath/tailsharing/branch/label rewrites.
+
+## native-review-notak-water-transition-first-measurement-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+PARK FIRSTactual compilertriald85186456b0345429f15baa1a58f410d produces240/236 withALL34CURRENTNotak901controls exact. Same32frame/twoS andstate/global/byte/halfword/helperABI correct; missing-vars diagnostic path movedearlier withadditionalepiloguejump insteadreferencecoldend placement; no originalsourceCFG/prototype/layout effect correction. Preserve precompiler97d8e38missingunplannedtask and2fe128dcbudget rejected0compiler, reviewedfirstmeasurement unchangedC/catalog. No branch/goto/label/else inversion/qualifier/local/reg/flags cycles.
+
+Reopen condition: Independent original state/context/varargs ABI or actualsource-effect/alias/lifetime evidence only; no equivalent coldpath/tailsharing/branch/label rewrites.
+
+## native-review-notak-water-transition-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+PARK FIRSTactual compilertriald85186456b0345429f15baa1a58f410d produces240/236 withALL34CURRENTNotak901controls exact. Same32frame/twoS andstate/global/byte/halfword/helperABI correct; missing-vars diagnostic path movedearlier withadditionalepiloguejump insteadreferencecoldend placement; no originalsourceCFG/prototype/layout effect correction. Preserve precompiler97d8e38missingunplannedtask and2fe128dcbudget rejected0compiler, reviewedfirstmeasurement unchangedC/catalog. No branch/goto/label/else inversion/qualifier/local/reg/flags cycles.
+
+Reopen condition: Independent original state/context/varargs ABI or actualsource-effect/alias/lifetime evidence only; no equivalent coldpath/tailsharing/branch/label rewrites.
 
 ## native-review-prison-cache-promote-20261004
 
@@ -5613,6 +5661,16 @@ Reopen condition: Independent original ABI/layout/access-phase evidence only; no
 
 - `runtime:bank/parallel-orbital_lots-gorn-count-positive148-v1/evidence.json`
 
+## orbital-gorn-counted-insert124-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-gorn-counted-insert124-v1/evidence.json`
+
 ## orbital-gorn-descriptor-remap-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -5845,7 +5903,7 @@ Reopen condition: Independent original storage, ABI, or qualified compiler evide
 
 ## orbital-gorn-record-write64-20261004-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
 
@@ -6847,7 +6905,7 @@ Reopen condition: Current source/catalog/reference drift or independentlymeasure
 
 ## orbital-record-write-family-901-20261004-0_aranos_tutorial
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify whole currentunit then root owns integration/full image gates.
 
@@ -6857,7 +6915,7 @@ Reopen condition: Independent original ABI/layout or currentinput drift only.
 
 ## orbital-record-write-family-901-20261004-14_aranos_prison
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify whole currentunit then root owns integration/full image gates.
 
@@ -6867,7 +6925,7 @@ Reopen condition: Independent original ABI/layout or currentinput drift only.
 
 ## orbital-record-write-family-901-20261004-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify whole currentunit then root owns integration/full image gates.
 
@@ -6877,7 +6935,7 @@ Reopen condition: Independent original ABI/layout or currentinput drift only.
 
 ## orbital-record-write-family-901-20261004-2_maktar_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify whole currentunit then root owns integration/full image gates.
 
@@ -6887,7 +6945,7 @@ Reopen condition: Independent original ABI/layout or currentinput drift only.
 
 ## orbital-record-write-family-901-20261004-4_barlow
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify whole currentunit then root owns integration/full image gates.
 
@@ -9839,6 +9897,16 @@ Reopen condition: New independent count/layout/sourcephase evidence only
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 
+## parallel-boot-analysis-oozla-reset152-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholecurrentunit firstC trial; onlycompleteexact allowsfamily, parkstrictrefusal withoutsourcepermutations.
+
+Reopen condition: Independent original type/layout/ABI/accessphase/qualifiedlowering witness only; no forward/reverse/index/pointer/cast/loop/field/decl/local/flags/register permutations.
+
+- `private-work:parallel-20261004/boot_analysis/reset152-abi.json`
+
 ## parallel-boot-analysis-oozla-three-pass-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -9848,6 +9916,16 @@ Maintained full-current-unit first412 seed; inspect complete size/bytes, strictr
 Reopen condition: Independent original source/declaration/accessphase/ABI or qualified lowering witness; no type/view/volatile/cursor/local/condition/returncast/register/order/flags cycling.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-oozla-unlink164-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained wholecurrentunit firstC trial; full exact required beforefamily, parkstrictrefusal withoutpointer/loop variants.
+
+Reopen condition: Independent original layout/type/ABI/accessphase/qualifiedlowering evidence only; no cursor/head/rootview/pointer/handle/local/decl/order/flags/register or return-residue permutations.
+
+- `private-work:parallel-20261004/boot_analysis/unlink164-abi.json`
 
 ## parallel-boot-analysis-parts252-20-v1
 

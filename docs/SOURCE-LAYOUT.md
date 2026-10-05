@@ -34,7 +34,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Six hundred eighty-six contextual native bodies remain distinct in the
+family has 26. Six hundred ninety-two contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -80,17 +80,30 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 181 definitions | 9,564 |
-| Native overlays | 694 family-or-singleton items, 695 contextual variants | 87,152 across 901 placements |
+| Native overlays | 700 family-or-singleton items, 701 contextual variants | 87,536 across 907 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 77,968, or 77,992 when both clear
+Native representative catalogued bytes total 78,352, or 78,376 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **303,796 / 48,788,176 bytes (0.6227%)**.
-The latest lot adds one 44-byte boot double constructor, 27 selection-grid
+The current integration exporter accepts **304,180 / 48,788,176 bytes (0.6235%)**.
+The latest lot adds six complete 64-byte record-pointer writers, totaling
+384 bytes. A zero initial marker skips the scan. Otherwise the full selector
+word and signed promoted key select the first matching 80-byte record; its
+payload pointer is written, with the original marker-one termination order.
+All seven actual callers prove four ordinary arguments and an unused result.
+
+One authored fragment retains explicit per-program symbols. All 204 complete
+functions in the six units match, including 198 controls; generated sources
+and catalogs equal immutable qualifications. Barlow keeps its qualified G8
+profile and every existing external binding is unchanged. The whole-body scan
+excludes the other 21 programs. Fresh boot and all 27 loaded-byte and metadata
+gates, independent exports and the full test suite qualify integration.
+
+The preceding lot added one 44-byte boot double constructor, 27 selection-grid
 updates of 312 bytes, 27 slot reservation/reuse routines of 84 bytes and three
 clamped local-target angle routines of 252 bytes, totaling 11,492 bytes.
 The grid event helper's signed return is independently proven by an actual

@@ -551,3 +551,31 @@ int LVL_4_BARLOW_FUN_003326F0(void *object)
     }
     return -1;
 }
+
+typedef struct {
+    u8 prefix[0x40];
+    void *payload;
+    u32 unused44;
+    short key;
+    u8 marker;
+    u8 unused4b;
+    u8 selector;
+    u8 tail[3];
+} GornRecordWrite64;
+typedef char GornRecordWrite64Stride[(sizeof(GornRecordWrite64) == 80) ? 1 : -1];
+
+void LVL_4_BARLOW_FUN_003461E0(GornRecordWrite64 *record, u32 selector,
+                            int key, void *payload)
+{
+    if (record->marker != 0) {
+        u8 marker;
+        do {
+            if (record->selector == selector && record->key == key) {
+                record->payload = payload;
+                return;
+            }
+            marker = record->marker;
+            ++record;
+        } while (marker != 1);
+    }
+}
