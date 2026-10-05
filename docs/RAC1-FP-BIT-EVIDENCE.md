@@ -1,9 +1,10 @@
 # RAC1 evidence for the boot's fp-bit helpers
 
-Recorded 5 October 2026 from rac1-decomp. **This is evidence for a hypothesis,
-not a RAC2 match.** No RAC2 compiler trial was run for it; it adds no credit
-and changes no proof input. The campaign task
-`boot-fp-bit-verbatim-source-rac1-evidence-20261005` tracks it.
+Recorded 5 October 2026 from rac1-decomp, and **superseded later the same day by
+the trial it called for**: `FUN_00123400` matched exactly and
+`FUN_001234F0` did not. Read [What the RAC2 trial measured](#what-the-rac2-trial-measured-5-october-2026)
+for the result; the sections below are the evidence as it was first recorded,
+and remain the reason the trial was worth running.
 
 ## The RAC2 targets
 
@@ -60,8 +61,35 @@ rac1-decomp `main` at `cb22f0b0d3a171d1fd4b6851b86fe214a22c9822`:
 | `src/libgcc/README.md` | provenance and per-module results |
 | `Makefile.sn`, lines 128-158 | the exact build lines |
 
-The sources are GPL v2 with the libgcc linking exception. They are referenced
-here, not copied.
+The sources are GPL v2 with the libgcc linking exception. Until the trial ran,
+they were referenced here and not copied; the trial's exact input is now
+published under its own licence in [`src/libgcc/`](../src/libgcc/README.md).
+
+## What the RAC2 trial measured, 5 October 2026
+
+The trial this document called for was run. Its standalone unit is the `cpp`
+output of the pinned `fp-bit.c`, with the two campaign symbol mappings
+(`__unpack_f` → `FUN_00123400`, `fptodp` → `FUN_001234F0`) and the text between
+the markers unedited. It was compiled once with the qualified
+`-O2 -G0 -ffunction-sections` profile and both complete symbols were compared
+against the retail boot image.
+
+| Symbol | Retail size | Result |
+| --- | ---: | --- |
+| `FUN_00123400` | 144 | **exact**, every byte equal |
+| `FUN_001234F0` | 64 | refused, 8 bytes differ |
+
+The refusal is confined to delay-slot filling around the `jal` to
+`__unpack_f`: retail stores `s.s $f12,16($sp)` before the call and keeps
+`daddu a1,sp,zero` in the delay slot, while this chain emits the two in the
+opposite order. Size and instruction set agree; only the ordering does not.
+The reopening condition is therefore a compiler hypothesis, not a source
+permutation: the retail libgcc objects may come from Sony's own `2.9-ee-991111`
+rather than the SN 2.95.3 build, as the `rac1-decomp` libgcc README suggests.
+
+The refused body stays in the published source instead of being edited down to
+the part that matched, because the campaign requires the published file to be
+the exact input that produced the measured object.
 
 ## What a RAC2 trial would have to show
 

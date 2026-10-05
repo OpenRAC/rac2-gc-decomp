@@ -99,6 +99,15 @@
       "returncode": 0,
       "state": "passed"
     },
+    "1ce49e9ea7a342a18efca08b4d0ad084": {
+      "directory": "runtime:actions/1ce49e9ea7a342a18efca08b4d0ad084",
+      "finished": "2026-10-05T19:24:27.347822+00:00",
+      "id": "1ce49e9ea7a342a18efca08b4d0ad084",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 2,
+      "state": "failed"
+    },
     "2089f75d227d496a880c1dd0c536316a": {
       "artifact": "runtime:actions/2089f75d227d496a880c1dd0c536316a/report.json",
       "artifact_sha256": "83c0225d214bf0aadfec012c3420aca14fff5b8ae3774c5416cad9abae65e4a1",
@@ -264,6 +273,15 @@
       "returncode": 0,
       "state": "passed"
     },
+    "4c50a46c22fb42d8ad8943ab31152d10": {
+      "directory": "runtime:actions/4c50a46c22fb42d8ad8943ab31152d10",
+      "finished": "2026-10-05T19:29:47.419692+00:00",
+      "id": "4c50a46c22fb42d8ad8943ab31152d10",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 1,
+      "state": "failed"
+    },
     "4d0d6db70a9f433da636a013606510e7": {
       "artifact": "prepared-run:builds/campaign-4d0d6db70a9f433da636a013606510e7/report.json",
       "artifact_sha256": "47067e21b527acad8f0d6ef2d12657b2cc6128094897c6dba52dd61cc2820e99",
@@ -296,6 +314,15 @@
       "kind": "report",
       "returncode": 0,
       "state": "passed"
+    },
+    "5352b8ac26104fe58e21e749ab721c48": {
+      "directory": "runtime:actions/5352b8ac26104fe58e21e749ab721c48",
+      "finished": "2026-10-05T19:22:01.894364+00:00",
+      "id": "5352b8ac26104fe58e21e749ab721c48",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 1,
+      "state": "failed"
     },
     "563dab4bdce641f58f221e56eb1da682": {
       "artifact": "runtime:actions/563dab4bdce641f58f221e56eb1da682/report.json",
@@ -580,6 +607,23 @@
       "kind": "report",
       "returncode": 0,
       "state": "passed"
+    },
+    "a7ac4554b6b9424da407814799dfd91c": {
+      "artifact": "prepared-run:builds/campaign-a7ac4554b6b9424da407814799dfd91c/report.json",
+      "artifact_sha256": "517bb4b85a7bfff40ffb65ba25fbf658d0d464cf5a785470b2ab7651d4914d13",
+      "directory": "runtime:actions/a7ac4554b6b9424da407814799dfd91c",
+      "finished": "2026-10-05T19:36:54.025345+00:00",
+      "id": "a7ac4554b6b9424da407814799dfd91c",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
+    "a7d6efa810504644a2054ca9966b2e24": {
+      "directory": "runtime:actions/a7d6efa810504644a2054ca9966b2e24",
+      "id": "a7d6efa810504644a2054ca9966b2e24",
+      "kind": "integrate",
+      "state": "running"
     },
     "ae23dc71c0274b639d136f7575f5d567": {
       "artifact": "prepared-run:builds/campaign-ae23dc71c0274b639d136f7575f5d567/report.json",
@@ -4242,7 +4286,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 4981,
+  "revision": 5110,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -6530,20 +6574,89 @@
         }
       ]
     },
+    "boot-fp-bit-verbatim-rac2-trial-20261005": {
+      "address": 1192960,
+      "budget": 1,
+      "created": "2026-10-05T18:53:35.042996+00:00",
+      "hypothesis": "One trial of the verbatim GCC 2.95.3 fp-bit.c named by docs/RAC1-FP-BIT-EVIDENCE.md. The standalone unit is that file (rac1-decomp commit cb22f0b, provenance sha256 3069e3a1385e9b2d316929a676a71e2af8a834666b7388a89f10c52ae0e17336) preprocessed once by the same reconstructed 2.9-ee cpp the campaign chain runs, with cpp -P -DFLOAT -DFLOAT_BIT_ORDER_MISMATCH -DNO_DENORMALS -DUS_SOFTWARE_GOFAST, then two symbol mappings (__unpack_f -> FUN_00123400, fptodp -> FUN_001234F0) so the catalogued names are the campaign's; no byte inside the preprocessed text is edited. Unit sha256 7d654bb5f1e57860c3fd6926497bc80530ef5b003808bdbe4fce5b9d658541c5. Compile once with the qualified profile -O2 -G0 -ffunction-sections; this also measures the -G2-vs-G0 question the evidence doc leaves open. __thenan_df is a link-only absolute definition for fp-bit's nan() shared object: neither catalogued body references it and its address cannot change their bytes.",
+      "id": "boot-fp-bit-verbatim-rac2-trial-20261005",
+      "kind": "candidate",
+      "last_trial": "d6d282813c9c469586780e0d9543afe8",
+      "next_action": "Require both complete bodies exact (144 and 64 bytes, every byte); retain the refusal as-is if either differs, with no flag, alias, source-shape or prototype permutation.",
+      "pointers": [
+        "docs/RAC1-FP-BIT-EVIDENCE.md",
+        "boot-fp-bit-verbatim-source-rac1-evidence-20261005"
+      ],
+      "priority": 80,
+      "program": "boot",
+      "reopen_condition": "A measured layout/ABI difference, a changed compiler hypothesis, or an independent source context explaining a complete mismatch.",
+      "size": 208,
+      "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/fp-bit-ee.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_00123400",
+        "FUN_001234F0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog.json",
+          "id": "boot-fp-bit",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T18:54:00.113909+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "d6d282813c9c469586780e0d9543afe8"
+        }
+      ]
+    },
     "boot-fp-bit-verbatim-source-rac1-evidence-20261005": {
       "address": 1192960,
+      "amendments": [
+        {
+          "at": "2026-10-05T18:55:12.078198+00:00",
+          "before": {
+            "next_action": "Maintainer review of docs/RAC1-FP-BIT-EVIDENCE.md. If accepted, reopen the two stopped tasks for one trial: rac1-decomp fp-bit.c (sha256 3069e3a1...) preprocessed with the fp-bit configuration macros and EE target predefines into a standalone unit, compiled once with the qualified GNU profile, a fresh catalogue for both complete symbols and full gates. Preserve any refusal; no flag, alias or source-shape permutations.",
+            "pointers": [
+              "docs/RAC1-FP-BIT-EVIDENCE.md",
+              "https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/src/libgcc/README.md",
+              "https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/Makefile.sn#L128-L158"
+            ],
+            "remaining_difference": null
+          },
+          "changes": {
+            "next_action": "Measured 2026-10-05 by boot_analysis (trial d6d282813c9c469586780e0d9543afe8, candidate task boot-fp-bit-verbatim-rac2-trial-20261005, one trial, budget spent). Result: FUN_00123400 (the __unpack_f body) is exact -- complete 144 bytes, 0 differing bytes, reference sha256 8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54 on both sides -- with the qualified profile -O2 -G0 -ffunction-sections from the verbatim rac1-decomp fp-bit.c, so the -G2 question of this document is answered for that body. FUN_001234F0 (fptodp) was refused: 8 differing bytes, two words exchanged around the jal to 0x00123400. Do not permute flags, aliases or source shape; the refusal stays as recorded. Root decides whether the exact 144-byte body is split into its own authored module for integration.",
+            "pointers": [
+              "docs/RAC1-FP-BIT-EVIDENCE.md",
+              "boot-fp-bit-verbatim-rac2-trial-20261005",
+              "runtime:trials/d6d282813c9c469586780e0d9543afe8/outcome.json",
+              "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog.json",
+              "runtime:bank/parallel-boot-analysis-fpbit-20261005/fp-bit-ee.c"
+            ],
+            "remaining_difference": "FUN_001234F0 only: at +0x0C the retail image holds s.s $f12,16($sp) (word 1000ACE7) and at +0x14 daddu a1,sp,zero (word 2D28A003) as the jal delay slot; the qualified chain emits the two in the opposite order (daddu at +0x0C, the store in the delay slot at +0x14). Same instruction set, same size, delay-slot filling only. Everything else in both bodies is identical."
+          },
+          "reason": "Measured outcome of the single verbatim fp-bit trial recorded for maintainer review; no state change asserted"
+        }
+      ],
       "created": "2026-10-05T17:11:33.110639+00:00",
       "hypothesis": "FUN_00123400 (144) and FUN_001234F0 (64) are fp-bit __unpack_f and fptodp from Sony's libgcc fp-bit.o, next to the integrated __make_dp FUN_00123268 (44). rac1-decomp matched all three on RAC1 SCES_509.16 (same sizes and order) by compiling verbatim GCC 2.95.3 fp-bit.c whole with Sony 2.9-ee-991111 through its driver: -DFLOAT -DFLOAT_BIT_ORDER_MISMATCH -DNO_DENORMALS (2000-03-16 trunk hunk backported) -DUS_SOFTWARE_GOFAST. Supplies the independent original source/compiler evidence named by the stopped root-boot-unpack-single144-* and root-boot-fptodp64-* tasks; not a RAC2 match.",
       "id": "boot-fp-bit-verbatim-source-rac1-evidence-20261005",
       "kind": "research",
-      "next_action": "Maintainer review of docs/RAC1-FP-BIT-EVIDENCE.md. If accepted, reopen the two stopped tasks for one trial: rac1-decomp fp-bit.c (sha256 3069e3a1...) preprocessed with the fp-bit configuration macros and EE target predefines into a standalone unit, compiled once with the qualified GNU profile, a fresh catalogue for both complete symbols and full gates. Preserve any refusal; no flag, alias or source-shape permutations.",
+      "next_action": "Measured 2026-10-05 by boot_analysis (trial d6d282813c9c469586780e0d9543afe8, candidate task boot-fp-bit-verbatim-rac2-trial-20261005, one trial, budget spent). Result: FUN_00123400 (the __unpack_f body) is exact -- complete 144 bytes, 0 differing bytes, reference sha256 8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54 on both sides -- with the qualified profile -O2 -G0 -ffunction-sections from the verbatim rac1-decomp fp-bit.c, so the -G2 question of this document is answered for that body. FUN_001234F0 (fptodp) was refused: 8 differing bytes, two words exchanged around the jal to 0x00123400. Do not permute flags, aliases or source shape; the refusal stays as recorded. Root decides whether the exact 144-byte body is split into its own authored module for integration.",
       "pointers": [
         "docs/RAC1-FP-BIT-EVIDENCE.md",
-        "https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/src/libgcc/README.md",
-        "https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/Makefile.sn#L128-L158"
+        "boot-fp-bit-verbatim-rac2-trial-20261005",
+        "runtime:trials/d6d282813c9c469586780e0d9543afe8/outcome.json",
+        "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog.json",
+        "runtime:bank/parallel-boot-analysis-fpbit-20261005/fp-bit-ee.c"
       ],
       "priority": 80,
       "program": "boot",
+      "remaining_difference": "FUN_001234F0 only: at +0x0C the retail image holds s.s $f12,16($sp) (word 1000ACE7) and at +0x14 daddu a1,sp,zero (word 2D28A003) as the jal delay slot; the qualified chain emits the two in the opposite order (daddu at +0x0C, the store in the delay slot at +0x14). Same instruction set, same size, delay-slot filling only. Everything else in both bodies is identical.",
       "reopen_condition": "A RAC2 trial of the verbatim source refused, or evidence that RAC2's runtime library is not fp-bit.",
       "size": 208,
       "state": "queued",
@@ -7082,6 +7195,279 @@
       "reopen_condition": "",
       "state": "done",
       "transitions": []
+    },
+    "family-countbytes112-placements-20261005": {
+      "address": 3264744,
+      "budget": 1,
+      "created": "2026-10-05T19:17:48.178923+00:00",
+      "hypothesis": "Placement unit for shared family rank 363 after the seed LVL_7_SIBERIUS_FUN_0031D0E8 was qualified byte-exact (trial d229d471, 112/112, 0 differing bytes). Seven in-zone placements, each with its own catalogue and its own independent frontier proof: every address is a splat function entry in its own program and its own splat output gives it 112 bytes. Family identity controlled first: the same bytes sit at one splat entry in all 27 overlays (27/27), so no address immediate varies. One compilation, seven children, unchanged profile.",
+      "id": "family-countbytes112-placements-20261005",
+      "kind": "candidate",
+      "last_trial": "1eb980201ad04cf3a00d8dddc1a93389",
+      "next_action": "Require all seven complete 112-byte bodies exact; keep any refusal with its measured difference. Out-of-zone placements stay for the owning workers.",
+      "pointers": [
+        "target-ranker.json rank 363",
+        "family-countbytes112-seed-siberius-20261005",
+        "runtime:bank/parallel-boot-analysis-fpbit-20261005/rank363-placements.json"
+      ],
+      "priority": 86,
+      "program": "7_siberius",
+      "reopen_condition": "A measured boundary difference in one placement, or a changed source shape justified by a measured difference.",
+      "size": 112,
+      "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/family-countbytes112-placements.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_0_ARANOS_TUTORIAL_FUN_003269F0",
+        "LVL_1_OOZLA_FUN_0031C6E0",
+        "LVL_2_MAKTAR_NEBULA_FUN_0032BAD0",
+        "LVL_5_FELTZIN_SYSTEM_FUN_0033D280",
+        "LVL_7_SIBERIUS_FUN_0031D0E8",
+        "LVL_8_TABORA_FUN_003356C8",
+        "LVL_9_DOBBO_FUN_00323220"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-countbytes-0_aranos_tutorial.json",
+          "id": "0-aranos-tutorial-countbytes",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-countbytes-1_oozla.json",
+          "id": "1-oozla-countbytes",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-countbytes-2_maktar_nebula.json",
+          "id": "2-maktar-nebula-countbytes",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-countbytes-5_feltzin_system.json",
+          "id": "5-feltzin-system-countbytes",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-countbytes-7_siberius.json",
+          "id": "7-siberius-countbytes",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-countbytes-8_tabora.json",
+          "id": "8-tabora-countbytes",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        },
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-countbytes-9_dobbo.json",
+          "id": "9-dobbo-countbytes",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:17:49.328279+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "1eb980201ad04cf3a00d8dddc1a93389"
+        }
+      ]
+    },
+    "family-countbytes112-seed-siberius-20261005": {
+      "address": 3264744,
+      "budget": 2,
+      "created": "2026-10-05T19:17:00.715308+00:00",
+      "hypothesis": "Seed of shared family rank 363 (lane 0), 112 bytes. Family identity controlled first: the same bytes sit at one splat function entry in all 27 overlays (27/27), so the seed is worth the full placement count and no immediate varies. Extent 112 bytes measured from splat func_0031D0E8, 0x70. ABI: no arguments, int return; single base pointer, low register pressure, no call, one external (resident table 0x19B278) addressed absolutely so -G0 holds.",
+      "id": "family-countbytes112-seed-siberius-20261005",
+      "kind": "candidate",
+      "last_trial": "d229d47127e24ed4a9d93d93de98ee03",
+      "next_action": "Require the complete 112-byte body exact; keep any refusal with its measured difference.",
+      "pointers": [
+        "target-ranker.json rank 363",
+        "runtime:bank/parallel-boot-analysis-fpbit-20261005/lane0-corrected.json"
+      ],
+      "priority": 85,
+      "program": "7_siberius",
+      "reopen_condition": "A measured boundary or ABI difference, or a source shape justified by a measured difference.",
+      "size": 112,
+      "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/family-countbytes112-seed.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_7_SIBERIUS_FUN_0031D0E8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-countbytes-seed.json",
+          "id": "siberius-countbytes",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:17:01.595382+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d229d47127e24ed4a9d93d93de98ee03"
+        }
+      ]
+    },
+    "family-record8-store76-seed-siberius-20261005": {
+      "address": 2849920,
+      "amendments": [
+        {
+          "at": "2026-10-05T19:07:18.878900+00:00",
+          "before": {
+            "hypothesis": "Seed of shared family rank 399 (lane 0), the smallest free family with a placement in my zone. Frontier measured twice independently: splat func_002B7C80, 0x4C and Ghidra FUN_002b7c80 body_end 0x002b7ccb exclusive -> 76 bytes (the ranker's 80 is its gap-to-next-entry estimate). ABI: three integer arguments in a0/a1/a2, void return (epilogue jr ra with a nop, v0 holds a discarded load). One external, the resident table base 0x189E20, addressed absolutely, so the -G0 profile holds. The same bytes sit at one splat entry in each of the 27 overlays and none of them is integrated anywhere.",
+            "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/family-record8-store76-seed.c"
+          },
+          "changes": {
+            "hypothesis": "Seed of shared family rank 399, source v2. First trial 8c28d37ca3e9474d89f9e346ed5fb375 compiled to 68 bytes against the pinned 76 and named the two missing instructions: the pinned body materialises the table base before adding the record offset, where v1 folded both constants into one relocation, and the loop-alignment word that follows once the pre-loop is five instructions long. v2 only introduces the intermediate base pointer; boundaries, ABI, external and profile are unchanged.",
+            "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/family-record8-store76-seed-v2.c"
+          },
+          "reason": "Second trial within budget: source v2 keeps the table base materialised, answering the two instructions measured missing in trial 8c28d37c"
+        },
+        {
+          "at": "2026-10-05T19:07:50.705350+00:00",
+          "before": {
+            "next_action": "Require the complete 76-byte body exact; if it refuses, keep the refusal with its measured difference and park the family.",
+            "remaining_difference": null
+          },
+          "changes": {
+            "next_action": "Parked with two preserved refusals (8c28d37c: 68 bytes; 234d91b6: correct 76-byte size, 4 differing bytes). The whole body is right except one exchanged pair: at +0x24 and +0x2C the pinned image stores field02 (sh a0,2(v1)) then field06 (sh a2,6(v1)) where the current source emits field06 first. Everything else, including the materialised base, the record loop, the alignment word and the return paths, is byte-identical. Reopening needs one precise source-shape hypothesis: an assignment order or an intermediate that makes the a0 store issue before the a2 store. Do not re-run the same two shapes.",
+            "remaining_difference": "234d91b6374f4e59b5c15ef5f793c97c against the pinned 76 bytes: two words only. +0x24 pinned 020064a4 (sh a0,2(v1)) versus candidate 060066a4 (sh a2,6(v1)); +0x2C the two are exchanged. Same instruction multiset, size and semantics."
+          },
+          "reason": "Record the measured near-miss and the single source-shape hypothesis a reopening would need"
+        }
+      ],
+      "budget": 2,
+      "created": "2026-10-05T19:06:30.913843+00:00",
+      "hypothesis": "Seed of shared family rank 399, source v2. First trial 8c28d37ca3e9474d89f9e346ed5fb375 compiled to 68 bytes against the pinned 76 and named the two missing instructions: the pinned body materialises the table base before adding the record offset, where v1 folded both constants into one relocation, and the loop-alignment word that follows once the pre-loop is five instructions long. v2 only introduces the intermediate base pointer; boundaries, ABI, external and profile are unchanged.",
+      "id": "family-record8-store76-seed-siberius-20261005",
+      "kind": "candidate",
+      "last_trial": "234d91b6374f4e59b5c15ef5f793c97c",
+      "next_action": "Parked with two preserved refusals (8c28d37c: 68 bytes; 234d91b6: correct 76-byte size, 4 differing bytes). The whole body is right except one exchanged pair: at +0x24 and +0x2C the pinned image stores field02 (sh a0,2(v1)) then field06 (sh a2,6(v1)) where the current source emits field06 first. Everything else, including the materialised base, the record loop, the alignment word and the return paths, is byte-identical. Reopening needs one precise source-shape hypothesis: an assignment order or an intermediate that makes the a0 store issue before the a2 store. Do not re-run the same two shapes.",
+      "pointers": [
+        "target-ranker.json rank 399",
+        "runtime:bank/parallel-boot-analysis-fpbit-20261005/lane0-corrected.json"
+      ],
+      "priority": 85,
+      "program": "7_siberius",
+      "remaining_difference": "234d91b6374f4e59b5c15ef5f793c97c against the pinned 76 bytes: two words only. +0x24 pinned 020064a4 (sh a0,2(v1)) versus candidate 060066a4 (sh a2,6(v1)); +0x2C the two are exchanged. Same instruction multiset, size and semantics.",
+      "reopen_condition": "A measured boundary or ABI difference in the 7_siberius placement, or a source shape justified by a measured difference.",
+      "size": 76,
+      "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/family-record8-store76-seed-v2.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_7_SIBERIUS_FUN_002B7C80"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-record8-seed.json",
+          "id": "siberius-record8-store",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:06:31.710074+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "8c28d37ca3e9474d89f9e346ed5fb375"
+        },
+        {
+          "at": "2026-10-05T19:07:19.654314+00:00",
+          "from": "stopped",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "234d91b6374f4e59b5c15ef5f793c97c"
+        }
+      ]
+    },
+    "family-ring-bitset124-seed-siberius-20261005": {
+      "address": 3056576,
+      "amendments": [
+        {
+          "at": "2026-10-05T19:03:12.503179+00:00",
+          "before": {
+            "hypothesis": "Seed of shared family rank 342 of target-ranker.json (lane 0, index 342 %% 3 == 0): the same 124 bytes sit at one splat function entry in each of the 27 overlays, none of them integrated anywhere. Frontier measured twice independently: splat func_002EA3C0, 0x7C and Ghidra FUN_002ea3c0 body_end 0x002ea433 exclusive -> 124 bytes; 5_feltzin_system 0x394dd0 and 8_tabora 0x390518 report the same 124 bytes. ABI: one pointer argument, void return (the body leaves v0 untouched and its epilogue is jr ra with a nop delay slot). The only external is the resident writable table at 0x139768, addressed absolutely, so the -G0 profile applies unchanged.",
+            "next_action": "Require the complete 124-byte body exact; if it differs, keep the refusal and the measured difference, then decide from that measurement whether a revised source is a new hypothesis or a parked negative.",
+            "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/family-ring-bitset124-seed.c"
+          },
+          "changes": {
+            "hypothesis": "Seed of shared family rank 342 (lane 0 of the boot_analysis split), source v2. First trial ae158910016b4980bdfc042318c28975 compiled v1 to 112 bytes against the pinned 124 and named three missing instructions: the record base must be materialised once (addiu a3,a2,8) with the load at offset 0, the ring step must carry the value in the then-arm (daddu a1,zero,zero; movn a1,v0,v1, v1 = (i+1)^5) where v1 produced the opposite arm, and with those two the nine pre-loop instructions land four bytes short of the pinned eight-byte loop alignment. v2 changes only those two source shapes; boundaries, ABI, external and profile are unchanged.",
+            "next_action": "Require the complete 124-byte body exact. If it refuses again, keep both refusals and park the family; no further source-shape permutations without new independent evidence.",
+            "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/family-ring-bitset124-seed-v2.c"
+          },
+          "reason": "Second trial within the same family budget: source v2 answers the three measured instructions missing from trial ae158910; boundaries, ABI and profile unchanged"
+        },
+        {
+          "at": "2026-10-05T19:04:06.899519+00:00",
+          "before": {
+            "next_action": "Require the complete 124-byte body exact. If it refuses again, keep both refusals and park the family; no further source-shape permutations without new independent evidence.",
+            "remaining_difference": null
+          },
+          "changes": {
+            "next_action": "Parked with two preserved refusals (ae158910: 112 bytes; df00db8b: correct 124-byte size, 15 differing bytes). Both diffs are register-allocation and hoist-order tie-breaks on an otherwise identical instruction stream, so reopening needs independent new evidence (a measured translation-unit or ABI context, or a changed compiler hypothesis), not another expression spelling. The seed's C is otherwise ready: family rank 342, 124 bytes, one pointer argument, void return, single external (resident table 0x139768). Six further in-zone placements (0_aranos_tutorial 0x37fbe0, 1_oozla 0x375ea0, 2_maktar_nebula 0x387390, 5_feltzin_system 0x394dd0, 8_tabora 0x390518, 9_dobbo 0x37d108) and twenty out-of-zone placements are mapped; none may be claimed before the seed is exact.",
+            "remaining_difference": "df00db8b against the pinned 124 bytes: +0x10/+0x14 the lui of the table address and the record-base addiu are exchanged; +0x18/+0x1C the table low add and the constant one are exchanged; +0x28 addu v0,a3,v0 versus addu v0,v0,a3 (same sum, operands swapped); +0x44/+0x48 the table base and the constant one swap t1/t0 ($9/$8), which moves the sllv source register. Instruction multiset, size and semantics are identical."
+          },
+          "reason": "Record the measured outcome and both preserved refusals of the rank-342 seed after its two-trial budget"
+        },
+        {
+          "at": "2026-10-05T19:06:04.963702+00:00",
+          "before": {
+            "reopen_condition": "A measured boundary or ABI difference in the 7_siberius placement, or a changed source shape justified by the measured difference."
+          },
+          "changes": {
+            "reopen_condition": "Reopening needs a precise source-shape hypothesis, not an expression permutation. The measured signature to reproduce is: the hoisted preamble emitting the table lui before the record-base addiu and the table low add before the constant one; addu v0,a3,v0 (base as the first operand of the index sum) rather than addu v0,v0,a3; and the constant one in t0 with the table base in t1. A candidate hypothesis is a source form in which the bit mask is an explicit intermediate evaluated before the table element address, or an expression whose operand order puts the record base first. Any such trial must be planned as a fresh reviewed task with that hypothesis stated; do not re-run the same two shapes."
+          },
+          "reason": "Root decision: park the seed; state the precise source-shape hypothesis a reopening would need, beyond the two shapes already measured"
+        }
+      ],
+      "budget": 2,
+      "created": "2026-10-05T19:01:26.994820+00:00",
+      "hypothesis": "Seed of shared family rank 342 (lane 0 of the boot_analysis split), source v2. First trial ae158910016b4980bdfc042318c28975 compiled v1 to 112 bytes against the pinned 124 and named three missing instructions: the record base must be materialised once (addiu a3,a2,8) with the load at offset 0, the ring step must carry the value in the then-arm (daddu a1,zero,zero; movn a1,v0,v1, v1 = (i+1)^5) where v1 produced the opposite arm, and with those two the nine pre-loop instructions land four bytes short of the pinned eight-byte loop alignment. v2 changes only those two source shapes; boundaries, ABI, external and profile are unchanged.",
+      "id": "family-ring-bitset124-seed-siberius-20261005",
+      "kind": "candidate",
+      "last_trial": "df00db8b0a074a81a47722594495be8d",
+      "next_action": "Parked with two preserved refusals (ae158910: 112 bytes; df00db8b: correct 124-byte size, 15 differing bytes). Both diffs are register-allocation and hoist-order tie-breaks on an otherwise identical instruction stream, so reopening needs independent new evidence (a measured translation-unit or ABI context, or a changed compiler hypothesis), not another expression spelling. The seed's C is otherwise ready: family rank 342, 124 bytes, one pointer argument, void return, single external (resident table 0x139768). Six further in-zone placements (0_aranos_tutorial 0x37fbe0, 1_oozla 0x375ea0, 2_maktar_nebula 0x387390, 5_feltzin_system 0x394dd0, 8_tabora 0x390518, 9_dobbo 0x37d108) and twenty out-of-zone placements are mapped; none may be claimed before the seed is exact.",
+      "pointers": [
+        "target-ranker.json rank 342",
+        "runtime:bank/parallel-boot-analysis-fpbit-20261005/lane0-corrected.json"
+      ],
+      "priority": 85,
+      "program": "7_siberius",
+      "remaining_difference": "df00db8b against the pinned 124 bytes: +0x10/+0x14 the lui of the table address and the record-base addiu are exchanged; +0x18/+0x1C the table low add and the constant one are exchanged; +0x28 addu v0,a3,v0 versus addu v0,v0,a3 (same sum, operands swapped); +0x44/+0x48 the table base and the constant one swap t1/t0 ($9/$8), which moves the sllv source register. Instruction multiset, size and semantics are identical.",
+      "reopen_condition": "Reopening needs a precise source-shape hypothesis, not an expression permutation. The measured signature to reproduce is: the hoisted preamble emitting the table lui before the record-base addiu and the table low add before the constant one; addu v0,a3,v0 (base as the first operand of the index sum) rather than addu v0,v0,a3; and the constant one in t0 with the table base in t1. A candidate hypothesis is a source form in which the bit mask is an explicit intermediate evaluated before the table element address, or an expression whose operand order puts the record base first. Any such trial must be planned as a fresh reviewed task with that hypothesis stated; do not re-run the same two shapes.",
+      "size": 124,
+      "source": "runtime:bank/parallel-boot-analysis-fpbit-20261005/family-ring-bitset124-seed-v2.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_7_SIBERIUS_FUN_002EA3C0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog-ring-seed.json",
+          "id": "siberius-ring-bitset",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:01:43.141211+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "ae158910016b4980bdfc042318c28975"
+        },
+        {
+          "at": "2026-10-05T19:03:19.722351+00:00",
+          "from": "stopped",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "df00db8b0a074a81a47722594495be8d"
+        }
+      ]
     },
     "float-guard-only-0_aranos_tutorial-20261004": {
       "budget": 2,
@@ -17146,6 +17532,262 @@
         }
       ]
     },
+    "native-review-family172-endako-v1-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T19:06:29.533904+00:00",
+      "hypothesis": "Fresh 204-byte body with complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0 profile, no gp/VU/MMI.",
+      "id": "native-review-family172-endako-v1-20261005",
+      "kind": "candidate",
+      "last_trial": "5480a1a876b84ef4be1d5b1943757d32",
+      "next_action": "Qualify all current 35 controls plus the complete 204-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-family172-endako-v1/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_00340B08"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-family172-endako-v1/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:06:30.210042+00:00",
+          "from": "queued",
+          "reason": "compile_failed",
+          "to": "stopped",
+          "trial": "5480a1a876b84ef4be1d5b1943757d32"
+        }
+      ]
+    },
+    "native-review-family172-endako-v2-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T19:06:45.665139+00:00",
+      "hypothesis": "Fresh 204-byte body with complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0 profile, no gp/VU/MMI.",
+      "id": "native-review-family172-endako-v2-20261005",
+      "kind": "candidate",
+      "last_trial": "8d03a3e724c44897bb010a88789d18b3",
+      "next_action": "Qualify all current 35 controls plus the complete 204-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-family172-endako-v2/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_00340B08"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-family172-endako-v2/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:06:46.607613+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "8d03a3e724c44897bb010a88789d18b3"
+        }
+      ]
+    },
+    "native-review-family172-endako-v3-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T19:07:08.442834+00:00",
+      "hypothesis": "Fresh 204-byte body with complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0 profile, no gp/VU/MMI.",
+      "id": "native-review-family172-endako-v3-20261005",
+      "kind": "candidate",
+      "last_trial": "39c2c312f6af4ebfa3975ed10f0356ae",
+      "next_action": "Qualify all current 35 controls plus the complete 204-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-family172-endako-v3/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_00340B08"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-family172-endako-v3/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:07:09.363892+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "39c2c312f6af4ebfa3975ed10f0356ae"
+        }
+      ]
+    },
+    "native-review-family172-endako-v4-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T19:07:41.891780+00:00",
+      "hypothesis": "Fresh 204-byte body with complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0 profile, no gp/VU/MMI.",
+      "id": "native-review-family172-endako-v4-20261005",
+      "kind": "candidate",
+      "last_trial": "91d265b8bc3f4cbd92d842c21565883b",
+      "next_action": "Qualify all current 35 controls plus the complete 204-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-family172-endako-v4/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_00340B08"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-family172-endako-v4/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:07:46.668794+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "91d265b8bc3f4cbd92d842c21565883b"
+        }
+      ]
+    },
+    "native-review-family304-endako-v1-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T19:02:10.518942+00:00",
+      "hypothesis": "Fresh 156-byte body with complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0 profile, no gp/VU/MMI.",
+      "id": "native-review-family304-endako-v1-20261005",
+      "kind": "candidate",
+      "last_trial": "60fd09cebe79494292ac2c11027e1f36",
+      "next_action": "Qualify all current 35 controls plus the complete 156-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-family304-endako-v1/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_002E9570"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-family304-endako-v1/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:02:13.608438+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "60fd09cebe79494292ac2c11027e1f36"
+        }
+      ]
+    },
+    "native-review-family304-endako-v2-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T19:03:14.687316+00:00",
+      "hypothesis": "Fresh 156-byte body with complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0 profile, no gp/VU/MMI.",
+      "id": "native-review-family304-endako-v2-20261005",
+      "kind": "candidate",
+      "last_trial": "bf2f6068a5104cbeb55ede2989f089e9",
+      "next_action": "Qualify all current 35 controls plus the complete 156-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-family304-endako-v2/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_002E9570"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-family304-endako-v2/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:03:15.637235+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "bf2f6068a5104cbeb55ede2989f089e9"
+        }
+      ]
+    },
+    "native-review-family304-endako-v3-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T19:04:11.246379+00:00",
+      "hypothesis": "Fresh 156-byte body with complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0 profile, no gp/VU/MMI.",
+      "id": "native-review-family304-endako-v3-20261005",
+      "kind": "candidate",
+      "last_trial": "b1529f8737a44d6fabfd4cd7542e31f9",
+      "next_action": "Qualify all current 35 controls plus the complete 156-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-family304-endako-v3/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_002E9570"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-family304-endako-v3/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:04:13.960102+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "b1529f8737a44d6fabfd4cd7542e31f9"
+        }
+      ]
+    },
+    "native-review-family304-endako-v4-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T19:05:10.223498+00:00",
+      "hypothesis": "Fresh 156-byte body with complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0 profile, no gp/VU/MMI.",
+      "id": "native-review-family304-endako-v4-20261005",
+      "kind": "candidate",
+      "last_trial": "78b79f3ecf42405faa59bb5fcf8fc4ee",
+      "next_action": "Qualify all current 35 controls plus the complete 156-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-family304-endako-v4/3_endako.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_3_ENDAKO_FUN_002E9570"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-family304-endako-v4/catalog.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:05:19.276074+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "78b79f3ecf42405faa59bb5fcf8fc4ee"
+        }
+      ]
+    },
     "native-review-index-family-0_aranos_tutorial-20261004": {
       "budget": 1,
       "created": "2026-10-04T10:09:12.997312+00:00",
@@ -22491,6 +23133,38 @@
         }
       ]
     },
+    "native-review-prison-slot-store-v1-20261005": {
+      "budget": 1,
+      "created": "2026-10-05T18:57:17.983376+00:00",
+      "hypothesis": "Fresh 76-byte leaf storing two words into the indexed eight-byte slot of the resident block. Complete boundary, live pin, unique executable occurrence and empty published/physical history audit measured before authoring; default G0, no gp/SIMD/helpers/stack.",
+      "id": "native-review-prison-slot-store-v1-20261005",
+      "kind": "candidate",
+      "last_trial": "1541a35989fc4d9096c29ebb3b7eb8d3",
+      "next_action": "Qualify all current 38 controls plus the complete 76-byte seed.",
+      "pointers": [],
+      "reopen_condition": "Independent layout/ABI/storage evidence only; no equivalent source or register cycles.",
+      "source": "runtime:bank/parallel-native-review-prison-slot-store-v1/14_aranos_prison.c",
+      "state": "stopped",
+      "symbols": [
+        "LVL_14_ARANOS_PRISON_FUN_003141E8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-native-review-prison-slot-store-v1/catalog.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T18:57:34.371483+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "1541a35989fc4d9096c29ebb3b7eb8d3"
+        }
+      ]
+    },
     "native-review-record-search-family-20261004": {
       "address": 4218288,
       "created": "2026-10-04T13:59:15.038384+00:00",
@@ -24900,6 +25574,391 @@
         }
       ]
     },
+    "orbital-320388-family-20261005-10_hrugis_cloud": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:38.301793+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_10_HRUGIS_CLOUD_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-10_hrugis_cloud",
+      "kind": "candidate",
+      "last_trial": "43ddc96f6b20420682a1413e84876408",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-10_hrugis_cloud/evidence.json"
+      ],
+      "program": "levels/10_hrugis_cloud",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-10_hrugis_cloud/10_hrugis_cloud.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_00320388"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-10_hrugis_cloud/catalog.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:41.633217+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "43ddc96f6b20420682a1413e84876408"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-15_gorn": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:42.065479+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_15_GORN_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-15_gorn",
+      "kind": "candidate",
+      "last_trial": "f4c43f184e0040008262f68fc6f95e70",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-15_gorn/evidence.json"
+      ],
+      "program": "levels/15_gorn",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-15_gorn/15_gorn.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_15_GORN_FUN_0031E458"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-15_gorn/catalog.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:43.269185+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "f4c43f184e0040008262f68fc6f95e70"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-16_snivelak": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:43.654112+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_16_SNIVELAK_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-16_snivelak",
+      "kind": "candidate",
+      "last_trial": "a5a4ed80236e41d88485f34734159e7b",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-16_snivelak/evidence.json"
+      ],
+      "program": "levels/16_snivelak",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-16_snivelak/16_snivelak.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_16_SNIVELAK_FUN_002FF078"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-16_snivelak/catalog.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:44.858658+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "a5a4ed80236e41d88485f34734159e7b"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-17_smolg": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:45.278404+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_17_SMOLG_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-17_smolg",
+      "kind": "candidate",
+      "last_trial": "de75a5f25e884dcfa71760625037f338",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-17_smolg/evidence.json"
+      ],
+      "program": "levels/17_smolg",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-17_smolg/17_smolg.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_17_SMOLG_FUN_00306338"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-17_smolg/catalog.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:46.506690+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "de75a5f25e884dcfa71760625037f338"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-18_damosel": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:46.900732+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_18_DAMOSEL_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-18_damosel",
+      "kind": "candidate",
+      "last_trial": "58349ee920ac47c0b710ad8b439cf377",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-18_damosel/evidence.json"
+      ],
+      "program": "levels/18_damosel",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-18_damosel/18_damosel.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_18_DAMOSEL_FUN_0031FE88"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-18_damosel/catalog.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:48.062928+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "58349ee920ac47c0b710ad8b439cf377"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-19_grelbin": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:48.431646+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_19_GRELBIN_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-19_grelbin",
+      "kind": "candidate",
+      "last_trial": "eadcdfa599ec400fb0128cdba7ddaea0",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-19_grelbin/evidence.json"
+      ],
+      "program": "levels/19_grelbin",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-19_grelbin/19_grelbin.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_19_GRELBIN_FUN_00303410"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-19_grelbin/catalog.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:49.449186+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "eadcdfa599ec400fb0128cdba7ddaea0"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-20_yeedil": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:49.788928+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_20_YEEDIL_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-20_yeedil",
+      "kind": "candidate",
+      "last_trial": "edf90fa0a0e04bcab94cafa7f294c921",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-20_yeedil/evidence.json"
+      ],
+      "program": "levels/20_yeedil",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-20_yeedil/20_yeedil.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_20_YEEDIL_FUN_00319DD0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-20_yeedil/catalog.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:50.836091+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "edf90fa0a0e04bcab94cafa7f294c921"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-22_dobbo_orbit": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:51.193020+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_22_DOBBO_ORBIT_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-22_dobbo_orbit",
+      "kind": "candidate",
+      "last_trial": "d0a4251975ee4c00a0dc066707c496aa",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-22_dobbo_orbit/evidence.json"
+      ],
+      "program": "levels/22_dobbo_orbit",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-22_dobbo_orbit/22_dobbo_orbit.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_22_DOBBO_ORBIT_FUN_0030AE60"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-22_dobbo_orbit/catalog.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:52.139077+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d0a4251975ee4c00a0dc066707c496aa"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-25_wupash_nebula": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:52.498111+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_25_WUPASH_NEBULA_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-25_wupash_nebula",
+      "kind": "candidate",
+      "last_trial": "1496d2780f1245098a9222ef82d4774f",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-25_wupash_nebula/evidence.json"
+      ],
+      "program": "levels/25_wupash_nebula",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-25_wupash_nebula/25_wupash_nebula.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_25_WUPASH_NEBULA_FUN_00317FD8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-25_wupash_nebula/catalog.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:53.525568+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "1496d2780f1245098a9222ef82d4774f"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-26_jamming_array": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:53.872518+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_26_JAMMING_ARRAY_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-26_jamming_array",
+      "kind": "candidate",
+      "last_trial": "81616bb3eac54387ba6a8bb9715e1714",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-26_jamming_array/evidence.json"
+      ],
+      "program": "levels/26_jamming_array",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-26_jamming_array/26_jamming_array.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_26_JAMMING_ARRAY_FUN_00305A38"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-26_jamming_array/catalog.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:54.851302+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "81616bb3eac54387ba6a8bb9715e1714"
+        }
+      ]
+    },
+    "orbital-320388-family-20261005-30_insomniac_museum": {
+      "budget": 1,
+      "created": "2026-10-05T19:18:55.203935+00:00",
+      "hypothesis": "target-ranker idx 341: signed-division bitmap bit get-and-set, complete 124-byte body (ranked gap 128 includes 4 trailing nop bytes). Byte-identical in all 17 inventoried members. Ordinary C reusing the existing LVL_30_INSOMNIAC_MUSEUM_D_001395B8 extern.",
+      "id": "orbital-320388-family-20261005-30_insomniac_museum",
+      "kind": "candidate",
+      "last_trial": "dea63441b9d84a189c0902ac4b903f74",
+      "next_action": "Measure the complete placement plus all current controls.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-320388-family-30_insomniac_museum/evidence.json"
+      ],
+      "program": "levels/30_insomniac_museum",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-320388-family-30_insomniac_museum/30_insomniac_museum.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_30_INSOMNIAC_MUSEUM_FUN_0030C228"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-320388-family-30_insomniac_museum/catalog.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:18:56.113688+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "dea63441b9d84a189c0902ac4b903f74"
+        }
+      ]
+    },
     "orbital-bitmap-getter-family-20261004": {
       "address": 3277832,
       "budget": 1,
@@ -26901,6 +27960,391 @@
           },
           "reason": "Current published source/object/full-image proofs validated",
           "to": "integrated"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-10_hrugis_cloud": {
+      "budget": 1,
+      "created": "2026-10-05T19:06:50.257329+00:00",
+      "hypothesis": "Family target-ranker idx 398: complete 80-byte resident-flag predicate, byte-identical in all 17 inventoried members (no address-immediate variation). Seed 10_hrugis_cloud 0x002C8D00; Ghidra body 0x002C8D00-0x002C8D4F complete. Ordinary C reusing the current LVL_10_HRUGIS_CLOUD_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-10_hrugis_cloud",
+      "kind": "candidate",
+      "last_trial": "3bcf7dd6cd7741318f1c77327de10def",
+      "next_action": "Measure the complete seed plus all current controls. If exact, qualify the ten remaining in-zone placements one by one with their own boundary and identity proof; hand the six out-of-zone members to root.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family/evidence.json"
+      ],
+      "program": "levels/10_hrugis_cloud",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change; no expression, type or comparison-order cycles.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family/10_hrugis_cloud.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_10_HRUGIS_CLOUD_FUN_002C8D00"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family/catalog.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:06:57.492815+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3bcf7dd6cd7741318f1c77327de10def"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-15_gorn": {
+      "budget": 1,
+      "created": "2026-10-05T19:07:58.769475+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 15_gorn at 0x002C6E00. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_15_GORN_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-15_gorn",
+      "kind": "candidate",
+      "last_trial": "a8eb4b11dd1d4214bb97069e50c34398",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-15_gorn/evidence.json"
+      ],
+      "program": "levels/15_gorn",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-15_gorn/15_gorn.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_15_GORN_FUN_002C6E00"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-15_gorn/catalog.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:07:59.628806+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "a8eb4b11dd1d4214bb97069e50c34398"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-16_snivelak": {
+      "budget": 1,
+      "created": "2026-10-05T19:07:59.961056+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 16_snivelak at 0x002AE460. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_16_SNIVELAK_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-16_snivelak",
+      "kind": "candidate",
+      "last_trial": "7cbf6edc88e247e39becd66128a3d24f",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-16_snivelak/evidence.json"
+      ],
+      "program": "levels/16_snivelak",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-16_snivelak/16_snivelak.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_16_SNIVELAK_FUN_002AE460"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-16_snivelak/catalog.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:00.837034+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "7cbf6edc88e247e39becd66128a3d24f"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-17_smolg": {
+      "budget": 1,
+      "created": "2026-10-05T19:08:01.137265+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 17_smolg at 0x002AF308. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_17_SMOLG_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-17_smolg",
+      "kind": "candidate",
+      "last_trial": "5b275184e0214aad8e427fed872d80f5",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-17_smolg/evidence.json"
+      ],
+      "program": "levels/17_smolg",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-17_smolg/17_smolg.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_17_SMOLG_FUN_002AF308"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-17_smolg/catalog.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:02.014111+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "5b275184e0214aad8e427fed872d80f5"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-18_damosel": {
+      "budget": 1,
+      "created": "2026-10-05T19:08:02.374909+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 18_damosel at 0x002CB2A8. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_18_DAMOSEL_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-18_damosel",
+      "kind": "candidate",
+      "last_trial": "4c0562cdfdb04de88dc8c4debf82328f",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-18_damosel/evidence.json"
+      ],
+      "program": "levels/18_damosel",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-18_damosel/18_damosel.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_18_DAMOSEL_FUN_002CB2A8"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-18_damosel/catalog.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:03.251530+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "4c0562cdfdb04de88dc8c4debf82328f"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-19_grelbin": {
+      "budget": 1,
+      "created": "2026-10-05T19:08:03.609694+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 19_grelbin at 0x002B0D88. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_19_GRELBIN_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-19_grelbin",
+      "kind": "candidate",
+      "last_trial": "5eeb34d2874847d3994b96b9e5bf0606",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-19_grelbin/evidence.json"
+      ],
+      "program": "levels/19_grelbin",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-19_grelbin/19_grelbin.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_19_GRELBIN_FUN_002B0D88"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-19_grelbin/catalog.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:04.511767+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "5eeb34d2874847d3994b96b9e5bf0606"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-20_yeedil": {
+      "budget": 1,
+      "created": "2026-10-05T19:08:04.806494+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 20_yeedil at 0x002C0D10. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_20_YEEDIL_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-20_yeedil",
+      "kind": "candidate",
+      "last_trial": "dae155fb549f43e08b12a50201cb805e",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-20_yeedil/evidence.json"
+      ],
+      "program": "levels/20_yeedil",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-20_yeedil/20_yeedil.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_20_YEEDIL_FUN_002C0D10"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-20_yeedil/catalog.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:05.691819+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "dae155fb549f43e08b12a50201cb805e"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-22_dobbo_orbit": {
+      "budget": 1,
+      "created": "2026-10-05T19:08:06.002742+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 22_dobbo_orbit at 0x002B2638. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_22_DOBBO_ORBIT_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-22_dobbo_orbit",
+      "kind": "candidate",
+      "last_trial": "16c63dff911847599e6ce52162a38c7a",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-22_dobbo_orbit/evidence.json"
+      ],
+      "program": "levels/22_dobbo_orbit",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-22_dobbo_orbit/22_dobbo_orbit.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_22_DOBBO_ORBIT_FUN_002B2638"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-22_dobbo_orbit/catalog.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:06.870314+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "16c63dff911847599e6ce52162a38c7a"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-25_wupash_nebula": {
+      "budget": 1,
+      "created": "2026-10-05T19:08:07.163693+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 25_wupash_nebula at 0x002C1180. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_25_WUPASH_NEBULA_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-25_wupash_nebula",
+      "kind": "candidate",
+      "last_trial": "41b1d08dc8ef4372abed9df4681a2698",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-25_wupash_nebula/evidence.json"
+      ],
+      "program": "levels/25_wupash_nebula",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-25_wupash_nebula/25_wupash_nebula.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_25_WUPASH_NEBULA_FUN_002C1180"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-25_wupash_nebula/catalog.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:08.045922+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "41b1d08dc8ef4372abed9df4681a2698"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-26_jamming_array": {
+      "budget": 1,
+      "created": "2026-10-05T19:08:08.339391+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 26_jamming_array at 0x002AE580. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_26_JAMMING_ARRAY_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-26_jamming_array",
+      "kind": "candidate",
+      "last_trial": "41c971f36cff4e27b2e5dbfb92d6bc97",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-26_jamming_array/evidence.json"
+      ],
+      "program": "levels/26_jamming_array",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-26_jamming_array/26_jamming_array.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_26_JAMMING_ARRAY_FUN_002AE580"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-26_jamming_array/catalog.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:09.256213+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "41c971f36cff4e27b2e5dbfb92d6bc97"
+        }
+      ]
+    },
+    "orbital-c8d00-family-20261005-30_insomniac_museum": {
+      "budget": 1,
+      "created": "2026-10-05T19:08:09.561526+00:00",
+      "hypothesis": "Family target-ranker idx 398, placement in 30_insomniac_museum at 0x002B4D80. Reference body is byte-identical to the qualified 10_hrugis_cloud seed 0x002C8D00 (80 bytes, all 17 inventoried members identical). Same ordinary C, reusing this level's existing LVL_30_INSOMNIAC_MUSEUM_D_00189E20 extern.",
+      "id": "orbital-c8d00-family-20261005-30_insomniac_museum",
+      "kind": "candidate",
+      "last_trial": "5d419411b65840f88a89ec73a9b108f3",
+      "next_action": "Measure the complete placement plus all current controls for this program.",
+      "pointers": [
+        "runtime:bank/parallel-orbital_lots-c8d00-family-30_insomniac_museum/evidence.json"
+      ],
+      "program": "levels/30_insomniac_museum",
+      "reopen_condition": "New ABI/layout evidence or a measured compiler-hypothesis change only.",
+      "source": "runtime:bank/parallel-orbital_lots-c8d00-family-30_insomniac_museum/30_insomniac_museum.c",
+      "state": "exact_private",
+      "symbols": [
+        "LVL_30_INSOMNIAC_MUSEUM_FUN_002B4D80"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/parallel-orbital_lots-c8d00-family-30_insomniac_museum/catalog.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-05T19:08:10.453757+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "5d419411b65840f88a89ec73a9b108f3"
         }
       ]
     },
@@ -96431,6 +97875,19 @@
       "state": "exact_private",
       "task": "root-parallel-combined-24_ship_shack-20261004"
     },
+    "1496d2780f1245098a9222ef82d4774f": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/1496d2780f1245098a9222ef82d4774f",
+      "finished": "2026-10-05T19:18:53.489120+00:00",
+      "id": "1496d2780f1245098a9222ef82d4774f",
+      "manifest_sha256": "27df12067f5b3cf0f6414b45823ae02ecdb4d7853f0cf1003612c46684a036b4",
+      "measured_functions": 37,
+      "outcome_sha256": "98a1858853a6acb6fe7578b9996e86ae2ce2980487eeb69b1696485c081b2d66",
+      "semantic_key": "a28fbb0e05df33a5d31466c9aa1e4fdeca218e6294c23dcab0ea1d00bf03f5b7",
+      "started": "2026-10-05T19:18:53.015029+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-25_wupash_nebula"
+    },
     "14aa34b82e0948ddbc5685b4b4336b3a": {
       "compile_attempted": true,
       "directory": "runtime:trials/14aa34b82e0948ddbc5685b4b4336b3a",
@@ -96469,6 +97926,19 @@
       "started": "2026-10-04T13:43:04.811587+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-list192-23-v1"
+    },
+    "1541a35989fc4d9096c29ebb3b7eb8d3": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/1541a35989fc4d9096c29ebb3b7eb8d3",
+      "finished": "2026-10-05T18:57:34.325373+00:00",
+      "id": "1541a35989fc4d9096c29ebb3b7eb8d3",
+      "manifest_sha256": "3c95831f544d121041dd6ffb31c124c914683dffe37ddfb4320a837f77922482",
+      "measured_functions": 39,
+      "outcome_sha256": "5d04b0cb4c83020cc2b418899d3aef45d65dc3f2f8bc92dc5c97b7c638867109",
+      "semantic_key": "94e24c693a89e3087c96f6458b11a24dd4c261715476701304094d8758af4dbd",
+      "started": "2026-10-05T18:57:33.886845+00:00",
+      "state": "mismatch",
+      "task": "native-review-prison-slot-store-v1-20261005"
     },
     "15f3ce42b2f14e448ef29443e6eaf0a3": {
       "compile_attempted": true,
@@ -96510,6 +97980,19 @@
       "semantic_key": "7bfdea67df13edf4632211e3a4364e3d5cb3944097931b1cc6ba3fe5b359587f",
       "state": "preparation_rejected",
       "task": "root-boot-fptodp64-first-20261005"
+    },
+    "16c63dff911847599e6ce52162a38c7a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/16c63dff911847599e6ce52162a38c7a",
+      "finished": "2026-10-05T19:08:06.831785+00:00",
+      "id": "16c63dff911847599e6ce52162a38c7a",
+      "manifest_sha256": "a19c8b9fa108d369490d6d7cba03f767ac2849dca593ddecc633bdb113c512d9",
+      "measured_functions": 37,
+      "outcome_sha256": "36805145f3220ce9368776742cf35db36a1729ae32b85f7b210df8f186c4fee4",
+      "semantic_key": "cd12c7f6f240c82effa12d4f03e5c3f82f7cb5e93bd40c1db0066f78dcc85524",
+      "started": "2026-10-05T19:08:06.426037+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-22_dobbo_orbit"
     },
     "16d36d056e254aaf85cdc28a227a8d80": {
       "compile_attempted": true,
@@ -97077,6 +98560,19 @@
       "state": "exact_private",
       "task": "orbital-mode-set-family-20261004-22_dobbo_orbit"
     },
+    "1eb980201ad04cf3a00d8dddc1a93389": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/1eb980201ad04cf3a00d8dddc1a93389",
+      "finished": "2026-10-05T19:17:49.279164+00:00",
+      "id": "1eb980201ad04cf3a00d8dddc1a93389",
+      "manifest_sha256": "e9de5f10bb4a2c269e3bc5563f6c92e3eaee2ff8519bf696cc36e8f4f882bd81",
+      "measured_functions": 7,
+      "outcome_sha256": "3f5139ea6db1dc7d03296f212148636f9681c32a3b120815b019bcc2df37e044",
+      "semantic_key": "7130be6a1e1e181412fc89a2a56c833f69ede6612fe9479e51c8857c3e2d170a",
+      "started": "2026-10-05T19:17:48.741621+00:00",
+      "state": "exact_private",
+      "task": "family-countbytes112-placements-20261005"
+    },
     "1ef3eb15057048f9959f63bdb43156c9": {
       "compile_attempted": true,
       "directory": "runtime:trials/1ef3eb15057048f9959f63bdb43156c9",
@@ -97492,6 +98988,19 @@
       "started": "2026-10-04T12:40:18.489847+00:00",
       "state": "exact_private",
       "task": "orbital-pair-lookup-family-20261004-17_smolg"
+    },
+    "234d91b6374f4e59b5c15ef5f793c97c": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/234d91b6374f4e59b5c15ef5f793c97c",
+      "finished": "2026-10-05T19:07:19.622949+00:00",
+      "id": "234d91b6374f4e59b5c15ef5f793c97c",
+      "manifest_sha256": "2757ee4cd2965a8e4c9006c46957cd774f34c10b7926cf7da1171ef45860cc29",
+      "measured_functions": 1,
+      "outcome_sha256": "4bd16366b79c8d571e48b25d4bb378714a6adeefeada0770d3a36e6ae493eded",
+      "semantic_key": "14c778a498feec4d8f0b43a286551f10783ea418b0ab4bbff487e8d5823c1881",
+      "started": "2026-10-05T19:07:19.309574+00:00",
+      "state": "mismatch",
+      "task": "family-record8-store76-seed-siberius-20261005"
     },
     "237350c4f8544776b718db95077b7ac2": {
       "compile_attempted": true,
@@ -99340,6 +100849,19 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-update116-19-v1"
     },
+    "39c2c312f6af4ebfa3975ed10f0356ae": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/39c2c312f6af4ebfa3975ed10f0356ae",
+      "finished": "2026-10-05T19:07:09.322918+00:00",
+      "id": "39c2c312f6af4ebfa3975ed10f0356ae",
+      "manifest_sha256": "c936e7eb58f28eaeff4e519ded1ae12027eb74a941a1179dd7fb5df632ebe444",
+      "measured_functions": 36,
+      "outcome_sha256": "9e7a88a9e3b758502977fd37c06caaf62574c34a9cbd8c16a0183342a2d1707a",
+      "semantic_key": "7dc46b3fcdb444f0957ab9866e5d25b2a7d15703c25ec2a49cbc7f109d51942d",
+      "started": "2026-10-05T19:07:08.875911+00:00",
+      "state": "mismatch",
+      "task": "native-review-family172-endako-v3-20261005"
+    },
     "39f1fbfca8b9443d9c680a7630ec2922": {
       "compile_attempted": true,
       "directory": "runtime:trials/39f1fbfca8b9443d9c680a7630ec2922",
@@ -99469,6 +100991,19 @@
       "started": "2026-10-05T00:23:40.514920+00:00",
       "state": "compile_failed",
       "task": "orbital-grelbin-particle-create-20261004-v1"
+    },
+    "3bcf7dd6cd7741318f1c77327de10def": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3bcf7dd6cd7741318f1c77327de10def",
+      "finished": "2026-10-05T19:06:57.449993+00:00",
+      "id": "3bcf7dd6cd7741318f1c77327de10def",
+      "manifest_sha256": "ce545bc46d622244d24a801ae8bf2651bfd9b7e6591d69a417505903bfbe4b16",
+      "measured_functions": 39,
+      "outcome_sha256": "af58a92e16947525761554ab45d454e2c57473faba7dbfad5b3430e23fb897db",
+      "semantic_key": "38349517ffa3b4e2b394f939af689848e0309c98bc547d6e09b607a44d74bbc9",
+      "started": "2026-10-05T19:06:57.001623+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-10_hrugis_cloud"
     },
     "3c21a0b053624713b041c4ec234b4b43": {
       "compile_attempted": true,
@@ -99912,6 +101447,32 @@
       "state": "exact_private",
       "task": "orbital-bitmap-getter-family-20261004-4_barlow"
     },
+    "41b1d08dc8ef4372abed9df4681a2698": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/41b1d08dc8ef4372abed9df4681a2698",
+      "finished": "2026-10-05T19:08:08.005145+00:00",
+      "id": "41b1d08dc8ef4372abed9df4681a2698",
+      "manifest_sha256": "dbd07c0be568346ea02a5dc8b1e8bf4fab5b4b5f5529abdcf9da654a0f1a513a",
+      "measured_functions": 37,
+      "outcome_sha256": "d396c490e690861abcd3998951d1b11b6c8e9554fffa0cb78db97e59e7b68d59",
+      "semantic_key": "66f9b91831338738eb4d7e4db9d3ab377a4719d66d7084e2299222830095a173",
+      "started": "2026-10-05T19:08:07.597880+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-25_wupash_nebula"
+    },
+    "41c971f36cff4e27b2e5dbfb92d6bc97": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/41c971f36cff4e27b2e5dbfb92d6bc97",
+      "finished": "2026-10-05T19:08:09.199737+00:00",
+      "id": "41c971f36cff4e27b2e5dbfb92d6bc97",
+      "manifest_sha256": "37ad4b9b85e9b05d999e2f0c383851293d4d3c3251189b754e2cadb7b55cc58a",
+      "measured_functions": 37,
+      "outcome_sha256": "aa1376b5b4d67113f230e9d8ac3f8ee09a11233d8a5867bb419553ffe2598ccb",
+      "semantic_key": "d11a6162e40af10811b01188c6ac4264e9182db57dd4b2ef933e66fdd8dc10d6",
+      "started": "2026-10-05T19:08:08.807192+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-26_jamming_array"
+    },
     "41e8fd97090d498b89e94d56f623a3f2": {
       "compile_attempted": true,
       "directory": "runtime:trials/41e8fd97090d498b89e94d56f623a3f2",
@@ -100002,6 +101563,19 @@
       "started": "2026-10-04T03:32:18.681160+00:00",
       "state": "exact_private",
       "task": "ship-shack-a4468-isolated-controls"
+    },
+    "43ddc96f6b20420682a1413e84876408": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/43ddc96f6b20420682a1413e84876408",
+      "finished": "2026-10-05T19:18:41.583677+00:00",
+      "id": "43ddc96f6b20420682a1413e84876408",
+      "manifest_sha256": "334aa5dc87c5315e7a7b64aefebe20ce478638a477e237c80327172556157a99",
+      "measured_functions": 39,
+      "outcome_sha256": "1e285a9011042a86659fe71f6927fc41368a735366a3c9ffd120e8b2946235a2",
+      "semantic_key": "5cfc84a298c2fc278432416f55e306ecab905871851fa6412b872c189343294d",
+      "started": "2026-10-05T19:18:40.999766+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-10_hrugis_cloud"
     },
     "440cc272b79247dcaf4da6b0e565036d": {
       "compile_attempted": true,
@@ -100634,6 +102208,19 @@
       "state": "exact_private",
       "task": "root-next-five-combined-18_damosel-20261004"
     },
+    "4c0562cdfdb04de88dc8c4debf82328f": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4c0562cdfdb04de88dc8c4debf82328f",
+      "finished": "2026-10-05T19:08:03.216737+00:00",
+      "id": "4c0562cdfdb04de88dc8c4debf82328f",
+      "manifest_sha256": "d5e32c1d09a938b3822b83292ed0f043dde5bec85ad970c2a797b9f0fb8913a7",
+      "measured_functions": 35,
+      "outcome_sha256": "9bd71902f97b6cedc1a67d86813c4cbc6a99567ba7a034f4eca189dcd3151d5b",
+      "semantic_key": "8c9008c49a651a354ff0f58b5ad515198d7871103052aade5a2b17e4b39305ac",
+      "started": "2026-10-05T19:08:02.808859+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-18_damosel"
+    },
     "4c1031c153a64f478e35e6379716fbdc": {
       "compile_attempted": true,
       "directory": "runtime:trials/4c1031c153a64f478e35e6379716fbdc",
@@ -101161,6 +102748,19 @@
       "state": "mismatch",
       "task": "parallel-boot-analysis-oozla-quaternion-direct-assign-v2"
     },
+    "5480a1a876b84ef4be1d5b1943757d32": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5480a1a876b84ef4be1d5b1943757d32",
+      "finished": "2026-10-05T19:06:30.175740+00:00",
+      "id": "5480a1a876b84ef4be1d5b1943757d32",
+      "manifest_sha256": "700516891b06b7d384fa71eead5495e21ab2cdebdcb22e4391426452209888e8",
+      "measured_functions": 0,
+      "outcome_sha256": "22f8235f69d3cf576696978d2d2810613bdea3d08305bf092fe1aa6c18053a0c",
+      "semantic_key": "2fcf08c142c1dd78a2cc95e010cf19190a00a1c0af98fa03a35c287983f0c0b0",
+      "started": "2026-10-05T19:06:29.981107+00:00",
+      "state": "compile_failed",
+      "task": "native-review-family172-endako-v1-20261005"
+    },
     "54889f44efd149a4b080e4166e27ff74": {
       "compile_attempted": true,
       "directory": "runtime:trials/54889f44efd149a4b080e4166e27ff74",
@@ -101512,6 +103112,19 @@
       "state": "exact_private",
       "task": "root-parallel-combined-16_snivelak-20261004"
     },
+    "58349ee920ac47c0b710ad8b439cf377": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/58349ee920ac47c0b710ad8b439cf377",
+      "finished": "2026-10-05T19:18:48.014682+00:00",
+      "id": "58349ee920ac47c0b710ad8b439cf377",
+      "manifest_sha256": "ab52a3d571825815040909a8e6cfb4d24ed05b7f12e6bf04aaca4857fe031fac",
+      "measured_functions": 35,
+      "outcome_sha256": "130276e311a9f493ab8b0744c7ccb3fdf96c7f36321d11893c5a68859c4f9b3a",
+      "semantic_key": "2f4dc09475adff19ff7c34a4762077bad0690c27b29e51dd05ba4131bc8db464",
+      "started": "2026-10-05T19:18:47.464363+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-18_damosel"
+    },
     "589821e9bd314eff8f99e40bc7e6372a": {
       "compile_attempted": true,
       "directory": "runtime:trials/589821e9bd314eff8f99e40bc7e6372a",
@@ -101642,6 +103255,19 @@
       "state": "mismatch",
       "task": "root-boot-record460-v1-20261004"
     },
+    "5b275184e0214aad8e427fed872d80f5": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5b275184e0214aad8e427fed872d80f5",
+      "finished": "2026-10-05T19:08:01.966420+00:00",
+      "id": "5b275184e0214aad8e427fed872d80f5",
+      "manifest_sha256": "cbf262bb371fff3b7408328f730e7d733adf285abc2f0f01f6e54269bc993cb1",
+      "measured_functions": 38,
+      "outcome_sha256": "5bd1f4c745efc4d2a55cd4e1641b9efdbf278b8098dba7ee365b25d0beba3ecb",
+      "semantic_key": "88f3cae81adb09e01d991cc3d94ce961d5f2196bbf3b6c2630cd519f1ef49f52",
+      "started": "2026-10-05T19:08:01.553887+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-17_smolg"
+    },
     "5b8d3a67d4a543629b7c226722c0d9ef": {
       "compile_attempted": true,
       "directory": "runtime:trials/5b8d3a67d4a543629b7c226722c0d9ef",
@@ -101693,6 +103319,19 @@
       "started": "2026-10-05T03:11:24.495023+00:00",
       "state": "mismatch",
       "task": "orbital-gorn-count-positive148-20261004-v1"
+    },
+    "5d419411b65840f88a89ec73a9b108f3": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5d419411b65840f88a89ec73a9b108f3",
+      "finished": "2026-10-05T19:08:10.417211+00:00",
+      "id": "5d419411b65840f88a89ec73a9b108f3",
+      "manifest_sha256": "b1b460615d75ab8cea3bd810e94a063aa516000a2b4f7874bfbef25acbe284b8",
+      "measured_functions": 37,
+      "outcome_sha256": "e4af7d910a4d726ca367088af577993493be8e854edc863cc9021244358d821b",
+      "semantic_key": "4026402a590d0615563bbf248bf6d0fe92c36cd00ab4f42dc8d4754021f92ca4",
+      "started": "2026-10-05T19:08:09.989504+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-30_insomniac_museum"
     },
     "5d476d5c9bb44482a79bd3c433562e3e": {
       "compile_attempted": true,
@@ -101910,6 +103549,19 @@
       "state": "mismatch",
       "task": "parallel-boot-analysis-oozla-unlink164-v1"
     },
+    "5eeb34d2874847d3994b96b9e5bf0606": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5eeb34d2874847d3994b96b9e5bf0606",
+      "finished": "2026-10-05T19:08:04.463240+00:00",
+      "id": "5eeb34d2874847d3994b96b9e5bf0606",
+      "manifest_sha256": "8e56c30006a418102210f51a199cf694163c9d0e2c9f3ac9baca6c88b903cd9a",
+      "measured_functions": 33,
+      "outcome_sha256": "ad44e1baf3ab3c52fb0fac742a3a9767cf3fe4df8b6fe682efd2a17df1f973e6",
+      "semantic_key": "1eb7d01ac45c2f60f3b3b6d32887b2a9eab7fb33db1e2e9e4f65d61d9bb9827c",
+      "started": "2026-10-05T19:08:04.036134+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-19_grelbin"
+    },
     "5f461d1986ff4116acf624ac2b43d067": {
       "compile_attempted": true,
       "directory": "runtime:trials/5f461d1986ff4116acf624ac2b43d067",
@@ -102000,6 +103652,19 @@
       "started": "2026-10-04T10:09:45.993109+00:00",
       "state": "exact_private",
       "task": "native-review-index-family-13_boldan-20261004"
+    },
+    "60fd09cebe79494292ac2c11027e1f36": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/60fd09cebe79494292ac2c11027e1f36",
+      "finished": "2026-10-05T19:02:13.566707+00:00",
+      "id": "60fd09cebe79494292ac2c11027e1f36",
+      "manifest_sha256": "2f82c9298d9aa7be23305aff844c90fa301c22f5f1cab31c1b82aa4adf70a8f3",
+      "measured_functions": 36,
+      "outcome_sha256": "3886c7f8ca73a3463e418571899b18195788191c6b0c816c9a35a502d7ca38ac",
+      "semantic_key": "f1109e402649dbb3dfbfa91fa9609d0ee2cb0edd97a5e5276379f4b3bd6677dc",
+      "started": "2026-10-05T19:02:13.112563+00:00",
+      "state": "mismatch",
+      "task": "native-review-family304-endako-v1-20261005"
     },
     "6101f7abc43949398717409ad33dd81b": {
       "compile_attempted": true,
@@ -103512,6 +105177,19 @@
       "state": "exact_private",
       "task": "two-native-families-19_grelbin-20261004"
     },
+    "78b79f3ecf42405faa59bb5fcf8fc4ee": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/78b79f3ecf42405faa59bb5fcf8fc4ee",
+      "finished": "2026-10-05T19:05:19.227980+00:00",
+      "id": "78b79f3ecf42405faa59bb5fcf8fc4ee",
+      "manifest_sha256": "1dcd1ff3cb5f4fd0195c958c69a5bf5a741149fac8ed1c5244d836544ecfb73b",
+      "measured_functions": 36,
+      "outcome_sha256": "8e5ad694db442bdc9ece0e0c3c8bc6f1d2b6aae2c78458f6edb17f3be00c0aa4",
+      "semantic_key": "812ef11319570c07dcdbaf4737883459bc68e3ac3843d5c040d5b1c249347c86",
+      "started": "2026-10-05T19:05:18.794881+00:00",
+      "state": "mismatch",
+      "task": "native-review-family304-endako-v4-20261005"
+    },
     "78dced9b12a24710947cfa545e644821": {
       "compile_attempted": true,
       "directory": "runtime:trials/78dced9b12a24710947cfa545e644821",
@@ -103823,6 +105501,19 @@
       "started": "2026-10-04T07:27:57.779136+00:00",
       "state": "exact_private",
       "task": "scalar-families-25_wupash_nebula-20261004"
+    },
+    "7cbf6edc88e247e39becd66128a3d24f": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/7cbf6edc88e247e39becd66128a3d24f",
+      "finished": "2026-10-05T19:08:00.793087+00:00",
+      "id": "7cbf6edc88e247e39becd66128a3d24f",
+      "manifest_sha256": "7bc647f51e9afd56d5eca2828ab75bf8c7bcedacfe35056b0e6dcd71c0a7dc39",
+      "measured_functions": 35,
+      "outcome_sha256": "91a191a11482ae42cb5abdb06c97d67c04cee182bcf50ec3df56d86e12fa0a2c",
+      "semantic_key": "cbfb595c3b1a04589fceac2cbcca7a2e65578395a9df595f67d0b98067c2688a",
+      "started": "2026-10-05T19:08:00.399855+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-16_snivelak"
     },
     "7cc818fb20fa42f28692d8979043708e": {
       "compile_attempted": true,
@@ -104194,6 +105885,19 @@
       "started": "2026-10-04T05:07:11.873821+00:00",
       "state": "exact_private",
       "task": "float-guard-only-22_dobbo_orbit-20261004"
+    },
+    "81616bb3eac54387ba6a8bb9715e1714": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/81616bb3eac54387ba6a8bb9715e1714",
+      "finished": "2026-10-05T19:18:54.808710+00:00",
+      "id": "81616bb3eac54387ba6a8bb9715e1714",
+      "manifest_sha256": "680094193847e40414edcbedcb5a5128fd7c1e2717bde731e90b26200de79c58",
+      "measured_functions": 37,
+      "outcome_sha256": "bb53ac71a1753e17156c0538ed916c39f10b4e826d0c503cd2ac2b50383e3602",
+      "semantic_key": "7da841a72da37cf1e904b8076c5ce8f0188cbba58ed244bfe86a7d0d8654483e",
+      "started": "2026-10-05T19:18:54.342902+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-26_jamming_array"
     },
     "820f3b2d20e94bdea4cca7a11a8fe4b5": {
       "compile_attempted": true,
@@ -104858,6 +106562,19 @@
       "state": "exact_private",
       "task": "gs-family-9_dobbo-136-v2"
     },
+    "8c28d37ca3e9474d89f9e346ed5fb375": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8c28d37ca3e9474d89f9e346ed5fb375",
+      "finished": "2026-10-05T19:06:31.660933+00:00",
+      "id": "8c28d37ca3e9474d89f9e346ed5fb375",
+      "manifest_sha256": "3d1eb70afab1c3eb99cf0302c3c2af3e10c0efdaef2b96778ede4a6359e09dbb",
+      "measured_functions": 1,
+      "outcome_sha256": "9a33539bb31052161b64e2b3022b0fb918ce7edd47719fe4258949945cdb67a7",
+      "semantic_key": "30c46f97a29b3b07cf57b3938af752aea6c37f9639a3d82797654268f5c01227",
+      "started": "2026-10-05T19:06:31.340933+00:00",
+      "state": "mismatch",
+      "task": "family-record8-store76-seed-siberius-20261005"
+    },
     "8c2ccc69cb504d34ab6581b5592d2817": {
       "compile_attempted": true,
       "directory": "runtime:trials/8c2ccc69cb504d34ab6581b5592d2817",
@@ -104922,6 +106639,19 @@
       "started": "2026-10-05T02:39:32.842122+00:00",
       "state": "mismatch",
       "task": "root-boot-unpack-single144-first-20261005"
+    },
+    "8d03a3e724c44897bb010a88789d18b3": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8d03a3e724c44897bb010a88789d18b3",
+      "finished": "2026-10-05T19:06:46.573300+00:00",
+      "id": "8d03a3e724c44897bb010a88789d18b3",
+      "manifest_sha256": "f4c327ece1eb15016b0bf72384d29152b51ff236fa5a042984fce02c690baeeb",
+      "measured_functions": 36,
+      "outcome_sha256": "7291b9bfaaca5e3a719ea8b034d5bbac7faa0426b290aeab0cec21107c012f8f",
+      "semantic_key": "78c90d5d184f7e9f10e714e342735cee3df188ccced6e9d6b98211e7aee34e59",
+      "started": "2026-10-05T19:06:46.133294+00:00",
+      "state": "mismatch",
+      "task": "native-review-family172-endako-v2-20261005"
     },
     "8d0db88f33a44e2d971d19f8a05ef04b": {
       "compile_attempted": true,
@@ -105303,6 +107033,19 @@
       "started": "2026-10-04T16:11:43.269348+00:00",
       "state": "exact_private",
       "task": "orbital-mode-set-family-20261004-24_ship_shack"
+    },
+    "91d265b8bc3f4cbd92d842c21565883b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/91d265b8bc3f4cbd92d842c21565883b",
+      "finished": "2026-10-05T19:07:46.634082+00:00",
+      "id": "91d265b8bc3f4cbd92d842c21565883b",
+      "manifest_sha256": "a00eef5f218c4707bb188613c03f304a5edd799660106b0c8f2365efe08c8af4",
+      "measured_functions": 36,
+      "outcome_sha256": "ede507a81d64acff9f2df4a95c942e5b1d99a6b8f6b9525118b0054486145aec",
+      "semantic_key": "323cea28ddfac9585ee15d78668d1129126cf995943de778be4600f02af26df0",
+      "started": "2026-10-05T19:07:46.205262+00:00",
+      "state": "mismatch",
+      "task": "native-review-family172-endako-v4-20261005"
     },
     "92011c51ecb54088b213cae2e9ae7195": {
       "compile_attempted": true,
@@ -106703,6 +108446,19 @@
       "state": "exact_private",
       "task": "orbital-pair-lookup-family-20261004-14_aranos_prison"
     },
+    "a5a4ed80236e41d88485f34734159e7b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/a5a4ed80236e41d88485f34734159e7b",
+      "finished": "2026-10-05T19:18:44.804039+00:00",
+      "id": "a5a4ed80236e41d88485f34734159e7b",
+      "manifest_sha256": "177926dae30f6d50407e2e23d17c1787131360fa442e5147712843e8354aabbd",
+      "measured_functions": 35,
+      "outcome_sha256": "2152e80e74658a9318412f2b1b78325755b2d1c80d8a64551f209b0b7b430ab2",
+      "semantic_key": "09c1536c99a1962c0a0af86b4eaf5700c540942305b93f87ece19873c5ef0ad4",
+      "started": "2026-10-05T19:18:44.220380+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-16_snivelak"
+    },
     "a5ed4077d50a4da8984ca152d5168fcc": {
       "compile_attempted": true,
       "directory": "runtime:trials/a5ed4077d50a4da8984ca152d5168fcc",
@@ -106873,6 +108629,19 @@
       "started": "2026-10-04T03:45:02.833237+00:00",
       "state": "mismatch",
       "task": "boot-00293000-record-packets-v1"
+    },
+    "a8eb4b11dd1d4214bb97069e50c34398": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/a8eb4b11dd1d4214bb97069e50c34398",
+      "finished": "2026-10-05T19:07:59.585703+00:00",
+      "id": "a8eb4b11dd1d4214bb97069e50c34398",
+      "manifest_sha256": "5d79a386986612cf671b7343dc70e52e8b6ac93293a379af27fa71ac496f5a56",
+      "measured_functions": 39,
+      "outcome_sha256": "b78105d73011a20bfd27567124b6af091fef5ab1eb2f83dc3ad71f460ba1b0c7",
+      "semantic_key": "23d8b64505c76a3592c2f0a90a6e4860b010b4cc1e22553bbc1e069d14c2d82b",
+      "started": "2026-10-05T19:07:59.174477+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-15_gorn"
     },
     "a9121fc197f84aa491ee988faf86d252": {
       "compile_attempted": true,
@@ -107147,6 +108916,19 @@
       "state": "exact_private",
       "task": "root-compound-rowgrid52-1_oozla-20261005"
     },
+    "ae158910016b4980bdfc042318c28975": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/ae158910016b4980bdfc042318c28975",
+      "finished": "2026-10-05T19:01:43.098317+00:00",
+      "id": "ae158910016b4980bdfc042318c28975",
+      "manifest_sha256": "8da5ff53162c2194865c0d3d70f2800bf29b94dfc11684eb262d08487e3b4abd",
+      "measured_functions": 1,
+      "outcome_sha256": "47722ee581b3b84988741708d78ba21e00a1f3f7bef44f51485d4dffe18867d9",
+      "semantic_key": "840cfcbbe9b15018d6273214fe2684950b763f7d5fde2811b0918fb070028cd0",
+      "started": "2026-10-05T19:01:42.751894+00:00",
+      "state": "mismatch",
+      "task": "family-ring-bitset124-seed-siberius-20261005"
+    },
     "ae49bdd4c98c4b33ad0f9a2a269c199e": {
       "compile_attempted": true,
       "directory": "runtime:trials/ae49bdd4c98c4b33ad0f9a2a269c199e",
@@ -107315,6 +109097,19 @@
       "started": "2026-10-04T17:48:33.914129+00:00",
       "state": "exact_private",
       "task": "orbital-flag-clear-family-20261004-22_dobbo_orbit"
+    },
+    "b1529f8737a44d6fabfd4cd7542e31f9": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/b1529f8737a44d6fabfd4cd7542e31f9",
+      "finished": "2026-10-05T19:04:13.920959+00:00",
+      "id": "b1529f8737a44d6fabfd4cd7542e31f9",
+      "manifest_sha256": "ee1599699a9313815280193a70303e57190f48e190a7ab011842347f0acf0f2f",
+      "measured_functions": 36,
+      "outcome_sha256": "d122e408d90c942b9699a2ee695b6fc99e868a09755e8457310fc8ef6b5f556a",
+      "semantic_key": "f71efd7b91e4dbe4ee3fd1eaa06240d2e916e836d5bd18b52c067a9c24f24cee",
+      "started": "2026-10-05T19:04:13.505579+00:00",
+      "state": "mismatch",
+      "task": "native-review-family304-endako-v3-20261005"
     },
     "b160d3b506d24a1295f747712d678f79": {
       "compile_attempted": true,
@@ -108193,6 +109988,19 @@
       "started": "2026-10-05T01:31:46.604099+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-dobbo-parts252-v1"
+    },
+    "bf2f6068a5104cbeb55ede2989f089e9": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/bf2f6068a5104cbeb55ede2989f089e9",
+      "finished": "2026-10-05T19:03:15.590343+00:00",
+      "id": "bf2f6068a5104cbeb55ede2989f089e9",
+      "manifest_sha256": "0f84508b3887761ff87412f5d440fb49120626be6c97c1269820f60567d6ccc0",
+      "measured_functions": 36,
+      "outcome_sha256": "51bca63963b730183956f2ba79e58cc48eb029f64611dc85a235f6b00e726e71",
+      "semantic_key": "fe96f1ec504910a38de4c8f2e6a0aac1a65077db466b78dae28e88fe47301a28",
+      "started": "2026-10-05T19:03:15.148432+00:00",
+      "state": "mismatch",
+      "task": "native-review-family304-endako-v2-20261005"
     },
     "bf45abc3ff404744aba3d15df966850c": {
       "compile_attempted": true,
@@ -109425,6 +111233,19 @@
       "state": "mismatch",
       "task": "parallel-boot-analysis-oozla-debit-v1"
     },
+    "d0a4251975ee4c00a0dc066707c496aa": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d0a4251975ee4c00a0dc066707c496aa",
+      "finished": "2026-10-05T19:18:52.091715+00:00",
+      "id": "d0a4251975ee4c00a0dc066707c496aa",
+      "manifest_sha256": "530f0e9ed58822df57de8cd1bb0e22d95f3d74071ec7bade30e1443c7ae31cce",
+      "measured_functions": 37,
+      "outcome_sha256": "b40b92529c8f81c8190bf6cca548eef9c315b5a44c4033f4b333c71cf866abe7",
+      "semantic_key": "0e6a26cc27e64f30b54e4d5e7a927811fe73b805dbc83b6e32944901477896dd",
+      "started": "2026-10-05T19:18:51.636910+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-22_dobbo_orbit"
+    },
     "d0b6c77c28a948519f4b4fbf38d055c6": {
       "compile_attempted": true,
       "directory": "runtime:trials/d0b6c77c28a948519f4b4fbf38d055c6",
@@ -109515,6 +111336,19 @@
       "started": "2026-10-04T14:06:15.113659+00:00",
       "state": "exact_private",
       "task": "native-review-search-family-1_oozla-20261004"
+    },
+    "d229d47127e24ed4a9d93d93de98ee03": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d229d47127e24ed4a9d93d93de98ee03",
+      "finished": "2026-10-05T19:17:01.569156+00:00",
+      "id": "d229d47127e24ed4a9d93d93de98ee03",
+      "manifest_sha256": "6a65c9bdae10425e43f05e288138850729ddfa3fa869c38fb7967e4f9b3cca88",
+      "measured_functions": 1,
+      "outcome_sha256": "e326e514e303022be2614e0cb82eaebc28d3bfddfaecbf327b3826219df707b0",
+      "semantic_key": "696a8b09f5434885a035b49111c2a498815486fec62766c011c92e0208347da4",
+      "started": "2026-10-05T19:17:01.233753+00:00",
+      "state": "exact_private",
+      "task": "family-countbytes112-seed-siberius-20261005"
     },
     "d264a552a0b44d11aa86378404ab7e44": {
       "compile_attempted": true,
@@ -109775,6 +111609,19 @@
       "started": "2026-10-04T14:40:19.482615+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-kind96-9-v1"
+    },
+    "d6d282813c9c469586780e0d9543afe8": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d6d282813c9c469586780e0d9543afe8",
+      "finished": "2026-10-05T18:54:00.074455+00:00",
+      "id": "d6d282813c9c469586780e0d9543afe8",
+      "manifest_sha256": "d23aba3e6e67df28fc430a4a04d56421b7d3eab09612c4886158d53b9bff80de",
+      "measured_functions": 2,
+      "outcome_sha256": "38702fac8e9e366007ee8522c5411d52cf34919a7a45f07674df54909afbc16e",
+      "semantic_key": "5b24ff1677d6dddde5b8816cfcdc1aa7702074d423dd38e04cb8eb93d7bc4718",
+      "started": "2026-10-05T18:53:59.737428+00:00",
+      "state": "mismatch",
+      "task": "boot-fp-bit-verbatim-rac2-trial-20261005"
     },
     "d6e2bfedb78e4f6db6f45b7878f1160b": {
       "compile_attempted": true,
@@ -110061,6 +111908,19 @@
       "started": "2026-10-04T10:36:49.636576+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-update116-10-v1"
+    },
+    "dae155fb549f43e08b12a50201cb805e": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/dae155fb549f43e08b12a50201cb805e",
+      "finished": "2026-10-05T19:08:05.659335+00:00",
+      "id": "dae155fb549f43e08b12a50201cb805e",
+      "manifest_sha256": "18e61e9bf7c48adc1c2cb37ba622cadfcfb07f225941ef69f1e6f2430556b5ac",
+      "measured_functions": 38,
+      "outcome_sha256": "5fb0cf8146df5873417613932e0e2ff3eae711b4105d540807a3993dea0c9680",
+      "semantic_key": "a62be1ec0249a7987629a2f475367944f9dd1530a4359b190f1d985d084b5d64",
+      "started": "2026-10-05T19:08:05.228294+00:00",
+      "state": "exact_private",
+      "task": "orbital-c8d00-family-20261005-20_yeedil"
     },
     "daea95731ea44c8f941d24322f1e68f6": {
       "compile_attempted": true,
@@ -110374,6 +112234,19 @@
       "state": "mismatch",
       "task": "parallel-boot-analysis-oozla-reset152-v1"
     },
+    "de75a5f25e884dcfa71760625037f338": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/de75a5f25e884dcfa71760625037f338",
+      "finished": "2026-10-05T19:18:46.443120+00:00",
+      "id": "de75a5f25e884dcfa71760625037f338",
+      "manifest_sha256": "6547a063e0e4d61e3c950a1d97ba469049dc529840bd4d0f07066195ee007843",
+      "measured_functions": 38,
+      "outcome_sha256": "4bb13345bd9a12cf784255d04e118bdd7675f30022a3b140ee4e7de432fe3335",
+      "semantic_key": "ead63dbf4c46b6c04b1697881b956d0c911f8019fa6769d0c1445edab1409d08",
+      "started": "2026-10-05T19:18:45.877794+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-17_smolg"
+    },
     "de8d51a2dbfe444d867a85c85e32bb60": {
       "compile_attempted": true,
       "directory": "runtime:trials/de8d51a2dbfe444d867a85c85e32bb60",
@@ -110399,6 +112272,19 @@
       "started": "2026-10-04T14:40:18.853005+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-kind96-8-v1"
+    },
+    "dea63441b9d84a189c0902ac4b903f74": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/dea63441b9d84a189c0902ac4b903f74",
+      "finished": "2026-10-05T19:18:56.075977+00:00",
+      "id": "dea63441b9d84a189c0902ac4b903f74",
+      "manifest_sha256": "cc4ac761fec807bea170152187ebc0e50ba8f5abcabdb42956fd7eb20a70f99f",
+      "measured_functions": 37,
+      "outcome_sha256": "0944ca23cea5756856faa2a669eccf5e95f8a27c7cbb6cb2ddf16c9d0fba14e2",
+      "semantic_key": "2cc48bbc684fad80ee125c33bc40305abcfa6733310c229edcc447c6668366e8",
+      "started": "2026-10-05T19:18:55.627697+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-30_insomniac_museum"
     },
     "ded53ff4a7d8443a8205b7628465f8ee": {
       "compile_attempted": true,
@@ -110438,6 +112324,19 @@
       "started": "2026-10-05T03:46:07.587705+00:00",
       "state": "exact_private",
       "task": "root-compound-grid-slot-angles-22_dobbo_orbit-20261005"
+    },
+    "df00db8b0a074a81a47722594495be8d": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/df00db8b0a074a81a47722594495be8d",
+      "finished": "2026-10-05T19:03:19.679596+00:00",
+      "id": "df00db8b0a074a81a47722594495be8d",
+      "manifest_sha256": "a3baada7b25f40c0d9cea54265c07114b190cfbbe82400fa446e64d63ee0c07f",
+      "measured_functions": 1,
+      "outcome_sha256": "82be12cd91e021b32e91d736798ddc038216e9e3c4c7cdac82a2072e7d28d8ba",
+      "semantic_key": "e79f82841405e2c9355008bf7f45ff46c64147ec9d0331851006d7fd7e98c64b",
+      "started": "2026-10-05T19:03:19.373781+00:00",
+      "state": "mismatch",
+      "task": "family-ring-bitset124-seed-siberius-20261005"
     },
     "df0556cf7be74bd7ac74dce46f78c768": {
       "compile_attempted": true,
@@ -111343,6 +113242,19 @@
       "state": "exact_private",
       "task": "root-resume-three-combined-22_dobbo_orbit-20261004"
     },
+    "eadcdfa599ec400fb0128cdba7ddaea0": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/eadcdfa599ec400fb0128cdba7ddaea0",
+      "finished": "2026-10-05T19:18:49.402579+00:00",
+      "id": "eadcdfa599ec400fb0128cdba7ddaea0",
+      "manifest_sha256": "8d843b2cb51a962cfd97c9ea0dfcbc5735dd0f39d28d9368131efc3e95ffcc88",
+      "measured_functions": 33,
+      "outcome_sha256": "40200793124a4a93996b4b618ed68b146cbaf13f1233bc39aba5d16552027ef7",
+      "semantic_key": "c213421f7f1873cca2f9e8b4bf94a085628b5d67f8febd32c05253ab384c4f66",
+      "started": "2026-10-05T19:18:48.918084+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-19_grelbin"
+    },
     "eae4387e24b94d088d9c69935abe3b1c": {
       "compile_attempted": true,
       "directory": "runtime:trials/eae4387e24b94d088d9c69935abe3b1c",
@@ -111680,6 +113592,19 @@
       "started": "2026-10-04T23:04:19.594738+00:00",
       "state": "exact_private",
       "task": "root-readonly-controls-15_gorn-20261004"
+    },
+    "edf90fa0a0e04bcab94cafa7f294c921": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/edf90fa0a0e04bcab94cafa7f294c921",
+      "finished": "2026-10-05T19:18:50.792046+00:00",
+      "id": "edf90fa0a0e04bcab94cafa7f294c921",
+      "manifest_sha256": "8bb65eaa58896384fc07fc4a95165aaea0ead7929b12b2c603c57944c9c63dd1",
+      "measured_functions": 38,
+      "outcome_sha256": "157806cf3ac090b9cbaf869bbb5c875f01114ad339992b5592d6154749157861",
+      "semantic_key": "c63855c2db2232b33b065f9a22fb7bd727bbf473cfe34cf0a73cfc5d6f14202f",
+      "started": "2026-10-05T19:18:50.304606+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-20_yeedil"
     },
     "ee2a6363efad48d6bfc5363dd4974620": {
       "compile_attempted": true,
@@ -112148,6 +114073,19 @@
       "started": "2026-10-05T03:34:09.137167+00:00",
       "state": "exact_private",
       "task": "orbital-slot-reuse-family-844-20261004-2_maktar_nebula"
+    },
+    "f4c43f184e0040008262f68fc6f95e70": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/f4c43f184e0040008262f68fc6f95e70",
+      "finished": "2026-10-05T19:18:43.216816+00:00",
+      "id": "f4c43f184e0040008262f68fc6f95e70",
+      "manifest_sha256": "166725a6c3c0dcbfa607964673feec7d20eea11aefe5553ae6fb08502e4e02d4",
+      "measured_functions": 39,
+      "outcome_sha256": "d237e0e5e0b2e768e724ef972723a0579c24efb8d096c707cc39046683dd79bf",
+      "semantic_key": "d89ff25d7da7af6edaeb124a96773edac8bd9ecd6594544c02c2ed79f8f26cc5",
+      "started": "2026-10-05T19:18:42.610156+00:00",
+      "state": "exact_private",
+      "task": "orbital-320388-family-20261005-15_gorn"
     },
     "f4e622ecf2884000820b080e0f2e788f": {
       "compile_attempted": true,
@@ -112982,6 +114920,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "582c3ac7b82c8539291772b3110986ddb9ed809962d4d09eaea6bf24f30023b4"
+    "docs/CAMPAIGN-QUEUE.md": "760059627fab65230fbeb15ab03eab45a24b4829f898c61b21a412f724ccf322"
   }
 }

@@ -790,17 +790,30 @@ Compare full 420-byte target and all existing boot controls in one maintained tr
 
 Reopen condition: New measured type, lifetime or division-control evidence
 
+## boot-fp-bit-verbatim-rac2-trial-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Require both complete bodies exact (144 and 64 bytes, every byte); retain the refusal as-is if either differs, with no flag, alias, source-shape or prototype permutation.
+
+Reopen condition: A measured layout/ABI difference, a changed compiler hypothesis, or an independent source context explaining a complete mismatch.
+
+- `docs/RAC1-FP-BIT-EVIDENCE.md`
+- `boot-fp-bit-verbatim-source-rac1-evidence-20261005`
+
 ## boot-fp-bit-verbatim-source-rac1-evidence-20261005
 
 State: `queued`. Kind: `research`.
 
-Maintainer review of docs/RAC1-FP-BIT-EVIDENCE.md. If accepted, reopen the two stopped tasks for one trial: rac1-decomp fp-bit.c (sha256 3069e3a1...) preprocessed with the fp-bit configuration macros and EE target predefines into a standalone unit, compiled once with the qualified GNU profile, a fresh catalogue for both complete symbols and full gates. Preserve any refusal; no flag, alias or source-shape permutations.
+Measured 2026-10-05 by boot_analysis (trial d6d282813c9c469586780e0d9543afe8, candidate task boot-fp-bit-verbatim-rac2-trial-20261005, one trial, budget spent). Result: FUN_00123400 (the __unpack_f body) is exact -- complete 144 bytes, 0 differing bytes, reference sha256 8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54 on both sides -- with the qualified profile -O2 -G0 -ffunction-sections from the verbatim rac1-decomp fp-bit.c, so the -G2 question of this document is answered for that body. FUN_001234F0 (fptodp) was refused: 8 differing bytes, two words exchanged around the jal to 0x00123400. Do not permute flags, aliases or source shape; the refusal stays as recorded. Root decides whether the exact 144-byte body is split into its own authored module for integration.
 
 Reopen condition: A RAC2 trial of the verbatim source refused, or evidence that RAC2's runtime library is not fp-bit.
 
 - `docs/RAC1-FP-BIT-EVIDENCE.md`
-- `https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/src/libgcc/README.md`
-- `https://github.com/OpenRAC/rac1-decomp/blob/cb22f0b0d3a171d1fd4b6851b86fe214a22c9822/Makefile.sn#L128-L158`
+- `boot-fp-bit-verbatim-rac2-trial-20261005`
+- `runtime:trials/d6d282813c9c469586780e0d9543afe8/outcome.json`
+- `runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog.json`
+- `runtime:bank/parallel-boot-analysis-fpbit-20261005/fp-bit-ee.c`
 
 ## boot-fun_00282a88
 
@@ -938,6 +951,51 @@ Closed by the measured compiler rule; consult the recorded exception limits befo
 
 - `docs/COMPILER-NOTES.md`
 - `scripts/compiler/restrict_mtc1_exemption.py`
+
+## family-countbytes112-placements-20261005
+
+State: `exact_private`. Kind: `candidate`.
+
+Require all seven complete 112-byte bodies exact; keep any refusal with its measured difference. Out-of-zone placements stay for the owning workers.
+
+Reopen condition: A measured boundary difference in one placement, or a changed source shape justified by a measured difference.
+
+- `target-ranker.json rank 363`
+- `family-countbytes112-seed-siberius-20261005`
+- `runtime:bank/parallel-boot-analysis-fpbit-20261005/rank363-placements.json`
+
+## family-countbytes112-seed-siberius-20261005
+
+State: `exact_private`. Kind: `candidate`.
+
+Require the complete 112-byte body exact; keep any refusal with its measured difference.
+
+Reopen condition: A measured boundary or ABI difference, or a source shape justified by a measured difference.
+
+- `target-ranker.json rank 363`
+- `runtime:bank/parallel-boot-analysis-fpbit-20261005/lane0-corrected.json`
+
+## family-record8-store76-seed-siberius-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Parked with two preserved refusals (8c28d37c: 68 bytes; 234d91b6: correct 76-byte size, 4 differing bytes). The whole body is right except one exchanged pair: at +0x24 and +0x2C the pinned image stores field02 (sh a0,2(v1)) then field06 (sh a2,6(v1)) where the current source emits field06 first. Everything else, including the materialised base, the record loop, the alignment word and the return paths, is byte-identical. Reopening needs one precise source-shape hypothesis: an assignment order or an intermediate that makes the a0 store issue before the a2 store. Do not re-run the same two shapes.
+
+Reopen condition: A measured boundary or ABI difference in the 7_siberius placement, or a source shape justified by a measured difference.
+
+- `target-ranker.json rank 399`
+- `runtime:bank/parallel-boot-analysis-fpbit-20261005/lane0-corrected.json`
+
+## family-ring-bitset124-seed-siberius-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Parked with two preserved refusals (ae158910: 112 bytes; df00db8b: correct 124-byte size, 15 differing bytes). Both diffs are register-allocation and hoist-order tie-breaks on an otherwise identical instruction stream, so reopening needs independent new evidence (a measured translation-unit or ABI context, or a changed compiler hypothesis), not another expression spelling. The seed's C is otherwise ready: family rank 342, 124 bytes, one pointer argument, void return, single external (resident table 0x139768). Six further in-zone placements (0_aranos_tutorial 0x37fbe0, 1_oozla 0x375ea0, 2_maktar_nebula 0x387390, 5_feltzin_system 0x394dd0, 8_tabora 0x390518, 9_dobbo 0x37d108) and twenty out-of-zone placements are mapped; none may be claimed before the seed is exact.
+
+Reopen condition: Reopening needs a precise source-shape hypothesis, not an expression permutation. The measured signature to reproduce is: the hoisted preamble emitting the table lui before the record-base addiu and the table low add before the constant one; addu v0,a3,v0 (base as the first operand of the index sum) rather than addu v0,v0,a3; and the constant one in t0 with the table base in t1. A candidate hypothesis is a source form in which the bit mask is an explicit intermediate evaluated before the table element address, or an expression whose operand order puts the record base first. Any such trial must be planned as a fresh reviewed task with that hypothesis stated; do not re-run the same two shapes.
+
+- `target-ranker.json rank 342`
+- `runtime:bank/parallel-boot-analysis-fpbit-20261005/lane0-corrected.json`
 
 ## float-guard-only-0_aranos_tutorial-20261004
 
@@ -2601,6 +2659,70 @@ Park unchanged firstsource. Retain target212/caller2376/fullhelper+inner2656 pin
 
 Reopen condition: Independent original object/array ownership/alias/source-lifetime/prototype evidence required. No parameteroverwrite, local declaration/scope/loop/translation-pointer/register forcing orfloat-association/profile/sourcecycling topreventoptimization.
 
+## native-review-family172-endako-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 35 controls plus the complete 204-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
+## native-review-family172-endako-v2-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 35 controls plus the complete 204-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
+## native-review-family172-endako-v3-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 35 controls plus the complete 204-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
+## native-review-family172-endako-v4-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 35 controls plus the complete 204-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
+## native-review-family304-endako-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 35 controls plus the complete 156-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
+## native-review-family304-endako-v2-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 35 controls plus the complete 156-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
+## native-review-family304-endako-v3-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 35 controls plus the complete 156-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
+## native-review-family304-endako-v4-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 35 controls plus the complete 156-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
 ## native-review-index-family-0_aranos_tutorial-20261004
 
 State: `integrated`. Kind: `candidate`.
@@ -3649,6 +3771,14 @@ Qualify all current19 controls and complete88-byte seed, no family until exact.
 
 Reopen condition: Independent source layout/ABI/storage phase evidence only; no equivalent source or register cycles.
 
+## native-review-prison-slot-store-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify all current 38 controls plus the complete 76-byte seed.
+
+Reopen condition: Independent layout/ABI/storage evidence only; no equivalent source or register cycles.
+
 ## native-review-record-search-family-20261004
 
 State: `queued`. Kind: `research`.
@@ -4041,6 +4171,116 @@ Park both immutable tri-state physical/logical-family variants includingrawdupli
 
 Reopen condition: Independent original commandrecord source/storage/qualifier or qualified access/lifetime mechanism evidence; no unsupported volatile, forced registers, padding, macro/expression permutations or flagchanges.
 
+## orbital-320388-family-20261005-10_hrugis_cloud
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-10_hrugis_cloud/evidence.json`
+
+## orbital-320388-family-20261005-15_gorn
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-15_gorn/evidence.json`
+
+## orbital-320388-family-20261005-16_snivelak
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-16_snivelak/evidence.json`
+
+## orbital-320388-family-20261005-17_smolg
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-17_smolg/evidence.json`
+
+## orbital-320388-family-20261005-18_damosel
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-18_damosel/evidence.json`
+
+## orbital-320388-family-20261005-19_grelbin
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-19_grelbin/evidence.json`
+
+## orbital-320388-family-20261005-20_yeedil
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-20_yeedil/evidence.json`
+
+## orbital-320388-family-20261005-22_dobbo_orbit
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-22_dobbo_orbit/evidence.json`
+
+## orbital-320388-family-20261005-25_wupash_nebula
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-25_wupash_nebula/evidence.json`
+
+## orbital-320388-family-20261005-26_jamming_array
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-26_jamming_array/evidence.json`
+
+## orbital-320388-family-20261005-30_insomniac_museum
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-320388-family-30_insomniac_museum/evidence.json`
+
 ## orbital-bitmap-getter-family-20261004
 
 State: `done`. Kind: `research`.
@@ -4310,6 +4550,116 @@ Qualify complete intended current source unit; publish only after root full imag
 Reopen condition: Current source/catalog/reference drift or independently measured ABI/layout evidence only.
 
 - `runtime:bank/parallel-orbital_lots-bitmap-family/9_dobbo/evidence.json`
+
+## orbital-c8d00-family-20261005-10_hrugis_cloud
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete seed plus all current controls. If exact, qualify the ten remaining in-zone placements one by one with their own boundary and identity proof; hand the six out-of-zone members to root.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change; no expression, type or comparison-order cycles.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family/evidence.json`
+
+## orbital-c8d00-family-20261005-15_gorn
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-15_gorn/evidence.json`
+
+## orbital-c8d00-family-20261005-16_snivelak
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-16_snivelak/evidence.json`
+
+## orbital-c8d00-family-20261005-17_smolg
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-17_smolg/evidence.json`
+
+## orbital-c8d00-family-20261005-18_damosel
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-18_damosel/evidence.json`
+
+## orbital-c8d00-family-20261005-19_grelbin
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-19_grelbin/evidence.json`
+
+## orbital-c8d00-family-20261005-20_yeedil
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-20_yeedil/evidence.json`
+
+## orbital-c8d00-family-20261005-22_dobbo_orbit
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-22_dobbo_orbit/evidence.json`
+
+## orbital-c8d00-family-20261005-25_wupash_nebula
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-25_wupash_nebula/evidence.json`
+
+## orbital-c8d00-family-20261005-26_jamming_array
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-26_jamming_array/evidence.json`
+
+## orbital-c8d00-family-20261005-30_insomniac_museum
+
+State: `exact_private`. Kind: `candidate`.
+
+Measure the complete placement plus all current controls for this program.
+
+Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
+
+- `runtime:bank/parallel-orbital_lots-c8d00-family-30_insomniac_museum/evidence.json`
 
 ## orbital-class-filter-family-20261004
 
