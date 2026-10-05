@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "13_boldan",
   "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
-  "source_sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
-  "catalog_sha256": "6974c186727ce54bea116b3cb0a3b52fc0297b17d347198f278dd83520feccdf",
+  "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
+  "catalog_sha256": "ec73169690ac7c2c1fcc9f23d29ca865cec3080e59983578929ef7c0be98408b",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2150,6 +2150,20 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "FUN_002B7340",
+      "address": 3372608,
+      "size": 64,
+      "matched": true,
+      "reference_sha256": "956edf7f25f8f8b7c2dc647ac7bf899765b80fc702eba3cafbab055bdee0ff28",
+      "candidate_sha256": "956edf7f25f8f8b7c2dc647ac7bf899765b80fc702eba3cafbab055bdee0ff28",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "13_boldan",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
       "symbol": "LVL_13_BOLDAN_FUN_002B8C70",
       "address": 2854000,
       "size": 52,
@@ -2554,6 +2568,20 @@
       "program": "13_boldan",
       "candidate_source": "candidates/levels/13_boldan.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_13_BOLDAN_FUN_00313288",
+      "address": 3224200,
+      "size": 396,
+      "matched": true,
+      "reference_sha256": "a99db61244226428ae86df98d312166c73c5f7d8176a973736dccda978ce6a39",
+      "candidate_sha256": "a99db61244226428ae86df98d312166c73c5f7d8176a973736dccda978ce6a39",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "13_boldan",
+      "candidate_source": "candidates/levels/13_boldan.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2561,15 +2589,15 @@
     "bytes_compared": 2833784,
     "segments": 1
   },
-  "matched_code_bytes": 9900,
+  "matched_code_bytes": 10360,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "84f297b44b978b7c9784d62860614f47226e35387c1a19e8f575089e967673fa",
-  "c_object_sha256": "8010c046efe99dcfb5fa1c29e0708b0a57682b2f78d732aa2a9113dbb8eb322f",
+  "candidate_elf_sha256": "c2acbd2679a6f1103e73c91e4dc4517f9535e56ea6c905463890093690439573",
+  "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
   "replacement_inputs": {
     "107E80.s": [
       "FUN_0026FEB8",
@@ -2725,6 +2753,7 @@
       "FUN_00351F28",
       "FUN_00351FA0",
       "FUN_0027B948",
+      "FUN_002B7340",
       "LVL_13_BOLDAN_FUN_002B8C70",
       "LVL_13_BOLDAN_FUN_002B8CA8",
       "LVL_13_BOLDAN_FUN_002B8DD8",
@@ -2753,7 +2782,8 @@
       "LVL_13_BOLDAN_FUN_002DDC58",
       "LVL_13_BOLDAN_FUN_002DDC90",
       "LVL_13_BOLDAN_FUN_002E15F8",
-      "LVL_13_BOLDAN_FUN_002FDA60"
+      "LVL_13_BOLDAN_FUN_002FDA60",
+      "LVL_13_BOLDAN_FUN_00313288"
     ]
   },
   "schema": 2,
@@ -2762,8 +2792,8 @@
     "target": "SCUS_972.68",
     "program": "13_boldan",
     "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
-    "source_sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
-    "catalog_sha256": "6974c186727ce54bea116b3cb0a3b52fc0297b17d347198f278dd83520feccdf",
+    "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
+    "catalog_sha256": "ec73169690ac7c2c1fcc9f23d29ca865cec3080e59983578929ef7c0be98408b",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_level_gate": {
@@ -2771,15 +2801,15 @@
       "bytes_compared": 2833784,
       "segments": 1
     },
-    "matched_code_bytes": 7608,
+    "matched_code_bytes": 7672,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "84f297b44b978b7c9784d62860614f47226e35387c1a19e8f575089e967673fa",
-    "c_object_sha256": "8010c046efe99dcfb5fa1c29e0708b0a57682b2f78d732aa2a9113dbb8eb322f",
+    "candidate_elf_sha256": "c2acbd2679a6f1103e73c91e4dc4517f9535e56ea6c905463890093690439573",
+    "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
     "replacement_inputs": {
       "107E80.s": [
         "FUN_0026FEB8",
@@ -2935,6 +2965,7 @@
         "FUN_00351F28",
         "FUN_00351FA0",
         "FUN_0027B948",
+        "FUN_002B7340",
         "LVL_13_BOLDAN_FUN_002B8C70",
         "LVL_13_BOLDAN_FUN_002B8CA8",
         "LVL_13_BOLDAN_FUN_002B8DD8",
@@ -2963,7 +2994,8 @@
         "LVL_13_BOLDAN_FUN_002DDC58",
         "LVL_13_BOLDAN_FUN_002DDC90",
         "LVL_13_BOLDAN_FUN_002E15F8",
-        "LVL_13_BOLDAN_FUN_002FDA60"
+        "LVL_13_BOLDAN_FUN_002FDA60",
+        "LVL_13_BOLDAN_FUN_00313288"
       ]
     }
   },
@@ -2973,13 +3005,13 @@
   },
   "reference_entry": 2812680,
   "candidate_entry": 2812680,
-  "dependency_sha256": "950d8185bb82eabaefdff403bee0a697d69c65fab84476e0f2598d28d58a693d",
-  "boot_review_sha256": "ab78804849db6dd3518be4bc2c561425674ac0d88d5b4ce12ef199729d579377",
+  "dependency_sha256": "10eed6eef97f72a020c6864228e86865d56af74928f01955262f2c13be146acd",
+  "boot_review_sha256": "07ac867ac9508af5e8c2c12a83330f946df78a31286d6677056b6549ebffc78a",
   "native": {
     "source": "candidates/levels/13_boldan.c",
     "catalog_path": "config/level-native/13_boldan.json",
     "review_path": "progress/level-candidates/13_boldan.json",
-    "review_sha256": "21077f0836d7c5cf55b3657bf9aae1bece9c7550a7f83ffc06a85e56f3c09270",
+    "review_sha256": "8a6224d63db903c68671a37c7d434aa76c4f74555f22ad074aea655a58e9550b",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2988,10 +3020,10 @@
       "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
       "reference_entry": 2812680,
       "candidate_source": "candidates/levels/13_boldan.c",
-      "source_sha256": "484f0e29ab4c5ba65631b349d1580d5bedd63ef6ddcd6f1c0f04040013131906",
-      "catalog_sha256": "a7b6db6b807235ce137e362d2e91f91d5a94bb24de100ca2182f87026c541415",
-      "object_sha256": "c695ba604491e823c174c431880737fbb4a6d53904b83d90463a22364a4f9641",
-      "candidate_elf_sha256": "f20243a19c08a063955da1cee11ef22b362b08d32c4ff8d353f2a975151fb336",
+      "source_sha256": "0b2a038c372b49acc507b701bf997c99c6e4aabda234c8c2184d9d51453a8761",
+      "catalog_sha256": "1fb5647f4a2ef605ba233f67b08b804147c24ec83a75de9ea5b302a295c54858",
+      "object_sha256": "7eb3aeaf33c4079f5c50d7fae28291e8a8c323f393dab5213a178788ea3d58cb",
+      "candidate_elf_sha256": "e2264002fa3d8d5591831da713a0e0dcc60b1af915d77f1439384ef9cade57c9",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3324,11 +3356,22 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 48
+        },
+        {
+          "symbol": "LVL_13_BOLDAN_FUN_00313288",
+          "address": 3224200,
+          "size": 396,
+          "matched": true,
+          "reference_sha256": "a99db61244226428ae86df98d312166c73c5f7d8176a973736dccda978ce6a39",
+          "candidate_sha256": "a99db61244226428ae86df98d312166c73c5f7d8176a973736dccda978ce6a39",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 396
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 2292
+      "matched_code_bytes": 2688
     },
-    "object_sha256": "c695ba604491e823c174c431880737fbb4a6d53904b83d90463a22364a4f9641"
+    "object_sha256": "7eb3aeaf33c4079f5c50d7fae28291e8a8c323f393dab5213a178788ea3d58cb"
   }
 }

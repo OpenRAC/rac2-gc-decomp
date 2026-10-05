@@ -2,8 +2,8 @@
   "target": "SCUS_972.68",
   "program": "4_barlow",
   "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
-  "source_sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
-  "catalog_sha256": "6974c186727ce54bea116b3cb0a3b52fc0297b17d347198f278dd83520feccdf",
+  "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
+  "catalog_sha256": "ec73169690ac7c2c1fcc9f23d29ca865cec3080e59983578929ef7c0be98408b",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2150,6 +2150,20 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "FUN_002B7340",
+      "address": 3476808,
+      "size": 64,
+      "matched": true,
+      "reference_sha256": "956edf7f25f8f8b7c2dc647ac7bf899765b80fc702eba3cafbab055bdee0ff28",
+      "candidate_sha256": "956edf7f25f8f8b7c2dc647ac7bf899765b80fc702eba3cafbab055bdee0ff28",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "4_barlow",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
       "symbol": "LVL_4_BARLOW_FUN_002D4350",
       "address": 2966352,
       "size": 52,
@@ -2526,6 +2540,20 @@
       "program": "4_barlow",
       "candidate_source": "candidates/levels/4_barlow.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_4_BARLOW_FUN_00329910",
+      "address": 3315984,
+      "size": 396,
+      "matched": true,
+      "reference_sha256": "1b45daf584ca54ede47ba8cefec6b04bc3d69a8109e839a2775087f19b1f73c8",
+      "candidate_sha256": "1b45daf584ca54ede47ba8cefec6b04bc3d69a8109e839a2775087f19b1f73c8",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "4_barlow",
+      "candidate_source": "candidates/levels/4_barlow.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2533,15 +2561,15 @@
     "bytes_compared": 3027792,
     "segments": 1
   },
-  "matched_code_bytes": 9892,
+  "matched_code_bytes": 10352,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "2655bb475c7b22eaebfe9c7376aa15766fca0809a4a3d545ac5ab3fe5c5749dd",
-  "c_object_sha256": "8010c046efe99dcfb5fa1c29e0708b0a57682b2f78d732aa2a9113dbb8eb322f",
+  "candidate_elf_sha256": "006bb6398acadee5e8947da3f381a81d96f51cd5ea821c1ac9ab684194f9bc4e",
+  "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
   "replacement_inputs": {
     "124800.s": [
       "FUN_0026FEB8",
@@ -2697,6 +2725,7 @@
       "FUN_00351F28",
       "FUN_00351FA0",
       "FUN_0027B948",
+      "FUN_002B7340",
       "LVL_4_BARLOW_FUN_002D4350",
       "LVL_4_BARLOW_FUN_002D4388",
       "LVL_4_BARLOW_FUN_002D44B8",
@@ -2723,7 +2752,8 @@
       "LVL_4_BARLOW_FUN_003147F0",
       "LVL_4_BARLOW_FUN_003A5EA0",
       "LVL_4_BARLOW_FUN_002F6F18",
-      "LVL_4_BARLOW_FUN_00314158"
+      "LVL_4_BARLOW_FUN_00314158",
+      "LVL_4_BARLOW_FUN_00329910"
     ]
   },
   "schema": 2,
@@ -2732,8 +2762,8 @@
     "target": "SCUS_972.68",
     "program": "4_barlow",
     "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
-    "source_sha256": "cd876796155d15764334c4e08ed21d6f3612c2ddb8d17407f6369e229ff3d10a",
-    "catalog_sha256": "6974c186727ce54bea116b3cb0a3b52fc0297b17d347198f278dd83520feccdf",
+    "source_sha256": "db1ebbeb0e6d28c5db6cd51ffc2cdc9c5cb5da9981919022aa155fb2fda8f8d9",
+    "catalog_sha256": "ec73169690ac7c2c1fcc9f23d29ca865cec3080e59983578929ef7c0be98408b",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_level_gate": {
@@ -2741,15 +2771,15 @@
       "bytes_compared": 3027792,
       "segments": 1
     },
-    "matched_code_bytes": 7608,
+    "matched_code_bytes": 7672,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "2655bb475c7b22eaebfe9c7376aa15766fca0809a4a3d545ac5ab3fe5c5749dd",
-    "c_object_sha256": "8010c046efe99dcfb5fa1c29e0708b0a57682b2f78d732aa2a9113dbb8eb322f",
+    "candidate_elf_sha256": "006bb6398acadee5e8947da3f381a81d96f51cd5ea821c1ac9ab684194f9bc4e",
+    "c_object_sha256": "314d9e5a558a7f59f42406f24ac8c52701cdf6133c8738b025910c2f13ea3795",
     "replacement_inputs": {
       "124800.s": [
         "FUN_0026FEB8",
@@ -2905,6 +2935,7 @@
         "FUN_00351F28",
         "FUN_00351FA0",
         "FUN_0027B948",
+        "FUN_002B7340",
         "LVL_4_BARLOW_FUN_002D4350",
         "LVL_4_BARLOW_FUN_002D4388",
         "LVL_4_BARLOW_FUN_002D44B8",
@@ -2931,7 +2962,8 @@
         "LVL_4_BARLOW_FUN_003147F0",
         "LVL_4_BARLOW_FUN_003A5EA0",
         "LVL_4_BARLOW_FUN_002F6F18",
-        "LVL_4_BARLOW_FUN_00314158"
+        "LVL_4_BARLOW_FUN_00314158",
+        "LVL_4_BARLOW_FUN_00329910"
       ]
     }
   },
@@ -2941,13 +2973,13 @@
   },
   "reference_entry": 2929800,
   "candidate_entry": 2929800,
-  "dependency_sha256": "ec1f7303d0ceeef534b30f8c4f11bb4ec2540a302392c886d5c42cd5e9b23e62",
-  "boot_review_sha256": "ab78804849db6dd3518be4bc2c561425674ac0d88d5b4ce12ef199729d579377",
+  "dependency_sha256": "f1717de5bc771bc8f8a551ef79989054209199ef34fb8b96ec7989d0156d1d40",
+  "boot_review_sha256": "07ac867ac9508af5e8c2c12a83330f946df78a31286d6677056b6549ebffc78a",
   "native": {
     "source": "candidates/levels/4_barlow.c",
     "catalog_path": "config/level-native/4_barlow.json",
     "review_path": "progress/level-candidates/4_barlow.json",
-    "review_sha256": "fd22959302db651c332456ffb2cdc34936bf27830b74121a2ce328b63a61950c",
+    "review_sha256": "8d8411a8755d011e55a1b7bbb352e7978c6f8d3ca660a86ed744e84a5454eda6",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -2956,10 +2988,10 @@
       "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
       "reference_entry": 2929800,
       "candidate_source": "candidates/levels/4_barlow.c",
-      "source_sha256": "683d019afb75b7a33e223a4fb538beea8ca6c67a877d860e5fcfe86ef8d0bdc0",
-      "catalog_sha256": "a659cd1ec66810c93c4dee91a934ff9f556bbc53b95743e04b92fdbf5ac8b0c4",
-      "object_sha256": "23ae250a202773a656fa4b9504d2bd267499631a053410098bda734fbcd4c5fb",
-      "candidate_elf_sha256": "d48ebd3abe61f0d869334a662c8aef9b7f8a1d407e58284a7bdb492d110bde37",
+      "source_sha256": "04d74cd34b189a6733c23680bcaf677e795c3e2dcffc953c07415c5e2de6995d",
+      "catalog_sha256": "533a3f9d8fc9f65796f4d2d6777f26b76a8c0d81c663d99667340e0a21f220c5",
+      "object_sha256": "bee55a31334fe1ced1c1502d24f584cc289c0505f18f63a8909b97c18ce50d24",
+      "candidate_elf_sha256": "405ad2802de27e9f7e0dafed580604b58268778404b6243127abc8351f739ab7",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3270,11 +3302,22 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 48
+        },
+        {
+          "symbol": "LVL_4_BARLOW_FUN_00329910",
+          "address": 3315984,
+          "size": 396,
+          "matched": true,
+          "reference_sha256": "1b45daf584ca54ede47ba8cefec6b04bc3d69a8109e839a2775087f19b1f73c8",
+          "candidate_sha256": "1b45daf584ca54ede47ba8cefec6b04bc3d69a8109e839a2775087f19b1f73c8",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 396
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 2284
+      "matched_code_bytes": 2680
     },
-    "object_sha256": "23ae250a202773a656fa4b9504d2bd267499631a053410098bda734fbcd4c5fb"
+    "object_sha256": "bee55a31334fe1ced1c1502d24f584cc289c0505f18f63a8909b97c18ce50d24"
   }
 }

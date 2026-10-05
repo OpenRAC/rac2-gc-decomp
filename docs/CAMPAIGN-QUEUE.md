@@ -1663,6 +1663,30 @@ Park unchanged firstsource andpreservefulltarget160/caller252/live/ref/unique/hi
 
 Reopen condition: Independent original argument/lifetime/fieldownership/sourcephase evidence mustjustifyreopening. No formaloverwrite, differentlocalnames, iteration/conditional/registerforcing orarbitrary independentstore reordering/flags/sourcecycles.
 
+## native-review-barlow-registry-clear-20261005
+
+State: `queued`. Kind: `research`.
+
+Pinfull80target andcompletecaller ordinarykey/statusABI; save independent currentexactSET source/proof provenance+relatednative80 pin asread-onlywitness, authorprivate CLEARC andrunmaintainedall27currentcontrols. Qualifiedseedonlythenuncoveredfamily; possiblefreshgetter92 separateafterclear.
+
+Reopen condition: Independent original typedpair/header/caller/ABI/lifetime evidence only; no alternate loops/localnames/register/formal/branch/flags/source cycles.
+
+## native-review-barlow-registry-clear-v1-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Park bothimmutable sources/objects/assembly/outcomes/full80+caller1664/SET80witness and27controls. ContinuegenuinelyfreshownedCtarget; no initializer/localname/declaration/order/register/flags/loop cycles.
+
+Reopen condition: Independent original source binding/initialization phase/compiler-module provenance evidence required; no automaticG0trial ormetadata assumptions fromABS loads. Preserve v1/v2 andzeroCcredit.
+
+## native-review-barlow-registry-clear-v2-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Park bothimmutable sources/objects/assembly/outcomes/full80+caller1664/SET80witness and27controls. ContinuegenuinelyfreshownedCtarget; no initializer/localname/declaration/order/register/flags/loop cycles.
+
+Reopen condition: Independent original source binding/initialization phase/compiler-module provenance evidence required; no automaticG0trial ormetadata assumptions fromABS loads. Preserve v1/v2 andzeroCcredit.
+
 ## native-review-barlow-scaled-statistics-20261005
 
 State: `queued`. Kind: `research`.
@@ -6579,6 +6603,26 @@ Reopen condition: Independent original ABI/layout/access-phase evidence only; no
 
 - `runtime:bank/parallel-orbital_lots-wupash-class-cleanup-v1/evidence.json`
 
+## orbital-wupash-marker-argmin-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-wupash-marker-argmin-v1/evidence.json`
+
+## orbital-wupash-random-state-init-20261004-v1
+
+State: `stopped`. Kind: `candidate`.
+
+Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
+
+Reopen condition: Independent original ABI/layout/access-phase evidence only; no expression cycles or near-match credit.
+
+- `runtime:bank/parallel-orbital_lots-wupash-random-state-init-v1/evidence.json`
+
 ## orbital-yeedil-audio-launch-20261004-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -6813,6 +6857,27 @@ Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifi
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
 - `private-work:parallel-20261004/boot_analysis/effect756-qualification.json`
 
+## parallel-boot-analysis-dobbo-expand464-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained whole currentunit firsttrial; retainrefusal/noaliases ifnotexact.
+
+Reopen condition: Independent original layout/type/ABI/accessphase/qualified compiler evidence only; no localarray/loop/bitexpression/reg/flags/padding permutations.
+
+- `private-work:parallel-20261004/boot_analysis/expand464-abi.json`
+
+## parallel-boot-analysis-dobbo-format396-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole currentunit qualification; preserve strictrefusal withoutsourcecycling.
+
+Reopen condition: Independent original layout/ABI/accessphase/source/qualified lowering witness only; no equivalentcopyloop/condition/locals/pointer/reg/flags variants.
+
+- `private-work:parallel-20261004/boot_analysis/format396-abi.json`
+- `private-work:parallel-20261004/boot_analysis/format396-resident-abi.json`
+
 ## parallel-boot-analysis-dobbo-gradient-quad-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -6894,6 +6959,16 @@ Reopen condition: Independent source/layout/ABI/qualifiedlowering witness only; 
 - `private-work:parallel-20261004/boot_analysis/rates544-abi.json`
 - `private-work:parallel-20261004/boot_analysis/rates544-forwarded-fp.json`
 
+## parallel-boot-analysis-dobbo-rebase440-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained whole currentunit trial; exactfullsymbol prerequisite beforefamily.
+
+Reopen condition: Independent original source/layout/ABI/accessphase or qualifiedlowering evidence only; no pointer/view/loop/local/param/qualifier/flags/register variants.
+
+- `private-work:parallel-20261004/boot_analysis/rebase440-abi.json`
+
 ## parallel-boot-analysis-dobbo-select352-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -6923,6 +6998,19 @@ One maintained wholecurrentunit276firstseed; exactfullsize/everybyte+allcontrols
 Reopen condition: Independent originalsource/declaration/ABI/accessphase/qualifiedlowering witness only; no casts/row/view/pointer/loop/local/ordering/qualifier/flags/register/padding variants.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-dobbo-sort468-v1
+
+State: `stopped`. Kind: `candidate`.
+
+One maintained whole currentunit firstC trial; only exactfullbody allowsfamily, preserve any refusal.
+
+Reopen condition: Independent original source/layout/ABI/qualified compiler witness only; no sort/float/array/pointer/local/condition/flag/register permutations.
+
+- `private-work:parallel-20261004/boot_analysis/sort468-abi.json`
+- `private-work:parallel-20261004/boot_analysis/sort468-double-abi.json`
+- `private-work:parallel-20261004/boot_analysis/sort468-format.json`
+- `runtime:bank/boot-3427c0-gofast/catalog.json`
 
 ## parallel-boot-analysis-dobbo-sparse560-v1
 
@@ -7023,6 +7111,276 @@ Park tile-bitmap physical family; select fresh independent scalar target.
 Reopen condition: Independent output declaration/source phase or qualified lowering witness, no pointer/type/local/register/address regroup/loop/flush/order/flag permutations.
 
 - `private-work:parallel-20261004/boot_analysis/CURRENT.md`
+
+## parallel-boot-analysis-format396-0-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-1-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-10-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-11-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-12-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-13-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-14-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-15-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-16-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-17-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-18-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-19-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-2-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-20-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-22-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-23-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-24-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-25-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-26-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-3-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-30-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-4-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-5-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-6-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-7-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-8-v1
+
+State: `integrated`. Kind: `candidate`.
+
+One maintained whole current unit qualification before root integration; preserve any strict mismatch.
+
+Reopen condition: Independent original source/layout/ABI/qualified lowering evidence only; no permutations/flags/padding or alias retries.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
+
+## parallel-boot-analysis-format396-family
+
+State: `done`. Kind: `research`.
+
+Maintained26nonseedwholeunit trials plusimmutable seedreuse then portableREADYpacket.
+
+Reopen condition: Independent source/layout/reference/ABI witness only.
+
+- `runtime:bank/parallel-boot_analysis-format-family/placements-qualified.json`
 
 ## parallel-boot-analysis-kind-pointer96-family
 
@@ -9138,6 +9496,34 @@ Reopen condition: Independent source/cursor layout and loop lifetime evidence, n
 
 - `private-work:parallel-20261004/root-gp/boot-eligible-filtered.json`
 
+## root-boot-record-relocate116-first-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve first ordinary record/address model, complete owners/xrefs/live bytes and all179 exact controls. Stop without equivalent association, locals/declaration, pointer/type, scope, branch/register or profile cycles.
+
+Reopen condition: Independent original field/source/prototype/compiler evidence explaining complete differences; matching size and equivalent expression spelling are insufficient.
+
+- `private-work:parallel-20261004/root-gp/record-relocate116-static.json`
+- `private-work:parallel-20261004/root-gp/relocate116-live-memory.json`
+- `private-work:parallel-20261004/root-gp/relocate116-owner-00278eb0.json`
+- `private-work:parallel-20261004/root-gp/relocate116-owner-00278fc0.json`
+- `private-work:parallel-20261004/root-gp/relocate116-xrefs.json`
+
+## root-boot-record-relocate116-research-20261005
+
+State: `done`. Kind: `research`.
+
+ONE ordinary descriptor/16-byte-record C with all179 currentboot controls; preservecomplete size/byte refusal without source/layout/branch/register/flag cycles.
+
+Reopen condition: Independent original source/type/ABI/access-phase/compiler evidence only, no equivalent spelling permutation.
+
+- `private-work:parallel-20261004/root-gp/record-relocate116-static.json`
+- `private-work:parallel-20261004/root-gp/relocate116-live-memory.json`
+- `private-work:parallel-20261004/root-gp/relocate116-owner-00278eb0.json`
+- `private-work:parallel-20261004/root-gp/relocate116-owner-00278fc0.json`
+- `private-work:parallel-20261004/root-gp/relocate116-xrefs.json`
+
 ## root-boot-record460-storage-v2-20261004
 
 State: `stopped`. Kind: `candidate`.
@@ -9158,6 +9544,56 @@ Reopen condition: Independent source/cursor layout and loop lifetime evidence, n
 
 - `private-work:parallel-20261004/root-gp/boot-record-leaf-pin.json`
 - `private-work:parallel-20261004/root-gp/boot-leaf-ghidra-0.json`
+
+## root-boot-resident-channel64-first-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+ONE ordinary C field projection and conditional halfword stores withfull179controls, preserveanycomplete refusal without sign/flag/array/view/locals/branch/register/profile permutations.
+
+Reopen condition: Independent originalsource/type/ABI/compiler witness explaining complete difference, not equivalent-expression cycles.
+
+- `private-work:parallel-20261004/root-gp/channel64-static.json`
+- `private-work:parallel-20261004/root-gp/channel64-live-memory.json`
+- `private-work:parallel-20261004/root-gp/channel64-caller-002f57a8.json`
+- `private-work:parallel-20261004/root-gp/channel64-xrefs.json`
+
+## root-boot-resident-channel64-research-20261005
+
+State: `done`. Kind: `research`.
+
+ONE ordinary C field projection and conditional halfword stores withfull179controls, preserveanycomplete refusal without sign/flag/array/view/locals/branch/register/profile permutations.
+
+Reopen condition: Independent originalsource/type/ABI/compiler witness explaining complete difference, not equivalent-expression cycles.
+
+- `private-work:parallel-20261004/root-gp/channel64-static.json`
+- `private-work:parallel-20261004/root-gp/channel64-live-memory.json`
+- `private-work:parallel-20261004/root-gp/channel64-caller-002f57a8.json`
+- `private-work:parallel-20261004/root-gp/channel64-xrefs.json`
+
+## root-boot-ring-mark124-first-20261005
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve first ordinary ring iteration and complete callers/enqueue/reset/live evidence. Stop without update-form, ternary, scopes/locals/types/qualifiers/register/flag permutations.
+
+Reopen condition: Independent original source/ABI/layout or qualified compiler provenance explaining complete increment/select difference; equivalent expressions and control matches are insufficient.
+
+- `private-work:parallel-20261004/root-gp/ring124-static.json`
+- `private-work:parallel-20261004/root-gp/ring124-live-memory.json`
+- `private-work:parallel-20261004/root-gp/ring124-xrefs.json`
+
+## root-boot-ring-mark124-research-20261005
+
+State: `done`. Kind: `research`.
+
+One first natural ring iteration C withall179currentbootcontrols and originalbitmap binding; preservewhole refusal without loop/index/qualifier/type/register/profile cycles.
+
+Reopen condition: Independent original layout/ABI/source/compiler evidence explaining complete difference.
+
+- `private-work:parallel-20261004/root-gp/ring124-static.json`
+- `private-work:parallel-20261004/root-gp/ring124-live-memory.json`
+- `private-work:parallel-20261004/root-gp/ring124-xrefs.json`
 
 ## root-boot-sprite396-20261004
 
@@ -10228,6 +10664,27 @@ Retain every complete control result, then regenerate affected object reviews an
 
 Reopen condition: An independently changed checker/source/catalog/tool input with a concrete validation purpose, never duplicate source cycling.
 
+## root-resident-channel64-family-20261005
+
+State: `done`. Kind: `research`.
+
+Verifyall27fullGhidrabounds/livepins/callerA0andunusedV0, jointlyqualifycurrentwholebootobject acrossall28targetcatalogs; then authorboot/commonplacements andfreshfull28gates/tests/exports/normalpush.
+
+Reopen condition: Independent originalsource/type/ABI/compiler witness explaining complete difference, not equivalent-expression cycles.
+
+- `private-work:parallel-20261004/root-gp/channel64-family-scan.json`
+- `private-work:parallel-20261004/root-gp/channel64-first-trial.json`
+
+## root-resident-channel64-joint-20261005
+
+State: `integrated`. Kind: `candidate`.
+
+Requireall28wholeunit targets andcontrols exact; thenauthorbootfragment/27explicitcommonplacements, freshboot180review/sourceinventory/all28imagegates/independentexports/tests/explicitcommitpush.
+
+Reopen condition: Independent source/catalog/reference/ABI/compiler witness; no equivalent expression or profile cycles.
+
+- `private-work:parallel-20261004/root-gp/channel64-family-live-audit.json`
+
 ## root-resume-three-combined-0_aranos_tutorial-20261004
 
 State: `integrated`. Kind: `candidate`.
@@ -10451,6 +10908,16 @@ State: `stopped`. Kind: `candidate`.
 Require all786complete functions exact before frozen boot/all27loaded-image gates and public credit.
 
 Reopen condition: New compiler input or a concrete candidate proof freshness issue, not a duplicate unchanged trial.
+
+## root-uya-gp-comparison-20261005
+
+State: `done`. Kind: `research`.
+
+Retain assessed comparison; continue unchanged instrument/profile integration. No compiler/assembler/flags or old-refusal reopening without independent RAC2 ABI/layout/context proof.
+
+Reopen condition: Concrete new RAC2 original producer/caller/source/compiler witness for a specific whole-body refusal, followed by independently qualified context and all required gates.
+
+- `private-work:parallel-20261004/root-gp/uya-comparison-assessment.json`
 
 ## scalar-cubic-10_hrugis_cloud-20261004
 

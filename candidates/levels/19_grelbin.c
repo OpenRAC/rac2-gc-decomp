@@ -371,3 +371,55 @@ void LVL_19_GRELBIN_FUN_002F0C48(void) {
         LVL_19_GRELBIN_D_001BFB80.state = 2;
     }
 }
+
+/* Substitute the first percent selector in a record's localized text. */
+typedef struct {
+    unsigned char gap0[10];
+    short text_id;
+    short mapped_key;
+    unsigned char gap0e[26];
+} DobboFormatRow396;
+typedef struct {
+    unsigned char gap0[32];
+    DobboFormatRow396 *rows;
+} DobboFormatRoot396;
+typedef struct {
+    unsigned char gap0[0x80];
+    int amount;
+    unsigned char gap84[0x5c];
+} DobboFormatMapped396;
+typedef char DobboFormatRowStride396[(sizeof(DobboFormatRow396) == 40) ? 1 : -1];
+typedef char DobboFormatMappedStride396[(sizeof(DobboFormatMapped396) == 0xe0) ? 1 : -1];
+extern DobboFormatRoot396 LVL_19_GRELBIN_D_001CA020;
+extern const char LVL_19_GRELBIN_D_001A99E0[];
+extern const char LVL_19_GRELBIN_D_001A99E8[];
+extern const unsigned char *LVL_19_GRELBIN_FUN_002F1F28(int);
+extern void BOOT_FUN_00115DA8(char *, const char *, ...);
+void LVL_19_GRELBIN_FUN_00306B10(int index, unsigned char *output)
+{
+    unsigned char temporary[80];
+    const unsigned char *source = LVL_19_GRELBIN_FUN_002F1F28(LVL_19_GRELBIN_D_001CA020.rows[index].text_id);
+    unsigned char *p = temporary;
+    if (!source)
+        return;
+    while (*source && *source != '%')
+        *output++ = *source++;
+    if (!*source) {
+        *output = *source;
+        return;
+    }
+    ++source;
+    if (*source == 'b') {
+        int key = LVL_19_GRELBIN_D_001CA020.rows[index].mapped_key;
+        DobboFormatMapped396 *record = (DobboFormatMapped396 *)&LVL_19_GRELBIN_D_00265870[LVL_19_GRELBIN_D_00139568[key]];
+        BOOT_FUN_00115DA8((char *)temporary, LVL_19_GRELBIN_D_001A99E0, record->amount);
+    } else {
+        BOOT_FUN_00115DA8((char *)temporary, LVL_19_GRELBIN_D_001A99E8);
+    }
+    ++source;
+    while (*p)
+        *output++ = *p++;
+    while (*source)
+        *output++ = *source++;
+    *output = 0;
+}
