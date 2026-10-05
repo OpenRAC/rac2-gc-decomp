@@ -244,6 +244,8 @@ Related projects include [RAC1](https://github.com/Lynder063/rac1-decomp) and
 can inform a hypothesis; addresses and code must be verified against the RAC2 target.
 Reused C is credited per function in [the second C lot](docs/SECOND-C-LOT.md),
 and contributed research in [community engine references](docs/COMMUNITY-ENGINE-REFERENCE.md).
+Compiler, libgcc and SDK findings measured on RAC1 are summarised in
+[findings from rac1-decomp](docs/RAC1-DECOMP-FINDINGS.md).
 [OpenRAC](https://openrac.dev/) provides a community view of decompilation projects.
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before contributing. Write documentation,
