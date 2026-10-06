@@ -37,7 +37,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Seven hundred nineteen contextual native bodies remain distinct in the
+family has 26. Eight hundred three contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -83,20 +83,29 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 182 catalogued definitions (181 campaign-authored, one vendored) | 9,708 |
-| Native overlays | 782 family-or-singleton items, 783 contextual variants | 94,856 across 989 placements |
+| Native overlays | 811 family-or-singleton items, 812 contextual variants | 97,884 across 1,018 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 85,672, or 85,696 when both clear
+Native representative catalogued bytes total 88,700, or 88,724 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **311,500 / 48,788,176 bytes (0.6385%)**.
+The current integration exporter accepts **314,672 / 48,788,176 bytes**.
+The three-family lot adds 29 complete native placements / 3,028 bytes: eleven
+80-byte resident-state predicates, eleven 124-byte signed-index bitmap accessors,
+and seven 112-byte nonzero-byte counters. Three canonical authored fragments
+retain explicit per-program bindings. Every changed complete unit qualifies all
+638 existing controls plus the 29 new bodies, followed by all 28 full-image gates.
+Authored inventory variants retain their address bindings; fragment reuse does
+not itself establish a normalized machine-code family or add duplicate credit.
+
+The earlier timer lot is described below for its separate profile evidence.
 The latest lot adds one complete 84-byte registered gameplay callback in Barlow,
 the timer that sets a 10000 tick target, decrements the remaining time by the
 resident delta with a zero floor, or clears the active mode, then clears the
-first field. It is compiled under the qualified small-data profile with the
+first field. It was compiled under the qualified small-data profile with the
 pinned GP and the explicit small-data extern for the resident float.
 
 The same 84-byte body exists byte-identically in eleven further programs, but
@@ -104,8 +113,8 @@ those use the default profile, and a measured probe shows the reconstructed
 backend emits an absolute address pair there instead: the unit compiles to 88
 bytes against the 84-byte reference. Those eleven placements stay unmatched and
 are recorded as blocked by the instrument, not by the source. One authored
-fragment retains its explicit per-program bindings; all 989 complete native
-functions match, including 988 controls, and the Barlow G8 profile, GP and
+fragment retains its explicit per-program bindings; that earlier qualification checked 989 complete native
+functions, including 988 controls, and the Barlow G8 profile, GP and
 external bindings are unchanged.
 
 The preceding lot added two complete 52-byte float families, one per program and

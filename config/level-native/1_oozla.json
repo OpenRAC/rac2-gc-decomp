@@ -1,253 +1,260 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "1_oozla",
-  "program": "levels/1_oozla",
-  "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
   "entry": 2776968,
-  "source": "candidates/levels/1_oozla.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "D_19B278": 1684088,
+    "LVL_1_OOZLA_D_00139568": 1283432,
+    "LVL_1_OOZLA_D_001395B8": 1283512,
+    "LVL_1_OOZLA_D_00189E20": 1613344,
+    "LVL_1_OOZLA_D_0018B040": 1617984,
+    "LVL_1_OOZLA_D_0018B134": 1618228,
+    "LVL_1_OOZLA_D_0018C0B0": 1622192,
+    "LVL_1_OOZLA_D_0018C0B4": 1622196,
+    "LVL_1_OOZLA_D_001A79F0": 1735152,
+    "LVL_1_OOZLA_D_001A8EB0": 1740464,
+    "LVL_1_OOZLA_D_001A9A60": 1743456,
+    "LVL_1_OOZLA_D_001A9A68": 1743464,
+    "LVL_1_OOZLA_D_001B24C0": 1778880,
+    "LVL_1_OOZLA_D_001B2500": 1778944,
+    "LVL_1_OOZLA_D_001B9300": 1807104,
+    "LVL_1_OOZLA_D_001BF600": 1832448,
+    "LVL_1_OOZLA_D_001C9AA0": 1874592,
+    "LVL_1_OOZLA_D_00226E00": 2256384,
+    "LVL_1_OOZLA_D_0022DD00": 2284800,
+    "LVL_1_OOZLA_D_0022E300": 2286336,
+    "LVL_1_OOZLA_D_00231A40": 2300480,
+    "LVL_1_OOZLA_D_002546B0": 2442928,
+    "LVL_1_OOZLA_D_002637A0": 2504608,
+    "LVL_1_OOZLA_D_0027EF80": 2617216,
+    "LVL_1_OOZLA_FUN_002CCE68": 2936424,
+    "LVL_1_OOZLA_FUN_002D2298": 2957976,
+    "LVL_1_OOZLA_FUN_002D25E0": 2958816,
+    "LVL_1_OOZLA_FUN_002E31B0": 3027376,
+    "LVL_1_OOZLA_FUN_002E34A0": 3028128,
+    "LVL_1_OOZLA_FUN_002E3918": 3029272,
+    "LVL_1_OOZLA_FUN_002E5990": 3037584,
+    "LVL_1_OOZLA_FUN_002E5CF8": 3038456,
+    "LVL_1_OOZLA_FUN_002E99D0": 3054032,
+    "LVL_1_OOZLA_FUN_003558E0": 3496160,
+    "LVL_1_OOZLA_FUN_003717C8": 3610568
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_1_OOZLA_FUN_002AE920",
       "address": 2812192,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_1_OOZLA_FUN_002AE920"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002AE958",
       "address": 2812248,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_1_OOZLA_FUN_002AE958"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002AEA88",
       "address": 2812552,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_1_OOZLA_FUN_002AEA88"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002AF578",
       "address": 2815352,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_1_OOZLA_FUN_002AF578"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002CC0B8",
       "address": 2932920,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_1_OOZLA_FUN_002CC0B8"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002CD110",
       "address": 2937104,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_1_OOZLA_FUN_002CD110"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002D9238",
       "address": 2986552,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_1_OOZLA_FUN_002D9238"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002E9138",
       "address": 3051832,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_1_OOZLA_FUN_002E9138"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002CC910",
       "address": 2935056,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_1_OOZLA_FUN_002CC910"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002DAFD8",
       "address": 2994136,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_1_OOZLA_FUN_002DAFD8"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002AE990",
       "address": 2812304,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_1_OOZLA_FUN_002AE990"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002AE9C8",
       "address": 2812360,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_1_OOZLA_FUN_002AE9C8"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002B3C78",
       "address": 2833528,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_1_OOZLA_FUN_002B3C78"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_00337B90",
       "address": 3373968,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_1_OOZLA_FUN_00337B90"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002EC468",
       "address": 3064936,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_1_OOZLA_FUN_002EC468"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002FB360",
       "address": 3126112,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_1_OOZLA_FUN_002FB360"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_003740A8",
       "address": 3621032,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_1_OOZLA_FUN_003740A8"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_00360FD8",
       "address": 3543000,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_1_OOZLA_FUN_00360FD8"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_003FA410",
       "address": 4170768,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_1_OOZLA_FUN_003FA410"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002CBF78",
       "address": 2932600,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_1_OOZLA_FUN_002CBF78"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002A73C0",
       "address": 2782144,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_1_OOZLA_FUN_002A73C0"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002E8E10",
       "address": 3051024,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_1_OOZLA_FUN_002E8E10"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_00376408",
       "address": 3630088,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_1_OOZLA_FUN_00376408"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002CBEF8",
       "address": 2932472,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_1_OOZLA_FUN_002CBEF8"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002CC340",
       "address": 2933568,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_1_OOZLA_FUN_002CC340"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002E8778",
       "address": 3049336,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_1_OOZLA_FUN_002E8778"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002FE9E0",
       "address": 3140064,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_1_OOZLA_FUN_002FE9E0"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002B4328",
       "address": 2835240,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_1_OOZLA_FUN_002B4328"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_0043CA98",
       "address": 4442776,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_1_OOZLA_FUN_0043CA98"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_00307158",
       "address": 3174744,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_1_OOZLA_FUN_00307158"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_002D21F0",
       "address": 2957808,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_1_OOZLA_FUN_002D21F0"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_00441F10",
       "address": 4464400,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_1_OOZLA_FUN_00441F10"
     },
     {
-      "symbol": "LVL_1_OOZLA_FUN_004423A8",
       "address": 4465576,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_1_OOZLA_FUN_004423A8"
+    },
+    {
+      "address": 3262176,
+      "meaning": "counts the non-zero bytes of the 0x1C by 4 byte table at 0x19B278 and returns the count clamped into 0..0x28",
+      "size": 112,
+      "symbol": "LVL_1_OOZLA_FUN_0031C6E0"
     }
   ],
-  "externals": {
-    "LVL_1_OOZLA_D_001A8EB0": 1740464,
-    "LVL_1_OOZLA_D_0018C0B4": 1622196,
-    "LVL_1_OOZLA_D_00189E20": 1613344,
-    "LVL_1_OOZLA_FUN_002CCE68": 2936424,
-    "LVL_1_OOZLA_FUN_002E5990": 3037584,
-    "LVL_1_OOZLA_FUN_002E5CF8": 3038456,
-    "LVL_1_OOZLA_FUN_003717C8": 3610568,
-    "LVL_1_OOZLA_D_0027EF80": 2617216,
-    "LVL_1_OOZLA_D_001395B8": 1283512,
-    "LVL_1_OOZLA_D_00231A40": 2300480,
-    "LVL_1_OOZLA_D_0022E300": 2286336,
-    "LVL_1_OOZLA_D_00226E00": 2256384,
-    "LVL_1_OOZLA_D_0022DD00": 2284800,
-    "LVL_1_OOZLA_D_002546B0": 2442928,
-    "LVL_1_OOZLA_D_0018C0B0": 1622192,
-    "LVL_1_OOZLA_D_0018B134": 1618228,
-    "LVL_1_OOZLA_D_0018B040": 1617984,
-    "LVL_1_OOZLA_D_00139568": 1283432,
-    "LVL_1_OOZLA_D_002637A0": 2504608,
-    "LVL_1_OOZLA_FUN_002E31B0": 3027376,
-    "LVL_1_OOZLA_D_001A79F0": 1735152,
-    "LVL_1_OOZLA_D_001B9300": 1807104,
-    "LVL_1_OOZLA_D_001BF600": 1832448,
-    "LVL_1_OOZLA_D_001C9AA0": 1874592,
-    "LVL_1_OOZLA_D_001A9A60": 1743456,
-    "LVL_1_OOZLA_D_001A9A68": 1743464,
-    "LVL_1_OOZLA_FUN_002E99D0": 3054032,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_1_OOZLA_FUN_003558E0": 3496160,
-    "LVL_1_OOZLA_D_001B24C0": 1778880,
-    "LVL_1_OOZLA_D_001B2500": 1778944,
-    "LVL_1_OOZLA_FUN_002D2298": 2957976,
-    "LVL_1_OOZLA_FUN_002E34A0": 3028128,
-    "LVL_1_OOZLA_FUN_002E3918": 3029272,
-    "LVL_1_OOZLA_FUN_002D25E0": 2958816
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "1_oozla",
+  "program": "levels/1_oozla",
+  "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
+  "schema": 1,
+  "source": "candidates/levels/1_oozla.c",
+  "target": "SCUS_972.68"
 }

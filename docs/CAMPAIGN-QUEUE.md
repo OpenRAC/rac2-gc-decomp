@@ -615,7 +615,7 @@ Reopen condition: A concrete new ABI/type/layout/compiler or algorithm observati
 
 ## aranos-explicit-return-phases-20261004-v2
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure all14complete symbols with10existingnativecontrols in one standalone unit.
 
@@ -648,7 +648,7 @@ Closed: the public inventory includes all 495 later annotations plus the origina
 
 ## barlow-header-count-isolated-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require all eleven complete symbols exact before authoring and full-image gates.
 
@@ -967,26 +967,30 @@ Closed by the measured compiler rule; consult the recorded exception limits befo
 
 ## family-countbytes112-placements-20261005
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Require all seven complete 112-byte bodies exact; keep any refusal with its measured difference. Out-of-zone placements stay for the owning workers.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: A measured boundary difference in one placement, or a changed source shape justified by a measured difference.
 
 - `target-ranker.json rank 363`
 - `family-countbytes112-seed-siberius-20261005`
 - `runtime:bank/parallel-boot-analysis-fpbit-20261005/rank363-placements.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/reconciliation/countbytes112-whole-units/qualification.json`
 
 ## family-countbytes112-seed-siberius-20261005
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Require the complete 112-byte body exact; keep any refusal with its measured difference.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: A measured boundary or ABI difference, or a source shape justified by a measured difference.
 
 - `target-ranker.json rank 363`
 - `runtime:bank/parallel-boot-analysis-fpbit-20261005/lane0-corrected.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/reconciliation/countbytes112-whole-units/qualification.json`
 
 ## family-record8-store76-seed-siberius-20261005
 
@@ -1225,6 +1229,26 @@ State: `integrated`. Kind: `candidate`.
 Qualify complete per-program source and all prior native controls, then rebuild boot and all27overlays.
 
 Reopen condition: New measured ABI, boundary or source context evidence
+
+## fresh-nullable-pointer98-word8-predicate36-seed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Park the immutable source/catalog/object/assembly/reference/outcome and27 raw family reservations with zero C credit. BudgetONE exhausted. Do not try equivalent branch, conditional expression, temporary, prototype spelling, field signedness, qualifier, register or flags variants. Continue the distinct measured test-and-set-byte36 reservation only after root approval.
+
+Reopen condition: Independent original producer/type/source-phase or qualified compiler provenance evidence explaining the actual36-byte Boolean return lowering is required. No equivalent-source scheduling cycles or partial/sliced byte acceptance.
+
+- `private-work:c-campaign-20261006/fresh-selection-data/pointer-predicate36-negative-evidence.json`
+
+## fresh-test-set-byteBE-bit2-status36-seed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutable natural source/catalog/object/assembly/complete36-byte comparison and21-placement raw family packet with zero C credit. BudgetONE exhausted. Do not invert the branch, respell OR/update/conditional returns, change locals/prototype/qualifiers/registers or compiler flags. No further root trials until firstlot publication is complete.
+
+Reopen condition: Independent original source-phase/module/compiler provenance or producer/prototype/type evidence explaining the measured reference branch layout is required; no equivalent-source scheduling cycles or partial matches.
+
+- `private-work:c-campaign-20261006/fresh-selection-data/test-set-byte36-negative-evidence.json`
 
 ## global-unique-code-catalogue-20261005
 
@@ -1758,6 +1782,26 @@ Compare all complete symbols and object hash with the pre-lot committed native r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
+## native-complement-power68-v1-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reservation/registration first; maintain complete68byte target plus ALL38current controls. On exact seed prepare same ordinaryC across explicit27whole raw-identical placements and currentperunitcontrols.
+
+Reopen condition: Independent original source/type/ABI/lifetime or separately qualified compiler evidence; no equivalent multiplication loop, float variable/register naming, count iteration, constant or flags cycling.
+
+## native-packed-word-compose-32-v1-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Park retained immutable first source/catalog/object/assembly/manifest/outcome; no second OR-tree, mask, type spelling, register-name or store-order trial. Continue a genuinely different uncovered arithmetic family under qualified unchanged profiles.
+
+Reopen condition: Independent original source/type/ABI or independently qualified compiler witness explaining the original OR tree/scheduling. The already satisfied caller argument mapping does not reopen; equivalent OR-tree/type/register/store scheduling permutations are forbidden without that witness.
+
+- `private-work:c-campaign-20261006/fresh-selection-frame/negative-packed32.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/negative-trial-4b2abcad`
+- `private-work:c-campaign-20261006/fresh-selection-frame/proposal-ready.json`
+
 ## native-review-barlow-action-gate-20261005
 
 State: `stopped`. Kind: `research`.
@@ -1808,7 +1852,7 @@ Reopen condition: Independent original callback/global/header ABI/layout/alias/l
 
 ## native-review-barlow-callback-timer-qualified-20261005
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 FirstnaturalC/wholeCURRENTG8unit strictqualification; preserve negatives, familyonlyifseedexact.
 
@@ -1928,7 +1972,7 @@ Reopen condition: Independent serializedalias/layout/ABI/sourcephase evidenceonl
 
 ## native-review-boldan-compact-record-v2-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify every complete CURRENT control and new300-byte body in maintained intended unit; familyonlyafterexact seed.
 
@@ -2470,7 +2514,7 @@ Reopen condition: Independent originalpolynomial/source variable/storage/lifetim
 
 ## native-review-endako-index-c-v1-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure all complete14symbols in intendedunit; preserve refusal or qualifyfamilyonlyafterseedexact.
 
@@ -3822,7 +3866,7 @@ Reopen condition: Independent original local/storage/source-lifetime orqualified
 
 ## native-review-prison-search-v1-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify all current19 controls and complete88-byte seed, no family until exact.
 
@@ -4269,113 +4313,135 @@ Reopen condition: New independently measured family, binding or instrument evide
 
 ## orbital-320388-family-20261005-10_hrugis_cloud
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-10_hrugis_cloud/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-15_gorn
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-15_gorn/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-16_snivelak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-16_snivelak/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-17_smolg/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-18_damosel
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-18_damosel/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-19_grelbin
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-19_grelbin/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-20_yeedil
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-20_yeedil/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-22_dobbo_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-22_dobbo_orbit/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-25_wupash_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-25_wupash_nebula/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-26_jamming_array
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-26_jamming_array/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-320388-family-20261005-30_insomniac_museum
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-320388-family-30_insomniac_museum/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap124/delivery.json`
 
 ## orbital-bitmap-getter-family-20261004
 
@@ -4649,113 +4715,157 @@ Reopen condition: Current source/catalog/reference drift or independently measur
 
 ## orbital-c8d00-family-20261005-10_hrugis_cloud
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete seed plus all current controls. If exact, qualify the ten remaining in-zone placements one by one with their own boundary and identity proof; hand the six out-of-zone members to root.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change; no expression, type or comparison-order cycles.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-15_gorn
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-15_gorn/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-16_snivelak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-16_snivelak/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-17_smolg/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-18_damosel
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-18_damosel/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-19_grelbin
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-19_grelbin/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-20_yeedil
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-20_yeedil/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-22_dobbo_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-22_dobbo_orbit/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-25_wupash_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-25_wupash_nebula/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-26_jamming_array
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-26_jamming_array/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-c8d00-family-20261005-30_insomniac_museum
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
-Measure the complete placement plus all current controls for this program.
+Fresh whole-current-unit private qualification is linked; close this original task only after every original catalogue body is present in validated published combined-unit/full-image proofs. Keep historical source, targets and last_trial unchanged.
 
 Reopen condition: New ABI/layout evidence or a measured compiler-hypothesis change only.
 
 - `runtime:bank/parallel-orbital_lots-c8d00-family-30_insomniac_museum/evidence.json`
+- `private-work:c-campaign-20261006/reconciliation/reconciliation-v2.json`
+- `private-work:c-campaign-20261006/bitmap80/delivery.json`
+- `private-work:c-campaign-20261006/bitmap80/original-bank-conservation.json`
+- `private-work:c-campaign-20261006/bitmap80/source-recipe-roundtrip.json`
 
 ## orbital-class-filter-family-20261004
 
@@ -5349,7 +5459,7 @@ Reopen condition: Current source/catalog/reference drift or independent original
 
 ## orbital-flag-clear-family-20261004-0_aranos_tutorial
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5359,7 +5469,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-10_hrugis_cloud
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5369,7 +5479,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-11_joba
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5379,7 +5489,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-12_todano
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5389,7 +5499,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-13_boldan
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5399,7 +5509,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-14_aranos_prison
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5409,7 +5519,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5419,7 +5529,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-20_yeedil
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5429,7 +5539,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-22_dobbo_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5439,7 +5549,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-23_damosel_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5449,7 +5559,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-24_ship_shack
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5459,7 +5569,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-25_wupash_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5469,7 +5579,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-26_jamming_array
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5479,7 +5589,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-2_maktar_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5489,7 +5599,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-30_insomniac_museum
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5499,7 +5609,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-3_endako
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5509,7 +5619,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-5_feltzin_system
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5519,7 +5629,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-clear-family-20261004-6_notak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5539,7 +5649,7 @@ Reopen condition: Current input drift or independent original ABI/storage eviden
 
 ## orbital-flag-pair-family-20261004-0_aranos_tutorial
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5549,7 +5659,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-10_hrugis_cloud
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5559,7 +5669,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-11_joba
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5569,7 +5679,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-12_todano
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5579,7 +5689,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-13_boldan
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5589,7 +5699,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-14_aranos_prison
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5599,7 +5709,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5609,7 +5719,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-20_yeedil
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5619,7 +5729,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-22_dobbo_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5629,7 +5739,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-23_damosel_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5639,7 +5749,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-24_ship_shack
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5649,7 +5759,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-25_wupash_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5659,7 +5769,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-26_jamming_array
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5669,7 +5779,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-2_maktar_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5679,7 +5789,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-30_insomniac_museum
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5689,7 +5799,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-3_endako
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5699,7 +5809,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-5_feltzin_system
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -5709,7 +5819,7 @@ Reopen condition: Independent ABI/layout evidence or current input drift only.
 
 ## orbital-flag-pair-family-20261004-6_notak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify complete current unit; root owns integration and full image gates.
 
@@ -6319,7 +6429,7 @@ Reopen condition: Superseded by immutable declfixed task preserving the exact sa
 
 ## orbital-gorn-object-flag-clear-20261004-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
 
@@ -6339,7 +6449,7 @@ Reopen condition: One coherent typed resident root layout witness in new immutab
 
 ## orbital-gorn-object-flag-pair-layoutfix-20261004-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
 
@@ -6529,7 +6639,7 @@ Reopen condition: Independent original state-storage/layout/ABI or compiler evid
 
 ## orbital-gorn-state-transition-20261004-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure complete seed and all current controls; if exact then qualify aliases against complete boundaries and history. Retain every refusal.
 
@@ -11335,7 +11445,7 @@ Reopen condition: New independent count/layout/sourcephase evidence only
 
 ## parallel-boot-analysis-oozla-record-update-v1
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Verify fullpins callerABI and globals, author privateC then run maintainedwhole-unit controls defaultG0.
 
@@ -12225,7 +12335,7 @@ Reopen condition: Independent original source/compiler scheduling/context eviden
 
 ## root-boot-g8-absolute-controls-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Compile this unchanged prepared context once, require every complete178 control byte exact, preserve any refusal and stop without variants. Public boot remains G0; no new target or profile publication yet.
 
@@ -13312,7 +13422,7 @@ Reopen condition: Independent original source/type/ABI or qualified compiler evi
 
 ## root-g8-support-review-19_grelbin-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact units before frozen boot and all27overlay gates.
 
@@ -13320,7 +13430,7 @@ Reopen condition: New measured compiler/source evidence, not duplicate replay.
 
 ## root-g8-support-review-4_barlow-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact units before frozen boot and all27overlay gates.
 
@@ -13328,7 +13438,7 @@ Reopen condition: New measured compiler/source evidence, not duplicate replay.
 
 ## root-g8-support-review-7_siberius-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact units before frozen boot and all27overlay gates.
 
@@ -13336,7 +13446,7 @@ Reopen condition: New measured compiler/source evidence, not duplicate replay.
 
 ## root-g8-support-review-8_tabora-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact units before frozen boot and all27overlay gates.
 
@@ -13400,7 +13510,7 @@ Reopen condition: Independent source/global layout or object context evidence ex
 
 ## root-index-lf-0_aranos_tutorial-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13408,7 +13518,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-10_hrugis_cloud-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13416,7 +13526,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-11_joba-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13424,7 +13534,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-12_todano-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13432,7 +13542,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-13_boldan-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13440,7 +13550,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-14_aranos_prison-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13448,7 +13558,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-15_gorn-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13456,7 +13566,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-16_snivelak-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13464,7 +13574,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-17_smolg-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13472,7 +13582,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-18_damosel-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13480,7 +13590,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-1_oozla-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13488,7 +13598,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-20_yeedil-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13496,7 +13606,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-22_dobbo_orbit-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13504,7 +13614,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-23_damosel_orbit-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13512,7 +13622,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-24_ship_shack-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13520,7 +13630,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-25_wupash_nebula-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13528,7 +13638,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-26_jamming_array-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13536,7 +13646,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-2_maktar_nebula-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13544,7 +13654,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-30_insomniac_museum-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13552,7 +13662,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-3_endako-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13560,7 +13670,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-5_feltzin_system-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13568,7 +13678,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-6_notak-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -13576,7 +13686,7 @@ Reopen condition: New measured source/compiler evidence; formatting adds zero cr
 
 ## root-index-lf-9_dobbo-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Require complete exact unit and identical old object; regenerate current native review and full gates.
 
@@ -14065,7 +14175,7 @@ Reopen condition: A separately qualified small-data path for a G0 program, or in
 
 ## root-readonly-controls-0_aranos_tutorial-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14073,7 +14183,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-10_hrugis_cloud-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14081,7 +14191,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-11_joba-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14089,7 +14199,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-12_todano-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14097,7 +14207,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-13_boldan-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14105,7 +14215,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-14_aranos_prison-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14113,7 +14223,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-15_gorn-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14121,7 +14231,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-16_snivelak-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14129,7 +14239,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-17_smolg-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14137,7 +14247,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-18_damosel-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14145,7 +14255,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-19_grelbin-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14153,7 +14263,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-1_oozla-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14161,7 +14271,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-20_yeedil-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14169,7 +14279,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-22_dobbo_orbit-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14177,7 +14287,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-23_damosel_orbit-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14185,7 +14295,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-24_ship_shack-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14193,7 +14303,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-25_wupash_nebula-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14201,7 +14311,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-26_jamming_array-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14209,7 +14319,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-2_maktar_nebula-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14217,7 +14327,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-30_insomniac_museum-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14225,7 +14335,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-3_endako-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14233,7 +14343,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-4_barlow-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14241,7 +14351,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-5_feltzin_system-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14249,7 +14359,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-6_notak-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14257,7 +14367,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-7_siberius-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14265,7 +14375,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-8_tabora-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14273,7 +14383,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-9_dobbo-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14281,7 +14391,7 @@ Reopen condition: An independently changed checker/source/catalog/tool input wit
 
 ## root-readonly-controls-boot-20261004
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Retain every complete control result, then regenerate affected object reviews and full boot/all27 loaded-byte metadata gates before publication.
 
@@ -14912,7 +15022,7 @@ Reopen condition: Measured source lifetime, sum-clamp scheduling, helper prototy
 
 ## ship-shack-002e4828-gs-setup-v2
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Measure complete136-byte target with all28current native controls; published boot-shared/native spans checked for zero overlap.
 

@@ -654,3 +654,25 @@ void LVL_9_DOBBO_FUN_0044E088(f32 x, f32 y, f32 z, f32 w, JammingGridObject *obj
     object->groups[group].rows[row].z = z;
     object->groups[group].rows[row].w = w;
 }
+
+extern unsigned char D_19B278[];
+
+int LVL_9_DOBBO_FUN_00323220(void)
+{
+    int count = 0;
+    int i;
+
+    for (i = 0; i < 0x1C; i++) {
+        int j;
+
+        for (j = 0; j < 4; j++) {
+            if (D_19B278[i * 4 + j] != 0)
+                count++;
+        }
+    }
+    if (count < 0)
+        count = 0;
+    if (count > 0x28)
+        count = 0x28;
+    return count;
+}

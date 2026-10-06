@@ -1,276 +1,283 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "9_dobbo",
-  "program": "levels/9_dobbo",
-  "reference_sha256": "a47999f3aa251431498e068932ac542399b5e402ab8dcddcbfe246dc220b7810",
   "entry": 2782472,
-  "source": "candidates/levels/9_dobbo.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "D_19B278": 1684088,
+    "LVL_9_DOBBO_D_00139568": 1283432,
+    "LVL_9_DOBBO_D_001395B8": 1283512,
+    "LVL_9_DOBBO_D_00189E20": 1613344,
+    "LVL_9_DOBBO_D_0018B040": 1617984,
+    "LVL_9_DOBBO_D_0018B134": 1618228,
+    "LVL_9_DOBBO_D_0018C0B0": 1622192,
+    "LVL_9_DOBBO_D_0018C0B4": 1622196,
+    "LVL_9_DOBBO_D_001A79F0": 1735152,
+    "LVL_9_DOBBO_D_001A8EB0": 1740464,
+    "LVL_9_DOBBO_D_001A9A60": 1743456,
+    "LVL_9_DOBBO_D_001A9A68": 1743464,
+    "LVL_9_DOBBO_D_001B27C0": 1779648,
+    "LVL_9_DOBBO_D_001B2800": 1779712,
+    "LVL_9_DOBBO_D_001B9840": 1808448,
+    "LVL_9_DOBBO_D_001BFB40": 1833792,
+    "LVL_9_DOBBO_D_001C9FE0": 1875936,
+    "LVL_9_DOBBO_D_00227340": 2257728,
+    "LVL_9_DOBBO_D_0022E240": 2286144,
+    "LVL_9_DOBBO_D_0022E840": 2287680,
+    "LVL_9_DOBBO_D_00231F80": 2301824,
+    "LVL_9_DOBBO_D_00254BF0": 2444272,
+    "LVL_9_DOBBO_D_002651F0": 2511344,
+    "LVL_9_DOBBO_D_00280980": 2623872,
+    "LVL_9_DOBBO_FUN_002D3740": 2963264,
+    "LVL_9_DOBBO_FUN_002D8BD8": 2984920,
+    "LVL_9_DOBBO_FUN_002D8F20": 2985760,
+    "LVL_9_DOBBO_FUN_002EA1B0": 3056048,
+    "LVL_9_DOBBO_FUN_002EA4A0": 3056800,
+    "LVL_9_DOBBO_FUN_002EA5E8": 3057128,
+    "LVL_9_DOBBO_FUN_002EA930": 3057968,
+    "LVL_9_DOBBO_FUN_002EAB28": 3058472,
+    "LVL_9_DOBBO_FUN_002EC9A8": 3066280,
+    "LVL_9_DOBBO_FUN_002ECD10": 3067152,
+    "LVL_9_DOBBO_FUN_002F09E8": 3082728,
+    "LVL_9_DOBBO_FUN_003205C8": 3278280,
+    "LVL_9_DOBBO_FUN_00321470": 3282032,
+    "LVL_9_DOBBO_FUN_0035C990": 3525008,
+    "LVL_9_DOBBO_FUN_00378928": 3639592,
+    "LVL_9_DOBBO_FUN_003F7788": 4159368
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_9_DOBBO_FUN_002B08B8",
       "address": 2820280,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_9_DOBBO_FUN_002B08B8"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002B08F0",
       "address": 2820336,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_9_DOBBO_FUN_002B08F0"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002B0A20",
       "address": 2820640,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_9_DOBBO_FUN_002B0A20"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002B1510",
       "address": 2823440,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_9_DOBBO_FUN_002B1510"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002D2990",
       "address": 2959760,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_9_DOBBO_FUN_002D2990"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002D39E8",
       "address": 2963944,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_9_DOBBO_FUN_002D39E8"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002DFB78",
       "address": 3013496,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_9_DOBBO_FUN_002DFB78"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002F0150",
       "address": 3080528,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_9_DOBBO_FUN_002F0150"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002D31E8",
       "address": 2961896,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_9_DOBBO_FUN_002D31E8"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002E1918",
       "address": 3021080,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_9_DOBBO_FUN_002E1918"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002B0928",
       "address": 2820392,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_9_DOBBO_FUN_002B0928"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002B0960",
       "address": 2820448,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_9_DOBBO_FUN_002B0960"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002B5C38",
       "address": 2841656,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_9_DOBBO_FUN_002B5C38"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_00420460",
       "address": 4326496,
+      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
       "size": 36,
-      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three"
+      "symbol": "LVL_9_DOBBO_FUN_00420460"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_0033EAE0",
       "address": 3402464,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_9_DOBBO_FUN_0033EAE0"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002F3258",
       "address": 3093080,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_9_DOBBO_FUN_002F3258"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_00301C80",
       "address": 3153024,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_9_DOBBO_FUN_00301C80"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_0037B310",
       "address": 3650320,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_9_DOBBO_FUN_0037B310"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_00367FD8",
       "address": 3571672,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_9_DOBBO_FUN_00367FD8"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_003F5CF0",
       "address": 4152560,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_9_DOBBO_FUN_003F5CF0"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002D2850",
       "address": 2959440,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_9_DOBBO_FUN_002D2850"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002A8940",
       "address": 2787648,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_9_DOBBO_FUN_002A8940"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002EFE28",
       "address": 3079720,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_9_DOBBO_FUN_002EFE28"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_0037D670",
       "address": 3659376,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_9_DOBBO_FUN_0037D670"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002D27D0",
       "address": 2959312,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_9_DOBBO_FUN_002D27D0"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002D2C18",
       "address": 2960408,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_9_DOBBO_FUN_002D2C18"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002EF790",
       "address": 3078032,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_9_DOBBO_FUN_002EF790"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_003F9468",
       "address": 4166760,
+      "meaning": "validate descriptorparent classD0E/status then attach two optionalparts, propagate flag/disabled state and original packed-color helper",
       "size": 252,
-      "meaning": "validate descriptorparent classD0E/status then attach two optionalparts, propagate flag/disabled state and original packed-color helper"
+      "symbol": "LVL_9_DOBBO_FUN_003F9468"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_00305300",
       "address": 3166976,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_9_DOBBO_FUN_00305300"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002B6300",
       "address": 2843392,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_9_DOBBO_FUN_002B6300"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_00448778",
       "address": 4491128,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_9_DOBBO_FUN_00448778"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_0030D698",
       "address": 3200664,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_9_DOBBO_FUN_0030D698"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_004051F8",
       "address": 4215288,
+      "meaning": "computes a local target direction and stores bounded horizontal and vertical angles through the original math helpers",
       "size": 252,
-      "meaning": "computes a local target direction and stores bounded horizontal and vertical angles through the original math helpers"
+      "symbol": "LVL_9_DOBBO_FUN_004051F8"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_002D8B30",
       "address": 2984752,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_9_DOBBO_FUN_002D8B30"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_0044DBF0",
       "address": 4512752,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_9_DOBBO_FUN_0044DBF0"
     },
     {
-      "symbol": "LVL_9_DOBBO_FUN_0044E088",
       "address": 4513928,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_9_DOBBO_FUN_0044E088"
+    },
+    {
+      "address": 3289632,
+      "meaning": "counts the non-zero bytes of the 0x1C by 4 byte table at 0x19B278 and returns the count clamped into 0..0x28",
+      "size": 112,
+      "symbol": "LVL_9_DOBBO_FUN_00323220"
     }
   ],
-  "externals": {
-    "LVL_9_DOBBO_D_001A8EB0": 1740464,
-    "LVL_9_DOBBO_D_0018C0B4": 1622196,
-    "LVL_9_DOBBO_D_00189E20": 1613344,
-    "LVL_9_DOBBO_FUN_002D3740": 2963264,
-    "LVL_9_DOBBO_FUN_002EC9A8": 3066280,
-    "LVL_9_DOBBO_FUN_002ECD10": 3067152,
-    "LVL_9_DOBBO_FUN_00378928": 3639592,
-    "LVL_9_DOBBO_D_00280980": 2623872,
-    "LVL_9_DOBBO_D_001395B8": 1283512,
-    "LVL_9_DOBBO_D_00231F80": 2301824,
-    "LVL_9_DOBBO_D_0022E840": 2287680,
-    "LVL_9_DOBBO_D_00227340": 2257728,
-    "LVL_9_DOBBO_D_0022E240": 2286144,
-    "LVL_9_DOBBO_D_00254BF0": 2444272,
-    "LVL_9_DOBBO_D_0018C0B0": 1622192,
-    "LVL_9_DOBBO_D_0018B134": 1618228,
-    "LVL_9_DOBBO_D_0018B040": 1617984,
-    "LVL_9_DOBBO_D_00139568": 1283432,
-    "LVL_9_DOBBO_D_002651F0": 2511344,
-    "LVL_9_DOBBO_FUN_002EA1B0": 3056048,
-    "LVL_9_DOBBO_D_001A79F0": 1735152,
-    "LVL_9_DOBBO_D_001B9840": 1808448,
-    "LVL_9_DOBBO_D_001BFB40": 1833792,
-    "LVL_9_DOBBO_FUN_003205C8": 3278280,
-    "LVL_9_DOBBO_FUN_003F7788": 4159368,
-    "LVL_9_DOBBO_D_001C9FE0": 1875936,
-    "LVL_9_DOBBO_D_001A9A60": 1743456,
-    "LVL_9_DOBBO_D_001A9A68": 1743464,
-    "LVL_9_DOBBO_FUN_002F09E8": 3082728,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_9_DOBBO_FUN_0035C990": 3525008,
-    "LVL_9_DOBBO_D_001B27C0": 1779648,
-    "LVL_9_DOBBO_D_001B2800": 1779712,
-    "LVL_9_DOBBO_FUN_002EA4A0": 3056800,
-    "LVL_9_DOBBO_FUN_00321470": 3282032,
-    "LVL_9_DOBBO_FUN_002EAB28": 3058472,
-    "LVL_9_DOBBO_FUN_002EA5E8": 3057128,
-    "LVL_9_DOBBO_FUN_002D8BD8": 2984920,
-    "LVL_9_DOBBO_FUN_002EA930": 3057968,
-    "LVL_9_DOBBO_FUN_002D8F20": 2985760
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "9_dobbo",
+  "program": "levels/9_dobbo",
+  "reference_sha256": "a47999f3aa251431498e068932ac542399b5e402ab8dcddcbfe246dc220b7810",
+  "schema": 1,
+  "source": "candidates/levels/9_dobbo.c",
+  "target": "SCUS_972.68"
 }

@@ -1,272 +1,279 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "5_feltzin_system",
-  "program": "levels/5_feltzin_system",
-  "reference_sha256": "bd41a03a57871a6f33106d5277c6b4918f379ceaa5f780a84c82360b421204fb",
   "entry": 2868232,
-  "source": "candidates/levels/5_feltzin_system.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "D_19B278": 1684088,
+    "LVL_5_FELTZIN_SYSTEM_D_00139568": 1283432,
+    "LVL_5_FELTZIN_SYSTEM_D_001395B8": 1283512,
+    "LVL_5_FELTZIN_SYSTEM_D_00189E20": 1613344,
+    "LVL_5_FELTZIN_SYSTEM_D_0018B040": 1617984,
+    "LVL_5_FELTZIN_SYSTEM_D_0018B134": 1618228,
+    "LVL_5_FELTZIN_SYSTEM_D_0018C0B0": 1622192,
+    "LVL_5_FELTZIN_SYSTEM_D_0018C0B4": 1622196,
+    "LVL_5_FELTZIN_SYSTEM_D_001A79F0": 1735152,
+    "LVL_5_FELTZIN_SYSTEM_D_001A8EB0": 1740464,
+    "LVL_5_FELTZIN_SYSTEM_D_001A99E0": 1743328,
+    "LVL_5_FELTZIN_SYSTEM_D_001A99E8": 1743336,
+    "LVL_5_FELTZIN_SYSTEM_D_001B2480": 1778816,
+    "LVL_5_FELTZIN_SYSTEM_D_001B24C0": 1778880,
+    "LVL_5_FELTZIN_SYSTEM_D_001B9500": 1807616,
+    "LVL_5_FELTZIN_SYSTEM_D_001BF800": 1832960,
+    "LVL_5_FELTZIN_SYSTEM_D_001C9CA0": 1875104,
+    "LVL_5_FELTZIN_SYSTEM_D_00227200": 2257408,
+    "LVL_5_FELTZIN_SYSTEM_D_0022E100": 2285824,
+    "LVL_5_FELTZIN_SYSTEM_D_0022E700": 2287360,
+    "LVL_5_FELTZIN_SYSTEM_D_00231E40": 2301504,
+    "LVL_5_FELTZIN_SYSTEM_D_00262770": 2500464,
+    "LVL_5_FELTZIN_SYSTEM_D_00278A70": 2591344,
+    "LVL_5_FELTZIN_SYSTEM_D_00294200": 2703872,
+    "LVL_5_FELTZIN_SYSTEM_FUN_002EBF60": 3063648,
+    "LVL_5_FELTZIN_SYSTEM_FUN_002EFE38": 3079736,
+    "LVL_5_FELTZIN_SYSTEM_FUN_002F5268": 3101288,
+    "LVL_5_FELTZIN_SYSTEM_FUN_002F55B0": 3102128,
+    "LVL_5_FELTZIN_SYSTEM_FUN_00306370": 3171184,
+    "LVL_5_FELTZIN_SYSTEM_FUN_00306660": 3171936,
+    "LVL_5_FELTZIN_SYSTEM_FUN_00306AD8": 3173080,
+    "LVL_5_FELTZIN_SYSTEM_FUN_00308B50": 3181392,
+    "LVL_5_FELTZIN_SYSTEM_FUN_00308EB8": 3182264,
+    "LVL_5_FELTZIN_SYSTEM_FUN_0030CBA8": 3197864,
+    "LVL_5_FELTZIN_SYSTEM_FUN_00371A60": 3611232,
+    "LVL_5_FELTZIN_SYSTEM_FUN_003906F8": 3737336
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C66E8",
       "address": 2909928,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C66E8"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6720",
       "address": 2909984,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6720"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6850",
       "address": 2910288,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6850"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C7340",
       "address": 2913088,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C7340"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EF120",
       "address": 3076384,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EF120"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002F00E0",
       "address": 3080416,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002F00E0"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002FC208",
       "address": 3129864,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002FC208"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030C2F8",
       "address": 3195640,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030C2F8"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EF8E0",
       "address": 3078368,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EF8E0"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002FE030",
       "address": 3137584,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002FE030"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6578",
       "address": 2909560,
+      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper",
       "size": 56,
-      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6578"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6758",
       "address": 2910040,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6758"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6790",
       "address": 2910096,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002C6790"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002CBAC8",
       "address": 2931400,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002CBAC8"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00353FB8",
       "address": 3489720,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00353FB8"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030F418",
       "address": 3208216,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030F418"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0031DD00",
       "address": 3267840,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0031DD00"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00392FD8",
       "address": 3747800,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00392FD8"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0037FF40",
       "address": 3669824,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0037FF40"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_003FFC40",
       "address": 4193344,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_003FFC40"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EEFE0",
       "address": 3076064,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EEFE0"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002BD868",
       "address": 2873448,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002BD868"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030BFD0",
       "address": 3194832,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030BFD0"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00395338",
       "address": 3756856,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00395338"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EEF60",
       "address": 3075936,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EEF60"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EBA50",
       "address": 3062352,
+      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EBA50"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EBA88",
       "address": 3062408,
+      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EBA88"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EF3A8",
       "address": 3077032,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EF3A8"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030B938",
       "address": 3193144,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0030B938"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00321380",
       "address": 3281792,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00321380"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002CC218",
       "address": 2933272,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002CC218"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00455188",
       "address": 4542856,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00455188"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00329728",
       "address": 3315496,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00329728"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002F51C0",
       "address": 3101120,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002F51C0"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0045A600",
       "address": 4564480,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0045A600"
     },
     {
-      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0045AA98",
       "address": 4565656,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0045AA98"
+    },
+    {
+      "address": 3396224,
+      "meaning": "counts the non-zero bytes of the 0x1C by 4 byte table at 0x19B278 and returns the count clamped into 0..0x28",
+      "size": 112,
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0033D280"
     }
   ],
-  "externals": {
-    "LVL_5_FELTZIN_SYSTEM_D_001A8EB0": 1740464,
-    "LVL_5_FELTZIN_SYSTEM_D_0018C0B4": 1622196,
-    "LVL_5_FELTZIN_SYSTEM_D_00189E20": 1613344,
-    "LVL_5_FELTZIN_SYSTEM_FUN_002EFE38": 3079736,
-    "LVL_5_FELTZIN_SYSTEM_FUN_00308B50": 3181392,
-    "LVL_5_FELTZIN_SYSTEM_FUN_00308EB8": 3182264,
-    "LVL_5_FELTZIN_SYSTEM_FUN_003906F8": 3737336,
-    "LVL_5_FELTZIN_SYSTEM_FUN_002EBF60": 3063648,
-    "LVL_5_FELTZIN_SYSTEM_D_00294200": 2703872,
-    "LVL_5_FELTZIN_SYSTEM_D_001395B8": 1283512,
-    "LVL_5_FELTZIN_SYSTEM_D_00231E40": 2301504,
-    "LVL_5_FELTZIN_SYSTEM_D_0022E700": 2287360,
-    "LVL_5_FELTZIN_SYSTEM_D_00227200": 2257408,
-    "LVL_5_FELTZIN_SYSTEM_D_0022E100": 2285824,
-    "LVL_5_FELTZIN_SYSTEM_D_00262770": 2500464,
-    "LVL_5_FELTZIN_SYSTEM_D_0018C0B0": 1622192,
-    "LVL_5_FELTZIN_SYSTEM_D_0018B134": 1618228,
-    "LVL_5_FELTZIN_SYSTEM_D_0018B040": 1617984,
-    "LVL_5_FELTZIN_SYSTEM_D_00139568": 1283432,
-    "LVL_5_FELTZIN_SYSTEM_D_00278A70": 2591344,
-    "LVL_5_FELTZIN_SYSTEM_FUN_00306370": 3171184,
-    "LVL_5_FELTZIN_SYSTEM_D_001A79F0": 1735152,
-    "LVL_5_FELTZIN_SYSTEM_D_001B9500": 1807616,
-    "LVL_5_FELTZIN_SYSTEM_D_001BF800": 1832960,
-    "LVL_5_FELTZIN_SYSTEM_D_001C9CA0": 1875104,
-    "LVL_5_FELTZIN_SYSTEM_D_001A99E0": 1743328,
-    "LVL_5_FELTZIN_SYSTEM_D_001A99E8": 1743336,
-    "LVL_5_FELTZIN_SYSTEM_FUN_0030CBA8": 3197864,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_5_FELTZIN_SYSTEM_FUN_00371A60": 3611232,
-    "LVL_5_FELTZIN_SYSTEM_D_001B2480": 1778816,
-    "LVL_5_FELTZIN_SYSTEM_D_001B24C0": 1778880,
-    "LVL_5_FELTZIN_SYSTEM_FUN_002F5268": 3101288,
-    "LVL_5_FELTZIN_SYSTEM_FUN_00306660": 3171936,
-    "LVL_5_FELTZIN_SYSTEM_FUN_00306AD8": 3173080,
-    "LVL_5_FELTZIN_SYSTEM_FUN_002F55B0": 3102128
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "5_feltzin_system",
+  "program": "levels/5_feltzin_system",
+  "reference_sha256": "bd41a03a57871a6f33106d5277c6b4918f379ceaa5f780a84c82360b421204fb",
+  "schema": 1,
+  "source": "candidates/levels/5_feltzin_system.c",
+  "target": "SCUS_972.68"
 }

@@ -1,425 +1,448 @@
 {
-  "schema": 1,
-  "kind": "level-native-candidate",
-  "target": "SCUS_972.68",
-  "program": "levels/22_dobbo_orbit",
-  "reference_sha256": "c609f24d897e1a82d49cdb9a8a7ece36ea83332414dc3cc6d588375e0bda55db",
-  "reference_entry": 2783752,
+  "candidate_elf_sha256": "3ad3a0fa1bf8da24739a860bb1e4cfa1e9ad0387d076bfc77d8889d2a1165aad",
   "candidate_source": "candidates/levels/22_dobbo_orbit.c",
-  "source_sha256": "fede76835a46278bd261dfc17e8ed9a8b99fccb5dc12333f5ea29010901d51a0",
-  "catalog_sha256": "e8a04b1d9cdd86d568741901cf6c0e513dd3f31414201977c79bdd5ad6e5f5c5",
-  "object_sha256": "f4e268df8e4f2f95ddbd42cbad5f0ec43c976a850f7f65c4e62d72f40a3f4d01",
-  "candidate_elf_sha256": "094b1b8d08441c229413ec10bf56a7f0fef6c43875a27cafed3cc0e9192dfef0",
+  "catalog_sha256": "508f2a1ee469d51bb8f9adcf8de37e0aaf446874ad0234aa7bb01ae5f85baf45",
   "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
-  "tools": {
-    "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
-    "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
-    "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
-    "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
-  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "state": "matched_unintegrated",
   "functions": [
     {
       "address": 2827552,
       "candidate_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 52,
       "reference_sha256": "a7aa8f2966775af11e66d6e27fa32f0252a2cb67511ace58340622f9fc286d4e",
       "size": 52,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2520",
-      "produced_size": 52
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2520"
     },
     {
       "address": 2827608,
       "candidate_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 52,
       "reference_sha256": "b8bda4295619dcad851096cb660da50183b51a6ddd05767b119df9a4aca2571d",
       "size": 52,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2558",
-      "produced_size": 52
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2558"
     },
     {
       "address": 2827912,
       "candidate_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 20,
       "reference_sha256": "fb9cf4f207eb1080cd9a1228fb079d3f0a29a1f98520edd742f7017474beb523",
       "size": 20,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2688",
-      "produced_size": 20
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2688"
     },
     {
       "address": 2830712,
       "candidate_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 88,
       "reference_sha256": "9c002ec00608e528b0f515ea83237ff88ddd41e8e87f7ced34cb6b6265bc66a7",
       "size": 88,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B3178",
-      "produced_size": 88
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B3178"
     },
     {
       "address": 3001304,
       "candidate_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 12,
       "reference_sha256": "59545e1db6692a32f3ee09d3202aa74e5f766c34f4d0fe9f55722d9448344a91",
       "size": 12,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DCBD8",
-      "produced_size": 12
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DCBD8"
     },
     {
       "address": 3005336,
       "candidate_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 24,
       "reference_sha256": "2c70bf182366eee88775b1b237c37a414b222efba794c0737e98ff59ad2ba7cf",
       "size": 24,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DDB98",
-      "produced_size": 24
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DDB98"
     },
     {
       "address": 3054784,
       "candidate_sha256": "c70b8d6bc7a8cda6b0677ce25a7b8c77ae4a28fc2cee40d3b0d28b5958248761",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 36,
       "reference_sha256": "c70b8d6bc7a8cda6b0677ce25a7b8c77ae4a28fc2cee40d3b0d28b5958248761",
       "size": 36,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002E9CC0",
-      "produced_size": 36
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002E9CC0"
     },
     {
       "address": 3118944,
       "candidate_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 72,
       "reference_sha256": "b0247b7cbdd535dd835701fee9dc139abb1079b8580f24495cb26d763e4495bf",
       "size": 72,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002F9760",
-      "produced_size": 72
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002F9760"
     },
     {
       "address": 3003288,
       "candidate_sha256": "4f14a6922ce1716f280095b1961e5c6cc392fe67857521e825b7782cb1084929",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 92,
       "reference_sha256": "4f14a6922ce1716f280095b1961e5c6cc392fe67857521e825b7782cb1084929",
       "size": 92,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DD398",
-      "produced_size": 92
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DD398"
     },
     {
       "address": 3062368,
       "candidate_sha256": "007fa73de1da1a7cddba49a95db54ef5504b93d23a18fabcac8e43d4b69ffe5b",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 136,
       "reference_sha256": "007fa73de1da1a7cddba49a95db54ef5504b93d23a18fabcac8e43d4b69ffe5b",
       "size": 136,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002EBA60",
-      "produced_size": 136
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002EBA60"
     },
     {
       "address": 2827184,
       "candidate_sha256": "d5cc977b9b49eae1c9e90adcbc3439d9d937410ca8647e471364a0dd090d741a",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 56,
       "reference_sha256": "d5cc977b9b49eae1c9e90adcbc3439d9d937410ca8647e471364a0dd090d741a",
       "size": 56,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B23B0",
-      "produced_size": 56
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B23B0"
     },
     {
       "address": 2827664,
       "candidate_sha256": "fc6c76eeaef596a2da9732d7b419934915f812748ba9210aeacbde521dd5b1f2",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 56,
       "reference_sha256": "fc6c76eeaef596a2da9732d7b419934915f812748ba9210aeacbde521dd5b1f2",
       "size": 56,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2590",
-      "produced_size": 56
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2590"
     },
     {
       "address": 2827720,
       "candidate_sha256": "fabd16911653354a08358ce6bb21e55473c9b5147ff199212fa384c9a7947a6b",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 36,
       "reference_sha256": "fabd16911653354a08358ce6bb21e55473c9b5147ff199212fa384c9a7947a6b",
       "size": 36,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B25C8",
-      "produced_size": 36
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B25C8"
     },
     {
       "address": 2849728,
       "candidate_sha256": "44096337db3ef2dead087fe4023d99ef94fef08cdc91bbbefc8f38dc33eb7522",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 32,
       "reference_sha256": "44096337db3ef2dead087fe4023d99ef94fef08cdc91bbbefc8f38dc33eb7522",
       "size": 32,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B7BC0",
-      "produced_size": 32
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B7BC0"
     },
     {
       "address": 3428680,
       "candidate_sha256": "ebca143726974110e29d0bfcb98a049bd0855fc47004d282f041d760cf6454fc",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 100,
       "reference_sha256": "ebca143726974110e29d0bfcb98a049bd0855fc47004d282f041d760cf6454fc",
       "size": 100,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_00345148",
-      "produced_size": 100
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_00345148"
     },
     {
       "address": 3131496,
       "candidate_sha256": "62018bbd4ece969552908cb6d2e247882d0c1425a894fcf507bf14e471368eab",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 116,
       "reference_sha256": "62018bbd4ece969552908cb6d2e247882d0c1425a894fcf507bf14e471368eab",
       "size": 116,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002FC868",
-      "produced_size": 116
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002FC868"
     },
     {
       "address": 3190496,
       "candidate_sha256": "9b86f42cd1858febd4314e71ae4347da9aa554444c1df382cb19be39a3eb3674",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 72,
       "reference_sha256": "9b86f42cd1858febd4314e71ae4347da9aa554444c1df382cb19be39a3eb3674",
       "size": 72,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0030AEE0",
-      "produced_size": 72
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0030AEE0"
     },
     {
       "address": 3675496,
       "candidate_sha256": "d189aa3f65a7f4e09d5a69cc87f61d999cd2da8dae8b9c87e56fec84d9be4baa",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 68,
       "reference_sha256": "d189aa3f65a7f4e09d5a69cc87f61d999cd2da8dae8b9c87e56fec84d9be4baa",
       "size": 68,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_00381568",
-      "produced_size": 68
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_00381568"
     },
     {
       "address": 3597520,
       "candidate_sha256": "d8af4db0d57a325fe099cc9f43212f34ade60bb16b02190d162cb4cc7da00173",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 192,
       "reference_sha256": "d8af4db0d57a325fe099cc9f43212f34ade60bb16b02190d162cb4cc7da00173",
       "size": 192,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0036E4D0",
-      "produced_size": 192
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0036E4D0"
     },
     {
       "address": 4144360,
       "candidate_sha256": "244f2509b3acdd67b8bff24cd9986bdf9e4402442d526538b4cd6d9398258c52",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 88,
       "reference_sha256": "244f2509b3acdd67b8bff24cd9986bdf9e4402442d526538b4cd6d9398258c52",
       "size": 88,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_003F3CE8",
-      "produced_size": 88
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_003F3CE8"
     },
     {
       "address": 3000984,
       "candidate_sha256": "939ea2083a9852c4abd21886b83e7dffed53dffd8a74910835bfc5d0a2583778",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 160,
       "reference_sha256": "939ea2083a9852c4abd21886b83e7dffed53dffd8a74910835bfc5d0a2583778",
       "size": 160,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DCA98",
-      "produced_size": 160
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DCA98"
     },
     {
       "address": 2789008,
       "candidate_sha256": "9c76c0104b501c71e20fd6151ed9b3823715be6b14ebf1afe74f0448524052ff",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 96,
       "reference_sha256": "9c76c0104b501c71e20fd6151ed9b3823715be6b14ebf1afe74f0448524052ff",
       "size": 96,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002A8E90",
-      "produced_size": 96
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002A8E90"
     },
     {
       "address": 3118136,
       "candidate_sha256": "30f8492d91cc11b1e0b7f6d987327584a5f19a99d3d437a71e04bd6a6d36017b",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 84,
       "reference_sha256": "30f8492d91cc11b1e0b7f6d987327584a5f19a99d3d437a71e04bd6a6d36017b",
       "size": 84,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002F9438",
-      "produced_size": 84
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002F9438"
     },
     {
       "address": 3684552,
       "candidate_sha256": "c98c019238b9a78d739f3f806092585e64a98fe385cc2f122a74e2f08fa008d2",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 300,
       "reference_sha256": "c98c019238b9a78d739f3f806092585e64a98fe385cc2f122a74e2f08fa008d2",
       "size": 300,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_003838C8",
-      "produced_size": 300
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_003838C8"
     },
     {
       "address": 3000856,
       "candidate_sha256": "bbd2a6336c8052a954f8a0f0ed975a607d07cadc74011cf689c011a6cca0cb6c",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 60,
       "reference_sha256": "bbd2a6336c8052a954f8a0f0ed975a607d07cadc74011cf689c011a6cca0cb6c",
       "size": 60,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DCA18",
-      "produced_size": 60
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DCA18"
     },
     {
       "address": 2987272,
       "candidate_sha256": "4a0c380cbb86b9561697799c1c4406f7a635f573137b5f2d5c4fe6719fa9ea65",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 56,
       "reference_sha256": "4a0c380cbb86b9561697799c1c4406f7a635f573137b5f2d5c4fe6719fa9ea65",
       "size": 56,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002D9508",
-      "produced_size": 56
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002D9508"
     },
     {
       "address": 2987328,
       "candidate_sha256": "9ce95840004c54efcdd5d5812a2af198be4164575308ce8a14e57cbc55974114",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 56,
       "reference_sha256": "9ce95840004c54efcdd5d5812a2af198be4164575308ce8a14e57cbc55974114",
       "size": 56,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002D9540",
-      "produced_size": 56
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002D9540"
     },
     {
       "address": 3001952,
       "candidate_sha256": "fc4131cf6b680540ef171a16d74a88eebcf2cc7d739ab1bbead535fa3056b8f8",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 52,
       "reference_sha256": "fc4131cf6b680540ef171a16d74a88eebcf2cc7d739ab1bbead535fa3056b8f8",
       "size": 52,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DCE60",
-      "produced_size": 52
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DCE60"
     },
     {
       "address": 3116448,
       "candidate_sha256": "96ac60bcaa923d7fb53de1143e110c5b829a1ab608d748314760ca8a148b3c05",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 48,
       "reference_sha256": "96ac60bcaa923d7fb53de1143e110c5b829a1ab608d748314760ca8a148b3c05",
       "size": 48,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002F8DA0",
-      "produced_size": 48
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002F8DA0"
     },
     {
       "address": 3204448,
       "candidate_sha256": "0aa9bd0ff5f0c330cdff4f5ae4858a0627de204a1fde0bfada0ead63ee852be0",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 396,
       "reference_sha256": "0aa9bd0ff5f0c330cdff4f5ae4858a0627de204a1fde0bfada0ead63ee852be0",
       "size": 396,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0030E560",
-      "produced_size": 396
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0030E560"
     },
     {
       "address": 2851664,
       "candidate_sha256": "4c31cbfdb3ee71ee50186e41d61069f515745d1194bf7e3211a2313c6d1aab1c",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 64,
       "reference_sha256": "4c31cbfdb3ee71ee50186e41d61069f515745d1194bf7e3211a2313c6d1aab1c",
       "size": 64,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B8350",
-      "produced_size": 64
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B8350"
     },
     {
       "address": 4433040,
       "candidate_sha256": "1e0fbae7d97ad492708027cfa2c4e10b182294e44bc1457f2fc4af0a0fedf018",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 312,
       "reference_sha256": "1e0fbae7d97ad492708027cfa2c4e10b182294e44bc1457f2fc4af0a0fedf018",
       "size": 312,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0043A490",
-      "produced_size": 312
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0043A490"
     },
     {
       "address": 3238136,
       "candidate_sha256": "daeb7a4dab304fdd04c33144a399c42982e47ccb278ddb7cf78975946da2532c",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 84,
       "reference_sha256": "daeb7a4dab304fdd04c33144a399c42982e47ccb278ddb7cf78975946da2532c",
       "size": 84,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_003168F8",
-      "produced_size": 84
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_003168F8"
     },
     {
       "address": 3026040,
       "candidate_sha256": "381a144d32139e567ccb19f7df99b1845ade0cd1fc842882b96f61aeb0a7bf5c",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 164,
       "reference_sha256": "381a144d32139e567ccb19f7df99b1845ade0cd1fc842882b96f61aeb0a7bf5c",
       "size": 164,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002E2C78",
-      "produced_size": 164
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002E2C78"
     },
     {
       "address": 4454664,
       "candidate_sha256": "b39141ff75f885b9f71824657fa3f0be47897f84fa570b7d428b01411fc86cc1",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 52,
       "reference_sha256": "b39141ff75f885b9f71824657fa3f0be47897f84fa570b7d428b01411fc86cc1",
       "size": 52,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0043F908",
-      "produced_size": 52
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0043F908"
     },
     {
       "address": 4455840,
       "candidate_sha256": "3491d0748cc089c45dbf9db423ee067abcd07b23fa988e4e11ba4722e9dfec5e",
       "different_bytes": 0,
       "matched": true,
+      "produced_size": 52,
       "reference_sha256": "3491d0748cc089c45dbf9db423ee067abcd07b23fa988e4e11ba4722e9dfec5e",
       "size": 52,
       "state": "matched_unintegrated",
-      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0043FDA0",
-      "produced_size": 52
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0043FDA0"
+    },
+    {
+      "address": 2827832,
+      "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "different_bytes": 0,
+      "matched": true,
+      "produced_size": 80,
+      "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "size": 80,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002B2638"
+    },
+    {
+      "address": 3190368,
+      "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "different_bytes": 0,
+      "matched": true,
+      "produced_size": 124,
+      "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "size": 124,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0030AE60"
     }
   ],
-  "matched_code_bytes": 3436
+  "kind": "level-native-candidate",
+  "matched_code_bytes": 3640,
+  "object_sha256": "9ca8c36b78aa4bc43ed419e180acd5e1ef953a832d80376eea44313d93d6ad5d",
+  "program": "levels/22_dobbo_orbit",
+  "read_only_sections": [],
+  "reference_entry": 2783752,
+  "reference_sha256": "c609f24d897e1a82d49cdb9a8a7ece36ea83332414dc3cc6d588375e0bda55db",
+  "schema": 1,
+  "source_sha256": "c9e1cc95434e5f92814b7027f38812ad4d2d282a6f62920a420d37d838633454",
+  "state": "matched_unintegrated",
+  "target": "SCUS_972.68",
+  "tools": {
+    "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
+    "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
+    "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
+    "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
+  }
 }
