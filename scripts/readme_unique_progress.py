@@ -77,6 +77,11 @@ def catalogue_metrics(catalogue: dict, physical: dict) -> dict:
     if global_counts:
         metrics["validated_subset"] = subset
         metrics["quality"] = catalogue["quality"]
+    graph = catalogue.get('graph_refinement') or {}
+    if graph.get('combined_reference_boot_edges'):
+        metrics['boot_binding'] = {'scope': graph['boot_binding_scope'],
+                                   'edges': graph['combined_reference_boot_edges'],
+                                   'runtime_preservation_proven': graph['runtime_preservation_proven']}
     return metrics
 
 
@@ -101,6 +106,9 @@ def render_table(metrics: dict) -> str:
     if "quality" in metrics:
         q, subset = metrics["quality"], metrics["validated_subset"]
         result += f"Conservative global partition retains unknown extents and gaps without deduplication: {q['unknown_bytes']:,} loaded EE bytes have unsupported boundaries. The total follows the stated grouping policy and is not a certified original-source size. Supported subset: {subset['matched_c_unique_bytes']:,} / {subset['total_unique_bytes']:,} unique bytes.\n"
+    if metrics.get('boot_binding'):
+        b = metrics['boot_binding']
+        result += f"\nShared boot binding: {b['edges']:,} static edges in combined pinned reference images. Runtime code preservation is unproved. See [the binding and remaining-duplication audit](docs/BOOT-SHARED-CODE-VERIFICATION.md).\n"
     return result
 
 

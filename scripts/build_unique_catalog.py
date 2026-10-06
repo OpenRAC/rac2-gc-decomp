@@ -201,13 +201,14 @@ def build(repo, boundary_path, references, destination, pointer_evidence=None):
     if pointer_evidence is not None and sha(pointer_evidence.read_bytes()) != pointer_payload_pin:
         raise ValueError('Pointer evidence changed during global normalization')
     manifest = {'schema':1,'target':'SCUS_972.68','normalizer':{'id':'conservative-ee-relocation-template-v1','sha256':normalizer_sha},
+                'section_identity_policy':'named-pinned-ee-sections-v1',
                 'group_policy':'graph-refined-structural-templates',
                 'dependency_policy':'complete-static-control-dependencies',
                 'data_policy':'retain-unowned-data-address-operands',
                 'dependency_extraction':'pinned-r5900-static-control-including-cop0-branches',
                 'input_pins':[{'path':name,'sha256':pin} for name,pin in frozen_inputs.items()],
                 'programs':[{'program':p['name'],'reference_sha256':p['sha256'],
-                            'ee_sections':[{'address':s['address'],'size':s['size']} for s in p['sections'] if s['flags'] & 4 and s['name'] != '.vutext'],
+                            'ee_sections':[{'name':s['name'],'address':s['address'],'size':s['size']} for s in p['sections'] if s['flags'] & 4 and s['name'] != '.vutext'],
                             'excluded_vu_bytes':sum(s['size'] for s in p['sections'] if s['name'] == '.vutext')} for p in scope['programs']],
                 'function_chunks':[entry for _,_,entry in staged],
                 'provenance':{'boundary_catalogue_sha256':sha(raw_boundary),'boundary_decoder':boundary['decoder'],

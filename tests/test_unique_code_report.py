@@ -35,6 +35,26 @@ def catalog():
 
 
 class UniqueReportTests(unittest.TestCase):
+    def test_named_sections_require_complete_identity(self):
+        c = catalog()
+        c['section_identity_policy'] = 'named-pinned-ee-sections-v1'
+        with self.assertRaises(ValueError):
+            module.validate_catalog(c)
+        for p in c['programs']:
+            p['ee_sections'][0]['name'] = 'core.text' if p['program'] == 'boot' else '.text'
+        module.validate_catalog(c)
+        c['programs'][0]['ee_sections'][0]['name'] = ''
+        with self.assertRaises(ValueError):
+            module.validate_catalog(c)
+
+    def test_boot_binding_path_cannot_escape_repository(self):
+        with tempfile.TemporaryDirectory() as work:
+            for path in ('../secret.json', '/secret.json', 'C:/secret.json'):
+                with self.assertRaises(ValueError):
+                    module.current_boot_binding(Path(work), {'boot_binding_proof': {
+                        'path': path, 'sha256': H, 'scope': 'combined-pinned-reference-images',
+                        'runtime_preservation_proven': False, 'source_catalog_sha256': H}})
+
     def test_paired_all_vs_any_and_gaps(self):
         result = module.generate(catalog(), {("boot", 256, 16): H})
         self.assertEqual(result["validated_subset"]["total_unique_bytes"], 16)

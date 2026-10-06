@@ -1,5 +1,5 @@
 {
-  "catalog_sha256": "7f8b3098fee6e0af2e902a63dcb9f25cbb41f04e54f4f603cbff715e8881a3cf",
+  "catalog_sha256": "0e785509bd2c163e155ef0a5d52ff3581fc64993b50de5644a4ad5aabee7cb26",
   "catalogue_complete": false,
   "coverage": {
     "aliases": 5325,
@@ -12,10 +12,13 @@
   },
   "data_policy": "retain-unowned-data-address-operands",
   "graph_refinement": {
+    "boot_binding_artifact_sha256": "06531c65f99529326ae11cec96b23d5ea958a48dfb6e6407db62a317ecdc7873",
+    "boot_binding_scope": "combined-pinned-reference-images",
+    "combined_reference_boot_edges": 22522,
     "complete_dependency_rows": 109725,
     "complete_graph_coverage_claimed": true,
     "external_static_edge_count": 878656,
-    "final_class_count": 84841,
+    "final_class_count": 83093,
     "initial_class_count": 67145,
     "iterations": 7,
     "legacy_dependency_rows": 0,
@@ -25,16 +28,17 @@
       "Legacy relocation fallback omits unmodified static targets; never certify it as complete."
     ],
     "primary_data_binding_policy": "retain-unowned-data-address-operands",
-    "unresolved_edge_count": 25815
+    "runtime_preservation_proven": false,
+    "unresolved_edge_count": 3293
   },
   "group_policy": "graph-refined-structural-templates",
   "kind": "unique-code-progress",
   "metrics": {
     "physical_matched_bytes": 311644,
     "physical_total_bytes": 48701808,
-    "unique_matched_bytes": 106348,
-    "unique_matched_percent": 0.23696519837134222,
-    "unique_total_bytes": 44879164
+    "unique_matched_bytes": 67844,
+    "unique_matched_percent": 0.152624386265227,
+    "unique_total_bytes": 44451612
   },
   "policy": "one equal-sized representative per conservative structural class refined by static target classes and retained unowned data address operands; all verified placements require current exact C integration; no semantic, original-data-object or original-source equivalence claim",
   "provisional_partition": {
@@ -57,10 +61,10 @@
   "schema": 1,
   "target": "SCUS_972.68",
   "validated_subset": {
-    "any_c_unique_bytes": 107536,
-    "groups": 69776,
-    "matched_c_groups": 1034,
-    "matched_c_unique_bytes": 106348,
-    "total_unique_bytes": 36206884
+    "any_c_unique_bytes": 69032,
+    "groups": 68028,
+    "matched_c_groups": 614,
+    "matched_c_unique_bytes": 67844,
+    "total_unique_bytes": 35779332
   }
 }
