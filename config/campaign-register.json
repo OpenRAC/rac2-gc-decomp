@@ -647,12 +647,32 @@
       "kind": "integrate",
       "state": "running"
     },
+    "ada56dc8177f434db3e2cae51182a3b0": {
+      "directory": "runtime:actions/ada56dc8177f434db3e2cae51182a3b0",
+      "finished": "2026-10-06T01:00:06.371822+00:00",
+      "id": "ada56dc8177f434db3e2cae51182a3b0",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 1,
+      "state": "provenance_changed"
+    },
     "ae23dc71c0274b639d136f7575f5d567": {
       "artifact": "prepared-run:builds/campaign-ae23dc71c0274b639d136f7575f5d567/report.json",
       "artifact_sha256": "d7bb36bda3aec4f0f3f24929800f3e1176dba94d7426aeb9f8a8e43965e08183",
       "directory": "runtime:actions/ae23dc71c0274b639d136f7575f5d567",
       "finished": "2026-10-05T00:54:01.603714+00:00",
       "id": "ae23dc71c0274b639d136f7575f5d567",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
+    "ae514c735a9246db82d4e349e4ee7602": {
+      "artifact": "prepared-run:builds/campaign-ae514c735a9246db82d4e349e4ee7602/report.json",
+      "artifact_sha256": "ee4f17ec60726394f68ddd724427705fded2f6befcad08da553aad438cf7e304",
+      "directory": "runtime:actions/ae514c735a9246db82d4e349e4ee7602",
+      "finished": "2026-10-06T01:49:44.231726+00:00",
+      "id": "ae514c735a9246db82d4e349e4ee7602",
       "integration_credit": 0,
       "kind": "integrate",
       "returncode": 0,
@@ -932,6 +952,15 @@
       "kind": "report",
       "returncode": 0,
       "state": "passed"
+    },
+    "f68bb5e5490644398ffdc2ab21c499c6": {
+      "directory": "runtime:actions/f68bb5e5490644398ffdc2ab21c499c6",
+      "finished": "2026-10-06T01:26:42.516887+00:00",
+      "id": "f68bb5e5490644398ffdc2ab21c499c6",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 1,
+      "state": "provenance_changed"
     },
     "feeb0c602b724c38a70686637f0ff9d2": {
       "artifact": "runtime:actions/feeb0c602b724c38a70686637f0ff9d2/report.json",
@@ -4319,7 +4348,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 5140,
+  "revision": 5152,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -9389,6 +9418,60 @@
           },
           "reason": "Current published source/object/full-image proofs validated",
           "to": "integrated"
+        }
+      ]
+    },
+    "global-unique-code-catalogue-20261005": {
+      "amendments": [
+        {
+          "at": "2026-10-06T01:14:05.944499+00:00",
+          "before": {
+            "next_action": "Validate byte-pinned global catalogue and reconstruction receipts; incorporate only independently proven pointer ABI evidence, then export and publish paired conservative/provisional metrics, README/CI and external site PR. Retain physical exact acceptance and all uncertain spans.",
+            "pointers": [
+              "private-work:global-unique-catalog-20261005",
+              "scripts/global_function_catalog.py",
+              "scripts/relocation_identity.py",
+              "scripts/unique_code_report.py"
+            ]
+          },
+          "changes": {
+            "next_action": "Finish the frozen graph-refined global catalogue, paired unique and physical summaries, README and CI; publish a reviewed RAC2 topic PR. Website changes are withdrawn. Retain physical exact acceptance and every unsupported boundary or unproved address role.",
+            "pointers": [
+              "private-work:global-unique-catalog-20261005",
+              "docs/GLOBAL-UNIQUE-CODE.md",
+              "scripts/global_function_catalog.py",
+              "scripts/build_unique_catalog.py",
+              "scripts/relocation_identity.py",
+              "scripts/call_graph_refinement.py",
+              "scripts/unique_code_report.py"
+            ]
+          },
+          "reason": "Website changes were withdrawn; the global measurement requires static target class refinement in addition to exact relocation reconstruction."
+        }
+      ],
+      "created": "2026-10-06T00:39:57.900653+00:00",
+      "hypothesis": "LP requests complete global function/copy catalogue, conservative address-field validation, paired unique C metrics and actual display/CI. Inferred/original-boundary uncertainty must remain explicit; no arbitrary 5 MB denominator.",
+      "id": "global-unique-code-catalogue-20261005",
+      "kind": "research",
+      "next_action": "Finish the frozen graph-refined global catalogue, paired unique and physical summaries, README and CI; publish a reviewed RAC2 topic PR. Website changes are withdrawn. Retain physical exact acceptance and every unsupported boundary or unproved address role.",
+      "pointers": [
+        "private-work:global-unique-catalog-20261005",
+        "docs/GLOBAL-UNIQUE-CODE.md",
+        "scripts/global_function_catalog.py",
+        "scripts/build_unique_catalog.py",
+        "scripts/relocation_identity.py",
+        "scripts/call_graph_refinement.py",
+        "scripts/unique_code_report.py"
+      ],
+      "reopen_condition": "New verified function extent, original object allocation, scoped GP or source/target evidence; regenerate both numerator and denominator under one policy and never suppress uncertainty to reach a desired size.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-06T01:52:01.362416+00:00",
+          "from": "queued",
+          "reason": "Published-data lot validated locally: 109725 pinned intervals reconstruct exactly; graph/data-guarded paired metrics retain uncertain boundaries, 455 tests pass with two skips, pinned objdiff accepts both reports, and fresh frozen batch ae514c735a9246db82d4e349e4ee7602 passes all 28 loaded-image gates. No new C matching credit and no website changes.",
+          "reopen_condition": "New verified function extent, original object allocation, scoped GP or source/target evidence; regenerate both numerator and denominator under one policy and never suppress uncertainty to reach a desired size.",
+          "to": "done"
         }
       ]
     },
@@ -115617,6 +115700,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "4887c7f773b537333ccad540799e5fb7f4f7aa4598a36735e6530a3300650802"
+    "docs/CAMPAIGN-QUEUE.md": "c358767ffc6f595b70eaab1f4045919f9e396786b921856e9d442d431bd1d14c"
   }
 }

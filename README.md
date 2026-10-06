@@ -27,6 +27,25 @@
 
 ## Current status
 
+The global catalogue also reports conservative unique EE code under a
+[documented structural grouping policy](docs/GLOBAL-UNIQUE-CODE.md).
+Unsupported extents stay separate, unproved address fields stay literal, and
+static target classes refine relocation templates. This is a different scope
+from loaded-byte coverage; the normal matching acceptance rule is unchanged.
+
+![Unique and loaded code](progress/unique-decompilation.svg)
+
+<!-- unique-code-progress:start -->
+| Metric | Matched C bytes | Total code bytes | Progress |
+| --- | ---: | ---: | ---: |
+| Conservative unique EE code (unsupported extents uncollapsed) | 106,348 | 44,879,164 | 0.2370% |
+| Loaded code (boot + 27 overlays) | 311,644 | 48,788,176 | 0.6388% |
+
+Structurally supported function extents cover 40,029,528 loaded EE bytes; 231,732 EE bytes remain unresolved. VU code excluded: 86,368 bytes.
+Provisional representative partition: 37,641,816 bytes (certified: false); no global progress percentage is inferred from this partition.
+Conservative global partition retains unknown extents and gaps without deduplication: 8,672,280 loaded EE bytes have unsupported boundaries. The total follows the stated grouping policy and is not a certified original-source size. Supported subset: 106,348 / 36,206,884 unique bytes.
+<!-- unique-code-progress:end -->
+
 <p align="center">
   <a href="progress/report.json"><img src="progress/decompilation.svg" alt="Validated matching C/C++ progress across the boot and 27 overlays" width="760"></a>
 </p>

@@ -1213,6 +1213,22 @@ Qualify complete per-program source and all prior native controls, then rebuild 
 
 Reopen condition: New measured ABI, boundary or source context evidence
 
+## global-unique-code-catalogue-20261005
+
+State: `done`. Kind: `research`.
+
+Finish the frozen graph-refined global catalogue, paired unique and physical summaries, README and CI; publish a reviewed RAC2 topic PR. Website changes are withdrawn. Retain physical exact acceptance and every unsupported boundary or unproved address role.
+
+Reopen condition: New verified function extent, original object allocation, scoped GP or source/target evidence; regenerate both numerator and denominator under one policy and never suppress uncertainty to reach a desired size.
+
+- `private-work:global-unique-catalog-20261005`
+- `docs/GLOBAL-UNIQUE-CODE.md`
+- `scripts/global_function_catalog.py`
+- `scripts/build_unique_catalog.py`
+- `scripts/relocation_identity.py`
+- `scripts/call_graph_refinement.py`
+- `scripts/unique_code_report.py`
+
 ## glyph-family-0_aranos_tutorial-20261004
 
 State: `stopped`. Kind: `candidate`.
