@@ -79,17 +79,22 @@ def _raw_data_bindings(row):
     return tuple(sorted(bindings,key=lambda item:(item[5],item[4],item[1],item[2],item[3],item[0],item[6])))
 
 
-def refine_call_groups(rows,programs=None):
+def refine_call_groups(rows,programs=None,boot_binding_proof=None):
     """Return stable classes after ordered external static control-target splits.
 
     rows: validated catalogue function rows. programmes: optional exporter dict
-    or list of programme metadata, used only to recognize boot core.text as a
-    resident fallback. Targets resolve by actual programme+entry address; missing
-    targets remain distinct by programme+target. Unsupported rows stay singleton.
+    or list of programme metadata. Cross-program boot targets require a
+    ValidatedBootBindings receipt for the exact caller edge; names and explicit
+    target_program labels alone never authorize them. Missing targets remain
+    distinct by programme+target. Unsupported rows stay singleton.
     """
     if not isinstance(rows,list) or not rows:raise ValueError("Nonempty function rows required")
     if isinstance(programs,list):programs={p["program"]:p for p in programs}
     programs=programs or {}
+    from validate_boot_binding import ValidatedBootBindings
+    if boot_binding_proof is not None and not isinstance(boot_binding_proof,ValidatedBootBindings):
+        raise ValueError('Boot bindings must pass the independent metadata validator')
+    proof_edges=boot_binding_proof.edges if boot_binding_proof is not None else {}
     by_id={};entries={};initial=defaultdict(list);dependencies={};complete_rows=0
     for row in rows:
         identity,program,address,size=row.get("id"),row.get("program"),row.get("address"),row.get("size")
@@ -103,21 +108,28 @@ def refine_call_groups(rows,programs=None):
         initial[key].append(identity)
         dependencies[identity],complete=_edges(row);complete_rows+=complete
     def labels(groups):return {identity:_class_id(members) for members in groups for identity in members}
+    if boot_binding_proof is not None:
+        for identity,pin in boot_binding_proof.row_pins.items():
+            row=by_id.get(identity)
+            if row is None or (row['program'],row['address'],row['size'],row['raw_sha256'],row['boundary']['status'])!=pin:
+                raise ValueError('Validated boot binding caller/target body changed after validation')
     groups=[sorted(members) for members in initial.values()];groups.sort(key=lambda members:tuple(members))
     current=labels(groups);initial_count=len(groups)
-    def resident_boot(target):
-        boot=programs.get("boot",{})
-        return any(s.get("name")=="core.text" and s["address"]<=target<s["address"]+s["size"]
-                   for s in boot.get("ee_sections",boot.get("sections",[])))
-    resolved={};unresolved=0
+    resolved={};unresolved=0;proved_boot_edges=0
     for identity,edges in dependencies.items():
         row=by_id[identity];result=[]
         for offset,kind,target,explicit_program in edges:
             program=explicit_program or row["program"]
-            callee=entries.get((program,target))
-            if callee is None and not explicit_program and resident_boot(target):
-                callee=entries.get(("boot",target))
-            token=("resolved",callee) if callee is not None else ("unresolved",program,target)
+            callee=entries.get((program,target)) if program==row["program"] else None
+            key=(identity,offset,kind,target)
+            if callee is None and program in (row["program"],"boot") and key in proof_edges:
+                candidate=proof_edges[key]
+                target_row=by_id.get(candidate)
+                if (target_row is None or target_row['program']!='boot' or target_row['address']!=target
+                        or not _supported(target_row)):
+                    raise ValueError('Validated boot edge target no longer matches current rows')
+                callee=candidate;proved_boot_edges+=1
+            token=("resolved",callee) if callee is not None else ("unresolved",row['program'],program,target)
             unresolved+=callee is None;result.append((offset,kind,token))
         resolved[identity]=result
     iterations=0
@@ -138,6 +150,9 @@ def refine_call_groups(rows,programs=None):
     return {"class_by_id":current,"groups":[{"id":_class_id(members),"members":members} for members in groups],
             "iterations":iterations,"initial_class_count":initial_count,"final_class_count":len(groups),
             "external_static_edge_count":sum(len(v) for v in resolved.values()),"unresolved_edge_count":unresolved,
+            "combined_reference_boot_edges":proved_boot_edges,"runtime_preservation_proven":False,
+            "boot_binding_scope":boot_binding_proof.scope if boot_binding_proof is not None else None,
+            "boot_binding_artifact_sha256":boot_binding_proof.artifact_sha256 if boot_binding_proof is not None else None,
             "complete_dependency_rows":complete_rows,"legacy_dependency_rows":len(rows)-complete_rows,
             "complete_graph_coverage_claimed":complete_rows==len(rows),
             "primary_data_binding_policy":"retain-unowned-data-address-operands",

@@ -1,5 +1,16 @@
 {
   "actions": {
+    "0120d4f48a1c469f8e9d0370c76b5a25": {
+      "artifact": "prepared-run:builds/campaign-0120d4f48a1c469f8e9d0370c76b5a25/report.json",
+      "artifact_sha256": "ae95149326494000bfa175288cd25887ec557d161903f0bd55b5ba497f28dd08",
+      "directory": "runtime:actions/0120d4f48a1c469f8e9d0370c76b5a25",
+      "finished": "2026-10-06T03:27:54.493764+00:00",
+      "id": "0120d4f48a1c469f8e9d0370c76b5a25",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "042557e3a8d74eefb85c2598787efb4f": {
       "artifact": "runtime:actions/042557e3a8d74eefb85c2598787efb4f/report.json",
       "artifact_sha256": "cf0dea13cb19b31b89e6a194c3915f59ac849eee120f2338680dd59a4b336144",
@@ -4348,7 +4359,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 5152,
+  "revision": 5158,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -7241,6 +7252,30 @@
           "reason": "Two fresh full-context trials produce 444 and 440 bytes against the pinned 420-byte body; each retains 178 exact controls. Index-lifetime correction alone is insufficient.",
           "reopen_condition": "Measured division guard, loop CFG or original type evidence addressing the remaining complete-size refusal",
           "to": "stopped"
+        }
+      ]
+    },
+    "boot-shared-code-verification-20261005": {
+      "created": "2026-10-06T02:53:50.677631+00:00",
+      "hypothesis": "Named executable scopes and independently verified combined-reference boot bindings can resolve shared-core dependencies without claiming runtime immutability. Byte-weighted data/GP and boundary audits determine remaining duplication obligations.",
+      "id": "boot-shared-code-verification-20261005",
+      "kind": "research",
+      "next_action": "Verify exact boot/core ownership and all overlay load/zero-fill nonoverlap, gate each cross-program edge with pinned proof, preserve unowned data literals, audit the largest repeated and uncertain bodies, then regenerate paired metrics and qualify a frozen review PR.",
+      "pointers": [
+        "private-work:boot-shared-code-verification-20261005",
+        "docs/GLOBAL-UNIQUE-CODE.md",
+        "scripts/call_graph_refinement.py",
+        "scripts/build_unique_catalog.py"
+      ],
+      "reopen_condition": "Qualified original allocation/base/addend, scoped entry GP and preservation, finite-table snapshot normalization or new loader/runtime/source evidence; never broaden scalar masks or force an estimated source size.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-06T03:29:31.996010+00:00",
+          "from": "queued",
+          "reason": "Verified 22522 combined-reference boot edges to 103 pinned core bodies; primary grouping removes 427552 bytes with no new C credit. Data/GP and 20 guarded-switch audits retain unresolved ownership/runtime assumptions. All 496 tests pass with two skips, pinned objdiff and freshness checks pass, and frozen batch 0120d4f48a1c469f8e9d0370c76b5a25 passes every loaded-image gate with unchanged inputs.",
+          "reopen_condition": "Qualified original allocation/base/addend, scoped entry GP and preservation, finite-table snapshot normalization or new loader/runtime/source evidence; never broaden scalar masks or force an estimated source size.",
+          "to": "done"
         }
       ]
     },
@@ -115700,6 +115735,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "c358767ffc6f595b70eaab1f4045919f9e396786b921856e9d442d431bd1d14c"
+    "docs/CAMPAIGN-QUEUE.md": "f6b646a09b79cb1c4b3e9bc359a0d51ca0dc43fdb6366548cde6c68e9c2ebab2"
   }
 }

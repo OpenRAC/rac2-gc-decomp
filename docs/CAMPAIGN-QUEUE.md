@@ -943,6 +943,19 @@ Reopen condition: Measured division guard, loop CFG or original type evidence ad
 
 - `config/candidate-catalog.json`
 
+## boot-shared-code-verification-20261005
+
+State: `done`. Kind: `research`.
+
+Verify exact boot/core ownership and all overlay load/zero-fill nonoverlap, gate each cross-program edge with pinned proof, preserve unowned data literals, audit the largest repeated and uncertain bodies, then regenerate paired metrics and qualify a frozen review PR.
+
+Reopen condition: Qualified original allocation/base/addend, scoped entry GP and preservation, finite-table snapshot normalization or new loader/runtime/source evidence; never broaden scalar masks or force an estimated source size.
+
+- `private-work:boot-shared-code-verification-20261005`
+- `docs/GLOBAL-UNIQUE-CODE.md`
+- `scripts/call_graph_refinement.py`
+- `scripts/build_unique_catalog.py`
+
 ## compiler-mtc1-four-exceptions
 
 State: `done`. Kind: `research`.

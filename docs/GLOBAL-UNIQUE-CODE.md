@@ -41,6 +41,11 @@ template-only partition remains a separate provisional diagnostic. This policy
 still describes machine-code structure under explicit address bindings, not
 recovered original source or full semantic equivalence.
 
+Cross-programme boot edges additionally require a pinned, independently replayed
+combined-reference binding receipt. Named sections alone are insufficient.
+This is a static code-inventory model with runtime preservation explicitly
+unproved; see [the boot and remaining-duplication verification](BOOT-SHARED-CODE-VERIFICATION.md).
+
 The generator reads private pinned references and reconstructs every complete
 body byte for byte. Its public compressed chunks contain structural identifiers,
 address-role metadata and hash receipts, never reference instructions or assets.

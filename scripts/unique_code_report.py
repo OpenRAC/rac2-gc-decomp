@@ -120,6 +120,8 @@ def validate_catalog(catalog: dict) -> tuple[dict, list[dict]]:
             and catalog.get("target") == "SCUS_972.68",
             "Unsupported catalogue identity")
     normalizer = catalog.get("normalizer", {})
+    section_policy = catalog.get("section_identity_policy")
+    require(section_policy in (None, "named-pinned-ee-sections-v1"), "Unknown section identity policy")
     graph_policy = catalog.get("group_policy") == "graph-refined-structural-templates"
     require(catalog.get("group_policy") in (None, "graph-refined-structural-templates"), "Unknown grouping policy")
     if graph_policy:
@@ -134,6 +136,10 @@ def validate_catalog(catalog: dict) -> tuple[dict, list[dict]]:
         sha(program.get("reference_sha256"))
         sections = program.get("ee_sections")
         require(isinstance(sections, list) and bool(sections), "Missing executable EE scope")
+        if section_policy is not None:
+            require(all(isinstance(s.get("name"), str) and s["name"] for s in sections),
+                    "Named section identity is missing")
+            require(len({s["name"] for s in sections}) == len(sections), "Duplicate executable section name")
         no_overlap(sections)
         require(type(program.get("excluded_vu_bytes")) is int and program["excluded_vu_bytes"] >= 0,
                 "Missing separate VU extent")
@@ -215,7 +221,7 @@ def validate_catalog(catalog: dict) -> tuple[dict, list[dict]]:
     return programs, rows
 
 
-def generate(catalog: dict, credit: dict[tuple[str, int, int], str]) -> dict:
+def generate(catalog: dict, credit: dict[tuple[str, int, int], str], boot_binding_proof=None) -> dict:
     """Credit keys must come exclusively from the current validated integration loader."""
     programs, rows = validate_catalog(catalog)
     for program in programs:
@@ -228,7 +234,7 @@ def generate(catalog: dict, credit: dict[tuple[str, int, int], str]) -> dict:
     graph = None
     if catalog.get("group_policy") == "graph-refined-structural-templates":
         from call_graph_refinement import refine_call_groups
-        graph = refine_call_groups(rows, programs)
+        graph = refine_call_groups(rows, programs, boot_binding_proof)
     for row in rows:
         norm = row.get("normalization")
         signature = norm["signature_sha256"] if norm else "unresolved:" + row["id"]
@@ -312,6 +318,13 @@ def load_current_credit(repo: Path, catalog: dict) -> dict:
     required.update(f"progress/levels/{row['level']}.json" for row in overlays["levels"])
     require_current_policy(catalog)
     required.add("scripts/call_graph_refinement.py")
+    if catalog.get("boot_binding_proof") is not None:
+        required.update({"scripts/verify_boot_bindings.py", "scripts/validate_boot_binding.py",
+                         "scripts/elf_tools.py", "scripts/relocation_identity.py"})
+        descriptor = catalog["boot_binding_proof"]
+        require(isinstance(descriptor, dict) and isinstance(descriptor.get("path"), str),
+                "Invalid boot binding descriptor")
+        required.add(descriptor["path"])
     require(required <= pins, "Catalogue lacks current proof/input freshness pins")
     scope = read("config/progress-scope.json")
     identities = {p["name"]: p["sha256"] for p in scope["programs"]}
@@ -323,7 +336,13 @@ def load_current_credit(repo: Path, catalog: dict) -> dict:
         physical = next(p for p in scope["programs"] if p["name"] == program["program"])
         ee = [{"address": s["address"], "size": s["size"]} for s in physical["sections"]
               if s["flags"] & 4 and s["name"] != ".vutext"]
-        require(program["ee_sections"] == ee, "Catalogue EE scope differs from pinned physical scope")
+        actual = program["ee_sections"]
+        require([{k:s[k] for k in ("address", "size")} for s in actual] == ee,
+                "Catalogue EE scope differs from pinned physical scope")
+        if catalog.get("section_identity_policy") is not None:
+            require([s["name"] for s in actual] == [s["name"] for s in physical["sections"]
+                    if s["flags"] & 4 and s["name"] != ".vutext"],
+                    "Catalogue executable section names differ from pinned physical scope")
         require(program["excluded_vu_bytes"] == sum(s["size"] for s in physical["sections"]
                                                   if s["name"] == ".vutext"), "VU scope mismatch")
     sys.path.insert(0, str(repo / "scripts"))
@@ -481,6 +500,37 @@ def expand_compact_row(row: object, program: str, normalizer_sha256: str) -> dic
     return result
 
 
+def current_boot_binding(repo, catalog):
+    """Load the pinned static image binding; never infer it from section names."""
+    descriptor = catalog.get("boot_binding_proof")
+    if descriptor is None:
+        return None
+    from validate_boot_binding import load_boot_binding
+    require(isinstance(descriptor, dict), "Invalid boot binding descriptor")
+    require(descriptor.get("scope") == "combined-pinned-reference-images"
+            and descriptor.get("runtime_preservation_proven") is False,
+            "Boot descriptor must state static reference scope without runtime proof")
+    sha(descriptor.get("source_catalog_sha256"))
+    name = descriptor.get("path")
+    require(isinstance(name, str) and name and ":" not in name and "\\" not in name,
+            "Boot binding path must be repository-relative")
+    relative = PurePosixPath(name)
+    require(not relative.is_absolute() and ".." not in relative.parts and str(relative) == name,
+            "Invalid boot binding path")
+    path = (repo / name).resolve()
+    require(path.is_relative_to(repo.resolve()), "Boot binding path escapes repository")
+    sha(descriptor.get("sha256"))
+    pins = {key: digest((repo / source).read_bytes()) for key, source in (
+        ("proof_source_sha256", "scripts/verify_boot_bindings.py"),
+        ("reader_sha256", "scripts/elf_tools.py"),
+        ("decoder_source_sha256", "scripts/relocation_identity.py"))}
+    result = load_boot_binding(path, descriptor["sha256"], catalog["functions"],
+                               catalog["programs"], catalog["function_chunks"], pins)
+    require(result.source_catalog_sha256 == descriptor["source_catalog_sha256"],
+            "Boot descriptor original source context mismatch")
+    return result
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--catalog", type=Path, required=True)
@@ -493,7 +543,7 @@ def main() -> int:
     args = parser.parse_args()
     catalog, catalog_bytes = read_catalog(args.catalog)
     credit = load_current_credit(args.repo, catalog)
-    report = generate(catalog, credit)
+    report = generate(catalog, credit, current_boot_binding(args.repo, catalog))
     report["catalog_sha256"] = digest(catalog_bytes)
     summary = report if args.include_groups else {key: value for key, value in report.items() if key != "groups"}
     outputs = [(args.output, encoded(summary))]
