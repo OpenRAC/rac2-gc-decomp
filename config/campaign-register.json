@@ -788,6 +788,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "b33b8cefb35c4139b52ac1810427f5fe": {
+      "artifact": "prepared-run:builds/campaign-b33b8cefb35c4139b52ac1810427f5fe/report.json",
+      "artifact_sha256": "9070914dcb32806834cea87b62d4f6694384c1d25a5c59d3191287c1d0cbdf33",
+      "directory": "runtime:actions/b33b8cefb35c4139b52ac1810427f5fe",
+      "finished": "2026-10-06T16:13:16.164430+00:00",
+      "id": "b33b8cefb35c4139b52ac1810427f5fe",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "b5d06e2cf86c4351bf690784c0bf1d4a": {
       "artifact": "prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json",
       "artifact_sha256": "95ae80364e6135f7b5db76f135fa77a1c6024fba513b3cc28f81260d74ee796c",
@@ -4491,7 +4502,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 5908,
+  "revision": 5918,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -113547,6 +113558,148 @@
         }
       ]
     },
+    "sdk-cpr8-656-callbearing-source-qualification-20261006": {
+      "amendments": [
+        {
+          "at": "2026-10-06T15:24:49.427094+00:00",
+          "before": {
+            "next_action": "Execute one exact-plan source-unit qualification. Read actual complete STT/text/REL rows before strip and link, then compare the entire linked body. Helpers receive zero C credit; a successful experiment remains unintegrated until complete owner and image gates pass.",
+            "pointers": [
+              "private plan sha256:dfbb30e4414174e8262af145c1838f2f2711996b353980673b0906ae20b87b14",
+              "source sha256:526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+              "catalog sha256:64107298c9f7311a044b69ccbf27a713c690e818fb7afa5eac4923cec2718a08",
+              "campaign-trial:e4ed66e94a8f4cdebe8782484aa66260"
+            ],
+            "remaining_difference": null
+          },
+          "changes": {
+            "next_action": "Preserve the successful actual SDK compilation and the metadata-guard refusal. The complete unstripped object is 656 bytes with all four expected relocations; no link or body measurement has occurred. Repair only the unstable Python method fingerprint, then separately authorize finishing this same object without another compiler invocation.",
+            "pointers": [
+              "private plan sha256:dfbb30e4414174e8262af145c1838f2f2711996b353980673b0906ae20b87b14",
+              "source sha256:526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+              "catalog sha256:64107298c9f7311a044b69ccbf27a713c690e818fb7afa5eac4923cec2718a08",
+              "campaign-trial:e4ed66e94a8f4cdebe8782484aa66260",
+              "private actual compile object sha256:7a26e9567b01cead56a2a79b8f9f51f828cbb47bcd961f5d19a4f0736d2794c1",
+              "private retained outcome sha256:9f6ed990ee6ec5bd26eed64772b4e56989427107ba692dd8dd7ed346412c9ce4",
+              "private pre-strip audit sha256:de76f48d1c65384430d75f065983d658447d19ce1cdaded6698d69d19c2dc221"
+            ],
+            "remaining_difference": "Instrumentation refusal after driver return code zero: marshal-based expected_compile_argv fingerprint changes when its returned literal strings remain referenced. A zero-SDK benign argv-retention call reproduces the false refusal. Object STT/whole text/relocation contract passes; linked C qualification remains unproven."
+          },
+          "reason": "The single compiler budget is spent on an actual successful source compile. Retain the instrumentation refusal without reclassifying it as a source-body mismatch or an exact linked qualification; finish only the existing object after a concrete metadata-only repair."
+        },
+        {
+          "at": "2026-10-06T15:47:36.727482+00:00",
+          "before": {
+            "next_action": "Preserve the successful actual SDK compilation and the metadata-guard refusal. The complete unstripped object is 656 bytes with all four expected relocations; no link or body measurement has occurred. Repair only the unstable Python method fingerprint, then separately authorize finishing this same object without another compiler invocation.",
+            "pointers": [
+              "private plan sha256:dfbb30e4414174e8262af145c1838f2f2711996b353980673b0906ae20b87b14",
+              "source sha256:526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+              "catalog sha256:64107298c9f7311a044b69ccbf27a713c690e818fb7afa5eac4923cec2718a08",
+              "campaign-trial:e4ed66e94a8f4cdebe8782484aa66260",
+              "private actual compile object sha256:7a26e9567b01cead56a2a79b8f9f51f828cbb47bcd961f5d19a4f0736d2794c1",
+              "private retained outcome sha256:9f6ed990ee6ec5bd26eed64772b4e56989427107ba692dd8dd7ed346412c9ce4",
+              "private pre-strip audit sha256:de76f48d1c65384430d75f065983d658447d19ce1cdaded6698d69d19c2dc221"
+            ],
+            "remaining_difference": "Instrumentation refusal after driver return code zero: marshal-based expected_compile_argv fingerprint changes when its returned literal strings remain referenced. A zero-SDK benign argv-retention call reproduces the false refusal. Object STT/whole text/relocation contract passes; linked C qualification remains unproven."
+          },
+          "changes": {
+            "next_action": "Integrate this independently qualified complete 656-byte source as a second explicit SDK boot object owner. Preserve the default GNU and sysbit objects, opaque helper ownership and all overlay placements; run fresh complete image and unique-coverage gates before publishing credit.",
+            "pointers": [
+              "private plan sha256:dfbb30e4414174e8262af145c1838f2f2711996b353980673b0906ae20b87b14",
+              "source sha256:526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+              "catalog sha256:64107298c9f7311a044b69ccbf27a713c690e818fb7afa5eac4923cec2718a08",
+              "campaign-trial:e4ed66e94a8f4cdebe8782484aa66260",
+              "private actual compile object sha256:7a26e9567b01cead56a2a79b8f9f51f828cbb47bcd961f5d19a4f0736d2794c1",
+              "private retained outcome sha256:9f6ed990ee6ec5bd26eed64772b4e56989427107ba692dd8dd7ed346412c9ce4",
+              "private pre-strip audit sha256:de76f48d1c65384430d75f065983d658447d19ce1cdaded6698d69d19c2dc221",
+              "source:src/sdk/cpr8_source_unit.c",
+              "private readonly final qualification sha256:ff648481b24e38076a550b7fd7d6d70e1395149cda3e4315f44bb9f2684002ba",
+              "independent finished artifact audit sha256:0e9738927b268e41372af1a13c09bf1ad6e2f6afd695d7a1395af587c587fcea",
+              "complete linked body sha256:3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8"
+            ],
+            "remaining_difference": "The complete linked source unit matches all 656 reference bytes. Two instrumentation refusals remain immutable: unstable Python marshal serialization after the only compiler call, and an incorrect linked SN absolute-symbol type assumption after the only strip/link. Narrow metadata repairs and readonly validation complete the same actual artifacts; no source, flags, tools or helper bodies were changed."
+          },
+          "reason": "Complete actual source compilation, strip-copy and SN link are verified after two metadata-only guard repairs. Preserve both original zero-measurement refusal outcomes and the older 736-byte default refusal; no new compiler or linker action was used for the readonly final validation."
+        },
+        {
+          "at": "2026-10-06T16:23:36.765626+00:00",
+          "before": {
+            "next_action": "Integrate this independently qualified complete 656-byte source as a second explicit SDK boot object owner. Preserve the default GNU and sysbit objects, opaque helper ownership and all overlay placements; run fresh complete image and unique-coverage gates before publishing credit.",
+            "pointers": [
+              "private plan sha256:dfbb30e4414174e8262af145c1838f2f2711996b353980673b0906ae20b87b14",
+              "source sha256:526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+              "catalog sha256:64107298c9f7311a044b69ccbf27a713c690e818fb7afa5eac4923cec2718a08",
+              "campaign-trial:e4ed66e94a8f4cdebe8782484aa66260",
+              "private actual compile object sha256:7a26e9567b01cead56a2a79b8f9f51f828cbb47bcd961f5d19a4f0736d2794c1",
+              "private retained outcome sha256:9f6ed990ee6ec5bd26eed64772b4e56989427107ba692dd8dd7ed346412c9ce4",
+              "private pre-strip audit sha256:de76f48d1c65384430d75f065983d658447d19ce1cdaded6698d69d19c2dc221",
+              "source:src/sdk/cpr8_source_unit.c",
+              "private readonly final qualification sha256:ff648481b24e38076a550b7fd7d6d70e1395149cda3e4315f44bb9f2684002ba",
+              "independent finished artifact audit sha256:0e9738927b268e41372af1a13c09bf1ad6e2f6afd695d7a1395af587c587fcea",
+              "complete linked body sha256:3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8"
+            ]
+          },
+          "changes": {
+            "next_action": "This exact CPR8 source is integrated as the second SDK boot owner. Current complete image and object proofs pass for 189 boot functions; all-members unique coverage measures an additional 656 bytes. Preserve the previous source and instrumentation refusals, opaque helpers and exact-source admission. New targets require separate source qualification.",
+            "pointers": [
+              "private plan sha256:dfbb30e4414174e8262af145c1838f2f2711996b353980673b0906ae20b87b14",
+              "source sha256:526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+              "catalog sha256:64107298c9f7311a044b69ccbf27a713c690e818fb7afa5eac4923cec2718a08",
+              "campaign-trial:e4ed66e94a8f4cdebe8782484aa66260",
+              "private actual compile object sha256:7a26e9567b01cead56a2a79b8f9f51f828cbb47bcd961f5d19a4f0736d2794c1",
+              "private retained outcome sha256:9f6ed990ee6ec5bd26eed64772b4e56989427107ba692dd8dd7ed346412c9ce4",
+              "private pre-strip audit sha256:de76f48d1c65384430d75f065983d658447d19ce1cdaded6698d69d19c2dc221",
+              "source:src/sdk/cpr8_source_unit.c",
+              "private readonly final qualification sha256:ff648481b24e38076a550b7fd7d6d70e1395149cda3e4315f44bb9f2684002ba",
+              "independent finished artifact audit sha256:0e9738927b268e41372af1a13c09bf1ad6e2f6afd695d7a1395af587c587fcea",
+              "complete linked body sha256:3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8",
+              "catalog:config/boot-units/sdk-cpr8.json",
+              "review:progress/boot-units/sdk-cpr8.json",
+              "integration:progress/integration.json",
+              "campaign-action:b33b8cefb35c4139b52ac1810427f5fe",
+              "unique-report:progress/unique-code-report.json"
+            ]
+          },
+          "reason": "Fresh complete boot and all 27 overlay gates, independent 5545-function object/readonly audit and 109725-function reconstruction/theorem replay qualify this explicit 656-byte SDK owner. No helper credit, generic SDK profile promotion or source variation is introduced."
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-06T15:19:53.957127+00:00",
+      "hypothesis": "The fixed owned SDK pipeline may reproduce the unchanged attributed CPR8 source as one complete 656-byte text function with exactly four declared calls to two opaque original helpers. The prior default-compiler 736-byte link refusal remains immutable.",
+      "id": "sdk-cpr8-656-callbearing-source-qualification-20261006",
+      "kind": "research",
+      "next_action": "This exact CPR8 source is integrated as the second SDK boot owner. Current complete image and object proofs pass for 189 boot functions; all-members unique coverage measures an additional 656 bytes. Preserve the previous source and instrumentation refusals, opaque helpers and exact-source admission. New targets require separate source qualification.",
+      "pointers": [
+        "private plan sha256:dfbb30e4414174e8262af145c1838f2f2711996b353980673b0906ae20b87b14",
+        "source sha256:526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+        "catalog sha256:64107298c9f7311a044b69ccbf27a713c690e818fb7afa5eac4923cec2718a08",
+        "campaign-trial:e4ed66e94a8f4cdebe8782484aa66260",
+        "private actual compile object sha256:7a26e9567b01cead56a2a79b8f9f51f828cbb47bcd961f5d19a4f0736d2794c1",
+        "private retained outcome sha256:9f6ed990ee6ec5bd26eed64772b4e56989427107ba692dd8dd7ed346412c9ce4",
+        "private pre-strip audit sha256:de76f48d1c65384430d75f065983d658447d19ce1cdaded6698d69d19c2dc221",
+        "source:src/sdk/cpr8_source_unit.c",
+        "private readonly final qualification sha256:ff648481b24e38076a550b7fd7d6d70e1395149cda3e4315f44bb9f2684002ba",
+        "independent finished artifact audit sha256:0e9738927b268e41372af1a13c09bf1ad6e2f6afd695d7a1395af587c587fcea",
+        "complete linked body sha256:3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8",
+        "catalog:config/boot-units/sdk-cpr8.json",
+        "review:progress/boot-units/sdk-cpr8.json",
+        "integration:progress/integration.json",
+        "campaign-action:b33b8cefb35c4139b52ac1810427f5fe",
+        "unique-report:progress/unique-code-report.json"
+      ],
+      "remaining_difference": "The complete linked source unit matches all 656 reference bytes. Two instrumentation refusals remain immutable: unstable Python marshal serialization after the only compiler call, and an incorrect linked SN absolute-symbol type assumption after the only strip/link. Narrow metadata repairs and readonly validation complete the same actual artifacts; no source, flags, tools or helper bodies were changed.",
+      "reopen_condition": "No source, type, expression, loop, flag or tool permutation. Preserve any refusal and require independently new evidence before another source trial.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-06T15:47:36.882891+00:00",
+          "from": "queued",
+          "reason": "One actual SDK compiler invocation and one same-object strip/link produced the complete 656-byte reference body. Readonly final and independent artifact audits pass; this research closure adds no integrated credit or general profile admission.",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
     "sdk-fixed-control-profile-foundation-publication-20261006": {
       "created": "2026-10-06T12:47:02.779316+00:00",
       "hypothesis": "Publish explicit, strictly validated metadata for the owned SDK driver pipeline measured on the three already accepted MIT control units, with no new C credit or global compiler replacement.",
@@ -139225,6 +139378,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "0ad3d616a2d457f50935099025ac2f9fcc260d1a877d81d1dd3ae23364cbe20f"
+    "docs/CAMPAIGN-QUEUE.md": "3ded28bab3b9f3454f3ea8d0121159ebe7e105fd617d52cf9134827cc48a6234"
   }
 }

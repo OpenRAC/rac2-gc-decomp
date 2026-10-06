@@ -116,7 +116,7 @@
       "name": "18-ipu-synchronization"
     }
   ],
-  "generator_sha256": "f88cbd07e3b3f8ef5a3a6cb43643ab1f02f46de228cdb01bb7bf259099ba99a2",
+  "generator_sha256": "5ca92b96cd2079e52a0115f3a963b5331c3f7f0e69db8f6ea46069b03745aa1d",
   "input_sha256": {
     "candidates/boot.c": "fec0fb61d30ac322b5989e7fcf9611b1017d7c64775c507b3f30d48329b66b52",
     "candidates/levels/0_aranos_tutorial.c": "a0de41344bc4e9ed5eb2e216ff36b2543c93e40ed402d7156d73800d9b910ea6",
@@ -146,9 +146,12 @@
     "candidates/levels/7_siberius.c": "fdfd8595bd7a967c2b43cc385b718197a0e7dcda2b7656463824122fb37e0694",
     "candidates/levels/8_tabora.c": "58caaf2482f713cac786d87489e717423f8cebc472505b08d7c3edfdfe65887e",
     "candidates/levels/9_dobbo.c": "52a4570298f3d6320f63bbd06e1cb571cdc0e81f3d57f28474f6d7200175fd4b",
+    "candidates/sdk/cpr8_source_unit.c": "526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
     "candidates/sdk/sysbit_flush.c": "b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4",
+    "config/boot-units/sdk-cpr8.json": "d3b35d02f2ab660e84aeedf65aabde12b89286d97ba012bc27fa8fd5291175c5",
     "config/boot-units/sdk-sysbit-flush.json": "8997e4370cf6c1a4aaf13d44c4234d78b0226618a7895319ecc1618d93e1d031",
     "config/candidate-catalog.json": "6fa8b8079aca55afd4a4f2815e09f30919c5725ee172bead2e4c733fbc44a9b3",
+    "config/compiler-profiles/owned-sdk-b9-single-text-controls-v1.json": "b6274a824c321458200375da3012c3cd35163f1994402caf6f9c78bfb71023b6",
     "config/level-native/0_aranos_tutorial.json": "9b0c54cfe53d98d4f492f764dbe6ec099fee855046818dfecd7fd6fbe4579830",
     "config/level-native/10_hrugis_cloud.json": "9732ded3532015543fd47a35e6767f581ae131b1607f9099d1da37dc1536c77b",
     "config/level-native/11_joba.json": "baa8798c0072c9e6e5c989a43b4f6194e62bb77a5f8e6c82b545785d76ec5157",
@@ -176,6 +179,9 @@
     "config/level-native/7_siberius.json": "2effd27d73d197aec5b975367249bf9499bc38898e58041327a3b01c931b75f0",
     "config/level-native/8_tabora.json": "b5f5cc711c5a2c65f80dfab565ea1e481ac8edbb53d5f87cc18e2364e356814f",
     "config/level-native/9_dobbo.json": "f3518f1abcf1896ee9d36b62ce9141bd79f70a35bb50f4400d7d7b445a2df361",
+    "config/target.json": "36ac2984abe5328806b509105a955f747609bd0dc5f3d4b0dedd375d1557a8ec",
+    "progress/compiler-profiles/owned-sdk-b9-leaf-controls.json": "d28fdadf81b63778c25592200771dff28964e4b8f9084818cbd37db2178b40d2",
+    "src/sdk/cpr8_source_unit.c": "526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
     "src/sdk/sysbit_flush.c": "b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4"
   },
   "machine_proof_status": "unverified after authoring; regenerate all affected reviews and loaded-byte gates",
@@ -197,10 +203,10 @@
     "pilot_family_replicated_catalogued_bytes": 648,
     "pilot_family_unique_catalogued_bytes": 24,
     "scope": "authored default boot, separate SDK boot and native catalogues; excludes replicated common overlay coverage",
-    "sdk_authored_functions": 1,
-    "sdk_catalogued_machine_bytes": 152,
+    "sdk_authored_functions": 2,
+    "sdk_catalogued_machine_bytes": 808,
     "shared_native_prelude_variants": 1,
-    "total_unique_authored_source_variants_in_scope": 1103,
+    "total_unique_authored_source_variants_in_scope": 1104,
     "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report."
   },
   "native_source_families": [
@@ -28164,6 +28170,17 @@
       ],
       "sha256": "52a4570298f3d6320f63bbd06e1cb571cdc0e81f3d57f28474f6d7200175fd4b",
       "source_text_bytes": 23409
+    },
+    "candidates/sdk/cpr8_source_unit.c": {
+      "pieces": [
+        {
+          "fragment": "src/sdk/cpr8_source_unit.c",
+          "sha256": "526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+          "source_text_bytes": 4438
+        }
+      ],
+      "sha256": "526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+      "source_text_bytes": 4438
     },
     "candidates/sdk/sysbit_flush.c": {
       "pieces": [

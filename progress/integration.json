@@ -2825,9 +2825,24 @@
       "candidate_source": "candidates/sdk/sysbit_flush.c",
       "origin": "boot-sdk",
       "unit_id": "sdk-sysbit-flush"
+    },
+    {
+      "symbol": "FUN_0012D808",
+      "address": 1234952,
+      "size": 656,
+      "matched": true,
+      "reference_sha256": "3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8",
+      "candidate_sha256": "3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot",
+      "candidate_source": "candidates/sdk/cpr8_source_unit.c",
+      "origin": "boot-sdk",
+      "unit_id": "sdk-cpr8"
     }
   ],
-  "matched_code_bytes": 10704,
+  "matched_code_bytes": 11360,
   "full_boot_gate": {
     "matched": true,
     "bytes_compared": 2521763,
@@ -2853,7 +2868,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "f8782d943e13468e07a63700dfed036f63e1c3db5714e71fd835086e1c4589bd",
+    "candidate_elf_sha256": "7076029f726856912c7ca1f2bc9ef6fd28cbe5fc201a6a3535959637828549b1",
     "c_object_sha256": "b71624c21c7eb1161c91670dd8b3cae6afb5d1a6f40e678905086cdb8f1a76c6",
     "replacement_inputs": {
       "16180.s": [
@@ -2870,7 +2885,8 @@
         "FUN_0012B3E0",
         "FUN_0012CFE8",
         "FUN_00130DB8",
-        "_sysbitFlush"
+        "_sysbitFlush",
+        "FUN_0012D808"
       ],
       "16F980.s": [
         "FUN_0026F710",
@@ -3057,14 +3073,14 @@
       "module": "src/sdk/sysbit_flush.c",
       "catalog_path": "config/boot-units/sdk-sysbit-flush.json",
       "review_path": "progress/boot-units/sdk-sysbit-flush.json",
-      "review_sha256": "125b9b12dfbf86e59e389d92ac091ba76c0dcb3f9cbe66b6d8273e90b7b085ef",
+      "review_sha256": "2049d69b3100ee518bec297786e82f992aa8c3a4bbd37eb5a9525b403d350aa1",
       "profile_id": "owned-sdk-b9-single-text-controls-v1",
       "input_section": ".text",
       "object_proof": {
         "unit_id": "sdk-sysbit-flush",
         "source_sha256": "b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4",
         "catalog_sha256": "8997e4370cf6c1a4aaf13d44c4234d78b0226618a7895319ecc1618d93e1d031",
-        "review_sha256": "125b9b12dfbf86e59e389d92ac091ba76c0dcb3f9cbe66b6d8273e90b7b085ef",
+        "review_sha256": "2049d69b3100ee518bec297786e82f992aa8c3a4bbd37eb5a9525b403d350aa1",
         "profile_id": "owned-sdk-b9-single-text-controls-v1",
         "pipeline": "sdk-driver-integrated-cpp-strip-v1",
         "tools": {
@@ -3078,7 +3094,7 @@
         },
         "object_sha256": "e0a9a1a83aed6b86d94cd1b0e0f71ea6021d64f190c842ea56aa83cef9f3845c",
         "candidate_elf_sha256": "19774fef13d258e0d14c042b3a15a785315c44eab6f2710be2bb6be0f7231d24",
-        "validator_sha256": "fa7d4bf48606f692e2bbe6aae8296e8369cf73a8475e1795e3501dd5c78269c7",
+        "validator_sha256": "921cb614b330aeb2a2922e540fd1639b228f1ee452156ad5950abab17f416474",
         "functions": [
           {
             "symbol": "_sysbitFlush",
@@ -3087,6 +3103,49 @@
             "matched": true,
             "reference_sha256": "70928de6af250170c95f9516617cbc936385634206ffe953ad7dbe2007698ce0",
             "candidate_sha256": "70928de6af250170c95f9516617cbc936385634206ffe953ad7dbe2007698ce0",
+            "different_bytes": 0,
+            "state": "matched_unintegrated"
+          }
+        ],
+        "read_only_sections": []
+      }
+    },
+    "sdk-cpr8": {
+      "unit_id": "sdk-cpr8",
+      "source": "candidates/sdk/cpr8_source_unit.c",
+      "module": "src/sdk/cpr8_source_unit.c",
+      "catalog_path": "config/boot-units/sdk-cpr8.json",
+      "review_path": "progress/boot-units/sdk-cpr8.json",
+      "review_sha256": "856d08b534027d4fc05c2051c839e69a40055173890d07300619d9648669fe15",
+      "profile_id": "owned-sdk-b9-single-text-controls-v1",
+      "input_section": ".text",
+      "object_proof": {
+        "unit_id": "sdk-cpr8",
+        "source_sha256": "526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e",
+        "catalog_sha256": "d3b35d02f2ab660e84aeedf65aabde12b89286d97ba012bc27fa8fd5291175c5",
+        "review_sha256": "856d08b534027d4fc05c2051c839e69a40055173890d07300619d9648669fe15",
+        "profile_id": "owned-sdk-b9-single-text-controls-v1",
+        "pipeline": "sdk-driver-integrated-cpp-strip-v1",
+        "tools": {
+          "driver": "64d0a50fef499da0b98177eb5e79e41dfb066ad44246b137c78a266ef97ee265",
+          "cc1": "b9aef69f93efb949f15ea58189e8eef4a002b9fe4de5d3fcf89c34e1244ec026",
+          "as": "296af123052ee39d175e5b3254102aafca105d4f6e975b351a13867f59b04019",
+          "cpp_available": "f85a54d241e019993fa7a06285d3677856b3b431e10318a587ab029373c603d7",
+          "cc1plus_available": "da6ef339898e721fa6393f608f7c5de975b9510841d4c2967f318d6108f62512",
+          "strip": "fce5d577f2ed6bb8bdb61028d44c5b6be87187b55230e1bb41eccb0053cbbf76",
+          "linker": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
+        },
+        "object_sha256": "d92c545c53c0f2c0550fca7c42fa2db1dd37b6d9374e0ab435702f59622b467b",
+        "candidate_elf_sha256": "cc2c592297e9860a4785e9ed25371fba4c07faa2bc6b861dc35c994b5806f739",
+        "validator_sha256": "921cb614b330aeb2a2922e540fd1639b228f1ee452156ad5950abab17f416474",
+        "functions": [
+          {
+            "symbol": "FUN_0012D808",
+            "address": 1234952,
+            "size": 656,
+            "matched": true,
+            "reference_sha256": "3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8",
+            "candidate_sha256": "3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8",
             "different_bytes": 0,
             "state": "matched_unintegrated"
           }

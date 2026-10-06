@@ -40,7 +40,11 @@ The separately qualified SDK `_sysbitFlush` body is authored as
 change the default 187-function unit or its shared overlay placements. The boot
 integration records both owners explicitly and compares each complete object
 before the full loaded-image gate. See [the source and ownership evidence](SDK-SYSBIT-EVIDENCE.md).
-This additional authored unit does not establish an original retail object boundary.
+The additional `src/sdk/cpr8_source_unit.c` source is rendered under the same
+bare filename and has its own complete-object, four-call relocation and opaque
+helper ownership proof. See [CPR8 evidence](SDK-CPR8-EVIDENCE.md). The two SDK
+units contribute 808 catalogued bytes without changing default GNU or native
+sources. These authored units do not establish original retail object boundaries.
 
 ## Native family pilot
 
@@ -99,7 +103,7 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Default GNU boot | 187 catalogued definitions (183 campaign-authored, four attributed third-party definitions) | 10,552 |
-| Separate SDK boot unit | One attributed definition with its own complete-object proof | 152 |
+| Separate SDK boot units | Two attributed definitions with their own complete-object proofs | 808 |
 | Native overlays | 914 family-or-singleton items, 915 contextual variants | 107,328 across 1,121 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
