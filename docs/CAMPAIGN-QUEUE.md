@@ -3796,13 +3796,15 @@ Reopen condition: Independent original prototype/source storage/observable veloc
 
 ## native-review-endako-decimal-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify full live reference, callers and converter ABI; author complete unit preserving current Endako controls, then qualify exact bytes.
+Keep this physical family parked under its existing complete-symbol candidate trials. The old queued research reservation is not an untried target.
 
-Reopen condition: New measured type/lifetime/ABI evidence, never equivalent expression or allocation cycling.
+Reopen condition: Independent measured type/lifetime/ABI or algorithm evidence; no expression/register cycles.
 
 - `private-work:parallel-20261004/native_review/CURRENT.md`
+- `campaign-trial:f67d9d7135c742e494cd21b48b765883`
+- `campaign-trial:3eefc36ad07d40c08b77a9049f73aca5`
 
 ## native-review-endako-decimal-c-v1-20261004
 
@@ -4098,11 +4100,14 @@ Reopen condition: Independent originalasset-header/descriptor globalstorage orso
 
 ## native-review-endako-unlink-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin complete boundaries and callers, then author private whole Endako unit and maintained trial preserving13controls.
+Keep this physical family parked under its existing complete-symbol candidate trials. The old queued research reservation is not an untried target.
 
-Reopen condition: New measured types, CFG/lifetime or helperABI evidence, no source allocation cycles.
+Reopen condition: Independent original source/type/optimizer phase evidence that explains remaining owner/head traversal allocation and branch-delay scheduling; equivalent expressions or renamed locals are insufficient.
+
+- `campaign-trial:000a1c12a9d74b848588d12529246872`
+- `campaign-trial:3c21a0b053624713b041c4ec234b4b43`
 
 ## native-review-endako-unlink-c-v1-20261004
 
@@ -4750,11 +4755,16 @@ Reopen condition: Independent original marker declaration/array/aggregate extent
 
 ## native-review-joba-stream-relocation-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify caller32-bit ABI and complete pin uniqueness/history, then author privateintendedJobaunit and qualifyallcurrentcontrols.
+Keep this 352-byte physical family parked under its existing v1/v2 source trials. The research reservation is an alias of already measured refusals, not a new compilation opportunity.
 
-Reopen condition: Independent header/record alias/layout/source-phase evidence, no names/registers/expressioncycle.
+Reopen condition: Independently measured current-backend memory-alias optimization/source-binding witness reproducing required postwrite global reloads; no volatile, fakeaggregate, forcedregisters, flagsmatrix or expressioncycling.
+
+- `campaign-task:native-review-joba-stream-relocation-c-v1-20261004`
+- `campaign-task:native-review-joba-stream-relocation-c-v2-20261004`
+- `campaign-trial:478f6cbf42a94961881388b77323529b`
+- `campaign-trial:3f479814b9d0433dbe564cc9feee153b`
 
 ## native-review-joba-stream-relocation-c-v1-20261004
 
@@ -16872,6 +16882,29 @@ Reopen condition: New independently qualified per-unit evidence is required befo
 - `private-work:c-campaign-20261006/sdk-domain-toolqualification-controls/root-independent-audit.json`
 - `private-work:c-campaign-20261006/sdk-domain-tooling-review/SDK-DOMAIN-ASSESSMENT.md`
 - `docs/SDK-PROFILE-QUALIFICATION.md`
+
+## sdk-sysbit152-experimental-unit-qualification-20261006
+
+State: `done`. Kind: `research`.
+
+The exact standalone SDK source is integrated in the boot through its explicit object owner. Final boot and all 27 overlays pass with 188 boot functions; fresh all-member unique coverage adds exactly 152 bytes. Preserve the original default-compiler refusal and the leaf-only control foundation. New sources or tool profiles require separate reviewed qualification.
+
+Reopen condition: No source, flags, type, layout or expression variants. Preserve the prior default-compiler 140/152 negative and stop this experiment after its single actual execution.
+
+- `private sealed unit plan sha256:2959be356acc64137d6c35e420a7fa10c97a894da8696fb0dba96bc12a8086e5`
+- `source sha256:b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4`
+- `catalog sha256:bcf6901793c96e461088957beb1064aeb62684a4271af2a5b166acd553112445`
+- `private SDK controls receipt sha256:045c484fe3d434774f0687602c04b4be6fd0876e49d9dbb9a29ef3319f4e4c0c`
+- `private actual SDK outcome sha256:1b6766c61b67f6e418f3ea46be919c0609f7564f4deaa741d33fb5919d636679`
+- `actual stripped object sha256:e0a9a1a83aed6b86d94cd1b0e0f71ea6021d64f190c842ea56aa83cef9f3845c`
+- `complete 152-byte body sha256:70928de6af250170c95f9516617cbc936385634206ffe953ad7dbe2007698ce0`
+- `source:src/sdk/sysbit_flush.c`
+- `catalog:config/boot-units/sdk-sysbit-flush.json`
+- `review:progress/boot-units/sdk-sysbit-flush.json`
+- `integration:progress/integration.json`
+- `campaign-action:5953aa98108648cc9df3f90495339d4f`
+- `final owner audit sha256:53d6fdbb3b7712026ea030d73876c5fd9f97305c0370605288ce5d4a9ab2e00b`
+- `unique-report:progress/unique-code-report.json`
 
 ## shared-callstate-power-20261006-0_aranos_tutorial
 

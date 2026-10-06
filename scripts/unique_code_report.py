@@ -305,6 +305,30 @@ def require_current_policy(catalog: dict) -> None:
             "Current catalogue requires graph-refined complete static dependencies and retained unowned data operands")
 
 
+def sdk_owner_input_paths(integration: dict, repo: Path) -> set[str]:
+    """Use the owner validator's fixed dependency closure without adding C credit."""
+    if "sdk_units" not in integration:
+        return set()
+    require(type(integration.get("schema")) is int and integration["schema"] == 3
+            and integration.get("kind") == "boot-c-owner-integration",
+            "SDK dependencies require the complete boot owner schema")
+    sys.path.insert(0, str(repo / "scripts"))
+    import boot_sdk_unit
+    require(Path(boot_sdk_unit.__file__).resolve() == (repo / "scripts/boot_sdk_unit.py").resolve(),
+            "SDK owner validator repository mismatch")
+    paths = boot_sdk_unit.current_input_paths(integration, repo)
+    require(type(paths) is set and "scripts/boot_sdk_unit.py" in paths,
+            "SDK owner dependency closure is incomplete")
+    for name in paths:
+        require(type(name) is str and "\\" not in name and ":" not in name,
+                "Invalid SDK owner dependency path")
+        path = PurePosixPath(name)
+        require(not path.is_absolute() and ".." not in path.parts and path.as_posix() == name
+                and (repo / name).is_file() and (repo / name).resolve().is_relative_to(repo.resolve()),
+                "SDK owner dependency escapes repository or is missing")
+    return paths
+
+
 def load_current_credit(repo: Path, catalog: dict) -> dict:
     """Reuse the existing exact proof validators; never credit a candidate or partial range."""
     pins = validate_pins(catalog, repo)
@@ -316,6 +340,7 @@ def load_current_credit(repo: Path, catalog: dict) -> dict:
                 "progress/report.json", "progress/integration.json", "progress/candidates.json",
                 "scripts/decomp_report.py", "scripts/unique_code_report.py"}
     required.update(f"progress/levels/{row['level']}.json" for row in overlays["levels"])
+    required.update(sdk_owner_input_paths(read("progress/integration.json"), repo))
     require_current_policy(catalog)
     required.add("scripts/call_graph_refinement.py")
     if catalog.get("boot_binding_proof") is not None:

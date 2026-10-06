@@ -170,7 +170,7 @@ G1 result; neither counters nor a process exit code can substitute for the gates
 Retired batch scripts and finalizers are historical evidence, not the active path.
 
 ```powershell
-python scripts/campaign.py --runtime <private-runtime> integrate -- --manifest <private-manifest.json> --toolchain <ASM-toolchain> --c-toolchain <C-linker-toolchain> --program-jobs 4 --jobs 2
+python scripts/campaign.py --runtime <private-runtime> integrate -- --manifest <private-manifest.json> --toolchain <ASM-toolchain> --c-toolchain <C-linker-toolchain> --sdk-binding <private-sdk-binding.json> --program-jobs 4 --jobs 2
 python scripts/campaign.py --runtime <private-runtime> report -- --level-proof progress/levels/<level>.json
 python scripts/campaign.py --runtime <private-runtime> close <candidate-task-id>
 ```

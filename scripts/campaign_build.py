@@ -23,7 +23,9 @@ def input_hashes(root: Path) -> dict:
         "scripts/campaign_build.py", "scripts/source_layout.py")]
     for directory, pattern in (("candidates", "*.c"), ("src", "*.cfrag"), ("src", "*.c"),
                                ("config/level-native", "*.json"), ("config/regions", "*.json"),
-                               ("progress/level-candidates", "*.json")):
+                               ("progress/level-candidates", "*.json"), ("config/boot-units", "*.json"),
+                               ("progress/boot-units", "*.json"), ("config/compiler-profiles", "*.json"),
+                               ("progress/compiler-profiles", "*.json")):
         paths.extend((root / directory).rglob(pattern))
     paths.extend((root / "scripts").rglob("*.py"))
     return {path.relative_to(root).as_posix(): file_hash(path)
@@ -50,7 +52,7 @@ def validate_manifest(manifest: dict, baseline: dict) -> None:
 
 def run_campaign(manifest_path: Path, toolchain: Path, c_toolchain: Path,
                  program_jobs: int, jobs: int, candidate_review: Path | None = None,
-                 batch_id: str | None = None) -> tuple[Path, dict]:
+                 batch_id: str | None = None, sdk_binding: Path | None = None) -> tuple[Path, dict]:
     if program_jobs < 1 or jobs < 1:
         raise ValueError("Parallelism must be positive")
     if (ROOT / "config/source-layout.json").exists():
@@ -82,6 +84,8 @@ def run_campaign(manifest_path: Path, toolchain: Path, c_toolchain: Path,
               "tools": {path.name: file_hash(path) for path in instruments},
               "g1": None, "g3": [], "failures": [], "matched": False}
     report["input_sha256"] = input_hashes(ROOT)
+    sdk_binding_sha256 = file_hash(sdk_binding) if sdk_binding is not None else None
+    report["sdk_binding_sha256"] = sdk_binding_sha256
     programs = [("boot", manifest["boot"])] + [
         (row["level"], row) for row in manifest["overlays"]]
 
@@ -89,7 +93,7 @@ def run_campaign(manifest_path: Path, toolchain: Path, c_toolchain: Path,
         result = rebuild(Path(row["path"]), row["sha256"], directory / name,
                          toolchain, jobs, "boot" if name == "boot" else "overlay",
                          c_toolchain, level=None if name == "boot" else name,
-                         candidate_review=candidate_review)
+                         candidate_review=candidate_review, sdk_binding=sdk_binding if name == "boot" else None)
         result["program"] = name
         if name != "boot":
             result["level"] = name
@@ -109,6 +113,8 @@ def run_campaign(manifest_path: Path, toolchain: Path, c_toolchain: Path,
                 else:
                     report["g3"].append(result)
     report["g3"].sort(key=lambda row: row["level"])
+    if sdk_binding is not None and file_hash(sdk_binding) != sdk_binding_sha256:
+        report["failures"].append({"program": "boot-sdk", "error": "Private SDK binding changed during batch"})
     if input_hashes(ROOT) != report["input_sha256"]:
         report["failures"].append({"program": "batch", "error": "Campaign inputs changed during the build"})
     report["failures"].sort(key=lambda row: row["program"])
@@ -132,12 +138,13 @@ def main() -> int:
     parser.add_argument("--toolchain", required=True, type=Path)
     parser.add_argument("--c-toolchain", required=True, type=Path)
     parser.add_argument("--candidate-review", type=Path)
+    parser.add_argument("--sdk-binding", type=Path, help="private owned SDK paths, required only for an admitted boot SDK unit")
     parser.add_argument("--program-jobs", type=int, default=4)
     parser.add_argument("--jobs", type=int, default=2)
     parser.add_argument("--batch-id", help="fresh action UUID supplied by the campaign facade")
     args = parser.parse_args()
     path, report = run_campaign(args.manifest, args.toolchain, args.c_toolchain,
-                                args.program_jobs, args.jobs, args.candidate_review, args.batch_id)
+                                args.program_jobs, args.jobs, args.candidate_review, args.batch_id, args.sdk_binding)
     print(json.dumps({"report": str(path), "matched": report["matched"],
                       "failures": report["failures"]}))
     return 0 if report["matched"] else 1

@@ -20,9 +20,14 @@ class SourceLayoutTest(unittest.TestCase):
         self.layout = Path(self.temp.name)
         tool.capture(REPO, self.layout)
 
-    def test_all_28_standalone_sources_are_byte_identical(self):
+    def test_all_catalogued_standalone_sources_are_byte_identical(self):
         result = tool.verify(REPO, self.layout, self.layout / "generated")
-        self.assertEqual(result["byte_identical_sources"], 28)
+        has_sdk = (REPO / "config/boot-units/sdk-sysbit-flush.json").exists()
+        self.assertEqual(result["byte_identical_sources"], 29 if has_sdk else 28)
+        if has_sdk:
+            self.assertEqual((self.layout / "generated/candidates/sdk/sysbit_flush.c").read_bytes(),
+                             (REPO / "src/sdk/sysbit_flush.c").read_bytes())
+            self.assertEqual(result["metrics"]["sdk_authored_functions"], 1)
         inventory = json.loads((REPO / "progress/source-inventory.json").read_bytes())
         self.assertEqual(result["metrics"]["native_explicit_base_source_families"],
                          inventory["metrics"]["native_explicit_base_source_families"])
@@ -99,7 +104,8 @@ class SourceLayoutTest(unittest.TestCase):
         self.assertTrue(result["manifest_refreshed"])
         self.assertFalse(result["compiler_or_retail_gate_run"])
         self.assertIn(b"Authored organization test comment", (repo / "candidates/boot.c").read_bytes())
-        self.assertEqual(tool.verify(repo, self.layout)["byte_identical_sources"], 28)
+        self.assertEqual(tool.verify(repo, self.layout)["byte_identical_sources"],
+                         29 if (repo / "config/boot-units/sdk-sysbit-flush.json").exists() else 28)
 
     def test_authoring_can_add_catalogued_function_without_reslicing_modules(self):
         repo, manifest = self.fixture_repo()
