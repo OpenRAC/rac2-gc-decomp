@@ -279,6 +279,17 @@ comments and commits in English; use a scoped subject and substantive commit bod
 Keep contributions coherent, validate affected proofs and retain negative evidence.
 Game data, extracted retail assembly and proprietary tools remain outside Git.
 
+## Reusable code families
+
+The [supplementary reuse report](progress/code-reuse-report.json) measures
+complete instruction templates with explicit per-image address bindings. Its
+[family catalogue](progress/code-reuse-families.json.gz) lists the proved copies
+and independently validated authored C fragment reuse; the summary exposes
+uncertain boundary and residual totals.
+This measure keeps its own all-placement C numerator and preserves the existing
+conservative and physical progress measures. It does not establish a 5 MB
+original-source total. See [the proof scope and measured baseline](docs/GLOBAL-CODE-REUSE.md).
+
 ## Next milestones
 
 1. Expand matching C while keeping the boot and all affected overlay gates exact.

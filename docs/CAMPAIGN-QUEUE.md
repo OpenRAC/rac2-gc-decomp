@@ -2266,6 +2266,21 @@ Reopen condition: Independent original source-phase/module/compiler provenance o
 
 - `private-work:c-campaign-20261006/fresh-selection-data/test-set-byte36-negative-evidence.json`
 
+## global-binding-template-reuse-report-20261006
+
+State: `done`. Kind: `research`.
+
+Validate deterministic report and family inventory, complete raw/private reconstruction and current certificate provenance, then publish the tested report, proof scope and CI checks. Keep GP and original data ownership unproved until separate entry/lifetime evidence exists.
+
+Reopen condition: A concrete new address-role, boundary or source-context proof, or a report defect; no speculative address masks, register/constants/opcode normalization, target denominator or new C trials.
+
+- `script:scripts/code_reuse_report.py`
+- `report:progress/code-reuse-report.json`
+- `families:progress/code-reuse-families.json.gz`
+- `docs:docs/GLOBAL-CODE-REUSE.md`
+- `private-work:reuse-measure-20261006/diagnosis.json`
+- `private-work:reuse-measure-20261006/gp-diagnosis/REPORT.md`
+
 ## global-unique-code-catalogue-20261005
 
 State: `done`. Kind: `research`.

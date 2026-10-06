@@ -821,6 +821,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "b897c738967040a5871ec82aec5a400a": {
+      "artifact": "prepared-run:builds/campaign-b897c738967040a5871ec82aec5a400a/report.json",
+      "artifact_sha256": "50fafb7226055f93afb915b81b92b247425adb5705097e2103ee5b35fcb2a744",
+      "directory": "runtime:actions/b897c738967040a5871ec82aec5a400a",
+      "finished": "2026-10-06T18:42:12.141485+00:00",
+      "id": "b897c738967040a5871ec82aec5a400a",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "ba345e79a2a746dcadd565c71d614f40": {
       "artifact": "prepared-run:builds/campaign-ba345e79a2a746dcadd565c71d614f40/report.json",
       "artifact_sha256": "cc1a5e73acf55a90858e01b096b7f87fb190c0d6b2d71cbc1cda01f4d8e560a7",
@@ -4522,7 +4533,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 6020,
+  "revision": 6028,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -16082,6 +16093,58 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "854cbbcb2080450d9f2e95cc55685bed"
+        }
+      ]
+    },
+    "global-binding-template-reuse-report-20261006": {
+      "amendments": [
+        {
+          "at": "2026-10-06T18:46:19.599442+00:00",
+          "before": {
+            "pointers": [
+              "script:scripts/code_reuse_report.py",
+              "report:progress/code-reuse-report.json",
+              "families:progress/code-reuse-families.json.gz",
+              "docs:docs/GLOBAL-CODE-REUSE.md",
+              "private-work:../work/reuse-measure-20261006/diagnosis.json"
+            ]
+          },
+          "changes": {
+            "pointers": [
+              "script:scripts/code_reuse_report.py",
+              "report:progress/code-reuse-report.json",
+              "families:progress/code-reuse-families.json.gz",
+              "docs:docs/GLOBAL-CODE-REUSE.md",
+              "private-work:reuse-measure-20261006/diagnosis.json",
+              "private-work:reuse-measure-20261006/gp-diagnosis/REPORT.md"
+            ]
+          },
+          "reason": "Use canonical private-work root without path traversal and retain bounded GP proof diagnosis."
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-06T18:45:27.050542+00:00",
+      "hypothesis": "A supplementary complete-scope partition can expose lossless placement-specific code templates and current authored fragment reuse while retaining unresolved extents, explicit bindings and independent conservative/physical metrics. This does not establish an original source denominator or add matching C credit.",
+      "id": "global-binding-template-reuse-report-20261006",
+      "kind": "research",
+      "next_action": "Validate deterministic report and family inventory, complete raw/private reconstruction and current certificate provenance, then publish the tested report, proof scope and CI checks. Keep GP and original data ownership unproved until separate entry/lifetime evidence exists.",
+      "pointers": [
+        "script:scripts/code_reuse_report.py",
+        "report:progress/code-reuse-report.json",
+        "families:progress/code-reuse-families.json.gz",
+        "docs:docs/GLOBAL-CODE-REUSE.md",
+        "private-work:reuse-measure-20261006/diagnosis.json",
+        "private-work:reuse-measure-20261006/gp-diagnosis/REPORT.md"
+      ],
+      "reopen_condition": "A concrete new address-role, boundary or source-context proof, or a report defect; no speculative address masks, register/constants/opcode normalization, target denominator or new C trials.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-06T18:55:09.962183+00:00",
+          "from": "queued",
+          "reason": "Global supported template partition, raw replay, authored-fragment association and unchanged physical/conservative metrics validated. Fresh full28 and all 109725 catalogue normalization/theorem checks pass; no new C credit or estimated source denominator.",
+          "reopen_condition": "",
+          "to": "done"
         }
       ]
     },
@@ -141919,6 +141982,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "0c5f3270cc3b06826b1548eed01ebd6013f135c7cc3527acadf7a076aba9b6b4"
+    "docs/CAMPAIGN-QUEUE.md": "085735c42ba10ef69d8526f1080835b25a881a7baa53d7fe94e11201ce7af9c3"
   }
 }
