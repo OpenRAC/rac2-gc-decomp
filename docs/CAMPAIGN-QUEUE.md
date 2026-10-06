@@ -2808,6 +2808,16 @@ Compare all complete symbols and object hash with the pre-lot committed native r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
+## lombyte-cpr8-656-source-first-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Keep cpr8scope parked: actuale4ed66 compiledtrue objectda72... fullSTT736 versusreference656 andlink overlap withqualifiedcontrolFUN12DA98/40. No linkedELF,0measuredfunctions,0controlmatches,0newcredit. Preserveactualsource/events/budget andprovidedSDK656/source/header/fouropaquehelper proof; no compilerretry/source/profile/loop/type/order/goto variants.
+
+Reopen condition: Only independently reviewed originalABI/module or separatelyauthorized actuallyqualified lowering-profile evidence; donorSDK656 identity/currentframe-register-padding differences do not themselves reopen or justify alternatives.
+
+- `private-work:c-campaign-20261006/cpr8-656-negative-independent-audit/diagnosis.json`
+
 ## lombyte-dual-prime-vector388-source-first-20261006
 
 State: `integrated`. Kind: `candidate`.
@@ -16849,6 +16859,19 @@ State: `integrated`. Kind: `candidate`.
 Compare every complete symbol in the intended standalone unit before full frozen image gates.
 
 Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## sdk-fixed-control-profile-foundation-publication-20261006
+
+State: `done`. Kind: `research`.
+
+Review the private foundation validator and actual six-object qualification receipt; publish only sanitized profile/control hashes and scope limitations. Validate tests and affected current proofs before the coherent tooling lot is committed and merged.
+
+Reopen condition: New independently qualified per-unit evidence is required before any broader SDK admission or parked-target work; three leaf controls alone do not establish call-bearing, GP or 64-bit algorithm compatibility.
+
+- `private-work:c-campaign-20261006/sdk-domain-toolqualification-controls/qualification-receipt.json`
+- `private-work:c-campaign-20261006/sdk-domain-toolqualification-controls/root-independent-audit.json`
+- `private-work:c-campaign-20261006/sdk-domain-tooling-review/SDK-DOMAIN-ASSESSMENT.md`
+- `docs/SDK-PROFILE-QUALIFICATION.md`
 
 ## shared-callstate-power-20261006-0_aranos_tutorial
 
