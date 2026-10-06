@@ -1299,6 +1299,357 @@ Reopen condition: Reopening needs a precise source-shape hypothesis, not an expr
 - `target-ranker.json rank 342`
 - `runtime:bank/parallel-boot-analysis-fpbit-20261005/lane0-corrected.json`
 
+## fifth-shared-three-families-0_aranos_tutorial-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/0_aranos_tutorial.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/0_aranos_tutorial.json`
+
+## fifth-shared-three-families-10_hrugis_cloud-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/10_hrugis_cloud.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/10_hrugis_cloud.json`
+
+## fifth-shared-three-families-11_joba-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/11_joba.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/11_joba.json`
+
+## fifth-shared-three-families-12_todano-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/12_todano.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/12_todano.json`
+
+## fifth-shared-three-families-13_boldan-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/13_boldan.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/13_boldan.json`
+
+## fifth-shared-three-families-14_aranos_prison-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/14_aranos_prison.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/14_aranos_prison.json`
+
+## fifth-shared-three-families-15_gorn-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/15_gorn.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/15_gorn.json`
+
+## fifth-shared-three-families-16_snivelak-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/16_snivelak.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/16_snivelak.json`
+
+## fifth-shared-three-families-17_smolg-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/17_smolg.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/17_smolg.json`
+
+## fifth-shared-three-families-18_damosel-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/18_damosel.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/18_damosel.json`
+
+## fifth-shared-three-families-19_grelbin-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/19_grelbin.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/19_grelbin.json`
+
+## fifth-shared-three-families-1_oozla-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/1_oozla.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/1_oozla.json`
+
+## fifth-shared-three-families-20_yeedil-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/20_yeedil.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/20_yeedil.json`
+
+## fifth-shared-three-families-22_dobbo_orbit-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/22_dobbo_orbit.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/22_dobbo_orbit.json`
+
+## fifth-shared-three-families-23_damosel_orbit-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/23_damosel_orbit.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/23_damosel_orbit.json`
+
+## fifth-shared-three-families-24_ship_shack-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/24_ship_shack.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/24_ship_shack.json`
+
+## fifth-shared-three-families-25_wupash_nebula-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/25_wupash_nebula.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/25_wupash_nebula.json`
+
+## fifth-shared-three-families-26_jamming_array-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/26_jamming_array.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/26_jamming_array.json`
+
+## fifth-shared-three-families-2_maktar_nebula-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/2_maktar_nebula.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/2_maktar_nebula.json`
+
+## fifth-shared-three-families-30_insomniac_museum-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/30_insomniac_museum.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/30_insomniac_museum.json`
+
+## fifth-shared-three-families-3_endako-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/3_endako.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/3_endako.json`
+
+## fifth-shared-three-families-4_barlow-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/4_barlow.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/4_barlow.json`
+
+## fifth-shared-three-families-5_feltzin_system-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/5_feltzin_system.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/5_feltzin_system.json`
+
+## fifth-shared-three-families-6_notak-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/6_notak.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/6_notak.json`
+
+## fifth-shared-three-families-7_siberius-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/7_siberius.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/7_siberius.json`
+
+## fifth-shared-three-families-8_tabora-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/8_tabora.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/8_tabora.json`
+
+## fifth-shared-three-families-9_dobbo-20261006
+
+State: `done`. Kind: `research`.
+
+Published local current source/object/full-image proofs validate every mapped function and retained native control. Commit and require exact-head CI before authorized normal merge; no additional C trial or native-source publication.
+
+Reopen condition: Independent measured mapping/compiler/object evidence after any refusal; no new native source/profile/ABI cycles.
+
+- `runtime:bank/fifth-shared-placement-v1/qualification-inputs/9_dobbo.json`
+- `prepared-run:builds/campaign-b5d06e2cf86c4351bf690784c0bf1d4a/report.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+- `progress/levels/9_dobbo.json`
+
 ## float-guard-only-0_aranos_tutorial-20261004
 
 State: `integrated`. Kind: `candidate`.
@@ -1515,15 +1866,327 @@ Qualify complete per-program source and all prior native controls, then rebuild 
 
 Reopen condition: New measured ABI, boundary or source context evidence
 
+## fresh-medium-image-store128-10_hrugis_cloud-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/10_hrugis_cloud.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-11_joba-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/11_joba.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-12_todano-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/12_todano.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-13_boldan-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/13_boldan.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-14_aranos_prison-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/14_aranos_prison.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-15_gorn-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/15_gorn.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-16_snivelak-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/16_snivelak.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-17_smolg-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/17_smolg.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-18_damosel-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/18_damosel.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-19_grelbin-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/19_grelbin.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-1_oozla-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/1_oozla.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-20_yeedil-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/20_yeedil.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-22_dobbo_orbit-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/22_dobbo_orbit.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-23_damosel_orbit-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/23_damosel_orbit.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-24_ship_shack-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/24_ship_shack.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-25_wupash_nebula-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/25_wupash_nebula.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-26_jamming_array-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/26_jamming_array.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-2_maktar_nebula-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/2_maktar_nebula.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-30_insomniac_museum-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/30_insomniac_museum.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-3_endako-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/3_endako.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-4_barlow-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Park immutable Barlow source/catalog/object/assembly/whole128 comparison and exact41 controls, zero new image128 credit. BudgetONE exhausted. Exclude Barlow's new image function, declarations and external bindings from publication while retaining its existing controls. Keep all26 positive image members (25 other trials plus seed) qualified separately. Do not claim whole27-family closure or retry any source/order/qualifier/flags/prototype/register variant.
+
+Reopen condition: Independent original source/module/compiler provenance or measured access/type/lifetime evidence explaining the Barlow lowering is required. No isolated G0 or profile matrix, no register or equivalent-expression cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-barlow-negative-evidence.json`
+
+## fresh-medium-image-store128-5_feltzin_system-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/5_feltzin_system.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-6_notak-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/6_notak.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-7_siberius-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/7_siberius.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-8_tabora-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/8_tabora.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## fresh-medium-image-store128-9_dobbo-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `private-work:c-campaign-20261006/fresh-medium-families-data/image128-family-prepared.json`
+- `progress/levels/9_dobbo.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
 ## fresh-medium-image-store128-seed-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `stopped`. Kind: `candidate`.
 
-Root reserve and one maintained seed full-unit trial. Only complete exact function with all controls may progress to remaining explicitly pinned placements; preserve any refusal without equivalent source cycling.
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
 
-Reopen condition: Independent actual producer/type/source/module/compiler evidence after refusal; no loops/branch/local/order/qualifier/flags or register cycles.
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
 
 - `private-work:c-campaign-20261006/fresh-medium-families-data/medium-reservations-private.json`
+- `progress/levels/0_aranos_tutorial.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
 
 ## fresh-medium-sentinel-table168-seed-20261006
 
@@ -1547,6 +2210,20 @@ Park the immutable source/catalog/object/assembly/reference/outcome and27 raw fa
 Reopen condition: Independent original producer/type/source-phase or qualified compiler provenance evidence explaining the actual36-byte Boolean return lowering is required. No equivalent-source scheduling cycles or partial/sliced byte acceptance.
 
 - `private-work:c-campaign-20261006/fresh-selection-data/pointer-predicate36-negative-evidence.json`
+
+## fresh-sixth-sound-request-cleanup260-seed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Keep this260-byte first-hypothesis physical family parked after actual budget1 refusal. No remaining27copy trials or source/type/anchor/loop/profile variants. Require independently distinguishing original producer/declaration/storage/source/module/compiler evidence before root-reviewed reopening. Domain/field labels remain hypotheses.
+
+Reopen condition: Independently distinguishing original global producer/allocation/declaration/type/storage/source-module/compiler evidence, explicitly reviewed by root, must justify a concrete correction. Current reference address anchors and pseudocode were already known before first trial; switching to padded views, alternative anchors/types/loops/locals/conditions/profiles/registers or remaining copies from those alone is equivalent source cycling and is not authorized.
+
+- `runtime:bank/sixth-sound-request-cleanup260-seed-v1/evidence.json`
+- `private-work:c-campaign-20261006/bank/sixth-new-shared-algorithm/source-packet.json`
+- `private-work:c-campaign-20261006/bank/sixth-new-shared-algorithm/negative-review/diagnosis.json`
+- `runtime:trials/8807d0ae02344b0ab3f3b4c79c6bff78/manifest.json`
+- `runtime:trials/8807d0ae02344b0ab3f3b4c79c6bff78/outcome.json`
 
 ## fresh-test-set-byteBE-bit2-status36-seed-20261006
 
@@ -2284,6 +2961,17 @@ State: `integrated`. Kind: `candidate`.
 Root reservation/registration first; maintain complete68byte target plus ALL38current controls. On exact seed prepare same ordinaryC across explicit27whole raw-identical placements and currentperunitcontrols.
 
 Reopen condition: Independent original source/type/ABI/lifetime or separately qualified compiler evidence; no equivalent multiplication loop, float variable/register naming, count iteration, constant or flags cycling.
+
+## native-known-boot-wait372-v1-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/0_aranos_tutorial.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
 
 ## native-packed-word-compose-32-v1-20261006
 
@@ -12672,6 +13360,303 @@ Reopen condition: Concrete independently reviewed family/binding or instrument e
 - `private-work:public-family-tools-20261005/feature-receipt.json`
 - `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
 
+## resident-sync-clear168-0_aranos_tutorial-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/0_aranos_tutorial.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-10_hrugis_cloud-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/10_hrugis_cloud.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-11_joba-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/11_joba.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-12_todano-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/12_todano.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-13_boldan-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/13_boldan.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-14_aranos_prison-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/14_aranos_prison.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-15_gorn-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/15_gorn.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-16_snivelak-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/16_snivelak.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-17_smolg-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/17_smolg.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-18_damosel-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/18_damosel.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-19_grelbin-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/19_grelbin.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-1_oozla-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/1_oozla.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-20_yeedil-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/20_yeedil.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-22_dobbo_orbit-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/22_dobbo_orbit.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-23_damosel_orbit-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/23_damosel_orbit.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-24_ship_shack-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/24_ship_shack.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-25_wupash_nebula-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/25_wupash_nebula.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-26_jamming_array-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/26_jamming_array.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-2_maktar_nebula-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/2_maktar_nebula.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-30_insomniac_museum-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/30_insomniac_museum.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-3_endako-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/3_endako.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-4_barlow-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/4_barlow.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-5_feltzin_system-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/5_feltzin_system.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-6_notak-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/6_notak.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-7_siberius-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/7_siberius.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-8_tabora-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/8_tabora.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## resident-sync-clear168-9_dobbo-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/9_dobbo.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
 ## root-bit-runs248-v1-20261004
 
 State: `stopped`. Kind: `candidate`.
@@ -16150,3 +17135,289 @@ State: `stopped`. Kind: `candidate`.
 Require all complete symbols exact, then author shared fragments and integrate all27programs.
 
 Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## wait372-copy-10_hrugis_cloud-00342068-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/10_hrugis_cloud.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-11_joba-003414e8-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/11_joba.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-12_todano-00332a20-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/12_todano.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-13_boldan-00337470-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/13_boldan.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-14_aranos_prison-003379e0-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/14_aranos_prison.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-15_gorn-00346258-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/15_gorn.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-16_snivelak-00325c88-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/16_snivelak.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-17_smolg-003308d0-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/17_smolg.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-18_damosel-00348c58-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/18_damosel.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-19_grelbin-0032af58-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/19_grelbin.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-1_oozla-00323380-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/1_oozla.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-20_yeedil-003430a0-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/20_yeedil.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-22_dobbo_orbit-00330fe8-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/22_dobbo_orbit.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-23_damosel_orbit-00335700-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/23_damosel_orbit.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-24_ship_shack-00325580-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/24_ship_shack.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-25_wupash_nebula-0033a4b0-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/25_wupash_nebula.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-26_jamming_array-0032d660-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/26_jamming_array.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-2_maktar_nebula-003345e8-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/2_maktar_nebula.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-30_insomniac_museum-0032e700-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/30_insomniac_museum.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-3_endako-0032f1b0-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/3_endako.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-4_barlow-00350b78-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/4_barlow.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-5_feltzin_system-00340308-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/5_feltzin_system.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-6_notak-0036e328-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/6_notak.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-7_siberius-00324300-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/7_siberius.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-8_tabora-0033bc90-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/8_tabora.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
+
+## wait372-copy-9_dobbo-0032a318-fixed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Retain the actual exact private native-source object/trial as alternate-source evidence. Current complete canonical boot-shared C covers this program/address/size under validated source/object/full-image proofs; retire duplicate publication and further trials.
+
+Reopen condition: The current canonical placement becomes uncovered or its complete source/object/image proof is invalidated, with independent new evidence. No equivalent source, profile or register-allocation cycles.
+
+- `progress/levels/9_dobbo.json`
+- `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`

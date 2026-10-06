@@ -92,26 +92,46 @@ explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **324,352 / 48,788,176 bytes**.
-The latest lot integrates 20 additional 112-byte nonzero-byte counters and
+The current integration exporter accepts **342,388 / 48,788,176 bytes**.
+The latest lot reuses three already qualified boot C bodies at 81 additional
+explicit overlay placements: a 128-byte GS image store, a 372-byte wait/reset
+routine and a 168-byte synchronized table clear. The 18,036 additional loaded
+bytes use the unchanged canonical boot source and G0 object. All 1,121 current
+native bodies remain in their independently qualified G0/G8 objects; Barlow
+retains its G8 profile and fixed GP. Every current shared/native function and
+new placement passes complete object qualification and the 28 full-image gates.
+No new authored C variant or original translation-unit boundary is claimed.
+
+The private native-source experiments remain immutable evidence. The Barlow
+image experiment under G8 is a retained complete-body refusal; the accepted
+placement instead uses the already qualified G0 boot object through the existing
+shared-placement loader. No source expression, register or profile matrix was
+cycled to produce it. The unique all-members measurement is exported separately
+from these replicated loaded bytes. The current conservative measure is
+86,160 / 44,451,612 bytes. Its structural graph classes can retain separate
+program copies when static targets or data ownership remain unresolved; the
+three source-family labels do not themselves define three unique groups.
+
+The preceding lot accepted **324,352 / 48,788,176 bytes**.
+That lot integrated 20 additional 112-byte nonzero-byte counters and
 14 additional 80-byte resident-state predicates, adding 3,360 loaded C bytes.
 The 26 affected units qualify all 1,193 current controls and 34 new complete
 bodies. Eight changed combined contexts are requalified; eighteen unchanged
 source/catalogue/review byte sets are reused. All 28 loaded-image gates pass.
-The all-members unique numerator remains 68,124: the state-predicate group is
+For that lot, the all-members unique numerator stayed at 68,124: the state-predicate group is
 25/27 and the counter group is 27/28, with three historical refusals retained
 until independent evidence satisfies their reopening conditions.
 
-The preceding lot completed the signed-index bitmap family: seventeen additional
+An earlier lot completed the signed-index bitmap family: seventeen additional
 124-byte functions, including one boot placement and sixteen native placements,
 contribute 2,108 loaded C bytes. All 816 existing controls and 17 new complete
 bodies qualify in their current units, followed by the boot and all 27 overlay
-loaded-image gates. The same 28-member structural group is now complete, adding
+loaded-image gates. The same 28-member structural group became complete, adding
 124 primary unique bytes once and advancing the unique numerator to
 68,124 / 44,451,612. The shared body is unchanged; boot adds only an explicit
 byte-array declaration and binding. Prior shared-placement maps remain unchanged.
 
-The preceding lot added 54 complete native placements / 4,212 bytes: the proven
+The earlier call-state and arithmetic lot added 54 native placements / 4,212 bytes: the proven
 88-byte resident call-state body is reused in all 27 native units, alongside
 a 68-byte scalar complement-power loop. All 1,018 existing native controls and
 54 new bodies qualify together, followed by all 28 full-image gates. The primary
@@ -127,7 +147,7 @@ Authored inventory variants retain their address bindings; fragment reuse does
 not itself establish a normalized machine-code family or add duplicate credit.
 
 The earlier timer lot is described below for its separate profile evidence.
-The latest lot adds one complete 84-byte registered gameplay callback in Barlow,
+That timer lot added one complete 84-byte registered gameplay callback in Barlow,
 the timer that sets a 10000 tick target, decrements the remaining time by the
 resident delta with a zero floor, or clears the active mode, then clears the
 first field. It was compiled under the qualified small-data profile with the
