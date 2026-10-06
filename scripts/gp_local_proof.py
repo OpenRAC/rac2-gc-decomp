@@ -177,6 +177,23 @@ def prove(body, address, *, program, reference_sha256, sections, boundary_eviden
     require(not any(w >> 26 == 16 or w >> 26 == 0 and w & 63 in (12, 13)
                     for w in words), "Unsupported COP0/exception control in local CFG")
     edges, controls, delays = _cfg(words, address)
+    # A static exit is not a theorem about the next machine PC. Unknown return
+    # links, indirect targets and opaque callees can reenter this body with a
+    # different GP. Admit only a closed direct CFG; no ABI return assumption.
+    for kind, target, _ in controls.values():
+        require(kind in ("branch", "jump") and target is not None
+                and address <= target < address + len(body) and target % 4 == 0,
+                "Unproved control escape or reentry: closed direct CFG required")
+    reachable, pending = set(), [0]
+    while pending:
+        index = pending.pop()
+        if index in reachable:
+            continue
+        reachable.add(index)
+        require(bool(edges[index]), "Unproved fallthrough escape: closed direct CFG required")
+        if index in controls and controls[index][0] == "branch":
+            require(index + 2 < len(words), "Unproved branch fallthrough escape: closed direct CFG required")
+        pending.extend(edges[index])
     predecessors = {i: [] for i in range(len(words))}
     for origin, targets in edges.items():
         for target in targets:
@@ -243,11 +260,13 @@ def prove(body, address, *, program, reference_sha256, sections, boundary_eviden
         "elf_mapping_decoder_sha256": sha(Path(elf_mapping.__file__).read_bytes()),
         "finite_MMI_decoder_receipt": mmi_receipt,
         "entry_GP_assumed": False, "call_GP_preservation_assumed": False,
+        "control_flow_policy": "closed direct CFG; no calls, indirect transfers or reachable fallthrough escape",
         "reachable_instructions": len(incoming), "locally_known_GP": facts,
         "GP_memory": memory, "eligible_scoped_relocations": relocations,
         "certificate": {"exact": True, "template_sha256": sha(bytes(template)),
             "reconstructed_sha256": sha(rebuilt)},
         "limitations": ["Lower64 constant facts only; no upper GPR lane or global GP ABI proof.",
+            "Normal instruction completion only; asynchronous interrupts and exception-handler effects are not proved.",
             "Supplied complete extent is not an original-source boundary proof.",
             "Mapped target is not original object/field identity; no C credit or consumer normalization is enabled."]}
 

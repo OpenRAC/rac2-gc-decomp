@@ -92,7 +92,12 @@ lifetime evidence** and must not authorize a production GP16 consumer. Actual
 indirect-target proofs or conservative refusal are required before that use.
 The prior 28-body retail pilot had zero eligible GP16 fields and zero C credit;
 this finding adds neither. Both published and private counterexamples are
-retained. This evidence-only lot does not claim to repair the verifier.
+retained. That evidence-only investigation did not repair the verifier.
+
+The subsequent [closed-CFG repair](LOCAL-GP-PROOF.md#current-control-admission)
+refuses those escapes in both producer and consumer before emitting facts. Old
+receipts remain historical evidence. This repair does not establish the missing
+startup/kernel transmission theorem.
 
 ## Reopening conditions and unchanged progress
 

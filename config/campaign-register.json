@@ -555,6 +555,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "78897289783e4830b1aec4ffbb72b230": {
+      "artifact": "prepared-run:builds/campaign-78897289783e4830b1aec4ffbb72b230/report.json",
+      "artifact_sha256": "597d4dcaf3ca07fadf323e3683ca98cde97535e761dbaa763f9e3eb11071293e",
+      "directory": "runtime:actions/78897289783e4830b1aec4ffbb72b230",
+      "finished": "2026-10-06T21:09:56.358222+00:00",
+      "id": "78897289783e4830b1aec4ffbb72b230",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "790b5eb477624821be9ed3fcdc3c615d": {
       "artifact": "prepared-run:builds/campaign-790b5eb477624821be9ed3fcdc3c615d/report.json",
       "artifact_sha256": "efd449c6238ac86796cf7aa6263fc84ec3ada5c6c78b5e2bae485e20cd65cfc6",
@@ -1156,6 +1167,15 @@
       "integration_credit": 0,
       "kind": "integrate",
       "returncode": 1,
+      "state": "provenance_changed"
+    },
+    "f9fd48cb8e9645d0bcecf2b851b445b9": {
+      "directory": "runtime:actions/f9fd48cb8e9645d0bcecf2b851b445b9",
+      "finished": "2026-10-06T21:00:14.927005+00:00",
+      "id": "f9fd48cb8e9645d0bcecf2b851b445b9",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
       "state": "provenance_changed"
     },
     "feeb0c602b724c38a70686637f0ff9d2": {
@@ -4544,7 +4564,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 6039,
+  "revision": 6048,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -8697,6 +8717,31 @@
             "reopen_condition": "Conservative indirect-control refusal or independently verified targets closes the published local-verifier lifetime counterexample, plus machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller."
           },
           "reason": "Independent review and root reproduction show the published local verifier also accepts an indirect-return reentry with a changed GP. All facts remain static-CFG conditional, not qualified dynamic-lifetime evidence; no production consumer is enabled."
+        },
+        {
+          "at": "2026-10-06T21:05:03.841458+00:00",
+          "before": {
+            "next_action": "Before any GP16 consumer use, repair or independently prove indirect control and reentry in the existing local verifier. Retain the bounded startup refusal; reopen caller transmission only with pinned kernel/callee preservation or another suitable caller.",
+            "pointers": [
+              "docs:docs/GP-CALLER-EVIDENCE.md",
+              "private-work:gp-caller-proof-20261006/root-startup-negative.json",
+              "private-work:gp-caller-proof-20261006/root-old-verifier-negative.json",
+              "private-work:gp-caller-proof-20261006/selection/startup-negative-and-inventory.json"
+            ],
+            "reopen_condition": "Conservative indirect-control refusal or independently verified targets closes the published local-verifier lifetime counterexample, plus machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller."
+          },
+          "changes": {
+            "next_action": "The closed direct-CFG guard now refuses the retained indirect-reentry counterexample. Caller GP transmission remains unproved: obtain pinned kernel/callee preservation or another suitable caller. Wider verifier admission needs independent machine control-target proof.",
+            "pointers": [
+              "docs:docs/GP-CALLER-EVIDENCE.md",
+              "docs:docs/LOCAL-GP-PROOF.md",
+              "private-work:gp-caller-proof-20261006/root-startup-negative.json",
+              "private-work:gp-caller-proof-20261006/root-old-verifier-negative.json",
+              "private-work:gp-control-fix-20261006/root-reentry-refusal.json"
+            ],
+            "reopen_condition": "Machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller, with independently verified control targets for any wider admission."
+          },
+          "reason": "The tested closed direct-CFG guard refuses indirect and opaque control before GP facts, including producer and old-certificate consumer reentry regressions. This does not establish kernel preservation or accept a caller seed."
         }
       ],
       "budget": 1,
@@ -8704,14 +8749,15 @@
       "hypothesis": "A complete caller with explicit GP construction might supply a conditional entry fact to a small mapped-data leaf. The startup route must retain actual kernel effects and complete target control flow.",
       "id": "bounded-caller-gp-proof-20261006",
       "kind": "research",
-      "next_action": "Before any GP16 consumer use, repair or independently prove indirect control and reentry in the existing local verifier. Retain the bounded startup refusal; reopen caller transmission only with pinned kernel/callee preservation or another suitable caller.",
+      "next_action": "The closed direct-CFG guard now refuses the retained indirect-reentry counterexample. Caller GP transmission remains unproved: obtain pinned kernel/callee preservation or another suitable caller. Wider verifier admission needs independent machine control-target proof.",
       "pointers": [
         "docs:docs/GP-CALLER-EVIDENCE.md",
+        "docs:docs/LOCAL-GP-PROOF.md",
         "private-work:gp-caller-proof-20261006/root-startup-negative.json",
         "private-work:gp-caller-proof-20261006/root-old-verifier-negative.json",
-        "private-work:gp-caller-proof-20261006/selection/startup-negative-and-inventory.json"
+        "private-work:gp-control-fix-20261006/root-reentry-refusal.json"
       ],
-      "reopen_condition": "Conservative indirect-control refusal or independently verified targets closes the published local-verifier lifetime counterexample, plus machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller.",
+      "reopen_condition": "Machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller, with independently verified control targets for any wider admission.",
       "state": "stopped",
       "transitions": [
         {
@@ -17393,6 +17439,31 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "c4bab3d2a9ae41c288f7ebb50db02864"
+        }
+      ]
+    },
+    "gp-control-reentry-fix-20261006": {
+      "budget": 1,
+      "created": "2026-10-06T20:52:22.885345+00:00",
+      "hypothesis": "Refusing indirect transfers, opaque calls and direct or fallthrough control escapes closes the retained GP reentry counterexample without assuming return-link or ABI preservation.",
+      "id": "gp-control-reentry-fix-20261006",
+      "kind": "research",
+      "next_action": "Validate a closed direct-CFG admission guard with adversarial producer/consumer tests, reclassify all 28 old MMIO pilot bodies as historical/refused, refresh all affected gates and report provenance, then publish after exact-head CI.",
+      "pointers": [
+        "script:scripts/gp_local_proof.py",
+        "docs:docs/LOCAL-GP-PROOF.md",
+        "proof:progress/gp-local-pilot.json",
+        "private-work:gp-control-fix-20261006"
+      ],
+      "reopen_condition": "A counterexample escaping the admitted closed direct CFG under normal instruction completion; future wider admission requires independently checked machine control-target evidence.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-06T21:18:47.016864+00:00",
+          "from": "queued",
+          "reason": "Closed direct CFG admission refuses indirect/return/call/external/fallthrough reentry before facts; 601 tests and independent regressions pass. All 28 old producer and consumer certificates refused and historical proof hashes retained. Fresh frozen 28-image gates and full 109725 reconstruction/pointer replay plus report freshness pass; no C credit or normalizer policy change.",
+          "reopen_condition": "",
+          "to": "done"
         }
       ]
     },
@@ -142068,6 +142139,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "91f7236df39fda293e6505d809f45d47309e5b9e8244e297591fdbdbec60b69d"
+    "docs/CAMPAIGN-QUEUE.md": "9270acc51828f2994da1379482dd2c5b8c215886f152dad18ad255b29d551e5a"
   }
 }

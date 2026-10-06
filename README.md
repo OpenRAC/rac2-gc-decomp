@@ -293,9 +293,10 @@ original-source total. See [the proof scope and measured baseline](docs/GLOBAL-C
 ## Next milestones
 
 The [bounded local GP verifier](docs/LOCAL-GP-PROOF.md) starts from unknown
-entry registers and proves instruction-scoped constants from raw CFG paths.
-Its [28-body pilot receipt](progress/gp-local-pilot.json) preserves unsafe joins
-and MMIO operands without adding GP16 normalization or matching C credit.
+entry registers and admits only closed direct CFGs. Its
+[historical 28-body pilot receipt](progress/gp-local-pilot.json) preserves the
+superseded observations and current refusals without adding GP16 normalization
+or matching C credit.
 
 1. Expand matching C while keeping the boot and all affected overlay gates exact.
 2. Review new function boundaries and ABI, qualify complete units and publish tested lots.
