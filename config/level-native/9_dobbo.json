@@ -3,6 +3,7 @@
   "externals": {
     "BOOT_FUN_00115DA8": 1138088,
     "D_19B278": 1684088,
+    "FUN_00133400": 1258496,
     "LVL_9_DOBBO_D_00139568": 1283432,
     "LVL_9_DOBBO_D_001395B8": 1283512,
     "LVL_9_DOBBO_D_00189E20": 1613344,
@@ -10,6 +11,7 @@
     "LVL_9_DOBBO_D_0018B134": 1618228,
     "LVL_9_DOBBO_D_0018C0B0": 1622192,
     "LVL_9_DOBBO_D_0018C0B4": 1622196,
+    "LVL_9_DOBBO_D_001A63A8": 1729448,
     "LVL_9_DOBBO_D_001A79F0": 1735152,
     "LVL_9_DOBBO_D_001A8EB0": 1740464,
     "LVL_9_DOBBO_D_001A9A60": 1743456,
@@ -270,6 +272,18 @@
       "meaning": "counts the non-zero bytes of the 0x1C by 4 byte table at 0x19B278 and returns the count clamped into 0..0x28",
       "size": 112,
       "symbol": "LVL_9_DOBBO_FUN_00323220"
+    },
+    {
+      "address": 3317344,
+      "meaning": "Pass resident active word to original stop helper when signed status is three, set status four and return one; otherwise zero",
+      "size": 88,
+      "symbol": "LVL_9_DOBBO_FUN_00329E60"
+    },
+    {
+      "address": 3238344,
+      "meaning": "computes a scalar complement-power curve by repeated multiplication",
+      "size": 68,
+      "symbol": "LVL_9_DOBBO_FUN_003169C8"
     }
   ],
   "gp": 0,

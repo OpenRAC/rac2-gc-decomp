@@ -601,3 +601,21 @@ void LVL_23_DAMOSEL_ORBIT_FUN_004553D8(f32 x, f32 y, f32 z, f32 w, JammingGridOb
     object->groups[group].rows[row].z = z;
     object->groups[group].rows[row].w = w;
 }
+
+typedef struct { u8 before[0x68]; s32 active; u8 gap[6]; short state; } CallState;
+extern u8 LVL_23_DAMOSEL_ORBIT_D_001A63A8[];
+extern void FUN_00133400(s32);
+s32 LVL_23_DAMOSEL_ORBIT_FUN_003352B8(void) {
+    if (((CallState *)LVL_23_DAMOSEL_ORBIT_D_001A63A8)->active==0) return 0;
+    if (((CallState *)LVL_23_DAMOSEL_ORBIT_D_001A63A8)->state!=3) return 0;
+    FUN_00133400(((CallState *)LVL_23_DAMOSEL_ORBIT_D_001A63A8)->active); ((CallState *)LVL_23_DAMOSEL_ORBIT_D_001A63A8)->state=4;
+    return 1;
+}
+
+f32 LVL_23_DAMOSEL_ORBIT_FUN_00324340(f32 value, s32 count) {
+    f32 factor = 1.0f - value;
+    f32 product = factor;
+    for (; count > 1; --count)
+        product = product * factor;
+    return 1.0f - product;
+}

@@ -1,277 +1,291 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "6_notak",
-  "program": "levels/6_notak",
-  "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
   "entry": 3027336,
-  "source": "candidates/levels/6_notak.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "FUN_00133400": 1258496,
+    "LVL_6_NOTAK_D_00139568": 1283432,
+    "LVL_6_NOTAK_D_001395B8": 1283512,
+    "LVL_6_NOTAK_D_00189E20": 1613344,
+    "LVL_6_NOTAK_D_0018B040": 1617984,
+    "LVL_6_NOTAK_D_0018B134": 1618228,
+    "LVL_6_NOTAK_D_0018C0B0": 1622192,
+    "LVL_6_NOTAK_D_0018C0B4": 1622196,
+    "LVL_6_NOTAK_D_001A63A8": 1729448,
+    "LVL_6_NOTAK_D_001A79F0": 1735152,
+    "LVL_6_NOTAK_D_001A8EB0": 1740464,
+    "LVL_6_NOTAK_D_001A99E0": 1743328,
+    "LVL_6_NOTAK_D_001A99E8": 1743336,
+    "LVL_6_NOTAK_D_001B2780": 1779584,
+    "LVL_6_NOTAK_D_001B27C0": 1779648,
+    "LVL_6_NOTAK_D_001BF980": 1833344,
+    "LVL_6_NOTAK_D_001C9E20": 1875488,
+    "LVL_6_NOTAK_D_00227180": 2257280,
+    "LVL_6_NOTAK_D_0022E080": 2285696,
+    "LVL_6_NOTAK_D_0022E680": 2287232,
+    "LVL_6_NOTAK_D_00231DC0": 2301376,
+    "LVL_6_NOTAK_D_00254A30": 2443824,
+    "LVL_6_NOTAK_D_0026C7F0": 2541552,
+    "LVL_6_NOTAK_D_00287F80": 2654080,
+    "LVL_6_NOTAK_FUN_00312E60": 3223136,
+    "LVL_6_NOTAK_FUN_00316D80": 3239296,
+    "LVL_6_NOTAK_FUN_0031C1B0": 3260848,
+    "LVL_6_NOTAK_FUN_0031C4F8": 3261688,
+    "LVL_6_NOTAK_FUN_0032D308": 3330824,
+    "LVL_6_NOTAK_FUN_0032D5F8": 3331576,
+    "LVL_6_NOTAK_FUN_0032DA88": 3332744,
+    "LVL_6_NOTAK_FUN_0032FB00": 3341056,
+    "LVL_6_NOTAK_FUN_0032FE68": 3341928,
+    "LVL_6_NOTAK_FUN_00333B40": 3357504,
+    "LVL_6_NOTAK_FUN_003A0AA8": 3803816,
+    "LVL_6_NOTAK_FUN_003BC960": 3918176
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_6_NOTAK_FUN_002ED468",
       "address": 3069032,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_6_NOTAK_FUN_002ED468"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002ED4A0",
       "address": 3069088,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_6_NOTAK_FUN_002ED4A0"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002ED5D0",
       "address": 3069392,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_6_NOTAK_FUN_002ED5D0"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002EE0C0",
       "address": 3072192,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_6_NOTAK_FUN_002EE0C0"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00316068",
       "address": 3235944,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_6_NOTAK_FUN_00316068"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00317028",
       "address": 3239976,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_6_NOTAK_FUN_00317028"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00323150",
       "address": 3289424,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_6_NOTAK_FUN_00323150"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003332A8",
       "address": 3355304,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_6_NOTAK_FUN_003332A8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00316828",
       "address": 3237928,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_6_NOTAK_FUN_00316828"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00324EF0",
       "address": 3297008,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_6_NOTAK_FUN_00324EF0"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002ED2F8",
       "address": 3068664,
+      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper",
       "size": 56,
-      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper"
+      "symbol": "LVL_6_NOTAK_FUN_002ED2F8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002ED4D8",
       "address": 3069144,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_6_NOTAK_FUN_002ED4D8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002ED510",
       "address": 3069200,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_6_NOTAK_FUN_002ED510"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002F29C8",
       "address": 3090888,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_6_NOTAK_FUN_002F29C8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003BEF00",
       "address": 3927808,
+      "meaning": "returns the packed header's signed rounded sixteen-byte block count in word units",
       "size": 56,
-      "meaning": "returns the packed header's signed rounded sixteen-byte block count in word units"
+      "symbol": "LVL_6_NOTAK_FUN_003BEF00"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00460B50",
       "address": 4590416,
+      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
       "size": 36,
-      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three"
+      "symbol": "LVL_6_NOTAK_FUN_00460B50"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003829F0",
       "address": 3680752,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_6_NOTAK_FUN_003829F0"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003363B0",
       "address": 3367856,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_6_NOTAK_FUN_003363B0"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00344E30",
       "address": 3427888,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_6_NOTAK_FUN_00344E30"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003C14C8",
       "address": 3937480,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_6_NOTAK_FUN_003C14C8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003AC170",
       "address": 3850608,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_6_NOTAK_FUN_003AC170"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_0043BBA8",
       "address": 4438952,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_6_NOTAK_FUN_0043BBA8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00315F28",
       "address": 3235624,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_6_NOTAK_FUN_00315F28"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002E45E8",
       "address": 3032552,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_6_NOTAK_FUN_002E45E8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00332F80",
       "address": 3354496,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_6_NOTAK_FUN_00332F80"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003C3860",
       "address": 3946592,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_6_NOTAK_FUN_003C3860"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00315EA8",
       "address": 3235496,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_6_NOTAK_FUN_00315EA8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00312950",
       "address": 3221840,
+      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_6_NOTAK_FUN_00312950"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00312988",
       "address": 3221896,
+      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_6_NOTAK_FUN_00312988"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003328E8",
       "address": 3352808,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_6_NOTAK_FUN_003328E8"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_003484B0",
       "address": 3441840,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_6_NOTAK_FUN_003484B0"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_002F3118",
       "address": 3092760,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_6_NOTAK_FUN_002F3118"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_0048B6F0",
       "address": 4765424,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_6_NOTAK_FUN_0048B6F0"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00351290",
       "address": 3478160,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_6_NOTAK_FUN_00351290"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_0031C108",
       "address": 3260680,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_6_NOTAK_FUN_0031C108"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00490B68",
       "address": 4787048,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_6_NOTAK_FUN_00490B68"
     },
     {
-      "symbol": "LVL_6_NOTAK_FUN_00491000",
       "address": 4788224,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_6_NOTAK_FUN_00491000"
+    },
+    {
+      "address": 3595888,
+      "meaning": "Pass resident active word to original stop helper when signed status is three, set status four and return one; otherwise zero",
+      "size": 88,
+      "symbol": "LVL_6_NOTAK_FUN_0036DE70"
+    },
+    {
+      "address": 3515840,
+      "meaning": "computes a scalar complement-power curve by repeated multiplication",
+      "size": 68,
+      "symbol": "LVL_6_NOTAK_FUN_0035A5C0"
     }
   ],
-  "externals": {
-    "LVL_6_NOTAK_D_001A8EB0": 1740464,
-    "LVL_6_NOTAK_D_0018C0B4": 1622196,
-    "LVL_6_NOTAK_D_00189E20": 1613344,
-    "LVL_6_NOTAK_FUN_00316D80": 3239296,
-    "LVL_6_NOTAK_FUN_0032FB00": 3341056,
-    "LVL_6_NOTAK_FUN_0032FE68": 3341928,
-    "LVL_6_NOTAK_FUN_003BC960": 3918176,
-    "LVL_6_NOTAK_FUN_00312E60": 3223136,
-    "LVL_6_NOTAK_D_00287F80": 2654080,
-    "LVL_6_NOTAK_D_001395B8": 1283512,
-    "LVL_6_NOTAK_D_00231DC0": 2301376,
-    "LVL_6_NOTAK_D_0022E680": 2287232,
-    "LVL_6_NOTAK_D_00227180": 2257280,
-    "LVL_6_NOTAK_D_0022E080": 2285696,
-    "LVL_6_NOTAK_D_00254A30": 2443824,
-    "LVL_6_NOTAK_D_0018C0B0": 1622192,
-    "LVL_6_NOTAK_D_0018B134": 1618228,
-    "LVL_6_NOTAK_D_0018B040": 1617984,
-    "LVL_6_NOTAK_D_00139568": 1283432,
-    "LVL_6_NOTAK_D_0026C7F0": 2541552,
-    "LVL_6_NOTAK_FUN_0032D308": 3330824,
-    "LVL_6_NOTAK_D_001A79F0": 1735152,
-    "LVL_6_NOTAK_D_001BF980": 1833344,
-    "LVL_6_NOTAK_D_001C9E20": 1875488,
-    "LVL_6_NOTAK_D_001A99E0": 1743328,
-    "LVL_6_NOTAK_D_001A99E8": 1743336,
-    "LVL_6_NOTAK_FUN_00333B40": 3357504,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_6_NOTAK_FUN_003A0AA8": 3803816,
-    "LVL_6_NOTAK_D_001B2780": 1779584,
-    "LVL_6_NOTAK_D_001B27C0": 1779648,
-    "LVL_6_NOTAK_FUN_0031C1B0": 3260848,
-    "LVL_6_NOTAK_FUN_0032D5F8": 3331576,
-    "LVL_6_NOTAK_FUN_0032DA88": 3332744,
-    "LVL_6_NOTAK_FUN_0031C4F8": 3261688
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "6_notak",
+  "program": "levels/6_notak",
+  "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
+  "schema": 1,
+  "source": "candidates/levels/6_notak.c",
+  "target": "SCUS_972.68"
 }

@@ -1,12 +1,65 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "24_ship_shack",
-  "program": "levels/24_ship_shack",
-  "reference_sha256": "4afbc22add84109c84ef8ca49099fdf9863905e5f497369c207ac5cb47814740",
   "entry": 2763912,
-  "source": "candidates/levels/24_ship_shack.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "FUN_00133400": 1258496,
+    "LVL_24_SHIP_SHACK_D_00139568": 1283432,
+    "LVL_24_SHIP_SHACK_D_001395B8": 1283512,
+    "LVL_24_SHIP_SHACK_D_00189E20": 1613344,
+    "LVL_24_SHIP_SHACK_D_0018B040": 1617984,
+    "LVL_24_SHIP_SHACK_D_0018B134": 1618228,
+    "LVL_24_SHIP_SHACK_D_0018B2BC": 1618620,
+    "LVL_24_SHIP_SHACK_D_0018C0B0": 1622192,
+    "LVL_24_SHIP_SHACK_D_0018C0B4": 1622196,
+    "LVL_24_SHIP_SHACK_D_001A63A8": 1729448,
+    "LVL_24_SHIP_SHACK_D_001A79F0": 1735152,
+    "LVL_24_SHIP_SHACK_D_001A8EB0": 1740464,
+    "LVL_24_SHIP_SHACK_D_001A99E0": 1743328,
+    "LVL_24_SHIP_SHACK_D_001A99E8": 1743336,
+    "LVL_24_SHIP_SHACK_D_001B1700": 1775360,
+    "LVL_24_SHIP_SHACK_D_001B1740": 1775424,
+    "LVL_24_SHIP_SHACK_D_001B1B70": 1776496,
+    "LVL_24_SHIP_SHACK_D_001B1B74": 1776500,
+    "LVL_24_SHIP_SHACK_D_001B8500": 1803520,
+    "LVL_24_SHIP_SHACK_D_001B8580": 1803648,
+    "LVL_24_SHIP_SHACK_D_001BC3C0": 1819584,
+    "LVL_24_SHIP_SHACK_D_001BE800": 1828864,
+    "LVL_24_SHIP_SHACK_D_001BE840": 1828928,
+    "LVL_24_SHIP_SHACK_D_001BE888": 1829000,
+    "LVL_24_SHIP_SHACK_D_001BE894": 1829012,
+    "LVL_24_SHIP_SHACK_D_001C8CA0": 1871008,
+    "LVL_24_SHIP_SHACK_D_00226000": 2252800,
+    "LVL_24_SHIP_SHACK_D_0022CF00": 2281216,
+    "LVL_24_SHIP_SHACK_D_0022D500": 2282752,
+    "LVL_24_SHIP_SHACK_D_00230C40": 2296896,
+    "LVL_24_SHIP_SHACK_D_00252CB0": 2436272,
+    "LVL_24_SHIP_SHACK_D_0025B710": 2471696,
+    "LVL_24_SHIP_SHACK_D_00261E70": 2498160,
+    "LVL_24_SHIP_SHACK_D_0027D600": 2610688,
+    "LVL_24_SHIP_SHACK_D_0028AAC0": 2665152,
+    "LVL_24_SHIP_SHACK_FUN_002A4148": 2769224,
+    "LVL_24_SHIP_SHACK_FUN_002A52C8": 2773704,
+    "LVL_24_SHIP_SHACK_FUN_002ADC18": 2808856,
+    "LVL_24_SHIP_SHACK_FUN_002ADE68": 2809448,
+    "LVL_24_SHIP_SHACK_FUN_002AE960": 2812256,
+    "LVL_24_SHIP_SHACK_FUN_002B8D58": 2854232,
+    "LVL_24_SHIP_SHACK_FUN_002D25C0": 2958784,
+    "LVL_24_SHIP_SHACK_FUN_002D27E0": 2959328,
+    "LVL_24_SHIP_SHACK_FUN_002D66B8": 2975416,
+    "LVL_24_SHIP_SHACK_FUN_002DBAE8": 2996968,
+    "LVL_24_SHIP_SHACK_FUN_002DBE30": 2997808,
+    "LVL_24_SHIP_SHACK_FUN_002EC588": 3065224,
+    "LVL_24_SHIP_SHACK_FUN_002EC878": 3065976,
+    "LVL_24_SHIP_SHACK_FUN_002ECCF0": 3067120,
+    "LVL_24_SHIP_SHACK_FUN_002EEBE0": 3075040,
+    "LVL_24_SHIP_SHACK_FUN_002EED68": 3075432,
+    "LVL_24_SHIP_SHACK_FUN_002EF0D0": 3076304,
+    "LVL_24_SHIP_SHACK_FUN_002F2DA8": 3091880,
+    "LVL_24_SHIP_SHACK_FUN_002F5D18": 3104024,
+    "LVL_24_SHIP_SHACK_FUN_0033C720": 3393312,
+    "LVL_24_SHIP_SHACK_FUN_00356B70": 3500912,
+    "LVL_24_SHIP_SHACK_FUN_00372790": 3614608
+  },
   "flags": [
     "-O2",
     "-G0",
@@ -14,392 +67,354 @@
   ],
   "functions": [
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002A5288",
       "address": 2773640,
+      "meaning": "passes the measured byte and constants to two callees",
       "size": 60,
-      "meaning": "passes the measured byte and constants to two callees"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002A5288"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002ACF68",
       "address": 2805608,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002ACF68"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002ACFA0",
       "address": 2805664,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002ACFA0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002AD0D0",
       "address": 2805968,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002AD0D0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002ADBC0",
       "address": 2808768,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002ADBC0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002AECC0",
       "address": 2813120,
+      "meaning": "calls three measured no-argument functions in sequence",
       "size": 44,
-      "meaning": "calls three measured no-argument functions in sequence"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002AECC0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D1570",
       "address": 2954608,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
       "size": 72,
-      "meaning": "updates the resident selection and index after validating the selected table entry"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D1570"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D2878",
       "address": 2959480,
+      "meaning": "calls the measured float callee with the negated input",
       "size": 28,
-      "meaning": "calls the measured float callee with the negated input"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D2878"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5820",
       "address": 2971680,
+      "meaning": "calls the measured integer callee with zero",
       "size": 28,
-      "meaning": "calls the measured integer callee with zero"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5820"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5840",
       "address": 2971712,
+      "meaning": "calls the measured integer callee with three",
       "size": 28,
-      "meaning": "calls the measured integer callee with three"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5840"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D59A0",
       "address": 2972064,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D59A0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5A30",
       "address": 2972208,
+      "meaning": "tests the byte at the indexed 16-byte table entry",
       "size": 28,
-      "meaning": "tests the byte at the indexed 16-byte table entry"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5A30"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D6960",
       "address": 2976096,
+      "meaning": "clears five object fields; authored level-only C",
       "size": 24,
-      "meaning": "clears five object fields; authored level-only C"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D6960"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D6CF8",
       "address": 2977016,
+      "meaning": "sets the referenced object halfword at 0x7e and clears its byte at 0x7d",
       "size": 32,
-      "meaning": "sets the referenced object halfword at 0x7e and clears its byte at 0x7d"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D6CF8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002E2A88",
       "address": 3025544,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002E2A88"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002E48B0",
       "address": 3033264,
+      "meaning": "calls the measured no-argument callee",
       "size": 28,
-      "meaning": "calls the measured no-argument callee"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002E48B0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002E53E0",
       "address": 3036128,
+      "meaning": "calls the measured callee with zero",
       "size": 28,
-      "meaning": "calls the measured callee with zero"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002E53E0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002EBB68",
       "address": 3062632,
+      "meaning": "calls the measured callee with constants 0x47 and 0x513f1",
       "size": 36,
-      "meaning": "calls the measured callee with constants 0x47 and 0x513f1"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002EBB68"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002EF578",
       "address": 3077496,
+      "meaning": "returns the signed word at 0x001be840",
       "size": 12,
-      "meaning": "returns the signed word at 0x001be840"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002EF578"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002EF588",
       "address": 3077512,
+      "meaning": "returns the signed word at 0x001be888",
       "size": 12,
-      "meaning": "returns the signed word at 0x001be888"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002EF588"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002EF5E8",
       "address": 3077608,
+      "meaning": "stores the provided word at 0x001be894",
       "size": 12,
-      "meaning": "stores the provided word at 0x001be894"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002EF5E8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002F1B80",
       "address": 3087232,
+      "meaning": "tests whether the measured state word equals seven",
       "size": 20,
-      "meaning": "tests whether the measured state word equals seven"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002F1B80"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002F2510",
       "address": 3089680,
+      "meaning": "authored C for independently verified level-native body",
       "size": 72,
-      "meaning": "authored C for independently verified level-native body"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002F2510"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002F5DE0",
       "address": 3104224,
+      "meaning": "authored C for independently verified level-native body",
       "size": 80,
-      "meaning": "authored C for independently verified level-native body"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002F5DE0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_0034F218",
       "address": 3469848,
+      "meaning": "authored C for independently verified level-native body",
       "size": 80,
-      "meaning": "authored C for independently verified level-native body"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_0034F218"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_0035E348",
       "address": 3531592,
+      "meaning": "selects the level data bank when the resident context is in state 9",
       "size": 72,
-      "meaning": "selects the level data bank when the resident context is in state 9"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_0035E348"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002A4468",
       "address": 2770024,
+      "meaning": "calls the measured element helper over a 0x1b80-byte array in 0xb0-byte steps",
       "size": 76,
-      "meaning": "calls the measured element helper over a 0x1b80-byte array in 0xb0-byte steps"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002A4468"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D6160",
       "address": 2974048,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D6160"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002E4828",
       "address": 3033128,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002E4828"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002ACDF8",
       "address": 2805240,
+      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper",
       "size": 56,
-      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002ACDF8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002ACFD8",
       "address": 2805720,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002ACFD8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002AD010",
       "address": 2805776,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002AD010"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002B2348",
       "address": 2827080,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002B2348"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_003390C8",
       "address": 3379400,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_003390C8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002F5618",
       "address": 3102232,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002F5618"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_00303C88",
       "address": 3161224,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00303C88"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_00375070",
       "address": 3625072,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00375070"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_003621A8",
       "address": 3547560,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_003621A8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_003DA6E8",
       "address": 4040424,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_003DA6E8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5860",
       "address": 2971744,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5860"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002A40E8",
       "address": 2769128,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002A40E8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002F21E8",
       "address": 3088872,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002F21E8"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_003773D0",
       "address": 3634128,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_003773D0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D57E0",
       "address": 2971616,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D57E0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D22D0",
       "address": 2958032,
+      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D22D0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D2308",
       "address": 2958088,
+      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D2308"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5C28",
       "address": 2972712,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002D5C28"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002F1B50",
       "address": 3087184,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002F1B50"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_00307308",
       "address": 3175176,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00307308"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002B2A98",
       "address": 2828952,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002B2A98"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_00418978",
       "address": 4295032,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00418978"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_0030F650",
       "address": 3208784,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_0030F650"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_002DBA40",
       "address": 2996800,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002DBA40"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_0041DDF0",
       "address": 4316656,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_0041DDF0"
     },
     {
-      "symbol": "LVL_24_SHIP_SHACK_FUN_0041E288",
       "address": 4317832,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_24_SHIP_SHACK_FUN_0041E288"
+    },
+    {
+      "address": 3297592,
+      "meaning": "Pass resident active word to original stop helper when signed status is three, set status four and return one; otherwise zero",
+      "size": 88,
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00325138"
+    },
+    {
+      "address": 3246408,
+      "meaning": "computes a scalar complement-power curve by repeated multiplication",
+      "size": 68,
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00318948"
     }
   ],
-  "externals": {
-    "LVL_24_SHIP_SHACK_FUN_002F5D18": 3104024,
-    "LVL_24_SHIP_SHACK_D_001A8EB0": 1740464,
-    "LVL_24_SHIP_SHACK_D_001B1B70": 1776496,
-    "LVL_24_SHIP_SHACK_D_001B1B74": 1776500,
-    "LVL_24_SHIP_SHACK_D_00189E20": 1613344,
-    "LVL_24_SHIP_SHACK_D_001BC3C0": 1819584,
-    "LVL_24_SHIP_SHACK_D_0028AAC0": 2665152,
-    "LVL_24_SHIP_SHACK_D_0018C0B4": 1622196,
-    "LVL_24_SHIP_SHACK_FUN_002D25C0": 2958784,
-    "LVL_24_SHIP_SHACK_D_001B8500": 1803520,
-    "LVL_24_SHIP_SHACK_D_001B8580": 1803648,
-    "LVL_24_SHIP_SHACK_D_001BE840": 1828928,
-    "LVL_24_SHIP_SHACK_D_001BE888": 1829000,
-    "LVL_24_SHIP_SHACK_D_001BE894": 1829012,
-    "LVL_24_SHIP_SHACK_FUN_002EEBE0": 3075040,
-    "LVL_24_SHIP_SHACK_FUN_0033C720": 3393312,
-    "LVL_24_SHIP_SHACK_FUN_00372790": 3614608,
-    "LVL_24_SHIP_SHACK_D_0018B2BC": 1618620,
-    "LVL_24_SHIP_SHACK_FUN_002ADE68": 2809448,
-    "LVL_24_SHIP_SHACK_FUN_002AE960": 2812256,
-    "LVL_24_SHIP_SHACK_FUN_002ADC18": 2808856,
-    "LVL_24_SHIP_SHACK_FUN_002A52C8": 2773704,
-    "LVL_24_SHIP_SHACK_FUN_002B8D58": 2854232,
-    "LVL_24_SHIP_SHACK_D_0025B710": 2471696,
-    "LVL_24_SHIP_SHACK_FUN_002A4148": 2769224,
-    "LVL_24_SHIP_SHACK_FUN_002D66B8": 2975416,
-    "LVL_24_SHIP_SHACK_FUN_002EED68": 3075432,
-    "LVL_24_SHIP_SHACK_FUN_002EF0D0": 3076304,
-    "LVL_24_SHIP_SHACK_FUN_002D27E0": 2959328,
-    "LVL_24_SHIP_SHACK_D_0027D600": 2610688,
-    "LVL_24_SHIP_SHACK_D_001395B8": 1283512,
-    "LVL_24_SHIP_SHACK_D_00230C40": 2296896,
-    "LVL_24_SHIP_SHACK_D_0022D500": 2282752,
-    "LVL_24_SHIP_SHACK_D_00226000": 2252800,
-    "LVL_24_SHIP_SHACK_D_0022CF00": 2281216,
-    "LVL_24_SHIP_SHACK_D_00252CB0": 2436272,
-    "LVL_24_SHIP_SHACK_D_0018C0B0": 1622192,
-    "LVL_24_SHIP_SHACK_D_0018B134": 1618228,
-    "LVL_24_SHIP_SHACK_D_0018B040": 1617984,
-    "LVL_24_SHIP_SHACK_D_00139568": 1283432,
-    "LVL_24_SHIP_SHACK_D_00261E70": 2498160,
-    "LVL_24_SHIP_SHACK_FUN_002EC588": 3065224,
-    "LVL_24_SHIP_SHACK_D_001A79F0": 1735152,
-    "LVL_24_SHIP_SHACK_D_001BE800": 1828864,
-    "LVL_24_SHIP_SHACK_D_001C8CA0": 1871008,
-    "LVL_24_SHIP_SHACK_D_001A99E0": 1743328,
-    "LVL_24_SHIP_SHACK_D_001A99E8": 1743336,
-    "LVL_24_SHIP_SHACK_FUN_002F2DA8": 3091880,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_24_SHIP_SHACK_FUN_00356B70": 3500912,
-    "LVL_24_SHIP_SHACK_D_001B1700": 1775360,
-    "LVL_24_SHIP_SHACK_D_001B1740": 1775424,
-    "LVL_24_SHIP_SHACK_FUN_002DBAE8": 2996968,
-    "LVL_24_SHIP_SHACK_FUN_002EC878": 3065976,
-    "LVL_24_SHIP_SHACK_FUN_002ECCF0": 3067120,
-    "LVL_24_SHIP_SHACK_FUN_002DBE30": 2997808
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "24_ship_shack",
+  "program": "levels/24_ship_shack",
+  "reference_sha256": "4afbc22add84109c84ef8ca49099fdf9863905e5f497369c207ac5cb47814740",
+  "schema": 1,
+  "source": "candidates/levels/24_ship_shack.c",
+  "target": "SCUS_972.68"
 }

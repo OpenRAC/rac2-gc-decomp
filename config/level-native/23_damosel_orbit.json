@@ -1,272 +1,286 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "23_damosel_orbit",
-  "program": "levels/23_damosel_orbit",
-  "reference_sha256": "0c75617382013a703eb5fcc85845f4d1352f496bfbb4047f512454aa730d37b4",
   "entry": 2801928,
-  "source": "candidates/levels/23_damosel_orbit.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "FUN_00133400": 1258496,
+    "LVL_23_DAMOSEL_ORBIT_D_00139568": 1283432,
+    "LVL_23_DAMOSEL_ORBIT_D_001395B8": 1283512,
+    "LVL_23_DAMOSEL_ORBIT_D_00189E20": 1613344,
+    "LVL_23_DAMOSEL_ORBIT_D_0018B040": 1617984,
+    "LVL_23_DAMOSEL_ORBIT_D_0018B134": 1618228,
+    "LVL_23_DAMOSEL_ORBIT_D_0018C0B0": 1622192,
+    "LVL_23_DAMOSEL_ORBIT_D_0018C0B4": 1622196,
+    "LVL_23_DAMOSEL_ORBIT_D_001A63A8": 1729448,
+    "LVL_23_DAMOSEL_ORBIT_D_001A79F0": 1735152,
+    "LVL_23_DAMOSEL_ORBIT_D_001A8EB0": 1740464,
+    "LVL_23_DAMOSEL_ORBIT_D_001A99E0": 1743328,
+    "LVL_23_DAMOSEL_ORBIT_D_001A99E8": 1743336,
+    "LVL_23_DAMOSEL_ORBIT_D_001B2700": 1779456,
+    "LVL_23_DAMOSEL_ORBIT_D_001B2740": 1779520,
+    "LVL_23_DAMOSEL_ORBIT_D_001BA480": 1811584,
+    "LVL_23_DAMOSEL_ORBIT_D_001C0780": 1836928,
+    "LVL_23_DAMOSEL_ORBIT_D_001CAC20": 1879072,
+    "LVL_23_DAMOSEL_ORBIT_D_00227F80": 2260864,
+    "LVL_23_DAMOSEL_ORBIT_D_0022EE80": 2289280,
+    "LVL_23_DAMOSEL_ORBIT_D_0022F480": 2290816,
+    "LVL_23_DAMOSEL_ORBIT_D_00232BC0": 2304960,
+    "LVL_23_DAMOSEL_ORBIT_D_00254EF0": 2445040,
+    "LVL_23_DAMOSEL_ORBIT_D_00266A70": 2517616,
+    "LVL_23_DAMOSEL_ORBIT_D_00282200": 2630144,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002DE0F8": 3006712,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002E1FD0": 3022800,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002E7400": 3044352,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002E7748": 3045192,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002F7EA0": 3112608,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002F8190": 3113360,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002F8620": 3114528,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002FA6D8": 3122904,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002FAA40": 3123776,
+    "LVL_23_DAMOSEL_ORBIT_FUN_002FE718": 3139352,
+    "LVL_23_DAMOSEL_ORBIT_FUN_003675B0": 3569072,
+    "LVL_23_DAMOSEL_ORBIT_FUN_003833A0": 3683232
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6C20",
       "address": 2845728,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6C20"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6C58",
       "address": 2845784,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6C58"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6D88",
       "address": 2846088,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6D88"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B7878",
       "address": 2848888,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B7878"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E12B8",
       "address": 3019448,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E12B8"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E2278",
       "address": 3023480,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E2278"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002EE3A0",
       "address": 3072928,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002EE3A0"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002FDE80",
       "address": 3137152,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002FDE80"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E1A78",
       "address": 3021432,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E1A78"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002F0140",
       "address": 3080512,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002F0140"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6AB0",
       "address": 2845360,
+      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper",
       "size": 56,
-      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6AB0"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6C90",
       "address": 2845840,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6C90"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6CC8",
       "address": 2845896,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002B6CC8"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002BC2C0",
       "address": 2867904,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002BC2C0"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00349860",
       "address": 3446880,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00349860"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00300F88",
       "address": 3149704,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00300F88"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0030F5F8",
       "address": 3208696,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0030F5F8"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00385C80",
       "address": 3693696,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00385C80"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00372BE8",
       "address": 3615720,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00372BE8"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003FAEB0",
       "address": 4173488,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003FAEB0"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E1178",
       "address": 3019128,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E1178"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002AD590",
       "address": 2807184,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002AD590"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002FDB58",
       "address": 3136344,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002FDB58"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00387FE0",
       "address": 3702752,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00387FE0"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E10F8",
       "address": 3019000,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E10F8"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002DDBE8",
       "address": 3005416,
+      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002DDBE8"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002DDC20",
       "address": 3005472,
+      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002DDC20"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E1540",
       "address": 3020096,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E1540"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002FD4C0",
       "address": 3134656,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002FD4C0"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00312C78",
       "address": 3222648,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00312C78"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002BCA50",
       "address": 2869840,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002BCA50"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0044FAC8",
       "address": 4520648,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0044FAC8"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0031B010",
       "address": 3256336,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0031B010"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E7358",
       "address": 3044184,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E7358"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00454F40",
       "address": 4542272,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00454F40"
     },
     {
-      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_004553D8",
       "address": 4543448,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_004553D8"
+    },
+    {
+      "address": 3363512,
+      "meaning": "Pass resident active word to original stop helper when signed status is three, set status four and return one; otherwise zero",
+      "size": 88,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003352B8"
+    },
+    {
+      "address": 3294016,
+      "meaning": "computes a scalar complement-power curve by repeated multiplication",
+      "size": 68,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00324340"
     }
   ],
-  "externals": {
-    "LVL_23_DAMOSEL_ORBIT_D_001A8EB0": 1740464,
-    "LVL_23_DAMOSEL_ORBIT_D_0018C0B4": 1622196,
-    "LVL_23_DAMOSEL_ORBIT_D_00189E20": 1613344,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002E1FD0": 3022800,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002FA6D8": 3122904,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002FAA40": 3123776,
-    "LVL_23_DAMOSEL_ORBIT_FUN_003833A0": 3683232,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002DE0F8": 3006712,
-    "LVL_23_DAMOSEL_ORBIT_D_00282200": 2630144,
-    "LVL_23_DAMOSEL_ORBIT_D_001395B8": 1283512,
-    "LVL_23_DAMOSEL_ORBIT_D_00232BC0": 2304960,
-    "LVL_23_DAMOSEL_ORBIT_D_0022F480": 2290816,
-    "LVL_23_DAMOSEL_ORBIT_D_00227F80": 2260864,
-    "LVL_23_DAMOSEL_ORBIT_D_0022EE80": 2289280,
-    "LVL_23_DAMOSEL_ORBIT_D_00254EF0": 2445040,
-    "LVL_23_DAMOSEL_ORBIT_D_0018C0B0": 1622192,
-    "LVL_23_DAMOSEL_ORBIT_D_0018B134": 1618228,
-    "LVL_23_DAMOSEL_ORBIT_D_0018B040": 1617984,
-    "LVL_23_DAMOSEL_ORBIT_D_00139568": 1283432,
-    "LVL_23_DAMOSEL_ORBIT_D_00266A70": 2517616,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002F7EA0": 3112608,
-    "LVL_23_DAMOSEL_ORBIT_D_001A79F0": 1735152,
-    "LVL_23_DAMOSEL_ORBIT_D_001BA480": 1811584,
-    "LVL_23_DAMOSEL_ORBIT_D_001C0780": 1836928,
-    "LVL_23_DAMOSEL_ORBIT_D_001CAC20": 1879072,
-    "LVL_23_DAMOSEL_ORBIT_D_001A99E0": 1743328,
-    "LVL_23_DAMOSEL_ORBIT_D_001A99E8": 1743336,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002FE718": 3139352,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_23_DAMOSEL_ORBIT_FUN_003675B0": 3569072,
-    "LVL_23_DAMOSEL_ORBIT_D_001B2700": 1779456,
-    "LVL_23_DAMOSEL_ORBIT_D_001B2740": 1779520,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002E7400": 3044352,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002F8190": 3113360,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002F8620": 3114528,
-    "LVL_23_DAMOSEL_ORBIT_FUN_002E7748": 3045192
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "23_damosel_orbit",
+  "program": "levels/23_damosel_orbit",
+  "reference_sha256": "0c75617382013a703eb5fcc85845f4d1352f496bfbb4047f512454aa730d37b4",
+  "schema": 1,
+  "source": "candidates/levels/23_damosel_orbit.c",
+  "target": "SCUS_972.68"
 }

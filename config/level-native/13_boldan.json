@@ -1,280 +1,294 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "13_boldan",
-  "program": "levels/13_boldan",
-  "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
   "entry": 2812680,
-  "source": "candidates/levels/13_boldan.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "FUN_00133400": 1258496,
+    "LVL_13_BOLDAN_D_00139568": 1283432,
+    "LVL_13_BOLDAN_D_001395B8": 1283512,
+    "LVL_13_BOLDAN_D_00189E20": 1613344,
+    "LVL_13_BOLDAN_D_0018B040": 1617984,
+    "LVL_13_BOLDAN_D_0018B134": 1618228,
+    "LVL_13_BOLDAN_D_0018C0B0": 1622192,
+    "LVL_13_BOLDAN_D_0018C0B4": 1622196,
+    "LVL_13_BOLDAN_D_001A63A8": 1729448,
+    "LVL_13_BOLDAN_D_001A79F0": 1735152,
+    "LVL_13_BOLDAN_D_001A8EB0": 1740464,
+    "LVL_13_BOLDAN_D_001A99E0": 1743328,
+    "LVL_13_BOLDAN_D_001A99E8": 1743336,
+    "LVL_13_BOLDAN_D_001B2880": 1779840,
+    "LVL_13_BOLDAN_D_001B28C0": 1779904,
+    "LVL_13_BOLDAN_D_001B9700": 1808128,
+    "LVL_13_BOLDAN_D_001BFA00": 1833472,
+    "LVL_13_BOLDAN_D_001C9EA0": 1875616,
+    "LVL_13_BOLDAN_D_00227200": 2257408,
+    "LVL_13_BOLDAN_D_0022E100": 2285824,
+    "LVL_13_BOLDAN_D_0022E700": 2287360,
+    "LVL_13_BOLDAN_D_00231E40": 2301504,
+    "LVL_13_BOLDAN_D_00254AB0": 2443952,
+    "LVL_13_BOLDAN_D_0026D270": 2544240,
+    "LVL_13_BOLDAN_D_00288A00": 2656768,
+    "LVL_13_BOLDAN_FUN_002E2120": 3023136,
+    "LVL_13_BOLDAN_FUN_002E75B8": 3044792,
+    "LVL_13_BOLDAN_FUN_002E7900": 3045632,
+    "LVL_13_BOLDAN_FUN_002F8480": 3114112,
+    "LVL_13_BOLDAN_FUN_002F8770": 3114864,
+    "LVL_13_BOLDAN_FUN_002F88B8": 3115192,
+    "LVL_13_BOLDAN_FUN_002F8C00": 3116032,
+    "LVL_13_BOLDAN_FUN_002F8DF8": 3116536,
+    "LVL_13_BOLDAN_FUN_002FAC78": 3124344,
+    "LVL_13_BOLDAN_FUN_002FAFE0": 3125216,
+    "LVL_13_BOLDAN_FUN_002FECB8": 3140792,
+    "LVL_13_BOLDAN_FUN_0032E008": 3334152,
+    "LVL_13_BOLDAN_FUN_00368FB0": 3575728,
+    "LVL_13_BOLDAN_FUN_00384E68": 3690088
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002B8C70",
       "address": 2854000,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_13_BOLDAN_FUN_002B8C70"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002B8CA8",
       "address": 2854056,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_13_BOLDAN_FUN_002B8CA8"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002B8DD8",
       "address": 2854360,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_13_BOLDAN_FUN_002B8DD8"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002B98C8",
       "address": 2857160,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_13_BOLDAN_FUN_002B98C8"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002E1370",
       "address": 3019632,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_13_BOLDAN_FUN_002E1370"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002E23C8",
       "address": 3023816,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_13_BOLDAN_FUN_002E23C8"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002EE558",
       "address": 3073368,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_13_BOLDAN_FUN_002EE558"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002FE420",
       "address": 3138592,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_13_BOLDAN_FUN_002FE420"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002E1BC8",
       "address": 3021768,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_13_BOLDAN_FUN_002E1BC8"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002F02F8",
       "address": 3080952,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_13_BOLDAN_FUN_002F02F8"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002B8CE0",
       "address": 2854112,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_13_BOLDAN_FUN_002B8CE0"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002B8D18",
       "address": 2854168,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_13_BOLDAN_FUN_002B8D18"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002BE1D0",
       "address": 2875856,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_13_BOLDAN_FUN_002BE1D0"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00422C90",
       "address": 4336784,
+      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
       "size": 36,
-      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three"
+      "symbol": "LVL_13_BOLDAN_FUN_00422C90"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_0034B260",
       "address": 3453536,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_13_BOLDAN_FUN_0034B260"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00301528",
       "address": 3151144,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_13_BOLDAN_FUN_00301528"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_0030FC08",
       "address": 3210248,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_13_BOLDAN_FUN_0030FC08"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00387748",
       "address": 3700552,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_13_BOLDAN_FUN_00387748"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00374678",
       "address": 3622520,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_13_BOLDAN_FUN_00374678"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_003FA838",
       "address": 4171832,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_13_BOLDAN_FUN_003FA838"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002E1230",
       "address": 3019312,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_13_BOLDAN_FUN_002E1230"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002AFF68",
       "address": 2817896,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_13_BOLDAN_FUN_002AFF68"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002FE0F8",
       "address": 3137784,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_13_BOLDAN_FUN_002FE0F8"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00389B40",
       "address": 3709760,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_13_BOLDAN_FUN_00389B40"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002E11B0",
       "address": 3019184,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_13_BOLDAN_FUN_002E11B0"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002DDC58",
       "address": 3005528,
+      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_13_BOLDAN_FUN_002DDC58"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002DDC90",
       "address": 3005584,
+      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_13_BOLDAN_FUN_002DDC90"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002E15F8",
       "address": 3020280,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_13_BOLDAN_FUN_002E15F8"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002FDA60",
       "address": 3136096,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_13_BOLDAN_FUN_002FDA60"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00313288",
       "address": 3224200,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_13_BOLDAN_FUN_00313288"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002BE920",
       "address": 2877728,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_13_BOLDAN_FUN_002BE920"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_0044DB88",
       "address": 4512648,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_13_BOLDAN_FUN_0044DB88"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_0031B620",
       "address": 3257888,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_13_BOLDAN_FUN_0031B620"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00426250",
       "address": 4350544,
+      "meaning": "computes a local target direction and stores bounded horizontal and vertical angles through the original math helpers",
       "size": 252,
-      "meaning": "computes a local target direction and stores bounded horizontal and vertical angles through the original math helpers"
+      "symbol": "LVL_13_BOLDAN_FUN_00426250"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_002E7510",
       "address": 3044624,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_13_BOLDAN_FUN_002E7510"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00453000",
       "address": 4534272,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_13_BOLDAN_FUN_00453000"
     },
     {
-      "symbol": "LVL_13_BOLDAN_FUN_00453498",
       "address": 4535448,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_13_BOLDAN_FUN_00453498"
+    },
+    {
+      "address": 3370936,
+      "meaning": "Pass resident active word to original stop helper when signed status is three, set status four and return one; otherwise zero",
+      "size": 88,
+      "symbol": "LVL_13_BOLDAN_FUN_00336FB8"
+    },
+    {
+      "address": 3295568,
+      "meaning": "computes a scalar complement-power curve by repeated multiplication",
+      "size": 68,
+      "symbol": "LVL_13_BOLDAN_FUN_00324950"
     }
   ],
-  "externals": {
-    "LVL_13_BOLDAN_D_001A8EB0": 1740464,
-    "LVL_13_BOLDAN_D_0018C0B4": 1622196,
-    "LVL_13_BOLDAN_D_00189E20": 1613344,
-    "LVL_13_BOLDAN_FUN_002E2120": 3023136,
-    "LVL_13_BOLDAN_FUN_002FAC78": 3124344,
-    "LVL_13_BOLDAN_FUN_002FAFE0": 3125216,
-    "LVL_13_BOLDAN_FUN_00384E68": 3690088,
-    "LVL_13_BOLDAN_D_00288A00": 2656768,
-    "LVL_13_BOLDAN_D_001395B8": 1283512,
-    "LVL_13_BOLDAN_D_00231E40": 2301504,
-    "LVL_13_BOLDAN_D_0022E700": 2287360,
-    "LVL_13_BOLDAN_D_00227200": 2257408,
-    "LVL_13_BOLDAN_D_0022E100": 2285824,
-    "LVL_13_BOLDAN_D_00254AB0": 2443952,
-    "LVL_13_BOLDAN_D_0018C0B0": 1622192,
-    "LVL_13_BOLDAN_D_0018B134": 1618228,
-    "LVL_13_BOLDAN_D_0018B040": 1617984,
-    "LVL_13_BOLDAN_D_00139568": 1283432,
-    "LVL_13_BOLDAN_D_0026D270": 2544240,
-    "LVL_13_BOLDAN_FUN_002F8480": 3114112,
-    "LVL_13_BOLDAN_D_001A79F0": 1735152,
-    "LVL_13_BOLDAN_D_001B9700": 1808128,
-    "LVL_13_BOLDAN_D_001BFA00": 1833472,
-    "LVL_13_BOLDAN_D_001C9EA0": 1875616,
-    "LVL_13_BOLDAN_D_001A99E0": 1743328,
-    "LVL_13_BOLDAN_D_001A99E8": 1743336,
-    "LVL_13_BOLDAN_FUN_002FECB8": 3140792,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_13_BOLDAN_FUN_00368FB0": 3575728,
-    "LVL_13_BOLDAN_D_001B2880": 1779840,
-    "LVL_13_BOLDAN_D_001B28C0": 1779904,
-    "LVL_13_BOLDAN_FUN_002F8770": 3114864,
-    "LVL_13_BOLDAN_FUN_0032E008": 3334152,
-    "LVL_13_BOLDAN_FUN_002F8DF8": 3116536,
-    "LVL_13_BOLDAN_FUN_002F88B8": 3115192,
-    "LVL_13_BOLDAN_FUN_002E75B8": 3044792,
-    "LVL_13_BOLDAN_FUN_002F8C00": 3116032,
-    "LVL_13_BOLDAN_FUN_002E7900": 3045632
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "13_boldan",
+  "program": "levels/13_boldan",
+  "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
+  "schema": 1,
+  "source": "candidates/levels/13_boldan.c",
+  "target": "SCUS_972.68"
 }

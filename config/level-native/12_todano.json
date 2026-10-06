@@ -1,287 +1,301 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "12_todano",
-  "program": "levels/12_todano",
-  "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
   "entry": 2791176,
-  "source": "candidates/levels/12_todano.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "FUN_00133400": 1258496,
+    "LVL_12_TODANO_D_00139568": 1283432,
+    "LVL_12_TODANO_D_001395B8": 1283512,
+    "LVL_12_TODANO_D_00189E20": 1613344,
+    "LVL_12_TODANO_D_0018B040": 1617984,
+    "LVL_12_TODANO_D_0018B134": 1618228,
+    "LVL_12_TODANO_D_0018C0B0": 1622192,
+    "LVL_12_TODANO_D_0018C0B4": 1622196,
+    "LVL_12_TODANO_D_001A63A8": 1729448,
+    "LVL_12_TODANO_D_001A79F0": 1735152,
+    "LVL_12_TODANO_D_001A8EB0": 1740464,
+    "LVL_12_TODANO_D_001A9A60": 1743456,
+    "LVL_12_TODANO_D_001A9A68": 1743464,
+    "LVL_12_TODANO_D_001B2E00": 1781248,
+    "LVL_12_TODANO_D_001B2E40": 1781312,
+    "LVL_12_TODANO_D_001B9C40": 1809472,
+    "LVL_12_TODANO_D_001BFF40": 1834816,
+    "LVL_12_TODANO_D_001CA3E0": 1876960,
+    "LVL_12_TODANO_D_00227740": 2258752,
+    "LVL_12_TODANO_D_0022E640": 2287168,
+    "LVL_12_TODANO_D_0022EC40": 2288704,
+    "LVL_12_TODANO_D_00232380": 2302848,
+    "LVL_12_TODANO_D_00254540": 2442560,
+    "LVL_12_TODANO_D_002636F0": 2504432,
+    "LVL_12_TODANO_D_0027EE80": 2616960,
+    "LVL_12_TODANO_FUN_002D6E40": 2977344,
+    "LVL_12_TODANO_FUN_002DADB0": 2993584,
+    "LVL_12_TODANO_FUN_002E01E0": 3015136,
+    "LVL_12_TODANO_FUN_002E0528": 3015976,
+    "LVL_12_TODANO_FUN_002F1668": 3085928,
+    "LVL_12_TODANO_FUN_002F1958": 3086680,
+    "LVL_12_TODANO_FUN_002F1AA0": 3087008,
+    "LVL_12_TODANO_FUN_002F1E08": 3087880,
+    "LVL_12_TODANO_FUN_002F2000": 3088384,
+    "LVL_12_TODANO_FUN_002F3E80": 3096192,
+    "LVL_12_TODANO_FUN_002F41E8": 3097064,
+    "LVL_12_TODANO_FUN_002F7EC0": 3112640,
+    "LVL_12_TODANO_FUN_00327DB8": 3308984,
+    "LVL_12_TODANO_FUN_00364F58": 3559256,
+    "LVL_12_TODANO_FUN_00380D80": 3673472
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_12_TODANO_FUN_002B36A0",
       "address": 2832032,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_12_TODANO_FUN_002B36A0"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002B36D8",
       "address": 2832088,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_12_TODANO_FUN_002B36D8"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002B3808",
       "address": 2832392,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_12_TODANO_FUN_002B3808"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002B42F8",
       "address": 2835192,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_12_TODANO_FUN_002B42F8"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002DA098",
       "address": 2990232,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_12_TODANO_FUN_002DA098"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002DB058",
       "address": 2994264,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_12_TODANO_FUN_002DB058"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002E7180",
       "address": 3043712,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_12_TODANO_FUN_002E7180"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002F7628",
       "address": 3110440,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_12_TODANO_FUN_002F7628"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002DA858",
       "address": 2992216,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_12_TODANO_FUN_002DA858"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002E8F20",
       "address": 3051296,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_12_TODANO_FUN_002E8F20"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002B3530",
       "address": 2831664,
+      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper",
       "size": 56,
-      "meaning": "forwards an output pointer, three pinned floating constants and selector one to the typed helper"
+      "symbol": "LVL_12_TODANO_FUN_002B3530"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002B3710",
       "address": 2832144,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_12_TODANO_FUN_002B3710"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002B3748",
       "address": 2832200,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_12_TODANO_FUN_002B3748"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002B8B40",
       "address": 2853696,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_12_TODANO_FUN_002B8B40"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_00423FE8",
       "address": 4341736,
+      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
       "size": 36,
-      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three"
+      "symbol": "LVL_12_TODANO_FUN_00423FE8"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_00346FC0",
       "address": 3436480,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_12_TODANO_FUN_00346FC0"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002FA730",
       "address": 3122992,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_12_TODANO_FUN_002FA730"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_003094F8",
       "address": 3183864,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_12_TODANO_FUN_003094F8"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_00383660",
       "address": 3683936,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_12_TODANO_FUN_00383660"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_00370590",
       "address": 3605904,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_12_TODANO_FUN_00370590"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_003FB878",
       "address": 4175992,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_12_TODANO_FUN_003FB878"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002D9F58",
       "address": 2989912,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_12_TODANO_FUN_002D9F58"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002AAB68",
       "address": 2796392,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_12_TODANO_FUN_002AAB68"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002F7300",
       "address": 3109632,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_12_TODANO_FUN_002F7300"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_003859C0",
       "address": 3692992,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_12_TODANO_FUN_003859C0"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002D9ED8",
       "address": 2989784,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_12_TODANO_FUN_002D9ED8"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002D6930",
       "address": 2976048,
+      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_12_TODANO_FUN_002D6930"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002D6968",
       "address": 2976104,
+      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_12_TODANO_FUN_002D6968"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002DA320",
       "address": 2990880,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_12_TODANO_FUN_002DA320"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002F6C68",
       "address": 3107944,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_12_TODANO_FUN_002F6C68"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_0030CB78",
       "address": 3197816,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_12_TODANO_FUN_0030CB78"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002B9290",
       "address": 2855568,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_12_TODANO_FUN_002B9290"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_00450230",
       "address": 4522544,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_12_TODANO_FUN_00450230"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_00314F10",
       "address": 3231504,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_12_TODANO_FUN_00314F10"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_00427F40",
       "address": 4357952,
+      "meaning": "computes a local target direction and stores bounded horizontal and vertical angles through the original math helpers",
       "size": 252,
-      "meaning": "computes a local target direction and stores bounded horizontal and vertical angles through the original math helpers"
+      "symbol": "LVL_12_TODANO_FUN_00427F40"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_002E0138",
       "address": 3014968,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_12_TODANO_FUN_002E0138"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_004556A8",
       "address": 4544168,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_12_TODANO_FUN_004556A8"
     },
     {
-      "symbol": "LVL_12_TODANO_FUN_00455B40",
       "address": 4545344,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_12_TODANO_FUN_00455B40"
+    },
+    {
+      "address": 3351912,
+      "meaning": "Pass resident active word to original stop helper when signed status is three, set status four and return one; otherwise zero",
+      "size": 88,
+      "symbol": "LVL_12_TODANO_FUN_00332568"
+    },
+    {
+      "address": 3269184,
+      "meaning": "computes a scalar complement-power curve by repeated multiplication",
+      "size": 68,
+      "symbol": "LVL_12_TODANO_FUN_0031E240"
     }
   ],
-  "externals": {
-    "LVL_12_TODANO_D_001A8EB0": 1740464,
-    "LVL_12_TODANO_D_0018C0B4": 1622196,
-    "LVL_12_TODANO_D_00189E20": 1613344,
-    "LVL_12_TODANO_FUN_002DADB0": 2993584,
-    "LVL_12_TODANO_FUN_002F3E80": 3096192,
-    "LVL_12_TODANO_FUN_002F41E8": 3097064,
-    "LVL_12_TODANO_FUN_00380D80": 3673472,
-    "LVL_12_TODANO_FUN_002D6E40": 2977344,
-    "LVL_12_TODANO_D_0027EE80": 2616960,
-    "LVL_12_TODANO_D_001395B8": 1283512,
-    "LVL_12_TODANO_D_00232380": 2302848,
-    "LVL_12_TODANO_D_0022EC40": 2288704,
-    "LVL_12_TODANO_D_00227740": 2258752,
-    "LVL_12_TODANO_D_0022E640": 2287168,
-    "LVL_12_TODANO_D_00254540": 2442560,
-    "LVL_12_TODANO_D_0018C0B0": 1622192,
-    "LVL_12_TODANO_D_0018B134": 1618228,
-    "LVL_12_TODANO_D_0018B040": 1617984,
-    "LVL_12_TODANO_D_00139568": 1283432,
-    "LVL_12_TODANO_D_002636F0": 2504432,
-    "LVL_12_TODANO_FUN_002F1668": 3085928,
-    "LVL_12_TODANO_D_001A79F0": 1735152,
-    "LVL_12_TODANO_D_001B9C40": 1809472,
-    "LVL_12_TODANO_D_001BFF40": 1834816,
-    "LVL_12_TODANO_D_001CA3E0": 1876960,
-    "LVL_12_TODANO_D_001A9A60": 1743456,
-    "LVL_12_TODANO_D_001A9A68": 1743464,
-    "LVL_12_TODANO_FUN_002F7EC0": 3112640,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_12_TODANO_FUN_00364F58": 3559256,
-    "LVL_12_TODANO_D_001B2E00": 1781248,
-    "LVL_12_TODANO_D_001B2E40": 1781312,
-    "LVL_12_TODANO_FUN_002F1958": 3086680,
-    "LVL_12_TODANO_FUN_00327DB8": 3308984,
-    "LVL_12_TODANO_FUN_002F2000": 3088384,
-    "LVL_12_TODANO_FUN_002F1AA0": 3087008,
-    "LVL_12_TODANO_FUN_002E01E0": 3015136,
-    "LVL_12_TODANO_FUN_002F1E08": 3087880,
-    "LVL_12_TODANO_FUN_002E0528": 3015976
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "12_todano",
+  "program": "levels/12_todano",
+  "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
+  "schema": 1,
+  "source": "candidates/levels/12_todano.c",
+  "target": "SCUS_972.68"
 }
