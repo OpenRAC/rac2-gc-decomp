@@ -12,15 +12,19 @@ python scripts/source_layout.py --check --inventory-check progress/source-invent
 
 ## Boot pilot
 
-Sixteen ordered core fragments in `src/boot/` group layouts, resident accessors,
+Seventeen ordered core fragments in `src/boot/` group layouts, resident accessors,
 utilities, object operations, callbacks and the packed-pixel decoder. The
 generator concatenates them without introducing includes, line directives,
 whitespace or additional compiler invocations. Types and declarations retain
 their original order and scope. The output is still one `boot.c` translation
-unit containing 184 catalogued definitions. The recipe also appends the
+unit containing 185 catalogued definitions. The recipe also includes the
 vendored libgcc source in `src/libgcc/fp-bit-ee.c`; its one accepted definition
 is upstream library code, separately licensed, rather than campaign-authored
 code. Its complete notices also accompany the generated copy in `boot.c`.
+The final core fragment contains the mechanically adapted MIT-licensed Lombyte
+dual-prime motion-vector body, with its complete notice. Its provenance and
+independent complete-body acceptance are recorded in
+[`MPEG-DUAL-PRIME-EVIDENCE.md`](MPEG-DUAL-PRIME-EVIDENCE.md).
 
 These are authored organizational boundaries. They do not establish original
 retail modules, object files or independently compilable units. Independent
@@ -82,7 +86,7 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
-| Boot | 184 catalogued definitions (183 campaign-authored, one vendored) | 9,944 |
+| Boot | 185 catalogued definitions (183 campaign-authored, two attributed third-party definitions) | 10,332 |
 | Native overlays | 914 family-or-singleton items, 915 contextual variants | 107,328 across 1,121 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
@@ -92,11 +96,14 @@ explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **342,388 / 48,788,176 bytes**.
-The latest lot reuses three already qualified boot C bodies at 81 additional
+The current integration exporter accepts **342,776 / 48,788,176 bytes**.
+The latest lot adds the complete 388-byte dual-prime motion-vector function to
+boot. All 185 current boot functions and all 27 overlays pass fresh full-image
+and metadata gates; no new overlay placement is credited for this function.
+The preceding shared-family lot reused three already qualified boot C bodies at 81 additional
 explicit overlay placements: a 128-byte GS image store, a 372-byte wait/reset
 routine and a 168-byte synchronized table clear. The 18,036 additional loaded
-bytes use the unchanged canonical boot source and G0 object. All 1,121 current
+bytes reused the canonical boot source and G0 object qualified in that lot. All 1,121 current
 native bodies remain in their independently qualified G0/G8 objects; Barlow
 retains its G8 profile and fixed GP. Every current shared/native function and
 new placement passes complete object qualification and the 28 full-image gates.

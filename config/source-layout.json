@@ -99,11 +99,16 @@
       "boundary_evidence": "authoritative contiguous source fragment; not an original object boundary",
       "fragment": "src/levels/shared/count-nonzero-bytes112.cfrag",
       "name": "count-nonzero-bytes112"
+    },
+    {
+      "boundary_evidence": "authoritative contiguous source fragment; not an original object boundary",
+      "fragment": "src/boot/16-dual-prime-motion-vector.cfrag",
+      "name": "16-dual-prime-motion-vector"
     }
   ],
   "generator_sha256": "5dea27fffe81f262f02029ff2126bf1a673c4edad860b34e46850a69156d8a9f",
   "input_sha256": {
-    "candidates/boot.c": "20270f2afddb41bea71d840198237d9812be697b8149a2cb7b637bb052aa2ecf",
+    "candidates/boot.c": "4b62e00a03d9e07945803165168a98da2f5d27a300f3c329ed4efe3ad50dcf35",
     "candidates/levels/0_aranos_tutorial.c": "a0de41344bc4e9ed5eb2e216ff36b2543c93e40ed402d7156d73800d9b910ea6",
     "candidates/levels/10_hrugis_cloud.c": "b47c896029e1829a36d52ced47286abc642b92945688b550463b33649ef1eb61",
     "candidates/levels/11_joba.c": "6a05cf40a06be103c975c075ec3b08fe4de4a4455d9eedfdef68395267bf8bca",
@@ -131,7 +136,7 @@
     "candidates/levels/7_siberius.c": "fdfd8595bd7a967c2b43cc385b718197a0e7dcda2b7656463824122fb37e0694",
     "candidates/levels/8_tabora.c": "58caaf2482f713cac786d87489e717423f8cebc472505b08d7c3edfdfe65887e",
     "candidates/levels/9_dobbo.c": "52a4570298f3d6320f63bbd06e1cb571cdc0e81f3d57f28474f6d7200175fd4b",
-    "config/candidate-catalog.json": "c1bd9eb3371fe15636af5f2768d9a11dce90935c05827f71d671475e8c2f37f1",
+    "config/candidate-catalog.json": "5819a7b7916b47b4e826082152a34f6574aa8bbf5866b0aa94b53536702db363",
     "config/level-native/0_aranos_tutorial.json": "9b0c54cfe53d98d4f492f764dbe6ec099fee855046818dfecd7fd6fbe4579830",
     "config/level-native/10_hrugis_cloud.json": "9732ded3532015543fd47a35e6767f581ae131b1607f9099d1da37dc1536c77b",
     "config/level-native/11_joba.json": "baa8798c0072c9e6e5c989a43b4f6194e62bb77a5f8e6c82b545785d76ec5157",
@@ -162,8 +167,8 @@
   },
   "machine_proof_status": "unverified after authoring; regenerate all affected reviews and loaded-byte gates",
   "metrics": {
-    "boot_authored_functions": 184,
-    "boot_catalogued_machine_bytes": 9944,
+    "boot_authored_functions": 185,
+    "boot_catalogued_machine_bytes": 10332,
     "identity_basis": "catalogued definitions compared as exact source bytes after recorded symbol-only substitutions; not a new machine proof",
     "native_authored_variant_catalogued_bytes_upper_bound": 98168,
     "native_base_family_placements": 215,
@@ -180,7 +185,7 @@
     "pilot_family_unique_catalogued_bytes": 24,
     "scope": "authored boot and native candidate catalogues only; excludes replicated boot/common overlay coverage",
     "shared_native_prelude_variants": 1,
-    "total_unique_authored_source_variants_in_scope": 1099,
+    "total_unique_authored_source_variants_in_scope": 1100,
     "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report."
   },
   "native_source_families": [
@@ -17372,10 +17377,15 @@
           },
           "sha256": "d63f52c264811dd0cf5dc001db134e5359c30e10616f70900ababc68e6d2a2f1",
           "source_text_bytes": 369
+        },
+        {
+          "fragment": "src/boot/16-dual-prime-motion-vector.cfrag",
+          "sha256": "404fc9126ae9480c7895fd329eb66da1b7ee4bbcf5b6cb5f78f8f569bba6d3ac",
+          "source_text_bytes": 2675
         }
       ],
-      "sha256": "20270f2afddb41bea71d840198237d9812be697b8149a2cb7b637bb052aa2ecf",
-      "source_text_bytes": 60222
+      "sha256": "4b62e00a03d9e07945803165168a98da2f5d27a300f3c329ed4efe3ad50dcf35",
+      "source_text_bytes": 62897
     },
     "candidates/levels/0_aranos_tutorial.c": {
       "pieces": [

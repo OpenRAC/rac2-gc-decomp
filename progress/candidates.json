@@ -1,6 +1,6 @@
 {
-  "candidate_elf_sha256": "5e13e4a6f4f1fbdfb82b2c7b3d78f16265b769aeb0ac1169c0f0e918143c473d",
-  "catalog_sha256": "c1bd9eb3371fe15636af5f2768d9a11dce90935c05827f71d671475e8c2f37f1",
+  "candidate_elf_sha256": "5fc379534554d663c7edb7e41d1189e65db161bbed6ced697c331697f6aa2121",
+  "catalog_sha256": "5819a7b7916b47b4e826082152a34f6574aa8bbf5866b0aa94b53536702db363",
   "checker_sha256": "7c40d149419ff91694c03789372ef51da25fc9c9f3c37265d2a1bbfaa915fb07",
   "flags": [
     "-O2",
@@ -2031,14 +2031,25 @@
       "size": 112,
       "state": "matched_unintegrated",
       "symbol": "FUN_002B0DB8"
+    },
+    {
+      "address": 1225696,
+      "candidate_sha256": "cbd826f112e4e0f877738933fb36cb67db882ce5f8cc497b759686bc476cc949",
+      "different_bytes": 0,
+      "matched": true,
+      "produced_size": 388,
+      "reference_sha256": "cbd826f112e4e0f877738933fb36cb67db882ce5f8cc497b759686bc476cc949",
+      "size": 388,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_0012B3E0"
     }
   ],
   "integrated_functions": 0,
-  "object_sha256": "417217ef9ec7f710567b5f6edbf1df21cda73b3b75c784c8de6ce1a4092f5f65",
-  "profile_scope": "Only fully matched complete functions below; no general compiler or loaded-image qualification",
+  "object_sha256": "afafc4632bd5563778da7ce814ef7f73cf661c7ed651e5a2cb285ff0f479fc3a",
+  "profile_scope": "Complete actual boot object from one maintained trial; independently replayed without recompilation; fresh loaded-image gates still required",
   "read_only_sections": [],
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "20270f2afddb41bea71d840198237d9812be697b8149a2cb7b637bb052aa2ecf",
+  "source_sha256": "4b62e00a03d9e07945803165168a98da2f5d27a300f3c329ed4efe3ad50dcf35",
   "target": "SCUS_972.68",
   "tools": {
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
@@ -2046,5 +2057,5 @@
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "verified_at": "2026-10-06T09:53:10.392992+00:00"
+  "verified_at": "2026-10-06T10:42:18.953381+00:00"
 }

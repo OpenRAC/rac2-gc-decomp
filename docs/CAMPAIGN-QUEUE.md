@@ -2808,6 +2808,14 @@ Compare all complete symbols and object hash with the pre-lot committed native r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
+## lombyte-dual-prime-vector388-source-first-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Root reserves one complete-current-boot-unit trial with existing qualifiedG0tools. Require all184controls and whole388symbol exact; preserve any source/context refusal without cycles. Current RAC1 proof/raw identity alone never adds RAC2 Ccredit.
+
+Reopen condition: Independent original ABI/declaration/source module or new qualified lowering evidence after an actualrefusal; no equivalent source, loop, type, Boolean/order/profile permutations.
+
 ## missing-members-bitmap124-0_aranos_tutorial-20261006
 
 State: `integrated`. Kind: `candidate`.
