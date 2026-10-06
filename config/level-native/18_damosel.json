@@ -38,7 +38,8 @@
     "LVL_18_DAMOSEL_FUN_0030B198": 3191192,
     "LVL_18_DAMOSEL_FUN_0030EE70": 3206768,
     "LVL_18_DAMOSEL_FUN_0037B810": 3651600,
-    "LVL_18_DAMOSEL_FUN_003976B0": 3765936
+    "LVL_18_DAMOSEL_FUN_003976B0": 3765936,
+    "LVL_18_DAMOSEL_FUN_0032B460": 3322976
   },
   "flags": [
     "-O2",
@@ -279,6 +280,12 @@
       "meaning": "Count non-zero bytes in the resident 0x1C by four unsigned-byte table and clamp the count to zero through 0x28",
       "size": 112,
       "symbol": "LVL_18_DAMOSEL_FUN_00341238"
+    },
+    {
+      "symbol": "LVL_18_DAMOSEL_FUN_003BC360",
+      "address": 3916640,
+      "size": 76,
+      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown."
     }
   ],
   "gp": 0,

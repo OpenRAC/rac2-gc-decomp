@@ -1,4 +1,4 @@
-"""Two explicitly qualified SDK boot owners; legacy compiler admission is unchanged."""
+"""Three explicitly qualified SDK boot owners; legacy compiler admission is unchanged."""
 from __future__ import annotations
 import hashlib, json, re, struct
 from pathlib import Path, PurePosixPath
@@ -18,6 +18,7 @@ PROFILE_SHA = 'b6274a824c321458200375da3012c3cd35163f1994402caf6f9c78bfb71023b6'
 CONTROL_SHA = 'd28fdadf81b63778c25592200771dff28964e4b8f9084818cbd37db2178b40d2'
 ACTUAL_UNIT_OUTCOME_SHA = '1b6766c61b67f6e418f3ea46be919c0609f7564f4deaa741d33fb5919d636679'
 CPR8 = 'sdk-cpr8'
+RESTART336 = 'sdk-ipu-restart-dma'
 UNITS = {
     UNIT: {'source': SOURCE, 'module': MODULE, 'catalog': CATALOG, 'review': REVIEW,
            'source_sha256': SOURCE_SHA, 'body_sha256': BODY, 'function': FUNCTION,
@@ -38,6 +39,19 @@ UNITS = {
                {'offset': 316, 'type': 4, 'symbol': 'FUN_0011F628', 'target_address': 1177128},
                {'offset': 372, 'type': 4, 'symbol': 'FUN_0011F5E0', 'target_address': 1177056},
                {'offset': 440, 'type': 4, 'symbol': 'FUN_0011F628', 'target_address': 1177128}]},
+    RESTART336: {'source': 'candidates/sdk/ipu_restart_dma.c',
+     'module': 'src/sdk/ipu_restart_dma.c',
+     'catalog': 'config/boot-units/sdk-ipu-restart-dma.json',
+     'review': 'progress/boot-units/sdk-ipu-restart-dma.json',
+     'source_sha256': '590d6a10dcc6883cd4724257300aaf6c5f5fe25e5745b60d463918039ba81bea',
+     'body_sha256': 'd9993319706cf0ddfe71dae0fcdfb3302b7d3773f59d15b8165514f4e4034a86',
+     'function': {'symbol': 'sceIpuRestartDMA', 'address': 1248360, 'size': 336},
+     'basename': 'ipu_restart_dma.c',
+     'actual_anchor': 'b990d836ab71952b24c00708e84ec581f3063f3b23c66cdb1d77e47d3ef90683',
+     'object_sha256': 'a056d3afe14484ee659a783ca86a95d5c1bd31347557fb630e0ea41815f3de8c',
+     'externals': {'SetD3Chcr': 1247920, 'SetD4Chcr': 1248024},
+     'relocations': [{'offset': 124, 'type': 4, 'symbol': 'SetD3Chcr', 'target_address': 1247920},
+                     {'offset': 304, 'type': 4, 'symbol': 'SetD4Chcr', 'target_address': 1248024}]},
 }
 
 def unit_spec(unit):
@@ -79,7 +93,7 @@ def load_catalog(root, unit=UNIT):
     SOURCE, MODULE, CATALOG, REVIEW = (spec[k] for k in ('source', 'module', 'catalog', 'review'))
     SOURCE_SHA, BODY, FUNCTION = (spec[k] for k in ('source_sha256', 'body_sha256', 'function'))
     root = Path(root)
-    c = fields(read(root / CATALOG), ['schema', 'kind', 'unit_id', 'target', 'program', 'source', 'module', 'source_sha256', 'module_sha256', 'reference_sha256', 'profile_id', 'profile_sha256', 'control_qualification_sha256', 'pipeline', 'admission', 'flags', 'strip_options', 'input_section', 'functions', 'externals', 'read_only_sections', 'traits_scope'] + (['relocations', 'helper_ownership'] if unit == CPR8 else []))
+    c = fields(read(root / CATALOG), ['schema', 'kind', 'unit_id', 'target', 'program', 'source', 'module', 'source_sha256', 'module_sha256', 'reference_sha256', 'profile_id', 'profile_sha256', 'control_qualification_sha256', 'pipeline', 'admission', 'flags', 'strip_options', 'input_section', 'functions', 'externals', 'read_only_sections', 'traits_scope'] + (['relocations', 'helper_ownership'] if unit in (CPR8, RESTART336) else []))
     integer(c['schema'])
     require(c['schema'] == 1 and c['kind'] == 'source-specific-sdk-boot-unit' and (c['unit_id'] == UNIT) and (c['target'] == 'SCUS_972.68') and (c['program'] == 'boot'), 'Unknown SDK owner')
     require(c['source'] == SOURCE and c['module'] == MODULE and (c['source_sha256'] == c['module_sha256'] == SOURCE_SHA) and (file_hash(root / SOURCE) == file_hash(root / MODULE) == SOURCE_SHA), 'SDK exact source/module drift')
@@ -93,7 +107,7 @@ def load_catalog(root, unit=UNIT):
         integer(f['size'])
     for address in c['externals'].values():
         integer(address)
-    if unit == CPR8:
+    if unit in (CPR8, RESTART336):
         require(type(c['relocations']) is list, 'Explicit CPR8 relocations required')
         for row in c['relocations']:
             fields(row, ['offset', 'type', 'symbol', 'target_address'])
@@ -287,6 +301,11 @@ def inspect_unit_object(path, unit=UNIT):
         helper = [s for s in global_symbols if s['name'] == name]
         require(helper == [{'name': name, 'value': 0, 'size': 0, 'info': 16,
                             'other': 0, 'owner': 0}], 'CPR8 helper must remain GLOBAL UNDEF NOTYPE')
+    if unit == RESTART336:
+        for gp_section in sections:
+            if gp_section['name'] == '.reginfo' and gp_section['size'] >= 4:
+                require(not struct.unpack_from('<I', data, gp_section['offset'])[0] & (1 << 28),
+                        'Restart336 GP use refused')
     relocations = []
     for h in headers:
         if h[1] != 9 or not h[5]:
@@ -301,8 +320,9 @@ def inspect_unit_object(path, unit=UNIT):
             name = tables[h[6]][symbol_index]['name']
             require(name in spec['externals'], 'Unknown CPR8 relocation symbol')
             word = struct.unpack_from('<I', data, section['offset'] + position)[0]
-            require(word >> 26 == 3 and word & ((1 << 26) - 1) == 0,
-                    'CPR8 relocation requires JAL with zero addend')
+            expected_opcode = {124: 3, 304: 2}.get(position) if unit == RESTART336 else 3
+            require(word >> 26 == expected_opcode and word & ((1 << 26) - 1) == 0,
+                    'Exact source-specific JAL/tail opcode and zero addend required')
             relocations.append({'offset': position, 'type': relocation_type,
                                 'symbol': name, 'target_address': spec['externals'][name]})
     require(relocations == spec['relocations'], 'CPR8 four measured R_MIPS_26 bindings refused')
@@ -333,7 +353,7 @@ def inspect_linked_helpers(path, unit=UNIT):
     for name, address in spec['externals'].items():
         helper = [s for s in symbols if s['name'] == name]
         require(len(helper) == 1 and helper[0]['value'] == address and helper[0]['size'] == 0
-                and helper[0]['info'] in (16, 17) and helper[0]['other'] == 0
+                and helper[0]['info'] in ((17,) if unit == RESTART336 else (16, 17)) and helper[0]['other'] == 0
                 and helper[0]['owner'] == 0xfff1, 'Wrong opaque ABS helper binding')
 
 

@@ -687,3 +687,22 @@ f32 LVL_10_HRUGIS_CLOUD_FUN_00335160(f32 value, s32 count) {
         product = product * factor;
     return 1.0f - product;
 }
+
+/* Prototype775 is a research label. Field names below describe only the
+ * independently observed byte23 and binary32 word2C operations. */
+typedef struct {
+    u8 pad00[0x23];
+    u8 field23;
+    u8 pad24[8];
+    f32 field2C;
+} NativeUpdate775View;
+
+extern void LVL_10_HRUGIS_CLOUD_FUN_0032AF78(NativeUpdate775View *object);
+
+void LVL_10_HRUGIS_CLOUD_FUN_003B6768(NativeUpdate775View *object)
+{
+    object->field2C *= 1.025f;
+    object->field23 -= 3;
+    if (object->field23 < 4)
+        LVL_10_HRUGIS_CLOUD_FUN_0032AF78(object);
+}

@@ -108,7 +108,8 @@ class IntegrationTests(unittest.TestCase):
     def test_relocated_placement_keeps_the_reviewed_symbol(self):
         content = original_function(0x1000, 8)
         placement = {"symbol": "FUN_00120BC8", "address": 0x1000, "size": 8}
-        with self.assertRaisesRegex(ValueError, "does not identify its address"):
+        # A non-address boot alias must first identify a qualified SDK owner.
+        with self.assertRaisesRegex(ValueError, "Unknown source-specific SDK unit"):
             integration.split_assembly(content, [placement])
         pieces = integration.split_assembly(content, [placement], relocated=True)
         self.assertEqual([piece["kind"] for piece in pieces], ["c"])

@@ -817,3 +817,22 @@ int LVL_24_SHIP_SHACK_FUN_003224F8(void)
         count = 0x28;
     return count;
 }
+
+/* Prototype775 is a research label. Field names below describe only the
+ * independently observed byte23 and binary32 word2C operations. */
+typedef struct {
+    u8 pad00[0x23];
+    u8 field23;
+    u8 pad24[8];
+    f32 field2C;
+} NativeUpdate775View;
+
+extern void LVL_24_SHIP_SHACK_FUN_0030E798(NativeUpdate775View *object);
+
+void LVL_24_SHIP_SHACK_FUN_00393B80(NativeUpdate775View *object)
+{
+    object->field2C *= 1.025f;
+    object->field23 -= 3;
+    if (object->field23 < 4)
+        LVL_24_SHIP_SHACK_FUN_0030E798(object);
+}

@@ -41,10 +41,11 @@ def split_assembly(content: str, functions: list[dict], relocated: bool = False)
         # placement keeps the reviewed C symbol and takes the address from the
         # level, so the name/address agreement is only required for the boot.
         if not relocated and function["symbol"] != f"FUN_{address:08X}":
-            from boot_sdk_unit import FUNCTION, SOURCE, UNIT
-            if (function.get("unit_id") != UNIT or function.get("origin") != "boot-sdk"
-                    or function.get("candidate_source") != SOURCE
-                    or {key: function[key] for key in FUNCTION} != FUNCTION
+            from boot_sdk_unit import unit_spec
+            spec = unit_spec(function.get("unit_id"))
+            if (function.get("origin") != "boot-sdk"
+                    or function.get("candidate_source") != spec["source"]
+                    or {key: function[key] for key in spec["function"]} != spec["function"]
                     or function.get("input_section") != ".text"):
                 raise ValueError("Integration symbol does not identify its address")
         previous_end = address + size
