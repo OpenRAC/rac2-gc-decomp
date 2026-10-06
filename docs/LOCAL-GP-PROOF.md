@@ -47,3 +47,14 @@ A useful next stage would prove entry GP for a small concrete data-accessing
 leaf from a complete caller witness, then independently prove any necessary
 callee preservation. This report does not provide that theorem or an original
 data-object identity; a matched compilation environment is not entry evidence.
+
+The subsequent [bounded caller investigation](GP-CALLER-EVIDENCE.md) records
+why the inspected startup route cannot yet supply that theorem: two opaque
+kernel boundaries precede its first direct call, whose target is not a GP-data
+leaf. That negative does not enable a program-wide GP annotation.
+
+The local pilot's facts are conditional on its supplied static intrafunction
+CFG. Indirect transfers are modeled as exits; their dynamic targets and possible
+reentry are not established by the pilot. It is not a runtime entry, return-link
+or register-preservation certificate, and must not authorize a production GP16
+consumer without those additional control-flow proofs.
