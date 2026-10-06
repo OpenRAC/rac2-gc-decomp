@@ -917,7 +917,7 @@ Reopen condition: A measured layout/ABI difference, a changed compiler hypothesi
 
 State: `queued`. Kind: `research`.
 
-Measured 2026-10-05 by boot_analysis (trial d6d282813c9c469586780e0d9543afe8, candidate task boot-fp-bit-verbatim-rac2-trial-20261005, one trial, budget spent). Result: FUN_00123400 (the __unpack_f body) is exact -- complete 144 bytes, 0 differing bytes, reference sha256 8accf01339157815bc3785c18c7aebeab0d0c653b941938b6f1fa67a16fdff54 on both sides -- with the qualified profile -O2 -G0 -ffunction-sections from the verbatim rac1-decomp fp-bit.c, so the -G2 question of this document is answered for that body. FUN_001234F0 (fptodp) was refused: 8 differing bytes, two words exchanged around the jal to 0x00123400. Do not permute flags, aliases or source shape; the refusal stays as recorded. Root decides whether the exact 144-byte body is split into its own authored module for integration.
+The actual verbatim-source trial is already recorded. Its complete 144-byte FUN_00123400 is now integrated from the published vendored source; do not split/retrial it. The separate complete 64-byte FUN_001234F0 remains an actual eight-byte refusal. Preserve the original two-symbol 208-byte planned total and all refusal history. Only independently new evidence for the remaining conversion body may justify reopening; no source/flags/alias scheduling cycles.
 
 Reopen condition: A RAC2 trial of the verbatim source refused, or evidence that RAC2's runtime library is not fp-bit.
 
@@ -926,6 +926,9 @@ Reopen condition: A RAC2 trial of the verbatim source refused, or evidence that 
 - `runtime:trials/d6d282813c9c469586780e0d9543afe8/outcome.json`
 - `runtime:bank/parallel-boot-analysis-fpbit-20261005/catalog.json`
 - `runtime:bank/parallel-boot-analysis-fpbit-20261005/fp-bit-ee.c`
+- `src/libgcc/fp-bit-ee.c`
+- `progress/integration.json`
+- `runtime:trials/d6d282813c9c469586780e0d9543afe8/manifest.json`
 
 ## boot-fun_00282a88
 
@@ -1866,6 +1869,34 @@ Qualify complete per-program source and all prior native controls, then rebuild 
 
 Reopen condition: New measured ABI, boundary or source context evidence
 
+## fresh-difference-correction72-seed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Keep the fixed 72-byte scalar difference hypothesis and all 27 native plus boot copies parked after actual budget-one refusal. No predicates, temporaries, FP-order, type or profile variants. Require an independently distinguishing source/module/compiler or ABI witness reviewed by root before reopening.
+
+Reopen condition: An independently distinguishing original source/module/compiler or producer/ABI witness must justify a concrete correction and be reviewed byroot. Existing rawcomparison timing/pseudocode or this same extraMOV/NOP observation does not authorizepredicate/temporary/FP-order/condition/type/profile variants orother27native/bootcopy trials.
+
+- `runtime:bank/new-difference-correction72-seed-v1/evidence.json`
+- `private-work:c-campaign-20261006/bank/new-compact-cop1/source-packet.json`
+- `private-work:c-campaign-20261006/bank/new-compact-cop1/negative-review/diagnosis.json`
+- `runtime:trials/19181d3d98044a689690c80b5b83b873/manifest.json`
+- `runtime:trials/19181d3d98044a689690c80b5b83b873/outcome.json`
+
+## fresh-grid-sample-vertex908-seed-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Keep the first908-byte scalarCOP1 hypothesis and bothrawphysicalcopies parked after actual budget1 refusal. No source/type/float-order/remainder/control/profile variants orTabora secondcopy trial. Require independently distinguishing producer/ownership/type/alias/storage/source/module/compiler evidence reviewed by root before reopening; domain/field names remain hypotheses.
+
+Reopen condition: Independently distinguishing original producer/ownership/type/alias/storage/source-module/compiler evidence, explicitly reviewed by root, must establish a concrete correction. Existing rawflags/pseudocode or newspill/branch observation alone does not licensecachedlocals/conditions/restrict/const/layout/float-order/remainder/loop/profile/register variants orsecondphysicalcopy.
+
+- `runtime:bank/new-grid-sample-vertex908-seed-v1/evidence.json`
+- `private-work:c-campaign-20261006/bank/new-algorithm-500-2048/source-packet.json`
+- `private-work:c-campaign-20261006/bank/new-algorithm-500-2048/negative-review/diagnosis.json`
+- `runtime:trials/30e10b6c93274b08836db209dae919b8/manifest.json`
+- `runtime:trials/30e10b6c93274b08836db209dae919b8/outcome.json`
+
 ## fresh-medium-image-store128-10_hrugis_cloud-20261006
 
 State: `stopped`. Kind: `candidate`.
@@ -2467,6 +2498,16 @@ Qualify the complete standalone per-program unit, then integrate through fresh f
 
 Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
 
+## gnu-libgcc-udivdi3-pure-c-first-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Keep the GNU unsigned-division candidate and unqualified related division-family transfers parked. Trial c4bab3d2a9ae41c288f7ebb50db02864 produced a complete 1504-byte symbol against 1488 required bytes. All 184 current controls and the full 256-byte GNU readonly table at 0x0013AE58 are exact. The actual product code packs an intermediate 64-bit value and then extracts its 32-bit words: ten instructions against three in the original. Preserve this C refusal separately from the supplied original-object relocation, source and licence evidence. No further primitive, macro, loop, source, profile or division-family trial without independently reviewed evidence.
+
+Reopen condition: New independent original declaration/module or qualified lowering evidence showing a pure-C two-SI-output unsigned multiply without the measured intermediate-DI pack/unpack, with a genuinely positive width/control witness and all current controls retained. Root must review the concrete source/compiler implication. Equivalent product expressions, highpart/lowpart macro variants, local/union/order/loop/type/profile cycles or trying the same primitive across other division-family wrappers are not new evidence.
+
+- `private-work:c-campaign-20261006/bank/gnu-integer-library-source/negative-diagnosis.json`
+
 ## gs-buffer-setup-control-public-family-v2-20261005-g0
 
 State: `stopped`. Kind: `candidate`.
@@ -3019,11 +3060,15 @@ Reopen condition: Independent original callback/count/table binding/type/alias/l
 
 ## native-review-barlow-callback-run-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Fullcurrent33Barlow934G8unit+new108/84 firstnaturalC; pinexecutorcaller/body/registercaller92/callback84/sharedmemory. Strictcompletebytes only.
+The pinned complete target has already been measured in actual trial 2b2d4f1da9624e8393a2626f9e8606ce (candidate native-review-barlow-callback-run-v1-20261005, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 41 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original callback/global/header ABI/layout/alias/lifetime/sourceeffect evidence only; no counter/view/qualifier/branch/FPR/register/flags cycles.
+
+- `runtime:trials/2b2d4f1da9624e8393a2626f9e8606ce/manifest.json`
+- `runtime:trials/2b2d4f1da9624e8393a2626f9e8606ce/targets/4_barlow/catalog.json`
+- `runtime:trials/2b2d4f1da9624e8393a2626f9e8606ce/outcome.json`
 
 ## native-review-barlow-callback-run-v1-20261005
 
@@ -3043,11 +3088,15 @@ Reopen condition: Independent original callback/global/header ABI/layout/alias/l
 
 ## native-review-barlow-frame-reset-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pincomplete target/caller/header layouts/reference/GPrelocations andcurrentBarlowprefix; authorprivate plainC loops andmeasuredSDA/NOSDA declarations only, thenmaintainedcurrentwholeunit firsttrial.
+The pinned complete target has already been measured in actual trial 19ce6de1d72e4bd79ed9b13fa66b99fe (candidate native-review-barlow-frame-reset-v1-20261005, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 41 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original global/record/header/loop/ABI/source lifetime evidence only; no annotations/aggregate-anchor/loop/register/flags/sourcecycles solely for matching.
+
+- `runtime:trials/19ce6de1d72e4bd79ed9b13fa66b99fe/manifest.json`
+- `runtime:trials/19ce6de1d72e4bd79ed9b13fa66b99fe/targets/4_barlow/catalog.json`
+- `runtime:trials/19ce6de1d72e4bd79ed9b13fa66b99fe/outcome.json`
 
 ## native-review-barlow-frame-reset-v1-20261005
 
@@ -3075,11 +3124,15 @@ Reopen condition: Independent original resident/global binding/prototype/type/al
 
 ## native-review-barlow-rectangle-slot-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pincomplete160target/252caller/live/ref/uniqueness/currentprefix andtypedpointer+ushort ABI; authorprivate standardC loop/table andmaintainedfirstwholeunittrial.
+The pinned complete target has already been measured in actual trial 97484c8fafa04f298be426191aa2972b (candidate native-review-barlow-rectangle-slot-v1-20261005, now stopped): 69 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 41 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original typedslot/table/caller/ABI/layout evidence only; no scan direction/condition/register/formal/storeorder/flags/sourcecycling.
+
+- `runtime:trials/97484c8fafa04f298be426191aa2972b/manifest.json`
+- `runtime:trials/97484c8fafa04f298be426191aa2972b/targets/4_barlow/catalog.json`
+- `runtime:trials/97484c8fafa04f298be426191aa2972b/outcome.json`
 
 ## native-review-barlow-rectangle-slot-v1-20261005
 
@@ -3091,11 +3144,15 @@ Reopen condition: Independent original argument/lifetime/fieldownership/sourceph
 
 ## native-review-barlow-registry-clear-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pinfull80target andcompletecaller ordinarykey/statusABI; save independent currentexactSET source/proof provenance+relatednative80 pin asread-onlywitness, authorprivate CLEARC andrunmaintainedall27currentcontrols. Qualifiedseedonlythenuncoveredfamily; possiblefreshgetter92 separateafterclear.
+The pinned complete target has already been measured in actual trial 2b8bc2482ec7457c90d7610a8efd6740 (candidate native-review-barlow-registry-clear-v2-20261005, now stopped): 21 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 41 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original typedpair/header/caller/ABI/lifetime evidence only; no alternate loops/localnames/register/formal/branch/flags/source cycles.
+
+- `runtime:trials/2b8bc2482ec7457c90d7610a8efd6740/manifest.json`
+- `runtime:trials/2b8bc2482ec7457c90d7610a8efd6740/targets/4_barlow/catalog.json`
+- `runtime:trials/2b8bc2482ec7457c90d7610a8efd6740/outcome.json`
 
 ## native-review-barlow-registry-clear-v1-20261005
 
@@ -3115,11 +3172,15 @@ Reopen condition: Independent original source binding/initialization phase/compi
 
 ## native-review-barlow-scaled-statistics-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pinfulltarget/caller664/live/ref/source-pointer/return use; authorprivate straightforwardintegerC withmeasuredlayout/NOSDAABS globals andfirstmaintainedwholeunittrial.
+The pinned complete target has already been measured in actual trial 691d79adc89545b99b68865f1a7cb330 (candidate native-review-barlow-scaled-statistics-v1-20261005, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 41 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original integerwidth/layout/arithmetic/ABI/sourcephase evidence only; no customdivisor/volatile/manualshift/trap/reg/storeorder/flags/sourcecycles.
+
+- `runtime:trials/691d79adc89545b99b68865f1a7cb330/manifest.json`
+- `runtime:trials/691d79adc89545b99b68865f1a7cb330/targets/4_barlow/catalog.json`
+- `runtime:trials/691d79adc89545b99b68865f1a7cb330/outcome.json`
 
 ## native-review-barlow-scaled-statistics-v1-20261005
 
@@ -3131,11 +3192,13 @@ Reopen condition: Independent original source/prototype/arithmetic/fieldlayout e
 
 ## native-review-boldan-clamped-angles-20261005
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
-Pinfulltarget/caller3048/helpers/secondarytransform ABI/current31prefix andreference uniqueness; authorprivate plainC vectorcomposition+orderedNaN-preserving rangechecks, maintainedfirstwholeunittrial.
+The complete 252-byte target at 0x00426250 is already covered by the current validated level-native proof and pinned raw body. Retire this stale first-trial/retransfer research reservation; select a genuinely uncovered body. No new credit or candidate-state change is added.
 
 Reopen condition: Independent original direction/state/helperABI/prototype/alignment/lifetime evidence only; no clamp-expression/branch/formal/FPR/float-association/flags/source cycles.
+
+- `progress/levels/13_boldan.json`
 
 ## native-review-boldan-clamped-angles-v1-20261005
 
@@ -3163,19 +3226,25 @@ Reopen condition: Independent serializedalias/layout/ABI/sourcephase evidenceonl
 
 ## native-review-boldan-compact-records-20261004
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
-Verifycallerblobpointer/fullhelperpins andfullheader/unionrowlayout, authorCURRENT22-control Boldanunit andmaintainedfirstCtrial. Physical/history/pendingaudit empty, preserve allrefusals.
+The complete 300-byte target at 0x00389b40 is already covered by the current validated level-native proof and pinned raw body. Retire this stale first-trial/retransfer research reservation; select a genuinely uncovered body. No new credit or candidate-state change is added.
 
 Reopen condition: Independent serializedalias/layout/ABI/sourcephase evidence only, no rawpayload/register/qualifier/flags/sourcecycles.
 
+- `progress/levels/13_boldan.json`
+
 ## native-review-boldan-grid-height-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verifycallerobject andfullhelperpins, typedpartialstate andactualarraystrides, authorCURRENTBoldanfull controls pluspendingcompact300 ifnotpublic, thenmaintainedfirstCtrial. Preserveoriginalsignedrow/columnedge conditions andfloatoperations.
+The pinned complete target has already been measured in actual trial 5091cf1b62114602b31564069328ccb5 (candidate native-review-boldan-grid-height-v2-20261004, now stopped): 18 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent layout/ABI/accessphase evidence only; no fakeaggregatebase, forcedregisters, qualifiers, flags or equivalentsourcecycles.
+
+- `runtime:trials/5091cf1b62114602b31564069328ccb5/manifest.json`
+- `runtime:trials/5091cf1b62114602b31564069328ccb5/targets/13_boldan/catalog.json`
+- `runtime:trials/5091cf1b62114602b31564069328ccb5/outcome.json`
 
 ## native-review-boldan-grid-height-v1-20261004
 
@@ -3195,19 +3264,27 @@ Reopen condition: Independent original global storage/source-binding or qualifie
 
 ## native-review-boldan-hue-layout-open-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Preserve independent complete switch/table layout evidence as static open condition; root alone may investigate bounded maintained readonly-section placement with complete generated-table proof. Worker continues another supported C target; no unsupported flags/linker/source workaround or compilertrial.
+The pinned complete target has already been measured in actual trial 341129f8cc1c44d095e4f2222710e210 (candidate root-boldan-hue224-first-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening. The immutable catalogue already pins a complete generated .rodata section; do not treat availability of the existing readonly placement support as newly satisfying the obsolete tooling-only reopen condition.
 
-Reopen condition: Maintained reviewed per-catalog generated readonly-data placement support, preserving all current controls and generated jump-table bytes/relocations; then one standaloneCswitch firsttrial. No assembly, fixed label addresses or copied retail bytes.
+Reopen condition: Independent new original table/layout/ABI/source evidence beyond the recorded complete C/table refusal. Maintained generated readonly placement support was already used in this actual trial; its availability alone is not a new reopen witness. No source/branch/register/label/flags/ASM/padding cycles.
+
+- `runtime:trials/341129f8cc1c44d095e4f2222710e210/manifest.json`
+- `runtime:trials/341129f8cc1c44d095e4f2222710e210/targets/boldan-hue/catalog.json`
+- `runtime:trials/341129f8cc1c44d095e4f2222710e210/outcome.json`
 
 ## native-review-boldan-nearest-selection-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify full caller/helper pins and collection population/valid distances, then author privateCURRENTBoldan whole unit andmaintainedCtrial autonomously, retaining allcurrent/newpacket controls.
+The pinned complete target has already been measured in actual trial 53184014160b42018d652f20359e8b83 (candidate native-review-boldan-nearest-v2-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent layout/ABI/storage/lifetime evidence only; no bytepayload, forcedregs/qualifiers/flags or equivalentsourcecycles.
+
+- `runtime:trials/53184014160b42018d652f20359e8b83/manifest.json`
+- `runtime:trials/53184014160b42018d652f20359e8b83/targets/13_boldan/catalog.json`
+- `runtime:trials/53184014160b42018d652f20359e8b83/outcome.json`
 
 ## native-review-boldan-nearest-v1-20261004
 
@@ -3259,19 +3336,27 @@ Reopen condition: Independent original statealias/storage/qualifier contract or 
 
 ## native-review-boldan-random-state-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin full216/helper60/caller1008 live/reference/unique andordinaryword-to-float ABI, author private standardC loops/floatfields withcurrent31prefix andrun maintainedfirstwholeunittrial.
+The pinned complete target has already been measured in actual trial 57ad7faf009f4580958e750e18673900 (candidate native-review-boldan-random-state-v1-20261005, now stopped): 10 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original state/RNG/type/alignment/caller/source-lifetime evidence only; no integer-bit float writes, arbitrary store/loop/register/FPR/formal/profile/sourcecycling.
 
+- `runtime:trials/57ad7faf009f4580958e750e18673900/manifest.json`
+- `runtime:trials/57ad7faf009f4580958e750e18673900/targets/13_boldan/catalog.json`
+- `runtime:trials/57ad7faf009f4580958e750e18673900/outcome.json`
+
 ## native-review-boldan-random-state-init-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-VerifycallerownerABI/fullhelperpin then author privateCURRENTBoldan20controls pluspendingexactsearch88 andnew212, runmaintainedstricttrial.
+The pinned complete target has already been measured in actual trial 286d9923c86e45ab873cae2973fae8bd (candidate native-review-boldan-random-init-v1-20261004, now stopped): 4 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original state/layout/ABI/sourcephase evidence only; no store/register/padding/sourcecycles.
+
+- `runtime:trials/286d9923c86e45ab873cae2973fae8bd/manifest.json`
+- `runtime:trials/286d9923c86e45ab873cae2973fae8bd/targets/13_boldan/catalog.json`
+- `runtime:trials/286d9923c86e45ab873cae2973fae8bd/outcome.json`
 
 ## native-review-boldan-random-state-v1-20261005
 
@@ -3569,21 +3654,26 @@ Reopen condition: Independent source/catalog/binding evidence only,no flags or e
 
 ## native-review-compact-record-family-20261004
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
-Complete27 static qualifications andprivate CURRENT fullunit trials; deliver exact integrationpacket thencontinue anotherfreshlot. No publicsource/proof/tool edits or credit before rootimagegates.
+All 27 accepted complete family placements are already covered by current validated all-origin proofs. Retire this stale first-trial/retransfer research reservation; select a genuinely uncovered body. No new credit or candidate-state change is added.
 
 Reopen condition: Independent actualchangedsource/catalog/reference/ABI evidence only,no partial matches or source/flags/register cycles.
 
 - `private-work:parallel-20261004/native_review/compact-family-scan.json`
+- `progress/levels/13_boldan.json`
 
 ## native-review-endako-axis-input-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin completehelper/caller/livebounds andFPR+pointerreturn ABI; author typedC snapshots/currentwholeunit then maintainedtrial.
+The pinned complete target has already been measured in actual trial f810186850524f0d8d9e903800674ddf (candidate native-review-endako-axis-input-v2-20261004, now stopped): 38 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalfloat/array/state layout/ABI/snapshot/lifetime evidence only, no clamp/expression/FPR/register/localorder/qualifier/flags cycles.
+
+- `runtime:trials/f810186850524f0d8d9e903800674ddf/manifest.json`
+- `runtime:trials/f810186850524f0d8d9e903800674ddf/targets/3_endako/catalog.json`
+- `runtime:trials/f810186850524f0d8d9e903800674ddf/outcome.json`
 
 ## native-review-endako-axis-input-v1-20261004
 
@@ -3603,11 +3693,15 @@ Reopen condition: Independent original prototype/mangled argumentorder or qualif
 
 ## native-review-endako-clamped-length-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin completehelpers/caller/reference andalignedordinarypointer/F0 ABI; authorCURRENT Endako28controls +216 andmaintainedwholeunittrial.
+The pinned complete target has already been measured in actual trial d71af3c5e8dd49f58dbeb0c52f04a55e (candidate native-review-endako-clamped-length-v1-20261004, now stopped): 13 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalowner/state/point storage/ABI orinput sampling/clamp lifetime evidence only,no clampbranch/array/field/register/localorder/volatile/padding/flags cycles.
+
+- `runtime:trials/d71af3c5e8dd49f58dbeb0c52f04a55e/manifest.json`
+- `runtime:trials/d71af3c5e8dd49f58dbeb0c52f04a55e/targets/3_endako/catalog.json`
+- `runtime:trials/d71af3c5e8dd49f58dbeb0c52f04a55e/outcome.json`
 
 ## native-review-endako-clamped-length-v1-20261004
 
@@ -3627,11 +3721,15 @@ Reopen condition: Independent original declaration/context or compiler schedulin
 
 ## native-review-endako-damped-motion-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Preserve completehelper/wrapper/caller/abs livepins andmixed ordinarypointer/fivefloat ABI, authorprivatecurrent28-controlunit withbothnewbodies andmaintainedwholeunittrial. Familyonlyafterexact complete seed; isolatepositive ifoneexact, retainnegatives.
+The pinned complete target has already been measured in actual trial 31839efc449d425eaab1d6e0417863ed (candidate native-review-endako-damped-motion-v1-20261004, now stopped): 14 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualfloat/pointer/state layout/ABI orvelocity storage/observableaccess lifetime evidence only,no formalmutation/expression association, parameterorder/FPR/register/loop/localname/qualifier/flags cycles.
+
+- `runtime:trials/31839efc449d425eaab1d6e0417863ed/manifest.json`
+- `runtime:trials/31839efc449d425eaab1d6e0417863ed/targets/3_endako/catalog.json`
+- `runtime:trials/31839efc449d425eaab1d6e0417863ed/outcome.json`
 
 ## native-review-endako-damped-motion-v1-20261004
 
@@ -3681,11 +3779,15 @@ Reopen condition: Independent original source memory-alias/declaration or optimi
 
 ## native-review-endako-hermite-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Preserve fulltarget/caller pins and originalSDK assertion entry/pointer ABI, author private ordinary5float C with allCURRENT Endako controls; no table data or previoustarget aliases. Afterroottool HOLD release, qualify wholeunit via maintained CLI.
+The pinned complete target has already been measured in actual trial eb3c1639aa9e456fa04cee057a6f2b97 (candidate native-review-endako-hermite-v1-20261004, now stopped): 61 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalfloat parameter/storage/ABI/guard or polynomial source lifetime evidence only; no expression association, parameter-order, FPR/register/localname/qualifier/flags cycles.
+
+- `runtime:trials/eb3c1639aa9e456fa04cee057a6f2b97/manifest.json`
+- `runtime:trials/eb3c1639aa9e456fa04cee057a6f2b97/targets/3_endako/catalog.json`
+- `runtime:trials/eb3c1639aa9e456fa04cee057a6f2b97/outcome.json`
 
 ## native-review-endako-hermite-v1-20261004
 
@@ -3705,11 +3807,15 @@ Reopen condition: New independently measured count/index/delta widths or sourceC
 
 ## native-review-endako-locked-ring-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin completecaller/helper/kernelSDKwordABI/reference, exactrecordsize/partialcontextviews, authorcurrentwholeunit C andmaintainedtrial.
+The pinned complete target has already been measured in actual trial f14be36ad9294f29aaa2ec8572736c29 (candidate native-review-endako-locked-ring-v2-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalrecord/context storage/type/ABI orobservable count/index/access lifetime evidence only, no condition/loop/index/alias/register/store/localorder/volatile/padding/flags cycles.
+
+- `runtime:trials/f14be36ad9294f29aaa2ec8572736c29/manifest.json`
+- `runtime:trials/f14be36ad9294f29aaa2ec8572736c29/targets/3_endako/catalog.json`
+- `runtime:trials/f14be36ad9294f29aaa2ec8572736c29/outcome.json`
 
 ## native-review-endako-locked-ring-v1-20261004
 
@@ -3729,11 +3835,15 @@ Reopen condition: Independent originalrecord/context/source control/storage/ABI 
 
 ## native-review-endako-option-update-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Retain fullpins/callerdispatcher/helperABI andflat24byte optionbank layout, authorcurrentEndakocontrols+pendingcompact300, maintainedwholeunit firsttrial. Familyonlyafterexact.
+The pinned complete target has already been measured in actual trial 017411ff89754d92bd25137f4111b067 (candidate native-review-endako-options-v2-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actuallayout/ABI/access/lifetime evidence only, no equivalentbranch/loop/register/qualifier/profile cycles.
+
+- `runtime:trials/017411ff89754d92bd25137f4111b067/manifest.json`
+- `runtime:trials/017411ff89754d92bd25137f4111b067/targets/3_endako/catalog.json`
+- `runtime:trials/017411ff89754d92bd25137f4111b067/outcome.json`
 
 ## native-review-endako-options-v1-20261004
 
@@ -3753,11 +3863,15 @@ Reopen condition: Independent original object/option-storage sourcebinding orqua
 
 ## native-review-endako-packed-texture-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Save fulltarget/caller/livepins andtypes; authorCURRENT Endako prefix/allcontrols andmaintainedtrial ifhistory/public eligible.
+The pinned complete target has already been measured in actual trial 64924e0b103a47afbfe31a88528964f7 (candidate native-review-endako-packed-texture-v1-20261004, now stopped): 140 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualword/64type/ABI/recordlayout/access lifetime evidence only,no expression/register/localorder/volatile/padding/flags cycles.
+
+- `runtime:trials/64924e0b103a47afbfe31a88528964f7/manifest.json`
+- `runtime:trials/64924e0b103a47afbfe31a88528964f7/targets/3_endako/catalog.json`
+- `runtime:trials/64924e0b103a47afbfe31a88528964f7/outcome.json`
 
 ## native-review-endako-packed-texture-v1-20261004
 
@@ -3785,11 +3899,15 @@ Reopen condition: An independently byte-qualified standard-C aligned128-bit copy
 
 ## native-review-endako-relative-map-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin fulltarget/caller/helper/liveidentity andpointer/word ABI; author freshEndako28controls +228 thenmaintainedtrial. No parkedrebase372 orotherphysicalaliases.
+The pinned complete target has already been measured in actual trial 75af99ee3b854e6ca9a9a326a155e7cf (candidate native-review-endako-relative-map-context-20261004, now stopped): 97 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originaltyped header/relativeoffset/translationtable/ABI/access lifetime evidence only,no loop/branch/store/base/globalview/register/qualifier/flags cycles.
+
+- `runtime:trials/75af99ee3b854e6ca9a9a326a155e7cf/manifest.json`
+- `runtime:trials/75af99ee3b854e6ca9a9a326a155e7cf/targets/3_endako/catalog.json`
+- `runtime:trials/75af99ee3b854e6ca9a9a326a155e7cf/outcome.json`
 
 ## native-review-endako-relative-map-context-20261004
 
@@ -3817,11 +3935,15 @@ Reopen condition: Independent originalencodedstream/context global layout orrema
 
 ## native-review-endako-selection-cache-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Parkallthree physical/logicalselection/cache bodies andboth pairmissvariants. Preserve completepins/caller/outflag semantics andunchangedintegratedmetric68. No third common-result/base/loop/register/type/declaration/qualifier/flags cycle. Continue anotherfresh ownedalgorithm.
+The pinned complete target has already been measured in actual trial 280cf0dc0f1647e4991793af2ab5fdcf (candidate native-review-endako-selection-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original array/global-storage/source-lifetime orsourcebinding witness explaining arraybase rematerialization/dualinduction andsavedresult/metricinit phases; no equivalentsourcecycling.
+
+- `runtime:trials/280cf0dc0f1647e4991793af2ab5fdcf/manifest.json`
+- `runtime:trials/280cf0dc0f1647e4991793af2ab5fdcf/targets/3_endako/catalog.json`
+- `runtime:trials/280cf0dc0f1647e4991793af2ab5fdcf/outcome.json`
 
 ## native-review-endako-selection-v1-20261004
 
@@ -3833,11 +3955,15 @@ Reopen condition: Independent original array/global-storage/source-lifetime orso
 
 ## native-review-endako-seven-queue-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Save fulltarget/caller/livepins, authorCURRENT786Endako28controls +240 andmaintainedwholeunittrial, no unsupportedglobalview ormodulus cycles.
+The pinned complete target has already been measured in actual trial c372e512e1d44fabb23c4ae15d6a19cc (candidate native-review-endako-seven-queue-v2-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalword/half/globalqueue/storage/access lifetime evidence only,no branch/register/modulus/expression/localorder/volatile/padding/flags cycles.
+
+- `runtime:trials/c372e512e1d44fabb23c4ae15d6a19cc/manifest.json`
+- `runtime:trials/c372e512e1d44fabb23c4ae15d6a19cc/targets/3_endako/catalog.json`
+- `runtime:trials/c372e512e1d44fabb23c4ae15d6a19cc/outcome.json`
 
 ## native-review-endako-seven-queue-v1-20261004
 
@@ -3857,11 +3983,15 @@ Reopen condition: Independent originalqueue source count/head snapshot ortypedgl
 
 ## native-review-endako-socket-points-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin fulltarget/caller504/callees/reference/live/ordinary64 ABI+packedlayout andCURRENT30prefix, authorprivateC query+maintainedfirstwholeunittrial; seedexactonlythenfamily.
+The pinned complete target has already been measured in actual trial 144792c008594705b8a4d8b1692771d4 (candidate native-review-endako-socket-points-v1-20261005, now stopped): 67 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original typeddescriptor/packedrecord/owner/alignment/helperABI/source-lifetime evidence only; no parameter/FPR/loop/float-association/register/profile/sourcecycling.
+
+- `runtime:trials/144792c008594705b8a4d8b1692771d4/manifest.json`
+- `runtime:trials/144792c008594705b8a4d8b1692771d4/targets/3_endako/catalog.json`
+- `runtime:trials/144792c008594705b8a4d8b1692771d4/outcome.json`
 
 ## native-review-endako-socket-points-v1-20261005
 
@@ -3873,19 +4003,27 @@ Reopen condition: Independent original typeddescriptor/packedrecord/owner/protot
 
 ## native-review-endako-switch-data-open-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Keep staticexcluded pending root-owned generatedread-only placement support qualifiedwithallcurrentcontrols andloaded-image gates. Do not author/compile switchuntilsupport exists; continue anothereligiblefreshbody.
+The pinned complete target has already been measured in actual trial c8050e312e644ed0a3004778a140a54b (candidate root-endako-switch188-first-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening. The immutable catalogue already pins a complete generated .rodata section; do not treat availability of the existing readonly placement support as newly satisfying the obsolete tooling-only reopen condition.
 
-Reopen condition: Qualified maintained compiler-generated readonly table placement andrelocation binding, with originaltable boundaries/pins andallunitcontrols exact; no manualtableaddress/sourcebranch/register/ASM/padding workaround.
+Reopen condition: Independent new original table/layout/ABI/source evidence beyond the recorded complete C/table refusal. Maintained generated readonly placement support was already used in this actual trial; its availability alone is not a new reopen witness. No source/branch/register/label/flags/ASM/padding cycles.
+
+- `runtime:trials/c8050e312e644ed0a3004778a140a54b/manifest.json`
+- `runtime:trials/c8050e312e644ed0a3004778a140a54b/targets/endako-switch/catalog.json`
+- `runtime:trials/c8050e312e644ed0a3004778a140a54b/outcome.json`
 
 ## native-review-endako-texture-group-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin fullhelpers/callers/reference andword/pointertypes, prepareCURRENT786Endako28controls +292 andmaintainedtrial.
+The pinned complete target has already been measured in actual trial 27cc6e0fae0d4318bfb3824de5b95e93 (candidate native-review-endako-texture-group-v2-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originaldescriptor/header/count/type/ABI/access lifetime evidence only,no loop/base/shift/register/store/localorder/volatile/padding/flags cycles.
+
+- `runtime:trials/27cc6e0fae0d4318bfb3824de5b95e93/manifest.json`
+- `runtime:trials/27cc6e0fae0d4318bfb3824de5b95e93/targets/3_endako/catalog.json`
+- `runtime:trials/27cc6e0fae0d4318bfb3824de5b95e93/outcome.json`
 
 ## native-review-endako-texture-group-v1-20261004
 
@@ -3929,11 +4067,15 @@ Reopen condition: Independent original source/type/optimizer phase evidence that
 
 ## native-review-endako-world-matrices-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pinfulltarget/caller2376/allhelpers/inner andqualifiedABI provenance; authorprivate current29-controlEndakoC andmaintainedfirstwholeunittrial. Exactseedonlythenfamily.
+The pinned complete target has already been measured in actual trial 4ebc607590f64818b71732bb884112db (candidate native-review-endako-world-matrices-v1-20261005, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 40 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original matrix/object/alignment/ABI/lifetime evidence only; no formal/loop/register/float-association/flags/sourcecycling.
+
+- `runtime:trials/4ebc607590f64818b71732bb884112db/manifest.json`
+- `runtime:trials/4ebc607590f64818b71732bb884112db/targets/3_endako/catalog.json`
+- `runtime:trials/4ebc607590f64818b71732bb884112db/outcome.json`
 
 ## native-review-endako-world-matrices-v1-20261005
 
@@ -4119,9 +4261,9 @@ Reopen condition: New measured input/binding evidence only; no physicalsourcecyc
 
 ## native-review-index-family-20261004
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
-Qualify all23 complete raw-identical entries and ordinary4wordcaller ABI; compile each current wholeunit onlyafter static qualification.
+All 23 accepted complete family placements are already covered by current validated all-origin proofs. Retire this stale first-trial/retransfer research reservation; select a genuinely uncovered body. No new credit or candidate-state change is added.
 
 Reopen condition: Raw absence stays excluded; no variantclaim without independent measured completebody evidence.
 
@@ -4273,19 +4415,27 @@ Reopen condition: Independent original table declaration/access phase or qualifi
 
 ## native-review-joba-buffer-size-selection-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Prepare lookup seed with current whole Joba controls and pending exact188/80; qualify lookup first, then selector if useful. Do not replay constructor or change profiles.
+The pinned complete target has already been measured in actual trial 1a3c795d947f449baeeb2d858709ce72 (candidate native-review-joba-buffer-length-v2-20261004, now stopped): 29 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: New measured table layout, helper ABI or source-phase evidence; no register, field-anchor, volatility, padding or expression cycles.
 
+- `runtime:trials/1a3c795d947f449baeeb2d858709ce72/manifest.json`
+- `runtime:trials/1a3c795d947f449baeeb2d858709ce72/targets/11_joba/catalog.json`
+- `runtime:trials/1a3c795d947f449baeeb2d858709ce72/outcome.json`
+
 ## native-review-joba-class-count-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify complete caller argument/result evidence, author current21-control private unit with actual partial object/record views and4word table, then maintained strict trial.
+The pinned complete target has already been measured in actual trial be7cb355d4df4d0ab6729d6d80208953 (candidate native-review-joba-class-count-v2-20261004, now stopped): 33 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent layout/alignment/ABI/accessphase evidence; no register or source-expression cycles.
+
+- `runtime:trials/be7cb355d4df4d0ab6729d6d80208953/manifest.json`
+- `runtime:trials/be7cb355d4df4d0ab6729d6d80208953/targets/11_joba/catalog.json`
+- `runtime:trials/be7cb355d4df4d0ab6729d6d80208953/outcome.json`
 
 ## native-review-joba-class-count-v1-20261004
 
@@ -4305,11 +4455,15 @@ Reopen condition: Independent original class-table declaration/alignment or sour
 
 ## native-review-joba-class-map-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Complete pin/source/types/private wholecurrentJobaunit; compile one fresh measured seed; familyonlyifexact.
+The pinned complete target has already been measured in actual trial 7d2c41c392ab47e6833bdd71b8559c21 (candidate native-review-joba-class-map-c-v2-20261004, now stopped): 20 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: New measured classrecord/playerlayout/ABI or sourcephase evidence, no branch/register/expression cycling.
+
+- `runtime:trials/7d2c41c392ab47e6833bdd71b8559c21/manifest.json`
+- `runtime:trials/7d2c41c392ab47e6833bdd71b8559c21/targets/11_joba/catalog.json`
+- `runtime:trials/7d2c41c392ab47e6833bdd71b8559c21/outcome.json`
 
 ## native-review-joba-class-map-c-v1-20261004
 
@@ -4369,11 +4523,15 @@ Reopen condition: Independent original source or typed hardware accessor/source 
 
 ## native-review-joba-dma-initialize-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Qualify full caller/layout/ordinary fourword helperABI and retained MMIO witness; firstnaturalC/allcurrentJobacontrols.
+The pinned complete target has already been measured in actual trial ddbd938627e84c5a81b3bc7f266720a1 (candidate native-review-joba-dma-initialize-v1-20261005, now stopped): 3 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original record/owner alias/layout/lifetime evidence only; no loop/local/branch/register/flags cycling.
+
+- `runtime:trials/ddbd938627e84c5a81b3bc7f266720a1/manifest.json`
+- `runtime:trials/ddbd938627e84c5a81b3bc7f266720a1/targets/11_joba/catalog.json`
+- `runtime:trials/ddbd938627e84c5a81b3bc7f266720a1/outcome.json`
 
 ## native-review-joba-dma-initialize-v1-20261005
 
@@ -4401,11 +4559,15 @@ Reopen condition: Independent owner-supported original alias/storage/source evid
 
 ## native-review-joba-linked-count-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify callerobjectABI, partial object/state types andlivepin; authorCURRENT21-control private C andmaintainedfirsttrial.
+The pinned complete target has already been measured in actual trial b31c547905114eeca9118b435614cff1 (candidate native-review-joba-linked-count-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent source layout/alias/ABI evidence only; no equivalent expressions, volatile or register cycles.
+
+- `runtime:trials/b31c547905114eeca9118b435614cff1/manifest.json`
+- `runtime:trials/b31c547905114eeca9118b435614cff1/targets/11_joba/catalog.json`
+- `runtime:trials/b31c547905114eeca9118b435614cff1/outcome.json`
 
 ## native-review-joba-linked-count-v1-20261004
 
@@ -4441,11 +4603,15 @@ Reopen condition: Independent original declaration or qualified source-binding/o
 
 ## native-review-joba-pending-reset-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pincomplete target/helper/caller reference+liveABI windows before private C/currentunit firsttrial.
+The pinned complete target has already been measured in actual trial 0197beb9fe284e5b8cc53d6405b391d0 (candidate native-review-joba-pending-reset-v1-20261005, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original state/array bound/lifetime/helperABI evidence only; no loop/boolean/earlyreturn/register/CFG/sourcecycling.
+
+- `runtime:trials/0197beb9fe284e5b8cc53d6405b391d0/manifest.json`
+- `runtime:trials/0197beb9fe284e5b8cc53d6405b391d0/targets/11_joba/catalog.json`
+- `runtime:trials/0197beb9fe284e5b8cc53d6405b391d0/outcome.json`
 
 ## native-review-joba-pending-reset-v1-20261005
 
@@ -4473,11 +4639,15 @@ Reopen condition: Independent state/header/helper ABI or source phase evidence; 
 
 ## native-review-joba-region-predicate-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify caller mixed float/word ABI, authorCURRENT21-control private unit then maintainedexacttrial.
+The pinned complete target has already been measured in actual trial e372135c7dba4e38a8bd508b2cfb8686 (candidate native-review-joba-region-v1-20261004, now stopped): 2 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent ABI/control-lifetime evidence only; no registerforcing, equivalent expressioncycling or floatbit payloads.
+
+- `runtime:trials/e372135c7dba4e38a8bd508b2cfb8686/manifest.json`
+- `runtime:trials/e372135c7dba4e38a8bd508b2cfb8686/targets/11_joba/catalog.json`
+- `runtime:trials/e372135c7dba4e38a8bd508b2cfb8686/outcome.json`
 
 ## native-review-joba-region-v1-20261004
 
@@ -4489,11 +4659,15 @@ Reopen condition: Independent original region-global layout/source or qualified 
 
 ## native-review-joba-reset-pool-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Authorprivate typedrecord loop with correct signedselector and measuredhelperABI; maintained full32controls andcomplete196body.
+The pinned complete target has already been measured in actual trial b9e84c568d9f4cd58d8f6fded44b2ae3 (candidate native-review-joba-reset-pool-v1-20261005, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent recordlayout/caller/helper/sourcephase evidence only, no iteration/register/branch/equivalent-source/flags cycling.
+
+- `runtime:trials/b9e84c568d9f4cd58d8f6fded44b2ae3/manifest.json`
+- `runtime:trials/b9e84c568d9f4cd58d8f6fded44b2ae3/targets/11_joba/catalog.json`
+- `runtime:trials/b9e84c568d9f4cd58d8f6fded44b2ae3/outcome.json`
 
 ## native-review-joba-reset-pool-v1-20261005
 
@@ -4545,11 +4719,15 @@ Reopen condition: Independently measured current-backend memory-alias optimizati
 
 ## native-review-joba-strip-packet-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify called input ABI then author standalone C/current21-control unit and run maintained exact trial with defaultG0.
+The pinned complete target has already been measured in actual trial 12121667246e49bcaf76f84e774d8fb9 (candidate native-review-joba-strip-packet-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent source layout/storage/ABI evidence only; no forced registers, volatile, padding or equivalent expression cycles.
+
+- `runtime:trials/12121667246e49bcaf76f84e774d8fb9/manifest.json`
+- `runtime:trials/12121667246e49bcaf76f84e774d8fb9/targets/11_joba/catalog.json`
+- `runtime:trials/12121667246e49bcaf76f84e774d8fb9/outcome.json`
 
 ## native-review-joba-strip-packet-v1-20261004
 
@@ -4569,11 +4747,15 @@ Reopen condition: Independent original memory qualifier, inter-thread/hardware p
 
 ## native-review-joba-vector-braking-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify full target/helper pins and caller floatingargument evidence; author private currentJobaunit plus standard scalarC control and maintain full-unit trial.
+The pinned complete target has already been measured in actual trial 97b3489eac534de68f4964b9f9a1aefa (candidate native-review-joba-vector-braking-v1-20261005, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 44 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original types/alias/lifetime/ABI evidence only; no register/branch/equivalent-source/flags cycling.
+
+- `runtime:trials/97b3489eac534de68f4964b9f9a1aefa/manifest.json`
+- `runtime:trials/97b3489eac534de68f4964b9f9a1aefa/targets/11_joba/catalog.json`
+- `runtime:trials/97b3489eac534de68f4964b9f9a1aefa/outcome.json`
 
 ## native-review-joba-vector-braking-v1-20261005
 
@@ -4601,11 +4783,15 @@ Reopen condition: Independent original helper effect/prototype/state layout/alia
 
 ## native-review-notak-cell-visit-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verifycaller/fullhelperpins andactualblob/header/row/point layouts, authorcurrentNotakfullunit pluspendingcompact300 andmaintainedfirstCtrial.
+The pinned complete target has already been measured in actual trial c19cb98a626749e5b8c1003a6b4fcfcc (candidate native-review-notak-cell-visit-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualserialized/ABI/access/iteration-lifetime evidenceonly; no equivalentcounter/register/flags/qualifier orsourcecycles.
+
+- `runtime:trials/c19cb98a626749e5b8c1003a6b4fcfcc/manifest.json`
+- `runtime:trials/c19cb98a626749e5b8c1003a6b4fcfcc/targets/6_notak/catalog.json`
+- `runtime:trials/c19cb98a626749e5b8c1003a6b4fcfcc/outcome.json`
 
 ## native-review-notak-cell-visit-v1-20261004
 
@@ -4617,11 +4803,15 @@ Reopen condition: Independent original globalstorage/source-binding or qualified
 
 ## native-review-notak-constraint-blend-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify fullcaller/helper/livepins and5pointer+2float ABI; authorprivate standard C composed vectoralgorithm thenmaintained fullunit trial.
+The pinned complete target has already been measured in actual trial e14130cfc9094fa9abd93a29eab5c92a (candidate native-review-notak-constraint-blend-v1-20261005, now stopped): 42 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original layout/alias/lifetime/ABI evidence only; no stack/FPR/register/parameter/phase equivalent-source cycling.
+
+- `runtime:trials/e14130cfc9094fa9abd93a29eab5c92a/manifest.json`
+- `runtime:trials/e14130cfc9094fa9abd93a29eab5c92a/targets/6_notak/catalog.json`
+- `runtime:trials/e14130cfc9094fa9abd93a29eab5c92a/outcome.json`
 
 ## native-review-notak-constraint-blend-v1-20261005
 
@@ -4633,11 +4823,15 @@ Reopen condition: Independent original declaration/source/qualified compiler sch
 
 ## native-review-notak-dialog-switch-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin completecaller/helper/table/live/ref identity; authorprivatecurrentNotakunit+ordinaryCswitch withonlyactualcases, validpercatalog .rodata placement/pin; maintainedfirsttrial aftersource snapshot. No integration untilrootfullData gate support.
+The pinned complete target has already been measured in actual trial 0f1bc7afcaa64b488a5b82e6253b2963 (candidate native-review-notak-dialog-switch-v1-20261005, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originaltyped owner/state/helperABI/table/storage orsource lifetime evidence only,no caseenumeration/branch/parameter/register/flags/sourcecycling toforce table.
+
+- `runtime:trials/0f1bc7afcaa64b488a5b82e6253b2963/manifest.json`
+- `runtime:trials/0f1bc7afcaa64b488a5b82e6253b2963/targets/6_notak/catalog.json`
+- `runtime:trials/0f1bc7afcaa64b488a5b82e6253b2963/outcome.json`
 
 ## native-review-notak-dialog-switch-v1-20261005
 
@@ -4649,11 +4843,15 @@ Reopen condition: Independent originalenum/domain/prototype/source case-group ev
 
 ## native-review-notak-group-rebase-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify boundedcallergroup ABI/headerdescriptoraccess, authorCURRENTNotak pluspendingexactcompact300, maintainedfullunitseedtrial. Familyonlyafterexact.
+The pinned complete target has already been measured in actual trial 8f33bda17c26430db6ff8b431acdb686 (candidate native-review-notak-group-rebase-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualheader/layout/ABI/accessphase evidence only, no equivalentstore/loop/register/qualifier/flags cycles.
+
+- `runtime:trials/8f33bda17c26430db6ff8b431acdb686/manifest.json`
+- `runtime:trials/8f33bda17c26430db6ff8b431acdb686/targets/6_notak/catalog.json`
+- `runtime:trials/8f33bda17c26430db6ff8b431acdb686/outcome.json`
 
 ## native-review-notak-group-rebase-v1-20261004
 
@@ -4665,11 +4863,15 @@ Reopen condition: Independent originalglobal-storage/sourcealias binding witness
 
 ## native-review-notak-menu-cycle-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verifycallerpointer/buttons/result andcompletehelperpins, actualmenuindices/count layout; authorCURRENTNotakfullcontrols+pendingcompact300 andmaintainedfirstCtrial.
+The pinned complete target has already been measured in actual trial 50652902485e40f9855d6299543d762c (candidate native-review-notak-menu-cycle-v1-20261004, now stopped): 68 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actuallayout/ABI/iteration/accessphase evidenceonly, no equivalentwrap/branch/register/qualifier/flags/sourcecycles.
+
+- `runtime:trials/50652902485e40f9855d6299543d762c/manifest.json`
+- `runtime:trials/50652902485e40f9855d6299543d762c/targets/6_notak/catalog.json`
+- `runtime:trials/50652902485e40f9855d6299543d762c/outcome.json`
 
 ## native-review-notak-menu-cycle-v1-20261004
 
@@ -4681,11 +4883,15 @@ Reopen condition: Independent original object alias/access or loop-lifetime evid
 
 ## native-review-notak-model-cache-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin fulltarget/representativecaller/livebounds andtypedpartialnode/modeldata view; authorprivateC/current30controls thenmaintainedtrial.
+The pinned complete target has already been measured in actual trial e4a5ddb948e34e5788a5317e932b3ae7 (candidate native-review-notak-model-cache-v1-20261004, now stopped): 134 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalnode/modelbank layout/ABI/alias/access lifetime evidence only,no bank/pointer/member/register/localorder/volatile/padding/flags cycles.
+
+- `runtime:trials/e4a5ddb948e34e5788a5317e932b3ae7/manifest.json`
+- `runtime:trials/e4a5ddb948e34e5788a5317e932b3ae7/targets/6_notak/catalog.json`
+- `runtime:trials/e4a5ddb948e34e5788a5317e932b3ae7/outcome.json`
 
 ## native-review-notak-model-cache-v1-20261004
 
@@ -4761,11 +4967,15 @@ Reopen condition: Independent original globalpointer sourcebinding/lifetime or r
 
 ## native-review-notak-ui-allocation-20261005
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Duringroot compiler HOLD prepare private fullpins/types/current-unitC for432-bytecoherentlot. Launchmaintainedtrial onlyafter explicit rootrelease; no publicchanges.
+The pinned complete target has already been measured in actual trial bdd168cf4cd742c89fb910d8b7a9249e (candidate native-review-notak-ui-allocation-v1-20261005, now stopped): 39 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original typedpool/record/lifetime/ABI evidence only; no arbitrary allocation/storeorder/branch/register/flags/sourcecycling.
+
+- `runtime:trials/bdd168cf4cd742c89fb910d8b7a9249e/manifest.json`
+- `runtime:trials/bdd168cf4cd742c89fb910d8b7a9249e/targets/6_notak/catalog.json`
+- `runtime:trials/bdd168cf4cd742c89fb910d8b7a9249e/outcome.json`
 
 ## native-review-notak-ui-allocation-v1-20261005
 
@@ -4777,11 +4987,15 @@ Reopen condition: Independent original constructor storage/initialization phase 
 
 ## native-review-notak-vector-bank-init-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Author currentfullunit pluspendingexactcompact300; maintainedseedtrial first, familyonlyaftercomplete equality.
+The pinned complete target has already been measured in actual trial 0a00fff31c154833b0b871c211049997 (candidate native-review-notak-vector-init-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 42 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actuallayout/ABI/access-phase witness only, no equivalentstore/loop/register/qualifier flags cycles.
+
+- `runtime:trials/0a00fff31c154833b0b871c211049997/manifest.json`
+- `runtime:trials/0a00fff31c154833b0b871c211049997/targets/6_notak/catalog.json`
+- `runtime:trials/0a00fff31c154833b0b871c211049997/outcome.json`
 
 ## native-review-notak-vector-init-v1-20261004
 
@@ -4817,11 +5031,15 @@ Reopen condition: Independent original state/context/varargs ABI or actualsource
 
 ## native-review-prison-cache-promote-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Preservefulltarget/caller/helper live/reference boundary pins andactualword/types/return ABI; authorcurrent78630controls then maintainedwholeunittrial ifeligible.
+The pinned complete target has already been measured in actual trial 3b4d7ec134df4743a98fb0ef328f604f (candidate native-review-prison-cache-promote-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent typedentry/globalroot/helperABI/access lifetime evidence only,no index/loop/register/equivalentdeclaration/volatile/padding/flags cycles.
+
+- `runtime:trials/3b4d7ec134df4743a98fb0ef328f604f/manifest.json`
+- `runtime:trials/3b4d7ec134df4743a98fb0ef328f604f/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/3b4d7ec134df4743a98fb0ef328f604f/outcome.json`
 
 ## native-review-prison-cache-promote-v1-20261004
 
@@ -4841,27 +5059,39 @@ Reopen condition: Independent original declaration or qualified compiler lifetim
 
 ## native-review-prison-category-value-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify callerwordoutputABI andactual tableword layout, authorCURRENT20controls+pendingexactsearch88+new92 thenmaintainedstricttrial.
+The pinned complete target has already been measured in actual trial 8ca9a5fe3fa24d6b9ca43d78893e220f (candidate native-review-prison-category-v1-20261004, now stopped): 5 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent source/table/ABI/lifetime evidence only, no association/register/expression cycling.
 
+- `runtime:trials/8ca9a5fe3fa24d6b9ca43d78893e220f/manifest.json`
+- `runtime:trials/8ca9a5fe3fa24d6b9ca43d78893e220f/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/8ca9a5fe3fa24d6b9ca43d78893e220f/outcome.json`
+
 ## native-review-prison-class-point-effects-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Retainfullhelper/caller/alignment/word+mixedfloat ABI pins, authorfreshCURRENT78630controls +228 thenmaintainedwholeunittrial. Familyonlyafterexact, neverreplaygroundcontact/otherparkedaliases.
+The pinned complete target has already been measured in actual trial 263b8e87c0cb4d1f993c412b373c4f6f (candidate native-review-prison-point-effects-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualdescriptor/point/onceflag layout/ABI/access/lifetime evidence only,no class/pointer/loop/register/qualifier/flags sourcecycles.
 
+- `runtime:trials/263b8e87c0cb4d1f993c412b373c4f6f/manifest.json`
+- `runtime:trials/263b8e87c0cb4d1f993c412b373c4f6f/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/263b8e87c0cb4d1f993c412b373c4f6f/outcome.json`
+
 ## native-review-prison-duel-outcome-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-VerifycallerABI thenauthorprivatewholeCURRENTPrison19-controlunit andmaintainedexacttrial withdefaultG0.
+The pinned complete target has already been measured in actual trial 4cc3fbde97fa4537b76c9a3febe1e524 (candidate native-review-prison-duel-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent state/layout/ABI/sourcephaseevidenceonly, no branch/reg/expression cycling.
+
+- `runtime:trials/4cc3fbde97fa4537b76c9a3febe1e524/manifest.json`
+- `runtime:trials/4cc3fbde97fa4537b76c9a3febe1e524/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/4cc3fbde97fa4537b76c9a3febe1e524/outcome.json`
 
 ## native-review-prison-duel-v1-20261004
 
@@ -4881,19 +5111,27 @@ Reopen condition: Independent original access/lifetime/caller layout evidence ex
 
 ## native-review-prison-entry-selection-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verifycallerstateargument and20-byte returnedrecordconsumer, authorcurrent20controls+pendingsearch88+new88 inprivateunit thenmaintainedtrial.
+The pinned complete target has already been measured in actual trial f22cf1c12c7140268f5771642d88c886 (candidate native-review-prison-entry-select-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalstate/entrylayout/ABI/sourcephaseevidence only, no allocation/branchspellingcycles.
 
+- `runtime:trials/f22cf1c12c7140268f5771642d88c886/manifest.json`
+- `runtime:trials/f22cf1c12c7140268f5771642d88c886/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/f22cf1c12c7140268f5771642d88c886/outcome.json`
+
 ## native-review-prison-ground-contact-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pinhelper/caller/query-outputalignment/wordfloat ABI andlargecontext offsets, authorfreshCURRENT78630controls +436 usingqualifiedTI unionmemorycopies andactualscalarfields. Maintainedwholeunit trial, exactseedonlythenfamily. Neverreplayparkedquad24 orEndako616families.
+The pinned complete target has already been measured in actual trial db6a20556e944ba387582960b2323cff (candidate native-review-prison-ground-contact-v2-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualcontext/stack/output layout/ABI/alignment/source-lifetime evidence only,no volatile/fixedregs/ASM/padding/flags orG0globalview cycles.
+
+- `runtime:trials/db6a20556e944ba387582960b2323cff/manifest.json`
+- `runtime:trials/db6a20556e944ba387582960b2323cff/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/db6a20556e944ba387582960b2323cff/outcome.json`
 
 ## native-review-prison-ground-contact-v1-20261004
 
@@ -4913,11 +5151,15 @@ Reopen condition: Independent originalcontext/sourcepoint storage orobservable m
 
 ## native-review-prison-list-propagation-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verifycaller object ABI then author typed actual256-byte object/state partial views andmaintained fullunit trial, preserving listed null/termination gates.
+The pinned complete target has already been measured in actual trial cccd0fc1e6b743069377d6f0819acfb9 (candidate native-review-prison-propagate-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent original storage/alias/layout/sourcephase evidence only, no loop/register permutations.
+
+- `runtime:trials/cccd0fc1e6b743069377d6f0819acfb9/manifest.json`
+- `runtime:trials/cccd0fc1e6b743069377d6f0819acfb9/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/cccd0fc1e6b743069377d6f0819acfb9/outcome.json`
 
 ## native-review-prison-point-effects-v1-20261004
 
@@ -4929,11 +5171,15 @@ Reopen condition: Independent originaltyped source alias/storage/access lifetime
 
 ## native-review-prison-point-rotation-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin fulltarget/caller/helper boundaries and livebytes; verify helper ABI ordinary pointer arguments and return usage. Author fullCURRENT78630controls and maintain wholeunit trial only if defensible.
+The pinned complete target has already been measured in actual trial 62aeb532177c4c9f9e61627f86b6e85d (candidate native-review-prison-point-rotation-v2-20261004, now stopped): 60 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent measured typed stackmatrix/point extent, helper ABI or source-lifetime evidence only, no unsupported packedMMI/VU/ASM/forcedregister/padding/volatile/newflags cycles.
+
+- `runtime:trials/62aeb532177c4c9f9e61627f86b6e85d/manifest.json`
+- `runtime:trials/62aeb532177c4c9f9e61627f86b6e85d/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/62aeb532177c4c9f9e61627f86b6e85d/outcome.json`
 
 ## native-review-prison-point-rotation-v1-20261004
 
@@ -4961,11 +5207,15 @@ Reopen condition: Independent original per-class source boundaries/inlined acces
 
 ## native-review-prison-quad-state-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin target/callers/external64template withcompleteboundaries andtypedlayout; authorCURRENT78630controls then maintainedtrial.
+The pinned complete target has already been measured in actual trial 46b8579d45e348edb9d8b3d4b2ef8ade (candidate native-review-prison-quad-state-typefix-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originaltemplate/destination typedstorage/ABI/source lifetime evidence only, no storeorder/register/localorder/volatile/padding/flags cycles.
+
+- `runtime:trials/46b8579d45e348edb9d8b3d4b2ef8ade/manifest.json`
+- `runtime:trials/46b8579d45e348edb9d8b3d4b2ef8ade/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/46b8579d45e348edb9d8b3d4b2ef8ade/outcome.json`
 
 ## native-review-prison-quad-state-typefix-20261004
 
@@ -4985,11 +5235,15 @@ Reopen condition: Independent originaltyped stackmatrix/point extent, helper ABI
 
 ## native-review-prison-record-color-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Verify callerrecordpointer and complete helperpin ABI, author current20-control Prison plus pending exactsearch88 andnew128, thenmaintainedstricttrial.
+The pinned complete target has already been measured in actual trial 6752315368d1489e93bffc23931bbb62 (candidate native-review-prison-record-color-v1-20261004, now stopped): 1 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent union/layout/ABI/accessphase evidence only; no arbitrary stores/register/padding or sourcecycles.
+
+- `runtime:trials/6752315368d1489e93bffc23931bbb62/manifest.json`
+- `runtime:trials/6752315368d1489e93bffc23931bbb62/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/6752315368d1489e93bffc23931bbb62/outcome.json`
 
 ## native-review-prison-record-color-v1-20261004
 
@@ -5001,19 +5255,25 @@ Reopen condition: Independent original access qualifier or qualified compiler/so
 
 ## native-review-prison-record-search-20261004
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
-Verify caller input/result andreal recordarray view; author privateCURRENT19-controlunit withoneboundedCsearch thenmaintainedstricttrial.
+The complete 88-byte target at 0x00405db0 is already covered by the current validated level-native proof and pinned raw body. Retire this stale first-trial/retransfer research reservation; select a genuinely uncovered body. No new credit or candidate-state change is added.
 
 Reopen condition: Independent original record layout/access/control-lifetime evidence only; no anchor/register/loopspellingcycles.
 
+- `progress/levels/14_aranos_prison.json`
+
 ## native-review-prison-ring-child-colors-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pinactualcaller/childtype/colorstate andringstorage, authorfreshCURRENT786program14controls (30 expected) andmaintainedwholeunit firsttrial. Familyonlyaftercompleteexactseed, no parameter/halfword/register/store/qualifier cycles.
+The pinned complete target has already been measured in actual trial 5e1a7e53486c4990b8a54113b5662300 (candidate native-review-prison-ring-child-colors-v1-20261004, now stopped): 108 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualring/childstorage/layout/ABI/access/lifetime evidence only,no parity/modulus/color/float/store/register/qualifier/flags sourcecycles.
+
+- `runtime:trials/5e1a7e53486c4990b8a54113b5662300/manifest.json`
+- `runtime:trials/5e1a7e53486c4990b8a54113b5662300/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/5e1a7e53486c4990b8a54113b5662300/outcome.json`
 
 ## native-review-prison-ring-child-colors-v1-20261004
 
@@ -5025,11 +5285,15 @@ Reopen condition: Independent originalcolor storage/type/source-phase orqualifie
 
 ## native-review-prison-ring-index-state-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Retainfullcaller/helper/statepins, authorfreshCURRENT786program14controls30+new212, maintainedwholeunit firsttrial. Familyonlyafterexactseed.
+The pinned complete target has already been measured in actual trial a7ba61e00e144d658ddc253617f13920 (candidate native-review-prison-ring-index-v2-20261004, now stopped): 40 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualsignedhalf/owner-state layout/ABI/access/lifetime evidence only,no index/modulus/loop/parity/branch/register/qualifier/flags sourcecycles.
+
+- `runtime:trials/a7ba61e00e144d658ddc253617f13920/manifest.json`
+- `runtime:trials/a7ba61e00e144d658ddc253617f13920/targets/14_aranos_prison/catalog.json`
+- `runtime:trials/a7ba61e00e144d658ddc253617f13920/outcome.json`
 
 ## native-review-prison-ring-index-v1-20261004
 
@@ -5065,13 +5329,14 @@ Reopen condition: Independent layout/ABI/storage evidence only; no equivalent so
 
 ## native-review-record-search-family-20261004
 
-State: `queued`. Kind: `research`.
+State: `done`. Kind: `research`.
 
-Finish independent27 program qualification, author private intended current full units and maintained exact trials autonomously; no public credit before root gates.
+All 27 accepted complete family placements are already covered by current validated all-origin proofs. Retire this stale first-trial/retransfer research reservation; select a genuinely uncovered body. No new credit or candidate-state change is added.
 
 Reopen condition: Independent full pin/source/catalog changes, not equivalent source permutations or flags matrices.
 
 - `private-work:parallel-20261004/native_review/search-family-scan.json`
+- `progress/levels/14_aranos_prison.json`
 
 ## native-review-search-family-0_aranos_tutorial-20261004
 
@@ -5345,11 +5610,15 @@ Reopen condition: Independent changed source/catalog/binding evidence only, not 
 
 ## native-review-todano-layout-metrics-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Preservetypedconstant/helper/caller9arg pins, authorfreshcoherentCURRENT75929controls +new804, maintainedwholeunitfirsttrial. Onlyexactcomplete804canqualifyfamily; no declaration/ABI/storage cycles without newevidence.
+The pinned complete target has already been measured in actual trial 6268c0f8965c4a7e8551a6824cf57e35 (candidate native-review-todano-layout-metrics-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalcopied-data extent/storage/layout/ABI/source-lifetime evidence only, no aggregate/scalar/float/branch/register/qualifier/flags cycles.
+
+- `runtime:trials/6268c0f8965c4a7e8551a6824cf57e35/manifest.json`
+- `runtime:trials/6268c0f8965c4a7e8551a6824cf57e35/targets/12_todano/catalog.json`
+- `runtime:trials/6268c0f8965c4a7e8551a6824cf57e35/outcome.json`
 
 ## native-review-todano-layout-metrics-v1-20261004
 
@@ -5361,11 +5630,15 @@ Reopen condition: Independent originalglobalassetstorage/sourcebinding orqualifi
 
 ## native-review-todano-novel-choice-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pin fullhelper andcaller5word ABI andsixword table, authorfreshcurrentTodano+pendingcompact300 thenmaintainedwholeunitseedtrial. Familyonlyafterexact.
+The pinned complete target has already been measured in actual trial 647977914a1747b888bbfd5e5d22ad20 (candidate native-review-todano-novel-choice-v2-20261004, now stopped): 31 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualstorage/layout/ABI/iteration/accessphase evidence only, no equivalentmodulus/loop/register/qualifier/flags sourcecycles.
+
+- `runtime:trials/647977914a1747b888bbfd5e5d22ad20/manifest.json`
+- `runtime:trials/647977914a1747b888bbfd5e5d22ad20/targets/12_todano/catalog.json`
+- `runtime:trials/647977914a1747b888bbfd5e5d22ad20/outcome.json`
 
 ## native-review-todano-novel-choice-v1-20261004
 
@@ -5385,11 +5658,15 @@ Reopen condition: Independent originalobject/storage/valid-state pointer precond
 
 ## native-review-todano-path-options-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Pinfullhelper/callers andactualmatrix/stateprojection, authorcurrentTodano24priorcontrols+new296 intendedunit andmaintainedfirsttrial. Familyonlyafterexact.
+The pinned complete target has already been measured in actual trial 119630e3fdbb42fe880b5aec4d97e8c5 (candidate native-review-todano-path-options-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualstate/layout/ABI/access/lifetime evidence only,no sentinel/loop/branch/store/register/qualifier/flags cycles.
+
+- `runtime:trials/119630e3fdbb42fe880b5aec4d97e8c5/manifest.json`
+- `runtime:trials/119630e3fdbb42fe880b5aec4d97e8c5/targets/12_todano/catalog.json`
+- `runtime:trials/119630e3fdbb42fe880b5aec4d97e8c5/outcome.json`
 
 ## native-review-todano-path-options-v1-20261004
 
@@ -5401,11 +5678,15 @@ Reopen condition: Independent originalboolean representation/source-binding orqu
 
 ## native-review-todano-path-transition-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Preservefullcallee/callerpins and16bytebank/wrappedsignedhalfword ABI semantics, authorcurrentTodano+pendingCOMPACT300 with336body andmaintainedwholeunittrial. Familyonlyafterexact.
+The pinned complete target has already been measured in actual trial 5e162a89a5bd4797ade282c467fa65fb (candidate native-review-todano-path-transition-v1-20261004, now stopped): 81 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent originalstate/layout/ABI/access/lifetime evidence only, no halfword/byte/branch/store/register/qualifier/flags sourcecycles.
+
+- `runtime:trials/5e162a89a5bd4797ade282c467fa65fb/manifest.json`
+- `runtime:trials/5e162a89a5bd4797ade282c467fa65fb/targets/12_todano/catalog.json`
+- `runtime:trials/5e162a89a5bd4797ade282c467fa65fb/outcome.json`
 
 ## native-review-todano-path-transition-v1-20261004
 
@@ -5417,11 +5698,15 @@ Reopen condition: Independent originalstorage alias, primitivefieldtypes orsourc
 
 ## native-review-todano-quadrant-layout-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Preservefullpins/caller9arg/helperreturn ABI, authorordinaryC againstCURRENTcoherent759 prefix/catalog andmaintainedwholeunitfirsttrial. Do notreuse615sourceprefix orduplicateCOMPACTdefinition. Familyonlyafterexactseed.
+The pinned complete target has already been measured in actual trial 654dc364d7ed4afe947ad64ac4f0a53d (candidate native-review-todano-quadrant-layout-v1-20261004, now stopped): complete symbol size mismatch. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actualstack-output layout/ABI/floatalias/lifetime evidence only, no store/float/expression/register/qualifier/flags cycles.
+
+- `runtime:trials/654dc364d7ed4afe947ad64ac4f0a53d/manifest.json`
+- `runtime:trials/654dc364d7ed4afe947ad64ac4f0a53d/targets/12_todano/catalog.json`
+- `runtime:trials/654dc364d7ed4afe947ad64ac4f0a53d/outcome.json`
 
 ## native-review-todano-quadrant-layout-v1-20261004
 
@@ -5433,11 +5718,15 @@ Reopen condition: Independent originalsource object/lifetime orqualifiedcompiler
 
 ## native-review-todano-tristate-flags-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Establish callerthree-word ABI andactualdescriptor/byte representations, authorONE complete552seed withCURRENTTodano controls+pendingexactcompact300. Qualifyseedfirst; duplicatebody/familyonlyafterexact, no bulknegative replay.
+The pinned complete target has already been measured in actual trial 19316df19a1547b5bd3d1c2144ccaa92 (candidate native-review-todano-tristate-v2-20261004, now stopped): 47 differing bytes. Do not run a first/equivalent source trial from this stale research entry. Preserve every refusal and investigate only the existing independent reopen witness before any new reservation. Current intended native unit has 43 reviewed controls; recapture that complete current unit only if genuinely new evidence qualifies reopening.
 
 Reopen condition: Independent actuallayout/ABI/accessphase evidence only; no arbitrary flag/byte/branch/register or qualifier/sourcecycles.
+
+- `runtime:trials/19316df19a1547b5bd3d1c2144ccaa92/manifest.json`
+- `runtime:trials/19316df19a1547b5bd3d1c2144ccaa92/targets/12_todano/catalog.json`
+- `runtime:trials/19316df19a1547b5bd3d1c2144ccaa92/outcome.json`
 
 ## native-review-todano-tristate-v1-20261004
 
@@ -5454,6 +5743,30 @@ State: `stopped`. Kind: `candidate`.
 Park both immutable tri-state physical/logical-family variants includingrawduplicateTodano400900 andsame semanticother-program copies. No third command-cache/byte/flag/predicate/register/branch spelling cycle orbulk aliases. Continue genuinelydifferent ownedalgorithm.
 
 Reopen condition: Independent original commandrecord source/storage/qualifier or qualified access/lifetime mechanism evidence; no unsupported volatile, forced registers, padding, macro/expression permutations or flagchanges.
+
+## new-number-format316-admission-repaired-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Keep admission-repaired first actual C task stopped/parked; its sole actual compile budget is spent. Preserve immutable actual source/catalogue/object/assembly/manifest/outcome separately from the original24c14 and9d59 preparation-only events, which attempted no compiler and measured zero. No source/type/aggregate/alignment/branch/order/register/profile variants and no other-copy qualification from refused seed. Continue a genuinely new algorithm when separately reserved.
+
+Reopen condition: Independent original source/declaration/storage/ABI or separately qualified compiler evidence that distinguishes the observed lowering. Caller signedLW-to64 register transport and the already supported unaligned snapshot do not independently justify changing original parameter type, byte aggregate, casts or branch order. No equivalent-source or profile cycling.
+
+- `private-work:c-campaign-20261006/bank/new-large-scalar-frame/number316-first-compile-refusal.json`
+- `private-work:c-campaign-20261006/bank/new-large-scalar-frame/negative-first-actual-number316`
+- `private-work:c-campaign-20261006/bank/new-large-scalar-frame/preparation-only-events`
+- `private-work:c-campaign-20261006/bank/new-large-scalar-frame/plain-source-verification.json`
+
+## new-number-format316-v1-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+This reservation records preparation-only rejections 24c14/9d59, not compiled failures. The unchanged source/catalog were subsequently compiled for the FIRST time in actual follow-up 6458b4ae4b2445d8963000cf9583f305: all43controls exact, complete316-byte target emitted324 and refused. Preserve all three distinct events; do not replay a first source trial from this superseded preparation reservation. Independent original reopen evidence is required.
+
+Reopen condition: Independent original source/storage/alignment/ABI or separately qualified compiler evidence; no type/alignment/cast/branch/source-order/profile permutations. This numericcallee is distinctfromstopped placeholder-string parent; no parent orotheroldpark reopened.
+
+- `runtime:trials/6458b4ae4b2445d8963000cf9583f305/manifest.json`
+- `runtime:trials/6458b4ae4b2445d8963000cf9583f305/outcome.json`
 
 ## normalized-family-validation-20261005
 

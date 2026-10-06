@@ -44,7 +44,7 @@ def _scrub(data):
 
 
 def _source_scope(data, function, externals):
-    if re.search(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|\.byte|\.word|\b__(?:DATE|TIME|TIMESTAMP)__\b", data):
+    if re.search(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|(?m:^[ \t]*(?:(?:[A-Za-z_.$][A-Za-z0-9_.$]*|[0-9]+):[ \t]*)?\.(?:byte|word)\b(?:[ \t]+(?![ \t]*=)\S|[ \t]*$))|\b__(?:DATE|TIME|TIMESTAMP)__\b", data):
         raise ValueError("Family source must contain reproducible C, never assembly or retail bytes")
     if re.search(rb"(?m)^\s*#\s*include\b", data):
         raise ValueError("Family context must be explicit; includes are unsupported")

@@ -188,7 +188,7 @@ def main() -> int:
         raise ValueError("Keep private candidate builds outside sources")
     source = args.source.resolve()
     content = source.read_text(encoding="utf-8")
-    if re.search(r"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|\.byte|\.word", content):
+    if re.search(r"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|(?m:^[ \t]*(?:(?:[A-Za-z_.$][A-Za-z0-9_.$]*|[0-9]+):[ \t]*)?\.(?:byte|word)\b(?:[ \t]+(?![ \t]*=)\S|[ \t]*$))", content):
         raise ValueError("C candidates must not embed assembly or retail bytes")
     work = runtime / "candidate-runs" / uuid.uuid4().hex[:8]
     work.mkdir(parents=True)

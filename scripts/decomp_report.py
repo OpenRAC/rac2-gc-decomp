@@ -64,7 +64,7 @@ def validate_integration(integration: dict, target: dict, progress: dict) -> lis
     if (hashlib.sha256(source).hexdigest() != integration["source_sha256"]
             or hashlib.sha256(catalog_bytes).hexdigest() != integration["catalog_sha256"]):
         raise ValueError("Integration source or catalog hash mismatch")
-    if re.search(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|\.byte|\.word", source):
+    if re.search(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|(?m:^[ \t]*(?:(?:[A-Za-z_.$][A-Za-z0-9_.$]*|[0-9]+):[ \t]*)?\.(?:byte|word)\b(?:[ \t]+(?![ \t]*=)\S|[ \t]*$))", source):
         raise ValueError("Integrated C must not embed assembly or retail bytes")
     catalog = json.loads(catalog_bytes)
     if (catalog["target"] != target["serial"]
