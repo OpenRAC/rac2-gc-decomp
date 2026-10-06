@@ -1088,14 +1088,15 @@ Reopen condition: Qualified original allocation/base/addend, scoped entry GP and
 
 State: `stopped`. Kind: `research`.
 
-Before any GP16 consumer use, repair or independently prove indirect control and reentry in the existing local verifier. Retain the bounded startup refusal; reopen caller transmission only with pinned kernel/callee preservation or another suitable caller.
+The closed direct-CFG guard now refuses the retained indirect-reentry counterexample. Caller GP transmission remains unproved: obtain pinned kernel/callee preservation or another suitable caller. Wider verifier admission needs independent machine control-target proof.
 
-Reopen condition: Conservative indirect-control refusal or independently verified targets closes the published local-verifier lifetime counterexample, plus machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller.
+Reopen condition: Machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller, with independently verified control targets for any wider admission.
 
 - `docs:docs/GP-CALLER-EVIDENCE.md`
+- `docs:docs/LOCAL-GP-PROOF.md`
 - `private-work:gp-caller-proof-20261006/root-startup-negative.json`
 - `private-work:gp-caller-proof-20261006/root-old-verifier-negative.json`
-- `private-work:gp-caller-proof-20261006/selection/startup-negative-and-inventory.json`
+- `private-work:gp-control-fix-20261006/root-reentry-refusal.json`
 
 ## bounded-local-gp-proof-pilot-20261006
 
@@ -2548,6 +2549,19 @@ Keep the GNU unsigned-division candidate and unqualified related division-family
 Reopen condition: New independent original declaration/module or qualified lowering evidence showing a pure-C two-SI-output unsigned multiply without the measured intermediate-DI pack/unpack, with a genuinely positive width/control witness and all current controls retained. Root must review the concrete source/compiler implication. Equivalent product expressions, highpart/lowpart macro variants, local/union/order/loop/type/profile cycles or trying the same primitive across other division-family wrappers are not new evidence.
 
 - `private-work:c-campaign-20261006/bank/gnu-integer-library-source/negative-diagnosis.json`
+
+## gp-control-reentry-fix-20261006
+
+State: `done`. Kind: `research`.
+
+Validate a closed direct-CFG admission guard with adversarial producer/consumer tests, reclassify all 28 old MMIO pilot bodies as historical/refused, refresh all affected gates and report provenance, then publish after exact-head CI.
+
+Reopen condition: A counterexample escaping the admitted closed direct CFG under normal instruction completion; future wider admission requires independently checked machine control-target evidence.
+
+- `script:scripts/gp_local_proof.py`
+- `docs:docs/LOCAL-GP-PROOF.md`
+- `proof:progress/gp-local-pilot.json`
+- `private-work:gp-control-fix-20261006`
 
 ## gs-buffer-setup-control-public-family-v2-20261005-g0
 

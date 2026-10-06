@@ -616,5 +616,266 @@
     "Static intrafunction instruction paths only, not arbitrary external intervention.",
     "No function-entry or call-preservation theorem is exported.",
     "Public receipt is metadata; full consumer verification needs pinned original reference bytes."
+  ],
+  "status": "historical static-CFG pilot; superseded and refused by current closed-CFG verifier",
+  "historical_observations_are_current_GP_lifetime_evidence": false,
+  "current_verifier_sha256": "132d21dbe83b17f2ca9d24f12048b215cfbae61712cf7c989d473ade1ab32ded",
+  "current_control_policy": "closed direct CFG; no indirect transfers, calls, external edges or reachable fallthrough escape",
+  "current_accepted_GP_facts": 0,
+  "current_producer_refusals": 28,
+  "current_historical_consumer_refusals": 28,
+  "current_refusals": [
+    {
+      "program": "boot",
+      "size": 5060,
+      "raw_sha256": "64343b6931b45495e9cc7e6ec4fca2218745f1e6f6793289a285e448f8d6706f",
+      "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/0_aranos_tutorial",
+      "size": 5060,
+      "raw_sha256": "65ed6ebb4a73b05a1c5e4020026a3ee403bf711406a74af71908ce8cc2eae672",
+      "reference_sha256": "c486f497920118066ed02076f540a5fad6811ce874d014a3a2bb18cb77714d11",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/10_hrugis_cloud",
+      "size": 5060,
+      "raw_sha256": "b60f07419c3b8a171e3029908bcc57dc93cbc49a3ec23ea622dd2076d9c10a98",
+      "reference_sha256": "287e8f233f0b60cf4ccb3f0ff4dc043b907cabb7b3eff8c2229ca79cc1d19b48",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/11_joba",
+      "size": 5060,
+      "raw_sha256": "52bec055520bed531d0fa5bf90e9221e5d3dbdb2765da4b9705c9f9e3d0fcbff",
+      "reference_sha256": "c6cf24ac0591c78ae6a5320a333b4465f54969ab91e0f42f52fcb7fc95f2f00e",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/12_todano",
+      "size": 5060,
+      "raw_sha256": "fc165b43dd5131eea5bef26f50f680ab4b460286a1dfcc1d5dd41ff59365d838",
+      "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/13_boldan",
+      "size": 5060,
+      "raw_sha256": "3c1eeedff4d4336ef0114a77eea8926ba5a043d7d42fdab5333af3ea1fd6d5c1",
+      "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/14_aranos_prison",
+      "size": 5060,
+      "raw_sha256": "1a26b6450acf62f64a7f5ec4fdf1e378001311e8861e306a129c8032906b3ab3",
+      "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/15_gorn",
+      "size": 5060,
+      "raw_sha256": "51ec3f027bbbf795a8f1ddb320aaac5d3425124a39814f7830c605b7445d8258",
+      "reference_sha256": "838098ef94f05d78f79be2f65291447db6c9468e7c44e2cab36396f720cce109",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/16_snivelak",
+      "size": 5060,
+      "raw_sha256": "87ea11375a9ea2672df0a75cf0158ace95288c01235c34df230a615db4934ad0",
+      "reference_sha256": "ad5840ad4ebfef75199ad6196e36ba010d99970e75d0de681a050ab4c59f944b",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/17_smolg",
+      "size": 5060,
+      "raw_sha256": "9384fd4b851e85d277b6f217d872dfbd6027721849da24e013633bcf0d87a7ee",
+      "reference_sha256": "4e1908fbc51ea0f156a32077fd20b2af755fe0b1f4aa7b1bc67967208e7e87f4",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/18_damosel",
+      "size": 5060,
+      "raw_sha256": "80c6c6a5f948a5faf6e6c762f465052edde29f88dfeb9cda5df9df3048a2bfb8",
+      "reference_sha256": "61c1050b11c8bbb1674bc35107ccf83f2634ee6c8248c9983ba552343d911113",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/19_grelbin",
+      "size": 5060,
+      "raw_sha256": "4e0ef63ca1eccf55bf8c3b205b728fab53acc08e2e3e238136e308ef83042c51",
+      "reference_sha256": "eeab491a667c311b024745af7173ac08371e279ade0b4ab5d48b6f81fa751aaf",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/1_oozla",
+      "size": 5060,
+      "raw_sha256": "efa93c763b8146891f21b6b53de3a16625160f9bf5c26f853ffbc38e8e0823f1",
+      "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/20_yeedil",
+      "size": 5060,
+      "raw_sha256": "dd5061ea69315ac1c18b9d8da8d70265e39ae2ce86cc24974c37cd4cba693aa3",
+      "reference_sha256": "af33c5378811e9d57c612c10002ca5c92eb676add3db0552ab2d6231034cafc8",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/22_dobbo_orbit",
+      "size": 5060,
+      "raw_sha256": "dc09eaa19a4c298ca1e906de9a596f2a3faf4a1835550bc6d4ea47d605d27465",
+      "reference_sha256": "c609f24d897e1a82d49cdb9a8a7ece36ea83332414dc3cc6d588375e0bda55db",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/23_damosel_orbit",
+      "size": 5060,
+      "raw_sha256": "26b87e9e69414c4132b2b48c5e0676df3cbc78a03306dc51a8a72da6363b79b4",
+      "reference_sha256": "0c75617382013a703eb5fcc85845f4d1352f496bfbb4047f512454aa730d37b4",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/24_ship_shack",
+      "size": 5060,
+      "raw_sha256": "42f48a6bf8eb1035ac1660607ad41dfa27fae374ec0321f97dae0f5d52ea18b8",
+      "reference_sha256": "4afbc22add84109c84ef8ca49099fdf9863905e5f497369c207ac5cb47814740",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/25_wupash_nebula",
+      "size": 5060,
+      "raw_sha256": "0893e1c6e02251ac70abd74df91426aeadea8f43b6fc1eccf80727f780cd8039",
+      "reference_sha256": "075a0a55f83fd7d35957af62eeac8e911357cee2fa6119edd9f2cfcdea7e9cdc",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/26_jamming_array",
+      "size": 5060,
+      "raw_sha256": "45f2bdfa768b59ab234dde74f030c62d0c0ca10e0b345e7a62703120f356fe4d",
+      "reference_sha256": "575ab90300200e2c8bd49afba637aa9212e82d2ee17af618e2ad8c5bf78bd36b",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/2_maktar_nebula",
+      "size": 5060,
+      "raw_sha256": "8279150416148b451f6dcfe0574b9ec36fe6d9affeaa19c2e869d78294501995",
+      "reference_sha256": "ab59cf107fb30843db03cd3571af1c08d62e99e6b50594bc38dd7a70f91ac94b",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/30_insomniac_museum",
+      "size": 5060,
+      "raw_sha256": "e810b6eeb6b8793c6179af88f253e213a2f4d91ce8e200eaec47c791e38c2fc3",
+      "reference_sha256": "b638bb36997a9b3e8041738f45b0c624c01fe4ad9ae601ff50e305916ff3040c",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/3_endako",
+      "size": 5060,
+      "raw_sha256": "18b0d97f0b0dc9adb8b326743d651f849a9c26c832a8750aedb49154f47a660f",
+      "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/4_barlow",
+      "size": 5060,
+      "raw_sha256": "b338bc37ece74e5f7f045426650d41fb21b0a1b95e7e95613be48e82bbcf6788",
+      "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/5_feltzin_system",
+      "size": 5060,
+      "raw_sha256": "8e43301ff543c6a6252ca34d3da36edf531aadae016ad9ac5c5d6b00d9da0ccf",
+      "reference_sha256": "bd41a03a57871a6f33106d5277c6b4918f379ceaa5f780a84c82360b421204fb",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/6_notak",
+      "size": 5060,
+      "raw_sha256": "1a048f8e5201c06f92c397affed34da09d452432f422484e7e9eeaf77d5f9a50",
+      "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/7_siberius",
+      "size": 5060,
+      "raw_sha256": "1e359dac0cd436d638d292c1356c6a5d3a93d1d099619b4c48bf810872ff4f2f",
+      "reference_sha256": "76b77dbbc9a3e15f1c4f202a36b37d01bdaff7936142c14b5b35a1552a85287a",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/8_tabora",
+      "size": 5060,
+      "raw_sha256": "47cd99a0b417a5f60d790ba28440ec03f2279f2ec390db667bdbe93866e8cc1c",
+      "reference_sha256": "37c1b1c86b8800fb3930b539fe4b5c94dccf42e7bb5960154477f63731dd48a5",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    },
+    {
+      "program": "levels/9_dobbo",
+      "size": 5060,
+      "raw_sha256": "7ee728401fd9c311c478ac2cfd244ff7cbaeea08465cf2ac0b9f5953a1df02c5",
+      "reference_sha256": "a47999f3aa251431498e068932ac542399b5e402ab8dcddcbfe246dc220b7810",
+      "producer_refused": true,
+      "consumer_refused": true,
+      "reason": "Unproved control escape or reentry: closed direct CFG required"
+    }
   ]
 }
