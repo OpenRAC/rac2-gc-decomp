@@ -2638,6 +2638,34 @@
       "program": "18_damosel",
       "candidate_source": "candidates/levels/18_damosel.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_18_DAMOSEL_FUN_002CB2A8",
+      "address": 2929320,
+      "size": 80,
+      "matched": true,
+      "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "18_damosel",
+      "candidate_source": "candidates/levels/18_damosel.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_18_DAMOSEL_FUN_0031FE88",
+      "address": 3276424,
+      "size": 124,
+      "matched": true,
+      "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "18_damosel",
+      "candidate_source": "candidates/levels/18_damosel.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2645,14 +2673,14 @@
     "bytes_compared": 2937928,
     "segments": 1
   },
-  "matched_code_bytes": 10996,
+  "matched_code_bytes": 11200,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "5890651ccfc7f1916aa4fd607ac1c4d65a23c28685ed09001a98ce35ba264440",
+  "candidate_elf_sha256": "004549a876ad27755298a551c894453fae076fe0fd0b5d61f0f512c372ad71bc",
   "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
   "replacement_inputs": {
     "11AE00.s": [
@@ -2843,7 +2871,9 @@
       "LVL_18_DAMOSEL_FUN_0032C3A8",
       "LVL_18_DAMOSEL_FUN_002F72D0",
       "LVL_18_DAMOSEL_FUN_0046C6D0",
-      "LVL_18_DAMOSEL_FUN_0046CB68"
+      "LVL_18_DAMOSEL_FUN_0046CB68",
+      "LVL_18_DAMOSEL_FUN_002CB2A8",
+      "LVL_18_DAMOSEL_FUN_0031FE88"
     ]
   },
   "schema": 2,
@@ -2868,7 +2898,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "5890651ccfc7f1916aa4fd607ac1c4d65a23c28685ed09001a98ce35ba264440",
+    "candidate_elf_sha256": "004549a876ad27755298a551c894453fae076fe0fd0b5d61f0f512c372ad71bc",
     "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
     "replacement_inputs": {
       "11AE00.s": [
@@ -3059,7 +3089,9 @@
         "LVL_18_DAMOSEL_FUN_0032C3A8",
         "LVL_18_DAMOSEL_FUN_002F72D0",
         "LVL_18_DAMOSEL_FUN_0046C6D0",
-        "LVL_18_DAMOSEL_FUN_0046CB68"
+        "LVL_18_DAMOSEL_FUN_0046CB68",
+        "LVL_18_DAMOSEL_FUN_002CB2A8",
+        "LVL_18_DAMOSEL_FUN_0031FE88"
       ]
     }
   },
@@ -3069,13 +3101,13 @@
   },
   "reference_entry": 2890376,
   "candidate_entry": 2890376,
-  "dependency_sha256": "e7d98b1a588a1cc44a0bfd1bd07191ef2c02879d8f8ed22106fb33210247e0ff",
+  "dependency_sha256": "7ae4fd07d669ed644089c2c7d34c0648fd88822d28cca727fb0ef3038b3caf8d",
   "boot_review_sha256": "80d0b16935af6777f1d73a5489b12588540d0f5593a2d7a8be9af4cf00ce9b9a",
   "native": {
     "source": "candidates/levels/18_damosel.c",
     "catalog_path": "config/level-native/18_damosel.json",
     "review_path": "progress/level-candidates/18_damosel.json",
-    "review_sha256": "857c017bf4d6ad2c0b8e07edde5c756592198463d4b23feb42e90685a0445aed",
+    "review_sha256": "91de1dd3329f863151c6755b3d845a47ab2951c3c6a9296e556d0437287ddb6f",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3084,10 +3116,10 @@
       "reference_sha256": "61c1050b11c8bbb1674bc35107ccf83f2634ee6c8248c9983ba552343d911113",
       "reference_entry": 2890376,
       "candidate_source": "candidates/levels/18_damosel.c",
-      "source_sha256": "6084486268b3f42288998058741155c625f9e168523985d36e20b54ec8975ccd",
-      "catalog_sha256": "8214dc8fca1b267b63feaeaa49445d7707e135d76afbc93d11b2dab204e98cbb",
-      "object_sha256": "c03f75640f3ace02596b49554d7d5e57125ec60d4c365178d75118afe0c71d6a",
-      "candidate_elf_sha256": "05edd8857d17ba25ecef3e0d53efd96a4ad7acdbb6c256d8fedf59de543631a1",
+      "source_sha256": "5f7575c68c83b5f51ed6b2a86ddde7bb9ab1d939c2c31748a4172d2f879dc8af",
+      "catalog_sha256": "b8d8b502b961c874e18e6af8843e976e249c1dcf5a41e1b3be579ef02c3996f1",
+      "object_sha256": "26161971d09b30b6d36aac5a36ca12f79f68ae1d001a0f40944b40312ee740c6",
+      "candidate_elf_sha256": "057f0689edae2f36067ec9abaafb85a031d87d3ebfba5542d22677b42c3fd92c",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3475,11 +3507,33 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 52
+        },
+        {
+          "symbol": "LVL_18_DAMOSEL_FUN_002CB2A8",
+          "address": 2929320,
+          "size": 80,
+          "matched": true,
+          "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+          "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 80
+        },
+        {
+          "symbol": "LVL_18_DAMOSEL_FUN_0031FE88",
+          "address": 3276424,
+          "size": 124,
+          "matched": true,
+          "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+          "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 124
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 3324
+      "matched_code_bytes": 3528
     },
-    "object_sha256": "c03f75640f3ace02596b49554d7d5e57125ec60d4c365178d75118afe0c71d6a"
+    "object_sha256": "26161971d09b30b6d36aac5a36ca12f79f68ae1d001a0f40944b40312ee740c6"
   }
 }

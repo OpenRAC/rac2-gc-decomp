@@ -601,3 +601,43 @@ void LVL_25_WUPASH_NEBULA_FUN_0044BA20(f32 x, f32 y, f32 z, f32 w, JammingGridOb
     object->groups[group].rows[row].z = z;
     object->groups[group].rows[row].w = w;
 }
+
+typedef struct {
+    u8 pad0000[0x2294];
+    u32 kind;
+    u32 unknown2298;
+    u32 mode;
+} ResidentFlags2294;
+
+s32 LVL_25_WUPASH_NEBULA_FUN_002C1180(void)
+{
+    ResidentFlags2294 *root = (ResidentFlags2294 *)LVL_25_WUPASH_NEBULA_D_00189E20;
+
+    if (root->mode == 17 || root->mode == 18
+        || root->kind == 0x67 || root->kind == 0x7f
+        || root->kind == 0x73 || root->kind == 0x72) {
+        return 1;
+    }
+    return 0;
+}
+
+typedef struct {
+    u8 pad0000[0x0000];
+} ResidentBase1395B8;
+
+s32 LVL_25_WUPASH_NEBULA_FUN_00317FD8(s32 index)
+{
+    s32 byte = index / 8;
+    s32 bit = index % 8;
+    s32 old;
+
+    if ((u32)bit < 8) {
+        old = (LVL_25_WUPASH_NEBULA_D_001395B8[byte + 0xA7] >> bit) & 1;
+    } else {
+        old = 0;
+    }
+    if ((u32)bit < 8) {
+        LVL_25_WUPASH_NEBULA_D_001395B8[byte + 0xA7] |= 1 << bit;
+    }
+    return old;
+}

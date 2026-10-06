@@ -1,253 +1,260 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "8_tabora",
-  "program": "levels/8_tabora",
-  "reference_sha256": "37c1b1c86b8800fb3930b539fe4b5c94dccf42e7bb5960154477f63731dd48a5",
   "entry": 2843784,
-  "source": "candidates/levels/8_tabora.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "D_19B278": 1684088,
+    "LVL_8_TABORA_D_00139568": 1283432,
+    "LVL_8_TABORA_D_001395B8": 1283512,
+    "LVL_8_TABORA_D_00189E20": 1613344,
+    "LVL_8_TABORA_D_0018B040": 1617984,
+    "LVL_8_TABORA_D_0018B134": 1618228,
+    "LVL_8_TABORA_D_0018C0B0": 1622192,
+    "LVL_8_TABORA_D_0018C0B4": 1622196,
+    "LVL_8_TABORA_D_001A79F0": 1735152,
+    "LVL_8_TABORA_D_001A8EB0": 1740464,
+    "LVL_8_TABORA_D_001A9AA0": 1743520,
+    "LVL_8_TABORA_D_001A9AA8": 1743528,
+    "LVL_8_TABORA_D_001B2940": 1780032,
+    "LVL_8_TABORA_D_001B2980": 1780096,
+    "LVL_8_TABORA_D_001B9940": 1808704,
+    "LVL_8_TABORA_D_001BFC40": 1834048,
+    "LVL_8_TABORA_D_001CA0E0": 1876192,
+    "LVL_8_TABORA_D_00227440": 2257984,
+    "LVL_8_TABORA_D_0022E340": 2286400,
+    "LVL_8_TABORA_D_0022E940": 2287936,
+    "LVL_8_TABORA_D_00232080": 2302080,
+    "LVL_8_TABORA_D_0025D170": 2478448,
+    "LVL_8_TABORA_D_0026CCF0": 2542832,
+    "LVL_8_TABORA_D_00288480": 2655360,
+    "LVL_8_TABORA_FUN_002E3480": 3028096,
+    "LVL_8_TABORA_FUN_002E8918": 3049752,
+    "LVL_8_TABORA_FUN_002E8C60": 3050592,
+    "LVL_8_TABORA_FUN_002F9B30": 3119920,
+    "LVL_8_TABORA_FUN_002F9E20": 3120672,
+    "LVL_8_TABORA_FUN_002FA298": 3121816,
+    "LVL_8_TABORA_FUN_002FC310": 3130128,
+    "LVL_8_TABORA_FUN_002FC678": 3131000,
+    "LVL_8_TABORA_FUN_003003D8": 3146712,
+    "LVL_8_TABORA_FUN_0036DA40": 3594816,
+    "LVL_8_TABORA_FUN_00389AB0": 3709616
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_8_TABORA_FUN_002BF518",
       "address": 2880792,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_8_TABORA_FUN_002BF518"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002BF550",
       "address": 2880848,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_8_TABORA_FUN_002BF550"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002BF680",
       "address": 2881152,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_8_TABORA_FUN_002BF680"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002C0170",
       "address": 2883952,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_8_TABORA_FUN_002C0170"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002E26D0",
       "address": 3024592,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_8_TABORA_FUN_002E26D0"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002E3728",
       "address": 3028776,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_8_TABORA_FUN_002E3728"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002EF8B8",
       "address": 3078328,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_8_TABORA_FUN_002EF8B8"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002FFAB8",
       "address": 3144376,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_8_TABORA_FUN_002FFAB8"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002E2F28",
       "address": 3026728,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_8_TABORA_FUN_002E2F28"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002F1658",
       "address": 3085912,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_8_TABORA_FUN_002F1658"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002BF588",
       "address": 2880904,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_8_TABORA_FUN_002BF588"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002BF5C0",
       "address": 2880960,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_8_TABORA_FUN_002BF5C0"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002C4898",
       "address": 2902168,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_8_TABORA_FUN_002C4898"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_0038C158",
       "address": 3719512,
+      "meaning": "returns the packed header's signed rounded sixteen-byte block count in word units",
       "size": 56,
-      "meaning": "returns the packed header's signed rounded sixteen-byte block count in word units"
+      "symbol": "LVL_8_TABORA_FUN_0038C158"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_00302E70",
       "address": 3157616,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_8_TABORA_FUN_00302E70"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_00311FA0",
       "address": 3219360,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_8_TABORA_FUN_00311FA0"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_0038E720",
       "address": 3729184,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_8_TABORA_FUN_0038E720"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_003791E8",
       "address": 3641832,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_8_TABORA_FUN_003791E8"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_00407DC8",
       "address": 4226504,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_8_TABORA_FUN_00407DC8"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002E2590",
       "address": 3024272,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_8_TABORA_FUN_002E2590"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002B78D0",
       "address": 2848976,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_8_TABORA_FUN_002B78D0"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002FF790",
       "address": 3143568,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_8_TABORA_FUN_002FF790"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_00390AB8",
       "address": 3738296,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_8_TABORA_FUN_00390AB8"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002E2510",
       "address": 3024144,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_8_TABORA_FUN_002E2510"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002E2958",
       "address": 3025240,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_8_TABORA_FUN_002E2958"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002FF0F8",
       "address": 3141880,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_8_TABORA_FUN_002FF0F8"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_00315620",
       "address": 3233312,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_8_TABORA_FUN_00315620"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002C4FA0",
       "address": 2903968,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_8_TABORA_FUN_002C4FA0"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_00455980",
       "address": 4544896,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_8_TABORA_FUN_00455980"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_0031E448",
       "address": 3269704,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_8_TABORA_FUN_0031E448"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_002E8870",
       "address": 3049584,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_8_TABORA_FUN_002E8870"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_0045ADF8",
       "address": 4566520,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_8_TABORA_FUN_0045ADF8"
     },
     {
-      "symbol": "LVL_8_TABORA_FUN_0045B290",
       "address": 4567696,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_8_TABORA_FUN_0045B290"
+    },
+    {
+      "address": 3364552,
+      "meaning": "counts the non-zero bytes of the 0x1C by 4 byte table at 0x19B278 and returns the count clamped into 0..0x28",
+      "size": 112,
+      "symbol": "LVL_8_TABORA_FUN_003356C8"
     }
   ],
-  "externals": {
-    "LVL_8_TABORA_D_001A8EB0": 1740464,
-    "LVL_8_TABORA_D_0018C0B4": 1622196,
-    "LVL_8_TABORA_D_00189E20": 1613344,
-    "LVL_8_TABORA_FUN_002E3480": 3028096,
-    "LVL_8_TABORA_FUN_002FC310": 3130128,
-    "LVL_8_TABORA_FUN_002FC678": 3131000,
-    "LVL_8_TABORA_FUN_00389AB0": 3709616,
-    "LVL_8_TABORA_D_00288480": 2655360,
-    "LVL_8_TABORA_D_001395B8": 1283512,
-    "LVL_8_TABORA_D_00232080": 2302080,
-    "LVL_8_TABORA_D_0022E940": 2287936,
-    "LVL_8_TABORA_D_00227440": 2257984,
-    "LVL_8_TABORA_D_0022E340": 2286400,
-    "LVL_8_TABORA_D_0025D170": 2478448,
-    "LVL_8_TABORA_D_0018C0B0": 1622192,
-    "LVL_8_TABORA_D_0018B134": 1618228,
-    "LVL_8_TABORA_D_0018B040": 1617984,
-    "LVL_8_TABORA_D_00139568": 1283432,
-    "LVL_8_TABORA_D_0026CCF0": 2542832,
-    "LVL_8_TABORA_FUN_002F9B30": 3119920,
-    "LVL_8_TABORA_D_001A79F0": 1735152,
-    "LVL_8_TABORA_D_001B9940": 1808704,
-    "LVL_8_TABORA_D_001BFC40": 1834048,
-    "LVL_8_TABORA_D_001CA0E0": 1876192,
-    "LVL_8_TABORA_D_001A9AA0": 1743520,
-    "LVL_8_TABORA_D_001A9AA8": 1743528,
-    "LVL_8_TABORA_FUN_003003D8": 3146712,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_8_TABORA_FUN_0036DA40": 3594816,
-    "LVL_8_TABORA_D_001B2940": 1780032,
-    "LVL_8_TABORA_D_001B2980": 1780096,
-    "LVL_8_TABORA_FUN_002E8918": 3049752,
-    "LVL_8_TABORA_FUN_002F9E20": 3120672,
-    "LVL_8_TABORA_FUN_002FA298": 3121816,
-    "LVL_8_TABORA_FUN_002E8C60": 3050592
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "8_tabora",
+  "program": "levels/8_tabora",
+  "reference_sha256": "37c1b1c86b8800fb3930b539fe4b5c94dccf42e7bb5960154477f63731dd48a5",
+  "schema": 1,
+  "source": "candidates/levels/8_tabora.c",
+  "target": "SCUS_972.68"
 }

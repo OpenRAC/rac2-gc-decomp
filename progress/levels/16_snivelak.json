@@ -2638,6 +2638,34 @@
       "program": "16_snivelak",
       "candidate_source": "candidates/levels/16_snivelak.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_16_SNIVELAK_FUN_002AE460",
+      "address": 2810976,
+      "size": 80,
+      "matched": true,
+      "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "16_snivelak",
+      "candidate_source": "candidates/levels/16_snivelak.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_16_SNIVELAK_FUN_002FF078",
+      "address": 3141752,
+      "size": 124,
+      "matched": true,
+      "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "16_snivelak",
+      "candidate_source": "candidates/levels/16_snivelak.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2645,14 +2673,14 @@
     "bytes_compared": 2799304,
     "segments": 1
   },
-  "matched_code_bytes": 10976,
+  "matched_code_bytes": 11180,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "8c3ea84d7bcdcfb716f011cf065bf4408f7471bb3879a9cd0b2cb2bfb55dfc03",
+  "candidate_elf_sha256": "8af20318d608e6361c2be0e97972652bd7bf23ca9700066269c1dfa62bbbcca5",
   "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
   "replacement_inputs": {
     "FE780.s": [
@@ -2843,7 +2871,9 @@
       "LVL_16_SNIVELAK_FUN_0030AB10",
       "LVL_16_SNIVELAK_FUN_002D5D00",
       "LVL_16_SNIVELAK_FUN_0044A950",
-      "LVL_16_SNIVELAK_FUN_0044ADE8"
+      "LVL_16_SNIVELAK_FUN_0044ADE8",
+      "LVL_16_SNIVELAK_FUN_002AE460",
+      "LVL_16_SNIVELAK_FUN_002FF078"
     ]
   },
   "schema": 2,
@@ -2868,7 +2898,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "8c3ea84d7bcdcfb716f011cf065bf4408f7471bb3879a9cd0b2cb2bfb55dfc03",
+    "candidate_elf_sha256": "8af20318d608e6361c2be0e97972652bd7bf23ca9700066269c1dfa62bbbcca5",
     "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
     "replacement_inputs": {
       "FE780.s": [
@@ -3059,7 +3089,9 @@
         "LVL_16_SNIVELAK_FUN_0030AB10",
         "LVL_16_SNIVELAK_FUN_002D5D00",
         "LVL_16_SNIVELAK_FUN_0044A950",
-        "LVL_16_SNIVELAK_FUN_0044ADE8"
+        "LVL_16_SNIVELAK_FUN_0044ADE8",
+        "LVL_16_SNIVELAK_FUN_002AE460",
+        "LVL_16_SNIVELAK_FUN_002FF078"
       ]
     }
   },
@@ -3069,13 +3101,13 @@
   },
   "reference_entry": 2774024,
   "candidate_entry": 2774024,
-  "dependency_sha256": "4dbae0abc7f4e4a98a8ecf0f09b2581b754c76a87690d1a6f93d005bfdd0c172",
+  "dependency_sha256": "092f8beb6d6759297804b6c13a84fb7453d84931a130e312628729817d6cee23",
   "boot_review_sha256": "80d0b16935af6777f1d73a5489b12588540d0f5593a2d7a8be9af4cf00ce9b9a",
   "native": {
     "source": "candidates/levels/16_snivelak.c",
     "catalog_path": "config/level-native/16_snivelak.json",
     "review_path": "progress/level-candidates/16_snivelak.json",
-    "review_sha256": "2486f2cd8c6e9ec9f963b3b48f5cc23b984ec43ed1f65240e33301906c407052",
+    "review_sha256": "e2e88ea69139864a5ac0ae21479b22a46fe6376a534b46c34487d94d691c8eec",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3084,10 +3116,10 @@
       "reference_sha256": "ad5840ad4ebfef75199ad6196e36ba010d99970e75d0de681a050ab4c59f944b",
       "reference_entry": 2774024,
       "candidate_source": "candidates/levels/16_snivelak.c",
-      "source_sha256": "86c90a7f88526c2193a151e5391ab862a44afb395af11726f2ae03cfea24501d",
-      "catalog_sha256": "df1e4df8cc3cdb2de65dd29c752b198aea4b7bcb00f7593cad2150705bd3f8e9",
-      "object_sha256": "54745c7d711a67741d7313b477a32fa3b9e9cecb80cab12ef663d2a848f0f72e",
-      "candidate_elf_sha256": "bc2faacec140ac623755b34b21c8d2492fca24bae9781da4c075d265d1cfb0f7",
+      "source_sha256": "4f6b46bd3cab3f325ccd407585e0362a6fa7e79779557ac4aab3d52002b0c08c",
+      "catalog_sha256": "36b0b7828453a83d90f381975e52419877168092ecd1a4791f7f2f888fef4a16",
+      "object_sha256": "283f16c3f9abc4e30220c84276b1b9ee5ccde8998512f7a2f395c12260c813a6",
+      "candidate_elf_sha256": "21e6ea545af1f974ec122d3a94c6d9af80f564e13ae5e1cc75ca1d3e7816cc36",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3475,11 +3507,33 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 52
+        },
+        {
+          "symbol": "LVL_16_SNIVELAK_FUN_002AE460",
+          "address": 2810976,
+          "size": 80,
+          "matched": true,
+          "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+          "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 80
+        },
+        {
+          "symbol": "LVL_16_SNIVELAK_FUN_002FF078",
+          "address": 3141752,
+          "size": 124,
+          "matched": true,
+          "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+          "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 124
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 3304
+      "matched_code_bytes": 3508
     },
-    "object_sha256": "54745c7d711a67741d7313b477a32fa3b9e9cecb80cab12ef663d2a848f0f72e"
+    "object_sha256": "283f16c3f9abc4e30220c84276b1b9ee5ccde8998512f7a2f395c12260c813a6"
   }
 }

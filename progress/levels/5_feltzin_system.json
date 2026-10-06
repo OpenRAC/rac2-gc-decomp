@@ -2666,6 +2666,20 @@
       "program": "5_feltzin_system",
       "candidate_source": "candidates/levels/5_feltzin_system.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0033D280",
+      "address": 3396224,
+      "size": 112,
+      "matched": true,
+      "reference_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "candidate_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "5_feltzin_system",
+      "candidate_source": "candidates/levels/5_feltzin_system.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2673,14 +2687,14 @@
     "bytes_compared": 2863992,
     "segments": 1
   },
-  "matched_code_bytes": 11108,
+  "matched_code_bytes": 11220,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "c3c2277a63aa7c0cbe22ce100b9f1c4382f5a19ce839afdaa9180dce55861b7f",
+  "candidate_elf_sha256": "1ed7c0ec56113b8b81b0567d809bec4955c02f882bd733d961e15812fabaa773",
   "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
   "replacement_inputs": {
     "115780.s": [
@@ -2873,7 +2887,8 @@
       "LVL_5_FELTZIN_SYSTEM_FUN_00329728",
       "LVL_5_FELTZIN_SYSTEM_FUN_002F51C0",
       "LVL_5_FELTZIN_SYSTEM_FUN_0045A600",
-      "LVL_5_FELTZIN_SYSTEM_FUN_0045AA98"
+      "LVL_5_FELTZIN_SYSTEM_FUN_0045AA98",
+      "LVL_5_FELTZIN_SYSTEM_FUN_0033D280"
     ]
   },
   "schema": 2,
@@ -2898,7 +2913,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "c3c2277a63aa7c0cbe22ce100b9f1c4382f5a19ce839afdaa9180dce55861b7f",
+    "candidate_elf_sha256": "1ed7c0ec56113b8b81b0567d809bec4955c02f882bd733d961e15812fabaa773",
     "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
     "replacement_inputs": {
       "115780.s": [
@@ -3091,7 +3106,8 @@
         "LVL_5_FELTZIN_SYSTEM_FUN_00329728",
         "LVL_5_FELTZIN_SYSTEM_FUN_002F51C0",
         "LVL_5_FELTZIN_SYSTEM_FUN_0045A600",
-        "LVL_5_FELTZIN_SYSTEM_FUN_0045AA98"
+        "LVL_5_FELTZIN_SYSTEM_FUN_0045AA98",
+        "LVL_5_FELTZIN_SYSTEM_FUN_0033D280"
       ]
     }
   },
@@ -3101,13 +3117,13 @@
   },
   "reference_entry": 2868232,
   "candidate_entry": 2868232,
-  "dependency_sha256": "e624686c7ff234afa9033cdf3421ba5be8afc56c6fcd1ddb6bbea0c1d73ac744",
+  "dependency_sha256": "93a1e82e4afb8ec987b1f7cacdf5d6f1b7d3eefbe9a7c3d138ad02c9610f279c",
   "boot_review_sha256": "80d0b16935af6777f1d73a5489b12588540d0f5593a2d7a8be9af4cf00ce9b9a",
   "native": {
     "source": "candidates/levels/5_feltzin_system.c",
     "catalog_path": "config/level-native/5_feltzin_system.json",
     "review_path": "progress/level-candidates/5_feltzin_system.json",
-    "review_sha256": "5fe60f4ecdb5b51cd87286ec47926747a272d8bd87001da366f9a87cb32132b6",
+    "review_sha256": "3f68c218331e095610f10952c126b5489abae10931619c4c3df0e35825ff2108",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3116,10 +3132,10 @@
       "reference_sha256": "bd41a03a57871a6f33106d5277c6b4918f379ceaa5f780a84c82360b421204fb",
       "reference_entry": 2868232,
       "candidate_source": "candidates/levels/5_feltzin_system.c",
-      "source_sha256": "d609be13fa751ac06004eb0b5b7253dd72c6f1fdd86c11ed72b7abad329d3fc1",
-      "catalog_sha256": "d873501b857f6ade41439d0b5f1c7c8eb87b8155703d4a52fd8985425e1882d4",
-      "object_sha256": "945c1a24889820384931d12279f5e5ae4c97e436497a145f9982ee81c5d893df",
-      "candidate_elf_sha256": "daeda98f2c68c9f9d49d916354cd176295a379a0b212984e69eb0fd71d5bbdaa",
+      "source_sha256": "972c0978898987a547d36266f29d5068d4fe090af9758e81cf63937b902c4072",
+      "catalog_sha256": "9dcdb04a81016301edeb58afda8fe60cb43be4c3a1ca2851d82d6bf0fc561040",
+      "object_sha256": "8bef857f720d78691c326331274fb83cd20261eb5eac3a6851f125bbe1329d0b",
+      "candidate_elf_sha256": "6a13dc9154c6bdda24c84656d2e4a43ff08ee201c9ee82aa512bf1b8ec4bfd72",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3529,11 +3545,22 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 52
+        },
+        {
+          "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0033D280",
+          "address": 3396224,
+          "size": 112,
+          "matched": true,
+          "reference_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+          "candidate_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 112
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 3436
+      "matched_code_bytes": 3548
     },
-    "object_sha256": "945c1a24889820384931d12279f5e5ae4c97e436497a145f9982ee81c5d893df"
+    "object_sha256": "8bef857f720d78691c326331274fb83cd20261eb5eac3a6851f125bbe1329d0b"
   }
 }

@@ -2666,6 +2666,34 @@
       "program": "30_insomniac_museum",
       "candidate_source": "candidates/levels/30_insomniac_museum.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_002B4D80",
+      "address": 2837888,
+      "size": 80,
+      "matched": true,
+      "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "30_insomniac_museum",
+      "candidate_source": "candidates/levels/30_insomniac_museum.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_0030C228",
+      "address": 3195432,
+      "size": 124,
+      "matched": true,
+      "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "30_insomniac_museum",
+      "candidate_source": "candidates/levels/30_insomniac_museum.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2673,14 +2701,14 @@
     "bytes_compared": 2766936,
     "segments": 1
   },
-  "matched_code_bytes": 11108,
+  "matched_code_bytes": 11312,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "a9bf6445c94b2635219b961c3000b98d22ff6f6181cc2545a529efc8a0d14037",
+  "candidate_elf_sha256": "830391d48a1668ae563c69344455e15fd5e13237e9fbdb89f8d886978e30f277",
   "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
   "replacement_inputs": {
     "103D00.s": [
@@ -2873,7 +2901,9 @@
       "LVL_30_INSOMNIAC_MUSEUM_FUN_00317CC0",
       "LVL_30_INSOMNIAC_MUSEUM_FUN_002E38D8",
       "LVL_30_INSOMNIAC_MUSEUM_FUN_00442AE0",
-      "LVL_30_INSOMNIAC_MUSEUM_FUN_00442F78"
+      "LVL_30_INSOMNIAC_MUSEUM_FUN_00442F78",
+      "LVL_30_INSOMNIAC_MUSEUM_FUN_002B4D80",
+      "LVL_30_INSOMNIAC_MUSEUM_FUN_0030C228"
     ]
   },
   "schema": 2,
@@ -2898,7 +2928,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "a9bf6445c94b2635219b961c3000b98d22ff6f6181cc2545a529efc8a0d14037",
+    "candidate_elf_sha256": "830391d48a1668ae563c69344455e15fd5e13237e9fbdb89f8d886978e30f277",
     "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
     "replacement_inputs": {
       "103D00.s": [
@@ -3091,7 +3121,9 @@
         "LVL_30_INSOMNIAC_MUSEUM_FUN_00317CC0",
         "LVL_30_INSOMNIAC_MUSEUM_FUN_002E38D8",
         "LVL_30_INSOMNIAC_MUSEUM_FUN_00442AE0",
-        "LVL_30_INSOMNIAC_MUSEUM_FUN_00442F78"
+        "LVL_30_INSOMNIAC_MUSEUM_FUN_00442F78",
+        "LVL_30_INSOMNIAC_MUSEUM_FUN_002B4D80",
+        "LVL_30_INSOMNIAC_MUSEUM_FUN_0030C228"
       ]
     }
   },
@@ -3101,13 +3133,13 @@
   },
   "reference_entry": 2795912,
   "candidate_entry": 2795912,
-  "dependency_sha256": "62682ee01ff47bf7b0b52414cd0b918a8d63e96641f2425904c000f02c57ff34",
+  "dependency_sha256": "fdf98c1f6c6df249a7ed42642afe41b848df9caf9440333597ee82450f146ac1",
   "boot_review_sha256": "80d0b16935af6777f1d73a5489b12588540d0f5593a2d7a8be9af4cf00ce9b9a",
   "native": {
     "source": "candidates/levels/30_insomniac_museum.c",
     "catalog_path": "config/level-native/30_insomniac_museum.json",
     "review_path": "progress/level-candidates/30_insomniac_museum.json",
-    "review_sha256": "950e1130787c2a564df721ae055ae1071688868a15c48308677fdcdae59dd177",
+    "review_sha256": "92135a287ba2e96463af7ce5ffd247cef1e6d316dbbbb1cb0c01094feec1549f",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3116,10 +3148,10 @@
       "reference_sha256": "b638bb36997a9b3e8041738f45b0c624c01fe4ad9ae601ff50e305916ff3040c",
       "reference_entry": 2795912,
       "candidate_source": "candidates/levels/30_insomniac_museum.c",
-      "source_sha256": "2744b953fa94f28a4929f51ad3ed8607b19dbee8e485ee1014ce8480ac32efd5",
-      "catalog_sha256": "a8fa34c8d6b4d738d9468efb48ae234780c3f771647893979a451769e9fd7860",
-      "object_sha256": "37769414a3341a85669aff06584713c3cef6ec363714af1af671ecd53b5bd092",
-      "candidate_elf_sha256": "5970de2ec6c85ddf3b0495dd011a36d1ed5804c1de887ca2fdc6f0af6e3cc3de",
+      "source_sha256": "a47402745bb534518fef987028ee9db56f5fe258301e16ef39140c8b0488ff9a",
+      "catalog_sha256": "8a31804b8d5cffb868da34219c63dac4f2d100ff8703c46a91d643cf68453a90",
+      "object_sha256": "9ac613eeeca155f1ac4f3287d6018e80107bebbc5200edf1375989479692cbe6",
+      "candidate_elf_sha256": "585b463ea7dfb3be871e81bf427c827abe59f29d6941a085a4c6eca54c7d61b9",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3529,11 +3561,33 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 52
+        },
+        {
+          "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_002B4D80",
+          "address": 2837888,
+          "size": 80,
+          "matched": true,
+          "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+          "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 80
+        },
+        {
+          "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_0030C228",
+          "address": 3195432,
+          "size": 124,
+          "matched": true,
+          "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+          "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 124
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 3436
+      "matched_code_bytes": 3640
     },
-    "object_sha256": "37769414a3341a85669aff06584713c3cef6ec363714af1af671ecd53b5bd092"
+    "object_sha256": "9ac613eeeca155f1ac4f3287d6018e80107bebbc5200edf1375989479692cbe6"
   }
 }
