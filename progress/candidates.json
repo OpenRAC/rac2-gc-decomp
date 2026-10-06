@@ -1,6 +1,6 @@
 {
-  "candidate_elf_sha256": "7f9144013e549c936908cabb3c907fa8f1938552775ca0139e69153bbf917ef2",
-  "catalog_sha256": "33310dd81e5428cb17945fc3f539f6d66978453244d8c397137a32516f2bc86f",
+  "candidate_elf_sha256": "5e13e4a6f4f1fbdfb82b2c7b3d78f16265b769aeb0ac1169c0f0e918143c473d",
+  "catalog_sha256": "191d599a65fe5d6fcb7b645e6890d78b91ccda7319e908ebd211548c1307ffcb",
   "checker_sha256": "2964b71f90ba9910bbce6359331a88ceb3cfc64e4a444f35b90083adfa60b26f",
   "flags": [
     "-O2",
@@ -2020,14 +2020,25 @@
       "size": 124,
       "state": "matched_unintegrated",
       "symbol": "FUN_00294E48"
+    },
+    {
+      "address": 2821560,
+      "candidate_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "different_bytes": 0,
+      "matched": true,
+      "produced_size": 112,
+      "reference_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "size": 112,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_002B0DB8"
     }
   ],
   "integrated_functions": 0,
-  "object_sha256": "5ab80fabc83570709c75418e78042a360a3b803d35c8e6ebcf1552a1fc95caa6",
-  "profile_scope": "Only the fully matched complete functions below; not a general RAC2 compiler qualification",
+  "object_sha256": "417217ef9ec7f710567b5f6edbf1df21cda73b3b75c784c8de6ce1a4092f5f65",
+  "profile_scope": "Only fully matched complete functions below; no general compiler or loaded-image qualification",
   "read_only_sections": [],
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "8634f1a444b442305f731b242b222681938470ccafaa8ca93eb9710edaced301",
+  "source_sha256": "20270f2afddb41bea71d840198237d9812be697b8149a2cb7b637bb052aa2ecf",
   "target": "SCUS_972.68",
   "tools": {
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
@@ -2035,5 +2046,5 @@
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "verified_at": "2026-10-06T05:07:24.354517+00:00"
+  "verified_at": "2026-10-06T05:53:22.836946+00:00"
 }

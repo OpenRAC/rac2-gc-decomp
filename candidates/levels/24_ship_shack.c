@@ -795,3 +795,25 @@ s32 LVL_24_SHIP_SHACK_FUN_00303C08(s32 index)
     }
     return old;
 }
+
+extern unsigned char D_19B278[];
+
+int LVL_24_SHIP_SHACK_FUN_003224F8(void)
+{
+    int count = 0;
+    int i;
+
+    for (i = 0; i < 0x1C; i++) {
+        int j;
+
+        for (j = 0; j < 4; j++) {
+            if (D_19B278[i * 4 + j] != 0)
+                count++;
+        }
+    }
+    if (count < 0)
+        count = 0;
+    if (count > 0x28)
+        count = 0x28;
+    return count;
+}

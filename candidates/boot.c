@@ -2705,3 +2705,25 @@ s32 FUN_00294E48(s32 index)
     }
     return old;
 }
+
+extern unsigned char D_19B278[];
+
+int FUN_002B0DB8(void)
+{
+    int count = 0;
+    int i;
+
+    for (i = 0; i < 0x1C; i++) {
+        int j;
+
+        for (j = 0; j < 4; j++) {
+            if (D_19B278[i * 4 + j] != 0)
+                count++;
+        }
+    }
+    if (count < 0)
+        count = 0;
+    if (count > 0x28)
+        count = 0x28;
+    return count;
+}

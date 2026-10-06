@@ -2,7 +2,7 @@
   "target": "SCUS_972.68",
   "program": "20_yeedil",
   "reference_sha256": "af33c5378811e9d57c612c10002ca5c92eb676add3db0552ab2d6231034cafc8",
-  "source_sha256": "8634f1a444b442305f731b242b222681938470ccafaa8ca93eb9710edaced301",
+  "source_sha256": "20270f2afddb41bea71d840198237d9812be697b8149a2cb7b637bb052aa2ecf",
   "catalog_sha256": "1f54e6a7a5c289e332db4452a43ced7d52870cd0d5b71c636e94071ee7f39a05",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
@@ -2722,6 +2722,20 @@
       "program": "20_yeedil",
       "candidate_source": "candidates/levels/20_yeedil.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_20_YEEDIL_FUN_0033BE10",
+      "address": 3390992,
+      "size": 112,
+      "matched": true,
+      "reference_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "candidate_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "20_yeedil",
+      "candidate_source": "candidates/levels/20_yeedil.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2729,15 +2743,15 @@
     "bytes_compared": 2977264,
     "segments": 1
   },
-  "matched_code_bytes": 11704,
+  "matched_code_bytes": 11816,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "d0b82a385eefd1579279522e9b97bea1840df404030f953cb34fd0497304a704",
-  "c_object_sha256": "5ab80fabc83570709c75418e78042a360a3b803d35c8e6ebcf1552a1fc95caa6",
+  "candidate_elf_sha256": "12007457125e5421b20eccb323d4f0c0713448e35e3dac9c3d3ff28d15994069",
+  "c_object_sha256": "417217ef9ec7f710567b5f6edbf1df21cda73b3b75c784c8de6ce1a4092f5f65",
   "replacement_inputs": {
     "10FB00.s": [
       "FUN_0026FEB8",
@@ -2933,7 +2947,8 @@
       "LVL_20_YEEDIL_FUN_002C0D10",
       "LVL_20_YEEDIL_FUN_00319DD0",
       "LVL_20_YEEDIL_FUN_00342BE8",
-      "LVL_20_YEEDIL_FUN_0032F620"
+      "LVL_20_YEEDIL_FUN_0032F620",
+      "LVL_20_YEEDIL_FUN_0033BE10"
     ]
   },
   "schema": 2,
@@ -2942,7 +2957,7 @@
     "target": "SCUS_972.68",
     "program": "20_yeedil",
     "reference_sha256": "af33c5378811e9d57c612c10002ca5c92eb676add3db0552ab2d6231034cafc8",
-    "source_sha256": "8634f1a444b442305f731b242b222681938470ccafaa8ca93eb9710edaced301",
+    "source_sha256": "20270f2afddb41bea71d840198237d9812be697b8149a2cb7b637bb052aa2ecf",
     "catalog_sha256": "1f54e6a7a5c289e332db4452a43ced7d52870cd0d5b71c636e94071ee7f39a05",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
@@ -2958,8 +2973,8 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "d0b82a385eefd1579279522e9b97bea1840df404030f953cb34fd0497304a704",
-    "c_object_sha256": "5ab80fabc83570709c75418e78042a360a3b803d35c8e6ebcf1552a1fc95caa6",
+    "candidate_elf_sha256": "12007457125e5421b20eccb323d4f0c0713448e35e3dac9c3d3ff28d15994069",
+    "c_object_sha256": "417217ef9ec7f710567b5f6edbf1df21cda73b3b75c784c8de6ce1a4092f5f65",
     "replacement_inputs": {
       "10FB00.s": [
         "FUN_0026FEB8",
@@ -3155,7 +3170,8 @@
         "LVL_20_YEEDIL_FUN_002C0D10",
         "LVL_20_YEEDIL_FUN_00319DD0",
         "LVL_20_YEEDIL_FUN_00342BE8",
-        "LVL_20_YEEDIL_FUN_0032F620"
+        "LVL_20_YEEDIL_FUN_0032F620",
+        "LVL_20_YEEDIL_FUN_0033BE10"
       ]
     }
   },
@@ -3165,13 +3181,13 @@
   },
   "reference_entry": 2844552,
   "candidate_entry": 2844552,
-  "dependency_sha256": "de89547d6f931643c721fc92d173263f4328f3fcf56e5e6c85540e54aec8764e",
-  "boot_review_sha256": "1613c64afabed8a6e2167e1f6f6fdbff573c07398667a2b243228f82e55628a7",
+  "dependency_sha256": "c3bb15986e164a3a711e8f2a36bb557fc3eb3765a17dbf67cc69a4c92b6dcfc6",
+  "boot_review_sha256": "e1b8b82688c64631ba51b8641ab688ed558ef835c31b9926c612724da578a5e4",
   "native": {
     "source": "candidates/levels/20_yeedil.c",
     "catalog_path": "config/level-native/20_yeedil.json",
     "review_path": "progress/level-candidates/20_yeedil.json",
-    "review_sha256": "01c7603e6a46c25297662af2531bbbb8c82abfa89702a9adda572e5153f9896b",
+    "review_sha256": "2eb7dd54eaa45abc13decc578febe22305986129f368942b38c075f0cabedce0",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3180,10 +3196,10 @@
       "reference_sha256": "af33c5378811e9d57c612c10002ca5c92eb676add3db0552ab2d6231034cafc8",
       "reference_entry": 2844552,
       "candidate_source": "candidates/levels/20_yeedil.c",
-      "source_sha256": "9d60020f580732695ceb97daad6795f148dd9b6d6d9598936493dd18d17ba335",
-      "catalog_sha256": "0db929c7303540339526aaa179b6105e9de1e9be8faa0bbd83eb8132960759b5",
-      "object_sha256": "048b3c1f2eefee8f24eeb4248206d43532a0b588e58df4b8c88deadae8b6861a",
-      "candidate_elf_sha256": "02415c0e35a0157b26b8475f29539d301e9dc2b7c9ea51bd7099a49e26d49d63",
+      "source_sha256": "bf1b5ffa5335c0c2c8c269c145164abe9dd729416611663ff1560a4f49a310fa",
+      "catalog_sha256": "7614a27101c099e75cbf486bcd0cd31493f5f06925254be594fdae7081cff650",
+      "object_sha256": "9e3ecc1718eb53ed73f609a9e0ea527bf39574108e53b95899e3a7db894bcac5",
+      "candidate_elf_sha256": "30b3f274af53d829b2b01ec60c967cd8af5754b3fac3621b411530fed4cf064d",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3648,11 +3664,22 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 68
+        },
+        {
+          "symbol": "LVL_20_YEEDIL_FUN_0033BE10",
+          "address": 3390992,
+          "size": 112,
+          "matched": true,
+          "reference_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+          "candidate_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 112
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 4048
+      "matched_code_bytes": 4160
     },
-    "object_sha256": "048b3c1f2eefee8f24eeb4248206d43532a0b588e58df4b8c88deadae8b6861a"
+    "object_sha256": "9e3ecc1718eb53ed73f609a9e0ea527bf39574108e53b95899e3a7db894bcac5"
   }
 }
