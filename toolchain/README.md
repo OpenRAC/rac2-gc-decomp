@@ -134,6 +134,29 @@ does not establish legal acquisition, R5900 language support or usable emulator
 configuration: the AI and contributor must verify those separately. Prepare the
 pinned references and pass the full baseline gates before contribution work.
 
+## Source-specific SDK boot owner
+
+The boot now links the separately qualified `_sysbitFlush` SDK object alongside
+the unchanged default GNU object. Use the maintained campaign integration route
+with `--sdk-binding <private-sdk-binding.json>`, as shown in
+[CAMPAIGN-WORKFLOW.md](../docs/CAMPAIGN-WORKFLOW.md). The file is private and has
+exactly three fields: `distro`, `workspace_root` and `tool_paths`.
+
+`workspace_root` names a private native Linux directory under `/root/` or `/home/`.
+`tool_paths` supplies the seven instrument roles in
+[`owned-sdk-b9-single-text-controls-v1.json`](../config/compiler-profiles/owned-sdk-b9-single-text-controls-v1.json):
+`driver`, `cc1`, `as`, `strip`, `linker`, `cpp_available` and `cc1plus_available`.
+The linker uses its host path; the other instruments use absolute WSL paths.
+Their hashes must match the qualified owned tools. Flags and stripping arguments
+are fixed by the source-specific unit, rather than configurable in the binding.
+
+The ordinary doctor C probe covers the default GNU chain. It does not supply
+or qualify the owned SDK instruments. This additional admission is limited to
+the exact standalone source and complete object documented in
+[SDK-SYSBIT-EVIDENCE.md](../docs/SDK-SYSBIT-EVIDENCE.md); the existing three-control
+foundation remains leaf-only. The complete boot and all 27 overlay gates remain
+mandatory, and private tools and runtime bindings are never published.
+
 ## Keeping this folder current
 
 Verify upstream ownership, license, applicable version and download provenance

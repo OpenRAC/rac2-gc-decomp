@@ -75,6 +75,8 @@ def build(repo, boundary_path, references, destination, pointer_evidence=None):
     if (repo / 'scripts/global_function_catalog.py').exists():
         required.append('scripts/global_function_catalog.py')
     required.append('scripts/call_graph_refinement.py')
+    required += sorted(unique_code_report.sdk_owner_input_paths(
+        json.loads((repo / 'progress/integration.json').read_bytes()), repo))
     pointer_records, pointer_provenance, pointer_payload_pin = {}, None, None
     if pointer_evidence is not None:
         import pointer_evidence_loader

@@ -186,7 +186,7 @@ def resolved_symbols(directory: Path) -> None:
 
 def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Path, jobs: int, name: str,
             c_toolchain: Path | None = None, level: str | None = None,
-            candidate_review: Path | None = None) -> dict:
+            candidate_review: Path | None = None, sdk_binding: Path | None = None) -> dict:
     if hashlib.sha256(reference.read_bytes()).hexdigest() != expected_hash:
         raise ValueError("Reference changed since verified extraction")
     directory.mkdir(parents=True)
@@ -204,13 +204,12 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
         raise ValueError("No generated assembly")
     c_object = None
     if c_toolchain is not None:
-        from integration import (compile_c, compile_level_c, replace_inputs, add_definitions,
+        from integration import (compile_boot_c, compile_level_c, replace_inputs, add_definitions,
                                  validate_integrated, c_objects)
         if level is None:
             if name != "boot":
                 raise ValueError("C integration is qualified for the boot only")
-            catalog, c_object, c_hashes = (compile_c(reference, directory, c_toolchain) if candidate_review is None
-                                         else compile_c(reference, directory, c_toolchain, candidate_review))
+            catalog, c_object, c_hashes = compile_boot_c(reference, directory, c_toolchain, candidate_review, sdk_binding)
         else:
             if name != "overlay":
                 raise ValueError("Level C integration is qualified for one overlay at a time")
@@ -248,6 +247,9 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
         program = level or "boot"
         functions = validate_integrated(reference, output, catalog, ROOT / "candidates" / "boot.c",
                                         program=program)
+        if "sdk_units" in catalog:
+            from boot_sdk_unit import check_final_tool_closure
+            check_final_tool_closure(directory, ROOT)
         catalog_name = "level-catalog.json" if level else "candidate-catalog.json"
         gate_name = "full_level_gate" if level else "full_boot_gate"
         proof = {"target": TARGET["serial"], "program": program, "reference_sha256": expected_hash,
@@ -260,6 +262,16 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
                  "candidate_elf_sha256": result["candidate_sha256"],
                  "c_object_sha256": hashlib.sha256(c_objects(c_object)[0].read_bytes()).hexdigest(),
                  "replacement_inputs": replacements}
+        if "sdk_units" in catalog:
+            default_rows = [row for row in functions if row["unit_id"] == "default-gnu8bed"]
+            default = {**proof, "matched_code_bytes": sum(row["size"] for row in default_rows)}
+            default.pop("functions")
+            default["c_object_sha256"] = hashlib.sha256(c_object["candidates/boot.c"].read_bytes()).hexdigest()
+            proof = {"schema": 3, "kind": "boot-c-owner-integration", "target": TARGET["serial"],
+                     "program": "boot", "reference_sha256": expected_hash, "state": "integrated",
+                     "functions": functions, "matched_code_bytes": sum(row["size"] for row in functions),
+                     "full_boot_gate": proof["full_boot_gate"], "default": default,
+                     "sdk_units": catalog["sdk_units"]}
         if "native" in catalog:
             from level_native import dependencies, file_hash
             if read_elf(output)["entry"] != catalog["reference_entry"]:

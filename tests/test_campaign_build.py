@@ -96,7 +96,14 @@ class CampaignBuildTests(unittest.TestCase):
         report = self.batch()
         functions = decomp_report.validate_integration(read("progress/integration.json"),
                                                        read("config/target.json"), report)
-        self.assertEqual(len(functions), len(read("config/candidate-catalog.json")["functions"]))
+        default = [row for row in functions if row.get("origin") != "boot-sdk"]
+        sdk = [row for row in functions if row.get("origin") == "boot-sdk"]
+        identity = lambda rows: {(row["symbol"], row["address"], row["size"]) for row in rows}
+        self.assertEqual(identity(default), identity(read("config/candidate-catalog.json")["functions"]))
+        if sdk:
+            self.assertEqual(identity(sdk), identity(read("config/boot-units/sdk-sysbit-flush.json")["functions"]))
+            self.assertEqual(len(sdk), 1)
+        self.assertEqual(len(functions), len(default) + len(sdk))
 
     def test_one_failure_retained_and_blocks_batch(self):
         report = self.batch(failing=True)

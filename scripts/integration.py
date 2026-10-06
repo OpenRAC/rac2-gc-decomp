@@ -41,7 +41,12 @@ def split_assembly(content: str, functions: list[dict], relocated: bool = False)
         # placement keeps the reviewed C symbol and takes the address from the
         # level, so the name/address agreement is only required for the boot.
         if not relocated and function["symbol"] != f"FUN_{address:08X}":
-            raise ValueError("Integration symbol does not identify its address")
+            from boot_sdk_unit import FUNCTION, SOURCE, UNIT
+            if (function.get("unit_id") != UNIT or function.get("origin") != "boot-sdk"
+                    or function.get("candidate_source") != SOURCE
+                    or {key: function[key] for key in FUNCTION} != FUNCTION
+                    or function.get("input_section") != ".text"):
+                raise ValueError("Integration symbol does not identify its address")
         previous_end = address + size
         original_symbol = f"func_{address:08X}"
         starts = starts_by_address.get(address, [])
@@ -181,6 +186,37 @@ def compile_c(reference: Path, directory: Path, toolchain: Path, review_path: Pa
                     "profile_scope": "Independent qualification of the exact object subsequently used in the full boot"}
     (directory / "object-qualification.json").write_text(json.dumps(object_proof, indent=2) + "\n", encoding="utf-8")
     return catalog, object_path, hashes
+
+
+
+def compile_boot_c(reference: Path, directory: Path, toolchain: Path,
+                   review_path: Path | None = None, sdk_binding: Path | None = None):
+    """Preserve the default object and optionally add the admitted SDK boot owner."""
+    default, default_object, default_tools = compile_c(reference, directory, toolchain, review_path)
+    from boot_sdk_unit import CATALOG, SOURCE, MODULE, REVIEW, UNIT, compile_reviewed, file_hash
+    if not (ROOT / CATALOG).exists():
+        return default, default_object, default_tools
+    sdk, sdk_object, sdk_proof = compile_reviewed(reference, directory / "build/c/sdk" / UNIT,
+                                                   ROOT, sdk_binding)
+    default_functions = [{**f, "candidate_source": "candidates/boot.c", "origin": "boot-default",
+                          "unit_id": "default-gnu8bed"} for f in default["functions"]]
+    sdk_functions = [{**f, "candidate_source": SOURCE, "origin": "boot-sdk", "unit_id": UNIT,
+                      "input_section": ".text"} for f in sdk["functions"]]
+    from level_native import ranges
+    ranges(default_functions + sdk_functions)
+    require_symbols = {f["symbol"] for f in default_functions + sdk_functions}
+    if len(require_symbols) != len(default_functions + sdk_functions):
+        raise ValueError("Boot object owner symbols collide")
+    union = {**default, "functions": default_functions + sdk_functions,
+             "compiled_sources": {"candidates/boot.c": default["compiled_source_sha256"],
+                                  SOURCE: sdk["source_sha256"]},
+             "sdk_units": {UNIT: {"unit_id": UNIT, "source": SOURCE, "module": MODULE,
+                                   "catalog_path": CATALOG, "review_path": REVIEW,
+                                   "review_sha256": file_hash(ROOT / REVIEW),
+                                   "profile_id": sdk["profile_id"], "input_section": ".text",
+                                   "object_proof": sdk_proof}},
+             "default_functions": default_functions}
+    return union, {"candidates/boot.c": default_object, SOURCE: sdk_object}, default_tools
 
 
 def level_catalog(level: str) -> dict:
@@ -366,7 +402,10 @@ def replace_inputs(directory: Path, sources: list[Path], catalog: dict, c_object
                 function = piece["function"]
                 found.add(function["symbol"])
                 owner = c_object[function["candidate_source"]] if isinstance(c_object, dict) else c_object
-                new_inputs.append(owner.relative_to(directory).as_posix() + f"(.text.{function['symbol']});")
+                input_section = function.get('input_section', '.text.' + function['symbol'])
+                if input_section not in {'.text', '.text.' + function['symbol']}:
+                    raise ValueError('Unreviewed per-owner input section')
+                new_inputs.append(owner.relative_to(directory).as_posix() + f'({input_section});')
             else:
                 fragment = directory / "asm_pp" / "integrated" / f"{source.stem}_{index}.s"
                 fragment.parent.mkdir(exist_ok=True)
@@ -416,7 +455,9 @@ def validate_integrated(reference: Path, candidate: Path, catalog: dict, source:
     for result in results:
         result.update({"integrated": True, "program": program})
         result["state"] = "integrated"
-        if "native" in catalog:
+        if "native" in catalog or "sdk_units" in catalog:
             function = next(item for item in catalog["functions"] if item["symbol"] == result["symbol"])
             result.update({"candidate_source": function["candidate_source"], "origin": function["origin"]})
+            if "sdk_units" in catalog:
+                result["unit_id"] = function["unit_id"]
     return results

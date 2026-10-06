@@ -91,6 +91,30 @@ class BuilderTests(unittest.TestCase):
         self.assertEqual(manifest, second)
         self.assertEqual(payload, (self.root / "metadata2" / chunk["path"]).read_bytes())
 
+    def test_sdk_owner_closure_enters_manifest_and_checks_freshness(self):
+        owner_path = 'src/sdk/fixture.c'
+        path = self.repo / owner_path
+        path.parent.mkdir(parents=True)
+        path.write_bytes(b'qualified source')
+        with patch.object(builder.unique_code_report, 'sdk_owner_input_paths', return_value={owner_path}) as closure:
+            manifest, _ = self.build()
+        closure.assert_called_once_with({}, self.repo)
+        self.assertEqual(next(p['sha256'] for p in manifest['input_pins'] if p['path'] == owner_path),
+                         builder.sha(b'qualified source'))
+
+    def test_sdk_owner_source_changes_during_normalization_refused(self):
+        owner_path = 'src/sdk/fixture.c'
+        path = self.repo / owner_path
+        path.parent.mkdir(parents=True)
+        path.write_bytes(b'qualified source')
+        def changed(data, address, context):
+            path.write_bytes(b'changed source')
+            return self.normalize(data, address, context)
+        with patch.object(builder.unique_code_report, 'sdk_owner_input_paths', return_value={owner_path}), \
+             self.assertRaisesRegex(ValueError, 'changed'):
+            self.build(normalize=changed)
+        self.assertFalse(self.output.exists())
+
     def test_existing_destination_and_public_wrong_parent_rejected(self):
         self.output.mkdir()
         sentinel = self.output / "preserve.txt"

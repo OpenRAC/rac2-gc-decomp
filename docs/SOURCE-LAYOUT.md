@@ -34,6 +34,14 @@ These are authored organizational boundaries. They do not establish original
 retail modules, object files or independently compilable units. Independent
 object splitting remains a separate experiment requiring new complete proofs.
 
+The separately qualified SDK `_sysbitFlush` body is authored as
+`src/sdk/sysbit_flush.c` and rendered byte-identically to
+`candidates/sdk/sysbit_flush.c`. Its source-specific catalogue and review do not
+change the default 187-function unit or its shared overlay placements. The boot
+integration records both owners explicitly and compares each complete object
+before the full loaded-image gate. See [the source and ownership evidence](SDK-SYSBIT-EVIDENCE.md).
+This additional authored unit does not establish an original retail object boundary.
+
 ## Native family pilot
 
 `src/levels/shared/clear-five-words.cfrag` supplies the canonical five-word clear
@@ -90,7 +98,8 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
-| Boot | 187 catalogued definitions (183 campaign-authored, four attributed third-party definitions) | 10,552 |
+| Default GNU boot | 187 catalogued definitions (183 campaign-authored, four attributed third-party definitions) | 10,552 |
+| Separate SDK boot unit | One attributed definition with its own complete-object proof | 152 |
 | Native overlays | 914 family-or-singleton items, 915 contextual variants | 107,328 across 1,121 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 

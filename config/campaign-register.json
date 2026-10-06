@@ -229,6 +229,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "38133e465841464e87fa51050fda9566": {
+      "artifact": "prepared-run:builds/campaign-38133e465841464e87fa51050fda9566/report.json",
+      "artifact_sha256": "58aafb2961aff21210cc420183b2ccad0aa06797271db59b881100120b8d4339",
+      "directory": "runtime:actions/38133e465841464e87fa51050fda9566",
+      "finished": "2026-10-06T14:34:18.985785+00:00",
+      "id": "38133e465841464e87fa51050fda9566",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "39e790ef35eb4361af89657eceb2db04": {
       "artifact": "prepared-run:builds/campaign-39e790ef35eb4361af89657eceb2db04/report.json",
       "artifact_sha256": "f8b5142a1e925ed6b0874ff40e0be7b64393a25352eb14f4d7301cc1f2416be9",
@@ -387,6 +398,17 @@
       "id": "58d93b6fb511471fa0626582e0df586c",
       "integration_credit": 0,
       "kind": "report",
+      "returncode": 0,
+      "state": "passed"
+    },
+    "5953aa98108648cc9df3f90495339d4f": {
+      "artifact": "prepared-run:builds/campaign-5953aa98108648cc9df3f90495339d4f/report.json",
+      "artifact_sha256": "b275a4c1e60bc82efd6b2e3d60a6cebf358a754ef97cb6ec0e43099232678767",
+      "directory": "runtime:actions/5953aa98108648cc9df3f90495339d4f",
+      "finished": "2026-10-06T14:48:13.619680+00:00",
+      "id": "5953aa98108648cc9df3f90495339d4f",
+      "integration_credit": 0,
+      "kind": "integrate",
       "returncode": 0,
       "state": "passed"
     },
@@ -4469,7 +4491,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 5890,
+  "revision": 5908,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -25841,18 +25863,50 @@
       ]
     },
     "native-review-endako-decimal-20261004": {
+      "amendments": [
+        {
+          "at": "2026-10-06T14:04:17.462227+00:00",
+          "before": {
+            "next_action": "Verify full live reference, callers and converter ABI; author complete unit preserving current Endako controls, then qualify exact bytes.",
+            "pointers": [
+              "private-work:parallel-20261004/native_review/CURRENT.md"
+            ],
+            "reopen_condition": "New measured type/lifetime/ABI evidence, never equivalent expression or allocation cycling."
+          },
+          "changes": {
+            "next_action": "Keep this physical family parked under its existing complete-symbol candidate trials. The old queued research reservation is not an untried target.",
+            "pointers": [
+              "private-work:parallel-20261004/native_review/CURRENT.md",
+              "campaign-trial:f67d9d7135c742e494cd21b48b765883",
+              "campaign-trial:3eefc36ad07d40c08b77a9049f73aca5"
+            ],
+            "reopen_condition": "Independent measured type/lifetime/ABI or algorithm evidence; no expression/register cycles."
+          },
+          "reason": "Independent live boundary, raw-byte and history audit verified that this research scope is already covered by two stopped physical-family trials. Preserve both negatives and the candidate reopening condition."
+        }
+      ],
       "created": "2026-10-04T09:54:47.796137+00:00",
       "hypothesis": "Owned seed3 Endako complete128-byte decimal quantization algorithm at00323A90, fingerprint7f4f656589f5b5520e277157d4ac40e768724cf575b19035cf95f028cb59b0b0. Positive integer power-of-ten loop, f12 input and A0 signed digits, conversion helper2F0158 f12 toV0. Check all current published/history spans and complete ABI before one private intended-unit trial; no parked aliases.",
       "id": "native-review-endako-decimal-20261004",
       "kind": "research",
-      "next_action": "Verify full live reference, callers and converter ABI; author complete unit preserving current Endako controls, then qualify exact bytes.",
+      "next_action": "Keep this physical family parked under its existing complete-symbol candidate trials. The old queued research reservation is not an untried target.",
       "pointers": [
-        "private-work:parallel-20261004/native_review/CURRENT.md"
+        "private-work:parallel-20261004/native_review/CURRENT.md",
+        "campaign-trial:f67d9d7135c742e494cd21b48b765883",
+        "campaign-trial:3eefc36ad07d40c08b77a9049f73aca5"
       ],
       "priority": 80,
-      "reopen_condition": "New measured type/lifetime/ABI evidence, never equivalent expression or allocation cycling.",
-      "state": "queued",
-      "transitions": []
+      "reopen_condition": "Independent measured type/lifetime/ABI or algorithm evidence; no expression/register cycles.",
+      "state": "stopped",
+      "transitions": [
+        {
+          "at": "2026-10-06T14:04:17.616370+00:00",
+          "from": "queued",
+          "reason": "Correct the stale research queue after validating both actual negative trial outcomes, full boundaries and unchanged history. No new source trial or matching credit.",
+          "reopen_condition": "Independent measured type/lifetime/ABI or algorithm evidence; no expression/register cycles.",
+          "to": "stopped"
+        }
+      ]
     },
     "native-review-endako-decimal-c-v1-20261004": {
       "budget": 2,
@@ -27260,16 +27314,46 @@
       ]
     },
     "native-review-endako-unlink-20261004": {
+      "amendments": [
+        {
+          "at": "2026-10-06T14:04:17.106944+00:00",
+          "before": {
+            "next_action": "Pin complete boundaries and callers, then author private whole Endako unit and maintained trial preserving13controls.",
+            "pointers": [],
+            "reopen_condition": "New measured types, CFG/lifetime or helperABI evidence, no source allocation cycles."
+          },
+          "changes": {
+            "next_action": "Keep this physical family parked under its existing complete-symbol candidate trials. The old queued research reservation is not an untried target.",
+            "pointers": [
+              "campaign-trial:000a1c12a9d74b848588d12529246872",
+              "campaign-trial:3c21a0b053624713b041c4ec234b4b43"
+            ],
+            "reopen_condition": "Independent original source/type/optimizer phase evidence that explains remaining owner/head traversal allocation and branch-delay scheduling; equivalent expressions or renamed locals are insufficient."
+          },
+          "reason": "Independent live boundary, raw-byte and history audit verified that this research scope is already covered by two stopped physical-family trials. Preserve both negatives and the candidate reopening condition."
+        }
+      ],
       "created": "2026-10-04T09:58:34.278326+00:00",
       "hypothesis": "Owned seed3 Endako003125C8 complete152-byte singly-linked removal and40-byte-word clearing algorithm, span9de80c53201ac5fb39d1203a5ea8be186517c015146e1fddf8d6b2b51f701e74. Uncovered against all published spans and trial bank; ordinary A0 owner/A1 node and A0/A1/A2 clear-helper ABI. Exclude all parked physical aliases.",
       "id": "native-review-endako-unlink-20261004",
       "kind": "research",
-      "next_action": "Pin complete boundaries and callers, then author private whole Endako unit and maintained trial preserving13controls.",
-      "pointers": [],
+      "next_action": "Keep this physical family parked under its existing complete-symbol candidate trials. The old queued research reservation is not an untried target.",
+      "pointers": [
+        "campaign-trial:000a1c12a9d74b848588d12529246872",
+        "campaign-trial:3c21a0b053624713b041c4ec234b4b43"
+      ],
       "priority": 80,
-      "reopen_condition": "New measured types, CFG/lifetime or helperABI evidence, no source allocation cycles.",
-      "state": "queued",
-      "transitions": []
+      "reopen_condition": "Independent original source/type/optimizer phase evidence that explains remaining owner/head traversal allocation and branch-delay scheduling; equivalent expressions or renamed locals are insufficient.",
+      "state": "stopped",
+      "transitions": [
+        {
+          "at": "2026-10-06T14:04:17.273936+00:00",
+          "from": "queued",
+          "reason": "Correct the stale research queue after validating both actual negative trial outcomes, full boundaries and unchanged history. No new source trial or matching credit.",
+          "reopen_condition": "Independent original source/type/optimizer phase evidence that explains remaining owner/head traversal allocation and branch-delay scheduling; equivalent expressions or renamed locals are insufficient.",
+          "to": "stopped"
+        }
+      ]
     },
     "native-review-endako-unlink-c-v1-20261004": {
       "budget": 2,
@@ -30990,16 +31074,53 @@
       ]
     },
     "native-review-joba-stream-relocation-20261004": {
+      "amendments": [
+        {
+          "at": "2026-10-06T14:02:29.523588+00:00",
+          "before": {
+            "next_action": "Verify caller32-bit ABI and complete pin uniqueness/history, then author privateintendedJobaunit and qualifyallcurrentcontrols.",
+            "pointers": [],
+            "remaining_difference": null,
+            "reopen_condition": "Independent header/record alias/layout/source-phase evidence, no names/registers/expressioncycle."
+          },
+          "changes": {
+            "next_action": "Keep this 352-byte physical family parked under its existing v1/v2 source trials. The research reservation is an alias of already measured refusals, not a new compilation opportunity.",
+            "pointers": [
+              "campaign-task:native-review-joba-stream-relocation-c-v1-20261004",
+              "campaign-task:native-review-joba-stream-relocation-c-v2-20261004",
+              "campaign-trial:478f6cbf42a94961881388b77323529b",
+              "campaign-trial:3f479814b9d0433dbe564cc9feee153b"
+            ],
+            "remaining_difference": "v1trial478f6cbf42a94961881388b77323529b and measured raw-address-storage v2trial3f479814b9d0433dbe564cc9feee153b both252/352 with15CURRENT controls exact; whole objectSHA5a737f301ae2486dbe5255c6ab6157f05b0dca95fb1338358b8ab2800db65f24 identical. Compiler still hoists resident pointerloads and combines separate wordwrites unlike fullreference.",
+            "reopen_condition": "Independently measured current-backend memory-alias optimization/source-binding witness reproducing required postwrite global reloads; no volatile, fakeaggregate, forcedregisters, flagsmatrix or expressioncycling."
+          },
+          "reason": "Live physical-family history review found that the queued research reservation predates two stopped complete-symbol trials. Link that history instead of authoring or compiling a third alias."
+        }
+      ],
       "created": "2026-10-04T10:20:52.461792+00:00",
       "hypothesis": "Ownedseed11 Joba complete352-byte two-stream relocation308D20: align base16, skip previouslyrelocated slot, resolve two signedcount ranges from header, clearhighbit/addbase for each8-byte record. Fullbody/livepin352 ends308E7F, sixdirectcallers, no calls/MMI/VU/GPloads. Fingerprint4f9b6972ad62e99dddb745a11242e85b40bf20694cbde5a03523b5686b1284f6. Exclude every integrated/reserved span and physicalnegativealias beforetrial.",
       "id": "native-review-joba-stream-relocation-20261004",
       "kind": "research",
-      "next_action": "Verify caller32-bit ABI and complete pin uniqueness/history, then author privateintendedJobaunit and qualifyallcurrentcontrols.",
-      "pointers": [],
+      "next_action": "Keep this 352-byte physical family parked under its existing v1/v2 source trials. The research reservation is an alias of already measured refusals, not a new compilation opportunity.",
+      "pointers": [
+        "campaign-task:native-review-joba-stream-relocation-c-v1-20261004",
+        "campaign-task:native-review-joba-stream-relocation-c-v2-20261004",
+        "campaign-trial:478f6cbf42a94961881388b77323529b",
+        "campaign-trial:3f479814b9d0433dbe564cc9feee153b"
+      ],
       "priority": 80,
-      "reopen_condition": "Independent header/record alias/layout/source-phase evidence, no names/registers/expressioncycle.",
-      "state": "queued",
-      "transitions": []
+      "remaining_difference": "v1trial478f6cbf42a94961881388b77323529b and measured raw-address-storage v2trial3f479814b9d0433dbe564cc9feee153b both252/352 with15CURRENT controls exact; whole objectSHA5a737f301ae2486dbe5255c6ab6157f05b0dca95fb1338358b8ab2800db65f24 identical. Compiler still hoists resident pointerloads and combines separate wordwrites unlike fullreference.",
+      "reopen_condition": "Independently measured current-backend memory-alias optimization/source-binding witness reproducing required postwrite global reloads; no volatile, fakeaggregate, forcedregisters, flagsmatrix or expressioncycling.",
+      "state": "stopped",
+      "transitions": [
+        {
+          "at": "2026-10-06T14:02:29.702168+00:00",
+          "from": "queued",
+          "reason": "Both existing sources emitted the same 252-byte object body against the complete 352-byte reference; fifteen controls matched. No independently new memory-alias or source-binding evidence permits reopening.",
+          "reopen_condition": "Independently measured current-backend memory-alias optimization/source-binding witness reproducing required postwrite global reloads; no volatile, fakeaggregate, forcedregisters, flagsmatrix or expressioncycling.",
+          "to": "stopped"
+        }
+      ]
     },
     "native-review-joba-stream-relocation-c-v1-20261004": {
       "budget": 2,
@@ -113451,6 +113572,103 @@
         }
       ]
     },
+    "sdk-sysbit152-experimental-unit-qualification-20261006": {
+      "amendments": [
+        {
+          "at": "2026-10-06T13:52:30.658435+00:00",
+          "before": {
+            "next_action": "Execute exactly one sealed SDK source-unit qualification, preserve the complete object and outcome, then independently audit it. No integrated C credit until per-owner boot linking and complete image gates pass.",
+            "pointers": [
+              "private sealed unit plan sha256:2959be356acc64137d6c35e420a7fa10c97a894da8696fb0dba96bc12a8086e5",
+              "source sha256:b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4",
+              "catalog sha256:bcf6901793c96e461088957beb1064aeb62684a4271af2a5b166acd553112445",
+              "private SDK controls receipt sha256:045c484fe3d434774f0687602c04b4be6fd0876e49d9dbb9a29ef3319f4e4c0c"
+            ]
+          },
+          "changes": {
+            "next_action": "Independent audit of the actual single SDK compilation, then separate per-owner boot integration. The complete experimental unit matches all 152 bytes; integrated credit remains zero until full image proofs pass.",
+            "pointers": [
+              "private sealed unit plan sha256:2959be356acc64137d6c35e420a7fa10c97a894da8696fb0dba96bc12a8086e5",
+              "source sha256:b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4",
+              "catalog sha256:bcf6901793c96e461088957beb1064aeb62684a4271af2a5b166acd553112445",
+              "private SDK controls receipt sha256:045c484fe3d434774f0687602c04b4be6fd0876e49d9dbb9a29ef3319f4e4c0c",
+              "private actual SDK outcome sha256:1b6766c61b67f6e418f3ea46be919c0609f7564f4deaa741d33fb5919d636679",
+              "actual stripped object sha256:e0a9a1a83aed6b86d94cd1b0e0f71ea6021d64f190c842ea56aa83cef9f3845c",
+              "complete 152-byte body sha256:70928de6af250170c95f9516617cbc936385634206ffe953ad7dbe2007698ce0"
+            ]
+          },
+          "reason": "The single fixed SDK source compilation and link completed; full STT/text extent is 152 bytes and the unmasked reference difference is zero. Preserve the older default-compiler refusal and the leaf-only foundation scope."
+        },
+        {
+          "at": "2026-10-06T15:02:10.822549+00:00",
+          "before": {
+            "next_action": "Independent audit of the actual single SDK compilation, then separate per-owner boot integration. The complete experimental unit matches all 152 bytes; integrated credit remains zero until full image proofs pass.",
+            "pointers": [
+              "private sealed unit plan sha256:2959be356acc64137d6c35e420a7fa10c97a894da8696fb0dba96bc12a8086e5",
+              "source sha256:b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4",
+              "catalog sha256:bcf6901793c96e461088957beb1064aeb62684a4271af2a5b166acd553112445",
+              "private SDK controls receipt sha256:045c484fe3d434774f0687602c04b4be6fd0876e49d9dbb9a29ef3319f4e4c0c",
+              "private actual SDK outcome sha256:1b6766c61b67f6e418f3ea46be919c0609f7564f4deaa741d33fb5919d636679",
+              "actual stripped object sha256:e0a9a1a83aed6b86d94cd1b0e0f71ea6021d64f190c842ea56aa83cef9f3845c",
+              "complete 152-byte body sha256:70928de6af250170c95f9516617cbc936385634206ffe953ad7dbe2007698ce0"
+            ]
+          },
+          "changes": {
+            "next_action": "The exact standalone SDK source is integrated in the boot through its explicit object owner. Final boot and all 27 overlays pass with 188 boot functions; fresh all-member unique coverage adds exactly 152 bytes. Preserve the original default-compiler refusal and the leaf-only control foundation. New sources or tool profiles require separate reviewed qualification.",
+            "pointers": [
+              "private sealed unit plan sha256:2959be356acc64137d6c35e420a7fa10c97a894da8696fb0dba96bc12a8086e5",
+              "source sha256:b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4",
+              "catalog sha256:bcf6901793c96e461088957beb1064aeb62684a4271af2a5b166acd553112445",
+              "private SDK controls receipt sha256:045c484fe3d434774f0687602c04b4be6fd0876e49d9dbb9a29ef3319f4e4c0c",
+              "private actual SDK outcome sha256:1b6766c61b67f6e418f3ea46be919c0609f7564f4deaa741d33fb5919d636679",
+              "actual stripped object sha256:e0a9a1a83aed6b86d94cd1b0e0f71ea6021d64f190c842ea56aa83cef9f3845c",
+              "complete 152-byte body sha256:70928de6af250170c95f9516617cbc936385634206ffe953ad7dbe2007698ce0",
+              "source:src/sdk/sysbit_flush.c",
+              "catalog:config/boot-units/sdk-sysbit-flush.json",
+              "review:progress/boot-units/sdk-sysbit-flush.json",
+              "integration:progress/integration.json",
+              "campaign-action:5953aa98108648cc9df3f90495339d4f",
+              "final owner audit sha256:53d6fdbb3b7712026ea030d73876c5fd9f97305c0370605288ce5d4a9ab2e00b",
+              "unique-report:progress/unique-code-report.json"
+            ]
+          },
+          "reason": "Final current-input image, source-object ownership and all-members unique proofs qualify this 152-byte source-specific boot owner. The experimental research history remains distinct from the actual integrated coverage proofs; no ordinary default-compiler trial or profile promotion is fabricated."
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-06T13:50:21.602652+00:00",
+      "hypothesis": "The qualified owned SDK pipeline may reproduce the unchanged MIT sysbitFlush source as one complete 152-byte text unit. This is experimental source-unit qualification, outside the three leaf control admission scope.",
+      "id": "sdk-sysbit152-experimental-unit-qualification-20261006",
+      "kind": "research",
+      "next_action": "The exact standalone SDK source is integrated in the boot through its explicit object owner. Final boot and all 27 overlays pass with 188 boot functions; fresh all-member unique coverage adds exactly 152 bytes. Preserve the original default-compiler refusal and the leaf-only control foundation. New sources or tool profiles require separate reviewed qualification.",
+      "pointers": [
+        "private sealed unit plan sha256:2959be356acc64137d6c35e420a7fa10c97a894da8696fb0dba96bc12a8086e5",
+        "source sha256:b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4",
+        "catalog sha256:bcf6901793c96e461088957beb1064aeb62684a4271af2a5b166acd553112445",
+        "private SDK controls receipt sha256:045c484fe3d434774f0687602c04b4be6fd0876e49d9dbb9a29ef3319f4e4c0c",
+        "private actual SDK outcome sha256:1b6766c61b67f6e418f3ea46be919c0609f7564f4deaa741d33fb5919d636679",
+        "actual stripped object sha256:e0a9a1a83aed6b86d94cd1b0e0f71ea6021d64f190c842ea56aa83cef9f3845c",
+        "complete 152-byte body sha256:70928de6af250170c95f9516617cbc936385634206ffe953ad7dbe2007698ce0",
+        "source:src/sdk/sysbit_flush.c",
+        "catalog:config/boot-units/sdk-sysbit-flush.json",
+        "review:progress/boot-units/sdk-sysbit-flush.json",
+        "integration:progress/integration.json",
+        "campaign-action:5953aa98108648cc9df3f90495339d4f",
+        "final owner audit sha256:53d6fdbb3b7712026ea030d73876c5fd9f97305c0370605288ce5d4a9ab2e00b",
+        "unique-report:progress/unique-code-report.json"
+      ],
+      "reopen_condition": "No source, flags, type, layout or expression variants. Preserve the prior default-compiler 140/152 negative and stop this experiment after its single actual execution.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-06T13:52:30.813143+00:00",
+          "from": "queued",
+          "reason": "Experimental qualification completed after one actual compile: one complete 152-byte function matches exactly, no additional code/data/GP/relocations. This research closure adds no integrated matching credit.",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
     "shared-callstate-power-20261006-0_aranos_tutorial": {
       "budget": 1,
       "created": "2026-10-06T04:56:19.945176+00:00",
@@ -139007,6 +139225,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "a78da2abf8a22e75af3d63c79224316d6217217a251ca8cd3a9558ee3c9c3c4a"
+    "docs/CAMPAIGN-QUEUE.md": "0ad3d616a2d457f50935099025ac2f9fcc260d1a877d81d1dd3ae23364cbe20f"
   }
 }
