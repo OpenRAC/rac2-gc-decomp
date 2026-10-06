@@ -4544,7 +4544,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 6034,
+  "revision": 6039,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -8670,6 +8670,56 @@
           "reason": "Verified 22522 combined-reference boot edges to 103 pinned core bodies; primary grouping removes 427552 bytes with no new C credit. Data/GP and 20 guarded-switch audits retain unresolved ownership/runtime assumptions. All 496 tests pass with two skips, pinned objdiff and freshness checks pass, and frozen batch 0120d4f48a1c469f8e9d0370c76b5a25 passes every loaded-image gate with unchanged inputs.",
           "reopen_condition": "Qualified original allocation/base/addend, scoped entry GP and preservation, finite-table snapshot normalization or new loader/runtime/source evidence; never broaden scalar masks or force an estimated source size.",
           "to": "done"
+        }
+      ]
+    },
+    "bounded-caller-gp-proof-20261006": {
+      "amendments": [
+        {
+          "at": "2026-10-06T20:41:45.295595+00:00",
+          "before": {
+            "next_action": "Retain the bounded startup refusal and conditional return-link counterexample. Reopen only with independently pinned kernel/callee preservation or another suitable complete caller; do not assume a global entry GP or enable normalization.",
+            "pointers": [
+              "docs:docs/GP-CALLER-EVIDENCE.md",
+              "private-work:gp-caller-proof-20261006/root-startup-negative.json",
+              "private-work:gp-caller-proof-20261006/selection/REPRISE.md"
+            ],
+            "reopen_condition": "Machine-level GP preservation evidence for the actual syscall 0x3C/0x3D boundaries and subsequent callees, or a complete independently pinned caller with explicit GP and no opaque effects before a mapped-data leaf."
+          },
+          "changes": {
+            "next_action": "Before any GP16 consumer use, repair or independently prove indirect control and reentry in the existing local verifier. Retain the bounded startup refusal; reopen caller transmission only with pinned kernel/callee preservation or another suitable caller.",
+            "pointers": [
+              "docs:docs/GP-CALLER-EVIDENCE.md",
+              "private-work:gp-caller-proof-20261006/root-startup-negative.json",
+              "private-work:gp-caller-proof-20261006/root-old-verifier-negative.json",
+              "private-work:gp-caller-proof-20261006/selection/startup-negative-and-inventory.json"
+            ],
+            "reopen_condition": "Conservative indirect-control refusal or independently verified targets closes the published local-verifier lifetime counterexample, plus machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller."
+          },
+          "reason": "Independent review and root reproduction show the published local verifier also accepts an indirect-return reentry with a changed GP. All facts remain static-CFG conditional, not qualified dynamic-lifetime evidence; no production consumer is enabled."
+        }
+      ],
+      "budget": 1,
+      "created": "2026-10-06T20:38:57.374776+00:00",
+      "hypothesis": "A complete caller with explicit GP construction might supply a conditional entry fact to a small mapped-data leaf. The startup route must retain actual kernel effects and complete target control flow.",
+      "id": "bounded-caller-gp-proof-20261006",
+      "kind": "research",
+      "next_action": "Before any GP16 consumer use, repair or independently prove indirect control and reentry in the existing local verifier. Retain the bounded startup refusal; reopen caller transmission only with pinned kernel/callee preservation or another suitable caller.",
+      "pointers": [
+        "docs:docs/GP-CALLER-EVIDENCE.md",
+        "private-work:gp-caller-proof-20261006/root-startup-negative.json",
+        "private-work:gp-caller-proof-20261006/root-old-verifier-negative.json",
+        "private-work:gp-caller-proof-20261006/selection/startup-negative-and-inventory.json"
+      ],
+      "reopen_condition": "Conservative indirect-control refusal or independently verified targets closes the published local-verifier lifetime counterexample, plus machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller.",
+      "state": "stopped",
+      "transitions": [
+        {
+          "at": "2026-10-06T20:39:08.597956+00:00",
+          "from": "queued",
+          "reason": "Bounded startup caller fails at opaque syscall selector 0x3C, followed by 0x3D before its first direct call. The complete first target has five calls and a tail transfer, with no GP memory. No accepted entry theorem or suitable retail leaf packet; private conditional prototype retained with return-link regression.",
+          "reopen_condition": "",
+          "to": "stopped"
         }
       ]
     },
@@ -142018,6 +142068,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "5a4bedee742a25a67f8cccd05412e4bad4c8ffac449516ec868fde9a4a13602b"
+    "docs/CAMPAIGN-QUEUE.md": "91f7236df39fda293e6505d809f45d47309e5b9e8244e297591fdbdbec60b69d"
   }
 }

@@ -1084,6 +1084,19 @@ Reopen condition: Qualified original allocation/base/addend, scoped entry GP and
 - `scripts/call_graph_refinement.py`
 - `scripts/build_unique_catalog.py`
 
+## bounded-caller-gp-proof-20261006
+
+State: `stopped`. Kind: `research`.
+
+Before any GP16 consumer use, repair or independently prove indirect control and reentry in the existing local verifier. Retain the bounded startup refusal; reopen caller transmission only with pinned kernel/callee preservation or another suitable caller.
+
+Reopen condition: Conservative indirect-control refusal or independently verified targets closes the published local-verifier lifetime counterexample, plus machine-level GP preservation across actual syscall 0x3C/0x3D boundaries or another suitable complete caller.
+
+- `docs:docs/GP-CALLER-EVIDENCE.md`
+- `private-work:gp-caller-proof-20261006/root-startup-negative.json`
+- `private-work:gp-caller-proof-20261006/root-old-verifier-negative.json`
+- `private-work:gp-caller-proof-20261006/selection/startup-negative-and-inventory.json`
+
 ## bounded-local-gp-proof-pilot-20261006
 
 State: `done`. Kind: `research`.
