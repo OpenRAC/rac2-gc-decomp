@@ -641,3 +641,24 @@ f32 LVL_5_FELTZIN_SYSTEM_FUN_00332A58(f32 value, s32 count) {
         product = product * factor;
     return 1.0f - product;
 }
+
+typedef struct {
+    u8 pad0000[0x0000];
+} ResidentBase1395B8;
+
+s32 LVL_5_FELTZIN_SYSTEM_FUN_0031DC80(s32 index)
+{
+    s32 byte = index / 8;
+    s32 bit = index % 8;
+    s32 old;
+
+    if ((u32)bit < 8) {
+        old = (LVL_5_FELTZIN_SYSTEM_D_001395B8[byte + 0xA7] >> bit) & 1;
+    } else {
+        old = 0;
+    }
+    if ((u32)bit < 8) {
+        LVL_5_FELTZIN_SYSTEM_D_001395B8[byte + 0xA7] |= 1 << bit;
+    }
+    return old;
+}

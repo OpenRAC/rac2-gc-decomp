@@ -594,3 +594,24 @@ f32 LVL_7_SIBERIUS_FUN_00310A38(f32 value, s32 count) {
         product = product * factor;
     return 1.0f - product;
 }
+
+typedef struct {
+    u8 pad0000[0x0000];
+} ResidentBase1395B8;
+
+s32 LVL_7_SIBERIUS_FUN_002FBC70(s32 index)
+{
+    s32 byte = index / 8;
+    s32 bit = index % 8;
+    s32 old;
+
+    if ((u32)bit < 8) {
+        old = (LVL_7_SIBERIUS_D_001395B8[byte + 0xA7] >> bit) & 1;
+    } else {
+        old = 0;
+    }
+    if ((u32)bit < 8) {
+        LVL_7_SIBERIUS_D_001395B8[byte + 0xA7] |= 1 << bit;
+    }
+    return old;
+}

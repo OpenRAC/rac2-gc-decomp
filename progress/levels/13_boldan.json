@@ -2,7 +2,7 @@
   "target": "SCUS_972.68",
   "program": "13_boldan",
   "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
-  "source_sha256": "b1e38dcefa2b827a736b104072d5280b015e865c9572acf6c3f04e3a7fdfa12b",
+  "source_sha256": "8634f1a444b442305f731b242b222681938470ccafaa8ca93eb9710edaced301",
   "catalog_sha256": "1f54e6a7a5c289e332db4452a43ced7d52870cd0d5b71c636e94071ee7f39a05",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
@@ -2708,6 +2708,20 @@
       "program": "13_boldan",
       "candidate_source": "candidates/levels/13_boldan.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_13_BOLDAN_FUN_0030FB88",
+      "address": 3210120,
+      "size": 124,
+      "matched": true,
+      "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "13_boldan",
+      "candidate_source": "candidates/levels/13_boldan.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2715,15 +2729,15 @@
     "bytes_compared": 2833784,
     "segments": 1
   },
-  "matched_code_bytes": 11496,
+  "matched_code_bytes": 11620,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "60756aeb604e84e99dfae6564416981edb44cadb17dde31e714c64a9d843affe",
-  "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
+  "candidate_elf_sha256": "d21234f2d73086c1d18569d748945c7d865f439c967a71f46f5003fd77ab4a83",
+  "c_object_sha256": "5ab80fabc83570709c75418e78042a360a3b803d35c8e6ebcf1552a1fc95caa6",
   "replacement_inputs": {
     "107E80.s": [
       "FUN_0026FEB8",
@@ -2918,7 +2932,8 @@
       "LVL_13_BOLDAN_FUN_00453000",
       "LVL_13_BOLDAN_FUN_00453498",
       "LVL_13_BOLDAN_FUN_00336FB8",
-      "LVL_13_BOLDAN_FUN_00324950"
+      "LVL_13_BOLDAN_FUN_00324950",
+      "LVL_13_BOLDAN_FUN_0030FB88"
     ]
   },
   "schema": 2,
@@ -2927,7 +2942,7 @@
     "target": "SCUS_972.68",
     "program": "13_boldan",
     "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
-    "source_sha256": "b1e38dcefa2b827a736b104072d5280b015e865c9572acf6c3f04e3a7fdfa12b",
+    "source_sha256": "8634f1a444b442305f731b242b222681938470ccafaa8ca93eb9710edaced301",
     "catalog_sha256": "1f54e6a7a5c289e332db4452a43ced7d52870cd0d5b71c636e94071ee7f39a05",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
@@ -2943,8 +2958,8 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "60756aeb604e84e99dfae6564416981edb44cadb17dde31e714c64a9d843affe",
-    "c_object_sha256": "7768478c273314b8c98c8eb18a8298978296d5415eea83bc84ca83b54f374179",
+    "candidate_elf_sha256": "d21234f2d73086c1d18569d748945c7d865f439c967a71f46f5003fd77ab4a83",
+    "c_object_sha256": "5ab80fabc83570709c75418e78042a360a3b803d35c8e6ebcf1552a1fc95caa6",
     "replacement_inputs": {
       "107E80.s": [
         "FUN_0026FEB8",
@@ -3139,7 +3154,8 @@
         "LVL_13_BOLDAN_FUN_00453000",
         "LVL_13_BOLDAN_FUN_00453498",
         "LVL_13_BOLDAN_FUN_00336FB8",
-        "LVL_13_BOLDAN_FUN_00324950"
+        "LVL_13_BOLDAN_FUN_00324950",
+        "LVL_13_BOLDAN_FUN_0030FB88"
       ]
     }
   },
@@ -3149,13 +3165,13 @@
   },
   "reference_entry": 2812680,
   "candidate_entry": 2812680,
-  "dependency_sha256": "2924c4dde21310dd337d3f28435f7f0e79481d33383095d50ba478855182e973",
-  "boot_review_sha256": "80d0b16935af6777f1d73a5489b12588540d0f5593a2d7a8be9af4cf00ce9b9a",
+  "dependency_sha256": "4c783f0c9d5ba6850ffdaeff4dff944707c58a6809717f18ee10b0d940c4c51c",
+  "boot_review_sha256": "1613c64afabed8a6e2167e1f6f6fdbff573c07398667a2b243228f82e55628a7",
   "native": {
     "source": "candidates/levels/13_boldan.c",
     "catalog_path": "config/level-native/13_boldan.json",
     "review_path": "progress/level-candidates/13_boldan.json",
-    "review_sha256": "11e06816866a25a7de33f07d30dc5828a4b388609a48113308fbd51c2e1c0755",
+    "review_sha256": "25ab6d9ebb0b384159fba1cf990ad4250c16a1ba82c0f7e668f617a5663482aa",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3164,10 +3180,10 @@
       "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
       "reference_entry": 2812680,
       "candidate_source": "candidates/levels/13_boldan.c",
-      "source_sha256": "ed5dfac29e20645d4bb39ee4c8e6bf206c1488124a71d126a4dc9fde741f4319",
-      "catalog_sha256": "61e909243e24ab766bfdfe636adc878bce5132d3a8fb71b89102d2dd2022609e",
-      "object_sha256": "4cd725a2702ad105513522e493d4a3780149be9da00f52a11fe26d1063014532",
-      "candidate_elf_sha256": "79a69389324b80317769ac51b8a8668271ca0da5495f7018017ebf705d9452fd",
+      "source_sha256": "2159c3fb3e7790d9ad4d8751a6fb67564d8cc8435957cbdc1dba3f9e225865d8",
+      "catalog_sha256": "c69210fcbae5990e9c1976cdf7065dc919d56d43282bf4a4cb869673b325ef08",
+      "object_sha256": "cc6873dd05560e9652e5978652e3af2d2fc464ff6360c872530acb021931b916",
+      "candidate_elf_sha256": "d692de1efe4cf1efddad146003e31c0499f13abef423845b27252fc2339d4e9a",
       "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3610,11 +3626,22 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 68
+        },
+        {
+          "symbol": "LVL_13_BOLDAN_FUN_0030FB88",
+          "address": 3210120,
+          "size": 124,
+          "matched": true,
+          "reference_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+          "candidate_sha256": "340841691742533718ef4b0ed7849e8e12e288306f1e9a44038ee83e9485ef60",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 124
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 3824
+      "matched_code_bytes": 3948
     },
-    "object_sha256": "4cd725a2702ad105513522e493d4a3780149be9da00f52a11fe26d1063014532"
+    "object_sha256": "cc6873dd05560e9652e5978652e3af2d2fc464ff6360c872530acb021931b916"
   }
 }
