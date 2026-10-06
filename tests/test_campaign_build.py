@@ -101,8 +101,11 @@ class CampaignBuildTests(unittest.TestCase):
         identity = lambda rows: {(row["symbol"], row["address"], row["size"]) for row in rows}
         self.assertEqual(identity(default), identity(read("config/candidate-catalog.json")["functions"]))
         if sdk:
-            self.assertEqual(identity(sdk), identity(read("config/boot-units/sdk-sysbit-flush.json")["functions"]))
-            self.assertEqual(len(sdk), 1)
+            catalogs = [json.loads(path.read_bytes()) for path in
+                        sorted((root / "config/boot-units").glob("*.json"))]
+            expected_sdk = [row for catalog in catalogs for row in catalog["functions"]]
+            self.assertEqual(identity(sdk), identity(expected_sdk))
+            self.assertEqual(len(sdk), len(expected_sdk))
         self.assertEqual(len(functions), len(default) + len(sdk))
 
     def test_one_failure_retained_and_blocks_batch(self):

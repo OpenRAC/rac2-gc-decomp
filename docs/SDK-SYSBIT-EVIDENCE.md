@@ -73,11 +73,12 @@ The unit catalogue and review live under `config/boot-units/` and
 `progress/boot-units/`. This explicit ownership does not add the SDK symbol to
 the default 187-function catalogue or authorize any overlay placement.
 
-The schema-3 boot integration proof contains 188 function rows exactly once.
+The schema-3 boot integration proof contains 189 function rows exactly once:
+the 187-function default unit and the separate sysbit and CPR8 SDK units.
 Its default owner retains the 187-function GNU review, source and object. Its
 SDK owner carries the separate full `.text` object and source-specific review.
 Each fresh campaign compiles and qualifies both objects independently before
 linking them into the complete boot image. The actual complete boot gate
-compares 2,521,763 loaded bytes and includes 10,704 bytes of accepted C.
+compares 2,521,763 loaded bytes and includes 11,360 bytes of accepted C.
 All 27 overlay gates and the all-members unique export remain required before
 the resulting measurements are published.

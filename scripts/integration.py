@@ -191,32 +191,44 @@ def compile_c(reference: Path, directory: Path, toolchain: Path, review_path: Pa
 
 def compile_boot_c(reference: Path, directory: Path, toolchain: Path,
                    review_path: Path | None = None, sdk_binding: Path | None = None):
-    """Preserve the default object and optionally add the admitted SDK boot owner."""
+    """Preserve the default object; add only fixed, individually admitted SDK units."""
     default, default_object, default_tools = compile_c(reference, directory, toolchain, review_path)
-    from boot_sdk_unit import CATALOG, SOURCE, MODULE, REVIEW, UNIT, compile_reviewed, file_hash
-    if not (ROOT / CATALOG).exists():
+    from boot_sdk_unit import admitted_units, unit_spec, compile_reviewed, file_hash
+    units = admitted_units(ROOT)
+    if not units:
         return default, default_object, default_tools
-    sdk, sdk_object, sdk_proof = compile_reviewed(reference, directory / "build/c/sdk" / UNIT,
-                                                   ROOT, sdk_binding)
     default_functions = [{**f, "candidate_source": "candidates/boot.c", "origin": "boot-default",
                           "unit_id": "default-gnu8bed"} for f in default["functions"]]
-    sdk_functions = [{**f, "candidate_source": SOURCE, "origin": "boot-sdk", "unit_id": UNIT,
-                      "input_section": ".text"} for f in sdk["functions"]]
+    union = {**default, "functions": list(default_functions),
+             "compiled_sources": {"candidates/boot.c": default["compiled_source_sha256"]},
+             "sdk_units": {}, "default_functions": default_functions,
+             "externals": dict(default["externals"])}
+    objects = {"candidates/boot.c": default_object}
+    for unit in units:
+        spec = unit_spec(unit)
+        sdk, sdk_object, sdk_proof = compile_reviewed(reference, directory / "build/c/sdk" / unit,
+                                                     ROOT, sdk_binding, unit)
+        for name, address in sdk["externals"].items():
+            if name in union["externals"] and union["externals"][name] != address:
+                raise ValueError("SDK absolute external conflicts with existing boot binding")
+            existing = [f for f in union["functions"] if f["symbol"] == name]
+            if existing and any(f["address"] != address for f in existing):
+                raise ValueError("SDK absolute external conflicts with compiled boot owner")
+            union["externals"][name] = address
+        union["functions"].extend({**f, "candidate_source": spec["source"], "origin": "boot-sdk",
+                                   "unit_id": unit, "input_section": ".text"} for f in sdk["functions"])
+        union["compiled_sources"][spec["source"]] = sdk["source_sha256"]
+        union["sdk_units"][unit] = {
+            "unit_id": unit, "source": spec["source"], "module": spec["module"],
+            "catalog_path": spec["catalog"], "review_path": spec["review"],
+            "review_sha256": file_hash(ROOT / spec["review"]),
+            "profile_id": sdk["profile_id"], "input_section": ".text", "object_proof": sdk_proof}
+        objects[spec["source"]] = sdk_object
     from level_native import ranges
-    ranges(default_functions + sdk_functions)
-    require_symbols = {f["symbol"] for f in default_functions + sdk_functions}
-    if len(require_symbols) != len(default_functions + sdk_functions):
+    ranges(union["functions"])
+    if len({f["symbol"] for f in union["functions"]}) != len(union["functions"]):
         raise ValueError("Boot object owner symbols collide")
-    union = {**default, "functions": default_functions + sdk_functions,
-             "compiled_sources": {"candidates/boot.c": default["compiled_source_sha256"],
-                                  SOURCE: sdk["source_sha256"]},
-             "sdk_units": {UNIT: {"unit_id": UNIT, "source": SOURCE, "module": MODULE,
-                                   "catalog_path": CATALOG, "review_path": REVIEW,
-                                   "review_sha256": file_hash(ROOT / REVIEW),
-                                   "profile_id": sdk["profile_id"], "input_section": ".text",
-                                   "object_proof": sdk_proof}},
-             "default_functions": default_functions}
-    return union, {"candidates/boot.c": default_object, SOURCE: sdk_object}, default_tools
+    return union, objects, default_tools
 
 
 def level_catalog(level: str) -> dict:

@@ -16870,6 +16870,31 @@ Compare every complete symbol in the intended standalone unit before full frozen
 
 Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
 
+## sdk-cpr8-656-callbearing-source-qualification-20261006
+
+State: `done`. Kind: `research`.
+
+This exact CPR8 source is integrated as the second SDK boot owner. Current complete image and object proofs pass for 189 boot functions; all-members unique coverage measures an additional 656 bytes. Preserve the previous source and instrumentation refusals, opaque helpers and exact-source admission. New targets require separate source qualification.
+
+Reopen condition: No source, type, expression, loop, flag or tool permutation. Preserve any refusal and require independently new evidence before another source trial.
+
+- `private plan sha256:dfbb30e4414174e8262af145c1838f2f2711996b353980673b0906ae20b87b14`
+- `source sha256:526e6888e54dea5025a27a013101d88024c434cc99ce0121c06d67d84c19a66e`
+- `catalog sha256:64107298c9f7311a044b69ccbf27a713c690e818fb7afa5eac4923cec2718a08`
+- `campaign-trial:e4ed66e94a8f4cdebe8782484aa66260`
+- `private actual compile object sha256:7a26e9567b01cead56a2a79b8f9f51f828cbb47bcd961f5d19a4f0736d2794c1`
+- `private retained outcome sha256:9f6ed990ee6ec5bd26eed64772b4e56989427107ba692dd8dd7ed346412c9ce4`
+- `private pre-strip audit sha256:de76f48d1c65384430d75f065983d658447d19ce1cdaded6698d69d19c2dc221`
+- `source:src/sdk/cpr8_source_unit.c`
+- `private readonly final qualification sha256:ff648481b24e38076a550b7fd7d6d70e1395149cda3e4315f44bb9f2684002ba`
+- `independent finished artifact audit sha256:0e9738927b268e41372af1a13c09bf1ad6e2f6afd695d7a1395af587c587fcea`
+- `complete linked body sha256:3e43b8eb74cf2d19ba065bc68d58b8bda52bfa053bb06588bbe9dc0f38c0fad8`
+- `catalog:config/boot-units/sdk-cpr8.json`
+- `review:progress/boot-units/sdk-cpr8.json`
+- `integration:progress/integration.json`
+- `campaign-action:b33b8cefb35c4139b52ac1810427f5fe`
+- `unique-report:progress/unique-code-report.json`
+
 ## sdk-fixed-control-profile-foundation-publication-20261006
 
 State: `done`. Kind: `research`.

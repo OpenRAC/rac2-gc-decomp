@@ -136,7 +136,7 @@ pinned references and pass the full baseline gates before contribution work.
 
 ## Source-specific SDK boot owner
 
-The boot now links the separately qualified `_sysbitFlush` SDK object alongside
+The boot links the separately qualified sysbit and CPR8 SDK objects alongside
 the unchanged default GNU object. Use the maintained campaign integration route
 with `--sdk-binding <private-sdk-binding.json>`, as shown in
 [CAMPAIGN-WORKFLOW.md](../docs/CAMPAIGN-WORKFLOW.md). The file is private and has
@@ -153,7 +153,8 @@ are fixed by the source-specific unit, rather than configurable in the binding.
 The ordinary doctor C probe covers the default GNU chain. It does not supply
 or qualify the owned SDK instruments. This additional admission is limited to
 the exact standalone source and complete object documented in
-[SDK-SYSBIT-EVIDENCE.md](../docs/SDK-SYSBIT-EVIDENCE.md); the existing three-control
+[SDK-SYSBIT-EVIDENCE.md](../docs/SDK-SYSBIT-EVIDENCE.md) and
+[SDK-CPR8-EVIDENCE.md](../docs/SDK-CPR8-EVIDENCE.md); the existing three-control
 foundation remains leaf-only. The complete boot and all 27 overlay gates remain
 mandatory, and private tools and runtime bindings are never published.
 

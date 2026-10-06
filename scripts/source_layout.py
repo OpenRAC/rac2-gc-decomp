@@ -241,20 +241,18 @@ def capture(repo: Path, layout: Path, write: bool = True, expected_manifest_hash
                        dict(current_pilot_piece, replacements={"@@FUNCTION@@": pilot_symbol}),
                        fragment(f"src/levels/placements/{catalog['level']}-after.cfrag", data[end:])])
         recipes[relative] = {"sha256": digest(data), "source_text_bytes": len(data), "pieces": pieces}
-    sdk_catalog_path = repo / "config/boot-units/sdk-sysbit-flush.json"
-    if sdk_catalog_path.exists():
-        sdk = json.loads(sdk_catalog_path.read_bytes())
-        if (sdk.get("unit_id") != "sdk-sysbit-flush"
-                or sdk.get("source") != "candidates/sdk/sysbit_flush.c"
-                or sdk.get("module") != "src/sdk/sysbit_flush.c"):
-            raise ValueError("Unknown SDK authored unit")
+    from boot_sdk_unit import admitted_units, load_catalog, unit_spec
+    sdk_catalogs = [load_catalog(repo, unit) for unit in admitted_units(repo)]
+    if sdk_catalogs:
+        from boot_sdk_unit import PROFILE, CONTROLS
+        for dependency in ('config/target.json', PROFILE, CONTROLS):
+            inputs[dependency] = digest(contained(repo, dependency).read_bytes())
+    for sdk in sdk_catalogs:
         data = contained(repo, sdk["source"]).read_bytes()
-        if (digest(data) != "b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4"
-                or contained(repo, sdk["module"]).read_bytes() != data):
-            raise ValueError("Fixed SDK whole source changed")
         piece = fragment(sdk["module"], data)
         recipes[sdk["source"]] = {"sha256": digest(data), "source_text_bytes": len(data), "pieces": [piece]}
-        inputs["config/boot-units/sdk-sysbit-flush.json"] = digest(sdk_catalog_path.read_bytes())
+        catalog_path = unit_spec(sdk["unit_id"])["catalog"]
+        inputs[catalog_path] = digest(contained(repo, catalog_path).read_bytes())
         inputs[sdk["source"]] = inputs[sdk["module"]] = digest(data)
     families = [{k: v for k, v in family.items() if k != "normalized_source"} for family in base_templates.values()]
     native_functions = sum(len(c["functions"]) for _, c in native)
@@ -278,10 +276,10 @@ def capture(repo: Path, layout: Path, write: bool = True, expected_manifest_hash
         "shared_native_prelude_variants": len(shared_preludes),
         "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report.",
     }
-    if sdk_catalog_path.exists():
-        metrics["sdk_authored_functions"] = 1
-        metrics["sdk_catalogued_machine_bytes"] = 152
-        metrics["total_unique_authored_source_variants_in_scope"] += 1
+    if sdk_catalogs:
+        metrics["sdk_authored_functions"] = len(sdk_catalogs)
+        metrics["sdk_catalogued_machine_bytes"] = sum(f["size"] for c in sdk_catalogs for f in c["functions"])
+        metrics["total_unique_authored_source_variants_in_scope"] += len(sdk_catalogs)
         metrics["scope"] = "authored default boot, separate SDK boot and native catalogues; excludes replicated common overlay coverage"
     manifest = {"schema": 1, "target": "SCUS_972.68", "input_sha256": inputs,
                 "generator_sha256": digest(Path(__file__).read_bytes()),
@@ -326,16 +324,15 @@ def render(layout: Path, manifest: dict, enforce_hashes: bool = True) -> tuple[d
 def analyze(repo: Path, sources: dict, recipes: dict) -> dict:
     """Recompute source inventories without re-slicing authoritative modules."""
     boot, native, inputs = load_inputs(repo)
-    sdk_catalogs = []
-    sdk_catalog_path = repo / "config/boot-units/sdk-sysbit-flush.json"
-    if sdk_catalog_path.exists():
-        sdk_catalog = json.loads(sdk_catalog_path.read_bytes())
-        if (sdk_catalog.get("unit_id") != "sdk-sysbit-flush"
-                or sdk_catalog.get("source") != "candidates/sdk/sysbit_flush.c"
-                or sdk_catalog.get("module") != "src/sdk/sysbit_flush.c"):
-            raise ValueError("Unknown SDK authored unit")
-        sdk_catalogs.append(sdk_catalog)
-        inputs["config/boot-units/sdk-sysbit-flush.json"] = digest(sdk_catalog_path.read_bytes())
+    from boot_sdk_unit import admitted_units, load_catalog, unit_spec
+    sdk_catalogs = [load_catalog(repo, unit) for unit in admitted_units(repo)]
+    if sdk_catalogs:
+        from boot_sdk_unit import PROFILE, CONTROLS
+        for dependency in ('config/target.json', PROFILE, CONTROLS):
+            inputs[dependency] = digest(contained(repo, dependency).read_bytes())
+    for sdk_catalog in sdk_catalogs:
+        path = unit_spec(sdk_catalog["unit_id"])["catalog"]
+        inputs[path] = digest(contained(repo, path).read_bytes())
         inputs[sdk_catalog["module"]] = digest(contained(repo, sdk_catalog["module"]).read_bytes())
     expected_sources = {"candidates/boot.c"} | {c["source"] for _, c in native} | {c["source"] for c in sdk_catalogs}
     if set(sources) != expected_sources:
@@ -346,11 +343,11 @@ def analyze(repo: Path, sources: dict, recipes: dict) -> dict:
         defined = {m[1].decode() for m in re.finditer(definition_pattern, data)}
         catalogued = {f["symbol"] for f in catalog["functions"]}
         if catalog in sdk_catalogs:
-            if digest(data) != "b6921af8b6d1fb1b6d65860b0f6130f5a8f6e6bc57777439e6844df8460391f4":
-                raise ValueError("Fixed SDK whole source changed")
-            if catalogued != {"_sysbitFlush"}:
-                raise ValueError("SDK authored function set changed")
-            defined = {"_sysbitFlush"} if re.search(rb"(?m)^s64 _sysbitFlush\s*\(", data) else set()
+            spec = unit_spec(catalog["unit_id"])
+            if digest(data) != spec["source_sha256"] or catalogued != {spec["function"]["symbol"]}:
+                raise ValueError("Fixed SDK whole source/function changed")
+            # Exact reviewed source hash bounds definitions including names outside the default regex.
+            defined = catalogued
         if defined != catalogued:
             raise ValueError(f"source/catalogue definitions differ: {catalog['source']}")
         for f in catalog["functions"]:
@@ -417,9 +414,9 @@ def analyze(repo: Path, sources: dict, recipes: dict) -> dict:
         "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report.",
     }
     if sdk_catalogs:
-        metrics["sdk_authored_functions"] = 1
-        metrics["sdk_catalogued_machine_bytes"] = 152
-        metrics["total_unique_authored_source_variants_in_scope"] += 1
+        metrics["sdk_authored_functions"] = len(sdk_catalogs)
+        metrics["sdk_catalogued_machine_bytes"] = sum(f["size"] for c in sdk_catalogs for f in c["functions"])
+        metrics["total_unique_authored_source_variants_in_scope"] += len(sdk_catalogs)
         metrics["scope"] = "authored default boot, separate SDK boot and native catalogues; excludes replicated common overlay coverage"
     return {"input_sha256": inputs, "generator_sha256": digest(Path(__file__).read_bytes()), "recipes": recipes,
             "native_source_families": families, "native_unmerged_singletons": singletons, "metrics": metrics}
