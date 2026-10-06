@@ -615,3 +615,22 @@ s32 LVL_7_SIBERIUS_FUN_002FBC70(s32 index)
     }
     return old;
 }
+
+/* Prototype775 is a research label. Field names below describe only the
+ * independently observed byte23 and binary32 word2C operations. */
+typedef struct {
+    u8 pad00[0x23];
+    u8 field23;
+    u8 pad24[8];
+    f32 field2C;
+} NativeUpdate775View;
+
+extern void LVL_7_SIBERIUS_FUN_00306800(NativeUpdate775View *object);
+
+void LVL_7_SIBERIUS_FUN_00394AF8(NativeUpdate775View *object)
+{
+    object->field2C *= 1.025f;
+    object->field23 -= 3;
+    if (object->field23 < 4)
+        LVL_7_SIBERIUS_FUN_00306800(object);
+}

@@ -679,3 +679,22 @@ s32 LVL_6_NOTAK_FUN_002ED580(void)
     }
     return 0;
 }
+
+/* Prototype775 is a research label. Field names below describe only the
+ * independently observed byte23 and binary32 word2C operations. */
+typedef struct {
+    u8 pad00[0x23];
+    u8 field23;
+    u8 pad24[8];
+    f32 field2C;
+} NativeUpdate775View;
+
+extern void LVL_6_NOTAK_FUN_00350388(NativeUpdate775View *object);
+
+void LVL_6_NOTAK_FUN_003E1150(NativeUpdate775View *object)
+{
+    object->field2C *= 1.025f;
+    object->field23 -= 3;
+    if (object->field23 < 4)
+        LVL_6_NOTAK_FUN_00350388(object);
+}

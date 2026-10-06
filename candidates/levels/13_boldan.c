@@ -717,3 +717,22 @@ s32 LVL_13_BOLDAN_FUN_002B8D88(void)
     }
     return 0;
 }
+
+/* Prototype775 is a research label. Field names below describe only the
+ * independently observed byte23 and binary32 word2C operations. */
+typedef struct {
+    u8 pad00[0x23];
+    u8 field23;
+    u8 pad24[8];
+    f32 field2C;
+} NativeUpdate775View;
+
+extern void LVL_13_BOLDAN_FUN_0031A718(NativeUpdate775View *object);
+
+void LVL_13_BOLDAN_FUN_003A80E0(NativeUpdate775View *object)
+{
+    object->field2C *= 1.025f;
+    object->field23 -= 3;
+    if (object->field23 < 4)
+        LVL_13_BOLDAN_FUN_0031A718(object);
+}

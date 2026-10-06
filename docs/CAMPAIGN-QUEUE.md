@@ -4603,19 +4603,26 @@ Reopen condition: Independent original typed payload/header binding or true alia
 
 ## native-review-joba-frame-table-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Exclude this already-owned physical family and continue a different uncovered algorithm; no candidate plan/compile or alias replay.
+Keep this physical family excluded under its existing actual refusal history. The old research reservation is a static exclusion, not an untried C target. Select a genuinely uncovered algorithm; preserve the existing independent-evidence reopening condition.
 
 Reopen condition: Owner supplies genuinely new algorithm/source evidence or completed transferable qualification; currentworker does not replay ownerfamily.
 
+- `campaign-trial:64a5c35397544b6cbd49c75b52d1b0f5`
+
 ## native-review-joba-line-packet-20261004
 
-State: `queued`. Kind: `research`.
+State: `stopped`. Kind: `research`.
 
-Exclude both physical families before C authoring or compilation. Research reservation retained only as static exclusion; select another genuinely uncovered algorithm.
+Keep this physical family excluded under its existing actual refusal history. The old research reservation is a static exclusion, not an untried C target. Select a genuinely uncovered algorithm; preserve the existing independent-evidence reopening condition.
 
 Reopen condition: Independent owner-supported original alias/storage/source evidence; no worker replay or equivalent declaration permutations.
+
+- `campaign-trial:5aa5bfcf00344b9ea396de8d832a89cb`
+- `campaign-trial:e04cffdcdc9f4351a4d85adfe10b00e5`
+- `campaign-trial:22db66753f984a0894fecbd1eaf2bc5f`
+- `campaign-trial:6011cbb5bebd4860844c987b14ab5f68`
 
 ## native-review-joba-linked-count-20261004
 
@@ -16908,6 +16915,24 @@ Reopen condition: New independently qualified per-unit evidence is required befo
 - `private-work:c-campaign-20261006/sdk-domain-tooling-review/SDK-DOMAIN-ASSESSMENT.md`
 - `docs/SDK-PROFILE-QUALIFICATION.md`
 
+## sdk-ipu-restart336-source-qualification-20261006
+
+State: `done`. Kind: `research`.
+
+One actual fixed SDK source compilation, strip and SN link are complete: all 336 unmasked bytes match. Await independent artifact and finite qualifier reviews, then integrate a third explicit SDK object owner and run fresh full-image gates. No repeat compilation or source variants; opaque helpers receive zero credit.
+
+Reopen condition: Independent measured original ABI, layout, algorithm or qualified compiler evidence. No equivalent expression, type, register, order, tool or flag cycling.
+
+- `private-work:c-campaign-20261006/bank/rac1-source-reuse-readonly/sdk-remaining-after189/delivery.json`
+- `private plan sha256:1038e419439d4dc310bc5876be450c4d5f5a5f17c0517acc2f35f1477b2d5efe`
+- `source sha256:590d6a10dcc6883cd4724257300aaf6c5f5fe25e5745b60d463918039ba81bea`
+- `catalog sha256:316208ca5b1730c0a8c92fed1442fe680a84ff1472c48a35eaa61d6699e4f289`
+- `private-work:c-campaign-20261006/sdk-ipu-restart336-root-actual-output/outcome.json`
+- `actual outcome sha256:b990d836ab71952b24c00708e84ec581f3063f3b23c66cdb1d77e47d3ef90683`
+- `actual object sha256:a056d3afe14484ee659a783ca86a95d5c1bd31347557fb630e0ea41815f3de8c`
+- `actual linked ELF sha256:384c8e9f09bc78b8b4c753759f36b142bc16b124aee8402aec96694aef5b662d`
+- `complete linked body sha256:d9993319706cf0ddfe71dae0fcdfb3302b7d3773f59d15b8165514f4e4034a86`
+
 ## sdk-sysbit152-experimental-unit-qualification-20261006
 
 State: `done`. Kind: `research`.
@@ -17574,6 +17599,276 @@ State: `stopped`. Kind: `candidate`.
 Require all complete symbols exact, then author shared fragments and integrate all27programs.
 
 Reopen condition: An actual uncovered pinned span with independent boundary evidence; do not count an alternate alias of an integrated body
+
+## update-moby775-76-10_hrugis_cloud-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-11_joba-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-12_todano-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-13_boldan-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-14_aranos_prison-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-15_gorn-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-16_snivelak-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-17_smolg-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-18_damosel-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-19_grelbin-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-1_oozla-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-20_yeedil-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-22_dobbo_orbit-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-23_damosel_orbit-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-24_ship_shack-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-25_wupash_nebula-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-26_jamming_array-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-2_maktar_nebula-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-30_insomniac_museum-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-3_endako-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-4_barlow-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-5_feltzin_system-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-6_notak-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-7_siberius-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-8_tabora-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-9_dobbo-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile this complete current unit once with the qualified tools. Require all controls, readonly sections and the whole new 76-byte function to match. Preserve any refusal; no integrated credit before complete loaded-image gates.
+
+Reopen condition: Independent measured original ABI, layout or qualified compiler lowering evidence; no equivalent source, type, order, register or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/family-other26-v1/prepared.json`
+
+## update-moby775-76-aranos-source-first-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Compile the complete 43-function unit once with qualified tools. Require all 42 controls and the complete new 76-byte symbol to match. Preserve any refusal; qualify the other fixed placements only after the seed matches.
+
+Reopen condition: Independent measured original callback ABI, field layout, or qualified compiler lowering evidence; no equivalent source, type, order, register, or flag cycling.
+
+- `private-work:c-campaign-20261006/normal-gameplay-selection-data/updateMoby775-76/source-packet.json`
 
 ## wait372-copy-10_hrugis_cloud-00342068-fixed-20261006
 

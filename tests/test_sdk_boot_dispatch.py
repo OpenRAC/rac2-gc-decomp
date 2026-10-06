@@ -32,6 +32,24 @@ class SDKBootDispatch(unittest.TestCase):
         with self.assertRaises(ValueError):
             integration.split_assembly('', [{'symbol': 'ARBITRARY', 'address': 0x1000, 'size': 8}])
 
+    def test_restart_sdk_alias_requires_exact_finite_owner(self):
+        spec = sdk.unit_spec(sdk.RESTART336)
+        function = {**spec['function'], 'unit_id': sdk.RESTART336, 'origin': 'boot-sdk',
+                    'candidate_source': spec['source'], 'input_section': '.text'}
+        address = function['address']
+        text = f'.globl func_{address:08X}\nfunc_{address:08X}:\n'
+        text += ''.join(f'/* 000000 {address + i:08X} 00000000 */ nop\n'
+                        for i in range(0, function['size'], 4))
+        pieces = integration.split_assembly(text, [function])
+        self.assertEqual([p['kind'] for p in pieces], ['c'])
+        for key, value in [('unit_id', sdk.UNIT), ('unit_id', 'sdk-unknown'),
+                           ('candidate_source', sdk.SOURCE), ('origin', 'level-native'),
+                           ('input_section', '.text.fake'), ('symbol', 'OTHER'),
+                           ('size', 332), ('address', address + 4)]:
+            wrong = dict(function, **{key: value})
+            with self.subTest(key=key, value=value), self.assertRaises(ValueError):
+                integration.split_assembly(text, [wrong])
+
     def test_no_sdk_catalog_preserves_exact_default_dispatch(self):
         expected = ({'functions': []}, Path('default.o'), {'cc1': 'old'})
         with patch.object(integration, 'compile_c', return_value=expected) as default:

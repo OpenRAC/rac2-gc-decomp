@@ -634,3 +634,22 @@ int LVL_19_GRELBIN_FUN_00323E88(void)
         count = 0x28;
     return count;
 }
+
+/* Prototype775 is a research label. Field names below describe only the
+ * independently observed byte23 and binary32 word2C operations. */
+typedef struct {
+    u8 pad00[0x23];
+    u8 field23;
+    u8 pad24[8];
+    f32 field2C;
+} NativeUpdate775View;
+
+extern void LVL_19_GRELBIN_FUN_0030DFE8(NativeUpdate775View *object);
+
+void LVL_19_GRELBIN_FUN_0039CF70(NativeUpdate775View *object)
+{
+    object->field2C *= 1.025f;
+    object->field23 -= 3;
+    if (object->field23 < 4)
+        LVL_19_GRELBIN_FUN_0030DFE8(object);
+}
