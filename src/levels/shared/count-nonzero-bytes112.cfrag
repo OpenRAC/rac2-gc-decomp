@@ -1,5 +1,5 @@
 
-extern unsigned char D_19B278[];
+extern unsigned char @@DATA_DECL@@[];
 
 int @@FUNCTION@@(void)
 {
@@ -10,7 +10,7 @@ int @@FUNCTION@@(void)
         int j;
 
         for (j = 0; j < 4; j++) {
-            if (D_19B278[i * 4 + j] != 0)
+            if (@@DATA_READ@@[i * 4 + j] != 0)
                 count++;
         }
     }

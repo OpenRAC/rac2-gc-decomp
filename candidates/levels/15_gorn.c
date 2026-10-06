@@ -708,3 +708,25 @@ f32 LVL_15_GORN_FUN_00333280(f32 value, s32 count) {
         product = product * factor;
     return 1.0f - product;
 }
+
+extern unsigned char D_19B278[];
+
+int LVL_15_GORN_FUN_0033E980(void)
+{
+    int count = 0;
+    int i;
+
+    for (i = 0; i < 0x1C; i++) {
+        int j;
+
+        for (j = 0; j < 4; j++) {
+            if (D_19B278[i * 4 + j] != 0)
+                count++;
+        }
+    }
+    if (count < 0)
+        count = 0;
+    if (count > 0x28)
+        count = 0x28;
+    return count;
+}

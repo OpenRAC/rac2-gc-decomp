@@ -17,7 +17,7 @@ utilities, object operations, callbacks and the packed-pixel decoder. The
 generator concatenates them without introducing includes, line directives,
 whitespace or additional compiler invocations. Types and declarations retain
 their original order and scope. The output is still one `boot.c` translation
-unit containing 183 catalogued definitions. The recipe also appends the
+unit containing 184 catalogued definitions. The recipe also appends the
 vendored libgcc source in `src/libgcc/fp-bit-ee.c`; its one accepted definition
 is upstream library code, separately licensed, rather than campaign-authored
 code. Its complete notices also accompany the generated copy in `boot.c`.
@@ -37,7 +37,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Eight hundred seventy-three contextual native bodies remain distinct in the
+family has 26. Nine hundred six contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -82,18 +82,27 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
-| Boot | 183 catalogued definitions (182 campaign-authored, one vendored) | 9,832 |
-| Native overlays | 881 family-or-singleton items, 882 contextual variants | 104,080 across 1,088 placements |
+| Boot | 184 catalogued definitions (183 campaign-authored, one vendored) | 9,944 |
+| Native overlays | 914 family-or-singleton items, 915 contextual variants | 107,328 across 1,121 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 94,896, or 94,920 when both clear
+Native representative catalogued bytes total 98,144, or 98,168 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **320,992 / 48,788,176 bytes**.
-The latest lot completes the signed-index bitmap family: seventeen additional
+The current integration exporter accepts **324,352 / 48,788,176 bytes**.
+The latest lot integrates 20 additional 112-byte nonzero-byte counters and
+14 additional 80-byte resident-state predicates, adding 3,360 loaded C bytes.
+The 26 affected units qualify all 1,193 current controls and 34 new complete
+bodies. Eight changed combined contexts are requalified; eighteen unchanged
+source/catalogue/review byte sets are reused. All 28 loaded-image gates pass.
+The all-members unique numerator remains 68,124: the state-predicate group is
+25/27 and the counter group is 27/28, with three historical refusals retained
+until independent evidence satisfies their reopening conditions.
+
+The preceding lot completed the signed-index bitmap family: seventeen additional
 124-byte functions, including one boot placement and sixteen native placements,
 contribute 2,108 loaded C bytes. All 816 existing controls and 17 new complete
 bodies qualify in their current units, followed by the boot and all 27 overlay

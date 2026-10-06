@@ -1,7 +1,7 @@
 {
-  "candidate_elf_sha256": "eaee35cb8a83e9b65972044301f819f462eca28110f7df8d87a0d6b3e6623174",
+  "candidate_elf_sha256": "06060b8e5507b4804a3582c0208e11ffda50f3062a93d48e8ffb78bf017a67a4",
   "candidate_source": "candidates/levels/14_aranos_prison.c",
-  "catalog_sha256": "bca2ef59d923df0c596478b0c89883c89f855b09112e68781a2f93995f3f59b6",
+  "catalog_sha256": "f6cff5208d567aca2328db0f0e7458afd3ced58aaf161590629bb1b91b14ee34",
   "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
   "flags": [
     "-O2",
@@ -459,17 +459,39 @@
       "size": 124,
       "state": "matched_unintegrated",
       "symbol": "LVL_14_ARANOS_PRISON_FUN_0030D200"
+    },
+    {
+      "address": 3336232,
+      "candidate_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "different_bytes": 0,
+      "matched": true,
+      "produced_size": 112,
+      "reference_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "size": 112,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_0032E828"
+    },
+    {
+      "address": 2840320,
+      "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "different_bytes": 0,
+      "matched": true,
+      "produced_size": 80,
+      "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "size": 80,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_002B5700"
     }
   ],
   "kind": "level-native-candidate",
-  "matched_code_bytes": 3816,
-  "object_sha256": "fe81c7f5d1a780b9086f27f43197d3125e3afdd7903dc94086dc87f2e6a9492c",
+  "matched_code_bytes": 4008,
+  "object_sha256": "c01e83b00c8d63d754fb969f377c91ce596c02f3af07a7d7d0a3b91c03a0beed",
   "program": "levels/14_aranos_prison",
   "read_only_sections": [],
   "reference_entry": 2798344,
   "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
   "schema": 1,
-  "source_sha256": "8517d83dd4a4452188c8fb349d9051e240f4db2477cf2488c2b64beaeb24625c",
+  "source_sha256": "159f1656c66eb29d3012969876dc66fba90f1390d3e73d726c149b6797487a2c",
   "state": "matched_unintegrated",
   "target": "SCUS_972.68",
   "tools": {

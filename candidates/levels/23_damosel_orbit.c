@@ -640,3 +640,44 @@ s32 LVL_23_DAMOSEL_ORBIT_FUN_0030F578(s32 index)
     }
     return old;
 }
+
+extern unsigned char D_19B278[];
+
+int LVL_23_DAMOSEL_ORBIT_FUN_0032FAB8(void)
+{
+    int count = 0;
+    int i;
+
+    for (i = 0; i < 0x1C; i++) {
+        int j;
+
+        for (j = 0; j < 4; j++) {
+            if (D_19B278[i * 4 + j] != 0)
+                count++;
+        }
+    }
+    if (count < 0)
+        count = 0;
+    if (count > 0x28)
+        count = 0x28;
+    return count;
+}
+
+typedef struct {
+    u8 pad0000[0x2294];
+    u32 kind;
+    u32 unknown2298;
+    u32 mode;
+} ResidentFlags2294;
+
+s32 LVL_23_DAMOSEL_ORBIT_FUN_002B6D38(void)
+{
+    ResidentFlags2294 *root = (ResidentFlags2294 *)LVL_23_DAMOSEL_ORBIT_D_00189E20;
+
+    if (root->mode == 17 || root->mode == 18
+        || root->kind == 0x67 || root->kind == 0x7f
+        || root->kind == 0x73 || root->kind == 0x72) {
+        return 1;
+    }
+    return 0;
+}

@@ -1,7 +1,7 @@
 {
-  "candidate_elf_sha256": "f6993e86822dd900f3d8a2faf27b964f7dd2c20fcc503a71ec4090d7364f79b4",
+  "candidate_elf_sha256": "a0b6a69e1a533617394419ab7d2cebb0fe8d9f0152769f036b268051133ae9c4",
   "candidate_source": "candidates/levels/3_endako.c",
-  "catalog_sha256": "ccee8f130a358d53a1cd54b1ae93d88d7163541155910fff1c8159c5025a0092",
+  "catalog_sha256": "89b1665bdb923cd8ffa9341891e2b45345cd9026c88c609c07fc6141d0bfbdbf",
   "checker_sha256": "f6c31c63a42be6cc93af4a03c256134428c17acfeade34d26aefd55c3fe9beff",
   "flags": [
     "-O2",
@@ -426,17 +426,39 @@
       "size": 124,
       "state": "matched_unintegrated",
       "symbol": "LVL_3_ENDAKO_FUN_00306B68"
+    },
+    {
+      "address": 3307032,
+      "candidate_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "different_bytes": 0,
+      "matched": true,
+      "produced_size": 112,
+      "reference_sha256": "d16b3a80f66294c4d78d35a68f401ea9403160c1d13a67817ff47639edbaa5a7",
+      "size": 112,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_3_ENDAKO_FUN_00327618"
+    },
+    {
+      "address": 2832448,
+      "candidate_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "different_bytes": 0,
+      "matched": true,
+      "produced_size": 80,
+      "reference_sha256": "507b121952ed76748bfec276c8d32d0ac6caebcf4fce63b45d6ad2e56db217d3",
+      "size": 80,
+      "state": "matched_unintegrated",
+      "symbol": "LVL_3_ENDAKO_FUN_002B3840"
     }
   ],
   "kind": "level-native-candidate",
-  "matched_code_bytes": 3660,
-  "object_sha256": "4792bb346d132264c09c496f83a04cdafa42df1298dc9f58d0c743fd46b8358d",
+  "matched_code_bytes": 3852,
+  "object_sha256": "4bf8e45625f29fc8929c7463190f87cd2c2540250f7a670e441adb36a6647dc9",
   "program": "levels/3_endako",
   "read_only_sections": [],
   "reference_entry": 2794248,
   "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
   "schema": 1,
-  "source_sha256": "c54e551d7ef97787e0864fc854c2435d7bcf0276f4c781ad1ff9b1b06e28db21",
+  "source_sha256": "19d8b189692d68ad72b966b7265a93d2733f16f9937f3a14fb3e0907bed2ce76",
   "state": "matched_unintegrated",
   "target": "SCUS_972.68",
   "tools": {

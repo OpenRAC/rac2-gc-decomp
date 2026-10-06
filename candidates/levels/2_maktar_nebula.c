@@ -690,3 +690,22 @@ s32 LVL_2_MAKTAR_NEBULA_FUN_00309910(s32 index)
     }
     return old;
 }
+
+typedef struct {
+    u8 pad0000[0x2294];
+    u32 kind;
+    u32 unknown2298;
+    u32 mode;
+} ResidentFlags2294;
+
+s32 LVL_2_MAKTAR_NEBULA_FUN_002B1280(void)
+{
+    ResidentFlags2294 *root = (ResidentFlags2294 *)LVL_2_MAKTAR_NEBULA_D_00189E20;
+
+    if (root->mode == 17 || root->mode == 18
+        || root->kind == 0x67 || root->kind == 0x7f
+        || root->kind == 0x73 || root->kind == 0x72) {
+        return 1;
+    }
+    return 0;
+}
