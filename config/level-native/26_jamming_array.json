@@ -2,6 +2,7 @@
   "entry": 2769288,
   "externals": {
     "BOOT_FUN_00115DA8": 1138088,
+    "FUN_00133400": 1258496,
     "LVL_26_JAMMING_ARRAY_D_00139568": 1283432,
     "LVL_26_JAMMING_ARRAY_D_001395B8": 1283512,
     "LVL_26_JAMMING_ARRAY_D_00189E20": 1613344,
@@ -9,6 +10,7 @@
     "LVL_26_JAMMING_ARRAY_D_0018B134": 1618228,
     "LVL_26_JAMMING_ARRAY_D_0018C0B0": 1622192,
     "LVL_26_JAMMING_ARRAY_D_0018C0B4": 1622196,
+    "LVL_26_JAMMING_ARRAY_D_001A63A8": 1729448,
     "LVL_26_JAMMING_ARRAY_D_001A79F0": 1735152,
     "LVL_26_JAMMING_ARRAY_D_001A8EB0": 1740464,
     "LVL_26_JAMMING_ARRAY_D_001A9A60": 1743456,
@@ -271,6 +273,18 @@
       "meaning": "bit get-and-set on the resident bitmap byte at 0x001395B8 + index/8 + 0xA7: reads bit index%8, sets it, returns the previous bit",
       "size": 124,
       "symbol": "LVL_26_JAMMING_ARRAY_FUN_00305A38"
+    },
+    {
+      "address": 3330584,
+      "meaning": "Pass resident active word to original stop helper when signed status is three, set status four and return one; otherwise zero",
+      "size": 88,
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_0032D218"
+    },
+    {
+      "address": 3254272,
+      "meaning": "computes a scalar complement-power curve by repeated multiplication",
+      "size": 68,
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_0031A800"
     }
   ],
   "gp": 0,

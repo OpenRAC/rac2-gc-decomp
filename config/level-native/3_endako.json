@@ -1,265 +1,279 @@
 {
-  "schema": 1,
-  "kind": "level-native-catalog",
-  "target": "SCUS_972.68",
-  "level": "3_endako",
-  "program": "levels/3_endako",
-  "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
   "entry": 2794248,
-  "source": "candidates/levels/3_endako.c",
+  "externals": {
+    "BOOT_FUN_00115DA8": 1138088,
+    "FUN_00133400": 1258496,
+    "LVL_3_ENDAKO_D_00139568": 1283432,
+    "LVL_3_ENDAKO_D_001395B8": 1283512,
+    "LVL_3_ENDAKO_D_00189E20": 1613344,
+    "LVL_3_ENDAKO_D_0018B040": 1617984,
+    "LVL_3_ENDAKO_D_0018B134": 1618228,
+    "LVL_3_ENDAKO_D_0018C0B0": 1622192,
+    "LVL_3_ENDAKO_D_0018C0B4": 1622196,
+    "LVL_3_ENDAKO_D_001A63A8": 1729448,
+    "LVL_3_ENDAKO_D_001A79F0": 1735152,
+    "LVL_3_ENDAKO_D_001A8EB0": 1740464,
+    "LVL_3_ENDAKO_D_001A9A20": 1743392,
+    "LVL_3_ENDAKO_D_001A9A28": 1743400,
+    "LVL_3_ENDAKO_D_001B2980": 1780096,
+    "LVL_3_ENDAKO_D_001B29C0": 1780160,
+    "LVL_3_ENDAKO_D_001B97C0": 1808320,
+    "LVL_3_ENDAKO_D_001BFAC0": 1833664,
+    "LVL_3_ENDAKO_D_001CA020": 1876000,
+    "LVL_3_ENDAKO_D_00227380": 2257792,
+    "LVL_3_ENDAKO_D_0022E280": 2286208,
+    "LVL_3_ENDAKO_D_0022E880": 2287744,
+    "LVL_3_ENDAKO_D_00231FC0": 2301888,
+    "LVL_3_ENDAKO_D_002567C0": 2451392,
+    "LVL_3_ENDAKO_D_00266DA0": 2518432,
+    "LVL_3_ENDAKO_D_00282530": 2630960,
+    "LVL_3_ENDAKO_FUN_002D8170": 2982256,
+    "LVL_3_ENDAKO_FUN_002DD650": 3003984,
+    "LVL_3_ENDAKO_FUN_002DD998": 3004824,
+    "LVL_3_ENDAKO_FUN_002EECC0": 3075264,
+    "LVL_3_ENDAKO_FUN_002EEFE0": 3076064,
+    "LVL_3_ENDAKO_FUN_002EF478": 3077240,
+    "LVL_3_ENDAKO_FUN_002F1530": 3085616,
+    "LVL_3_ENDAKO_FUN_002F1898": 3086488,
+    "LVL_3_ENDAKO_FUN_002F5570": 3102064,
+    "LVL_3_ENDAKO_FUN_00360BE0": 3541984,
+    "LVL_3_ENDAKO_FUN_0037CA78": 3656312
+  },
   "flags": [
     "-O2",
     "-G0",
     "-ffunction-sections"
   ],
-  "gp": 0,
   "functions": [
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002B3728",
       "address": 2832168,
+      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1220 when field 0x1244 equals two, otherwise zero"
+      "symbol": "LVL_3_ENDAKO_FUN_002B3728"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002B3760",
       "address": 2832224,
+      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one",
       "size": 52,
-      "meaning": "returns indexed resident word 0x1248 when field 0x1244 equals two, otherwise minus one"
+      "symbol": "LVL_3_ENDAKO_FUN_002B3760"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002B3890",
       "address": 2832528,
+      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255",
       "size": 20,
-      "meaning": "returns the provided value, or object byte 0xa9 when the value is 255"
+      "symbol": "LVL_3_ENDAKO_FUN_002B3890"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002B4380",
       "address": 2835328,
+      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e",
       "size": 88,
-      "meaning": "maps values one, two and three to identifiers 0x72, 0x70 and 0x6e"
+      "symbol": "LVL_3_ENDAKO_FUN_002B4380"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002D73C0",
       "address": 2978752,
+      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
-      "meaning": "returns the resident 32-bit field at core address 0x0018c0b4"
+      "symbol": "LVL_3_ENDAKO_FUN_002D73C0"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002D8418",
       "address": 2982936,
+      "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
-      "meaning": "clear five object fields; independently qualified in this overlay"
+      "symbol": "LVL_3_ENDAKO_FUN_002D8418"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002E45F0",
       "address": 3032560,
+      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word",
       "size": 36,
-      "meaning": "evaluates (b-a)*(t*t)+a*t and converts the measured float result to a signed word"
+      "symbol": "LVL_3_ENDAKO_FUN_002E45F0"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002F4CD8",
       "address": 3099864,
+      "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
-      "meaning": "indexed copy of overlay-owned five-entry table"
+      "symbol": "LVL_3_ENDAKO_FUN_002F4CD8"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002D7C18",
       "address": 2980888,
+      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative",
       "size": 92,
-      "meaning": "clears object byte then calls the measured four-float helper when the field is nonnegative"
+      "symbol": "LVL_3_ENDAKO_FUN_002D7C18"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002E6390",
       "address": 3040144,
+      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification",
       "size": 136,
-      "meaning": "Set up aligned GS buffer state and emit pinned register/clear helper calls; source identity and matching require complete-unit qualification"
+      "symbol": "LVL_3_ENDAKO_FUN_002E6390"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002B3798",
       "address": 2832280,
+      "meaning": "tests whether the indexed resident status equals 12 or 17",
       "size": 56,
-      "meaning": "tests whether the indexed resident status equals 12 or 17"
+      "symbol": "LVL_3_ENDAKO_FUN_002B3798"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002B37D0",
       "address": 2832336,
+      "meaning": "tests whether the indexed resident status equals 47",
       "size": 36,
-      "meaning": "tests whether the indexed resident status equals 47"
+      "symbol": "LVL_3_ENDAKO_FUN_002B37D0"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002B8C60",
       "address": 2853984,
+      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71",
       "size": 32,
-      "meaning": "tests the signed short identifier at offset 0xaa of a nonnull object against 71"
+      "symbol": "LVL_3_ENDAKO_FUN_002B8C60"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_00342C48",
       "address": 3419208,
+      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint",
       "size": 100,
-      "meaning": "advances an index with signed delta and either wraps by count or clamps the applicable endpoint"
+      "symbol": "LVL_3_ENDAKO_FUN_00342C48"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002F8008",
       "address": 3112968,
+      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
-      "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear"
+      "symbol": "LVL_3_ENDAKO_FUN_002F8008"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_00306BE8",
       "address": 3173352,
+      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
-      "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard"
+      "symbol": "LVL_3_ENDAKO_FUN_00306BE8"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_0037F358",
       "address": 3666776,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
       "size": 68,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one"
+      "symbol": "LVL_3_ENDAKO_FUN_0037F358"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_0036C2B8",
       "address": 3588792,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
       "size": 192,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33"
+      "symbol": "LVL_3_ENDAKO_FUN_0036C2B8"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_00404480",
       "address": 4211840,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1"
+      "symbol": "LVL_3_ENDAKO_FUN_00404480"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002D7280",
       "address": 2978432,
+      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection",
       "size": 160,
-      "meaning": "Filter primary or fallback object's class identifier by mode and signed selection"
+      "symbol": "LVL_3_ENDAKO_FUN_002D7280"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002AB758",
       "address": 2799448,
+      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
-      "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL"
+      "symbol": "LVL_3_ENDAKO_FUN_002AB758"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002F49B0",
       "address": 3099056,
+      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero",
       "size": 84,
-      "meaning": "search56 byte-mapped E0 records by U16class3C, return opaque32 marker0 elsezero"
+      "symbol": "LVL_3_ENDAKO_FUN_002F49B0"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_003816B8",
       "address": 3675832,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords"
+      "symbol": "LVL_3_ENDAKO_FUN_003816B8"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002D7200",
       "address": 2978304,
+      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
-      "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero"
+      "symbol": "LVL_3_ENDAKO_FUN_002D7200"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002D3C58",
       "address": 2964568,
+      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Set bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_3_ENDAKO_FUN_002D3C58"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002D3C90",
       "address": 2964624,
+      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
-      "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags"
+      "symbol": "LVL_3_ENDAKO_FUN_002D3C90"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002D7648",
       "address": 2979400,
+      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero",
       "size": 52,
-      "meaning": "For eight16-byte records, clear active byte1 and halfword6 only when active is nonzero"
+      "symbol": "LVL_3_ENDAKO_FUN_002D7648"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002F4318",
       "address": 3097368,
+      "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
-      "meaning": "Change resident state word from1 to2 only when the mode word equals7"
+      "symbol": "LVL_3_ENDAKO_FUN_002F4318"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_0030A268",
       "address": 3187304,
+      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail",
       "size": 396,
-      "meaning": "localized row40 textID10 firstpercent selector b formats signedmappedword80 with original decimalformatter; other selector formats original error string, preserve prefix/tail"
+      "symbol": "LVL_3_ENDAKO_FUN_0030A268"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002B9358",
       "address": 2855768,
+      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values",
       "size": 64,
-      "meaning": "Test whether a scalar lies below a plane within its configured depth, rejecting unordered values"
+      "symbol": "LVL_3_ENDAKO_FUN_002B9358"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_0044AA00",
       "address": 4499968,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
       "size": 312,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row"
+      "symbol": "LVL_3_ENDAKO_FUN_0044AA00"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_00312660",
       "address": 3221088,
+      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
-      "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index"
+      "symbol": "LVL_3_ENDAKO_FUN_00312660"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_002DD5A8",
       "address": 3003816,
+      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
-      "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return"
+      "symbol": "LVL_3_ENDAKO_FUN_002DD5A8"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_0044FE78",
       "address": 4521592,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
       "size": 52,
-      "meaning": "Store an indexed four-component parameter row and its float weight"
+      "symbol": "LVL_3_ENDAKO_FUN_0044FE78"
     },
     {
-      "symbol": "LVL_3_ENDAKO_FUN_00450310",
       "address": 4522768,
+      "meaning": "Store four float components in a selected row of a parameter group",
       "size": 52,
-      "meaning": "Store four float components in a selected row of a parameter group"
+      "symbol": "LVL_3_ENDAKO_FUN_00450310"
+    },
+    {
+      "address": 3337464,
+      "meaning": "Pass resident active word to original stop helper when signed status is three, set status four and return one; otherwise zero",
+      "size": 88,
+      "symbol": "LVL_3_ENDAKO_FUN_0032ECF8"
+    },
+    {
+      "address": 3258768,
+      "meaning": "computes a scalar complement-power curve by repeated multiplication",
+      "size": 68,
+      "symbol": "LVL_3_ENDAKO_FUN_0031B990"
     }
   ],
-  "externals": {
-    "LVL_3_ENDAKO_D_001A8EB0": 1740464,
-    "LVL_3_ENDAKO_D_0018C0B4": 1622196,
-    "LVL_3_ENDAKO_D_00189E20": 1613344,
-    "LVL_3_ENDAKO_FUN_002D8170": 2982256,
-    "LVL_3_ENDAKO_FUN_002F1530": 3085616,
-    "LVL_3_ENDAKO_FUN_002F1898": 3086488,
-    "LVL_3_ENDAKO_FUN_0037CA78": 3656312,
-    "LVL_3_ENDAKO_D_00282530": 2630960,
-    "LVL_3_ENDAKO_D_001395B8": 1283512,
-    "LVL_3_ENDAKO_D_00231FC0": 2301888,
-    "LVL_3_ENDAKO_D_0022E880": 2287744,
-    "LVL_3_ENDAKO_D_00227380": 2257792,
-    "LVL_3_ENDAKO_D_0022E280": 2286208,
-    "LVL_3_ENDAKO_D_002567C0": 2451392,
-    "LVL_3_ENDAKO_D_0018C0B0": 1622192,
-    "LVL_3_ENDAKO_D_0018B134": 1618228,
-    "LVL_3_ENDAKO_D_0018B040": 1617984,
-    "LVL_3_ENDAKO_D_00139568": 1283432,
-    "LVL_3_ENDAKO_D_00266DA0": 2518432,
-    "LVL_3_ENDAKO_FUN_002EECC0": 3075264,
-    "LVL_3_ENDAKO_D_001A79F0": 1735152,
-    "LVL_3_ENDAKO_D_001B97C0": 1808320,
-    "LVL_3_ENDAKO_D_001BFAC0": 1833664,
-    "LVL_3_ENDAKO_D_001CA020": 1876000,
-    "LVL_3_ENDAKO_D_001A9A20": 1743392,
-    "LVL_3_ENDAKO_D_001A9A28": 1743400,
-    "LVL_3_ENDAKO_FUN_002F5570": 3102064,
-    "BOOT_FUN_00115DA8": 1138088,
-    "LVL_3_ENDAKO_FUN_00360BE0": 3541984,
-    "LVL_3_ENDAKO_D_001B2980": 1780096,
-    "LVL_3_ENDAKO_D_001B29C0": 1780160,
-    "LVL_3_ENDAKO_FUN_002DD650": 3003984,
-    "LVL_3_ENDAKO_FUN_002EEFE0": 3076064,
-    "LVL_3_ENDAKO_FUN_002EF478": 3077240,
-    "LVL_3_ENDAKO_FUN_002DD998": 3004824
-  }
+  "gp": 0,
+  "kind": "level-native-catalog",
+  "level": "3_endako",
+  "program": "levels/3_endako",
+  "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
+  "schema": 1,
+  "source": "candidates/levels/3_endako.c",
+  "target": "SCUS_972.68"
 }

@@ -1782,9 +1782,196 @@ Compare all complete symbols and object hash with the pre-lot committed native r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
-## native-complement-power68-v1-20261006
+## missing-members-bitmap124-0_aranos_tutorial-20261006
 
 State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/0_aranos_tutorial/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-11_joba-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/11_joba/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-12_todano-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/12_todano/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-13_boldan-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/13_boldan/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-14_aranos_prison-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/14_aranos_prison/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-1_oozla-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/1_oozla/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-23_damosel_orbit-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/23_damosel_orbit/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-24_ship_shack-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/24_ship_shack/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-2_maktar_nebula-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/2_maktar_nebula/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-3_endako-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/3_endako/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-4_barlow-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/4_barlow/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-5_feltzin_system-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/5_feltzin_system/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-6_notak-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/6_notak/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-7_siberius-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/7_siberius/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-8_tabora-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/8_tabora/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-9_dobbo-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/9_dobbo/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## missing-members-bitmap124-boot-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
+
+Reopen condition: Independent ABI/declaration/context or qualified compiler evidence, reviewed separately; no source/type/register/loop/flag cycles.
+
+- `runtime:bank/missing-members-bitmap124/boot/preparation.json`
+- `private-work:c-campaign-20261006/bank/missing-members-bitmap124/preparation.json`
+
+## native-complement-power68-v1-20261006
+
+State: `integrated`. Kind: `candidate`.
 
 Root reservation/registration first; maintain complete68byte target plus ALL38current controls. On exact seed prepare same ordinaryC across explicit27whole raw-identical placements and currentperunitcontrols.
 
@@ -15011,6 +15198,330 @@ State: `integrated`. Kind: `candidate`.
 Compare every complete symbol in the intended standalone unit before full frozen image gates.
 
 Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
+
+## shared-callstate-power-20261006-0_aranos_tutorial
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-10_hrugis_cloud
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-11_joba
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-12_todano
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-13_boldan
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-14_aranos_prison
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-15_gorn
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-16_snivelak
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-17_smolg
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-18_damosel
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-19_grelbin
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-1_oozla
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-20_yeedil
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-22_dobbo_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-23_damosel_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-24_ship_shack
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-25_wupash_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-26_jamming_array
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-2_maktar_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-30_insomniac_museum
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-3_endako
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-4_barlow
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-5_feltzin_system
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-6_notak
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-7_siberius
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-8_tabora
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
+
+## shared-callstate-power-20261006-9_dobbo
+
+State: `integrated`. Kind: `candidate`.
+
+Validate the complete current source/object/full-image proofs for the whole catalogue, then close through the maintained campaign validator. Private exact bodies add no coverage before integration.
+
+Reopen condition: Independent original ABI/type/source-lifetime or separately qualified compiler evidence after any refusal; no equivalent expression, branch, register or profile cycling.
+
+- `private-work:c-campaign-20261006/combined-nextlot/integration-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-callback/nextlot-manifest.json`
+- `private-work:c-campaign-20261006/fresh-selection-frame/arithmetic68-family/integration-receipt.json`
 
 ## ship-shack-002e4828-gs-setup-v1
 

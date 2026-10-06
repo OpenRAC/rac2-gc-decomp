@@ -591,3 +591,21 @@ int LVL_1_OOZLA_FUN_0031C6E0(void)
         count = 0x28;
     return count;
 }
+
+typedef struct { u8 before[0x68]; s32 active; u8 gap[6]; short state; } CallState;
+extern u8 LVL_1_OOZLA_D_001A63A8[];
+extern void FUN_00133400(s32);
+s32 LVL_1_OOZLA_FUN_00322EC8(void) {
+    if (((CallState *)LVL_1_OOZLA_D_001A63A8)->active==0) return 0;
+    if (((CallState *)LVL_1_OOZLA_D_001A63A8)->state!=3) return 0;
+    FUN_00133400(((CallState *)LVL_1_OOZLA_D_001A63A8)->active); ((CallState *)LVL_1_OOZLA_D_001A63A8)->state=4;
+    return 1;
+}
+
+f32 LVL_1_OOZLA_FUN_00310488(f32 value, s32 count) {
+    f32 factor = 1.0f - value;
+    f32 product = factor;
+    for (; count > 1; --count)
+        product = product * factor;
+    return 1.0f - product;
+}

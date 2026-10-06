@@ -37,7 +37,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Eight hundred three contextual native bodies remain distinct in the
+family has 26. Eight hundred fifty-seven contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -83,17 +83,24 @@ The checked [`source inventory`](../progress/source-inventory.json) currently re
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
 | Boot | 182 catalogued definitions (181 campaign-authored, one vendored) | 9,708 |
-| Native overlays | 811 family-or-singleton items, 812 contextual variants | 97,884 across 1,018 placements |
+| Native overlays | 865 family-or-singleton items, 866 contextual variants | 102,096 across 1,072 placements |
 | Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 88,700, or 88,724 when both clear
+Native representative catalogued bytes total 92,912, or 92,936 when both clear
 variants are retained separately. These are organization metrics, based on
 explicit source membership, not a new machine-equivalence claim. This inventory
 excludes replicated common boot coverage in overlays and is not a replacement
 for the full game's progress denominator.
 
-The current integration exporter accepts **314,672 / 48,788,176 bytes**.
-The three-family lot adds 29 complete native placements / 3,028 bytes: eleven
+The current integration exporter accepts **318,884 / 48,788,176 bytes**.
+The latest lot adds 54 complete native placements / 4,212 bytes: the proven
+88-byte resident call-state body is reused in all 27 native units, alongside
+a 68-byte scalar complement-power loop. All 1,018 existing native controls and
+54 new bodies qualify together, followed by all 28 full-image gates. The primary
+unique numerator advances by the two completed groups, 88 + 68 = 156 bytes,
+to 68,000 / 44,451,612; replicated placements receive no extra unique credit.
+
+The preceding three-family lot added 29 complete native placements / 3,028 bytes: eleven
 80-byte resident-state predicates, eleven 124-byte signed-index bitmap accessors,
 and seven 112-byte nonzero-byte counters. Three canonical authored fragments
 retain explicit per-program bindings. Every changed complete unit qualifies all
