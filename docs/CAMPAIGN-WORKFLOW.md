@@ -98,7 +98,18 @@ paths bind to the chosen private runtime and cannot escape it. For example:
 ```
 
 The catalog defines measured scope; `symbols` filters packet history only. Source
-must remain standalone C. The default profile is `progress/candidates.json`, and
+must remain standalone C. Admission checks distinguish ordinary C members and
+designators such as `snapshot.bytes` or `.word = value` from assembler directives.
+Real assembly tokens and `.byte`/`.word` directives remain refused in all five
+source consumers; accepting a source never adds matching credit.
+
+A preparation rejection is retained as a real event with
+`compile_attempted=false`; it does not establish a C/code-generation refusal.
+Task budgets count attempted trial events, including rejected preparation. If a
+verified tooling defect is repaired after that budget is spent, reserve a reviewed
+follow-up task naming the unchanged source and the prior rejection. Preserve both
+histories and the concrete repair reason; do not increase an old budget or use a
+preparation repair to cycle expressions, types, flags or layouts. The default profile is `progress/candidates.json`, and
 actual cc1/cpp/as/linker hashes must agree. Research tasks carry analysis or naming
 work without compiler targets. Historical source rows were conservatively seeded
 as research tasks: accepted functions are closed by current validated proofs,

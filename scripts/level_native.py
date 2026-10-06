@@ -13,7 +13,7 @@ from wsl_chain import compile_c, tool_hashes
 ROOT = Path(__file__).resolve().parents[1]
 HASH = re.compile(r"[0-9a-f]{64}")
 LEVEL = re.compile(r"[0-9]+_[a-z0-9_]+")
-C_ONLY = re.compile(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|\.byte|\.word")
+C_ONLY = re.compile(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|(?m:^[ \t]*(?:(?:[A-Za-z_.$][A-Za-z0-9_.$]*|[0-9]+):[ \t]*)?\.(?:byte|word)\b(?:[ \t]+(?![ \t]*=)\S|[ \t]*$))")
 DEFAULT_FLAGS = ["-O2", "-G0", "-ffunction-sections"]
 SMALL_DATA_FLAGS = ["-O2", "-G8", "-ffunction-sections"]
 

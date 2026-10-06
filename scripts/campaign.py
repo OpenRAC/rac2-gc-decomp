@@ -296,7 +296,7 @@ def _trial(store, repo, task_id, toolchain, profile, repeat_reason="", backend=N
     if not SAFE.fullmatch(source.name) or source.suffix != ".c":
         raise ValueError("Use a plain C filename safe for the existing WSL chain")
     content = source.read_bytes()
-    if re.search(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|\.byte|\.word", content):
+    if re.search(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|(?m:^[ \t]*(?:(?:[A-Za-z_.$][A-Za-z0-9_.$]*|[0-9]+):[ \t]*)?\.(?:byte|word)\b(?:[ \t]+(?![ \t]*=)\S|[ \t]*$))", content):
         raise ValueError("Candidate embeds assembly or retail bytes")
     if re.search(rb"(?m)^\s*#\s*include\b|\b__(?:DATE|TIME|TIMESTAMP)__\b", content):
         raise ValueError("Candidate must be standalone and reproducible until headers are pinned")
