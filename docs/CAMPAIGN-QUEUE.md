@@ -1084,6 +1084,19 @@ Reopen condition: Qualified original allocation/base/addend, scoped entry GP and
 - `scripts/call_graph_refinement.py`
 - `scripts/build_unique_catalog.py`
 
+## bounded-local-gp-proof-pilot-20261006
+
+State: `done`. Kind: `research`.
+
+Validate the finite typed producer and consumer on 28 complete original bodies, preserve unknown joins and unaligned accesses, publish scoped metadata and the tested verifier after fresh repository gates and CI. Do not enable program-wide GP normalization or resume matching C.
+
+Reopen condition: Independently pinned entry GP and call-preservation evidence for a concrete mapped-data family, or a verifier defect. No assumed global GP, arbitrary masks, source variants or speculative matching credit.
+
+- `script:scripts/gp_local_proof.py`
+- `proof:progress/gp-local-pilot.json`
+- `docs:docs/LOCAL-GP-PROOF.md`
+- `private-work:gp-proof-pilot-20261006/root-family-proof-v2/receipt.json`
+
 ## compiler-mtc1-four-exceptions
 
 State: `done`. Kind: `research`.
