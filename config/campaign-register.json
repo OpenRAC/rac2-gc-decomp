@@ -832,6 +832,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "b9f5ba983c1f43b2bc354b552594f732": {
+      "artifact": "prepared-run:builds/campaign-b9f5ba983c1f43b2bc354b552594f732/report.json",
+      "artifact_sha256": "32ea2bd2077f4d8d168db3f92fb73bf4cdfcaa5ea83dde1a6ac23aa607fd70c1",
+      "directory": "runtime:actions/b9f5ba983c1f43b2bc354b552594f732",
+      "finished": "2026-10-06T20:16:05.600897+00:00",
+      "id": "b9f5ba983c1f43b2bc354b552594f732",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "ba345e79a2a746dcadd565c71d614f40": {
       "artifact": "prepared-run:builds/campaign-ba345e79a2a746dcadd565c71d614f40/report.json",
       "artifact_sha256": "cc1a5e73acf55a90858e01b096b7f87fb190c0d6b2d71cbc1cda01f4d8e560a7",
@@ -4533,7 +4544,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 6028,
+  "revision": 6034,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -8658,6 +8669,31 @@
           "from": "queued",
           "reason": "Verified 22522 combined-reference boot edges to 103 pinned core bodies; primary grouping removes 427552 bytes with no new C credit. Data/GP and 20 guarded-switch audits retain unresolved ownership/runtime assumptions. All 496 tests pass with two skips, pinned objdiff and freshness checks pass, and frozen batch 0120d4f48a1c469f8e9d0370c76b5a25 passes every loaded-image gate with unchanged inputs.",
           "reopen_condition": "Qualified original allocation/base/addend, scoped entry GP and preservation, finite-table snapshot normalization or new loader/runtime/source evidence; never broaden scalar masks or force an estimated source size.",
+          "to": "done"
+        }
+      ]
+    },
+    "bounded-local-gp-proof-pilot-20261006": {
+      "budget": 1,
+      "created": "2026-10-06T20:14:44.441231+00:00",
+      "hypothesis": "Instruction-scoped GP constants can be proved from explicit local definitions and complete CFG paths without importing a global ABI or caller GP annotation. A bounded original scratch family supplies a positive MMIO observation and unsafe join negatives, with zero GP16 or C credit.",
+      "id": "bounded-local-gp-proof-pilot-20261006",
+      "kind": "research",
+      "next_action": "Validate the finite typed producer and consumer on 28 complete original bodies, preserve unknown joins and unaligned accesses, publish scoped metadata and the tested verifier after fresh repository gates and CI. Do not enable program-wide GP normalization or resume matching C.",
+      "pointers": [
+        "script:scripts/gp_local_proof.py",
+        "proof:progress/gp-local-pilot.json",
+        "docs:docs/LOCAL-GP-PROOF.md",
+        "private-work:gp-proof-pilot-20261006/root-family-proof-v2/receipt.json"
+      ],
+      "reopen_condition": "Independently pinned entry GP and call-preservation evidence for a concrete mapped-data family, or a verifier defect. No assumed global GP, arbitrary masks, source variants or speculative matching credit.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-06T20:27:01.521468+00:00",
+          "from": "queued",
+          "reason": "Completed bounded intrafunction GP verifier and 28-body exact reconstruction pilot. Unsafe joins remain unknown and the sole locally resolved memory target is MMIO. No GP16 normalization or matching C credit. Full image gates and provenance replay pass.",
+          "reopen_condition": "",
           "to": "done"
         }
       ]
@@ -141982,6 +142018,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "085735c42ba10ef69d8526f1080835b25a881a7baa53d7fe94e11201ce7af9c3"
+    "docs/CAMPAIGN-QUEUE.md": "5a4bedee742a25a67f8cccd05412e4bad4c8ffac449516ec868fde9a4a13602b"
   }
 }
