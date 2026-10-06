@@ -2816,6 +2816,43 @@ Root reserves one complete-current-boot-unit trial with existing qualifiedG0tool
 
 Reopen condition: Independent original ABI/declaration/source module or new qualified lowering evidence after an actualrefusal; no equivalent source, loop, type, Boolean/order/profile permutations.
 
+## lombyte-three-sdk-source-first-combined-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Original mixed188 event remains stopped: sysbit152 emitted140 and stays parked without retry. Its exact track116 and IPUsync104 scopes are now covered by the actual final187 qualification42030 and current187 full-image integration. Preserve all original source, object and outcome records; do not redo the covered positives or count the failed152 body.
+
+Reopen condition: Failedsysbit scope stays parked. Only independently reviewed original ABI/module or separately authorized and actually qualified exact SDKlowering evidence may justify futurework; donorb9 object/source proof alone and currentassembly differences are not a reopen.
+
+- `private-work:c-campaign-20261006/bank/rac1-source-reuse-readonly/remaining-three/delivery.json`
+- `private-work:c-campaign-20261006/sysbit152-negative-independent-audit/diagnosis.json`
+- `progress/integration.json`
+- `progress/candidates.json`
+- `private-work:c-campaign-20261006/bank/rac1-source-reuse-readonly/remaining-three/accepted-two-187/final-track-ipu220-gate-audit.json`
+
+## lombyte-track-ipusync187-canonical-comment-coherence-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Root reserves one maintained actual187 final-source trial, then generate a new actual review and guarded canonical integration manifest only after full187/readonly/pins pass; fresh full28 gates remain mandatory. Preserve967 and original188 positive/negative evidence.
+
+Reopen condition: No automatic source/type/expression/profile permutations after any actual refusal; new independent original evidence required. No sysbit reopening.
+
+- `runtime:trials/967acd7ce3f443708f3b3f25802f15cf/manifest.json`
+- `runtime:trials/967acd7ce3f443708f3b3f25802f15cf/outcome.json`
+
+## lombyte-track-ipusync187-subset-qualification-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Root reserves one actual187 whole-unit qualification with current G0 instruments; require all185 controls and both116/104 full extents plus readonly/pins. Preserve any failure without automatic retry. No reuse of188 object/review metadata against this reduced source. Canonical source-layout stage and final full28 gates follow only actual187 acceptance.
+
+Reopen condition: Independent original-source/ABI/declaration or separately qualified lowering evidence after an actual subset refusal; no source/type/expression/profile permutations, and no sysbit reopening.
+
+- `runtime:trials/b40912e9de5949e38cbe303c866d950f/manifest.json`
+- `runtime:trials/b40912e9de5949e38cbe303c866d950f/outcome.json`
+- `private-work:c-campaign-20261006/bank/rac1-source-reuse-readonly/remaining-three/accepted-two-187/subset-preparation-receipt.json`
+
 ## missing-members-bitmap124-0_aranos_tutorial-20261006
 
 State: `integrated`. Kind: `candidate`.
