@@ -619,3 +619,24 @@ f32 LVL_23_DAMOSEL_ORBIT_FUN_00324340(f32 value, s32 count) {
         product = product * factor;
     return 1.0f - product;
 }
+
+typedef struct {
+    u8 pad0000[0x0000];
+} ResidentBase1395B8;
+
+s32 LVL_23_DAMOSEL_ORBIT_FUN_0030F578(s32 index)
+{
+    s32 byte = index / 8;
+    s32 bit = index % 8;
+    s32 old;
+
+    if ((u32)bit < 8) {
+        old = (LVL_23_DAMOSEL_ORBIT_D_001395B8[byte + 0xA7] >> bit) & 1;
+    } else {
+        old = 0;
+    }
+    if ((u32)bit < 8) {
+        LVL_23_DAMOSEL_ORBIT_D_001395B8[byte + 0xA7] |= 1 << bit;
+    }
+    return old;
+}

@@ -710,6 +710,118 @@ Measure all seventeen complete functions in the intended unit. Retain refusals, 
 
 Reopen condition: Independent measured type, layout, ABI or source lifetime evidence; no expression or register forcing.
 
+## bitmap80-missing-0_aranos_tutorial-002adf80-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-11_joba-002c6308-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-12_todano-002b37b8-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-13_boldan-002b8d88-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-14_aranos_prison-002b5700-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-1_oozla-002aea38-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-23_damosel_orbit-002b6d38-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-2_maktar_nebula-002b1280-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-3_endako-002b3840-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-4_barlow-002d4468-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-5_feltzin_system-002c6800-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-6_notak-002ed580-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-8_tabora-002bf630-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
+## bitmap80-missing-9_dobbo-002b09d0-context-v2-fixed-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+Root reserve and plan seed before any compilation. One immutable fixed-source trial including every current control and complete80 target. Preserve refusal; only proceed other genuinely untried placements under root authorization.
+
+Reopen condition: Independent original declaration/source/ABI or separately qualified compiler witness. Never reopen stopped Ship2AD080/Siberius2ACDA0 or cycle type/local/condition/OR spelling.
+
 ## boot-00293000-record-packets-v1
 
 State: `stopped`. Kind: `candidate`.
@@ -964,6 +1076,166 @@ Closed by the measured compiler rule; consult the recorded exception limits befo
 
 - `docs/COMPILER-NOTES.md`
 - `scripts/compiler/restrict_mtc1_exemption.py`
+
+## count112-untried-11_joba-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-12_todano-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-13_boldan-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-14_aranos_prison-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-15_gorn-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-16_snivelak-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-17_smolg-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-18_damosel-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-19_grelbin-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-20_yeedil-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-22_dobbo_orbit-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-23_damosel_orbit-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-24_ship_shack-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-25_wupash_nebula-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-26_jamming_array-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-30_insomniac_museum-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-3_endako-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-4_barlow-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-6_notak-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
+
+## count112-untried-boot-20261006
+
+State: `exact_private`. Kind: `candidate`.
+
+ROOT RESERVATION REQUIRED; rebase prefix/catalog if bitmap124 thirdlot changed current context, then exactly one whole-current-unit maintained trial with fixed body and inherited profile. No direct private integration credit.
+
+Reopen condition: Independent original ABI/declaration/type/storage or separately qualified compiler lowering evidence; no equivalent loop/pointer spelling or flag cycles.
 
 ## family-countbytes112-placements-20261005
 
@@ -1784,7 +2056,7 @@ Reopen condition: User-requested compiler regression check or measured tool drif
 
 ## missing-members-bitmap124-0_aranos_tutorial-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1795,7 +2067,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-11_joba-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1806,7 +2078,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-12_todano-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1817,7 +2089,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-13_boldan-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1828,7 +2100,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-14_aranos_prison-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1839,7 +2111,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-1_oozla-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1850,7 +2122,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-23_damosel_orbit-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1861,7 +2133,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-24_ship_shack-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1872,7 +2144,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-2_maktar_nebula-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1883,7 +2155,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-3_endako-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1894,7 +2166,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-4_barlow-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1905,7 +2177,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-5_feltzin_system-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1916,7 +2188,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-6_notak-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1927,7 +2199,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-7_siberius-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1938,7 +2210,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-8_tabora-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1949,7 +2221,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-9_dobbo-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 
@@ -1960,7 +2232,7 @@ Reopen condition: Independent ABI/declaration/context or qualified compiler evid
 
 ## missing-members-bitmap124-boot-20261006
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Root reserves one seed current whole-unit trial first; only after exact complete selected body and ALL current controls may unchanged family qualification proceed. Stop/preserve any failure.
 

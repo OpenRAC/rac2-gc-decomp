@@ -2682,3 +2682,26 @@ fptodp  (SFtype arg_a)
 
 
 /* --- verbatim preprocessed fp-bit.c ends here --- */
+
+extern u8 BOOT_D_001395B8[];
+
+typedef struct {
+    u8 pad0000[0x0000];
+} ResidentBase1395B8;
+
+s32 FUN_00294E48(s32 index)
+{
+    s32 byte = index / 8;
+    s32 bit = index % 8;
+    s32 old;
+
+    if ((u32)bit < 8) {
+        old = (BOOT_D_001395B8[byte + 0xA7] >> bit) & 1;
+    } else {
+        old = 0;
+    }
+    if ((u32)bit < 8) {
+        BOOT_D_001395B8[byte + 0xA7] |= 1 << bit;
+    }
+    return old;
+}
