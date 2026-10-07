@@ -1992,3 +1992,125 @@ Slot0820eb11 *LVL_3_ENDAKO_FUN_00311EE0(Ctx *ctx, int index)
     ctx->f50 = (int)slot;
     return slot;
 }
+
+extern int LVL_3_ENDAKO_F349daa69_D_001B31A0 __attribute__((sda));
+extern int LVL_3_ENDAKO_F349daa69_D_001B31A4 __attribute__((sda));
+
+extern void LVL_3_ENDAKO_F349daa69_FUN_0011A950(int, int);
+extern void LVL_3_ENDAKO_F349daa69_FUN_0011B658(int);
+
+void LVL_3_ENDAKO_FUN_0037D2C0(void)
+{
+    if ((*(volatile u32 *)0x1000E010 & 0x20000) != 0) {
+        *(volatile u32 *)0x1000E010 = 0x20000;
+    }
+    LVL_3_ENDAKO_F349daa69_FUN_0011A950(1, LVL_3_ENDAKO_F349daa69_D_001B31A0);
+    LVL_3_ENDAKO_F349daa69_FUN_0011A950(15, LVL_3_ENDAKO_F349daa69_D_001B31A4);
+    LVL_3_ENDAKO_F349daa69_FUN_0011B658(1);
+    LVL_3_ENDAKO_F349daa69_D_001B31A0 = 0;
+    LVL_3_ENDAKO_F349daa69_D_001B31A4 = 0;
+}
+/* Append one 16-byte record to the level's queue at 0x226150 and submit it
+   through the DMA helper LVL_3_ENDAKO_F5a29d35d_FUN_0011AFE0.  The four queue globals live in a
+   0x38-byte state block based at 0x1A7240; because they are reached with a
+   constant offset from that base (a CONST address), cc1 gives the store a
+   two-instruction length and refuses to drop it into the branch delay slot,
+   which is what the retail body does as well.  */
+
+typedef struct {
+    int start;      /* +0x00 -> 0x1A7240 */
+    int end;        /* +0x04 -> 0x1A7244 */
+    int pad[10];    /* +0x08 .. +0x2F */
+    int cursor;     /* +0x30 -> 0x1A7270 */
+    int count;      /* +0x34 -> 0x1A7274 */
+} LevelQueue5a29d35d;
+
+extern LevelQueue5a29d35d LVL_3_ENDAKO_F5a29d35d_D_001A7240 __attribute__((sda));
+extern char LVL_3_ENDAKO_F5a29d35d_D_00226150[];
+extern int LVL_3_ENDAKO_F5a29d35d_FUN_0011AFE0(int *dma, int flag);
+
+int LVL_3_ENDAKO_FUN_0036A128(int p0, int p1, int p2, int p3)
+{
+    int args[4];
+    int n, k;
+
+    if (LVL_3_ENDAKO_F5a29d35d_D_001A7240.end - (LVL_3_ENDAKO_F5a29d35d_D_001A7240.cursor - LVL_3_ENDAKO_F5a29d35d_D_001A7240.start) < p2 * 16)
+        return -1;
+    if (LVL_3_ENDAKO_F5a29d35d_D_001A7240.count == 64)
+        return -2;
+
+    args[0] = p0;
+    args[1] = LVL_3_ENDAKO_F5a29d35d_D_001A7240.cursor;
+    args[2] = p1 * 16;
+    args[3] = 0;
+    LVL_3_ENDAKO_F5a29d35d_FUN_0011AFE0(args, 1);
+
+    n = LVL_3_ENDAKO_F5a29d35d_D_001A7240.count;
+    k = n;
+    n = n + 1;
+    LVL_3_ENDAKO_F5a29d35d_D_001A7240.count = n;
+    *(int *)(LVL_3_ENDAKO_F5a29d35d_D_00226150 + k * 16) = LVL_3_ENDAKO_F5a29d35d_D_001A7240.cursor;
+    *(int *)(LVL_3_ENDAKO_F5a29d35d_D_00226150 + k * 16 + 4) = p2;
+    *(int *)(LVL_3_ENDAKO_F5a29d35d_D_00226150 + k * 16 + 8) = p3;
+    LVL_3_ENDAKO_F5a29d35d_D_001A7240.cursor = LVL_3_ENDAKO_F5a29d35d_D_001A7240.cursor + p2 * 16;
+    return k;
+}
+typedef struct {
+    unsigned char key;
+    unsigned char reserved01[11];
+    int target;
+} Row16b52b2850;
+typedef struct {
+    unsigned char reserved00[32];
+    Row16b52b2850 *rows;
+} ListObjectb52b2850;
+typedef struct {
+    short first;
+    short second;
+} Pairb52b2850;
+
+extern int LVL_3_ENDAKO_Fb52b2850_D_001DE1C0[];
+extern ListObjectb52b2850 *LVL_3_ENDAKO_Fb52b2850_D_001DAB80[];
+extern Pairb52b2850 LVL_3_ENDAKO_Fb52b2850_D_001DDA00[];
+
+void LVL_3_ENDAKO_FUN_00312B88(void)
+{
+    int *selected;
+    ListObjectb52b2850 *object;
+    Row16b52b2850 *row;
+    unsigned char *keys;
+    unsigned int *dst;
+    Pairb52b2850 *pair;
+    int *next;
+
+    selected = LVL_3_ENDAKO_Fb52b2850_D_001DE1C0;
+    while (*selected >= 0) {
+        next = selected + 1;
+        object = LVL_3_ENDAKO_Fb52b2850_D_001DAB80[*selected];
+        row = object->rows;
+        for (;;) {
+            keys = (unsigned char *)row;
+            dst = (unsigned int *)(row->target & 0x7FFFFFFF);
+            if (*keys != 255) {
+                do {
+                    pair = &LVL_3_ENDAKO_Fb52b2850_D_001DDA00[*keys];
+                    if (pair->first != 0) {
+                        dst[12] = (dst[12] & 0xFFFFC000u) | pair->first;
+                    }
+                    keys++;
+                    if (pair->second != 0) {
+                        dst[16] = (dst[16] & 0xFFFFC000u) | pair->second;
+                    }
+                    dst += 16;
+                } while (*keys != 255);
+            }
+            if (row->target < 0) {
+                goto out;
+            }
+            row++;
+        }
+out:
+        ;
+        selected = next;
+    }
+}

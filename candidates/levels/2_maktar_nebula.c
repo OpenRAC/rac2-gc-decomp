@@ -2028,3 +2028,17 @@ void LVL_2_MAKTAR_NEBULA_FUN_002F4440(int a0)
     LVL_2_MAKTAR_NEBULA_Fcfd2e0cd_D_001B3D08[3] = 0x50000015;
     LVL_2_MAKTAR_NEBULA_Fcfd2e0cd_D_001B3D08_1 = LVL_2_MAKTAR_NEBULA_Fcfd2e0cd_D_001B3D08 + 4;
 }
+extern int LVL_2_MAKTAR_NEBULA_Fbef45185_D_001B359C __attribute__((sda));
+
+void LVL_2_MAKTAR_NEBULA_FUN_00324860(int param_1, unsigned short *param_2)
+{
+    int i;
+
+    for (i = 1; i <= (short)param_2[0]; i++) {
+        if (LVL_2_MAKTAR_NEBULA_Fbef45185_D_001B359C + ((short)param_2[i] << 8) == param_1) {
+            param_2[i] = param_2[(short)param_2[0]];
+            param_2[0] = param_2[0] - 1;
+            return;
+        }
+    }
+}

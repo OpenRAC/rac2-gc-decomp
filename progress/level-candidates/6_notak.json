@@ -6,10 +6,10 @@
   "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
   "reference_entry": 3027336,
   "candidate_source": "candidates/levels/6_notak.c",
-  "source_sha256": "c947ce0c46aaa6a97b750248742a9372a4d1a78ad70d1e6a5da0c9b4564055c7",
-  "catalog_sha256": "f69f641297e306dca4b4aa2ee21f27792b9a139a610f381c7ad2b9f64b06a424",
-  "object_sha256": "90824cbc16a11f60b05cc674f349e00745f124be69b1624f3298a5f74e6f6da6",
-  "candidate_elf_sha256": "d21fad984bc05a8f11c873725cf7fb05d8579e1a461228ff6ff44c0cfe2ca1d8",
+  "source_sha256": "cadb14f5fe372265158b61175a1f2b7094928f8b8830c4f3cd8c4da19eb075e4",
+  "catalog_sha256": "8612664fa90ab03668daaa5985b31a98fc8d01a60a23410755499f98b846053a",
+  "object_sha256": "7bf36a0984b5575bc1dfe1f9e474a7858c6ee5b97325f1f15b298029640c8c8e",
+  "candidate_elf_sha256": "1704ff6e23e2cf0a174a209e7b82f1b4d41e24d207c1020ddff3d86a66dbf3b8",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -320,6 +320,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 36
+    },
+    {
+      "symbol": "LVL_6_NOTAK_FUN_003239C8",
+      "address": 3291592,
+      "size": 212,
+      "matched": true,
+      "reference_sha256": "81a6bac45c6f6c8d77667327b7a8cce0d858555f5c5595cc2d64ba19d403d17d",
+      "candidate_sha256": "81a6bac45c6f6c8d77667327b7a8cce0d858555f5c5595cc2d64ba19d403d17d",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 212
     },
     {
       "symbol": "LVL_6_NOTAK_FUN_00324EF0",
@@ -705,6 +716,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 148
+    },
+    {
+      "symbol": "LVL_6_NOTAK_FUN_0039E580",
+      "address": 3794304,
+      "size": 112,
+      "matched": true,
+      "reference_sha256": "175680a249b60d6783c70e145311cae08c08cb802e845068fdd36ca1692759a4",
+      "candidate_sha256": "175680a249b60d6783c70e145311cae08c08cb802e845068fdd36ca1692759a4",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 112
     },
     {
       "symbol": "LVL_6_NOTAK_FUN_003A06A0",
@@ -1324,5 +1346,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 11280
+  "matched_code_bytes": 11604
 }

@@ -44,6 +44,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "0714b9f6f1ec423898fd2622b689037a": {
+      "artifact": "prepared-run:builds/campaign-0714b9f6f1ec423898fd2622b689037a/report.json",
+      "artifact_sha256": "eb19fca42922335ee0206618fc78ffaa0ee56d02b5b977a995d08be448bb99b8",
+      "directory": "runtime:actions/0714b9f6f1ec423898fd2622b689037a",
+      "finished": "2026-10-07T16:24:18.536005+00:00",
+      "id": "0714b9f6f1ec423898fd2622b689037a",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "0c888b752786495a9220e1be4c82fe22": {
       "artifact": "runtime:actions/0c888b752786495a9220e1be4c82fe22/report.json",
       "artifact_sha256": "67016af14a91c7813825fa2e95e63e240b6a0a5f8ed29275ee5dc1c2e06f09a5",
@@ -4732,7 +4743,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 7086,
+  "revision": 7160,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -31109,6 +31120,785 @@
       "state": "queued",
       "symbols": [
         "native-army-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/candidate-catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-0_aranos_tutorial": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:25.800012+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 0_aranos_tutorial; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-0_aranos_tutorial",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/0_aranos_tutorial.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/0_aranos_tutorial.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-10_hrugis_cloud": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:26.642982+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 10_hrugis_cloud; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-10_hrugis_cloud",
+      "kind": "candidate",
+      "last_trial": "f8d09651ac4c4060a8ccbf5bea8b307a",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/10_hrugis_cloud.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/10_hrugis_cloud.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:28.102160+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "f8d09651ac4c4060a8ccbf5bea8b307a"
+        }
+      ]
+    },
+    "native-army2-20261007-11_joba": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:28.360033+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 11_joba; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-11_joba",
+      "kind": "candidate",
+      "last_trial": "8eb6e81e7643456bbfa10ed9fbe488be",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/11_joba.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/11_joba.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:29.904010+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "8eb6e81e7643456bbfa10ed9fbe488be"
+        }
+      ]
+    },
+    "native-army2-20261007-12_todano": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:30.153875+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 12_todano; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-12_todano",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/12_todano.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/12_todano.json",
+          "id": "12_todano",
+          "reference": "runtime:references/levels/12_todano/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-13_boldan": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:31.047205+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 13_boldan; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-13_boldan",
+      "kind": "candidate",
+      "last_trial": "f82eb6b221ed4f23a134a1215c19406a",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/13_boldan.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/13_boldan.json",
+          "id": "13_boldan",
+          "reference": "runtime:references/levels/13_boldan/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:32.482892+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "f82eb6b221ed4f23a134a1215c19406a"
+        }
+      ]
+    },
+    "native-army2-20261007-14_aranos_prison": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:32.758837+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 14_aranos_prison; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-14_aranos_prison",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/14_aranos_prison.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/14_aranos_prison.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-15_gorn": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:33.636976+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 15_gorn; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-15_gorn",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/15_gorn.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/15_gorn.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-16_snivelak": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:34.507082+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 16_snivelak; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-16_snivelak",
+      "kind": "candidate",
+      "last_trial": "16c369e83dc6475ab4f69c55feeabde5",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/16_snivelak.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/16_snivelak.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:35.998931+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "16c369e83dc6475ab4f69c55feeabde5"
+        }
+      ]
+    },
+    "native-army2-20261007-17_smolg": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:36.261073+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 17_smolg; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-17_smolg",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/17_smolg.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/17_smolg.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-18_damosel": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:37.111701+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 18_damosel; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-18_damosel",
+      "kind": "candidate",
+      "last_trial": "df440e396e1b492e86edd794f4a9bb98",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/18_damosel.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/18_damosel.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:38.609096+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "df440e396e1b492e86edd794f4a9bb98"
+        }
+      ]
+    },
+    "native-army2-20261007-19_grelbin": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:38.859171+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 19_grelbin; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-19_grelbin",
+      "kind": "candidate",
+      "last_trial": "ece6e44d3fbf49f5aee6fb155b575c32",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/19_grelbin.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/19_grelbin.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:40.305228+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "ece6e44d3fbf49f5aee6fb155b575c32"
+        }
+      ]
+    },
+    "native-army2-20261007-1_oozla": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:40.583461+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 1_oozla; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-1_oozla",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/1_oozla.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/1_oozla.json",
+          "id": "1_oozla",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-20_yeedil": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:41.478634+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 20_yeedil; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-20_yeedil",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/20_yeedil.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/20_yeedil.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-22_dobbo_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:42.351722+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 22_dobbo_orbit; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-22_dobbo_orbit",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/22_dobbo_orbit.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/22_dobbo_orbit.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-23_damosel_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:43.242965+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 23_damosel_orbit; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-23_damosel_orbit",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/23_damosel_orbit.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/23_damosel_orbit.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:references/levels/23_damosel_orbit/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-24_ship_shack": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:44.136179+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 24_ship_shack; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-24_ship_shack",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/24_ship_shack.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/24_ship_shack.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:references/levels/24_ship_shack/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-25_wupash_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:44.980294+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 25_wupash_nebula; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-25_wupash_nebula",
+      "kind": "candidate",
+      "last_trial": "52253777b9de423891309ce96b66c29e",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/25_wupash_nebula.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/25_wupash_nebula.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:46.409995+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "52253777b9de423891309ce96b66c29e"
+        }
+      ]
+    },
+    "native-army2-20261007-26_jamming_array": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:46.675114+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 26_jamming_array; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-26_jamming_array",
+      "kind": "candidate",
+      "last_trial": "5a0126d5e2684a0599f58ce33557bf3c",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/26_jamming_array.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/26_jamming_array.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:48.053096+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "5a0126d5e2684a0599f58ce33557bf3c"
+        }
+      ]
+    },
+    "native-army2-20261007-2_maktar_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:48.302801+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 2_maktar_nebula; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-2_maktar_nebula",
+      "kind": "candidate",
+      "last_trial": "b1c1d769d40b420d94343abb5cdba400",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/2_maktar_nebula.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/2_maktar_nebula.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:49.774662+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "b1c1d769d40b420d94343abb5cdba400"
+        }
+      ]
+    },
+    "native-army2-20261007-30_insomniac_museum": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:50.047228+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 30_insomniac_museum; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-30_insomniac_museum",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/30_insomniac_museum.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/30_insomniac_museum.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-3_endako": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:50.912895+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 3_endako; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-3_endako",
+      "kind": "candidate",
+      "last_trial": "3be2942f6e6149bb8d4b197e36dbd24d",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/3_endako.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/3_endako.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:52.367639+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3be2942f6e6149bb8d4b197e36dbd24d"
+        }
+      ]
+    },
+    "native-army2-20261007-4_barlow": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:52.630724+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 4_barlow; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-4_barlow",
+      "kind": "candidate",
+      "last_trial": "56d373551c25422f9b17d1e444f0c4b5",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/4_barlow.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/4_barlow.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:54.027541+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "56d373551c25422f9b17d1e444f0c4b5"
+        }
+      ]
+    },
+    "native-army2-20261007-5_feltzin_system": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:54.310442+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 5_feltzin_system; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-5_feltzin_system",
+      "kind": "candidate",
+      "last_trial": "73398bfba28d4ae3995ac60e0922cdf8",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/5_feltzin_system.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/5_feltzin_system.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:55.851571+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "73398bfba28d4ae3995ac60e0922cdf8"
+        }
+      ]
+    },
+    "native-army2-20261007-6_notak": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:56.126042+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 6_notak; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-6_notak",
+      "kind": "candidate",
+      "last_trial": "ee7d248e36c34b2c8ff0d298d2133f3a",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/6_notak.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/6_notak.json",
+          "id": "6_notak",
+          "reference": "runtime:references/levels/6_notak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:57.744107+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "ee7d248e36c34b2c8ff0d298d2133f3a"
+        }
+      ]
+    },
+    "native-army2-20261007-7_siberius": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:58.011964+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 7_siberius; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-7_siberius",
+      "kind": "candidate",
+      "last_trial": "f6323618c0044428899226fd82223ee0",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/7_siberius.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/7_siberius.json",
+          "id": "7_siberius",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:15:59.462569+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "f6323618c0044428899226fd82223ee0"
+        }
+      ]
+    },
+    "native-army2-20261007-8_tabora": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:59.721742+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 8_tabora; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-8_tabora",
+      "kind": "candidate",
+      "last_trial": "3de57af05ba147368d3241fa807ad006",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/8_tabora.c",
+      "state": "exact_private",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/8_tabora.json",
+          "id": "8_tabora",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T16:16:01.277021+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3de57af05ba147368d3241fa807ad006"
+        }
+      ]
+    },
+    "native-army2-20261007-9_dobbo": {
+      "budget": 3,
+      "created": "2026-10-07T16:16:01.534529+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in 9_dobbo; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-9_dobbo",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/9_dobbo.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/9_dobbo.json",
+          "id": "9_dobbo",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "native-army2-20261007-boot": {
+      "budget": 3,
+      "created": "2026-10-07T16:15:24.621789+00:00",
+      "hypothesis": "Family native-army2-20261007: one canonical C body reproduces the retail bytes at every measured placement in boot; the unit catalogue carries all prior controls.",
+      "id": "native-army2-20261007-boot",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/boot.c",
+      "state": "queued",
+      "symbols": [
+        "native-army2-20261007"
       ],
       "targets": [
         {
@@ -141337,6 +142127,19 @@
       "state": "preparation_rejected",
       "task": "root-boot-fptodp64-first-20261005"
     },
+    "16c369e83dc6475ab4f69c55feeabde5": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/16c369e83dc6475ab4f69c55feeabde5",
+      "finished": "2026-10-07T16:15:35.943838+00:00",
+      "id": "16c369e83dc6475ab4f69c55feeabde5",
+      "manifest_sha256": "85e69875a6116b7c7034f2084641c3c2980ad6fd464a2dd3d6b293961f9c83c5",
+      "measured_functions": 114,
+      "outcome_sha256": "de7ec9060d8ddf26335b82ed114ca5296ee494aa08d656652690b3fdd602f2aa",
+      "semantic_key": "93a3e51d529124bc9919f48739613da03ec3f4a93aa846440812ae32c824f075",
+      "started": "2026-10-07T16:15:35.021260+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-16_snivelak"
+    },
     "16c63dff911847599e6ce52162a38c7a": {
       "compile_attempted": true,
       "directory": "runtime:trials/16c63dff911847599e6ce52162a38c7a",
@@ -142241,6 +143044,26 @@
       "started": "2026-10-04T10:23:05.435025+00:00",
       "state": "exact_private",
       "task": "root-index-lf-14_aranos_prison-20261004"
+    },
+    "1f29b674210a4a60a987696655e33819": {
+      "children": [
+        {
+          "id": "24_ship_shack",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/1f29b674210a4a60a987696655e33819",
+      "error": "Semantic duplicate trial: 75e3880edfbc43e8a57e6f3c6f3a864f; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:44.686207+00:00",
+      "id": "1f29b674210a4a60a987696655e33819",
+      "integration_credit": 0,
+      "manifest_sha256": "6cf694a5d1d2f68f82e42547ee75fa8ba62f210d5f3147611f855eb4d590f946",
+      "measured_functions": 0,
+      "outcome_sha256": "23a3d49a6358f0f874c577f52a5e6116daa2faf232bb4bcaf507d74a270248ca",
+      "semantic_key": "2a7b5820e9301a07c0f30ff2ced7d8b6d57c415fa299cc9eab09ee19f4329724",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-24_ship_shack"
     },
     "1f6429a5bd9543e2b69be2e836cd8c70": {
       "compile_attempted": true,
@@ -145298,6 +146121,19 @@
       "state": "exact_private",
       "task": "orbital-c8d00-family-20261005-10_hrugis_cloud"
     },
+    "3be2942f6e6149bb8d4b197e36dbd24d": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3be2942f6e6149bb8d4b197e36dbd24d",
+      "finished": "2026-10-07T16:15:52.301919+00:00",
+      "id": "3be2942f6e6149bb8d4b197e36dbd24d",
+      "manifest_sha256": "6ff804beb5eda83b7d5c1aa38adad2c1322a5dd1f12e126ff80d936b8d05eb8a",
+      "measured_functions": 115,
+      "outcome_sha256": "43a2ff7ccb01071f3723ee62e68aa08fc85092b8fc169fd30c0d200e79c04039",
+      "semantic_key": "9770c8b00ac6a5099a0b7ad8df9dd31152847edd862324dcc118c1cffef03bb6",
+      "started": "2026-10-07T16:15:51.411562+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-3_endako"
+    },
     "3c21a0b053624713b041c4ec234b4b43": {
       "compile_attempted": true,
       "directory": "runtime:trials/3c21a0b053624713b041c4ec234b4b43",
@@ -145506,6 +146342,19 @@
       "state": "exact_private",
       "task": "orbital-conditional-reset-family-20261004-20_yeedil"
     },
+    "3de57af05ba147368d3241fa807ad006": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3de57af05ba147368d3241fa807ad006",
+      "finished": "2026-10-07T16:16:01.217011+00:00",
+      "id": "3de57af05ba147368d3241fa807ad006",
+      "manifest_sha256": "33bd1b92c2eaf9324747564491c1d03c6a34784c6f864096cbec2ecd92e65b9e",
+      "measured_functions": 110,
+      "outcome_sha256": "83b19ebe3b379f6aa09940b88e921ad093fdd1923764c6768a43a1112e81685a",
+      "semantic_key": "1a1004de37c62ba4ad1d18868884b6cfe9041606a236970f5bcc2a708981f498",
+      "started": "2026-10-07T16:16:00.279707+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-8_tabora"
+    },
     "3e22af54d04143b99800c64119ae08ed": {
       "compile_attempted": true,
       "directory": "runtime:trials/3e22af54d04143b99800c64119ae08ed",
@@ -145687,6 +146536,26 @@
       "started": "2026-10-04T14:40:06.281355+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-kind96-14-v1"
+    },
+    "3fb5ff0e03ff478bbc916436a9ca9d9c": {
+      "children": [
+        {
+          "id": "14_aranos_prison",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/3fb5ff0e03ff478bbc916436a9ca9d9c",
+      "error": "Semantic duplicate trial: 0e915a4ee18546b0b2f39eeaa3ca68d3; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:33.319479+00:00",
+      "id": "3fb5ff0e03ff478bbc916436a9ca9d9c",
+      "integration_credit": 0,
+      "manifest_sha256": "992db5ef8b5ae9ddea1f9b4736155dcce7183aca0cc5c9473abdd143d35fd8d6",
+      "measured_functions": 0,
+      "outcome_sha256": "c0715dc112efbc60bffdfa6512298f2130ab4d8f699aec2a26b1badf1bb7a5f7",
+      "semantic_key": "1a646a10ad7ebcbcbc447c4ba9b879c40c75e4afac1d1aa81894b88725e89b22",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-14_aranos_prison"
     },
     "3fc39be50d574989b530eef3b1a91f93": {
       "compile_attempted": true,
@@ -147024,6 +147893,26 @@
       "state": "exact_private",
       "task": "small-positive-bit32-query16-combined-23_damosel_orbit-20261006"
     },
+    "4bc59506df0e44d59eb4a6943685b959": {
+      "children": [
+        {
+          "id": "22_dobbo_orbit",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/4bc59506df0e44d59eb4a6943685b959",
+      "error": "Semantic duplicate trial: 013573d886d24d7db5765a622b1dc022; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:42.933968+00:00",
+      "id": "4bc59506df0e44d59eb4a6943685b959",
+      "integration_credit": 0,
+      "manifest_sha256": "4f9af78480ec15f0b9ecef34ff90e9c1def593e33d0da7214d17b6cafd0c4873",
+      "measured_functions": 0,
+      "outcome_sha256": "d9889268c4ad288d31fea950bbc30873bc093cdc988fa2e0af961156501274d0",
+      "semantic_key": "d737ea0510f4c926686281f515aa5235ea48cd658e596a5f5270403be4ced958",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-22_dobbo_orbit"
+    },
     "4be0743197b24e4782e6aba26e15488e": {
       "compile_attempted": true,
       "directory": "runtime:trials/4be0743197b24e4782e6aba26e15488e",
@@ -147559,6 +148448,26 @@
       "state": "exact_private",
       "task": "orbital-float-interval-family-815-20261004-20_yeedil"
     },
+    "51d1bd3d3f3e45fd9885886261633af0": {
+      "children": [
+        {
+          "id": "15_gorn",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/51d1bd3d3f3e45fd9885886261633af0",
+      "error": "Semantic duplicate trial: a231866d535245d1b8c14f29fd2f5e41; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:34.179544+00:00",
+      "id": "51d1bd3d3f3e45fd9885886261633af0",
+      "integration_credit": 0,
+      "manifest_sha256": "449579fff7f3d03aac32327348ef1b565f8478cd6c7db42b16253d44af3e3ad6",
+      "measured_functions": 0,
+      "outcome_sha256": "00ed31f232c509fecde352b78e5f69b120c96d7dc41754506f99ea08d84ebf7c",
+      "semantic_key": "2dad82fba72b6679a4cce23c1b18247676ae0e9f07dde58009e3571e56d02c96",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-15_gorn"
+    },
     "51dbe542b79346a6aaf94dddf6f5f810": {
       "compile_attempted": true,
       "directory": "runtime:trials/51dbe542b79346a6aaf94dddf6f5f810",
@@ -147597,6 +148506,19 @@
       "started": "2026-10-04T18:56:26.224090+00:00",
       "state": "exact_private",
       "task": "root-next-five-combined-25_wupash_nebula-20261004"
+    },
+    "52253777b9de423891309ce96b66c29e": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/52253777b9de423891309ce96b66c29e",
+      "finished": "2026-10-07T16:15:46.339700+00:00",
+      "id": "52253777b9de423891309ce96b66c29e",
+      "manifest_sha256": "a4da22476099d1c5ec92a08dc02761d8f005b972fe4a58d211a200cfc4071ae0",
+      "measured_functions": 109,
+      "outcome_sha256": "79f7a52416ef4df590775879317d7973412330dfa051f5cea6ab7f4ef6b89749",
+      "semantic_key": "9b6a0b9e32b4fa325e61ca81f157919d91aba6faa4ed04db7eb495487433033a",
+      "started": "2026-10-07T16:15:45.465682+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-25_wupash_nebula"
     },
     "523b092d68c14463ae8fe9214453606d": {
       "compile_attempted": true,
@@ -147963,6 +148885,26 @@
       "state": "exact_private",
       "task": "orbital-bitmap-getter-family-20261004-2_maktar_nebula"
     },
+    "55c2b0e31c2447d1a28d01935e873a8d": {
+      "children": [
+        {
+          "id": "17_smolg",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/55c2b0e31c2447d1a28d01935e873a8d",
+      "error": "Semantic duplicate trial: b2be9aa75d734add8f1644a24e404d7b; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:36.812954+00:00",
+      "id": "55c2b0e31c2447d1a28d01935e873a8d",
+      "integration_credit": 0,
+      "manifest_sha256": "d68d5c65fbaeb23aada726861767f7bff85339d905395ac9dfe1988ea090b7f5",
+      "measured_functions": 0,
+      "outcome_sha256": "1c1bee8394dbf8593a42c3fa1773fe1e7752e2452499434cfe52a96a19c4bc4f",
+      "semantic_key": "6155c968f96e1370fafce971fc4d9eab3797369e132e7ff056a89e2d8d76fb1e",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-17_smolg"
+    },
     "55db6bbb7ba6497eb456a43d8e838896": {
       "compile_attempted": true,
       "directory": "runtime:trials/55db6bbb7ba6497eb456a43d8e838896",
@@ -148086,6 +149028,19 @@
       "started": "2026-10-04T14:34:45.863440+00:00",
       "state": "exact_private",
       "task": "orbital-class-filter-family-20261004-19_grelbin"
+    },
+    "56d373551c25422f9b17d1e444f0c4b5": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/56d373551c25422f9b17d1e444f0c4b5",
+      "finished": "2026-10-07T16:15:53.971539+00:00",
+      "id": "56d373551c25422f9b17d1e444f0c4b5",
+      "manifest_sha256": "e79c712cf8254bf86e466445b7d0fa5ad362d738bda9215c810ed4c20219632c",
+      "measured_functions": 90,
+      "outcome_sha256": "31165e3b5e3f2f0797dfc30ec89eaee2dcc1afed61db93fdb82534bbbc2d4b93",
+      "semantic_key": "e5acb999aa3f1a44d7b3eda4145f97d7a51793150eb5c96ccc789613cff1eac3",
+      "started": "2026-10-07T16:15:53.155120+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-4_barlow"
     },
     "56e76b8b13c049ff9ee964351b558219": {
       "compile_attempted": true,
@@ -148425,6 +149380,19 @@
       "started": "2026-10-07T09:05:33.491208+00:00",
       "state": "exact_private",
       "task": "gp-lot-20261007-24_ship_shack"
+    },
+    "5a0126d5e2684a0599f58ce33557bf3c": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5a0126d5e2684a0599f58ce33557bf3c",
+      "finished": "2026-10-07T16:15:47.995761+00:00",
+      "id": "5a0126d5e2684a0599f58ce33557bf3c",
+      "manifest_sha256": "20474e3cc216f799ab98b6a173f1a5019bcc723a0f1d8bc393ce6baa5efb661c",
+      "measured_functions": 103,
+      "outcome_sha256": "8df1699cb355142b2715a2d6856665e7ac57e5d7568f1ab46df9085086c2e1eb",
+      "semantic_key": "9287d0714b4bdc2063ad9f2fa0fbc4c4ee572b29616127e9dc2ad7e71cdbdea1",
+      "started": "2026-10-07T16:15:47.162618+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-26_jamming_array"
     },
     "5a2c68ebbb4c451dbc5678bdd601fb11": {
       "compile_attempted": true,
@@ -149514,6 +150482,26 @@
       "started": "2026-10-04T10:35:48.941082+00:00",
       "state": "exact_private",
       "task": "orbital-bitmap-getter-family-20261004-1_oozla"
+    },
+    "64b59b98e0c24b63adfbebc318b73e0e": {
+      "children": [
+        {
+          "id": "9_dobbo",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/64b59b98e0c24b63adfbebc318b73e0e",
+      "error": "Semantic duplicate trial: 92ec6f0ac1fa448bbc38c2875f073892; provide --repeat-reason",
+      "finished": "2026-10-07T16:16:02.082912+00:00",
+      "id": "64b59b98e0c24b63adfbebc318b73e0e",
+      "integration_credit": 0,
+      "manifest_sha256": "148a2a76207c304deb981cf09d2485aad4f76917f8ac59c4816ba36319a6e95a",
+      "measured_functions": 0,
+      "outcome_sha256": "ad1f7e3ba95eef1314eb402bcc23b6cac9dfed6d4187e306cde44589878b0440",
+      "semantic_key": "b8a7a93f6e4ec837c92703bf69e6cb283b64ba638aa785a0190cdd7f3d4897b5",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-9_dobbo"
     },
     "651a6907b6f449ad81e9a1129ef453c0": {
       "compile_attempted": true,
@@ -150681,6 +151669,19 @@
       "state": "exact_private",
       "task": "root-resume-three-combined-1_oozla-20261004"
     },
+    "73398bfba28d4ae3995ac60e0922cdf8": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/73398bfba28d4ae3995ac60e0922cdf8",
+      "finished": "2026-10-07T16:15:55.795565+00:00",
+      "id": "73398bfba28d4ae3995ac60e0922cdf8",
+      "manifest_sha256": "0720e5a50572f1e577b731466bda3d113523e78592b95cbde0555f9e8733c4eb",
+      "measured_functions": 118,
+      "outcome_sha256": "4636f69cce5ce2625f506ff27a9a3b2842ac888ce7986022a1f674e2d2a5ec2b",
+      "semantic_key": "10b9fd3329437dedddb82069458b6bbe305e8472b8628b2a4c3e7b70e72f8e28",
+      "started": "2026-10-07T16:15:54.840610+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-5_feltzin_system"
+    },
     "7361135727224087acc51e76ba602b23": {
       "compile_attempted": true,
       "directory": "runtime:trials/7361135727224087acc51e76ba602b23",
@@ -150824,6 +151825,26 @@
       "state": "mismatch",
       "task": "native-review-endako-relative-map-context-20261004"
     },
+    "75c16f6d8b6342bc87043318e985439b": {
+      "children": [
+        {
+          "id": "23_damosel_orbit",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/75c16f6d8b6342bc87043318e985439b",
+      "error": "Semantic duplicate trial: fc21f72d1d3b4af695fc4c9a8452cdf4; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:43.827063+00:00",
+      "id": "75c16f6d8b6342bc87043318e985439b",
+      "integration_credit": 0,
+      "manifest_sha256": "74cd94a9a4d6b698b5bc0f8cfa7b870c8fef7230d76ffee265c48a2da6ce88f3",
+      "measured_functions": 0,
+      "outcome_sha256": "8690d147210ec055a101a9361e184f295e103ff605ec31233c46ea7d564d9bd5",
+      "semantic_key": "db3ff6efc3f9870217292a094c860daeada21366e5d2e582b4905158c5dc1271",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-23_damosel_orbit"
+    },
     "75dc5d5dffd24a99978706a35e78c72e": {
       "compile_attempted": true,
       "directory": "runtime:trials/75dc5d5dffd24a99978706a35e78c72e",
@@ -150875,6 +151896,26 @@
       "started": "2026-10-04T23:59:01.475693+00:00",
       "state": "mismatch",
       "task": "native-review-endako-locked-ring-v1-20261004"
+    },
+    "7619eddb2fe34646a161ea2c17db6dd6": {
+      "children": [
+        {
+          "id": "0_aranos_tutorial",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/7619eddb2fe34646a161ea2c17db6dd6",
+      "error": "Semantic duplicate trial: 4c87eaf477a04887b47d387b4c273bd2; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:26.338772+00:00",
+      "id": "7619eddb2fe34646a161ea2c17db6dd6",
+      "integration_credit": 0,
+      "manifest_sha256": "7d40c656a177ebff195c34c273309089c23a69b400b32d0ada1e41ebde586630",
+      "measured_functions": 0,
+      "outcome_sha256": "97e50fc3cde2185bce80bfa5662979808f4302b91a02829bca707c177c0bfb79",
+      "semantic_key": "bcd0836e1cf5b4de238bd50e49c54fe3e307e086b23269bf5a8fc8632e198241",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-0_aranos_tutorial"
     },
     "767d5ca5487c4ea285cee0de302c0461": {
       "compile_attempted": true,
@@ -152018,6 +153059,26 @@
       "started": "2026-10-04T10:17:18.032831+00:00",
       "state": "mismatch",
       "task": "parallel-boot-analysis-aranos-slot-insert-v2"
+    },
+    "809958fd856c437abafd424ed51d07f6": {
+      "children": [
+        {
+          "id": "boot",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/809958fd856c437abafd424ed51d07f6",
+      "error": "Semantic duplicate trial: 9ff355fc6d4748948c6216a776f83ea6; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:25.493160+00:00",
+      "id": "809958fd856c437abafd424ed51d07f6",
+      "integration_credit": 0,
+      "manifest_sha256": "8c10c578507bf4d363e7678c595b64c35c4c7c1a02c34e46fb29897ff0d7e410",
+      "measured_functions": 0,
+      "outcome_sha256": "61d08eb8c82c1305495827fd09df997d131927338b97692a39fd427821dcc9f5",
+      "semantic_key": "57053c63b9db2d9c3685154c611a60c98691e1d4b61b580daad0260e72ede1f3",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-boot"
     },
     "814cd85b00044094b95add3fb78daf89": {
       "compile_attempted": true,
@@ -153293,6 +154354,19 @@
       "started": "2026-10-07T09:05:08.559310+00:00",
       "state": "exact_private",
       "task": "gp-lot-20261007-0_aranos_tutorial"
+    },
+    "8eb6e81e7643456bbfa10ed9fbe488be": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8eb6e81e7643456bbfa10ed9fbe488be",
+      "finished": "2026-10-07T16:15:29.847404+00:00",
+      "id": "8eb6e81e7643456bbfa10ed9fbe488be",
+      "manifest_sha256": "053040880400375563198daf5badb1d9e5af771c08111d839c541a9e63785bce",
+      "measured_functions": 125,
+      "outcome_sha256": "f955411104c955e4aa3e2e7c23e5d5adfbeb40db298b9a31209d9122f0571ce9",
+      "semantic_key": "a7ba9a53dbdd571f06279d2572dfcd44e3f769ca2cd8c98882666a5d50eff1b3",
+      "started": "2026-10-07T16:15:28.860641+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-11_joba"
     },
     "8eb8b5a127684eba88e0f42f6d2e74da": {
       "compile_attempted": true,
@@ -155396,6 +156470,26 @@
       "state": "exact_private",
       "task": "float-guard-only-11_joba-20261004"
     },
+    "a34bc7ed8c8844fa8dd4702a1b7f8343": {
+      "children": [
+        {
+          "id": "20_yeedil",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/a34bc7ed8c8844fa8dd4702a1b7f8343",
+      "error": "Semantic duplicate trial: 11ef248c6eb940419eb19a139ff353f0; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:42.024522+00:00",
+      "id": "a34bc7ed8c8844fa8dd4702a1b7f8343",
+      "integration_credit": 0,
+      "manifest_sha256": "d3a1c2af41d88d942f4514a9c7dd434010d26b3e8c64bc161513f9fe17633fdd",
+      "measured_functions": 0,
+      "outcome_sha256": "8e15ae6ca58a5ed7b9e7712f7685b86c516590d90b1b9e72b8ce94a959b24705",
+      "semantic_key": "e780f03de59561480fe43376f07bf39a85cfd209151094bb97f1fd24b56f5985",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-20_yeedil"
+    },
     "a37ee2d208b5455c8ef5c3e23c64f34a": {
       "compile_attempted": true,
       "directory": "runtime:trials/a37ee2d208b5455c8ef5c3e23c64f34a",
@@ -156666,6 +157760,19 @@
       "started": "2026-10-04T12:51:18.865372+00:00",
       "state": "mismatch",
       "task": "native-review-joba-target-setter-v1-20261004"
+    },
+    "b1c1d769d40b420d94343abb5cdba400": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/b1c1d769d40b420d94343abb5cdba400",
+      "finished": "2026-10-07T16:15:49.718848+00:00",
+      "id": "b1c1d769d40b420d94343abb5cdba400",
+      "manifest_sha256": "ddae4f736abae3079c7256d746a11e5fe3304b682052367dbc8c97dde0f2161d",
+      "measured_functions": 113,
+      "outcome_sha256": "c8a1adf4d07a6fb5a8e438982bc6c5ea0a37233c399e5493fe0efdd59c4914a4",
+      "semantic_key": "9f2b822d8ba568570a12999b33207bc8383ffa2a5fa68f69784368f83b0a356d",
+      "started": "2026-10-07T16:15:48.803686+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-2_maktar_nebula"
     },
     "b1c461ccfbbd4c4682978b224e8d32ba": {
       "compile_attempted": true,
@@ -158198,6 +159305,26 @@
       "state": "exact_private",
       "task": "orbital-flags-joint-20261004-23_damosel_orbit"
     },
+    "c2e65b555e174977b1c99182fe011c71": {
+      "children": [
+        {
+          "id": "12_todano",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/c2e65b555e174977b1c99182fe011c71",
+      "error": "Semantic duplicate trial: 6d02e6165e3a48aca11a5527c6c0e980; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:30.745001+00:00",
+      "id": "c2e65b555e174977b1c99182fe011c71",
+      "integration_credit": 0,
+      "manifest_sha256": "8224869bbfd4c0070b702b64bbb048d62b8fe1a8d365c86ce10e632be67da443",
+      "measured_functions": 0,
+      "outcome_sha256": "c8fa638a086e8585a5fa7a44c3707e09b8347a9344efd911f67fc99e4b9ab9c3",
+      "semantic_key": "dc16a525d1583685a852a07dae052ae661b5bf92650f6c7314056017b2e4b96a",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-12_todano"
+    },
     "c2eee1380075436d943fb4be52a80905": {
       "compile_attempted": true,
       "directory": "runtime:trials/c2eee1380075436d943fb4be52a80905",
@@ -159387,6 +160514,26 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-grid312-18-v1"
     },
+    "ce38511a4c6940ea8eb382234693cc2d": {
+      "children": [
+        {
+          "id": "30_insomniac_museum",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/ce38511a4c6940ea8eb382234693cc2d",
+      "error": "Semantic duplicate trial: 5266d011805e456a86bc884b62563880; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:50.614913+00:00",
+      "id": "ce38511a4c6940ea8eb382234693cc2d",
+      "integration_credit": 0,
+      "manifest_sha256": "1bb7aee2aa526b826d20fa1bca68fd72c95392996d0dc47283acf24d8ad3d0d0",
+      "measured_functions": 0,
+      "outcome_sha256": "daefb2fc1a9d71d541440c6e03efa83747faadf6cecee87452359bf974c8c20c",
+      "semantic_key": "4fd943b908a6ff84d80a5ee01c01d5f875623e6247a2a334e38f5fa92893410e",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-30_insomniac_museum"
+    },
     "ce3d34f88fd24d4a888d31df41a6aa3e": {
       "compile_attempted": true,
       "directory": "runtime:trials/ce3d34f88fd24d4a888d31df41a6aa3e",
@@ -159608,6 +160755,26 @@
       "started": "2026-10-04T07:16:09.778632+00:00",
       "state": "mismatch",
       "task": "barlow-packed-header-20261004-v1"
+    },
+    "cff075b0faea47d1b6fb296256b36f40": {
+      "children": [
+        {
+          "id": "1_oozla",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/cff075b0faea47d1b6fb296256b36f40",
+      "error": "Semantic duplicate trial: 41b0b33534a440dda6b65d7876a0226e; provide --repeat-reason",
+      "finished": "2026-10-07T16:15:41.167164+00:00",
+      "id": "cff075b0faea47d1b6fb296256b36f40",
+      "integration_credit": 0,
+      "manifest_sha256": "6bff9af32e8c0bfaa5d473d2c8063bd040ac52872fe243f2636bd4b61221f517",
+      "measured_functions": 0,
+      "outcome_sha256": "ede5d265ad81aa77b0cff012583f18fc5e41c61f10dd6f5eaac9b6b037d622d5",
+      "semantic_key": "1d1cb45ab077ec3f93938d92ce7a39dd1106abe67277034098bcbba5c795e98d",
+      "state": "preparation_rejected",
+      "task": "native-army2-20261007-1_oozla"
     },
     "cff4b21856e64f489d63d14e66cc2937": {
       "compile_attempted": true,
@@ -161229,6 +162396,19 @@
       "state": "exact_private",
       "task": "small-positive-bit32-query16-combined-14_aranos_prison-20261006"
     },
+    "df440e396e1b492e86edd794f4a9bb98": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/df440e396e1b492e86edd794f4a9bb98",
+      "finished": "2026-10-07T16:15:38.549593+00:00",
+      "id": "df440e396e1b492e86edd794f4a9bb98",
+      "manifest_sha256": "1a7d33b4db3f951cd1aa36dd9c8415f02fda2e68cf4c0e4a6a9c77a3dc040c69",
+      "measured_functions": 123,
+      "outcome_sha256": "8a705df9a23aaf811dd3c3f5f93ba07bfc252cd58223239460b5277a7dbe30cd",
+      "semantic_key": "ed562f3bbcc674b3f34ee7ad0aa9b2b31799c1b5e30f84ad2be9ec418e1b03e2",
+      "started": "2026-10-07T16:15:37.618492+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-18_damosel"
+    },
     "df58c1b3eb20482dbee2203b4712531c": {
       "compile_attempted": true,
       "directory": "runtime:trials/df58c1b3eb20482dbee2203b4712531c",
@@ -162714,6 +163894,19 @@
       "state": "preparation_rejected",
       "task": "gp-lot-20261007c-5_feltzin_system"
     },
+    "ece6e44d3fbf49f5aee6fb155b575c32": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/ece6e44d3fbf49f5aee6fb155b575c32",
+      "finished": "2026-10-07T16:15:40.246633+00:00",
+      "id": "ece6e44d3fbf49f5aee6fb155b575c32",
+      "manifest_sha256": "5fc81a58612d416051eae3fd17e52a2f19627991969738fe713b6810cfd62344",
+      "measured_functions": 114,
+      "outcome_sha256": "f9bece45d1fafa84c14e252e132bfa86ab2502647a6b19cf135f6908b06c0e76",
+      "semantic_key": "1a4b7bc87dd94860c946c9299c38299f998308bff5f578b0f8447e18538b8ef0",
+      "started": "2026-10-07T16:15:39.343808+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-19_grelbin"
+    },
     "ecee00ed927d440fa9736244a9bf2817": {
       "compile_attempted": true,
       "directory": "runtime:trials/ecee00ed927d440fa9736244a9bf2817",
@@ -162882,6 +164075,19 @@
       "started": "2026-10-04T14:40:14.882614+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-kind96-2-v1"
+    },
+    "ee7d248e36c34b2c8ff0d298d2133f3a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/ee7d248e36c34b2c8ff0d298d2133f3a",
+      "finished": "2026-10-07T16:15:57.683491+00:00",
+      "id": "ee7d248e36c34b2c8ff0d298d2133f3a",
+      "manifest_sha256": "a89adabc5b6548ed80a279ac36bbc6ab31f4056e1a1019567af2ac774c5a5d4f",
+      "measured_functions": 120,
+      "outcome_sha256": "61d3b061ed452945ce950339a5c2883989ba2395df129f78b7203cd22fb51aea",
+      "semantic_key": "c1a22fcbd0424eb387d3556ae5659ac285babb110bf64224a25f33956dd1ba47",
+      "started": "2026-10-07T16:15:56.630872+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-6_notak"
     },
     "ee8a0f1daf494292a3fccb46f017f121": {
       "compile_attempted": true,
@@ -163612,6 +164818,19 @@
       "state": "mismatch",
       "task": "orbital-yeedil-range72-20261005-v1"
     },
+    "f6323618c0044428899226fd82223ee0": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/f6323618c0044428899226fd82223ee0",
+      "finished": "2026-10-07T16:15:59.408053+00:00",
+      "id": "f6323618c0044428899226fd82223ee0",
+      "manifest_sha256": "7cb5773cd8f8238c53cd2e507f2fbb17ac3f7832635f9f3826efc0bf143a422f",
+      "measured_functions": 106,
+      "outcome_sha256": "6a6009cf6edfc7db3d899fd6dd448110e2a44d7297a6afa163e8bf301d099a4b",
+      "semantic_key": "2234bb920bb963b956dec2181061a3449141694909b6fdb282bfd5c40ce69bac",
+      "started": "2026-10-07T16:15:58.531355+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-7_siberius"
+    },
     "f67d9d7135c742e494cd21b48b765883": {
       "compile_attempted": true,
       "directory": "runtime:trials/f67d9d7135c742e494cd21b48b765883",
@@ -163814,6 +165033,19 @@
       "state": "mismatch",
       "task": "native-review-endako-axis-input-v2-20261004"
     },
+    "f82eb6b221ed4f23a134a1215c19406a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/f82eb6b221ed4f23a134a1215c19406a",
+      "finished": "2026-10-07T16:15:32.417247+00:00",
+      "id": "f82eb6b221ed4f23a134a1215c19406a",
+      "manifest_sha256": "a350778ae72ea4c32a31bdcd5c31d8564bce1b7cde7edf8593d6a6c04c655813",
+      "measured_functions": 107,
+      "outcome_sha256": "d816b65ec99cae389d5d864f5e5b58b9bbdd643739b731e04ec37bf065a8e06d",
+      "semantic_key": "2f6d411428dea7ce089e5bad19ef85bb5f833363edb368c8893379f0a2645963",
+      "started": "2026-10-07T16:15:31.562394+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-13_boldan"
+    },
     "f85a95b779b4489796f239606b9ec9d2": {
       "compile_attempted": true,
       "directory": "runtime:trials/f85a95b779b4489796f239606b9ec9d2",
@@ -163852,6 +165084,19 @@
       "started": "2026-10-04T18:56:16.553557+00:00",
       "state": "exact_private",
       "task": "root-next-five-combined-15_gorn-20261004"
+    },
+    "f8d09651ac4c4060a8ccbf5bea8b307a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/f8d09651ac4c4060a8ccbf5bea8b307a",
+      "finished": "2026-10-07T16:15:28.046642+00:00",
+      "id": "f8d09651ac4c4060a8ccbf5bea8b307a",
+      "manifest_sha256": "e5d972efbd60e270375be6c1dc90dc123ca7c265bdb8552614e44a128014e167",
+      "measured_functions": 115,
+      "outcome_sha256": "505919198e6266144da1adc7b129f787c255a4b2bfcdf655ff3b9592c263272d",
+      "semantic_key": "ff300f2a7234da758f5533372e6973d20b8fa34cdb300c33b8913dc72933e61f",
+      "started": "2026-10-07T16:15:27.126372+00:00",
+      "state": "exact_private",
+      "task": "native-army2-20261007-10_hrugis_cloud"
     },
     "f8e55dda36ac4fbca8a918bf085c0b4a": {
       "compile_attempted": true,
@@ -164753,6 +165998,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "a9e3df7f02f8a09b98683344e46359b7581595eae25dddee4e3981ad94919f73"
+    "docs/CAMPAIGN-QUEUE.md": "37b536c46ba93c73e8655bd877a71af3ac5c69024aecf571b7a8bceaa3f04101"
   }
 }

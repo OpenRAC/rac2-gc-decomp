@@ -6,10 +6,10 @@
   "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
   "reference_entry": 2929800,
   "candidate_source": "candidates/levels/4_barlow.c",
-  "source_sha256": "c8f51e2a2db41dcd4c229e691b6b5ee16082f2ef107dbd2df37be8bbee36019d",
-  "catalog_sha256": "acf4c73a963e941538e6acc13eca0f330d678823ffb75e8a96b635e840f85af2",
-  "object_sha256": "eeafbdbd68240c3ef38ee0cf4e1ae2716bbf3f9cc7b818f440c841ec472d6cf1",
-  "candidate_elf_sha256": "cbd4c6f8ef7f5638c35179b217229d572cabe4b865a70db90543ab3590d94084",
+  "source_sha256": "c45f4b86b9e03eb6e4cd1f97296ff1d170cec435c29d1279913a542eba5f4e9d",
+  "catalog_sha256": "5517bffdcc705e5c1c8de1494f7850bc5d26f6b77359d194dfbaf4b848676ddf",
+  "object_sha256": "9f4ef616b12708c9c6b00a11ced32c27395dcbee7434ff65f93df7528b17581b",
+  "candidate_elf_sha256": "5ff30fc86c594067a4f4678cab55d82e36af094f051dce993107eccbbc555aaf",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -707,6 +707,17 @@
       "produced_size": 136
     },
     {
+      "symbol": "LVL_4_BARLOW_FUN_00410E48",
+      "address": 4263496,
+      "size": 200,
+      "matched": true,
+      "reference_sha256": "fbe327929b8b467f0b5af5042e1485ec209d47b8683ef3f0366d86c835e505b6",
+      "candidate_sha256": "fbe327929b8b467f0b5af5042e1485ec209d47b8683ef3f0366d86c835e505b6",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 200
+    },
+    {
       "symbol": "LVL_4_BARLOW_FUN_0041B7C8",
       "address": 4306888,
       "size": 136,
@@ -1005,5 +1016,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 6884
+  "matched_code_bytes": 7084
 }

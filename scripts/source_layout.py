@@ -31,6 +31,22 @@ SHIP_CLEAR_VARIANT = b"void @@FUNCTION@@(int *object) {\n    object[0] = 0;\n   
 # authored body is the family identity, so any program may anchor one. The
 # legacy anchor program keeps its historical family id spelling.
 BASE_SEED_PLACEMENTS = (
+    ("19_grelbin", "LVL_19_GRELBIN_FUN_0030F458"),
+    ("16_snivelak", "LVL_16_SNIVELAK_FUN_0030B038"),
+    ("25_wupash_nebula", "LVL_25_WUPASH_NEBULA_FUN_00323FA8"),
+    ("26_jamming_array", "LVL_26_JAMMING_ARRAY_FUN_0035F1D8"),
+    ("18_damosel", "LVL_18_DAMOSEL_FUN_003792E8"),
+    ("16_snivelak", "LVL_16_SNIVELAK_FUN_00360890"),
+    ("19_grelbin", "LVL_19_GRELBIN_FUN_00366B70"),
+    ("13_boldan", "LVL_13_BOLDAN_FUN_003724E8"),
+    ("16_snivelak", "LVL_16_SNIVELAK_FUN_002DBE98"),
+    ("10_hrugis_cloud", "LVL_10_HRUGIS_CLOUD_FUN_002FD858"),
+    ("19_grelbin", "LVL_19_GRELBIN_FUN_00379EA8"),
+    ("11_joba", "LVL_11_JOBA_FUN_00332B18"),
+    ("16_snivelak", "LVL_16_SNIVELAK_FUN_0030A390"),
+    ("11_joba", "LVL_11_JOBA_FUN_00400AA0"),
+    ("19_grelbin", "LVL_19_GRELBIN_FUN_002E1D88"),
+    ("18_damosel", "LVL_18_DAMOSEL_FUN_002FEB90"),
     ("25_wupash_nebula", "LVL_25_WUPASH_NEBULA_FUN_00323300"),
     ("10_hrugis_cloud", "LVL_10_HRUGIS_CLOUD_FUN_0032B6B0"),
     ("15_gorn", "LVL_15_GORN_FUN_003297D0"),

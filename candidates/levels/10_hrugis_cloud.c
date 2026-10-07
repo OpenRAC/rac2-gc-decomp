@@ -2190,3 +2190,25 @@ Slot3cde0d02 *LVL_10_HRUGIS_CLOUD_FUN_0032B6B0(Ctx *ctx, int index)
     ctx->f50 = (int)slot;
     return slot;
 }
+struct Rec31cd0302 {
+    int v[10];
+};
+
+extern struct Rec31cd0302 LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[];
+
+void LVL_10_HRUGIS_CLOUD_FUN_002FD858(int p0, int p1, int p2, int p3, int p4, int p5,
+                                      int p6, int p7, int p8, int p9, unsigned idx)
+{
+    if (idx >= 32u)
+        return;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[0] = p0;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[1] = p1;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[2] = p2;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[3] = p3;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[4] = p4;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[5] = p5;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[6] = p6;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[7] = p7;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[8] = p8;
+    LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48[idx].v[9] = p9;
+}

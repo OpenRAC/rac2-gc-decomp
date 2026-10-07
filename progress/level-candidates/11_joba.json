@@ -6,10 +6,10 @@
   "reference_sha256": "c6cf24ac0591c78ae6a5320a333b4465f54969ab91e0f42f52fcb7fc95f2f00e",
   "reference_entry": 2870792,
   "candidate_source": "candidates/levels/11_joba.c",
-  "source_sha256": "7720c3f4c2e87db6da03392042f1e2122737b5ad51913863b41e4ba8404aa214",
-  "catalog_sha256": "85a21892abfe8b13cc375474659964c01d1bd80320e27dc957157624eab33fde",
-  "object_sha256": "7a544d303179c260e9f07e28bd6d23106535d2154b3950f6cef3ffae187cfb0c",
-  "candidate_elf_sha256": "58bd54ecd57a03aab7c88135c3322441ade6c152e0b24f540c35ec7ac2c793ea",
+  "source_sha256": "761b2ecb1da90f65fad7cbee0b19a5e4cf9233e93c97b06a382e544ef205fd8a",
+  "catalog_sha256": "1e55a0aed1f85c02ddfe9807298ce80d7c7cdb21672958600264655c831fb5a2",
+  "object_sha256": "35db57da38b6b42a11704e86d0eb9cbef22c116f54c2dbeb6504913a156cde4f",
+  "candidate_elf_sha256": "a2fd6846ff3e1b46805137988948970a535a04eb5284d71ff9f545bd0017498b",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -619,6 +619,17 @@
       "produced_size": 124
     },
     {
+      "symbol": "LVL_11_JOBA_FUN_00332B18",
+      "address": 3353368,
+      "size": 116,
+      "matched": true,
+      "reference_sha256": "2592d37de3d0f5f6195c1da381e30540aaa3f471c1d836957995d6b504d10a12",
+      "candidate_sha256": "2592d37de3d0f5f6195c1da381e30540aaa3f471c1d836957995d6b504d10a12",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 116
+    },
+    {
       "symbol": "LVL_11_JOBA_FUN_00338DF0",
       "address": 3378672,
       "size": 112,
@@ -958,6 +969,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 136
+    },
+    {
+      "symbol": "LVL_11_JOBA_FUN_00400AA0",
+      "address": 4197024,
+      "size": 200,
+      "matched": true,
+      "reference_sha256": "fbe327929b8b467f0b5af5042e1485ec209d47b8683ef3f0366d86c835e505b6",
+      "candidate_sha256": "fbe327929b8b467f0b5af5042e1485ec209d47b8683ef3f0366d86c835e505b6",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 200
     },
     {
       "symbol": "LVL_11_JOBA_FUN_0040B2C8",
@@ -1379,5 +1401,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 12220
+  "matched_code_bytes": 12536
 }

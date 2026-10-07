@@ -2976,6 +2976,20 @@
       "origin": "level-native"
     },
     {
+      "symbol": "LVL_3_ENDAKO_FUN_00312B88",
+      "address": 3222408,
+      "size": 216,
+      "matched": true,
+      "reference_sha256": "697c883f5eefe92b0c5c90e0e09a22371d375a8462313ad8c7220bd69c0e86cc",
+      "candidate_sha256": "697c883f5eefe92b0c5c90e0e09a22371d375a8462313ad8c7220bd69c0e86cc",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako",
+      "candidate_source": "candidates/levels/3_endako.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_3_ENDAKO_FUN_0031B990",
       "address": 3258768,
       "size": 68,
@@ -3130,6 +3144,20 @@
       "origin": "level-native"
     },
     {
+      "symbol": "LVL_3_ENDAKO_FUN_0036A128",
+      "address": 3580200,
+      "size": 244,
+      "matched": true,
+      "reference_sha256": "89e73a698078fcdbcb7d614ce9b2ce75a4fd1af88a13d8aa83b81f776680479a",
+      "candidate_sha256": "89e73a698078fcdbcb7d614ce9b2ce75a4fd1af88a13d8aa83b81f776680479a",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako",
+      "candidate_source": "candidates/levels/3_endako.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_3_ENDAKO_FUN_0036C2B8",
       "address": 3588792,
       "size": 192,
@@ -3192,6 +3220,20 @@
       "matched": true,
       "reference_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
       "candidate_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako",
+      "candidate_source": "candidates/levels/3_endako.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_3_ENDAKO_FUN_0037D2C0",
+      "address": 3658432,
+      "size": 112,
+      "matched": true,
+      "reference_sha256": "fd3ed350c0656d6f3de979b3da3646536a4f019af34597165fb776fca0c292f9",
+      "candidate_sha256": "fd3ed350c0656d6f3de979b3da3646536a4f019af34597165fb776fca0c292f9",
       "different_bytes": 0,
       "state": "integrated",
       "integrated": true,
@@ -3849,14 +3891,14 @@
     "bytes_compared": 2821104,
     "segments": 1
   },
-  "matched_code_bytes": 19368,
+  "matched_code_bytes": 19940,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "f6714cfe2436058153c7cad19edf7a7869a15389c0858b07bd1cb17e6173f061",
+  "candidate_elf_sha256": "74b6efb8657210770e901b5b194e56c4be46574aa341ffb57ec8aa0a6889aff0",
   "c_object_sha256": "cdfa10e1df341a2531c9efb6f99c439da290234676e6a5d4cef6fb2b3d7fd7f8",
   "replacement_inputs": {
     "103680.s": [
@@ -4072,6 +4114,7 @@
       "LVL_3_ENDAKO_FUN_003117B0",
       "LVL_3_ENDAKO_FUN_00311EE0",
       "LVL_3_ENDAKO_FUN_00312660",
+      "LVL_3_ENDAKO_FUN_00312B88",
       "LVL_3_ENDAKO_FUN_0031B990",
       "LVL_3_ENDAKO_FUN_00320658",
       "LVL_3_ENDAKO_FUN_00321810",
@@ -4083,11 +4126,13 @@
       "LVL_3_ENDAKO_FUN_00342C48",
       "LVL_3_ENDAKO_FUN_00347A08",
       "LVL_3_ENDAKO_FUN_003607D8",
+      "LVL_3_ENDAKO_FUN_0036A128",
       "LVL_3_ENDAKO_FUN_0036C2B8",
       "LVL_3_ENDAKO_FUN_00370980",
       "LVL_3_ENDAKO_FUN_00375468",
       "LVL_3_ENDAKO_FUN_00376E68",
       "LVL_3_ENDAKO_FUN_0037C480",
+      "LVL_3_ENDAKO_FUN_0037D2C0",
       "LVL_3_ENDAKO_FUN_0037F358",
       "LVL_3_ENDAKO_FUN_0037FE08",
       "LVL_3_ENDAKO_FUN_00381458",
@@ -4158,7 +4203,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "f6714cfe2436058153c7cad19edf7a7869a15389c0858b07bd1cb17e6173f061",
+    "candidate_elf_sha256": "74b6efb8657210770e901b5b194e56c4be46574aa341ffb57ec8aa0a6889aff0",
     "c_object_sha256": "cdfa10e1df341a2531c9efb6f99c439da290234676e6a5d4cef6fb2b3d7fd7f8",
     "replacement_inputs": {
       "103680.s": [
@@ -4374,6 +4419,7 @@
         "LVL_3_ENDAKO_FUN_003117B0",
         "LVL_3_ENDAKO_FUN_00311EE0",
         "LVL_3_ENDAKO_FUN_00312660",
+        "LVL_3_ENDAKO_FUN_00312B88",
         "LVL_3_ENDAKO_FUN_0031B990",
         "LVL_3_ENDAKO_FUN_00320658",
         "LVL_3_ENDAKO_FUN_00321810",
@@ -4385,11 +4431,13 @@
         "LVL_3_ENDAKO_FUN_00342C48",
         "LVL_3_ENDAKO_FUN_00347A08",
         "LVL_3_ENDAKO_FUN_003607D8",
+        "LVL_3_ENDAKO_FUN_0036A128",
         "LVL_3_ENDAKO_FUN_0036C2B8",
         "LVL_3_ENDAKO_FUN_00370980",
         "LVL_3_ENDAKO_FUN_00375468",
         "LVL_3_ENDAKO_FUN_00376E68",
         "LVL_3_ENDAKO_FUN_0037C480",
+        "LVL_3_ENDAKO_FUN_0037D2C0",
         "LVL_3_ENDAKO_FUN_0037F358",
         "LVL_3_ENDAKO_FUN_0037FE08",
         "LVL_3_ENDAKO_FUN_00381458",
@@ -4445,13 +4493,13 @@
   },
   "reference_entry": 2794248,
   "candidate_entry": 2794248,
-  "dependency_sha256": "c54aa1d1be21820bbd763510283bc0ea3fe84b2ac766cb528f6826676142ff67",
+  "dependency_sha256": "f75ec3a2ea15d107201f3fc75d7909513723c79777f8829ed59a0d385cf0e9b6",
   "boot_review_sha256": "1890b2367fc5f1165a3df28f8f8c88da402fb2755d8d535a99d9e4845a5c1a40",
   "native": {
     "source": "candidates/levels/3_endako.c",
     "catalog_path": "config/level-native/3_endako.json",
     "review_path": "progress/level-candidates/3_endako.json",
-    "review_sha256": "de72590f94b26176817b9b742025e5a6bff44c3c528478cd58c812a041aa160b",
+    "review_sha256": "1e33fc50aa637d026df56bec9593a5383da6a565bde183515bf7e826474d4e65",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -4460,10 +4508,10 @@
       "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
       "reference_entry": 2794248,
       "candidate_source": "candidates/levels/3_endako.c",
-      "source_sha256": "a67dc952d26213f9be27e585126a8efcb7075105e756c7f50bc52ad088acadb5",
-      "catalog_sha256": "907325d06c8cfccf2a5bc2a318f4b048da160fcfdd33d10a3df4461a0d28b612",
-      "object_sha256": "49223d1bce0d7f5cae61dad65a8a02f48b84d51172adc5a7bd7d5726288aa5b2",
-      "candidate_elf_sha256": "3e7afab49a90078977142f976c11d18ccb7b5e091d5c9d8e50c8d8158410f54a",
+      "source_sha256": "00bfaa407b61a28f560ddcc7b6118d29d344fd6e240df106bd6dfb8d5772bd39",
+      "catalog_sha256": "95caebcc5833e14759473e4a8a144c3b1d1670433250288638b817b624854d63",
+      "object_sha256": "924002da566131a011e437cb8eb1a48c8b6513b24f0dbaf84795029b9766f47c",
+      "candidate_elf_sha256": "520e74da6e36c6910cd1be53163a802940758a1a3a082812a7f4b653b1bbcbb0",
       "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -5029,6 +5077,17 @@
           "produced_size": 84
         },
         {
+          "symbol": "LVL_3_ENDAKO_FUN_00312B88",
+          "address": 3222408,
+          "size": 216,
+          "matched": true,
+          "reference_sha256": "697c883f5eefe92b0c5c90e0e09a22371d375a8462313ad8c7220bd69c0e86cc",
+          "candidate_sha256": "697c883f5eefe92b0c5c90e0e09a22371d375a8462313ad8c7220bd69c0e86cc",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 216
+        },
+        {
           "symbol": "LVL_3_ENDAKO_FUN_0031B990",
           "address": 3258768,
           "size": 68,
@@ -5150,6 +5209,17 @@
           "produced_size": 124
         },
         {
+          "symbol": "LVL_3_ENDAKO_FUN_0036A128",
+          "address": 3580200,
+          "size": 244,
+          "matched": true,
+          "reference_sha256": "89e73a698078fcdbcb7d614ce9b2ce75a4fd1af88a13d8aa83b81f776680479a",
+          "candidate_sha256": "89e73a698078fcdbcb7d614ce9b2ce75a4fd1af88a13d8aa83b81f776680479a",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 244
+        },
+        {
           "symbol": "LVL_3_ENDAKO_FUN_0036C2B8",
           "address": 3588792,
           "size": 192,
@@ -5203,6 +5273,17 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 8
+        },
+        {
+          "symbol": "LVL_3_ENDAKO_FUN_0037D2C0",
+          "address": 3658432,
+          "size": 112,
+          "matched": true,
+          "reference_sha256": "fd3ed350c0656d6f3de979b3da3646536a4f019af34597165fb776fca0c292f9",
+          "candidate_sha256": "fd3ed350c0656d6f3de979b3da3646536a4f019af34597165fb776fca0c292f9",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 112
         },
         {
           "symbol": "LVL_3_ENDAKO_FUN_0037F358",
@@ -5712,8 +5793,8 @@
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 10492
+      "matched_code_bytes": 11064
     },
-    "object_sha256": "49223d1bce0d7f5cae61dad65a8a02f48b84d51172adc5a7bd7d5726288aa5b2"
+    "object_sha256": "924002da566131a011e437cb8eb1a48c8b6513b24f0dbaf84795029b9766f47c"
   }
 }

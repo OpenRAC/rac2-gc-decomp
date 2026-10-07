@@ -1854,3 +1854,48 @@ void LVL_13_BOLDAN_FUN_00372B50(void)
         } while (p->elems != 0);
     }
 }
+/* Append one 16-byte record to the level's queue at 0x225FD0 and submit it
+   through the DMA helper LVL_13_BOLDAN_F0451f37d_FUN_0011AFE0.  The four queue globals live in a
+   0x38-byte state block based at 0x1A7240; because they are reached with a
+   constant offset from that base (a CONST address), cc1 gives the store a
+   two-instruction length and refuses to drop it into the branch delay slot,
+   which is what the retail body does as well.  */
+
+typedef struct {
+    int start;      /* +0x00 -> 0x1A7240 */
+    int end;        /* +0x04 -> 0x1A7244 */
+    int pad[10];    /* +0x08 .. +0x2F */
+    int cursor;     /* +0x30 -> 0x1A7270 */
+    int count;      /* +0x34 -> 0x1A7274 */
+} LevelQueue0451f37d;
+
+extern LevelQueue0451f37d LVL_13_BOLDAN_F0451f37d_D_001A7240 __attribute__((sda));
+extern char LVL_13_BOLDAN_F0451f37d_D_00225FD0[];
+extern int LVL_13_BOLDAN_F0451f37d_FUN_0011AFE0(int *dma, int flag);
+
+int LVL_13_BOLDAN_FUN_003724E8(int p0, int p1, int p2, int p3)
+{
+    int args[4];
+    int n, k;
+
+    if (LVL_13_BOLDAN_F0451f37d_D_001A7240.end - (LVL_13_BOLDAN_F0451f37d_D_001A7240.cursor - LVL_13_BOLDAN_F0451f37d_D_001A7240.start) < p2 * 16)
+        return -1;
+    if (LVL_13_BOLDAN_F0451f37d_D_001A7240.count == 64)
+        return -2;
+
+    args[0] = p0;
+    args[1] = LVL_13_BOLDAN_F0451f37d_D_001A7240.cursor;
+    args[2] = p1 * 16;
+    args[3] = 0;
+    LVL_13_BOLDAN_F0451f37d_FUN_0011AFE0(args, 1);
+
+    n = LVL_13_BOLDAN_F0451f37d_D_001A7240.count;
+    k = n;
+    n = n + 1;
+    LVL_13_BOLDAN_F0451f37d_D_001A7240.count = n;
+    *(int *)(LVL_13_BOLDAN_F0451f37d_D_00225FD0 + k * 16) = LVL_13_BOLDAN_F0451f37d_D_001A7240.cursor;
+    *(int *)(LVL_13_BOLDAN_F0451f37d_D_00225FD0 + k * 16 + 4) = p2;
+    *(int *)(LVL_13_BOLDAN_F0451f37d_D_00225FD0 + k * 16 + 8) = p3;
+    LVL_13_BOLDAN_F0451f37d_D_001A7240.cursor = LVL_13_BOLDAN_F0451f37d_D_001A7240.cursor + p2 * 16;
+    return k;
+}
