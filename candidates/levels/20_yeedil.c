@@ -1805,3 +1805,55 @@ after1:
 after2:
     return value != 3;
 }
+/* 28-entry table scan.  The table is reached through the resident pointer at
+   0x1AA7F0; the caller's id is looked up from index 0, the first hit wins, and
+   an index is rejected when its slot is empty while the small-data flag at
+   0x1A79F0 is set.  The flag is read through $gp and the load sits in the delay
+   slot of the bail-out branch, so the body needs the -G8 small-data profile.
+
+   Measured shape note: the table pointer must be reached through the global
+   itself (`LVL_20_YEEDIL_F490e2c59_D_001AA7F0[i]`), not through a local `int *` copy.  With a local the
+   allocator keeps one register for the whole live range (26 instructions);
+   with the global gcc loads it into $v1, hoists the loop-invariant value and
+   emits the retail `move $a2,$v1` copy at the block boundary (28 instructions,
+   byte-identical). */
+extern int *LVL_20_YEEDIL_F490e2c59_D_001AA7F0 __attribute__((sda));
+extern int LVL_20_YEEDIL_F490e2c59_D_001A79F0 __attribute__((sda));
+
+int LVL_20_YEEDIL_FUN_0031A998(int param_1)
+{
+    int index = -1;
+    int i;
+
+    for (i = 0; i < 28; i++)
+        if (LVL_20_YEEDIL_F490e2c59_D_001AA7F0[i] == param_1) { index = i; break; }
+
+    if (LVL_20_YEEDIL_F490e2c59_D_001AA7F0[index] == 0)
+        index = LVL_20_YEEDIL_F490e2c59_D_001A79F0 ? -1 : index;
+
+    return index;
+}
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_20_YEEDIL_F1157be91_D_001A63E8;
+extern unsigned char LVL_20_YEEDIL_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_20_YEEDIL_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_20_YEEDIL_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_20_YEEDIL_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_20_YEEDIL_F1157be91_FUN_00133230(void);
+extern int LVL_20_YEEDIL_F1157be91_FUN_00132028(void);
+
+int LVL_20_YEEDIL_FUN_00343B40(int a0, int a1, int a2) {
+    CdMode mode = LVL_20_YEEDIL_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_20_YEEDIL_F1157be91_D_001A7900[0];
+    LVL_20_YEEDIL_F1157be91_D_001A7430[0] = 0;
+    LVL_20_YEEDIL_F1157be91_D_001A7434 = 0;
+    LVL_20_YEEDIL_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_20_YEEDIL_F1157be91_FUN_00133230();
+    LVL_20_YEEDIL_F1157be91_FUN_00132028();
+    return 1;
+}

@@ -77,6 +77,15 @@
       "returncode": 0,
       "state": "passed"
     },
+    "1349037f20e34d32ac826e83e65b9981": {
+      "directory": "runtime:actions/1349037f20e34d32ac826e83e65b9981",
+      "finished": "2026-10-07T09:14:56.408552+00:00",
+      "id": "1349037f20e34d32ac826e83e65b9981",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 1,
+      "state": "failed"
+    },
     "16d0f57b472d4e0e987f8e42b8ec89a4": {
       "artifact": "runtime:actions/16d0f57b472d4e0e987f8e42b8ec89a4/report.json",
       "artifact_sha256": "ea71701b6e54d8274442a82d6920bfba6291a6381a020a3d700ef57eb7524132",
@@ -158,6 +167,17 @@
       "directory": "runtime:actions/28a2664c5af7464083e8cae348c545d3",
       "finished": "2026-10-04T14:20:47.670045+00:00",
       "id": "28a2664c5af7464083e8cae348c545d3",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
+    "2a27a84bfbe8437289eeace34891fe08": {
+      "artifact": "prepared-run:builds/campaign-2a27a84bfbe8437289eeace34891fe08/report.json",
+      "artifact_sha256": "6c1e7601eaffa4418351166dc32a167aa4e1e2c8be12a1a96d1d92bf2706c225",
+      "directory": "runtime:actions/2a27a84bfbe8437289eeace34891fe08",
+      "finished": "2026-10-07T09:31:39.411333+00:00",
+      "id": "2a27a84bfbe8437289eeace34891fe08",
       "integration_credit": 0,
       "kind": "integrate",
       "returncode": 0,
@@ -421,6 +441,15 @@
       "integration_credit": 0,
       "kind": "integrate",
       "returncode": 1,
+      "state": "failed"
+    },
+    "554452f8cc8b49c3a3bbe06df0a4d845": {
+      "directory": "runtime:actions/554452f8cc8b49c3a3bbe06df0a4d845",
+      "finished": "2026-10-07T09:18:57.190502+00:00",
+      "id": "554452f8cc8b49c3a3bbe06df0a4d845",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 2,
       "state": "failed"
     },
     "563dab4bdce641f58f221e56eb1da682": {
@@ -833,6 +862,17 @@
       "id": "a7d6efa810504644a2054ca9966b2e24",
       "kind": "integrate",
       "state": "running"
+    },
+    "a800aec2dc2a487eb57be1f755dccd60": {
+      "artifact": "prepared-run:builds/campaign-a800aec2dc2a487eb57be1f755dccd60/report.json",
+      "artifact_sha256": "ee0630227afe4d051dc4f9d5bf92421e5f3230775f0441d2602faefaabff0e46",
+      "directory": "runtime:actions/a800aec2dc2a487eb57be1f755dccd60",
+      "finished": "2026-10-07T09:31:32.355991+00:00",
+      "id": "a800aec2dc2a487eb57be1f755dccd60",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
     },
     "ada56dc8177f434db3e2cae51182a3b0": {
       "directory": "runtime:actions/ada56dc8177f434db3e2cae51182a3b0",
@@ -4681,7 +4721,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 6798,
+  "revision": 7000,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -18515,6 +18555,2172 @@
           "to": "done"
         }
       ]
+    },
+    "gp-lot-20261007-0_aranos_tutorial": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:08.102932+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 0_aranos_tutorial; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-0_aranos_tutorial",
+      "kind": "candidate",
+      "last_trial": "8e98909216414687b1e43513add5e938",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/0_aranos_tutorial.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/0_aranos_tutorial.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:09.415804+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "8e98909216414687b1e43513add5e938"
+        }
+      ]
+    },
+    "gp-lot-20261007-10_hrugis_cloud": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:09.681201+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 10_hrugis_cloud; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-10_hrugis_cloud",
+      "kind": "candidate",
+      "last_trial": "56b4c0ebea70409fa1ae602bfee2aec2",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/10_hrugis_cloud.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/10_hrugis_cloud.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:10.954519+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "56b4c0ebea70409fa1ae602bfee2aec2"
+        }
+      ]
+    },
+    "gp-lot-20261007-11_joba": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:11.229782+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 11_joba; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-11_joba",
+      "kind": "candidate",
+      "last_trial": "0c0217de2a174d14a0ee0dd2a44a1b64",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/11_joba.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/11_joba.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:12.756784+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "0c0217de2a174d14a0ee0dd2a44a1b64"
+        }
+      ]
+    },
+    "gp-lot-20261007-12_todano": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:13.024393+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 12_todano; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-12_todano",
+      "kind": "candidate",
+      "last_trial": "d0798c5e08324b988731038e9b8b9358",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/12_todano.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/12_todano.json",
+          "id": "12_todano",
+          "reference": "runtime:references/levels/12_todano/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:14.385055+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d0798c5e08324b988731038e9b8b9358"
+        }
+      ]
+    },
+    "gp-lot-20261007-13_boldan": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:14.650311+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 13_boldan; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-13_boldan",
+      "kind": "candidate",
+      "last_trial": "ca416eb6b6e243eea49f5ba98b198840",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/13_boldan.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/13_boldan.json",
+          "id": "13_boldan",
+          "reference": "runtime:references/levels/13_boldan/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:15.976135+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "ca416eb6b6e243eea49f5ba98b198840"
+        }
+      ]
+    },
+    "gp-lot-20261007-14_aranos_prison": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:16.246266+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 14_aranos_prison; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-14_aranos_prison",
+      "kind": "candidate",
+      "last_trial": "bbfafc5b3f5749a1940e8fd4986e2172",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/14_aranos_prison.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/14_aranos_prison.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:17.565611+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "bbfafc5b3f5749a1940e8fd4986e2172"
+        }
+      ]
+    },
+    "gp-lot-20261007-15_gorn": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:17.842000+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 15_gorn; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-15_gorn",
+      "kind": "candidate",
+      "last_trial": "caddd831307c467283fdf4fbfebb5c80",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/15_gorn.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/15_gorn.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:19.158068+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "caddd831307c467283fdf4fbfebb5c80"
+        }
+      ]
+    },
+    "gp-lot-20261007-16_snivelak": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:19.431125+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 16_snivelak; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-16_snivelak",
+      "kind": "candidate",
+      "last_trial": "b49745b865f740f4a2f9b6b7f877c24a",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/16_snivelak.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/16_snivelak.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:20.718120+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "b49745b865f740f4a2f9b6b7f877c24a"
+        }
+      ]
+    },
+    "gp-lot-20261007-17_smolg": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:20.981546+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 17_smolg; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-17_smolg",
+      "kind": "candidate",
+      "last_trial": "c34604b226b64014bbebd2390ecd7491",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/17_smolg.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/17_smolg.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:22.345465+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "c34604b226b64014bbebd2390ecd7491"
+        }
+      ]
+    },
+    "gp-lot-20261007-18_damosel": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:22.615880+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 18_damosel; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-18_damosel",
+      "kind": "candidate",
+      "last_trial": "ad6bbe8a752d4064b0bcca1b27885952",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/18_damosel.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/18_damosel.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:24.050811+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "ad6bbe8a752d4064b0bcca1b27885952"
+        }
+      ]
+    },
+    "gp-lot-20261007-19_grelbin": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:24.317664+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 19_grelbin; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-19_grelbin",
+      "kind": "candidate",
+      "last_trial": "a511868895a1442da79e50a2db87d2b2",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/19_grelbin.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/19_grelbin.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:25.706372+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "a511868895a1442da79e50a2db87d2b2"
+        }
+      ]
+    },
+    "gp-lot-20261007-1_oozla": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:26.019187+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 1_oozla; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-1_oozla",
+      "kind": "candidate",
+      "last_trial": "5eedee9ab51f44599ba4ef070d9ae027",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/1_oozla.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/1_oozla.json",
+          "id": "1_oozla",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:27.459022+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "5eedee9ab51f44599ba4ef070d9ae027"
+        }
+      ]
+    },
+    "gp-lot-20261007-20_yeedil": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:27.745874+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 20_yeedil; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-20_yeedil",
+      "kind": "candidate",
+      "last_trial": "013ad362772748f1ba62f6cc949ab26b",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/20_yeedil.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/20_yeedil.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:29.181237+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "013ad362772748f1ba62f6cc949ab26b"
+        }
+      ]
+    },
+    "gp-lot-20261007-22_dobbo_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:29.472630+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 22_dobbo_orbit; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-22_dobbo_orbit",
+      "kind": "candidate",
+      "last_trial": "1746f2b5b03940d68eee334884712b36",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/22_dobbo_orbit.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/22_dobbo_orbit.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:30.941691+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "1746f2b5b03940d68eee334884712b36"
+        }
+      ]
+    },
+    "gp-lot-20261007-23_damosel_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:31.235494+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 23_damosel_orbit; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-23_damosel_orbit",
+      "kind": "candidate",
+      "last_trial": "705dfe1bc30e4421b5ddacd7d467d255",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/23_damosel_orbit.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/23_damosel_orbit.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:references/levels/23_damosel_orbit/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:32.695813+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "705dfe1bc30e4421b5ddacd7d467d255"
+        }
+      ]
+    },
+    "gp-lot-20261007-24_ship_shack": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:32.994042+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 24_ship_shack; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-24_ship_shack",
+      "kind": "candidate",
+      "last_trial": "59f274fbe1934e83b5678a36a3bff926",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/24_ship_shack.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/24_ship_shack.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:references/levels/24_ship_shack/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:34.428355+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "59f274fbe1934e83b5678a36a3bff926"
+        }
+      ]
+    },
+    "gp-lot-20261007-25_wupash_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:34.719493+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 25_wupash_nebula; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-25_wupash_nebula",
+      "kind": "candidate",
+      "last_trial": "5b98f76f83cf4b088e574e9ec299dcd6",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/25_wupash_nebula.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/25_wupash_nebula.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:36.079246+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "5b98f76f83cf4b088e574e9ec299dcd6"
+        }
+      ]
+    },
+    "gp-lot-20261007-26_jamming_array": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:36.351342+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 26_jamming_array; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-26_jamming_array",
+      "kind": "candidate",
+      "last_trial": "acfc19834cc8459d97629aa3deb3242b",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/26_jamming_array.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/26_jamming_array.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:37.653924+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "acfc19834cc8459d97629aa3deb3242b"
+        }
+      ]
+    },
+    "gp-lot-20261007-2_maktar_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:37.916161+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 2_maktar_nebula; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-2_maktar_nebula",
+      "kind": "candidate",
+      "last_trial": "8b7c742190ae46b183a4c9a888964365",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/2_maktar_nebula.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/2_maktar_nebula.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:39.277879+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "8b7c742190ae46b183a4c9a888964365"
+        }
+      ]
+    },
+    "gp-lot-20261007-30_insomniac_museum": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:39.563493+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 30_insomniac_museum; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-30_insomniac_museum",
+      "kind": "candidate",
+      "last_trial": "9b84d4097ca44ebeb05b06d3841d9e6f",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/30_insomniac_museum.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/30_insomniac_museum.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:40.852127+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "9b84d4097ca44ebeb05b06d3841d9e6f"
+        }
+      ]
+    },
+    "gp-lot-20261007-3_endako": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:41.118026+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 3_endako; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-3_endako",
+      "kind": "candidate",
+      "last_trial": "5ba86e8e65b44a2aab1847ebd761ce3d",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/3_endako.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/3_endako.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:42.497142+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "5ba86e8e65b44a2aab1847ebd761ce3d"
+        }
+      ]
+    },
+    "gp-lot-20261007-4_barlow": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:42.763595+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 4_barlow; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-4_barlow",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/4_barlow.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/4_barlow.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007-5_feltzin_system": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:43.583507+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 5_feltzin_system; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-5_feltzin_system",
+      "kind": "candidate",
+      "last_trial": "4c12bf7aceea4db9bd8accd5defc56ac",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/5_feltzin_system.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/5_feltzin_system.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:44.945580+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "4c12bf7aceea4db9bd8accd5defc56ac"
+        }
+      ]
+    },
+    "gp-lot-20261007-6_notak": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:45.226926+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 6_notak; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-6_notak",
+      "kind": "candidate",
+      "last_trial": "d0c712d715f74ae7b00d0ad642ebf29e",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/6_notak.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/6_notak.json",
+          "id": "6_notak",
+          "reference": "runtime:references/levels/6_notak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:46.629834+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d0c712d715f74ae7b00d0ad642ebf29e"
+        }
+      ]
+    },
+    "gp-lot-20261007-7_siberius": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:46.889487+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 7_siberius; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-7_siberius",
+      "kind": "candidate",
+      "last_trial": "d287e36c077c4a9b9ad8d5c4afc04f71",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/7_siberius.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/7_siberius.json",
+          "id": "7_siberius",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:48.286547+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d287e36c077c4a9b9ad8d5c4afc04f71"
+        }
+      ]
+    },
+    "gp-lot-20261007-8_tabora": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:48.548173+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 8_tabora; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-8_tabora",
+      "kind": "candidate",
+      "last_trial": "f7a9f9a92bff49d8a0e4b04a5f9b9551",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/8_tabora.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/8_tabora.json",
+          "id": "8_tabora",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:49.905003+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "f7a9f9a92bff49d8a0e4b04a5f9b9551"
+        }
+      ]
+    },
+    "gp-lot-20261007-9_dobbo": {
+      "budget": 3,
+      "created": "2026-10-07T09:05:50.196094+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in 9_dobbo; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-9_dobbo",
+      "kind": "candidate",
+      "last_trial": "8849d7474473443ca48578f99e4672aa",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/9_dobbo.c",
+      "state": "exact_private",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/9_dobbo.json",
+          "id": "9_dobbo",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-07T09:05:51.566343+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "8849d7474473443ca48578f99e4672aa"
+        }
+      ]
+    },
+    "gp-lot-20261007-boot": {
+      "budget": 3,
+      "created": "2026-10-07T09:04:57.289699+00:00",
+      "hypothesis": "Family gp-lot-20261007: one canonical C body reproduces the retail bytes at every measured placement in boot; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007-boot",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/boot.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007"
+      ],
+      "targets": [
+        {
+          "catalog": "config/candidate-catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-0_aranos_tutorial": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:12.257145+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 0_aranos_tutorial; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-0_aranos_tutorial",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/0_aranos_tutorial.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/0_aranos_tutorial.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-10_hrugis_cloud": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:13.206592+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 10_hrugis_cloud; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-10_hrugis_cloud",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/10_hrugis_cloud.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/10_hrugis_cloud.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-11_joba": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:14.135596+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 11_joba; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-11_joba",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/11_joba.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/11_joba.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-12_todano": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:15.024866+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 12_todano; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-12_todano",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/12_todano.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/12_todano.json",
+          "id": "12_todano",
+          "reference": "runtime:references/levels/12_todano/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-13_boldan": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:15.855657+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 13_boldan; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-13_boldan",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/13_boldan.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/13_boldan.json",
+          "id": "13_boldan",
+          "reference": "runtime:references/levels/13_boldan/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-14_aranos_prison": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:16.776184+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 14_aranos_prison; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-14_aranos_prison",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/14_aranos_prison.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/14_aranos_prison.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-15_gorn": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:17.701417+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 15_gorn; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-15_gorn",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/15_gorn.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/15_gorn.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-16_snivelak": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:18.570502+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 16_snivelak; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-16_snivelak",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/16_snivelak.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/16_snivelak.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-17_smolg": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:19.438922+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 17_smolg; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-17_smolg",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/17_smolg.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/17_smolg.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-18_damosel": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:20.385598+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 18_damosel; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-18_damosel",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/18_damosel.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/18_damosel.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-19_grelbin": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:21.373748+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 19_grelbin; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-19_grelbin",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/19_grelbin.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/19_grelbin.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-1_oozla": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:22.358201+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 1_oozla; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-1_oozla",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/1_oozla.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/1_oozla.json",
+          "id": "1_oozla",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-20_yeedil": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:23.299703+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 20_yeedil; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-20_yeedil",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/20_yeedil.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/20_yeedil.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-22_dobbo_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:24.285675+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 22_dobbo_orbit; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-22_dobbo_orbit",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/22_dobbo_orbit.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/22_dobbo_orbit.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-23_damosel_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:25.213838+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 23_damosel_orbit; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-23_damosel_orbit",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/23_damosel_orbit.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/23_damosel_orbit.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:references/levels/23_damosel_orbit/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-24_ship_shack": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:26.163520+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 24_ship_shack; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-24_ship_shack",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/24_ship_shack.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/24_ship_shack.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:references/levels/24_ship_shack/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-25_wupash_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:27.029003+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 25_wupash_nebula; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-25_wupash_nebula",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/25_wupash_nebula.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/25_wupash_nebula.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-26_jamming_array": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:27.872477+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 26_jamming_array; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-26_jamming_array",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/26_jamming_array.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/26_jamming_array.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-2_maktar_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:28.731446+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 2_maktar_nebula; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-2_maktar_nebula",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/2_maktar_nebula.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/2_maktar_nebula.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-30_insomniac_museum": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:29.577909+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 30_insomniac_museum; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-30_insomniac_museum",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/30_insomniac_museum.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/30_insomniac_museum.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-3_endako": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:30.439273+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 3_endako; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-3_endako",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/3_endako.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/3_endako.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-4_barlow": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:31.304666+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 4_barlow; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-4_barlow",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/4_barlow.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/4_barlow.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-5_feltzin_system": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:32.204825+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 5_feltzin_system; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-5_feltzin_system",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/5_feltzin_system.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/5_feltzin_system.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-6_notak": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:33.152059+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 6_notak; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-6_notak",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/6_notak.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/6_notak.json",
+          "id": "6_notak",
+          "reference": "runtime:references/levels/6_notak/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-7_siberius": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:34.041193+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 7_siberius; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-7_siberius",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/7_siberius.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/7_siberius.json",
+          "id": "7_siberius",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-8_tabora": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:34.918194+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 8_tabora; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-8_tabora",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/8_tabora.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/8_tabora.json",
+          "id": "8_tabora",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-9_dobbo": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:35.749766+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in 9_dobbo; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-9_dobbo",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/9_dobbo.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/9_dobbo.json",
+          "id": "9_dobbo",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007b-boot": {
+      "budget": 3,
+      "created": "2026-10-07T09:18:09.312261+00:00",
+      "hypothesis": "Family gp-lot-20261007b: one canonical C body reproduces the retail bytes at every measured placement in boot; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007b-boot",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/boot.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007b"
+      ],
+      "targets": [
+        {
+          "catalog": "config/candidate-catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-0_aranos_tutorial": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:19.974630+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 0_aranos_tutorial; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-0_aranos_tutorial",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/0_aranos_tutorial.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/0_aranos_tutorial.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-10_hrugis_cloud": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:20.786386+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 10_hrugis_cloud; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-10_hrugis_cloud",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/10_hrugis_cloud.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/10_hrugis_cloud.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-11_joba": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:21.667272+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 11_joba; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-11_joba",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/11_joba.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/11_joba.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-12_todano": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:22.655709+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 12_todano; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-12_todano",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/12_todano.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/12_todano.json",
+          "id": "12_todano",
+          "reference": "runtime:references/levels/12_todano/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-13_boldan": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:23.530623+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 13_boldan; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-13_boldan",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/13_boldan.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/13_boldan.json",
+          "id": "13_boldan",
+          "reference": "runtime:references/levels/13_boldan/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-14_aranos_prison": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:24.388961+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 14_aranos_prison; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-14_aranos_prison",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/14_aranos_prison.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/14_aranos_prison.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-15_gorn": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:25.286735+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 15_gorn; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-15_gorn",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/15_gorn.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/15_gorn.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-16_snivelak": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:26.149505+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 16_snivelak; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-16_snivelak",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/16_snivelak.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/16_snivelak.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-17_smolg": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:27.065068+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 17_smolg; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-17_smolg",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/17_smolg.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/17_smolg.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-18_damosel": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:27.919707+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 18_damosel; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-18_damosel",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/18_damosel.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/18_damosel.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-19_grelbin": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:28.749093+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 19_grelbin; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-19_grelbin",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/19_grelbin.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/19_grelbin.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-1_oozla": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:29.589829+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 1_oozla; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-1_oozla",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/1_oozla.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/1_oozla.json",
+          "id": "1_oozla",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-20_yeedil": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:30.533708+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 20_yeedil; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-20_yeedil",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/20_yeedil.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/20_yeedil.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-22_dobbo_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:31.369204+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 22_dobbo_orbit; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-22_dobbo_orbit",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/22_dobbo_orbit.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/22_dobbo_orbit.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-23_damosel_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:32.209072+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 23_damosel_orbit; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-23_damosel_orbit",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/23_damosel_orbit.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/23_damosel_orbit.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:references/levels/23_damosel_orbit/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-24_ship_shack": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:33.109352+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 24_ship_shack; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-24_ship_shack",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/24_ship_shack.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/24_ship_shack.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:references/levels/24_ship_shack/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-25_wupash_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:33.966087+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 25_wupash_nebula; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-25_wupash_nebula",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/25_wupash_nebula.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/25_wupash_nebula.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-26_jamming_array": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:34.852055+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 26_jamming_array; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-26_jamming_array",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/26_jamming_array.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/26_jamming_array.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-2_maktar_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:35.734869+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 2_maktar_nebula; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-2_maktar_nebula",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/2_maktar_nebula.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/2_maktar_nebula.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-30_insomniac_museum": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:36.641949+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 30_insomniac_museum; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-30_insomniac_museum",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/30_insomniac_museum.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/30_insomniac_museum.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-3_endako": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:37.530563+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 3_endako; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-3_endako",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/3_endako.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/3_endako.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-4_barlow": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:38.415515+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 4_barlow; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-4_barlow",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/4_barlow.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/4_barlow.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-5_feltzin_system": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:39.276973+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 5_feltzin_system; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-5_feltzin_system",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/5_feltzin_system.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/5_feltzin_system.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-6_notak": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:40.159377+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 6_notak; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-6_notak",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/6_notak.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/6_notak.json",
+          "id": "6_notak",
+          "reference": "runtime:references/levels/6_notak/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-7_siberius": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:41.038220+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 7_siberius; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-7_siberius",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/7_siberius.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/7_siberius.json",
+          "id": "7_siberius",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-8_tabora": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:41.928983+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 8_tabora; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-8_tabora",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/8_tabora.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/8_tabora.json",
+          "id": "8_tabora",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-9_dobbo": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:42.860196+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in 9_dobbo; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-9_dobbo",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/9_dobbo.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/9_dobbo.json",
+          "id": "9_dobbo",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "gp-lot-20261007c-boot": {
+      "budget": 3,
+      "created": "2026-10-07T09:20:16.869416+00:00",
+      "hypothesis": "Family gp-lot-20261007c: one canonical C body reproduces the retail bytes at every measured placement in boot; the unit catalogue carries all prior controls.",
+      "id": "gp-lot-20261007c-boot",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/boot.c",
+      "state": "queued",
+      "symbols": [
+        "gp-lot-20261007c"
+      ],
+      "targets": [
+        {
+          "catalog": "config/candidate-catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": []
     },
     "gs-buffer-setup-control-public-family-v2-20261005-g0": {
       "amendments": [
@@ -136232,6 +138438,26 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-mapped84-9-v1"
     },
+    "00d5756a5ec64c51b1ab46b55b6f2a93": {
+      "children": [
+        {
+          "id": "1_oozla",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/00d5756a5ec64c51b1ab46b55b6f2a93",
+      "error": "Semantic duplicate trial: 5eedee9ab51f44599ba4ef070d9ae027; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:30.215962+00:00",
+      "id": "00d5756a5ec64c51b1ab46b55b6f2a93",
+      "integration_credit": 0,
+      "manifest_sha256": "ebb7cb8c2ca91a8ae842cd48f3f6b7c8a1fe5045024ec9a1506a9d053a6e4c8e",
+      "measured_functions": 0,
+      "outcome_sha256": "6404ead23fea66fe9c22454c36c0c0df79e60dce6aa27ef933686683192ec7a9",
+      "semantic_key": "55771f7b4fae703c711fe543b9866eaf89d34f160e5d0316fef9d4ea5089bbba",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-1_oozla"
+    },
     "0115ec6a541a4124b377f6fe5540ae77": {
       "compile_attempted": true,
       "directory": "runtime:trials/0115ec6a541a4124b377f6fe5540ae77",
@@ -136271,6 +138497,19 @@
       "state": "exact_private",
       "task": "resident-sync-clear168-1_oozla-20261006"
     },
+    "013ad362772748f1ba62f6cc949ab26b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/013ad362772748f1ba62f6cc949ab26b",
+      "finished": "2026-10-07T09:05:29.119519+00:00",
+      "id": "013ad362772748f1ba62f6cc949ab26b",
+      "manifest_sha256": "b7798a4c1f4b5613dd99445368b9ce1c0cd64bd7c3195b0f32033140cd892c62",
+      "measured_functions": 106,
+      "outcome_sha256": "209b5fd1fa5fc74e27dfea39b88057e7d16588906519f8f018c8da559ab18f2e",
+      "semantic_key": "9b0c9fc2b901a6f2bd728104ffebc5ed56be04208afabd107bacfe413848fbe3",
+      "started": "2026-10-07T09:05:28.248449+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-20_yeedil"
+    },
     "017411ff89754d92bd25137f4111b067": {
       "compile_attempted": true,
       "directory": "runtime:trials/017411ff89754d92bd25137f4111b067",
@@ -136283,6 +138522,26 @@
       "started": "2026-10-04T18:26:32.515100+00:00",
       "state": "mismatch",
       "task": "native-review-endako-options-v2-20261004"
+    },
+    "017e1d5cdbc340e4ba6221300b44aed5": {
+      "children": [
+        {
+          "id": "2_maktar_nebula",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/017e1d5cdbc340e4ba6221300b44aed5",
+      "error": "Semantic duplicate trial: 8b7c742190ae46b183a4c9a888964365; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:29.252311+00:00",
+      "id": "017e1d5cdbc340e4ba6221300b44aed5",
+      "integration_credit": 0,
+      "manifest_sha256": "4e46a6f3d09c193d5384d827baf63ad5107f596ac3667a1ea839126fd6cb9d29",
+      "measured_functions": 0,
+      "outcome_sha256": "23b29a62e8a5f60979e2685426b5390de5a5a87d32ff3e9498cfad7ce76da942",
+      "semantic_key": "f8f05afcfe2b6855f355eba8d3ff4c5f35b19fac85e82ed7fa2a52bb7556c430",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-2_maktar_nebula"
     },
     "0186dcc1ca064c01b43b0c2433ed1923": {
       "compile_attempted": true,
@@ -137170,6 +139429,19 @@
       "state": "exact_private",
       "task": "native-review-search-family-10_hrugis_cloud-20261004"
     },
+    "0c0217de2a174d14a0ee0dd2a44a1b64": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/0c0217de2a174d14a0ee0dd2a44a1b64",
+      "finished": "2026-10-07T09:05:12.700765+00:00",
+      "id": "0c0217de2a174d14a0ee0dd2a44a1b64",
+      "manifest_sha256": "f07c04b59d7c1066641f631531c8cf29903a7cf3cbd7a8d5a60d962195e7d1a3",
+      "measured_functions": 116,
+      "outcome_sha256": "9c00d7eb385cf6be4c3a1bcb768f9f7439b80ecef7c54c9fc2125c567cca6341",
+      "semantic_key": "2b1d090b5ca969dadbfe929d88618c8d04ecabe67bdf70b955dbc2c3a4f6a5ce",
+      "started": "2026-10-07T09:05:11.779039+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-11_joba"
+    },
     "0c5dceb685324c44908ee3fc0c502e58": {
       "compile_attempted": true,
       "directory": "runtime:trials/0c5dceb685324c44908ee3fc0c502e58",
@@ -137391,6 +139663,26 @@
       "state": "exact_private",
       "task": "count112-untried-24_ship_shack-20261006"
     },
+    "0ee2abfe96e84038a79d6b9fd530d51f": {
+      "children": [
+        {
+          "id": "boot",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/0ee2abfe96e84038a79d6b9fd530d51f",
+      "error": "Semantic duplicate trial: 9ff355fc6d4748948c6216a776f83ea6; provide --repeat-reason",
+      "finished": "2026-10-07T09:05:07.794521+00:00",
+      "id": "0ee2abfe96e84038a79d6b9fd530d51f",
+      "integration_credit": 0,
+      "manifest_sha256": "dff602899f5374b8080cbd5c64189a164b8dcf9703123e4a3ed5b22fbbc5155c",
+      "measured_functions": 0,
+      "outcome_sha256": "b31e9b34a8d3c991eaa9eab6c2ae0a0ec6c6802377ba6900d591c064d17453c8",
+      "semantic_key": "57053c63b9db2d9c3685154c611a60c98691e1d4b61b580daad0260e72ede1f3",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007-boot"
+    },
     "0ee5f535552a42f4858e5fa24cc87388": {
       "children": [
         {
@@ -137540,6 +139832,26 @@
       "started": "2026-10-04T14:34:49.467866+00:00",
       "state": "exact_private",
       "task": "orbital-class-filter-family-20261004-25_wupash_nebula"
+    },
+    "10bd0aa9246f4a4fa230d936964b27fd": {
+      "children": [
+        {
+          "id": "13_boldan",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/10bd0aa9246f4a4fa230d936964b27fd",
+      "error": "Semantic duplicate trial: ca416eb6b6e243eea49f5ba98b198840; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:16.419156+00:00",
+      "id": "10bd0aa9246f4a4fa230d936964b27fd",
+      "integration_credit": 0,
+      "manifest_sha256": "afe3efb2e7b9c67eaed7c29363c965b2ad7204ffc1f89cfbabb8977b27b0c56b",
+      "measured_functions": 0,
+      "outcome_sha256": "13b09dad6b7f6e9468512486422a02f79ddb11eb040aa4a2e8c69b4f1dcdf932",
+      "semantic_key": "98137b6b9019f1485657dfa842a7846c7d4b8a82b1d2d34d475a2f33df0fbb3f",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-13_boldan"
     },
     "10c223ff6ffd42b68cb2ef663907be09": {
       "compile_attempted": true,
@@ -138084,6 +140396,19 @@
       "state": "exact_private",
       "task": "root-resume-three-combined-6_notak-20261004"
     },
+    "1746f2b5b03940d68eee334884712b36": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/1746f2b5b03940d68eee334884712b36",
+      "finished": "2026-10-07T09:05:30.878177+00:00",
+      "id": "1746f2b5b03940d68eee334884712b36",
+      "manifest_sha256": "5757f029aa4d737bce8f26e631e45e768092f62c92ae5e60efab47f04f05b726",
+      "measured_functions": 101,
+      "outcome_sha256": "490aca51938014845d2eb1532044f1ff2fb4dcfc4c9465dfc6978ad595fda2c2",
+      "semantic_key": "998edd4cade289e16437d026e6652c14aea61d7f06c4875598ca7caccfb1fcfc",
+      "started": "2026-10-07T09:05:30.010166+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-22_dobbo_orbit"
+    },
     "17649b7df24d4738afcbd4d966e60e43": {
       "compile_attempted": true,
       "directory": "runtime:trials/17649b7df24d4738afcbd4d966e60e43",
@@ -138546,6 +140871,26 @@
       "state": "exact_private",
       "task": "orbital-state-transition-family-759-20261004-10_hrugis_cloud"
     },
+    "1bd39778c4b84acf9413ea6387075162": {
+      "children": [
+        {
+          "id": "23_damosel_orbit",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/1bd39778c4b84acf9413ea6387075162",
+      "error": "Semantic duplicate trial: 705dfe1bc30e4421b5ddacd7d467d255; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:32.780794+00:00",
+      "id": "1bd39778c4b84acf9413ea6387075162",
+      "integration_credit": 0,
+      "manifest_sha256": "51fb218737fcc6c6619bdd687171e8fcb208592f3fb62d8a71f0486ae51f143c",
+      "measured_functions": 0,
+      "outcome_sha256": "fe4cf2e8cb7147c6cfe6a38637ee6651ffa5b5c97be08185a10eabafe7b5813d",
+      "semantic_key": "53b6efa102893419351282717205757f8840c9728ba88e343ccbc1682c048085",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-23_damosel_orbit"
+    },
     "1bf3a3870341458b98e898353e58ca0c": {
       "compile_attempted": true,
       "directory": "runtime:trials/1bf3a3870341458b98e898353e58ca0c",
@@ -138975,6 +141320,26 @@
       "state": "exact_private",
       "task": "aranos-explicit-return-phases-20261004-v2"
     },
+    "1fe19e972ca6416fb6a88a4162aa46c7": {
+      "children": [
+        {
+          "id": "13_boldan",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/1fe19e972ca6416fb6a88a4162aa46c7",
+      "error": "Semantic duplicate trial: ca416eb6b6e243eea49f5ba98b198840; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:24.067892+00:00",
+      "id": "1fe19e972ca6416fb6a88a4162aa46c7",
+      "integration_credit": 0,
+      "manifest_sha256": "992ea562660d273a15522b2ff024522eec5b074c88ddfb9f862e39ab52c7062c",
+      "measured_functions": 0,
+      "outcome_sha256": "7bd3741ca699c3a253f42f2bc1a34a6ac1399a15bce4bcdbc012032213ef24de",
+      "semantic_key": "98137b6b9019f1485657dfa842a7846c7d4b8a82b1d2d34d475a2f33df0fbb3f",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-13_boldan"
+    },
     "1fe6f194d5624085b38e628beb38ccb1": {
       "compile_attempted": true,
       "directory": "runtime:trials/1fe6f194d5624085b38e628beb38ccb1",
@@ -139143,6 +141508,26 @@
       "started": "2026-10-04T16:01:20.058954+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-mapped84-18-v1"
+    },
+    "21975fbb32454e93890cc168d0e055a3": {
+      "children": [
+        {
+          "id": "30_insomniac_museum",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/21975fbb32454e93890cc168d0e055a3",
+      "error": "Semantic duplicate trial: 9b84d4097ca44ebeb05b06d3841d9e6f; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:37.183938+00:00",
+      "id": "21975fbb32454e93890cc168d0e055a3",
+      "integration_credit": 0,
+      "manifest_sha256": "c2913cbfd3e8fe6baf2a9790cff3a4fc73e96be284e4771d6de3d76cb927d20a",
+      "measured_functions": 0,
+      "outcome_sha256": "db0983a282891c832c5ffe953326d7eb4db4460ca9062f46482873c6f9fd7cf5",
+      "semantic_key": "ac677f3ca8d02cda50ead4c5b71c611d3e2afccb89ba1d35c5a110c5dd93c329",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-30_insomniac_museum"
     },
     "21a4f10a670f45b7b8922d093ebb9195": {
       "compile_attempted": true,
@@ -139416,6 +141801,26 @@
       "started": "2026-10-06T05:07:12.064877+00:00",
       "state": "exact_private",
       "task": "missing-members-bitmap124-12_todano-20261006"
+    },
+    "24b7533d66c94f0fa66a66c86dc980c3": {
+      "children": [
+        {
+          "id": "9_dobbo",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/24b7533d66c94f0fa66a66c86dc980c3",
+      "error": "Semantic duplicate trial: 8849d7474473443ca48578f99e4672aa; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:43.459159+00:00",
+      "id": "24b7533d66c94f0fa66a66c86dc980c3",
+      "integration_credit": 0,
+      "manifest_sha256": "6ff134f6b9b59de2e2b0f5bf7373a608725f115ab0c7bfb738d51690eb678e36",
+      "measured_functions": 0,
+      "outcome_sha256": "6c2772e6679e530972aa538cb4a0b313c368753b73667e9cbcae24959eb5db3b",
+      "semantic_key": "51a501f87e19e8067e23094b5c72d7e195599a94478319b12b794b10523a72ae",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-9_dobbo"
     },
     "24bf5af4810341afa3cb0ca816b6d64f": {
       "compile_attempted": true,
@@ -140094,6 +142499,26 @@
       "state": "mismatch",
       "task": "native-review-barlow-callback-run-v1-20261005"
     },
+    "2b34e8d5eefc45dbbeb263df946e93de": {
+      "children": [
+        {
+          "id": "15_gorn",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/2b34e8d5eefc45dbbeb263df946e93de",
+      "error": "Semantic duplicate trial: caddd831307c467283fdf4fbfebb5c80; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:25.827181+00:00",
+      "id": "2b34e8d5eefc45dbbeb263df946e93de",
+      "integration_credit": 0,
+      "manifest_sha256": "af3ee4b6f00a9e7a196fa54a15031ffedde9e3a22ce80ffe87159ddcc56f0a2a",
+      "measured_functions": 0,
+      "outcome_sha256": "6109c72a7f69ea8983bb6d0cc59fdd78d48e8ac2a04481588539948fcd2c655c",
+      "semantic_key": "2d50fd9816f952ef4779a1b40927a56ab9c9f3b3c7b011e834f2c9f0225047c8",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-15_gorn"
+    },
     "2b3828d9b20d4e0f8ed1f3dac86e3c15": {
       "compile_attempted": true,
       "directory": "runtime:trials/2b3828d9b20d4e0f8ed1f3dac86e3c15",
@@ -140465,6 +142890,46 @@
       "state": "exact_private",
       "task": "barlow-nosda-g8-20261004"
     },
+    "2ea6821a4c79418ba987994bf734e06c": {
+      "children": [
+        {
+          "id": "22_dobbo_orbit",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/2ea6821a4c79418ba987994bf734e06c",
+      "error": "Semantic duplicate trial: 1746f2b5b03940d68eee334884712b36; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:24.870844+00:00",
+      "id": "2ea6821a4c79418ba987994bf734e06c",
+      "integration_credit": 0,
+      "manifest_sha256": "fd069baecb1f2bac20257dc7150e68d297726f3ca7338a337881f576274990ad",
+      "measured_functions": 0,
+      "outcome_sha256": "f51292c5c552f8ef5f59e7e63c5479c822e416802dc94a2cf617c237c1bc6334",
+      "semantic_key": "af94d6c3133ed7f654c6863879d9f2c51ce723ab6c2ed666651d98f9272a5bcb",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-22_dobbo_orbit"
+    },
+    "2eba59e76a7b44999b5db30678047561": {
+      "children": [
+        {
+          "id": "17_smolg",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/2eba59e76a7b44999b5db30678047561",
+      "error": "Semantic duplicate trial: c34604b226b64014bbebd2390ecd7491; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:27.601594+00:00",
+      "id": "2eba59e76a7b44999b5db30678047561",
+      "integration_credit": 0,
+      "manifest_sha256": "18687118147da4c36b6b8f5770b8f0b044f8034dede79515ab94930047bced01",
+      "measured_functions": 0,
+      "outcome_sha256": "289eafcfb2903428db23ec048f1c79796c96d09a209e8ea6bd340089daf6a806",
+      "semantic_key": "788de0bd467b4db7122dea3af349bcdee459d92dc2eb24bd2988e6965118bf5f",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-17_smolg"
+    },
     "2ef7d0ebf1884ee09cebaabdcb39a571": {
       "compile_attempted": true,
       "directory": "runtime:trials/2ef7d0ebf1884ee09cebaabdcb39a571",
@@ -140601,6 +143066,26 @@
       "started": "2026-10-05T03:46:09.692621+00:00",
       "state": "exact_private",
       "task": "root-compound-grid-slot-angles-24_ship_shack-20261005"
+    },
+    "302513cacd5a4b09be5ac9a24b1ca198": {
+      "children": [
+        {
+          "id": "19_grelbin",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/302513cacd5a4b09be5ac9a24b1ca198",
+      "error": "Semantic duplicate trial: a511868895a1442da79e50a2db87d2b2; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:21.973741+00:00",
+      "id": "302513cacd5a4b09be5ac9a24b1ca198",
+      "integration_credit": 0,
+      "manifest_sha256": "d869985639afde06dc32a994ca6be3451b2cc05626d02d1425c19216a16576ca",
+      "measured_functions": 0,
+      "outcome_sha256": "d7f5784c44f903acd89647a3fcb7ecfd81d555c32f31736adaf3e924b6a02b67",
+      "semantic_key": "c7f41b6c9bddd3f2ae1cae2d4d448d9dab4a32a41d4aebb9b930293d7ae15e7e",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-19_grelbin"
     },
     "305ed6a613614269adcc36314bde2b89": {
       "compile_attempted": true,
@@ -141056,6 +143541,26 @@
       "started": "2026-10-04T17:52:32.215679+00:00",
       "state": "exact_private",
       "task": "orbital-flags-joint-20261004-17_smolg"
+    },
+    "34a309c157ff4879b51655fa047aa235": {
+      "children": [
+        {
+          "id": "11_joba",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/34a309c157ff4879b51655fa047aa235",
+      "error": "Semantic duplicate trial: 0c0217de2a174d14a0ee0dd2a44a1b64; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:22.285407+00:00",
+      "id": "34a309c157ff4879b51655fa047aa235",
+      "integration_credit": 0,
+      "manifest_sha256": "8bbc8b7f54f48ed4eed8552de690cd4c0a8026184c585d84b94666dbc646bda4",
+      "measured_functions": 0,
+      "outcome_sha256": "5eeec8f17132ec0600364d3a53557f5b7dc67595f4a70d5d43c60192f3ca30bd",
+      "semantic_key": "92be3119af72fb10b2a543c4ec6c88299c45cb5434035fc3d76d9bf3f4720e26",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-11_joba"
     },
     "34c7967a724b49e3bcd4184e4014f620": {
       "compile_attempted": true,
@@ -141648,6 +144153,26 @@
       "started": "2026-10-04T18:31:59.825448+00:00",
       "state": "exact_private",
       "task": "orbital-conditional-reset-family-20261004-18_damosel"
+    },
+    "3acbd28185b04df892d6a0e0d5bdb121": {
+      "children": [
+        {
+          "id": "24_ship_shack",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/3acbd28185b04df892d6a0e0d5bdb121",
+      "error": "Semantic duplicate trial: 59f274fbe1934e83b5678a36a3bff926; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:26.718817+00:00",
+      "id": "3acbd28185b04df892d6a0e0d5bdb121",
+      "integration_credit": 0,
+      "manifest_sha256": "ca167a019ab4a52a94fda5501584f0abe91477204426ffc99d7e27612354955e",
+      "measured_functions": 0,
+      "outcome_sha256": "42383df997d6baed611f7d4ec80be1ded3f6c0dff6d89d6b460e34dc36e10b02",
+      "semantic_key": "3bf5c1f08334cee00c50ece91ae6dcc50c183c83030889e65c566d24d5a72cc6",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-24_ship_shack"
     },
     "3b1ed507633c4264936ea2ed161cb40a": {
       "compile_attempted": true,
@@ -142377,6 +144902,26 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-grid312-0-v1"
     },
+    "41f18a16a90543dd8238877f6f1b89bc": {
+      "children": [
+        {
+          "id": "6_notak",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/41f18a16a90543dd8238877f6f1b89bc",
+      "error": "Semantic duplicate trial: d0c712d715f74ae7b00d0ad642ebf29e; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:33.717904+00:00",
+      "id": "41f18a16a90543dd8238877f6f1b89bc",
+      "integration_credit": 0,
+      "manifest_sha256": "a3848c6e942a5c48ab71c169dd1d25b03727edd96ce0ad38055843a0497e3d46",
+      "measured_functions": 0,
+      "outcome_sha256": "ed958b2ac75b1b036a1bfca19e68a34868f9207a576ff14e5d1dbe81a0f7454b",
+      "semantic_key": "9e52175eb33a570d22e8b7ed610dd6c06194cc1c82278f2638957bcb7db5b0ee",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-6_notak"
+    },
     "42030a917af1479e9502eef515e656a2": {
       "compile_attempted": true,
       "directory": "runtime:trials/42030a917af1479e9502eef515e656a2",
@@ -142441,6 +144986,26 @@
       "started": "2026-10-06T05:53:08.496490+00:00",
       "state": "exact_private",
       "task": "count112-untried-15_gorn-20261006"
+    },
+    "4288d14d967b4c17b7a0fcdcc862a0f1": {
+      "children": [
+        {
+          "id": "4_barlow",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/4288d14d967b4c17b7a0fcdcc862a0f1",
+      "error": "Semantic duplicate trial: eaba09cc61da48eabeed036973e297b3; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:31.844284+00:00",
+      "id": "4288d14d967b4c17b7a0fcdcc862a0f1",
+      "integration_credit": 0,
+      "manifest_sha256": "b69438e667e487995097c0bf09265924d6b2d4ba3a8824041aa06a3b16d38f1d",
+      "measured_functions": 0,
+      "outcome_sha256": "8060a79da98160b7bc7b14474caa6f18ea26c0372e90622957d705a92eaf1b81",
+      "semantic_key": "67fabbbd2a66abd77244b7515b4118c655e9632a4e3bc383a7851206ae7311bf",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-4_barlow"
     },
     "42a80c744ab245c195eb433a34ed547d": {
       "compile_attempted": true,
@@ -142545,6 +145110,26 @@
       "started": "2026-10-04T23:04:36.270301+00:00",
       "state": "exact_private",
       "task": "root-readonly-controls-5_feltzin_system-20261004"
+    },
+    "44469034b32f48f28595add6f355a0bd": {
+      "children": [
+        {
+          "id": "7_siberius",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/44469034b32f48f28595add6f355a0bd",
+      "error": "Semantic duplicate trial: d287e36c077c4a9b9ad8d5c4afc04f71; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:41.594837+00:00",
+      "id": "44469034b32f48f28595add6f355a0bd",
+      "integration_credit": 0,
+      "manifest_sha256": "b2b37e27dfe9833032845618728a0152d68800e420a0e814b81578e3225ed03f",
+      "measured_functions": 0,
+      "outcome_sha256": "6b70a5649ba88694a6d0a116a4b7822ea5870c3638bd132a98749fbb13a0641b",
+      "semantic_key": "69be0bb24db0517196101cb00cb92d6067640ccdaba52b9450391964f21dc9fd",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-7_siberius"
     },
     "448c22a1cdcc4a55a130b869d91e3814": {
       "compile_attempted": true,
@@ -143262,6 +145847,26 @@
       "state": "mismatch",
       "task": "boot-003427c0-alpha-helper-v3"
     },
+    "4a6cc77b4d554d4683a06cb43d9ad825": {
+      "children": [
+        {
+          "id": "0_aranos_tutorial",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/4a6cc77b4d554d4683a06cb43d9ad825",
+      "error": "Semantic duplicate trial: 8e98909216414687b1e43513add5e938; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:12.843159+00:00",
+      "id": "4a6cc77b4d554d4683a06cb43d9ad825",
+      "integration_credit": 0,
+      "manifest_sha256": "88540a7779a0d5863bf365a06c5d75cf1ca25c08683300fca270576e92f78801",
+      "measured_functions": 0,
+      "outcome_sha256": "9733584094e1ce796ae448bcfcfa6e350352cd77de246715a668d04f9190ca19",
+      "semantic_key": "fa1b54dc768f3e366ae151784bb3290778b52a1a5fedd2a18021271300921c82",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-0_aranos_tutorial"
+    },
     "4ac44bb735304e51adc18adccb19dae8": {
       "compile_attempted": true,
       "directory": "runtime:trials/4ac44bb735304e51adc18adccb19dae8",
@@ -143287,6 +145892,26 @@
       "started": "2026-10-06T07:32:29.199532+00:00",
       "state": "exact_private",
       "task": "fresh-medium-image-store128-8_tabora-20261006"
+    },
+    "4b03e6963c50407f99e1b879417a5708": {
+      "children": [
+        {
+          "id": "7_siberius",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/4b03e6963c50407f99e1b879417a5708",
+      "error": "Semantic duplicate trial: d287e36c077c4a9b9ad8d5c4afc04f71; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:34.597070+00:00",
+      "id": "4b03e6963c50407f99e1b879417a5708",
+      "integration_credit": 0,
+      "manifest_sha256": "93b59d4f5324dd46c671f38fa3f5d57662f6419d8732a742a8bdd9a27d399ded",
+      "measured_functions": 0,
+      "outcome_sha256": "3bf4b6c1055dd3d3c43cb9581d1938c5523249fb980b7340b9d0d4b08ce659b1",
+      "semantic_key": "69be0bb24db0517196101cb00cb92d6067640ccdaba52b9450391964f21dc9fd",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-7_siberius"
     },
     "4b241e6e2f0848cfa32e4ac653bd21b5": {
       "compile_attempted": true,
@@ -143417,6 +146042,19 @@
       "started": "2026-10-04T18:56:13.536879+00:00",
       "state": "exact_private",
       "task": "root-next-five-combined-12_todano-20261004"
+    },
+    "4c12bf7aceea4db9bd8accd5defc56ac": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4c12bf7aceea4db9bd8accd5defc56ac",
+      "finished": "2026-10-07T09:05:44.879076+00:00",
+      "id": "4c12bf7aceea4db9bd8accd5defc56ac",
+      "manifest_sha256": "c425024846d2f18470fb7e167b55828c1fe53bee98b8eff9ca7776d0e7f030f1",
+      "measured_functions": 110,
+      "outcome_sha256": "93839aa872a32fde2ddeff9bda43546183b5b9eefbba46cf34cff4ed7ac6de6d",
+      "semantic_key": "354811478864fac9057a930656db1b6e89c877a4ce205b808bb0f32c673482cf",
+      "started": "2026-10-07T09:05:44.062225+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-5_feltzin_system"
     },
     "4c2d7c881c144f75998f1b306a24de66": {
       "compile_attempted": true,
@@ -143953,6 +146591,26 @@
       "state": "exact_private",
       "task": "root-parallel-combined-25_wupash_nebula-20261004"
     },
+    "52746d07a4924ec5a4de09ddd44f4289": {
+      "children": [
+        {
+          "id": "boot",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/52746d07a4924ec5a4de09ddd44f4289",
+      "error": "Semantic duplicate trial: 9ff355fc6d4748948c6216a776f83ea6; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:11.893930+00:00",
+      "id": "52746d07a4924ec5a4de09ddd44f4289",
+      "integration_credit": 0,
+      "manifest_sha256": "b69c4cef6822574cdbbb946421180eb32eaa0df12f62e240938137bea471c53c",
+      "measured_functions": 0,
+      "outcome_sha256": "d7792650fdd6aa0ef2cc1c0f7c11143700e101c0dbb457d2162a1a25bffa795a",
+      "semantic_key": "57053c63b9db2d9c3685154c611a60c98691e1d4b61b580daad0260e72ede1f3",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-boot"
+    },
     "527d001feedc4d7a9ed3927a6dd49ad3": {
       "compile_attempted": true,
       "directory": "runtime:trials/527d001feedc4d7a9ed3927a6dd49ad3",
@@ -144259,6 +146917,26 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-list192-24-v1"
     },
+    "5642ef81ddc94c55b7d26cacde6b1a9c": {
+      "children": [
+        {
+          "id": "25_wupash_nebula",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/5642ef81ddc94c55b7d26cacde6b1a9c",
+      "error": "Semantic duplicate trial: 5b98f76f83cf4b088e574e9ec299dcd6; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:34.519024+00:00",
+      "id": "5642ef81ddc94c55b7d26cacde6b1a9c",
+      "integration_credit": 0,
+      "manifest_sha256": "d854b9677954a0ce2b1d6112a382742bde3cd98d8f40ee53ec4c417bfbf92d68",
+      "measured_functions": 0,
+      "outcome_sha256": "879290d53edaed12e834167e34618d429854289cb2ff984f849ca51724cca4eb",
+      "semantic_key": "043405af28bc498ca3140464ef548db782bef71742fb61d8c83f08d7f82bb004",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-25_wupash_nebula"
+    },
     "5648a98f7b814cb8a24f622dcd53e728": {
       "compile_attempted": true,
       "directory": "runtime:trials/5648a98f7b814cb8a24f622dcd53e728",
@@ -144310,6 +146988,19 @@
       "started": "2026-10-04T14:34:39.429961+00:00",
       "state": "exact_private",
       "task": "orbital-class-filter-family-20261004-0_aranos_tutorial"
+    },
+    "56b4c0ebea70409fa1ae602bfee2aec2": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/56b4c0ebea70409fa1ae602bfee2aec2",
+      "finished": "2026-10-07T09:05:10.898004+00:00",
+      "id": "56b4c0ebea70409fa1ae602bfee2aec2",
+      "manifest_sha256": "dddabd6bd2b74aa611d9de57cd397218c6d7abbc6733d348f33727dcb0eb1467",
+      "measured_functions": 103,
+      "outcome_sha256": "074a1fa5aa103c520665c3d48168bed11edc3e4b3a73e072a840045167273a1f",
+      "semantic_key": "7c844334dd853f751eb0ad1f8f4f93daa84515b852477c9e38571902a9bb0b94",
+      "started": "2026-10-07T09:05:10.161192+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-10_hrugis_cloud"
     },
     "56bf535cd7b14f0db5c447eb38d1b085": {
       "compile_attempted": true,
@@ -144467,6 +147158,26 @@
       "state": "exact_private",
       "task": "orbital-row52-family-934-20261005-22_dobbo_orbit"
     },
+    "582cd04ac9d9455a8e15f0e9fd7d1f42": {
+      "children": [
+        {
+          "id": "3_endako",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/582cd04ac9d9455a8e15f0e9fd7d1f42",
+      "error": "Semantic duplicate trial: 5ba86e8e65b44a2aab1847ebd761ce3d; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:30.972577+00:00",
+      "id": "582cd04ac9d9455a8e15f0e9fd7d1f42",
+      "integration_credit": 0,
+      "manifest_sha256": "09143f51a8e1737b4fd63fbf5ed64b09c12b34dc51e09247e07c7a5383d4c7c2",
+      "measured_functions": 0,
+      "outcome_sha256": "915cf1bebbfb2135571e2f68b7921abda228546b3be096bfc5ea55655e7a44f4",
+      "semantic_key": "16c4eee1a28a7b4c202ae9d9dba220fa8dbea95fc164a1ec30f43ddefa773d32",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-3_endako"
+    },
     "5830e48627eb47d5bba4c533e8f3cac3": {
       "compile_attempted": true,
       "directory": "runtime:trials/5830e48627eb47d5bba4c533e8f3cac3",
@@ -144545,6 +147256,26 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-mapped84-22-v1"
     },
+    "594eeba7d4044a109d3c61c44c6c3b39": {
+      "children": [
+        {
+          "id": "22_dobbo_orbit",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/594eeba7d4044a109d3c61c44c6c3b39",
+      "error": "Semantic duplicate trial: 1746f2b5b03940d68eee334884712b36; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:31.888902+00:00",
+      "id": "594eeba7d4044a109d3c61c44c6c3b39",
+      "integration_credit": 0,
+      "manifest_sha256": "addf7cb3ba2e2b1a2f348e042c8cf32c31c4ad59b9c6e3faaf4000de58ca02ae",
+      "measured_functions": 0,
+      "outcome_sha256": "0afdb8488f4336b0a5bb9b856e98e1ee09cc417f4f8a1e4b77f365e832afb507",
+      "semantic_key": "af94d6c3133ed7f654c6863879d9f2c51ce723ab6c2ed666651d98f9272a5bcb",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-22_dobbo_orbit"
+    },
     "59515ae6e96541eebe53e09b93f2f8ee": {
       "compile_attempted": true,
       "directory": "runtime:trials/59515ae6e96541eebe53e09b93f2f8ee",
@@ -144609,6 +147340,19 @@
       "started": "2026-10-04T13:43:00.285328+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-list192-16-v1"
+    },
+    "59f274fbe1934e83b5678a36a3bff926": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/59f274fbe1934e83b5678a36a3bff926",
+      "finished": "2026-10-07T09:05:34.371840+00:00",
+      "id": "59f274fbe1934e83b5678a36a3bff926",
+      "manifest_sha256": "515e92ddcf723739f52bf399d000be458c5664183a737405cf2026ec2955fda8",
+      "measured_functions": 118,
+      "outcome_sha256": "1bccb82777dad2a8fcf9d31682cdca77b088617e0f028ba3ec4110d8523d919d",
+      "semantic_key": "a0ae24670faf3eeb6edc595e412bd981c59055d7a3140145bb6f4dc3b76855df",
+      "started": "2026-10-07T09:05:33.491208+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-24_ship_shack"
     },
     "5a2c68ebbb4c451dbc5678bdd601fb11": {
       "compile_attempted": true,
@@ -144700,6 +147444,32 @@
       "started": "2026-10-04T10:24:44.398949+00:00",
       "state": "mismatch",
       "task": "parallel-boot-analysis-oozla-packet-choice-v1"
+    },
+    "5b98f76f83cf4b088e574e9ec299dcd6": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5b98f76f83cf4b088e574e9ec299dcd6",
+      "finished": "2026-10-07T09:05:36.024224+00:00",
+      "id": "5b98f76f83cf4b088e574e9ec299dcd6",
+      "manifest_sha256": "c7f2719e24ca94de8cc8128779d4f93deda1c77c8da1866b24e46999bd180d96",
+      "measured_functions": 103,
+      "outcome_sha256": "bb947a50ded4c91ec8c3d6e7fca06a481c892791c3e55db300a3a22e2e2f85c8",
+      "semantic_key": "fd00e220128d2219d0589b62f375f1530968886b2b43321c1483bf46f9bf09aa",
+      "started": "2026-10-07T09:05:35.189603+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-25_wupash_nebula"
+    },
+    "5ba86e8e65b44a2aab1847ebd761ce3d": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5ba86e8e65b44a2aab1847ebd761ce3d",
+      "finished": "2026-10-07T09:05:42.437657+00:00",
+      "id": "5ba86e8e65b44a2aab1847ebd761ce3d",
+      "manifest_sha256": "fe94cb7dfd5db16b9be427bc8083cc8c48ae28e00ce38e48d37e112e85a6cb66",
+      "measured_functions": 102,
+      "outcome_sha256": "3b40545e72a33e035963008eadd0a13ceface408053446b004159768953b08f5",
+      "semantic_key": "f938490b05d314f31a7c10eb687c6b530b62e41b8cce21b525cad0a857f27c79",
+      "started": "2026-10-07T09:05:41.579701+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-3_endako"
     },
     "5bc3f2077cba4f67a50052f38ed78adb": {
       "compile_attempted": true,
@@ -145020,6 +147790,19 @@
       "started": "2026-10-05T19:08:04.036134+00:00",
       "state": "exact_private",
       "task": "orbital-c8d00-family-20261005-19_grelbin"
+    },
+    "5eedee9ab51f44599ba4ef070d9ae027": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/5eedee9ab51f44599ba4ef070d9ae027",
+      "finished": "2026-10-07T09:05:27.398020+00:00",
+      "id": "5eedee9ab51f44599ba4ef070d9ae027",
+      "manifest_sha256": "830aa0f0146921a76306f5c34b999d1b8a24714ce8af05924457da71034400a6",
+      "measured_functions": 97,
+      "outcome_sha256": "65aaa5ec9a44ef631a49c250841c3f31323e46d58facab838c7db5493ae60e73",
+      "semantic_key": "274d63a5dc0ac78a2666e2a9544e33c36c0427931e485f9d43a5cc6de2bc2184",
+      "started": "2026-10-07T09:05:26.547111+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-1_oozla"
     },
     "5f015396688d41bda2a37dcb7356e0e1": {
       "compile_attempted": true,
@@ -145418,6 +148201,26 @@
       "state": "exact_private",
       "task": "glyph-family-24_ship_shack-20261004"
     },
+    "62cde871a68948a6952e2805102cf31e": {
+      "children": [
+        {
+          "id": "30_insomniac_museum",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/62cde871a68948a6952e2805102cf31e",
+      "error": "Semantic duplicate trial: 9b84d4097ca44ebeb05b06d3841d9e6f; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:30.107341+00:00",
+      "id": "62cde871a68948a6952e2805102cf31e",
+      "integration_credit": 0,
+      "manifest_sha256": "e2fb5731057c9ea3494827b3666c527c2aaa20bd6ab485fa1a0b615553c79d0d",
+      "measured_functions": 0,
+      "outcome_sha256": "2ec94e81f23040538ede80390cec2d0012d97f9801c49c27e50bcbb16a14957a",
+      "semantic_key": "ac677f3ca8d02cda50ead4c5b71c611d3e2afccb89ba1d35c5a110c5dd93c329",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-30_insomniac_museum"
+    },
     "63462b95e26d4140a03c4fc4b59b3735": {
       "compile_attempted": true,
       "directory": "runtime:trials/63462b95e26d4140a03c4fc4b59b3735",
@@ -145528,6 +148331,26 @@
       "started": "2026-10-05T02:45:20.406727+00:00",
       "state": "exact_private",
       "task": "orbital-float-interval-family-815-20261004-0_aranos_tutorial"
+    },
+    "63dafb25217c4275845a62fd82c5c63f": {
+      "children": [
+        {
+          "id": "20_yeedil",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/63dafb25217c4275845a62fd82c5c63f",
+      "error": "Semantic duplicate trial: 013ad362772748f1ba62f6cc949ab26b; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:31.042221+00:00",
+      "id": "63dafb25217c4275845a62fd82c5c63f",
+      "integration_credit": 0,
+      "manifest_sha256": "5f10431ff5a47b6ae7da988a2564e1a78e93ef4a95b6b37eed5aa205a53ba2eb",
+      "measured_functions": 0,
+      "outcome_sha256": "691b95883d155850d7793a943b49cf9bdc2677b57f956d4aa265ae485d5e533b",
+      "semantic_key": "d25d0fedbc9b96606e5737d39b6338e11525527b14bba9b291a638f6506e04b9",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-20_yeedil"
     },
     "644efaa4ba2243d1b95812fb7e8dc6c6": {
       "compile_attempted": true,
@@ -145997,6 +148820,26 @@
       "state": "exact_private",
       "task": "wait372-copy-8_tabora-0033bc90-fixed-20261006"
     },
+    "69ef5feea0a24fb48181654f5b7a738e": {
+      "children": [
+        {
+          "id": "5_feltzin_system",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/69ef5feea0a24fb48181654f5b7a738e",
+      "error": "Semantic duplicate trial: 4c12bf7aceea4db9bd8accd5defc56ac; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:32.814104+00:00",
+      "id": "69ef5feea0a24fb48181654f5b7a738e",
+      "integration_credit": 0,
+      "manifest_sha256": "fc7a01b2f074fb3875b6cf7d88e18b959c6168f56d26f9d4eaf890b4071e280a",
+      "measured_functions": 0,
+      "outcome_sha256": "c6f3330f6874c0cad3fa6baeae6436e72b322d4a0cc0bd8072909f3d0cc4273c",
+      "semantic_key": "115cae511141b7e5589de05323d32ea0b23e361f085411a893e844780032ea40",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-5_feltzin_system"
+    },
     "6a0a94ab9c5c4865af7b093aaf832e60": {
       "compile_attempted": true,
       "directory": "runtime:trials/6a0a94ab9c5c4865af7b093aaf832e60",
@@ -146348,6 +149191,26 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-append164-10-v1"
     },
+    "6ede92309cd943a28de5051d2331d1be": {
+      "children": [
+        {
+          "id": "9_dobbo",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/6ede92309cd943a28de5051d2331d1be",
+      "error": "Semantic duplicate trial: 8849d7474473443ca48578f99e4672aa; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:36.256264+00:00",
+      "id": "6ede92309cd943a28de5051d2331d1be",
+      "integration_credit": 0,
+      "manifest_sha256": "0374bc558c48cbf0426e5e0057bddb67fb47e9ce46eb02f8dbc8256e2b261f06",
+      "measured_functions": 0,
+      "outcome_sha256": "615cdc4c5b3221fe065242d818003100f7eaa6e739b3a120c3d2a32cc7d3a991",
+      "semantic_key": "51a501f87e19e8067e23094b5c72d7e195599a94478319b12b794b10523a72ae",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-9_dobbo"
+    },
     "6ef9756779ab4bb691f30bbdb5f0fa40": {
       "compile_attempted": true,
       "directory": "runtime:trials/6ef9756779ab4bb691f30bbdb5f0fa40",
@@ -146478,6 +149341,19 @@
       "state": "mismatch",
       "task": "orbital-damosel-unlink288-20261005-v1"
     },
+    "705dfe1bc30e4421b5ddacd7d467d255": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/705dfe1bc30e4421b5ddacd7d467d255",
+      "finished": "2026-10-07T09:05:32.634194+00:00",
+      "id": "705dfe1bc30e4421b5ddacd7d467d255",
+      "manifest_sha256": "041a54e732ff4edd50d158911ae52706951825ae510491b4ebae8e60b0ce0330",
+      "measured_functions": 102,
+      "outcome_sha256": "755a3235978c1961730d4b2b91e05b4902c0dd24a3110ea67a8f930a2f7cc746",
+      "semantic_key": "a06029f01d35df0da6125bd1d596e2eaa4e59db2916e5974e6abb2bddc9d52a1",
+      "started": "2026-10-07T09:05:31.777797+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-23_damosel_orbit"
+    },
     "70fed25b0ac7479984bfc4b3a7cd84f7": {
       "children": [
         {
@@ -146601,6 +149477,46 @@
       "started": "2026-10-04T12:40:15.297710+00:00",
       "state": "exact_private",
       "task": "orbital-pair-lookup-family-20261004-11_joba"
+    },
+    "71dada32178140269bcdcd8248bb0ffe": {
+      "children": [
+        {
+          "id": "18_damosel",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/71dada32178140269bcdcd8248bb0ffe",
+      "error": "Semantic duplicate trial: ad6bbe8a752d4064b0bcca1b27885952; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:28.426258+00:00",
+      "id": "71dada32178140269bcdcd8248bb0ffe",
+      "integration_credit": 0,
+      "manifest_sha256": "cb2fd90f4ea3af4326130ad12e24b5a6356cd1d993aaa0e783c163a021b1212c",
+      "measured_functions": 0,
+      "outcome_sha256": "9ecce996f32f79e2f544c8edcbaeaf59008aa5433fe497efde0a7612309e241c",
+      "semantic_key": "5113865e03b67cf6082a8d937d9b126bb5c54f6a6be91c555b0fe2df4819fe0b",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-18_damosel"
+    },
+    "71de41d2a7424d61b7043eb6806b22c7": {
+      "children": [
+        {
+          "id": "8_tabora",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/71de41d2a7424d61b7043eb6806b22c7",
+      "error": "Semantic duplicate trial: f7a9f9a92bff49d8a0e4b04a5f9b9551; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:35.427376+00:00",
+      "id": "71de41d2a7424d61b7043eb6806b22c7",
+      "integration_credit": 0,
+      "manifest_sha256": "f4eef4256282e6515463382de437849486a93e221657ee6ba8ad31cd701b3e84",
+      "measured_functions": 0,
+      "outcome_sha256": "38914efc1dc36f5dd8dfe61a605cebd8f71671fb5c26460dcafe1c1a0654e430",
+      "semantic_key": "db350832043f9e3af8a470005333cd62f677ab6aac14aaca20152332767ef0f6",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-8_tabora"
     },
     "71e272f7e7ae4f268a9e564f87f37e2f": {
       "compile_attempted": true,
@@ -147222,6 +150138,26 @@
       "state": "exact_private",
       "task": "update-moby775-76-24_ship_shack-source-first-v1-20261006"
     },
+    "79f776ca891c460a9afd5da6620a0c91": {
+      "children": [
+        {
+          "id": "15_gorn",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/79f776ca891c460a9afd5da6620a0c91",
+      "error": "Semantic duplicate trial: caddd831307c467283fdf4fbfebb5c80; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:18.239658+00:00",
+      "id": "79f776ca891c460a9afd5da6620a0c91",
+      "integration_credit": 0,
+      "manifest_sha256": "ec1cab311460940f9a8b71cba34733568bd7b8a4439c133484bf5daaf1642329",
+      "measured_functions": 0,
+      "outcome_sha256": "87aba33c64893ef73188dedc5dad829528137e732f04b195d769a79a86028848",
+      "semantic_key": "2d50fd9816f952ef4779a1b40927a56ab9c9f3b3c7b011e834f2c9f0225047c8",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-15_gorn"
+    },
     "7a107ef5c3b342b18673e101ba64e89d": {
       "compile_attempted": true,
       "directory": "runtime:trials/7a107ef5c3b342b18673e101ba64e89d",
@@ -147658,6 +150594,26 @@
       "state": "exact_private",
       "task": "count112-untried-14_aranos_prison-20261006"
     },
+    "7e582c5555af436591879b75681550e9": {
+      "children": [
+        {
+          "id": "4_barlow",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/7e582c5555af436591879b75681550e9",
+      "error": "Semantic duplicate trial: eaba09cc61da48eabeed036973e297b3; provide --repeat-reason",
+      "finished": "2026-10-07T09:05:43.280352+00:00",
+      "id": "7e582c5555af436591879b75681550e9",
+      "integration_credit": 0,
+      "manifest_sha256": "b9393a4d55d94b9c1d329cbcb36c71777f3fccbcd5e9844aaa2730ae01da9c9f",
+      "measured_functions": 0,
+      "outcome_sha256": "7f7c61018fcad587bdb7d87439464c0ce72f658b157c31731adb3cf95155d694",
+      "semantic_key": "67fabbbd2a66abd77244b7515b4118c655e9632a4e3bc383a7851206ae7311bf",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007-4_barlow"
+    },
     "7e7bf98bdac241b1aa37d226cda07cc0": {
       "compile_attempted": true,
       "directory": "runtime:trials/7e7bf98bdac241b1aa37d226cda07cc0",
@@ -147807,6 +150763,26 @@
       "semantic_key": "7b4cea60fe9573145453e55f5ca10a4baa0364e1adcb6669dfeea00a516a297b",
       "state": "preparation_rejected",
       "task": "g8pilot-24_ship_shack"
+    },
+    "7faf9972fddc4308afa484e46c71caba": {
+      "children": [
+        {
+          "id": "8_tabora",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/7faf9972fddc4308afa484e46c71caba",
+      "error": "Semantic duplicate trial: f7a9f9a92bff49d8a0e4b04a5f9b9551; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:42.509003+00:00",
+      "id": "7faf9972fddc4308afa484e46c71caba",
+      "integration_credit": 0,
+      "manifest_sha256": "603969fdde91eab878bc14c32e84d802dd55a86c8c7210ed8a88edf73f2ea242",
+      "measured_functions": 0,
+      "outcome_sha256": "38162812564bd2185b69936f430b11e1e86d70d79fa155ac377ae4dba39383de",
+      "semantic_key": "db350832043f9e3af8a470005333cd62f677ab6aac14aaca20152332767ef0f6",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-8_tabora"
     },
     "7fb845be8b214bf5838c275279b26208": {
       "compile_attempted": true,
@@ -148563,6 +151539,26 @@
       "state": "exact_private",
       "task": "orbital-jamming-row52-20261005-v1"
     },
+    "87f891f8885646bfa80c58c91342a277": {
+      "children": [
+        {
+          "id": "14_aranos_prison",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/87f891f8885646bfa80c58c91342a277",
+      "error": "Semantic duplicate trial: bbfafc5b3f5749a1940e8fd4986e2172; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:17.388659+00:00",
+      "id": "87f891f8885646bfa80c58c91342a277",
+      "integration_credit": 0,
+      "manifest_sha256": "1f1c29ec8d61974e277d7713e40c7ea1a29acaed6f1ead58f6e7e38d115e29ea",
+      "measured_functions": 0,
+      "outcome_sha256": "e1bbf70c3f0da6d9ede5beaaa3a82029fcba8e7119bd0d3ff28518a30b775188",
+      "semantic_key": "6676b53e260c6a01c5d0f0c27795b6be37e86a5d9d4dc3a39061020ac3a31c7f",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-14_aranos_prison"
+    },
     "87fa1d0f7b0d4ab58adea19514a538de": {
       "compile_attempted": true,
       "directory": "runtime:trials/87fa1d0f7b0d4ab58adea19514a538de",
@@ -148614,6 +151610,19 @@
       "started": "2026-10-04T14:34:43.021547+00:00",
       "state": "exact_private",
       "task": "orbital-class-filter-family-20261004-14_aranos_prison"
+    },
+    "8849d7474473443ca48578f99e4672aa": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8849d7474473443ca48578f99e4672aa",
+      "finished": "2026-10-07T09:05:51.505325+00:00",
+      "id": "8849d7474473443ca48578f99e4672aa",
+      "manifest_sha256": "f3f0ff9ac31a1bda272ce03fb49ccef536eb3165aa3c64ef2dcdad0cdc3b9586",
+      "measured_functions": 102,
+      "outcome_sha256": "bacdb6fd3cf284554e1e7efde70545cd40a52e34f6349291ade0e048af3a2a75",
+      "semantic_key": "88c65d1a75782553ec364d5abd335c532570572d72e7cb4f16c8fe02c0ed6d18",
+      "started": "2026-10-07T09:05:50.696066+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-9_dobbo"
     },
     "886eee1607644da08cd946d36f88b7c9": {
       "compile_attempted": true,
@@ -148848,6 +151857,19 @@
       "started": "2026-10-05T03:33:58.881398+00:00",
       "state": "exact_private",
       "task": "orbital-slot-reuse-family-844-20261004-14_aranos_prison"
+    },
+    "8b7c742190ae46b183a4c9a888964365": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8b7c742190ae46b183a4c9a888964365",
+      "finished": "2026-10-07T09:05:39.220370+00:00",
+      "id": "8b7c742190ae46b183a4c9a888964365",
+      "manifest_sha256": "6ae212b0f0a2a01dd58b05919bbe342664e48fc3f05a475bfa718add68d18086",
+      "measured_functions": 107,
+      "outcome_sha256": "1c3c9b7d6af789cf6f73ed35e0e1cfcb1c0eec8e6bc452ce9e2b692bb765cecd",
+      "semantic_key": "f7844ad9a1f69c90533afafd6d56e599abf8c9641ded5d21f4e487f98e121dba",
+      "started": "2026-10-07T09:05:38.398113+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-2_maktar_nebula"
     },
     "8b9ab56355f0462d8967cd6bc0df4451": {
       "compile_attempted": true,
@@ -149108,6 +152130,19 @@
       "started": "2026-10-04T04:23:21.950437+00:00",
       "state": "exact_private",
       "task": "glyph-family-3_endako-20261004"
+    },
+    "8e98909216414687b1e43513add5e938": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8e98909216414687b1e43513add5e938",
+      "finished": "2026-10-07T09:05:09.361733+00:00",
+      "id": "8e98909216414687b1e43513add5e938",
+      "manifest_sha256": "97a3e96e66944fc295a3432d4b3c048ca20e91a29a22b44e1af7e7fc91774dd6",
+      "measured_functions": 104,
+      "outcome_sha256": "4d97073bf265561c5eac5008f1d363f60840c2d12c6eb525bccff03668c15ea4",
+      "semantic_key": "24cb6ab17b756d07d80302373376768cf9766fef2c21518d6c11c6e964f1ea7d",
+      "started": "2026-10-07T09:05:08.559310+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-0_aranos_tutorial"
     },
     "8eb8b5a127684eba88e0f42f6d2e74da": {
       "compile_attempted": true,
@@ -150281,6 +153316,26 @@
       "state": "mismatch",
       "task": "orbital-jamming-rank72-20261005-v1"
     },
+    "9a7cfccfe5da4049a47350b956fb025c": {
+      "children": [
+        {
+          "id": "4_barlow",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/9a7cfccfe5da4049a47350b956fb025c",
+      "error": "Semantic duplicate trial: eaba09cc61da48eabeed036973e297b3; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:38.939292+00:00",
+      "id": "9a7cfccfe5da4049a47350b956fb025c",
+      "integration_credit": 0,
+      "manifest_sha256": "546d3f9837c00554313ef1328a9e1cc70610c9ac300af1e7d82bed78c119acdb",
+      "measured_functions": 0,
+      "outcome_sha256": "7ee1e48da4760f63053d36918047183ef5a73e1710c1bd66cea7753bb1ab9e5a",
+      "semantic_key": "67fabbbd2a66abd77244b7515b4118c655e9632a4e3bc383a7851206ae7311bf",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-4_barlow"
+    },
     "9aca173cf67044818aac9853903de91f": {
       "compile_attempted": true,
       "directory": "runtime:trials/9aca173cf67044818aac9853903de91f",
@@ -150319,6 +153374,19 @@
       "started": "2026-10-04T16:11:47.995153+00:00",
       "state": "exact_private",
       "task": "orbital-mode-set-family-20261004-5_feltzin_system"
+    },
+    "9b84d4097ca44ebeb05b06d3841d9e6f": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/9b84d4097ca44ebeb05b06d3841d9e6f",
+      "finished": "2026-10-07T09:05:40.796047+00:00",
+      "id": "9b84d4097ca44ebeb05b06d3841d9e6f",
+      "manifest_sha256": "7555a128d6f66b173ff6b5a58983407b0e062cc22010555bb7f1771005dbd0a8",
+      "measured_functions": 105,
+      "outcome_sha256": "071d5f1d3e9cf4200ecd8318b5f0eba5c463204413d7a21cfda84e41f669fb7d",
+      "semantic_key": "8e78774339b1f5f1706b8e6bbb7003ffee95bf39b5a7fee8e282d25e601048f1",
+      "started": "2026-10-07T09:05:40.029630+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-30_insomniac_museum"
     },
     "9b952b8cca30454e815e70603f74ea7d": {
       "compile_attempted": true,
@@ -150615,6 +153683,46 @@
       "started": "2026-10-04T04:36:25.880882+00:00",
       "state": "exact_private",
       "task": "two-native-families-10_hrugis_cloud-20261004"
+    },
+    "9e97482e82414729bfefd30132687bd5": {
+      "children": [
+        {
+          "id": "26_jamming_array",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/9e97482e82414729bfefd30132687bd5",
+      "error": "Semantic duplicate trial: acfc19834cc8459d97629aa3deb3242b; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:35.398698+00:00",
+      "id": "9e97482e82414729bfefd30132687bd5",
+      "integration_credit": 0,
+      "manifest_sha256": "51f2254c5030182bafd0bc094a5029d6973d4e3b1808fd80eaee8d782b46af72",
+      "measured_functions": 0,
+      "outcome_sha256": "2bceefa5ed97dfac69b22b696450ca2de1f90708a5b3ad62a330d903ee265857",
+      "semantic_key": "71f6dde39eb6f561a821362413f066e4dce35874cef080c47494acd9561b5ef4",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-26_jamming_array"
+    },
+    "9ee7b864d829491e982187e00e6ed24b": {
+      "children": [
+        {
+          "id": "10_hrugis_cloud",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/9ee7b864d829491e982187e00e6ed24b",
+      "error": "Semantic duplicate trial: 56b4c0ebea70409fa1ae602bfee2aec2; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:21.362438+00:00",
+      "id": "9ee7b864d829491e982187e00e6ed24b",
+      "integration_credit": 0,
+      "manifest_sha256": "f0b069aa6f7162af445d317a411f266deda40fbf629c76dab313d860fc0241c8",
+      "measured_functions": 0,
+      "outcome_sha256": "33d2e796310f44bd09572e4ea8cb1872e517ad88cf620148e6d90c6420c86ae1",
+      "semantic_key": "7c025c359d37b16c9ecdc00d47f014adf0383e2ec3ea5c6a1315163ff256ee9f",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-10_hrugis_cloud"
     },
     "9ee86345a00f436fb34fc777fcaa677f": {
       "compile_attempted": true,
@@ -151254,6 +154362,19 @@
       "started": "2026-10-04T17:52:35.088319+00:00",
       "state": "exact_private",
       "task": "orbital-flags-joint-20261004-24_ship_shack"
+    },
+    "a511868895a1442da79e50a2db87d2b2": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/a511868895a1442da79e50a2db87d2b2",
+      "finished": "2026-10-07T09:05:25.645888+00:00",
+      "id": "a511868895a1442da79e50a2db87d2b2",
+      "manifest_sha256": "40eda59b6853c4b8305235f44bcb2ae05245222438fe145ac1630ff6ec5a451d",
+      "measured_functions": 98,
+      "outcome_sha256": "53a25c23b4dc88106ed7021872265ce171422228118c8c5919d347acd94f6607",
+      "semantic_key": "c9e6935bded4922c1320054edfaac15adb95e2bb7b7e3e91e9b28fe7ba1a4776",
+      "started": "2026-10-07T09:05:24.780524+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-19_grelbin"
     },
     "a536bb0e30ab471ba909d4a0075aa4fe": {
       "compile_attempted": true,
@@ -151960,6 +155081,26 @@
       "state": "exact_private",
       "task": "reset-state-signs136-7_siberius"
     },
+    "ace9308d549b4c8d84b73ac92a503452": {
+      "children": [
+        {
+          "id": "19_grelbin",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/ace9308d549b4c8d84b73ac92a503452",
+      "error": "Semantic duplicate trial: a511868895a1442da79e50a2db87d2b2; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:29.267550+00:00",
+      "id": "ace9308d549b4c8d84b73ac92a503452",
+      "integration_credit": 0,
+      "manifest_sha256": "def959961cd121b935a0cfed4eb428474f6a33c677c0ef7a5b4600628793dda7",
+      "measured_functions": 0,
+      "outcome_sha256": "04685f8a756c0a8f6709d9122c4ffa1ec8b95fa76f0621674a9b0d1b0358b9ea",
+      "semantic_key": "c7f41b6c9bddd3f2ae1cae2d4d448d9dab4a32a41d4aebb9b930293d7ae15e7e",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-19_grelbin"
+    },
     "acfaf7bc3f2b4ba2bf8e0a11d452031a": {
       "compile_attempted": true,
       "directory": "runtime:trials/acfaf7bc3f2b4ba2bf8e0a11d452031a",
@@ -151972,6 +155113,19 @@
       "started": "2026-10-05T00:07:38.957274+00:00",
       "state": "mismatch",
       "task": "orbital-grelbin-clone-register-20261004-v1"
+    },
+    "acfc19834cc8459d97629aa3deb3242b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/acfc19834cc8459d97629aa3deb3242b",
+      "finished": "2026-10-07T09:05:37.598520+00:00",
+      "id": "acfc19834cc8459d97629aa3deb3242b",
+      "manifest_sha256": "9b706da1ba000f9db9abac06bf759692734b130ee8403ea9c55e7906605b77a6",
+      "measured_functions": 100,
+      "outcome_sha256": "83935997ed3eceed98475fe908c29d8f94caea4e26a1e725f6db87928a6ef6fe",
+      "semantic_key": "1ecc00aed9363c4222207a0fcd37bf07c4682f8639e1ef7b7cc3982ea81bad2a",
+      "started": "2026-10-07T09:05:36.829878+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-26_jamming_array"
     },
     "ad08d99b77f74c07853ac87712906b45": {
       "compile_attempted": true,
@@ -152011,6 +155165,19 @@
       "started": "2026-10-05T16:22:19.285309+00:00",
       "state": "exact_private",
       "task": "root-compound-rowgrid52-0_aranos_tutorial-20261005"
+    },
+    "ad6bbe8a752d4064b0bcca1b27885952": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/ad6bbe8a752d4064b0bcca1b27885952",
+      "finished": "2026-10-07T09:05:23.991647+00:00",
+      "id": "ad6bbe8a752d4064b0bcca1b27885952",
+      "manifest_sha256": "273fff64a7182d7170fee54bdc9331581c8459417acf3cccf56976a98ecdfc26",
+      "measured_functions": 109,
+      "outcome_sha256": "509f0ce4410985811a5280e3057f5671fccda2a89c9944eac54a25e223fe91e6",
+      "semantic_key": "2adfb0b7708f4b2b524df04bb1bc2f0204ef4aafc62031fd897a287f04fbf1fe",
+      "started": "2026-10-07T09:05:23.096001+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-18_damosel"
     },
     "ad9f512822ec44f6a6702adc7f29cc56": {
       "compile_attempted": true,
@@ -152415,6 +155582,26 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-format396-1-v1"
     },
+    "b2c6e579fa5c4313b00891806a228b52": {
+      "children": [
+        {
+          "id": "10_hrugis_cloud",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/b2c6e579fa5c4313b00891806a228b52",
+      "error": "Semantic duplicate trial: 56b4c0ebea70409fa1ae602bfee2aec2; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:13.789983+00:00",
+      "id": "b2c6e579fa5c4313b00891806a228b52",
+      "integration_credit": 0,
+      "manifest_sha256": "ae432a7c8e540ca3ef0292dfd24fd6b6aa98ede720259439e10d51207998915b",
+      "measured_functions": 0,
+      "outcome_sha256": "97f494bcdcdeddcac2fdfb0198887573394f3e2690aaabf747fb754169df50df",
+      "semantic_key": "7c025c359d37b16c9ecdc00d47f014adf0383e2ec3ea5c6a1315163ff256ee9f",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-10_hrugis_cloud"
+    },
     "b2e34104d2e647088f86729024225047": {
       "compile_attempted": true,
       "directory": "runtime:trials/b2e34104d2e647088f86729024225047",
@@ -152453,6 +155640,26 @@
       "started": "2026-10-06T07:32:25.655939+00:00",
       "state": "exact_private",
       "task": "fresh-medium-image-store128-24_ship_shack-20261006"
+    },
+    "b3280f2657cc4df294aa460ae2a740ee": {
+      "children": [
+        {
+          "id": "12_todano",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/b3280f2657cc4df294aa460ae2a740ee",
+      "error": "Semantic duplicate trial: d0798c5e08324b988731038e9b8b9358; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:15.546005+00:00",
+      "id": "b3280f2657cc4df294aa460ae2a740ee",
+      "integration_credit": 0,
+      "manifest_sha256": "7a3be9f9bae06ccf22dd86aaf672e198d1ec2ce8631bf70d58fcf55a86effc7b",
+      "measured_functions": 0,
+      "outcome_sha256": "8791162676e3d4c30e2c7346c70244a0fc14ed1978a9459fb5b04fc2512189b7",
+      "semantic_key": "4bc04f3547c2294c84f50a81a04efff45c852d32875417fd716087aa0d8381e9",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-12_todano"
     },
     "b3448a94081a439cb240197ee9616a28": {
       "children": [
@@ -152577,6 +155784,19 @@
       "started": "2026-10-04T10:38:38.753191+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-update116-30-v1"
+    },
+    "b49745b865f740f4a2f9b6b7f877c24a": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/b49745b865f740f4a2f9b6b7f877c24a",
+      "finished": "2026-10-07T09:05:20.662284+00:00",
+      "id": "b49745b865f740f4a2f9b6b7f877c24a",
+      "manifest_sha256": "bd5985310a3633b116da675445b76e20a883ca9df82ad7d0590006ef77d71748",
+      "measured_functions": 104,
+      "outcome_sha256": "fa615814ca4f247ba4db5e17e43219c002a62f163462ee61a33362c19587a3e6",
+      "semantic_key": "9897c39c1f8013dde025939dbb9f0f7e3ee4f9591290002eeebc0a5d7bfa3e98",
+      "started": "2026-10-07T09:05:19.898963+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-16_snivelak"
     },
     "b4c2477230d9454baaed5c855f2e85c9": {
       "compile_attempted": true,
@@ -152824,6 +156044,26 @@
       "started": "2026-10-04T12:16:06.281837+00:00",
       "state": "mismatch",
       "task": "orbital-gorn-pool-release-20261004-catalog-v1"
+    },
+    "b80239b9119f45628c9a4ff770f65ce3": {
+      "children": [
+        {
+          "id": "25_wupash_nebula",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/b80239b9119f45628c9a4ff770f65ce3",
+      "error": "Semantic duplicate trial: 5b98f76f83cf4b088e574e9ec299dcd6; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:27.551560+00:00",
+      "id": "b80239b9119f45628c9a4ff770f65ce3",
+      "integration_credit": 0,
+      "manifest_sha256": "2283b7642283fc98105ba6d2d943e3db77fcdfbdf927574664ed97c65f8b1847",
+      "measured_functions": 0,
+      "outcome_sha256": "ae7a7233f577acf6c929703f22b193d481f38f8d8db28e85f751dcc834f05cb2",
+      "semantic_key": "043405af28bc498ca3140464ef548db782bef71742fb61d8c83f08d7f82bb004",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-25_wupash_nebula"
     },
     "b8080e36ab824bffae79f12d09140d70": {
       "compile_attempted": true,
@@ -153203,6 +156443,19 @@
       "state": "exact_private",
       "task": "float-guard-only-1_oozla-20261004"
     },
+    "bbfafc5b3f5749a1940e8fd4986e2172": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/bbfafc5b3f5749a1940e8fd4986e2172",
+      "finished": "2026-10-07T09:05:17.503104+00:00",
+      "id": "bbfafc5b3f5749a1940e8fd4986e2172",
+      "manifest_sha256": "13b20c833f625b7b3bc36ddbe7ae5c14afb46eea47315b6aa1a3df9f8c67094a",
+      "measured_functions": 108,
+      "outcome_sha256": "e22ac23b3b75a1120ce4cd9c597f5891dd27a0cf01f60b54a81076a55fea0e56",
+      "semantic_key": "b42de47359a51d3a90b8e107aed22695d298ffa5fa9d3d0f3d95ec8b46c365f4",
+      "started": "2026-10-07T09:05:16.719263+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-14_aranos_prison"
+    },
     "bca816c0a4904284845569985737e8bd": {
       "compile_attempted": true,
       "directory": "runtime:trials/bca816c0a4904284845569985737e8bd",
@@ -153541,6 +156794,26 @@
       "state": "mismatch",
       "task": "native-review-boldan-pending-flush-typefix-20261005"
     },
+    "c101463b25c34bfcb6ee6efa0f04a934": {
+      "children": [
+        {
+          "id": "1_oozla",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/c101463b25c34bfcb6ee6efa0f04a934",
+      "error": "Semantic duplicate trial: 5eedee9ab51f44599ba4ef070d9ae027; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:22.955470+00:00",
+      "id": "c101463b25c34bfcb6ee6efa0f04a934",
+      "integration_credit": 0,
+      "manifest_sha256": "7781f3de71bf6b79fece34f2d168e5833f620973e95999cebfa4cef139d68379",
+      "measured_functions": 0,
+      "outcome_sha256": "a50a731c72f65d181f7feb405f0c15f4c6e100e9f7bb284d59cc234d499fd983",
+      "semantic_key": "55771f7b4fae703c711fe543b9866eaf89d34f160e5d0316fef9d4ea5089bbba",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-1_oozla"
+    },
     "c101d3c7225b4a598d5e431e2ef172f5": {
       "compile_attempted": true,
       "directory": "runtime:trials/c101d3c7225b4a598d5e431e2ef172f5",
@@ -153749,6 +157022,39 @@
       "state": "exact_private",
       "task": "orbital-float-interval-family-815-20261004-18_damosel"
     },
+    "c34604b226b64014bbebd2390ecd7491": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/c34604b226b64014bbebd2390ecd7491",
+      "finished": "2026-10-07T09:05:22.286226+00:00",
+      "id": "c34604b226b64014bbebd2390ecd7491",
+      "manifest_sha256": "961add1fdc4fd6bb42eec571fa25136a8142f6026836499f1655ada7530c93dc",
+      "measured_functions": 104,
+      "outcome_sha256": "585a45ce38989499d51e0d187a0e16290998f9fe67ded48c96888d21a95f5a67",
+      "semantic_key": "5ef779da3385a881f8a2d70aecab9881e8ce8f78d9f80831bf47c45c378237be",
+      "started": "2026-10-07T09:05:21.435452+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-17_smolg"
+    },
+    "c34d3c2e06334283939c41582d37d287": {
+      "children": [
+        {
+          "id": "26_jamming_array",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/c34d3c2e06334283939c41582d37d287",
+      "error": "Semantic duplicate trial: acfc19834cc8459d97629aa3deb3242b; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:28.410684+00:00",
+      "id": "c34d3c2e06334283939c41582d37d287",
+      "integration_credit": 0,
+      "manifest_sha256": "506d39e08f4f6580866210f9d50b42f326ffeca8f86077702228d9b737022322",
+      "measured_functions": 0,
+      "outcome_sha256": "737c77adf4611dd4f806a2279c461d34bfacb24a2b18f3c5914937e0a807c95a",
+      "semantic_key": "71f6dde39eb6f561a821362413f066e4dce35874cef080c47494acd9561b5ef4",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-26_jamming_array"
+    },
     "c3649e6279e5435dbc674b774962a39c": {
       "compile_attempted": true,
       "directory": "runtime:trials/c3649e6279e5435dbc674b774962a39c",
@@ -153787,6 +157093,26 @@
       "started": "2026-10-04T15:58:15.658777+00:00",
       "state": "mismatch",
       "task": "orbital-gorn-linked-record-copy-ti-20261004-v1"
+    },
+    "c3df1d109cc04d079e7f8d22a696ec96": {
+      "children": [
+        {
+          "id": "12_todano",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/c3df1d109cc04d079e7f8d22a696ec96",
+      "error": "Semantic duplicate trial: d0798c5e08324b988731038e9b8b9358; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:23.206828+00:00",
+      "id": "c3df1d109cc04d079e7f8d22a696ec96",
+      "integration_credit": 0,
+      "manifest_sha256": "97d81f09e5b3525c52c518f174c6d026d0dff4012924612f4a65c8b8d7e368df",
+      "measured_functions": 0,
+      "outcome_sha256": "734ee0363374b2c630031b6fa4702fb45a5467a580ebb1f321976547884983f9",
+      "semantic_key": "4bc04f3547c2294c84f50a81a04efff45c852d32875417fd716087aa0d8381e9",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-12_todano"
     },
     "c3efeb572ed640c792e965c4b307ae39": {
       "compile_attempted": true,
@@ -153878,6 +157204,26 @@
       "started": "2026-10-06T07:38:57.072750+00:00",
       "state": "exact_private",
       "task": "resident-sync-clear168-17_smolg-20261006"
+    },
+    "c52c9fa676fb4f3c9d5279da41c161a7": {
+      "children": [
+        {
+          "id": "3_endako",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/c52c9fa676fb4f3c9d5279da41c161a7",
+      "error": "Semantic duplicate trial: 5ba86e8e65b44a2aab1847ebd761ce3d; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:38.066584+00:00",
+      "id": "c52c9fa676fb4f3c9d5279da41c161a7",
+      "integration_credit": 0,
+      "manifest_sha256": "f01abd577d88a97244116dfee0826d752b818eeef966190772685cf1882cfe0a",
+      "measured_functions": 0,
+      "outcome_sha256": "92c865c3e3a1497135018d4d2f8969ce171452cb498d3b4c4fef35753d45fd92",
+      "semantic_key": "16c4eee1a28a7b4c202ae9d9dba220fa8dbea95fc164a1ec30f43ddefa773d32",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-3_endako"
     },
     "c54e245661534588b8cd90ccaafd7179": {
       "compile_attempted": true,
@@ -154022,6 +157368,26 @@
       "started": "2026-10-06T07:39:02.189849+00:00",
       "state": "exact_private",
       "task": "resident-sync-clear168-23_damosel_orbit-20261006"
+    },
+    "c67c4dcdff8241d98464c7ae8bf3ee86": {
+      "children": [
+        {
+          "id": "11_joba",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/c67c4dcdff8241d98464c7ae8bf3ee86",
+      "error": "Semantic duplicate trial: 0c0217de2a174d14a0ee0dd2a44a1b64; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:14.694684+00:00",
+      "id": "c67c4dcdff8241d98464c7ae8bf3ee86",
+      "integration_credit": 0,
+      "manifest_sha256": "ac4f413a2a5ded36ac58e913c3a857e6a58149c0bbe50c73e1178f951021b6ab",
+      "measured_functions": 0,
+      "outcome_sha256": "d0db454ae4478341bb36910eb190df177d4f7066521a2c4a0963443d40da30d6",
+      "semantic_key": "92be3119af72fb10b2a543c4ec6c88299c45cb5434035fc3d76d9bf3f4720e26",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-11_joba"
     },
     "c68c4ae1e0514747a4ccda132caa6df2": {
       "compile_attempted": true,
@@ -154374,6 +157740,32 @@
       "state": "exact_private",
       "task": "root-compound-grid-slot-angles-16_snivelak-20261005"
     },
+    "ca416eb6b6e243eea49f5ba98b198840": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/ca416eb6b6e243eea49f5ba98b198840",
+      "finished": "2026-10-07T09:05:15.918626+00:00",
+      "id": "ca416eb6b6e243eea49f5ba98b198840",
+      "manifest_sha256": "6a8eb45f65fee8c0366ea71fff242d1702c37a48320dda75316362d9f21b9f25",
+      "measured_functions": 104,
+      "outcome_sha256": "d727d117a756d6fe14a6b527285c8745dd01ddad20a79b3666b1a871f0d06eed",
+      "semantic_key": "8ac8a2a4f58eca1b61f88a64d9fd950f9bc7bfcfc243d5b5151f8a08b124b19b",
+      "started": "2026-10-07T09:05:15.132983+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-13_boldan"
+    },
+    "caddd831307c467283fdf4fbfebb5c80": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/caddd831307c467283fdf4fbfebb5c80",
+      "finished": "2026-10-07T09:05:19.099977+00:00",
+      "id": "caddd831307c467283fdf4fbfebb5c80",
+      "manifest_sha256": "ebdfbe8f96c6c79c7611ee41885d68e2010ace428153ba78cb83c26db38e8373",
+      "measured_functions": 106,
+      "outcome_sha256": "618029ad73ba452f31de2545e7dee337b32016d7064e000f84c48e4045aad463",
+      "semantic_key": "1eef57c043d5585b7fac9b559f3643d6b6430e3cbbbb3b660bfe89c3a78af72a",
+      "started": "2026-10-07T09:05:18.290596+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-15_gorn"
+    },
     "caeca31c1b1d47f98db5ac5660627c71": {
       "compile_attempted": true,
       "directory": "runtime:trials/caeca31c1b1d47f98db5ac5660627c71",
@@ -154386,6 +157778,26 @@
       "started": "2026-10-04T18:56:17.528751+00:00",
       "state": "exact_private",
       "task": "root-next-five-combined-16_snivelak-20261004"
+    },
+    "caf7f3fdfa9d4947a2ddeb0fb5bf8755": {
+      "children": [
+        {
+          "id": "14_aranos_prison",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/caf7f3fdfa9d4947a2ddeb0fb5bf8755",
+      "error": "Semantic duplicate trial: bbfafc5b3f5749a1940e8fd4986e2172; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:24.954192+00:00",
+      "id": "caf7f3fdfa9d4947a2ddeb0fb5bf8755",
+      "integration_credit": 0,
+      "manifest_sha256": "7d1fc0a502967e47e3fdca5f0e005f74d4c7d2207ad312b5263b3c9791d153f4",
+      "measured_functions": 0,
+      "outcome_sha256": "b7a7b04f5d87b089f9c0df1dfc4e367bcdcb01e4458ec70bb50b6a7686e0d019",
+      "semantic_key": "6676b53e260c6a01c5d0f0c27795b6be37e86a5d9d4dc3a39061020ac3a31c7f",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-14_aranos_prison"
     },
     "caf9fd960e3b442c92db92161fa3f4e5": {
       "compile_attempted": true,
@@ -154555,6 +157967,26 @@
       "started": "2026-10-04T04:23:11.741955+00:00",
       "state": "exact_private",
       "task": "glyph-family-0_aranos_tutorial-20261004"
+    },
+    "cd223db71a7648d19384fa0f8c2b54d7": {
+      "children": [
+        {
+          "id": "0_aranos_tutorial",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/cd223db71a7648d19384fa0f8c2b54d7",
+      "error": "Semantic duplicate trial: 8e98909216414687b1e43513add5e938; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:20.469884+00:00",
+      "id": "cd223db71a7648d19384fa0f8c2b54d7",
+      "integration_credit": 0,
+      "manifest_sha256": "521abda153ef655ca5396a98aea876e6787e10b77a0ca42c775d069aba2f1746",
+      "measured_functions": 0,
+      "outcome_sha256": "d15de9c6bb5f4611dcf780407012ebc04761d23c479c6954e75ef42225435d51",
+      "semantic_key": "fa1b54dc768f3e366ae151784bb3290778b52a1a5fedd2a18021271300921c82",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-0_aranos_tutorial"
     },
     "cd33c6f97f7f47f2a00505a8eb456361": {
       "compile_attempted": true,
@@ -154916,6 +158348,26 @@
       "state": "exact_private",
       "task": "nativefamilies-batch1-8_tabora"
     },
+    "cfb05cad9d6d457a958d0170ec582b70": {
+      "children": [
+        {
+          "id": "16_snivelak",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/cfb05cad9d6d457a958d0170ec582b70",
+      "error": "Semantic duplicate trial: b49745b865f740f4a2f9b6b7f877c24a; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:26.738953+00:00",
+      "id": "cfb05cad9d6d457a958d0170ec582b70",
+      "integration_credit": 0,
+      "manifest_sha256": "be197ecc4f591107df2467ec2e9af739c29a3f7c01e549f54c6ce00d6a8f1cc1",
+      "measured_functions": 0,
+      "outcome_sha256": "65d5e7c0ca319d0c8f7bb280203425bcdc6643b306cad9ec09bea872c3d4c497",
+      "semantic_key": "735837d50c29dd8c4a85764ff566db78a51cbc2294267c434a5cf658453b3747",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-16_snivelak"
+    },
     "cfe68a4e755040f29a0d9bb1523d14fe": {
       "compile_attempted": true,
       "directory": "runtime:trials/cfe68a4e755040f29a0d9bb1523d14fe",
@@ -154968,6 +158420,19 @@
       "state": "exact_private",
       "task": "glyph-family-19_grelbin-20261004"
     },
+    "d0798c5e08324b988731038e9b8b9358": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d0798c5e08324b988731038e9b8b9358",
+      "finished": "2026-10-07T09:05:14.329548+00:00",
+      "id": "d0798c5e08324b988731038e9b8b9358",
+      "manifest_sha256": "b43bd670869eea483a85cdf9a6847b83d6b80ef25c6fad0d01c19cb909379605",
+      "measured_functions": 106,
+      "outcome_sha256": "330909e1610f646f01e087a992e0caf6c339a4d107437510c27109805a0dd2ec",
+      "semantic_key": "cccf61f1eaa8495d2d8eb1dbcb9603196872360b75eba00b2ff2c5f3f26c05d0",
+      "started": "2026-10-07T09:05:13.497741+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-12_todano"
+    },
     "d091ca68fe474b31ab509190eadb95d3": {
       "compile_attempted": true,
       "directory": "runtime:trials/d091ca68fe474b31ab509190eadb95d3",
@@ -155006,6 +158471,19 @@
       "started": "2026-10-04T18:31:55.593588+00:00",
       "state": "exact_private",
       "task": "orbital-conditional-reset-family-20261004-11_joba"
+    },
+    "d0c712d715f74ae7b00d0ad642ebf29e": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d0c712d715f74ae7b00d0ad642ebf29e",
+      "finished": "2026-10-07T09:05:46.574310+00:00",
+      "id": "d0c712d715f74ae7b00d0ad642ebf29e",
+      "manifest_sha256": "0b80e67f382359bca282c02853762ab195e15222b701733ddbb4bff48e81c21d",
+      "measured_functions": 109,
+      "outcome_sha256": "edc7d27083241f13c351772f0734fd542268852110ff0d351611bd2966343a43",
+      "semantic_key": "c7f3e28311c3287a667c02fe093cc3e63bded49f0ac0dc63eaff6f1e651eec8b",
+      "started": "2026-10-07T09:05:45.739954+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-6_notak"
     },
     "d10e299b2c434501abc81df7f848a4af": {
       "compile_attempted": true,
@@ -155195,6 +158673,19 @@
       "started": "2026-10-04T14:40:10.182673+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-kind96-1-v1"
+    },
+    "d287e36c077c4a9b9ad8d5c4afc04f71": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d287e36c077c4a9b9ad8d5c4afc04f71",
+      "finished": "2026-10-07T09:05:48.230029+00:00",
+      "id": "d287e36c077c4a9b9ad8d5c4afc04f71",
+      "manifest_sha256": "f6d4e842d35e2aacab052f3f86feee2f301187a4d06c27f5e3ae11aab33720d2",
+      "measured_functions": 97,
+      "outcome_sha256": "b0ac19a4de4ea07afd0fc0fc42fc78e61981609e306d82def21bc876a293bc24",
+      "semantic_key": "155bb91774e9307e279f5ca2d5294c9ab81c4c2331595884577dd3ff086b0c3c",
+      "started": "2026-10-07T09:05:47.368090+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-7_siberius"
     },
     "d2c167a39fcb4c0d9b33fa79c76aab26": {
       "compile_attempted": true,
@@ -156569,6 +160060,26 @@
       "state": "exact_private",
       "task": "orbital-pair-lookup-family-20261004-3_endako"
     },
+    "dff9b13744cb4299be42a07f6923a628": {
+      "children": [
+        {
+          "id": "17_smolg",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/dff9b13744cb4299be42a07f6923a628",
+      "error": "Semantic duplicate trial: c34604b226b64014bbebd2390ecd7491; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:20.021787+00:00",
+      "id": "dff9b13744cb4299be42a07f6923a628",
+      "integration_credit": 0,
+      "manifest_sha256": "68df2feb4083569696a9460526f8ca131cd8b69903229afe0939aa807ea64e31",
+      "measured_functions": 0,
+      "outcome_sha256": "cb7907f07ac86f33e21669c8337e7894aacbb9243e6351ee4e276ac4fa87bbe1",
+      "semantic_key": "788de0bd467b4db7122dea3af349bcdee459d92dc2eb24bd2988e6965118bf5f",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-17_smolg"
+    },
     "e01679f9478745498947d06911e7d278": {
       "compile_attempted": true,
       "directory": "runtime:trials/e01679f9478745498947d06911e7d278",
@@ -156940,6 +160451,26 @@
       "state": "exact_private",
       "task": "bitmap80-missing-8_tabora-002bf630-context-v2-fixed-20261006"
     },
+    "e468e40bf9bf459e863506b95ae91c57": {
+      "children": [
+        {
+          "id": "boot",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/e468e40bf9bf459e863506b95ae91c57",
+      "error": "Semantic duplicate trial: 9ff355fc6d4748948c6216a776f83ea6; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:19.660682+00:00",
+      "id": "e468e40bf9bf459e863506b95ae91c57",
+      "integration_credit": 0,
+      "manifest_sha256": "80e4e61eaf6e4dcb577841846edb74356e268422911a0fb137c79367130ea0d6",
+      "measured_functions": 0,
+      "outcome_sha256": "e7bf4cf429ba631ad8b4a2705e349b61a4e944247535cd22574aaf29267a2c50",
+      "semantic_key": "57053c63b9db2d9c3685154c611a60c98691e1d4b61b580daad0260e72ede1f3",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-boot"
+    },
     "e48dedba41be4d6fb262dc879bbb0ef1": {
       "compile_attempted": true,
       "directory": "runtime:trials/e48dedba41be4d6fb262dc879bbb0ef1",
@@ -157167,6 +160698,26 @@
       "started": "2026-10-07T00:16:18.815926+00:00",
       "state": "exact_private",
       "task": "small-positive-bit32-query16-combined-4_barlow-20261006"
+    },
+    "e624ceb7ed9e476bad4f2c6dd15afc71": {
+      "children": [
+        {
+          "id": "18_damosel",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/e624ceb7ed9e476bad4f2c6dd15afc71",
+      "error": "Semantic duplicate trial: ad6bbe8a752d4064b0bcca1b27885952; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:21.029494+00:00",
+      "id": "e624ceb7ed9e476bad4f2c6dd15afc71",
+      "integration_credit": 0,
+      "manifest_sha256": "5bb91d064e627da97163b2257ca6ee157e69597bb46f93fc1ebb28adc01b7d9e",
+      "measured_functions": 0,
+      "outcome_sha256": "4726034eaed67a9b59eaade35a8dfd7dd59abd4ae2fc4e8f09c81add53ea71ec",
+      "semantic_key": "5113865e03b67cf6082a8d937d9b126bb5c54f6a6be91c555b0fe2df4819fe0b",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-18_damosel"
     },
     "e62c06f2274447c6b514f80f26ea6a24": {
       "children": [
@@ -157413,6 +160964,26 @@
       "started": "2026-10-05T04:26:25.230747+00:00",
       "state": "mismatch",
       "task": "native-review-barlow-mode-predicate-v1-20261005"
+    },
+    "e94673bec0984cd4b3982934343c6ee1": {
+      "children": [
+        {
+          "id": "16_snivelak",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/e94673bec0984cd4b3982934343c6ee1",
+      "error": "Semantic duplicate trial: b49745b865f740f4a2f9b6b7f877c24a; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:19.114438+00:00",
+      "id": "e94673bec0984cd4b3982934343c6ee1",
+      "integration_credit": 0,
+      "manifest_sha256": "da6f3bf0fa791ea1337d7ddb70a6b833498c80f11da4b7a1934ba43c692e47b9",
+      "measured_functions": 0,
+      "outcome_sha256": "0792bc25fbd55c880be243cf7aa4dc4bc79e8346d9b3a97b407e790f221edef9",
+      "semantic_key": "735837d50c29dd8c4a85764ff566db78a51cbc2294267c434a5cf658453b3747",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-16_snivelak"
     },
     "e95b9b37967e4f759adfa0fe7fdee949": {
       "compile_attempted": true,
@@ -157882,6 +161453,26 @@
       "state": "exact_private",
       "task": "orbital-bitmap-getter-family-20261004-18_damosel"
     },
+    "ecd46b19721241c0b82a545b33a50346": {
+      "children": [
+        {
+          "id": "5_feltzin_system",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/ecd46b19721241c0b82a545b33a50346",
+      "error": "Semantic duplicate trial: 4c12bf7aceea4db9bd8accd5defc56ac; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:39.824546+00:00",
+      "id": "ecd46b19721241c0b82a545b33a50346",
+      "integration_credit": 0,
+      "manifest_sha256": "b43b483b11f00454c593ce33700abf93eabee840e5b0b403f39e7e47b1ecaae9",
+      "measured_functions": 0,
+      "outcome_sha256": "29fcfb428f5a9c4de53db74375c4b52ce45e22a9fabd7bea58961e85abd7280e",
+      "semantic_key": "115cae511141b7e5589de05323d32ea0b23e361f085411a893e844780032ea40",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-5_feltzin_system"
+    },
     "ecee00ed927d440fa9736244a9bf2817": {
       "compile_attempted": true,
       "directory": "runtime:trials/ecee00ed927d440fa9736244a9bf2817",
@@ -158167,6 +161758,26 @@
       "started": "2026-10-05T02:30:21.521786+00:00",
       "state": "mismatch",
       "task": "orbital-dobbo-orbit-spawn-240-20261004-v1"
+    },
+    "effe1b7dbd364796aa1afb08a7e4ada9": {
+      "children": [
+        {
+          "id": "2_maktar_nebula",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/effe1b7dbd364796aa1afb08a7e4ada9",
+      "error": "Semantic duplicate trial: 8b7c742190ae46b183a4c9a888964365; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:36.291538+00:00",
+      "id": "effe1b7dbd364796aa1afb08a7e4ada9",
+      "integration_credit": 0,
+      "manifest_sha256": "84052f7f4c33d094445108fdeb69ac31d7a4f86cc8564f148a899e8936119c72",
+      "measured_functions": 0,
+      "outcome_sha256": "3919c4a9ac7b374cc1419b7754439d667be1479f60a82923d2409ba9fa5c60ad",
+      "semantic_key": "f8f05afcfe2b6855f355eba8d3ff4c5f35b19fac85e82ed7fa2a52bb7556c430",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-2_maktar_nebula"
     },
     "f0158f6dce3a4d5f8c96338e352d0cf1": {
       "compile_attempted": true,
@@ -158610,6 +162221,26 @@
       "state": "exact_private",
       "task": "bitmap80-missing-4_barlow-002d4468-context-v2-fixed-20261006"
     },
+    "f47621cc239344298dde38fda2323054": {
+      "children": [
+        {
+          "id": "6_notak",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/f47621cc239344298dde38fda2323054",
+      "error": "Semantic duplicate trial: d0c712d715f74ae7b00d0ad642ebf29e; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:40.703689+00:00",
+      "id": "f47621cc239344298dde38fda2323054",
+      "integration_credit": 0,
+      "manifest_sha256": "5771232d8c0946b6ef7abed0d98c24db875c56adaefc307c923c0a593e0f68a4",
+      "measured_functions": 0,
+      "outcome_sha256": "1fd10d54a8d4f4e76725a762132bab8bea228d6b1e4678324853636af61274d2",
+      "semantic_key": "9e52175eb33a570d22e8b7ed610dd6c06194cc1c82278f2638957bcb7db5b0ee",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-6_notak"
+    },
     "f485e3d34fa442fc8f9a65cd5e3b8842": {
       "compile_attempted": true,
       "directory": "runtime:trials/f485e3d34fa442fc8f9a65cd5e3b8842",
@@ -158766,6 +162397,26 @@
       "state": "exact_private",
       "task": "wait372-copy-13_boldan-00337470-fixed-20261006"
     },
+    "f698dbfe46cf4c89a4104cfe67bd9a98": {
+      "children": [
+        {
+          "id": "24_ship_shack",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/f698dbfe46cf4c89a4104cfe67bd9a98",
+      "error": "Semantic duplicate trial: 59f274fbe1934e83b5678a36a3bff926; provide --repeat-reason",
+      "finished": "2026-10-07T09:20:33.646100+00:00",
+      "id": "f698dbfe46cf4c89a4104cfe67bd9a98",
+      "integration_credit": 0,
+      "manifest_sha256": "f14dea530f1102ed97250ea0f35c76dd240dbd5b125f28a842270d69d92efc3b",
+      "measured_functions": 0,
+      "outcome_sha256": "a8b6b3b8946773a28e53e79117c29237c94b8f0e556cdd07e9ba30da65e15d3f",
+      "semantic_key": "3bf5c1f08334cee00c50ece91ae6dcc50c183c83030889e65c566d24d5a72cc6",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007c-24_ship_shack"
+    },
     "f69b1942e6d04133a9c61b1f7e810856": {
       "compile_attempted": true,
       "directory": "runtime:trials/f69b1942e6d04133a9c61b1f7e810856",
@@ -158856,6 +162507,19 @@
       "started": "2026-10-04T22:03:23.256331+00:00",
       "state": "mismatch",
       "task": "native-review-endako-relative-map-v1-20261004"
+    },
+    "f7a9f9a92bff49d8a0e4b04a5f9b9551": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/f7a9f9a92bff49d8a0e4b04a5f9b9551",
+      "finished": "2026-10-07T09:05:49.838706+00:00",
+      "id": "f7a9f9a92bff49d8a0e4b04a5f9b9551",
+      "manifest_sha256": "06eb6e77bd151eeef2ad9453818a9983ad761cc23b4d426eb7dadf6f1405a749",
+      "measured_functions": 96,
+      "outcome_sha256": "5ae32cebd537adf8ebfba4d37209738972ad96ca3b608001396a09c8da058350",
+      "semantic_key": "3d0848ea606c0adbc0d3969a117d546de5cf3134a46e83b6d53d9cf5906b67fc",
+      "started": "2026-10-07T09:05:49.042223+00:00",
+      "state": "exact_private",
+      "task": "gp-lot-20261007-8_tabora"
     },
     "f7ca8010c46b4b5cb06977ee8b2db5f9": {
       "compile_attempted": true,
@@ -159262,6 +162926,26 @@
       "state": "exact_private",
       "task": "update-moby775-76-6_notak-source-first-v1-20261006"
     },
+    "fbfcc5bafa8e4e9a9442b35a613dc794": {
+      "children": [
+        {
+          "id": "20_yeedil",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/fbfcc5bafa8e4e9a9442b35a613dc794",
+      "error": "Semantic duplicate trial: 013ad362772748f1ba62f6cc949ab26b; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:23.892632+00:00",
+      "id": "fbfcc5bafa8e4e9a9442b35a613dc794",
+      "integration_credit": 0,
+      "manifest_sha256": "bf96638ab9651d4cbeb379e69998abc07a683002542b45fde024a3e4218288a5",
+      "measured_functions": 0,
+      "outcome_sha256": "aff684233a28cd723e4405336fbb2464671cfc5db75b2ff5571360e3282c6e84",
+      "semantic_key": "d25d0fedbc9b96606e5737d39b6338e11525527b14bba9b291a638f6506e04b9",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-20_yeedil"
+    },
     "fc0f05563da441b8aeeb50b4f702d89b": {
       "children": [
         {
@@ -159544,6 +163228,26 @@
       "started": "2026-10-05T02:45:32.190314+00:00",
       "state": "exact_private",
       "task": "orbital-float-interval-family-815-20261004-24_ship_shack"
+    },
+    "fe966380401544d898a893ea6cbcf871": {
+      "children": [
+        {
+          "id": "23_damosel_orbit",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/fe966380401544d898a893ea6cbcf871",
+      "error": "Semantic duplicate trial: 705dfe1bc30e4421b5ddacd7d467d255; provide --repeat-reason",
+      "finished": "2026-10-07T09:18:25.817052+00:00",
+      "id": "fe966380401544d898a893ea6cbcf871",
+      "integration_credit": 0,
+      "manifest_sha256": "d421fd3c305918de249446ed790cd4e28541f6f0465c14471b7681306e83b1ab",
+      "measured_functions": 0,
+      "outcome_sha256": "0b2b76e45d439712333b4e885bac4769153e11cfc2a987ce0fbcb80f9f9545db",
+      "semantic_key": "53b6efa102893419351282717205757f8840c9728ba88e343ccbc1682c048085",
+      "state": "preparation_rejected",
+      "task": "gp-lot-20261007b-23_damosel_orbit"
     },
     "feb87529ad1d428d9e65ae7e68aa5063": {
       "compile_attempted": true,

@@ -1783,3 +1783,168 @@ int LVL_5_FELTZIN_SYSTEM_FUN_00392F70(int a0, int a1)
         }
     return r;
 }
+/* Paired-strip packet emitter, 396 bytes, placed in levels/10_hrugis_cloud and
+   levels/5_feltzin_system.  The body writes a 16-byte GIF header into the
+   resident packet cursor (a small-data global), advances the cursor, then
+   writes the tag words and two packed 64-bit strip descriptors.  The retail
+   loads the cursor with LUI/LO and advances it through $gp, so the unit is
+   compiled under the qualified small-data profile (-O2 -G8). */
+extern int *LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88 __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001A7350 __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001A7354 __attribute__((sda));
+
+void LVL_5_FELTZIN_SYSTEM_FUN_003138E8(int a0, int a1, int a2, int a3, int p4, int p5)
+{
+    long long *q;
+
+    *(int *)((char *)LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88 + 0) = 0x10000003;
+    *(int *)((char *)LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88 + 4) = 0;
+    *(int *)((char *)LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88 + 8) = 0;
+    *(int *)((char *)LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88 + 12) = 0x50000003;
+    q = (long long *)LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88;
+    LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88 = (int *)((char *)q + 16);
+    q[2] = 0x4400000000008001LL;
+    q[3] = 17424;
+    q[4] = 65;
+    q[5] = p4;
+#define LO_D0 (*(int *)((char *)&LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001A7350 + 0))
+#define HI_D4 (*(int *)((char *)&LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001A7354 + 0))
+
+    if (p5 != 0) {
+        q[6] = (a0 + LO_D0 - 8)
+             | ((long long)(a1 + HI_D4 - 8) << 16)
+             | 0xFFFFF000000000LL;
+        q[7] = (a2 + LO_D0 - 8)
+             | ((long long)(a3 + HI_D4 - 8) << 16)
+             | 0xFFFFF000000000LL;
+    } else {
+        q[6] = ((a0 << 4) + LO_D0 - 16)
+             | ((long long)((a1 << 4) + HI_D4 - 16) << 16)
+             | 0xFFFFF000000000LL;
+        q[7] = ((a2 << 4) + LO_D0 - 16)
+             | ((long long)((a3 << 4) + HI_D4 - 16) << 16)
+             | 0xFFFFF000000000LL;
+    }
+    LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88 = (int *)((char *)LVL_5_FELTZIN_SYSTEM_Fa6a1a427_D_001B2C88 + 48);
+}
+/* family 9bb235d69b795f0f - 372 bytes, 2 placements
+   levels/10_hrugis_cloud @0x00316120, levels/5_feltzin_system @0x00313C08
+
+   Builds one packet into the resident buffer: four-word header, advance the
+   resident pointer by 16, three pinned 64-bit words plus the caller payload,
+   then two packed 64-bit words selected by argument 7, then advance by 48.
+   The | chain must be written unshifted-term first: that fixes both the
+   accumulation register and the instruction interleaving (see SOLUTION.md).
+*/
+
+extern int *LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88 __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7350 __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7354 __attribute__((sda));
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00313C08(int a1, int a2, int a3, int a4,
+                                       long long a5, int a6, int a7)
+{
+    *(int *)LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88 = 0x10000003;
+    *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88 + 4) = 0;
+    *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88 + 8) = 0;
+    *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88 + 12) = 0x50000003;
+    {
+        char *p = (char *)LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88;
+
+        LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88 = (int *)(p + 16);
+        *(long long *)(p + 16) = 0x4400000000008001LL;
+        *(long long *)(p + 24) = 0x4410;
+        *(long long *)(p + 32) = 0x46;
+        *(long long *)(p + 40) = a5;
+        if (a7 != 0) {
+            *(long long *)(p + 48) = ((a1 + LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7350) - 8)
+                                   | ((long long)((a2 + LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7354) - 8) << 16)
+                                   | ((long long)a6 << 32);
+            *(long long *)(p + 56) = ((a3 + LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7350) - 8)
+                                   | ((long long)((a4 + LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7354) - 8) << 16)
+                                   | ((long long)a6 << 32);
+        } else {
+            *(long long *)(p + 48) = (((a1 << 4) + LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7350) - 16)
+                                   | ((long long)(((a2 << 4) + LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7354) - 16) << 16)
+                                   | ((long long)a6 << 32);
+            *(long long *)(p + 56) = (((a3 << 4) + LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7350) - 16)
+                                   | ((long long)(((a4 << 4) + LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001A7354) - 16) << 16)
+                                   | ((long long)a6 << 32);
+        }
+        LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88 = (int *)((char *)LVL_5_FELTZIN_SYSTEM_F9bb235d6_D_001B2C88 + 48);
+    }
+}
+extern int *LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B2C88 __attribute__((sda));
+extern int *LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B2AA0 __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001A72D0 __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001A72D4 __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B1FBC __attribute__((sda));
+
+typedef struct { int *saved; } SavedSlot;
+extern SavedSlot LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B2AC0 __attribute__((sda));
+
+typedef struct {
+    char gap0[12];
+    short count;
+    char gap14[2];
+    long long *table;
+} ResidentTable;
+
+void LVL_5_FELTZIN_SYSTEM_FUN_0036F538(void)
+{
+    ResidentTable *resident = (ResidentTable *)LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B2AA0;
+    int *current = LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B2C88;
+    int index;
+
+    LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B2AC0.saved = current;
+    LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B2C88 = (int *)((char *)current + 16);
+    LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001A72D0 = LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001A72D4;
+    LVL_5_FELTZIN_SYSTEM_F060b9f20_D_001B1FBC = 0;
+    for (index = 0; index < resident->count; ++index)
+        *(long long *)((char *)resident->table + index * 16) = 0;
+}
+extern unsigned char *LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2520 __attribute__((sda));
+extern unsigned char *LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2524 __attribute__((sda));
+extern unsigned int LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2048 __attribute__((sda));
+extern unsigned int LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2440 __attribute__((sda));
+void LVL_5_FELTZIN_SYSTEM_FUN_00328478(void)
+{
+    unsigned char *p = LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2520;
+    int seen = 0;
+    unsigned int limit;
+    LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2440 = 0;
+    while (p < LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2524) {
+        limit = LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2048;
+        do {
+            if ((p[32] >= 254 && *(unsigned int *)(p + 160) <= limit) || seen) {
+                LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2440 = LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2440 + 1;
+                seen = (p[32] == 0xff) ? 1 : seen;
+            }
+            p += 256;
+        } while (p < LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2524);
+    }
+}
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_5_FELTZIN_SYSTEM_F1157be91_D_001A63E8;
+extern unsigned char LVL_5_FELTZIN_SYSTEM_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_5_FELTZIN_SYSTEM_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_5_FELTZIN_SYSTEM_F1157be91_FUN_00133230(void);
+extern int LVL_5_FELTZIN_SYSTEM_F1157be91_FUN_00132028(void);
+
+int LVL_5_FELTZIN_SYSTEM_FUN_00340DA8(int a0, int a1, int a2) {
+    CdMode mode = LVL_5_FELTZIN_SYSTEM_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_5_FELTZIN_SYSTEM_F1157be91_D_001A7900[0];
+    LVL_5_FELTZIN_SYSTEM_F1157be91_D_001A7430[0] = 0;
+    LVL_5_FELTZIN_SYSTEM_F1157be91_D_001A7434 = 0;
+    LVL_5_FELTZIN_SYSTEM_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_5_FELTZIN_SYSTEM_F1157be91_FUN_00133230();
+    LVL_5_FELTZIN_SYSTEM_F1157be91_FUN_00132028();
+    return 1;
+}

@@ -1633,3 +1633,59 @@ void LVL_7_SIBERIUS_FUN_00428278(int *p, unsigned int n, int a2, int a3)
     p[3] = 0;
     p[0] = a2;
 }
+/* Family 430eca3b2fc8d2b0 (112 B, 2 placements).
+   A search over the resident table reached through LVL_7_SIBERIUS_F430eca3b_D_001AA7B0: the first entry
+   is tested outside the loop, the loop scans the rest, and the found index is
+   re-read.  Every access names the global itself, so cc1 merges the loads into
+   one register and keeps the index arithmetic (no strength reduction), which
+   is the retail shape.  The one small-data global LVL_7_SIBERIUS_F430eca3b_D_001A79F0 is loaded in the
+   branch delay slot, so the qualified small-data profile is required. */
+
+extern int *LVL_7_SIBERIUS_F430eca3b_D_001AA7B0 __attribute__((sda));
+extern int LVL_7_SIBERIUS_F430eca3b_D_001A79F0 __attribute__((sda));
+
+int LVL_7_SIBERIUS_FUN_002FC838(int a0)
+{
+    int r = -1;
+    int i = 0;
+
+    if (LVL_7_SIBERIUS_F430eca3b_D_001AA7B0[0] == a0) {
+        r = 0;
+    } else {
+        while (i < 28) {
+            if (LVL_7_SIBERIUS_F430eca3b_D_001AA7B0[i] == a0) {
+                r = i;
+                break;
+            }
+            i++;
+        }
+    }
+    if (LVL_7_SIBERIUS_F430eca3b_D_001AA7B0[r] == 0 && LVL_7_SIBERIUS_F430eca3b_D_001A79F0) {
+        r = -1;
+    }
+    return r;
+}
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_7_SIBERIUS_F1157be91_D_001A63E8;
+extern unsigned char LVL_7_SIBERIUS_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_7_SIBERIUS_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_7_SIBERIUS_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_7_SIBERIUS_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_7_SIBERIUS_F1157be91_FUN_00133230(void);
+extern int LVL_7_SIBERIUS_F1157be91_FUN_00132028(void);
+
+int LVL_7_SIBERIUS_FUN_00324DA0(int a0, int a1, int a2) {
+    CdMode mode = LVL_7_SIBERIUS_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_7_SIBERIUS_F1157be91_D_001A7900[0];
+    LVL_7_SIBERIUS_F1157be91_D_001A7430[0] = 0;
+    LVL_7_SIBERIUS_F1157be91_D_001A7434 = 0;
+    LVL_7_SIBERIUS_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_7_SIBERIUS_F1157be91_FUN_00133230();
+    LVL_7_SIBERIUS_F1157be91_FUN_00132028();
+    return 1;
+}

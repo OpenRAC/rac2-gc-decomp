@@ -6,10 +6,10 @@
   "reference_sha256": "ad5840ad4ebfef75199ad6196e36ba010d99970e75d0de681a050ab4c59f944b",
   "reference_entry": 2774024,
   "candidate_source": "candidates/levels/16_snivelak.c",
-  "source_sha256": "61ffc7e78dd3106f42e688c5f13c061d881cc0a387f63cc871ea5c44c2aecdff",
-  "catalog_sha256": "00b56e40750cc57f19ee50c30495a0c4d0c265763ca49d7f9a692dc19e3266e8",
-  "object_sha256": "3c3cbee09e1f3be98e9f8ba3a955628a4380e8569e6593aeda4a25a49f8dfa55",
-  "candidate_elf_sha256": "2f8f9261acae2147d5377b596bed91e2e8185b57bf6d8bb95d3a1f4a4d7fca1b",
+  "source_sha256": "a7ebbcb2b37e50b2334a743b6e5b607f54d621c8bbced024819e9e8bd6018dd8",
+  "catalog_sha256": "37434f353734af29f39bc323c150b8bae918c4b18d19f25496dbbacfa43bf27f",
+  "object_sha256": "67b96c6818de5da460de5d613ef8a22cf9aecc2c45e0000b828f37a1c821b860",
+  "candidate_elf_sha256": "aef88065175f4d23a02a2037b185ba36b6d58178f19af7149d27c356546608f0",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -518,6 +518,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 88
+    },
+    {
+      "symbol": "LVL_16_SNIVELAK_FUN_00326728",
+      "address": 3303208,
+      "size": 112,
+      "matched": true,
+      "reference_sha256": "f9647c1021d6397a08e7f263f22bdd745d94e55f61c0ed3ef307341f14c38e1b",
+      "candidate_sha256": "f9647c1021d6397a08e7f263f22bdd745d94e55f61c0ed3ef307341f14c38e1b",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 112
     },
     {
       "symbol": "LVL_16_SNIVELAK_FUN_003268A0",
@@ -1159,5 +1170,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 9120
+  "matched_code_bytes": 9232
 }

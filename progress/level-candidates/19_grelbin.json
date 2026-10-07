@@ -6,10 +6,10 @@
   "reference_sha256": "eeab491a667c311b024745af7173ac08371e279ade0b4ab5d48b6f81fa751aaf",
   "reference_entry": 2782728,
   "candidate_source": "candidates/levels/19_grelbin.c",
-  "source_sha256": "5203cc021472bbe0be3d6da6c62bf5ed4115cdf46f56723372bda0b067cfbcb6",
-  "catalog_sha256": "d25fa54e441517a713421c3fa8082c89d5af3c4a1a3a73b41afd53f849076c7a",
-  "object_sha256": "cc7e8ac6258c6d21715c78654a663b8bccb91aa0b3f882c82cd40e91f1b12866",
-  "candidate_elf_sha256": "0408d6012896b8a1958cd785fc115ff646e63a689a5f547768bac23e003e9297",
+  "source_sha256": "6454af283f0b1b5ac6bc6ee76d79517d75854cd01ea7aa8ba13b0ed7b4c294b6",
+  "catalog_sha256": "3dd790baa702b528ce60af310962fbb4425d25ed6f48236769d3b2ddda4c408a",
+  "object_sha256": "d40c21eba2215b244b0588b46bfca1229adca055c59b42e480fdbeab353de4b6",
+  "candidate_elf_sha256": "0ec6002841020cdbd5e6ee59dd1e9dc70ffc5c5b8b81396d40721e744b771089",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -366,6 +366,17 @@
       "produced_size": 116
     },
     {
+      "symbol": "LVL_19_GRELBIN_FUN_002F8DF8",
+      "address": 3116536,
+      "size": 396,
+      "matched": true,
+      "reference_sha256": "25ec3f26f6cd32b230b3cf5fb2fc5f8d8dcb02eb0e0cfdbfda75b001b692e728",
+      "candidate_sha256": "25ec3f26f6cd32b230b3cf5fb2fc5f8d8dcb02eb0e0cfdbfda75b001b692e728",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 396
+    },
+    {
       "symbol": "LVL_19_GRELBIN_FUN_002F9F30",
       "address": 3120944,
       "size": 8,
@@ -518,6 +529,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 88
+    },
+    {
+      "symbol": "LVL_19_GRELBIN_FUN_0032B9F8",
+      "address": 3324408,
+      "size": 112,
+      "matched": true,
+      "reference_sha256": "f9647c1021d6397a08e7f263f22bdd745d94e55f61c0ed3ef307341f14c38e1b",
+      "candidate_sha256": "f9647c1021d6397a08e7f263f22bdd745d94e55f61c0ed3ef307341f14c38e1b",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 112
     },
     {
       "symbol": "LVL_19_GRELBIN_FUN_0032BB70",
@@ -1082,5 +1104,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 8420
+  "matched_code_bytes": 8928
 }

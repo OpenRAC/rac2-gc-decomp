@@ -46,6 +46,26 @@ combined-reference binding receipt. Named sections alone are insufficient.
 This is a static code-inventory model with runtime preservation explicitly
 unproved; see [the boot and remaining-duplication verification](BOOT-SHARED-CODE-VERIFICATION.md).
 
+`verify_boot_bindings.py` writes that receipt as plain JSON, and
+`build_unique_catalog.py` refuses to overwrite an existing destination, so the
+receipt reaches the catalogue through three steps that no single script owns:
+
+1. `python scripts/verify_boot_bindings.py --repo . --references <private refs>
+   --catalog <fresh catalogue> --output <fresh path>.json`
+2. gzip that JSON to `config/function-evidence/boot-bindings.json.gz`; its SHA-256
+   and the `source_catalog_sha256` recorded inside it become the catalogue's
+   `boot_binding_proof` descriptor, with `scope` = `combined-pinned-reference-images`
+   and `runtime_preservation_proven` = false.
+3. add the four pins the descriptor makes required to `input_pins`: the receipt,
+   `config/function-evidence/pointer-arguments.json.gz`,
+   `scripts/verify_boot_bindings.py` and `scripts/validate_boot_binding.py`.
+
+Skipping step 2 or 3 does not fail loudly at build time: the refined grouping
+loses every boot edge and the conservative unique numerator inflates by tens of
+thousands of bytes. The guard is `combined_reference_boot_edges` in
+`progress/unique-code-report.json`, which must equal the receipt's binding count
+and never zero.
+
 The generator reads private pinned references and reconstructs every complete
 body byte for byte. Its public compressed chunks contain structural identifiers,
 address-role metadata and hash receipts, never reference instructions or assets.

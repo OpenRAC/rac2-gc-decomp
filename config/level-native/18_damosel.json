@@ -31,9 +31,24 @@
     "LVL_18_DAMOSEL_F07a718bf_D_001BCF88": 1822600,
     "LVL_18_DAMOSEL_F0be97c76_D_00189E20": 1613344,
     "LVL_18_DAMOSEL_F0dbfe45a_D_001CA028": 1876008,
+    "LVL_18_DAMOSEL_F1157be91_D_001A63E8": 1729512,
+    "LVL_18_DAMOSEL_F1157be91_D_001A7430": 1733680,
+    "LVL_18_DAMOSEL_F1157be91_D_001A7434": 1733684,
+    "LVL_18_DAMOSEL_F1157be91_D_001A7900": 1734912,
+    "LVL_18_DAMOSEL_F1157be91_FUN_00132028": 1253416,
+    "LVL_18_DAMOSEL_F1157be91_FUN_00133230": 1258032,
+    "LVL_18_DAMOSEL_F1157be91_FUN_001334B8": 1258680,
     "LVL_18_DAMOSEL_F1c0a2bbf_D_001ADD18": 1760536,
     "LVL_18_DAMOSEL_F1c0a2bbf_D_001ADD38": 1760568,
     "LVL_18_DAMOSEL_F1c0a2bbf_FUN_00115E38": 1138232,
+    "LVL_18_DAMOSEL_F236d541c_D_001A742C": 1733676,
+    "LVL_18_DAMOSEL_F236d541c_D_001B2F88": 1781640,
+    "LVL_18_DAMOSEL_F25780968_D_001A7350": 1733456,
+    "LVL_18_DAMOSEL_F25780968_D_001A7354": 1733460,
+    "LVL_18_DAMOSEL_F25780968_D_001B2F88": 1781640,
+    "LVL_18_DAMOSEL_F32969de2_D_001AC000": 1753088,
+    "LVL_18_DAMOSEL_F32969de2_D_001B2820": 1779744,
+    "LVL_18_DAMOSEL_F32969de2_D_001B2824": 1779748,
     "LVL_18_DAMOSEL_F55a1acb8_D_001A63A8": 1729448,
     "LVL_18_DAMOSEL_F55a1acb8_D_001A63AC": 1729452,
     "LVL_18_DAMOSEL_F55a1acb8_FUN_0011AEA0": 1158816,
@@ -56,8 +71,11 @@
     "LVL_18_DAMOSEL_FUN_0030EE70": 3206768,
     "LVL_18_DAMOSEL_FUN_0032B460": 3322976,
     "LVL_18_DAMOSEL_FUN_0037B810": 3651600,
-    "LVL_18_DAMOSEL_FUN_003976B0": 3765936,
     "LVL_18_DAMOSEL_Fa2dbe766_D_00189E20": 1613344,
+    "LVL_18_DAMOSEL_Fafa454c6_D_001B2FA0": 1781664,
+    "LVL_18_DAMOSEL_Fafa454c6_D_001B2FA4": 1781668,
+    "LVL_18_DAMOSEL_Fafa454c6_FUN_0011A950": 1157456,
+    "LVL_18_DAMOSEL_Fafa454c6_FUN_0011B658": 1160792,
     "LVL_18_DAMOSEL_Fafab4c55_D_001AD5F0": 1758704,
     "LVL_18_DAMOSEL_Fafab4c55_D_001AD600": 1758720,
     "LVL_18_DAMOSEL_Fafab4c55_D_001AD608": 1758728,
@@ -66,6 +84,7 @@
     "LVL_18_DAMOSEL_Fe77c6258_D_001ADD18": 1760536,
     "LVL_18_DAMOSEL_Fe77c6258_D_001ADD60": 1760608,
     "LVL_18_DAMOSEL_Fe77c6258_FUN_00115E38": 1138232,
+    "LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88": 1781640,
     "LVL_18_DAMOSEL_Fea34650e_D_00189E20": 1613344,
     "LVL_18_DAMOSEL_Fee2b87d1_D_0014B540": 1357120,
     "LVL_18_DAMOSEL_Fee2b87d1_D_00152CD0": 1387728
@@ -225,6 +244,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_00307888"
     },
     {
+      "address": 3190208,
+      "meaning": "shared native body of family 236d541c0f24cbf9",
+      "size": 108,
+      "symbol": "LVL_18_DAMOSEL_FUN_0030ADC0"
+    },
+    {
       "address": 3202072,
       "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
@@ -263,6 +288,12 @@
       "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
       "symbol": "LVL_18_DAMOSEL_FUN_003116E0"
+    },
+    {
+      "address": 3235536,
+      "meaning": "shared native body of family 25780968cc90f4a5",
+      "size": 372,
+      "symbol": "LVL_18_DAMOSEL_FUN_00315ED0"
     },
     {
       "address": 3239544,
@@ -349,6 +380,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_003487A0"
     },
     {
+      "address": 3446520,
+      "meaning": "shared native body of family 1157be91806b76ca",
+      "size": 112,
+      "symbol": "LVL_18_DAMOSEL_FUN_003496F8"
+    },
+    {
       "address": 3446896,
       "meaning": "(1) the resident 0x1A7Bxx accesses must use the form giving retail's lui/lw shape; (2) inside the guarded block the source order must be read f1C, clear f18, clear f1C, call - any other order keeps th",
       "size": 112,
@@ -398,6 +435,18 @@
       "address": 3764408,
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_003970B8"
+    },
+    {
+      "address": 3765936,
+      "meaning": "ring header writer advanced through the overlay's own small-data pointer",
+      "size": 180,
+      "symbol": "LVL_18_DAMOSEL_FUN_003976B0"
+    },
+    {
+      "address": 3768056,
+      "meaning": "shared native body of family afa454c62e00c177",
+      "size": 112,
+      "symbol": "LVL_18_DAMOSEL_FUN_00397EF8"
     },
     {
       "address": 3775568,
@@ -462,6 +511,12 @@
       "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
       "size": 136,
       "symbol": "LVL_18_DAMOSEL_FUN_003D4068"
+    },
+    {
+      "address": 4033840,
+      "meaning": "shared native body of family 32969de2c02196ef",
+      "size": 184,
+      "symbol": "LVL_18_DAMOSEL_FUN_003D8D30"
     },
     {
       "address": 4052752,
@@ -668,7 +723,7 @@
       "symbol": "LVL_18_DAMOSEL_FUN_00474F48"
     }
   ],
-  "gp": 0,
+  "gp": 1765360,
   "kind": "level-native-catalog",
   "level": "18_damosel",
   "program": "levels/18_damosel",
