@@ -12,16 +12,39 @@ python scripts/source_layout.py --check --inventory-check progress/source-invent
 
 ## Boot pilot
 
-Thirteen ordered fragments in `src/boot/` group layouts, resident accessors,
+Nineteen ordered core fragments in `src/boot/` group layouts, resident accessors,
 utilities, object operations, callbacks and the packed-pixel decoder. The
 generator concatenates them without introducing includes, line directives,
 whitespace or additional compiler invocations. Types and declarations retain
 their original order and scope. The output is still one `boot.c` translation
-unit containing 178 catalogued definitions.
+unit containing 187 catalogued definitions. The recipe also includes the
+vendored libgcc source in `src/libgcc/fp-bit-ee.c`; its one accepted definition
+is upstream library code, separately licensed, rather than campaign-authored
+code. Its complete notices also accompany the generated copy in `boot.c`.
+The dual-prime core fragment contains the mechanically adapted MIT-licensed Lombyte
+dual-prime motion-vector body, with its complete notice. Its provenance and
+independent complete-body acceptance are recorded in
+[`MPEG-DUAL-PRIME-EVIDENCE.md`](MPEG-DUAL-PRIME-EVIDENCE.md).
+Two further attributed core fragments contain the unchanged temporary-track
+update and IPU synchronization bodies. Their provenance, original mixed trial
+and final whole-unit qualification are recorded in
+[`SDK-TRACK-IPU-EVIDENCE.md`](SDK-TRACK-IPU-EVIDENCE.md).
 
 These are authored organizational boundaries. They do not establish original
 retail modules, object files or independently compilable units. Independent
 object splitting remains a separate experiment requiring new complete proofs.
+
+The separately qualified SDK `_sysbitFlush` body is authored as
+`src/sdk/sysbit_flush.c` and rendered byte-identically to
+`candidates/sdk/sysbit_flush.c`. Its source-specific catalogue and review do not
+change the default 187-function unit or its shared overlay placements. The boot
+integration records both owners explicitly and compares each complete object
+before the full loaded-image gate. See [the source and ownership evidence](SDK-SYSBIT-EVIDENCE.md).
+The additional `src/sdk/cpr8_source_unit.c` source is rendered under the same
+bare filename and has its own complete-object, four-call relocation and opaque
+helper ownership proof. See [CPR8 evidence](SDK-CPR8-EVIDENCE.md). The three SDK
+units contribute 1,144 catalogued bytes without changing default GNU or native
+sources. The third unit is the unchanged attributed IPU DMA restart body; see [its evidence](SDK-RESTART-DMA-EVIDENCE.md). These authored units do not establish original retail object boundaries.
 
 ## Native family pilot
 
@@ -34,7 +57,7 @@ authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The source inventory verifies eight base families by exact authored source after
 recorded symbol substitutions. Seven have 27 placements; the five-entry table
-family has 26. Five hundred forty-four contextual native bodies remain distinct in the
+family has 26. Nine hundred six contextual native bodies remain distinct in the
 inventory. The clear family, floating-field guard and GS buffer setup have
 canonical shared fragments. The guard and GS setup retain per-program helper
 bindings; their 27 forms each
@@ -42,6 +65,12 @@ remain separate inventory items because external addresses are part of the
 current normalization. Expand factorization after
 the same source-identity and complete-image checks, rather than assuming every
 similarly sized body belongs to one family.
+
+Two further shared fragments provide the 32-byte entity bit setter and the
+16-byte signed-cell comparison, each with 27 function-name substitutions.
+Their complete-unit qualification and retained refusals are described in
+[the scalar leaf pair evidence](SCALAR-LEAF-PAIR-EVIDENCE.md). These fragments
+do not establish original object, class or module boundaries.
 
 ## Authoring and regeneration
 
@@ -75,107 +104,40 @@ artifacts and current-hash files remain private.
 
 ## Separate source and coverage metrics
 
-The checked [`source inventory`](../progress/source-inventory.json) currently records:
+The checked [source inventory](../progress/source-inventory.json) records:
 
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | ---: | ---: |
-| Boot | 178 definitions | 9,336 |
-| Native overlays | 552 family-or-singleton items, 553 contextual variants | 61,172 across 759 placements |
-| Clear-family pilot | 2 textual variants, 24 representative bytes | 648 across 27 placements |
+| Default GNU boot | 187 catalogued definitions (183 campaign-authored, four attributed definitions) | 10,552 |
+| Separate SDK boot units | Three attributed definitions with complete-object proofs | 1,144 |
+| Native overlays | 941 family-or-singleton items, 942 contextual variants | 109,380 across 1,148 placements |
+| Clear-family pilot | Two textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 51,988, or 52,012 when both clear
-variants are retained separately. These are organization metrics, based on
-explicit source membership, not a new machine-equivalence claim. This inventory
-excludes replicated common boot coverage in overlays and is not a replacement
-for the full game's progress denominator.
+Native representative catalogued bytes total 100,196, or 100,220 when both clear
+variants are retained separately. These organization metrics exclude replicated
+common boot coverage and do not replace the game's progress denominator.
 
-The current integration exporter accepts **272,620 / 48,788,176 bytes (0.5588%)**.
-The latest matching lot adds 144 complete placements totaling 15,416 bytes:
-27 mapped-class queries of 84 bytes, 27 serialized-header relocation and row
-compaction bodies of 300 bytes, 27 resident-mode predicates of 60 bytes,
-19 pairs of 56-byte object flag setters and clearers, and 25 conditional
-eight-slot resets of 52 bytes. Joint flag sources share their declarations
-once; measured Ship Shack storage spellings retain separate exact variants.
-All 759 complete native functions match, including 615 prior controls, followed
-by fresh boot and all 27 loaded-byte and metadata gates. Compaction calls the
-original measured PLZCW helper as an external and adds zero helper credit.
-The reset family excludes Barlow and Notak because one raw caller in each lacks
-a stored complete function boundary; no placement or credit is inferred.
-Current per-program flags, GP and far-data attributes remain qualified.
+The prototype-labelled callback 775 has one canonical shared fragment and 27
+explicit function/helper bindings. Its neutral partial field view and observed
+ABI are documented in [the family evidence](UPDATE-MOBY775-76-EVIDENCE.md).
+Its helper addresses remain contextual inventory operands, so sharing a source
+fragment does not itself collapse those entries or prove machine equivalence.
 
-The preceding matching lot added three complete families across all 27 overlays:
-88-byte record-object searches, 160-byte object-class filters and 96-byte
-kind-pointer selectors. The 81 new placements total 9,288 bytes. All 615
-complete native functions match, including 534 prior controls, with fresh
-combined source/object qualifications and boot plus all 27 loaded-byte and
-metadata gates. Ship Shack retains its measured typed-root expression and
-removes only the external binding now supplied by its new definition; Barlow
-retains its qualified G8 profile and three far-pointer NOSDA declarations.
-These explicit storage and call bindings do not infer original module boundaries.
+The current integration exporter accepts **346,192 / 48,788,176 bytes**:
+190 boot functions contribute 11,696 bytes; 5,383 overlay placements contribute
+334,496 bytes, including 1,148 native functions. The latest lot adds 27 complete
+76-byte callbacks and one independently qualified 336-byte SDK IPU restart body,
+for 2,388 additional loaded C bytes. All existing controls remain exact.
+The default GNU object and both previous SDK objects retain their prior hashes.
+Barlow retains its G8 profile and fixed GP; other native units retain G0.
 
-The preceding matching lot added 27 selected-object row override loops of 192
-bytes, totaling 5,184 bytes. Each signed sentinel list selects objects with
-measured byte counts and row pointers. A row key indexes two signed halfword
-overrides; nonzero values are merged with retained upper word bits. All 534
-complete native functions in the current 27 units match, including 507 prior
-controls, with source/catalog bytes identical to their immutable qualifications.
-Fresh boot and all 27 loaded-byte and metadata gates pass. No field projection
-or canonical fragment establishes an original source name or object boundary.
+Fresh boot and all 27 overlay PT_LOAD bytes and metadata pass under campaign
+`790b5eb477624821be9ed3fcdc3c615d`. The prior batch's boot symbol-dispatch refusal
+and all earlier source/instrumentation refusals remain retained evidence. No
+helper implementation, source permutation or generic SDK profile is credited.
 
-The preceding pair/query lot added 29 placements totaling 2,104 bytes: 27 two-key
-table lookups of 68 bytes, a 188-byte Joba counter increment and an 80-byte
-indexed polygon-query dispatcher. All 507 complete native functions in the
-final 27 units match, including 478 controls; the combined Joba source contains
-21 exact functions. The other 26 units preserve their previously qualified
-source/catalog bytes exactly. Fresh boot and all 27 loaded-byte and metadata
-gates pass. The two Joba bodies are absent in the other programs; the existing
-204-byte crossing-parity helper receives no additional credit.
-
-The preceding singleton lot added one 268-byte Joba class-counter consumer. It
-selects one of six measured signed state counters, decrements a positive count,
-and returns success. All 18 complete functions in the current Joba source match,
-including 17 controls. Its raw body is absent from the other 26 programs, which
-gain no inferred placement. Fresh boot and all 27 overlay loaded-byte and metadata
-gates pass; the total native catalog holds 478 complete placements.
-
-The preceding parallel lot added 78 placements totaling 7,576 bytes: 23 signed
-index clamp/wrap algorithms of 100 bytes, 27 record-key updates of 116 bytes,
-27 resident bitmap getters of 72 bytes and the 200-byte Barlow queue launcher.
-The three independently qualified worker packets were combined with the launcher;
-all 477 complete functions in the final 27 standalone units match. Fresh boot
-and all 27 overlay loaded-byte and metadata gates pass. The index shape is absent
-in four programs, which receive no inferred placement or credit.
-
-Barlow uses the separately qualified small-data profile and the measured GP;
-its far four-byte control object has an explicit NOSDA binding. Boot and the
-other 26 native programs retain the default flags. Reviews and loaded-image
-proofs bind each program's actual flags, source and checker. This does not infer
-original SDK compilation flags or recovered object boundaries.
-
-The previous lot added nine complete 36-byte scalar cubic helpers, totaling
-324 bytes. Their float operation order is preserved; the shape is absent in
-18 programs and no copies are inferred there.
-
-The previous scalar lot added 101 placements totaling 4,468 bytes: 15 output
-wrappers of 56 bytes, 27 status classifiers of 56 bytes, 27 classifiers of 36
-bytes, 27 object-identifier checks of 32 bytes and five header getters of 56
-bytes. Earlier lots added 27 136-byte GS buffer setup wrappers, 27 92-byte
-floating-field guards and the 76-byte Ship Shack traversal.
-
-Twenty-one canonical fragments supply the scalar bodies with explicit placements.
-Status classifiers call each unit's existing indexed status getter definition;
-the output wrappers bind measured per-program floating helper addresses.
-The output wrapper is absent in 12 programs and the header getter is absent in
-22 programs; no placement or credit is inferred there. The inventory's eight
-base-family categories remain fixed, so the added scalar bodies remain contextual
-items in its conservative counters despite their canonical fragment reuse.
-This bookkeeping distinction does not change the exporter or matching numerator.
-
-The independently requalified 80-byte signed-weight loop adds no credit: all 27
-placements were already integrated through boot-shared `FUN_0027F128`. A proposed
-native alias for each placement triggered the integration overlap guard. The
-private trials and refusal are retained; the redundant native rows and fragments
-are excluded from the current source inventory and matching total.
-Refactoring sources adds zero matching credit. The earlier organization-only pilot regenerated all 28
-standalone C files identically while preserving its catalogs, checker and flags.
-The later small-data extension separately qualifies per-program native flags. Complete image checks remain the final acceptor.
+The conservative all-members unique measure is **89,964 / 44,451,612 bytes**.
+All 109,725 function reconstructions and the complete pointer-theorem replay
+pass. Static target classes and retained unowned data operands can keep copies
+separate; source identity alone does not establish original source, data-object,
+module or runtime equivalence.

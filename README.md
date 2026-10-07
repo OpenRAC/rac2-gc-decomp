@@ -27,21 +27,44 @@
 
 ## Current status
 
+The global catalogue also reports conservative unique EE code under a
+[documented structural grouping policy](docs/GLOBAL-UNIQUE-CODE.md).
+Unsupported extents stay separate, unproved address fields stay literal, and
+static target classes refine relocation templates. This is a different scope
+from loaded-byte coverage; the normal matching acceptance rule is unchanged.
+
+![Unique and loaded code](progress/unique-decompilation.svg)
+
+<!-- unique-code-progress:start -->
+| Metric | Matched C bytes | Total code bytes | Progress |
+| --- | ---: | ---: | ---: |
+| Conservative unique EE code (unsupported extents uncollapsed) | 99,276 | 44,451,612 | 0.2233% |
+| Loaded code (boot + 27 overlays) | 488,388 | 48,788,176 | 1.0010% |
+
+Structurally supported function extents cover 40,029,748 loaded EE bytes; 231,732 EE bytes remain unresolved. VU code excluded: 86,368 bytes.
+Provisional representative partition: 37,641,816 bytes (certified: false); no global progress percentage is inferred from this partition.
+Conservative global partition retains unknown extents and gaps without deduplication: 8,672,060 loaded EE bytes have unsupported boundaries. The total follows the stated grouping policy and is not a certified original-source size. Supported subset: 99,276 / 35,779,552 unique bytes.
+
+Shared boot binding: 22,522 static edges in combined pinned reference images. Runtime code preservation is unproved. See [the binding and remaining-duplication audit](docs/BOOT-SHARED-CODE-VERIFICATION.md).
+<!-- unique-code-progress:end -->
+
 <p align="center">
   <a href="progress/report.json"><img src="progress/decompilation.svg" alt="Validated matching C/C++ progress across the boot and 27 overlays" width="760"></a>
 </p>
 
-Recorded validation on **3 October 2026**:
+<!-- generated-progress:start -->
+Recorded validation on **7 October 2026**:
 
 | Scope | Integrated C functions / placements | Matched C bytes |
 | --- | ---: | ---: |
-| Boot | 178 functions | 9,336 |
-| 27 level overlays | 4,334 placements | 212,424 |
-| Native overlay subset, included above | 234 placements | 10,312 |
-| **Total C coverage** | **Boot + all 27 overlays** | **221,760 / 48,788,176 (0.4545%)** |
+| Boot | 244 functions | 13,456 |
+| 27 level overlays | 7,143 placements | 474,932 |
+| Native overlay subset, included above | 2,747 placements | 234,996 |
+| **Total C coverage** | **Boot + all 27 overlays** | **488,388 / 48,788,176 (1.0010%)** |
+<!-- generated-progress:end -->
 
 The complete boot (**2,521,763 loaded bytes, two PT_LOAD segments**) and all
-27 overlays pass loaded-byte and metadata equality gates. **222 tool tests pass.**
+27 overlays pass loaded-byte and metadata equality gates. Tool tests run in CI.
 Assembly reconstruction and naming research are tracked separately from matching C.
 Native PC execution and visual gameplay remain unverified; recorded emulator
 observations and their limits are in [PCSX2 validation](docs/PCSX2-VALIDATION.md).
@@ -49,7 +72,8 @@ observations and their limits are in [PCSX2 validation](docs/PCSX2-VALIDATION.md
 Current evidence: [runtime gates](progress/report.json),
 [boot integration](progress/integration.json), [level integrations](progress/levels/)
 and [independent C qualification](progress/candidates.json).
-The progress bar is generated from those validated proofs; CI checks its freshness.
+The progress bar and table are generated together from those validated proofs;
+CI rejects either one if stale. Run `python scripts/readme_progress.py` after a validated lot.
 Its fill uses the full 0–100% scale.
 
 ## Supported version
@@ -57,10 +81,19 @@ Its fill uses the full 0–100% scale.
 | Game | Platform | Region | Version | Boot executable |
 | --- | --- | --- | --- | --- |
 | Ratchet & Clank: Going Commando (2003) | PlayStation 2 | USA / NTSC-U | 1.01 | `SCUS_972.68` |
+| Ratchet & Clank 2: Locked and Loaded (2003) | PlayStation 2 | Europe / PAL | 1.00 | `SCES_516.07` |
 
-Other regions and Greatest Hits v2.00 are different targets. Disc and boot
-identities are pinned in [target configuration](config/target.json); all
-27 extracted overlay identities are in [overlay configuration](config/overlays.json).
+Matching proofs exist for USA v1.01 only. Disc and boot identities are pinned in
+[target configuration](config/target.json); all 27 extracted overlay identities
+are in [overlay configuration](config/overlays.json). The PAL release is a
+registered but unpinned region: `--region pal` lets the preparation and
+reconstruction tools measure and round-trip it, without C catalogues or credit.
+See [game regions](docs/REGIONS.md). Greatest Hits v2.00 is a different target.
+
+The functional, non-matching PAL reconstruction and native-port skeleton from
+[platypet2217-star/RAC2Decomp](https://github.com/platypet2217-star/RAC2Decomp)
+are imported with their history under [ports/pal-functional/](ports/pal-functional/).
+They are outside the matching sources and add no progress.
 
 ## Start or resume work
 
@@ -121,6 +154,11 @@ and experiment authority. The [queue view](docs/CAMPAIGN-QUEUE.md) and
 [historical experiment view](docs/C-NATIVE-EXPERIMENT-REGISTER.md) are derived
 from it. Prior refusals and reopening conditions remain recorded. Trial sources,
 objects, assembly, logs and immutable UUID evidence packages stay private.
+
+The [shared-family workflow](docs/NORMALIZED-FAMILY-WORKFLOW.md) discovers candidate
+copies and prepares reviewed canonical C controls with explicit per-level bindings.
+It retains constants and uses the existing unmasked exact checks; its discovery
+reports and private banks add no matching credit.
 
 </details>
 
@@ -204,8 +242,8 @@ Keep every source, catalog, tool and proof dependency coherent after an edit.
 ## Progress reporting and research
 
 CI exports **`SCUS_972.68_report`** in objdiff report v2 format from the boot and
-all 27 level integration proofs. This independently validates the **221,760-byte**
-C total, source/catalog hashes, object provenance and non-overlapping ranges.
+all 27 level integration proofs. This independently validates the current
+integrated C total, source/catalog hashes, object provenance and non-overlapping ranges.
 Generated section units are remaining work, not completed C translation units.
 CI also publishes the separate authored-source inventory.
 
@@ -232,6 +270,8 @@ Related projects include [RAC1](https://github.com/Lynder063/rac1-decomp) and
 can inform a hypothesis; addresses and code must be verified against the RAC2 target.
 Reused C is credited per function in [the second C lot](docs/SECOND-C-LOT.md),
 and contributed research in [community engine references](docs/COMMUNITY-ENGINE-REFERENCE.md).
+Compiler, libgcc and SDK findings measured on RAC1 are summarised in
+[findings from rac1-decomp](docs/RAC1-DECOMP-FINDINGS.md).
 [OpenRAC](https://openrac.dev/) provides a community view of decompilation projects.
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before contributing. Write documentation,
@@ -239,7 +279,24 @@ comments and commits in English; use a scoped subject and substantive commit bod
 Keep contributions coherent, validate affected proofs and retain negative evidence.
 Game data, extracted retail assembly and proprietary tools remain outside Git.
 
+## Reusable code families
+
+The [supplementary reuse report](progress/code-reuse-report.json) measures
+complete instruction templates with explicit per-image address bindings. Its
+[family catalogue](progress/code-reuse-families.json.gz) lists the proved copies
+and independently validated authored C fragment reuse; the summary exposes
+uncertain boundary and residual totals.
+This measure keeps its own all-placement C numerator and preserves the existing
+conservative and physical progress measures. It does not establish a 5 MB
+original-source total. See [the proof scope and measured baseline](docs/GLOBAL-CODE-REUSE.md).
+
 ## Next milestones
+
+The [bounded local GP verifier](docs/LOCAL-GP-PROOF.md) starts from unknown
+entry registers and admits only closed direct CFGs. Its
+[historical 28-body pilot receipt](progress/gp-local-pilot.json) preserves the
+superseded observations and current refusals without adding GP16 normalization
+or matching C credit.
 
 1. Expand matching C while keeping the boot and all affected overlay gates exact.
 2. Review new function boundaries and ABI, qualify complete units and publish tested lots.
@@ -252,3 +309,5 @@ Intermediate percentages are milestones, not completion of the project.
 
 MIT — see [LICENSE](LICENSE). It covers the repository's code, never the game,
 its assets or proprietary toolchains. Contributions use the same terms.
+`ports/pal-functional/` keeps its own MIT notice, copyright platypet2217-star,
+in [its LICENSE](ports/pal-functional/LICENSE).

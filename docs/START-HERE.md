@@ -102,6 +102,10 @@ it prints, and writes `<runtime>/latest.json`:
 On failure it prints `Preparation failed: <reason>` and exits **2**. A wrong disc says
 `ISO: wrong size, sha1, …`; a runtime inside the repository says so explicitly.
 
+These steps prepare the USA v1.01 matching target. A European PAL disc is a separate,
+still unpinned region: add `--region pal --measure-identity` to measure it privately.
+It supports the assembly round trip only; read [game regions](REGIONS.md) first.
+
 ## 3. Rebuild, and gate every byte
 
 ```powershell

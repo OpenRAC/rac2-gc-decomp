@@ -47,6 +47,13 @@ The commands and authoring safeguards are documented in
 
 ## Commands and task packets
 
+For candidate copy discovery and reviewed same-object binding controls, use the
+[normalized family workflow](NORMALIZED-FAMILY-WORKFLOW.md). Its conservative
+J/JAL-only signatures retain constants and other fields. Preparation produces
+private immutable banks and portable task specs; compilation still uses `trial`,
+and acceptance remains complete unmasked equality. Discovery adds no credit or
+new progress denominator.
+
 Run commands from the repository with an explicit private runtime. That runtime
 holds immutable trial/action directories, registry revisions and view backups.
 `--registry` is a test/bootstrap override; the live default remains the one
@@ -91,11 +98,35 @@ paths bind to the chosen private runtime and cannot escape it. For example:
 ```
 
 The catalog defines measured scope; `symbols` filters packet history only. Source
-must remain standalone C. The default profile is `progress/candidates.json`, and
+must remain standalone C. Admission checks distinguish ordinary C members and
+designators such as `snapshot.bytes` or `.word = value` from assembler directives.
+Real assembly tokens and `.byte`/`.word` directives remain refused in all five
+source consumers; accepting a source never adds matching credit.
+
+A preparation rejection is retained as a real event with
+`compile_attempted=false`; it does not establish a C/code-generation refusal.
+Task budgets count attempted trial events, including rejected preparation. If a
+verified tooling defect is repaired after that budget is spent, reserve a reviewed
+follow-up task naming the unchanged source and the prior rejection. Preserve both
+histories and the concrete repair reason; do not increase an old budget or use a
+preparation repair to cycle expressions, types, flags or layouts. The default profile is `progress/candidates.json`, and
 actual cc1/cpp/as/linker hashes must agree. Research tasks carry analysis or naming
 work without compiler targets. Historical source rows were conservatively seeded
 as research tasks: accepted functions are closed by current validated proofs,
 trial-only winners retain no credit before integration, and unresolved trials stay parked.
+
+A native catalog may pin one whole compiler-generated `.rodata` section with
+`read_only_sections`: `section`, `address`, `size` and `sha256` are required.
+The unchanged compiled object must contain exactly that allocated non-executable
+data section, with readonly flags and the complete reviewed size. The linked
+table must occupy the reviewed address and match every pinned reference byte.
+Reference tables may reside in the original writable `.data`; this does not
+change their loaded metadata. A missing table, other generated data, a truncated
+extent or one different byte is a refusal even when every function matches.
+Data adds no C code coverage. This placement qualifies an object only; source
+publication still requires replacement of the original data extent and the
+complete loaded-image and metadata gates. Do not embed a retail table in C or
+rewrite the switch to avoid its generated data.
 
 Before selecting a new matching target, check its complete program/address/size
 span against every published function in that program's `progress/levels` proof,
@@ -139,7 +170,7 @@ G1 result; neither counters nor a process exit code can substitute for the gates
 Retired batch scripts and finalizers are historical evidence, not the active path.
 
 ```powershell
-python scripts/campaign.py --runtime <private-runtime> integrate -- --manifest <private-manifest.json> --toolchain <ASM-toolchain> --c-toolchain <C-linker-toolchain> --program-jobs 4 --jobs 2
+python scripts/campaign.py --runtime <private-runtime> integrate -- --manifest <private-manifest.json> --toolchain <ASM-toolchain> --c-toolchain <C-linker-toolchain> --sdk-binding <private-sdk-binding.json> --program-jobs 4 --jobs 2
 python scripts/campaign.py --runtime <private-runtime> report -- --level-proof progress/levels/<level>.json
 python scripts/campaign.py --runtime <private-runtime> close <candidate-task-id>
 ```

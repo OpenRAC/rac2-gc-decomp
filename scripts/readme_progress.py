@@ -1,14 +1,18 @@
-"""Render the README progress bar from all currently validated integration proofs."""
+"""Render the README bar and status table from validated integration proofs."""
 from __future__ import annotations
 
 import argparse
 import json
+from datetime import datetime
 from pathlib import Path
 
 from decomp_report import generate, validate_object_proof
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "progress/decompilation.svg"
+README = ROOT / "README.md"
+START = "<!-- generated-progress:start -->"
+END = "<!-- generated-progress:end -->"
 
 
 def render(matched: int, total: int) -> str:
@@ -33,29 +37,70 @@ def render(matched: int, total: int) -> str:
 '''
 
 
-def current_svg() -> str:
+def current_progress() -> tuple[dict, list[dict], str]:
     read = lambda name: json.loads((ROOT / name).read_bytes())
     levels = [read(f"progress/levels/{row['level']}.json") for row in read("config/overlays.json")["levels"]]
     if len(levels) != 27:
         raise ValueError("README progress requires all 27 overlays")
     integration = read("progress/integration.json")
+    gates = read("progress/report.json")
     report = generate(read("config/progress-scope.json"), read("config/target.json"),
-                      read("config/overlays.json"), read("progress/report.json"), integration, levels)
+                      read("config/overlays.json"), gates, integration, levels)
     validate_object_proof(integration, read("progress/candidates.json"))
+    native = [item for proof in levels for item in proof["functions"]
+              if item.get("origin") == "level-native"]
+    return report, native, gates["verified_at"]
+
+
+def current_svg() -> str:
+    report, _, _ = current_progress()
     return render(int(report["measures"]["matchedCode"]), int(report["measures"]["totalCode"]))
+
+
+def render_table(report: dict, native: list[dict], verified_at: str) -> str:
+    categories = {row["id"]: row["measures"] for row in report["categories"]}
+    boot, levels = categories["boot"], categories["levels"]
+    matched, total = (int(report["measures"][key]) for key in ("matchedCode", "totalCode"))
+    date = datetime.fromisoformat(verified_at)
+    months = ("January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December")
+    return f'''Recorded validation on **{date.day} {months[date.month - 1]} {date.year}**:
+
+| Scope | Integrated C functions / placements | Matched C bytes |
+| --- | ---: | ---: |
+| Boot | {int(boot["completeUnits"]):,} functions | {int(boot["matchedCode"]):,} |
+| 27 level overlays | {int(levels["completeUnits"]):,} placements | {int(levels["matchedCode"]):,} |
+| Native overlay subset, included above | {len(native):,} placements | {sum(item["size"] for item in native):,} |
+| **Total C coverage** | **Boot + all 27 overlays** | **{matched:,} / {total:,} ({matched / total * 100:.4f}%)** |
+'''
+
+
+def update_readme(text: str, table: str) -> str:
+    if text.count(START) != 1 or text.count(END) != 1:
+        raise ValueError("README requires exactly one generated progress block")
+    before, rest = text.split(START)
+    _, after = rest.split(END)
+    return before + START + "\n" + table + END + after
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="reject a stale bar without writing")
+    parser.add_argument("--check", action="store_true", help="reject a stale bar or table without writing")
     args = parser.parse_args()
-    data = current_svg().encode("utf-8")
+    report, native, verified_at = current_progress()
+    data = render(int(report["measures"]["matchedCode"]), int(report["measures"]["totalCode"])).encode("utf-8")
+    original = README.read_text(encoding="utf-8")
+    updated = update_readme(original, render_table(report, native, verified_at))
     if args.check:
         if not OUTPUT.exists() or OUTPUT.read_bytes() != data:
             raise ValueError("Stale README progress bar; run python scripts/readme_progress.py")
+        if original != updated:
+            raise ValueError("Stale README progress table; run python scripts/readme_progress.py")
     else:
         OUTPUT.write_bytes(data)
-    print("README progress bar is current: progress/decompilation.svg")
+        if original != updated:
+            README.write_text(updated, encoding="utf-8", newline="\n")
+    print("README progress bar and table are current")
     return 0
 
 

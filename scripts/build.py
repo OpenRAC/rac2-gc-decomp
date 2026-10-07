@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from elf_tools import assert_fresh, compare_loads, read_elf
+import region as regions
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = json.loads((ROOT / "config" / "target.json").read_text(encoding="utf-8"))
@@ -185,7 +186,7 @@ def resolved_symbols(directory: Path) -> None:
 
 def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Path, jobs: int, name: str,
             c_toolchain: Path | None = None, level: str | None = None,
-            candidate_review: Path | None = None) -> dict:
+            candidate_review: Path | None = None, sdk_binding: Path | None = None) -> dict:
     if hashlib.sha256(reference.read_bytes()).hexdigest() != expected_hash:
         raise ValueError("Reference changed since verified extraction")
     directory.mkdir(parents=True)
@@ -203,13 +204,12 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
         raise ValueError("No generated assembly")
     c_object = None
     if c_toolchain is not None:
-        from integration import (compile_c, compile_level_c, replace_inputs, add_definitions,
+        from integration import (compile_boot_c, compile_level_c, replace_inputs, add_definitions,
                                  validate_integrated, c_objects)
         if level is None:
             if name != "boot":
                 raise ValueError("C integration is qualified for the boot only")
-            catalog, c_object, c_hashes = (compile_c(reference, directory, c_toolchain) if candidate_review is None
-                                         else compile_c(reference, directory, c_toolchain, candidate_review))
+            catalog, c_object, c_hashes = compile_boot_c(reference, directory, c_toolchain, candidate_review, sdk_binding)
         else:
             if name != "overlay":
                 raise ValueError("Level C integration is qualified for one overlay at a time")
@@ -247,6 +247,9 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
         program = level or "boot"
         functions = validate_integrated(reference, output, catalog, ROOT / "candidates" / "boot.c",
                                         program=program)
+        if "sdk_units" in catalog:
+            from boot_sdk_unit import check_final_tool_closure
+            check_final_tool_closure(directory, ROOT)
         catalog_name = "level-catalog.json" if level else "candidate-catalog.json"
         gate_name = "full_level_gate" if level else "full_boot_gate"
         proof = {"target": TARGET["serial"], "program": program, "reference_sha256": expected_hash,
@@ -259,6 +262,16 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
                  "candidate_elf_sha256": result["candidate_sha256"],
                  "c_object_sha256": hashlib.sha256(c_objects(c_object)[0].read_bytes()).hexdigest(),
                  "replacement_inputs": replacements}
+        if "sdk_units" in catalog:
+            default_rows = [row for row in functions if row["unit_id"] == "default-gnu8bed"]
+            default = {**proof, "matched_code_bytes": sum(row["size"] for row in default_rows)}
+            default.pop("functions")
+            default["c_object_sha256"] = hashlib.sha256(c_object["candidates/boot.c"].read_bytes()).hexdigest()
+            proof = {"schema": 3, "kind": "boot-c-owner-integration", "target": TARGET["serial"],
+                     "program": "boot", "reference_sha256": expected_hash, "state": "integrated",
+                     "functions": functions, "matched_code_bytes": sum(row["size"] for row in functions),
+                     "full_boot_gate": proof["full_boot_gate"], "default": default,
+                     "sdk_units": catalog["sdk_units"]}
         if "native" in catalog:
             from level_native import dependencies, file_hash
             if read_elf(output)["entry"] != catalog["reference_entry"]:
@@ -298,6 +311,7 @@ def main() -> int:
     parser.add_argument("--c-all-levels", action="store_true", help="integrate shared and available native C in all overlays")
     parser.add_argument("--candidate-review", type=Path, help="explicit fresh boot object review; does not overwrite prior provenance")
     parser.add_argument("--jobs", type=int, default=8)
+    regions.add_argument(parser)
     args = parser.parse_args()
     if args.jobs < 1:
         raise ValueError("jobs must be positive")
@@ -313,17 +327,34 @@ def main() -> int:
     if ROOT == manifest_path.parent or ROOT in manifest_path.parents:
         raise ValueError("Private manifest and builds must remain outside source repository")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if manifest["target"] != "SCUS_972.68":
-        raise ValueError("Wrong manifest target")
-    if manifest["boot"]["sha256"] != TARGET["boot"]["sha256"]:
-        raise ValueError("Manifest boot identity is not the pinned RAC2 baseline")
-    baseline = json.loads((ROOT / "config" / "overlays.json").read_text(encoding="utf-8"))
-    expected_overlays = {entry["level"]: entry["sha256"] for entry in baseline["levels"]}
+    try:
+        region = regions.by_serial(manifest["target"])
+    except ValueError as error:
+        raise ValueError("Wrong manifest target") from error
+    if args.region and regions.canonical(args.region) != region.name:
+        raise ValueError(f"Manifest target {region.serial} belongs to region {region.name}, not {args.region}")
+    if (args.c_toolchain or args.c_level or args.candidate_review) and not region.matching:
+        region.require_matching("C integration")
+    if region.pinned:
+        if manifest["boot"]["sha256"] != region.target["boot"]["sha256"]:
+            raise ValueError(f"Manifest boot identity is not the pinned {region.label} baseline")
+        expected_overlays = region.overlay_pins()
+        expected_count = region.expected_levels
+    elif manifest.get("pinned") is False and manifest.get("region") == region.name:
+        # An unpinned region: setup.py --measure-identity recorded these identities
+        # privately. The byte gates still compare every loaded byte, but against an
+        # unreviewed reference, so the report says so and no proof is produced.
+        print(f"WARNING: {region.label} identities are unpinned; gates are a round trip only", flush=True)
+        expected_overlays = None
+        expected_count = len(manifest.get("level_wads", []))
+    else:
+        region.require_pinned("boot identity")
     actual_overlays = {entry["level"]: entry["sha256"] for entry in manifest["overlays"]}
     if any(not re.fullmatch(r"\d+_[a-z0-9_]+", level) for level in actual_overlays):
         raise ValueError("Invalid level identifier")
-    if args.all_levels and (len(manifest["overlays"]) != len(actual_overlays) or actual_overlays != expected_overlays):
-        raise ValueError("Overlay identities do not match the pinned RAC2 baseline")
+    if args.all_levels and (len(manifest["overlays"]) != len(actual_overlays)
+                            or (expected_overlays is not None and actual_overlays != expected_overlays)):
+        raise ValueError(f"Overlay identities do not match the pinned {region.label} baseline")
     toolchain = args.toolchain.resolve()
     instruments = {name: toolchain / "ee" / "bin" / name for name in ("Ps2EeAs.exe", "ld.exe")}
     for instrument in instruments.values():
@@ -334,6 +365,8 @@ def main() -> int:
               "packages": versions, "tools": {name: hashlib.sha256(path.read_bytes()).hexdigest()
                                              for name, path in instruments.items()},
               "g1": None, "g3": [], "decompiled_functions": 0, "compiler_flags": None}
+    if not region.matching:
+        report.update({"region": region.name, "pinned": region.pinned})
     report["g1"] = rebuild(Path(manifest["boot"]["path"]), manifest["boot"]["sha256"],
                            builds / "boot", toolchain, args.jobs, "boot",
                            args.c_toolchain.resolve() if args.c_toolchain else None, candidate_review=args.candidate_review)
@@ -353,8 +386,8 @@ def main() -> int:
         result["level"] = c_level["level"]
         report["g3"].append(result)
     if args.all_levels:
-        if len(manifest["overlays"]) != 27:
-            raise ValueError("G3 requires all 27 verified overlays")
+        if not expected_count or len(manifest["overlays"]) != expected_count:
+            raise ValueError(f"G3 requires all {expected_count} verified overlays")
         for overlay in manifest["overlays"]:
             if c_level is not None and overlay["level"] == c_level["level"]:
                 continue

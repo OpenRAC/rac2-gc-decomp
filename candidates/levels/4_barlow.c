@@ -417,31 +417,990 @@ s32 LVL_4_BARLOW_FUN_002F6F18(void) {
     return found;
 }
 
-/* Versión final compacta para la compuerta de tamaño de Barlow */
-extern void LVL_4_BARLOW_FUN_002F6C50(s32 source, s32 destination);
+typedef struct {
+    u8 prefix[0x40];
+    s32 mode;
+    u8 between[0x14];
+    s32 state;
+} StateTransitionView;
+typedef char StateTransitionViewSize[(sizeof(StateTransitionView) == 0x5c) ? 1 : -1];
+extern StateTransitionView LVL_4_BARLOW_D_001BF7C0;
+void LVL_4_BARLOW_FUN_00314158(void) {
+    if (LVL_4_BARLOW_D_001BF7C0.mode == 7 && LVL_4_BARLOW_D_001BF7C0.state == 1) {
+        LVL_4_BARLOW_D_001BF7C0.state = 2;
+    }
+}
 
-s32 LVL_4_BARLOW_FUN_00300A10(PackedHeaderCountView* header, u32* data_array) {
-    s32 total_compacted_bytes = 0;
+/* Substitute the first percent selector in a record's localized text. */
+typedef struct {
+    unsigned char gap0[10];
+    short text_id;
+    short mapped_key;
+    unsigned char gap0e[26];
+} DobboFormatRow396;
+typedef struct {
+    unsigned char gap0[32];
+    DobboFormatRow396 *rows;
+} DobboFormatRoot396;
+typedef struct {
+    unsigned char gap0[0x80];
+    int amount;
+    unsigned char gap84[0x5c];
+} DobboFormatMapped396;
+typedef char DobboFormatRowStride396[(sizeof(DobboFormatRow396) == 40) ? 1 : -1];
+typedef char DobboFormatMappedStride396[(sizeof(DobboFormatMapped396) == 0xe0) ? 1 : -1];
+extern DobboFormatRoot396 LVL_4_BARLOW_D_001C9C60;
+extern const char LVL_4_BARLOW_D_001A99E0[];
+extern const char LVL_4_BARLOW_D_001A99E8[];
+extern const unsigned char *LVL_4_BARLOW_FUN_003153B0(int);
+extern void BOOT_FUN_00115DA8(char *, const char *, ...);
+void LVL_4_BARLOW_FUN_00329910(int index, unsigned char *output)
+{
+    unsigned char temporary[80];
+    const unsigned char *source = LVL_4_BARLOW_FUN_003153B0(LVL_4_BARLOW_D_001C9C60.rows[index].text_id);
+    unsigned char *p = temporary;
+    if (!source)
+        return;
+    while (*source && *source != '%')
+        *output++ = *source++;
+    if (!*source) {
+        *output = *source;
+        return;
+    }
+    ++source;
+    if (*source == 'b') {
+        int key = LVL_4_BARLOW_D_001C9C60.rows[index].mapped_key;
+        DobboFormatMapped396 *record = (DobboFormatMapped396 *)&LVL_4_BARLOW_D_0027B470[LVL_4_BARLOW_D_00139568[key]];
+        BOOT_FUN_00115DA8((char *)temporary, LVL_4_BARLOW_D_001A99E0, record->amount);
+    } else {
+        BOOT_FUN_00115DA8((char *)temporary, LVL_4_BARLOW_D_001A99E8);
+    }
+    ++source;
+    while (*p)
+        *output++ = *p++;
+    while (*source)
+        *output++ = *source++;
+    *output = 0;
+}
 
-    if (header && data_array) {
-        s32 length = header->length;
-        s32 offset = header->data_offset;
+typedef struct { u8 prefix[0xc38]; f32 plane; f32 depth; } GornFloatInterval64;
 
-        if (length > 0 && offset >= 0) {
-            s32 i = 0;
-            u32* row_ptr = data_array + offset;
+int LVL_4_BARLOW_FUN_002D9DD8(f32 value)
+{
+    GornFloatInterval64 *root = (GornFloatInterval64 *)LVL_4_BARLOW_D_00189E20;
+    if (value < root->plane) {
+        if (root->plane - value <= root->depth)
+            return 1;
+    }
+    return 0;
+}
 
-            do {
-                // Validación directa de la palabra base en el registro físico
-                if (row_ptr[0] != 0) {
-                    LVL_4_BARLOW_FUN_002F6C50((s32)row_ptr, total_compacted_bytes);
-                    total_compacted_bytes += 32;
-                }
-                row_ptr += 8; // Avanzar exactamente 32 bytes (8 palabras de 32 bits)
-                i++;
-            } while (i < length);
+/* Update the observed two-axis selection fields and their combined index. */
+typedef struct {
+    unsigned char gap0[0x43c];
+    int column, row, index, mode;
+} DobboGridState312;
+extern int LVL_4_BARLOW_FUN_00382F58(int, unsigned int, void *);
+void LVL_4_BARLOW_FUN_0047D160(DobboGridState312 *state, unsigned int buttons)
+{
+    if (buttons & 0x1000) {
+        LVL_4_BARLOW_FUN_00382F58(3, 0, 0);
+        --state->row;
+        if (state->row < 0) {
+            if (state->column == 0) {
+                state->mode = 2;
+                state->row = 1;
+                state->column = 3;
+            } else if (state->column == 1) {
+                state->row = state->column;
+            }
+        }
+    } else if (buttons & 0x4000) {
+        int row;
+        LVL_4_BARLOW_FUN_00382F58(3, 0, 0);
+        row = state->row + 1;
+        state->row = row > 1 ? 0 : row;
+    } else if (buttons & 0x8000) {
+        LVL_4_BARLOW_FUN_00382F58(3, 0, 0);
+        --state->column;
+        if (state->column < 0) {
+            state->column = 3;
+            state->row = 1;
+            state->mode = 2;
+        }
+    } else if (buttons & 0x2000) {
+        LVL_4_BARLOW_FUN_00382F58(3, 0, 0);
+        ++state->column;
+        if (state->column >= 2)
+            state->column = 0;
+    }
+    state->index = state->column + state->row * 2;
+}
+
+extern void *LVL_4_BARLOW_D_001B2440[16];
+extern u32 LVL_4_BARLOW_D_001B2480[16];
+
+int LVL_4_BARLOW_FUN_003326F0(void *object)
+{
+    int index;
+    for (index = 0; index < 16; ++index) {
+        if (LVL_4_BARLOW_D_001B2440[index] == 0 ||
+            LVL_4_BARLOW_D_001B2440[index] == object) {
+            LVL_4_BARLOW_D_001B2440[index] = object;
+            LVL_4_BARLOW_D_001B2480[index] = 0;
+            return index;
         }
     }
+    return -1;
+}
 
-    return total_compacted_bytes;
+typedef struct {
+    u8 prefix[0x40];
+    void *payload;
+    u32 unused44;
+    short key;
+    u8 marker;
+    u8 unused4b;
+    u8 selector;
+    u8 tail[3];
+} GornRecordWrite64;
+typedef char GornRecordWrite64Stride[(sizeof(GornRecordWrite64) == 80) ? 1 : -1];
+
+void LVL_4_BARLOW_FUN_003461E0(GornRecordWrite64 *record, u32 selector,
+                            int key, void *payload)
+{
+    if (record->marker != 0) {
+        u8 marker;
+        do {
+            if (record->selector == selector && record->key == key) {
+                record->payload = payload;
+                return;
+            }
+            marker = record->marker;
+            ++record;
+        } while (marker != 1);
+    }
+}
+
+/* Append an observed point index and update the original geometric descriptor. */
+typedef struct {
+    unsigned char gap0[0x10];
+    float plane[4];
+    unsigned char gap20[0x10];
+    float (*points)[4];
+    unsigned char gap34[0x25];
+    unsigned char indices[3];
+    unsigned char count;
+} OozlaAppendDescriptor164;
+typedef struct {
+    unsigned char gap0[0x68];
+    OozlaAppendDescriptor164 *descriptor;
+    unsigned char gap6c[0x54];
+    float transform[3][4];
+} OozlaAppendObject164;
+typedef char OozlaAppendDescriptorCount164[((int)&((OozlaAppendDescriptor164 *)0)->count == 0x5c) ? 1 : -1];
+extern void LVL_4_BARLOW_FUN_002FD328(OozlaAppendObject164 *, int, const float *);
+extern void LVL_4_BARLOW_FUN_0030EDC8(float *, const float *, const float *);
+extern void LVL_4_BARLOW_FUN_0030F270(float *, const float *, const float *);
+extern void LVL_4_BARLOW_FUN_002FD670(OozlaAppendObject164 *, float *, const float *);
+unsigned int LVL_4_BARLOW_FUN_002FD280(OozlaAppendObject164 *object, unsigned int index, const float *direction)
+{
+    float difference[4];
+    OozlaAppendDescriptor164 *descriptor = object->descriptor;
+    descriptor->indices[descriptor->count] = index;
+    ++descriptor->count;
+    LVL_4_BARLOW_FUN_002FD328(object, (int)descriptor->count - 1, direction);
+    if (descriptor->count != 1) {
+        LVL_4_BARLOW_FUN_0030EDC8(difference, descriptor->points[descriptor->indices[0]], descriptor->points[descriptor->indices[1]]);
+        LVL_4_BARLOW_FUN_0030F270(difference, difference, &object->transform[0][0]);
+        LVL_4_BARLOW_FUN_002FD670(object, descriptor->plane, difference);
+    }
+    return descriptor->count;
+}
+
+typedef struct { f32 x, y, z, w; } JammingParameterRow;
+typedef struct {
+    u8 prefix[0x30];
+    JammingParameterRow rows[4];
+    f32 weights[3];
+} JammingParameterRows;
+void LVL_4_BARLOW_FUN_004825D8(f32 weight, f32 x, f32 y, f32 z, f32 w, JammingParameterRows *object, s32 index) {
+    object->rows[index].x = x;
+    object->rows[index].y = y;
+    object->rows[index].z = z;
+    object->rows[index].w = w;
+    object->weights[index] = weight;
+}
+
+typedef struct { f32 x, y, z, w; } JammingGridRow;
+typedef struct { JammingGridRow rows[3]; } JammingGridGroup;
+typedef struct { u8 prefix[0x2c]; JammingGridGroup groups[2]; } JammingGridObject;
+void LVL_4_BARLOW_FUN_00482A70(f32 x, f32 y, f32 z, f32 w, JammingGridObject *object, s32 row, s32 group) {
+    object->groups[group].rows[row].x = x;
+    object->groups[group].rows[row].y = y;
+    object->groups[group].rows[row].z = z;
+    object->groups[group].rows[row].w = w;
+}
+
+typedef struct {
+    u32 field00;
+    u32 field04;
+    f32 field08;
+    f32 field0C;
+} NativeCallbackTimer;
+extern NativeCallbackTimer LVL_4_BARLOW_D_001B98E0;
+extern f32 LVL_4_BARLOW_D_001B1C88 __attribute__((sda));
+void LVL_4_BARLOW_FUN_0046B4E8(void) {
+    NativeCallbackTimer *state = &LVL_4_BARLOW_D_001B98E0;
+    u32 mode = state->field04;
+    state->field08 = 10000.0f;
+    if (mode == 0) {
+        state->field0C -= LVL_4_BARLOW_D_001B1C88;
+        if (state->field0C < 0.0f) state->field0C = 0.0f;
+    } else {
+        state->field04 = 0;
+    }
+    state->field00 = 0;
+}
+
+typedef struct { u8 before[0x68]; s32 active; u8 gap[6]; short state; } CallState;
+extern u8 LVL_4_BARLOW_D_001A63A8[];
+extern void FUN_00133400(s32);
+s32 LVL_4_BARLOW_FUN_003506C0(void) {
+    if (((CallState *)LVL_4_BARLOW_D_001A63A8)->active==0) return 0;
+    if (((CallState *)LVL_4_BARLOW_D_001A63A8)->state!=3) return 0;
+    FUN_00133400(((CallState *)LVL_4_BARLOW_D_001A63A8)->active); ((CallState *)LVL_4_BARLOW_D_001A63A8)->state=4;
+    return 1;
+}
+
+f32 LVL_4_BARLOW_FUN_0033BA20(f32 value, s32 count) {
+    f32 factor = 1.0f - value;
+    f32 product = factor;
+    for (; count > 1; --count)
+        product = product * factor;
+    return 1.0f - product;
+}
+
+typedef struct {
+    u8 pad0000[0x0000];
+} ResidentBase1395B8;
+
+s32 LVL_4_BARLOW_FUN_00326210(s32 index)
+{
+    s32 byte = index / 8;
+    s32 bit = index % 8;
+    s32 old;
+
+    if ((u32)bit < 8) {
+        old = (LVL_4_BARLOW_D_001395B8[byte + 0xA7] >> bit) & 1;
+    } else {
+        old = 0;
+    }
+    if ((u32)bit < 8) {
+        LVL_4_BARLOW_D_001395B8[byte + 0xA7] |= 1 << bit;
+    }
+    return old;
+}
+
+extern unsigned char D_19B278[];
+
+int LVL_4_BARLOW_FUN_00348FB8(void)
+{
+    int count = 0;
+    int i;
+
+    for (i = 0; i < 0x1C; i++) {
+        int j;
+
+        for (j = 0; j < 4; j++) {
+            if (D_19B278[i * 4 + j] != 0)
+                count++;
+        }
+    }
+    if (count < 0)
+        count = 0;
+    if (count > 0x28)
+        count = 0x28;
+    return count;
+}
+
+typedef struct {
+    u8 pad0000[0x2294];
+    u32 kind;
+    u32 unknown2298;
+    u32 mode;
+} ResidentFlags2294;
+
+s32 LVL_4_BARLOW_FUN_002D4468(void)
+{
+    ResidentFlags2294 *root = (ResidentFlags2294 *)LVL_4_BARLOW_D_00189E20;
+
+    if (root->mode == 17 || root->mode == 18
+        || root->kind == 0x67 || root->kind == 0x7f
+        || root->kind == 0x73 || root->kind == 0x72) {
+        return 1;
+    }
+    return 0;
+}
+
+/* Prototype775 is a research label. Field names below describe only the
+ * independently observed byte23 and binary32 word2C operations. */
+typedef struct {
+    u8 pad00[0x23];
+    u8 field23;
+    u8 pad24[8];
+    f32 field2C;
+} NativeUpdate775View;
+
+extern void LVL_4_BARLOW_UPDATE775_HELPER_003317E8(NativeUpdate775View *object);
+
+void LVL_4_BARLOW_FUN_003C4BA0(NativeUpdate775View *object)
+{
+    object->field2C *= 1.025f;
+    object->field23 -= 3;
+    if (object->field23 < 4)
+        LVL_4_BARLOW_UPDATE775_HELPER_003317E8(object);
+}
+
+
+/* One fixed ordinary scalar source hypothesis. Byte offset and mask are
+   measured; no original object/class/field name or allocation claim. The
+   observed callers pass scalar one and ignore the result. */
+void LVL_4_BARLOW_FUN_0034C4A8(unsigned char *entity, int enabled) {
+    if (enabled)
+        entity[0xBE] |= 4;
+    else
+        entity[0xBE] &= 0xFB;
+}
+
+
+/* One fixed ordinary scalar query. Signed halfword width, offset and
+   equality constant are measured; no original class or field-name claim. */
+int LVL_4_BARLOW_FUN_00340EF8(const unsigned char *entity) {
+    return *(const signed short *)(entity + 0xAA) == 0x0CDB;
+}
+
+
+void LVL_4_BARLOW_FUN_002CE3F0(void)
+{
+}
+
+
+unsigned int LVL_4_BARLOW_FUN_002F7068(void)
+{
+    return 0;
+}
+
+
+void LVL_4_BARLOW_FUN_0030E0B0(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00315148(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00315EF8(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_0031D3B8(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_0031D3C0(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00320F70(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00329CC8(void)
+{
+}
+
+
+unsigned int LVL_4_BARLOW_FUN_00340418(void)
+{
+    return 0;
+}
+
+
+unsigned int LVL_4_BARLOW_FUN_00392E78(void)
+{
+    return 0;
+}
+
+
+void LVL_4_BARLOW_FUN_00397990(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_0039E9A8(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_003A45B8(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_003A7CD0(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00430A08(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00456620(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_0046FD98(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00471808(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00471A58(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00471F50(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_0047A7C8(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_0047B420(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_00487228(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_004895B8(void)
+{
+}
+
+
+void LVL_4_BARLOW_FUN_0048AE50(void)
+{
+}
+void LVL_4_BARLOW_FUN_003DA2E8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_003E9A40(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_003F7AC8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_00406168(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_0041B7C8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_00421AA8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_0042BCB0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_0042D178(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_00453E18(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_0045AB78(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_003CA510(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 88) = 0;
+    *(float *)(p + 96) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 92) = 1.0f;
+    *(int *)(p + 100) = 0;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_00425DD8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 88) = 0;
+    *(float *)(p + 96) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 92) = 1.0f;
+    *(int *)(p + 100) = 0;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_003ACEF8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_003AF580(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_0045D4D0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 8) = 0;
+    *(float *)(p + 24) = 2.0f;
+    *(int *)(p + 40) = 0;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_0033CB88(char *p)
+{
+    *(int *)(p + 0) = 640;
+    *(float *)(p + 8) = 0.5f;
+    *(int *)(p + 20) = 0;
+    *(float *)(p + 4) = 1.0f;
+    *(float *)(p + 12) = 0.5f;
+    *(int *)(p + 16) = 0;
+    *(float *)(p + 36) = 2.7f;
+    *(int *)(p + 24) = 0;
+    *(float *)(p + 32) = 0.3f;
+    *(float *)(p + 28) = 0.3f;
+    *(float *)(p + 40) = 1.57f;
+    *(float *)(p + 44) = 0.1f;
+}
+void LVL_4_BARLOW_FUN_00369D80(void)
+{
+    *(short *)0x001AA802 = (*(unsigned char *)0x001A7BC9) ? 3 : 0;
+    *(short *)0x001AA81A = (*(unsigned char *)0x001A7BCA) ? 3 : 0;
+    *(short *)0x001AA832 = (*(unsigned char *)0x001A7BCB) ? 3 : 0;
+    *(short *)0x001AA84A = (*(unsigned char *)0x001A7BCC) ? 3 : 0;
+    *(short *)0x001AA862 = (*(unsigned char *)0x001A7BCE) ? 3 : 0;
+}
+void LVL_4_BARLOW_FUN_004264B0(char *p)
+{
+    *(long long *)(p + 112) = 0;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_4_BARLOW_FUN_0045D468(char *p)
+{
+    *(long long *)(p + 112) = 0;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
 }

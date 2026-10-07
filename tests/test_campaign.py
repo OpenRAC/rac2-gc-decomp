@@ -92,6 +92,19 @@ class CampaignTests(unittest.TestCase):
         self.assertEqual((work / "manifest.json").read_bytes(), manifest_bytes)
         self.assertEqual(campaign.summary(self.store.load())["compilation_attempts"], 1)
 
+    def test_nonmatching_region_is_rejected_before_compilation(self):
+        self.dump(self.repo / "config/regions.json", {
+            "schema": 1, "default": "ntsc-u", "regions": {"ntsc-u": {
+                "serial": "SCUS_972.68", "label": "Unqualified region",
+                "target": "config/target.json", "overlays": "config/overlays.json",
+                "matching": False}}})
+        campaign.plan(self.store, self.task)
+        backend = Backend(self.tools)
+        result = self.attempt(backend)
+        self.assertEqual(result["state"], "preparation_rejected")
+        self.assertIn("C trials exists only for a matching region", result["error"])
+        self.assertEqual(backend.compilations, 0)
+
     def test_compile_failure_is_one_failure_not_two_body_measurements(self):
         self.task["targets"].append({**self.task["targets"][0], "id": "second-placement"})
         campaign.plan(self.store, self.task)
@@ -137,6 +150,48 @@ class CampaignTests(unittest.TestCase):
         self.source.write_bytes(b"__asm__(\"nop\");")
         self.assertIn("assembly", self.attempt(backend)["error"])
         self.assertEqual(backend.compilations, 0)
+
+    def test_c_member_names_reach_the_compiler_without_becoming_directives(self):
+        self.source.write_bytes(b'''struct Snapshot { unsigned char bytes[24]; int word; int words; };
+struct Snapshot snapshot = {
+    .word = 2,
+    .words = 3
+};
+int FUN_1(void) { const struct Snapshot *object = &snapshot;
+    return snapshot.bytes[0] + object->word + object->words + snapshot.word;
+}
+''')
+        campaign.plan(self.store, self.task)
+        backend = Backend(self.tools)
+        result = self.attempt(backend)
+        self.assertEqual(result["state"], "exact_private")
+        self.assertEqual(backend.compilations, 1)
+
+    def test_real_assembly_tokens_and_directives_are_rejected_before_compiler(self):
+        campaign.plan(self.store, self.task)
+        for content in (b'.byte 1, 2\n', b'.word 0x1234\n', b'label: .word 1\n',
+                        b'1: .byte 2\n', b'asm("nop");', b'__asm__("nop");',
+                        b'__asm("nop");', b'INCLUDE_ASM("unit.s", FUN_1);'):
+            with self.subTest(content=content):
+                self.source.write_bytes(content)
+                backend = Backend(self.tools)
+                result = self.attempt(backend, reason="source admission regression fixture")
+                self.assertEqual(result["state"], "preparation_rejected")
+                self.assertIn("assembly", result["error"])
+                self.assertFalse(result["compile_attempted"])
+                self.assertEqual(backend.compilations, 0)
+
+    def test_member_admission_does_not_bypass_standalone_reproducibility(self):
+        campaign.plan(self.store, self.task)
+        for content in (b'#include "header.h"\nint FUN_1(void) { return object.word; }',
+                        b'const char *stamp = __DATE__;\nint FUN_1(void) { return object.words; }'):
+            with self.subTest(content=content):
+                self.source.write_bytes(content)
+                backend = Backend(self.tools)
+                result = self.attempt(backend, reason="standalone admission regression fixture")
+                self.assertEqual(result["state"], "preparation_rejected")
+                self.assertIn("standalone", result["error"])
+                self.assertEqual(backend.compilations, 0)
 
     def test_changed_instrument_invalidates_exact(self):
         campaign.plan(self.store, self.task)

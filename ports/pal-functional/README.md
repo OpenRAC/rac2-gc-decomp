@@ -1,0 +1,134 @@
+# Ratchet & Clank 2 (PAL) - Functional Decompilation & Reverse Engineering
+
+This tree is dedicated to the **reverse engineering, logical analysis and functional
+decompilation** of the European (PAL) version of *Ratchet & Clank 2* (game ID
+`SCES-516.07`) for the PlayStation 2.
+
+It was imported with its full history from
+[platypet2217-star/RAC2Decomp](https://github.com/platypet2217-star/RAC2Decomp) and
+keeps that project's [MIT licence](LICENSE). The surrounding repository is a
+byte-matching decompilation of USA v1.01 (`SCUS_972.68`); this tree is not part of
+its matching sources, catalogues or progress. The addresses quoted here are PAL
+addresses and do not correspond to USA placements.
+
+Unlike strict *byte-matching* projects, the main goal of this work is to
+**understand, document and extract the logical subsystems of the Insomniac Games
+engine** (physics, weapon behaviour, inventory management, state flows) and
+translate them into clean, modern C/C++ code. This serves as a documentary
+foundation for future preservation efforts, advanced modifications or an eventual
+native port.
+
+> [!IMPORTANT]
+> This tree **does not host or distribute copyrighted material**. You will not find
+> any ISOs, textures, music, 3D models or commercial executables owned by Insomniac
+> Games or Sony Interactive Entertainment here.
+
+---
+
+## Region Selection
+
+The port is configured for either release; PAL remains the default because the
+reconstruction was made from it:
+
+```sh
+cmake -S . -B build                      # PAL, SCES_516.07
+cmake -S . -B build -DRAC2_REGION=NTSC   # USA, SCUS_972.68
+```
+
+`include/core/region.h` switches the boot executable expected under `orig/`, the
+GS output mode, the engine frame clock (PAL 50 Hz = 20 ms, NTSC 59.94 Hz ≈ 16.68 ms)
+and the base display height (512 or 448 lines). Function and RAM addresses quoted
+in the sources and documents are PAL addresses: the direct RAM accesses, such as
+the frame-rate global in `src/boot_init.c`, stay PAL-only until a PAL-to-USA
+address map exists.
+
+---
+
+## Building and Running
+
+Requirements: CMake 3.16+, a C11 compiler and SDL2 (tested with 2.30 headers and 2.32). OpenGL is
+loaded at run time through SDL, so no OpenGL development files are needed.
+
+```sh
+cmake -S . -B build              # finds SDL2 through its CMake package
+cmake -S . -B build -DSDL2_INCLUDE_DIR=/path/to/SDL2 -DSDL2_LIBRARY=/path/to/libSDL2.so
+cmake --build build
+```
+
+On Windows, point `SDL2_DIR` at the `cmake` directory of the SDL2 development
+archive, or set `SDL2_INCLUDE_DIR` and `SDL2_LIBRARY` as above.
+
+The reconstructed functions still access the game's globals at their PS2
+addresses. `src/core/ee_memory.c` provides a 32 MB emulated EE RAM and every
+such access goes through `EE_ADDR()`. At start-up the port copies the loadable
+segments of your own boot executable, `orig/SCES_516.07` (or
+`orig/SCUS_972.68` for NTSC), into that memory so the original static data
+sits at its addresses; without the file the memory starts empty. Code pointers
+the engine keeps in RAM (for example the next-stage callback) are host
+variables instead, since MIPS code cannot run on PC.
+
+The executable opens a window, runs the boot state machine in the fixed-rate
+loop and exits with Escape or by closing the window. It does not draw the game
+yet. If a Vulkan window cannot be created, it falls back to OpenGL.
+
+---
+
+## Tools Used in the Workflow
+
+- **Ghidra (v11.x or higher):** static analysis of the executable (`SCES_516.07`),
+  configured with analyzers specific to the **MIPS-R5900 (Emotion Engine)**
+  architecture to mitigate alignment and constant issues and obtain clean C
+  pseudocode in the decompiler.
+- **PCSX2 debugger:** real-time dynamic analysis. It pauses the game, injects values
+  into PS2 RAM, traces pointers and validates hypotheses about function behaviour
+  before they are documented.
+
+---
+
+## Structure
+
+- `docs/`: research notes, RAM maps found with the debugger, flowcharts and
+  documentation of engine structures.
+- `include/`: headers (`.h`) with PS2 data type definitions (`u32`, `f32`, etc.)
+  and reconstructed game data structures (e.g. vectors, actor components).
+- `src/`: functional reconstruction of the game's logic functions in C/C++.
+- `tools/`: scripts for processing data, formatting text or assisting with
+  repetitive reverse-engineering tasks.
+
+---
+
+## Getting Started
+
+1. **Clone** the repository.
+2. **Set up the analysis environment:**
+   - Import your legally obtained executable `SCES_516.07` into Ghidra.
+   - Enable the MIPS-R5900 analyzers (`Constant Reference Analyzer` and
+     `Unaligned Instruction Fix`) so that the functions follow the project
+     standard.
+3. **Explore the structures:** `include/core/types.h` contains the primitive types
+   used to document local and global variables in Ghidra.
+
+---
+
+## Contributions
+
+Any findings are valuable. Contributions fall into the following categories:
+
+- **Documentation:** map variables in memory and record their behaviour in `docs/`.
+- **Code translation:** take the pseudocode generated by the Ghidra decompiler,
+  clean it up, rename generic variables to descriptive, functional names and place
+  it in `src/`.
+
+---
+
+## Licence
+
+The research code and community-developed tools in this tree are distributed under
+the MIT Licence, copyright platypet2217-star. The trademarks, names and assets of
+the original game belong exclusively to their respective rights holders.
+
+## Original Author's Note
+
+"I'm completely new to this, so there may be better ports out there than what this
+repository has to offer. In any case, this is an attempt to preserve one of my
+favorite games so it can run natively."

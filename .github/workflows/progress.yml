@@ -28,8 +28,27 @@ jobs:
           python scripts/decomp_report.py --output build/decomp/report.json \
             $(for f in progress/levels/*.json; do printf -- '--level-proof %s ' "$f"; done)
 
+      - name: Validate the report with objdiff
+        # decomp.dev parses this artifact with objdiff; reject a report it cannot load.
+        # The release binary is pinned by version and SHA-256.
+        run: |
+          curl --fail --location --retry 3 -o "$RUNNER_TEMP/objdiff-cli" \
+            https://github.com/encounter/objdiff/releases/download/v3.8.1/objdiff-cli-linux-x86_64
+          echo "c8290281e82114bcc1a06ff73061110d3902a177822e750337de2537188e358f  $RUNNER_TEMP/objdiff-cli" | sha256sum --check
+          chmod +x "$RUNNER_TEMP/objdiff-cli"
+          "$RUNNER_TEMP/objdiff-cli" report changes build/decomp/report.json build/decomp/report.json \
+            -o "$RUNNER_TEMP/objdiff-validation.json"
+
       - name: Check README progress bar
         run: python scripts/readme_progress.py --check
+      - name: Check global unique catalogue and paired progress
+        run: |
+          python scripts/unique_code_report.py --catalog config/function-catalog/catalog.json --output progress/unique-code-report.json --check
+          python scripts/unique_code_report.py --catalog config/function-catalog/catalog.json --output build/decomp/unique-summary.json --objdiff-output build/decomp/unique-report.json
+          python scripts/readme_unique_progress.py --catalogue-report progress/unique-code-report.json --physical-report build/decomp/report.json --check
+          # Validate all units without the CLI doing a quadratic self-comparison.
+          python -c 'import sys,json; sys.path.insert(0,"scripts"); from decomp_report import measures; print(json.dumps({"version":2,"measures":measures(0,0,0),"units":[],"categories":[]}))' > "$RUNNER_TEMP/empty-report.json"
+          "$RUNNER_TEMP/objdiff-cli" report changes "$RUNNER_TEMP/empty-report.json" build/decomp/unique-report.json -o "$RUNNER_TEMP/unique-objdiff-validation.json"
 
       - name: Upload decomp.dev progress artifact
         uses: actions/upload-artifact@v4
@@ -43,6 +62,31 @@ jobs:
         with:
           name: SCUS_972.68_authored_source
           path: progress/source-inventory.json
+          if-no-files-found: error
+      - name: Upload conservative unique EE report
+        uses: actions/upload-artifact@v4
+        with:
+          name: SCUS_972.68-unique_report
+          path: build/decomp/unique-report.json
+          if-no-files-found: error
+      - name: Upload paired global metric quality
+        uses: actions/upload-artifact@v4
+        with:
+          name: SCUS_972.68_unique-metrics
+          path: build/decomp/unique-summary.json
+          if-no-files-found: error
+
+      - name: Check supplementary reusable-code families
+        run: |
+          python scripts/code_reuse_report.py --repo . --catalog config/function-catalog/catalog.json \
+            --output progress/code-reuse-report.json --families-output progress/code-reuse-families.json.gz --check
+      - name: Upload supplementary reusable-code families
+        uses: actions/upload-artifact@v4
+        with:
+          name: SCUS_972.68_code-reuse
+          path: |
+            progress/code-reuse-report.json
+            progress/code-reuse-families.json.gz
           if-no-files-found: error
 
       - name: Post Job Summary
@@ -79,6 +123,23 @@ jobs:
               cu = cm["completeUnits"]
               tu = cm["totalUnits"]
               lines.append(f"| {cname} | `{mc:,} / {tc:,} B` | {pct:.3f}% | {cu} / {tu} |")
+
+          with open("build/decomp/unique-summary.json") as f:
+              unique = json.load(f)
+          um = unique["metrics"]
+          uq = unique["quality"]
+          unique_matched = um["unique_matched_bytes"]
+          unique_total = um["unique_total_bytes"]
+          unique_percent = um["unique_matched_percent"]
+          unique_unknown = uq["unknown_bytes"]
+          lines.extend([
+              "",
+              "#### Conservative unique EE partition",
+              "",
+              f"Exact C across every grouped placement: {unique_matched:,} / {unique_total:,} bytes ({unique_percent:.6f}%).",
+              f"Unsupported boundaries and unresolved gaps retained without collapse: {unique_unknown:,} bytes.",
+              "This is a separate structural grouping policy, not certified original-source size. VU code remains in the physical report.",
+          ])
 
           summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
           if summary_path:

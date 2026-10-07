@@ -1,0 +1,410 @@
+/*
+ *  gl_backend.c – OpenGL 3.3 Core backend
+ *
+ *  PC equivalent of the PS2 init chain:
+ *    Hw_DMA_Init  [FUN_0029d9e8]  →  GL_Init (context + framebuffer)
+ *    Hw_GS_Init               →  GL_BeginFrame (render target setup)
+ *
+ *  Depends on: SDL2 (window, GL entry points through gl_loader.c).
+ *  Does not depend on: engine/, game/.
+ */
+
+#include "core/render/gl/gl_backend.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+/* ========================================================================
+ *  Init / Destroy
+ * ======================================================================== */
+
+RenderHandle* GL_Init(u32 width, u32 height, u32 flags)
+{
+    /* ---- SDL window ---- */
+    SDL_Window* win = SDL_CreateWindow(
+        "Ratchet & Clank 2",
+        SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+        (int)width, (int)height,
+        SDL_WINDOW_OPENGL
+        | (flags & RENDER_FLAG_RESIZABLE ? SDL_WINDOW_RESIZABLE : 0)
+        | (flags & RENDER_FLAG_FULLSCREEN ? SDL_WINDOW_FULLSCREEN : 0)
+    );
+    if (!win) {
+        fprintf(stderr, "[GL] SDL_CreateWindow failed: %s\n", SDL_GetError());
+        return NULL;
+    }
+
+    /* ---- GL attribs: 3.3 core ---- */
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+    SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
+    SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
+    if (flags & RENDER_FLAG_SRGB) {
+        SDL_GL_SetAttribute(SDL_GL_FRAMEBUFFER_SRGB_CAPABLE, 1);
+    }
+    if (flags & RENDER_FLAG_VSYNC) {
+        SDL_GL_SetSwapInterval(1);
+    }
+    else {
+        SDL_GL_SetSwapInterval(0);
+    }
+
+    SDL_GLContext ctx = SDL_GL_CreateContext(win);
+    if (!ctx) {
+        fprintf(stderr, "[GL] SDL_GL_CreateContext failed: %s\n", SDL_GetError());
+        SDL_DestroyWindow(win);
+        return NULL;
+    }
+
+    /* ---- GL entry points (load once before any gl* call) ---- */
+    if (!rac2_gl_load()) {
+        fprintf(stderr, "[GL] loading OpenGL entry points failed: %s\n", SDL_GetError());
+        SDL_GL_DeleteContext(ctx);
+        SDL_DestroyWindow(win);
+        return NULL;
+    }
+
+    fprintf(stderr, "[GL] GL_VENDOR:  %s\n", glGetString(GL_VENDOR));
+    fprintf(stderr, "[GL] GL_RENDERER: %s\n", glGetString(GL_RENDERER));
+    fprintf(stderr, "[GL] GL_VERSION: %s\n", glGetString(GL_VERSION));
+
+    /* ---- Default state ---- */
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
+    glEnable(GL_CULL_FACE);
+    glCullFace(GL_BACK);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
+    /* ---- Handle ---- */
+    RenderHandle* h = (RenderHandle*)calloc(1, sizeof(RenderHandle));
+    if (!h) {
+        SDL_GL_DeleteContext(ctx);
+        SDL_DestroyWindow(win);
+        return NULL;
+    }
+    h->window = win;
+    h->gl_ctx = ctx;
+    h->width = width;
+    h->height = height;
+    h->flags = flags;
+    h->current_vao = 0;
+
+    return h;
+}
+
+void GL_Destroy(RenderHandle* h)
+{
+    if (!h) return;
+    if (h->gl_ctx)   SDL_GL_DeleteContext(h->gl_ctx);
+    if (h->window)   SDL_DestroyWindow(h->window);
+    free(h);
+}
+
+/* ========================================================================
+ *  Frame
+ * ======================================================================== */
+
+void GL_BeginFrame(RenderHandle* h, u32 clear_flags, f32 r, f32 g, f32 b, f32 a)
+{
+    (void)h;
+    glViewport(0, 0, (GLsizei)h->width, (GLsizei)h->height);
+
+    if (clear_flags & CLEAR_COLOR)   glClearColor(r, g, b, a);
+    if (clear_flags & CLEAR_DEPTH)   glClearDepthf(1.0f);
+    if (clear_flags & CLEAR_STENCIL) glClearStencil(0);
+
+    u32 mask = 0;
+    if (clear_flags & CLEAR_COLOR)   mask |= GL_COLOR_BUFFER_BIT;
+    if (clear_flags & CLEAR_DEPTH)   mask |= GL_DEPTH_BUFFER_BIT;
+    if (clear_flags & CLEAR_STENCIL) mask |= GL_STENCIL_BUFFER_BIT;
+    if (mask) glClear(mask);
+}
+
+void GL_EndFrame(RenderHandle* h)
+{
+    SDL_GL_SwapWindow(h->window);
+}
+
+/* ========================================================================
+ *  State
+ * ======================================================================== */
+
+void GL_SetPipeline(RenderHandle* h, ShaderHandle* sh)
+{
+    if (sh && sh->program) {
+        glUseProgram(sh->program);
+        h->current_shader = sh;
+    }
+}
+
+void GL_SetCamera(RenderHandle* h, Camera* cam)
+{
+    if (cam) h->current_cam = *cam;
+}
+
+void GL_SetTexture(RenderHandle* h, u32 unit, TextureHandle* tex)
+{
+    if (tex) {
+        glActiveTexture(GL_TEXTURE0 + unit);
+        glBindTexture(GL_TEXTURE_2D, tex->tex_id);
+        h->tex_units[unit] = tex->tex_id;
+    }
+    else {
+        glActiveTexture(GL_TEXTURE0 + unit);
+        glBindTexture(GL_TEXTURE_2D, 0);
+        h->tex_units[unit] = 0;
+    }
+}
+
+void GL_SetUniformMat4(RenderHandle* h, const char* name, const f32* mat4)
+{
+    if (!h->current_shader) return;
+    GLint loc = glGetUniformLocation(h->current_shader->program, name);
+    if (loc >= 0) glUniformMatrix4fv(loc, 1, GL_FALSE, mat4);
+}
+
+void GL_SetUniformF32(RenderHandle* h, const char* name, f32 val)
+{
+    if (!h->current_shader) return;
+    GLint loc = glGetUniformLocation(h->current_shader->program, name);
+    if (loc >= 0) glUniform1f(loc, val);
+}
+
+void GL_SetUniformI32(RenderHandle* h, const char* name, i32 val)
+{
+    if (!h->current_shader) return;
+    GLint loc = glGetUniformLocation(h->current_shader->program, name);
+    if (loc >= 0) glUniform1i(loc, val);
+}
+
+/* ========================================================================
+ *  Draw
+ * ======================================================================== */
+
+void GL_DrawMesh(RenderHandle* h, MeshHandle* mesh)
+{
+    if (!mesh) return;
+    if (h->current_vao != mesh->vao) {
+        glBindVertexArray(mesh->vao);
+        h->current_vao = mesh->vao;
+    }
+    glDrawElements(GL_TRIANGLES, (GLsizei)mesh->idx_count, GL_UNSIGNED_SHORT, 0);
+}
+
+void GL_DrawMeshRange(RenderHandle* h, MeshHandle* mesh, u32 first, u32 count)
+{
+    if (!mesh) return;
+    if (h->current_vao != mesh->vao) {
+        glBindVertexArray(mesh->vao);
+        h->current_vao = mesh->vao;
+    }
+    glDrawElementsBaseVertex(GL_TRIANGLES, (GLsizei)count, GL_UNSIGNED_SHORT,
+        (void*)(uintptr_t)first, 0);
+}
+
+/* ========================================================================
+ *  Resource creation
+ * ======================================================================== */
+
+ShaderHandle* GL_CreateShader(const char* vert_src, const char* frag_src)
+{
+    /* --- compile helpers --- */
+    GLuint compile(GLenum type, const char* src) {
+        GLuint sh = glCreateShader(type);
+        glShaderSource(sh, 1, &src, NULL);
+        glCompileShader(sh);
+        GLint ok;
+        glGetShaderiv(sh, GL_COMPILE_STATUS, &ok);
+        if (!ok) {
+            char log[4096];
+            glGetShaderInfoLog(sh, sizeof(log), NULL, log);
+            fprintf(stderr, "[GL] Shader compile error:\n%s\n", log);
+            glDeleteShader(sh);
+            return 0;
+        }
+        return sh;
+    }
+
+    GLuint vs = compile(GL_VERTEX_SHADER, vert_src);
+    if (!vs) return NULL;
+
+    GLuint fs = compile(GL_FRAGMENT_SHADER, frag_src);
+    if (!fs) { glDeleteShader(vs); return NULL; }
+
+    GLuint prog = glCreateProgram();
+    glAttachShader(prog, vs);
+    glAttachShader(prog, fs);
+    glLinkProgram(prog);
+
+    /* vertex attrib locations (fixed by the layout) */
+    const char* attribs[] = {
+        "a_position", "a_normal", "a_texcoord",
+        "a_bone_indices", "a_bone_weights"
+    };
+    for (int i = 0; i < 5; i++) {
+        glBindAttribLocation(prog, i, attribs[i]);
+    }
+    glLinkProgram(prog);
+
+    GLint link_ok;
+    glGetProgramiv(prog, GL_LINK_STATUS, &link_ok);
+    if (!link_ok) {
+        char log[4096];
+        glGetProgramInfoLog(prog, sizeof(log), NULL, log);
+        fprintf(stderr, "[GL] Program link error:\n%s\n", log);
+        glDeleteProgram(prog);
+        glDeleteShader(vs);
+        glDeleteShader(fs);
+        return NULL;
+    }
+
+    glDeleteShader(vs);
+    glDeleteShader(fs);
+
+    ShaderHandle* sh = (ShaderHandle*)calloc(1, sizeof(ShaderHandle));
+    sh->program = prog;
+    return sh;
+}
+
+MeshHandle* GL_CreateMesh(const Vertex* verts, u32 vert_count,
+    const u16* indices, u32 idx_count)
+{
+    if (!verts || vert_count == 0) return NULL;
+
+    MeshHandle* mesh = (MeshHandle*)calloc(1, sizeof(MeshHandle));
+
+    glGenVertexArrays(1, &mesh->vao);
+    glBindVertexArray(mesh->vao);
+
+    /* VBO */
+    glGenBuffers(1, &mesh->vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, mesh->vbo);
+    glBufferData(GL_ARRAY_BUFFER,
+        (GLsizeiptr)(vert_count * sizeof(Vertex)),
+        verts, GL_STATIC_DRAW);
+
+    /* Layout – stride = sizeof(Vertex) = 3+3+2+4+4 floats = 16 floats = 64 bytes */
+    f32 stride = (f32)sizeof(Vertex);
+
+    /* a_position – loc 0 */
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, (void*)0);
+
+    /* a_normal – loc 1 */
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, stride, (void*)(3 * sizeof(f32)));
+
+    /* a_texcoord – loc 2 */
+    glEnableVertexAttribArray(2);
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, stride, (void*)(6 * sizeof(f32)));
+
+    /* a_bone_indices – loc 3 */
+    glEnableVertexAttribArray(3);
+    glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, stride, (void*)(8 * sizeof(f32)));
+
+    /* a_bone_weights – loc 4 */
+    glEnableVertexAttribArray(4);
+    glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, stride, (void*)(12 * sizeof(f32)));
+
+    /* IBO */
+    mesh->idx_count = idx_count;
+    if (indices && idx_count > 0) {
+        glGenBuffers(1, &mesh->ibo);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mesh->ibo);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER,
+            (GLsizeiptr)(idx_count * sizeof(u16)),
+            indices, GL_STATIC_DRAW);
+    }
+
+    mesh->vert_count = vert_count;
+    glBindVertexArray(0);
+    return mesh;
+}
+
+TextureHandle* GL_CreateTextureFromData(const u8* data, u32 w, u32 h, PixelFormat fmt)
+{
+    if (!data || w == 0 || h == 0) return NULL;
+
+    TextureHandle* tex = (TextureHandle*)calloc(1, sizeof(TextureHandle));
+    tex->width = w;
+    tex->height = h;
+    tex->fmt = fmt;
+    glGenTextures(1, &tex->tex_id);
+
+    glBindTexture(GL_TEXTURE_2D, tex->tex_id);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    GLenum gl_fmt, gl_type;
+    u32 bytes_per_px;
+    switch (fmt) {
+    case PIX_RGBA8: gl_fmt = GL_RGBA;  gl_type = GL_UNSIGNED_BYTE; bytes_per_px = 4; break;
+    case PIX_RGB8:  gl_fmt = GL_RGB;   gl_type = GL_UNSIGNED_BYTE; bytes_per_px = 3; break;
+    case PIX_R8:    gl_fmt = GL_RED;   gl_type = GL_UNSIGNED_BYTE; bytes_per_px = 1; break;
+    default:        gl_fmt = GL_RGBA;  gl_type = GL_UNSIGNED_BYTE; bytes_per_px = 4; break;
+    }
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, (GLsizei)w, (GLsizei)h, 0,
+        gl_fmt, gl_type, data);
+    glGenerateMipmap(GL_TEXTURE_2D);
+
+    glBindTexture(GL_TEXTURE_2D, 0);
+    return tex;
+}
+
+/* ========================================================================
+ *  Resource destruction
+ * ======================================================================== */
+
+void GL_DestroyShader(ShaderHandle* sh)
+{
+    if (!sh) return;
+    if (sh->program)   glDeleteProgram(sh->program);
+    free(sh);
+}
+
+void GL_DestroyMesh(MeshHandle* mesh)
+{
+    if (!mesh) return;
+    if (mesh->vao) glDeleteVertexArrays(1, &mesh->vao);
+    if (mesh->vbo) glDeleteBuffers(1, &mesh->vbo);
+    if (mesh->ibo) glDeleteBuffers(1, &mesh->ibo);
+    free(mesh);
+}
+
+void GL_DestroyTexture(TextureHandle* tex)
+{
+    if (!tex) return;
+    if (tex->tex_id) glDeleteTextures(1, &tex->tex_id);
+    free(tex);
+}
+
+/* ========================================================================
+ *  Window query
+ * ======================================================================== */
+
+u32 GL_GetWindowWidth(SDL_Window* win)
+{
+    int w, h;
+    SDL_GetWindowSize(win, &w, &h);
+    return (u32)w;
+}
+
+u32 GL_GetWindowHeight(SDL_Window* win)
+{
+    int w, h;
+    SDL_GetWindowSize(win, &w, &h);
+    return (u32)h;
+}
+
+void GL_GetWindowPosition(SDL_Window* win, i32* x, i32* y)
+{
+    int px, py;
+    SDL_GetWindowPosition(win, &px, &py);
+    if (x) *x = (i32)px;
+    if (y) *y = (i32)py;
+}

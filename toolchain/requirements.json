@@ -1,27 +1,164 @@
 {
-  "schema": 1,
-  "kind": "rac2-toolchain-requirements",
-  "contributor_policy": {"legally_acquired_matching_iso_required": true, "complete_tool_suite_required": true, "verify_baseline_before_contribution": true, "doctor_mode": "--contributor-check"},
-  "paths_relative_to": "repository root",
-  "recommended_python": "3.12",
-  "python_dependencies_source": "requirements.txt",
-  "qualified_c_hash_source": {"path": "progress/candidates.json", "field": "tools"},
-  "qualified_c_flags_source": {"path": "config/candidate-catalog.json", "field": "flags"},
-  "qualified_reconstruction_hash_source": {"path": "progress/report.json", "field": "tools"},
-  "components": [
-    {"id": "git", "required_for": ["all contributions"], "source_url": "https://git-scm.com/downloads/", "acquisition": "public upstream download"},
-    {"id": "python", "required_for": ["all contributions"], "source_url": "https://www.python.org/downloads/", "acquisition": "public upstream download; project-tested minor is 3.12"},
-    {"id": "github-cli", "required_for": ["optional fork and pull request automation"], "source_url": "https://cli.github.com/", "acquisition": "public upstream download"},
-    {"id": "wsl", "required_for": ["current matching C runner on Windows"], "source_url": "https://learn.microsoft.com/en-us/windows/wsl/install", "acquisition": "Microsoft installation instructions"},
-    {"id": "wrench", "required_for": ["disc preparation"], "source_url": "https://github.com/chaoticgd/wrench/releases", "project_url": "https://github.com/chaoticgd/wrench", "executable": "wrenchbuild", "acquisition": "upstream releases or upstream build instructions"},
-    {"id": "gnu-ee-c-profile", "required_for": ["matching C candidate checks"], "executables": ["cpp", "cc1", "as"], "profile": "GNU EE 2.9-ee-991111b with measured RAC2 adjustments", "source_url": null, "upstream_background_url": "https://gcc.gnu.org/", "acquisition": "exact reconstruction inputs are not yet a self-contained public download recipe", "base_archive": {"filename": "gnu-ee-binutils-gcc-1.1.tar.gz", "sha256": "1f518043e252d6eda726386971d52eda26541ab936ea73a9783d73712b595f92"}, "notes": "A modern upstream GCC download is not a substitute. Public adjustments are in scripts/compiler; see docs/COMPILER-NOTES.md."},
-    {"id": "sn-c-linker", "required_for": ["matching C candidate checks"], "profile": "SN ProDG 3.01 EE linker", "relative_executable": "ee/bin/ld.exe", "source_url": null, "vendor_information_url": "https://partners.playstation.net/", "acquisition": "user-supplied authorized legacy copy; no verified public download link offered"},
-    {"id": "sn-reconstruction-tools", "required_for": ["full image integration and assembly reconstruction"], "profile": "SN ProDG 2.0 EE reconstruction tools", "relative_executables": ["ee/bin/Ps2EeAs.exe", "ee/bin/ld.exe"], "source_url": null, "vendor_information_url": "https://partners.playstation.net/", "acquisition": "user-supplied authorized legacy copy; no verified public download link offered"},
-    {"id": "ghidra", "required_for": ["contribution: binary analysis"], "source_url": "https://github.com/NationalSecurityAgency/ghidra/releases", "processor_support_url": "https://github.com/chaoticgd/ghidra-emotionengine-reloaded", "ai_access_example_url": "https://github.com/LaurieWired/GhidraMCP", "acquisition": "official upstream releases plus verified R5900 language support and analysis access"},
-    {"id": "pcsx2", "required_for": ["contribution: dynamic validation"], "source_url": "https://pcsx2.net/downloads/", "ai_access_example_url": "https://github.com/hkmodd/PCSX2-MCP", "acquisition": "official upstream download or reviewed upstream debugger integration; user supplies permitted BIOS and game data"},
-    {"id": "legally-acquired-iso", "required_for": ["every contribution"], "identity_source": "config/target.json", "source_url": null, "acquisition": "contributor supplies their own legally acquired supported image"},
-    {"id": "permitted-bios", "required_for": ["contribution: PCSX2 setup"], "source_url": null, "acquisition": "contributor supplies their own permitted local BIOS"}
-  ],
-  "local_install_directory": "toolchain/local/",
-  "hosts_binaries": false
+ "schema": 1,
+ "kind": "rac2-toolchain-requirements",
+ "contributor_policy": {
+  "legally_acquired_matching_iso_required": true,
+  "complete_tool_suite_required": true,
+  "verify_baseline_before_contribution": true,
+  "doctor_mode": "--contributor-check"
+ },
+ "paths_relative_to": "repository root",
+ "recommended_python": "3.12",
+ "python_dependencies_source": "requirements.txt",
+ "qualified_c_hash_source": {
+  "path": "progress/candidates.json",
+  "field": "tools"
+ },
+ "qualified_c_flags_source": {
+  "path": "config/candidate-catalog.json",
+  "field": "flags"
+ },
+ "qualified_reconstruction_hash_source": {
+  "path": "progress/report.json",
+  "field": "tools"
+ },
+ "components": [
+  {
+   "id": "git",
+   "required_for": [
+    "all contributions"
+   ],
+   "source_url": "https://git-scm.com/downloads/",
+   "acquisition": "public upstream download"
+  },
+  {
+   "id": "python",
+   "required_for": [
+    "all contributions"
+   ],
+   "source_url": "https://www.python.org/downloads/",
+   "acquisition": "public upstream download; project-tested minor is 3.12"
+  },
+  {
+   "id": "github-cli",
+   "required_for": [
+    "optional fork and pull request automation"
+   ],
+   "source_url": "https://cli.github.com/",
+   "acquisition": "public upstream download"
+  },
+  {
+   "id": "wsl",
+   "required_for": [
+    "current matching C runner on Windows"
+   ],
+   "source_url": "https://learn.microsoft.com/en-us/windows/wsl/install",
+   "acquisition": "Microsoft installation instructions"
+  },
+  {
+   "id": "wrench",
+   "required_for": [
+    "disc preparation"
+   ],
+   "source_url": "https://github.com/chaoticgd/wrench/releases",
+   "project_url": "https://github.com/chaoticgd/wrench",
+   "executable": "wrenchbuild",
+   "acquisition": "upstream releases or upstream build instructions"
+  },
+  {
+   "id": "gnu-ee-c-profile",
+   "required_for": [
+    "matching C candidate checks"
+   ],
+   "executables": [
+    "cpp",
+    "cc1",
+    "as"
+   ],
+   "profile": "GNU EE 2.9-ee-991111b with measured RAC2 adjustments",
+   "source_url": null,
+   "upstream_background_url": "https://gcc.gnu.org/",
+   "acquisition": "exact reconstruction inputs are not yet a self-contained public download recipe",
+   "base_archive": {
+    "filename": "gnu-ee-binutils-gcc-1.1.tar.gz",
+    "sha256": "1f518043e252d6eda726386971d52eda26541ab936ea73a9783d73712b595f92"
+   },
+   "notes": "A modern upstream GCC download is not a substitute. Public adjustments are in scripts/compiler; see docs/COMPILER-NOTES.md."
+  },
+  {
+   "id": "sn-c-linker",
+   "required_for": [
+    "matching C candidate checks"
+   ],
+   "profile": "SN ProDG 3.01 EE linker",
+   "relative_executable": "ee/bin/ld.exe",
+   "source_url": null,
+   "vendor_information_url": "https://partners.playstation.net/",
+   "acquisition": "user-supplied authorized legacy copy; no verified public download link offered"
+  },
+  {
+   "id": "sn-reconstruction-tools",
+   "required_for": [
+    "full image integration and assembly reconstruction"
+   ],
+   "profile": "SN ProDG 2.0 EE reconstruction tools",
+   "relative_executables": [
+    "ee/bin/Ps2EeAs.exe",
+    "ee/bin/ld.exe"
+   ],
+   "source_url": null,
+   "vendor_information_url": "https://partners.playstation.net/",
+   "acquisition": "user-supplied authorized legacy copy; no verified public download link offered"
+  },
+  {
+   "id": "ghidra",
+   "required_for": [
+    "contribution: binary analysis"
+   ],
+   "source_url": "https://github.com/NationalSecurityAgency/ghidra/releases",
+   "processor_support_url": "https://github.com/chaoticgd/ghidra-emotionengine-reloaded",
+   "ai_access_example_url": "https://github.com/LaurieWired/GhidraMCP",
+   "acquisition": "official upstream releases plus verified R5900 language support and analysis access"
+  },
+  {
+   "id": "pcsx2",
+   "required_for": [
+    "contribution: dynamic validation"
+   ],
+   "source_url": "https://pcsx2.net/downloads/",
+   "ai_access_example_url": "https://github.com/hkmodd/PCSX2-MCP",
+   "acquisition": "official upstream download or reviewed upstream debugger integration; user supplies permitted BIOS and game data"
+  },
+  {
+   "id": "legally-acquired-iso",
+   "required_for": [
+    "every contribution"
+   ],
+   "identity_source": "config/target.json",
+   "source_url": null,
+   "acquisition": "contributor supplies their own legally acquired supported image"
+  },
+  {
+   "id": "permitted-bios",
+   "required_for": [
+    "contribution: PCSX2 setup"
+   ],
+   "source_url": null,
+   "acquisition": "contributor supplies their own permitted local BIOS"
+  }
+ ],
+ "local_install_directory": "toolchain/local/",
+ "hosts_binaries": false,
+ "c_toolchain_build_environment": {
+  "host": "Ubuntu 26.04.x under WSL2 with 32-bit support (gcc -m32)",
+  "host_triple": "i686-linux-gnu",
+  "bison": "1.28 (built locally, first on PATH)",
+  "recipe": "docs/COMPILER-NOTES.md#complete-rebuild-recipe",
+  "identity_checkpoints": {
+   "gcc/config/mips/mips.c": "c76c0bec5b56c198381ab2a4fc60c161a4287e8312d7d1fdea3d1e6a0e1af614",
+   "gcc/config/mips/mips.h": "52f470a043ffbba535582e2f08a8353d23bbf6521b1b63e241847f464891d9e6",
+   "gas/config/tc-mips.c": "61e51c1ebcdf860db4503b6cc6a11c40596d1f3c969daf66ee56a45f454130ca"
+  },
+  "note": "Instrument hashes are host-dependent; the qualified values are in progress/candidates.json (tools)."
+ }
 }

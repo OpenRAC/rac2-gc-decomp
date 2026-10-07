@@ -77,12 +77,16 @@ do not prove a candidate: actual complete-symbol/image gates still have to pass.
 The reconstructed GNU profile starts from `gnu-ee-binutils-gcc-1.1.tar.gz`
 (base archive identity recorded in `requirements.json`) and an inherited patch
 stack plus the public adjustments under `scripts/compiler/`. See
-[compiler provenance](../docs/COMPILER-NOTES.md). **The exact base acquisition and
-complete public rebuild recipe are not yet a self-contained beginner setup.**
-The [upstream GNU GCC project](https://gcc.gnu.org/) provides background and public
+[compiler provenance](../docs/COMPILER-NOTES.md), which carries the
+[complete rebuild recipe](../docs/COMPILER-NOTES.md#complete-rebuild-recipe): the
+patch order, the measured source adjustments, the build host and the six
+identities a finished build must reproduce. The instruments are host-built, so
+the documented hashes require that host; a rebuild that skips one adjustment
+still compiles the measured corpus but yields a different `cc1`, which is why a
+contributor compares identities before working. The
+[upstream GNU GCC project](https://gcc.gnu.org/) provides background and public
 GNU releases, not a download of our byte-matching EE profile. Do not substitute
-another compiler and report it as qualified. Documenting a verified, licensed,
-reproducible acquisition/build route is useful work in its own right.
+another compiler and report it as qualified.
 
 ## Legacy SN components
 
@@ -133,6 +137,30 @@ The strict check returns nonzero for missing prerequisites. File/hash presence
 does not establish legal acquisition, R5900 language support or usable emulator
 configuration: the AI and contributor must verify those separately. Prepare the
 pinned references and pass the full baseline gates before contribution work.
+
+## Source-specific SDK boot owner
+
+The boot links the separately qualified sysbit and CPR8 SDK objects alongside
+the unchanged default GNU object. Use the maintained campaign integration route
+with `--sdk-binding <private-sdk-binding.json>`, as shown in
+[CAMPAIGN-WORKFLOW.md](../docs/CAMPAIGN-WORKFLOW.md). The file is private and has
+exactly three fields: `distro`, `workspace_root` and `tool_paths`.
+
+`workspace_root` names a private native Linux directory under `/root/` or `/home/`.
+`tool_paths` supplies the seven instrument roles in
+[`owned-sdk-b9-single-text-controls-v1.json`](../config/compiler-profiles/owned-sdk-b9-single-text-controls-v1.json):
+`driver`, `cc1`, `as`, `strip`, `linker`, `cpp_available` and `cc1plus_available`.
+The linker uses its host path; the other instruments use absolute WSL paths.
+Their hashes must match the qualified owned tools. Flags and stripping arguments
+are fixed by the source-specific unit, rather than configurable in the binding.
+
+The ordinary doctor C probe covers the default GNU chain. It does not supply
+or qualify the owned SDK instruments. This additional admission is limited to
+the exact standalone source and complete object documented in
+[SDK-SYSBIT-EVIDENCE.md](../docs/SDK-SYSBIT-EVIDENCE.md) and
+[SDK-CPR8-EVIDENCE.md](../docs/SDK-CPR8-EVIDENCE.md); the existing three-control
+foundation remains leaf-only. The complete boot and all 27 overlay gates remain
+mandatory, and private tools and runtime bindings are never published.
 
 ## Keeping this folder current
 

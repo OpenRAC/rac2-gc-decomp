@@ -1392,3 +1392,2038 @@ void FUN_002B7170(void) {
 
 /* Clear one aligned 128-bit object through architectural zero. */
 void FUN_00282C88(TI *a0) { *a0 = 0; }
+
+/* Write the measured GS privileged 64-bit register configuration in order. */
+typedef unsigned long long GsRegisterValue;
+extern GsRegisterValue D_001A6488[3];
+
+void FUN_0027B948(void)
+{
+    GsRegisterValue framebuffer, display;
+    *(volatile GsRegisterValue *)0x120000e0 = 0;
+    *(volatile GsRegisterValue *)0x12000000 = 0xffa1;
+    *(volatile GsRegisterValue *)0x12000020 = D_001A6488[0];
+    framebuffer = D_001A6488[1];
+    *(volatile GsRegisterValue *)0x12000070 = framebuffer;
+    *(volatile GsRegisterValue *)0x12000090 = framebuffer;
+    display = D_001A6488[2];
+    *(volatile GsRegisterValue *)0x12000080 = display;
+    *(volatile GsRegisterValue *)0x120000a0 = display;
+    *(volatile GsRegisterValue *)0x120000d0 = 0;
+}
+
+/* Set the value of each enabled resident channel in its observed update order. */
+typedef struct ResidentChannel64 {
+    short flags;
+    short value;
+    u8 fields4[0x20];
+} ResidentChannel64;
+typedef struct ResidentChannels64 {
+    u8 fields0[0x50];
+    ResidentChannel64 channels[3];
+} ResidentChannels64;
+
+void FUN_002B7340(s32 value)
+{
+    ResidentChannels64 *state = (ResidentChannels64 *)D_001A63A8;
+    if (state->channels[0].flags & 0x8000)
+        state->channels[0].value = value;
+    if (state->channels[2].flags & 0x8000)
+        state->channels[2].value = value;
+    if (state->channels[1].flags & 0x8000)
+        state->channels[1].value = value;
+}
+
+/* Construct a double through the original runtime packing routine. */
+typedef struct DoubleParts44 {
+    s32 kind;
+    u32 sign;
+    s32 exponent;
+    unsigned long long fraction;
+} DoubleParts44;
+extern double FUN_00122630(DoubleParts44 *);
+
+double FUN_00123268(s32 kind, u32 sign, s32 exponent, unsigned long long fraction)
+{
+    DoubleParts44 parts;
+    parts.kind = kind;
+    parts.sign = sign;
+    parts.exponent = exponent;
+    parts.fraction = fraction;
+    return FUN_00122630(&parts);
+}
+/* libgcc single-precision software floating point, EE build - vendored copy.
+ *
+ * Modified distribution prepared by the RAC2 decompilation campaign on
+ * 5 October 2026: upstream fp-bit.c was preprocessed for the EE single-float
+ * configuration and one symbol was renamed. The original copyright,
+ * GPL version 2-or-later notice, additional permissions, linking exception,
+ * warranty disclaimer and author credits are retained below. Only
+ * trailing whitespace on added comment lines is normalized.
+ * See COPYING in this directory for the GNU GPL version 2 text. The root
+ * MIT licence does not relicense this source or its generated copy within
+ * candidates/boot.c.
+ *
+ * Provenance:
+ *   upstream   rac1-decomp src/libgcc/fp-bit.c, commit
+ *              cb22f0b0d3a171d1fd4b6851b86fe214a22c9822, sha256
+ *              3069e3a1385e9b2d316929a676a71e2af8a834666b7388a89f10c52ae0e17336
+ *   transform  one pass of the campaign's reconstructed 2.9-ee cpp:
+ *              cpp -P -DFLOAT -DFLOAT_BIT_ORDER_MISMATCH -DNO_DENORMALS
+ *                  -DUS_SOFTWARE_GOFAST
+ *   rename     __unpack_f becomes FUN_00123400 at 16 occurrences in the
+ *              preprocessed body. This is a mechanical, reversible rename;
+ *              fptodp and every other body keep their original names.
+ *
+ * The published body is derived from the immutable two-symbol private trial;
+ * it is independently qualified in the generated complete boot unit. The
+ * refused fptodp body remains present and receives no matching credit.
+ * The body between the markers is unchanged from the published PR13 source
+ * at f39ac431876c1e05e88b9a2e28dce855a1e4f9cb. Only notices were restored.
+ * See README.md in this directory and docs/RAC1-FP-BIT-EVIDENCE.md.
+ */
+
+/* This is a software floating point library which can be used instead of
+   the floating point routines in libgcc1.c for targets without hardware
+   floating point.
+ Copyright (C) 1994, 1995, 1996, 1997, 1998 Free Software Foundation, Inc.
+
+This file is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2, or (at your option) any
+later version.
+
+In addition to the permissions in the GNU General Public License, the
+Free Software Foundation gives you unlimited permission to link the
+compiled version of this file with other programs, and to distribute
+those programs without any restriction coming from the use of this
+file.  (The General Public License restrictions do apply in other
+respects; for example, they cover modification of the file, and
+distribution when not linked into another program.)
+
+This file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; see the file COPYING.  If not, write to
+the Free Software Foundation, 59 Temple Place - Suite 330,
+Boston, MA 02111-1307, USA.  */
+
+/* As a special exception, if you link this library with other files,
+   some of which are compiled with GCC, to produce an executable,
+   this library does not by itself cause the resulting executable
+   to be covered by the GNU General Public License.
+   This exception does not however invalidate any other reasons why
+   the executable file might be covered by the GNU General Public License.  */
+
+/* This implements IEEE 754 format arithmetic, but does not provide a
+   mechanism for setting the rounding mode, or for generating or handling
+   exceptions.
+
+   The original code by Steve Chamberlain, hacked by Mark Eichin and Jim
+   Wilson, all of Cygnus Support.  */
+
+/* --- verbatim preprocessed fp-bit.c begins here --- */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+typedef float SFtype __attribute__ ((mode (SF)));
+typedef float DFtype __attribute__ ((mode (DF)));
+
+typedef int HItype __attribute__ ((mode (HI)));
+typedef int SItype __attribute__ ((mode (SI)));
+typedef int DItype __attribute__ ((mode (DI)));
+
+ 
+
+
+
+
+typedef unsigned int UHItype __attribute__ ((mode (HI)));
+typedef unsigned int USItype __attribute__ ((mode (SI)));
+typedef unsigned int UDItype __attribute__ ((mode (DI)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	typedef USItype fractype;
+	typedef UHItype halffractype;
+	typedef SFtype FLO_type;
+	typedef SItype intfrac;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+typedef enum
+{
+  CLASS_SNAN,
+  CLASS_QNAN,
+  CLASS_ZERO,
+  CLASS_NUMBER,
+  CLASS_INFINITY
+} fp_class_type;
+
+typedef struct
+{
+
+  fp_class_type class;
+  unsigned int sign;
+  int normal_exp;
+
+
+  union
+    {
+      fractype ll;
+      halffractype l[2];
+    } fraction;
+} fp_number_type;
+
+typedef union
+{
+  FLO_type value;
+  fractype value_raw;
+
+
+
+
+  struct
+    {
+      fractype fraction: 23  __attribute__ ((packed));
+      unsigned int exp: 8  __attribute__ ((packed));
+      unsigned int sign:1 __attribute__ ((packed));
+    }
+  bits;
+
+
+
+}
+FLO_union_type;
+
+
+ 
+
+ 
+
+
+
+__inline__ 
+static fp_number_type *
+nan ()
+{
+   
+
+
+
+
+  extern fp_number_type __thenan_df;
+
+  return &__thenan_df;
+}
+
+__inline__ 
+static int
+isnan ( fp_number_type *  x)
+{
+  return x->class == CLASS_SNAN || x->class == CLASS_QNAN;
+}
+
+__inline__ 
+static int
+isinf ( fp_number_type *  x)
+{
+  return x->class == CLASS_INFINITY;
+}
+
+
+
+__inline__ 
+static int
+iszero ( fp_number_type *  x)
+{
+  return x->class == CLASS_ZERO;
+}
+
+__inline__  
+static void
+flip_sign ( fp_number_type *  x)
+{
+  x->sign = !x->sign;
+}
+
+extern FLO_type __pack_f  ( fp_number_type * );
+
+
+FLO_type
+__pack_f  ( fp_number_type *  src)
+{
+  FLO_union_type dst;
+  fractype fraction = src->fraction.ll;	 
+  int sign = src->sign;
+  int exp = 0;
+
+  if (isnan (src))
+    {
+      exp = (0xff) ;
+      if (src->class == CLASS_QNAN || 1)
+	{
+	  fraction |= 0x100000L ;
+	}
+    }
+  else if (isinf (src))
+    {
+      exp = (0xff) ;
+      fraction = 0;
+    }
+  else if (iszero (src))
+    {
+      exp = 0;
+      fraction = 0;
+    }
+  else if (fraction == 0)
+    {
+      exp = 0;
+    }
+  else
+    {
+      if (src->normal_exp < (-(127 )+1) )
+	{
+	   
+
+
+
+	  int shift = (-(127 )+1)  - src->normal_exp;
+
+	  exp = 0;
+
+	  if (shift > 32  - 7L )
+	    {
+	       
+	      fraction = 0;
+	    }
+	  else
+	    {
+	       
+	      fraction >>= shift;
+	    }
+	  fraction >>= 7L ;
+	}
+      else if (src->normal_exp > 127 )
+	{
+	  exp = (0xff) ;
+	  fraction = 0;
+	}
+      else
+	{
+	  exp = src->normal_exp + 127 ;
+	   
+
+
+	  if ((fraction & 0x7f ) == 0x40 )
+	    {
+	      if (fraction & (1 << 7L ))
+		fraction += 0x3f  + 1;
+	    }
+	  else
+	    {
+	       
+	      fraction += 0x3f ;
+	    }
+	  if (fraction >= (1LL<<(23 +1+ 7L )) )
+	    {
+	      fraction >>= 1;
+	      exp += 1;
+	    }
+	  fraction >>= 7L ;
+	}
+    }
+
+   
+
+
+
+  dst.bits.fraction = fraction;
+  dst.bits.exp = exp;
+  dst.bits.sign = sign;
+
+
+
+
+  return dst.value;
+}
+
+
+extern void FUN_00123400  (FLO_union_type *, fp_number_type *);
+
+
+void
+FUN_00123400  (FLO_union_type * src, fp_number_type * dst)
+{
+   
+
+
+  fractype fraction;
+  int exp;
+  int sign;
+
+
+  
+
+  fraction = src->bits.fraction;
+  exp = src->bits.exp;
+  sign = src->bits.sign;
+
+
+  dst->sign = sign;
+  if (exp == 0)
+    {
+       
+       
+
+
+
+      if (fraction == 0
+
+	  || 1
+
+	  )
+	{
+	   
+	  dst->class = CLASS_ZERO;
+	}
+      else
+	{
+	   
+
+
+	  dst->normal_exp = exp - 127  + 1;
+	  fraction <<= 7L ;
+
+	  dst->class = CLASS_NUMBER;
+
+	  while (fraction < (1LL<<(23 + 7L )) )
+	    {
+	      fraction <<= 1;
+	      dst->normal_exp--;
+	    }
+
+	  dst->fraction.ll = fraction;
+	}
+    }
+  else if (exp == (0xff) )
+    {
+       
+      if (fraction == 0)
+	{
+	   
+	  dst->class = CLASS_INFINITY;
+	}
+      else
+	{
+	   
+	  if (fraction & 0x100000L )
+	    {
+	      dst->class = CLASS_QNAN;
+	    }
+	  else
+	    {
+	      dst->class = CLASS_SNAN;
+	    }
+	   
+	  dst->fraction.ll = fraction;
+	}
+    }
+  else
+    {
+       
+      dst->normal_exp = exp - 127 ;
+      dst->class = CLASS_NUMBER;
+      dst->fraction.ll = (fraction << 7L ) | (1LL<<(23 + 7L )) ;
+    }
+}
+
+
+
+static fp_number_type *
+_fpadd_parts (fp_number_type * a,
+	      fp_number_type * b,
+	      fp_number_type * tmp)
+{
+  intfrac tfraction;
+
+   
+  int a_normal_exp;
+  int b_normal_exp;
+  fractype a_fraction;
+  fractype b_fraction;
+
+  if (isnan (a))
+    {
+      return a;
+    }
+  if (isnan (b))
+    {
+      return b;
+    }
+  if (isinf (a))
+    {
+       
+      if (isinf (b) && a->sign != b->sign)
+	return nan ();
+      return a;
+    }
+  if (isinf (b))
+    {
+      return b;
+    }
+  if (iszero (b))
+    {
+      if (iszero (a))
+	{
+	  *tmp = *a;
+	  tmp->sign = a->sign & b->sign;
+	  return tmp;
+	}
+      return a;
+    }
+  if (iszero (a))
+    {
+      return b;
+    }
+
+   
+
+  {
+    int diff;
+
+    a_normal_exp = a->normal_exp;
+    b_normal_exp = b->normal_exp;
+    a_fraction = a->fraction.ll;
+    b_fraction = b->fraction.ll;
+
+    diff = a_normal_exp - b_normal_exp;
+
+    if (diff < 0)
+      diff = -diff;
+    if (diff < 32 )
+      {
+	 
+	while (a_normal_exp > b_normal_exp)
+	  {
+	    b_normal_exp++;
+	    {  b_fraction  = ( b_fraction  & 1) | ( b_fraction  >> 1); } ;
+	  }
+	while (b_normal_exp > a_normal_exp)
+	  {
+	    a_normal_exp++;
+	    {  a_fraction  = ( a_fraction  & 1) | ( a_fraction  >> 1); } ;
+	  }
+      }
+    else
+      {
+	 
+	if (a_normal_exp > b_normal_exp)
+	  {
+	    b_normal_exp = a_normal_exp;
+	    b_fraction = 0;
+	  }
+	else
+	  {
+	    a_normal_exp = b_normal_exp;
+	    a_fraction = 0;
+	  }
+      }
+  }
+
+  if (a->sign != b->sign)
+    {
+      if (a->sign)
+	{
+	  tfraction = -a_fraction + b_fraction;
+	}
+      else
+	{
+	  tfraction = a_fraction - b_fraction;
+	}
+      if (tfraction >= 0)
+	{
+	  tmp->sign = 0;
+	  tmp->normal_exp = a_normal_exp;
+	  tmp->fraction.ll = tfraction;
+	}
+      else
+	{
+	  tmp->sign = 1;
+	  tmp->normal_exp = a_normal_exp;
+	  tmp->fraction.ll = -tfraction;
+	}
+       
+
+      while (tmp->fraction.ll < (1LL<<(23 + 7L ))  && tmp->fraction.ll)
+	{
+	  tmp->fraction.ll <<= 1;
+	  tmp->normal_exp--;
+	}
+    }
+  else
+    {
+      tmp->sign = a->sign;
+      tmp->normal_exp = a_normal_exp;
+      tmp->fraction.ll = a_fraction + b_fraction;
+    }
+  tmp->class = CLASS_NUMBER;
+   
+
+
+  if (tmp->fraction.ll >= (1LL<<(23 +1+ 7L )) )
+    {
+      {  tmp->fraction.ll  = ( tmp->fraction.ll  & 1) | ( tmp->fraction.ll  >> 1); } ;
+      tmp->normal_exp++;
+    }
+  return tmp;
+
+}
+
+FLO_type
+fpadd  (FLO_type arg_a, FLO_type arg_b)
+{
+  fp_number_type a;
+  fp_number_type b;
+  fp_number_type tmp;
+  fp_number_type *res;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &a);
+  FUN_00123400  ((FLO_union_type *) & arg_b, &b);
+
+  res = _fpadd_parts (&a, &b, &tmp);
+
+  return __pack_f  (res);
+}
+
+FLO_type
+fpsub  (FLO_type arg_a, FLO_type arg_b)
+{
+  fp_number_type a;
+  fp_number_type b;
+  fp_number_type tmp;
+  fp_number_type *res;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &a);
+  FUN_00123400  ((FLO_union_type *) & arg_b, &b);
+
+  b.sign ^= 1;
+
+  res = _fpadd_parts (&a, &b, &tmp);
+
+  return __pack_f  (res);
+}
+
+
+
+static __inline__  fp_number_type *
+_fpmul_parts ( fp_number_type *  a,
+	       fp_number_type *  b,
+	       fp_number_type * tmp)
+{
+  fractype low = 0;
+  fractype high = 0;
+
+  if (isnan (a))
+    {
+      a->sign = a->sign != b->sign;
+      return a;
+    }
+  if (isnan (b))
+    {
+      b->sign = a->sign != b->sign;
+      return b;
+    }
+  if (isinf (a))
+    {
+      if (iszero (b))
+	return nan ();
+      a->sign = a->sign != b->sign;
+      return a;
+    }
+  if (isinf (b))
+    {
+      if (iszero (a))
+	{
+	  return nan ();
+	}
+      b->sign = a->sign != b->sign;
+      return b;
+    }
+  if (iszero (a))
+    {
+      a->sign = a->sign != b->sign;
+      return a;
+    }
+  if (iszero (b))
+    {
+      b->sign = a->sign != b->sign;
+      return b;
+    }
+
+   
+
+  {
+
+    {
+       
+
+
+      DItype answer = (DItype)(a->fraction.ll) * (DItype)(b->fraction.ll);
+      
+      high = answer >> 32;
+      low = answer;
+    }
+
+  }
+
+  tmp->normal_exp = a->normal_exp + b->normal_exp;
+  tmp->sign = a->sign != b->sign;
+
+  tmp->normal_exp += 2;		 
+
+  while (high >= (1LL<<(23 +1+ 7L )) )
+    {
+      tmp->normal_exp++;
+      if (high & 1)
+	{
+	  low >>= 1;
+	  low |= 0x80000000L ;
+	}
+      high >>= 1;
+    }
+  while (high < (1LL<<(23 + 7L )) )
+    {
+      tmp->normal_exp--;
+
+      high <<= 1;
+      if (low & 0x80000000L )
+	high |= 1;
+      low <<= 1;
+    }
+   
+
+  if ((high & 0x7f ) == 0x40 )
+    {
+      if (high & (1 << 7L ))
+	{
+	   
+	  high += 0x3f  + 1;
+	}
+      else if (low)
+	{
+	   
+	  high += 0x3f  + 1;
+	}
+    }
+  tmp->fraction.ll = high;
+  tmp->class = CLASS_NUMBER;
+  return tmp;
+}
+
+FLO_type
+fpmul  (FLO_type arg_a, FLO_type arg_b)
+{
+  fp_number_type a;
+  fp_number_type b;
+  fp_number_type tmp;
+  fp_number_type *res;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &a);
+  FUN_00123400  ((FLO_union_type *) & arg_b, &b);
+
+  res = _fpmul_parts (&a, &b, &tmp);
+
+  return __pack_f  (res);
+}
+
+
+
+static __inline__  fp_number_type *
+_fpdiv_parts (fp_number_type * a,
+	      fp_number_type * b)
+{
+  fractype bit;
+  fractype numerator;
+  fractype denominator;
+  fractype quotient;
+
+  if (isnan (a))
+    {
+      return a;
+    }
+  if (isnan (b))
+    {
+      return b;
+    }
+
+  a->sign = a->sign ^ b->sign;
+
+  if (isinf (a) || iszero (a))
+    {
+      if (a->class == b->class)
+	return nan ();
+      return a;
+    }
+
+  if (isinf (b))
+    {
+      a->fraction.ll = 0;
+      a->normal_exp = 0;
+      return a;
+    }
+  if (iszero (b))
+    {
+      a->class = CLASS_INFINITY;
+      return a;
+    }
+
+   
+
+  {
+     
+
+
+
+    a->normal_exp = a->normal_exp - b->normal_exp;
+    numerator = a->fraction.ll;
+    denominator = b->fraction.ll;
+
+    if (numerator < denominator)
+      {
+	 
+	numerator *= 2;
+	a->normal_exp--;
+      }
+    bit = (1LL<<(23 + 7L )) ;
+    quotient = 0;
+     
+    while (bit)
+      {
+	if (numerator >= denominator)
+	  {
+	    quotient |= bit;
+	    numerator -= denominator;
+	  }
+	bit >>= 1;
+	numerator *= 2;
+      }
+
+    if ((quotient & 0x7f ) == 0x40 )
+      {
+	if (quotient & (1 << 7L ))
+	  {
+	     
+	    quotient += 0x3f  + 1;
+	  }
+	else if (numerator)
+	  {
+	     
+	    quotient += 0x3f  + 1;
+	  }
+      }
+
+    a->fraction.ll = quotient;
+    return (a);
+  }
+}
+
+FLO_type
+fpdiv  (FLO_type arg_a, FLO_type arg_b)
+{
+  fp_number_type a;
+  fp_number_type b;
+  fp_number_type *res;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &a);
+  FUN_00123400  ((FLO_union_type *) & arg_b, &b);
+
+  res = _fpdiv_parts (&a, &b);
+
+  return __pack_f  (res);
+}
+
+
+int __fpcmp_parts_f  (fp_number_type * a, fp_number_type *b);
+
+
+ 
+
+
+
+
+
+int
+__fpcmp_parts_f  (fp_number_type * a, fp_number_type * b)
+{
+
+
+  if (isnan (a) || isnan (b))
+    {
+      return 1;			 
+    }
+  if (isinf (a) && isinf (b))
+    {
+       
+       
+
+
+
+
+
+
+
+      return b->sign - a->sign;
+    }
+   
+  if (isinf (a))
+    {
+      return a->sign ? -1 : 1;
+    }
+  if (isinf (b))
+    {
+      return b->sign ? 1 : -1;
+    }
+  if (iszero (a) && iszero (b))
+    {
+      return 0;
+    }
+  if (iszero (a))
+    {
+      return b->sign ? 1 : -1;
+    }
+  if (iszero (b))
+    {
+      return a->sign ? -1 : 1;
+    }
+   
+  if (a->sign != b->sign)
+    {
+       
+      return a->sign ? -1 : 1;
+    }
+   
+  if (a->normal_exp > b->normal_exp)
+    {
+      return a->sign ? -1 : 1;
+    }
+  if (a->normal_exp < b->normal_exp)
+    {
+      return a->sign ? 1 : -1;
+    }
+   
+  if (a->fraction.ll > b->fraction.ll)
+    {
+      return a->sign ? -1 : 1;
+    }
+  if (a->fraction.ll < b->fraction.ll)
+    {
+      return a->sign ? 1 : -1;
+    }
+   
+  return 0;
+}
+
+
+
+SItype 
+fpcmp  (FLO_type arg_a, FLO_type arg_b)
+{
+  fp_number_type a;
+  fp_number_type b;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &a);
+  FUN_00123400  ((FLO_union_type *) & arg_b, &b);
+
+  return __fpcmp_parts_f  (&a, &b);
+}
+
+
+
+
+
+FLO_type
+sitofp  (SItype arg_a)
+{
+  fp_number_type in;
+
+  in.class = CLASS_NUMBER;
+  in.sign = arg_a < 0;
+  if (!arg_a)
+    {
+      in.class = CLASS_ZERO;
+    }
+  else
+    {
+      in.normal_exp = 23  + 7L ;
+      if (in.sign) 
+	{
+	   
+
+	  if (arg_a == (SItype) 0x80000000)
+	    {
+	      return -2147483648.0;
+	    }
+	  in.fraction.ll = (-arg_a);
+	}
+      else
+	in.fraction.ll = arg_a;
+
+      while (in.fraction.ll < (1LL << (23  + 7L )))
+	{
+	  in.fraction.ll <<= 1;
+	  in.normal_exp -= 1;
+	}
+    }
+  return __pack_f  (&in);
+}
+
+
+
+SItype
+fptosi  (FLO_type arg_a)
+{
+  fp_number_type a;
+  SItype tmp;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &a);
+  if (iszero (&a))
+    return 0;
+  if (isnan (&a))
+    return 0;
+   
+  if (isinf (&a))
+    return a.sign ? (- ((SItype) ((unsigned) (~0)>>1)) )-1 : ((SItype) ((unsigned) (~0)>>1)) ;
+   
+  if (a.normal_exp < 0)
+    return 0;
+  if (a.normal_exp > 30)
+    return a.sign ? (- ((SItype) ((unsigned) (~0)>>1)) )-1 : ((SItype) ((unsigned) (~0)>>1)) ;
+  tmp = a.fraction.ll >> ((23  + 7L ) - a.normal_exp);
+  return a.sign ? (-tmp) : (tmp);
+}
+
+
+
+
+ 
+
+
+
+
+
+USItype
+fptoui  (FLO_type arg_a)
+{
+  fp_number_type a;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &a);
+  if (iszero (&a))
+    return 0;
+  if (isnan (&a))
+    return 0;
+   
+  if (a.sign)
+    return 0;
+   
+  if (isinf (&a))
+    return ((USItype) ~0) ;
+   
+  if (a.normal_exp < 0)
+    return 0;
+  if (a.normal_exp > 31)
+    return ((USItype) ~0) ;
+  else if (a.normal_exp > (23  + 7L ))
+    return a.fraction.ll << (a.normal_exp - (23  + 7L ));
+  else
+    return a.fraction.ll >> ((23  + 7L ) - a.normal_exp);
+}
+
+
+
+
+FLO_type
+__negsf2  (FLO_type arg_a)
+{
+  fp_number_type a;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &a);
+  flip_sign (&a);
+  return __pack_f  (&a);
+}
+
+
+
+
+
+SFtype
+__make_fp(fp_class_type class,
+	     unsigned int sign,
+	     int exp, 
+	     USItype frac)
+{
+  fp_number_type in;
+
+  in.class = class;
+  in.sign = sign;
+  in.normal_exp = exp;
+  in.fraction.ll = frac;
+  return __pack_f  (&in);
+}
+
+
+
+
+ 
+
+
+
+
+extern DFtype __make_dp (fp_class_type, unsigned int, int, UDItype frac);
+
+
+DFtype
+fptodp  (SFtype arg_a)
+{
+  fp_number_type in;
+
+  FUN_00123400  ((FLO_union_type *) & arg_a, &in);
+  return __make_dp (in.class, in.sign, in.normal_exp,
+		    ((UDItype) in.fraction.ll) << (52+8-(23+7)) );
+}
+
+
+
+
+
+
+
+/* --- verbatim preprocessed fp-bit.c ends here --- */
+
+extern u8 BOOT_D_001395B8[];
+
+typedef struct {
+    u8 pad0000[0x0000];
+} ResidentBase1395B8;
+
+s32 FUN_00294E48(s32 index)
+{
+    s32 byte = index / 8;
+    s32 bit = index % 8;
+    s32 old;
+
+    if ((u32)bit < 8) {
+        old = (BOOT_D_001395B8[byte + 0xA7] >> bit) & 1;
+    } else {
+        old = 0;
+    }
+    if ((u32)bit < 8) {
+        BOOT_D_001395B8[byte + 0xA7] |= 1 << bit;
+    }
+    return old;
+}
+
+extern unsigned char D_19B278[];
+
+int FUN_002B0DB8(void)
+{
+    int count = 0;
+    int i;
+
+    for (i = 0; i < 0x1C; i++) {
+        int j;
+
+        for (j = 0; j < 4; j++) {
+            if (D_19B278[i * 4 + j] != 0)
+                count++;
+        }
+    }
+    if (count < 0)
+        count = 0;
+    if (count > 0x28)
+        count = 0x28;
+    return count;
+}
+
+/* Adapted mechanically from Lombyte src/sdk/library/dual_prime_vector.c.
+ * Source last change f18ea57e965bf7e88630871cc3b230b05b07c587;
+ * current upstream2c4452dd03f5f7ebb2868dbe073ccdb1afb27f61 has identical source.
+ * Source SHA256 e6df19f23bb23e15cf030b7d3c5222fae6d1fc4ba4411cbff4a03f31fc014b51.
+ * Only the include of already-identical EE u8/s32 types and function name
+ * change. Algorithm, parameter types, layout, expressions and order unchanged.
+ * RAC1 matching source/object identity does not prove this RAC2 C candidate.
+ */
+/*
+MIT License
+
+Copyright (c) 2026 Mateusz Kłysz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+typedef struct {
+    u8 pad0[0x174];
+    s32 pictStruct;
+    s32 topFieldFirst;
+} MpegDec;
+
+void FUN_0012B3E0(MpegDec *d, s32 DMV[][2], s32 *dmvector, s32 mvx, s32 mvy) {
+    if (d->pictStruct == 3) {
+        if (d->topFieldFirst) {
+            DMV[0][0] = ((mvx + (mvx > 0)) >> 1) + dmvector[0];
+            DMV[0][1] = ((mvy + (mvy > 0)) >> 1) + dmvector[1] - 1;
+            DMV[1][0] = ((3 * mvx + (mvx > 0)) >> 1) + dmvector[0];
+            DMV[1][1] = ((3 * mvy + (mvy > 0)) >> 1) + dmvector[1] + 1;
+        } else {
+            DMV[0][0] = ((3 * mvx + (mvx > 0)) >> 1) + dmvector[0];
+            DMV[0][1] = ((3 * mvy + (mvy > 0)) >> 1) + dmvector[1] - 1;
+            DMV[1][0] = ((mvx + (mvx > 0)) >> 1) + dmvector[0];
+            DMV[1][1] = ((mvy + (mvy > 0)) >> 1) + dmvector[1] + 1;
+        }
+    } else {
+        DMV[0][0] = ((mvx + (mvx > 0)) >> 1) + dmvector[0];
+        DMV[0][1] = ((mvy + (mvy > 0)) >> 1) + dmvector[1];
+        if (d->pictStruct == 1) {
+            DMV[0][1]--;
+        } else {
+            DMV[0][1]++;
+        }
+    }
+}
+
+/* Copied mechanically from Lombyte sdk/library/update_temp_track_data.c; current source and actual
+ * SDK-built full object/ref body pinned in donor-proof.json. Algorithm,
+ * layout, signedness, expressions and source order preserved. Function
+ * rename and duplicate EE scalar-type/include context removal only.
+ * The donor SDK compiler b9aef69 differs; RAC2 acceptance requires its own qualification. */
+/*
+MIT License
+
+Copyright (c) 2026 Mateusz Kłysz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+struct M2c_arg0
+{
+  u8 pad_0[0x150];
+  s32 unk150;
+  u8 pad_154[0x58];
+  s32 unk1AC;
+  u8 pad_1B0[0x69C];
+  s32 unk84C;
+  s32 unk850;
+  s32 unk854;
+};
+void FUN_0012CFE8(struct M2c_arg0 *arg0, s32 arg1)
+{
+  s32 temp_2_30;
+  s32 temp_3_21;
+  s32 temp_4_32;
+  s32 var_4_8;
+  s32 var_7_4;
+  var_7_4 = 0;
+  var_4_8 = 0;
+  if ((arg0->unk150 != 3) && (arg1 != 0))
+  {
+    if (arg1 < 0)
+    {
+      var_7_4 = arg0->unk854 == 0;
+    }
+    arg0->unk854 = 0;
+    var_4_8 = arg1;
+  }
+  temp_3_21 = arg0->unk84C + arg1;
+  arg0->unk1AC = temp_3_21;
+  if ((var_7_4 != 0) && (var_4_8 >= arg1))
+  {
+    arg0->unk1AC = (s32) (temp_3_21 + 0x400);
+  }
+  ;
+  temp_4_32 = arg0->unk1AC;
+  arg0->unk850 = (s32) ((arg0->unk850 < temp_4_32) ? (temp_4_32) : (arg0->unk850));
+}
+
+/* Copied mechanically from Lombyte sdk/video/ipu/sce_ipu_sync.c; current source and actual
+ * SDK-built full object/ref body pinned in donor-proof.json. Algorithm,
+ * layout, signedness, expressions and source order preserved. Function
+ * rename and duplicate EE scalar-type/include context removal only.
+ * The donor SDK compiler b9aef69 differs; RAC2 acceptance requires its own qualification. */
+/*
+MIT License
+
+Copyright (c) 2026 Mateusz Kłysz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+u32 FUN_00130DB8(s32 arg0) {
+    u32 result;
+
+    result = 0;
+    switch (arg0) {
+    case 0:
+        while (*(volatile s32 *)0x10002010 < 0) {
+        }
+        result = 0;
+        break;
+    case 1:
+        result = *(volatile u32 *)0x10002010 >> 31;
+        break;
+    default:
+        break;
+    }
+    return result;
+}
+
+
+void FUN_0026F720(void)
+{
+}
+
+
+void FUN_0026F728(void)
+{
+}
+
+
+unsigned int FUN_0026F730(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F738(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F740(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F748(void)
+{
+    return 0;
+}
+
+
+void FUN_0026F750(void)
+{
+}
+
+
+void FUN_0026F758(void)
+{
+}
+
+
+void FUN_0026F760(void)
+{
+}
+
+
+void FUN_0026F768(void)
+{
+}
+
+
+void FUN_0026F770(void)
+{
+}
+
+
+void FUN_0026F778(void)
+{
+}
+
+
+void FUN_0026F780(void)
+{
+}
+
+
+void FUN_0026F788(void)
+{
+}
+
+
+void FUN_0026F790(void)
+{
+}
+
+
+void FUN_0026F798(void)
+{
+}
+
+
+unsigned int FUN_0026F7A0(void)
+{
+    return 0;
+}
+
+
+void FUN_0026F7B0(void)
+{
+}
+
+
+unsigned int FUN_0026F7B8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7C0(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7C8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7D0(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7D8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7E0(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7E8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7F0(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7F8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F800(void)
+{
+    return 0;
+}
+
+
+void FUN_0026F808(void)
+{
+}
+
+
+void FUN_002820C8(void)
+{
+}
+
+
+void FUN_00288D88(void)
+{
+}
+
+
+void FUN_00289AA0(void)
+{
+}
+
+
+void FUN_002912F0(void)
+{
+}
+
+
+void FUN_00298170(void)
+{
+}
+
+
+void FUN_002FF288(void)
+{
+}
+
+
+void FUN_00336DA0(void)
+{
+}
+
+
+void FUN_00338808(void)
+{
+}
+
+
+void FUN_00338A58(void)
+{
+}
+
+
+void FUN_00338F50(void)
+{
+}
+
+
+void FUN_003417C8(void)
+{
+}
+
+
+void FUN_00342420(void)
+{
+}
+
+
+void FUN_0034E218(void)
+{
+}
+
+
+void FUN_003505A8(void)
+{
+}
+
+
+void FUN_00351E40(void)
+{
+}
+void FUN_00316B40(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void FUN_0031E750(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void FUN_00328CA8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void FUN_0032B2F0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void FUN_00305838(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void FUN_00307C30(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void FUN_0031C8E0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void FUN_003220A8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void FUN_003253A0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+
+struct Slot { s32 w; s32 rest[4]; };
+struct Table1 { char pad[19264]; struct Slot slots[48]; };
+struct Table2 { char pad[52]; s32 slots[4]; };
+
+extern struct Table1 Fee2b87d1_D_0014B540;
+extern struct Table2 Fee2b87d1_D_00152CD0;
+
+s32 FUN_00294630(s32 value) {
+    s32 i = 0;
+    s32 *q;
+    if (Fee2b87d1_D_0014B540.slots[0].w == value) goto after1;
+    while (++i < 48) {
+        if (Fee2b87d1_D_0014B540.slots[i].w == value) break;
+    }
+after1:
+    if (i == 48) return 1;
+    value = 0;
+    if (Fee2b87d1_D_00152CD0.slots[0] == i) goto after2;
+    while (++value < 3) {
+        if (Fee2b87d1_D_00152CD0.slots[value] == i) break;
+    }
+after2:
+    return value != 3;
+}

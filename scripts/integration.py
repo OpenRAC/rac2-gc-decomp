@@ -22,6 +22,11 @@ HEADER = '.set noat\n.set noreorder\n.section .text, "ax"\n'
 
 def split_assembly(content: str, functions: list[dict], relocated: bool = False) -> list[dict]:
     lines = content.splitlines(keepends=True)
+    starts_by_address = {}
+    for index, line in enumerate(lines):
+        match = re.fullmatch(r"\.globl func_([0-9A-F]{8})", line.strip())
+        if match:
+            starts_by_address.setdefault(int(match.group(1), 16), []).append(index)
     selected = sorted(functions, key=lambda function: function["address"])
     if len({function["address"] for function in selected}) != len(selected):
         raise ValueError("Duplicate integration address")
@@ -36,10 +41,16 @@ def split_assembly(content: str, functions: list[dict], relocated: bool = False)
         # placement keeps the reviewed C symbol and takes the address from the
         # level, so the name/address agreement is only required for the boot.
         if not relocated and function["symbol"] != f"FUN_{address:08X}":
-            raise ValueError("Integration symbol does not identify its address")
+            from boot_sdk_unit import unit_spec
+            spec = unit_spec(function.get("unit_id"))
+            if (function.get("origin") != "boot-sdk"
+                    or function.get("candidate_source") != spec["source"]
+                    or {key: function[key] for key in spec["function"]} != spec["function"]
+                    or function.get("input_section") != ".text"):
+                raise ValueError("Integration symbol does not identify its address")
         previous_end = address + size
         original_symbol = f"func_{address:08X}"
-        starts = [index for index, line in enumerate(lines) if line.strip() == f".globl {original_symbol}"]
+        starts = starts_by_address.get(address, [])
         if len(starts) != 1:
             raise ValueError(f"Expected one original assembly definition: {original_symbol}")
         start = starts[0]
@@ -93,13 +104,19 @@ def split_assembly(content: str, functions: list[dict], relocated: bool = False)
         for match in re.finditer(r"\.?L([0-9A-Fa-f]+)\b", fragment):
             if defined.get(match.group(1), index) != index:
                 crossing.add(match.group(1))
-    for name in sorted(crossing):
-        for index, fragment in enumerate(fragments):
-            renomme = re.sub(r"\.?L" + re.escape(name) + r"\b", "XL_" + name, fragment)
-            if defined.get(name) == index:
-                renomme = re.sub(r"(?m)^(\s*)XL_" + re.escape(name) + r":",
-                                 r"\1.globl XL_" + name + "\n\\1XL_" + name + ":", renomme, count=1)
-            fragments[index] = renomme
+    for index, fragment in enumerate(fragments):
+        def rename_reference(match):
+            name = match.group(1)
+            return "XL_" + name if name in crossing else match.group(0)
+        fragment = re.sub(r"\.?L([0-9A-Fa-f]+)\b", rename_reference, fragment)
+        declared = set()
+        def declare_definition(match):
+            indent, name = match.group(1), match.group(2)
+            if name not in crossing or defined.get(name) != index or name in declared:
+                return match.group(0)
+            declared.add(name)
+            return indent + ".globl XL_" + name + "\n" + indent + "XL_" + name + ":"
+        fragments[index] = re.sub(r"(?m)^(\s*)XL_([0-9A-Fa-f]+):", declare_definition, fragment)
     for index, fragment in enumerate(fragments):
         pieces[positions[index]]["content"] = fragment
     return pieces
@@ -170,6 +187,49 @@ def compile_c(reference: Path, directory: Path, toolchain: Path, review_path: Pa
                     "profile_scope": "Independent qualification of the exact object subsequently used in the full boot"}
     (directory / "object-qualification.json").write_text(json.dumps(object_proof, indent=2) + "\n", encoding="utf-8")
     return catalog, object_path, hashes
+
+
+
+def compile_boot_c(reference: Path, directory: Path, toolchain: Path,
+                   review_path: Path | None = None, sdk_binding: Path | None = None):
+    """Preserve the default object; add only fixed, individually admitted SDK units."""
+    default, default_object, default_tools = compile_c(reference, directory, toolchain, review_path)
+    from boot_sdk_unit import admitted_units, unit_spec, compile_reviewed, file_hash
+    units = admitted_units(ROOT)
+    if not units:
+        return default, default_object, default_tools
+    default_functions = [{**f, "candidate_source": "candidates/boot.c", "origin": "boot-default",
+                          "unit_id": "default-gnu8bed"} for f in default["functions"]]
+    union = {**default, "functions": list(default_functions),
+             "compiled_sources": {"candidates/boot.c": default["compiled_source_sha256"]},
+             "sdk_units": {}, "default_functions": default_functions,
+             "externals": dict(default["externals"])}
+    objects = {"candidates/boot.c": default_object}
+    for unit in units:
+        spec = unit_spec(unit)
+        sdk, sdk_object, sdk_proof = compile_reviewed(reference, directory / "build/c/sdk" / unit,
+                                                     ROOT, sdk_binding, unit)
+        for name, address in sdk["externals"].items():
+            if name in union["externals"] and union["externals"][name] != address:
+                raise ValueError("SDK absolute external conflicts with existing boot binding")
+            existing = [f for f in union["functions"] if f["symbol"] == name]
+            if existing and any(f["address"] != address for f in existing):
+                raise ValueError("SDK absolute external conflicts with compiled boot owner")
+            union["externals"][name] = address
+        union["functions"].extend({**f, "candidate_source": spec["source"], "origin": "boot-sdk",
+                                   "unit_id": unit, "input_section": ".text"} for f in sdk["functions"])
+        union["compiled_sources"][spec["source"]] = sdk["source_sha256"]
+        union["sdk_units"][unit] = {
+            "unit_id": unit, "source": spec["source"], "module": spec["module"],
+            "catalog_path": spec["catalog"], "review_path": spec["review"],
+            "review_sha256": file_hash(ROOT / spec["review"]),
+            "profile_id": sdk["profile_id"], "input_section": ".text", "object_proof": sdk_proof}
+        objects[spec["source"]] = sdk_object
+    from level_native import ranges
+    ranges(union["functions"])
+    if len({f["symbol"] for f in union["functions"]}) != len(union["functions"]):
+        raise ValueError("Boot object owner symbols collide")
+    return union, objects, default_tools
 
 
 def level_catalog(level: str) -> dict:
@@ -333,8 +393,10 @@ def replace_inputs(directory: Path, sources: list[Path], catalog: dict, c_object
     found = set()
     for source in sources:
         original = source.read_text(encoding="ascii")
+        addresses = {int(value, 16) for value in re.findall(
+            r"^\s*\.globl\s+func_([0-9A-F]{8})\s*$", original, re.MULTILINE)}
         functions = [function for function in catalog["functions"]
-                     if re.search(r"^\s*\.globl\s+func_" + f"{function['address']:08X}" + r"\s*$", original, re.MULTILINE)]
+                     if function["address"] in addresses]
         if not functions:
             unchanged.append(source)
             continue
@@ -353,7 +415,10 @@ def replace_inputs(directory: Path, sources: list[Path], catalog: dict, c_object
                 function = piece["function"]
                 found.add(function["symbol"])
                 owner = c_object[function["candidate_source"]] if isinstance(c_object, dict) else c_object
-                new_inputs.append(owner.relative_to(directory).as_posix() + f"(.text.{function['symbol']});")
+                input_section = function.get('input_section', '.text.' + function['symbol'])
+                if input_section not in {'.text', '.text.' + function['symbol']}:
+                    raise ValueError('Unreviewed per-owner input section')
+                new_inputs.append(owner.relative_to(directory).as_posix() + f'({input_section});')
             else:
                 fragment = directory / "asm_pp" / "integrated" / f"{source.stem}_{index}.s"
                 fragment.parent.mkdir(exist_ok=True)
@@ -403,7 +468,9 @@ def validate_integrated(reference: Path, candidate: Path, catalog: dict, source:
     for result in results:
         result.update({"integrated": True, "program": program})
         result["state"] = "integrated"
-        if "native" in catalog:
+        if "native" in catalog or "sdk_units" in catalog:
             function = next(item for item in catalog["functions"] if item["symbol"] == result["symbol"])
             result.update({"candidate_source": function["candidate_source"], "origin": function["origin"]})
+            if "sdk_units" in catalog:
+                result["unit_id"] = function["unit_id"]
     return results

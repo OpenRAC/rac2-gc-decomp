@@ -11,6 +11,39 @@ import campaign_build
 
 
 class CampaignBuildTests(unittest.TestCase):
+    def test_vendored_source_changes_invalidate_batch_inputs(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "src/libgcc/fp-bit-ee.c"
+            source.parent.mkdir(parents=True)
+            source.write_bytes(b"int library_helper(void) { return 1; }\n")
+            generated = root / "candidates/boot.c"
+            generated.parent.mkdir()
+            generated.write_bytes(source.read_bytes())
+            before = campaign_build.input_hashes(root)
+            source.write_bytes(b"int library_helper(void) { return 2; }\n")
+            after = campaign_build.input_hashes(root)
+            self.assertNotEqual(before["src/libgcc/fp-bit-ee.c"],
+                                after["src/libgcc/fp-bit-ee.c"])
+            self.assertEqual(before["candidates/boot.c"], after["candidates/boot.c"])
+
+    def test_region_policy_and_identity_changes_invalidate_provenance(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            identity = root / "config/regions/pal/target.json"
+            identity.parent.mkdir(parents=True)
+            identity.write_text('{"serial": "SCES_516.07"}')
+            policy = root / "config/regions.json"
+            policy.write_text('{"default": "ntsc-u"}')
+            before = campaign_build.input_hashes(root)
+            policy.write_text('{"default": "pal"}')
+            changed_policy = campaign_build.input_hashes(root)
+            self.assertNotEqual(before["config/regions.json"], changed_policy["config/regions.json"])
+            identity.write_text('{"serial": "SCES_516.07", "expected_levels": 27}')
+            changed_identity = campaign_build.input_hashes(root)
+            self.assertNotEqual(changed_policy["config/regions/pal/target.json"],
+                                changed_identity["config/regions/pal/target.json"])
+
     def batch(self, failing=False):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary) / "repo"
@@ -63,7 +96,17 @@ class CampaignBuildTests(unittest.TestCase):
         report = self.batch()
         functions = decomp_report.validate_integration(read("progress/integration.json"),
                                                        read("config/target.json"), report)
-        self.assertEqual(len(functions), len(read("config/candidate-catalog.json")["functions"]))
+        default = [row for row in functions if row.get("origin") != "boot-sdk"]
+        sdk = [row for row in functions if row.get("origin") == "boot-sdk"]
+        identity = lambda rows: {(row["symbol"], row["address"], row["size"]) for row in rows}
+        self.assertEqual(identity(default), identity(read("config/candidate-catalog.json")["functions"]))
+        if sdk:
+            catalogs = [json.loads(path.read_bytes()) for path in
+                        sorted((root / "config/boot-units").glob("*.json"))]
+            expected_sdk = [row for catalog in catalogs for row in catalog["functions"]]
+            self.assertEqual(identity(sdk), identity(expected_sdk))
+            self.assertEqual(len(sdk), len(expected_sdk))
+        self.assertEqual(len(functions), len(default) + len(sdk))
 
     def test_one_failure_retained_and_blocks_batch(self):
         report = self.batch(failing=True)

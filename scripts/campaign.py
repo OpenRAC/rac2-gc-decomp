@@ -268,7 +268,9 @@ class PublicBackend:
         self.check.run([str(toolchain / "ee/bin/ld.exe"), "-T", str(script), "-o", str(linked), str(obj)], work / "link.log")
         results = [self.check.compare_function(reference, linked, f["symbol"], f["address"], f["size"])
                    for f in catalog["functions"]]
-        return {"functions": results, "candidate_elf_sha256": digest(linked.read_bytes())}
+        data = self.check.compare_readonly(reference, linked, catalog, obj)
+        return {"functions": results, "read_only_sections": data,
+                "candidate_elf_sha256": digest(linked.read_bytes())}
 
 
 def absolute(path, repo, runtime=None):
@@ -294,7 +296,7 @@ def _trial(store, repo, task_id, toolchain, profile, repeat_reason="", backend=N
     if not SAFE.fullmatch(source.name) or source.suffix != ".c":
         raise ValueError("Use a plain C filename safe for the existing WSL chain")
     content = source.read_bytes()
-    if re.search(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|\.byte|\.word", content):
+    if re.search(rb"\b(?:asm|__asm__|__asm|INCLUDE_ASM)\b|(?m:^[ \t]*(?:(?:[A-Za-z_.$][A-Za-z0-9_.$]*|[0-9]+):[ \t]*)?\.(?:byte|word)\b(?:[ \t]+(?![ \t]*=)\S|[ \t]*$))", content):
         raise ValueError("Candidate embeds assembly or retail bytes")
     if re.search(rb"(?m)^\s*#\s*include\b|\b__(?:DATE|TIME|TIMESTAMP)__\b", content):
         raise ValueError("Candidate must be standalone and reproducible until headers are pinned")
@@ -303,16 +305,21 @@ def _trial(store, repo, task_id, toolchain, profile, repeat_reason="", backend=N
                                               for name in ("cc1", "cpp", "as", "ld.exe")):
         raise ValueError("Trials require the pinned current GNU8bed profile")
     targets, flags = [], None
-    pinned = read(repo / "config/target.json")
-    refs = {"boot": pinned["boot"]["sha256"]}
-    refs.update({"levels/" + level["level"]: level["sha256"] for level in read(repo / "config/overlays.json")["levels"]})
     for descriptor in task["targets"]:
         catalog_path = absolute(descriptor["catalog"], repo, store.runtime)
         reference_path = absolute(descriptor["reference"], repo, store.runtime)
         catalog_bytes, reference_bytes = catalog_path.read_bytes(), reference_path.read_bytes()
         catalog = json.loads(catalog_bytes)
         program = catalog.get("program", "boot")
-        if (catalog.get("target") != pinned["serial"] or program not in refs
+        # The catalogue names its own release; only that region's pinned identities apply.
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        try:
+            owner = importlib.import_module("region").by_serial(catalog.get("target"), repo)
+            owner.require_matching("C trials")
+            refs = owner.program_pins()
+        except ValueError as error:
+            raise ValueError(f"Reference/catalog is not a pinned RAC2 program ({error})") from error
+        if (program not in refs
                 or digest(reference_bytes) != refs[program] or catalog.get("reference_sha256") != refs[program]):
             raise ValueError("Reference/catalog is not a pinned RAC2 program")
         current_flags = catalog.get("flags")
@@ -403,6 +410,12 @@ def _trial(store, repo, task_id, toolchain, profile, repeat_reason="", backend=N
                     raise ValueError("Checker omitted or duplicated a complete target function")
                 exact = all(f.get("matched") is True and HASH.fullmatch(f.get("reference_sha256", ""))
                             and f.get("reference_sha256") == f.get("candidate_sha256") for f in functions)
+                if target["catalog"].get("read_only_sections"):
+                    from check_candidates import require_exact_readonly
+                    try:
+                        require_exact_readonly(target["catalog"], measured.get("read_only_sections", []))
+                    except ValueError:
+                        exact = False
                 outcome = {"id": target["id"], "state": "exact_private" if exact else "mismatch", **measured}
                 result["measured_functions"] += len(functions)
             except (OSError, ValueError, KeyError) as error:
