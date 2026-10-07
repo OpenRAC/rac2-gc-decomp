@@ -749,3 +749,21 @@ void LVL_15_GORN_FUN_003BA1E8(NativeUpdate775View *object)
     if (object->field23 < 4)
         LVL_15_GORN_FUN_00329048(object);
 }
+
+
+/* One fixed ordinary scalar source hypothesis. Byte offset and mask are
+   measured; no original object/class/field name or allocation claim. The
+   observed callers pass scalar one and ignore the result. */
+void LVL_15_GORN_FUN_003415A8(unsigned char *entity, int enabled) {
+    if (enabled)
+        entity[0xBE] |= 4;
+    else
+        entity[0xBE] &= 0xFB;
+}
+
+
+/* One fixed ordinary scalar query. Signed halfword width, offset and
+   equality constant are measured; no original class or field-name claim. */
+int LVL_15_GORN_FUN_00337DE0(const unsigned char *entity) {
+    return *(const signed short *)(entity + 0xAA) == 0x0CDB;
+}

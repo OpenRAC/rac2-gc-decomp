@@ -736,3 +736,21 @@ void LVL_13_BOLDAN_FUN_003A80E0(NativeUpdate775View *object)
     if (object->field23 < 4)
         LVL_13_BOLDAN_FUN_0031A718(object);
 }
+
+
+/* One fixed ordinary scalar source hypothesis. Byte offset and mask are
+   measured; no original object/class/field name or allocation claim. The
+   observed callers pass scalar one and ignore the result. */
+void LVL_13_BOLDAN_FUN_00332488(unsigned char *entity, int enabled) {
+    if (enabled)
+        entity[0xBE] |= 4;
+    else
+        entity[0xBE] &= 0xFB;
+}
+
+
+/* One fixed ordinary scalar query. Signed halfword width, offset and
+   equality constant are measured; no original class or field-name claim. */
+int LVL_13_BOLDAN_FUN_003294B0(const unsigned char *entity) {
+    return *(const signed short *)(entity + 0xAA) == 0x0CDB;
+}

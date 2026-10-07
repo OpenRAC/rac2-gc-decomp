@@ -66,6 +66,12 @@ current normalization. Expand factorization after
 the same source-identity and complete-image checks, rather than assuming every
 similarly sized body belongs to one family.
 
+Two further shared fragments provide the 32-byte entity bit setter and the
+16-byte signed-cell comparison, each with 27 function-name substitutions.
+Their complete-unit qualification and retained refusals are described in
+[the scalar leaf pair evidence](SCALAR-LEAF-PAIR-EVIDENCE.md). These fragments
+do not establish original object, class or module boundaries.
+
 ## Authoring and regeneration
 
 1. Back up the affected fragments, catalogs, generated units and layout manifest
