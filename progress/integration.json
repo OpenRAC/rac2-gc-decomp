@@ -967,6 +967,21 @@
       "unit_id": "default-gnu8bed"
     },
     {
+      "symbol": "FUN_00294630",
+      "address": 2704944,
+      "size": 144,
+      "matched": true,
+      "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "boot",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-default",
+      "unit_id": "default-gnu8bed"
+    },
+    {
       "symbol": "FUN_00294E48",
       "address": 2707016,
       "size": 124,
@@ -3652,7 +3667,7 @@
       "unit_id": "sdk-ipu-restart-dma"
     }
   ],
-  "matched_code_bytes": 13312,
+  "matched_code_bytes": 13456,
   "full_boot_gate": {
     "matched": true,
     "bytes_compared": 2521763,
@@ -3662,8 +3677,8 @@
     "target": "SCUS_972.68",
     "program": "boot",
     "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-    "source_sha256": "6edfb28b177aa50baa08b5dd0597d144a785962d457048ef2e97de4bbaf33ba7",
-    "catalog_sha256": "09e2f90747f74b01a4f33642e6891a62cd7ebe606ab4f0d744cc02909e139973",
+    "source_sha256": "0631bd292a6e5c0dff6019e0e02f4d2dd509787c57f7b09fc155db9769b5ae9c",
+    "catalog_sha256": "6a05d070e38fd68b9a9a9a8160e9822166e6e35b6ffe99225e7742faa1a3d29d",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_boot_gate": {
@@ -3671,15 +3686,15 @@
       "bytes_compared": 2521763,
       "segments": 2
     },
-    "matched_code_bytes": 12168,
+    "matched_code_bytes": 12312,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "1a19280d3c756bec21b7d43beb263d0316c417084c9cb007a79e8e69e7fd2f21",
-    "c_object_sha256": "566a898664f1bb4a9f8c7a8b499105baf528d87a311a1a3eb0bcc26784d179c6",
+    "candidate_elf_sha256": "6cad203a4e6e9820b26f5927e22e5b8ed8a89d2a77116321440accd0a9d666f5",
+    "c_object_sha256": "cdfa10e1df341a2531c9efb6f99c439da290234676e6a5d4cef6fb2b3d7fd7f8",
     "replacement_inputs": {
       "16180.s": [
         "FUN_00115200",
@@ -3751,6 +3766,7 @@
         "FUN_0028B950",
         "FUN_002912F0",
         "FUN_002934B8",
+        "FUN_00294630",
         "FUN_00294E48",
         "FUN_00295BE8",
         "FUN_00297550",

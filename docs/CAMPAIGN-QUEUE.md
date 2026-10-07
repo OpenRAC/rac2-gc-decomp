@@ -3363,6 +3363,230 @@ Reopen condition: Independent original-source/ABI/declaration or separately qual
 - `runtime:trials/b40912e9de5949e38cbe303c866d950f/outcome.json`
 - `private-work:c-campaign-20261006/bank/rac1-source-reuse-readonly/remaining-three/accepted-two-187/subset-preparation-receipt.json`
 
+## lot3-0_aranos_tutorial
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-10_hrugis_cloud
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-11_joba
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-12_todano
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-13_boldan
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-14_aranos_prison
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-15_gorn
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-16_snivelak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-17_smolg
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-18_damosel
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-19_grelbin
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-1_oozla
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-20_yeedil
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-22_dobbo_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-23_damosel_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-24_ship_shack
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-25_wupash_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-26_jamming_array
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-2_maktar_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-30_insomniac_museum
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-3_endako
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-4_barlow
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-5_feltzin_system
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-6_notak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-7_siberius
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-8_tabora
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-9_dobbo
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## lot3-boot
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
 ## missing-members-bitmap124-0_aranos_tutorial-20261006
 
 State: `integrated`. Kind: `candidate`.

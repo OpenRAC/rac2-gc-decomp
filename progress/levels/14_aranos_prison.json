@@ -2,7 +2,7 @@
   "target": "SCUS_972.68",
   "program": "14_aranos_prison",
   "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
-  "source_sha256": "6edfb28b177aa50baa08b5dd0597d144a785962d457048ef2e97de4bbaf33ba7",
+  "source_sha256": "0631bd292a6e5c0dff6019e0e02f4d2dd509787c57f7b09fc155db9769b5ae9c",
   "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
@@ -2808,6 +2808,20 @@
       "origin": "level-native"
     },
     {
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_0030C940",
+      "address": 3197248,
+      "size": 144,
+      "matched": true,
+      "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "14_aranos_prison",
+      "candidate_source": "candidates/levels/14_aranos_prison.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_14_ARANOS_PRISON_FUN_0030D200",
       "address": 3199488,
       "size": 124,
@@ -3765,15 +3779,15 @@
     "bytes_compared": 2875248,
     "segments": 1
   },
-  "matched_code_bytes": 17908,
+  "matched_code_bytes": 18052,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "8dc4c50871d4817cadab94653a940f11fc26d82d3e5bbd3813bdc396bf531434",
-  "c_object_sha256": "566a898664f1bb4a9f8c7a8b499105baf528d87a311a1a3eb0bcc26784d179c6",
+  "candidate_elf_sha256": "315d90ffb90e74ed2e36846cd5630d5e11771e109dc39cf181d31bbe17c59bc9",
+  "c_object_sha256": "cdfa10e1df341a2531c9efb6f99c439da290234676e6a5d4cef6fb2b3d7fd7f8",
   "replacement_inputs": {
     "104680.s": [
       "FUN_0026FEB8",
@@ -3976,6 +3990,7 @@
       "LVL_14_ARANOS_PRISON_FUN_00304310",
       "LVL_14_ARANOS_PRISON_FUN_00304318",
       "LVL_14_ARANOS_PRISON_FUN_00307F60",
+      "LVL_14_ARANOS_PRISON_FUN_0030C940",
       "LVL_14_ARANOS_PRISON_FUN_0030D200",
       "LVL_14_ARANOS_PRISON_FUN_0030D280",
       "LVL_14_ARANOS_PRISON_FUN_00310900",
@@ -4052,7 +4067,7 @@
     "target": "SCUS_972.68",
     "program": "14_aranos_prison",
     "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
-    "source_sha256": "6edfb28b177aa50baa08b5dd0597d144a785962d457048ef2e97de4bbaf33ba7",
+    "source_sha256": "0631bd292a6e5c0dff6019e0e02f4d2dd509787c57f7b09fc155db9769b5ae9c",
     "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
@@ -4068,8 +4083,8 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "8dc4c50871d4817cadab94653a940f11fc26d82d3e5bbd3813bdc396bf531434",
-    "c_object_sha256": "566a898664f1bb4a9f8c7a8b499105baf528d87a311a1a3eb0bcc26784d179c6",
+    "candidate_elf_sha256": "315d90ffb90e74ed2e36846cd5630d5e11771e109dc39cf181d31bbe17c59bc9",
+    "c_object_sha256": "cdfa10e1df341a2531c9efb6f99c439da290234676e6a5d4cef6fb2b3d7fd7f8",
     "replacement_inputs": {
       "104680.s": [
         "FUN_0026FEB8",
@@ -4272,6 +4287,7 @@
         "LVL_14_ARANOS_PRISON_FUN_00304310",
         "LVL_14_ARANOS_PRISON_FUN_00304318",
         "LVL_14_ARANOS_PRISON_FUN_00307F60",
+        "LVL_14_ARANOS_PRISON_FUN_0030C940",
         "LVL_14_ARANOS_PRISON_FUN_0030D200",
         "LVL_14_ARANOS_PRISON_FUN_0030D280",
         "LVL_14_ARANOS_PRISON_FUN_00310900",
@@ -4349,13 +4365,13 @@
   },
   "reference_entry": 2798344,
   "candidate_entry": 2798344,
-  "dependency_sha256": "2d5a5b305d059bd521f60e5a91ef7150f5e14d0ab9633d052d28afc455e46d2e",
-  "boot_review_sha256": "aec5003421d4ab6ad003003af24f774222cd2c14678240752ed4e58f4740b26a",
+  "dependency_sha256": "b858a16c56fb358f69b807d6689def3c6ebebaa3a097be8b4cca7554f30761bd",
+  "boot_review_sha256": "1890b2367fc5f1165a3df28f8f8c88da402fb2755d8d535a99d9e4845a5c1a40",
   "native": {
     "source": "candidates/levels/14_aranos_prison.c",
     "catalog_path": "config/level-native/14_aranos_prison.json",
     "review_path": "progress/level-candidates/14_aranos_prison.json",
-    "review_sha256": "7379d7932687865409c12445476a550a0bac813e22166282ff601d07827e04bb",
+    "review_sha256": "ae1d03de9063c188957a06413c8d66cb7b736eac7bebe80011369e75a0a9d741",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -4364,10 +4380,10 @@
       "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
       "reference_entry": 2798344,
       "candidate_source": "candidates/levels/14_aranos_prison.c",
-      "source_sha256": "c469125ed31baff3c8773758a25a6ae4789e5a1708f95f7fa866adb5ed3e45a4",
-      "catalog_sha256": "932ae29d51b1f6ffd9eb0197e47f84d4a16f02411a4fda7796583cc947ebeecc",
-      "object_sha256": "513e8b6363306e9b1f33bf85fd06bc23c15838a69db13d483b8bca59dd5c7af7",
-      "candidate_elf_sha256": "402631531de3db61ce104e42c94e944868da3abef3499da21974c1690760cec2",
+      "source_sha256": "ee01509723d8cb188fc791234da003615d69feb127e7d191c6780557f20c5a1b",
+      "catalog_sha256": "16f0887af6bdcbf0151469ad32240a50e23b5edf23649d93f82bc039ee94e5b6",
+      "object_sha256": "bb16e01817d49c85e972379ee8869c6210b686af389699230be8e5fbffc06bca",
+      "candidate_elf_sha256": "b399279028154eda2a1cf819a0672cac9c4fb35be16c072480633d7101fb839b",
       "checker_sha256": "423969fa4af0f1df7bc4b96e135b28e4c9a129c9f36e945fb2c413ea30dba39d",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -4799,6 +4815,17 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 8
+        },
+        {
+          "symbol": "LVL_14_ARANOS_PRISON_FUN_0030C940",
+          "address": 3197248,
+          "size": 144,
+          "matched": true,
+          "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+          "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 144
         },
         {
           "symbol": "LVL_14_ARANOS_PRISON_FUN_0030D200",
@@ -5550,8 +5577,8 @@
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 9032
+      "matched_code_bytes": 9176
     },
-    "object_sha256": "513e8b6363306e9b1f33bf85fd06bc23c15838a69db13d483b8bca59dd5c7af7"
+    "object_sha256": "bb16e01817d49c85e972379ee8869c6210b686af389699230be8e5fbffc06bca"
   }
 }

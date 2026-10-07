@@ -6,10 +6,10 @@
   "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
   "reference_entry": 2776968,
   "candidate_source": "candidates/levels/1_oozla.c",
-  "source_sha256": "875133dbd8e59fdc0ee20fa1d5dbedc2f09605fa1b8ab48aa3729c830b6fa09f",
-  "catalog_sha256": "a069e7443420a8999cb46678ea251421ceed79969700b8d2c7528128e666387a",
-  "object_sha256": "aad7f4e03e723df733a739124afcb335c3b99e2edd62979985830c818ba30061",
-  "candidate_elf_sha256": "396aa7311b2f4c0d359601826c67508e58fca1a80ad116dcde88051bb2d3c335",
+  "source_sha256": "746e85a07221cae89102334953e05d821fddf912378755dcb516774a8d586e72",
+  "catalog_sha256": "7b3061fd30293e35ce9eaa66ec5e88fd58a0c3ede8b994c8f412b39a179ea79f",
+  "object_sha256": "218f7719c423d6770716b5d18e04cdbfed039173f53fbd2f01d9fa000018f411",
+  "candidate_elf_sha256": "f6befb424a4b8e20e8cd1ea8bfc7f2e31329adaf3e1f718e8967b9022f9a0bb8",
   "checker_sha256": "423969fa4af0f1df7bc4b96e135b28e4c9a129c9f36e945fb2c413ea30dba39d",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -408,6 +408,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 8
+    },
+    {
+      "symbol": "LVL_1_OOZLA_FUN_002FAA20",
+      "address": 3123744,
+      "size": 144,
+      "matched": true,
+      "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 144
     },
     {
       "symbol": "LVL_1_OOZLA_FUN_002FB2E0",
@@ -1060,5 +1071,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 7800
+  "matched_code_bytes": 7944
 }

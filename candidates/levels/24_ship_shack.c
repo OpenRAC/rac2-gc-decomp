@@ -1774,3 +1774,28 @@ void LVL_24_SHIP_SHACK_FUN_002A6170(void)
         }
     }
 }
+
+struct Slot { s32 w; s32 rest[4]; };
+struct Table1 { char pad[19264]; struct Slot slots[48]; };
+struct Table2 { char pad[52]; s32 slots[4]; };
+
+extern struct Table1 LVL_24_SHIP_SHACK_Fee2b87d1_D_0014B540;
+extern struct Table2 LVL_24_SHIP_SHACK_Fee2b87d1_D_00152CD0;
+
+s32 LVL_24_SHIP_SHACK_FUN_00303348(s32 value) {
+    s32 i = 0;
+    s32 *q;
+    if (LVL_24_SHIP_SHACK_Fee2b87d1_D_0014B540.slots[0].w == value) goto after1;
+    while (++i < 48) {
+        if (LVL_24_SHIP_SHACK_Fee2b87d1_D_0014B540.slots[i].w == value) break;
+    }
+after1:
+    if (i == 48) return 1;
+    value = 0;
+    if (LVL_24_SHIP_SHACK_Fee2b87d1_D_00152CD0.slots[0] == i) goto after2;
+    while (++value < 3) {
+        if (LVL_24_SHIP_SHACK_Fee2b87d1_D_00152CD0.slots[value] == i) break;
+    }
+after2:
+    return value != 3;
+}

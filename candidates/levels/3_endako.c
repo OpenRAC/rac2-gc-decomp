@@ -1586,3 +1586,44 @@ void LVL_3_ENDAKO_FUN_0042CC58(char *p)
     *(float *)(p + 20) = -1.0f;
     *(float *)(p + 60) = 1.0f;
 }
+
+struct Slot { s32 w; s32 rest[4]; };
+struct Table1 { char pad[19264]; struct Slot slots[48]; };
+struct Table2 { char pad[52]; s32 slots[4]; };
+
+extern struct Table1 LVL_3_ENDAKO_Fee2b87d1_D_0014B540;
+extern struct Table2 LVL_3_ENDAKO_Fee2b87d1_D_00152CD0;
+
+s32 LVL_3_ENDAKO_FUN_003062A8(s32 value) {
+    s32 i = 0;
+    s32 *q;
+    if (LVL_3_ENDAKO_Fee2b87d1_D_0014B540.slots[0].w == value) goto after1;
+    while (++i < 48) {
+        if (LVL_3_ENDAKO_Fee2b87d1_D_0014B540.slots[i].w == value) break;
+    }
+after1:
+    if (i == 48) return 1;
+    value = 0;
+    if (LVL_3_ENDAKO_Fee2b87d1_D_00152CD0.slots[0] == i) goto after2;
+    while (++value < 3) {
+        if (LVL_3_ENDAKO_Fee2b87d1_D_00152CD0.slots[value] == i) break;
+    }
+after2:
+    return value != 3;
+}
+extern void LVL_3_ENDAKO_F0b67d264_FUN_00115E38(char *a, int b, char *c);
+extern char LVL_3_ENDAKO_F0b67d264_D_001ADD58[];
+extern char LVL_3_ENDAKO_F0b67d264_D_001ADD78[];
+
+void LVL_3_ENDAKO_FUN_0043D650(int *p, unsigned int n, int a2, int a3)
+{
+    if (n < 4)
+        LVL_3_ENDAKO_F0b67d264_FUN_00115E38(LVL_3_ENDAKO_F0b67d264_D_001ADD58, 37, LVL_3_ENDAKO_F0b67d264_D_001ADD78);
+
+    p[1] = a3;
+    p[2] = n;
+    p[4] = 0;
+    p[5] = 0;
+    p[3] = 0;
+    p[0] = a2;
+}

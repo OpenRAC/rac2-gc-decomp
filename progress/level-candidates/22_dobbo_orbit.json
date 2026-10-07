@@ -6,10 +6,10 @@
   "reference_sha256": "c609f24d897e1a82d49cdb9a8a7ece36ea83332414dc3cc6d588375e0bda55db",
   "reference_entry": 2783752,
   "candidate_source": "candidates/levels/22_dobbo_orbit.c",
-  "source_sha256": "e81faabb81e6b1fce55fcd8f429c342898be52640b3db79a8e9df9192c1d4887",
-  "catalog_sha256": "12010346151b10aba146ec9d9167814163621a1477d29654388b2923d951f4dc",
-  "object_sha256": "d8695cb8286b3825b6becbc383c162efc73541d8cbcb891a585e3bae95d72760",
-  "candidate_elf_sha256": "d308ba7fcfec06c2c4196a8ed41564e40cc4f12d777fd8bfee9f9c8372aa0f97",
+  "source_sha256": "993f56081f1d857686f71d3dc2001c32c9acb4b20f7563ff3e8c88966b21ded6",
+  "catalog_sha256": "434033265ea6bce9a6c450287ef1b012c7702d445dc323ec07e3e2231b45a132",
+  "object_sha256": "7960276cb4544a0e16e091efe141b0ae15386dcae6f25db0e21e40cfbe09b0a7",
+  "candidate_elf_sha256": "eed542e16fc369575dc14fad1427287c8502e20619dd4421d40543ab18ff5d31",
   "checker_sha256": "423969fa4af0f1df7bc4b96e135b28e4c9a129c9f36e945fb2c413ea30dba39d",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -452,6 +452,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 8
+    },
+    {
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0030A5A0",
+      "address": 3188128,
+      "size": 144,
+      "matched": true,
+      "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 144
     },
     {
       "symbol": "LVL_22_DOBBO_ORBIT_FUN_0030AE60",
@@ -1115,5 +1126,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 8280
+  "matched_code_bytes": 8424
 }

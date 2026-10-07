@@ -2,7 +2,7 @@
   "target": "SCUS_972.68",
   "program": "2_maktar_nebula",
   "reference_sha256": "ab59cf107fb30843db03cd3571af1c08d62e99e6b50594bc38dd7a70f91ac94b",
-  "source_sha256": "6edfb28b177aa50baa08b5dd0597d144a785962d457048ef2e97de4bbaf33ba7",
+  "source_sha256": "0631bd292a6e5c0dff6019e0e02f4d2dd509787c57f7b09fc155db9769b5ae9c",
   "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
@@ -2822,6 +2822,20 @@
       "origin": "level-native"
     },
     {
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_00309050",
+      "address": 3182672,
+      "size": 144,
+      "matched": true,
+      "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "2_maktar_nebula",
+      "candidate_source": "candidates/levels/2_maktar_nebula.c",
+      "origin": "level-native"
+    },
+    {
       "symbol": "LVL_2_MAKTAR_NEBULA_FUN_00309910",
       "address": 3184912,
       "size": 124,
@@ -3737,15 +3751,15 @@
     "bytes_compared": 2928824,
     "segments": 1
   },
-  "matched_code_bytes": 17796,
+  "matched_code_bytes": 17940,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "dfe8335297c64c9a3b907570cea3d51d41d9c32c28787c44165c3a4580c22759",
-  "c_object_sha256": "566a898664f1bb4a9f8c7a8b499105baf528d87a311a1a3eb0bcc26784d179c6",
+  "candidate_elf_sha256": "956d68d6c489f412b2823fbe6641505c3403292d826c1773e4797ac8c3da0911",
+  "c_object_sha256": "cdfa10e1df341a2531c9efb6f99c439da290234676e6a5d4cef6fb2b3d7fd7f8",
   "replacement_inputs": {
     "100200.s": [
       "FUN_0026FEB8",
@@ -3949,6 +3963,7 @@
       "LVL_2_MAKTAR_NEBULA_FUN_003007C8",
       "LVL_2_MAKTAR_NEBULA_FUN_003007D0",
       "LVL_2_MAKTAR_NEBULA_FUN_00304670",
+      "LVL_2_MAKTAR_NEBULA_FUN_00309050",
       "LVL_2_MAKTAR_NEBULA_FUN_00309910",
       "LVL_2_MAKTAR_NEBULA_FUN_00309990",
       "LVL_2_MAKTAR_NEBULA_FUN_0030D010",
@@ -4022,7 +4037,7 @@
     "target": "SCUS_972.68",
     "program": "2_maktar_nebula",
     "reference_sha256": "ab59cf107fb30843db03cd3571af1c08d62e99e6b50594bc38dd7a70f91ac94b",
-    "source_sha256": "6edfb28b177aa50baa08b5dd0597d144a785962d457048ef2e97de4bbaf33ba7",
+    "source_sha256": "0631bd292a6e5c0dff6019e0e02f4d2dd509787c57f7b09fc155db9769b5ae9c",
     "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
@@ -4038,8 +4053,8 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "dfe8335297c64c9a3b907570cea3d51d41d9c32c28787c44165c3a4580c22759",
-    "c_object_sha256": "566a898664f1bb4a9f8c7a8b499105baf528d87a311a1a3eb0bcc26784d179c6",
+    "candidate_elf_sha256": "956d68d6c489f412b2823fbe6641505c3403292d826c1773e4797ac8c3da0911",
+    "c_object_sha256": "cdfa10e1df341a2531c9efb6f99c439da290234676e6a5d4cef6fb2b3d7fd7f8",
     "replacement_inputs": {
       "100200.s": [
         "FUN_0026FEB8",
@@ -4243,6 +4258,7 @@
         "LVL_2_MAKTAR_NEBULA_FUN_003007C8",
         "LVL_2_MAKTAR_NEBULA_FUN_003007D0",
         "LVL_2_MAKTAR_NEBULA_FUN_00304670",
+        "LVL_2_MAKTAR_NEBULA_FUN_00309050",
         "LVL_2_MAKTAR_NEBULA_FUN_00309910",
         "LVL_2_MAKTAR_NEBULA_FUN_00309990",
         "LVL_2_MAKTAR_NEBULA_FUN_0030D010",
@@ -4317,13 +4333,13 @@
   },
   "reference_entry": 2780808,
   "candidate_entry": 2780808,
-  "dependency_sha256": "4f96f959478e6d4152db77229561bcbc396b255c61d6eb4b4ae2f56eb003e1b2",
-  "boot_review_sha256": "aec5003421d4ab6ad003003af24f774222cd2c14678240752ed4e58f4740b26a",
+  "dependency_sha256": "d6c7a6083d34dcc67b59cb283bb4c2260c4737e8e1b7a34616f79b3071bd9bb2",
+  "boot_review_sha256": "1890b2367fc5f1165a3df28f8f8c88da402fb2755d8d535a99d9e4845a5c1a40",
   "native": {
     "source": "candidates/levels/2_maktar_nebula.c",
     "catalog_path": "config/level-native/2_maktar_nebula.json",
     "review_path": "progress/level-candidates/2_maktar_nebula.json",
-    "review_sha256": "b6871cca2c0c24ee7bb69c6742741f49778ea7b7fb01edd4b0ccd0d5bd2a3154",
+    "review_sha256": "ae3a6be715a1249117089f24e5543f9b2fb0445107ef46d16b4bb7e0763414ea",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -4332,10 +4348,10 @@
       "reference_sha256": "ab59cf107fb30843db03cd3571af1c08d62e99e6b50594bc38dd7a70f91ac94b",
       "reference_entry": 2780808,
       "candidate_source": "candidates/levels/2_maktar_nebula.c",
-      "source_sha256": "53c24e293302d57258fdf64d7c8c037a85b5001af0f876fb41c469a549f0f9b7",
-      "catalog_sha256": "096b6d92a568f09560e2ea1a4709dfa5e4ff23655e22482fa99b36a80e2ef75a",
-      "object_sha256": "670f4c2f9c1027cc95caa5ad601f278f25694b86871750bf1189050e2f114be6",
-      "candidate_elf_sha256": "4a18294df30f58a970f06e01b11278c95aee822e8e40d4d188c4d608877ea972",
+      "source_sha256": "ca727b348685abf8d3c93c3a1f84f32dc08a7b680452a15d192b2043367f7b38",
+      "catalog_sha256": "a9edc2991806bc7459115dcedd83049eaca078c08ab98630673b3eb621cd0705",
+      "object_sha256": "2a33b1b4e3bbd6f39323e43b02d118e39a3d16df192c062fef028a6aef5d899e",
+      "candidate_elf_sha256": "673030acfc74b391c0683e719e8e3f5779eb6a8f405d82b8cf1060cd982613e2",
       "checker_sha256": "423969fa4af0f1df7bc4b96e135b28e4c9a129c9f36e945fb2c413ea30dba39d",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -4767,6 +4783,17 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 8
+        },
+        {
+          "symbol": "LVL_2_MAKTAR_NEBULA_FUN_00309050",
+          "address": 3182672,
+          "size": 144,
+          "matched": true,
+          "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+          "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 144
         },
         {
           "symbol": "LVL_2_MAKTAR_NEBULA_FUN_00309910",
@@ -5485,8 +5512,8 @@
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 8904
+      "matched_code_bytes": 9048
     },
-    "object_sha256": "670f4c2f9c1027cc95caa5ad601f278f25694b86871750bf1189050e2f114be6"
+    "object_sha256": "2a33b1b4e3bbd6f39323e43b02d118e39a3d16df192c062fef028a6aef5d899e"
   }
 }
