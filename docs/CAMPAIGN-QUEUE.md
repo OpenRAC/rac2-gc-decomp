@@ -6326,7 +6326,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-0_aranos_tutorial
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6334,7 +6334,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-10_hrugis_cloud
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6342,7 +6342,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-11_joba
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6350,7 +6350,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-12_todano
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6358,7 +6358,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-13_boldan
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6366,7 +6366,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-14_aranos_prison
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6374,7 +6374,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-15_gorn
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6382,7 +6382,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-16_snivelak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6390,7 +6390,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6398,7 +6398,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-18_damosel
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6406,7 +6406,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-19_grelbin
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6414,7 +6414,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-1_oozla
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6422,7 +6422,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-20_yeedil
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6430,7 +6430,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-22_dobbo_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6438,7 +6438,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-23_damosel_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6446,7 +6446,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-24_ship_shack
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6454,7 +6454,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-25_wupash_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6462,7 +6462,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-26_jamming_array
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6470,7 +6470,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-2_maktar_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6478,7 +6478,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-30_insomniac_museum
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6486,7 +6486,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-3_endako
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6494,7 +6494,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-4_barlow
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6502,7 +6502,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-5_feltzin_system
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6510,7 +6510,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-6_notak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6518,7 +6518,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-7_siberius
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6526,7 +6526,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-8_tabora
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6534,7 +6534,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefam-b2d-9_dobbo
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6550,7 +6550,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-0_aranos_tutorial
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6558,7 +6558,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-10_hrugis_cloud
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6566,7 +6566,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-11_joba
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6574,7 +6574,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-12_todano
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6582,7 +6582,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-13_boldan
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6590,7 +6590,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-14_aranos_prison
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6598,7 +6598,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-15_gorn
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6606,7 +6606,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-16_snivelak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6614,7 +6614,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6622,7 +6622,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-18_damosel
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6630,7 +6630,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-19_grelbin
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6638,7 +6638,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-1_oozla
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6646,7 +6646,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-20_yeedil
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6654,7 +6654,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-22_dobbo_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6662,7 +6662,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-23_damosel_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6670,7 +6670,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-24_ship_shack
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6678,7 +6678,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-25_wupash_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6686,7 +6686,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-26_jamming_array
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6694,7 +6694,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-2_maktar_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6702,7 +6702,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-30_insomniac_museum
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6710,7 +6710,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-3_endako
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6718,7 +6718,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-4_barlow
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6726,7 +6726,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-5_feltzin_system
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6734,7 +6734,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-6_notak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6742,7 +6742,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-7_siberius
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6750,7 +6750,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-8_tabora
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6758,7 +6758,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-9_dobbo
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -6766,7 +6766,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## nativefamilies-batch1-boot
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14711,7 +14711,7 @@ Reopen condition: Concrete independently reviewed family/binding or instrument e
 
 ## reset-state-signs136-0_aranos_tutorial
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14719,7 +14719,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-10_hrugis_cloud
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14727,7 +14727,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-11_joba
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14735,7 +14735,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-12_todano
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14743,7 +14743,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-13_boldan
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14751,7 +14751,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-14_aranos_prison
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14759,7 +14759,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-15_gorn
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14767,7 +14767,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-16_snivelak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14775,7 +14775,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-17_smolg
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14783,7 +14783,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-18_damosel
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14791,7 +14791,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-19_grelbin
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14799,7 +14799,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-1_oozla
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14807,7 +14807,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-20_yeedil
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14815,7 +14815,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-22_dobbo_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14823,7 +14823,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-23_damosel_orbit
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14831,7 +14831,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-24_ship_shack
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14839,7 +14839,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-25_wupash_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14847,7 +14847,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-26_jamming_array
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14855,7 +14855,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-2_maktar_nebula
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14863,7 +14863,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-30_insomniac_museum
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14871,7 +14871,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-3_endako
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14879,7 +14879,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-4_barlow
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14887,7 +14887,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-5_feltzin_system
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14895,7 +14895,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-6_notak
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14903,7 +14903,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-7_siberius
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14911,7 +14911,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-8_tabora
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14919,7 +14919,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-9_dobbo
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
@@ -14927,7 +14927,7 @@ Reopen condition: New measured ABI, type or compiler evidence only.
 
 ## reset-state-signs136-boot
 
-State: `exact_private`. Kind: `candidate`.
+State: `integrated`. Kind: `candidate`.
 
 Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
