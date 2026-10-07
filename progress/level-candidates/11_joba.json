@@ -6,10 +6,10 @@
   "reference_sha256": "c6cf24ac0591c78ae6a5320a333b4465f54969ab91e0f42f52fcb7fc95f2f00e",
   "reference_entry": 2870792,
   "candidate_source": "candidates/levels/11_joba.c",
-  "source_sha256": "f39f985267d130afda1b3310ecb5f4aadd85888a95c1cb894e1dd3d325f61452",
-  "catalog_sha256": "fef2bcadec03ec39d04c012c2cadaa88117c7e5c1d7b0f01a468e0405266f112",
-  "object_sha256": "1fcd848471db7a917796aa2ba41941252a1a5418df3aca4b4cddf77094118cf9",
-  "candidate_elf_sha256": "63a9a86a8c549f0091565a4e2a09ca6f1063ab974d7b32468731da31e2d5fdaf",
+  "source_sha256": "e736be881cabe042eed54e52724f1a87d21d237a6507477de4268a5117850671",
+  "catalog_sha256": "2fb19976f954d573cbc8d585959a8dc54101f84fd8d91b4ad79a0733b00299ec",
+  "object_sha256": "a6138175572f5ae5675548271dc8925ef7774113937d617712f94771a0935c1b",
+  "candidate_elf_sha256": "2138eb5dbd7f7d686496de8875a6ce539c4a18bfc0102a77551d9021205dcb95",
   "checker_sha256": "423969fa4af0f1df7bc4b96e135b28e4c9a129c9f36e945fb2c413ea30dba39d",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -452,6 +452,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 8
+    },
+    {
+      "symbol": "LVL_11_JOBA_FUN_003173C8",
+      "address": 3240904,
+      "size": 144,
+      "matched": true,
+      "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 144
     },
     {
       "symbol": "LVL_11_JOBA_FUN_00317C88",
@@ -1247,5 +1258,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 9904
+  "matched_code_bytes": 10048
 }

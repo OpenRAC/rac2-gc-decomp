@@ -3402,3 +3402,28 @@ void FUN_003253A0(char *p)
     *(float *)(p + 52) = 2.0f;
     *(float *)(p + 60) = 1.0f;
 }
+
+struct Slot { s32 w; s32 rest[4]; };
+struct Table1 { char pad[19264]; struct Slot slots[48]; };
+struct Table2 { char pad[52]; s32 slots[4]; };
+
+extern struct Table1 Fee2b87d1_D_0014B540;
+extern struct Table2 Fee2b87d1_D_00152CD0;
+
+s32 FUN_00294630(s32 value) {
+    s32 i = 0;
+    s32 *q;
+    if (Fee2b87d1_D_0014B540.slots[0].w == value) goto after1;
+    while (++i < 48) {
+        if (Fee2b87d1_D_0014B540.slots[i].w == value) break;
+    }
+after1:
+    if (i == 48) return 1;
+    value = 0;
+    if (Fee2b87d1_D_00152CD0.slots[0] == i) goto after2;
+    while (++value < 3) {
+        if (Fee2b87d1_D_00152CD0.slots[value] == i) break;
+    }
+after2:
+    return value != 3;
+}

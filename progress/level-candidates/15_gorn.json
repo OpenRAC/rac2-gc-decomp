@@ -6,10 +6,10 @@
   "reference_sha256": "838098ef94f05d78f79be2f65291447db6c9468e7c44e2cab36396f720cce109",
   "reference_entry": 2869768,
   "candidate_source": "candidates/levels/15_gorn.c",
-  "source_sha256": "fbffb0b1f805a36201b3db7d11f04f313785f0253d27835b2a90ffd2d0409bc1",
-  "catalog_sha256": "743f816be4c7611993bb49a4e27fd8cfa7dda95b138ee37b34c219a9c6e6038d",
-  "object_sha256": "999728794a9e2216397381bcd139daefd715a53d36912f3f1a7485ba759feeb3",
-  "candidate_elf_sha256": "d20d6ffb7c8245e98681d701f34b1cb964351d1f03069078485a8d7eeb6e308b",
+  "source_sha256": "5df8274623396fdb952778566cbaf3fa46da6eec4d1bb1ec332d713213130072",
+  "catalog_sha256": "dae2120c2590523207402c4109f430452f21b3b5e81c00e6de776ee3212f4c80",
+  "object_sha256": "9d30a69a1db00ae188748d8cc7db29901cdcc19ba7cc41df993c45c86cbafdc6",
+  "candidate_elf_sha256": "63f8cb898aa60d2ad812b5c1e494610f80a12a51659b49579af77fda87c4867d",
   "checker_sha256": "423969fa4af0f1df7bc4b96e135b28e4c9a129c9f36e945fb2c413ea30dba39d",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -452,6 +452,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 8
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_0031DB98",
+      "address": 3267480,
+      "size": 144,
+      "matched": true,
+      "reference_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 144
     },
     {
       "symbol": "LVL_15_GORN_FUN_0031E458",
@@ -1159,5 +1170,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 8760
+  "matched_code_bytes": 8904
 }

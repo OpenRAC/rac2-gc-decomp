@@ -1744,3 +1744,42 @@ void LVL_5_FELTZIN_SYSTEM_FUN_002BF8F0(void)
         }
     }
 }
+
+struct Slot { s32 w; s32 rest[4]; };
+struct Table1 { char pad[19264]; struct Slot slots[48]; };
+struct Table2 { char pad[52]; s32 slots[4]; };
+
+extern struct Table1 LVL_5_FELTZIN_SYSTEM_Fee2b87d1_D_0014B540;
+extern struct Table2 LVL_5_FELTZIN_SYSTEM_Fee2b87d1_D_00152CD0;
+
+s32 LVL_5_FELTZIN_SYSTEM_FUN_0031D3C0(s32 value) {
+    s32 i = 0;
+    s32 *q;
+    if (LVL_5_FELTZIN_SYSTEM_Fee2b87d1_D_0014B540.slots[0].w == value) goto after1;
+    while (++i < 48) {
+        if (LVL_5_FELTZIN_SYSTEM_Fee2b87d1_D_0014B540.slots[i].w == value) break;
+    }
+after1:
+    if (i == 48) return 1;
+    value = 0;
+    if (LVL_5_FELTZIN_SYSTEM_Fee2b87d1_D_00152CD0.slots[0] == i) goto after2;
+    while (++value < 3) {
+        if (LVL_5_FELTZIN_SYSTEM_Fee2b87d1_D_00152CD0.slots[value] == i) break;
+    }
+after2:
+    return value != 3;
+}
+extern int LVL_5_FELTZIN_SYSTEM_F954231c4_D_00231E40[][4];
+
+int LVL_5_FELTZIN_SYSTEM_FUN_00392F70(int a0, int a1)
+{
+    int i;
+    int r = 1;
+
+    for (i = 0; i < 32; i++)
+        if (LVL_5_FELTZIN_SYSTEM_F954231c4_D_00231E40[i][1] == a0 && LVL_5_FELTZIN_SYSTEM_F954231c4_D_00231E40[i][0] == a1) {
+            r = 0;
+            break;
+        }
+    return r;
+}

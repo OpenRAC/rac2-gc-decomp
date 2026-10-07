@@ -41,6 +41,7 @@ BASE_SEED_PLACEMENTS = (
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002E3A68"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002F3DD0"),
     ("15_gorn", "LVL_15_GORN_FUN_002FB958"),
+    ("3_endako", "LVL_3_ENDAKO_FUN_0043D650"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002A7070"),
     ("15_gorn", "LVL_15_GORN_FUN_0031EC90"),
     ("11_joba", "LVL_11_JOBA_FUN_0035AC48"),
@@ -53,6 +54,7 @@ BASE_SEED_PLACEMENTS = (
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0035F100"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002F36D8"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003A2B28"),
+    ("13_boldan", "LVL_13_BOLDAN_FUN_003876E0"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0041AF60"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003883B8"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003C5B18"),
@@ -69,6 +71,7 @@ BASE_SEED_PLACEMENTS = (
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002D3068"),
     ("11_joba", "LVL_11_JOBA_FUN_0048E0C0"),
     ("3_endako", "LVL_3_ENDAKO_FUN_00347A08"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_00304FF0"),
 )
 BASE_SEED_SYMBOLS = tuple(symbol for _, symbol in BASE_SEED_PLACEMENTS)
 
