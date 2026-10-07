@@ -305,10 +305,20 @@ patch -R -p1 -s < "$P/0001-r5900-quad-saves.patch"
 | `gcc/config/mips/mips.c` | run the FPR save block before the GPR save block (and keep GPR restores before FPR restores) | the retail orders the two intact blocks that way; patch `0026` covers the frame-save case, this completes it |
 | `gas/config/tc-mips.c` | insert the `rac2_mtc1_nop_ok()` helper and guard both `++nops` sites with it: a `nop` follows `mtc1` when the next instruction reads the written FPR, except when `mtc1` is the function's first instruction | measured 587 nop in 598 cases; the single exception is `FUN_00283CE0` |
 
-**4. Public transformers**, applied in this order:
-`scripts/compiler/allow_zero_ti_store.patch` (patch), then
-`scripts/compiler/disable_frame_order_default.py`, then
-`scripts/compiler/restrict_mtc1_exemption.py` (`gas/config/tc-mips.c`).
+**4. Public transformers.** Every measured adjustment above is shipped as a
+script that carries its exact replacement text; the five source adjustments are
+`neutralise_timode_anchor.py`, `enable_loop_padding.py`,
+`count_trap_length.py`, `ascending_save_order.py` and `reorder_save_blocks.py`,
+and the three that touch the assembler and the machine description are
+`allow_zero_ti_store.patch`, `disable_frame_order_default.py` and
+`restrict_mtc1_exemption.py`. Applying the table above as prose instead of
+running these files yields a *different* `mips.c`: two of the replacements carry
+annotation text, and a differently worded comment changes the hash even though
+the generated code is identical. The order of the last three is immaterial —
+they touch `mips.md`, `mips.c` (one line) and `gas/config/tc-mips.c`
+respectively — but the relative order of the five source adjustments is not:
+the save-block reorder rewrites the region the ascending-order replacement has
+already produced.
 
 **5. Configure and build.**
 
