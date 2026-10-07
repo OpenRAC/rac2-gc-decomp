@@ -4894,6 +4894,230 @@ Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
 Reopen condition: New measured ABI, type or compiler evidence only.
 
+## native-army2-20261007-0_aranos_tutorial
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-10_hrugis_cloud
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-11_joba
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-12_todano
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-13_boldan
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-14_aranos_prison
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-15_gorn
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-16_snivelak
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-17_smolg
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-18_damosel
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-19_grelbin
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-1_oozla
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-20_yeedil
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-22_dobbo_orbit
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-23_damosel_orbit
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-24_ship_shack
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-25_wupash_nebula
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-26_jamming_array
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-2_maktar_nebula
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-30_insomniac_museum
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-3_endako
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-4_barlow
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-5_feltzin_system
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-6_notak
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-7_siberius
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-8_tabora
+
+State: `exact_private`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-9_dobbo
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## native-army2-20261007-boot
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
 ## native-complement-power68-v1-20261006
 
 State: `integrated`. Kind: `candidate`.

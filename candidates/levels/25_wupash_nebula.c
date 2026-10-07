@@ -1953,3 +1953,62 @@ Slot4615e05e *LVL_25_WUPASH_NEBULA_FUN_00323300(Ctx *ctx, int index)
     ctx->f50 = (int)slot;
     return slot;
 }
+typedef struct {
+    unsigned char key;
+    unsigned char reserved01[11];
+    int target;
+} Row167abba11e;
+typedef struct {
+    unsigned char reserved00[32];
+    Row167abba11e *rows;
+} ListObject7abba11e;
+typedef struct {
+    short first;
+    short second;
+} Pair7abba11e;
+
+extern int LVL_25_WUPASH_NEBULA_F7abba11e_D_001DD980[];
+extern ListObject7abba11e *LVL_25_WUPASH_NEBULA_F7abba11e_D_001DA340[];
+extern Pair7abba11e LVL_25_WUPASH_NEBULA_F7abba11e_D_001DD1C0[];
+
+void LVL_25_WUPASH_NEBULA_FUN_00323FA8(void)
+{
+    int *selected;
+    ListObject7abba11e *object;
+    Row167abba11e *row;
+    unsigned char *keys;
+    unsigned int *dst;
+    Pair7abba11e *pair;
+    int *next;
+
+    selected = LVL_25_WUPASH_NEBULA_F7abba11e_D_001DD980;
+    while (*selected >= 0) {
+        next = selected + 1;
+        object = LVL_25_WUPASH_NEBULA_F7abba11e_D_001DA340[*selected];
+        row = object->rows;
+        for (;;) {
+            keys = (unsigned char *)row;
+            dst = (unsigned int *)(row->target & 0x7FFFFFFF);
+            if (*keys != 255) {
+                do {
+                    pair = &LVL_25_WUPASH_NEBULA_F7abba11e_D_001DD1C0[*keys];
+                    if (pair->first != 0) {
+                        dst[12] = (dst[12] & 0xFFFFC000u) | pair->first;
+                    }
+                    keys++;
+                    if (pair->second != 0) {
+                        dst[16] = (dst[16] & 0xFFFFC000u) | pair->second;
+                    }
+                    dst += 16;
+                } while (*keys != 255);
+            }
+            if (row->target < 0) {
+                goto out;
+            }
+            row++;
+        }
+out:
+        ;
+        selected = next;
+    }
+}

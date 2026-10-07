@@ -1751,3 +1751,26 @@ void LVL_26_JAMMING_ARRAY_FUN_003750E8(char *buf, int value)
     else
         LVL_26_JAMMING_ARRAY_F250a61cf_FUN_00115DA8(buf, LVL_26_JAMMING_ARRAY_F250a61cf_D_001AD688, value);
 }
+typedef struct {
+    short key;
+    short index;
+    int value;
+} Query;
+
+typedef struct {
+    int key;
+    int value;
+} Entry32fd6f60;
+
+extern Entry32fd6f60 LVL_26_JAMMING_ARRAY_F32fd6f60_D_002A4100[];
+
+void LVL_26_JAMMING_ARRAY_FUN_0035F1D8(Query *query)
+{
+    int i;
+
+    i = 0;
+    while (LVL_26_JAMMING_ARRAY_F32fd6f60_D_002A4100[i].key != -1 && LVL_26_JAMMING_ARRAY_F32fd6f60_D_002A4100[i].key != query->key)
+        i++;
+    query->index = i;
+    query->value = LVL_26_JAMMING_ARRAY_F32fd6f60_D_002A4100[i].value;
+}

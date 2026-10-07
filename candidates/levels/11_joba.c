@@ -2274,3 +2274,52 @@ void LVL_11_JOBA_FUN_003029E8(int a0)
     LVL_11_JOBA_Fcfd2e0cd_D_001B3D08[3] = 0x50000015;
     LVL_11_JOBA_Fcfd2e0cd_D_001B3D08_1 = LVL_11_JOBA_Fcfd2e0cd_D_001B3D08 + 4;
 }
+int LVL_11_JOBA_FUN_00400AA0(int a0, int a1, float f12)
+{
+    int a2 = 0;
+
+    if (*(int *)0x001A79F0 != 11) goto end;
+
+    if (a0 == -1) {
+        if (a1 >= 166) {
+            if (a1 < 187) {
+                if (f12 < 520.2f) {
+                    a2 = 1;
+                    goto end;
+                }
+            }
+        }
+    }
+
+    if (a0 == 2) {
+        if ((unsigned)(a1 - 1) < 6) {
+            if (f12 < 537.0f) {
+                a2 = 1;
+                goto end;
+            }
+        }
+        if ((unsigned)(a1 - 35) < 13) {
+            if (f12 < 534.0f) {
+                a2 = 1;
+                goto end;
+            }
+        }
+    }
+
+end:
+    return a2;
+}
+extern int LVL_11_JOBA_Fbef45185_D_001B359C __attribute__((sda));
+
+void LVL_11_JOBA_FUN_00332B18(int param_1, unsigned short *param_2)
+{
+    int i;
+
+    for (i = 1; i <= (short)param_2[0]; i++) {
+        if (LVL_11_JOBA_Fbef45185_D_001B359C + ((short)param_2[i] << 8) == param_1) {
+            param_2[i] = param_2[(short)param_2[0]];
+            param_2[0] = param_2[0] - 1;
+            return;
+        }
+    }
+}

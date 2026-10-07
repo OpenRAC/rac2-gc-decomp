@@ -1926,3 +1926,85 @@ Slot4615e05e *LVL_7_SIBERIUS_FUN_00306F88(Ctx *ctx, int index)
     ctx->f50 = (int)slot;
     return slot;
 }
+typedef struct {
+    short key;
+    short index;
+    int value;
+} Query;
+
+typedef struct {
+    int key;
+    int value;
+} Entry32fd6f60;
+
+extern Entry32fd6f60 LVL_7_SIBERIUS_F32fd6f60_D_002A4100[];
+
+void LVL_7_SIBERIUS_FUN_003558E8(Query *query)
+{
+    int i;
+
+    i = 0;
+    while (LVL_7_SIBERIUS_F32fd6f60_D_002A4100[i].key != -1 && LVL_7_SIBERIUS_F32fd6f60_D_002A4100[i].key != query->key)
+        i++;
+    query->index = i;
+    query->value = LVL_7_SIBERIUS_F32fd6f60_D_002A4100[i].value;
+}
+typedef struct {
+    unsigned char key;
+    unsigned char reserved01[11];
+    int target;
+} Row167abba11e;
+typedef struct {
+    unsigned char reserved00[32];
+    Row167abba11e *rows;
+} ListObject7abba11e;
+typedef struct {
+    short first;
+    short second;
+} Pair7abba11e;
+
+extern int LVL_7_SIBERIUS_F7abba11e_D_001DD980[];
+extern ListObject7abba11e *LVL_7_SIBERIUS_F7abba11e_D_001DA340[];
+extern Pair7abba11e LVL_7_SIBERIUS_F7abba11e_D_001DD1C0[];
+
+void LVL_7_SIBERIUS_FUN_00307C30(void)
+{
+    int *selected;
+    ListObject7abba11e *object;
+    Row167abba11e *row;
+    unsigned char *keys;
+    unsigned int *dst;
+    Pair7abba11e *pair;
+    int *next;
+
+    selected = LVL_7_SIBERIUS_F7abba11e_D_001DD980;
+    while (*selected >= 0) {
+        next = selected + 1;
+        object = LVL_7_SIBERIUS_F7abba11e_D_001DA340[*selected];
+        row = object->rows;
+        for (;;) {
+            keys = (unsigned char *)row;
+            dst = (unsigned int *)(row->target & 0x7FFFFFFF);
+            if (*keys != 255) {
+                do {
+                    pair = &LVL_7_SIBERIUS_F7abba11e_D_001DD1C0[*keys];
+                    if (pair->first != 0) {
+                        dst[12] = (dst[12] & 0xFFFFC000u) | pair->first;
+                    }
+                    keys++;
+                    if (pair->second != 0) {
+                        dst[16] = (dst[16] & 0xFFFFC000u) | pair->second;
+                    }
+                    dst += 16;
+                } while (*keys != 255);
+            }
+            if (row->target < 0) {
+                goto out;
+            }
+            row++;
+        }
+out:
+        ;
+        selected = next;
+    }
+}

@@ -2080,3 +2080,56 @@ void LVL_6_NOTAK_FUN_003BC620(void)
     LVL_6_NOTAK_F74e6a904_D_001B2370 = a1;
     LVL_6_NOTAK_F74e6a904_D_001B2374 = a1 - 8192;
 }
+int LVL_6_NOTAK_FUN_003239C8(int a0, int a1, int a2)
+{
+    unsigned char *base = *(unsigned char **)0x001B23C0;
+    unsigned char *end = base + *(int *)base;
+    unsigned short *node = (unsigned short *)(base + 4);
+    int i2;
+    int i1;
+    int i0;
+
+    i2 = a2 - node[0];
+    if (i2 < 0) return 0;
+    if (!(i2 < node[1])) return 0;
+    if (!node[i2 + 2]) return 0;
+    node = (unsigned short *)(base + node[i2 + 2] * 4);
+    i1 = a1 - node[0];
+    if (i1 < 0) return 0;
+    if (!(i1 < node[1])) return 0;
+    if (!node[i1 + 2]) return 0;
+    node = (unsigned short *)(base + node[i1 + 2] * 4);
+    i0 = a0 - node[0];
+    if (i0 < 0 || !(i0 < node[1])) return 0;
+    if (node[i0 + 2] == 0xFFFF) return 0;
+    return (int)(end + node[i0 + 2] * 128);
+}
+extern int *LVL_6_NOTAK_F412a47f9_D_001B2F88 __attribute__((sda));
+extern int *LVL_6_NOTAK_F412a47f9_D_001B2DA0 __attribute__((sda));
+extern int LVL_6_NOTAK_F412a47f9_D_001A72D0 __attribute__((sda));
+extern int LVL_6_NOTAK_F412a47f9_D_001A72D4 __attribute__((sda));
+extern int LVL_6_NOTAK_F412a47f9_D_001B22BC __attribute__((sda));
+
+typedef struct { int *saved; } SavedSlot412a47f9;
+extern SavedSlot412a47f9 LVL_6_NOTAK_F412a47f9_D_001B2DC0 __attribute__((sda));
+
+typedef struct {
+    char gap0[12];
+    short count;
+    char gap14[2];
+    long long *table;
+} ResidentTable412a47f9;
+
+void LVL_6_NOTAK_FUN_0039E580(void)
+{
+    ResidentTable412a47f9 *resident = (ResidentTable412a47f9 *)LVL_6_NOTAK_F412a47f9_D_001B2DA0;
+    int *current = LVL_6_NOTAK_F412a47f9_D_001B2F88;
+    int index;
+
+    LVL_6_NOTAK_F412a47f9_D_001B2DC0.saved = current;
+    LVL_6_NOTAK_F412a47f9_D_001B2F88 = (int *)((char *)current + 16);
+    LVL_6_NOTAK_F412a47f9_D_001A72D0 = LVL_6_NOTAK_F412a47f9_D_001A72D4;
+    LVL_6_NOTAK_F412a47f9_D_001B22BC = 0;
+    for (index = 0; index < resident->count; ++index)
+        *(long long *)((char *)resident->table + index * 16) = 0;
+}

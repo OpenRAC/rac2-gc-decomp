@@ -1967,3 +1967,183 @@ void LVL_8_TABORA_FUN_002F2E28(void) {
         LVL_8_TABORA_F6230a760_D_001B2498[i](LVL_8_TABORA_F6230a760_D_001B24A8[i]);
     }
 }
+int LVL_8_TABORA_FUN_002F0130(int a0, int a1, int a2)
+{
+    unsigned char *base = *(unsigned char **)0x001B2580;
+    unsigned char *end = base + *(int *)base;
+    unsigned short *node = (unsigned short *)(base + 4);
+    int i2;
+    int i1;
+    int i0;
+
+    i2 = a2 - node[0];
+    if (i2 < 0) return 0;
+    if (!(i2 < node[1])) return 0;
+    if (!node[i2 + 2]) return 0;
+    node = (unsigned short *)(base + node[i2 + 2] * 4);
+    i1 = a1 - node[0];
+    if (i1 < 0) return 0;
+    if (!(i1 < node[1])) return 0;
+    if (!node[i1 + 2]) return 0;
+    node = (unsigned short *)(base + node[i1 + 2] * 4);
+    i0 = a0 - node[0];
+    if (i0 < 0 || !(i0 < node[1])) return 0;
+    if (node[i0 + 2] == 0xFFFF) return 0;
+    return (int)(end + node[i0 + 2] * 128);
+}
+extern unsigned char LVL_8_TABORA_F6251b968_D_001D2480[];
+extern char LVL_8_TABORA_F6251b968_D_001CA680[];
+
+unsigned char *LVL_8_TABORA_FUN_0031DCC8(unsigned char *a0, int a1)
+{
+    int slot;
+    unsigned char *table;
+    unsigned char *entry;
+    int *q;
+    unsigned char *r;
+
+    table = LVL_8_TABORA_F6251b968_D_001D2480;
+    slot = 0;
+    while (slot < 6 && *(unsigned char *)(table + slot * 64 + 4) != 0)
+        slot++;
+
+    entry = LVL_8_TABORA_F6251b968_D_001D2480 + slot * 64;
+    entry[4] = 1;
+    *(unsigned short *)entry = a1;
+    *(unsigned char **)(entry + 16) = (unsigned char *)(LVL_8_TABORA_F6251b968_D_001CA680 + slot * 5376);
+
+    *(int *)(entry + 20) = *(int *)(a0 + 36);
+    q = *(int **)(*(int *)(a0 + 36) + 28);
+    r = (unsigned char *)q[(short)a1 + 1];
+    *(unsigned short *)(entry + 2) = r[2];
+    *(int *)(entry + 12) = (int)(r + (r[0] + 4));
+    *(int *)(entry + 28) = *(int *)(a0 + 80);
+    *(int *)(a0 + 80) = (int)entry;
+    return entry;
+}
+struct Rec7f9c1f18 {
+    int v[10];
+};
+
+extern struct Rec7f9c1f18 LVL_8_TABORA_F7f9c1f18_D_001BD2C8[];
+
+void LVL_8_TABORA_FUN_002EEA08(int p0, int p1, int p2, int p3, int p4, int p5,
+                                      int p6, int p7, int p8, int p9, unsigned idx)
+{
+    if (idx >= 32u)
+        return;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[0] = p0;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[1] = p1;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[2] = p2;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[3] = p3;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[4] = p4;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[5] = p5;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[6] = p6;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[7] = p7;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[8] = p8;
+    LVL_8_TABORA_F7f9c1f18_D_001BD2C8[idx].v[9] = p9;
+}
+/* Append one 16-byte record to the level's queue at 0x226210 and submit it
+   through the DMA helper LVL_8_TABORA_Fa3822957_FUN_0011AFE0.  The four queue globals live in a
+   0x38-byte state block based at 0x1A7240; because they are reached with a
+   constant offset from that base (a CONST address), cc1 gives the store a
+   two-instruction length and refuses to drop it into the branch delay slot,
+   which is what the retail body does as well.  */
+
+typedef struct {
+    int start;      /* +0x00 -> 0x1A7240 */
+    int end;        /* +0x04 -> 0x1A7244 */
+    int pad[10];    /* +0x08 .. +0x2F */
+    int cursor;     /* +0x30 -> 0x1A7270 */
+    int count;      /* +0x34 -> 0x1A7274 */
+} LevelQueuea3822957;
+
+extern LevelQueuea3822957 LVL_8_TABORA_Fa3822957_D_001A7240 __attribute__((sda));
+extern char LVL_8_TABORA_Fa3822957_D_00226210[];
+extern int LVL_8_TABORA_Fa3822957_FUN_0011AFE0(int *dma, int flag);
+
+int LVL_8_TABORA_FUN_00377058(int p0, int p1, int p2, int p3)
+{
+    int args[4];
+    int n, k;
+
+    if (LVL_8_TABORA_Fa3822957_D_001A7240.end - (LVL_8_TABORA_Fa3822957_D_001A7240.cursor - LVL_8_TABORA_Fa3822957_D_001A7240.start) < p2 * 16)
+        return -1;
+    if (LVL_8_TABORA_Fa3822957_D_001A7240.count == 64)
+        return -2;
+
+    args[0] = p0;
+    args[1] = LVL_8_TABORA_Fa3822957_D_001A7240.cursor;
+    args[2] = p1 * 16;
+    args[3] = 0;
+    LVL_8_TABORA_Fa3822957_FUN_0011AFE0(args, 1);
+
+    n = LVL_8_TABORA_Fa3822957_D_001A7240.count;
+    k = n;
+    n = n + 1;
+    LVL_8_TABORA_Fa3822957_D_001A7240.count = n;
+    *(int *)(LVL_8_TABORA_Fa3822957_D_00226210 + k * 16) = LVL_8_TABORA_Fa3822957_D_001A7240.cursor;
+    *(int *)(LVL_8_TABORA_Fa3822957_D_00226210 + k * 16 + 4) = p2;
+    *(int *)(LVL_8_TABORA_Fa3822957_D_00226210 + k * 16 + 8) = p3;
+    LVL_8_TABORA_Fa3822957_D_001A7240.cursor = LVL_8_TABORA_Fa3822957_D_001A7240.cursor + p2 * 16;
+    return k;
+}
+typedef struct {
+    unsigned char key;
+    unsigned char reserved01[11];
+    int target;
+} Row16ac18d0d0;
+typedef struct {
+    unsigned char reserved00[32];
+    Row16ac18d0d0 *rows;
+} ListObjectac18d0d0;
+typedef struct {
+    short first;
+    short second;
+} Pairac18d0d0;
+
+extern int LVL_8_TABORA_Fac18d0d0_D_001DE280[];
+extern ListObjectac18d0d0 *LVL_8_TABORA_Fac18d0d0_D_001DAC40[];
+extern Pairac18d0d0 LVL_8_TABORA_Fac18d0d0_D_001DDAC0[];
+
+void LVL_8_TABORA_FUN_0031E970(void)
+{
+    int *selected;
+    ListObjectac18d0d0 *object;
+    Row16ac18d0d0 *row;
+    unsigned char *keys;
+    unsigned int *dst;
+    Pairac18d0d0 *pair;
+    int *next;
+
+    selected = LVL_8_TABORA_Fac18d0d0_D_001DE280;
+    while (*selected >= 0) {
+        next = selected + 1;
+        object = LVL_8_TABORA_Fac18d0d0_D_001DAC40[*selected];
+        row = object->rows;
+        for (;;) {
+            keys = (unsigned char *)row;
+            dst = (unsigned int *)(row->target & 0x7FFFFFFF);
+            if (*keys != 255) {
+                do {
+                    pair = &LVL_8_TABORA_Fac18d0d0_D_001DDAC0[*keys];
+                    if (pair->first != 0) {
+                        dst[12] = (dst[12] & 0xFFFFC000u) | pair->first;
+                    }
+                    keys++;
+                    if (pair->second != 0) {
+                        dst[16] = (dst[16] & 0xFFFFC000u) | pair->second;
+                    }
+                    dst += 16;
+                } while (*keys != 255);
+            }
+            if (row->target < 0) {
+                goto out;
+            }
+            row++;
+        }
+out:
+        ;
+        selected = next;
+    }
+}

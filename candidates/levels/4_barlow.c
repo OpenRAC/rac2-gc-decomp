@@ -1402,3 +1402,38 @@ void LVL_4_BARLOW_FUN_0045D468(char *p)
     *(float *)(p + 20) = -1.0f;
     *(float *)(p + 60) = 1.0f;
 }
+int LVL_4_BARLOW_FUN_00410E48(int a0, int a1, float f12)
+{
+    int a2 = 0;
+
+    if (*(int *)0x001A79F0 != 11) goto end;
+
+    if (a0 == -1) {
+        if (a1 >= 166) {
+            if (a1 < 187) {
+                if (f12 < 520.2f) {
+                    a2 = 1;
+                    goto end;
+                }
+            }
+        }
+    }
+
+    if (a0 == 2) {
+        if ((unsigned)(a1 - 1) < 6) {
+            if (f12 < 537.0f) {
+                a2 = 1;
+                goto end;
+            }
+        }
+        if ((unsigned)(a1 - 35) < 13) {
+            if (f12 < 534.0f) {
+                a2 = 1;
+                goto end;
+            }
+        }
+    }
+
+end:
+    return a2;
+}
