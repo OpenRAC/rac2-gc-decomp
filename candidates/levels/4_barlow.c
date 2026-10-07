@@ -107,6 +107,8 @@ typedef struct {
     s32 extra;
 } PackedHeaderCountView;
 
+//
+
 s32 LVL_4_BARLOW_FUN_003A1540(const PackedHeaderCountView *header) {
     s32 fixed = header->extra + 16;
     s32 total = header->data_offset + fixed + header->length;
@@ -413,4 +415,33 @@ s32 LVL_4_BARLOW_FUN_002F6F18(void) {
         found = 1;
     }
     return found;
+}
+
+/* Versión final compacta para la compuerta de tamaño de Barlow */
+extern void LVL_4_BARLOW_FUN_002F6C50(s32 source, s32 destination);
+
+s32 LVL_4_BARLOW_FUN_00300A10(PackedHeaderCountView* header, u32* data_array) {
+    s32 total_compacted_bytes = 0;
+
+    if (header && data_array) {
+        s32 length = header->length;
+        s32 offset = header->data_offset;
+
+        if (length > 0 && offset >= 0) {
+            s32 i = 0;
+            u32* row_ptr = data_array + offset;
+
+            do {
+                // Validación directa de la palabra base en el registro físico
+                if (row_ptr[0] != 0) {
+                    LVL_4_BARLOW_FUN_002F6C50((s32)row_ptr, total_compacted_bytes);
+                    total_compacted_bytes += 32;
+                }
+                row_ptr += 8; // Avanzar exactamente 32 bytes (8 palabras de 32 bits)
+                i++;
+            } while (i < length);
+        }
+    }
+
+    return total_compacted_bytes;
 }
