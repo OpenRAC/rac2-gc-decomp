@@ -339,6 +339,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "4c333e68e6634eb4b197d98c10e2309b": {
+      "artifact": "prepared-run:builds/campaign-4c333e68e6634eb4b197d98c10e2309b/report.json",
+      "artifact_sha256": "40f61ee4270b5982bd75bc174c0aac32cfef1b53910a1b1007ee99331c1de11d",
+      "directory": "runtime:actions/4c333e68e6634eb4b197d98c10e2309b",
+      "finished": "2026-10-07T01:26:42.515486+00:00",
+      "id": "4c333e68e6634eb4b197d98c10e2309b",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "4c50a46c22fb42d8ad8943ab31152d10": {
       "directory": "runtime:actions/4c50a46c22fb42d8ad8943ab31152d10",
       "finished": "2026-10-05T19:29:47.419692+00:00",
@@ -4575,7 +4586,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 6161,
+  "revision": 6167,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -19915,6 +19926,33 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "d85c32814a284986ade6b19e1d708607"
+        }
+      ]
+    },
+    "known-boot-callback-mmio-existing-shared-placement-20261006": {
+      "address": 3536984,
+      "budget": 1,
+      "created": "2026-10-07T01:19:59.570106+00:00",
+      "hypothesis": "Reuse three currently exact unchanged boot G0 C functions at81 complete raw-identical overlay extents, one original symbol per image: callback loop120 and two architectural MMIO wrappers108/108. Existing explicit resident state/helper bindings remain unchanged. No new C body, native clone, compiler/profile variant, multi-alias mapping or entry-GP assumption.",
+      "id": "known-boot-callback-mmio-existing-shared-placement-20261006",
+      "kind": "research",
+      "next_action": "Root checks pins after C2 merge, then uses the existing maintained shared integration qualification or campaign-integrate facade/full28 action. Require complete actual mapped function/STT/raw/source/tool/read-only equality, all current shared controls and1202 native controls. Preserve any contextual refusal and stop that placement; no source/operator/type/order/register/flag cycles. Preparation worker performs no compiler/linker action.",
+      "pointers": [
+        "private-work:c-campaign-20261006/known-C-nontrivial-reuse-preparation/delivery-shared.json",
+        "private-work:c-campaign-20261006/known-C-nontrivial-reuse-preparation/level-catalog-proposed.json",
+        "private-work:c-campaign-20261006/known-C-nontrivial-reuse-preparation/REPRISE.md"
+      ],
+      "program": "levels/0_aranos_tutorial",
+      "reopen_condition": "Independent contradictory ownership/ABI/storage/boundary or maintained pipeline-contract evidence; never an equivalent C spelling or guessed GP/profile.",
+      "size": 120,
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-07T01:27:43.615006+00:00",
+          "from": "queued",
+          "reason": "Unchanged known boot C accepted at 81 complete shared placements by fresh full28 action 4c333e68e6634eb4b197d98c10e2309b; private closure receipt validates original source/object, all prior shared placements and 1202 native controls. No new authored C body or opaque helper credit.",
+          "reopen_condition": "",
+          "to": "done"
         }
       ]
     },
@@ -145134,6 +145172,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "b6fb4835c4f4ff872805d902b89324ba5b613d1b414a5f76b234c7b0f085b738"
+    "docs/CAMPAIGN-QUEUE.md": "cfb38f9546dd2348c4f7ed6370e39969c10b5b3b019a723494b552a9cae18d44"
   }
 }

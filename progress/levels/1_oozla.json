@@ -3,7 +3,7 @@
   "program": "1_oozla",
   "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
   "source_sha256": "fec0fb61d30ac322b5989e7fcf9611b1017d7c64775c507b3f30d48329b66b52",
-  "catalog_sha256": "fee9a7cfce921183a9b7ff95fd1af8f7caefad120ed536dbc345cd4823c311e6",
+  "catalog_sha256": "7663a9cceb2f64be74f7c7b3452162ed561364aa4b8ec03f9239b8b55978d4ae",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2206,6 +2206,48 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "FUN_002E5F60",
+      "address": 3497040,
+      "size": 120,
+      "matched": true,
+      "reference_sha256": "4417389de6bf865b82a40831a6be5802f25f7a0c34fe62e1dc1d46cf81f9a651",
+      "candidate_sha256": "4417389de6bf865b82a40831a6be5802f25f7a0c34fe62e1dc1d46cf81f9a651",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "1_oozla",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
+      "symbol": "FUN_00350798",
+      "address": 4493536,
+      "size": 108,
+      "matched": true,
+      "reference_sha256": "5909ee6c5c9f1e73692b70869ab698a2f47c02f302e9c8c740e2468b98208c0c",
+      "candidate_sha256": "5909ee6c5c9f1e73692b70869ab698a2f47c02f302e9c8c740e2468b98208c0c",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "1_oozla",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
+      "symbol": "FUN_00350808",
+      "address": 4493648,
+      "size": 108,
+      "matched": true,
+      "reference_sha256": "0d9984f1a9a16a8772558c35bb097c7ec8b7125bafbd9c13d96a2ee968f922ba",
+      "candidate_sha256": "0d9984f1a9a16a8772558c35bb097c7ec8b7125bafbd9c13d96a2ee968f922ba",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "1_oozla",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
       "symbol": "LVL_1_OOZLA_FUN_002AE920",
       "address": 2812192,
       "size": 52,
@@ -2785,14 +2827,14 @@
     "bytes_compared": 2763912,
     "segments": 1
   },
-  "matched_code_bytes": 12204,
+  "matched_code_bytes": 12540,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "58c09986d6125621884182d66eecdea098c961cc3d34867ceade14b996bdf05f",
+  "candidate_elf_sha256": "83dd33b567320ef0c80ca9fcf62b13bf3209666d45d9acabe60fe53842d607fc",
   "c_object_sha256": "b71624c21c7eb1161c91670dd8b3cae6afb5d1a6f40e678905086cdb8f1a76c6",
   "replacement_inputs": {
     "FF300.s": [
@@ -2953,6 +2995,9 @@
       "FUN_00285708",
       "FUN_002B7170",
       "FUN_002E5FE0",
+      "FUN_002E5F60",
+      "FUN_00350798",
+      "FUN_00350808",
       "LVL_1_OOZLA_FUN_002AE920",
       "LVL_1_OOZLA_FUN_002AE958",
       "LVL_1_OOZLA_FUN_002AEA88",
@@ -3003,7 +3048,7 @@
     "program": "1_oozla",
     "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
     "source_sha256": "fec0fb61d30ac322b5989e7fcf9611b1017d7c64775c507b3f30d48329b66b52",
-    "catalog_sha256": "fee9a7cfce921183a9b7ff95fd1af8f7caefad120ed536dbc345cd4823c311e6",
+    "catalog_sha256": "7663a9cceb2f64be74f7c7b3452162ed561364aa4b8ec03f9239b8b55978d4ae",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_level_gate": {
@@ -3011,14 +3056,14 @@
       "bytes_compared": 2763912,
       "segments": 1
     },
-    "matched_code_bytes": 8340,
+    "matched_code_bytes": 8676,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "58c09986d6125621884182d66eecdea098c961cc3d34867ceade14b996bdf05f",
+    "candidate_elf_sha256": "83dd33b567320ef0c80ca9fcf62b13bf3209666d45d9acabe60fe53842d607fc",
     "c_object_sha256": "b71624c21c7eb1161c91670dd8b3cae6afb5d1a6f40e678905086cdb8f1a76c6",
     "replacement_inputs": {
       "FF300.s": [
@@ -3179,6 +3224,9 @@
         "FUN_00285708",
         "FUN_002B7170",
         "FUN_002E5FE0",
+        "FUN_002E5F60",
+        "FUN_00350798",
+        "FUN_00350808",
         "LVL_1_OOZLA_FUN_002AE920",
         "LVL_1_OOZLA_FUN_002AE958",
         "LVL_1_OOZLA_FUN_002AEA88",
@@ -3229,7 +3277,7 @@
   },
   "reference_entry": 2776968,
   "candidate_entry": 2776968,
-  "dependency_sha256": "17f52b06d2c60306a04c97b26f241c0018cce79ae4bc8b6500abf6fba81340a7",
+  "dependency_sha256": "cb8af047db505fd384a20a61af8a4e2d8d11aa29ef09f4752f6b6010a77b0574",
   "boot_review_sha256": "cce0149093096d9f16b91d2c9c456331d07e167c16e23a9dbcda533d525d5974",
   "native": {
     "source": "candidates/levels/1_oozla.c",
