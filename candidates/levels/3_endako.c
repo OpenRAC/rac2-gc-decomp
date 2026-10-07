@@ -848,3 +848,33 @@ void LVL_3_ENDAKO_FUN_00456E58(void)
 void LVL_3_ENDAKO_FUN_004586F0(void)
 {
 }
+
+
+/* Three measured byte-state cases and width-specific field views.
+   The correspondence name UpdateMoby_2426 does not establish an original
+   class, enumeration, allocation or field-name declaration. */
+extern void LVL_3_ENDAKO_STATE_HELPER_2426(u8 *, u8, s32);
+extern u32 LVL_3_ENDAKO_STATUS_HELPER_2426(u8 *);
+void LVL_3_ENDAKO_FUN_003CA9F8(u8 *entity) {
+    switch (entity[0x20]) {
+    case 0:
+        LVL_3_ENDAKO_STATE_HELPER_2426(entity, 1, -1);
+        *(u32 *)(entity + 0x98) = 0;
+        *(unsigned short *)(entity + 0x34) =
+            (*(unsigned short *)(entity + 0x34) | 0x41) & 0xEFFF;
+        break;
+    case 1:
+        if (LVL_3_ENDAKO_STATUS_HELPER_2426(entity) != 0) {
+            LVL_3_ENDAKO_STATE_HELPER_2426(entity, 2, -1);
+            *(u32 *)(entity + 0x98) =
+                *(u32 *)(*(u8 **)(entity + 0x24) + 0x10);
+        }
+        break;
+    case 2:
+        if (LVL_3_ENDAKO_STATUS_HELPER_2426(entity) == 0) {
+            LVL_3_ENDAKO_STATE_HELPER_2426(entity, 1, -1);
+            *(u32 *)(entity + 0x98) = 0;
+        }
+        break;
+    }
+}

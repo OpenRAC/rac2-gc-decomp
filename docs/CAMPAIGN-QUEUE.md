@@ -2306,6 +2306,30 @@ Reopen condition: Independently distinguishing original global producer/allocati
 - `runtime:trials/8807d0ae02344b0ab3f3b4c79c6bff78/manifest.json`
 - `runtime:trials/8807d0ae02344b0ab3f3b4c79c6bff78/outcome.json`
 
+## fresh-state-byte-dispatch204-14_aranos_prison-first-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Root reserves and runs only the Endako first hypothesis once. Require complete204 STT/object/raw/read-only/tool/source equality and every current native control. Preserve refusal with no source/type/order/register/profile variation or peer trial. Prison uses unchanged C only after exact Endako and separate Root reservation. Finish this already-engaged family, then idle for the user-requested pause; no new targets.
+
+Reopen condition: Independent contradictory ABI/storage/boundary or qualified compiler witness, never equivalent expressions/types/register allocation/order/flags. Original family172 refusals remain parked.
+
+- `private-work:c-campaign-20261006/fresh-gameplay-after731/delivery.json`
+- `private-work:c-campaign-20261006/fresh-gameplay-after731/cloud204-park-exclusion.json`
+- `private-work:c-campaign-20261006/fresh-gameplay-after731/REPRISE.md`
+
+## fresh-state-byte-dispatch204-3_endako-first-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+Root reserves and runs only the Endako first hypothesis once. Require complete204 STT/object/raw/read-only/tool/source equality and every current native control. Preserve refusal with no source/type/order/register/profile variation or peer trial. Prison uses unchanged C only after exact Endako and separate Root reservation. Finish this already-engaged family, then idle for the user-requested pause; no new targets.
+
+Reopen condition: Independent contradictory ABI/storage/boundary or qualified compiler witness, never equivalent expressions/types/register allocation/order/flags. Original family172 refusals remain parked.
+
+- `private-work:c-campaign-20261006/fresh-gameplay-after731/delivery.json`
+- `private-work:c-campaign-20261006/fresh-gameplay-after731/cloud204-park-exclusion.json`
+- `private-work:c-campaign-20261006/fresh-gameplay-after731/REPRISE.md`
+
 ## fresh-test-set-byteBE-bit2-status36-seed-20261006
 
 State: `stopped`. Kind: `candidate`.
@@ -2901,6 +2925,48 @@ Compare every complete symbol and exact object hash against the committed boot r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
+## known-boot-fun_00284000-gp-selection-exclusion-20261007
+
+State: `stopped`. Kind: `research`.
+
+Keep this shared-reuse selection parked. Do not plan a candidate, reevaluate/recompile, clone C or cycle expressions/types/registers/profiles. Reopen only if the concrete reopen_condition is independently satisfied; preserve all prior evidence and the existing boot C qualification.
+
+Reopen condition: Independent reviewed machine-level entry/caller GP and preservation evidence for this exact original store, together with an explicit resident binding contract for D_001A7BB8. A boot link-time GP value, byte identity, local-only GP fact or equivalent C spelling is insufficient.
+
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/retained-negative-preparations.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/bodies-and-helpers-initial.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/delivery.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/selection-exclusions/GP-SELECTION-EXCLUSIONS.md`
+- `private-work:c-campaign-20261006/known-scalar-map72-publication/boot-qualification-receipt.json`
+
+## known-boot-fun_002b7c10-gp-selection-exclusion-20261007
+
+State: `stopped`. Kind: `research`.
+
+Keep this shared-reuse selection parked. Do not plan a candidate, reevaluate/recompile, clone C or cycle expressions/types/registers/profiles. Reopen only if the concrete reopen_condition is independently satisfied; preserve all prior evidence and the existing boot C qualification.
+
+Reopen condition: Independent reviewed machine-level entry/caller GP and preservation evidence for this exact original store, together with an explicit resident binding contract for D_001A7434. A boot link-time GP value, byte identity, local-only GP fact or equivalent C spelling is insufficient.
+
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/retained-negative-preparations.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/bodies-and-helpers-initial.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/delivery.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/selection-exclusions/GP-SELECTION-EXCLUSIONS.md`
+- `private-work:c-campaign-20261006/known-scalar-map72-publication/boot-qualification-receipt.json`
+
+## known-boot-fun_002b7d88-gp-selection-exclusion-20261007
+
+State: `stopped`. Kind: `research`.
+
+Keep this shared-reuse selection parked. Do not plan a candidate, reevaluate/recompile, clone C or cycle expressions/types/registers/profiles. Reopen only if the concrete reopen_condition is independently satisfied; preserve all prior evidence and the existing boot C qualification.
+
+Reopen condition: Independent reviewed caller-to-original-FUN_00133688 GP entry/preservation and resident-binding contract covering its exact GP-relative load and reachable original call path. No assumed kernel/return-link preservation or source clone; byte identity alone is insufficient.
+
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/retained-negative-preparations.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/bodies-and-helpers-initial.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/delivery.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/selection-exclusions/GP-SELECTION-EXCLUSIONS.md`
+- `private-work:c-campaign-20261006/known-scalar-map72-publication/boot-qualification-receipt.json`
+
 ## known-boot-indexed-state72-existing-shared-placement-20261007
 
 State: `done`. Kind: `research`.
@@ -2912,6 +2978,18 @@ Reopen condition: Independent contradictory boundary/ABI/resident binding owners
 - `private-work:c-campaign-20261006/fresh-known-c-reuse-next/delivery.json`
 - `private-work:c-campaign-20261006/fresh-known-c-reuse-next/level-catalog-proposed.json`
 - `private-work:c-campaign-20261006/fresh-known-c-reuse-next/REPORT.md`
+
+## known-boot-state84-resident-wrapper60-shared-placement-20261007
+
+State: `done`. Kind: `research`.
+
+ROOT rechecks current pins after its frozen epoch, promotes only reviewed map rows/two binding keys with backups, then runs maintained full28 actual mapped-symbol and loaded-image gates. Require complete actual STT/size/raw/source/tool equality and all current shared/native controls; retain contextual refusals without source/type/register/profile cycles.
+
+Reopen condition: Concrete independent contradictory boundary/ABI/resident-binding or maintained pipeline-contract evidence; no guessed GP/object identity or equivalent C spelling.
+
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/delivery.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/level-catalog-proposed.json`
+- `private-work:c-campaign-20261006/fresh-known-c-resident-wrappers/REPORT.md`
 
 ## known-native-controls-20261003
 

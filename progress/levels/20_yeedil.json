@@ -3,7 +3,7 @@
   "program": "20_yeedil",
   "reference_sha256": "af33c5378811e9d57c612c10002ca5c92eb676add3db0552ab2d6231034cafc8",
   "source_sha256": "ff6b8bb5f75df97ed6e0d998f97772b82bb7c193116c8fc6a4258d74654ad1f5",
-  "catalog_sha256": "465ccade95fa44b60e23b8dcef351d7e8da4fa1f970c850785fd02735b271b23",
+  "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2248,6 +2248,34 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "FUN_002E59F8",
+      "address": 3625344,
+      "size": 84,
+      "matched": true,
+      "reference_sha256": "037b86dfaa2b42c71e3fa9c0f6fb7b94653bd8ce766138df0974c163d057181c",
+      "candidate_sha256": "037b86dfaa2b42c71e3fa9c0f6fb7b94653bd8ce766138df0974c163d057181c",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "20_yeedil",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
+      "symbol": "FUN_00284E40",
+      "address": 3163600,
+      "size": 60,
+      "matched": true,
+      "reference_sha256": "b249b1d59add6f594d7a01af4fc328d82caadd842ecd10ff5b14ef2853350b2e",
+      "candidate_sha256": "b249b1d59add6f594d7a01af4fc328d82caadd842ecd10ff5b14ef2853350b2e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "20_yeedil",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
       "symbol": "LVL_20_YEEDIL_FUN_002C0BF8",
       "address": 2886648,
       "size": 52,
@@ -3247,14 +3275,14 @@
     "bytes_compared": 2977264,
     "segments": 1
   },
-  "matched_code_bytes": 13240,
+  "matched_code_bytes": 13384,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "9fb10084832145a918177bb04c58cda06fb3b58f55b5e4d3f2937c3034cec4d4",
+  "candidate_elf_sha256": "c227ae43bc90e53dc618f6ba5d7320963787c2112d94489730f489763ca3e95e",
   "c_object_sha256": "a39d36fa6e92cd51cb498de318d20adeaef7b494012d1fd2ba102295ab0929f8",
   "replacement_inputs": {
     "10FB00.s": [
@@ -3418,6 +3446,8 @@
       "FUN_00350798",
       "FUN_00350808",
       "FUN_002E59B0",
+      "FUN_002E59F8",
+      "FUN_00284E40",
       "LVL_20_YEEDIL_FUN_002C0BF8",
       "LVL_20_YEEDIL_FUN_002C0C30",
       "LVL_20_YEEDIL_FUN_002C0D60",
@@ -3498,7 +3528,7 @@
     "program": "20_yeedil",
     "reference_sha256": "af33c5378811e9d57c612c10002ca5c92eb676add3db0552ab2d6231034cafc8",
     "source_sha256": "ff6b8bb5f75df97ed6e0d998f97772b82bb7c193116c8fc6a4258d74654ad1f5",
-    "catalog_sha256": "465ccade95fa44b60e23b8dcef351d7e8da4fa1f970c850785fd02735b271b23",
+    "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_level_gate": {
@@ -3506,14 +3536,14 @@
       "bytes_compared": 2977264,
       "segments": 1
     },
-    "matched_code_bytes": 8732,
+    "matched_code_bytes": 8876,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "9fb10084832145a918177bb04c58cda06fb3b58f55b5e4d3f2937c3034cec4d4",
+    "candidate_elf_sha256": "c227ae43bc90e53dc618f6ba5d7320963787c2112d94489730f489763ca3e95e",
     "c_object_sha256": "a39d36fa6e92cd51cb498de318d20adeaef7b494012d1fd2ba102295ab0929f8",
     "replacement_inputs": {
       "10FB00.s": [
@@ -3677,6 +3707,8 @@
         "FUN_00350798",
         "FUN_00350808",
         "FUN_002E59B0",
+        "FUN_002E59F8",
+        "FUN_00284E40",
         "LVL_20_YEEDIL_FUN_002C0BF8",
         "LVL_20_YEEDIL_FUN_002C0C30",
         "LVL_20_YEEDIL_FUN_002C0D60",
@@ -3757,7 +3789,7 @@
   },
   "reference_entry": 2844552,
   "candidate_entry": 2844552,
-  "dependency_sha256": "1ec397f9d3cb89ff4867ee325af7b74a519a577e5c25dea0df9c2ce5ab68bd91",
+  "dependency_sha256": "7c8baf80dde0deb1c032da9b0feac3edfe1dc21630ceb5b467601b82acab5b1a",
   "boot_review_sha256": "a6e1cf7a5cb906c232ce215476ea45cf4625125b9171532d59d357eef3463a36",
   "native": {
     "source": "candidates/levels/20_yeedil.c",

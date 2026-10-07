@@ -884,3 +884,33 @@ void LVL_14_ARANOS_PRISON_FUN_004641D8(void)
 void LVL_14_ARANOS_PRISON_FUN_00465A70(void)
 {
 }
+
+
+/* Three measured byte-state cases and width-specific field views.
+   The correspondence name UpdateMoby_2426 does not establish an original
+   class, enumeration, allocation or field-name declaration. */
+extern void LVL_14_ARANOS_PRISON_STATE_HELPER_2426(u8 *, u8, s32);
+extern u32 LVL_14_ARANOS_PRISON_STATUS_HELPER_2426(u8 *);
+void LVL_14_ARANOS_PRISON_FUN_003CC2E0(u8 *entity) {
+    switch (entity[0x20]) {
+    case 0:
+        LVL_14_ARANOS_PRISON_STATE_HELPER_2426(entity, 1, -1);
+        *(u32 *)(entity + 0x98) = 0;
+        *(unsigned short *)(entity + 0x34) =
+            (*(unsigned short *)(entity + 0x34) | 0x41) & 0xEFFF;
+        break;
+    case 1:
+        if (LVL_14_ARANOS_PRISON_STATUS_HELPER_2426(entity) != 0) {
+            LVL_14_ARANOS_PRISON_STATE_HELPER_2426(entity, 2, -1);
+            *(u32 *)(entity + 0x98) =
+                *(u32 *)(*(u8 **)(entity + 0x24) + 0x10);
+        }
+        break;
+    case 2:
+        if (LVL_14_ARANOS_PRISON_STATUS_HELPER_2426(entity) == 0) {
+            LVL_14_ARANOS_PRISON_STATE_HELPER_2426(entity, 1, -1);
+            *(u32 *)(entity + 0x98) = 0;
+        }
+        break;
+    }
+}

@@ -3,7 +3,7 @@
   "program": "3_endako",
   "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
   "source_sha256": "ff6b8bb5f75df97ed6e0d998f97772b82bb7c193116c8fc6a4258d74654ad1f5",
-  "catalog_sha256": "465ccade95fa44b60e23b8dcef351d7e8da4fa1f970c850785fd02735b271b23",
+  "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
   "candidate_source": "candidates/boot.c",
   "state": "integrated",
   "functions": [
@@ -2248,6 +2248,34 @@
       "origin": "boot-shared"
     },
     {
+      "symbol": "FUN_002E59F8",
+      "address": 3540864,
+      "size": 84,
+      "matched": true,
+      "reference_sha256": "037b86dfaa2b42c71e3fa9c0f6fb7b94653bd8ce766138df0974c163d057181c",
+      "candidate_sha256": "037b86dfaa2b42c71e3fa9c0f6fb7b94653bd8ce766138df0974c163d057181c",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
+      "symbol": "FUN_00284E40",
+      "address": 3085152,
+      "size": 60,
+      "matched": true,
+      "reference_sha256": "b249b1d59add6f594d7a01af4fc328d82caadd842ecd10ff5b14ef2853350b2e",
+      "candidate_sha256": "b249b1d59add6f594d7a01af4fc328d82caadd842ecd10ff5b14ef2853350b2e",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako",
+      "candidate_source": "candidates/boot.c",
+      "origin": "boot-shared"
+    },
+    {
       "symbol": "LVL_3_ENDAKO_FUN_002B3728",
       "address": 2832168,
       "size": 52,
@@ -3240,6 +3268,20 @@
       "program": "3_endako",
       "candidate_source": "candidates/levels/3_endako.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_3_ENDAKO_FUN_003CA9F8",
+      "address": 3975672,
+      "size": 204,
+      "matched": true,
+      "reference_sha256": "0a614b81a082f1e7ac9a1cb4328099bca696124d40572863fe9c29139c26af6f",
+      "candidate_sha256": "0a614b81a082f1e7ac9a1cb4328099bca696124d40572863fe9c29139c26af6f",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "3_endako",
+      "candidate_source": "candidates/levels/3_endako.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -3247,14 +3289,14 @@
     "bytes_compared": 2821104,
     "segments": 1
   },
-  "matched_code_bytes": 12956,
+  "matched_code_bytes": 13304,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "25385c776e2221fa63fc0fa178ba151ca4d926b3b230e9763289a4e6d9b37ef0",
+  "candidate_elf_sha256": "d13c273c35a6e3dee58eb719b7e76d63cb188788ebe536d75e71be96c0824719",
   "c_object_sha256": "a39d36fa6e92cd51cb498de318d20adeaef7b494012d1fd2ba102295ab0929f8",
   "replacement_inputs": {
     "103680.s": [
@@ -3418,6 +3460,8 @@
       "FUN_00350798",
       "FUN_00350808",
       "FUN_002E59B0",
+      "FUN_002E59F8",
+      "FUN_00284E40",
       "LVL_3_ENDAKO_FUN_002B3728",
       "LVL_3_ENDAKO_FUN_002B3760",
       "LVL_3_ENDAKO_FUN_002B3890",
@@ -3488,7 +3532,8 @@
       "LVL_3_ENDAKO_FUN_00448CC0",
       "LVL_3_ENDAKO_FUN_00454AC8",
       "LVL_3_ENDAKO_FUN_00456E58",
-      "LVL_3_ENDAKO_FUN_004586F0"
+      "LVL_3_ENDAKO_FUN_004586F0",
+      "LVL_3_ENDAKO_FUN_003CA9F8"
     ]
   },
   "schema": 2,
@@ -3498,7 +3543,7 @@
     "program": "3_endako",
     "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
     "source_sha256": "ff6b8bb5f75df97ed6e0d998f97772b82bb7c193116c8fc6a4258d74654ad1f5",
-    "catalog_sha256": "465ccade95fa44b60e23b8dcef351d7e8da4fa1f970c850785fd02735b271b23",
+    "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
     "candidate_source": "candidates/boot.c",
     "state": "integrated",
     "full_level_gate": {
@@ -3506,14 +3551,14 @@
       "bytes_compared": 2821104,
       "segments": 1
     },
-    "matched_code_bytes": 8732,
+    "matched_code_bytes": 8876,
     "tools": {
       "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
       "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "25385c776e2221fa63fc0fa178ba151ca4d926b3b230e9763289a4e6d9b37ef0",
+    "candidate_elf_sha256": "d13c273c35a6e3dee58eb719b7e76d63cb188788ebe536d75e71be96c0824719",
     "c_object_sha256": "a39d36fa6e92cd51cb498de318d20adeaef7b494012d1fd2ba102295ab0929f8",
     "replacement_inputs": {
       "103680.s": [
@@ -3677,6 +3722,8 @@
         "FUN_00350798",
         "FUN_00350808",
         "FUN_002E59B0",
+        "FUN_002E59F8",
+        "FUN_00284E40",
         "LVL_3_ENDAKO_FUN_002B3728",
         "LVL_3_ENDAKO_FUN_002B3760",
         "LVL_3_ENDAKO_FUN_002B3890",
@@ -3747,7 +3794,8 @@
         "LVL_3_ENDAKO_FUN_00448CC0",
         "LVL_3_ENDAKO_FUN_00454AC8",
         "LVL_3_ENDAKO_FUN_00456E58",
-        "LVL_3_ENDAKO_FUN_004586F0"
+        "LVL_3_ENDAKO_FUN_004586F0",
+        "LVL_3_ENDAKO_FUN_003CA9F8"
       ]
     }
   },
@@ -3757,13 +3805,13 @@
   },
   "reference_entry": 2794248,
   "candidate_entry": 2794248,
-  "dependency_sha256": "10f2e866c4e5f881525b298631ef07bbfe24193b0ef2507e21d1eea452af58a5",
+  "dependency_sha256": "ac80a82084e9f41a052faf0a4c0efa406cfcf388235eef24f42130e48fa2b79a",
   "boot_review_sha256": "a6e1cf7a5cb906c232ce215476ea45cf4625125b9171532d59d357eef3463a36",
   "native": {
     "source": "candidates/levels/3_endako.c",
     "catalog_path": "config/level-native/3_endako.json",
     "review_path": "progress/level-candidates/3_endako.json",
-    "review_sha256": "adb82820461a2c11c487b4fa27d26f7ebb1e3d160d369cc5e3018ec69498221c",
+    "review_sha256": "e3f2dea0dd2058dab2e655a410a12d7afc812eb29a281dc18df41cecadfbba6c",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3772,10 +3820,10 @@
       "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
       "reference_entry": 2794248,
       "candidate_source": "candidates/levels/3_endako.c",
-      "source_sha256": "cf3081ab92ec5bdd9479437d12bb10512cd4e66c2bb6b505f9201c2bf82dcfbf",
-      "catalog_sha256": "03e3492902896624bbee9c7a303cf41b8e2bd2024572a4fd043db45948212a4a",
-      "object_sha256": "ba066a8df5864257cbca630abdf0454f523b81fe477d8b8c6fde24a9d0c1d380",
-      "candidate_elf_sha256": "457e541d7ff5dedf684f61eb472cb9a8b05b4ef8dbd984a8a4c754e3ca9333e3",
+      "source_sha256": "498e1e99db42e1e70d5a4010fcf3ea9e63c27a5d7a68b21f56c7399d0571a1ce",
+      "catalog_sha256": "625b696bd8f9fc974d13d9de6eb20065c5a046ca86da79e206bfb50318af753b",
+      "object_sha256": "c38d08f29c4c84ce8b5f6322913ed48fc09d29239c0d0029fdefb466c642e0ff",
+      "candidate_elf_sha256": "d925be4a3d9371ce31c44a06257611cf25d9f9bba8dd254b3f31b9af5fbab86e",
       "checker_sha256": "423969fa4af0f1df7bc4b96e135b28e4c9a129c9f36e945fb2c413ea30dba39d",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -4570,11 +4618,22 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 8
+        },
+        {
+          "symbol": "LVL_3_ENDAKO_FUN_003CA9F8",
+          "address": 3975672,
+          "size": 204,
+          "matched": true,
+          "reference_sha256": "0a614b81a082f1e7ac9a1cb4328099bca696124d40572863fe9c29139c26af6f",
+          "candidate_sha256": "0a614b81a082f1e7ac9a1cb4328099bca696124d40572863fe9c29139c26af6f",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 204
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 4224
+      "matched_code_bytes": 4428
     },
-    "object_sha256": "ba066a8df5864257cbca630abdf0454f523b81fe477d8b8c6fde24a9d0c1d380"
+    "object_sha256": "c38d08f29c4c84ce8b5f6322913ed48fc09d29239c0d0029fdefb466c642e0ff"
   }
 }
