@@ -1111,6 +1111,29 @@ Reopen condition: Independently pinned entry GP and call-preservation evidence f
 - `docs:docs/LOCAL-GP-PROOF.md`
 - `private-work:gp-proof-pilot-20261006/root-family-proof-v2/receipt.json`
 
+## camera-activation-state112-aranos-source-binding-v2-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Compile the same complete 44-function unit once after correcting unsupported private-work path binding; require all43 controls and full112 symbol equality. No source/type/order/flags change or retry.
+
+Reopen condition: Independent measured contradictory ABI/field/whole-boundary or qualified compiler-lowering evidence, never an equivalent source rewrite.
+
+- `private-work:c-campaign-20261006/gameplay-next-family-proof/camera-activation112-v1/delivery.json`
+- `private-work:c-campaign-20261006/gameplay-next-family-proof/preparation-receipt.json`
+- `runtime:trials/e62c06f2274447c6b514f80f26ea6a24`
+
+## camera-activation-state112-aranos-source-first-v1-20261006
+
+State: `queued`. Kind: `candidate`.
+
+Historical preparation-only refusal retained. Corrected planning lookup paths reference the identical immutable source/catalog for exclusion readers; the original rejected invocation remains in its private manifest. Follow-up f9331415 compiled once and measured104 versus112 bytes with43exact controls; both tasks remain parked, no retry without new evidence.
+
+Reopen condition: Independent measured contradictory ABI/field/whole-boundary or qualified compiler-lowering evidence, never an equivalent source rewrite.
+
+- `private-work:c-campaign-20261006/gameplay-next-family-proof/camera-activation112-v1/delivery.json`
+- `private-work:c-campaign-20261006/gameplay-next-family-proof/preparation-receipt.json`
+
 ## compiler-mtc1-four-exceptions
 
 State: `done`. Kind: `research`.
@@ -2292,6 +2315,17 @@ Park immutable natural source/catalog/object/assembly/complete36-byte comparison
 Reopen condition: Independent original source-phase/module/compiler provenance or producer/prototype/type evidence explaining the measured reference branch layout is required; no equivalent-source scheduling cycles or partial matches.
 
 - `private-work:c-campaign-20261006/fresh-selection-data/test-set-byte36-negative-evidence.json`
+
+## gameplay-progress-collector456-aranos-first-v1-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Root reviews current pins, complete history and ABI, then reserves before compilation. Run one complete 44-function unit trial. Accept only a complete 456-byte STT_FUNC/object/raw match, all 43 controls and read-only/tool/source/catalog checks. Preserve refusal. No variants or other copies unless the seed is exact and Root reserves them.
+
+Reopen condition: Independent measured contradictory ABI, storage or whole-boundary evidence, or an independently qualified compiler-lowering witness. Equivalent expressions, type cycling, statement order, register naming and flags do not reopen this task.
+
+- `private-work:c-campaign-20261006/resumed-independent-family/delivery.json`
+- `private-work:c-campaign-20261006/resumed-independent-family/REPRISE.md`
 
 ## global-binding-template-reuse-report-20261006
 
@@ -16932,6 +16966,28 @@ Compare every complete symbol in the intended standalone unit before full frozen
 
 Reopen condition: New measured per-program ABI, layout or source-phase evidence; retain every refusal without source permutation cycling.
 
+## scalar-flags148-first-v1-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+ROOT may reserve this unchanged packet then compile once through the maintained CLI, measure all44 current seed controls and complete148-byte seed target. Peer bindings may be reserved separately only after seed148 and all44 controls are exact. After any seed refusal stop without an automatic retry. Retain every full-symbol refusal and add no credit before full native qualification/integration.
+
+Reopen condition: Concrete new contradictory complete-boundary, ABI, width/layout or qualified compiler-lowering evidence; no equivalent expression, type, register, ordering or flag cycles.
+
+- `private-work:c-campaign-20261006/resumed-callback-family/delivery148.json`
+- `private-work:c-campaign-20261006/resumed-callback-family/eligibility148.json`
+
+## scalar-float72-14_aranos_prison-first-v1-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+Compare all 46 current whole-unit controls and the complete new72-byte symbol once. Initial reservation is Prison seed only. Other program packets may be reserved only after the seed72 and all46 seed controls match every byte; no automatic retry after seed refusal. Full native qualification and full-image gates remain required for credit.
+
+Reopen condition: Independent concrete new complete-boundary, ABI, field/width, or qualified compiler-lowering evidence; no expression/type/register/order/flag cycles.
+
+- `private-work:c-campaign-20261006/next-float-family/ABI72.md`
+- `private-work:c-campaign-20261006/next-float-family/delivery72-full.json`
+
 ## sdk-cpr8-656-callbearing-source-qualification-20261006
 
 State: `done`. Kind: `research`.
@@ -17438,6 +17494,360 @@ State: `stopped`. Kind: `candidate`.
 Measure both complete bodies with all29current native controls; preserve every refusal.
 
 Reopen condition: Measured original types, context or CFG evidence beyond the preserved source forms
+
+## small-leaf-entity-byte-bit2-set32-aranos-first-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves this exact source/catalog once, then actual complete44-function trial. Require full target/STT/raw and all43 controls; preserve any refusal; no automatic retry.
+
+Reopen condition: Independent measured contradictory ABI/type/layout/boundary or qualified lowering evidence, never equivalent-expression/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-leaf/entity-byte-bit2-set32/delivery.json`
+
+## small-leaf-entity-signed-tag-equals16-aranos-first-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves this exact source/catalog once, then actual complete44-function trial. Require full target/STT/raw and all43 controls; preserve any refusal; no automatic retry.
+
+Reopen condition: Independent measured contradictory ABI/type/layout/boundary or qualified lowering evidence, never equivalent-expression/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-leaf/entity-signed-tag-equals16/delivery.json`
+
+## small-leaf-state-three-halfwords28-aranos-first-20261006
+
+State: `stopped`. Kind: `candidate`.
+
+ROOT reviews/reserves this exact source/catalog once, then actual complete44-function trial. Require full target/STT/raw and all43 controls; preserve any refusal; no automatic retry.
+
+Reopen condition: Independent measured contradictory ABI/type/layout/boundary or qualified lowering evidence, never equivalent-expression/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-leaf/state-three-halfwords28-v2/delivery.json`
+
+## small-positive-bit32-query16-combined-0_aranos_tutorial-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-10_hrugis_cloud-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-11_joba-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-12_todano-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-13_boldan-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-14_aranos_prison-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-15_gorn-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-16_snivelak-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-17_smolg-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-18_damosel-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-19_grelbin-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-1_oozla-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-20_yeedil-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-22_dobbo_orbit-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-23_damosel_orbit-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-24_ship_shack-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-25_wupash_nebula-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-26_jamming_array-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-2_maktar_nebula-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-30_insomniac_museum-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-3_endako-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-4_barlow-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-5_feltzin_system-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-6_notak-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-7_siberius-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-8_tabora-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
+
+## small-positive-bit32-query16-combined-9_dobbo-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reserves seed45 first and runs one whole-unit trial; only if exact, reserve/run remaining26 unchanged whole units once. Require every complete function/STT/fullraw/readonly/source/catalog/tool pin. Preserve any refusal, no automatic retry.
+
+Reopen condition: Independent measured ABI/type/boundary or qualified lowering evidence; no equivalent-source/flags/register/scheduling cycling.
+
+- `private-work:c-campaign-20261006/resumed-small-positive-combined/delivery.json`
+- `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
+- `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
 
 ## two-native-families-0_aranos_tutorial-20261004
 

@@ -750,3 +750,21 @@ void LVL_20_YEEDIL_FUN_003BBEF8(NativeUpdate775View *object)
     if (object->field23 < 4)
         LVL_20_YEEDIL_FUN_003253A8(object);
 }
+
+
+/* One fixed ordinary scalar source hypothesis. Byte offset and mask are
+   measured; no original object/class/field name or allocation claim. The
+   observed callers pass scalar one and ignore the result. */
+void LVL_20_YEEDIL_FUN_0033E7D8(unsigned char *entity, int enabled) {
+    if (enabled)
+        entity[0xBE] |= 4;
+    else
+        entity[0xBE] &= 0xFB;
+}
+
+
+/* One fixed ordinary scalar query. Signed halfword width, offset and
+   equality constant are measured; no original class or field-name claim. */
+int LVL_20_YEEDIL_FUN_003343F8(const unsigned char *entity) {
+    return *(const signed short *)(entity + 0xAA) == 0x0CDB;
+}

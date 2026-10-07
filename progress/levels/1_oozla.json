@@ -2750,6 +2750,34 @@
       "program": "1_oozla",
       "candidate_source": "candidates/levels/1_oozla.c",
       "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_1_OOZLA_FUN_0031F088",
+      "address": 3272840,
+      "size": 32,
+      "matched": true,
+      "reference_sha256": "44fbb3b0f071b690865aa8e30443b792f33db14d7359a29ff4950ea51d678d81",
+      "candidate_sha256": "44fbb3b0f071b690865aa8e30443b792f33db14d7359a29ff4950ea51d678d81",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "1_oozla",
+      "candidate_source": "candidates/levels/1_oozla.c",
+      "origin": "level-native"
+    },
+    {
+      "symbol": "LVL_1_OOZLA_FUN_003153A8",
+      "address": 3232680,
+      "size": 16,
+      "matched": true,
+      "reference_sha256": "b65ac4e5a7d08b8a985bfef06b7947fb817ac5174dc15653ed54d93b201e1165",
+      "candidate_sha256": "b65ac4e5a7d08b8a985bfef06b7947fb817ac5174dc15653ed54d93b201e1165",
+      "different_bytes": 0,
+      "state": "integrated",
+      "integrated": true,
+      "program": "1_oozla",
+      "candidate_source": "candidates/levels/1_oozla.c",
+      "origin": "level-native"
     }
   ],
   "full_level_gate": {
@@ -2757,14 +2785,14 @@
     "bytes_compared": 2763912,
     "segments": 1
   },
-  "matched_code_bytes": 12156,
+  "matched_code_bytes": 12204,
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "candidate_elf_sha256": "31a9683a612dff1ba769b189667f5820ca623454e2f1d7d67ac37e2f679df601",
+  "candidate_elf_sha256": "58c09986d6125621884182d66eecdea098c961cc3d34867ceade14b996bdf05f",
   "c_object_sha256": "b71624c21c7eb1161c91670dd8b3cae6afb5d1a6f40e678905086cdb8f1a76c6",
   "replacement_inputs": {
     "FF300.s": [
@@ -2963,7 +2991,9 @@
       "LVL_1_OOZLA_FUN_00310488",
       "LVL_1_OOZLA_FUN_002FB2E0",
       "LVL_1_OOZLA_FUN_002AEA38",
-      "LVL_1_OOZLA_FUN_00394920"
+      "LVL_1_OOZLA_FUN_00394920",
+      "LVL_1_OOZLA_FUN_0031F088",
+      "LVL_1_OOZLA_FUN_003153A8"
     ]
   },
   "schema": 2,
@@ -2988,7 +3018,7 @@
       "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
       "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
     },
-    "candidate_elf_sha256": "31a9683a612dff1ba769b189667f5820ca623454e2f1d7d67ac37e2f679df601",
+    "candidate_elf_sha256": "58c09986d6125621884182d66eecdea098c961cc3d34867ceade14b996bdf05f",
     "c_object_sha256": "b71624c21c7eb1161c91670dd8b3cae6afb5d1a6f40e678905086cdb8f1a76c6",
     "replacement_inputs": {
       "FF300.s": [
@@ -3187,7 +3217,9 @@
         "LVL_1_OOZLA_FUN_00310488",
         "LVL_1_OOZLA_FUN_002FB2E0",
         "LVL_1_OOZLA_FUN_002AEA38",
-        "LVL_1_OOZLA_FUN_00394920"
+        "LVL_1_OOZLA_FUN_00394920",
+        "LVL_1_OOZLA_FUN_0031F088",
+        "LVL_1_OOZLA_FUN_003153A8"
       ]
     }
   },
@@ -3197,13 +3229,13 @@
   },
   "reference_entry": 2776968,
   "candidate_entry": 2776968,
-  "dependency_sha256": "a23fd9aa60e9689433de120b4d210a137a322703174963e61433e86bebb4cedd",
+  "dependency_sha256": "17f52b06d2c60306a04c97b26f241c0018cce79ae4bc8b6500abf6fba81340a7",
   "boot_review_sha256": "cce0149093096d9f16b91d2c9c456331d07e167c16e23a9dbcda533d525d5974",
   "native": {
     "source": "candidates/levels/1_oozla.c",
     "catalog_path": "config/level-native/1_oozla.json",
     "review_path": "progress/level-candidates/1_oozla.json",
-    "review_sha256": "24f24a598d584d0720ebae49d3da05e22008b03cba3be6b1b0055321bcd7db7d",
+    "review_sha256": "26106d3ef6a0b7a121571466499214c5525fc7470ede0acd0cd8e4f1a7c5ec43",
     "object_qualification": {
       "schema": 1,
       "kind": "level-native-candidate",
@@ -3212,10 +3244,10 @@
       "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
       "reference_entry": 2776968,
       "candidate_source": "candidates/levels/1_oozla.c",
-      "source_sha256": "d1d8c70476e664131980b2f4b1bbc15008eb77cf629d855a095cc0b7f3a637e6",
-      "catalog_sha256": "99f20844b774248c4fac580faa9fa1eb192402e5a972f7fa4fe939d4f4e8ae2d",
-      "object_sha256": "f4f4674308d6873fc0bce1dfdbd9c717abff1a6c17d33c85014e41d34d788f6c",
-      "candidate_elf_sha256": "4c1bbcc3477f940719c24f8d4d2e5ce2f0ac984a777a136f6d30c38595055c61",
+      "source_sha256": "689254bbe48f6761d4a15bd3777ceb0e6b70c0692f9919e1bd123c7c9e5923eb",
+      "catalog_sha256": "4617b6ed3ca0baf6701f63f92d1f66313a9d3844d1808a9ac86052ad110c18e9",
+      "object_sha256": "0b486ecbf1ff5fe3ed8988ae6843a1776c7828c0bb4db271eb7c3327ffbe9403",
+      "candidate_elf_sha256": "2b13ba5a83308dd827e8c9b8df928a8fa0c4face28de8447616080f914864238",
       "checker_sha256": "423969fa4af0f1df7bc4b96e135b28e4c9a129c9f36e945fb2c413ea30dba39d",
       "tools": {
         "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -3658,11 +3690,33 @@
           "different_bytes": 0,
           "state": "matched_unintegrated",
           "produced_size": 76
+        },
+        {
+          "symbol": "LVL_1_OOZLA_FUN_0031F088",
+          "address": 3272840,
+          "size": 32,
+          "matched": true,
+          "reference_sha256": "44fbb3b0f071b690865aa8e30443b792f33db14d7359a29ff4950ea51d678d81",
+          "candidate_sha256": "44fbb3b0f071b690865aa8e30443b792f33db14d7359a29ff4950ea51d678d81",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 32
+        },
+        {
+          "symbol": "LVL_1_OOZLA_FUN_003153A8",
+          "address": 3232680,
+          "size": 16,
+          "matched": true,
+          "reference_sha256": "b65ac4e5a7d08b8a985bfef06b7947fb817ac5174dc15653ed54d93b201e1165",
+          "candidate_sha256": "b65ac4e5a7d08b8a985bfef06b7947fb817ac5174dc15653ed54d93b201e1165",
+          "different_bytes": 0,
+          "state": "matched_unintegrated",
+          "produced_size": 16
         }
       ],
       "read_only_sections": [],
-      "matched_code_bytes": 3816
+      "matched_code_bytes": 3864
     },
-    "object_sha256": "f4f4674308d6873fc0bce1dfdbd9c717abff1a6c17d33c85014e41d34d788f6c"
+    "object_sha256": "0b486ecbf1ff5fe3ed8988ae6843a1776c7828c0bb4db271eb7c3327ffbe9403"
   }
 }

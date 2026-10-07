@@ -759,3 +759,21 @@ void LVL_4_BARLOW_FUN_003C4BA0(NativeUpdate775View *object)
     if (object->field23 < 4)
         LVL_4_BARLOW_UPDATE775_HELPER_003317E8(object);
 }
+
+
+/* One fixed ordinary scalar source hypothesis. Byte offset and mask are
+   measured; no original object/class/field name or allocation claim. The
+   observed callers pass scalar one and ignore the result. */
+void LVL_4_BARLOW_FUN_0034C4A8(unsigned char *entity, int enabled) {
+    if (enabled)
+        entity[0xBE] |= 4;
+    else
+        entity[0xBE] &= 0xFB;
+}
+
+
+/* One fixed ordinary scalar query. Signed halfword width, offset and
+   equality constant are measured; no original class or field-name claim. */
+int LVL_4_BARLOW_FUN_00340EF8(const unsigned char *entity) {
+    return *(const signed short *)(entity + 0xAA) == 0x0CDB;
+}
