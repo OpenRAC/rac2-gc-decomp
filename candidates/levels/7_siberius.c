@@ -779,3 +779,816 @@ void LVL_7_SIBERIUS_FUN_00441A80(void)
 void LVL_7_SIBERIUS_FUN_00443318(void)
 {
 }
+void LVL_7_SIBERIUS_FUN_003A9E10(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003B1F68(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003C0950(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003C77F8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003CAB80(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003CB8D0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003D2068(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003DBED0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003DD278(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_0040C390(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_004150F0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+
+extern u8 LVL_7_SIBERIUS_F62e6ff2b_D_00189E20[];
+extern u8 LVL_7_SIBERIUS_F62e6ff2b_D_00188660[];
+
+typedef struct {
+    u8 pad0[4640];
+    u32 field4640;
+    u8 gap[4204];
+    u32 field8848;
+} NativeView;
+
+s32 LVL_7_SIBERIUS_FUN_003551E0(s32 id)
+{
+    u8 *record;
+    u8 *cursor;
+    s32 limit;
+
+    limit = 52;
+    if (id == 0 || (((NativeView *)&LVL_7_SIBERIUS_F62e6ff2b_D_00189E20)->field8848 != (u32)id &&
+                    ((NativeView *)&LVL_7_SIBERIUS_F62e6ff2b_D_00189E20)->field4640 != (u32)id))
+        limit = 42;
+
+    id = 0;
+    if (limit != 0) {
+        record = (u8 *)&LVL_7_SIBERIUS_F62e6ff2b_D_00188660;
+        if (record[116] != 0) {
+            cursor = record + 116;
+            do {
+                id++;
+                if (id >= limit)
+                    break;
+                cursor += 112;
+            } while (*cursor != 0);
+        }
+    }
+    return (id != limit) ? id : 52;
+}
+void LVL_7_SIBERIUS_FUN_0039A038(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 88) = 0;
+    *(float *)(p + 96) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 92) = 1.0f;
+    *(int *)(p + 100) = 0;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003D4BC8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 88) = 0;
+    *(float *)(p + 96) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 92) = 1.0f;
+    *(int *)(p + 100) = 0;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 280993940374112LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+typedef struct { int v[12]; } Blob;
+extern Blob LVL_7_SIBERIUS_F6894d7c1_D_001A8E60;
+int LVL_7_SIBERIUS_FUN_002E98F8(int x)
+{
+    Blob b;
+    int i;
+    b = LVL_7_SIBERIUS_F6894d7c1_D_001A8E60;
+    for (i = 0; b.v[i]; i++)
+        if (x == b.v[i])
+            return 1;
+    return 0;
+}
+void LVL_7_SIBERIUS_FUN_0037E250(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003808D8(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003E9B08(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_003ED798(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 80) = 0;
+    *(int *)(p + 84) = 0;
+    *(float *)(p + 88) = 1.0f;
+    *(int *)(p + 92) = 0;
+    *(int *)(p + 96) = 0;
+    *(float *)(p + 100) = 1.0f;
+    *(float *)(p + 104) = 1.0f;
+    *(float *)(p + 108) = 1.0f;
+    *(float *)(p + 8) = -2.0f;
+    *(float *)(p + 24) = 2.0f;
+    *(float *)(p + 40) = -2.0f;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 4) = -2.0f;
+    *(float *)(p + 36) = 2.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -2.0f;
+    *(float *)(p + 52) = 2.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_004177E0(char *p)
+{
+    *(long long *)(p + 112) = 0LL;
+    *(int *)(p + 8) = 0;
+    *(float *)(p + 24) = 2.0f;
+    *(int *)(p + 40) = 0;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 56) = 2.0f;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+typedef struct { short key; short val; } Entry;
+
+extern Entry *LVL_7_SIBERIUS_Fc68ad20a_D_0018C2B8;
+
+int LVL_7_SIBERIUS_FUN_002C7F68(int key, int *out)
+{
+    Entry *e = LVL_7_SIBERIUS_Fc68ad20a_D_0018C2B8;
+    Entry *p;
+
+    if (e == 0)
+        return 0;
+    if (e->key == -1)
+        goto notfound;
+    p = e;
+    for (;;) {
+        if (key == p->key) {
+            *out = p->val;
+            return 1;
+        }
+        p++;
+        if (p->key == -1)
+            goto notfound;
+    }
+notfound:
+    *out = 0;
+    return 0;
+}
+typedef struct {
+    int f0;
+    short f4;
+    unsigned char f6;
+    char pad[0x18 - 7];
+    int f18;
+    int f1C;
+} Blk;
+
+extern Blk LVL_7_SIBERIUS_F55a1acb8_D_001A63A8;
+extern short LVL_7_SIBERIUS_F55a1acb8_D_001A63AC;
+extern int LVL_7_SIBERIUS_F55a1acb8_FUN_00133688(void);
+extern void LVL_7_SIBERIUS_F55a1acb8_FUN_0011AEA0(int);
+
+void LVL_7_SIBERIUS_FUN_00324F18(int x)
+{
+    unsigned char c;
+    int q;
+    int arg;
+
+    if (x != 1)
+        return;
+
+    if (LVL_7_SIBERIUS_F55a1acb8_FUN_00133688()) {
+        LVL_7_SIBERIUS_F55a1acb8_D_001A63AC = 2;
+        return;
+    }
+
+    LVL_7_SIBERIUS_F55a1acb8_FUN_0011AEA0(0);
+
+    c = LVL_7_SIBERIUS_F55a1acb8_D_001A63A8.f6;
+    q = LVL_7_SIBERIUS_F55a1acb8_D_001A63A8.f18;
+    LVL_7_SIBERIUS_F55a1acb8_D_001A63A8.f4 = 0;
+    arg = c < 1;
+    LVL_7_SIBERIUS_F55a1acb8_D_001A63A8.f6 = 0;
+
+    if (q != 0) {
+        int cb = LVL_7_SIBERIUS_F55a1acb8_D_001A63A8.f1C;
+        LVL_7_SIBERIUS_F55a1acb8_D_001A63A8.f18 = 0;
+        LVL_7_SIBERIUS_F55a1acb8_D_001A63A8.f1C = 0;
+        ((void (*)(int, int))q)(cb, arg);
+    }
+}
+extern char LVL_7_SIBERIUS_Fa2dbe766_D_00189E20[];
+
+int LVL_7_SIBERIUS_FUN_003BA460(float f12)
+{
+    char *b;
+
+    if (f12 <= 0.0f)
+        goto fail;
+    b = LVL_7_SIBERIUS_Fa2dbe766_D_00189E20;
+    if (*(short *)(*(int *)(b + 8848) + 170) != 0)
+        goto fail;
+    if (*(unsigned char *)(b + 8884) != 0)
+        goto fail;
+    if (*(int *)(b + 8852) == 49)
+        goto fail;
+    if (*(int *)(b + 8860) == 20)
+        goto fail;
+    if (*(int *)(b + 9420) > 0)
+        goto ok;
+fail:
+    return 0;
+ok:
+    return 1;
+}
+struct Rec { s32 f0, f1, f2, f3, f4, f5, f6, f7, f8, f9; };
+extern struct Rec LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[32];
+void LVL_7_SIBERIUS_FUN_002D8C18(s32 a, s32 b, s32 c, s32 d, s32 e, s32 f,
+                                       s32 g, s32 h, s32 i, s32 j, s32 idx) {
+    if ((unsigned)idx < 32) {
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f0 = a;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f1 = b;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f2 = c;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f3 = d;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f4 = e;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f5 = f;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f6 = g;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f7 = h;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f8 = i;
+        (LVL_7_SIBERIUS_F480de5ac_D_001BC9C8[idx]).f9 = j;
+
+    }
+}
+typedef unsigned short u16;
+
+void LVL_7_SIBERIUS_FUN_0033C410(void) {
+    *(u16 *)0x1aa842 = *(u8 *)0x1a7bc9 ? 3 : 0;
+    *(u16 *)0x1aa85a = *(u8 *)0x1a7bca ? 3 : 0;
+    *(u16 *)0x1aa872 = *(u8 *)0x1a7bcb ? 3 : 0;
+    *(u16 *)0x1aa88a = *(u8 *)0x1a7bcc ? 3 : 0;
+    *(u16 *)0x1aa8a2 = *(u8 *)0x1a7bce ? 3 : 0;
+}
+void LVL_7_SIBERIUS_FUN_00403EB8(char *object)
+{
+    char *o = object;
+    int *q = *(int **)(o + 104);
+
+    if (*(unsigned char *)(o + 32))
+        return;
+
+    q[2] = 64;
+    q[4] = 50;
+    q[0] = 0;
+    q[3] = -1;
+    q[5] = 0;
+    *(unsigned char *)(o + 32) = 1;
+    q[6] = -1;
+
+    *(float *)(o + 44) = *(float *)(*(int *)(o + 36) + 36) * 0.8f;
+}
+extern char LVL_7_SIBERIUS_Fea34650e_D_00189E20[];
+
+void LVL_7_SIBERIUS_FUN_002C9058(void)
+{
+    char *b = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+    char *p;
+    int i;
+
+    p = *(char **)(b + 3096);
+    *(unsigned short *)(p + 52) &= 0xFFFE;
+
+    for (i = 0; i < 7; i++) {
+        p = *(char **)(b + 4640 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+        p = *(char **)(b + 4644 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+        p = *(char **)(b + 4648 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+    }
+
+    if (1) {
+        char *c = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+        p = *(char **)(c + 4892);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+    }
+
+    if (1) {
+        char *c = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+        if (*(unsigned char *)(c + 8884) == 1) {
+            c = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+            p = *(char **)(c + 6244);
+            if (p != 0)
+                *(unsigned short *)(p + 52) &= 0xFFFE;
+        }
+    }
+
+    if (1) {
+        char *c = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+        if (*(short *)(c + 9468) != 0 || *(int *)(c + 8860) == 31) {
+            c = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+            p = *(char **)(c + 4880);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+            c = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+            p = *(char **)(c + 4884);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+            c = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+            p = *(char **)(c + 4892);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+        }
+    }
+
+    if (1) {
+        char *c = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+        if ((*(unsigned char *)(c + 8894) != 0 && *(int *)(c + 4680) == 10) ||
+            *(unsigned char *)(c + 8895) != 0) {
+            char *d = LVL_7_SIBERIUS_Fea34650e_D_00189E20;
+            p = *(char **)(d + 4640);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+        }
+    }
+}
+void LVL_7_SIBERIUS_FUN_003D52A0(char *p)
+{
+    *(long long *)(p + 112) = 0;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
+void LVL_7_SIBERIUS_FUN_00417778(char *p)
+{
+    *(long long *)(p + 112) = 0;
+    *(float *)(p + 8) = -1.0f;
+    *(float *)(p + 24) = 1.0f;
+    *(float *)(p + 40) = -1.0f;
+    *(float *)(p + 56) = 1.0f;
+    *(float *)(p + 4) = -1.0f;
+    *(float *)(p + 36) = 1.0f;
+    *(float *)(p + 52) = 1.0f;
+    *(int *)(p + 0) = 0;
+    *(int *)(p + 16) = 0;
+    *(int *)(p + 32) = 0;
+    *(int *)(p + 48) = 0;
+    *(float *)(p + 12) = 1.0f;
+    *(float *)(p + 28) = 1.0f;
+    *(float *)(p + 44) = 1.0f;
+    *(long long *)(p + 128) = 0x0000FF9000000260LL;
+    *(float *)(p + 20) = -1.0f;
+    *(float *)(p + 60) = 1.0f;
+}
