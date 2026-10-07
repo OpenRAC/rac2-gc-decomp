@@ -293,6 +293,16 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
                                      "review_path": native["review_path"], "review_sha256": native["review_sha256"],
                                      "object_qualification": native["object_proof"],
                                      "object_sha256": file_hash(c_object[native["source"]])}})
+            # A small-data unit is a second C owner of this overlay, with its
+            # own flags, gp, catalog, review and object; record it explicitly
+            # so the proof shows every owner of the linked code.
+            if "smalldata" in catalog:
+                small = catalog["smalldata"]
+                proof["smalldata"] = {
+                    "source": small["source"], "catalog_path": small["catalog_path"],
+                    "review_path": small["review_path"], "review_sha256": small["review_sha256"],
+                    "gp": small["gp"], "object_qualification": small["object_proof"],
+                    "object_sha256": file_hash(c_object[small["source"]])}
         (directory / "integration.json").write_text(json.dumps(proof, indent=2) + "\n", encoding="utf-8")
         result["integrated_c_functions"] = len(functions)
         result["integrated_c_bytes"] = proof["matched_code_bytes"]

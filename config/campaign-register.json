@@ -262,6 +262,17 @@
       "returncode": 0,
       "state": "passed"
     },
+    "3bf07d7271b84a619c825e86e2131c96": {
+      "artifact": "prepared-run:builds/campaign-3bf07d7271b84a619c825e86e2131c96/report.json",
+      "artifact_sha256": "6e9591ce7ff99cf43d2d686e006cdd02c1afad3d25c8edda588398158275721e",
+      "directory": "runtime:actions/3bf07d7271b84a619c825e86e2131c96",
+      "finished": "2026-10-07T07:37:08.676205+00:00",
+      "id": "3bf07d7271b84a619c825e86e2131c96",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "3ec6518aa2f84e439eb96f9e77e9a616": {
       "artifact": "prepared-run:builds/campaign-3ec6518aa2f84e439eb96f9e77e9a616/report.json",
       "artifact_sha256": "18023099ade39a2a3c66933a6e84fde0ec17171f7d978a160aa96fe9b7b7beed",
@@ -4670,7 +4681,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 6739,
+  "revision": 6797,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -16583,6 +16594,650 @@
           "trial": "854cbbcb2080450d9f2e95cc55685bed"
         }
       ]
+    },
+    "g8pilot-0_aranos_tutorial": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:53.503767+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 0_aranos_tutorial; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-0_aranos_tutorial",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/0_aranos_tutorial.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/0_aranos_tutorial.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-10_hrugis_cloud": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:54.294773+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 10_hrugis_cloud; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-10_hrugis_cloud",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/10_hrugis_cloud.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/10_hrugis_cloud.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-11_joba": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:55.118683+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 11_joba; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-11_joba",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/11_joba.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/11_joba.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-12_todano": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:55.919990+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 12_todano; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-12_todano",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/12_todano.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/12_todano.json",
+          "id": "12_todano",
+          "reference": "runtime:references/levels/12_todano/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-13_boldan": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:56.715369+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 13_boldan; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-13_boldan",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/13_boldan.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/13_boldan.json",
+          "id": "13_boldan",
+          "reference": "runtime:references/levels/13_boldan/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-14_aranos_prison": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:57.529466+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 14_aranos_prison; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-14_aranos_prison",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/14_aranos_prison.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/14_aranos_prison.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-15_gorn": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:58.321249+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 15_gorn; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-15_gorn",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/15_gorn.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/15_gorn.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-16_snivelak": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:59.135251+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 16_snivelak; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-16_snivelak",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/16_snivelak.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/16_snivelak.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-17_smolg": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:59.940084+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 17_smolg; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-17_smolg",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/17_smolg.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/17_smolg.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-18_damosel": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:00.736781+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 18_damosel; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-18_damosel",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/18_damosel.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/18_damosel.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-19_grelbin": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:01.564411+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 19_grelbin; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-19_grelbin",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/19_grelbin.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/19_grelbin.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-1_oozla": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:02.370255+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 1_oozla; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-1_oozla",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/1_oozla.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/1_oozla.json",
+          "id": "1_oozla",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-20_yeedil": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:03.157336+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 20_yeedil; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-20_yeedil",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/20_yeedil.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/20_yeedil.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-22_dobbo_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:03.931566+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 22_dobbo_orbit; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-22_dobbo_orbit",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/22_dobbo_orbit.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/22_dobbo_orbit.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-23_damosel_orbit": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:04.741792+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 23_damosel_orbit; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-23_damosel_orbit",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/23_damosel_orbit.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/23_damosel_orbit.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:references/levels/23_damosel_orbit/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-24_ship_shack": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:05.594268+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 24_ship_shack; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-24_ship_shack",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/24_ship_shack.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/24_ship_shack.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:references/levels/24_ship_shack/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-25_wupash_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:06.374858+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 25_wupash_nebula; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-25_wupash_nebula",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/25_wupash_nebula.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/25_wupash_nebula.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-26_jamming_array": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:07.231710+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 26_jamming_array; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-26_jamming_array",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/26_jamming_array.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/26_jamming_array.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-2_maktar_nebula": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:08.109623+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 2_maktar_nebula; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-2_maktar_nebula",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/2_maktar_nebula.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/2_maktar_nebula.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-30_insomniac_museum": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:08.990243+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 30_insomniac_museum; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-30_insomniac_museum",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/30_insomniac_museum.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/30_insomniac_museum.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-3_endako": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:09.864832+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 3_endako; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-3_endako",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/3_endako.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/3_endako.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-4_barlow": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:10.694994+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 4_barlow; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-4_barlow",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/4_barlow.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/4_barlow.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-5_feltzin_system": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:11.489098+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 5_feltzin_system; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-5_feltzin_system",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/5_feltzin_system.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/5_feltzin_system.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-6_notak": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:12.321924+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 6_notak; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-6_notak",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/6_notak.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/6_notak.json",
+          "id": "6_notak",
+          "reference": "runtime:references/levels/6_notak/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-7_siberius": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:13.207785+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 7_siberius; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-7_siberius",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/7_siberius.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/7_siberius.json",
+          "id": "7_siberius",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-8_tabora": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:14.203105+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 8_tabora; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-8_tabora",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/8_tabora.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/8_tabora.json",
+          "id": "8_tabora",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-9_dobbo": {
+      "budget": 3,
+      "created": "2026-10-07T07:28:15.204671+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in 9_dobbo; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-9_dobbo",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/9_dobbo.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/9_dobbo.json",
+          "id": "9_dobbo",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        }
+      ],
+      "transitions": []
+    },
+    "g8pilot-boot": {
+      "budget": 3,
+      "created": "2026-10-07T07:27:50.598385+00:00",
+      "hypothesis": "Family g8pilot: one canonical C body reproduces the retail bytes at every measured placement in boot; the unit catalogue carries all prior controls.",
+      "id": "g8pilot-boot",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/boot.c",
+      "state": "queued",
+      "symbols": [
+        "g8pilot"
+      ],
+      "targets": [
+        {
+          "catalog": "config/candidate-catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": []
     },
     "gameplay-progress-collector456-aranos-first-v1-20261006": {
       "address": 4108024,
@@ -136013,6 +136668,26 @@
       "state": "mismatch",
       "task": "root-independent-wide-g8-20261004"
     },
+    "0555ee2d031e486a8d7d56aa84e38c8c": {
+      "children": [
+        {
+          "id": "23_damosel_orbit",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/0555ee2d031e486a8d7d56aa84e38c8c",
+      "error": "Semantic duplicate trial: 3a6129a94a2b4475941599e016f7084e; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:05.261616+00:00",
+      "id": "0555ee2d031e486a8d7d56aa84e38c8c",
+      "integration_credit": 0,
+      "manifest_sha256": "4cbf447b3a3779d1cc7876ab838f6c3571959419ad6380a479fe1f4ea33dba7d",
+      "measured_functions": 0,
+      "outcome_sha256": "b2a40ae87634dfed4cad62d8b62f0cd11bfc95c5a84d6afc059f246f9f058d2f",
+      "semantic_key": "0806cff985f02db11a2b523cff5981d9c1c532645ec6f8b59482a3acef79e76f",
+      "state": "preparation_rejected",
+      "task": "g8pilot-23_damosel_orbit"
+    },
     "057af52c1d194ed1885839b4a93e05ae": {
       "compile_attempted": true,
       "directory": "runtime:trials/057af52c1d194ed1885839b4a93e05ae",
@@ -136025,6 +136700,26 @@
       "started": "2026-10-04T13:43:06.110518+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-list192-25-v1"
+    },
+    "059afc225c79469a8b70ffd0f85b1016": {
+      "children": [
+        {
+          "id": "1_oozla",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/059afc225c79469a8b70ffd0f85b1016",
+      "error": "Semantic duplicate trial: 865f388f54ac4d7cbcc9e3b1443a0f79; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:02.858741+00:00",
+      "id": "059afc225c79469a8b70ffd0f85b1016",
+      "integration_credit": 0,
+      "manifest_sha256": "59565a03a531515ea11f5586c18156bfc2fcb6da1b30beb060641f872b49c815",
+      "measured_functions": 0,
+      "outcome_sha256": "7672bde53fa6e7d7dfb66b5c417eda6fcaac4b969f33c0439548a3fdaa25ba28",
+      "semantic_key": "d93beaa2fab20a8adbfde9f316e08bbc63775993ad205606cf9df5f3a3147bdf",
+      "state": "preparation_rejected",
+      "task": "g8pilot-1_oozla"
     },
     "059c8ddd9dc145f28c902daea6288ebe": {
       "compile_attempted": true,
@@ -136077,6 +136772,26 @@
       "started": "2026-10-05T02:36:50.150704+00:00",
       "state": "exact_private",
       "task": "orbital-gorn-float-interval64-20261004-v1"
+    },
+    "064c8c8ec2ea4aea81be592b5e857e2c": {
+      "children": [
+        {
+          "id": "2_maktar_nebula",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/064c8c8ec2ea4aea81be592b5e857e2c",
+      "error": "Semantic duplicate trial: 7533ad7b8c3449fe8ef01eae6df65cca; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:08.675976+00:00",
+      "id": "064c8c8ec2ea4aea81be592b5e857e2c",
+      "integration_credit": 0,
+      "manifest_sha256": "d47820becc861de13b3eeddb1ad39ebeadd74c93237d7ce1f6823bc597e24d52",
+      "measured_functions": 0,
+      "outcome_sha256": "41ac8857ba076aa0c2c848609196a76b8a7c9e23b24be9347a3425a80801384c",
+      "semantic_key": "fcf391a780c1ecc041cd3bb471b76443e38b14ad30113b32f16cc1f8444f960e",
+      "state": "preparation_rejected",
+      "task": "g8pilot-2_maktar_nebula"
     },
     "0667dde28c4b45939127c74a499a6c91": {
       "compile_attempted": true,
@@ -136676,6 +137391,26 @@
       "state": "exact_private",
       "task": "count112-untried-24_ship_shack-20261006"
     },
+    "0ee5f535552a42f4858e5fa24cc87388": {
+      "children": [
+        {
+          "id": "11_joba",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/0ee5f535552a42f4858e5fa24cc87388",
+      "error": "Semantic duplicate trial: 42df3213f1ee4e4985abe4a3bbc850c3; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:55.625350+00:00",
+      "id": "0ee5f535552a42f4858e5fa24cc87388",
+      "integration_credit": 0,
+      "manifest_sha256": "a44aadbaf2791790dc6f3ebaa5b7fdc6e80e8f3e0660833764100bf153ecf06a",
+      "measured_functions": 0,
+      "outcome_sha256": "c1d06c0b3b51322d366a7105ef260bdf604a640ff5b540bbe186b15ab9992a42",
+      "semantic_key": "bc4b7c815e956dbcecf411ea05ffcff5446990b95fe45e97cce5b2c114fd3fff",
+      "state": "preparation_rejected",
+      "task": "g8pilot-11_joba"
+    },
     "0efde5a352014bfa9e4a5ef9f7e34093": {
       "compile_attempted": true,
       "directory": "runtime:trials/0efde5a352014bfa9e4a5ef9f7e34093",
@@ -137021,6 +137756,26 @@
       "state": "exact_private",
       "task": "orbital-state-transition-family-759-20261004-11_joba"
     },
+    "13d65114a58b47f58928959a7efe9b65": {
+      "children": [
+        {
+          "id": "5_feltzin_system",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/13d65114a58b47f58928959a7efe9b65",
+      "error": "Semantic duplicate trial: e6b8b5f08df64bc1b1b5d8754e727a8e; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:11.998989+00:00",
+      "id": "13d65114a58b47f58928959a7efe9b65",
+      "integration_credit": 0,
+      "manifest_sha256": "9d7dfe6dd0e7c2f9e59d0e15cb92fbb06621a2958a670049ed1cd63331b8d66d",
+      "measured_functions": 0,
+      "outcome_sha256": "2720a13f3a687fefd13811220ab73309284bd94fe0723d26447ced17236f0de3",
+      "semantic_key": "38993a1aaed40a3f5755768fa39e0e9cae8d38e8e429a2e73579ba077d6d0122",
+      "state": "preparation_rejected",
+      "task": "g8pilot-5_feltzin_system"
+    },
     "13ffab3b09e743e3bd1e8ce64363c9cf": {
       "compile_attempted": true,
       "directory": "runtime:trials/13ffab3b09e743e3bd1e8ce64363c9cf",
@@ -137202,6 +137957,26 @@
       "started": "2026-10-07T04:20:19.319846+00:00",
       "state": "exact_private",
       "task": "nativefam-b2d-23_damosel_orbit"
+    },
+    "15e9b8f61d33419f8e5cf561da1b259b": {
+      "children": [
+        {
+          "id": "0_aranos_tutorial",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/15e9b8f61d33419f8e5cf561da1b259b",
+      "error": "Semantic duplicate trial: 527d30f190a944f3b8645d56cc89d549; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:53.994253+00:00",
+      "id": "15e9b8f61d33419f8e5cf561da1b259b",
+      "integration_credit": 0,
+      "manifest_sha256": "2b0f828b01023c2ab7113cf5384f7faa9804d0f5c75f395bed676e1a260d22a8",
+      "measured_functions": 0,
+      "outcome_sha256": "c0cf02e5c59320e01b94c578004a4fd0ccdccff1e31e8360458756759ba052ed",
+      "semantic_key": "afd7e9f72feaa5c0a26ca5a133b4f4683477643f71dc1005d64da1098d7941a7",
+      "state": "preparation_rejected",
+      "task": "g8pilot-0_aranos_tutorial"
     },
     "15f3ce42b2f14e448ef29443e6eaf0a3": {
       "compile_attempted": true,
@@ -142428,6 +143203,26 @@
       "state": "exact_private",
       "task": "missing-members-bitmap124-11_joba-20261006"
     },
+    "49fe0691b0e84b008ffba802b9393e41": {
+      "children": [
+        {
+          "id": "26_jamming_array",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/49fe0691b0e84b008ffba802b9393e41",
+      "error": "Semantic duplicate trial: 2f1b4eca6ae04d3b956575a1e0ffa06a; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:07.771867+00:00",
+      "id": "49fe0691b0e84b008ffba802b9393e41",
+      "integration_credit": 0,
+      "manifest_sha256": "a627c9bcb973d90f5122a66b709aa4733fb3826884c9a5ca11ddaf9dcfc32d21",
+      "measured_functions": 0,
+      "outcome_sha256": "4b30cf58540b84eebe4689b71df8b06e8ed28271a03337249ad3ab71e95a3a71",
+      "semantic_key": "07c10a5923d88c1e3483855e11a5e20b7bda616770af64f14cb3ce459908ed07",
+      "state": "preparation_rejected",
+      "task": "g8pilot-26_jamming_array"
+    },
     "4a15874dd2b44db9890f41623b270364": {
       "compile_attempted": true,
       "directory": "runtime:trials/4a15874dd2b44db9890f41623b270364",
@@ -145683,6 +146478,26 @@
       "state": "mismatch",
       "task": "orbital-damosel-unlink288-20261005-v1"
     },
+    "70fed25b0ac7479984bfc4b3a7cd84f7": {
+      "children": [
+        {
+          "id": "8_tabora",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/70fed25b0ac7479984bfc4b3a7cd84f7",
+      "error": "Semantic duplicate trial: 0a76ba3c445a4f0faf9a2384a2bda8fe; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:14.846866+00:00",
+      "id": "70fed25b0ac7479984bfc4b3a7cd84f7",
+      "integration_credit": 0,
+      "manifest_sha256": "193728002e75602d1687b7c585aba07b003cb30197bf887efdfb06df61db7ca0",
+      "measured_functions": 0,
+      "outcome_sha256": "265a4ec90ea7ad6b7822e8487431eac8a375274c6c90a3dbdcd7ddcab910edcd",
+      "semantic_key": "a228d6e6fb2b6cfeb8b14548567f3ccf2971ed6e0e9f091267023f8faa78b28e",
+      "state": "preparation_rejected",
+      "task": "g8pilot-8_tabora"
+    },
     "710d1e5995524e3e81f56f2f69528cff": {
       "compile_attempted": true,
       "directory": "runtime:trials/710d1e5995524e3e81f56f2f69528cff",
@@ -146348,6 +147163,26 @@
       "state": "mismatch",
       "task": "parallel-boot-analysis-maktar-template-apply-v2-gnu0"
     },
+    "798da3441bec46cfa3feb7c48d35717a": {
+      "children": [
+        {
+          "id": "4_barlow",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/798da3441bec46cfa3feb7c48d35717a",
+      "error": "Semantic duplicate trial: eaba09cc61da48eabeed036973e297b3; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:11.191635+00:00",
+      "id": "798da3441bec46cfa3feb7c48d35717a",
+      "integration_credit": 0,
+      "manifest_sha256": "e49ea1134d795b27c5f4de2c6568be05bad41b12ad9007d678f810b7dd751092",
+      "measured_functions": 0,
+      "outcome_sha256": "60483c3839837c26fa05c55afa4d53ab35b3a698812295251d13237e30f07b6b",
+      "semantic_key": "67fabbbd2a66abd77244b7515b4118c655e9632a4e3bc383a7851206ae7311bf",
+      "state": "preparation_rejected",
+      "task": "g8pilot-4_barlow"
+    },
     "798f5bbf6b8d4152b08788fd9f324bd9": {
       "compile_attempted": true,
       "directory": "runtime:trials/798f5bbf6b8d4152b08788fd9f324bd9",
@@ -146953,6 +147788,26 @@
       "state": "exact_private",
       "task": "orbital-mode-set-family-20261004-25_wupash_nebula"
     },
+    "7f7660582d374bdaa5855935c5e120bb": {
+      "children": [
+        {
+          "id": "24_ship_shack",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/7f7660582d374bdaa5855935c5e120bb",
+      "error": "Semantic duplicate trial: 483e7ddd463343b385f8d8d1ed4db175; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:06.082288+00:00",
+      "id": "7f7660582d374bdaa5855935c5e120bb",
+      "integration_credit": 0,
+      "manifest_sha256": "c3a53576c061d7d52ed3d86522f3f1b02662ef7adc869e35c14c2384daa9ee2c",
+      "measured_functions": 0,
+      "outcome_sha256": "dab9baaa85a09bfaaeab06fe40dee2bb84fe3505329ed2be96ee3194bbf708a3",
+      "semantic_key": "7b4cea60fe9573145453e55f5ca10a4baa0364e1adcb6669dfeea00a516a297b",
+      "state": "preparation_rejected",
+      "task": "g8pilot-24_ship_shack"
+    },
     "7fb845be8b214bf5838c275279b26208": {
       "compile_attempted": true,
       "directory": "runtime:trials/7fb845be8b214bf5838c275279b26208",
@@ -147141,6 +147996,26 @@
       "started": "2026-10-04T14:34:52.202712+00:00",
       "state": "exact_private",
       "task": "orbital-class-filter-family-20261004-3_endako"
+    },
+    "8241968ed0a54410a87e8f82dd89c74e": {
+      "children": [
+        {
+          "id": "19_grelbin",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/8241968ed0a54410a87e8f82dd89c74e",
+      "error": "Semantic duplicate trial: 825a4302dcb548f9b7d6ff60e44a4d57; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:02.084934+00:00",
+      "id": "8241968ed0a54410a87e8f82dd89c74e",
+      "integration_credit": 0,
+      "manifest_sha256": "adea809ffe156d6322621fbf87fde6b091ce396a948c651aa3364844f61b21fa",
+      "measured_functions": 0,
+      "outcome_sha256": "59dccce21bd2a62966f18eb7c2ea434a5420e7c43ea230df763f523eb796db19",
+      "semantic_key": "830dff5e02a2c45d4701bea772f757d2a308b32a6df2b297958a18c88e3484f0",
+      "state": "preparation_rejected",
+      "task": "g8pilot-19_grelbin"
     },
     "825a4302dcb548f9b7d6ff60e44a4d57": {
       "compile_attempted": true,
@@ -149373,6 +150248,26 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-kind96-10-v1"
     },
+    "9a56ec8e7844447aacfbe0e6f377f78d": {
+      "children": [
+        {
+          "id": "13_boldan",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/9a56ec8e7844447aacfbe0e6f377f78d",
+      "error": "Semantic duplicate trial: a44539af19234783a075899770d00951; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:57.239182+00:00",
+      "id": "9a56ec8e7844447aacfbe0e6f377f78d",
+      "integration_credit": 0,
+      "manifest_sha256": "09f96b0af95ab4d959b11468c6a2c6f83efc90b635fdd2d6bba94bfd464900e8",
+      "measured_functions": 0,
+      "outcome_sha256": "42d0aea6791c43ef3784af1acfb2d0e0938804ff0dbf79aa4c41a653f8827d27",
+      "semantic_key": "f9e43c3cd1074b60b16b573c785b60ed1b29b062b8db9254072f585c491739f3",
+      "state": "preparation_rejected",
+      "task": "g8pilot-13_boldan"
+    },
     "9a63d03fb5974bc68c2a63b0967346cc": {
       "compile_attempted": true,
       "directory": "runtime:trials/9a63d03fb5974bc68c2a63b0967346cc",
@@ -149438,6 +150333,26 @@
       "state": "exact_private",
       "task": "lot3-20_yeedil"
     },
+    "9bc20e5b583240398273d83ceba9da17": {
+      "children": [
+        {
+          "id": "30_insomniac_museum",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/9bc20e5b583240398273d83ceba9da17",
+      "error": "Semantic duplicate trial: d916193aacaa485b9b6a8e2d35ada806; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:09.533312+00:00",
+      "id": "9bc20e5b583240398273d83ceba9da17",
+      "integration_credit": 0,
+      "manifest_sha256": "2bf551178a79f3b311a5bc47cd08740489d6a050f8b8414a8407381cf0674ece",
+      "measured_functions": 0,
+      "outcome_sha256": "5be0f46822504f84da3da31d96b2f439a4c7bc7096498d3271e0c3714717e0ee",
+      "semantic_key": "78d89588995a25cdc14373e2e50bad7c7c79c920b4df2d301666d7b061c91f9a",
+      "state": "preparation_rejected",
+      "task": "g8pilot-30_insomniac_museum"
+    },
     "9c0dbff876fe42e5adbca9c55ddd24c8": {
       "compile_attempted": true,
       "directory": "runtime:trials/9c0dbff876fe42e5adbca9c55ddd24c8",
@@ -149450,6 +150365,26 @@
       "started": "2026-10-05T03:27:01.451653+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-grid312-26-v1"
+    },
+    "9c17a81587b14b6297726fb5d85d020a": {
+      "children": [
+        {
+          "id": "16_snivelak",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/9c17a81587b14b6297726fb5d85d020a",
+      "error": "Semantic duplicate trial: a06f4d061b424f8e804a76a5cd0e4085; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:59.634545+00:00",
+      "id": "9c17a81587b14b6297726fb5d85d020a",
+      "integration_credit": 0,
+      "manifest_sha256": "437ed1be79564dc050e568145a9cd61090bfd48d17919e0a54de918f52f2b354",
+      "measured_functions": 0,
+      "outcome_sha256": "570c5188b5deef7180d75a1688e8a036bd1efb028eef9102ede17db8cd984152",
+      "semantic_key": "f42811f05263987a71ecb1dc5fbe8a4f753c992d34460fbc086a5eed7a2ad6c1",
+      "state": "preparation_rejected",
+      "task": "g8pilot-16_snivelak"
     },
     "9c1ba539c9c240e1948baa6f9d05904d": {
       "compile_attempted": true,
@@ -150476,6 +151411,26 @@
       "state": "mismatch",
       "task": "native-review-endako-options-v1-20261004"
     },
+    "a6434d28bc7d404abf06fd57d0e0019c": {
+      "children": [
+        {
+          "id": "20_yeedil",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/a6434d28bc7d404abf06fd57d0e0019c",
+      "error": "Semantic duplicate trial: 9b952b8cca30454e815e70603f74ea7d; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:03.619975+00:00",
+      "id": "a6434d28bc7d404abf06fd57d0e0019c",
+      "integration_credit": 0,
+      "manifest_sha256": "ffb10da5773a614f72df87a6b28ec95fa0692cfe84e7af15a8fc192435891b8a",
+      "measured_functions": 0,
+      "outcome_sha256": "e7abdff813ae4cb0c10c44de690396a93705f85113281310b97e412a27b00190",
+      "semantic_key": "90b758fe58e393f0e7061c496dfd2cad7b6848e6b32bffd696c40d47af791b47",
+      "state": "preparation_rejected",
+      "task": "g8pilot-20_yeedil"
+    },
     "a6e0fb6acf68409c96a281997f9a397c": {
       "compile_attempted": true,
       "directory": "runtime:trials/a6e0fb6acf68409c96a281997f9a397c",
@@ -150763,6 +151718,26 @@
       "started": "2026-10-07T00:16:08.767827+00:00",
       "state": "exact_private",
       "task": "small-positive-bit32-query16-combined-1_oozla-20261006"
+    },
+    "aaada6caa3bf45469bf2653ee43bd260": {
+      "children": [
+        {
+          "id": "17_smolg",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/aaada6caa3bf45469bf2653ee43bd260",
+      "error": "Semantic duplicate trial: bca816c0a4904284845569985737e8bd; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:00.434209+00:00",
+      "id": "aaada6caa3bf45469bf2653ee43bd260",
+      "integration_credit": 0,
+      "manifest_sha256": "2c3aa2d9ca20b987d84d32f31d2c41e6210fe662188a9980512ef751e62d7369",
+      "measured_functions": 0,
+      "outcome_sha256": "7bd1978744c3daa625fcd2cc0bbcc5f01533afa9b31c28957292bf292fee425b",
+      "semantic_key": "b403ee733941010af60fa0ac57ceeee222daca41e400315cfb49b27ed4abc024",
+      "state": "preparation_rejected",
+      "task": "g8pilot-17_smolg"
     },
     "aac517e7b4f24b07982db3c3da935113": {
       "compile_attempted": true,
@@ -152136,6 +153111,26 @@
       "state": "mismatch",
       "task": "parallel-boot-analysis-maktar-template-apply-v1"
     },
+    "bb5689f548fa442db6f04d2d1e886b51": {
+      "children": [
+        {
+          "id": "boot",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/bb5689f548fa442db6f04d2d1e886b51",
+      "error": "Semantic duplicate trial: 9ff355fc6d4748948c6216a776f83ea6; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:53.202936+00:00",
+      "id": "bb5689f548fa442db6f04d2d1e886b51",
+      "integration_credit": 0,
+      "manifest_sha256": "84293b260183b97b2aadad5bcb2ff93c4414fa5a0b7e4648f165d7d26e1e88d5",
+      "measured_functions": 0,
+      "outcome_sha256": "fd2b06d8133f462a93fc6c57c2cee3f3c5a586e287789ab33bf946b9b725c497",
+      "semantic_key": "57053c63b9db2d9c3685154c611a60c98691e1d4b61b580daad0260e72ede1f3",
+      "state": "preparation_rejected",
+      "task": "g8pilot-boot"
+    },
     "bb82c265c6324420b6ff74bfe5583e2d": {
       "compile_attempted": true,
       "directory": "runtime:trials/bb82c265c6324420b6ff74bfe5583e2d",
@@ -152174,6 +153169,26 @@
       "started": "2026-10-04T04:41:27.638121+00:00",
       "state": "exact_private",
       "task": "two-native-families-8_tabora-20261004"
+    },
+    "bbd11ec6ae4f433b8dadaa17c78a735b": {
+      "children": [
+        {
+          "id": "9_dobbo",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/bbd11ec6ae4f433b8dadaa17c78a735b",
+      "error": "Semantic duplicate trial: d25c6515dae746c4aa4d4917ffea0144; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:15.782200+00:00",
+      "id": "bbd11ec6ae4f433b8dadaa17c78a735b",
+      "integration_credit": 0,
+      "manifest_sha256": "3945dd3c5bf36b15eff7e16819f5c01d32c4bcb29fb95a57737a3caa5c7f05e4",
+      "measured_functions": 0,
+      "outcome_sha256": "4c74984c191b5f9985a13ed667323b072f924e0e8be0be6d45b7ca09a033cc0a",
+      "semantic_key": "724a79018eb5c5769b487ae81e34761471a7ccc01f419f3f117ea76168b5dbd4",
+      "state": "preparation_rejected",
+      "task": "g8pilot-9_dobbo"
     },
     "bbd8d768b43a4082b93f8752dd0862e2": {
       "compile_attempted": true,
@@ -152876,6 +153891,26 @@
       "started": "2026-10-04T04:41:24.256549+00:00",
       "state": "exact_private",
       "task": "two-native-families-2_maktar_nebula-20261004"
+    },
+    "c5501de87ea245ea86603d081bb6eb90": {
+      "children": [
+        {
+          "id": "18_damosel",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/c5501de87ea245ea86603d081bb6eb90",
+      "error": "Semantic duplicate trial: a22aa028930849658c69db5c3f739312; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:01.246424+00:00",
+      "id": "c5501de87ea245ea86603d081bb6eb90",
+      "integration_credit": 0,
+      "manifest_sha256": "93f10a59272df57a0068183229bb6e71d875bfd7e8d49d62f9c2bb090ab312f7",
+      "measured_functions": 0,
+      "outcome_sha256": "261e941cf6e0f18645eb8be4b43b988f846236e46b8b95478efcabd1d7565c27",
+      "semantic_key": "fe333ae4f5a709bb59ad5f489aa26b15738c569ffe8c7451de98bc02fc094751",
+      "state": "preparation_rejected",
+      "task": "g8pilot-18_damosel"
     },
     "c559778ce0e54f6d86819970c2ddb32e": {
       "compile_attempted": true,
@@ -153744,6 +154779,26 @@
       "state": "exact_private",
       "task": "orbital-flag-clear-family-20261004-6_notak"
     },
+    "ce6f0fb3e50c4a5b9ec6ab0e9bacf05e": {
+      "children": [
+        {
+          "id": "3_endako",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/ce6f0fb3e50c4a5b9ec6ab0e9bacf05e",
+      "error": "Semantic duplicate trial: 6bf9a88b9421403ba83155cb90980f3f; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:10.385370+00:00",
+      "id": "ce6f0fb3e50c4a5b9ec6ab0e9bacf05e",
+      "integration_credit": 0,
+      "manifest_sha256": "53bb199fba7695509138d36aa52e3174c062b98163ee5683e0a8034fb93c6348",
+      "measured_functions": 0,
+      "outcome_sha256": "ccc4b2437c1e782e3f7fb7dee1194bef67d3140ea97e5a19d088bb9f3c156acf",
+      "semantic_key": "ed4d48b29596d49d9d01a0fc1b5853c2c75fdf48dd3a5ad457ac388c3a492113",
+      "state": "preparation_rejected",
+      "task": "g8pilot-3_endako"
+    },
     "ce7fd89c36194a9ca975b373fea3d1e2": {
       "compile_attempted": true,
       "directory": "runtime:trials/ce7fd89c36194a9ca975b373fea3d1e2",
@@ -153991,6 +155046,26 @@
       "state": "exact_private",
       "task": "glyph-family-5_feltzin_system-20261004"
     },
+    "d1aba578707048e0b38220024a61f55d": {
+      "children": [
+        {
+          "id": "6_notak",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/d1aba578707048e0b38220024a61f55d",
+      "error": "Semantic duplicate trial: 1cb0fae111f84bbdaef544fccd452853; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:12.887940+00:00",
+      "id": "d1aba578707048e0b38220024a61f55d",
+      "integration_credit": 0,
+      "manifest_sha256": "9b0e368760d0a1f5d6a26f46e108049d64ed66ee16de275dd2516b334bb818df",
+      "measured_functions": 0,
+      "outcome_sha256": "33986a28fc05b7fd7ace70aa660f60e84f6d8448f1f1e235f837ceaecb63d718",
+      "semantic_key": "4584864e376d88c3eb7e1e5e2fc8288c324cdd8536f37e972aeed6153396571f",
+      "state": "preparation_rejected",
+      "task": "g8pilot-6_notak"
+    },
     "d1d3d1ed8cf2412daf0e4d993d778347": {
       "compile_attempted": true,
       "directory": "runtime:trials/d1d3d1ed8cf2412daf0e4d993d778347",
@@ -154211,6 +155286,26 @@
       "started": "2026-10-04T10:08:59.738206+00:00",
       "state": "mismatch",
       "task": "orbital-hrugis-key-lookup-20261004-v2"
+    },
+    "d3e636ea008147969330f35b1946187f": {
+      "children": [
+        {
+          "id": "25_wupash_nebula",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/d3e636ea008147969330f35b1946187f",
+      "error": "Semantic duplicate trial: 51b4ae7f6d294661b6fbb38aa9c03f75; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:06.888391+00:00",
+      "id": "d3e636ea008147969330f35b1946187f",
+      "integration_credit": 0,
+      "manifest_sha256": "fdc264b6702248e7579886c006367f18c16fd8447a8626975d32120f2306422e",
+      "measured_functions": 0,
+      "outcome_sha256": "cb553f31e0af6924f5e3f1c8ea94c9b55d04bf7663ccf25f42320c6fa3841191",
+      "semantic_key": "0e5302be38c92aeb6905c4fa26634930a5b2f0fc59fb3ea50232fe03ed8e8f78",
+      "state": "preparation_rejected",
+      "task": "g8pilot-25_wupash_nebula"
     },
     "d42a49afc1ee41128555bf83d6f5fe0b": {
       "compile_attempted": true,
@@ -155083,6 +156178,26 @@
       "state": "exact_private",
       "task": "orbital-float-interval-family-815-20261004-3_endako"
     },
+    "dce3c9c5741a4711aa20bc8bd01bc492": {
+      "children": [
+        {
+          "id": "10_hrugis_cloud",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/dce3c9c5741a4711aa20bc8bd01bc492",
+      "error": "Semantic duplicate trial: 2dc9e8b3a68046a3af92f8eecbad622d; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:54.824266+00:00",
+      "id": "dce3c9c5741a4711aa20bc8bd01bc492",
+      "integration_credit": 0,
+      "manifest_sha256": "21a63d4e366b141215a3a2a31ace99719bd85947352d1b93a8c2a520448f59ad",
+      "measured_functions": 0,
+      "outcome_sha256": "2b441326c93e5aa5e7465b1a052e27efb9c87ae632a7865190d099982c43f894",
+      "semantic_key": "7a91407d7341a5a4e066f0a82c7408c03ccd9251fdf834843eb689e7cb3304c2",
+      "state": "preparation_rejected",
+      "task": "g8pilot-10_hrugis_cloud"
+    },
     "dcf41d2d51c845e2abece46b407e7274": {
       "compile_attempted": true,
       "directory": "runtime:trials/dcf41d2d51c845e2abece46b407e7274",
@@ -155420,6 +156535,26 @@
       "started": "2026-10-04T10:47:09.235636+00:00",
       "state": "exact_private",
       "task": "root-parallel-combined-7_siberius-20261004"
+    },
+    "dfd909db3221495185bdaeec228f549d": {
+      "children": [
+        {
+          "id": "7_siberius",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/dfd909db3221495185bdaeec228f549d",
+      "error": "Semantic duplicate trial: 8f5fec50df864c3987f1dbddf75344d4; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:13.887233+00:00",
+      "id": "dfd909db3221495185bdaeec228f549d",
+      "integration_credit": 0,
+      "manifest_sha256": "bd983f7bb8b48f7726345b1514d74dd7470925713ca8f2a3fa4a68dfb13edd16",
+      "measured_functions": 0,
+      "outcome_sha256": "bf34bdc84ca219442c4bb25ae4bfbc137da2539ddea90108e6a57bf7b856d1cd",
+      "semantic_key": "355d739847acd5fcf666b136b0e2480ae886639f0ae07886dbb16905f3536f89",
+      "state": "preparation_rejected",
+      "task": "g8pilot-7_siberius"
     },
     "dfeeb6ca964b492380ffdaffb2b3ff40": {
       "compile_attempted": true,
@@ -155772,6 +156907,26 @@
       "state": "exact_private",
       "task": "scalar-families-13_boldan-20261004"
     },
+    "e44e17322ce74e9d9271079397114a60": {
+      "children": [
+        {
+          "id": "22_dobbo_orbit",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/e44e17322ce74e9d9271079397114a60",
+      "error": "Semantic duplicate trial: 71ffadb3f36145c68a42e6c08a80c89d; provide --repeat-reason",
+      "finished": "2026-10-07T07:28:04.420619+00:00",
+      "id": "e44e17322ce74e9d9271079397114a60",
+      "integration_credit": 0,
+      "manifest_sha256": "a09267cade77451893271d7d1f1bfd8cbf900ad5677b5068515e7b8634a0b65d",
+      "measured_functions": 0,
+      "outcome_sha256": "44fa6c6bb89514df673014a7f26acd062e85d4e5812680e336c6f9c76ef0c657",
+      "semantic_key": "6fba89c90b26702e960cd732597bf08275a944b28575239a60ef6ca27329aa5e",
+      "state": "preparation_rejected",
+      "task": "g8pilot-22_dobbo_orbit"
+    },
     "e4685f91339949cd9a80d1ffdfa3106d": {
       "compile_attempted": true,
       "directory": "runtime:trials/e4685f91339949cd9a80d1ffdfa3106d",
@@ -156101,6 +157256,46 @@
       "started": "2026-10-07T05:35:27.181488+00:00",
       "state": "exact_private",
       "task": "lot3-5_feltzin_system"
+    },
+    "e6e3cd94c4514be898f2bc0d1a5a2e5b": {
+      "children": [
+        {
+          "id": "14_aranos_prison",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/e6e3cd94c4514be898f2bc0d1a5a2e5b",
+      "error": "Semantic duplicate trial: 32a5702439a84516b0a7d26daedc703d; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:58.023861+00:00",
+      "id": "e6e3cd94c4514be898f2bc0d1a5a2e5b",
+      "integration_credit": 0,
+      "manifest_sha256": "cee5c989f883a2dc2b43e6abf5054cfb8fccff2c4d86b6825ae1e1cce5e7d004",
+      "measured_functions": 0,
+      "outcome_sha256": "3d099f0fe37eb51f734e2504f4734aeba52ddd4ef22e53b5c407aa92b27ab2b8",
+      "semantic_key": "77de812bc84ffcfde6e94d3b6c5807df53d5b78a7a5a086d4150768b522cce0f",
+      "state": "preparation_rejected",
+      "task": "g8pilot-14_aranos_prison"
+    },
+    "e7012566125747b4b6d111b1fb30769a": {
+      "children": [
+        {
+          "id": "15_gorn",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/e7012566125747b4b6d111b1fb30769a",
+      "error": "Semantic duplicate trial: 91929adbfa6c4600877de014c3906cd2; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:58.832850+00:00",
+      "id": "e7012566125747b4b6d111b1fb30769a",
+      "integration_credit": 0,
+      "manifest_sha256": "9d41a3bc8b8262f0d1ed2ab10814691f2191836a33419ebb8b69c7f914b84c4b",
+      "measured_functions": 0,
+      "outcome_sha256": "0d9f8e91c1e1e827b51db92034a25aeaffee2b41a110fbe4bc33b8c941839b87",
+      "semantic_key": "b059d3e0235e4bf40ceab5aa6f64507ee4c80b2ba3f7f21921ef6772343a96ee",
+      "state": "preparation_rejected",
+      "task": "g8pilot-15_gorn"
     },
     "e7517ee07b204624801174ecf1a8d583": {
       "compile_attempted": true,
@@ -158066,6 +159261,26 @@
       "started": "2026-10-06T17:08:24.012429+00:00",
       "state": "exact_private",
       "task": "update-moby775-76-6_notak-source-first-v1-20261006"
+    },
+    "fc0f05563da441b8aeeb50b4f702d89b": {
+      "children": [
+        {
+          "id": "12_todano",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/fc0f05563da441b8aeeb50b4f702d89b",
+      "error": "Semantic duplicate trial: 0394b6b998e04eb8a2d1745e2ac60fa6; provide --repeat-reason",
+      "finished": "2026-10-07T07:27:56.408774+00:00",
+      "id": "fc0f05563da441b8aeeb50b4f702d89b",
+      "integration_credit": 0,
+      "manifest_sha256": "a7e955613c185fd5095854a1d564f2459f838506cf0daa5f16af94fabaa17efc",
+      "measured_functions": 0,
+      "outcome_sha256": "44e0bb9c8a9ff6bdc06afa0b34ce03ad1e0a4974895ddeb9bb58c0b1913fefe3",
+      "semantic_key": "ba187043c0b3b30711790093af98a852f6f6dfbb809d2767924eb42046e8e0a3",
+      "state": "preparation_rejected",
+      "task": "g8pilot-12_todano"
     },
     "fc47ffe846d34786a9dccde597190c40": {
       "compile_attempted": true,

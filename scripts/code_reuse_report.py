@@ -160,6 +160,8 @@ def authored_subset(repo, credit):
     catalogs.update({c["source"]: c for _, c in natives})
     for unit in admitted_units(repo):
         catalogs[unit_spec(unit)["source"]] = load_catalog(repo, unit)
+    for _, catalog in sl.load_smalldata(repo, {}):
+        catalogs[catalog["source"]] = catalog
     require(set(catalogs) == set(sources), "Authored sources/catalogues differ")
     slots = {}
     for name, catalog in sorted(catalogs.items()):
