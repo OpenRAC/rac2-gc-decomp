@@ -77,12 +77,16 @@ do not prove a candidate: actual complete-symbol/image gates still have to pass.
 The reconstructed GNU profile starts from `gnu-ee-binutils-gcc-1.1.tar.gz`
 (base archive identity recorded in `requirements.json`) and an inherited patch
 stack plus the public adjustments under `scripts/compiler/`. See
-[compiler provenance](../docs/COMPILER-NOTES.md). **The exact base acquisition and
-complete public rebuild recipe are not yet a self-contained beginner setup.**
-The [upstream GNU GCC project](https://gcc.gnu.org/) provides background and public
+[compiler provenance](../docs/COMPILER-NOTES.md), which carries the
+[complete rebuild recipe](../docs/COMPILER-NOTES.md#complete-rebuild-recipe): the
+patch order, the measured source adjustments, the build host and the six
+identities a finished build must reproduce. The instruments are host-built, so
+the documented hashes require that host; a rebuild that skips one adjustment
+still compiles the measured corpus but yields a different `cc1`, which is why a
+contributor compares identities before working. The
+[upstream GNU GCC project](https://gcc.gnu.org/) provides background and public
 GNU releases, not a download of our byte-matching EE profile. Do not substitute
-another compiler and report it as qualified. Documenting a verified, licensed,
-reproducible acquisition/build route is useful work in its own right.
+another compiler and report it as qualified.
 
 ## Legacy SN components
 

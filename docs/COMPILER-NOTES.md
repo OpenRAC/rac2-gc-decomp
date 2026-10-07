@@ -249,6 +249,101 @@ then links both sets of objects; Ps2EeAs does not reassemble the already produce
 C object. The C path was introduced in commit `b2b9101`. A padding assumption
 about Ps2EeAs therefore does not automatically apply to the GNU-assembled C.
 
+## Complete rebuild recipe
+
+A partial recipe silently yields a different `mips.c` and a different `cc1`: the
+source adjustments below are part of the qualified identity, not optional
+clean-ups. Run every step and check the three source hashes at the end.
+
+**Host.** Ubuntu 26.04.x under WSL2 with 32-bit host support (`gcc -m32`) and a
+locally built **bison 1.28** first on `PATH`. The instruments are ordinary
+host-built binaries, so their hashes depend on the distribution: a build on
+another host produces different `cpp`/`cc1`/`as` hashes from identical sources.
+No binaries are distributed; build them here and compare with the hashes above.
+
+**1. Sources.**
+
+```sh
+tar xzf gnu-ee-binutils-gcc-1.1.tar.gz        # sha256 1f518043e252d6eda726386971d52eda26541ab936ea73a9783d73712b595f92
+mv gnu-ee-binutils-gcc src
+```
+
+**2. Lombyte `sce-991111b` stack, minus the saves widening.** Apply, in this
+order, from the stack published with the Lombyte project:
+
+```
+0000-modern-host-fixes 0001-r5900-quad-saves 0015-no-sibcall 0016-no-edge-lcm-default
+0019-r5900-post-dbr-loop-pad 0020-gas-absolute-unknown-symbol
+0021-sched-keep-frame-related-order 0022-sibcall-default-off 0025-annul-dead-delay-slots
+0026-frame-save-first 0027-gas-inline-float-literals 0028-annul-ne-zero-default
+0029-call-clobber-pending 0030-pad-before-preceding 0031-annul-traced-comparison
+0032-anchor-all-pads 0033-ra-not-vs-nonframe 0034-r5900-extern-buffer-optin
+0036-retire-frame-save-pref 0037-game-no-strict-aliasing 0044-sda-nosda-attributes
+0045-encode-section-info-sda-nosda 0046-r5900-pad-unfilled-loops
+0047-pathb-reload1-localalloc-regclass-2952 0048-pathb-cse-2952
+0049-sibcall-pass-needs-placeholder 0050-r5900-dli-retail-form 0051-r5900-fpr-hazard-exact
+0052-r5900-dli-retail-general 0053-gas-la-absolute-unknown-symbol
+0054-r5900-assembler-pads-loops 0055-r5900-no-second-hilo 0056-sda-extern-before-use
+```
+
+then reverse the saves widening, because the retail saves in `sd` (8-byte slots),
+not `sq` (16):
+
+```sh
+patch -R -p1 -s < "$P/0001-r5900-quad-saves.patch"
+```
+
+**3. Source adjustments.** Each one is measured; omitting any of them changes
+`mips.c` and therefore `cc1`.
+
+| File | Adjustment | Reason |
+| --- | --- | --- |
+| `gcc/config/mips/mips.c` | the `if (TARGET_MIPS5900)` line preceding `mips_reg_mode[0] = TImode;` becomes `if (0 && TARGET_MIPS5900)` | the retail does not use TImode in that position |
+| `gcc/config/mips/mips.h` | add `#define MACHINE_DEPENDENT_REORG_AFTER_DBR(X) mips_r5900_pad_loops (X)` before `extern void mips_r5900_pad_loops ();` | patch `0054` disables the hook for the Ps2EeAs assembler; the C path uses GNU `as` and must keep it |
+| `gcc/config/mips/mips.c` | in `mips_r5900_pad_loops`, `n++;` becomes `n += pat == TRAP_IF ? get_attr_length (insn) : 1;` | a division guard expands to two MD words (`beql` + `break`) |
+| `gcc/config/mips/mips.c` | emit the GPR save loop in **ascending** register order, with `gp_offset -= GET_MODE_SIZE (mips_reg_mode[0]) * (n_rac2 - 1)` pre-computed when more than one register is saved and the per-register decrement turned into `+=` | the retail saves in ascending order with the same layout and offsets |
+| `gcc/config/mips/mips.c` | run the FPR save block before the GPR save block (and keep GPR restores before FPR restores) | the retail orders the two intact blocks that way; patch `0026` covers the frame-save case, this completes it |
+| `gas/config/tc-mips.c` | insert the `rac2_mtc1_nop_ok()` helper and guard both `++nops` sites with it: a `nop` follows `mtc1` when the next instruction reads the written FPR, except when `mtc1` is the function's first instruction | measured 587 nop in 598 cases; the single exception is `FUN_00283CE0` |
+
+**4. Public transformers**, applied in this order:
+`scripts/compiler/allow_zero_ti_store.patch` (patch), then
+`scripts/compiler/disable_frame_order_default.py`, then
+`scripts/compiler/restrict_mtc1_exemption.py` (`gas/config/tc-mips.c`).
+
+**5. Configure and build.**
+
+```sh
+export CC='gcc -m32'
+export CFLAGS='-O2 -fno-strict-aliasing -fcommon -std=gnu89 -D_GNU_SOURCE'
+./configure --target=mips64r5900-sf-elf --host=i686-linux-gnu --build=i686-linux-gnu     --disable-nls --enable-languages=c --without-headers
+(cd libiberty && make -j16 CC="$CC" CFLAGS="$CFLAGS")
+# The 1999 Makefile omits a dependency from flow.o to insn-flags.h, so a clean
+# parallel build can race the generated headers. Build them first.
+(cd gcc && make -j1 LANGUAGES=c CC="$CC" CFLAGS="$CFLAGS" insn-flags.h insn-codes.h insn-config.h)
+(cd gcc && make -j16 LANGUAGES=c CC="$CC" CFLAGS="$CFLAGS" cc1 cpp)
+(cd bfd && make -j16 CC="$CC" CFLAGS="$CFLAGS")
+(cd opcodes && make -j16 CC="$CC" CFLAGS="$CFLAGS")
+(cd gas && make -j16 CC="$CC" CFLAGS="$CFLAGS")     # produces gas/as-new
+```
+
+**6. Checkpoints.** The build is the qualified one only when all six identities
+match:
+
+| Artifact | sha256 |
+| --- | --- |
+| `gcc/config/mips/mips.c` | `c76c0bec5b56c198381ab2a4fc60c161a4287e8312d7d1fdea3d1e6a0e1af614` |
+| `gcc/config/mips/mips.h` | `52f470a043ffbba535582e2f08a8353d23bbf6521b1b63e241847f464891d9e6` |
+| `gas/config/tc-mips.c` | `61e51c1ebcdf860db4503b6cc6a11c40596d1f3c969daf66ee56a45f454130ca` |
+| `gcc/cc1` | `8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d` |
+| `gcc/cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
+| `gas/as-new` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
+
+A fresh build from this recipe was verified on 7 October 2026 and reproduced all
+six identities. A `mips.c` that hashes differently means a step above is missing
+— a rebuild that skips the adjustments produces a compiler that still matches the
+measured corpus on simple bodies and diverges elsewhere, which is exactly the
+failure mode this section exists to prevent.
+
 ## Scope
 
 This document claims what was measured: the named bodies and the 96 previously
