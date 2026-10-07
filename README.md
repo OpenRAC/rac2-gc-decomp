@@ -59,7 +59,7 @@ Recorded validation on **7 October 2026**:
 | --- | ---: | ---: |
 | Boot | 244 functions | 13,456 |
 | 27 level overlays | 7,144 placements | 475,040 |
-| Native overlay subset, included above | 2,747 placements | 234,996 |
+| Native overlay subset, included above | 2,748 placements | 235,104 |
 | **Total C coverage** | **Boot + all 27 overlays** | **488,496 / 48,788,176 (1.0013%)** |
 <!-- generated-progress:end -->
 
