@@ -671,3 +671,124 @@ void LVL_19_GRELBIN_FUN_00326850(unsigned char *entity, int enabled) {
 int LVL_19_GRELBIN_FUN_0031D108(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_19_GRELBIN_FUN_002AA8E0(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_002EAC68(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_002F1CC0(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_002F2A70(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_002F9F30(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_002F9F38(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_002FE170(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_00306EC8(void)
+{
+}
+
+
+unsigned int LVL_19_GRELBIN_FUN_0036D430(void)
+{
+    return 0;
+}
+
+
+void LVL_19_GRELBIN_FUN_00371F48(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_00378F60(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_0037C9F0(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_003800D0(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_003F6270(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_004203E8(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_0043DA70(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_0043F4E0(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_0043F730(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_0043FC28(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_004484A0(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_004490F8(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_00454F00(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_00457290(void)
+{
+}
+
+
+void LVL_19_GRELBIN_FUN_00458B28(void)
+{
+}

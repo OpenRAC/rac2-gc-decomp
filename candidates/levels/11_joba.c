@@ -781,3 +781,140 @@ void LVL_11_JOBA_FUN_0033C2E0(unsigned char *entity, int enabled) {
 int LVL_11_JOBA_FUN_003318E0(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_11_JOBA_FUN_002C02E0(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_002C0700(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_002C0708(void)
+{
+}
+
+
+unsigned int LVL_11_JOBA_FUN_002E8670(void)
+{
+    return 0;
+}
+
+
+void LVL_11_JOBA_FUN_002FF828(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_003068B0(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_00307660(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_0030ED48(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_0030ED50(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_003129E8(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_0031B740(void)
+{
+}
+
+
+unsigned int LVL_11_JOBA_FUN_00383C48(void)
+{
+    return 0;
+}
+
+
+void LVL_11_JOBA_FUN_00388760(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_0038F778(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_00393100(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_003967E0(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_0042B280(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_004741B0(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_0048E020(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_0048FA90(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_0048FCE0(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_004901D8(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_00498A50(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_004996A8(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_004A54B0(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_004A7840(void)
+{
+}
+
+
+void LVL_11_JOBA_FUN_004A90D8(void)
+{
+}

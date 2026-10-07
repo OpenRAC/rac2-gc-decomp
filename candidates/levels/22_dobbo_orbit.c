@@ -718,3 +718,136 @@ void LVL_22_DOBBO_ORBIT_FUN_0032DD68(unsigned char *entity, int enabled) {
 int LVL_22_DOBBO_ORBIT_FUN_00324788(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_22_DOBBO_ORBIT_FUN_002AB7A8(void)
+{
+}
+
+
+unsigned int LVL_22_DOBBO_ORBIT_FUN_002DCB68(void)
+{
+    return 0;
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_002F2DC8(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_002F9D90(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_002FAB40(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00302000(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00302008(void)
+{
+}
+
+
+unsigned int LVL_22_DOBBO_ORBIT_FUN_00302380(void)
+{
+    return 0;
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00305BC0(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_0030E918(void)
+{
+}
+
+
+unsigned int LVL_22_DOBBO_ORBIT_FUN_00372C00(void)
+{
+    return 0;
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_003776C0(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_0037E6D8(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00382018(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_003856F8(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_003F08C8(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00415A40(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_0042D0C8(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_0042EB38(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_0042ED88(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_0042F280(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00437AF8(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00438750(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00444558(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_004468E8(void)
+{
+}
+
+
+void LVL_22_DOBBO_ORBIT_FUN_00448180(void)
+{
+}

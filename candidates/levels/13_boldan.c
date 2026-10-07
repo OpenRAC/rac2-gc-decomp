@@ -754,3 +754,130 @@ void LVL_13_BOLDAN_FUN_00332488(unsigned char *entity, int enabled) {
 int LVL_13_BOLDAN_FUN_003294B0(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_13_BOLDAN_FUN_002B2068(void)
+{
+}
+
+
+unsigned int LVL_13_BOLDAN_FUN_002E1300(void)
+{
+    return 0;
+}
+
+
+void LVL_13_BOLDAN_FUN_002F7A78(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_002FEA50(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_002FF800(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00306CC0(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00306CC8(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_0030A8E8(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00313640(void)
+{
+}
+
+
+unsigned int LVL_13_BOLDAN_FUN_00378D40(void)
+{
+    return 0;
+}
+
+
+void LVL_13_BOLDAN_FUN_0037D858(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00384870(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_003881F8(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_0038B970(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_003F7060(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00424720(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_004407C0(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00442230(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00442480(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00442978(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_0044B1F0(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_0044BE48(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00457C50(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_00459FE0(void)
+{
+}
+
+
+void LVL_13_BOLDAN_FUN_0045B878(void)
+{
+}

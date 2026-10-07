@@ -712,3 +712,139 @@ void LVL_3_ENDAKO_FUN_0032AAF0(unsigned char *entity, int enabled) {
 int LVL_3_ENDAKO_FUN_00320658(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_3_ENDAKO_FUN_002AD7E0(void)
+{
+}
+
+
+unsigned int LVL_3_ENDAKO_FUN_002D7350(void)
+{
+    return 0;
+}
+
+
+void LVL_3_ENDAKO_FUN_002EE2B8(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_002F5308(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_002F60B8(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_002FDBB8(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_002FDBC0(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_003018C8(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_0030A620(void)
+{
+}
+
+
+unsigned int LVL_3_ENDAKO_FUN_00370980(void)
+{
+    return 0;
+}
+
+
+void LVL_3_ENDAKO_FUN_00375468(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_0037C480(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_0037FE08(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_003834E8(void)
+{
+}
+
+
+int LVL_3_ENDAKO_FUN_003A4978(unsigned char *p) { return p[0x20] == 1; }
+
+
+int LVL_3_ENDAKO_FUN_003CA138(unsigned char *p) { return p[0x20] == 1; }
+
+
+int LVL_3_ENDAKO_FUN_003CA280(unsigned char *p) { return p[0x20] == 1; }
+
+
+void LVL_3_ENDAKO_FUN_00401060(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_00424C38(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_0043D638(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_0043F0A8(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_0043F2F8(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_0043F7F0(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_00448068(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_00448CC0(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_00454AC8(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_00456E58(void)
+{
+}
+
+
+void LVL_3_ENDAKO_FUN_004586F0(void)
+{
+}

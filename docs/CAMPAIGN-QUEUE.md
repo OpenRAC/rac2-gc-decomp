@@ -2901,6 +2901,18 @@ Compare every complete symbol and exact object hash against the committed boot r
 
 Reopen condition: User-requested compiler regression check or measured tool drift
 
+## known-boot-indexed-state72-existing-shared-placement-20261007
+
+State: `done`. Kind: `research`.
+
+ROOT checks current pins after publication, installs only the reviewed map delta with a guarded backup, and uses the maintained full28 shared integration route. Require full actual mapped STT_FUNC/size/raw/source/tool equality, all existing shared controls and1202 native controls, and complete loaded-image gates. Retain any placement refusal without source/profile cycles.
+
+Reopen condition: Independent contradictory boundary/ABI/resident binding ownership or maintained pipeline-contract evidence; never an equivalent C expression or guessed GP/data object.
+
+- `private-work:c-campaign-20261006/fresh-known-c-reuse-next/delivery.json`
+- `private-work:c-campaign-20261006/fresh-known-c-reuse-next/level-catalog-proposed.json`
+- `private-work:c-campaign-20261006/fresh-known-c-reuse-next/REPORT.md`
+
 ## known-native-controls-20261003
 
 State: `integrated`. Kind: `candidate`.
@@ -2908,6 +2920,315 @@ State: `integrated`. Kind: `candidate`.
 Compare all complete symbols and object hash with the pre-lot committed native review.
 
 Reopen condition: User-requested compiler regression check or measured tool drift
+
+## known-scalar-reuse-0_aranos_tutorial-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-10_hrugis_cloud-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-11_joba-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-12_todano-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+- `private-work:c-campaign-20261006/known-C-scalar-map72-combined-preparation/delivery.json`
+
+## known-scalar-reuse-13_boldan-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-14_aranos_prison-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-15_gorn-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-16_snivelak-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-17_smolg-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-18_damosel-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-19_grelbin-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-1_oozla-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-20_yeedil-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-22_dobbo_orbit-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-23_damosel_orbit-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-24_ship_shack-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-25_wupash_nebula-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-26_jamming_array-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-2_maktar_nebula-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-30_insomniac_museum-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-3_endako-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-4_barlow-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-5_feltzin_system-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-6_notak-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-7_siberius-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-8_tabora-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-9_dobbo-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
+
+## known-scalar-reuse-boot-fixed-20261006
+
+State: `integrated`. Kind: `candidate`.
+
+ROOT reviews/reserves exact whole unit once after prior C2 merge; require all current controls and every new complete size/STT/raw/readonly/source/catalog/tool pin. Preserve any refusal; no source/type/operator/flag/ABI cycling or automatic retry.
+
+Reopen condition: Independent measured boundary/ABI/type or qualified lowering evidence, not another equivalent spelling or reopening a historical physical park.
+
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/delivery.json`
+- `private-work:c-campaign-20261006/known-C-scalar-reuse-preparation/all-placement-verification.json`
 
 ## lombyte-cpr8-656-source-first-20261006
 

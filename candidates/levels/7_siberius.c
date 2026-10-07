@@ -652,3 +652,130 @@ void LVL_7_SIBERIUS_FUN_0031FAB0(unsigned char *entity, int enabled) {
 int LVL_7_SIBERIUS_FUN_003157E8(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_7_SIBERIUS_FUN_002A70E0(void)
+{
+}
+
+
+unsigned int LVL_7_SIBERIUS_FUN_002CC828(void)
+{
+    return 0;
+}
+
+
+void LVL_7_SIBERIUS_FUN_002E3648(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_002EA620(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_002EB3D0(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_002F2C68(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_002F69D0(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_002FF728(void)
+{
+}
+
+
+unsigned int LVL_7_SIBERIUS_FUN_003654F8(void)
+{
+    return 0;
+}
+
+
+void LVL_7_SIBERIUS_FUN_00369FD0(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00370FE8(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00374970(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00378050(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_003E0B08(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_0040E190(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_0040F6B0(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00428260(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00429CD0(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00429F20(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_0042A418(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00432C90(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_004338E8(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_0043F6F0(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00441A80(void)
+{
+}
+
+
+void LVL_7_SIBERIUS_FUN_00443318(void)
+{
+}
