@@ -1828,3 +1828,216 @@ int LVL_15_GORN_FUN_00346CF8(int a0, int a1, int a2) {
     LVL_15_GORN_F1157be91_FUN_00132028();
     return 1;
 }
+struct src_record {
+    unsigned char b0;
+    unsigned char b1;
+    unsigned char b2;
+    unsigned char b3;
+    unsigned short s4;
+    unsigned short s6;
+    unsigned short s8;
+    unsigned short s10;
+    unsigned short s12;
+    unsigned char e;
+    unsigned char f;
+};
+
+struct dst_record {
+    unsigned char b0;
+    unsigned char b1;
+    unsigned char b2;
+    unsigned char b3;
+    unsigned short s4;
+    unsigned short s6;
+    unsigned short s8;
+    short s10;
+    short s12;
+    unsigned char e;
+    unsigned char f;
+};
+
+extern struct dst_record LVL_15_GORN_Fe6db7296_D_001B9600[8] __attribute__((nosda));
+
+int LVL_15_GORN_FUN_002EF7D0(struct src_record *src)
+{
+    int n = 0;
+    int i;
+    int j;
+
+    while (n < 8 && src[n].b0 != 255)
+        n++;
+
+    j = 0;
+    for (i = 0; i < 8 && j < n; i++) {
+        if (LVL_15_GORN_Fe6db7296_D_001B9600[i].b0 == 0)
+            j++;
+    }
+
+    if (j != n)
+        return -1;
+
+    for (j = 0; j < n; j++) {
+        i = 0;
+        while (i < 8 && LVL_15_GORN_Fe6db7296_D_001B9600[i].b0 != 0)
+            i++;
+        if (i < 8) {
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].b0 = src[j].b0;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].b1 = src[j].b1;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].b2 = src[j].b2;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].b3 = src[j].b3;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].s4 = src[j].s4;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].s6 = src[j].s6;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].s8 = src[j].s8;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].s10 = src[j].s10;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].s12 = src[j].s12;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].e = src[j].e - src[j].f;
+            LVL_15_GORN_Fe6db7296_D_001B9600[i].f = src[j].f;
+            if (LVL_15_GORN_Fe6db7296_D_001B9600[i].s10 + LVL_15_GORN_Fe6db7296_D_001B9600[i].s12 == 0)
+                LVL_15_GORN_Fe6db7296_D_001B9600[i].s10++;
+        }
+    }
+    return i;
+}
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_15_GORN_F4e5bde81_D_00189E20;
+extern s32 LVL_15_GORN_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_15_GORN_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_15_GORN_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_15_GORN_FUN_002EC280(void) {
+    s32 result = LVL_15_GORN_F4e5bde81_D_00189E20.field348;
+    if (LVL_15_GORN_F4e5bde81_D_001A8FF0 != 0 && LVL_15_GORN_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_15_GORN_F4e5bde81_D_001A8FF4 != 0 || LVL_15_GORN_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_15_GORN_F4e5bde81_D_00189E20.field2294 == 110 && LVL_15_GORN_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_15_GORN_F4e5bde81_D_00189E20.field2294 == 109 || LVL_15_GORN_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_15_GORN_F4e5bde81_D_00189E20.field1497 != 0 && LVL_15_GORN_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_15_GORN_F4e5bde81_D_00189E20.field2294 == 0 && LVL_15_GORN_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_15_GORN_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+extern void LVL_15_GORN_F250a61cf_FUN_00115DA8(char *buf, char *format, ...);
+extern char LVL_15_GORN_F250a61cf_D_001AD670[];
+extern char LVL_15_GORN_F250a61cf_D_001AD680[];
+extern char LVL_15_GORN_F250a61cf_D_001AD688[];
+
+void LVL_15_GORN_FUN_00391498(char *buf, int value)
+{
+    if (value > 999999)
+        LVL_15_GORN_F250a61cf_FUN_00115DA8(buf, LVL_15_GORN_F250a61cf_D_001AD670, value / 1000000,
+                                 value / 1000 % 1000, value % 1000);
+    else if (value >= 1000)
+        LVL_15_GORN_F250a61cf_FUN_00115DA8(buf, LVL_15_GORN_F250a61cf_D_001AD680, value / 1000, value % 1000);
+    else
+        LVL_15_GORN_F250a61cf_FUN_00115DA8(buf, LVL_15_GORN_F250a61cf_D_001AD688, value);
+}
+/* ffb5b86c8c05572c - nested scan over a table, 260 B, no arguments. */
+
+extern int LVL_15_GORN_Fffb5b86c_D_00220EA0 __attribute__((nosda));
+extern char *LVL_15_GORN_Fffb5b86c_D_0021F420[];
+struct Pair {
+    short a;
+    short b;
+};
+extern struct Pair LVL_15_GORN_Fffb5b86c_D_002209A0[];
+struct Item {
+    char *ptr;
+    int extra;
+};
+
+void LVL_15_GORN_FUN_003735B0(void)
+{
+    int *p;
+    int *entry;
+    struct Item *items;
+    char *node;
+    char *block;
+    char *slot;
+    struct Pair *pair;
+    short value;
+    int i;
+    int j;
+
+    p = &LVL_15_GORN_Fffb5b86c_D_00220EA0;
+    if (*p < 0)
+        return;
+    while (*p >= 0) {
+        entry = (int *)LVL_15_GORN_Fffb5b86c_D_0021F420[*p];
+        for (i = 0; i < *(short *)((char *)entry + 40); i++) {
+            items = (struct Item *)((char *)entry + 64);
+            node = *(char **)((char *)items + (i << 3));
+            block = node + 16;
+            slot = block + (*(int *)(block + 4) << 4) + 16;
+            for (j = 0; j < *(int *)block; j++) {
+                pair = &LVL_15_GORN_Fffb5b86c_D_002209A0[*(unsigned char *)(slot + 19)];
+                value = pair->a;
+                if (value != 0)
+                    *(int *)(slot + 48) = (*(int *)(slot + 48) & 0xFFFFC000) | value;
+                value = pair->b;
+                if (value != 0)
+                    *(int *)(slot + 32) = (*(int *)(slot + 32) & 0xFFFFC000) | value;
+                slot += 64;
+            }
+        }
+        p++;
+    }
+}
+/* RAC2 family 19c820e81a180575 - 192 bytes, 2 placements.
+ * Slot19c820e8 allocator: find the first free of six 64-byte slots, fill it in and
+ * link it at the head of the context's list.
+ */
+
+typedef struct Slot19c820e8 {
+    short          f00;    /* +0x00 */
+    short          f02;    /* +0x02 */
+    unsigned char  f04;    /* +0x04 */
+    char           pad05[7];
+    unsigned char *f0C;    /* +0x0C */
+    int            f10;    /* +0x10 */
+    int            f14;    /* +0x14 */
+    int            f18;    /* +0x18 */
+    int            f1C;    /* +0x1C */
+    char           pad20[32];
+} Slot19c820e8;                    /* 64 bytes */
+
+typedef struct Mid {
+    char           pad00[0x1C];
+    char          *f1C;    /* +0x1C */
+} Mid;
+
+typedef struct Ctx {
+    char           pad00[0x24];
+    Mid           *f24;    /* +0x24 */
+    char           pad28[0x28];
+    int            f50;    /* +0x50 */
+} Ctx;
+
+extern Slot19c820e8 LVL_15_GORN_F19c820e8_D_001D2140[6];
+extern unsigned char LVL_15_GORN_F19c820e8_D_001CA340[];
+
+Slot19c820e8 *LVL_15_GORN_FUN_003297D0(Ctx *ctx, int index)
+{
+    int i;
+    Slot19c820e8 *slot;
+    unsigned char *p;
+
+    for (i = 0; i < 6; i++) {
+        if (LVL_15_GORN_F19c820e8_D_001D2140[i].f04 == 0) {
+            break;
+        }
+    }
+    slot = &LVL_15_GORN_F19c820e8_D_001D2140[i];
+    slot->f04 = 1;
+    slot->f00 = index;
+    slot->f10 = (int)(LVL_15_GORN_F19c820e8_D_001CA340 + i * 5376);
+    slot->f14 = (int)ctx->f24;
+    p = (unsigned char *)*(unsigned int *)(ctx->f24->f1C + (short)index * 4 + 4);
+    slot->f02 = p[2];
+    slot->f0C = p + (p[0] + 4);
+    slot->f1C = ctx->f50;
+    ctx->f50 = (int)slot;
+    return slot;
+}

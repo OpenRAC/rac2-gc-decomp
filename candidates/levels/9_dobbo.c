@@ -1778,3 +1778,96 @@ int LVL_9_DOBBO_FUN_0032ADB8(int a0, int a1, int a2) {
     LVL_9_DOBBO_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct { char *p[6]; } Sep6;
+extern Sep6 LVL_9_DOBBO_Fd1b66aa7_D_001AA550;
+extern char LVL_9_DOBBO_Fd1b66aa7_D_001AA568[];
+extern char LVL_9_DOBBO_Fd1b66aa7_D_001AA578[];
+extern char LVL_9_DOBBO_Fd1b66aa7_D_001AA588[];
+extern int LVL_9_DOBBO_Fd1b66aa7_FUN_00115DA8(char *dst, char *fmt, ...);
+
+void LVL_9_DOBBO_FUN_0032B260(char *dst, int x, int idx)
+{
+    Sep6 t;
+    t = LVL_9_DOBBO_Fd1b66aa7_D_001AA550;
+    if (x > 999999) {
+        int m = x / 1000000;
+        int w = x % 1000000;
+        LVL_9_DOBBO_Fd1b66aa7_FUN_00115DA8(dst, LVL_9_DOBBO_Fd1b66aa7_D_001AA568, m, t.p[idx % 6], w / 1000,
+                          t.p[idx % 6], w % 1000);
+    } else if (x >= 1000)
+        LVL_9_DOBBO_Fd1b66aa7_FUN_00115DA8(dst, LVL_9_DOBBO_Fd1b66aa7_D_001AA578, x / 1000,
+                          t.p[idx % 6], x % 1000);
+    else
+        LVL_9_DOBBO_Fd1b66aa7_FUN_00115DA8(dst, LVL_9_DOBBO_Fd1b66aa7_D_001AA588, x);
+}
+/* attempt 1 - shape read straight off the disassembly:
+   save object's word 152 from its owner's field 16, then repeat for a second
+   object found through two pointer hops, skipping the sentinel byte values. */
+
+void LVL_9_DOBBO_FUN_003F74A8(char *p)
+{
+    char *q;
+    char *r;
+    char *s;
+    int v;
+
+    if (p == 0)
+        return;
+    if (*(unsigned char *)(p + 32) == 254)
+        return;
+    if (*(unsigned char *)(p + 32) == 253)
+        return;
+
+    q = *(char **)(p + 36);
+    r = *(char **)(p + 104);
+    *(int *)(p + 152) = *(int *)(q + 16);
+
+    s = *(char **)(r + 760);
+    if (s == 0)
+        return;
+    if (*(short *)(s + 170) != 3342)
+        return;
+    if (*(unsigned char *)(s + 32) == 254)
+        return;
+    if (*(unsigned char *)(s + 32) == 253)
+        return;
+
+    v = *(int *)(s + 36);
+    *(int *)(s + 152) = *(int *)(v + 16);
+}
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_9_DOBBO_F4e5bde81_D_00189E20;
+extern s32 LVL_9_DOBBO_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_9_DOBBO_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_9_DOBBO_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_9_DOBBO_FUN_002CF458(void) {
+    s32 result = LVL_9_DOBBO_F4e5bde81_D_00189E20.field348;
+    if (LVL_9_DOBBO_F4e5bde81_D_001A8FF0 != 0 && LVL_9_DOBBO_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_9_DOBBO_F4e5bde81_D_001A8FF4 != 0 || LVL_9_DOBBO_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_9_DOBBO_F4e5bde81_D_00189E20.field2294 == 110 && LVL_9_DOBBO_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_9_DOBBO_F4e5bde81_D_00189E20.field2294 == 109 || LVL_9_DOBBO_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_9_DOBBO_F4e5bde81_D_00189E20.field1497 != 0 && LVL_9_DOBBO_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_9_DOBBO_F4e5bde81_D_00189E20.field2294 == 0 && LVL_9_DOBBO_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_9_DOBBO_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+extern void LVL_9_DOBBO_F250a61cf_FUN_00115DA8(char *buf, char *format, ...);
+extern char LVL_9_DOBBO_F250a61cf_D_001AD670[];
+extern char LVL_9_DOBBO_F250a61cf_D_001AD680[];
+extern char LVL_9_DOBBO_F250a61cf_D_001AD688[];
+
+void LVL_9_DOBBO_FUN_00372D18(char *buf, int value)
+{
+    if (value > 999999)
+        LVL_9_DOBBO_F250a61cf_FUN_00115DA8(buf, LVL_9_DOBBO_F250a61cf_D_001AD670, value / 1000000,
+                                 value / 1000 % 1000, value % 1000);
+    else if (value >= 1000)
+        LVL_9_DOBBO_F250a61cf_FUN_00115DA8(buf, LVL_9_DOBBO_F250a61cf_D_001AD680, value / 1000, value % 1000);
+    else
+        LVL_9_DOBBO_F250a61cf_FUN_00115DA8(buf, LVL_9_DOBBO_F250a61cf_D_001AD688, value);
+}

@@ -1627,3 +1627,343 @@ int LVL_8_TABORA_FUN_0033C730(int a0, int a1, int a2) {
     LVL_8_TABORA_F1157be91_FUN_00132028();
     return 1;
 }
+extern char LVL_8_TABORA_Fd1a69f7e_D_00238000[];
+extern char LVL_8_TABORA_Fd1a69f7e_D_002392C0[];
+extern char LVL_8_TABORA_Fd1a69f7e_D_002392C0_1[];
+
+void LVL_8_TABORA_FUN_003974B0(void) {
+    int *p;
+    int *q;
+    int *t;
+    int *r;
+    int i;
+
+    p = (int *)LVL_8_TABORA_Fd1a69f7e_D_00238000;
+    p = (int *)((char *)p + 4788);
+    for (i = 99; i >= 0; i--) {
+        *p = 0;
+        p -= 12;
+    }
+    q = (int *)LVL_8_TABORA_Fd1a69f7e_D_002392C0;
+    q[138] = 5;
+    q[137] = 0;
+    q[136] = 0;
+    t = q;
+    for (i = 63; i >= 0; i--) {
+        t[0] = 0;
+        t[64] = 0;
+        t++;
+    }
+    r = (int *)LVL_8_TABORA_Fd1a69f7e_D_002392C0_1;
+    r = (int *)((char *)r + 540);
+    for (i = 7; i >= 0; i--) {
+        *r = 0;
+        r--;
+    }
+}
+/* Family be569dc253cd5555 — 108 bytes, 2 placements (19_grelbin, 8_tabora).
+   Walk the resident function-pointer table at 0x1B2340, call each entry while
+   the resident count at 0x1B2380 says there is one, then clear the count.
+   Default profile (-O2 -G0 -ffunction-sections): both globals are reached with
+   lui/lw absolute addressing, no $gp access anywhere in the body. */
+extern int LVL_8_TABORA_Fbe569dc2_D_001B2380 __attribute__((sda));
+extern void (*LVL_8_TABORA_Fbe569dc2_D_001B2340[])(void);
+
+void LVL_8_TABORA_FUN_002E3868(void)
+{
+    int i;
+
+    for (i = 0; i < LVL_8_TABORA_Fbe569dc2_D_001B2380; i++) {
+        LVL_8_TABORA_Fbe569dc2_D_001B2340[i]();
+    }
+
+    LVL_8_TABORA_Fbe569dc2_D_001B2380 = 0;
+}
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_8_TABORA_F4e5bde81_D_00189E20;
+extern s32 LVL_8_TABORA_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_8_TABORA_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_8_TABORA_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_8_TABORA_FUN_002DF198(void) {
+    s32 result = LVL_8_TABORA_F4e5bde81_D_00189E20.field348;
+    if (LVL_8_TABORA_F4e5bde81_D_001A8FF0 != 0 && LVL_8_TABORA_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_8_TABORA_F4e5bde81_D_001A8FF4 != 0 || LVL_8_TABORA_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_8_TABORA_F4e5bde81_D_00189E20.field2294 == 110 && LVL_8_TABORA_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_8_TABORA_F4e5bde81_D_00189E20.field2294 == 109 || LVL_8_TABORA_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_8_TABORA_F4e5bde81_D_00189E20.field1497 != 0 && LVL_8_TABORA_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_8_TABORA_F4e5bde81_D_00189E20.field2294 == 0 && LVL_8_TABORA_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_8_TABORA_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+typedef short s16;
+
+typedef struct {
+    u8 f0; u8 f1; u8 f2; u8 f3;
+    s16 f4; s16 f6; s16 f8; s16 fA; s16 fC;
+    u8 fE; u8 fF;
+} Slot;
+
+extern Slot LVL_8_TABORA_F909a5233_D_001B9940[8] __attribute__((nosda));
+
+int LVL_8_TABORA_FUN_002E2780(Slot *src)
+{
+    int count;
+    int i;
+    int free;
+
+    count = 0;
+    while (count < 8 && src[count].f0 != 255)
+        count++;
+
+    free = 0;
+    for (i = 0; i < 8 && free < count; i++) {
+        if (LVL_8_TABORA_F909a5233_D_001B9940[i].f0 == 0)
+            free++;
+    }
+
+    if (free != count)
+        return -1;
+
+    for (free = 0; free < count; free++) {
+        i = 0;
+        while (i < 8 && LVL_8_TABORA_F909a5233_D_001B9940[i].f0 != 0)
+            i++;
+        if (i < 8) {
+            LVL_8_TABORA_F909a5233_D_001B9940[i].f0 = src[free].f0;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].f1 = src[free].f1;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].f2 = src[free].f2;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].f3 = src[free].f3;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].f4 = src[free].f4;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].f6 = src[free].f6;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].f8 = src[free].f8;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].fA = src[free].fA;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].fC = src[free].fC;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].fE = src[free].fE - src[free].fF;
+            LVL_8_TABORA_F909a5233_D_001B9940[i].fF = src[free].fF;
+            if (LVL_8_TABORA_F909a5233_D_001B9940[i].fA + LVL_8_TABORA_F909a5233_D_001B9940[i].fC == 0)
+                LVL_8_TABORA_F909a5233_D_001B9940[i].fA++;
+        }
+    }
+    return i;
+}
+/* family c459a266b43242d6 - 352 bytes, 2 placements
+   levels/19_grelbin @0x00412F70, levels/8_tabora @0x0041E630
+
+   Fills five output floats from two pinned tables and a resident flag word,
+   then clamps the three still free outputs to [-1, 1]. */
+
+extern float LVL_8_TABORA_Fc459a266_D_00189E20[];
+extern int LVL_8_TABORA_Fc459a266_D_00138180[];
+
+void LVL_8_TABORA_FUN_0041E630(float *a0, float *a1, float *a2, float *a3, float *p4)
+{
+    float f1;
+    float f2;
+    int v1;
+
+    *a0 = -LVL_8_TABORA_Fc459a266_D_00189E20[2028];
+    *a2 = -LVL_8_TABORA_Fc459a266_D_00189E20[2029];
+    v1 = LVL_8_TABORA_Fc459a266_D_00138180[104];
+    f2 = 0.0f;
+    if (v1 & 0x40)
+        f2 = 1.0f;
+    f1 = (v1 & 0x20) ? (f2 - 1.0f) : f2;
+    *a1 = f1;
+    *a3 = *(float *)&LVL_8_TABORA_Fc459a266_D_00138180[75];
+    v1 = LVL_8_TABORA_Fc459a266_D_00138180[104];
+    f1 = 0.0f;
+    if (v1 & 0x1)
+        f1 = 1.0f;
+    if (v1 & 0x2)
+        f1 = f1 - 1.0f;
+    *p4 = f1;
+    if (*a0 > 1.0f)
+        *a0 = 1.0f;
+    else if (*a0 < -1.0f)
+        *a0 = -1.0f;
+    if (*a1 > 1.0f)
+        *a1 = 1.0f;
+    else if (*a1 < -1.0f)
+        *a1 = -1.0f;
+    if (*p4 > 1.0f)
+        *p4 = 1.0f;
+    else if (*p4 < -1.0f)
+        *p4 = -1.0f;
+}
+/* 6065799417900311 - nested scan over a table, 260 B, no arguments. */
+
+extern int LVL_8_TABORA_F60657994_D_002211E0 __attribute__((nosda));
+extern char *LVL_8_TABORA_F60657994_D_0021F760[];
+struct Pair {
+    short a;
+    short b;
+};
+extern struct Pair LVL_8_TABORA_F60657994_D_00220CE0[];
+struct Item {
+    char *ptr;
+    int extra;
+};
+
+void LVL_8_TABORA_FUN_00368E20(void)
+{
+    int *p;
+    int *entry;
+    struct Item *items;
+    char *node;
+    char *block;
+    char *slot;
+    struct Pair *pair;
+    short value;
+    int i;
+    int j;
+
+    p = &LVL_8_TABORA_F60657994_D_002211E0;
+    if (*p < 0)
+        return;
+    while (*p >= 0) {
+        entry = (int *)LVL_8_TABORA_F60657994_D_0021F760[*p];
+        for (i = 0; i < *(short *)((char *)entry + 40); i++) {
+            items = (struct Item *)((char *)entry + 64);
+            node = *(char **)((char *)items + (i << 3));
+            block = node + 16;
+            slot = block + (*(int *)(block + 4) << 4) + 16;
+            for (j = 0; j < *(int *)block; j++) {
+                pair = &LVL_8_TABORA_F60657994_D_00220CE0[*(unsigned char *)(slot + 19)];
+                value = pair->a;
+                if (value != 0)
+                    *(int *)(slot + 48) = (*(int *)(slot + 48) & 0xFFFFC000) | value;
+                value = pair->b;
+                if (value != 0)
+                    *(int *)(slot + 32) = (*(int *)(slot + 32) & 0xFFFFC000) | value;
+                slot += 64;
+            }
+        }
+        p++;
+    }
+}
+/* v2: guard reads p->count, loop counter is a second read (CSE -> copy). */
+struct Elem {
+    unsigned int f0;
+    unsigned char pad0[31];
+    unsigned char f35;
+    unsigned char pad1[12];
+    unsigned int f48;
+    unsigned char pad2[28];
+};
+struct Node {
+    struct Elem *elems;
+    int count;
+};
+extern struct Node LVL_8_TABORA_F4a421ea7_D_00226C40 __attribute__((nosda));
+extern short LVL_8_TABORA_F4a421ea7_D_00226940[][2];
+
+void LVL_8_TABORA_FUN_003776C0(void)
+{
+    struct Node *p = &LVL_8_TABORA_F4a421ea7_D_00226C40;
+
+    if (p->elems != 0) {
+        do {
+            struct Elem *e = p->elems;
+
+            if (p->count > 0) {
+                int n = p->count;
+
+                do {
+                    short *t = LVL_8_TABORA_F4a421ea7_D_00226940[e->f35];
+                    if (t[0] != 0) e->f0 = (e->f0 & 0xFFFFC000u) | (unsigned int)t[0];
+                    if (t[1] != 0) e->f48 = (e->f48 & 0xFFFFC000u) | (unsigned int)t[1];
+                    e++;
+                } while (--n);
+            }
+            p++;
+        } while (p->elems != 0);
+    }
+}
+/* family e21f3c02ab439188 - 152 B, 2 placements.
+ * Find the first free 64-byte record in a 32-entry array and initialise it.
+ * retail store order R after the guard:
+ *   20, 28, 52, 50, 29, 56, 0, 4, 8, 12, 16, 24, 25, 26, 30, 31, 60, 48
+ * sched1 hoists R[0] (the source's last statement) to the front, so the source
+ * keeps R[1..] and ends with f20.
+ */
+struct Rec {
+    float f0;
+    float f4;
+    float f8;
+    float f12;
+    float f16;
+    float f20;
+    unsigned char f24;
+    unsigned char f25;
+    short f26;
+    unsigned char f28;
+    unsigned char f29;
+    unsigned char f30;
+    unsigned char f31;
+    unsigned char pad32[16];
+    short f48;
+    short f50;
+    int f52;
+    int f56;
+    int f60;
+};
+
+extern struct Rec LVL_8_TABORA_Fe21f3c02_D_001BC730[];
+
+struct Rec *LVL_8_TABORA_FUN_002E2E88(int a)
+{
+    struct Rec *p = LVL_8_TABORA_Fe21f3c02_D_001BC730;
+    int i;
+
+    for (i = 0; i < 32; i++) {
+        if (p->f29 == 0) {
+            p->f0 = -1.0f;
+            p->f4 = -1.0f;
+            p->f8 = -1.0f;
+            p->f12 = -1.0f;
+            p->f16 = -1.0f;
+            p->f20 = -1.0f;
+            p->f28 = a;
+            p->f52 = 6;
+            p->f50 = 120;
+            p->f29 = 1;
+            p->f56 = -1;
+            p->f24 = 0;
+            p->f25 = 0;
+            p->f26 = 0;
+            p->f30 = 0;
+            p->f31 = 0;
+            p->f60 = 0;
+            p->f48 = 0;
+            return p;
+        }
+        p++;
+    }
+    return 0;
+}
+/* Family 6230a7600b032836 (120 B, 2 placements): call every registered
+ * callback with its paired argument, bounded by a resident count word.
+ *
+ * The three resident globals are reached with `lui`+`lw` / `lui`+`addiu`
+ * pairs that the ASSEMBLER macro expands from a single RTL insn; this only
+ * happens when the externs carry the `sda` attribute (SYMBOL_REF_FLAG), which
+ * suppresses gcc's HIGH/LO_SUM address split.  Without it the compiler keeps
+ * the `%hi` in an extra callee-saved register and the body is 3 words long.
+ */
+typedef void (*fn_t)(int);
+
+extern int LVL_8_TABORA_F6230a760_D_001B24B8 __attribute__((sda));   /* resident callback count */
+extern fn_t LVL_8_TABORA_F6230a760_D_001B2498[] __attribute__((sda)); /* callback table        */
+extern int LVL_8_TABORA_F6230a760_D_001B24A8[] __attribute__((sda));  /* argument table        */
+
+void LVL_8_TABORA_FUN_002F2E28(void) {
+    int i;
+    for (i = 0; i < LVL_8_TABORA_F6230a760_D_001B24B8; i++) {
+        LVL_8_TABORA_F6230a760_D_001B2498[i](LVL_8_TABORA_F6230a760_D_001B24A8[i]);
+    }
+}

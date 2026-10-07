@@ -1857,3 +1857,74 @@ int LVL_20_YEEDIL_FUN_00343B40(int a0, int a1, int a2) {
     LVL_20_YEEDIL_F1157be91_FUN_00132028();
     return 1;
 }
+/* attempt 1 - shape read straight off the disassembly:
+   save object's word 152 from its owner's field 16, then repeat for a second
+   object found through two pointer hops, skipping the sentinel byte values. */
+
+void LVL_20_YEEDIL_FUN_0041C828(char *p)
+{
+    char *q;
+    char *r;
+    char *s;
+    int v;
+
+    if (p == 0)
+        return;
+    if (*(unsigned char *)(p + 32) == 254)
+        return;
+    if (*(unsigned char *)(p + 32) == 253)
+        return;
+
+    q = *(char **)(p + 36);
+    r = *(char **)(p + 104);
+    *(int *)(p + 152) = *(int *)(q + 16);
+
+    s = *(char **)(r + 760);
+    if (s == 0)
+        return;
+    if (*(short *)(s + 170) != 3342)
+        return;
+    if (*(unsigned char *)(s + 32) == 254)
+        return;
+    if (*(unsigned char *)(s + 32) == 253)
+        return;
+
+    v = *(int *)(s + 36);
+    *(int *)(s + 152) = *(int *)(v + 16);
+}
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_20_YEEDIL_F4e5bde81_D_00189E20;
+extern s32 LVL_20_YEEDIL_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_20_YEEDIL_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_20_YEEDIL_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_20_YEEDIL_FUN_002E7328(void) {
+    s32 result = LVL_20_YEEDIL_F4e5bde81_D_00189E20.field348;
+    if (LVL_20_YEEDIL_F4e5bde81_D_001A8FF0 != 0 && LVL_20_YEEDIL_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_20_YEEDIL_F4e5bde81_D_001A8FF4 != 0 || LVL_20_YEEDIL_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_20_YEEDIL_F4e5bde81_D_00189E20.field2294 == 110 && LVL_20_YEEDIL_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_20_YEEDIL_F4e5bde81_D_00189E20.field2294 == 109 || LVL_20_YEEDIL_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_20_YEEDIL_F4e5bde81_D_00189E20.field1497 != 0 && LVL_20_YEEDIL_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_20_YEEDIL_F4e5bde81_D_00189E20.field2294 == 0 && LVL_20_YEEDIL_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_20_YEEDIL_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+extern void LVL_20_YEEDIL_F250a61cf_FUN_00115DA8(char *buf, char *format, ...);
+extern char LVL_20_YEEDIL_F250a61cf_D_001AD670[];
+extern char LVL_20_YEEDIL_F250a61cf_D_001AD680[];
+extern char LVL_20_YEEDIL_F250a61cf_D_001AD688[];
+
+void LVL_20_YEEDIL_FUN_0038B7A0(char *buf, int value)
+{
+    if (value > 999999)
+        LVL_20_YEEDIL_F250a61cf_FUN_00115DA8(buf, LVL_20_YEEDIL_F250a61cf_D_001AD670, value / 1000000,
+                                 value / 1000 % 1000, value % 1000);
+    else if (value >= 1000)
+        LVL_20_YEEDIL_F250a61cf_FUN_00115DA8(buf, LVL_20_YEEDIL_F250a61cf_D_001AD680, value / 1000, value % 1000);
+    else
+        LVL_20_YEEDIL_F250a61cf_FUN_00115DA8(buf, LVL_20_YEEDIL_F250a61cf_D_001AD688, value);
+}

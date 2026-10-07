@@ -39,6 +39,10 @@
     "LVL_17_SMOLG_F1c0a2bbf_D_001ADD18": 1760536,
     "LVL_17_SMOLG_F1c0a2bbf_D_001ADD38": 1760568,
     "LVL_17_SMOLG_F1c0a2bbf_FUN_00115E38": 1138232,
+    "LVL_17_SMOLG_F4e5bde81_D_00189E20": 1613344,
+    "LVL_17_SMOLG_F4e5bde81_D_001A7B08": 1735432,
+    "LVL_17_SMOLG_F4e5bde81_D_001A8FF0": 1740784,
+    "LVL_17_SMOLG_F4e5bde81_D_001A8FF4": 1740788,
     "LVL_17_SMOLG_F55a1acb8_D_001A63A8": 1729448,
     "LVL_17_SMOLG_F55a1acb8_D_001A63AC": 1729452,
     "LVL_17_SMOLG_F55a1acb8_FUN_0011AEA0": 1158816,
@@ -71,6 +75,11 @@
     "LVL_17_SMOLG_Fe77c6258_D_001ADD18": 1760536,
     "LVL_17_SMOLG_Fe77c6258_D_001ADD60": 1760608,
     "LVL_17_SMOLG_Fe77c6258_FUN_00115E38": 1138232,
+    "LVL_17_SMOLG_Fe9186f4c_D_001AA4D0": 1746128,
+    "LVL_17_SMOLG_Fe9186f4c_D_001AA4E8": 1746152,
+    "LVL_17_SMOLG_Fe9186f4c_D_001AA4F8": 1746168,
+    "LVL_17_SMOLG_Fe9186f4c_D_001AA508": 1746184,
+    "LVL_17_SMOLG_Fe9186f4c_FUN_00115DA8": 1138088,
     "LVL_17_SMOLG_Fea34650e_D_00189E20": 1613344,
     "LVL_17_SMOLG_Fee2b87d1_D_0014B540": 1357120,
     "LVL_17_SMOLG_Fee2b87d1_D_00152CD0": 1387728
@@ -175,6 +184,12 @@
       "meaning": "Clear bit0 of the primary object's halfword flags and of the optional secondary object's flags",
       "size": 56,
       "symbol": "LVL_17_SMOLG_FUN_002D4210"
+    },
+    {
+      "address": 2966536,
+      "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
+      "size": 188,
+      "symbol": "LVL_17_SMOLG_FUN_002D4408"
     },
     {
       "address": 2979712,
@@ -381,6 +396,12 @@
       "meaning": "(1) the resident 0x1A7Bxx accesses must use the form giving retail's lui/lw shape; (2) inside the guarded block the source order must be read f1C, clear f18, clear f1C, call - any other order keeps th",
       "size": 112,
       "symbol": "LVL_17_SMOLG_FUN_003314E8"
+    },
+    {
+      "address": 3348504,
+      "meaning": "shared native body of family e9186f4cb9df2784",
+      "size": 316,
+      "symbol": "LVL_17_SMOLG_FUN_00331818"
     },
     {
       "address": 3427200,

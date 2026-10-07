@@ -1644,3 +1644,40 @@ int LVL_1_OOZLA_FUN_00323E20(int a0, int a1, int a2) {
     LVL_1_OOZLA_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct { char *p[6]; } Sep6;
+extern Sep6 LVL_1_OOZLA_Fd1b66aa7_D_001AA550;
+extern char LVL_1_OOZLA_Fd1b66aa7_D_001AA568[];
+extern char LVL_1_OOZLA_Fd1b66aa7_D_001AA578[];
+extern char LVL_1_OOZLA_Fd1b66aa7_D_001AA588[];
+extern int LVL_1_OOZLA_Fd1b66aa7_FUN_00115DA8(char *dst, char *fmt, ...);
+
+void LVL_1_OOZLA_FUN_003242C8(char *dst, int x, int idx)
+{
+    Sep6 t;
+    t = LVL_1_OOZLA_Fd1b66aa7_D_001AA550;
+    if (x > 999999) {
+        int m = x / 1000000;
+        int w = x % 1000000;
+        LVL_1_OOZLA_Fd1b66aa7_FUN_00115DA8(dst, LVL_1_OOZLA_Fd1b66aa7_D_001AA568, m, t.p[idx % 6], w / 1000,
+                          t.p[idx % 6], w % 1000);
+    } else if (x >= 1000)
+        LVL_1_OOZLA_Fd1b66aa7_FUN_00115DA8(dst, LVL_1_OOZLA_Fd1b66aa7_D_001AA578, x / 1000,
+                          t.p[idx % 6], x % 1000);
+    else
+        LVL_1_OOZLA_Fd1b66aa7_FUN_00115DA8(dst, LVL_1_OOZLA_Fd1b66aa7_D_001AA588, x);
+}
+extern void LVL_1_OOZLA_F250a61cf_FUN_00115DA8(char *buf, char *format, ...);
+extern char LVL_1_OOZLA_F250a61cf_D_001AD670[];
+extern char LVL_1_OOZLA_F250a61cf_D_001AD680[];
+extern char LVL_1_OOZLA_F250a61cf_D_001AD688[];
+
+void LVL_1_OOZLA_FUN_0036BBB8(char *buf, int value)
+{
+    if (value > 999999)
+        LVL_1_OOZLA_F250a61cf_FUN_00115DA8(buf, LVL_1_OOZLA_F250a61cf_D_001AD670, value / 1000000,
+                                 value / 1000 % 1000, value % 1000);
+    else if (value >= 1000)
+        LVL_1_OOZLA_F250a61cf_FUN_00115DA8(buf, LVL_1_OOZLA_F250a61cf_D_001AD680, value / 1000, value % 1000);
+    else
+        LVL_1_OOZLA_F250a61cf_FUN_00115DA8(buf, LVL_1_OOZLA_F250a61cf_D_001AD688, value);
+}

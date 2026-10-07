@@ -36,8 +36,19 @@
     "LVL_11_JOBA_F1157be91_FUN_00132028": 1253416,
     "LVL_11_JOBA_F1157be91_FUN_00133230": 1258032,
     "LVL_11_JOBA_F1157be91_FUN_001334B8": 1258680,
+    "LVL_11_JOBA_F250a61cf_D_001AD670": 1758832,
+    "LVL_11_JOBA_F250a61cf_D_001AD680": 1758848,
+    "LVL_11_JOBA_F250a61cf_D_001AD688": 1758856,
+    "LVL_11_JOBA_F250a61cf_FUN_00115DA8": 1138088,
+    "LVL_11_JOBA_F489bf28e_D_001B3058": 1781848,
+    "LVL_11_JOBA_F489bf28e_D_001B3068": 1781864,
+    "LVL_11_JOBA_F489bf28e_D_001B3078": 1781880,
     "LVL_11_JOBA_F490e2c59_D_001A79F0": 1735152,
     "LVL_11_JOBA_F490e2c59_D_001AA7F0": 1746928,
+    "LVL_11_JOBA_F4e5bde81_D_00189E20": 1613344,
+    "LVL_11_JOBA_F4e5bde81_D_001A7B08": 1735432,
+    "LVL_11_JOBA_F4e5bde81_D_001A8FF0": 1740784,
+    "LVL_11_JOBA_F4e5bde81_D_001A8FF4": 1740788,
     "LVL_11_JOBA_F55a1acb8_D_001A63A8": 1729448,
     "LVL_11_JOBA_F55a1acb8_D_001A63AC": 1729452,
     "LVL_11_JOBA_F55a1acb8_FUN_0011AEA0": 1158816,
@@ -73,6 +84,18 @@
     "LVL_11_JOBA_Fc84472d1_D_001ADD98": 1760664,
     "LVL_11_JOBA_Fc84472d1_D_001ADDB8": 1760696,
     "LVL_11_JOBA_Fc84472d1_FUN_00115E38": 1138232,
+    "LVL_11_JOBA_Fcfd2e0cd_D_001A6D40": 1731904,
+    "LVL_11_JOBA_Fcfd2e0cd_D_001A6E90": 1732240,
+    "LVL_11_JOBA_Fcfd2e0cd_D_001B3D08": 1785096,
+    "LVL_11_JOBA_Fcfd2e0cd_D_001B3D08_1": 1785096,
+    "LVL_11_JOBA_Fd1b66aa7_D_001AA550": 1746256,
+    "LVL_11_JOBA_Fd1b66aa7_D_001AA568": 1746280,
+    "LVL_11_JOBA_Fd1b66aa7_D_001AA578": 1746296,
+    "LVL_11_JOBA_Fd1b66aa7_D_001AA588": 1746312,
+    "LVL_11_JOBA_Fd1b66aa7_FUN_00115DA8": 1138088,
+    "LVL_11_JOBA_Fd50cdefe_D_001B3D08": 1785096,
+    "LVL_11_JOBA_Fd50cdefe_D_001B3D08_1": 1785096,
+    "LVL_11_JOBA_Fd50cdefe_FUN_00126288": 1204872,
     "LVL_11_JOBA_Fea34650e_D_00189E20": 1613344,
     "LVL_11_JOBA_Feab1f2e5_D_001ADD98": 1760664,
     "LVL_11_JOBA_Feab1f2e5_D_001ADDE0": 1760736,
@@ -192,6 +215,12 @@
       "symbol": "LVL_11_JOBA_FUN_002E5000"
     },
     {
+      "address": 3035640,
+      "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
+      "size": 188,
+      "symbol": "LVL_11_JOBA_FUN_002E51F8"
+    },
+    {
       "address": 3048736,
       "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
@@ -251,6 +280,12 @@
       "symbol": "LVL_11_JOBA_FUN_002F7670"
     },
     {
+      "address": 3116528,
+      "meaning": "shared native body of family 489bf28ebf58470c",
+      "size": 120,
+      "symbol": "LVL_11_JOBA_FUN_002F8DF0"
+    },
+    {
       "address": 3143720,
       "size": 8,
       "symbol": "LVL_11_JOBA_FUN_002FF828"
@@ -260,6 +295,12 @@
       "meaning": "shared native body of family c1edda5cc3fa91ec",
       "size": 148,
       "symbol": "LVL_11_JOBA_FUN_00302950"
+    },
+    {
+      "address": 3156456,
+      "meaning": "shared native body of family cfd2e0cd2b82a1b7 (default profile)",
+      "size": 128,
+      "symbol": "LVL_11_JOBA_FUN_003029E8"
     },
     {
       "address": 3168448,
@@ -375,6 +416,12 @@
       "symbol": "LVL_11_JOBA_FUN_003318E0"
     },
     {
+      "address": 3353240,
+      "meaning": "shared native body of family 354e785cbdee35b5",
+      "size": 124,
+      "symbol": "LVL_11_JOBA_FUN_00332A98"
+    },
+    {
       "address": 3378672,
       "meaning": "Count non-zero bytes in the resident 0x1C by four unsigned-byte table and clamp the count to zero through 0x28",
       "size": 112,
@@ -402,6 +449,12 @@
       "meaning": "(1) the resident 0x1A7Bxx accesses must use the form giving retail's lui/lw shape; (2) inside the guarded block the source order must be read f1C, clear f18, clear f1C, call - any other order keeps th",
       "size": 112,
       "symbol": "LVL_11_JOBA_FUN_00342100"
+    },
+    {
+      "address": 3417136,
+      "meaning": "shared native body of family d1b66aa7f0ecd20d",
+      "size": 316,
+      "symbol": "LVL_11_JOBA_FUN_00342430"
     },
     {
       "address": 3497608,
@@ -438,9 +491,21 @@
       "symbol": "LVL_11_JOBA_FUN_00388760"
     },
     {
+      "address": 3711328,
+      "meaning": "shared native body of family 250a61cf2f35cf62",
+      "size": 188,
+      "symbol": "LVL_11_JOBA_FUN_0038A160"
+    },
+    {
       "address": 3733368,
       "size": 8,
       "symbol": "LVL_11_JOBA_FUN_0038F778"
+    },
+    {
+      "address": 3735968,
+      "meaning": "shared native body of family d50cdefed4015bae (default profile)",
+      "size": 364,
+      "symbol": "LVL_11_JOBA_FUN_003901A0"
     },
     {
       "address": 3745360,

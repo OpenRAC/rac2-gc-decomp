@@ -1795,3 +1795,62 @@ int LVL_13_BOLDAN_FUN_00337F10(int a0, int a1, int a2) {
     LVL_13_BOLDAN_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_13_BOLDAN_F4e5bde81_D_00189E20;
+extern s32 LVL_13_BOLDAN_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_13_BOLDAN_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_13_BOLDAN_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_13_BOLDAN_FUN_002DDE88(void) {
+    s32 result = LVL_13_BOLDAN_F4e5bde81_D_00189E20.field348;
+    if (LVL_13_BOLDAN_F4e5bde81_D_001A8FF0 != 0 && LVL_13_BOLDAN_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_13_BOLDAN_F4e5bde81_D_001A8FF4 != 0 || LVL_13_BOLDAN_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_13_BOLDAN_F4e5bde81_D_00189E20.field2294 == 110 && LVL_13_BOLDAN_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_13_BOLDAN_F4e5bde81_D_00189E20.field2294 == 109 || LVL_13_BOLDAN_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_13_BOLDAN_F4e5bde81_D_00189E20.field1497 != 0 && LVL_13_BOLDAN_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_13_BOLDAN_F4e5bde81_D_00189E20.field2294 == 0 && LVL_13_BOLDAN_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_13_BOLDAN_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+/* v2: guard reads p->count, loop counter is a second read (CSE -> copy). */
+struct Elem {
+    unsigned int f0;
+    unsigned char pad0[31];
+    unsigned char f35;
+    unsigned char pad1[12];
+    unsigned int f48;
+    unsigned char pad2[28];
+};
+struct Node {
+    struct Elem *elems;
+    int count;
+};
+extern struct Node LVL_13_BOLDAN_F9328256b_D_00226A00 __attribute__((nosda));
+extern short LVL_13_BOLDAN_F9328256b_D_00226700[][2];
+
+void LVL_13_BOLDAN_FUN_00372B50(void)
+{
+    struct Node *p = &LVL_13_BOLDAN_F9328256b_D_00226A00;
+
+    if (p->elems != 0) {
+        do {
+            struct Elem *e = p->elems;
+
+            if (p->count > 0) {
+                int n = p->count;
+
+                do {
+                    short *t = LVL_13_BOLDAN_F9328256b_D_00226700[e->f35];
+                    if (t[0] != 0) e->f0 = (e->f0 & 0xFFFFC000u) | (unsigned int)t[0];
+                    if (t[1] != 0) e->f48 = (e->f48 & 0xFFFFC000u) | (unsigned int)t[1];
+                    e++;
+                } while (--n);
+            }
+            p++;
+        } while (p->elems != 0);
+    }
+}

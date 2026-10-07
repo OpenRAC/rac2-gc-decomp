@@ -1689,3 +1689,240 @@ int LVL_7_SIBERIUS_FUN_00324DA0(int a0, int a1, int a2) {
     LVL_7_SIBERIUS_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_7_SIBERIUS_F4e5bde81_D_00189E20;
+extern s32 LVL_7_SIBERIUS_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_7_SIBERIUS_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_7_SIBERIUS_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_7_SIBERIUS_FUN_002C93B0(void) {
+    s32 result = LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field348;
+    if (LVL_7_SIBERIUS_F4e5bde81_D_001A8FF0 != 0 && LVL_7_SIBERIUS_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_7_SIBERIUS_F4e5bde81_D_001A8FF4 != 0 || LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field2294 == 110 && LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field2294 == 109 || LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field1497 != 0 && LVL_7_SIBERIUS_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field2294 == 0 && LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_7_SIBERIUS_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+typedef short s16;
+
+typedef struct {
+    u8 f0; u8 f1; u8 f2; u8 f3;
+    s16 f4; s16 f6; s16 f8; s16 fA; s16 fC;
+    u8 fE; u8 fF;
+} Slot;
+
+extern Slot LVL_7_SIBERIUS_F777b9bda_D_001B9040[8] __attribute__((nosda));
+
+int LVL_7_SIBERIUS_FUN_002CC948(Slot *src)
+{
+    int count;
+    int i;
+    int free;
+
+    count = 0;
+    while (count < 8 && src[count].f0 != 255)
+        count++;
+
+    free = 0;
+    for (i = 0; i < 8 && free < count; i++) {
+        if (LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f0 == 0)
+            free++;
+    }
+
+    if (free != count)
+        return -1;
+
+    for (free = 0; free < count; free++) {
+        i = 0;
+        while (i < 8 && LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f0 != 0)
+            i++;
+        if (i < 8) {
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f0 = src[free].f0;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f1 = src[free].f1;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f2 = src[free].f2;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f3 = src[free].f3;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f4 = src[free].f4;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f6 = src[free].f6;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].f8 = src[free].f8;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].fA = src[free].fA;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].fC = src[free].fC;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].fE = src[free].fE - src[free].fF;
+            LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].fF = src[free].fF;
+            if (LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].fA + LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].fC == 0)
+                LVL_7_SIBERIUS_F777b9bda_D_001B9040[i].fA++;
+        }
+    }
+    return i;
+}
+/* 3777c7f5d4234584 - nested scan over a table, 260 B, no arguments. */
+
+extern int LVL_7_SIBERIUS_F3777c7f5_D_002208E0 __attribute__((nosda));
+extern char *LVL_7_SIBERIUS_F3777c7f5_D_0021EE60[];
+struct Pair {
+    short a;
+    short b;
+};
+extern struct Pair LVL_7_SIBERIUS_F3777c7f5_D_002203E0[];
+struct Item {
+    char *ptr;
+    int extra;
+};
+
+void LVL_7_SIBERIUS_FUN_003509C8(void)
+{
+    int *p;
+    int *entry;
+    struct Item *items;
+    char *node;
+    char *block;
+    char *slot;
+    struct Pair *pair;
+    short value;
+    int i;
+    int j;
+
+    p = &LVL_7_SIBERIUS_F3777c7f5_D_002208E0;
+    if (*p < 0)
+        return;
+    while (*p >= 0) {
+        entry = (int *)LVL_7_SIBERIUS_F3777c7f5_D_0021EE60[*p];
+        for (i = 0; i < *(short *)((char *)entry + 40); i++) {
+            items = (struct Item *)((char *)entry + 64);
+            node = *(char **)((char *)items + (i << 3));
+            block = node + 16;
+            slot = block + (*(int *)(block + 4) << 4) + 16;
+            for (j = 0; j < *(int *)block; j++) {
+                pair = &LVL_7_SIBERIUS_F3777c7f5_D_002203E0[*(unsigned char *)(slot + 19)];
+                value = pair->a;
+                if (value != 0)
+                    *(int *)(slot + 48) = (*(int *)(slot + 48) & 0xFFFFC000) | value;
+                value = pair->b;
+                if (value != 0)
+                    *(int *)(slot + 32) = (*(int *)(slot + 32) & 0xFFFFC000) | value;
+                slot += 64;
+            }
+        }
+        p++;
+    }
+}
+
+extern u8 LVL_7_SIBERIUS_Fc895cb79_D_001D1D00[];
+
+void LVL_7_SIBERIUS_FUN_00306858(u8 *param_1)
+{
+    if (param_1[66] != 255) {
+        u8 *tbl = (u8 *)(*(volatile int *)(param_1 + 36) + 72);
+
+        *(int *)(param_1 + 88) = *(int *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + (param_1[64] << 2) + 28);
+        param_1[110] = *(u8 *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + 18);
+        param_1[108] = *(u8 *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + 17);
+    } else {
+        param_1[108] = 255;
+        param_1[110] = 0;
+        *(int *)(param_1 + 88) = (int)(LVL_7_SIBERIUS_Fc895cb79_D_001D1D00 + (param_1[64] << 11));
+    }
+
+    *(int *)(param_1 + 92) = *(int *)(*(int *)(*(volatile int *)(param_1 + 36) + (param_1[67] << 2) + 72) + (param_1[65] << 2) + 28);
+}
+extern void LVL_7_SIBERIUS_F0477ffed_FUN_00115DA8(int a, char *fmt, ...);
+extern char LVL_7_SIBERIUS_F0477ffed_D_001AD630[]; extern char LVL_7_SIBERIUS_F0477ffed_D_001AD640[]; extern char LVL_7_SIBERIUS_F0477ffed_D_001AD648[];
+void LVL_7_SIBERIUS_FUN_0036B9D0(int out, int v) {
+    if (v > 999999) {
+        LVL_7_SIBERIUS_F0477ffed_FUN_00115DA8(out, LVL_7_SIBERIUS_F0477ffed_D_001AD630, v / 1000000, (v / 1000) % 1000, v % 1000);
+    } else if (v >= 1000) {
+        LVL_7_SIBERIUS_F0477ffed_FUN_00115DA8(out, LVL_7_SIBERIUS_F0477ffed_D_001AD640, v / 1000, v % 1000);
+    } else {
+        LVL_7_SIBERIUS_F0477ffed_FUN_00115DA8(out, LVL_7_SIBERIUS_F0477ffed_D_001AD648, v);
+    }
+}
+extern void LVL_7_SIBERIUS_F7b754363_FUN_00115E38(char *a, int b, char *c);
+extern char LVL_7_SIBERIUS_F7b754363_D_001ADD58[];
+extern char LVL_7_SIBERIUS_F7b754363_D_001ADDA0[];
+
+int LVL_7_SIBERIUS_FUN_00428300(unsigned int *p)
+{
+    unsigned int *n = (unsigned int *)p[5];
+    unsigned int offset;
+    unsigned int result;
+
+    if (n != 0) {
+        p[5] = n[0];
+        p[4] = p[4] + 1;
+        return (int)n;
+    }
+
+    offset = p[3];
+
+    if (p[1] < offset + p[2]) {
+        LVL_7_SIBERIUS_F7b754363_FUN_00115E38(LVL_7_SIBERIUS_F7b754363_D_001ADD58, 83, LVL_7_SIBERIUS_F7b754363_D_001ADDA0);
+        return 0;
+    }
+
+    p[3] = offset + p[2];
+    result = p[0] + offset;
+    p[4] = p[4] + 1;
+    return result;
+}
+/* RAC2 family 4615e05e7f21cb33 - 192 bytes, 2 placements.
+ * Slot4615e05e allocator: find the first free of six 64-byte slots, fill it in and
+ * link it at the head of the context's list.
+ */
+
+typedef struct Slot4615e05e {
+    short          f00;    /* +0x00 */
+    short          f02;    /* +0x02 */
+    unsigned char  f04;    /* +0x04 */
+    char           pad05[7];
+    unsigned char *f0C;    /* +0x0C */
+    int            f10;    /* +0x10 */
+    int            f14;    /* +0x14 */
+    int            f18;    /* +0x18 */
+    int            f1C;    /* +0x1C */
+    char           pad20[32];
+} Slot4615e05e;                    /* 64 bytes */
+
+typedef struct Mid {
+    char           pad00[0x1C];
+    char          *f1C;    /* +0x1C */
+} Mid;
+
+typedef struct Ctx {
+    char           pad00[0x24];
+    Mid           *f24;    /* +0x24 */
+    char           pad28[0x28];
+    int            f50;    /* +0x50 */
+} Ctx;
+
+extern Slot4615e05e LVL_7_SIBERIUS_F4615e05e_D_001D1B80[6];
+extern unsigned char LVL_7_SIBERIUS_F4615e05e_D_001C9D80[];
+
+Slot4615e05e *LVL_7_SIBERIUS_FUN_00306F88(Ctx *ctx, int index)
+{
+    int i;
+    Slot4615e05e *slot;
+    unsigned char *p;
+
+    for (i = 0; i < 6; i++) {
+        if (LVL_7_SIBERIUS_F4615e05e_D_001D1B80[i].f04 == 0) {
+            break;
+        }
+    }
+    slot = &LVL_7_SIBERIUS_F4615e05e_D_001D1B80[i];
+    slot->f04 = 1;
+    slot->f00 = index;
+    slot->f10 = (int)(LVL_7_SIBERIUS_F4615e05e_D_001C9D80 + i * 5376);
+    slot->f14 = (int)ctx->f24;
+    p = (unsigned char *)*(unsigned int *)(ctx->f24->f1C + (short)index * 4 + 4);
+    slot->f02 = p[2];
+    slot->f0C = p + (p[0] + 4);
+    slot->f1C = ctx->f50;
+    ctx->f50 = (int)slot;
+    return slot;
+}
