@@ -1797,3 +1797,156 @@ after1:
 after2:
     return value != 3;
 }
+/* Ring header advance: the four header words are written, then the resident
+   pointer itself is advanced.  The final store is the only access the retail
+   body makes through $gp, hence the -G8 profile (same shape as the qualified
+   19_grelbin body, with this overlay's own global addresses). */
+extern int *LVL_18_DAMOSEL_F236d541c_D_001B2F88 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F236d541c_D_001A742C __attribute__((sda));
+
+void LVL_18_DAMOSEL_FUN_0030ADC0(void)
+{
+    *(int *)LVL_18_DAMOSEL_F236d541c_D_001B2F88 = 0x30000009;
+    *(int *)((char *)LVL_18_DAMOSEL_F236d541c_D_001B2F88 + 4) = (LVL_18_DAMOSEL_F236d541c_D_001A742C + 192) & 0x0FFFFFFF;
+    *(int *)((char *)LVL_18_DAMOSEL_F236d541c_D_001B2F88 + 8) = 0;
+    *(int *)((char *)LVL_18_DAMOSEL_F236d541c_D_001B2F88 + 12) = 0x50000009;
+    LVL_18_DAMOSEL_F236d541c_D_001B2F88 = (int *)((char *)LVL_18_DAMOSEL_F236d541c_D_001B2F88 + 16);
+}
+/* Paired-strip packet emitter, 372 bytes, placed in levels/18_damosel and
+   levels/6_notak.  The body writes a 16-byte GIF header into the resident
+   packet cursor (a small-data global), advances the cursor, writes the tag
+   words and two packed 64-bit strip descriptors, then advances the cursor by
+   another 48 bytes.  The retail loads the cursor absolutely and advances it
+   through $gp, so the unit is compiled under the small-data profile (-O2 -G8). */
+extern int *LVL_18_DAMOSEL_F25780968_D_001B2F88 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F25780968_D_001A7350 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F25780968_D_001A7354 __attribute__((sda));
+
+void LVL_18_DAMOSEL_FUN_00315ED0(int a0, int a1, int a2, int a3, int p4, int p5, int p6)
+{
+    long long *q;
+
+    *(int *)((char *)LVL_18_DAMOSEL_F25780968_D_001B2F88 + 0) = 0x10000003;
+    *(int *)((char *)LVL_18_DAMOSEL_F25780968_D_001B2F88 + 4) = 0;
+    *(int *)((char *)LVL_18_DAMOSEL_F25780968_D_001B2F88 + 8) = 0;
+    *(int *)((char *)LVL_18_DAMOSEL_F25780968_D_001B2F88 + 12) = 0x50000003;
+    q = (long long *)LVL_18_DAMOSEL_F25780968_D_001B2F88;
+    LVL_18_DAMOSEL_F25780968_D_001B2F88 = (int *)((char *)q + 16);
+    q[2] = 0x4400000000008001LL;
+    q[3] = 17424;
+    q[4] = 70;
+    q[5] = p4;
+#define LO_D0 (*(int *)((char *)&LVL_18_DAMOSEL_F25780968_D_001A7350 + 0))
+#define HI_D4 (*(int *)((char *)&LVL_18_DAMOSEL_F25780968_D_001A7354 + 0))
+    if (p6 != 0) {
+        q[6] = (a0 + LO_D0 - 8)
+             | ((long long)(a1 + HI_D4 - 8) << 16)
+             | ((long long)p5 << 32);
+        q[7] = (a2 + LO_D0 - 8)
+             | ((long long)(a3 + HI_D4 - 8) << 16)
+             | ((long long)p5 << 32);
+    } else {
+        q[6] = ((a0 << 4) + LO_D0 - 16)
+             | ((long long)((a1 << 4) + HI_D4 - 16) << 16)
+             | ((long long)p5 << 32);
+        q[7] = ((a2 << 4) + LO_D0 - 16)
+             | ((long long)((a3 << 4) + HI_D4 - 16) << 16)
+             | ((long long)p5 << 32);
+    }
+    LVL_18_DAMOSEL_F25780968_D_001B2F88 = (int *)((char *)LVL_18_DAMOSEL_F25780968_D_001B2F88 + 48);
+}
+
+/* 0x1B2FA0 / 0x1B2FA4 are 4-byte small-data objects (gp = 0x1AEFF0, offsets
+   +0x3FB0 / +0x3FB4).  The retail addresses them absolutely in every normal
+   reference and through $gp in the branch delay slot the reorg pass fills; the
+   plain declarations give exactly that split. */
+extern int LVL_18_DAMOSEL_Fafa454c6_D_001B2FA0 __attribute__((sda));
+extern int LVL_18_DAMOSEL_Fafa454c6_D_001B2FA4 __attribute__((sda));
+
+extern void LVL_18_DAMOSEL_Fafa454c6_FUN_0011A950(int, int);
+extern void LVL_18_DAMOSEL_Fafa454c6_FUN_0011B658(int);
+
+void LVL_18_DAMOSEL_FUN_00397EF8(void)
+{
+    if ((*(volatile u32 *)0x1000E010 & 0x20000) != 0) {
+        *(volatile u32 *)0x1000E010 = 0x20000;
+    }
+    LVL_18_DAMOSEL_Fafa454c6_FUN_0011A950(1, LVL_18_DAMOSEL_Fafa454c6_D_001B2FA0);
+    LVL_18_DAMOSEL_Fafa454c6_FUN_0011A950(15, LVL_18_DAMOSEL_Fafa454c6_D_001B2FA4);
+    LVL_18_DAMOSEL_Fafa454c6_FUN_0011B658(1);
+    LVL_18_DAMOSEL_Fafa454c6_D_001B2FA0 = 0;
+    LVL_18_DAMOSEL_Fafa454c6_D_001B2FA4 = 0;
+}
+typedef struct OBJ {
+    char pad0[32];
+    unsigned char f20;
+    char pad1[0x64 - 33];
+    void (*f64)(struct OBJ *);
+    char pad2[0xAA - 0x68];
+    short fAA;
+} OBJ;
+
+extern OBJ *LVL_18_DAMOSEL_F32969de2_D_001B2820 __attribute__((sda));
+extern OBJ *LVL_18_DAMOSEL_F32969de2_D_001B2824 __attribute__((sda));
+extern OBJ *LVL_18_DAMOSEL_F32969de2_D_001AC000 __attribute__((sda));
+
+void LVL_18_DAMOSEL_FUN_003D8D30(void)
+{
+    OBJ *p;
+    short key = LVL_18_DAMOSEL_F32969de2_D_001AC000->fAA;
+
+    for (p = LVL_18_DAMOSEL_F32969de2_D_001B2820; p < LVL_18_DAMOSEL_F32969de2_D_001B2824; p = (OBJ *)((char *)p + 256)) {
+        if (p == 0)
+            continue;
+        if (p->fAA != key)
+            continue;
+        if (p->f20 == 254)
+            continue;
+        if (p->f20 == 253)
+            continue;
+        if (p == LVL_18_DAMOSEL_F32969de2_D_001AC000)
+            continue;
+        p->f64(p);
+    }
+}
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_18_DAMOSEL_F1157be91_D_001A63E8;
+extern unsigned char LVL_18_DAMOSEL_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_18_DAMOSEL_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_18_DAMOSEL_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_18_DAMOSEL_F1157be91_FUN_00133230(void);
+extern int LVL_18_DAMOSEL_F1157be91_FUN_00132028(void);
+
+int LVL_18_DAMOSEL_FUN_003496F8(int a0, int a1, int a2) {
+    CdMode mode = LVL_18_DAMOSEL_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_18_DAMOSEL_F1157be91_D_001A7900[0];
+    LVL_18_DAMOSEL_F1157be91_D_001A7430[0] = 0;
+    LVL_18_DAMOSEL_F1157be91_D_001A7434 = 0;
+    LVL_18_DAMOSEL_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_18_DAMOSEL_F1157be91_FUN_00133230();
+    LVL_18_DAMOSEL_F1157be91_FUN_00132028();
+    return 1;
+}
+extern int *LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 __attribute__((sda));
+
+void LVL_18_DAMOSEL_FUN_003976B0(unsigned int param_1, unsigned long param_2)
+{
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 0) = 0x10000002;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 4) = 0;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 8) = 0;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 12) = 0x50000002;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 16) = 0x8001;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 20) = 0x10000000;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 24) = 14;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 28) = 0;
+    *(long long *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 32) = param_2;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 40) = param_1;
+    *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 44) = 0;
+    LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 = (int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 48);
+}

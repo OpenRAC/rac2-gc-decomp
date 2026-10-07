@@ -1982,3 +1982,120 @@ after1:
 after2:
     return value != 3;
 }
+/* 28-entry table scan.  The table is reached through the resident pointer at
+   0x1AA7F0; the caller's id is looked up from index 0, the first hit wins, and
+   an index is rejected when its slot is empty while the small-data flag at
+   0x1A79F0 is set.  The flag is read through $gp and the load sits in the delay
+   slot of the bail-out branch, so the body needs the -G8 small-data profile.
+
+   Measured shape note: the table pointer must be reached through the global
+   itself (`LVL_11_JOBA_F490e2c59_D_001AA7F0[i]`), not through a local `int *` copy.  With a local the
+   allocator keeps one register for the whole live range (26 instructions);
+   with the global gcc loads it into $v1, hoists the loop-invariant value and
+   emits the retail `move $a2,$v1` copy at the block boundary (28 instructions,
+   byte-identical). */
+extern int *LVL_11_JOBA_F490e2c59_D_001AA7F0 __attribute__((sda));
+extern int LVL_11_JOBA_F490e2c59_D_001A79F0 __attribute__((sda));
+
+int LVL_11_JOBA_FUN_00318850(int param_1)
+{
+    int index = -1;
+    int i;
+
+    for (i = 0; i < 28; i++)
+        if (LVL_11_JOBA_F490e2c59_D_001AA7F0[i] == param_1) { index = i; break; }
+
+    if (LVL_11_JOBA_F490e2c59_D_001AA7F0[index] == 0)
+        index = LVL_11_JOBA_F490e2c59_D_001A79F0 ? -1 : index;
+
+    return index;
+}
+/* Family 9b94f3cd1f5fac83 (372 B, 2 placements).
+   Retail builds a 64-byte packet from the resident cursor global LVL_11_JOBA_F9b94f3cd_D_001B3D08 and
+   then advances that global itself, so the closing store addresses the global
+   through $gp: the qualified small-data profile is required.
+   The four header words are written through the global expression, so each one
+   carries its own reload of LVL_11_JOBA_F9b94f3cd_D_001B3D08 before its store. */
+
+extern int *LVL_11_JOBA_F9b94f3cd_D_001B3D08 __attribute__((sda));
+extern int LVL_11_JOBA_F9b94f3cd_D_001A7350 __attribute__((sda));
+extern int LVL_11_JOBA_F9b94f3cd_D_001A7354 __attribute__((sda));
+
+void LVL_11_JOBA_FUN_0030DDA0(int a0, int a1, int a2, int a3, long long a4, int a5, int a6)
+{
+    int *p;
+
+    *(int *)LVL_11_JOBA_F9b94f3cd_D_001B3D08 = 0x10000003;
+    *(int *)((char *)LVL_11_JOBA_F9b94f3cd_D_001B3D08 + 4) = 0;
+    *(int *)((char *)LVL_11_JOBA_F9b94f3cd_D_001B3D08 + 8) = 0;
+    *(int *)((char *)LVL_11_JOBA_F9b94f3cd_D_001B3D08 + 12) = 0x50000003;
+    p = LVL_11_JOBA_F9b94f3cd_D_001B3D08;
+    LVL_11_JOBA_F9b94f3cd_D_001B3D08 = p + 4;
+    *(long long *)(p + 4) = 0x4400000000008001LL;
+    *(long long *)(p + 6) = 17424;
+    *(long long *)(p + 8) = 70;
+    *(long long *)(p + 10) = a4;
+    if (a6) {
+        *(long long *)(p + 12) = (a0 + LVL_11_JOBA_F9b94f3cd_D_001A7350 - 8)
+                               | ((long long)(a1 + LVL_11_JOBA_F9b94f3cd_D_001A7354 - 8) << 16)
+                               | ((long long)a5 << 32);
+        *(long long *)(p + 14) = (a2 + LVL_11_JOBA_F9b94f3cd_D_001A7350 - 8)
+                               | ((long long)(a3 + LVL_11_JOBA_F9b94f3cd_D_001A7354 - 8) << 16)
+                               | ((long long)a5 << 32);
+    } else {
+        *(long long *)(p + 12) = ((a0 << 4) + LVL_11_JOBA_F9b94f3cd_D_001A7350 - 16)
+                               | ((long long)((a1 << 4) + LVL_11_JOBA_F9b94f3cd_D_001A7354 - 16) << 16)
+                               | ((long long)a5 << 32);
+        *(long long *)(p + 14) = ((a2 << 4) + LVL_11_JOBA_F9b94f3cd_D_001A7350 - 16)
+                               | ((long long)((a3 << 4) + LVL_11_JOBA_F9b94f3cd_D_001A7354 - 16) << 16)
+                               | ((long long)a5 << 32);
+    }
+    LVL_11_JOBA_F9b94f3cd_D_001B3D08 = (int *)((char *)LVL_11_JOBA_F9b94f3cd_D_001B3D08 + 48);
+}
+/* Family c1edda5cc3fa91ec — 148 bytes, levels/2_maktar_nebula and levels/11_joba.
+
+   Write the four-word ring header and advance the resident pointer; when the
+   pointer is null, hand the sibling buffer 48 bytes further on to the stop
+   helper instead. Every reference reads the global again, and the last store
+   addresses it through $gp (a delay-slot form the pinned -G0 profile cannot
+   express). */
+extern int *LVL_11_JOBA_Fc1edda5c_D_001B3D08 __attribute__((sda));
+extern int LVL_11_JOBA_Fc1edda5c_D_001A742C __attribute__((sda));
+extern void LVL_11_JOBA_Fc1edda5c_FUN_00126108(void *);
+
+void LVL_11_JOBA_FUN_00302950(void)
+{
+    if (LVL_11_JOBA_Fc1edda5c_D_001B3D08 != 0) {
+        *(int *)LVL_11_JOBA_Fc1edda5c_D_001B3D08 = 0x30000009;
+        *(int *)((char *)LVL_11_JOBA_Fc1edda5c_D_001B3D08 + 4) = (LVL_11_JOBA_Fc1edda5c_D_001A742C + 48) & 0x0FFFFFFF;
+        *(int *)((char *)LVL_11_JOBA_Fc1edda5c_D_001B3D08 + 8) = 0;
+        *(int *)((char *)LVL_11_JOBA_Fc1edda5c_D_001B3D08 + 12) = 0x50000009;
+        LVL_11_JOBA_Fc1edda5c_D_001B3D08 = (int *)((char *)LVL_11_JOBA_Fc1edda5c_D_001B3D08 + 16);
+    } else {
+        LVL_11_JOBA_Fc1edda5c_FUN_00126108((void *)(LVL_11_JOBA_Fc1edda5c_D_001A742C + 48));
+    }
+}
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_11_JOBA_F1157be91_D_001A63E8;
+extern unsigned char LVL_11_JOBA_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_11_JOBA_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_11_JOBA_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_11_JOBA_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_11_JOBA_F1157be91_FUN_00133230(void);
+extern int LVL_11_JOBA_F1157be91_FUN_00132028(void);
+
+int LVL_11_JOBA_FUN_00341F88(int a0, int a1, int a2) {
+    CdMode mode = LVL_11_JOBA_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_11_JOBA_F1157be91_D_001A7900[0];
+    LVL_11_JOBA_F1157be91_D_001A7430[0] = 0;
+    LVL_11_JOBA_F1157be91_D_001A7434 = 0;
+    LVL_11_JOBA_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_11_JOBA_F1157be91_FUN_00133230();
+    LVL_11_JOBA_F1157be91_FUN_00132028();
+    return 1;
+}

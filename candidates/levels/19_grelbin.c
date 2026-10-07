@@ -1668,3 +1668,71 @@ after1:
 after2:
     return value != 3;
 }
+/* Paired-strip packet emitter, 396 bytes, placed in levels/19_grelbin and
+   levels/3_endako.  The body writes a 16-byte GIF header into the
+   resident packet cursor (a small-data global), advances the cursor, then
+   writes the tag words and two packed 64-bit strip descriptors.  The retail
+   loads the cursor with LUI/LO and advances it through $gp, so the unit is
+   compiled under the qualified small-data profile (-O2 -G8). */
+extern int *LVL_19_GRELBIN_F5e27257c_D_001B3188 __attribute__((sda));
+extern int LVL_19_GRELBIN_F5e27257c_D_001A7350 __attribute__((sda));
+extern int LVL_19_GRELBIN_F5e27257c_D_001A7354 __attribute__((sda));
+
+void LVL_19_GRELBIN_FUN_002F8DF8(int a0, int a1, int a2, int a3, int p4, int p5)
+{
+    long long *q;
+
+    *(int *)((char *)LVL_19_GRELBIN_F5e27257c_D_001B3188 + 0) = 0x10000003;
+    *(int *)((char *)LVL_19_GRELBIN_F5e27257c_D_001B3188 + 4) = 0;
+    *(int *)((char *)LVL_19_GRELBIN_F5e27257c_D_001B3188 + 8) = 0;
+    *(int *)((char *)LVL_19_GRELBIN_F5e27257c_D_001B3188 + 12) = 0x50000003;
+    q = (long long *)LVL_19_GRELBIN_F5e27257c_D_001B3188;
+    LVL_19_GRELBIN_F5e27257c_D_001B3188 = (int *)((char *)q + 16);
+    q[2] = 0x4400000000008001LL;
+    q[3] = 17424;
+    q[4] = 70;
+    q[5] = p4;
+#define LO_D0 (*(int *)((char *)&LVL_19_GRELBIN_F5e27257c_D_001A7350 + 0))
+#define HI_D4 (*(int *)((char *)&LVL_19_GRELBIN_F5e27257c_D_001A7354 + 0))
+
+    if (p5 != 0) {
+        q[6] = (a0 + LO_D0 - 8)
+             | ((long long)(a1 + HI_D4 - 8) << 16)
+             | 0xFFFFF000000000LL;
+        q[7] = (a2 + LO_D0 - 8)
+             | ((long long)(a3 + HI_D4 - 8) << 16)
+             | 0xFFFFF000000000LL;
+    } else {
+        q[6] = ((a0 << 4) + LO_D0 - 16)
+             | ((long long)((a1 << 4) + HI_D4 - 16) << 16)
+             | 0xFFFFF000000000LL;
+        q[7] = ((a2 << 4) + LO_D0 - 16)
+             | ((long long)((a3 << 4) + HI_D4 - 16) << 16)
+             | 0xFFFFF000000000LL;
+    }
+    LVL_19_GRELBIN_F5e27257c_D_001B3188 = (int *)((char *)LVL_19_GRELBIN_F5e27257c_D_001B3188 + 48);
+}
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_19_GRELBIN_F1157be91_D_001A63E8;
+extern unsigned char LVL_19_GRELBIN_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_19_GRELBIN_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_19_GRELBIN_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_19_GRELBIN_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_19_GRELBIN_F1157be91_FUN_00133230(void);
+extern int LVL_19_GRELBIN_F1157be91_FUN_00132028(void);
+
+int LVL_19_GRELBIN_FUN_0032B9F8(int a0, int a1, int a2) {
+    CdMode mode = LVL_19_GRELBIN_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_19_GRELBIN_F1157be91_D_001A7900[0];
+    LVL_19_GRELBIN_F1157be91_D_001A7430[0] = 0;
+    LVL_19_GRELBIN_F1157be91_D_001A7434 = 0;
+    LVL_19_GRELBIN_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_19_GRELBIN_F1157be91_FUN_00133230();
+    LVL_19_GRELBIN_F1157be91_FUN_00132028();
+    return 1;
+}

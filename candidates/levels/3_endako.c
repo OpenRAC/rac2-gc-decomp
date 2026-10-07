@@ -1627,3 +1627,103 @@ void LVL_3_ENDAKO_FUN_0043D650(int *p, unsigned int n, int a2, int a3)
     p[3] = 0;
     p[0] = a2;
 }
+/* Paired-strip packet emitter, 396 bytes, placed in levels/19_grelbin and
+   levels/3_endako.  The body writes a 16-byte GIF header into the
+   resident packet cursor (a small-data global), advances the cursor, then
+   writes the tag words and two packed 64-bit strip descriptors.  The retail
+   loads the cursor with LUI/LO and advances it through $gp, so the unit is
+   compiled under the qualified small-data profile (-O2 -G8). */
+extern int *LVL_3_ENDAKO_F5e27257c_D_001B3188 __attribute__((sda));
+extern int LVL_3_ENDAKO_F5e27257c_D_001A7350 __attribute__((sda));
+extern int LVL_3_ENDAKO_F5e27257c_D_001A7354 __attribute__((sda));
+
+void LVL_3_ENDAKO_FUN_002FC668(int a0, int a1, int a2, int a3, int p4, int p5)
+{
+    long long *q;
+
+    *(int *)((char *)LVL_3_ENDAKO_F5e27257c_D_001B3188 + 0) = 0x10000003;
+    *(int *)((char *)LVL_3_ENDAKO_F5e27257c_D_001B3188 + 4) = 0;
+    *(int *)((char *)LVL_3_ENDAKO_F5e27257c_D_001B3188 + 8) = 0;
+    *(int *)((char *)LVL_3_ENDAKO_F5e27257c_D_001B3188 + 12) = 0x50000003;
+    q = (long long *)LVL_3_ENDAKO_F5e27257c_D_001B3188;
+    LVL_3_ENDAKO_F5e27257c_D_001B3188 = (int *)((char *)q + 16);
+    q[2] = 0x4400000000008001LL;
+    q[3] = 17424;
+    q[4] = 70;
+    q[5] = p4;
+#define LO_D0 (*(int *)((char *)&LVL_3_ENDAKO_F5e27257c_D_001A7350 + 0))
+#define HI_D4 (*(int *)((char *)&LVL_3_ENDAKO_F5e27257c_D_001A7354 + 0))
+
+    if (p5 != 0) {
+        q[6] = (a0 + LO_D0 - 8)
+             | ((long long)(a1 + HI_D4 - 8) << 16)
+             | 0xFFFFF000000000LL;
+        q[7] = (a2 + LO_D0 - 8)
+             | ((long long)(a3 + HI_D4 - 8) << 16)
+             | 0xFFFFF000000000LL;
+    } else {
+        q[6] = ((a0 << 4) + LO_D0 - 16)
+             | ((long long)((a1 << 4) + HI_D4 - 16) << 16)
+             | 0xFFFFF000000000LL;
+        q[7] = ((a2 << 4) + LO_D0 - 16)
+             | ((long long)((a3 << 4) + HI_D4 - 16) << 16)
+             | 0xFFFFF000000000LL;
+    }
+    LVL_3_ENDAKO_F5e27257c_D_001B3188 = (int *)((char *)LVL_3_ENDAKO_F5e27257c_D_001B3188 + 48);
+}
+/* Family 430eca3b2fc8d2b0 (112 B, 2 placements).
+   A search over the resident table reached through LVL_3_ENDAKO_F430eca3b_D_001AA7B0: the first entry
+   is tested outside the loop, the loop scans the rest, and the found index is
+   re-read.  Every access names the global itself, so cc1 merges the loads into
+   one register and keeps the index arithmetic (no strength reduction), which
+   is the retail shape.  The one small-data global LVL_3_ENDAKO_F430eca3b_D_001A79F0 is loaded in the
+   branch delay slot, so the qualified small-data profile is required. */
+
+extern int *LVL_3_ENDAKO_F430eca3b_D_001AA7B0 __attribute__((sda));
+extern int LVL_3_ENDAKO_F430eca3b_D_001A79F0 __attribute__((sda));
+
+int LVL_3_ENDAKO_FUN_00307730(int a0)
+{
+    int r = -1;
+    int i = 0;
+
+    if (LVL_3_ENDAKO_F430eca3b_D_001AA7B0[0] == a0) {
+        r = 0;
+    } else {
+        while (i < 28) {
+            if (LVL_3_ENDAKO_F430eca3b_D_001AA7B0[i] == a0) {
+                r = i;
+                break;
+            }
+            i++;
+        }
+    }
+    if (LVL_3_ENDAKO_F430eca3b_D_001AA7B0[r] == 0 && LVL_3_ENDAKO_F430eca3b_D_001A79F0) {
+        r = -1;
+    }
+    return r;
+}
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_3_ENDAKO_F1157be91_D_001A63E8;
+extern unsigned char LVL_3_ENDAKO_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_3_ENDAKO_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_3_ENDAKO_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_3_ENDAKO_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_3_ENDAKO_F1157be91_FUN_00133230(void);
+extern int LVL_3_ENDAKO_F1157be91_FUN_00132028(void);
+
+int LVL_3_ENDAKO_FUN_0032FC50(int a0, int a1, int a2) {
+    CdMode mode = LVL_3_ENDAKO_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_3_ENDAKO_F1157be91_D_001A7900[0];
+    LVL_3_ENDAKO_F1157be91_D_001A7430[0] = 0;
+    LVL_3_ENDAKO_F1157be91_D_001A7434 = 0;
+    LVL_3_ENDAKO_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_3_ENDAKO_F1157be91_FUN_00133230();
+    LVL_3_ENDAKO_F1157be91_FUN_00132028();
+    return 1;
+}

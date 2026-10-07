@@ -28,9 +28,24 @@
     "LVL_6_NOTAK_D_0026C7F0": 2541552,
     "LVL_6_NOTAK_D_00287F80": 2654080,
     "LVL_6_NOTAK_F0be97c76_D_00189E20": 1613344,
+    "LVL_6_NOTAK_F1157be91_D_001A63E8": 1729512,
+    "LVL_6_NOTAK_F1157be91_D_001A7430": 1733680,
+    "LVL_6_NOTAK_F1157be91_D_001A7434": 1733684,
+    "LVL_6_NOTAK_F1157be91_D_001A7900": 1734912,
+    "LVL_6_NOTAK_F1157be91_FUN_00132028": 1253416,
+    "LVL_6_NOTAK_F1157be91_FUN_00133230": 1258032,
+    "LVL_6_NOTAK_F1157be91_FUN_001334B8": 1258680,
     "LVL_6_NOTAK_F1c0a2bbf_D_001ADD18": 1760536,
     "LVL_6_NOTAK_F1c0a2bbf_D_001ADD38": 1760568,
     "LVL_6_NOTAK_F1c0a2bbf_FUN_00115E38": 1138232,
+    "LVL_6_NOTAK_F236d541c_D_001A742C": 1733676,
+    "LVL_6_NOTAK_F236d541c_D_001B2F88": 1781640,
+    "LVL_6_NOTAK_F25780968_D_001A7350": 1733456,
+    "LVL_6_NOTAK_F25780968_D_001A7354": 1733460,
+    "LVL_6_NOTAK_F25780968_D_001B2F88": 1781640,
+    "LVL_6_NOTAK_F32969de2_D_001AC000": 1753088,
+    "LVL_6_NOTAK_F32969de2_D_001B2820": 1779744,
+    "LVL_6_NOTAK_F32969de2_D_001B2824": 1779748,
     "LVL_6_NOTAK_F55a1acb8_D_001A63A8": 1729448,
     "LVL_6_NOTAK_F55a1acb8_D_001A63AC": 1729452,
     "LVL_6_NOTAK_F55a1acb8_FUN_0011AEA0": 1158816,
@@ -54,8 +69,11 @@
     "LVL_6_NOTAK_FUN_00333B40": 3357504,
     "LVL_6_NOTAK_FUN_00350388": 3474312,
     "LVL_6_NOTAK_FUN_003A0AA8": 3803816,
-    "LVL_6_NOTAK_FUN_003BC960": 3918176,
     "LVL_6_NOTAK_Fa2dbe766_D_00189E20": 1613344,
+    "LVL_6_NOTAK_Fafa454c6_D_001B2FA0": 1781664,
+    "LVL_6_NOTAK_Fafa454c6_D_001B2FA4": 1781668,
+    "LVL_6_NOTAK_Fafa454c6_FUN_0011A950": 1157456,
+    "LVL_6_NOTAK_Fafa454c6_FUN_0011B658": 1160792,
     "LVL_6_NOTAK_Fafab4c55_D_001AD5F0": 1758704,
     "LVL_6_NOTAK_Fafab4c55_D_001AD600": 1758720,
     "LVL_6_NOTAK_Fafab4c55_D_001AD608": 1758728,
@@ -64,6 +82,7 @@
     "LVL_6_NOTAK_Fe77c6258_D_001ADD18": 1760536,
     "LVL_6_NOTAK_Fe77c6258_D_001ADD60": 1760608,
     "LVL_6_NOTAK_Fe77c6258_FUN_00115E38": 1138232,
+    "LVL_6_NOTAK_Fe85cf1e5_D_001B2F88": 1781640,
     "LVL_6_NOTAK_Fea34650e_D_00189E20": 1613344,
     "LVL_6_NOTAK_Fee2b87d1_D_0014B540": 1357120,
     "LVL_6_NOTAK_Fee2b87d1_D_00152CD0": 1387728
@@ -234,6 +253,12 @@
       "symbol": "LVL_6_NOTAK_FUN_0032C900"
     },
     {
+      "address": 3340944,
+      "meaning": "shared native body of family 236d541c0f24cbf9",
+      "size": 108,
+      "symbol": "LVL_6_NOTAK_FUN_0032FA90"
+    },
+    {
       "address": 3352808,
       "meaning": "Change resident state word from1 to2 only when the mode word equals7",
       "size": 48,
@@ -272,6 +297,12 @@
       "meaning": "findfirstmatchingkey among13records and writefield24 plusfield04 whenword68clear",
       "size": 116,
       "symbol": "LVL_6_NOTAK_FUN_003363B0"
+    },
+    {
+      "address": 3386272,
+      "meaning": "shared native body of family 25780968cc90f4a5",
+      "size": 372,
+      "symbol": "LVL_6_NOTAK_FUN_0033ABA0"
     },
     {
       "address": 3390280,
@@ -357,6 +388,12 @@
       "symbol": "LVL_6_NOTAK_FUN_0036DE70"
     },
     {
+      "address": 3599816,
+      "meaning": "shared native body of family 1157be91806b76ca",
+      "size": 112,
+      "symbol": "LVL_6_NOTAK_FUN_0036EDC8"
+    },
+    {
       "address": 3600192,
       "meaning": "(1) the resident 0x1A7Bxx accesses must use the form giving retail's lui/lw shape; (2) inside the guarded block the source order must be read f1C, clear f18, clear f1C, call - any other order keeps th",
       "size": 112,
@@ -406,6 +443,18 @@
       "address": 3916648,
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_003BC368"
+    },
+    {
+      "address": 3918176,
+      "meaning": "ring header writer advanced through the overlay's own small-data pointer",
+      "size": 180,
+      "symbol": "LVL_6_NOTAK_FUN_003BC960"
+    },
+    {
+      "address": 3920296,
+      "meaning": "shared native body of family afa454c62e00c177",
+      "size": 112,
+      "symbol": "LVL_6_NOTAK_FUN_003BD1A8"
     },
     {
       "address": 3927808,
@@ -464,6 +513,12 @@
       "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
       "size": 136,
       "symbol": "LVL_6_NOTAK_FUN_003FA500"
+    },
+    {
+      "address": 4194496,
+      "meaning": "shared native body of family 32969de2c02196ef",
+      "size": 184,
+      "symbol": "LVL_6_NOTAK_FUN_004000C0"
     },
     {
       "address": 4222360,
@@ -664,7 +719,7 @@
       "symbol": "LVL_6_NOTAK_FUN_004993E0"
     }
   ],
-  "gp": 0,
+  "gp": 1765360,
   "kind": "level-native-catalog",
   "level": "6_notak",
   "program": "levels/6_notak",

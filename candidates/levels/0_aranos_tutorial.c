@@ -1796,3 +1796,27 @@ after1:
 after2:
     return value != 3;
 }
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_0_ARANOS_TUTORIAL_F1157be91_D_001A63E8;
+extern unsigned char LVL_0_ARANOS_TUTORIAL_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_0_ARANOS_TUTORIAL_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_0_ARANOS_TUTORIAL_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_00133230(void);
+extern int LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_00132028(void);
+
+int LVL_0_ARANOS_TUTORIAL_FUN_0032E5F0(int a0, int a1, int a2) {
+    CdMode mode = LVL_0_ARANOS_TUTORIAL_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_0_ARANOS_TUTORIAL_F1157be91_D_001A7900[0];
+    LVL_0_ARANOS_TUTORIAL_F1157be91_D_001A7430[0] = 0;
+    LVL_0_ARANOS_TUTORIAL_F1157be91_D_001A7434 = 0;
+    LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_00133230();
+    LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_00132028();
+    return 1;
+}

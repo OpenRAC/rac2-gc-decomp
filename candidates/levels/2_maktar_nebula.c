@@ -1801,3 +1801,92 @@ after1:
 after2:
     return value != 3;
 }
+/* Family 9b94f3cd1f5fac83 (372 B, 2 placements).
+   Retail builds a 64-byte packet from the resident cursor global LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 and
+   then advances that global itself, so the closing store addresses the global
+   through $gp: the qualified small-data profile is required.
+   The four header words are written through the global expression, so each one
+   carries its own reload of LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 before its store. */
+
+extern int *LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 __attribute__((sda));
+extern int LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7350 __attribute__((sda));
+extern int LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7354 __attribute__((sda));
+
+void LVL_2_MAKTAR_NEBULA_FUN_002FF7F8(int a0, int a1, int a2, int a3, long long a4, int a5, int a6)
+{
+    int *p;
+
+    *(int *)LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 = 0x10000003;
+    *(int *)((char *)LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 + 4) = 0;
+    *(int *)((char *)LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 + 8) = 0;
+    *(int *)((char *)LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 + 12) = 0x50000003;
+    p = LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08;
+    LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 = p + 4;
+    *(long long *)(p + 4) = 0x4400000000008001LL;
+    *(long long *)(p + 6) = 17424;
+    *(long long *)(p + 8) = 70;
+    *(long long *)(p + 10) = a4;
+    if (a6) {
+        *(long long *)(p + 12) = (a0 + LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7350 - 8)
+                               | ((long long)(a1 + LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7354 - 8) << 16)
+                               | ((long long)a5 << 32);
+        *(long long *)(p + 14) = (a2 + LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7350 - 8)
+                               | ((long long)(a3 + LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7354 - 8) << 16)
+                               | ((long long)a5 << 32);
+    } else {
+        *(long long *)(p + 12) = ((a0 << 4) + LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7350 - 16)
+                               | ((long long)((a1 << 4) + LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7354 - 16) << 16)
+                               | ((long long)a5 << 32);
+        *(long long *)(p + 14) = ((a2 << 4) + LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7350 - 16)
+                               | ((long long)((a3 << 4) + LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7354 - 16) << 16)
+                               | ((long long)a5 << 32);
+    }
+    LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 = (int *)((char *)LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001B3D08 + 48);
+}
+/* Family c1edda5cc3fa91ec — 148 bytes, levels/2_maktar_nebula and levels/11_joba.
+
+   Write the four-word ring header and advance the resident pointer; when the
+   pointer is null, hand the sibling buffer 48 bytes further on to the stop
+   helper instead. Every reference reads the global again, and the last store
+   addresses it through $gp (a delay-slot form the pinned -G0 profile cannot
+   express). */
+extern int *LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001B3D08 __attribute__((sda));
+extern int LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001A742C __attribute__((sda));
+extern void LVL_2_MAKTAR_NEBULA_Fc1edda5c_FUN_00126108(void *);
+
+void LVL_2_MAKTAR_NEBULA_FUN_002F43A8(void)
+{
+    if (LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001B3D08 != 0) {
+        *(int *)LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001B3D08 = 0x30000009;
+        *(int *)((char *)LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001B3D08 + 4) = (LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001A742C + 48) & 0x0FFFFFFF;
+        *(int *)((char *)LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001B3D08 + 8) = 0;
+        *(int *)((char *)LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001B3D08 + 12) = 0x50000009;
+        LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001B3D08 = (int *)((char *)LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001B3D08 + 16);
+    } else {
+        LVL_2_MAKTAR_NEBULA_Fc1edda5c_FUN_00126108((void *)(LVL_2_MAKTAR_NEBULA_Fc1edda5c_D_001A742C + 48));
+    }
+}
+/* attempt 3: the project's existing (boot-qualified) spelling: -G0 profile plus
+   an explicit `sda` attribute on the one resident word that retail addresses
+   through $gp.  Used here as a control, to measure what -G8 changes. */
+
+typedef struct __attribute__((packed)) { unsigned char mode[4]; } CdMode;
+
+extern CdMode LVL_2_MAKTAR_NEBULA_F1157be91_D_001A63E8;
+extern unsigned char LVL_2_MAKTAR_NEBULA_F1157be91_D_001A7900[] __attribute__((sda));
+extern int LVL_2_MAKTAR_NEBULA_F1157be91_D_001A7430[] __attribute__((sda));
+extern int LVL_2_MAKTAR_NEBULA_F1157be91_D_001A7434 __attribute__((sda));
+extern int LVL_2_MAKTAR_NEBULA_F1157be91_FUN_001334B8(int, int, int, CdMode *);
+extern int LVL_2_MAKTAR_NEBULA_F1157be91_FUN_00133230(void);
+extern int LVL_2_MAKTAR_NEBULA_F1157be91_FUN_00132028(void);
+
+int LVL_2_MAKTAR_NEBULA_FUN_00335088(int a0, int a1, int a2) {
+    CdMode mode = LVL_2_MAKTAR_NEBULA_F1157be91_D_001A63E8;
+    mode.mode[1] = LVL_2_MAKTAR_NEBULA_F1157be91_D_001A7900[0];
+    LVL_2_MAKTAR_NEBULA_F1157be91_D_001A7430[0] = 0;
+    LVL_2_MAKTAR_NEBULA_F1157be91_D_001A7434 = 0;
+    LVL_2_MAKTAR_NEBULA_F1157be91_FUN_001334B8(a1, a2, a0, &mode);
+    LVL_2_MAKTAR_NEBULA_F1157be91_FUN_00133230();
+    LVL_2_MAKTAR_NEBULA_F1157be91_FUN_00132028();
+    return 1;
+}

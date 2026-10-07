@@ -31,6 +31,21 @@ SHIP_CLEAR_VARIANT = b"void @@FUNCTION@@(int *object) {\n    object[0] = 0;\n   
 # authored body is the family identity, so any program may anchor one. The
 # legacy anchor program keeps its historical family id spelling.
 BASE_SEED_PLACEMENTS = (
+    ("18_damosel", "LVL_18_DAMOSEL_FUN_003976B0"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0032E5F0"),
+    ("10_hrugis_cloud", "LVL_10_HRUGIS_CLOUD_FUN_0032AB80"),
+    ("11_joba", "LVL_11_JOBA_FUN_00302950"),
+    ("18_damosel", "LVL_18_DAMOSEL_FUN_003D8D30"),
+    ("3_endako", "LVL_3_ENDAKO_FUN_00307730"),
+    ("11_joba", "LVL_11_JOBA_FUN_0030DDA0"),
+    ("10_hrugis_cloud", "LVL_10_HRUGIS_CLOUD_FUN_00371348"),
+    ("10_hrugis_cloud", "LVL_10_HRUGIS_CLOUD_FUN_00316120"),
+    ("18_damosel", "LVL_18_DAMOSEL_FUN_00397EF8"),
+    ("18_damosel", "LVL_18_DAMOSEL_FUN_00315ED0"),
+    ("18_damosel", "LVL_18_DAMOSEL_FUN_0030ADC0"),
+    ("11_joba", "LVL_11_JOBA_FUN_00318850"),
+    ("19_grelbin", "LVL_19_GRELBIN_FUN_002F8DF8"),
+    ("10_hrugis_cloud", "LVL_10_HRUGIS_CLOUD_FUN_00315E00"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003B2900"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002ADE68"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002ADEA0"),

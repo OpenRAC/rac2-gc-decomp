@@ -6,10 +6,10 @@
   "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
   "reference_entry": 2791176,
   "candidate_source": "candidates/levels/12_todano.c",
-  "source_sha256": "2871e0ed88a78db785456d2893a6804accbe26b5aab97cc67ba141eeb6e9d43e",
-  "catalog_sha256": "26f924b4b79e7fa29d0ed5bec164f08a1235af5dff6c591adc4f5cf0f50007b5",
-  "object_sha256": "ac85b59f83b74ea4dce60b6f6a20ef7ecb7cd65c72900274d31678a9d858791d",
-  "candidate_elf_sha256": "c0824e0af9d91b39ca37f0baaea3046c909488b3ebf04a158a1d55ae0a68856e",
+  "source_sha256": "2a3b84ddfa96c646420e69f00aaa8d2bc7fccb4e8d41c250226910f7dcfed20c",
+  "catalog_sha256": "5983e83b106648ac253dc29dc58fac9e2673e8660d842cdee93fe1bd773dc6b7",
+  "object_sha256": "af78cf4c0c7d199265676f0a35ba48b5432e2394c5a69a780381532055187ae7",
+  "candidate_elf_sha256": "9c107a62b77764d1b9fad03083fd99109a0f7a51634829bef640b1bb69b52acc",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -465,6 +465,17 @@
       "produced_size": 72
     },
     {
+      "symbol": "LVL_12_TODANO_FUN_0030A040",
+      "address": 3186752,
+      "size": 112,
+      "matched": true,
+      "reference_sha256": "f3780fb9543da4c67bb2fdce31a29b7a291a7a6801305977a199ff9eccf88336",
+      "candidate_sha256": "f3780fb9543da4c67bb2fdce31a29b7a291a7a6801305977a199ff9eccf88336",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 112
+    },
+    {
       "symbol": "LVL_12_TODANO_FUN_0030CB78",
       "address": 3197816,
       "size": 396,
@@ -551,6 +562,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 88
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_003334C0",
+      "address": 3355840,
+      "size": 112,
+      "matched": true,
+      "reference_sha256": "f9647c1021d6397a08e7f263f22bdd745d94e55f61c0ed3ef307341f14c38e1b",
+      "candidate_sha256": "f9647c1021d6397a08e7f263f22bdd745d94e55f61c0ed3ef307341f14c38e1b",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 112
     },
     {
       "symbol": "LVL_12_TODANO_FUN_00333638",
@@ -1170,5 +1192,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 8820
+  "matched_code_bytes": 9044
 }
