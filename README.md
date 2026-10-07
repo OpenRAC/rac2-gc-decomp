@@ -81,7 +81,7 @@ Its fill uses the full 0–100% scale.
 | Game | Platform | Region | Version | Boot executable |
 | --- | --- | --- | --- | --- |
 | Ratchet & Clank: Going Commando (2003) | PlayStation 2 | USA / NTSC-U | 1.01 | `SCUS_972.68` |
-| Ratchet & Clank 2: Locked and Loaded (2003) | PlayStation 2 | Europe / PAL | unmeasured | `SCES_516.07` |
+| Ratchet & Clank 2: Locked and Loaded (2003) | PlayStation 2 | Europe / PAL | 1.00 | `SCES_516.07` |
 
 Matching proofs exist for USA v1.01 only. Disc and boot identities are pinned in
 [target configuration](config/target.json); all 27 extracted overlay identities
