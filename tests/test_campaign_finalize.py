@@ -147,7 +147,8 @@ class FinalizeTests(unittest.TestCase):
             destination = option("--output")
             write(destination / "boot.ndjson.gz", finalize._compress(b"[]\n"))
             write(destination / "catalog.json", {"function_chunks": [{"path": "boot.ndjson.gz"}],
-                "input_pins": [], "generation": {"reconstruction_checks": 28}})
+                "input_pins": [], "generation": {"reconstruction_checks": 28, "functions": 28},
+                "programs": [{"program": program, "reference_sha256": "a" * 64} for program in ["boot", *self.levels]]})
             write(option("--diagnostics"), {"failures": []})
         elif script == "verify_boot_bindings.py":
             write(option("--output"), {"blocked": [], "source_catalog_sha256": "a" * 64})
@@ -161,9 +162,23 @@ class FinalizeTests(unittest.TestCase):
             write(mirror / "progress/paired-code-metrics.json", {"physical": 112, "unique": 4})
             write(mirror / "progress/unique-decompilation.svg", b"<svg>unique</svg>\n")
             write(mirror / "README.md", b"physical and unique progress\n")
-        elif script == "code_reuse_report.py" and not check:
-            write(option("--output"), {"metrics": {"template_total_bytes": 100}})
-            write(option("--families-output"), finalize._compress(b"{}\n"))
+        elif script == "code_reuse_report.py":
+            catalog = json.loads(option("--catalog").read_bytes())
+            payload = finalize._compress(b"{}\n")
+            value = {"metrics": {"template_total_bytes": 100}, "counts": {"placements": catalog["generation"]["functions"]},
+                     "quality": {"private_raw_replay_performed": "--references" in args},
+                     "catalog_sha256": sha(option("--catalog").read_bytes()), "families_sha256": sha(payload),
+                     "input_sha256": {"scripts/code_reuse_report.py": "a" * 64}}
+            if "--references" in args:
+                value["private_raw_replay"] = {"state": "all_raw_rows_and_supported_template_reconstructions_exact",
+                    "raw_rows": catalog["generation"]["functions"], "supported_reconstructed_rows": 20,
+                    "catalogue_reference_pins": {program["program"]: program["reference_sha256"] for program in catalog["programs"]}}
+            if check:
+                if json.loads(option("--output").read_bytes()) != value or option("--families-output").read_bytes() != payload:
+                    return subprocess.CompletedProcess(command, 1)
+            else:
+                write(option("--output"), value)
+                write(option("--families-output"), payload)
         elif script == "campaign.py" and not check:
             register = json.loads(option("--registry").read_bytes())
             if "close" in args:
@@ -739,6 +754,58 @@ class FinalizeTests(unittest.TestCase):
             finalize.finalize(self.store, self.repo, self.action, manifest=self.manifest,
                               output=self.output, runner=mutate_snapshot, apply=True)
         self.assertEqual((self.repo / name).read_bytes(), values[name])
+
+    def test_raw_supplementary_replay_stays_private_and_portable_check_has_no_references(self):
+        self.finish(apply=True)
+        calls = [command for command in self.calls if Path(command[1]).name == "code_reuse_report.py"]
+        self.assertEqual(len(calls), 3)
+        private = [command for command in calls if "--references" in command]
+        self.assertEqual(len(private), 1)
+        for option in ("--output", "--families-output"):
+            location = Path(private[0][private[0].index(option) + 1])
+            self.assertTrue(location.is_relative_to(self.output))
+            self.assertFalse(location.is_relative_to(self.output / "snapshot"))
+            self.assertTrue(location.is_file())
+        portable = [command for command in calls if "--references" not in command]
+        self.assertEqual(len(portable), 2)
+        self.assertTrue(any("--check" in command for command in portable))
+        private_summary = json.loads((self.output / "supplementary-raw-replay.json").read_bytes())
+        public_summary = json.loads((self.repo / "progress/code-reuse-report.json").read_bytes())
+        self.assertTrue(private_summary["quality"]["private_raw_replay_performed"])
+        self.assertNotIn("private_raw_replay", public_summary)
+        self.assertIs(public_summary["quality"]["private_raw_replay_performed"], False)
+        self.assertEqual((self.output / "supplementary-raw-families.json.gz").read_bytes(),
+                         (self.repo / "progress/code-reuse-families.json.gz").read_bytes())
+        plan = json.loads((self.output / "plan.json").read_bytes())
+        self.assertTrue(plan["private_supplementary_replay"]["portable_export_identical"])
+
+    def test_supplementary_private_metrics_must_agree_with_portable_export(self):
+        self.finish()
+        private = self.output / "supplementary-raw-replay.json"
+        value = json.loads(private.read_bytes())
+        value["metrics"]["template_total_bytes"] += 1
+        write(private, value)
+        with self.assertRaisesRegex(ValueError, "supplementary exports disagree"):
+            finalize._check_reuse_exports(self.output / "snapshot/config/function-catalog/catalog.json", private,
+                self.output / "supplementary-raw-families.json.gz", self.output / "snapshot/progress/code-reuse-report.json",
+                self.output / "snapshot/progress/code-reuse-families.json.gz")
+
+    def test_incomplete_supplementary_private_replay_refuses_preparation(self):
+        original = self.runner
+        def incomplete(command, **kwargs):
+            result = original(command, **kwargs)
+            if Path(command[1]).name == "code_reuse_report.py" and "--references" in command:
+                location = Path(command[command.index("--output") + 1])
+                value = json.loads(location.read_bytes())
+                value["private_raw_replay"]["raw_rows"] -= 1
+                write(location, value)
+            return result
+        before = finalize._inventory(self.repo)
+        with self.assertRaisesRegex(ValueError, "supplementary replay is incomplete"):
+            finalize.finalize(self.store, self.repo, self.action, manifest=self.manifest,
+                              output=self.output, runner=incomplete, apply=True)
+        self.assertEqual(finalize._inventory(self.repo), before)
+        self.assertFalse((self.output / "plan.json").exists())
 
 
 if __name__ == "__main__":

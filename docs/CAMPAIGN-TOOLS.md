@@ -96,6 +96,9 @@ The command stages a private source/metadata snapshot, then:
 Reference binaries, SDKs, extracted assembly, compiler objects, local HTML and
 derived objdiff exports are never publication candidates. Counts derive from
 the validated gates and exporters; the finalizer itself adds zero credit.
+The supplementary raw replay receipt stays in the private finalization bank.
+Public reuse reports are generated and checked without private references,
+using the same reproducible command as CI.
 
 ## Inspect or resume a prepared publication
 

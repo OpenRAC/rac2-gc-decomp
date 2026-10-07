@@ -409,6 +409,37 @@ def _validate_boot_summary(repo, catalog_path, proof_path):
     return _check_boot_edges(proof, catalog, validated.edges)
 
 
+def _check_reuse_exports(catalog_path, private_summary, private_families, portable_summary, portable_families):
+    """Keep raw replay private while proving the portable export is identical."""
+    catalog = _read(catalog_path)
+    private, portable = _read(private_summary), _read(portable_summary)
+    replay = private.get("private_raw_replay", {})
+    rows = catalog["generation"]["functions"]
+    expected_pins = {program["program"]: program["reference_sha256"] for program in catalog["programs"]}
+    if (private.get("quality", {}).get("private_raw_replay_performed") is not True
+            or portable.get("quality", {}).get("private_raw_replay_performed") is not False
+            or "private_raw_replay" in portable
+            or replay.get("state") != "all_raw_rows_and_supported_template_reconstructions_exact"
+            or type(replay.get("raw_rows")) is not int or replay["raw_rows"] != rows
+            or private.get("counts", {}).get("placements") != rows
+            or type(replay.get("supported_reconstructed_rows")) is not int
+            or not 0 <= replay["supported_reconstructed_rows"] <= rows
+            or replay.get("catalogue_reference_pins") != expected_pins):
+        raise ValueError("Private supplementary replay is incomplete or leaked into the portable export")
+    baseline = copy.deepcopy(private)
+    baseline.pop("private_raw_replay")
+    baseline["quality"]["private_raw_replay_performed"] = False
+    payload = Path(private_families).read_bytes()
+    if (baseline != portable or payload != Path(portable_families).read_bytes()
+            or _sha(payload) != private.get("families_sha256")
+            or private.get("catalog_sha256") != _sha(Path(catalog_path).read_bytes())):
+        raise ValueError("Private and portable supplementary exports disagree")
+    return {"summary_sha256": _sha(Path(private_summary).read_bytes()), "families_sha256": _sha(payload),
+            "catalog_sha256": private["catalog_sha256"], "raw_rows": replay["raw_rows"],
+            "supported_reconstructed_rows": replay["supported_reconstructed_rows"],
+            "portable_export_identical": True}
+
+
 def _prepare(store, repo, action_id, manifest, output, references, tasks, runner):
     evidence = _preflight(store, repo, action_id, manifest, references, tasks)
     before = _inventory(repo)
@@ -529,10 +560,16 @@ def _prepare(store, repo, action_id, manifest, output, references, tasks, runner
     display = ["--repo", mirror, "--catalogue-report", unique, "--physical-report", physical]
     run("10-paired-display", "readme_unique_progress.py", display)
     run("11-paired-display-check", "readme_unique_progress.py", [*display, "--check"])
+    private_reuse = output / "supplementary-raw-replay.json"
+    private_families = output / "supplementary-raw-families.json.gz"
+    run("12-private-supplementary-replay", "code_reuse_report.py", ["--repo", mirror, "--catalog", catalog_path,
+        "--output", private_reuse, "--families-output", private_families, "--references", refs])
     reuse = ["--repo", mirror, "--catalog", catalog_path, "--output", mirror / "progress/code-reuse-report.json",
-             "--families-output", mirror / "progress/code-reuse-families.json.gz", "--references", refs]
-    run("12-supplementary-reuse", "code_reuse_report.py", reuse)
+             "--families-output", mirror / "progress/code-reuse-families.json.gz"]
+    run("12b-portable-supplementary-reuse", "code_reuse_report.py", reuse)
     run("13-supplementary-reuse-check", "code_reuse_report.py", [*reuse, "--check"])
+    private_reuse_validation = _check_reuse_exports(catalog_path, private_reuse, private_families,
+        mirror / "progress/code-reuse-report.json", mirror / "progress/code-reuse-families.json.gz")
     closed, retained = [], []
     for task_id in tasks:
         if evidence["tasks"][task_id]["kind"] != "candidate":
@@ -586,6 +623,7 @@ def _prepare(store, repo, action_id, manifest, output, references, tasks, runner
             "physical_measures": physical_report["measures"], "primary_metrics": _read(unique)["metrics"],
             "normalization": catalog["generation"], "pointer_evidence": "fresh scan and complete theorem replay",
             "boot_binding_validation": boot_summary,
+            "private_supplementary_replay": private_reuse_validation,
             "runtime_preservation_proven": False, "private_validation_exports": sorted(PRIVATE_EXPORTS)}
     _new(output / "plan.json", _encoded(plan))
     _new(output / "journal.json", _encoded({"state": "prepared", "plan_sha256": _sha(_encoded(plan)), "published": []}))
