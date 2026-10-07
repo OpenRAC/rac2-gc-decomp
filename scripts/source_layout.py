@@ -27,12 +27,58 @@ PILOT_FAMILY = "native-clear-five-words"
 FUNCTION_PLACEHOLDER = b"@@FUNCTION@@"
 CLEAR_CANONICAL_BODY = b"void @@FUNCTION@@(s32 *object) {\n    object[0]=0; object[1]=0; object[2]=0; object[3]=0; object[4]=0;\n}"
 SHIP_CLEAR_VARIANT = b"void @@FUNCTION@@(int *object) {\n    object[0] = 0;\n    object[1] = 0;\n    object[2] = 0;\n    object[3] = 0;\n    object[4] = 0;\n}"
-BASE_SEED_SYMBOLS = (
-    "LVL_0_ARANOS_TUTORIAL_FUN_002ADE68", "LVL_0_ARANOS_TUTORIAL_FUN_002ADEA0",
-    "LVL_0_ARANOS_TUTORIAL_FUN_002ADFD0", "LVL_0_ARANOS_TUTORIAL_FUN_002AEAC0",
-    "LVL_0_ARANOS_TUTORIAL_FUN_002D68E8", "LVL_0_ARANOS_TUTORIAL_FUN_002D7940",
-    "LVL_0_ARANOS_TUTORIAL_FUN_002E3A68", "LVL_0_ARANOS_TUTORIAL_FUN_002F3DD0",
+# One reviewed placement anchors each shared source family: the normalized
+# authored body is the family identity, so any program may anchor one. The
+# legacy anchor program keeps its historical family id spelling.
+BASE_SEED_PLACEMENTS = (
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003B2900"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002ADE68"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002ADEA0"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002ADFD0"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002AEAC0"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002D68E8"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002D7940"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002E3A68"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002F3DD0"),
+    ("15_gorn", "LVL_15_GORN_FUN_002FB958"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002A7070"),
+    ("15_gorn", "LVL_15_GORN_FUN_0031EC90"),
+    ("11_joba", "LVL_11_JOBA_FUN_0035AC48"),
+    ("13_boldan", "LVL_13_BOLDAN_FUN_004407D8"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_00346330"),
+    ("25_wupash_nebula", "LVL_25_WUPASH_NEBULA_FUN_002F5CD8"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0032E768"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003EA860"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0042C6E0"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0035F100"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002F36D8"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003A2B28"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0041AF60"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003883B8"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_003C5B18"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0042C768"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_00409420"),
+    ("13_boldan", "LVL_13_BOLDAN_FUN_0037F258"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_00375940"),
+    ("13_boldan", "LVL_13_BOLDAN_FUN_0034FDD8"),
+    ("10_hrugis_cloud", "LVL_10_HRUGIS_CLOUD_FUN_003E5E90"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002D1F78"),
+    ("11_joba", "LVL_11_JOBA_FUN_0048E038"),
+    ("17_smolg", "LVL_17_SMOLG_FUN_0031C1E0"),
+    ("13_boldan", "LVL_13_BOLDAN_FUN_00440860"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_002D3068"),
+    ("11_joba", "LVL_11_JOBA_FUN_0048E0C0"),
+    ("3_endako", "LVL_3_ENDAKO_FUN_00347A08"),
 )
+BASE_SEED_SYMBOLS = tuple(symbol for _, symbol in BASE_SEED_PLACEMENTS)
+
+
+def seed_family_id(level: str, symbol: str) -> str:
+    """Stable legacy ids for the original anchor program; explicit ids elsewhere."""
+    if symbol.endswith("002D7940"):
+        return PILOT_FAMILY
+    address = symbol.split("_FUN_")[1].lower()
+    return "native-" + address if level == "0_aranos_tutorial" else f"native-{level}-{address}"
 
 
 def digest(data: bytes) -> str:
@@ -168,15 +214,17 @@ def capture(repo: Path, layout: Path, write: bool = True, expected_manifest_hash
                              "functions": [n for n, (s, e) in boot_spans.items() if start <= s and e <= end],
                              "boundary_evidence": "reviewed organization boundary; not an original object boundary"})
 
-    seed = next(c for _, c in native if c["level"] == "0_aranos_tutorial")
-    seed_data = contained(repo, seed["source"]).read_bytes()
+    catalogs = {c["level"]: (name, c) for name, c in native}
     base_templates = {}
-    for f in seed["functions"]:
-        if f["symbol"] not in BASE_SEED_SYMBOLS:
-            continue
+    for seed_level, seed_symbol in BASE_SEED_PLACEMENTS:
+        if seed_level not in catalogs:
+            raise ValueError(f"unknown anchor program: {seed_level}")
+        _, seed = catalogs[seed_level]
+        seed_data = contained(repo, seed["source"]).read_bytes()
+        f = next(f for f in seed["functions"] if f["symbol"] == seed_symbol)
         start, end = function_span(seed_data, f["symbol"])
         normalized, _ = normalized_body(seed_data[start:end], f["symbol"], seed["externals"])
-        family = PILOT_FAMILY if f["meaning"].startswith("clear five object fields") else "native-" + f["symbol"].split("_FUN_")[1].lower()
+        family = PILOT_FAMILY if f["meaning"].startswith("clear five object fields") else seed_family_id(seed_level, f["symbol"])
         key = digest(normalized)
         if key in base_templates:
             raise ValueError("ambiguous base source template")
@@ -353,13 +401,16 @@ def analyze(repo: Path, sources: dict, recipes: dict) -> dict:
         for f in catalog["functions"]:
             function_span(data, f["symbol"])
     inputs.update({relative: digest(data) for relative, data in sources.items()})
-    seed = next(c for _, c in native if c["level"] == "0_aranos_tutorial")
+    catalogs_by_level = {c["level"]: c for _, c in native}
     templates = {}
-    for symbol in BASE_SEED_SYMBOLS:
+    for seed_level, symbol in BASE_SEED_PLACEMENTS:
+        seed = catalogs_by_level.get(seed_level)
+        if seed is None:
+            raise ValueError(f"unknown anchor program: {seed_level}")
         f = next(f for f in seed["functions"] if f["symbol"] == symbol)
         start, end = function_span(sources[seed["source"]], symbol)
         body, _ = normalized_body(sources[seed["source"]][start:end], symbol, seed["externals"])
-        family_id = PILOT_FAMILY if symbol.endswith("002D7940") else "native-" + symbol.split("_FUN_")[1].lower()
+        family_id = PILOT_FAMILY if symbol.endswith("002D7940") else seed_family_id(seed_level, symbol)
         if digest(body) in templates:
             raise ValueError("ambiguous normalized base family")
         templates[digest(body)] = {"id": family_id, "template_sha256": digest(body), "catalogued_size": f["size"],
