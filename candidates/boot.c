@@ -2906,3 +2906,238 @@ u32 FUN_00130DB8(s32 arg0) {
     }
     return result;
 }
+
+
+void FUN_0026F720(void)
+{
+}
+
+
+void FUN_0026F728(void)
+{
+}
+
+
+unsigned int FUN_0026F730(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F738(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F740(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F748(void)
+{
+    return 0;
+}
+
+
+void FUN_0026F750(void)
+{
+}
+
+
+void FUN_0026F758(void)
+{
+}
+
+
+void FUN_0026F760(void)
+{
+}
+
+
+void FUN_0026F768(void)
+{
+}
+
+
+void FUN_0026F770(void)
+{
+}
+
+
+void FUN_0026F778(void)
+{
+}
+
+
+void FUN_0026F780(void)
+{
+}
+
+
+void FUN_0026F788(void)
+{
+}
+
+
+void FUN_0026F790(void)
+{
+}
+
+
+void FUN_0026F798(void)
+{
+}
+
+
+unsigned int FUN_0026F7A0(void)
+{
+    return 0;
+}
+
+
+void FUN_0026F7B0(void)
+{
+}
+
+
+unsigned int FUN_0026F7B8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7C0(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7C8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7D0(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7D8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7E0(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7E8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7F0(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F7F8(void)
+{
+    return 0;
+}
+
+
+unsigned int FUN_0026F800(void)
+{
+    return 0;
+}
+
+
+void FUN_0026F808(void)
+{
+}
+
+
+void FUN_002820C8(void)
+{
+}
+
+
+void FUN_00288D88(void)
+{
+}
+
+
+void FUN_00289AA0(void)
+{
+}
+
+
+void FUN_002912F0(void)
+{
+}
+
+
+void FUN_00298170(void)
+{
+}
+
+
+void FUN_002FF288(void)
+{
+}
+
+
+void FUN_00336DA0(void)
+{
+}
+
+
+void FUN_00338808(void)
+{
+}
+
+
+void FUN_00338A58(void)
+{
+}
+
+
+void FUN_00338F50(void)
+{
+}
+
+
+void FUN_003417C8(void)
+{
+}
+
+
+void FUN_00342420(void)
+{
+}
+
+
+void FUN_0034E218(void)
+{
+}
+
+
+void FUN_003505A8(void)
+{
+}
+
+
+void FUN_00351E40(void)
+{
+}

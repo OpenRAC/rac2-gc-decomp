@@ -718,3 +718,130 @@ void LVL_23_DAMOSEL_ORBIT_FUN_00332480(unsigned char *entity, int enabled) {
 int LVL_23_DAMOSEL_ORBIT_FUN_00328EA0(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_002AFEA8(void)
+{
+}
+
+
+unsigned int LVL_23_DAMOSEL_ORBIT_FUN_002E1248(void)
+{
+    return 0;
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_002F74A8(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_002FE4B0(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_002FF260(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00306720(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00306728(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_0030A2D8(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00313030(void)
+{
+}
+
+
+unsigned int LVL_23_DAMOSEL_ORBIT_FUN_00377318(void)
+{
+    return 0;
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_0037BDD8(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00382DF0(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00386730(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00389E10(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_003F7A90(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00425560(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00442700(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00444170(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_004443C0(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_004448B8(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_0044D130(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_0044DD88(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00459B90(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_0045BF20(void)
+{
+}
+
+
+void LVL_23_DAMOSEL_ORBIT_FUN_0045D7B8(void)
+{
+}

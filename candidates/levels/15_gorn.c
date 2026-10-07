@@ -767,3 +767,130 @@ void LVL_15_GORN_FUN_003415A8(unsigned char *entity, int enabled) {
 int LVL_15_GORN_FUN_00337DE0(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_15_GORN_FUN_002BFF70(void)
+{
+}
+
+
+unsigned int LVL_15_GORN_FUN_002EF6B0(void)
+{
+    return 0;
+}
+
+
+void LVL_15_GORN_FUN_00305F78(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0030CF28(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0030DCF0(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_003151B0(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_003151B8(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_003191B8(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_00321F10(void)
+{
+}
+
+
+unsigned int LVL_15_GORN_FUN_0038AFD8(void)
+{
+    return 0;
+}
+
+
+void LVL_15_GORN_FUN_0038FA98(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_00396AB0(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0039A3F0(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0039DAD0(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_00406B80(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0042DCD8(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_00454A40(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_004564B0(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_00456700(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_00456BF8(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0045F470(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_004600C8(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0046BED0(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0046E260(void)
+{
+}
+
+
+void LVL_15_GORN_FUN_0046FAF8(void)
+{
+}

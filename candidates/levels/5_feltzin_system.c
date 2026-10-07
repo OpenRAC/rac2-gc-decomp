@@ -718,3 +718,130 @@ void LVL_5_FELTZIN_SYSTEM_FUN_0033DFE8(unsigned char *entity, int enabled) {
 int LVL_5_FELTZIN_SYSTEM_FUN_00336FB8(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_002BF970(void)
+{
+}
+
+
+unsigned int LVL_5_FELTZIN_SYSTEM_FUN_002EF0B0(void)
+{
+    return 0;
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00305978(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_0030C928(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_0030D6F0(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00314BB0(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00314BB8(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_003189E0(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00321738(void)
+{
+}
+
+
+unsigned int LVL_5_FELTZIN_SYSTEM_FUN_00384670(void)
+{
+    return 0;
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00389130(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00390148(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00393A88(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00397168(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_003FC820(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_0042A558(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00447DC0(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00449830(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00449A80(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00449F78(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_004527F0(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00453448(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_0045F250(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_004615E0(void)
+{
+}
+
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00462E78(void)
+{
+}

@@ -718,3 +718,130 @@ void LVL_30_INSOMNIAC_MUSEUM_FUN_0032C0A0(unsigned char *entity, int enabled) {
 int LVL_30_INSOMNIAC_MUSEUM_FUN_00325848(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_002ADEF0(void)
+{
+}
+
+
+unsigned int LVL_30_INSOMNIAC_MUSEUM_FUN_002DD6C8(void)
+{
+    return 0;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_002F41B0(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_002FB160(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_002FBF10(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_003033D0(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_003033D8(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00306F88(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0030FCE0(void)
+{
+}
+
+
+unsigned int LVL_30_INSOMNIAC_MUSEUM_FUN_0036FB18(void)
+{
+    return 0;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00374568(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0037B580(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0037EFC8(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_003826A8(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_003EE068(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_004148E8(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_004302A0(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00431D10(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00431F60(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00432458(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0043ACD0(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0043B928(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00447730(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00449AC0(void)
+{
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0044B358(void)
+{
+}

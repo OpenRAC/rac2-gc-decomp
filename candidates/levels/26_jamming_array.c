@@ -718,3 +718,125 @@ void LVL_26_JAMMING_ARRAY_FUN_00328A50(unsigned char *entity, int enabled) {
 int LVL_26_JAMMING_ARRAY_FUN_0031F3E8(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_26_JAMMING_ARRAY_FUN_002A76F0(void)
+{
+}
+
+
+unsigned int LVL_26_JAMMING_ARRAY_FUN_002D6FB0(void)
+{
+    return 0;
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_002ED670(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_002F4660(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_002F5410(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_002FC8D0(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_00300798(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_003094F0(void)
+{
+}
+
+
+unsigned int LVL_26_JAMMING_ARRAY_FUN_0036EC98(void)
+{
+    return 0;
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_003736E8(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_0037A700(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_0037E040(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_00381720(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_003E9908(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_004070F0(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_0041EC60(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_004206D0(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_00420920(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_00420E18(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_00429690(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_0042A2E8(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_004360F0(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_00438480(void)
+{
+}
+
+
+void LVL_26_JAMMING_ARRAY_FUN_00439D18(void)
+{
+}

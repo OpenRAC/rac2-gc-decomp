@@ -746,3 +746,130 @@ void LVL_2_MAKTAR_NEBULA_FUN_0032F0E8(unsigned char *entity, int enabled) {
 int LVL_2_MAKTAR_NEBULA_FUN_00323628(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_002AA3F0(void)
+{
+}
+
+
+unsigned int LVL_2_MAKTAR_NEBULA_FUN_002D9D48(void)
+{
+    return 0;
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_002F1278(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_002F8308(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_002F90B8(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_003007C8(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_003007D0(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00304670(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_0030D3C8(void)
+{
+}
+
+
+unsigned int LVL_2_MAKTAR_NEBULA_FUN_00376B90(void)
+{
+    return 0;
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_0037B6A8(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_003826C0(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00386048(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00389728(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_0041D9E0(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_0043F4C0(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00457B00(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00459570(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_004597C0(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00459CB8(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00462530(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00463188(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_0046EF90(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00471320(void)
+{
+}
+
+
+void LVL_2_MAKTAR_NEBULA_FUN_00472BB8(void)
+{
+}

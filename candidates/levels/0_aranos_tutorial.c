@@ -746,3 +746,125 @@ void LVL_0_ARANOS_TUTORIAL_FUN_003294F0(unsigned char *entity, int enabled) {
 int LVL_0_ARANOS_TUTORIAL_FUN_0031F2B0(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_002A70F0(void)
+{
+}
+
+
+unsigned int LVL_0_ARANOS_TUTORIAL_FUN_002D6878(void)
+{
+    return 0;
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_002ED420(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_002F4400(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_002F51B0(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_002FC7A0(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00300610(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00309368(void)
+{
+}
+
+
+unsigned int LVL_0_ARANOS_TUTORIAL_FUN_0036F480(void)
+{
+    return 0;
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00373F40(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_0037AF58(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_0037E898(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00381F78(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_003F5658(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00414018(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_0042C6C8(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_0042E138(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_0042E388(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_0042E880(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_004370F8(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00437D50(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00443B58(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00445EE8(void)
+{
+}
+
+
+void LVL_0_ARANOS_TUTORIAL_FUN_00447780(void)
+{
+}

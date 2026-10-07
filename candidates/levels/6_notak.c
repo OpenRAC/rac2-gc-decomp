@@ -716,3 +716,141 @@ void LVL_6_NOTAK_FUN_0036A278(unsigned char *entity, int enabled) {
 int LVL_6_NOTAK_FUN_0035FC28(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_6_NOTAK_FUN_002E66F0(void)
+{
+}
+
+
+unsigned int LVL_6_NOTAK_FUN_00315FF8(void)
+{
+    return 0;
+}
+
+
+void LVL_6_NOTAK_FUN_0032C900(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_003338D8(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_00334688(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_0033BB48(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_0033BB50(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_0033FB10(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_00348868(void)
+{
+}
+
+
+unsigned int LVL_6_NOTAK_FUN_0035E908(void)
+{
+    return 0;
+}
+
+
+unsigned int LVL_6_NOTAK_FUN_003B0838(void)
+{
+    return 0;
+}
+
+
+void LVL_6_NOTAK_FUN_003B5350(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_003BC368(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_003C1F78(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_003C5690(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_004383D0(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_00459B10(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_004635E0(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_0047E328(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_0047FD98(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_0047FFE8(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_004804E0(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_00488D58(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_004899B0(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_004957B8(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_00497B48(void)
+{
+}
+
+
+void LVL_6_NOTAK_FUN_004993E0(void)
+{
+}

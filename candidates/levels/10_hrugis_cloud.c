@@ -724,3 +724,125 @@ void LVL_10_HRUGIS_CLOUD_FUN_0033FD48(unsigned char *entity, int enabled) {
 int LVL_10_HRUGIS_CLOUD_FUN_00339818(const unsigned char *entity) {
     return *(const signed short *)(entity + 0xAA) == 0x0CDB;
 }
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_002C1E70(void)
+{
+}
+
+
+unsigned int LVL_10_HRUGIS_CLOUD_FUN_002F15B0(void)
+{
+    return 0;
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00307E78(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_0030EE40(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_0030FC08(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_003170C8(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_0031B0E8(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00323E40(void)
+{
+}
+
+
+unsigned int LVL_10_HRUGIS_CLOUD_FUN_00386350(void)
+{
+    return 0;
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_0038AE10(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00391E28(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00395768(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00398E48(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_003FD2D8(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_0042B4F8(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00449980(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_0044B3F0(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_0044B640(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_0044BB38(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_004543B0(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00455008(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00460E10(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_004631A0(void)
+{
+}
+
+
+void LVL_10_HRUGIS_CLOUD_FUN_00464A38(void)
+{
+}
