@@ -2881,6 +2881,18 @@ Qualify only the seed complete unit first. Measure other data-relocated placemen
 
 Reopen condition: New independently measured alias/layout/ABI or source-phase evidence; no register forcing or equivalent expression cycling.
 
+## known-boot-callback-mmio-existing-shared-placement-20261006
+
+State: `done`. Kind: `research`.
+
+Root checks pins after C2 merge, then uses the existing maintained shared integration qualification or campaign-integrate facade/full28 action. Require complete actual mapped function/STT/raw/source/tool/read-only equality, all current shared controls and1202 native controls. Preserve any contextual refusal and stop that placement; no source/operator/type/order/register/flag cycles. Preparation worker performs no compiler/linker action.
+
+Reopen condition: Independent contradictory ownership/ABI/storage/boundary or maintained pipeline-contract evidence; never an equivalent C spelling or guessed GP/profile.
+
+- `private-work:c-campaign-20261006/known-C-nontrivial-reuse-preparation/delivery-shared.json`
+- `private-work:c-campaign-20261006/known-C-nontrivial-reuse-preparation/level-catalog-proposed.json`
+- `private-work:c-campaign-20261006/known-C-nontrivial-reuse-preparation/REPRISE.md`
+
 ## known-boot-controls-20261003
 
 State: `integrated`. Kind: `candidate`.
