@@ -1727,3 +1727,268 @@ int LVL_3_ENDAKO_FUN_0032FC50(int a0, int a1, int a2) {
     LVL_3_ENDAKO_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_3_ENDAKO_F4e5bde81_D_00189E20;
+extern s32 LVL_3_ENDAKO_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_3_ENDAKO_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_3_ENDAKO_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_3_ENDAKO_FUN_002D3E88(void) {
+    s32 result = LVL_3_ENDAKO_F4e5bde81_D_00189E20.field348;
+    if (LVL_3_ENDAKO_F4e5bde81_D_001A8FF0 != 0 && LVL_3_ENDAKO_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_3_ENDAKO_F4e5bde81_D_001A8FF4 != 0 || LVL_3_ENDAKO_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_3_ENDAKO_F4e5bde81_D_00189E20.field2294 == 110 && LVL_3_ENDAKO_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_3_ENDAKO_F4e5bde81_D_00189E20.field2294 == 109 || LVL_3_ENDAKO_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_3_ENDAKO_F4e5bde81_D_00189E20.field1497 != 0 && LVL_3_ENDAKO_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_3_ENDAKO_F4e5bde81_D_00189E20.field2294 == 0 && LVL_3_ENDAKO_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_3_ENDAKO_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+
+extern u8 LVL_3_ENDAKO_Fd1172b6a_D_001D2540[];
+
+void LVL_3_ENDAKO_FUN_003117B0(u8 *param_1)
+{
+    if (param_1[66] != 255) {
+        u8 *tbl = (u8 *)(*(volatile int *)(param_1 + 36) + 72);
+
+        *(int *)(param_1 + 88) = *(int *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + (param_1[64] << 2) + 28);
+        param_1[110] = *(u8 *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + 18);
+        param_1[108] = *(u8 *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + 17);
+    } else {
+        param_1[108] = 255;
+        param_1[110] = 0;
+        *(int *)(param_1 + 88) = (int)(LVL_3_ENDAKO_Fd1172b6a_D_001D2540 + (param_1[64] << 11));
+    }
+
+    *(int *)(param_1 + 92) = *(int *)(*(int *)(*(volatile int *)(param_1 + 36) + (param_1[67] << 2) + 72) + (param_1[65] << 2) + 28);
+}
+extern void LVL_3_ENDAKO_F0477ffed_FUN_00115DA8(int a, char *fmt, ...);
+extern char LVL_3_ENDAKO_F0477ffed_D_001AD630[]; extern char LVL_3_ENDAKO_F0477ffed_D_001AD640[]; extern char LVL_3_ENDAKO_F0477ffed_D_001AD648[];
+void LVL_3_ENDAKO_FUN_00376E68(int out, int v) {
+    if (v > 999999) {
+        LVL_3_ENDAKO_F0477ffed_FUN_00115DA8(out, LVL_3_ENDAKO_F0477ffed_D_001AD630, v / 1000000, (v / 1000) % 1000, v % 1000);
+    } else if (v >= 1000) {
+        LVL_3_ENDAKO_F0477ffed_FUN_00115DA8(out, LVL_3_ENDAKO_F0477ffed_D_001AD640, v / 1000, v % 1000);
+    } else {
+        LVL_3_ENDAKO_F0477ffed_FUN_00115DA8(out, LVL_3_ENDAKO_F0477ffed_D_001AD648, v);
+    }
+}
+extern void LVL_3_ENDAKO_F7b754363_FUN_00115E38(char *a, int b, char *c);
+extern char LVL_3_ENDAKO_F7b754363_D_001ADD58[];
+extern char LVL_3_ENDAKO_F7b754363_D_001ADDA0[];
+
+int LVL_3_ENDAKO_FUN_0043D6D8(unsigned int *p)
+{
+    unsigned int *n = (unsigned int *)p[5];
+    unsigned int offset;
+    unsigned int result;
+
+    if (n != 0) {
+        p[5] = n[0];
+        p[4] = p[4] + 1;
+        return (int)n;
+    }
+
+    offset = p[3];
+
+    if (p[1] < offset + p[2]) {
+        LVL_3_ENDAKO_F7b754363_FUN_00115E38(LVL_3_ENDAKO_F7b754363_D_001ADD58, 83, LVL_3_ENDAKO_F7b754363_D_001ADDA0);
+        return 0;
+    }
+
+    p[3] = offset + p[2];
+    result = p[0] + offset;
+    p[4] = p[4] + 1;
+    return result;
+}
+extern int *LVL_3_ENDAKO_Fcceeec15_D_001B3188 __attribute__((sda));
+extern char LVL_3_ENDAKO_Fcceeec15_D_001A6D40[];
+extern char LVL_3_ENDAKO_Fcceeec15_D_001A6E90[];
+
+void LVL_3_ENDAKO_FUN_002F1440(int param_1)
+{
+    if (LVL_3_ENDAKO_Fcceeec15_D_001B3188 == 0) {
+        return;
+    }
+
+    *(int *)LVL_3_ENDAKO_Fcceeec15_D_001B3188 = 0x30000015;
+
+    if (param_1 == 0) {
+        *(int *)((char *)LVL_3_ENDAKO_Fcceeec15_D_001B3188 + 4) = (int)LVL_3_ENDAKO_Fcceeec15_D_001A6D40;
+    } else {
+        *(int *)((char *)LVL_3_ENDAKO_Fcceeec15_D_001B3188 + 4) = (int)LVL_3_ENDAKO_Fcceeec15_D_001A6E90;
+    }
+
+    *(int *)((char *)LVL_3_ENDAKO_Fcceeec15_D_001B3188 + 8) = 0;
+    *(int *)((char *)LVL_3_ENDAKO_Fcceeec15_D_001B3188 + 12) = 0x50000015;
+    LVL_3_ENDAKO_Fcceeec15_D_001B3188 = (int *)((char *)LVL_3_ENDAKO_Fcceeec15_D_001B3188 + 16);
+}
+void LVL_3_ENDAKO_FUN_00321810(int param_1, short *param_2, short param_3)
+{
+    int i;
+
+    param_1 = (param_1 - *(int *)0x001B2A1C) << 8 >> 16;
+    for (i = 1; i <= param_2[0]; i++) {
+        if (param_2[i] == param_1) return;
+    }
+    if (param_2[0] < param_3) {
+        param_2[0] = param_2[0] + 1;
+        param_2[param_2[0]] = param_1;
+    }
+}
+extern int LVL_3_ENDAKO_F9306cc1f_D_001CA2A8[];
+
+int LVL_3_ENDAKO_FUN_003073A0(int arg)
+{
+    int *t = LVL_3_ENDAKO_F9306cc1f_D_001CA2A8;
+    int *u = t + 5;
+    int i;
+
+    for (i = 0; i < 5; i++) {
+        int k = arg ? 4 - i : i;
+        if (t[k] == 0)
+            continue;
+        if (u[k] != -1)
+            continue;
+        return k;
+    }
+    return -1;
+}
+extern int LVL_3_ENDAKO_F8a42bc68_D_002325D0[];
+
+int LVL_3_ENDAKO_FUN_00381458(int value)
+{
+    int i;
+    int found = 0;
+
+    for (i = 0; i < LVL_3_ENDAKO_F8a42bc68_D_002325D0[64]; i++)
+    {
+        if (LVL_3_ENDAKO_F8a42bc68_D_002325D0[i] == value)
+        {
+            found = 1;
+            break;
+        }
+    }
+    return found;
+}
+/* Family 435a49e62f53b8db - 368 bytes, 2 members.
+   Placements: levels/3_endako @0x002FC368, levels/19_grelbin @0x002F8AF8.
+
+   Measured binding.  LVL_3_ENDAKO_F435a49e6_D_001B3188 is a four-byte pointer in the resident image
+   (0x001B3188 = 1782152).  The retail body reads it with a per-site
+   `lui $r,%hi` + `lw $r,%lo($r)` pair and writes it with a single
+   `sw $r,%lo($gp)`; all three of the latter sit in a compiler delay slot
+   (two in the `b` before the branch target, one in the `jr $ra` slot).
+
+   That mix is exactly gas's expansion of the bare-symbol macro form
+   `lw $r,LVL_3_ENDAKO_F435a49e6_D_001B3188` / `sw $r,LVL_3_ENDAKO_F435a49e6_D_001B3188`: absolute `lui`+`%lo` in ordinary
+   flow, `$gp` (GPREL16) inside a `.set nomacro` region.  cc1 emits that
+   macro only for an `sda` symbol, so the declaration carries `sda`.
+   Without it cc1 computes the symbol's address once, CSEs it into a base
+   register and reloads `0($base)` per site, which also costs an extra
+   `move` to keep the incoming `$a1` alive across that register - 344
+   bytes against the 368 of the reference. */
+
+extern int *LVL_3_ENDAKO_F435a49e6_D_001B3188 __attribute__((sda));
+extern void LVL_3_ENDAKO_F435a49e6_FUN_00126288(void *, short, short, int, int, int, short, short);
+extern void LVL_3_ENDAKO_F435a49e6_FUN_0011AEA0(int);
+extern void LVL_3_ENDAKO_F435a49e6_FUN_001265B0(void *, int);
+
+void LVL_3_ENDAKO_FUN_002FC368(int a0, int a1, int a2, int a3, int a4, int a5)
+{
+    char buf[96];
+    void *work;
+    int t4;
+    int s2;
+
+    s2 = 1 << (a3 + a4 - 4);
+    t4 = (1 << a3) >> 6;
+    if (t4 <= 0)
+        t4 = 1;
+
+    if (a5 == 0) {
+        *(int *)LVL_3_ENDAKO_F435a49e6_D_001B3188 = 0x10000006;
+        *(int *)((char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 4) = 0;
+        *(int *)((char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 8) = 0;
+        *(int *)((char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 12) = 0x50000006;
+        work = (char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 16;
+        LVL_3_ENDAKO_F435a49e6_D_001B3188 = (int *)((char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 112);
+    } else {
+        work = buf;
+    }
+
+    LVL_3_ENDAKO_F435a49e6_FUN_00126288(work, (short)a1, (short)t4, (short)a2, 0, 0,
+            (short)(1 << a3), (short)(1 << a4));
+
+    if (a5 == 0) {
+        *(int *)LVL_3_ENDAKO_F435a49e6_D_001B3188 = 0x30000000 | s2;
+        *(int *)((char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 4) = a0;
+        *(int *)((char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 8) = 0;
+        *(int *)((char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 12) = 0x50000000 | s2;
+        LVL_3_ENDAKO_F435a49e6_D_001B3188 = (int *)((char *)LVL_3_ENDAKO_F435a49e6_D_001B3188 + 16);
+    } else {
+        LVL_3_ENDAKO_F435a49e6_FUN_0011AEA0(0);
+        LVL_3_ENDAKO_F435a49e6_FUN_001265B0(work, a0);
+    }
+}
+/* RAC2 family 0820eb1123250c0b - 192 bytes, 2 placements.
+ * Slot0820eb11 allocator: find the first free of six 64-byte slots, fill it in and
+ * link it at the head of the context's list.
+ */
+
+typedef struct Slot0820eb11 {
+    short          f00;    /* +0x00 */
+    short          f02;    /* +0x02 */
+    unsigned char  f04;    /* +0x04 */
+    char           pad05[7];
+    unsigned char *f0C;    /* +0x0C */
+    int            f10;    /* +0x10 */
+    int            f14;    /* +0x14 */
+    int            f18;    /* +0x18 */
+    int            f1C;    /* +0x1C */
+    char           pad20[32];
+} Slot0820eb11;                    /* 64 bytes */
+
+typedef struct Mid {
+    char           pad00[0x1C];
+    char          *f1C;    /* +0x1C */
+} Mid;
+
+typedef struct Ctx {
+    char           pad00[0x24];
+    Mid           *f24;    /* +0x24 */
+    char           pad28[0x28];
+    int            f50;    /* +0x50 */
+} Ctx;
+
+extern Slot0820eb11 LVL_3_ENDAKO_F0820eb11_D_001D23C0[6];
+extern unsigned char LVL_3_ENDAKO_F0820eb11_D_001CA5C0[];
+
+Slot0820eb11 *LVL_3_ENDAKO_FUN_00311EE0(Ctx *ctx, int index)
+{
+    int i;
+    Slot0820eb11 *slot;
+    unsigned char *p;
+
+    for (i = 0; i < 6; i++) {
+        if (LVL_3_ENDAKO_F0820eb11_D_001D23C0[i].f04 == 0) {
+            break;
+        }
+    }
+    slot = &LVL_3_ENDAKO_F0820eb11_D_001D23C0[i];
+    slot->f04 = 1;
+    slot->f00 = index;
+    slot->f10 = (int)(LVL_3_ENDAKO_F0820eb11_D_001CA5C0 + i * 5376);
+    slot->f14 = (int)ctx->f24;
+    p = (unsigned char *)*(unsigned int *)(ctx->f24->f1C + (short)index * 4 + 4);
+    slot->f02 = p[2];
+    slot->f0C = p + (p[0] + 4);
+    slot->f1C = ctx->f50;
+    ctx->f50 = (int)slot;
+    return slot;
+}

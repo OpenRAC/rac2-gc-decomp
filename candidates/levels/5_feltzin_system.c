@@ -1948,3 +1948,210 @@ int LVL_5_FELTZIN_SYSTEM_FUN_00340DA8(int a0, int a1, int a2) {
     LVL_5_FELTZIN_SYSTEM_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20;
+extern s32 LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_5_FELTZIN_SYSTEM_FUN_002EBC80(void) {
+    s32 result = LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field348;
+    if (LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A8FF0 != 0 && LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A8FF4 != 0 || LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field2294 == 110 && LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field2294 == 109 || LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field1497 != 0 && LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field2294 == 0 && LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+/* family 695584ed7d3e53db - 368 bytes, 2 placements
+   levels/10_hrugis_cloud @0x00315C90, levels/5_feltzin_system @0x00313778
+
+   Two-pass packet emitter.  On the "first" path (p5 == 0) it writes a four-word
+   header into the resident packet cursor (a small-data global), points s0 at the
+   payload area and advances the cursor by 112 bytes; on the other path s0 is a
+   local scratch buffer.  An eight-argument helper then fills the payload, and a
+   second pass emits the tag plus payload word or delegates to two helpers.
+
+   The cursor is addressed through $gp at the two delay-slot sites only, so the
+   declaration carries the `sda` attribute and the unit is compiled -G0. */
+
+extern int *LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 __attribute__((sda));
+
+extern void LVL_5_FELTZIN_SYSTEM_F695584ed_FUN_00126288(void *p, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+extern void LVL_5_FELTZIN_SYSTEM_F695584ed_FUN_0011AEA0(int a0);
+extern void LVL_5_FELTZIN_SYSTEM_F695584ed_FUN_001265B0(void *a0, void *a1);
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00313778(int a0, int a1, int a2, int a3, int p4, int p5)
+{
+    int t5 = a3;
+    int n = (1 << t5) >> 6;
+    int stride = 1 << (t5 + p4 - 4);
+    int *s0;
+    char buf[96];
+
+    if (n <= 0) {
+        n = 1;
+    }
+    if (p5 == 0) {
+        char *q;
+
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 0) = 0x10000006;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 4) = 0;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 8) = 0;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 12) = 0x50000006;
+        q = (char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88;
+        s0 = (int *)(q + 16);
+        LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 = (int *)(q + 112);
+    } else {
+        s0 = (int *)buf;
+    }
+    LVL_5_FELTZIN_SYSTEM_F695584ed_FUN_00126288(s0, (short)a1, (short)n, (short)a2, 0, 0, (short)(1 << t5), (short)(1 << p4));
+    if (p5 == 0) {
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 0) = 0x30000000 | stride;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 4) = a0;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 8) = 0;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 12) = 0x50000000 | stride;
+        LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 = (int *)((char *)LVL_5_FELTZIN_SYSTEM_F695584ed_D_001B2C88 + 16);
+    } else {
+        LVL_5_FELTZIN_SYSTEM_F695584ed_FUN_0011AEA0(0);
+        LVL_5_FELTZIN_SYSTEM_F695584ed_FUN_001265B0(s0, (void *)a0);
+    }
+}
+/* v2: guard reads p->count, loop counter is a second read (CSE -> copy). */
+struct Elem {
+    unsigned int f0;
+    unsigned char pad0[31];
+    unsigned char f35;
+    unsigned char pad1[12];
+    unsigned int f48;
+    unsigned char pad2[28];
+};
+struct Node {
+    struct Elem *elems;
+    int count;
+};
+extern struct Node LVL_5_FELTZIN_SYSTEM_F9328256b_D_00226A00 __attribute__((nosda));
+extern short LVL_5_FELTZIN_SYSTEM_F9328256b_D_00226700[][2];
+
+void LVL_5_FELTZIN_SYSTEM_FUN_0037E418(void)
+{
+    struct Node *p = &LVL_5_FELTZIN_SYSTEM_F9328256b_D_00226A00;
+
+    if (p->elems != 0) {
+        do {
+            struct Elem *e = p->elems;
+
+            if (p->count > 0) {
+                int n = p->count;
+
+                do {
+                    short *t = LVL_5_FELTZIN_SYSTEM_F9328256b_D_00226700[e->f35];
+                    if (t[0] != 0) e->f0 = (e->f0 & 0xFFFFC000u) | (unsigned int)t[0];
+                    if (t[1] != 0) e->f48 = (e->f48 & 0xFFFFC000u) | (unsigned int)t[1];
+                    e++;
+                } while (--n);
+            }
+            p++;
+        } while (p->elems != 0);
+    }
+}
+extern char *LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 __attribute__((sda));
+extern char LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001A6D40[];
+extern char LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001A6E90[];
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00308A60(int a0)
+{
+    if (LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 != 0) {
+        *(int *)LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 = 0x30000015;
+        if (a0 == 0) {
+            *(int *)(LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 + 4) = (int)LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001A6D40;
+        } else {
+            *(int *)(LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 + 4) = (int)LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001A6E90;
+        }
+        *(int *)(LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 + 8) = 0;
+        *(int *)(LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 + 12) = 0x50000015;
+        LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 = LVL_5_FELTZIN_SYSTEM_F8aa1a3c4_D_001B2C88 + 16;
+    }
+}
+void LVL_5_FELTZIN_SYSTEM_FUN_00337E60(int param_1, short *param_2, short param_3)
+{
+    int i;
+
+    param_1 = (param_1 - *(int *)0x001B251C) << 8 >> 16;
+    for (i = 1; i <= param_2[0]; i++) {
+        if (param_2[i] == param_1) return;
+    }
+    if (param_2[0] < param_3) {
+        param_2[0] = param_2[0] + 1;
+        param_2[param_2[0]] = param_1;
+    }
+}
+/* Family e8702d836bd3adba (120 B, 2 placements): call every registered
+ * callback with its paired argument, bounded by a resident count word.
+ *
+ * The three resident globals are reached with `lui`+`lw` / `lui`+`addiu`
+ * pairs that the ASSEMBLER macro expands from a single RTL insn; this only
+ * happens when the externs carry the `sda` attribute (SYMBOL_REF_FLAG), which
+ * suppresses gcc's HIGH/LO_SUM address split.  Without it the compiler keeps
+ * the `%hi` in an extra callee-saved register and the body is 3 words long.
+ */
+typedef void (*fn_t)(int);
+
+extern int LVL_5_FELTZIN_SYSTEM_Fe8702d83_D_001B1FF8 __attribute__((sda));   /* resident callback count */
+extern fn_t LVL_5_FELTZIN_SYSTEM_Fe8702d83_D_001B1FD8[] __attribute__((sda)); /* callback table        */
+extern int LVL_5_FELTZIN_SYSTEM_Fe8702d83_D_001B1FE8[] __attribute__((sda));  /* argument table        */
+
+void LVL_5_FELTZIN_SYSTEM_FUN_002FF7B0(void) {
+    int i;
+    for (i = 0; i < LVL_5_FELTZIN_SYSTEM_Fe8702d83_D_001B1FF8; i++) {
+        LVL_5_FELTZIN_SYSTEM_Fe8702d83_D_001B1FD8[i](LVL_5_FELTZIN_SYSTEM_Fe8702d83_D_001B1FE8[i]);
+    }
+}
+/* Family 7a3a32da2b27da0d — 364 bytes, a block loop that builds two four-word
+   GS packets per iteration and calls the measured SDK helper at 0x00126288
+   between them.
+
+   -G0 promotion (agent f02, 2026-10-07): the retail body reaches the resident
+   write pointer at 0x001B2C88 ten times through the one-instruction small-data
+   form (absolute `lui`+`lw` in ordinary flow, the single `$gp` form in the
+   `jal` delay slot).  Under -G8 that model is free; under -G0 cc1 needs the
+   measured `sda` attribute, otherwise it emits the explicit two-instruction
+   pair and shifts register allocation.  Nothing else about the body changed. */
+
+extern int *LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 __attribute__((sda));
+
+extern void LVL_5_FELTZIN_SYSTEM_F7a3a32da_FUN_00126288(int *p, int a, int b, int c, int d, int e, int f, int g);
+
+void LVL_5_FELTZIN_SYSTEM_FUN_00390B28(char *dst, int src, int size)
+{
+    int count = (size + 16383) & -16384;
+    int si = 0;
+    int di = 0;
+    int v;
+
+    while (count > 0) {
+        *(int *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 = 0x10000006;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 4) = 0;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 8) = 0;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 12) = 0x50000006;
+        LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 = (int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 16);
+        v = (src + si) << 8;
+        v = v >> 16;
+        LVL_5_FELTZIN_SYSTEM_F7a3a32da_FUN_00126288(LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88, v, 1, 1, 0, 0, 64, 64);
+        LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 = (int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 96);
+        *(int *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 = 0x30000300;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 4) = (int)(dst + di);
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 8) = 0;
+        *(int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 12) = 0x50000300;
+        si += 16384;
+        di += 12288;
+        count -= 16384;
+        LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 = (int *)((char *)LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88 + 16);
+    }
+}

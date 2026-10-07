@@ -2099,3 +2099,178 @@ int LVL_11_JOBA_FUN_00341F88(int a0, int a1, int a2) {
     LVL_11_JOBA_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct { char *p[6]; } Sep6;
+extern Sep6 LVL_11_JOBA_Fd1b66aa7_D_001AA550;
+extern char LVL_11_JOBA_Fd1b66aa7_D_001AA568[];
+extern char LVL_11_JOBA_Fd1b66aa7_D_001AA578[];
+extern char LVL_11_JOBA_Fd1b66aa7_D_001AA588[];
+extern int LVL_11_JOBA_Fd1b66aa7_FUN_00115DA8(char *dst, char *fmt, ...);
+
+void LVL_11_JOBA_FUN_00342430(char *dst, int x, int idx)
+{
+    Sep6 t;
+    t = LVL_11_JOBA_Fd1b66aa7_D_001AA550;
+    if (x > 999999) {
+        int m = x / 1000000;
+        int w = x % 1000000;
+        LVL_11_JOBA_Fd1b66aa7_FUN_00115DA8(dst, LVL_11_JOBA_Fd1b66aa7_D_001AA568, m, t.p[idx % 6], w / 1000,
+                          t.p[idx % 6], w % 1000);
+    } else if (x >= 1000)
+        LVL_11_JOBA_Fd1b66aa7_FUN_00115DA8(dst, LVL_11_JOBA_Fd1b66aa7_D_001AA578, x / 1000,
+                          t.p[idx % 6], x % 1000);
+    else
+        LVL_11_JOBA_Fd1b66aa7_FUN_00115DA8(dst, LVL_11_JOBA_Fd1b66aa7_D_001AA588, x);
+}
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_11_JOBA_F4e5bde81_D_00189E20;
+extern s32 LVL_11_JOBA_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_11_JOBA_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_11_JOBA_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_11_JOBA_FUN_002E51F8(void) {
+    s32 result = LVL_11_JOBA_F4e5bde81_D_00189E20.field348;
+    if (LVL_11_JOBA_F4e5bde81_D_001A8FF0 != 0 && LVL_11_JOBA_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_11_JOBA_F4e5bde81_D_001A8FF4 != 0 || LVL_11_JOBA_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_11_JOBA_F4e5bde81_D_00189E20.field2294 == 110 && LVL_11_JOBA_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_11_JOBA_F4e5bde81_D_00189E20.field2294 == 109 || LVL_11_JOBA_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_11_JOBA_F4e5bde81_D_00189E20.field1497 != 0 && LVL_11_JOBA_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_11_JOBA_F4e5bde81_D_00189E20.field2294 == 0 && LVL_11_JOBA_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_11_JOBA_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+extern void LVL_11_JOBA_F250a61cf_FUN_00115DA8(char *buf, char *format, ...);
+extern char LVL_11_JOBA_F250a61cf_D_001AD670[];
+extern char LVL_11_JOBA_F250a61cf_D_001AD680[];
+extern char LVL_11_JOBA_F250a61cf_D_001AD688[];
+
+void LVL_11_JOBA_FUN_0038A160(char *buf, int value)
+{
+    if (value > 999999)
+        LVL_11_JOBA_F250a61cf_FUN_00115DA8(buf, LVL_11_JOBA_F250a61cf_D_001AD670, value / 1000000,
+                                 value / 1000 % 1000, value % 1000);
+    else if (value >= 1000)
+        LVL_11_JOBA_F250a61cf_FUN_00115DA8(buf, LVL_11_JOBA_F250a61cf_D_001AD680, value / 1000, value % 1000);
+    else
+        LVL_11_JOBA_F250a61cf_FUN_00115DA8(buf, LVL_11_JOBA_F250a61cf_D_001AD688, value);
+}
+void LVL_11_JOBA_FUN_00332A98(int param_1, short *param_2, short param_3)
+{
+    int i;
+
+    param_1 = (param_1 - *(int *)0x001B359C) << 8 >> 16;
+    for (i = 1; i <= param_2[0]; i++) {
+        if (param_2[i] == param_1) return;
+    }
+    if (param_2[0] < param_3) {
+        param_2[0] = param_2[0] + 1;
+        param_2[param_2[0]] = param_1;
+    }
+}
+/* Family 489bf28ebf58470c (120 B, 2 placements): call every registered
+ * callback with its paired argument, bounded by a resident count word.
+ *
+ * The three resident globals are reached with `lui`+`lw` / `lui`+`addiu`
+ * pairs that the ASSEMBLER macro expands from a single RTL insn; this only
+ * happens when the externs carry the `sda` attribute (SYMBOL_REF_FLAG), which
+ * suppresses gcc's HIGH/LO_SUM address split.  Without it the compiler keeps
+ * the `%hi` in an extra callee-saved register and the body is 3 words long.
+ */
+typedef void (*fn_t)(int);
+
+extern int LVL_11_JOBA_F489bf28e_D_001B3078 __attribute__((sda));   /* resident callback count */
+extern fn_t LVL_11_JOBA_F489bf28e_D_001B3058[] __attribute__((sda)); /* callback table        */
+extern int LVL_11_JOBA_F489bf28e_D_001B3068[] __attribute__((sda));  /* argument table        */
+
+void LVL_11_JOBA_FUN_002F8DF0(void) {
+    int i;
+    for (i = 0; i < LVL_11_JOBA_F489bf28e_D_001B3078; i++) {
+        LVL_11_JOBA_F489bf28e_D_001B3058[i](LVL_11_JOBA_F489bf28e_D_001B3068[i]);
+    }
+}
+/* Family d50cdefed4015bae — 364 bytes, a 16384-byte block loop that builds two
+   four-word GS packets per iteration and calls the measured SDK helper at
+   0x00126288 in between.
+
+   The resident write pointer at 0x001B3D08 is read ten times and stored three
+   times.  Two authored views of that one measured cell are needed and are the
+   qualified form here:
+     * the read view is volatile, so every use is a fresh load -- the retail
+       body re-loads the cell before every field store (aliasing through the
+       loaded pointer is not enough to force it: without the qualifier cc1
+       forwards a stored value into the next two reads);
+     * the write view is an ordinary pointer, so the store written before the
+       call is moved into the `jal` delay slot, which is where retail keeps it
+       (a volatile store is left in place).
+   The bare symbols keep the address materialisation a per-site assembler job
+   (`lui`+`lw` mid-stream, the single `$gp` form in a delay slot).
+
+   -G0 promotion (agent f02, 2026-10-07): under -G8 these two declarations need
+   no attribute, because -G8 alone puts the cell in small data.  Under -G0 cc1
+   would otherwise model each access as an explicit `lui`+`lw` pair, hoist the
+   base into a callee-saved register and reuse it, which changes both the
+   register allocation and the body size.  The measured `sda` attribute puts
+   cc1 back on the one-instruction model, so gas expands every site exactly as
+   the retail build did: absolute `lui`+`lw` in ordinary flow, the single `$gp`
+   form inside the `.set nomacro` region cc1 emits for the `jal` delay slot.
+   Nothing else about the body changed. */
+
+extern int *volatile LVL_11_JOBA_Fd50cdefe_D_001B3D08 __attribute__((sda));
+extern int *LVL_11_JOBA_Fd50cdefe_D_001B3D08_1 __attribute__((sda));
+
+extern void LVL_11_JOBA_Fd50cdefe_FUN_00126288(int *a0, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+
+void LVL_11_JOBA_FUN_003901A0(int a0, int a1, int a2)
+{
+    int s0 = (a2 + 16383) & -16384;
+    int s6 = 0;
+    int s5 = 0;
+
+    while (s0 > 0) {
+        *(int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 0) = 0x10000006;
+        *(int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 4) = 0;
+        *(int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 8) = 0;
+        *(int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 12) = 0x50000006;
+        {
+            int *next = (int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 16);
+            LVL_11_JOBA_Fd50cdefe_D_001B3D08_1 = next;
+            LVL_11_JOBA_Fd50cdefe_FUN_00126288(next, (short)((a1 + s6) >> 8), 1, 1, 0, 0, 64, 64);
+        }
+        s6 += 16384;
+        s0 -= 16384;
+        {
+            int *p = LVL_11_JOBA_Fd50cdefe_D_001B3D08;
+            int off = a0 + s5;
+            s5 += 12288;
+            LVL_11_JOBA_Fd50cdefe_D_001B3D08_1 = (int *)((char *)p + 96);
+            *(int *)((char *)p + 96) = 0x30000300;
+            *(int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 4) = off;
+            *(int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 8) = 0;
+            *(int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 12) = 0x50000300;
+            LVL_11_JOBA_Fd50cdefe_D_001B3D08_1 = (int *)((char *)LVL_11_JOBA_Fd50cdefe_D_001B3D08 + 16);
+        }
+    }
+}
+extern volatile int * volatile LVL_11_JOBA_Fcfd2e0cd_D_001B3D08 __attribute__((sda));
+extern volatile int * volatile LVL_11_JOBA_Fcfd2e0cd_D_001B3D08_1 __attribute__((sda));
+extern char LVL_11_JOBA_Fcfd2e0cd_D_001A6D40[];
+extern char LVL_11_JOBA_Fcfd2e0cd_D_001A6E90[];
+
+void LVL_11_JOBA_FUN_003029E8(int a0)
+{
+    int *p = (int *)LVL_11_JOBA_Fcfd2e0cd_D_001B3D08;
+
+    if (p == 0)
+        return;
+    p[0] = 0x30000015;
+    if (a0 == 0)
+        LVL_11_JOBA_Fcfd2e0cd_D_001B3D08[1] = (int)LVL_11_JOBA_Fcfd2e0cd_D_001A6D40;
+    else
+        LVL_11_JOBA_Fcfd2e0cd_D_001B3D08[1] = (int)LVL_11_JOBA_Fcfd2e0cd_D_001A6E90;
+    LVL_11_JOBA_Fcfd2e0cd_D_001B3D08[2] = 0;
+    LVL_11_JOBA_Fcfd2e0cd_D_001B3D08[3] = 0x50000015;
+    LVL_11_JOBA_Fcfd2e0cd_D_001B3D08_1 = LVL_11_JOBA_Fcfd2e0cd_D_001B3D08 + 4;
+}

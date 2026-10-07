@@ -366,3 +366,36 @@ frame-off source: its source hash is
 and host preprocessing with the release flags produces identical output.
 The active compiler and assembler remain the qualified binaries recorded above;
 this documentation change does not claim a new binary rebuild.
+
+## Small-data symbols under the pinned default profile (2026-10-07)
+
+The default profile is `-O2 -G0 -ffunction-sections` and emits no `$gp` access
+of its own. A body whose retail bytes address a global through `$gp` is
+nevertheless reachable, because the choice is the assembler's, not the
+compiler's:
+
+* cc1 emits a bare symbol operand for a load or store it can expand as a macro;
+  `gas` then decides per site — `lui`+`%lo` in ordinary flow, a one-instruction
+  `$gp` form inside a `.set nomacro` region, which is where a compiler delay
+  slot lands.
+* `__attribute__((sda))` on the declaration restores cc1's one-instruction model
+  for that symbol. It does not by itself force `$gp` anywhere; it makes cc1 emit
+  the form that leaves the per-site decision to the assembler, which is what the
+  retail build did. Declaring the symbol `nosda` instead makes cc1 materialise
+  the address explicitly, and that two-instruction model shifts register
+  allocation and scheduling away from the retail bytes.
+
+Measured consequence: a body that a `nosda` assignment refuses can still be
+exact when the same symbol is declared `sda`. The campaign driver therefore
+retries a refused body with every measured `nosda` flipped to `sda` and keeps
+only the variant the owner gate verifies on every placement.
+
+The boundary that remains: an access that retail performs through `$gp` in
+ordinary flow — not in a delay slot — needs the `.extern name, size` directive
+that the reconstructed backend only emits under `-G8`. Such families stay on the
+small-data unit route.
+
+A related format constraint: the level catalogue requires every external address
+to be word aligned, so a byte global at an odd address is bound through its
+aligned base with a constant index; the assembler folds the constant into the
+same immediate and the bytes are unchanged.

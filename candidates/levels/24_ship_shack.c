@@ -1823,3 +1823,24 @@ int LVL_24_SHIP_SHACK_FUN_00326020(int a0, int a1, int a2) {
     LVL_24_SHIP_SHACK_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20;
+extern s32 LVL_24_SHIP_SHACK_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_24_SHIP_SHACK_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_24_SHIP_SHACK_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_24_SHIP_SHACK_FUN_002D2500(void) {
+    s32 result = LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field348;
+    if (LVL_24_SHIP_SHACK_F4e5bde81_D_001A8FF0 != 0 && LVL_24_SHIP_SHACK_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_24_SHIP_SHACK_F4e5bde81_D_001A8FF4 != 0 || LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field2294 == 110 && LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field2294 == 109 || LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field1497 != 0 && LVL_24_SHIP_SHACK_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field2294 == 0 && LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}

@@ -1950,3 +1950,406 @@ void LVL_18_DAMOSEL_FUN_003976B0(unsigned int param_1, unsigned long param_2)
     *(int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 44) = 0;
     LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 = (int *)((char *)LVL_18_DAMOSEL_Fe85cf1e5_D_001B2F88 + 48);
 }
+struct Sep6 {
+    int v[6];
+};
+
+extern struct Sep6 LVL_18_DAMOSEL_Fe9186f4c_D_001AA4D0;
+extern char LVL_18_DAMOSEL_Fe9186f4c_D_001AA4E8[];
+extern char LVL_18_DAMOSEL_Fe9186f4c_D_001AA4F8[];
+extern char LVL_18_DAMOSEL_Fe9186f4c_D_001AA508[];
+extern void LVL_18_DAMOSEL_Fe9186f4c_FUN_00115DA8();
+
+void LVL_18_DAMOSEL_FUN_00349BA0(char *buf, int value, int index) {
+    struct Sep6 sep = LVL_18_DAMOSEL_Fe9186f4c_D_001AA4D0;
+    int rest;
+    if (value > 999999) {
+        rest = value % 1000000;
+        LVL_18_DAMOSEL_Fe9186f4c_FUN_00115DA8(buf, LVL_18_DAMOSEL_Fe9186f4c_D_001AA4E8, value / 1000000, sep.v[index % 6], rest / 1000,
+                sep.v[index % 6], rest % 1000);
+    } else if (value >= 1000) {
+        LVL_18_DAMOSEL_Fe9186f4c_FUN_00115DA8(buf, LVL_18_DAMOSEL_Fe9186f4c_D_001AA4F8, value / 1000, sep.v[index % 6], value % 1000);
+    } else {
+        LVL_18_DAMOSEL_Fe9186f4c_FUN_00115DA8(buf, LVL_18_DAMOSEL_Fe9186f4c_D_001AA508, value);
+    }
+}
+struct src_record {
+    unsigned char b0;
+    unsigned char b1;
+    unsigned char b2;
+    unsigned char b3;
+    unsigned short s4;
+    unsigned short s6;
+    unsigned short s8;
+    unsigned short s10;
+    unsigned short s12;
+    unsigned char e;
+    unsigned char f;
+};
+
+struct dst_record {
+    unsigned char b0;
+    unsigned char b1;
+    unsigned char b2;
+    unsigned char b3;
+    unsigned short s4;
+    unsigned short s6;
+    unsigned short s8;
+    short s10;
+    short s12;
+    unsigned char e;
+    unsigned char f;
+};
+
+extern struct dst_record LVL_18_DAMOSEL_Fe6db7296_D_001B9600[8] __attribute__((nosda));
+
+int LVL_18_DAMOSEL_FUN_002F11E0(struct src_record *src)
+{
+    int n = 0;
+    int i;
+    int j;
+
+    while (n < 8 && src[n].b0 != 255)
+        n++;
+
+    j = 0;
+    for (i = 0; i < 8 && j < n; i++) {
+        if (LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].b0 == 0)
+            j++;
+    }
+
+    if (j != n)
+        return -1;
+
+    for (j = 0; j < n; j++) {
+        i = 0;
+        while (i < 8 && LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].b0 != 0)
+            i++;
+        if (i < 8) {
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].b0 = src[j].b0;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].b1 = src[j].b1;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].b2 = src[j].b2;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].b3 = src[j].b3;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].s4 = src[j].s4;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].s6 = src[j].s6;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].s8 = src[j].s8;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].s10 = src[j].s10;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].s12 = src[j].s12;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].e = src[j].e - src[j].f;
+            LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].f = src[j].f;
+            if (LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].s10 + LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].s12 == 0)
+                LVL_18_DAMOSEL_Fe6db7296_D_001B9600[i].s10++;
+        }
+    }
+    return i;
+}
+/* Family 34e74db3063e7a24 — 108 bytes, 2 placements (18_damosel, 6_notak).
+   Same shape as be569dc253cd5555: walk the resident function-pointer table at
+   0x1B2180, call each entry while the resident count at 0x1B21C0 says there is
+   one, then clear the count.  Small-data profile: the count is a 4-byte scalar,
+   so cc1 prints the bare-symbol macro and gas expands every site on its own. */
+extern int LVL_18_DAMOSEL_F34e74db3_D_001B21C0 __attribute__((sda));
+extern void (*LVL_18_DAMOSEL_F34e74db3_D_001B2180[])(void);
+
+void LVL_18_DAMOSEL_FUN_002F22C8(void)
+{
+    int i;
+
+    for (i = 0; i < LVL_18_DAMOSEL_F34e74db3_D_001B21C0; i++) {
+        LVL_18_DAMOSEL_F34e74db3_D_001B2180[i]();
+    }
+
+    LVL_18_DAMOSEL_F34e74db3_D_001B21C0 = 0;
+}
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_18_DAMOSEL_F4e5bde81_D_00189E20;
+extern s32 LVL_18_DAMOSEL_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_18_DAMOSEL_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_18_DAMOSEL_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_18_DAMOSEL_FUN_002EDC20(void) {
+    s32 result = LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field348;
+    if (LVL_18_DAMOSEL_F4e5bde81_D_001A8FF0 != 0 && LVL_18_DAMOSEL_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_18_DAMOSEL_F4e5bde81_D_001A8FF4 != 0 || LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field2294 == 110 && LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field2294 == 109 || LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field1497 != 0 && LVL_18_DAMOSEL_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field2294 == 0 && LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_18_DAMOSEL_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+/* family 0c7f51df6235c46f - 364 bytes, 2 placements
+   levels/18_damosel @0x00397AE0, levels/6_notak @0x003BCD90
+
+   Loop over 16 KiB blocks.  Each iteration writes a four-word header into the
+   resident packet cursor (small-data global at 0x1B2F88), advances the cursor
+   through the helper call's delay slot, hands the payload area plus the rounded
+   block and slice offsets to the eight-argument helper, then writes the far
+   tag word and advances the cursor again. */
+
+extern int *LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 __attribute__((sda));
+extern void LVL_18_DAMOSEL_F0c7f51df_FUN_00126288(void *p, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+
+void LVL_18_DAMOSEL_FUN_00397AE0(int a0, int a1, int a2)
+{
+    int n = (a2 + 16383) & ~0x3FFF;
+    int block = 0;
+    int slice = 0;
+    int t;
+    char *q;
+    char *p;
+
+    while (n > 0) {
+        *(int *)((char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 0) = 0x10000006;
+        *(int *)((char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 4) = 0;
+        *(int *)((char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 8) = 0;
+        *(int *)((char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 12) = 0x50000006;
+        t = a1 + block;
+        block += 16384;
+        n -= 16384;
+        q = (char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 16;
+        LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 = (int *)q;
+        LVL_18_DAMOSEL_F0c7f51df_FUN_00126288(q, (t << 8) >> 16, 1, 1, 0, 0, 64, 64);
+        p = (char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88;
+        LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 = (int *)(p + 96);
+        *(int *)(p + 96) = 0x30000300;
+        *(int *)((char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 4) = a0 + slice;
+        slice += 12288;
+        *(int *)((char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 8) = 0;
+        *(int *)((char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 12) = 0x50000300;
+        LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 = (int *)((char *)LVL_18_DAMOSEL_F0c7f51df_D_001B2F88 + 16);
+    }
+}
+/* ffb5b86c8c05572c - nested scan over a table, 260 B, no arguments. */
+
+extern int LVL_18_DAMOSEL_Fffb5b86c_D_00220EA0 __attribute__((nosda));
+extern char *LVL_18_DAMOSEL_Fffb5b86c_D_0021F420[];
+struct Pair {
+    short a;
+    short b;
+};
+extern struct Pair LVL_18_DAMOSEL_Fffb5b86c_D_002209A0[];
+struct Item {
+    char *ptr;
+    int extra;
+};
+
+void LVL_18_DAMOSEL_FUN_00376BF0(void)
+{
+    int *p;
+    int *entry;
+    struct Item *items;
+    char *node;
+    char *block;
+    char *slot;
+    struct Pair *pair;
+    short value;
+    int i;
+    int j;
+
+    p = &LVL_18_DAMOSEL_Fffb5b86c_D_00220EA0;
+    if (*p < 0)
+        return;
+    while (*p >= 0) {
+        entry = (int *)LVL_18_DAMOSEL_Fffb5b86c_D_0021F420[*p];
+        for (i = 0; i < *(short *)((char *)entry + 40); i++) {
+            items = (struct Item *)((char *)entry + 64);
+            node = *(char **)((char *)items + (i << 3));
+            block = node + 16;
+            slot = block + (*(int *)(block + 4) << 4) + 16;
+            for (j = 0; j < *(int *)block; j++) {
+                pair = &LVL_18_DAMOSEL_Fffb5b86c_D_002209A0[*(unsigned char *)(slot + 19)];
+                value = pair->a;
+                if (value != 0)
+                    *(int *)(slot + 48) = (*(int *)(slot + 48) & 0xFFFFC000) | value;
+                value = pair->b;
+                if (value != 0)
+                    *(int *)(slot + 32) = (*(int *)(slot + 32) & 0xFFFFC000) | value;
+                slot += 64;
+            }
+        }
+        p++;
+    }
+}
+/* Family 07d033343bfa9687 — 148 bytes, levels/18_damosel and levels/6_notak.
+
+   Write the four-word ring header into the resident packet cursor and advance
+   the cursor itself; when the cursor is null, hand the sibling buffer 48 bytes
+   further on to the stop helper instead.  Every reference re-reads the global
+   because a store through it may alias the cursor itself, and the closing
+   store is the only access retail makes through $gp, so the unit uses the
+   qualified small-data spelling (-G0 plus an explicit `sda` attribute) — the
+   same recipe as the c1edda5c and 9b94f3cd ring-header bodies. */
+
+extern int *LVL_18_DAMOSEL_F07d03334_D_001B2F88 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F07d03334_D_001A742C __attribute__((sda));
+extern void LVL_18_DAMOSEL_F07d03334_FUN_00126108(void *);
+
+void LVL_18_DAMOSEL_FUN_0030ACA8(void)
+{
+    if (LVL_18_DAMOSEL_F07d03334_D_001B2F88 != 0) {
+        *(int *)LVL_18_DAMOSEL_F07d03334_D_001B2F88 = 0x30000009;
+        *(int *)((char *)LVL_18_DAMOSEL_F07d03334_D_001B2F88 + 4) = (LVL_18_DAMOSEL_F07d03334_D_001A742C + 48) & 0x0FFFFFFF;
+        *(int *)((char *)LVL_18_DAMOSEL_F07d03334_D_001B2F88 + 8) = 0;
+        *(int *)((char *)LVL_18_DAMOSEL_F07d03334_D_001B2F88 + 12) = 0x50000009;
+        LVL_18_DAMOSEL_F07d03334_D_001B2F88 = (int *)((char *)LVL_18_DAMOSEL_F07d03334_D_001B2F88 + 16);
+    } else {
+        LVL_18_DAMOSEL_F07d03334_FUN_00126108((void *)(LVL_18_DAMOSEL_F07d03334_D_001A742C + 48));
+    }
+}
+/* Family 0f425722ec0b6d0f — 140 bytes, levels/18_damosel and levels/6_notak.
+
+   Same measured body as the e7046bc9 family (levels/10_hrugis_cloud and
+   levels/5_feltzin_system), with this overlay pair's own addresses: walk the
+   256-byte-stride table between the two resident bounds and count the records
+   that qualify, either because their type byte is 254/255 and their field is
+   within the resident limit, or because the sticky flag is already set.  The
+   flag latches on the 0xff type byte through the compiler's conditional move.
+   The outer test and the inner back-edge test both read the same resident
+   bound, and the running count is a small-data word, so the unit uses the
+   qualified small-data spelling (-G0 plus `sda` on the resident words). */
+
+extern unsigned char *LVL_18_DAMOSEL_F0f425722_D_001B2820 __attribute__((sda));
+extern unsigned char *LVL_18_DAMOSEL_F0f425722_D_001B2824 __attribute__((sda));
+extern unsigned int LVL_18_DAMOSEL_F0f425722_D_001B2348 __attribute__((sda));
+extern unsigned int LVL_18_DAMOSEL_F0f425722_D_001B2740 __attribute__((sda));
+
+void LVL_18_DAMOSEL_FUN_0032B068(void)
+{
+    unsigned char *p = LVL_18_DAMOSEL_F0f425722_D_001B2820;
+    int seen = 0;
+    unsigned int limit;
+
+    LVL_18_DAMOSEL_F0f425722_D_001B2740 = 0;
+
+    while (p < LVL_18_DAMOSEL_F0f425722_D_001B2824) {
+        limit = LVL_18_DAMOSEL_F0f425722_D_001B2348;
+        do {
+            if ((p[32] >= 254 && *(unsigned int *)(p + 160) <= limit) || seen) {
+                LVL_18_DAMOSEL_F0f425722_D_001B2740 = LVL_18_DAMOSEL_F0f425722_D_001B2740 + 1;
+                seen = (p[32] == 0xff) ? 1 : seen;
+            }
+            p += 256;
+        } while (p < LVL_18_DAMOSEL_F0f425722_D_001B2824);
+    }
+}
+void LVL_18_DAMOSEL_FUN_0033B298(int param_1, short *param_2, short param_3)
+{
+    int i;
+
+    param_1 = (param_1 - *(int *)0x001B281C) << 8 >> 16;
+    for (i = 1; i <= param_2[0]; i++) {
+        if (param_2[i] == param_1) return;
+    }
+    if (param_2[0] < param_3) {
+        param_2[0] = param_2[0] + 1;
+        param_2[param_2[0]] = param_1;
+    }
+}
+/* Family 023cd14a875d20e4 (120 B, 2 placements): call every registered
+ * callback with its paired argument, bounded by a resident count word.
+ *
+ * The three resident globals are reached with `lui`+`lw` / `lui`+`addiu`
+ * pairs that the ASSEMBLER macro expands from a single RTL insn; this only
+ * happens when the externs carry the `sda` attribute (SYMBOL_REF_FLAG), which
+ * suppresses gcc's HIGH/LO_SUM address split.  Without it the compiler keeps
+ * the `%hi` in an extra callee-saved register and the body is 3 words long.
+ */
+typedef void (*fn_t)(int);
+
+extern int LVL_18_DAMOSEL_F023cd14a_D_001B22F8 __attribute__((sda));   /* resident callback count */
+extern fn_t LVL_18_DAMOSEL_F023cd14a_D_001B22D8[] __attribute__((sda)); /* callback table        */
+extern int LVL_18_DAMOSEL_F023cd14a_D_001B22E8[] __attribute__((sda));  /* argument table        */
+
+void LVL_18_DAMOSEL_FUN_00301838(void) {
+    int i;
+    for (i = 0; i < LVL_18_DAMOSEL_F023cd14a_D_001B22F8; i++) {
+        LVL_18_DAMOSEL_F023cd14a_D_001B22D8[i](LVL_18_DAMOSEL_F023cd14a_D_001B22E8[i]);
+    }
+}
+extern int LVL_18_DAMOSEL_F74e6a904_D_001B2F94 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F74e6a904_D_001B2F90 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F74e6a904_D_001A8F10 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F74e6a904_D_001B2F80[];
+extern int LVL_18_DAMOSEL_F74e6a904_D_001B2F88 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F74e6a904_D_001B2370 __attribute__((sda));
+extern int LVL_18_DAMOSEL_F74e6a904_D_001B2374 __attribute__((sda));
+
+void LVL_18_DAMOSEL_FUN_00397370(void)
+{
+    int a0;
+    int a1;
+    int a2;
+    int v1;
+
+    a0 = 1 - LVL_18_DAMOSEL_F74e6a904_D_001B2F94;
+    a1 = LVL_18_DAMOSEL_F74e6a904_D_001B2F90;
+    a2 = LVL_18_DAMOSEL_F74e6a904_D_001A8F10;
+    LVL_18_DAMOSEL_F74e6a904_D_001B2F94 = a0;
+    v1 = LVL_18_DAMOSEL_F74e6a904_D_001B2F80[a0];
+    a1 = v1 + LVL_18_DAMOSEL_F74e6a904_D_001B2F90;
+    LVL_18_DAMOSEL_F74e6a904_D_001B2F88 = v1;
+    a1 = a1 - a2;
+    LVL_18_DAMOSEL_F74e6a904_D_001B2370 = a1;
+    LVL_18_DAMOSEL_F74e6a904_D_001B2374 = a1 - 8192;
+}
+/* RAC2 family 19c820e81a180575 - 192 bytes, 2 placements.
+ * Slot19c820e8 allocator: find the first free of six 64-byte slots, fill it in and
+ * link it at the head of the context's list.
+ */
+
+typedef struct Slot19c820e8 {
+    short          f00;    /* +0x00 */
+    short          f02;    /* +0x02 */
+    unsigned char  f04;    /* +0x04 */
+    char           pad05[7];
+    unsigned char *f0C;    /* +0x0C */
+    int            f10;    /* +0x10 */
+    int            f14;    /* +0x14 */
+    int            f18;    /* +0x18 */
+    int            f1C;    /* +0x1C */
+    char           pad20[32];
+} Slot19c820e8;                    /* 64 bytes */
+
+typedef struct Mid {
+    char           pad00[0x1C];
+    char          *f1C;    /* +0x1C */
+} Mid;
+
+typedef struct Ctx {
+    char           pad00[0x24];
+    Mid           *f24;    /* +0x24 */
+    char           pad28[0x28];
+    int            f50;    /* +0x50 */
+} Ctx;
+
+extern Slot19c820e8 LVL_18_DAMOSEL_F19c820e8_D_001D2140[6];
+extern unsigned char LVL_18_DAMOSEL_F19c820e8_D_001CA340[];
+
+Slot19c820e8 *LVL_18_DAMOSEL_FUN_0032BC28(Ctx *ctx, int index)
+{
+    int i;
+    Slot19c820e8 *slot;
+    unsigned char *p;
+
+    for (i = 0; i < 6; i++) {
+        if (LVL_18_DAMOSEL_F19c820e8_D_001D2140[i].f04 == 0) {
+            break;
+        }
+    }
+    slot = &LVL_18_DAMOSEL_F19c820e8_D_001D2140[i];
+    slot->f04 = 1;
+    slot->f00 = index;
+    slot->f10 = (int)(LVL_18_DAMOSEL_F19c820e8_D_001CA340 + i * 5376);
+    slot->f14 = (int)ctx->f24;
+    p = (unsigned char *)*(unsigned int *)(ctx->f24->f1C + (short)index * 4 + 4);
+    slot->f02 = p[2];
+    slot->f0C = p + (p[0] + 4);
+    slot->f1C = ctx->f50;
+    ctx->f50 = (int)slot;
+    return slot;
+}

@@ -1819,3 +1819,374 @@ int LVL_10_HRUGIS_CLOUD_FUN_00342B08(int a0, int a1, int a2) {
     LVL_10_HRUGIS_CLOUD_F1157be91_FUN_00132028();
     return 1;
 }
+struct src_record {
+    unsigned char b0;
+    unsigned char b1;
+    unsigned char b2;
+    unsigned char b3;
+    unsigned short s4;
+    unsigned short s6;
+    unsigned short s8;
+    unsigned short s10;
+    unsigned short s12;
+    unsigned char e;
+    unsigned char f;
+};
+
+struct dst_record {
+    unsigned char b0;
+    unsigned char b1;
+    unsigned char b2;
+    unsigned char b3;
+    unsigned short s4;
+    unsigned short s6;
+    unsigned short s8;
+    short s10;
+    short s12;
+    unsigned char e;
+    unsigned char f;
+};
+
+extern struct dst_record LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[8] __attribute__((nosda));
+
+int LVL_10_HRUGIS_CLOUD_FUN_002F16D0(struct src_record *src)
+{
+    int n = 0;
+    int i;
+    int j;
+
+    while (n < 8 && src[n].b0 != 255)
+        n++;
+
+    j = 0;
+    for (i = 0; i < 8 && j < n; i++) {
+        if (LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].b0 == 0)
+            j++;
+    }
+
+    if (j != n)
+        return -1;
+
+    for (j = 0; j < n; j++) {
+        i = 0;
+        while (i < 8 && LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].b0 != 0)
+            i++;
+        if (i < 8) {
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].b0 = src[j].b0;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].b1 = src[j].b1;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].b2 = src[j].b2;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].b3 = src[j].b3;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].s4 = src[j].s4;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].s6 = src[j].s6;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].s8 = src[j].s8;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].s10 = src[j].s10;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].s12 = src[j].s12;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].e = src[j].e - src[j].f;
+            LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].f = src[j].f;
+            if (LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].s10 + LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].s12 == 0)
+                LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0[i].s10++;
+        }
+    }
+    return i;
+}
+typedef struct {
+    short a;
+    short b;
+} T2;
+
+extern int LVL_10_HRUGIS_CLOUD_F28b88339_D_00220D60 __attribute__((nosda));
+extern int *LVL_10_HRUGIS_CLOUD_F28b88339_D_0021F2E0[];
+extern T2 LVL_10_HRUGIS_CLOUD_F28b88339_D_00220860[];
+
+void LVL_10_HRUGIS_CLOUD_FUN_0036EC50(void)
+{
+    int *wp;
+    int *ent;
+    int i;
+    int j;
+    int k;
+    int *arr;
+    int *pe;
+    int *base;
+    int *e;
+
+    for (wp = &LVL_10_HRUGIS_CLOUD_F28b88339_D_00220D60; *wp >= 0; wp++) {
+        ent = LVL_10_HRUGIS_CLOUD_F28b88339_D_0021F2E0[*wp];
+        for (i = 0; i < *(short *)((char *)ent + 40); i++) {
+            arr = ent + 16;
+            pe = *(int **)((char *)arr + (i << 3));
+            base = pe + 4;
+            e = (int *)((char *)base + (base[1] << 4)) + 4;
+            for (j = 0; j < base[0]; j++) {
+                T2 *s = &LVL_10_HRUGIS_CLOUD_F28b88339_D_00220860[((unsigned char *)e)[19]];
+                if (s->a != 0)
+                    e[12] = (e[12] & 0xFFFFC000) | s->a;
+                if (s->b != 0)
+                    e[8] = (e[8] & 0xFFFFC000) | s->b;
+                e += 16;
+            }
+        }
+    }
+}
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20;
+extern s32 LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_10_HRUGIS_CLOUD_FUN_002EE180(void) {
+    s32 result = LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field348;
+    if (LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A8FF0 != 0 && LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A8FF4 != 0 || LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field2294 == 110 && LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field2294 == 109 || LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field1497 != 0 && LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field2294 == 0 && LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+/* family 695584ed7d3e53db - 368 bytes, 2 placements
+   levels/10_hrugis_cloud @0x00315C90, levels/5_feltzin_system @0x00313778
+
+   Two-pass packet emitter.  On the "first" path (p5 == 0) it writes a four-word
+   header into the resident packet cursor (a small-data global), points s0 at the
+   payload area and advances the cursor by 112 bytes; on the other path s0 is a
+   local scratch buffer.  An eight-argument helper then fills the payload, and a
+   second pass emits the tag plus payload word or delegates to two helpers.
+
+   The cursor is addressed through $gp at the two delay-slot sites only, so the
+   declaration carries the `sda` attribute and the unit is compiled -G0. */
+
+extern int *LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 __attribute__((sda));
+
+extern void LVL_10_HRUGIS_CLOUD_F695584ed_FUN_00126288(void *p, int a1, int a2, int a3, int a4, int a5, int a6, int a7);
+extern void LVL_10_HRUGIS_CLOUD_F695584ed_FUN_0011AEA0(int a0);
+extern void LVL_10_HRUGIS_CLOUD_F695584ed_FUN_001265B0(void *a0, void *a1);
+
+void LVL_10_HRUGIS_CLOUD_FUN_00315C90(int a0, int a1, int a2, int a3, int p4, int p5)
+{
+    int t5 = a3;
+    int n = (1 << t5) >> 6;
+    int stride = 1 << (t5 + p4 - 4);
+    int *s0;
+    char buf[96];
+
+    if (n <= 0) {
+        n = 1;
+    }
+    if (p5 == 0) {
+        char *q;
+
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 0) = 0x10000006;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 4) = 0;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 8) = 0;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 12) = 0x50000006;
+        q = (char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88;
+        s0 = (int *)(q + 16);
+        LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 = (int *)(q + 112);
+    } else {
+        s0 = (int *)buf;
+    }
+    LVL_10_HRUGIS_CLOUD_F695584ed_FUN_00126288(s0, (short)a1, (short)n, (short)a2, 0, 0, (short)(1 << t5), (short)(1 << p4));
+    if (p5 == 0) {
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 0) = 0x30000000 | stride;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 4) = a0;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 8) = 0;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 12) = 0x50000000 | stride;
+        LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 = (int *)((char *)LVL_10_HRUGIS_CLOUD_F695584ed_D_001B2C88 + 16);
+    } else {
+        LVL_10_HRUGIS_CLOUD_F695584ed_FUN_0011AEA0(0);
+        LVL_10_HRUGIS_CLOUD_F695584ed_FUN_001265B0(s0, (void *)a0);
+    }
+}
+
+extern u8 LVL_10_HRUGIS_CLOUD_F63ee41be_D_001D2180[];
+
+void LVL_10_HRUGIS_CLOUD_FUN_0032AFD0(u8 *param_1)
+{
+    if (param_1[66] != 255) {
+        u8 *tbl = (u8 *)(*(volatile int *)(param_1 + 36) + 72);
+
+        *(int *)(param_1 + 88) = *(int *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + (param_1[64] << 2) + 28);
+        param_1[110] = *(u8 *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + 18);
+        param_1[108] = *(u8 *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + 17);
+    } else {
+        param_1[108] = 255;
+        param_1[110] = 0;
+        *(int *)(param_1 + 88) = (int)(LVL_10_HRUGIS_CLOUD_F63ee41be_D_001D2180 + (param_1[64] << 11));
+    }
+
+    *(int *)(param_1 + 92) = *(int *)(*(int *)(*(volatile int *)(param_1 + 36) + (param_1[67] << 2) + 72) + (param_1[65] << 2) + 28);
+}
+extern char *LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 __attribute__((sda));
+extern char LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001A6D40[];
+extern char LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001A6E90[];
+
+void LVL_10_HRUGIS_CLOUD_FUN_0030AF78(int a0)
+{
+    if (LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 != 0) {
+        *(int *)LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 = 0x30000015;
+        if (a0 == 0) {
+            *(int *)(LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 + 4) = (int)LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001A6D40;
+        } else {
+            *(int *)(LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 + 4) = (int)LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001A6E90;
+        }
+        *(int *)(LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 + 8) = 0;
+        *(int *)(LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 + 12) = 0x50000015;
+        LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 = LVL_10_HRUGIS_CLOUD_F8aa1a3c4_D_001B2C88 + 16;
+    }
+}
+void LVL_10_HRUGIS_CLOUD_FUN_0033A6C0(int param_1, short *param_2, short param_3)
+{
+    int i;
+
+    param_1 = (param_1 - *(int *)0x001B251C) << 8 >> 16;
+    for (i = 1; i <= param_2[0]; i++) {
+        if (param_2[i] == param_1) return;
+    }
+    if (param_2[0] < param_3) {
+        param_2[0] = param_2[0] + 1;
+        param_2[param_2[0]] = param_1;
+    }
+}
+/* Family e8702d836bd3adba (120 B, 2 placements): call every registered
+ * callback with its paired argument, bounded by a resident count word.
+ *
+ * The three resident globals are reached with `lui`+`lw` / `lui`+`addiu`
+ * pairs that the ASSEMBLER macro expands from a single RTL insn; this only
+ * happens when the externs carry the `sda` attribute (SYMBOL_REF_FLAG), which
+ * suppresses gcc's HIGH/LO_SUM address split.  Without it the compiler keeps
+ * the `%hi` in an extra callee-saved register and the body is 3 words long.
+ */
+typedef void (*fn_t)(int);
+
+extern int LVL_10_HRUGIS_CLOUD_Fe8702d83_D_001B1FF8 __attribute__((sda));   /* resident callback count */
+extern fn_t LVL_10_HRUGIS_CLOUD_Fe8702d83_D_001B1FD8[] __attribute__((sda)); /* callback table        */
+extern int LVL_10_HRUGIS_CLOUD_Fe8702d83_D_001B1FE8[] __attribute__((sda));  /* argument table        */
+
+void LVL_10_HRUGIS_CLOUD_FUN_00301CB0(void) {
+    int i;
+    for (i = 0; i < LVL_10_HRUGIS_CLOUD_Fe8702d83_D_001B1FF8; i++) {
+        LVL_10_HRUGIS_CLOUD_Fe8702d83_D_001B1FD8[i](LVL_10_HRUGIS_CLOUD_Fe8702d83_D_001B1FE8[i]);
+    }
+}
+extern int LVL_10_HRUGIS_CLOUD_F82977136_D_001C9EE8[];
+
+int LVL_10_HRUGIS_CLOUD_FUN_00320BC0(int arg)
+{
+    int *t = LVL_10_HRUGIS_CLOUD_F82977136_D_001C9EE8;
+    int *u = t + 5;
+    int i;
+
+    for (i = 0; i < 5; i++) {
+        int k = arg ? 4 - i : i;
+        if (t[k] == 0)
+            continue;
+        if (u[k] != -1)
+            continue;
+        return k;
+    }
+    return -1;
+}
+/* Family 7a3a32da2b27da0d — 364 bytes, a block loop that builds two four-word
+   GS packets per iteration and calls the measured SDK helper at 0x00126288
+   between them.
+
+   -G0 promotion (agent f02, 2026-10-07): the retail body reaches the resident
+   write pointer at 0x001B2C88 ten times through the one-instruction small-data
+   form (absolute `lui`+`lw` in ordinary flow, the single `$gp` form in the
+   `jal` delay slot).  Under -G8 that model is free; under -G0 cc1 needs the
+   measured `sda` attribute, otherwise it emits the explicit two-instruction
+   pair and shifts register allocation.  Nothing else about the body changed. */
+
+extern int *LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 __attribute__((sda));
+
+extern void LVL_10_HRUGIS_CLOUD_F7a3a32da_FUN_00126288(int *p, int a, int b, int c, int d, int e, int f, int g);
+
+void LVL_10_HRUGIS_CLOUD_FUN_00392808(char *dst, int src, int size)
+{
+    int count = (size + 16383) & -16384;
+    int si = 0;
+    int di = 0;
+    int v;
+
+    while (count > 0) {
+        *(int *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 = 0x10000006;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 4) = 0;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 8) = 0;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 12) = 0x50000006;
+        LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 = (int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 16);
+        v = (src + si) << 8;
+        v = v >> 16;
+        LVL_10_HRUGIS_CLOUD_F7a3a32da_FUN_00126288(LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88, v, 1, 1, 0, 0, 64, 64);
+        LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 = (int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 96);
+        *(int *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 = 0x30000300;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 4) = (int)(dst + di);
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 8) = 0;
+        *(int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 12) = 0x50000300;
+        si += 16384;
+        di += 12288;
+        count -= 16384;
+        LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 = (int *)((char *)LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88 + 16);
+    }
+}
+/* RAC2 family 3cde0d021bd56651 - 192 bytes, 2 placements.
+ * Slot3cde0d02 allocator: find the first free of six 64-byte slots, fill it in and
+ * link it at the head of the context's list.
+ */
+
+typedef struct Slot3cde0d02 {
+    short          f00;    /* +0x00 */
+    short          f02;    /* +0x02 */
+    unsigned char  f04;    /* +0x04 */
+    char           pad05[7];
+    unsigned char *f0C;    /* +0x0C */
+    int            f10;    /* +0x10 */
+    int            f14;    /* +0x14 */
+    int            f18;    /* +0x18 */
+    int            f1C;    /* +0x1C */
+    char           pad20[32];
+} Slot3cde0d02;                    /* 64 bytes */
+
+typedef struct Mid {
+    char           pad00[0x1C];
+    char          *f1C;    /* +0x1C */
+} Mid;
+
+typedef struct Ctx {
+    char           pad00[0x24];
+    Mid           *f24;    /* +0x24 */
+    char           pad28[0x28];
+    int            f50;    /* +0x50 */
+} Ctx;
+
+extern Slot3cde0d02 LVL_10_HRUGIS_CLOUD_F3cde0d02_D_001D2000[6];
+extern unsigned char LVL_10_HRUGIS_CLOUD_F3cde0d02_D_001CA200[];
+
+Slot3cde0d02 *LVL_10_HRUGIS_CLOUD_FUN_0032B6B0(Ctx *ctx, int index)
+{
+    int i;
+    Slot3cde0d02 *slot;
+    unsigned char *p;
+
+    for (i = 0; i < 6; i++) {
+        if (LVL_10_HRUGIS_CLOUD_F3cde0d02_D_001D2000[i].f04 == 0) {
+            break;
+        }
+    }
+    slot = &LVL_10_HRUGIS_CLOUD_F3cde0d02_D_001D2000[i];
+    slot->f04 = 1;
+    slot->f00 = index;
+    slot->f10 = (int)(LVL_10_HRUGIS_CLOUD_F3cde0d02_D_001CA200 + i * 5376);
+    slot->f14 = (int)ctx->f24;
+    p = (unsigned char *)*(unsigned int *)(ctx->f24->f1C + (short)index * 4 + 4);
+    slot->f02 = p[2];
+    slot->f0C = p + (p[0] + 4);
+    slot->f1C = ctx->f50;
+    ctx->f50 = (int)slot;
+    return slot;
+}

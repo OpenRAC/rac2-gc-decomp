@@ -1745,3 +1745,50 @@ int LVL_23_DAMOSEL_ORBIT_FUN_003361A0(int a0, int a1, int a2) {
     LVL_23_DAMOSEL_ORBIT_F1157be91_FUN_00132028();
     return 1;
 }
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20;
+extern s32 LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_23_DAMOSEL_ORBIT_FUN_002DDE18(void) {
+    s32 result = LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field348;
+    if (LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_001A8FF0 != 0 && LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_001A8FF4 != 0 || LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field2294 == 110 && LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field2294 == 109 || LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field1497 != 0 && LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field2294 == 0 && LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_23_DAMOSEL_ORBIT_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+/* Family cbc1388ebe801e68 (116 B, 2 placements): arm one animation slot on a
+ * resident object.  Two global guards, a "current slot" guard, then five
+ * resident stores in the retail order.
+ *
+ * The indexed read `p + a1 * 4 + 1152` must be written as a named byte pointer
+ * (`w = p + a1 * 4`) followed by the load at `w + 1152`: when the 1152 is folded
+ * into the same PLUS chain, gcc canonicalises the commutative `addu` with the
+ * scaled index as the first source operand, one byte away from retail.
+ */
+
+extern u8 LVL_23_DAMOSEL_ORBIT_Fcbc1388e_D_001A63A8[];
+
+void LVL_23_DAMOSEL_ORBIT_FUN_003AAA80(u8 *a0, int a1) {
+    u8 *g = LVL_23_DAMOSEL_ORBIT_Fcbc1388e_D_001A63A8;
+    u8 *p = *(u8 **)(a0 + 104);
+    int bit;
+    if (*(int *)(g + 104) != 0) return;
+    if (*(int *)(g + 36) != -1) return;
+    if (a1 == *(int *)(p + 1256)) return;
+    bit = 1 << a1;
+    { u8 *w = p + a1 * 4; *(int *)(g + 36) = (*(int *)(w + 1152) & 0x3fff) + 2000; }
+    *(int *)(g + 40) = 0;
+    *(int *)(p + 1256) = a1;
+    *(int *)(p + 1252) = 1800;
+    *(int *)(p + 1248) |= bit;
+}

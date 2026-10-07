@@ -39,8 +39,18 @@
     "LVL_15_GORN_F1157be91_FUN_00132028": 1253416,
     "LVL_15_GORN_F1157be91_FUN_00133230": 1258032,
     "LVL_15_GORN_F1157be91_FUN_001334B8": 1258680,
+    "LVL_15_GORN_F19c820e8_D_001CA340": 1876800,
+    "LVL_15_GORN_F19c820e8_D_001D2140": 1909056,
+    "LVL_15_GORN_F250a61cf_D_001AD670": 1758832,
+    "LVL_15_GORN_F250a61cf_D_001AD680": 1758848,
+    "LVL_15_GORN_F250a61cf_D_001AD688": 1758856,
+    "LVL_15_GORN_F250a61cf_FUN_00115DA8": 1138088,
     "LVL_15_GORN_F490e2c59_D_001A79F0": 1735152,
     "LVL_15_GORN_F490e2c59_D_001AA7F0": 1746928,
+    "LVL_15_GORN_F4e5bde81_D_00189E20": 1613344,
+    "LVL_15_GORN_F4e5bde81_D_001A7B08": 1735432,
+    "LVL_15_GORN_F4e5bde81_D_001A8FF0": 1740784,
+    "LVL_15_GORN_F4e5bde81_D_001A8FF4": 1740788,
     "LVL_15_GORN_F55a1acb8_D_001A63A8": 1729448,
     "LVL_15_GORN_F55a1acb8_D_001A63AC": 1729452,
     "LVL_15_GORN_F55a1acb8_FUN_0011AEA0": 1158816,
@@ -69,12 +79,16 @@
     "LVL_15_GORN_Fc84472d1_D_001ADD98": 1760664,
     "LVL_15_GORN_Fc84472d1_D_001ADDB8": 1760696,
     "LVL_15_GORN_Fc84472d1_FUN_00115E38": 1138232,
+    "LVL_15_GORN_Fe6db7296_D_001B9600": 1807872,
     "LVL_15_GORN_Fea34650e_D_00189E20": 1613344,
     "LVL_15_GORN_Feab1f2e5_D_001ADD98": 1760664,
     "LVL_15_GORN_Feab1f2e5_D_001ADDE0": 1760736,
     "LVL_15_GORN_Feab1f2e5_FUN_00115E38": 1138232,
     "LVL_15_GORN_Fee2b87d1_D_0014B540": 1357120,
-    "LVL_15_GORN_Fee2b87d1_D_00152CD0": 1387728
+    "LVL_15_GORN_Fee2b87d1_D_00152CD0": 1387728,
+    "LVL_15_GORN_Fffb5b86c_D_0021F420": 2225184,
+    "LVL_15_GORN_Fffb5b86c_D_002209A0": 2230688,
+    "LVL_15_GORN_Fffb5b86c_D_00220EA0": 2231968
   },
   "flags": [
     "-O2",
@@ -184,6 +198,12 @@
       "symbol": "LVL_15_GORN_FUN_002EC088"
     },
     {
+      "address": 3064448,
+      "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
+      "size": 188,
+      "symbol": "LVL_15_GORN_FUN_002EC280"
+    },
+    {
       "address": 3077472,
       "meaning": "Return one when the resident mode word is25,5,10 or15, otherwise zero",
       "size": 60,
@@ -205,6 +225,12 @@
       "meaning": "returns the resident 32-bit field at core address 0x0018c0b4",
       "size": 12,
       "symbol": "LVL_15_GORN_FUN_002EF720"
+    },
+    {
+      "address": 3078096,
+      "meaning": "shared native body of family e6db72964a92fcfa",
+      "size": 468,
+      "symbol": "LVL_15_GORN_FUN_002EF7D0"
     },
     {
       "address": 3078568,
@@ -350,6 +376,12 @@
       "symbol": "LVL_15_GORN_FUN_00321F10"
     },
     {
+      "address": 3315664,
+      "meaning": "shared native body of family 19c820e81a180575",
+      "size": 192,
+      "symbol": "LVL_15_GORN_FUN_003297D0"
+    },
+    {
       "address": 3317584,
       "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
@@ -414,6 +446,12 @@
       "symbol": "LVL_15_GORN_FUN_0035EFF8"
     },
     {
+      "address": 3618224,
+      "meaning": "shared native body of family ffb5b86c8c05572c",
+      "size": 260,
+      "symbol": "LVL_15_GORN_FUN_003735B0"
+    },
+    {
       "address": 3636680,
       "meaning": "shared native body of family 62e6ff2b3d3a",
       "size": 124,
@@ -446,6 +484,12 @@
       "address": 3734168,
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_0038FA98"
+    },
+    {
+      "address": 3740824,
+      "meaning": "shared native body of family 250a61cf2f35cf62",
+      "size": 188,
+      "symbol": "LVL_15_GORN_FUN_00391498"
     },
     {
       "address": 3762864,

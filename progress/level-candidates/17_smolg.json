@@ -6,10 +6,10 @@
   "reference_sha256": "4e1908fbc51ea0f156a32077fd20b2af755fe0b1f4aa7b1bc67967208e7e87f4",
   "reference_entry": 2773128,
   "candidate_source": "candidates/levels/17_smolg.c",
-  "source_sha256": "12ae330e69c08a116b3c1a416f8ed4234427e2332de1fd118a96b92db736f109",
-  "catalog_sha256": "91e91cc36866f97a0b6e67d561d7c55bd7e474aa691b896a7b3616b2e9ad7d0c",
-  "object_sha256": "6a28df3c98c10030658ce86c7da3a59fbb77ddfbbf3eaf7813691f7e43ff6519",
-  "candidate_elf_sha256": "33f2870b5b190df81bed6df75d70024ddcb57333c33a7f25189353e05f5e41cb",
+  "source_sha256": "8e16a350e20cabff584768932250db4120e91aa7b33ef8efb7eb7cf4fe50e6d1",
+  "catalog_sha256": "4e1c65d964685b0e10b4bb7079ef6aa1e5e5e03a3dcf8d92b14d1ef176ad3d55",
+  "object_sha256": "d2091a10aa975105b8341caafe0b44625d9d73329db300b9dac864585a725706",
+  "candidate_elf_sha256": "1087fc4ea2b50548be6744c4ff8a242d083dd6c4d485f75d1f474a9545fe338d",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -199,6 +199,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 56
+    },
+    {
+      "symbol": "LVL_17_SMOLG_FUN_002D4408",
+      "address": 2966536,
+      "size": 188,
+      "matched": true,
+      "reference_sha256": "59b133bcdece9bc354d7aee2818b30227f2b673c9c6a9f9d009fa2ad4773b513",
+      "candidate_sha256": "59b133bcdece9bc354d7aee2818b30227f2b673c9c6a9f9d009fa2ad4773b513",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 188
     },
     {
       "symbol": "LVL_17_SMOLG_FUN_002D7780",
@@ -595,6 +606,17 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 112
+    },
+    {
+      "symbol": "LVL_17_SMOLG_FUN_00331818",
+      "address": 3348504,
+      "size": 316,
+      "matched": true,
+      "reference_sha256": "45d72ad98c8c7b9b90267fa3e0d690a428a46150ab41f98349efa52337cfdd3c",
+      "candidate_sha256": "45d72ad98c8c7b9b90267fa3e0d690a428a46150ab41f98349efa52337cfdd3c",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 316
     },
     {
       "symbol": "LVL_17_SMOLG_FUN_00344B80",
@@ -1170,5 +1192,5 @@
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 8964
+  "matched_code_bytes": 9468
 }

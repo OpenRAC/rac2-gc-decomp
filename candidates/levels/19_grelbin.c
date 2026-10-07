@@ -1736,3 +1736,335 @@ int LVL_19_GRELBIN_FUN_0032B9F8(int a0, int a1, int a2) {
     LVL_19_GRELBIN_F1157be91_FUN_00132028();
     return 1;
 }
+struct Sep6 {
+    int v[6];
+};
+
+extern struct Sep6 LVL_19_GRELBIN_Fe9186f4c_D_001AA4D0;
+extern char LVL_19_GRELBIN_Fe9186f4c_D_001AA4E8[];
+extern char LVL_19_GRELBIN_Fe9186f4c_D_001AA4F8[];
+extern char LVL_19_GRELBIN_Fe9186f4c_D_001AA508[];
+extern void LVL_19_GRELBIN_Fe9186f4c_FUN_00115DA8();
+
+void LVL_19_GRELBIN_FUN_0032BEA0(char *buf, int value, int index) {
+    struct Sep6 sep = LVL_19_GRELBIN_Fe9186f4c_D_001AA4D0;
+    int rest;
+    if (value > 999999) {
+        rest = value % 1000000;
+        LVL_19_GRELBIN_Fe9186f4c_FUN_00115DA8(buf, LVL_19_GRELBIN_Fe9186f4c_D_001AA4E8, value / 1000000, sep.v[index % 6], rest / 1000,
+                sep.v[index % 6], rest % 1000);
+    } else if (value >= 1000) {
+        LVL_19_GRELBIN_Fe9186f4c_FUN_00115DA8(buf, LVL_19_GRELBIN_Fe9186f4c_D_001AA4F8, value / 1000, sep.v[index % 6], value % 1000);
+    } else {
+        LVL_19_GRELBIN_Fe9186f4c_FUN_00115DA8(buf, LVL_19_GRELBIN_Fe9186f4c_D_001AA508, value);
+    }
+}
+/* Family be569dc253cd5555 — 108 bytes, 2 placements (19_grelbin, 8_tabora).
+   Walk the resident function-pointer table at 0x1B2340, call each entry while
+   the resident count at 0x1B2380 says there is one, then clear the count.
+   Default profile (-O2 -G0 -ffunction-sections): both globals are reached with
+   lui/lw absolute addressing, no $gp access anywhere in the body. */
+extern int LVL_19_GRELBIN_Fbe569dc2_D_001B2380 __attribute__((sda));
+extern void (*LVL_19_GRELBIN_Fbe569dc2_D_001B2340[])(void);
+
+void LVL_19_GRELBIN_FUN_002D54C0(void)
+{
+    int i;
+
+    for (i = 0; i < LVL_19_GRELBIN_Fbe569dc2_D_001B2380; i++) {
+        LVL_19_GRELBIN_Fbe569dc2_D_001B2340[i]();
+    }
+
+    LVL_19_GRELBIN_Fbe569dc2_D_001B2380 = 0;
+}
+typedef struct {
+    u8 field00[0x218]; signed short field218; u8 field21A[0x12e];
+    signed short field348; u8 field34A[4]; signed short field34E;
+    u8 field350[0x1147]; u8 field1497; u8 field1498[2]; u8 field149A;
+    u8 field149B[0xdf9]; s32 field2294;
+} NativeModeResident;
+extern NativeModeResident LVL_19_GRELBIN_F4e5bde81_D_00189E20;
+extern s32 LVL_19_GRELBIN_F4e5bde81_D_001A8FF0 __attribute__((sda));
+extern volatile u8 LVL_19_GRELBIN_F4e5bde81_D_001A7B08[4] __attribute__((sda));
+extern s32 LVL_19_GRELBIN_F4e5bde81_D_001A8FF4 __attribute__((sda));
+s32 LVL_19_GRELBIN_FUN_002D0E80(void) {
+    s32 result = LVL_19_GRELBIN_F4e5bde81_D_00189E20.field348;
+    if (LVL_19_GRELBIN_F4e5bde81_D_001A8FF0 != 0 && LVL_19_GRELBIN_F4e5bde81_D_001A8FF4 == 0) result = 2;
+    if (LVL_19_GRELBIN_F4e5bde81_D_001A8FF4 != 0 || LVL_19_GRELBIN_F4e5bde81_D_00189E20.field2294 == 59 ||
+        (LVL_19_GRELBIN_F4e5bde81_D_00189E20.field2294 == 110 && LVL_19_GRELBIN_F4e5bde81_D_00189E20.field149A == 0) ||
+        LVL_19_GRELBIN_F4e5bde81_D_00189E20.field2294 == 109 || LVL_19_GRELBIN_F4e5bde81_D_00189E20.field218 != 0 ||
+        (LVL_19_GRELBIN_F4e5bde81_D_00189E20.field1497 != 0 && LVL_19_GRELBIN_F4e5bde81_D_001A7B08[3] != 0 &&
+         LVL_19_GRELBIN_F4e5bde81_D_00189E20.field2294 == 0 && LVL_19_GRELBIN_F4e5bde81_D_00189E20.field34E < 4)) result = 1;
+    if (result == 1 && LVL_19_GRELBIN_F4e5bde81_D_00189E20.field149A != 0) result = 0;
+    return result;
+}
+/* family c459a266b43242d6 - 352 bytes, 2 placements
+   levels/19_grelbin @0x00412F70, levels/8_tabora @0x0041E630
+
+   Fills five output floats from two pinned tables and a resident flag word,
+   then clamps the three still free outputs to [-1, 1]. */
+
+extern float LVL_19_GRELBIN_Fc459a266_D_00189E20[];
+extern int LVL_19_GRELBIN_Fc459a266_D_00138180[];
+
+void LVL_19_GRELBIN_FUN_00412F70(float *a0, float *a1, float *a2, float *a3, float *p4)
+{
+    float f1;
+    float f2;
+    int v1;
+
+    *a0 = -LVL_19_GRELBIN_Fc459a266_D_00189E20[2028];
+    *a2 = -LVL_19_GRELBIN_Fc459a266_D_00189E20[2029];
+    v1 = LVL_19_GRELBIN_Fc459a266_D_00138180[104];
+    f2 = 0.0f;
+    if (v1 & 0x40)
+        f2 = 1.0f;
+    f1 = (v1 & 0x20) ? (f2 - 1.0f) : f2;
+    *a1 = f1;
+    *a3 = *(float *)&LVL_19_GRELBIN_Fc459a266_D_00138180[75];
+    v1 = LVL_19_GRELBIN_Fc459a266_D_00138180[104];
+    f1 = 0.0f;
+    if (v1 & 0x1)
+        f1 = 1.0f;
+    if (v1 & 0x2)
+        f1 = f1 - 1.0f;
+    *p4 = f1;
+    if (*a0 > 1.0f)
+        *a0 = 1.0f;
+    else if (*a0 < -1.0f)
+        *a0 = -1.0f;
+    if (*a1 > 1.0f)
+        *a1 = 1.0f;
+    else if (*a1 < -1.0f)
+        *a1 = -1.0f;
+    if (*p4 > 1.0f)
+        *p4 = 1.0f;
+    else if (*p4 < -1.0f)
+        *p4 = -1.0f;
+}
+
+extern u8 LVL_19_GRELBIN_Fd1172b6a_D_001D2540[];
+
+void LVL_19_GRELBIN_FUN_0030E040(u8 *param_1)
+{
+    if (param_1[66] != 255) {
+        u8 *tbl = (u8 *)(*(volatile int *)(param_1 + 36) + 72);
+
+        *(int *)(param_1 + 88) = *(int *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + (param_1[64] << 2) + 28);
+        param_1[110] = *(u8 *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + 18);
+        param_1[108] = *(u8 *)(*(int *)(tbl + (*(volatile u8 *)(param_1 + 66) << 2)) + 17);
+    } else {
+        param_1[108] = 255;
+        param_1[110] = 0;
+        *(int *)(param_1 + 88) = (int)(LVL_19_GRELBIN_Fd1172b6a_D_001D2540 + (param_1[64] << 11));
+    }
+
+    *(int *)(param_1 + 92) = *(int *)(*(int *)(*(volatile int *)(param_1 + 36) + (param_1[67] << 2) + 72) + (param_1[65] << 2) + 28);
+}
+extern int *LVL_19_GRELBIN_Fcceeec15_D_001B3188 __attribute__((sda));
+extern char LVL_19_GRELBIN_Fcceeec15_D_001A6D40[];
+extern char LVL_19_GRELBIN_Fcceeec15_D_001A6E90[];
+
+void LVL_19_GRELBIN_FUN_002EDD70(int param_1)
+{
+    if (LVL_19_GRELBIN_Fcceeec15_D_001B3188 == 0) {
+        return;
+    }
+
+    *(int *)LVL_19_GRELBIN_Fcceeec15_D_001B3188 = 0x30000015;
+
+    if (param_1 == 0) {
+        *(int *)((char *)LVL_19_GRELBIN_Fcceeec15_D_001B3188 + 4) = (int)LVL_19_GRELBIN_Fcceeec15_D_001A6D40;
+    } else {
+        *(int *)((char *)LVL_19_GRELBIN_Fcceeec15_D_001B3188 + 4) = (int)LVL_19_GRELBIN_Fcceeec15_D_001A6E90;
+    }
+
+    *(int *)((char *)LVL_19_GRELBIN_Fcceeec15_D_001B3188 + 8) = 0;
+    *(int *)((char *)LVL_19_GRELBIN_Fcceeec15_D_001B3188 + 12) = 0x50000015;
+    LVL_19_GRELBIN_Fcceeec15_D_001B3188 = (int *)((char *)LVL_19_GRELBIN_Fcceeec15_D_001B3188 + 16);
+}
+void LVL_19_GRELBIN_FUN_0031DFB0(int param_1, short *param_2, short param_3)
+{
+    int i;
+
+    param_1 = (param_1 - *(int *)0x001B2A1C) << 8 >> 16;
+    for (i = 1; i <= param_2[0]; i++) {
+        if (param_2[i] == param_1) return;
+    }
+    if (param_2[0] < param_3) {
+        param_2[0] = param_2[0] + 1;
+        param_2[param_2[0]] = param_1;
+    }
+}
+/* Family 6230a7600b032836 (120 B, 2 placements): call every registered
+ * callback with its paired argument, bounded by a resident count word.
+ *
+ * The three resident globals are reached with `lui`+`lw` / `lui`+`addiu`
+ * pairs that the ASSEMBLER macro expands from a single RTL insn; this only
+ * happens when the externs carry the `sda` attribute (SYMBOL_REF_FLAG), which
+ * suppresses gcc's HIGH/LO_SUM address split.  Without it the compiler keeps
+ * the `%hi` in an extra callee-saved register and the body is 3 words long.
+ */
+typedef void (*fn_t)(int);
+
+extern int LVL_19_GRELBIN_F6230a760_D_001B24B8 __attribute__((sda));   /* resident callback count */
+extern fn_t LVL_19_GRELBIN_F6230a760_D_001B2498[] __attribute__((sda)); /* callback table        */
+extern int LVL_19_GRELBIN_F6230a760_D_001B24A8[] __attribute__((sda));  /* argument table        */
+
+void LVL_19_GRELBIN_FUN_002E4A80(void) {
+    int i;
+    for (i = 0; i < LVL_19_GRELBIN_F6230a760_D_001B24B8; i++) {
+        LVL_19_GRELBIN_F6230a760_D_001B2498[i](LVL_19_GRELBIN_F6230a760_D_001B24A8[i]);
+    }
+}
+extern int LVL_19_GRELBIN_F9306cc1f_D_001CA2A8[];
+
+int LVL_19_GRELBIN_FUN_00303C48(int arg)
+{
+    int *t = LVL_19_GRELBIN_F9306cc1f_D_001CA2A8;
+    int *u = t + 5;
+    int i;
+
+    for (i = 0; i < 5; i++) {
+        int k = arg ? 4 - i : i;
+        if (t[k] == 0)
+            continue;
+        if (u[k] != -1)
+            continue;
+        return k;
+    }
+    return -1;
+}
+extern int LVL_19_GRELBIN_F8a42bc68_D_002325D0[];
+
+int LVL_19_GRELBIN_FUN_0037E040(int value)
+{
+    int i;
+    int found = 0;
+
+    for (i = 0; i < LVL_19_GRELBIN_F8a42bc68_D_002325D0[64]; i++)
+    {
+        if (LVL_19_GRELBIN_F8a42bc68_D_002325D0[i] == value)
+        {
+            found = 1;
+            break;
+        }
+    }
+    return found;
+}
+/* Family 435a49e62f53b8db - 368 bytes, 2 members.
+   Placements: levels/3_endako @0x002FC368, levels/19_grelbin @0x002F8AF8.
+
+   Measured binding.  LVL_19_GRELBIN_F435a49e6_D_001B3188 is a four-byte pointer in the resident image
+   (0x001B3188 = 1782152).  The retail body reads it with a per-site
+   `lui $r,%hi` + `lw $r,%lo($r)` pair and writes it with a single
+   `sw $r,%lo($gp)`; all three of the latter sit in a compiler delay slot
+   (two in the `b` before the branch target, one in the `jr $ra` slot).
+
+   That mix is exactly gas's expansion of the bare-symbol macro form
+   `lw $r,LVL_19_GRELBIN_F435a49e6_D_001B3188` / `sw $r,LVL_19_GRELBIN_F435a49e6_D_001B3188`: absolute `lui`+`%lo` in ordinary
+   flow, `$gp` (GPREL16) inside a `.set nomacro` region.  cc1 emits that
+   macro only for an `sda` symbol, so the declaration carries `sda`.
+   Without it cc1 computes the symbol's address once, CSEs it into a base
+   register and reloads `0($base)` per site, which also costs an extra
+   `move` to keep the incoming `$a1` alive across that register - 344
+   bytes against the 368 of the reference. */
+
+extern int *LVL_19_GRELBIN_F435a49e6_D_001B3188 __attribute__((sda));
+extern void LVL_19_GRELBIN_F435a49e6_FUN_00126288(void *, short, short, int, int, int, short, short);
+extern void LVL_19_GRELBIN_F435a49e6_FUN_0011AEA0(int);
+extern void LVL_19_GRELBIN_F435a49e6_FUN_001265B0(void *, int);
+
+void LVL_19_GRELBIN_FUN_002F8AF8(int a0, int a1, int a2, int a3, int a4, int a5)
+{
+    char buf[96];
+    void *work;
+    int t4;
+    int s2;
+
+    s2 = 1 << (a3 + a4 - 4);
+    t4 = (1 << a3) >> 6;
+    if (t4 <= 0)
+        t4 = 1;
+
+    if (a5 == 0) {
+        *(int *)LVL_19_GRELBIN_F435a49e6_D_001B3188 = 0x10000006;
+        *(int *)((char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 4) = 0;
+        *(int *)((char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 8) = 0;
+        *(int *)((char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 12) = 0x50000006;
+        work = (char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 16;
+        LVL_19_GRELBIN_F435a49e6_D_001B3188 = (int *)((char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 112);
+    } else {
+        work = buf;
+    }
+
+    LVL_19_GRELBIN_F435a49e6_FUN_00126288(work, (short)a1, (short)t4, (short)a2, 0, 0,
+            (short)(1 << a3), (short)(1 << a4));
+
+    if (a5 == 0) {
+        *(int *)LVL_19_GRELBIN_F435a49e6_D_001B3188 = 0x30000000 | s2;
+        *(int *)((char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 4) = a0;
+        *(int *)((char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 8) = 0;
+        *(int *)((char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 12) = 0x50000000 | s2;
+        LVL_19_GRELBIN_F435a49e6_D_001B3188 = (int *)((char *)LVL_19_GRELBIN_F435a49e6_D_001B3188 + 16);
+    } else {
+        LVL_19_GRELBIN_F435a49e6_FUN_0011AEA0(0);
+        LVL_19_GRELBIN_F435a49e6_FUN_001265B0(work, a0);
+    }
+}
+/* RAC2 family 0820eb1123250c0b - 192 bytes, 2 placements.
+ * Slot0820eb11 allocator: find the first free of six 64-byte slots, fill it in and
+ * link it at the head of the context's list.
+ */
+
+typedef struct Slot0820eb11 {
+    short          f00;    /* +0x00 */
+    short          f02;    /* +0x02 */
+    unsigned char  f04;    /* +0x04 */
+    char           pad05[7];
+    unsigned char *f0C;    /* +0x0C */
+    int            f10;    /* +0x10 */
+    int            f14;    /* +0x14 */
+    int            f18;    /* +0x18 */
+    int            f1C;    /* +0x1C */
+    char           pad20[32];
+} Slot0820eb11;                    /* 64 bytes */
+
+typedef struct Mid {
+    char           pad00[0x1C];
+    char          *f1C;    /* +0x1C */
+} Mid;
+
+typedef struct Ctx {
+    char           pad00[0x24];
+    Mid           *f24;    /* +0x24 */
+    char           pad28[0x28];
+    int            f50;    /* +0x50 */
+} Ctx;
+
+extern Slot0820eb11 LVL_19_GRELBIN_F0820eb11_D_001D23C0[6];
+extern unsigned char LVL_19_GRELBIN_F0820eb11_D_001CA5C0[];
+
+Slot0820eb11 *LVL_19_GRELBIN_FUN_0030E7B0(Ctx *ctx, int index)
+{
+    int i;
+    Slot0820eb11 *slot;
+    unsigned char *p;
+
+    for (i = 0; i < 6; i++) {
+        if (LVL_19_GRELBIN_F0820eb11_D_001D23C0[i].f04 == 0) {
+            break;
+        }
+    }
+    slot = &LVL_19_GRELBIN_F0820eb11_D_001D23C0[i];
+    slot->f04 = 1;
+    slot->f00 = index;
+    slot->f10 = (int)(LVL_19_GRELBIN_F0820eb11_D_001CA5C0 + i * 5376);
+    slot->f14 = (int)ctx->f24;
+    p = (unsigned char *)*(unsigned int *)(ctx->f24->f1C + (short)index * 4 + 4);
+    slot->f02 = p[2];
+    slot->f0C = p + (p[0] + 4);
+    slot->f1C = ctx->f50;
+    ctx->f50 = (int)slot;
+    return slot;
+}
