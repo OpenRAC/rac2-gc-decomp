@@ -143,6 +143,11 @@ private continuation prompt supplies the exact roots. The import retained all
 
 ## Complete build and closure
 
+The official [interactive review and batch finalizer](CAMPAIGN-TOOLS.md) provide
+`campaign.py diff` for immutable trial inspection and `campaign.py finalize`
+for guarded proof publication, complete report refresh and checks. They retain
+this register, the same acceptance gates and zero credit for diagnostics.
+
 Before compiling, establish function boundaries and ABI from the pinned
 instructions and relevant callers/callees. A default Ghidra signature or unused
 register residue does not justify an invented return value. Prototype changes
