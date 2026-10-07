@@ -168,6 +168,20 @@ def checked_fragment(layout: Path, name: str, data: bytes, write: bool = True) -
     return {"fragment": name, "sha256": digest(data), "source_text_bytes": len(data)}
 
 
+
+def load_smalldata(repo: Path, inputs: dict) -> list:
+    """The separate small-data units: one catalog per overlay that needs one."""
+    found = []
+    for path in sorted((repo / "config/level-g8").glob("*.json")):
+        relative = path.relative_to(repo).as_posix()
+        data = path.read_bytes()
+        catalog = json.loads(data)
+        if catalog.get("kind") != "level-smalldata-catalog" or catalog.get("target") != "SCUS_972.68":
+            raise ValueError(f"wrong small-data catalogue: {relative}")
+        inputs[relative] = digest(data)
+        found.append((relative, catalog))
+    return found
+
 def load_inputs(repo: Path) -> tuple[dict, list[tuple[str, dict]], dict]:
     boot_name = "config/candidate-catalog.json"
     boot_bytes = contained(repo, boot_name).read_bytes()
@@ -192,6 +206,7 @@ def capture(repo: Path, layout: Path, write: bool = True, expected_manifest_hash
     if write and layout.is_relative_to(repo):
         raise ValueError("draft must be outside the public repository")
     boot, native, inputs = load_inputs(repo)
+    small_catalogs = load_smalldata(repo, inputs)
     fragment = lambda name, data: checked_fragment(layout, name, data, write=write)
     boot_data = contained(repo, "candidates/boot.c").read_bytes()
     inputs["candidates/boot.c"] = digest(boot_data)
@@ -305,6 +320,17 @@ def capture(repo: Path, layout: Path, write: bool = True, expected_manifest_hash
         catalog_path = unit_spec(sdk["unit_id"])["catalog"]
         inputs[catalog_path] = digest(contained(repo, catalog_path).read_bytes())
         inputs[sdk["source"]] = inputs[sdk["module"]] = digest(data)
+    # A small-data unit is one authored fragment holding the measured body.
+    for _, catalog in small_catalogs:
+        pieces = []
+        for function in catalog["functions"]:
+            data = contained(repo, catalog["module"]).read_bytes()
+            pieces.append({**fragment(catalog["module"], data),
+                           "replacements": {"@@FUNCTION@@": function["symbol"]}})
+        rendered = contained(repo, catalog["source"]).read_bytes()
+        recipes[catalog["source"]] = {"sha256": digest(rendered), "source_text_bytes": len(rendered),
+                                      "pieces": pieces}
+        inputs[catalog["source"]] = digest(rendered)
     families = [{k: v for k, v in family.items() if k != "normalized_source"} for family in base_templates.values()]
     native_functions = sum(len(c["functions"]) for _, c in native)
     native_bytes = sum(f["size"] for _, c in native for f in c["functions"])
@@ -375,6 +401,7 @@ def render(layout: Path, manifest: dict, enforce_hashes: bool = True) -> tuple[d
 def analyze(repo: Path, sources: dict, recipes: dict) -> dict:
     """Recompute source inventories without re-slicing authoritative modules."""
     boot, native, inputs = load_inputs(repo)
+    smalldata = load_smalldata(repo, inputs)
     from boot_sdk_unit import admitted_units, load_catalog, unit_spec
     sdk_catalogs = [load_catalog(repo, unit) for unit in admitted_units(repo)]
     if sdk_catalogs:
@@ -385,11 +412,13 @@ def analyze(repo: Path, sources: dict, recipes: dict) -> dict:
         path = unit_spec(sdk_catalog["unit_id"])["catalog"]
         inputs[path] = digest(contained(repo, path).read_bytes())
         inputs[sdk_catalog["module"]] = digest(contained(repo, sdk_catalog["module"]).read_bytes())
-    expected_sources = {"candidates/boot.c"} | {c["source"] for _, c in native} | {c["source"] for c in sdk_catalogs}
+    expected_sources = ({"candidates/boot.c"} | {c["source"] for _, c in native}
+                        | {c["source"] for c in sdk_catalogs} | {c["source"] for _, c in smalldata})
     if set(sources) != expected_sources:
         raise ValueError("recipe source inventory differs from the catalogues")
     definition_pattern = rb"(?m)^[A-Za-z_][^;{}]*?\b((?:LVL_[A-Z0-9_]+_)?FUN_[0-9A-F]+)\s*\([^;{}]*?\)\s*\{"
-    for catalog in [dict(boot, source="candidates/boot.c")] + [c for _, c in native] + sdk_catalogs:
+    for catalog in ([dict(boot, source="candidates/boot.c")] + [c for _, c in native]
+                    + [c for _, c in smalldata] + sdk_catalogs):
         data = sources[catalog["source"]]
         defined = {m[1].decode() for m in re.finditer(definition_pattern, data)}
         catalogued = {f["symbol"] for f in catalog["functions"]}

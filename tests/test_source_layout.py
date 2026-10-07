@@ -14,6 +14,11 @@ import source_layout as tool
 from boot_sdk_unit import admitted_units
 
 
+def small_data_units(repo):
+    """Overlays that need a separate small-data unit (config/level-g8)."""
+    return sorted((repo / "config/level-g8").glob("*.json"))
+
+
 class SourceLayoutTest(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix="test-layout-")
@@ -24,7 +29,8 @@ class SourceLayoutTest(unittest.TestCase):
     def test_all_catalogued_standalone_sources_are_byte_identical(self):
         result = tool.verify(REPO, self.layout, self.layout / "generated")
         has_sdk = (REPO / "config/boot-units/sdk-sysbit-flush.json").exists()
-        self.assertEqual(result["byte_identical_sources"], 28 + len(admitted_units(REPO)))
+        self.assertEqual(result["byte_identical_sources"],
+                         28 + len(admitted_units(REPO)) + len(small_data_units(REPO)))
         if has_sdk:
             self.assertEqual((self.layout / "generated/candidates/sdk/sysbit_flush.c").read_bytes(),
                              (REPO / "src/sdk/sysbit_flush.c").read_bytes())
@@ -106,7 +112,7 @@ class SourceLayoutTest(unittest.TestCase):
         self.assertFalse(result["compiler_or_retail_gate_run"])
         self.assertIn(b"Authored organization test comment", (repo / "candidates/boot.c").read_bytes())
         self.assertEqual(tool.verify(repo, self.layout)["byte_identical_sources"],
-                         28 + len(admitted_units(repo)))
+                         28 + len(admitted_units(repo)) + len(small_data_units(repo)))
 
     def test_authoring_can_add_catalogued_function_without_reslicing_modules(self):
         repo, manifest = self.fixture_repo()

@@ -2340,6 +2340,230 @@ Reopen condition: Independent original source-phase/module/compiler provenance o
 
 - `private-work:c-campaign-20261006/fresh-selection-data/test-set-byte36-negative-evidence.json`
 
+## g8pilot-0_aranos_tutorial
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-10_hrugis_cloud
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-11_joba
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-12_todano
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-13_boldan
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-14_aranos_prison
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-15_gorn
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-16_snivelak
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-17_smolg
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-18_damosel
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-19_grelbin
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-1_oozla
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-20_yeedil
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-22_dobbo_orbit
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-23_damosel_orbit
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-24_ship_shack
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-25_wupash_nebula
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-26_jamming_array
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-2_maktar_nebula
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-30_insomniac_museum
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-3_endako
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-4_barlow
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-5_feltzin_system
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-6_notak
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-7_siberius
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-8_tabora
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-9_dobbo
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## g8pilot-boot
+
+State: `queued`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
 ## gameplay-progress-collector456-aranos-first-v1-20261006
 
 State: `stopped`. Kind: `candidate`.

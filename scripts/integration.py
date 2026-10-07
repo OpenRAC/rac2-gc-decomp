@@ -338,7 +338,7 @@ def _compile_shared_level_c(reference: Path, directory: Path, toolchain: Path, l
 
 def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: str, review_path: Path | None = None):
     """Preserve the legacy gate, optionally add an independently reviewed level source."""
-    from level_native import paths, compile_reviewed, ranges, dependencies
+    from level_native import paths, compile_reviewed, ranges, dependencies, has_smalldata, SMALL_DATA_GP
     catalog, object_path, hashes = _compile_shared_level_c(reference, directory, toolchain, level, review_path)
     source_path, native_catalog_path, native_review_path = paths(level)
     if not (ROOT / native_catalog_path).exists():
@@ -366,6 +366,38 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
         if name in externals and externals[name] != address:
             raise ValueError("Native and shared external addresses conflict")
         externals[name] = address
+    objects = {"candidates/boot.c": object_path, source_path: native_object}
+    smalldata = None
+    smalldata_functions = []
+    if has_smalldata(level, ROOT):
+        # A measured body that addresses a global through $gp cannot be built
+        # under the default profile, so it lives in its own unit with its own
+        # flags, gp, catalog and review. Both units are linked into this
+        # overlay and both are compared complete; neither is patched.
+        sd_source, sd_catalog_path, sd_review_path = paths(level, "smalldata")
+        sd, sd_object, sd_proof = compile_reviewed(
+            reference, directory / "build/c/smalldata" / level, toolchain, level, ROOT, "smalldata")
+        if sd_proof["tools"] != hashes:
+            raise ValueError("Small-data and shared compiler instruments disagree")
+        if native["gp"] not in (0, SMALL_DATA_GP):
+            raise ValueError("Small-data and native gp bases disagree")
+        smalldata_functions = [{**function, "candidate_source": sd_source, "origin": "level-smalldata"}
+                               for function in sd["functions"]]
+        functions = functions + smalldata_functions
+        ranges(functions)
+        for name, address in sd["externals"].items():
+            if name in definitions:
+                if definitions[name] != address:
+                    raise ValueError("Small-data external disagrees with an integrated definition")
+                continue
+            if name in externals and externals[name] != address:
+                raise ValueError("Small-data and shared external addresses conflict")
+            externals[name] = address
+        objects[sd_source] = sd_object
+        smalldata = {"source": sd_source, "catalog_path": sd_catalog_path,
+                     "review_path": sd_review_path, "object_proof": sd_proof,
+                     "review_sha256": file_hash(ROOT / sd_review_path), "gp": SMALL_DATA_GP}
+
     combined = {**catalog, "functions": functions, "externals": externals,
                 "native": {"source": source_path, "catalog_path": native_catalog_path,
                            "review_path": native_review_path, "object_proof": native_proof,
@@ -375,9 +407,14 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
                                      source_path: native_proof["source_sha256"]},
                 "dependency_sha256": dependencies(level, ROOT, review_path), "reference_entry": native["entry"],
                 "boot_review_sha256": file_hash(review_path or ROOT / "progress/candidates.json")}
-    if native["gp"]:
+    if smalldata is not None:
+        combined["smalldata"] = smalldata
+        combined["smalldata_functions"] = smalldata_functions
+        combined["compiled_sources"][smalldata["source"]] = smalldata["object_proof"]["source_sha256"]
+        combined["gp"] = SMALL_DATA_GP
+    elif native["gp"]:
         combined["gp"] = native["gp"]
-    return combined, {"candidates/boot.c": object_path, source_path: native_object}, hashes
+    return combined, objects, hashes
 
 
 def c_objects(objects) -> list[Path]:

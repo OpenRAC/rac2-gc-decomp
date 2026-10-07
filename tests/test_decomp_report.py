@@ -683,8 +683,12 @@ class CommittedProofTests(unittest.TestCase):
         expected = boot["matched_code_bytes"] + sum(proof["matched_code_bytes"] for proof in levels)
         self.assertEqual(int(result["measures"]["matchedCode"]), expected)
         self.assertEqual(expected, progress["integrated_code_bytes"])
+        # An overlay can own a default native unit and, for a measured body that
+        # addresses a global through $gp, a separate small-data unit. Both are
+        # native owners of that overlay; the shared boot rows are counted once.
+        native_origins = ("level-native", "level-smalldata")
         native_bytes = sum(row["size"] for proof in levels for row in proof["functions"]
-                           if row.get("origin") == "level-native")
+                           if row.get("origin") in native_origins)
         native_units = [unit for unit in result["units"] if unit["metadata"].get("sourcePath", "").startswith("candidates/levels/")]
         self.assertEqual(sum(int(unit["measures"]["matchedCode"]) for unit in native_units), native_bytes)
 

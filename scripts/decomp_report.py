@@ -324,7 +324,8 @@ def validate_native_level_proof(proof: dict, target: dict, overlays: dict, progr
                                 integration: dict, catalog_bytes: bytes, boot_catalog: dict,
                                 candidate_review: Path | None = None) -> list[dict]:
     """Validate both objects and their union; neither a boot proof nor a partial gate suffices."""
-    from level_native import load_catalog, validate_review, paths, ranges, dependencies, file_hash
+    from level_native import (load_catalog, validate_review, paths, ranges, dependencies, file_hash,
+                              has_smalldata, SMALL_DATA_GP)
     level = proof.get("program")
     if proof.get("schema") != 2 or proof.get("kind") != "level-c-integration":
         raise ValueError("Invalid native level integration kind")
@@ -394,7 +395,42 @@ def validate_native_level_proof(proof: dict, target: dict, overlays: dict, progr
                 or result.get("reference_sha256") != object_result["reference_sha256"]
                 or result.get("candidate_sha256") != object_result["candidate_sha256"]):
             raise ValueError("Native integration requires the complete reviewed object bodies")
-    union = shared_results + native_results
+    smalldata_results = []
+    if has_smalldata(level, ROOT):
+        sd_source, sd_catalog_path, sd_review_path = paths(level, "smalldata")
+        small_catalog = load_catalog(level, ROOT, "smalldata")
+        small = proof.get("smalldata")
+        if (not isinstance(small, dict) or small.get("source") != sd_source
+                or small.get("catalog_path") != sd_catalog_path or small.get("review_path") != sd_review_path
+                or small.get("review_sha256") != file_hash(ROOT / sd_review_path)
+                or small.get("gp") != SMALL_DATA_GP):
+            raise ValueError("Small-data integration source, catalogue or gp mismatch")
+        sd_review = json.loads((ROOT / sd_review_path).read_bytes())
+        validate_review(sd_review, small_catalog, level, ROOT, "smalldata")
+        sd_qualified = small.get("object_qualification")
+        validate_review(sd_qualified, small_catalog, level, ROOT, "smalldata")
+        if (small.get("object_sha256") != sd_review["object_sha256"]
+                or sd_qualified["object_sha256"] != sd_review["object_sha256"]
+                or sd_qualified["tools"] != sd_review["tools"]):
+            raise ValueError("Small-data integration object or instruments disagree with review")
+        sd_expected = {item["symbol"]: item for item in small_catalog["functions"]}
+        smalldata_results = [item for item in functions if item.get("origin") == "level-smalldata"]
+        sd_checked = {item["symbol"]: item for item in sd_qualified["functions"]}
+        if len(smalldata_results) != len(sd_expected):
+            raise ValueError("Small-data integration is partial")
+        for result in smalldata_results:
+            item = sd_expected.get(result.get("symbol"))
+            object_result = sd_checked.get(result.get("symbol"))
+            if (item is None or result.get("address") != item["address"] or result.get("size") != item["size"]
+                    or result.get("program") != level or result.get("candidate_source") != sd_source
+                    or result.get("integrated") is not True or result.get("matched") is not True
+                    or result.get("different_bytes") != 0
+                    or result.get("reference_sha256") != object_result["reference_sha256"]
+                    or result.get("candidate_sha256") != object_result["candidate_sha256"]):
+                raise ValueError("Small-data integration requires the complete reviewed object bodies")
+    elif "smalldata" in proof or any(item.get("origin") == "level-smalldata" for item in functions):
+        raise ValueError("Small-data section without a reviewed small-data unit")
+    union = shared_results + native_results + smalldata_results
     ranges(union)
     by_symbol = {item["symbol"]: item for item in union}
     if (len(by_symbol) != len(union) or len(functions) != len(union)

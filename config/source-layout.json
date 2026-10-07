@@ -386,7 +386,7 @@
       "name": "native-ee2b87d1"
     }
   ],
-  "generator_sha256": "48ebda5ef1f480e4b2847ed5c02e3178a1b5789eeb027f811f27c3cc57f6ce5d",
+  "generator_sha256": "d850d6accea8f7e79179a9409e821bb3d77ca99c1a5049842092eadd2641d18b",
   "input_sha256": {
     "candidates/boot.c": "0631bd292a6e5c0dff6019e0e02f4d2dd509787c57f7b09fc155db9769b5ae9c",
     "candidates/levels/0_aranos_tutorial.c": "c1ef94c54cfc7b6064e96f13f0f5a90e158379bb476cb4fbcda0a424b13ca81f",
@@ -399,6 +399,7 @@
     "candidates/levels/16_snivelak.c": "61ffc7e78dd3106f42e688c5f13c061d881cc0a387f63cc871ea5c44c2aecdff",
     "candidates/levels/17_smolg.c": "d44234a1cd097b2bdedb69c79ca52f42ab41aa3c9b5766968db7525d2bc88f96",
     "candidates/levels/18_damosel.c": "e03ecb08071b4671ceaca95b2174af1cc47833d936aee83ce68f94d949be0979",
+    "candidates/levels/19_grelbin-g8.c": "1c875bd20659aaba2348077e200002886521c17e240ad5bfbe76c6a780d5109e",
     "candidates/levels/19_grelbin.c": "5203cc021472bbe0be3d6da6c62bf5ed4115cdf46f56723372bda0b067cfbcb6",
     "candidates/levels/1_oozla.c": "746e85a07221cae89102334953e05d821fddf912378755dcb516774a8d586e72",
     "candidates/levels/20_yeedil.c": "8d2db08a30286363fd9c6092f0c9604370952ddd965cb15630ac349ba5153c18",
@@ -424,6 +425,7 @@
     "config/boot-units/sdk-sysbit-flush.json": "8997e4370cf6c1a4aaf13d44c4234d78b0226618a7895319ecc1618d93e1d031",
     "config/candidate-catalog.json": "6a05d070e38fd68b9a9a9a8160e9822166e6e35b6ffe99225e7742faa1a3d29d",
     "config/compiler-profiles/owned-sdk-b9-single-text-controls-v1.json": "b6274a824c321458200375da3012c3cd35163f1994402caf6f9c78bfb71023b6",
+    "config/level-g8/19_grelbin.json": "2dc7fb7e1f91f4f424c53be6c3082210515f51658f8ee819c01a58020a474ac3",
     "config/level-native/0_aranos_tutorial.json": "ddddf706c2df80273de54c20fff1f9be86df6fdd897d5c1f80fb0a117ec5f354",
     "config/level-native/10_hrugis_cloud.json": "f4578c8b07acc6fc84981d3b689d58b879d34617f76c539101c9d1d9d410fa5f",
     "config/level-native/11_joba.json": "2fb19976f954d573cbc8d585959a8dc54101f84fd8d91b4ad79a0733b00299ec",
@@ -51448,6 +51450,20 @@
       ],
       "sha256": "e03ecb08071b4671ceaca95b2174af1cc47833d936aee83ce68f94d949be0979",
       "source_text_bytes": 51557
+    },
+    "candidates/levels/19_grelbin-g8.c": {
+      "pieces": [
+        {
+          "fragment": "src/levels/smalldata/grelbin-ring-advance108.cfrag",
+          "replacements": {
+            "@@FUNCTION@@": "LVL_19_GRELBIN_FUN_002EDDF0"
+          },
+          "sha256": "d8b0b4994dabb2c331b236ffc474a8024d36fb8627d49e6a1fa8b1de4589ba8d",
+          "source_text_bytes": 664
+        }
+      ],
+      "sha256": "1c875bd20659aaba2348077e200002886521c17e240ad5bfbe76c6a780d5109e",
+      "source_text_bytes": 679
     },
     "candidates/levels/19_grelbin.c": {
       "pieces": [

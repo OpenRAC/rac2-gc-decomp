@@ -47,8 +47,11 @@ def current_progress() -> tuple[dict, list[dict], str]:
     report = generate(read("config/progress-scope.json"), read("config/target.json"),
                       read("config/overlays.json"), gates, integration, levels)
     validate_object_proof(integration, read("progress/candidates.json"))
+    # A small-data unit is a second native owner of the same overlay, so its
+    # bodies belong to the native subset line as well; the boot-shared rows
+    # stay counted where they already are.
     native = [item for proof in levels for item in proof["functions"]
-              if item.get("origin") == "level-native"]
+              if item.get("origin") in ("level-native", "level-smalldata")]
     return report, native, gates["verified_at"]
 
 
