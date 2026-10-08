@@ -257,6 +257,52 @@ class NativeTests(unittest.TestCase):
         self.assertIn("build/c/boot.o(.text.FUN_00001000)",linker)
         self.assertIn("AT(0x1000)",linker)
 
+    def compile_with_promoted_helper(self, bound_address=0x2020):
+        shared_object = self.home / "shared.o"
+        shared_object.write_bytes(b"synthetic shared object")
+        self.write("progress/candidates.json", {
+            "tools": self.tools, "object_sha256": native.file_hash(shared_object)})
+        promoted = {"symbol": native.symbol(self.level, 0x2020), "address": 0x2020, "size": 8}
+        native_catalog = {**self.catalog, "gp": 0,
+                          "externals": {promoted["symbol"]: bound_address, "UnownedData": 0x3000}}
+        sd_source, _, sd_review = native.paths(self.level, "smalldata")
+        self.write(sd_review, {"tools": self.tools})
+        sd_object = self.home / "smalldata.o"
+        sd_object.write_bytes(b"synthetic small-data object")
+        sd_catalog = {"functions": [promoted], "externals": {"OtherData": 0x3004}}
+        sd_proof = {"tools": self.tools, "source_sha256": "e" * 64}
+        shared = {"functions": [self.shared_fn], "externals": {},
+                  "compiled_source_sha256": native.file_hash(self.root / "candidates/boot.c")}
+        with mock.patch.object(integration, "ROOT", self.root), \
+                mock.patch.object(integration, "_compile_shared_level_c",
+                                  return_value=(shared, shared_object, self.tools)), \
+                mock.patch.object(native, "compile_reviewed", side_effect=[
+                    (native_catalog, self.object, self.review), (sd_catalog, sd_object, sd_proof)]), \
+                mock.patch.object(native, "has_smalldata", return_value=True), \
+                mock.patch.object(native, "dependencies", return_value="f" * 64):
+            combined, objects, tools = integration.compile_level_c(
+                self.reference, self.home / "build", self.home / "tools", self.level)
+        return combined, promoted
+
+    def test_promoted_small_data_helper_keeps_its_function_definition(self):
+        combined, promoted = self.compile_with_promoted_helper()
+        self.assertNotIn(promoted["symbol"], combined["externals"])
+        self.assertEqual(combined["externals"], {"UnownedData": 0x3000, "OtherData": 0x3004})
+        self.assertEqual(len(combined["functions"]), 3)
+        directory = self.home / "link"
+        (directory / "config").mkdir(parents=True)
+        script = directory / "config/undefined_symbols.ld"
+        script.write_text("func_00002020 = 0x2020;\n", encoding="ascii")
+        integration.add_definitions(directory, combined)
+        text = script.read_text(encoding="ascii")
+        self.assertIn(f"func_00002020 = {promoted['symbol']};", text)
+        self.assertNotIn(f"{promoted['symbol']} =", text)
+        self.assertIn("UnownedData = 0x00003000;", text)
+
+    def test_promoted_small_data_helper_rejects_a_conflicting_import(self):
+        with self.assertRaisesRegex(ValueError, "External disagrees with an integrated definition"):
+            self.compile_with_promoted_helper(bound_address=0x2030)
+
     def test_full_loaded_gate_and_derived_counts_are_mandatory(self):
         original, progress, boot = self.integrated()
         for change in ("gate", "total", "object", "provenance", "partial", "program", "shared-object"):

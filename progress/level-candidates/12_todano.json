@@ -6,10 +6,10 @@
   "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
   "reference_entry": 2791176,
   "candidate_source": "candidates/levels/12_todano.c",
-  "source_sha256": "c0a30b6470442fa6ca343f8ac19130ad172d2b72bcc932e21126dbb8d7ef7af5",
-  "catalog_sha256": "ddc656846d8275d13cbca3b5dba3fb6707c8665c0e36d1526a50ce1e28c02286",
-  "object_sha256": "8aed8e8549fdb59bb2089dc5bdafff3bb6747c2a84bb2addaab10fb16ea969a3",
-  "candidate_elf_sha256": "7006f95965f5c41dbe9be534b7d0a181e4db2f305d827f8ae9d522ab802bec50",
+  "source_sha256": "15103003639dc8325d266b16496ea12560a57a11f83f010fe62bb530cad23f71",
+  "catalog_sha256": "04ec59bc1e838ed85b01f97efc9c66e76d1c837126477ef115548e45d71a96fd",
+  "object_sha256": "0b387adccdc98ef71f998bb5b2d2a144301764055fb9aaced868a7940ebff4ca",
+  "candidate_elf_sha256": "ae3a91819e328a0ff83319bbb0bfec2bab57add7b4673ea6215324777e164dfe",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -1475,8 +1475,19 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 48
+    },
+    {
+      "symbol": "LVL_12_TODANO_FUN_0038F798",
+      "address": 3733400,
+      "size": 116,
+      "matched": true,
+      "reference_sha256": "d305226f65386d2f840dc3b1e50241d34831c411c22340a9aba8f25560d99c71",
+      "candidate_sha256": "d305226f65386d2f840dc3b1e50241d34831c411c22340a9aba8f25560d99c71",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 116
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 11440
+  "matched_code_bytes": 11556
 }

@@ -6,10 +6,10 @@
   "reference_sha256": "bd41a03a57871a6f33106d5277c6b4918f379ceaa5f780a84c82360b421204fb",
   "reference_entry": 2868232,
   "candidate_source": "candidates/levels/5_feltzin_system.c",
-  "source_sha256": "941582e6a6ccd09634267f9a2ac15b0b95137fc6a352bb87ace7fd0658d53cd8",
-  "catalog_sha256": "ce61e789264fee28325668ffa2fbd43945e59603d267bbba91d78ef961210213",
-  "object_sha256": "64a328ccc3794d17131b5af7555be9ff79974347f6ec9bf5a027a815cfdcbbe6",
-  "candidate_elf_sha256": "f8489bb86c5b7ff5670b2c7a6fb03ce8f7871a70b78bbe4b60fb78bc5d76585c",
+  "source_sha256": "765ab88cc1e7c34dfacf356b01fd06277620af1c24d30192eeea2705b65e0963",
+  "catalog_sha256": "2b0bbbb9ed1633cbbb6248fce1029940ae79b7f179d34465df9fd3e8bf16cff0",
+  "object_sha256": "34c7fddf5e2339debf9249aac05c9ac07d6897e58059e550c96d837055672fd4",
+  "candidate_elf_sha256": "ae8b3f6526f4e4a3aa09108d1fe4bfc8c7dfc735af90b80235471a5c2f6fa01e",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -1574,8 +1574,19 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 48
+    },
+    {
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_003A0EF8",
+      "address": 3804920,
+      "size": 116,
+      "matched": true,
+      "reference_sha256": "dd4785487e742f6d8a52aa61435d5316b8c4ed4d5061b2e9dfd45b117158758f",
+      "candidate_sha256": "dd4785487e742f6d8a52aa61435d5316b8c4ed4d5061b2e9dfd45b117158758f",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 116
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 13636
+  "matched_code_bytes": 13752
 }

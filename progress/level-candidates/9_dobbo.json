@@ -6,10 +6,10 @@
   "reference_sha256": "a47999f3aa251431498e068932ac542399b5e402ab8dcddcbfe246dc220b7810",
   "reference_entry": 2782472,
   "candidate_source": "candidates/levels/9_dobbo.c",
-  "source_sha256": "8cbf0af3704f91ef02a703fbaa2359ca88ead7013a29e437f94c821a3aa9a52e",
-  "catalog_sha256": "d1cb95f5e2c16fe9e1f6b59f80d648fc56c559510d291e36255d142f94383c71",
-  "object_sha256": "cc3b4fd63371ca4889f6c1cc98c1753da5165b35f56c867eaa7fc9fd2c9a80fe",
-  "candidate_elf_sha256": "31dc6d6ee58e0ced8bc53336637686bec5c160c687c1c9f65d3c99b198fb83f6",
+  "source_sha256": "e1c09500c9d12393d54434672cda899eb63047dda00a3616b242676543574f76",
+  "catalog_sha256": "0a94235c0295dc1dbfbdc357644cbc1bab21160477637f7868cab04f9d9e4581",
+  "object_sha256": "2c988dce7c7a854346d81c4244fa950a78d0a8595301fdbabc08f5b1a770d09d",
+  "candidate_elf_sha256": "0740ddaa0b92ebfbebb23bf5ab50a021663ea0e2e37eb20f81e10ef03d9f515f",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -1442,8 +1442,19 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 48
+    },
+    {
+      "symbol": "LVL_9_DOBBO_FUN_00387A40",
+      "address": 3701312,
+      "size": 116,
+      "matched": true,
+      "reference_sha256": "a04d3d5e43cae630852c93b3084ec06d9dbeddac7a0ebdcab2f28ed9431c5d3f",
+      "candidate_sha256": "a04d3d5e43cae630852c93b3084ec06d9dbeddac7a0ebdcab2f28ed9431c5d3f",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 116
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 11484
+  "matched_code_bytes": 11600
 }

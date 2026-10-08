@@ -6,10 +6,10 @@
   "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
   "reference_entry": 3027336,
   "candidate_source": "candidates/levels/6_notak.c",
-  "source_sha256": "0d2be7104cb63d3cd3a7a3df5e7f801ae5b6292c8eab164e707b5aa16afd7c63",
-  "catalog_sha256": "302f84117a9cfa66a72e676dcf064c5c99ae7d62fd83f2282791f3ebbc56c899",
-  "object_sha256": "a9cbc6c439c1b0c7c60a977c2ef16562120a9e700bd67f45c9d9409c48428517",
-  "candidate_elf_sha256": "28a95fe2a4e430fa18cc5f211b53bdab2183920dc8703c3a25320a31e9c87dcf",
+  "source_sha256": "1c82374c77c269980c601e439c748be6154fd1bae904727acbe6d23d052a08cd",
+  "catalog_sha256": "fe4528cc3a183b091d372a2fb62f6251fb1a5275b28cc650b7234ee63643d62c",
+  "object_sha256": "1e6e698c2252cf5aa5ea3aa764546909e88ae9fb7dbc86b1562c118d65c95747",
+  "candidate_elf_sha256": "a0c9f96e4997427a514278ca4567dabd82433ca821ca5ff1f30e999698cf6e24",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -1596,8 +1596,19 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 48
+    },
+    {
+      "symbol": "LVL_6_NOTAK_FUN_003CCE08",
+      "address": 3984904,
+      "size": 116,
+      "matched": true,
+      "reference_sha256": "12cca8ff7bd0ca73a36f90265065c42db87da74dced4e0b20aad90efc8160ba7",
+      "candidate_sha256": "12cca8ff7bd0ca73a36f90265065c42db87da74dced4e0b20aad90efc8160ba7",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 116
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 13308
+  "matched_code_bytes": 13424
 }

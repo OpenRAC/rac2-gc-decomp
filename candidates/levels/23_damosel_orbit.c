@@ -2266,3 +2266,24 @@ void LVL_23_DAMOSEL_ORBIT_FUN_00387AF8(Rac2Native_74a5d71aacb394c6_ExtraIndexSta
         state->current = 0;
     }
 }
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned int Rac2Native_03c444112283bc5f_u32;
+
+
+extern Rac2Native_03c444112283bc5f_u32 LVL_23_DAMOSEL_ORBIT_F03c444112283bc5f_AT00391430_ROLE00[139];
+
+void LVL_23_DAMOSEL_ORBIT_FUN_00391430(void)
+{
+    int i;
+    LVL_23_DAMOSEL_ORBIT_F03c444112283bc5f_AT00391430_ROLE00[138] = 5;
+    LVL_23_DAMOSEL_ORBIT_F03c444112283bc5f_AT00391430_ROLE00[137] = 0;
+    LVL_23_DAMOSEL_ORBIT_F03c444112283bc5f_AT00391430_ROLE00[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_23_DAMOSEL_ORBIT_F03c444112283bc5f_AT00391430_ROLE00[i] = 0;
+        LVL_23_DAMOSEL_ORBIT_F03c444112283bc5f_AT00391430_ROLE00[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_23_DAMOSEL_ORBIT_F03c444112283bc5f_AT00391430_ROLE00[i + 128] = 0;
+}

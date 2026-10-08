@@ -398,6 +398,16 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
                      "review_path": sd_review_path, "object_proof": sd_proof,
                      "review_sha256": file_hash(ROOT / sd_review_path), "gp": SMALL_DATA_GP}
 
+    # A former external helper can become a definition in a later owner.
+    # Reconcile against the complete union before emitting absolute bindings:
+    # assigning a defined C symbol in the linker script destroys its ELF identity.
+    definitions = {function["symbol"]: function["address"] for function in functions}
+    for name, address in tuple(externals.items()):
+        if name in definitions:
+            if definitions[name] != address:
+                raise ValueError("External disagrees with an integrated definition")
+            del externals[name]
+
     combined = {**catalog, "functions": functions, "externals": externals,
                 "native": {"source": source_path, "catalog_path": native_catalog_path,
                            "review_path": native_review_path, "object_proof": native_proof,

@@ -6,10 +6,10 @@
   "reference_sha256": "4e1908fbc51ea0f156a32077fd20b2af755fe0b1f4aa7b1bc67967208e7e87f4",
   "reference_entry": 2773128,
   "candidate_source": "candidates/levels/17_smolg.c",
-  "source_sha256": "b53ca0025c8af7b3bdd4ab184aa84443b0dddbe8296980a03e5ba38dcdba4366",
-  "catalog_sha256": "8dd5915413eef416f3a2348ddfc17025133359abc1b33697b55e92c751609fad",
-  "object_sha256": "51a26aaa6d3ae9bddad1f1be73dbcc7d4d176011174b1e4891df2385688a93a4",
-  "candidate_elf_sha256": "561767e1c4eb91300a5298a00cae754514bf88801e5aa8779f617e29b64623d2",
+  "source_sha256": "759acd3e820cb94ed327c1b8731b9db2763df83a601ea49db82c86a20b4873cf",
+  "catalog_sha256": "6d8b66fd705fa78eeb26cad8e7a4e1f00c15316bcad3285143f5d7c8167d48df",
+  "object_sha256": "325c94476a856fe2dc985882321e1419ad47a177192fa3b8fd65fd656273086f",
+  "candidate_elf_sha256": "7f227d3557f52da841ab3a1f10127e1a544da98cb27fa464f7d64f2d33119e54",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -1442,8 +1442,19 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 48
+    },
+    {
+      "symbol": "LVL_17_SMOLG_FUN_0038D020",
+      "address": 3723296,
+      "size": 116,
+      "matched": true,
+      "reference_sha256": "3f3256c378399eeb6f4bfce1a1b3b1a1a6c3a8ba3e0b98e21a49a9e5357dfd1b",
+      "candidate_sha256": "3f3256c378399eeb6f4bfce1a1b3b1a1a6c3a8ba3e0b98e21a49a9e5357dfd1b",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 116
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 11172
+  "matched_code_bytes": 11288
 }
