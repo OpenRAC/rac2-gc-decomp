@@ -2257,3 +2257,24 @@ void LVL_24_SHIP_SHACK_FUN_00376EE8(Rac2Native_74a5d71aacb394c6_ExtraIndexState4
         state->current = 0;
     }
 }
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned int Rac2Native_03c444112283bc5f_u32;
+
+
+extern Rac2Native_03c444112283bc5f_u32 LVL_24_SHIP_SHACK_F03c444112283bc5f_AT00380A30_ROLE00[139];
+
+void LVL_24_SHIP_SHACK_FUN_00380A30(void)
+{
+    int i;
+    LVL_24_SHIP_SHACK_F03c444112283bc5f_AT00380A30_ROLE00[138] = 5;
+    LVL_24_SHIP_SHACK_F03c444112283bc5f_AT00380A30_ROLE00[137] = 0;
+    LVL_24_SHIP_SHACK_F03c444112283bc5f_AT00380A30_ROLE00[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_24_SHIP_SHACK_F03c444112283bc5f_AT00380A30_ROLE00[i] = 0;
+        LVL_24_SHIP_SHACK_F03c444112283bc5f_AT00380A30_ROLE00[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_24_SHIP_SHACK_F03c444112283bc5f_AT00380A30_ROLE00[i + 128] = 0;
+}

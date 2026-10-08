@@ -56,7 +56,7 @@ A shared type prelude is reused where its exact text agrees. The remaining
 authored bodies stay in per-program fragments under `src/levels/placements/`.
 
 The current source inventory records 132 explicit base C families with 1,516
-placements. Another 2,088 contextual forms remain separate. Identity includes
+placements. Another 2,114 contextual forms remain separate. Identity includes
 the recorded helper and data addresses: sharing a fragment does not merge
 unexplained contexts or establish original source ownership.
 
@@ -82,7 +82,7 @@ unit is an exact prefix of its new complete module.
 
 The default native profiles, including Barlow's existing G8 profile, are
 unchanged. Separate small-data catalogues and reviews record their own explicit
-GP, bindings and complete objects. See the [46,312-byte batch evidence](NATIVE-GP-46K-EVIDENCE.md).
+GP, bindings and complete objects. See the [46,312-byte batch evidence](NATIVE-GP-46K-EVIDENCE.md). The latest [41,180-byte scalar batch](NATIVE-SCALAR-41K-EVIDENCE.md) also validates a bounded integer declaration context.
 These are authored ownership boundaries, not recovered retail modules.
 
 ## Authoring and regeneration
@@ -118,21 +118,21 @@ artifacts and current-hash files remain private.
 ## Separate source and coverage metrics
 
 The checked [source inventory](../progress/source-inventory.json) records the
-following snapshot after the 8 October 2026 native and small-data batch. Its
-organization counters cover boot/SDK/default native sources. The separate
-small-data row below comes from its validated catalogues and is excluded from
-those organization counters; all 58 generated sources are verified.
+following snapshot after the latest 8 October 2026 scalar-state and command batch.
+Its organization counters cover boot/SDK/default native sources. The separate
+small-data row below comes from validated catalogues and is excluded from those
+organization counters; all 58 generated sources are verified.
 
 | Scope | Authored source | Replicated catalogued bytes |
 | --- | --- | ---: |
 | Default GNU boot | 241 catalogued definitions | 12,312 |
 | Separate SDK boot units | 3 attributed definitions with complete-object proofs | 1,144 |
-| Default native overlays | 2,220 family-or-singleton items, 2,221 contextual variants | 326,584 across 3,604 placements |
-| Separate small-data overlays | 27 complete per-program modules, 370 definitions | 38,224 |
+| Default native overlays | 2,246 family-or-singleton items, 2,247 contextual variants | 329,600 across 3,630 placements |
+| Separate small-data overlays | 27 complete per-program modules, 1,347 definitions | 76,388 |
 | Clear-family pilot, included in native scope | Two textual variants, 24 representative bytes | 648 across 27 placements |
 
-Native representative catalogued bytes total 161,952, or an upper bound of
-161,976 when both clear variants are retained separately. These organization
+Native representative catalogued bytes total 164,968, or an upper bound of
+164,992 when both clear variants are retained separately. These organization
 metrics exclude replicated common boot coverage and do not replace progress.
 
 The prototype-labelled callback 775 has one canonical shared fragment and 27
@@ -141,22 +141,20 @@ ABI are documented in [the family evidence](UPDATE-MOBY775-76-EVIDENCE.md).
 Its helper addresses remain contextual inventory operands, so sharing a source
 fragment does not itself collapse those entries or prove machine equivalence.
 
-The current integration exporter accepts **618,200 / 48,788,176 bytes**:
-244 boot functions contribute 13,456 bytes; 8,370 overlay placements contribute
-604,744 bytes. The latest batch adds 485 complete placements and **46,312 new
-physical C bytes**, after all 54 complete translation units passed. All separately
-reserved Qwen work remains excluded and its research branch is not merged.
+The current integration exporter accepts **659,380 / 48,788,176 bytes**:
+244 boot functions contribute 13,456 bytes; 9,373 overlay placements
+contribute 645,924 bytes. The latest batch adds **1,003 complete placements /
+41,180 new physical C bytes**, following 53 complete translation-unit gates over
+4,846 old and new definitions. Reserved worker targets and equivalent copies remain excluded.
 
 Fresh boot and all 27 overlay PT_LOAD bytes and metadata pass under campaign
-`85ecb056506848ea9b92e950005cc797`: 79,486,851 loaded bytes were compared. Existing default profiles and
-the separately qualified small-data profile retain their measured settings.
-All earlier source and instrumentation refusals remain retained. No helper
-implementation, approximate result, partial-byte or masked result is credited.
+`de67b0a1d85e444189796aef63509496`: 79,486,851 loaded bytes were compared. Existing default profiles and
+the separate small-data profile retain their measured settings. Observed source
+effects are recorded; original game roles and complete object boundaries remain unknown.
 
-The conservative all-members unique measure is **132,100 / 44,408,040 bytes**.
+The conservative all-members unique measure is **161,316 / 44,408,040 bytes**.
 Catalogue reconstruction and pointer-theorem replay pass over the current scoped
-inventory; they do not prove every game function or data-object boundary known.
-See the [unique report](../progress/unique-code-report.json) and
-[latest batch evidence](NATIVE-GP-46K-EVIDENCE.md). Static target classes and
+inventory. See the [unique report](../progress/unique-code-report.json) and
+[latest batch evidence](NATIVE-SCALAR-41K-EVIDENCE.md). Static target classes and
 retained unowned data operands can keep copies separate. Source identity alone
 does not establish original source, data-object, module or runtime equivalence.

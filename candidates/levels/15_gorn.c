@@ -2494,3 +2494,24 @@ extern void LVL_15_GORN_F5fc519c90e0e763a_AT002EC5F8_ROLE00(Rac2Native_5fc519c90
 void LVL_15_GORN_FUN_002EC5F8(Rac2Native_5fc519c90e0e763a_f32 value) {
  LVL_15_GORN_F5fc519c90e0e763a_AT002EC5F8_ROLE00(-value);
 }
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned int Rac2Native_03c444112283bc5f_u32;
+
+
+extern Rac2Native_03c444112283bc5f_u32 LVL_15_GORN_F03c444112283bc5f_AT003A7098_ROLE00[139];
+
+void LVL_15_GORN_FUN_003A7098(void)
+{
+    int i;
+    LVL_15_GORN_F03c444112283bc5f_AT003A7098_ROLE00[138] = 5;
+    LVL_15_GORN_F03c444112283bc5f_AT003A7098_ROLE00[137] = 0;
+    LVL_15_GORN_F03c444112283bc5f_AT003A7098_ROLE00[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_15_GORN_F03c444112283bc5f_AT003A7098_ROLE00[i] = 0;
+        LVL_15_GORN_F03c444112283bc5f_AT003A7098_ROLE00[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_15_GORN_F03c444112283bc5f_AT003A7098_ROLE00[i + 128] = 0;
+}

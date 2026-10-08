@@ -2345,3 +2345,24 @@ void LVL_9_DOBBO_FUN_0037D188(Rac2Native_74a5d71aacb394c6_ExtraIndexState48 *sta
         state->current = 0;
     }
 }
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned int Rac2Native_03c444112283bc5f_u32;
+
+
+extern Rac2Native_03c444112283bc5f_u32 LVL_9_DOBBO_F03c444112283bc5f_AT00387A40_ROLE00[139];
+
+void LVL_9_DOBBO_FUN_00387A40(void)
+{
+    int i;
+    LVL_9_DOBBO_F03c444112283bc5f_AT00387A40_ROLE00[138] = 5;
+    LVL_9_DOBBO_F03c444112283bc5f_AT00387A40_ROLE00[137] = 0;
+    LVL_9_DOBBO_F03c444112283bc5f_AT00387A40_ROLE00[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_9_DOBBO_F03c444112283bc5f_AT00387A40_ROLE00[i] = 0;
+        LVL_9_DOBBO_F03c444112283bc5f_AT00387A40_ROLE00[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_9_DOBBO_F03c444112283bc5f_AT00387A40_ROLE00[i + 128] = 0;
+}

@@ -6,10 +6,10 @@
   "reference_sha256": "76b77dbbc9a3e15f1c4f202a36b37d01bdaff7936142c14b5b35a1552a85287a",
   "reference_entry": 2769288,
   "candidate_source": "candidates/levels/7_siberius.c",
-  "source_sha256": "4d728565da45bf86f55dc0666a8e7fd01cfaae2cf766b22c118c64bb2411d292",
-  "catalog_sha256": "3e224eb1477e0fda5f7db8fd1063fe30e3318b26d243f533c95c7d4c06fd113e",
-  "object_sha256": "b0187fcdd5bb1ecfaeb2a059594c51b0496126453e5299fde51c066e29078a89",
-  "candidate_elf_sha256": "4d4f0a7376af95e49214782894331ee6ebc775575cd4604f7faddc7cec773f23",
+  "source_sha256": "f8c97ff218397ce6c6f4f78b7ff6f00a3328be9f36e69f3f551caaaff4b1d871",
+  "catalog_sha256": "9334749dfc04e55b8240e43fccfdf5bcbba61a2acbd37889c6d9feb1f160fc45",
+  "object_sha256": "5146d4abd05d9062e9c35571a5f3b16446a72cc15ab717721fa95029b66fc115",
+  "candidate_elf_sha256": "a9e1b3c165dd3f70a50d23efb15bba6a8c613c56dc24853efba680e00fe8baeb",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -1442,8 +1442,19 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 48
+    },
+    {
+      "symbol": "LVL_7_SIBERIUS_FUN_00380800",
+      "address": 3672064,
+      "size": 116,
+      "matched": true,
+      "reference_sha256": "e44fd9443329dfbf6766ccb34519a26a7641c33ddc44d39164535264d4535125",
+      "candidate_sha256": "e44fd9443329dfbf6766ccb34519a26a7641c33ddc44d39164535264d4535125",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 116
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 12036
+  "matched_code_bytes": 12152
 }
