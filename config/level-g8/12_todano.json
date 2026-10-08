@@ -107,7 +107,13 @@
     "LVL_12_TODANO_Fff971bf89acc2217_AT00380FC8_ROLE00": 1783304,
     "LVL_12_TODANO_Fff971bf89acc2217_AT00380FC8_ROLE01": 1755008,
     "LVL_12_TODANO_Fff971bf89acc2217_AT00381028_ROLE00": 1783304,
-    "LVL_12_TODANO_Fff971bf89acc2217_AT00381028_ROLE01": 1755056
+    "LVL_12_TODANO_Fff971bf89acc2217_AT00381028_ROLE01": 1755056,
+    "LVL_12_TODANO_QWEN_339fe89f21bc_AT00380BE0_ROLE000": 3085960,
+    "LVL_12_TODANO_QWEN_339fe89f21bc_AT00380BE0_ROLE001": 1759264,
+    "LVL_12_TODANO_QWEN_538934d89776_AT002DA788_ROLE000": 1738972,
+    "LVL_12_TODANO_QWEN_538934d89776_AT002DA788_ROLE001": 1735600,
+    "LVL_12_TODANO_QWEN_538934d89776_AT002DA788_ROLE002": 2990936,
+    "LVL_12_TODANO_QWEN_538934d89776_AT002DA788_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -420,12 +426,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_12_TODANO_FUN_00442FB8"
+    },
+    {
+      "address": 2992008,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_12_TODANO_FUN_002DA788"
+    },
+    {
+      "address": 3673056,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_12_TODANO_FUN_00380BE0"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "12_todano",
-  "module": "src/levels/smalldata/12_todano-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/12_todano-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/12_todano",
   "reference_sha256": "326343dd0c4ba2e4fc0b626f633e1fbdd4e5937e7b693c4c7e994f2bf895c40c",
   "schema": 1,

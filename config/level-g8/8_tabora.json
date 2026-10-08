@@ -103,7 +103,9 @@
     "LVL_8_TABORA_Fff971bf89acc2217_AT00389E00_ROLE00": 1782088,
     "LVL_8_TABORA_Fff971bf89acc2217_AT00389E00_ROLE01": 1755072,
     "LVL_8_TABORA_Fff971bf89acc2217_AT00389E60_ROLE00": 1782088,
-    "LVL_8_TABORA_Fff971bf89acc2217_AT00389E60_ROLE01": 1755120
+    "LVL_8_TABORA_Fff971bf89acc2217_AT00389E60_ROLE01": 1755120,
+    "LVL_8_TABORA_QWEN_339fe89f21bc_AT00389910_ROLE000": 3119952,
+    "LVL_8_TABORA_QWEN_339fe89f21bc_AT00389910_ROLE001": 1759328
   },
   "flags": [
     "-O2",
@@ -392,12 +394,18 @@
       "meaning": "Write four observed 32-bit command words through a numeric address cursor, then advance the same cursor by 16. The command protocol and original types are unknown.",
       "size": 92,
       "symbol": "LVL_8_TABORA_FUN_00389EC8"
+    },
+    {
+      "address": 3709200,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_8_TABORA_FUN_00389910"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "8_tabora",
-  "module": "src/levels/smalldata/8_tabora-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/8_tabora-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/8_tabora",
   "reference_sha256": "37c1b1c86b8800fb3930b539fe4b5c94dccf42e7bb5960154477f63731dd48a5",
   "schema": 1,

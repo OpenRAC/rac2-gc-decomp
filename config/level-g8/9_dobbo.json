@@ -107,7 +107,13 @@
     "LVL_9_DOBBO_Fff971bf89acc2217_AT00378C78_ROLE00": 1781704,
     "LVL_9_DOBBO_Fff971bf89acc2217_AT00378C78_ROLE01": 1755008,
     "LVL_9_DOBBO_Fff971bf89acc2217_AT00378CD8_ROLE00": 1781704,
-    "LVL_9_DOBBO_Fff971bf89acc2217_AT00378CD8_ROLE01": 1755056
+    "LVL_9_DOBBO_Fff971bf89acc2217_AT00378CD8_ROLE01": 1755056,
+    "LVL_9_DOBBO_QWEN_339fe89f21bc_AT00378788_ROLE000": 3056080,
+    "LVL_9_DOBBO_QWEN_339fe89f21bc_AT00378788_ROLE001": 1759264,
+    "LVL_9_DOBBO_QWEN_538934d89776_AT002D3080_ROLE000": 1738972,
+    "LVL_9_DOBBO_QWEN_538934d89776_AT002D3080_ROLE001": 1735600,
+    "LVL_9_DOBBO_QWEN_538934d89776_AT002D3080_ROLE002": 2960464,
+    "LVL_9_DOBBO_QWEN_538934d89776_AT002D3080_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -420,12 +426,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_9_DOBBO_FUN_0043B500"
+    },
+    {
+      "address": 2961536,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_9_DOBBO_FUN_002D3080"
+    },
+    {
+      "address": 3639176,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_9_DOBBO_FUN_00378788"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "9_dobbo",
-  "module": "src/levels/smalldata/9_dobbo-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/9_dobbo-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/9_dobbo",
   "reference_sha256": "a47999f3aa251431498e068932ac542399b5e402ab8dcddcbfe246dc220b7810",
   "schema": 1,

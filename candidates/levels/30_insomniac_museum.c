@@ -2348,3 +2348,489 @@ void LVL_30_INSOMNIAC_MUSEUM_FUN_0038B9F8(void)
     for (i = 7; i >= 0; --i)
         LVL_30_INSOMNIAC_MUSEUM_F03c444112283bc5f_AT0038B9F8_ROLE00[i + 128] = 0;
 }
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_30_INSOMNIAC_MUSEUM_FUN_002ABCF0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_30_INSOMNIAC_MUSEUM_FUN_002DADB0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_30_INSOMNIAC_MUSEUM_FUN_002E3288(void) {
+    return 1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_30_INSOMNIAC_MUSEUM_FUN_002E3290(void) {
+    return 1;
+}
+
+
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_11a4c157d102_AT002FAEE0_ROLE000(unsigned char *);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_002FAEE0(void *owner)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_11a4c157d102_AT002FAEE0_ROLE000(owner);
+}
+
+
+
+void LVL_30_INSOMNIAC_MUSEUM_QWEN_407ee6f17a73_AT002FAF80_ROLE001(int);
+void LVL_30_INSOMNIAC_MUSEUM_QWEN_407ee6f17a73_AT002FAF80_ROLE000(void*);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_002FAF80(void *param)
+{
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_407ee6f17a73_AT002FAF80_ROLE001((int)param);
+  *(unsigned int *)param = 0;
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_407ee6f17a73_AT002FAF80_ROLE000(param);
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_QWEN_5696fcf76f0c_AT003184D0_ROLE000(unsigned int *dst, unsigned int val, int size);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_003184D0(void)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_5696fcf76f0c_AT003184D0_ROLE000((unsigned int *)0x70003A00, 0x40000000, 0x3C0);
+}
+
+
+/*
+ * Disassembled at 0x002cd220
+ * Signature: int FUN_002cd220(void)
+ * Behavior:
+ *   - Saves RA on stack
+ *   - Calls FUN_0027C540(0)
+ *   - Calls FUN_0029C138()
+ *   - Calls FUN_0027C660()
+ *   - Restores RA from stack
+ *   - Returns 0
+ */
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_523e38f49b74_AT00347088_ROLE000(long);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_523e38f49b74_AT00347088_ROLE002(void);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_523e38f49b74_AT00347088_ROLE001(void);
+
+int LVL_30_INSOMNIAC_MUSEUM_FUN_00347088(void)
+{
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_523e38f49b74_AT00347088_ROLE000(0);
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_523e38f49b74_AT00347088_ROLE002();
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_523e38f49b74_AT00347088_ROLE001();
+  return 0;
+}
+
+
+unsigned long long LVL_30_INSOMNIAC_MUSEUM_FUN_00347488(void);
+
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_f47929f95774_AT00347488_ROLE000(long);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_f47929f95774_AT00347488_ROLE002(void);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_f47929f95774_AT00347488_ROLE001(void);
+
+unsigned long long LVL_30_INSOMNIAC_MUSEUM_FUN_00347488(void)
+{
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_f47929f95774_AT00347488_ROLE000(0);
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_f47929f95774_AT00347488_ROLE002();
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_f47929f95774_AT00347488_ROLE001();
+  return 0;
+}
+
+
+/* Function at 0x002cd8c0: FUN_002CD8C0
+ * 
+ * Disassembly summary:
+ * - 12 instructions, 48 bytes total
+ * - Prologue: save ra, allocate 16-byte stack frame
+ * - Three calls to external functions:
+ *   1. FUN_0027C540(0)
+ *   2. FUN_0029C450()
+ *   3. FUN_0027C660()
+ * - Epilogue: restore ra, return 0, deallocate stack
+ * - No local variables used
+ * - Return type is void-like; returns zero in v0
+ * - Delay slots are_NOP/unused in this case
+ */
+
+/* External function declarations (exact addresses from task metadata) */
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_cb305b1f1210_AT00347728_ROLE000(long);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_cb305b1f1210_AT00347728_ROLE002(void);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_cb305b1f1210_AT00347728_ROLE001(void);
+
+long long LVL_30_INSOMNIAC_MUSEUM_FUN_00347728(void)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_cb305b1f1210_AT00347728_ROLE000(0LL);
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_cb305b1f1210_AT00347728_ROLE002();
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_cb305b1f1210_AT00347728_ROLE001();
+    return 0LL;
+}
+
+
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_c23b3406f982_AT0034CB20_ROLE000(long);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_c23b3406f982_AT0034CB20_ROLE002(void);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_c23b3406f982_AT0034CB20_ROLE001(void);
+
+int LVL_30_INSOMNIAC_MUSEUM_FUN_0034CB20(void)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_c23b3406f982_AT0034CB20_ROLE000(0);
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_c23b3406f982_AT0034CB20_ROLE002();
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_c23b3406f982_AT0034CB20_ROLE001();
+    return 0;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_QWEN_68cf9ebb5ee2_AT0034CC90_ROLE000(long);
+void LVL_30_INSOMNIAC_MUSEUM_QWEN_68cf9ebb5ee2_AT0034CC90_ROLE001(void);
+void LVL_30_INSOMNIAC_MUSEUM_QWEN_68cf9ebb5ee2_AT0034CC90_ROLE002(void);
+
+unsigned long long LVL_30_INSOMNIAC_MUSEUM_FUN_0034CC90(void)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_68cf9ebb5ee2_AT0034CC90_ROLE000(0);
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_68cf9ebb5ee2_AT0034CC90_ROLE002();
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_68cf9ebb5ee2_AT0034CC90_ROLE001();
+    return 0;
+}
+
+
+
+/* 
+ * Function: FUN_002D2EE0
+ * 
+ * Disassembly summary:
+ * - Saves return address on stack
+ * - Calls FUN_0027C540(0) (with zero argument)
+ * - Calls FUN_0029C7A0()
+ * - Calls FUN_0027C660()
+ * - Restores return address
+ * - Returns 0
+ *
+ * Notes:
+ * - The function follows standard MIPS ABI prologue/epilogue.
+ * - Delay slots are filled with NOP or argument setup as seen in disassembly.
+ * - No local variables used.
+ * - All external function addresses come from the assigned externals list.
+ */
+
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_68f040eb20c9_AT0034CD48_ROLE000(long arg0);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_68f040eb20c9_AT0034CD48_ROLE002(void);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_68f040eb20c9_AT0034CD48_ROLE001(void);
+
+unsigned long long LVL_30_INSOMNIAC_MUSEUM_FUN_0034CD48(void)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_68f040eb20c9_AT0034CD48_ROLE000(0);
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_68f040eb20c9_AT0034CD48_ROLE002();
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_68f040eb20c9_AT0034CD48_ROLE001();
+    return 0;
+}
+
+
+/* External function declarations as per target specification */
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_92ea7c2f4a5c_AT0034D0F8_ROLE000(long);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_92ea7c2f4a5c_AT0034D0F8_ROLE001(void);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_92ea7c2f4a5c_AT0034D0F8_ROLE002(void);
+
+/* Implementation matching decompiled output */
+long LVL_30_INSOMNIAC_MUSEUM_FUN_0034D0F8(void)
+{
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_92ea7c2f4a5c_AT0034D0F8_ROLE000(0);
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_92ea7c2f4a5c_AT0034D0F8_ROLE002();
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_92ea7c2f4a5c_AT0034D0F8_ROLE001();
+  return 0;
+}
+
+
+/* External functions declared with exact aliases from task.externals */
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_d01c568afacc_AT0034D1F8_ROLE000(long param_1);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_d01c568afacc_AT0034D1F8_ROLE001(void);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_d01c568afacc_AT0034D1F8_ROLE002(void);
+
+/* Candidate function: FUN_002d3390 */
+unsigned long long LVL_30_INSOMNIAC_MUSEUM_FUN_0034D1F8(void)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_d01c568afacc_AT0034D1F8_ROLE000(0);
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_d01c568afacc_AT0034D1F8_ROLE002();
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_d01c568afacc_AT0034D1F8_ROLE001();
+    return 0;
+}
+
+
+/* Target: FUN_002d5540 on MIPS (SCUS_972.68, -O2 -G0 -ffunction-sections)
+ * Calls three externals: FUN_0027C540(int), FUN_0029CED8(void), FUN_0027C660(void)
+ * Returns 0. Stack frame size 16 bytes. Delay slots filled.
+ */
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_093381cf82c3_AT0034F3A8_ROLE000(long);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_093381cf82c3_AT0034F3A8_ROLE002(void);
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_093381cf82c3_AT0034F3A8_ROLE001(void);
+
+long long LVL_30_INSOMNIAC_MUSEUM_FUN_0034F3A8(void)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_093381cf82c3_AT0034F3A8_ROLE000(0);
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_093381cf82c3_AT0034F3A8_ROLE002();
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_093381cf82c3_AT0034F3A8_ROLE001();
+    return 0;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_30_INSOMNIAC_MUSEUM_FUN_00359070(void) {
+    return 1;
+}
+
+
+/* Measured partial C views; original types and object ownership are unknown. */
+typedef unsigned char QwenRecovery_4ecc6b5a4034_u8;
+typedef unsigned int QwenRecovery_4ecc6b5a4034_u32;
+
+/* Minimum external views; neither declaration allocates original game storage. */
+typedef struct {
+    QwenRecovery_4ecc6b5a4034_u8 prefix[0x24];
+    QwenRecovery_4ecc6b5a4034_u32 word;
+    QwenRecovery_4ecc6b5a4034_u8 tail[8];
+} QwenRecovery_4ecc6b5a4034_ExtraResetRecord164;
+
+
+
+extern QwenRecovery_4ecc6b5a4034_ExtraResetRecord164 LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE000[100];
+extern QwenRecovery_4ecc6b5a4034_u32 LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE001[139];
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00388F80(void)
+{
+    int i;
+    for (i = 99; i >= 0; --i)
+        LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE000[i].word = 0;
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE001[138] = 5;
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE001[137] = 0;
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE001[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE001[i] = 0;
+        LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE001[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_30_INSOMNIAC_MUSEUM_QWEN_4ecc6b5a4034_AT00388F80_ROLE001[i + 128] = 0;
+}
+
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0042FF30(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0042FF38(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00430090(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_004301E0(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_30_INSOMNIAC_MUSEUM_FUN_004302B0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_df8fc8ba49cf_AT00432C78_ROLE000(unsigned char *owner, int value);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00432C78(unsigned char *owner, int value)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_df8fc8ba49cf_AT00432C78_ROLE000(owner + 8, value);
+}
+
+
+
+void* LVL_30_INSOMNIAC_MUSEUM_FUN_00437678(void* param_1);
+
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_f353c206e726_AT00437678_ROLE000(int);
+extern unsigned long long LVL_30_INSOMNIAC_MUSEUM_QWEN_f353c206e726_AT00437678_ROLE001(unsigned long long);
+
+void* LVL_30_INSOMNIAC_MUSEUM_FUN_00437678(void* param_1)
+{
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_f353c206e726_AT00437678_ROLE000((int)param_1 + 8);
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_f353c206e726_AT00437678_ROLE001((int)param_1 + 0x2b0);
+  return param_1;
+}
+
+
+extern int LVL_30_INSOMNIAC_MUSEUM_QWEN_f2f9288a4e34_AT00437818_ROLE000(int);
+
+int LVL_30_INSOMNIAC_MUSEUM_FUN_00437818(int owner)
+{
+    int result;
+    result = LVL_30_INSOMNIAC_MUSEUM_QWEN_f2f9288a4e34_AT00437818_ROLE000(owner);
+    return *(int *)(owner + 0x378) + result * 0x14;
+}
+
+
+
+extern int LVL_30_INSOMNIAC_MUSEUM_QWEN_e41cd63258f5_AT00437850_ROLE000(unsigned char *);
+
+int LVL_30_INSOMNIAC_MUSEUM_FUN_00437850(int owner)
+{
+    return LVL_30_INSOMNIAC_MUSEUM_QWEN_e41cd63258f5_AT00437850_ROLE000((unsigned char *)(owner + 0x2b0));
+}
+
+
+
+void LVL_30_INSOMNIAC_MUSEUM_QWEN_f29f80950ce7_AT0043AF70_ROLE000(int);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0043AF70(int param_1)
+{
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_f29f80950ce7_AT0043AF70_ROLE000(param_1 + 0x228);
+  return;
+}
+
+
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_bf824305b9f7_AT0043B888_ROLE000(unsigned char *owner, float *records);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0043B888(unsigned char *owner, float *records)
+{
+    *(float **)(owner + 0x250) = records;
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_bf824305b9f7_AT0043B888_ROLE000(owner + 0x188, records);
+}
+
+
+
+void LVL_30_INSOMNIAC_MUSEUM_QWEN_61faeca45963_AT0043BB50_ROLE000(int param_1);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0043BB50(int param_1)
+{
+  LVL_30_INSOMNIAC_MUSEUM_QWEN_61faeca45963_AT0043BB50_ROLE000(param_1 + 0x188);
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_30_INSOMNIAC_MUSEUM_FUN_0043BCB8(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern int LVL_30_INSOMNIAC_MUSEUM_QWEN_6add11b33414_AT0043CA68_ROLE000(unsigned char *owner);
+
+int LVL_30_INSOMNIAC_MUSEUM_FUN_0043CA68(unsigned char *owner)
+{
+    return LVL_30_INSOMNIAC_MUSEUM_QWEN_6add11b33414_AT0043CA68_ROLE000(owner + 0x298);
+}
+
+
+
+extern void LVL_30_INSOMNIAC_MUSEUM_QWEN_de961518de48_AT0043CA88_ROLE000(unsigned char *owner);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0043CA88(unsigned char *owner)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_de961518de48_AT0043CA88_ROLE000(owner + 0x298);
+}
+
+
+
+extern unsigned long long LVL_30_INSOMNIAC_MUSEUM_QWEN_7ba3cdeeb16b_AT004413A8_ROLE000(unsigned long long);
+
+unsigned long long LVL_30_INSOMNIAC_MUSEUM_FUN_004413A8(unsigned long long value)
+{
+    LVL_30_INSOMNIAC_MUSEUM_QWEN_7ba3cdeeb16b_AT004413A8_ROLE000(value);
+    return value;
+}
+
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_004415F0(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0xb8) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_30_INSOMNIAC_MUSEUM_FUN_00442650(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00442990(int *param_1)
+{
+    param_1[0x150 / sizeof(int)] = 0;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00442B30(int param_1, int param_2) {
+    *(int *)(param_1 + 0x84) = param_2;
+}
+
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_00442B78(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 32) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_30_INSOMNIAC_MUSEUM_FUN_00447AD0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_30_INSOMNIAC_MUSEUM_FUN_00449BC0(void) {
+    return 1;
+}
+
+
+extern int LVL_30_INSOMNIAC_MUSEUM_QWEN_cc83cb329fcb_AT0044B400_ROLE000(unsigned char *);
+
+int LVL_30_INSOMNIAC_MUSEUM_FUN_0044B400(int *owner)
+{
+    int result;
+    long status;
+    status = LVL_30_INSOMNIAC_MUSEUM_QWEN_cc83cb329fcb_AT0044B400_ROLE000((unsigned char *)owner);
+    if (status == 0)
+        result = *owner + owner[2] * 0xd0000;
+    else
+        result = 0;
+    return result;
+}
+

@@ -1,3 +1,4 @@
+import json
 """SDK boot dispatch and full assembly ownership; no compiler execution."""
 from pathlib import Path
 import sys
@@ -59,17 +60,32 @@ class SDKBootDispatch(unittest.TestCase):
         default.assert_called_once()
 
     def test_overlay_dispatch_does_not_invoke_the_present_sdk_boot_owner(self):
-        expected = ({'functions': []}, Path('shared.o'), {'cc1': 'default'})
+        tools = {'cc1': 'default'}
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             catalog = root / sdk.CATALOG
             catalog.parent.mkdir(parents=True)
             catalog.write_text('{}', encoding='utf8')
+            shared_object = root / 'shared.o'
+            shared_object.write_bytes(b'raw shared compiler fixture')
+            link_object = root / 'shared-link.o'
+            link_object.write_bytes(b'derived shared link fixture')
+            adapter = root / 'adapter.json'
+            adapter.write_text(json.dumps({'compiled_object_sha256': integration.file_hash(shared_object),
+                'link_object_sha256': integration.file_hash(link_object), 'relocation_changes': []}))
+            shared_catalog = {'functions': [], 'shared_link_object': {
+                'path': link_object.name, 'sha256': integration.file_hash(link_object),
+        'adapter_path': adapter.name, 'adapter_sha256': integration.file_hash(adapter),
+        'compiled_path': shared_object.name, 'compiled_object_sha256': integration.file_hash(shared_object)}}
+            review = root / 'progress/candidates.json'
+            review.parent.mkdir()
+            review.write_text(json.dumps({'object_sha256': integration.file_hash(shared_object)}))
+            expected = (shared_catalog, shared_object, tools)
             with patch.object(integration, 'ROOT', root), \
                     patch.object(integration, '_compile_shared_level_c', return_value=expected) as shared, \
                     patch.object(sdk, 'compile_reviewed', side_effect=AssertionError('SDK is boot-only')) as sdk_compile:
-                result = integration.compile_level_c(Path('reference'), Path('private'), Path('tools'), '0_aranos_tutorial')
-            self.assertEqual(result, expected)
+                result = integration.compile_level_c(Path('reference'), root, Path('tools'), '0_aranos_tutorial')
+            self.assertEqual(result, (shared_catalog, link_object, tools))
             shared.assert_called_once()
             sdk_compile.assert_not_called()
 

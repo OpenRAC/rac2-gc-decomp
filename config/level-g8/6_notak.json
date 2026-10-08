@@ -106,7 +106,13 @@
     "LVL_6_NOTAK_Fe44fc83bd69b4f14_AT0036BAC8_ROLE00": 1745776,
     "LVL_6_NOTAK_Fe6fa55215bad26dd_AT0036BB00_ROLE00": 1745780,
     "LVL_6_NOTAK_Fef45f15dfb57feb2_AT0033B4E0_ROLE00": 1741676,
-    "LVL_6_NOTAK_Ff0259c87ab6a3193_AT00332978_ROLE00": 1740212
+    "LVL_6_NOTAK_Ff0259c87ab6a3193_AT00332978_ROLE00": 1740212,
+    "LVL_6_NOTAK_QWEN_339fe89f21bc_AT003BC7C0_ROLE000": 3330856,
+    "LVL_6_NOTAK_QWEN_339fe89f21bc_AT003BC7C0_ROLE001": 1759136,
+    "LVL_6_NOTAK_QWEN_538934d89776_AT00316758_ROLE000": 1738972,
+    "LVL_6_NOTAK_QWEN_538934d89776_AT00316758_ROLE001": 1735600,
+    "LVL_6_NOTAK_QWEN_538934d89776_AT00316758_ROLE002": 3236648,
+    "LVL_6_NOTAK_QWEN_538934d89776_AT00316758_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -419,12 +425,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_0047E478"
+    },
+    {
+      "address": 3237720,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_6_NOTAK_FUN_00316758"
+    },
+    {
+      "address": 3917760,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_6_NOTAK_FUN_003BC7C0"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "6_notak",
-  "module": "src/levels/smalldata/6_notak-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/6_notak-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/6_notak",
   "reference_sha256": "c6f43c2e92a414bc38a98cb396e675d4ae4cf6fb9a380c886d47cd9897d5c412",
   "schema": 1,

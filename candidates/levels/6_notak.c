@@ -2628,3 +2628,500 @@ void LVL_6_NOTAK_FUN_003CCE08(void)
     for (i = 7; i >= 0; --i)
         LVL_6_NOTAK_F03c444112283bc5f_AT003CCE08_ROLE00[i + 128] = 0;
 }
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_6_NOTAK_FUN_002E44F0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_6_NOTAK_FUN_00313730(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_6_NOTAK_FUN_0031BAB8(void) {
+    return 1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_6_NOTAK_FUN_0031BAC0(void) {
+    return 1;
+}
+
+
+extern void LVL_6_NOTAK_QWEN_11a4c157d102_AT00333658_ROLE000(unsigned char *);
+
+void LVL_6_NOTAK_FUN_00333658(void *owner)
+{
+    LVL_6_NOTAK_QWEN_11a4c157d102_AT00333658_ROLE000(owner);
+}
+
+
+
+void LVL_6_NOTAK_QWEN_407ee6f17a73_AT003336F8_ROLE001(int);
+void LVL_6_NOTAK_QWEN_407ee6f17a73_AT003336F8_ROLE000(void*);
+
+void LVL_6_NOTAK_FUN_003336F8(void *param)
+{
+  LVL_6_NOTAK_QWEN_407ee6f17a73_AT003336F8_ROLE001((int)param);
+  *(unsigned int *)param = 0;
+  LVL_6_NOTAK_QWEN_407ee6f17a73_AT003336F8_ROLE000(param);
+}
+
+
+void LVL_6_NOTAK_QWEN_5696fcf76f0c_AT00351AA0_ROLE000(unsigned int *dst, unsigned int val, int size);
+
+void LVL_6_NOTAK_FUN_00351AA0(void)
+{
+    LVL_6_NOTAK_QWEN_5696fcf76f0c_AT00351AA0_ROLE000((unsigned int *)0x70003A00, 0x40000000, 0x3C0);
+}
+
+
+unsigned int LVL_6_NOTAK_FUN_0036CEB0(unsigned int param_1)
+{
+    unsigned int inner_ptr;
+    unsigned int result;
+
+    inner_ptr = *(unsigned int *)(param_1 + 0x68);
+    result = *(unsigned int *)(inner_ptr + 0x18);
+    return result;
+}
+
+
+/*
+ * Disassembled at 0x002cd220
+ * Signature: int FUN_002cd220(void)
+ * Behavior:
+ *   - Saves RA on stack
+ *   - Calls FUN_0027C540(0)
+ *   - Calls FUN_0029C138()
+ *   - Calls FUN_0027C660()
+ *   - Restores RA from stack
+ *   - Returns 0
+ */
+extern void LVL_6_NOTAK_QWEN_523e38f49b74_AT00387B00_ROLE000(long);
+extern void LVL_6_NOTAK_QWEN_523e38f49b74_AT00387B00_ROLE002(void);
+extern void LVL_6_NOTAK_QWEN_523e38f49b74_AT00387B00_ROLE001(void);
+
+int LVL_6_NOTAK_FUN_00387B00(void)
+{
+  LVL_6_NOTAK_QWEN_523e38f49b74_AT00387B00_ROLE000(0);
+  LVL_6_NOTAK_QWEN_523e38f49b74_AT00387B00_ROLE002();
+  LVL_6_NOTAK_QWEN_523e38f49b74_AT00387B00_ROLE001();
+  return 0;
+}
+
+
+unsigned long long LVL_6_NOTAK_FUN_00387F00(void);
+
+extern void LVL_6_NOTAK_QWEN_f47929f95774_AT00387F00_ROLE000(long);
+extern void LVL_6_NOTAK_QWEN_f47929f95774_AT00387F00_ROLE002(void);
+extern void LVL_6_NOTAK_QWEN_f47929f95774_AT00387F00_ROLE001(void);
+
+unsigned long long LVL_6_NOTAK_FUN_00387F00(void)
+{
+  LVL_6_NOTAK_QWEN_f47929f95774_AT00387F00_ROLE000(0);
+  LVL_6_NOTAK_QWEN_f47929f95774_AT00387F00_ROLE002();
+  LVL_6_NOTAK_QWEN_f47929f95774_AT00387F00_ROLE001();
+  return 0;
+}
+
+
+/* Function at 0x002cd8c0: FUN_002CD8C0
+ * 
+ * Disassembly summary:
+ * - 12 instructions, 48 bytes total
+ * - Prologue: save ra, allocate 16-byte stack frame
+ * - Three calls to external functions:
+ *   1. FUN_0027C540(0)
+ *   2. FUN_0029C450()
+ *   3. FUN_0027C660()
+ * - Epilogue: restore ra, return 0, deallocate stack
+ * - No local variables used
+ * - Return type is void-like; returns zero in v0
+ * - Delay slots are_NOP/unused in this case
+ */
+
+/* External function declarations (exact addresses from task metadata) */
+extern void LVL_6_NOTAK_QWEN_cb305b1f1210_AT003881A0_ROLE000(long);
+extern void LVL_6_NOTAK_QWEN_cb305b1f1210_AT003881A0_ROLE002(void);
+extern void LVL_6_NOTAK_QWEN_cb305b1f1210_AT003881A0_ROLE001(void);
+
+long long LVL_6_NOTAK_FUN_003881A0(void)
+{
+    LVL_6_NOTAK_QWEN_cb305b1f1210_AT003881A0_ROLE000(0LL);
+    LVL_6_NOTAK_QWEN_cb305b1f1210_AT003881A0_ROLE002();
+    LVL_6_NOTAK_QWEN_cb305b1f1210_AT003881A0_ROLE001();
+    return 0LL;
+}
+
+
+extern void LVL_6_NOTAK_QWEN_c23b3406f982_AT0038D598_ROLE000(long);
+extern void LVL_6_NOTAK_QWEN_c23b3406f982_AT0038D598_ROLE002(void);
+extern void LVL_6_NOTAK_QWEN_c23b3406f982_AT0038D598_ROLE001(void);
+
+int LVL_6_NOTAK_FUN_0038D598(void)
+{
+    LVL_6_NOTAK_QWEN_c23b3406f982_AT0038D598_ROLE000(0);
+    LVL_6_NOTAK_QWEN_c23b3406f982_AT0038D598_ROLE002();
+    LVL_6_NOTAK_QWEN_c23b3406f982_AT0038D598_ROLE001();
+    return 0;
+}
+
+
+void LVL_6_NOTAK_QWEN_68cf9ebb5ee2_AT0038D708_ROLE000(long);
+void LVL_6_NOTAK_QWEN_68cf9ebb5ee2_AT0038D708_ROLE001(void);
+void LVL_6_NOTAK_QWEN_68cf9ebb5ee2_AT0038D708_ROLE002(void);
+
+unsigned long long LVL_6_NOTAK_FUN_0038D708(void)
+{
+    LVL_6_NOTAK_QWEN_68cf9ebb5ee2_AT0038D708_ROLE000(0);
+    LVL_6_NOTAK_QWEN_68cf9ebb5ee2_AT0038D708_ROLE002();
+    LVL_6_NOTAK_QWEN_68cf9ebb5ee2_AT0038D708_ROLE001();
+    return 0;
+}
+
+
+
+/* 
+ * Function: FUN_002D2EE0
+ * 
+ * Disassembly summary:
+ * - Saves return address on stack
+ * - Calls FUN_0027C540(0) (with zero argument)
+ * - Calls FUN_0029C7A0()
+ * - Calls FUN_0027C660()
+ * - Restores return address
+ * - Returns 0
+ *
+ * Notes:
+ * - The function follows standard MIPS ABI prologue/epilogue.
+ * - Delay slots are filled with NOP or argument setup as seen in disassembly.
+ * - No local variables used.
+ * - All external function addresses come from the assigned externals list.
+ */
+
+extern void LVL_6_NOTAK_QWEN_68f040eb20c9_AT0038D7C0_ROLE000(long arg0);
+extern void LVL_6_NOTAK_QWEN_68f040eb20c9_AT0038D7C0_ROLE002(void);
+extern void LVL_6_NOTAK_QWEN_68f040eb20c9_AT0038D7C0_ROLE001(void);
+
+unsigned long long LVL_6_NOTAK_FUN_0038D7C0(void)
+{
+    LVL_6_NOTAK_QWEN_68f040eb20c9_AT0038D7C0_ROLE000(0);
+    LVL_6_NOTAK_QWEN_68f040eb20c9_AT0038D7C0_ROLE002();
+    LVL_6_NOTAK_QWEN_68f040eb20c9_AT0038D7C0_ROLE001();
+    return 0;
+}
+
+
+/* External function declarations as per target specification */
+extern void LVL_6_NOTAK_QWEN_92ea7c2f4a5c_AT0038DB70_ROLE000(long);
+extern void LVL_6_NOTAK_QWEN_92ea7c2f4a5c_AT0038DB70_ROLE001(void);
+extern void LVL_6_NOTAK_QWEN_92ea7c2f4a5c_AT0038DB70_ROLE002(void);
+
+/* Implementation matching decompiled output */
+long LVL_6_NOTAK_FUN_0038DB70(void)
+{
+  LVL_6_NOTAK_QWEN_92ea7c2f4a5c_AT0038DB70_ROLE000(0);
+  LVL_6_NOTAK_QWEN_92ea7c2f4a5c_AT0038DB70_ROLE002();
+  LVL_6_NOTAK_QWEN_92ea7c2f4a5c_AT0038DB70_ROLE001();
+  return 0;
+}
+
+
+/* External functions declared with exact aliases from task.externals */
+extern void LVL_6_NOTAK_QWEN_d01c568afacc_AT0038DC70_ROLE000(long param_1);
+extern void LVL_6_NOTAK_QWEN_d01c568afacc_AT0038DC70_ROLE001(void);
+extern void LVL_6_NOTAK_QWEN_d01c568afacc_AT0038DC70_ROLE002(void);
+
+/* Candidate function: FUN_002d3390 */
+unsigned long long LVL_6_NOTAK_FUN_0038DC70(void)
+{
+    LVL_6_NOTAK_QWEN_d01c568afacc_AT0038DC70_ROLE000(0);
+    LVL_6_NOTAK_QWEN_d01c568afacc_AT0038DC70_ROLE002();
+    LVL_6_NOTAK_QWEN_d01c568afacc_AT0038DC70_ROLE001();
+    return 0;
+}
+
+
+/* Target: FUN_002d5540 on MIPS (SCUS_972.68, -O2 -G0 -ffunction-sections)
+ * Calls three externals: FUN_0027C540(int), FUN_0029CED8(void), FUN_0027C660(void)
+ * Returns 0. Stack frame size 16 bytes. Delay slots filled.
+ */
+extern void LVL_6_NOTAK_QWEN_093381cf82c3_AT0038FE20_ROLE000(long);
+extern void LVL_6_NOTAK_QWEN_093381cf82c3_AT0038FE20_ROLE002(void);
+extern void LVL_6_NOTAK_QWEN_093381cf82c3_AT0038FE20_ROLE001(void);
+
+long long LVL_6_NOTAK_FUN_0038FE20(void)
+{
+    LVL_6_NOTAK_QWEN_093381cf82c3_AT0038FE20_ROLE000(0);
+    LVL_6_NOTAK_QWEN_093381cf82c3_AT0038FE20_ROLE002();
+    LVL_6_NOTAK_QWEN_093381cf82c3_AT0038FE20_ROLE001();
+    return 0;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_6_NOTAK_FUN_00399AE8(void) {
+    return 1;
+}
+
+
+/* Measured partial C views; original types and object ownership are unknown. */
+typedef unsigned char QwenRecovery_4ecc6b5a4034_u8;
+typedef unsigned int QwenRecovery_4ecc6b5a4034_u32;
+
+/* Minimum external views; neither declaration allocates original game storage. */
+typedef struct {
+    QwenRecovery_4ecc6b5a4034_u8 prefix[0x24];
+    QwenRecovery_4ecc6b5a4034_u32 word;
+    QwenRecovery_4ecc6b5a4034_u8 tail[8];
+} QwenRecovery_4ecc6b5a4034_ExtraResetRecord164;
+
+
+
+extern QwenRecovery_4ecc6b5a4034_ExtraResetRecord164 LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE000[100];
+extern QwenRecovery_4ecc6b5a4034_u32 LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE001[139];
+
+void LVL_6_NOTAK_FUN_003CA390(void)
+{
+    int i;
+    for (i = 99; i >= 0; --i)
+        LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE000[i].word = 0;
+    LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE001[138] = 5;
+    LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE001[137] = 0;
+    LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE001[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE001[i] = 0;
+        LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE001[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_6_NOTAK_QWEN_4ecc6b5a4034_AT003CA390_ROLE001[i + 128] = 0;
+}
+
+
+
+void LVL_6_NOTAK_FUN_0047DFB8(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+void LVL_6_NOTAK_FUN_0047DFC0(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_6_NOTAK_FUN_0047E118(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_6_NOTAK_FUN_0047E268(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_6_NOTAK_FUN_0047E338(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern void LVL_6_NOTAK_QWEN_df8fc8ba49cf_AT00480D00_ROLE000(unsigned char *owner, int value);
+
+void LVL_6_NOTAK_FUN_00480D00(unsigned char *owner, int value)
+{
+    LVL_6_NOTAK_QWEN_df8fc8ba49cf_AT00480D00_ROLE000(owner + 8, value);
+}
+
+
+
+void* LVL_6_NOTAK_FUN_00485700(void* param_1);
+
+extern void LVL_6_NOTAK_QWEN_f353c206e726_AT00485700_ROLE000(int);
+extern unsigned long long LVL_6_NOTAK_QWEN_f353c206e726_AT00485700_ROLE001(unsigned long long);
+
+void* LVL_6_NOTAK_FUN_00485700(void* param_1)
+{
+  LVL_6_NOTAK_QWEN_f353c206e726_AT00485700_ROLE000((int)param_1 + 8);
+  LVL_6_NOTAK_QWEN_f353c206e726_AT00485700_ROLE001((int)param_1 + 0x2b0);
+  return param_1;
+}
+
+
+extern int LVL_6_NOTAK_QWEN_f2f9288a4e34_AT004858A0_ROLE000(int);
+
+int LVL_6_NOTAK_FUN_004858A0(int owner)
+{
+    int result;
+    result = LVL_6_NOTAK_QWEN_f2f9288a4e34_AT004858A0_ROLE000(owner);
+    return *(int *)(owner + 0x378) + result * 0x14;
+}
+
+
+
+extern int LVL_6_NOTAK_QWEN_e41cd63258f5_AT004858D8_ROLE000(unsigned char *);
+
+int LVL_6_NOTAK_FUN_004858D8(int owner)
+{
+    return LVL_6_NOTAK_QWEN_e41cd63258f5_AT004858D8_ROLE000((unsigned char *)(owner + 0x2b0));
+}
+
+
+
+void LVL_6_NOTAK_QWEN_f29f80950ce7_AT00488FF8_ROLE000(int);
+
+void LVL_6_NOTAK_FUN_00488FF8(int param_1)
+{
+  LVL_6_NOTAK_QWEN_f29f80950ce7_AT00488FF8_ROLE000(param_1 + 0x228);
+  return;
+}
+
+
+extern void LVL_6_NOTAK_QWEN_bf824305b9f7_AT00489910_ROLE000(unsigned char *owner, float *records);
+
+void LVL_6_NOTAK_FUN_00489910(unsigned char *owner, float *records)
+{
+    *(float **)(owner + 0x250) = records;
+    LVL_6_NOTAK_QWEN_bf824305b9f7_AT00489910_ROLE000(owner + 0x188, records);
+}
+
+
+
+void LVL_6_NOTAK_QWEN_61faeca45963_AT00489BD8_ROLE000(int param_1);
+
+void LVL_6_NOTAK_FUN_00489BD8(int param_1)
+{
+  LVL_6_NOTAK_QWEN_61faeca45963_AT00489BD8_ROLE000(param_1 + 0x188);
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_6_NOTAK_FUN_00489D40(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern int LVL_6_NOTAK_QWEN_6add11b33414_AT0048AAF0_ROLE000(unsigned char *owner);
+
+int LVL_6_NOTAK_FUN_0048AAF0(unsigned char *owner)
+{
+    return LVL_6_NOTAK_QWEN_6add11b33414_AT0048AAF0_ROLE000(owner + 0x298);
+}
+
+
+
+extern void LVL_6_NOTAK_QWEN_de961518de48_AT0048AB10_ROLE000(unsigned char *owner);
+
+void LVL_6_NOTAK_FUN_0048AB10(unsigned char *owner)
+{
+    LVL_6_NOTAK_QWEN_de961518de48_AT0048AB10_ROLE000(owner + 0x298);
+}
+
+
+
+extern unsigned long long LVL_6_NOTAK_QWEN_7ba3cdeeb16b_AT0048F430_ROLE000(unsigned long long);
+
+unsigned long long LVL_6_NOTAK_FUN_0048F430(unsigned long long value)
+{
+    LVL_6_NOTAK_QWEN_7ba3cdeeb16b_AT0048F430_ROLE000(value);
+    return value;
+}
+
+
+
+void LVL_6_NOTAK_FUN_0048F678(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0xb8) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_6_NOTAK_FUN_004906D8(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+void LVL_6_NOTAK_FUN_00490A18(int *param_1)
+{
+    param_1[0x150 / sizeof(int)] = 0;
+}
+
+
+void LVL_6_NOTAK_FUN_00490BB8(int param_1, int param_2) {
+    *(int *)(param_1 + 0x84) = param_2;
+}
+
+
+void LVL_6_NOTAK_FUN_00490C00(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 32) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_6_NOTAK_FUN_00495B58(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_6_NOTAK_FUN_00497C48(void) {
+    return 1;
+}
+
+
+extern int LVL_6_NOTAK_QWEN_cc83cb329fcb_AT00499488_ROLE000(unsigned char *);
+
+int LVL_6_NOTAK_FUN_00499488(int *owner)
+{
+    int result;
+    long status;
+    status = LVL_6_NOTAK_QWEN_cc83cb329fcb_AT00499488_ROLE000((unsigned char *)owner);
+    if (status == 0)
+        result = *owner + owner[2] * 0xd0000;
+    else
+        result = 0;
+    return result;
+}
+

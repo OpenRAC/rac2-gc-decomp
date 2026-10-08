@@ -20,6 +20,52 @@ ROOT = Path(__file__).resolve().parents[1]
 TARGET = json.loads((ROOT / "config" / "target.json").read_text(encoding="utf-8"))
 
 
+def shared_link_object_proof(directory: Path, catalog: dict, c_object, boot_review: dict) -> dict | None:
+    """Pin the real raw and linked files; publish hashes/receipt without private paths."""
+    if 'shared_link_object' not in catalog:
+        return None
+    from decomp_report import validate_shared_link_proof
+    descriptor = catalog['shared_link_object']; root = directory.resolve()
+    def contained(name):
+        value = descriptor[name]
+        if not isinstance(value, str) or Path(value).is_absolute():
+            raise ValueError('Shared link descriptor requires relative paths')
+        path = (root / value).resolve()
+        if path == root or not path.is_relative_to(root):
+            raise ValueError('Shared link descriptor escaped its build')
+        return path
+    raw_path, link_path, receipt_path = (contained(name) for name in ('compiled_path', 'path', 'adapter_path'))
+    actual_link = c_object['candidates/boot.c'] if isinstance(c_object, dict) else c_object
+    if Path(actual_link).resolve() != link_path:
+        raise ValueError('The actual linked shared object differs from its recorded view')
+    raw, linked, receipt_bytes = raw_path.read_bytes(), link_path.read_bytes(), receipt_path.read_bytes()
+    digest = lambda data: hashlib.sha256(data).hexdigest()
+    if (digest(raw) != boot_review['object_sha256']
+            or digest(raw) != descriptor['compiled_object_sha256']
+            or digest(linked) != descriptor['sha256']
+            or digest(receipt_bytes) != descriptor['adapter_sha256']):
+        raise ValueError('Shared raw/link/receipt file hash changed')
+    receipt = json.loads(receipt_bytes)
+    result = {'c_object_sha256': digest(raw), 'c_link_object_sha256': digest(linked),
+              'c_link_object_adapter_sha256': digest(receipt_bytes), 'c_link_object_adapter': receipt}
+    validate_shared_link_proof(result, boot_review['object_sha256'], catalog['functions'])
+    if len(raw) != len(linked):
+        raise ValueError('Shared adapter changed object length')
+    import struct
+    allowed = set()
+    for edge in receipt['relocation_changes']:
+        offset = edge['r_info_offset']
+        if offset + 4 > len(raw):
+            raise ValueError('Shared relocation evidence is outside the actual object')
+        if (struct.unpack_from('<I', raw, offset)[0] != edge['old_r_info']
+                or struct.unpack_from('<I', linked, offset)[0] != edge['new_r_info']):
+            raise ValueError('Shared relocation evidence differs from actual r_info words')
+        allowed.update(range(offset, offset + 4))
+    if any(a != b and index not in allowed for index, (a, b) in enumerate(zip(raw, linked))):
+        raise ValueError('Shared derived object changed non-relocation bytes')
+    return result
+
+
 def checked(arguments: list[str], directory: Path, log: Path) -> None:
     with log.open("wb") as stream:
         try:
@@ -215,6 +261,9 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
                 raise ValueError("Level C integration is qualified for one overlay at a time")
             catalog, c_object, c_hashes = (compile_level_c(reference, directory, c_toolchain, level) if candidate_review is None
                                          else compile_level_c(reference, directory, c_toolchain, level, candidate_review))
+        shared_link = (shared_link_object_proof(directory, catalog, c_object,
+            json.loads((candidate_review or ROOT / 'progress/candidates.json').read_bytes()))
+            if level is not None else None)
         sources, replacements = replace_inputs(directory, sources, catalog, c_object,
                                                relocated=level is not None)
     assembler = toolchain / "ee" / "bin" / "Ps2EeAs.exe"
@@ -260,8 +309,15 @@ def rebuild(reference: Path, expected_hash: str, directory: Path, toolchain: Pat
                              "segments": sum(segment["type"] == 1 for segment in read_elf(reference)["segments"])},
                  "matched_code_bytes": sum(function["size"] for function in functions), "tools": c_hashes,
                  "candidate_elf_sha256": result["candidate_sha256"],
-                 "c_object_sha256": hashlib.sha256(c_objects(c_object)[0].read_bytes()).hexdigest(),
+                 "c_object_sha256": (shared_link["c_object_sha256"] if shared_link is not None
+                                      else hashlib.sha256(c_objects(c_object)[0].read_bytes()).hexdigest()),
                  "replacement_inputs": replacements}
+        if shared_link is not None:
+            current_link = shared_link_object_proof(directory, catalog, c_object,
+                json.loads((candidate_review or ROOT / 'progress/candidates.json').read_bytes()))
+            if current_link != shared_link:
+                raise ValueError('Shared raw/link proof chain changed during reconstruction')
+            proof.update(shared_link)
         if "sdk_units" in catalog:
             default_rows = [row for row in functions if row["unit_id"] == "default-gnu8bed"]
             default = {**proof, "matched_code_bytes": sum(row["size"] for row in default_rows)}

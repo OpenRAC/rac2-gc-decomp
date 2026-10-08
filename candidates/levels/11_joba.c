@@ -2818,3 +2818,500 @@ void LVL_11_JOBA_FUN_0039F318(void)
     for (i = 7; i >= 0; --i)
         LVL_11_JOBA_F03c444112283bc5f_AT0039F318_ROLE00[i + 128] = 0;
 }
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_11_JOBA_FUN_002BE160(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_11_JOBA_FUN_002E5DA8(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_11_JOBA_FUN_002EE238(void) {
+    return 1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_11_JOBA_FUN_002EE240(void) {
+    return 1;
+}
+
+
+extern void LVL_11_JOBA_QWEN_11a4c157d102_AT00306630_ROLE000(unsigned char *);
+
+void LVL_11_JOBA_FUN_00306630(void *owner)
+{
+    LVL_11_JOBA_QWEN_11a4c157d102_AT00306630_ROLE000(owner);
+}
+
+
+
+void LVL_11_JOBA_QWEN_407ee6f17a73_AT003066D0_ROLE001(int);
+void LVL_11_JOBA_QWEN_407ee6f17a73_AT003066D0_ROLE000(void*);
+
+void LVL_11_JOBA_FUN_003066D0(void *param)
+{
+  LVL_11_JOBA_QWEN_407ee6f17a73_AT003066D0_ROLE001((int)param);
+  *(unsigned int *)param = 0;
+  LVL_11_JOBA_QWEN_407ee6f17a73_AT003066D0_ROLE000(param);
+}
+
+
+void LVL_11_JOBA_QWEN_5696fcf76f0c_AT00323F30_ROLE000(unsigned int *dst, unsigned int val, int size);
+
+void LVL_11_JOBA_FUN_00323F30(void)
+{
+    LVL_11_JOBA_QWEN_5696fcf76f0c_AT00323F30_ROLE000((unsigned int *)0x70003A00, 0x40000000, 0x3C0);
+}
+
+
+unsigned int LVL_11_JOBA_FUN_0033F2D8(unsigned int param_1)
+{
+    unsigned int inner_ptr;
+    unsigned int result;
+
+    inner_ptr = *(unsigned int *)(param_1 + 0x68);
+    result = *(unsigned int *)(inner_ptr + 0x18);
+    return result;
+}
+
+
+/*
+ * Disassembled at 0x002cd220
+ * Signature: int FUN_002cd220(void)
+ * Behavior:
+ *   - Saves RA on stack
+ *   - Calls FUN_0027C540(0)
+ *   - Calls FUN_0029C138()
+ *   - Calls FUN_0027C660()
+ *   - Restores RA from stack
+ *   - Returns 0
+ */
+extern void LVL_11_JOBA_QWEN_523e38f49b74_AT0035AF98_ROLE000(long);
+extern void LVL_11_JOBA_QWEN_523e38f49b74_AT0035AF98_ROLE002(void);
+extern void LVL_11_JOBA_QWEN_523e38f49b74_AT0035AF98_ROLE001(void);
+
+int LVL_11_JOBA_FUN_0035AF98(void)
+{
+  LVL_11_JOBA_QWEN_523e38f49b74_AT0035AF98_ROLE000(0);
+  LVL_11_JOBA_QWEN_523e38f49b74_AT0035AF98_ROLE002();
+  LVL_11_JOBA_QWEN_523e38f49b74_AT0035AF98_ROLE001();
+  return 0;
+}
+
+
+unsigned long long LVL_11_JOBA_FUN_0035B398(void);
+
+extern void LVL_11_JOBA_QWEN_f47929f95774_AT0035B398_ROLE000(long);
+extern void LVL_11_JOBA_QWEN_f47929f95774_AT0035B398_ROLE002(void);
+extern void LVL_11_JOBA_QWEN_f47929f95774_AT0035B398_ROLE001(void);
+
+unsigned long long LVL_11_JOBA_FUN_0035B398(void)
+{
+  LVL_11_JOBA_QWEN_f47929f95774_AT0035B398_ROLE000(0);
+  LVL_11_JOBA_QWEN_f47929f95774_AT0035B398_ROLE002();
+  LVL_11_JOBA_QWEN_f47929f95774_AT0035B398_ROLE001();
+  return 0;
+}
+
+
+/* Function at 0x002cd8c0: FUN_002CD8C0
+ * 
+ * Disassembly summary:
+ * - 12 instructions, 48 bytes total
+ * - Prologue: save ra, allocate 16-byte stack frame
+ * - Three calls to external functions:
+ *   1. FUN_0027C540(0)
+ *   2. FUN_0029C450()
+ *   3. FUN_0027C660()
+ * - Epilogue: restore ra, return 0, deallocate stack
+ * - No local variables used
+ * - Return type is void-like; returns zero in v0
+ * - Delay slots are_NOP/unused in this case
+ */
+
+/* External function declarations (exact addresses from task metadata) */
+extern void LVL_11_JOBA_QWEN_cb305b1f1210_AT0035B638_ROLE000(long);
+extern void LVL_11_JOBA_QWEN_cb305b1f1210_AT0035B638_ROLE002(void);
+extern void LVL_11_JOBA_QWEN_cb305b1f1210_AT0035B638_ROLE001(void);
+
+long long LVL_11_JOBA_FUN_0035B638(void)
+{
+    LVL_11_JOBA_QWEN_cb305b1f1210_AT0035B638_ROLE000(0LL);
+    LVL_11_JOBA_QWEN_cb305b1f1210_AT0035B638_ROLE002();
+    LVL_11_JOBA_QWEN_cb305b1f1210_AT0035B638_ROLE001();
+    return 0LL;
+}
+
+
+extern void LVL_11_JOBA_QWEN_c23b3406f982_AT00360A30_ROLE000(long);
+extern void LVL_11_JOBA_QWEN_c23b3406f982_AT00360A30_ROLE002(void);
+extern void LVL_11_JOBA_QWEN_c23b3406f982_AT00360A30_ROLE001(void);
+
+int LVL_11_JOBA_FUN_00360A30(void)
+{
+    LVL_11_JOBA_QWEN_c23b3406f982_AT00360A30_ROLE000(0);
+    LVL_11_JOBA_QWEN_c23b3406f982_AT00360A30_ROLE002();
+    LVL_11_JOBA_QWEN_c23b3406f982_AT00360A30_ROLE001();
+    return 0;
+}
+
+
+void LVL_11_JOBA_QWEN_68cf9ebb5ee2_AT00360BA0_ROLE000(long);
+void LVL_11_JOBA_QWEN_68cf9ebb5ee2_AT00360BA0_ROLE001(void);
+void LVL_11_JOBA_QWEN_68cf9ebb5ee2_AT00360BA0_ROLE002(void);
+
+unsigned long long LVL_11_JOBA_FUN_00360BA0(void)
+{
+    LVL_11_JOBA_QWEN_68cf9ebb5ee2_AT00360BA0_ROLE000(0);
+    LVL_11_JOBA_QWEN_68cf9ebb5ee2_AT00360BA0_ROLE002();
+    LVL_11_JOBA_QWEN_68cf9ebb5ee2_AT00360BA0_ROLE001();
+    return 0;
+}
+
+
+
+/* 
+ * Function: FUN_002D2EE0
+ * 
+ * Disassembly summary:
+ * - Saves return address on stack
+ * - Calls FUN_0027C540(0) (with zero argument)
+ * - Calls FUN_0029C7A0()
+ * - Calls FUN_0027C660()
+ * - Restores return address
+ * - Returns 0
+ *
+ * Notes:
+ * - The function follows standard MIPS ABI prologue/epilogue.
+ * - Delay slots are filled with NOP or argument setup as seen in disassembly.
+ * - No local variables used.
+ * - All external function addresses come from the assigned externals list.
+ */
+
+extern void LVL_11_JOBA_QWEN_68f040eb20c9_AT00360C58_ROLE000(long arg0);
+extern void LVL_11_JOBA_QWEN_68f040eb20c9_AT00360C58_ROLE002(void);
+extern void LVL_11_JOBA_QWEN_68f040eb20c9_AT00360C58_ROLE001(void);
+
+unsigned long long LVL_11_JOBA_FUN_00360C58(void)
+{
+    LVL_11_JOBA_QWEN_68f040eb20c9_AT00360C58_ROLE000(0);
+    LVL_11_JOBA_QWEN_68f040eb20c9_AT00360C58_ROLE002();
+    LVL_11_JOBA_QWEN_68f040eb20c9_AT00360C58_ROLE001();
+    return 0;
+}
+
+
+/* External function declarations as per target specification */
+extern void LVL_11_JOBA_QWEN_92ea7c2f4a5c_AT00361008_ROLE000(long);
+extern void LVL_11_JOBA_QWEN_92ea7c2f4a5c_AT00361008_ROLE001(void);
+extern void LVL_11_JOBA_QWEN_92ea7c2f4a5c_AT00361008_ROLE002(void);
+
+/* Implementation matching decompiled output */
+long LVL_11_JOBA_FUN_00361008(void)
+{
+  LVL_11_JOBA_QWEN_92ea7c2f4a5c_AT00361008_ROLE000(0);
+  LVL_11_JOBA_QWEN_92ea7c2f4a5c_AT00361008_ROLE002();
+  LVL_11_JOBA_QWEN_92ea7c2f4a5c_AT00361008_ROLE001();
+  return 0;
+}
+
+
+/* External functions declared with exact aliases from task.externals */
+extern void LVL_11_JOBA_QWEN_d01c568afacc_AT00361108_ROLE000(long param_1);
+extern void LVL_11_JOBA_QWEN_d01c568afacc_AT00361108_ROLE001(void);
+extern void LVL_11_JOBA_QWEN_d01c568afacc_AT00361108_ROLE002(void);
+
+/* Candidate function: FUN_002d3390 */
+unsigned long long LVL_11_JOBA_FUN_00361108(void)
+{
+    LVL_11_JOBA_QWEN_d01c568afacc_AT00361108_ROLE000(0);
+    LVL_11_JOBA_QWEN_d01c568afacc_AT00361108_ROLE002();
+    LVL_11_JOBA_QWEN_d01c568afacc_AT00361108_ROLE001();
+    return 0;
+}
+
+
+/* Target: FUN_002d5540 on MIPS (SCUS_972.68, -O2 -G0 -ffunction-sections)
+ * Calls three externals: FUN_0027C540(int), FUN_0029CED8(void), FUN_0027C660(void)
+ * Returns 0. Stack frame size 16 bytes. Delay slots filled.
+ */
+extern void LVL_11_JOBA_QWEN_093381cf82c3_AT003632B8_ROLE000(long);
+extern void LVL_11_JOBA_QWEN_093381cf82c3_AT003632B8_ROLE002(void);
+extern void LVL_11_JOBA_QWEN_093381cf82c3_AT003632B8_ROLE001(void);
+
+long long LVL_11_JOBA_FUN_003632B8(void)
+{
+    LVL_11_JOBA_QWEN_093381cf82c3_AT003632B8_ROLE000(0);
+    LVL_11_JOBA_QWEN_093381cf82c3_AT003632B8_ROLE002();
+    LVL_11_JOBA_QWEN_093381cf82c3_AT003632B8_ROLE001();
+    return 0;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_11_JOBA_FUN_0036CF80(void) {
+    return 1;
+}
+
+
+/* Measured partial C views; original types and object ownership are unknown. */
+typedef unsigned char QwenRecovery_4ecc6b5a4034_u8;
+typedef unsigned int QwenRecovery_4ecc6b5a4034_u32;
+
+/* Minimum external views; neither declaration allocates original game storage. */
+typedef struct {
+    QwenRecovery_4ecc6b5a4034_u8 prefix[0x24];
+    QwenRecovery_4ecc6b5a4034_u32 word;
+    QwenRecovery_4ecc6b5a4034_u8 tail[8];
+} QwenRecovery_4ecc6b5a4034_ExtraResetRecord164;
+
+
+
+extern QwenRecovery_4ecc6b5a4034_ExtraResetRecord164 LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE000[100];
+extern QwenRecovery_4ecc6b5a4034_u32 LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE001[139];
+
+void LVL_11_JOBA_FUN_0039C888(void)
+{
+    int i;
+    for (i = 99; i >= 0; --i)
+        LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE000[i].word = 0;
+    LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE001[138] = 5;
+    LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE001[137] = 0;
+    LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE001[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE001[i] = 0;
+        LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE001[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_11_JOBA_QWEN_4ecc6b5a4034_AT0039C888_ROLE001[i + 128] = 0;
+}
+
+
+
+void LVL_11_JOBA_FUN_0048DCB0(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+void LVL_11_JOBA_FUN_0048DCB8(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_11_JOBA_FUN_0048DE10(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_11_JOBA_FUN_0048DF60(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_11_JOBA_FUN_0048E030(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern void LVL_11_JOBA_QWEN_df8fc8ba49cf_AT004909F8_ROLE000(unsigned char *owner, int value);
+
+void LVL_11_JOBA_FUN_004909F8(unsigned char *owner, int value)
+{
+    LVL_11_JOBA_QWEN_df8fc8ba49cf_AT004909F8_ROLE000(owner + 8, value);
+}
+
+
+
+void* LVL_11_JOBA_FUN_004953F8(void* param_1);
+
+extern void LVL_11_JOBA_QWEN_f353c206e726_AT004953F8_ROLE000(int);
+extern unsigned long long LVL_11_JOBA_QWEN_f353c206e726_AT004953F8_ROLE001(unsigned long long);
+
+void* LVL_11_JOBA_FUN_004953F8(void* param_1)
+{
+  LVL_11_JOBA_QWEN_f353c206e726_AT004953F8_ROLE000((int)param_1 + 8);
+  LVL_11_JOBA_QWEN_f353c206e726_AT004953F8_ROLE001((int)param_1 + 0x2b0);
+  return param_1;
+}
+
+
+extern int LVL_11_JOBA_QWEN_f2f9288a4e34_AT00495598_ROLE000(int);
+
+int LVL_11_JOBA_FUN_00495598(int owner)
+{
+    int result;
+    result = LVL_11_JOBA_QWEN_f2f9288a4e34_AT00495598_ROLE000(owner);
+    return *(int *)(owner + 0x378) + result * 0x14;
+}
+
+
+
+extern int LVL_11_JOBA_QWEN_e41cd63258f5_AT004955D0_ROLE000(unsigned char *);
+
+int LVL_11_JOBA_FUN_004955D0(int owner)
+{
+    return LVL_11_JOBA_QWEN_e41cd63258f5_AT004955D0_ROLE000((unsigned char *)(owner + 0x2b0));
+}
+
+
+
+void LVL_11_JOBA_QWEN_f29f80950ce7_AT00498CF0_ROLE000(int);
+
+void LVL_11_JOBA_FUN_00498CF0(int param_1)
+{
+  LVL_11_JOBA_QWEN_f29f80950ce7_AT00498CF0_ROLE000(param_1 + 0x228);
+  return;
+}
+
+
+extern void LVL_11_JOBA_QWEN_bf824305b9f7_AT00499608_ROLE000(unsigned char *owner, float *records);
+
+void LVL_11_JOBA_FUN_00499608(unsigned char *owner, float *records)
+{
+    *(float **)(owner + 0x250) = records;
+    LVL_11_JOBA_QWEN_bf824305b9f7_AT00499608_ROLE000(owner + 0x188, records);
+}
+
+
+
+void LVL_11_JOBA_QWEN_61faeca45963_AT004998D0_ROLE000(int param_1);
+
+void LVL_11_JOBA_FUN_004998D0(int param_1)
+{
+  LVL_11_JOBA_QWEN_61faeca45963_AT004998D0_ROLE000(param_1 + 0x188);
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_11_JOBA_FUN_00499A38(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern int LVL_11_JOBA_QWEN_6add11b33414_AT0049A7E8_ROLE000(unsigned char *owner);
+
+int LVL_11_JOBA_FUN_0049A7E8(unsigned char *owner)
+{
+    return LVL_11_JOBA_QWEN_6add11b33414_AT0049A7E8_ROLE000(owner + 0x298);
+}
+
+
+
+extern void LVL_11_JOBA_QWEN_de961518de48_AT0049A808_ROLE000(unsigned char *owner);
+
+void LVL_11_JOBA_FUN_0049A808(unsigned char *owner)
+{
+    LVL_11_JOBA_QWEN_de961518de48_AT0049A808_ROLE000(owner + 0x298);
+}
+
+
+
+extern unsigned long long LVL_11_JOBA_QWEN_7ba3cdeeb16b_AT0049F128_ROLE000(unsigned long long);
+
+unsigned long long LVL_11_JOBA_FUN_0049F128(unsigned long long value)
+{
+    LVL_11_JOBA_QWEN_7ba3cdeeb16b_AT0049F128_ROLE000(value);
+    return value;
+}
+
+
+
+void LVL_11_JOBA_FUN_0049F370(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0xb8) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_11_JOBA_FUN_004A03D0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+void LVL_11_JOBA_FUN_004A0710(int *param_1)
+{
+    param_1[0x150 / sizeof(int)] = 0;
+}
+
+
+void LVL_11_JOBA_FUN_004A08B0(int param_1, int param_2) {
+    *(int *)(param_1 + 0x84) = param_2;
+}
+
+
+void LVL_11_JOBA_FUN_004A08F8(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 32) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_11_JOBA_FUN_004A5850(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_11_JOBA_FUN_004A7940(void) {
+    return 1;
+}
+
+
+extern int LVL_11_JOBA_QWEN_cc83cb329fcb_AT004A9180_ROLE000(unsigned char *);
+
+int LVL_11_JOBA_FUN_004A9180(int *owner)
+{
+    int result;
+    long status;
+    status = LVL_11_JOBA_QWEN_cc83cb329fcb_AT004A9180_ROLE000((unsigned char *)owner);
+    if (status == 0)
+        result = *owner + owner[2] * 0xd0000;
+    else
+        result = 0;
+    return result;
+}
+

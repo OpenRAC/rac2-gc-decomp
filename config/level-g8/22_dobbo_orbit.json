@@ -108,7 +108,13 @@
     "LVL_22_DOBBO_ORBIT_Fe44fc83bd69b4f14_AT0032EB98_ROLE00": 1745776,
     "LVL_22_DOBBO_ORBIT_Fe6fa55215bad26dd_AT0032EBD0_ROLE00": 1745780,
     "LVL_22_DOBBO_ORBIT_Fef45f15dfb57feb2_AT00301998_ROLE00": 1741676,
-    "LVL_22_DOBBO_ORBIT_Ff0259c87ab6a3193_AT002F8E30_ROLE00": 1740212
+    "LVL_22_DOBBO_ORBIT_Ff0259c87ab6a3193_AT002F8E30_ROLE00": 1740212,
+    "LVL_22_DOBBO_ORBIT_QWEN_339fe89f21bc_AT0037EAE8_ROLE000": 3094496,
+    "LVL_22_DOBBO_ORBIT_QWEN_339fe89f21bc_AT0037EAE8_ROLE001": 1759136,
+    "LVL_22_DOBBO_ORBIT_QWEN_538934d89776_AT002DD2C8_ROLE000": 1738972,
+    "LVL_22_DOBBO_ORBIT_QWEN_538934d89776_AT002DD2C8_ROLE001": 1735600,
+    "LVL_22_DOBBO_ORBIT_QWEN_538934d89776_AT002DD2C8_ROLE002": 3002008,
+    "LVL_22_DOBBO_ORBIT_QWEN_538934d89776_AT002DD2C8_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -427,12 +433,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_22_DOBBO_ORBIT_FUN_0042D218"
+    },
+    {
+      "address": 3003080,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_002DD2C8"
+    },
+    {
+      "address": 3664616,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_22_DOBBO_ORBIT_FUN_0037EAE8"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "22_dobbo_orbit",
-  "module": "src/levels/smalldata/22_dobbo_orbit-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/22_dobbo_orbit-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/22_dobbo_orbit",
   "reference_sha256": "c609f24d897e1a82d49cdb9a8a7ece36ea83332414dc3cc6d588375e0bda55db",
   "schema": 1,

@@ -1767,6 +1767,222 @@ Reopen condition: Independent measured mapping/compiler/object evidence after an
 - `runtime:bank/fifth-shared-placement-v1/qualification-summary.json`
 - `progress/levels/9_dobbo.json`
 
+## final-shared-control-0_aranos_tutorial-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-10_hrugis_cloud-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-11_joba-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-12_todano-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-13_boldan-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-14_aranos_prison-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-15_gorn-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-16_snivelak-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-17_smolg-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-18_damosel-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-19_grelbin-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-1_oozla-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-20_yeedil-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-22_dobbo_orbit-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-23_damosel_orbit-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-24_ship_shack-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-25_wupash_nebula-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-26_jamming_array-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-2_maktar_nebula-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-30_insomniac_museum-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-3_endako-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-4_barlow-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-5_feltzin_system-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-6_notak-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-7_siberius-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-8_tabora-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
+## final-shared-control-9_dobbo-7c2721349c98
+
+State: `stopped`. Kind: `candidate`.
+
+Retain exact complete shared object proof before all28 loaded images; zero new physical credit.
+
+Reopen condition: New measured binding/source context only; no variants.
+
 ## float-guard-only-0_aranos_tutorial-20261004
 
 State: `integrated`. Kind: `candidate`.
@@ -22387,6 +22603,478 @@ Compare all complete native symbols and declared read-only sections; retain ever
 
 Reopen condition: Independent measured ABI/layout/compiler-context evidence; no flag cycling or partial/masked acceptance.
 
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd220-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd220-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd220-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd620-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd620-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd620-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd8c0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd8c0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002cd8c0-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002d5540-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002d5540-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callback-context4-copies-a1-qwen-callback-context-fun_002d5540-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2cb8-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2cb8-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2cb8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2e28-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2e28-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2e28-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2ee0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2ee0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d2ee0-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d3290-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d3290-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d3290-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d3390-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d3390-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-callback-copies-a1-qwen-reviewed-unchanged-fun_002d3390-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_002a01c8-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_002a01c8-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_002a01c8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_00341a68-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_00341a68-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_00341a68-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_00342648-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_00342648-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-callers8-part1-copies-a1-qwen-reviewed-unchanged-fun_00342648-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
 ## parent-20261008-calls-b1-call-family-108-g0-s0-seed
 
 State: `stopped`. Kind: `candidate`.
@@ -22491,6 +23179,686 @@ Retain all differences. Only exact complete placements may count toward the pre-
 
 Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
 
+## parent-20261008-canonical-pointer-context-copies-a1-qwen-abi-correction-fun_0033e348-native-g0-canonical-pointer-context-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-canonical-pointer-context-copies-a1-qwen-abi-correction-fun_0033e348-native-g0-canonical-pointer-context-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-canonical-pointer-context-copies-a1-qwen-abi-correction-fun_0033e348-native-g8-canonical-pointer-context-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-canonical-pointer-context-copies-a1-qwen-abi-correction-fun_00351ee8-native-g0-canonical-pointer-context-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-canonical-pointer-context-copies-a1-qwen-abi-correction-fun_00351ee8-native-g0-canonical-pointer-context-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-canonical-pointer-context-copies-a1-qwen-abi-correction-fun_00351ee8-native-g8-canonical-pointer-context-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-a1-native-extra-class500-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-class500-cfg-a1-native-extra-class500-cfg1-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect132-a1-wrapper-collect-accumulate-132-aligned-byte-view-g8-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Keep the two scope-specific C-contract exclusions parked; promote only the reviewed eligible complete owner units through all loaded-image and metadata gates.
+
+Reopen condition: One measured state-view source correction compatible with the existing canonical int-array interface, with fresh source-unit and complete-image proofs; no expression or flag cycling.
+
+## parent-20261008-collect132-a1-wrapper-collect-accumulate-132-aligned-byte-view-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-collect300-a1-native-extra-collect300-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-command128-address-context-a1-command128-address-word-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
 ## parent-20261008-conditional-context-update-52-g0-all-controls
 
 State: `exact_private`. Kind: `candidate`.
@@ -22542,6 +23910,398 @@ Compile and compare both complete seed symbols without masking. Retain failures;
 Reopen condition: New independent measured ABI, storage or qualified lowering evidence; no expression or flag cycling.
 
 - `runtime:bank/parent-20261008-seeds/context-forward-28`
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s24-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count104-a1-fresh-native-count104-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-count140-a1-native-extra-count140-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
 
 ## parent-20261008-fallback-d1-flag-predicate-112-g0-s0-remaining
 
@@ -22727,6 +24487,214 @@ Retain all differences. Only exact complete placements may count toward the pre-
 
 Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
 
+## parent-20261008-getter96-a1-absolute-getter96-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s24-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s25-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-getter96-a1-absolute-getter96-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
 ## parent-20261008-indirect-float-pair-20-g0-all-controls
 
 State: `exact_private`. Kind: `candidate`.
@@ -22810,6 +24778,1150 @@ Retain all differences. Only exact complete placements may count toward the pre-
 Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
 
 ## parent-20261008-largecalls-g4-progress-alpha-292-vector-view-g8-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-linked-float34-a1-native-float-linked34-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-owner-flags552-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s24-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-a1-texture-packet332-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-command128-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s24-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-small-a1-lookup124-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-clear80-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-index76-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-native-extra3-tiny-a1-set80-g0-s9-seed
 
 State: `stopped`. Kind: `candidate`.
 
@@ -22937,6 +26049,326 @@ Retain all differences. Only exact complete placements may count toward the pre-
 
 Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
 
+## parent-20261008-other-context4-copies-a1-qwen-other-context-fun_00288bb8-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-other-context4-copies-a1-qwen-other-context-fun_00288bb8-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-other-context4-copies-a1-qwen-other-context-fun_00288bb8-g8-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: One measured source-context correction using the existing exact canonical record-pointer interface, followed by fresh complete source-unit and loaded-image proofs. Preserve the old exact trial.
+
+## parent-20261008-other-context4-copies-a1-qwen-other-context-fun_0033e170-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-other-context4-copies-a1-qwen-other-context-fun_0033e170-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-other-context4-copies-a1-qwen-other-context-fun_0033e170-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-owner552-direct-cfg-a1-owner-flags552-direct-cfg-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s24-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-pack196-a1-fresh-native-pack196-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
 ## parent-20261008-prep-repair1-configure-state-116-g8-s0-seed
 
 State: `exact_private`. Kind: `candidate`.
@@ -22956,6 +26388,1390 @@ Reopen condition: New independent measured ABI, source or context evidence; no f
 ## parent-20261008-prep-repair1-context-reset-344-g8-s1-seed
 
 State: `queued`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s24-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-priority144-a1-native-extra-priority144-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s24-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-quota128-a1-fresh-native-quota128-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_0033e310-native-g0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_0033e310-native-g0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_0033e310-native-g8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_0033e348-native-g0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_0033e348-native-g0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_0033e348-native-g8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_00347ea0-native-g0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_00347ea0-native-g0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_00347ea0-native-g8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_00351ee8-native-g0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_00351ee8-native-g0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-abi7-copies-a1-qwen-abi-correction-fun_00351ee8-native-g8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00339770-g0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00339770-g0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00339770-g8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00342380-g0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00342380-g0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00342380-g8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00343560-g0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00343560-g0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00343560-g8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00343580-g0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00343580-g0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-knowncallee-copies-a1-qwen-known-callee-copy-fun_00343580-g8-g8-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_0012f940-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_0012f940-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_0012f940-g8-s1-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_0012f940-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_0031ab08-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_0031ab08-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_0031ab08-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00336a30-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00336a30-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00336a30-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00336a38-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00336a38-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00336a38-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_003427b0-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_003427b0-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_003427b0-g8-s1-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_003427b0-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_003480e8-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_003480e8-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_003480e8-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349488-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349488-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349488-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349628-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349628-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349628-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349670-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349670-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-qwen-leafcopies-a1-qwen-reviewed-fun_00349670-g8-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-range228-a1-fresh-native-range228-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s19-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s20-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s21-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s22-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s23-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s24-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reserve196-a1-native-extra-reserve196-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s1-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s10-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s11-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s12-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s13-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s14-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s15-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s16-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s17-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s18-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s19-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s2-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s20-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s21-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s22-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s23-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s3-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s4-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s5-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s6-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s7-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s8-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-reset164-a1-native-extra-reset164-g0-s9-seed
+
+State: `exact_private`. Kind: `candidate`.
 
 Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
 
@@ -23577,6 +28393,222 @@ Retain all differences. Only exact complete placements may count toward the pre-
 
 Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
 
+## parent-20261008-source13-reviewed-copies-a1-qwen-abi-correction-fun_00288b18-g0-s0-remaining
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-source13-reviewed-copies-a1-qwen-abi-correction-fun_00288b18-g0-s0-seed
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-source13-reviewed-copies-a1-qwen-abi-correction-fun_00288b18-g8-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: One measured source-context correction using the existing exact canonical record-pointer interface, followed by fresh complete source-unit and loaded-image proofs. Preserve the old exact trial.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s0-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s1-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s10-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s11-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s12-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s13-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s14-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s15-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s16-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s17-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s18-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s2-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s3-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s4-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s5-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s6-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s7-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s8-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-spatial212-a1-native-extra-spatial212-g0-s9-seed
+
+State: `stopped`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-wait76-a1-wrapper-wait-mask-76-g8-s0-seed
+
+State: `queued`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-wait76-a1-wrapper-wait-mask-76-g8-s1-seed
+
+State: `queued`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-wait76-a1-wrapper-wait-mask-76-g8-s2-seed
+
+State: `queued`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-wait76-a1-wrapper-wait-mask-76-g8-s3-seed
+
+State: `queued`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
+## parent-20261008-wait76-positive-revalidation-a2-wrapper-wait-mask-76-g8-s0-all-current
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain all differences. Only exact complete placements may count toward the pre-build40k threshold; complete canonical units and loaded-image gates remain required.
+
+Reopen condition: New independent measured ABI, source or context evidence; no flag/expression cycling.
+
 ## parent-20261008-whole-unit-0_aranos_tutorial-ba8c4404
 
 State: `integrated`. Kind: `candidate`.
@@ -23826,6 +28858,842 @@ Reopen condition: Concrete independently reviewed family/binding or instrument e
 - `config/family-candidates/gs-buffer-setup.json`
 - `private-work:public-family-tools-20261005/feature-receipt.json`
 - `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
+
+## qwen-recovery-boot-abi-corrections-a1-fun_00133490
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-corrections-a1-fun_00133930
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-corrections-a1-fun_00288b18
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-corrections-a1-fun_0033e310
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-corrections-a1-fun_0033e348
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-corrections-a1-fun_00347ea0
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-corrections-a1-fun_00351ee8
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-extra4-a1-fun_00291758
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-extra4-a1-fun_002b00b0
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-extra4-a1-fun_002b5278
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-abi-extra4-a1-fun_00343538
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-callback-context4-normalized-a2-fun_002cd220
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-callback-context4-normalized-a2-fun_002cd620
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-callback-context4-normalized-a2-fun_002cd8c0
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-callback-context4-normalized-a2-fun_002d5540
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-canonical-pointer-context-a1-fun_0033e348
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-canonical-pointer-context-a1-fun_00351ee8
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-knowncallee-a1-fun_00339770
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-knowncallee-a1-fun_00342380
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-knowncallee-a1-fun_00343560
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-knowncallee-a1-fun_00343580
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-knowncallee-a1-fun_00351848
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-knowncallee-a1-fun_00351938
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf-rest-a1-fun_0012ea70
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf-rest-a1-fun_001339f0
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_0012f940
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_0012fb70
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_0031ab08
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_00336a30
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_00336a38
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_003427b0
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_003480e8
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_00349488
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_00349628
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-leaf10-a1-fun_00349670
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-other-context4-normalized-a2-fun_00133850
+
+State: `stopped`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: One measured defined integer return-contract correction supported by the complete caller and RPC callee, followed by fresh complete standalone, owner and loaded-image proofs. No equivalent expression or flag cycling.
+
+## qwen-recovery-boot-other-context4-normalized-a2-fun_001338c8
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-other-context4-normalized-a2-fun_00288bb8
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-other-context4-normalized-a2-fun_0033e170
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-unchanged-callers8-a1-fun_002a01c8
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-unchanged-callers8-a1-fun_002d2cb8
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-unchanged-callers8-a1-fun_002d2e28
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-unchanged-callers8-a1-fun_002d2ee0
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-unchanged-callers8-a1-fun_002d3290
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-unchanged-callers8-a1-fun_002d3390
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-unchanged-callers8-a1-fun_00341a68
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-boot-unchanged-callers8-a1-fun_00342648
+
+State: `exact_private`. Kind: `candidate`.
+
+Retain complete unmasked differences; author source only after a coherent new physical-byte minimum and whole-unit gates.
+
+Reopen condition: New independently measured ABI, layout or source-context evidence.
+
+## qwen-recovery-shared-maintained-7c2721349c98
+
+State: `stopped`. Kind: `research`.
+
+Qualify full existing shared sets with unchanged boot.c/object/profile; keep failed generic candidate evidence.
+
+Reopen condition: New source/profile/binding evidence only.
+
+- `runtime:bank/qwen-shared-maintained-7c2721349c98-01/index.json`
+
+## qwen-recovery-shared-maintained-7c2721349c98-v3
+
+State: `done`. Kind: `research`.
+
+Qualify full existing shared sets with unchanged boot.c/object/profile; keep failed generic candidate evidence.
+
+Reopen condition: New source/profile/binding evidence only.
+
+- `runtime:bank/qwen-shared-maintained-7c2721349c98-v3-01/index.json`
+
+## qwen-recovery-whole-boot-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official boot proof; then all affected native/shared objects and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-0_aranos_tutorial-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-10_hrugis_cloud-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-11_joba-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-12_todano-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-13_boldan-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-14_aranos_prison-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-15_gorn-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-16_snivelak-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-17_smolg-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-18_damosel-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-19_grelbin-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-1_oozla-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-20_yeedil-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-22_dobbo_orbit-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-23_damosel_orbit-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-24_ship_shack-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-25_wupash_nebula-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-26_jamming_array-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-2_maktar_nebula-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-30_insomniac_museum-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-3_endako-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-4_barlow-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-5_feltzin_system-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-6_notak-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-7_siberius-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-8_tabora-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-native-9_dobbo-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-0_aranos_tutorial-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-10_hrugis_cloud-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-11_joba-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-12_todano-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-13_boldan-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-14_aranos_prison-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-15_gorn-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-16_snivelak-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-17_smolg-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-18_damosel-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-19_grelbin-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-1_oozla-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-20_yeedil-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-22_dobbo_orbit-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-23_damosel_orbit-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-24_ship_shack-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-25_wupash_nebula-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-26_jamming_array-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-2_maktar_nebula-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-30_insomniac_museum-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-3_endako-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-4_barlow-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-5_feltzin_system-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-6_notak-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-7_siberius-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-8_tabora-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
+
+## qwen-recovery-whole-smalldata-9_dobbo-ae36934fec6c
+
+State: `integrated`. Kind: `candidate`.
+
+Refresh official owner proof; then complete shared/boot and all28 image gates.
+
+Reopen condition: New measured context evidence only.
 
 ## qwen-reserved-20261008-fun_00115cf0
 

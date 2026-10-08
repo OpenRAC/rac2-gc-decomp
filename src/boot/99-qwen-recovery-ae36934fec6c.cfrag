@@ -1,0 +1,530 @@
+
+
+unsigned int FUN_0012EA70(unsigned int *param_1, int param_2)
+{
+  unsigned int uVar1;
+  
+  uVar1 = *(param_1 + 2) + (param_2 >> 3);
+  if (*(param_1 + 9) <= uVar1) {
+    uVar1 = uVar1 - *(param_1 + 10);
+  }
+  return uVar1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int FUN_0012F940(void) {
+    return 1;
+}
+
+
+void FUN_0012FB70(void* param_1)
+{
+  *(int*)(param_1 + 8) = *(int*)(param_1 + 12);
+}
+
+
+extern int FUN_00132C48(int, int, void *);
+
+int FUN_00133490(int value)
+{
+    int payload[4];
+    payload[0] = value;
+    return FUN_00132C48(0x36, 4, payload);
+}
+
+
+
+extern int FUN_00132C48(int, int, void *);
+
+void FUN_001338C8(void)
+{
+  FUN_00132C48(0x3c, 0, 0);
+}
+
+
+extern int FUN_00132C48(int, int, void *);
+
+int FUN_00133930(int first, int second)
+{
+    struct {
+        unsigned int first;
+        unsigned int second;
+        unsigned int pad[2];
+    } payload;
+    payload.first = first;
+    payload.second = second;
+    return FUN_00132C48(0x5a, 8, &payload.first);
+}
+
+
+
+void FUN_001339F0(void *dest, const void *src, int n)
+{
+    unsigned char *d = (unsigned char *)dest;
+    const unsigned char *s = (const unsigned char *)src;
+    int i = 0;
+
+    if (n <= 0) {
+        return;
+    }
+
+    do {
+        d[i] = s[i];
+        i++;
+    } while (i < n);
+}
+
+
+
+extern void FUN_002889B8(unsigned char *);
+
+void FUN_00288B18(void *owner)
+{
+    FUN_002889B8(owner);
+}
+
+
+
+void FUN_00288B38(int);
+void FUN_00288B18(void*);
+
+void FUN_00288BB8(void *param)
+{
+  FUN_00288B38((int)param);
+  *(unsigned int *)param = 0;
+  FUN_00288B18(param);
+}
+
+
+extern void FUN_00291788(unsigned long long);
+extern void FUN_00291640(unsigned long long);
+void FUN_00291758(unsigned long long param_1)
+{
+    FUN_00291788(param_1);
+    FUN_00291640(param_1);
+}
+
+
+
+void FUN_00282A60(unsigned int *dst, unsigned int val, int size);
+
+void FUN_002A01C8(void)
+{
+    FUN_00282A60((unsigned int *)0x70003A00, 0x40000000, 0x3C0);
+}
+
+
+/* Measured partial C views; original types and object ownership are unknown. */
+typedef unsigned char QwenRecovery_00beefd949f6_AbiByte15;
+typedef unsigned long long QwenRecovery_00beefd949f6_AbiFlag15;
+
+
+
+
+extern void FUN_002AFFD8(QwenRecovery_00beefd949f6_AbiByte15 *input, float *output, QwenRecovery_00beefd949f6_AbiFlag15 mode);
+
+void FUN_002B00B0(QwenRecovery_00beefd949f6_AbiByte15 *param_1, float *output, QwenRecovery_00beefd949f6_AbiFlag15 mode)
+{
+    FUN_002AFFD8(param_1 + 0x10, output, mode);
+    return;
+}
+
+
+
+/* Measured partial C views; original types and object ownership are unknown. */
+typedef unsigned char QwenRecovery_84e23fd54f9f_AbiByte16;
+
+
+
+
+extern int FUN_002B50E0(QwenRecovery_84e23fd54f9f_AbiByte16 *owner, QwenRecovery_84e23fd54f9f_AbiByte16 *input, float factor);
+
+void FUN_002B5278(QwenRecovery_84e23fd54f9f_AbiByte16 *param_1, float factor)
+{
+    FUN_002B50E0(param_1, param_1 + 0x10, factor);
+}
+
+
+
+/*
+ * Disassembled at 0x002cd220
+ * Signature: int FUN_002cd220(void)
+ * Behavior:
+ *   - Saves RA on stack
+ *   - Calls FUN_0027C540(0)
+ *   - Calls FUN_0029C138()
+ *   - Calls FUN_0027C660()
+ *   - Restores RA from stack
+ *   - Returns 0
+ */
+extern void FUN_0027C540(long);
+extern void FUN_0029C138(void);
+extern void FUN_0027C660(void);
+
+int FUN_002CD220(void)
+{
+  FUN_0027C540(0);
+  FUN_0029C138();
+  FUN_0027C660();
+  return 0;
+}
+
+
+unsigned long long FUN_002CD620(void);
+
+extern void FUN_0027C540(long);
+extern void FUN_0029C1D8(void);
+extern void FUN_0027C660(void);
+
+unsigned long long FUN_002CD620(void)
+{
+  FUN_0027C540(0);
+  FUN_0029C1D8();
+  FUN_0027C660();
+  return 0;
+}
+
+
+/* Function at 0x002cd8c0: FUN_002CD8C0
+ * 
+ * Disassembly summary:
+ * - 12 instructions, 48 bytes total
+ * - Prologue: save ra, allocate 16-byte stack frame
+ * - Three calls to external functions:
+ *   1. FUN_0027C540(0)
+ *   2. FUN_0029C450()
+ *   3. FUN_0027C660()
+ * - Epilogue: restore ra, return 0, deallocate stack
+ * - No local variables used
+ * - Return type is void-like; returns zero in v0
+ * - Delay slots are_NOP/unused in this case
+ */
+
+/* External function declarations (exact addresses from task metadata) */
+extern void FUN_0027C540(long);
+extern void FUN_0029C450(void);
+extern void FUN_0027C660(void);
+
+long long FUN_002CD8C0(void)
+{
+    FUN_0027C540(0LL);
+    FUN_0029C450();
+    FUN_0027C660();
+    return 0LL;
+}
+
+
+extern void FUN_0027C540(long);
+extern void FUN_0029C680(void);
+extern void FUN_0027C660(void);
+
+int FUN_002D2CB8(void)
+{
+    FUN_0027C540(0);
+    FUN_0029C680();
+    FUN_0027C660();
+    return 0;
+}
+
+
+void FUN_0027C540(long);
+void FUN_0027C660(void);
+void FUN_0029C730(void);
+
+unsigned long long FUN_002D2E28(void)
+{
+    FUN_0027C540(0);
+    FUN_0029C730();
+    FUN_0027C660();
+    return 0;
+}
+
+
+
+/* 
+ * Function: FUN_002D2EE0
+ * 
+ * Disassembly summary:
+ * - Saves return address on stack
+ * - Calls FUN_0027C540(0) (with zero argument)
+ * - Calls FUN_0029C7A0()
+ * - Calls FUN_0027C660()
+ * - Restores return address
+ * - Returns 0
+ *
+ * Notes:
+ * - The function follows standard MIPS ABI prologue/epilogue.
+ * - Delay slots are filled with NOP or argument setup as seen in disassembly.
+ * - No local variables used.
+ * - All external function addresses come from the assigned externals list.
+ */
+
+extern void FUN_0027C540(long arg0);
+extern void FUN_0029C7A0(void);
+extern void FUN_0027C660(void);
+
+unsigned long long FUN_002D2EE0(void)
+{
+    FUN_0027C540(0);
+    FUN_0029C7A0();
+    FUN_0027C660();
+    return 0;
+}
+
+
+/* External function declarations as per target specification */
+extern void FUN_0027C540(long);
+extern void FUN_0027C660(void);
+extern void FUN_0029C8F0(void);
+
+/* Implementation matching decompiled output */
+long FUN_002D3290(void)
+{
+  FUN_0027C540(0);
+  FUN_0029C8F0();
+  FUN_0027C660();
+  return 0;
+}
+
+
+/* External functions declared with exact aliases from task.externals */
+extern void FUN_0027C540(long param_1);
+extern void FUN_0027C660(void);
+extern void FUN_0029C960(void);
+
+/* Candidate function: FUN_002d3390 */
+unsigned long long FUN_002D3390(void)
+{
+    FUN_0027C540(0);
+    FUN_0029C960();
+    FUN_0027C660();
+    return 0;
+}
+
+
+/* Target: FUN_002d5540 on MIPS (SCUS_972.68, -O2 -G0 -ffunction-sections)
+ * Calls three externals: FUN_0027C540(int), FUN_0029CED8(void), FUN_0027C660(void)
+ * Returns 0. Stack frame size 16 bytes. Delay slots filled.
+ */
+extern void FUN_0027C540(long);
+extern void FUN_0029CED8(void);
+extern void FUN_0027C660(void);
+
+long long FUN_002D5540(void)
+{
+    FUN_0027C540(0);
+    FUN_0029CED8();
+    FUN_0027C660();
+    return 0;
+}
+
+
+unsigned int FUN_0031AB08(unsigned int param_1)
+{
+    unsigned int inner_ptr;
+    unsigned int result;
+
+    inner_ptr = *(unsigned int *)(param_1 + 0x68);
+    result = *(unsigned int *)(inner_ptr + 0x18);
+    return result;
+}
+
+
+void FUN_00336A30(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+void FUN_00336A38(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+extern void FUN_0033AE18(unsigned char *owner, int value);
+
+void FUN_00339770(unsigned char *owner, int value)
+{
+    FUN_0033AE18(owner + 8, value);
+}
+
+
+
+void* FUN_0033E170(void* param_1);
+
+extern void FUN_0033AB50(int);
+extern unsigned long long FUN_00347EA0(unsigned long long);
+
+void* FUN_0033E170(void* param_1)
+{
+  FUN_0033AB50((int)param_1 + 8);
+  FUN_00347EA0((int)param_1 + 0x2b0);
+  return param_1;
+}
+
+
+extern int FUN_0033E348(int);
+
+int FUN_0033E310(int owner)
+{
+    int result;
+    result = FUN_0033E348(owner);
+    return *(int *)(owner + 0x378) + result * 0x14;
+}
+
+
+
+extern int FUN_00348128(unsigned char *);
+
+int FUN_0033E348(int owner)
+{
+    return FUN_00348128((unsigned char *)(owner + 0x2b0));
+}
+
+
+
+void FUN_00348138(int);
+
+void FUN_00341A68(int param_1)
+{
+  FUN_00348138(param_1 + 0x228);
+  return;
+}
+
+
+extern void FUN_00348068(unsigned char *owner, float *records);
+
+void FUN_00342380(unsigned char *owner, float *records)
+{
+    *(float **)(owner + 0x250) = records;
+    FUN_00348068(owner + 0x188, records);
+}
+
+
+
+void FUN_00348138(int param_1);
+
+void FUN_00342648(int param_1)
+{
+  FUN_00348138(param_1 + 0x188);
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long FUN_003427B0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Measured partial C views; original types and object ownership are unknown. */
+typedef unsigned char QwenRecovery_a2544d80ec96_AbiByte22;
+
+
+
+
+extern void FUN_00342F70(QwenRecovery_a2544d80ec96_AbiByte22 *owner, const QwenRecovery_a2544d80ec96_AbiByte22 *table);
+
+void FUN_00343538(QwenRecovery_a2544d80ec96_AbiByte22 *p1, const QwenRecovery_a2544d80ec96_AbiByte22 *table)
+{
+    FUN_00342F70(p1 + 0x298, table);
+}
+
+
+
+extern int FUN_00342BC0(unsigned char *owner);
+
+int FUN_00343560(unsigned char *owner)
+{
+    return FUN_00342BC0(owner + 0x298);
+}
+
+
+
+extern void FUN_00343058(unsigned char *owner);
+
+void FUN_00343580(unsigned char *owner)
+{
+    FUN_00343058(owner + 0x298);
+}
+
+
+
+extern unsigned long long FUN_00336968(unsigned long long);
+
+unsigned long long FUN_00347EA0(unsigned long long value)
+{
+    FUN_00336968(value);
+    return value;
+}
+
+
+
+void FUN_003480E8(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0xb8) = param_2;
+  return;
+}
+
+
+void FUN_00349488(int *param_1)
+{
+    param_1[0x150 / sizeof(int)] = 0;
+}
+
+
+void FUN_00349628(int param_1, int param_2) {
+    *(int *)(param_1 + 0x84) = param_2;
+}
+
+
+void FUN_00349670(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 32) = param_2;
+  return;
+}
+
+
+extern void FUN_00350A78(int *owner, int *first_address, int *first_count,
+                         int *second_address, int *second_count);
+
+void FUN_00351848(unsigned char *owner, int *first_address, int *first_count,
+                  int *second_address, int *second_count)
+{
+    FUN_00350A78((int *)(owner + 0x48), first_address, first_count,
+                 second_address, second_count);
+}
+
+
+
+extern int FUN_00351268(unsigned char *owner);
+
+int FUN_00351938(unsigned char *owner)
+{
+    return FUN_00351268(owner + 0x48);
+}
+
+
+
+extern int FUN_00351E58(unsigned char *);
+
+int FUN_00351EE8(int *owner)
+{
+    int result;
+    long status;
+    status = FUN_00351E58((unsigned char *)owner);
+    if (status == 0)
+        result = *owner + owner[2] * 0xd0000;
+    else
+        result = 0;
+    return result;
+}
+

@@ -105,7 +105,13 @@
     "LVL_5_FELTZIN_SYSTEM_Fe44fc83bd69b4f14_AT0033EE18_ROLE00": 1745776,
     "LVL_5_FELTZIN_SYSTEM_Fe6fa55215bad26dd_AT0033EE50_ROLE00": 1745780,
     "LVL_5_FELTZIN_SYSTEM_Fef45f15dfb57feb2_AT00314548_ROLE00": 1741676,
-    "LVL_5_FELTZIN_SYSTEM_Ff0259c87ab6a3193_AT0030B9C8_ROLE00": 1740212
+    "LVL_5_FELTZIN_SYSTEM_Ff0259c87ab6a3193_AT0030B9C8_ROLE00": 1740212,
+    "LVL_5_FELTZIN_SYSTEM_QWEN_339fe89f21bc_AT00390558_ROLE000": 3171216,
+    "LVL_5_FELTZIN_SYSTEM_QWEN_339fe89f21bc_AT00390558_ROLE001": 1759136,
+    "LVL_5_FELTZIN_SYSTEM_QWEN_538934d89776_AT002EF810_ROLE000": 1738972,
+    "LVL_5_FELTZIN_SYSTEM_QWEN_538934d89776_AT002EF810_ROLE001": 1735600,
+    "LVL_5_FELTZIN_SYSTEM_QWEN_538934d89776_AT002EF810_ROLE002": 3077088,
+    "LVL_5_FELTZIN_SYSTEM_QWEN_538934d89776_AT002EF810_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -424,12 +430,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00447F10"
+    },
+    {
+      "address": 3078160,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002EF810"
+    },
+    {
+      "address": 3736920,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00390558"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "5_feltzin_system",
-  "module": "src/levels/smalldata/5_feltzin_system-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/5_feltzin_system-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/5_feltzin_system",
   "reference_sha256": "bd41a03a57871a6f33106d5277c6b4918f379ceaa5f780a84c82360b421204fb",
   "schema": 1,

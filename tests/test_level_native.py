@@ -257,7 +257,7 @@ class NativeTests(unittest.TestCase):
         self.assertIn("build/c/boot.o(.text.FUN_00001000)",linker)
         self.assertIn("AT(0x1000)",linker)
 
-    def compile_with_promoted_helper(self, bound_address=0x2020):
+    def compile_with_promoted_helper(self, bound_address=0x2020, corrupt_link=False, corrupt_receipt=False):
         shared_object = self.home / "shared.o"
         shared_object.write_bytes(b"synthetic shared object")
         self.write("progress/candidates.json", {
@@ -271,8 +271,24 @@ class NativeTests(unittest.TestCase):
         sd_object.write_bytes(b"synthetic small-data object")
         sd_catalog = {"functions": [promoted], "externals": {"OtherData": 0x3004}}
         sd_proof = {"tools": self.tools, "source_sha256": "e" * 64}
+        link_directory = self.home / "build"
+        link_directory.mkdir()
+        shared_object = link_directory / "shared-raw.o"
+        shared_object.write_bytes(b"synthetic shared object")
+        link_object = link_directory / "shared-link.o"
+        link_object.write_bytes(b"synthetic derived link object")
+        adapter_path = link_directory / "shared-link-adapter.json"
+        adapter_path.write_text(json.dumps({"compiled_object_sha256": native.file_hash(shared_object),
+            "link_object_sha256": native.file_hash(link_object), "relocation_changes": []}))
+        descriptor = {"path": link_object.name, "sha256": native.file_hash(link_object),
+            "adapter_path": adapter_path.name, "adapter_sha256": native.file_hash(adapter_path),
+            "compiled_object_sha256": native.file_hash(shared_object),
+            "compiled_path": shared_object.name}
+        if corrupt_link: link_object.write_bytes(b"changed derived object")
+        if corrupt_receipt: adapter_path.write_bytes(b"changed receipt")
         shared = {"functions": [self.shared_fn], "externals": {},
-                  "compiled_source_sha256": native.file_hash(self.root / "candidates/boot.c")}
+                  "compiled_source_sha256": native.file_hash(self.root / "candidates/boot.c"),
+                  "shared_link_object": descriptor}
         with mock.patch.object(integration, "ROOT", self.root), \
                 mock.patch.object(integration, "_compile_shared_level_c",
                                   return_value=(shared, shared_object, self.tools)), \
@@ -282,7 +298,19 @@ class NativeTests(unittest.TestCase):
                 mock.patch.object(native, "dependencies", return_value="f" * 64):
             combined, objects, tools = integration.compile_level_c(
                 self.reference, self.home / "build", self.home / "tools", self.level)
+        self.assertEqual(objects["candidates/boot.c"], link_object)
+        self.assertNotEqual(objects["candidates/boot.c"], shared_object)
+        self.assertEqual(native.file_hash(shared_object), json.loads(
+            (self.root / "progress/candidates.json").read_bytes())["object_sha256"])
         return combined, promoted
+
+    def test_full_level_route_rejects_changed_derived_object(self):
+        with self.assertRaisesRegex(ValueError, "derived link object or adapter receipt changed"):
+            self.compile_with_promoted_helper(corrupt_link=True)
+
+    def test_full_level_route_rejects_changed_adapter_receipt(self):
+        with self.assertRaisesRegex(ValueError, "derived link object or adapter receipt changed"):
+            self.compile_with_promoted_helper(corrupt_receipt=True)
 
     def test_promoted_small_data_helper_keeps_its_function_definition(self):
         combined, promoted = self.compile_with_promoted_helper()

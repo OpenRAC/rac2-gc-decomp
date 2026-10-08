@@ -1,25 +1,25 @@
 {
-  "catalog_sha256": "6964014ebacb4d283f222bf45d2c4c3a253b8536cc92d97dde9d1b5f09d2543d",
+  "catalog_sha256": "b9c0ab7145c515184cbc92f09a175c2ad52e58744743708c769850a0c7bb6834",
   "catalogue_complete": false,
   "coverage": {
-    "aliases": 9617,
+    "aliases": 10873,
     "catalogued_interval_bytes": 48470076,
     "excluded_vu_bytes": 86368,
-    "placements": 109725,
+    "placements": 109727,
     "scoped_ee_bytes": 48701808,
     "unresolved_gap_bytes": 231732,
-    "verified_boundary_bytes": 40075168
+    "verified_boundary_bytes": 40075248
   },
   "data_policy": "retain-unowned-data-address-operands",
   "graph_refinement": {
-    "boot_binding_artifact_sha256": "abb7b97ebadce7969dc06f882a73f27f9481587d3fe5128fa7606165df3328d4",
+    "boot_binding_artifact_sha256": "9397555e1bc004a2c59e45f463af2dbfe261d67f08c6ed923240c1db5c9dc124",
     "boot_binding_scope": "combined-pinned-reference-images",
-    "combined_reference_boot_edges": 22522,
-    "complete_dependency_rows": 109725,
+    "combined_reference_boot_edges": 22576,
+    "complete_dependency_rows": 109727,
     "complete_graph_coverage_claimed": true,
     "external_static_edge_count": 878656,
-    "final_class_count": 82651,
-    "initial_class_count": 66703,
+    "final_class_count": 82589,
+    "initial_class_count": 66705,
     "iterations": 7,
     "legacy_dependency_rows": 0,
     "limits": [
@@ -29,25 +29,25 @@
     ],
     "primary_data_binding_policy": "retain-unowned-data-address-operands",
     "runtime_preservation_proven": false,
-    "unresolved_edge_count": 3293
+    "unresolved_edge_count": 3237
   },
   "group_policy": "graph-refined-structural-templates",
   "kind": "unique-code-progress",
   "metrics": {
-    "physical_matched_bytes": 659380,
+    "physical_matched_bytes": 700256,
     "physical_total_bytes": 48701808,
-    "unique_matched_bytes": 161316,
-    "unique_matched_percent": 0.36325854507427036,
-    "unique_total_bytes": 44408040
+    "unique_matched_bytes": 178712,
+    "unique_matched_percent": 0.4025029815202501,
+    "unique_total_bytes": 44400168
   },
   "policy": "one equal-sized representative per conservative structural class refined by static target classes and retained unowned data address operands; all verified placements require current exact C integration; no semantic, original-data-object or original-source equivalence claim",
   "provisional_partition": {
     "certified": false,
-    "groups": 54787,
+    "groups": 54789,
     "representative_bytes": 37641816
   },
   "quality": {
-    "boundary_supported_bytes": 40075168,
+    "boundary_supported_bytes": 40075248,
     "certified": false,
     "data_policy": "retain-unowned-data-address-operands",
     "original_data_ownership_proven": false,
@@ -56,15 +56,15 @@
     "provisional_total_bytes": 37873548,
     "residual_gap_bytes": 231732,
     "structural_partition_complete": false,
-    "unknown_bytes": 8626640
+    "unknown_bytes": 8626560
   },
   "schema": 1,
   "target": "SCUS_972.68",
   "validated_subset": {
-    "any_c_unique_bytes": 163572,
-    "groups": 68050,
-    "matched_c_groups": 1371,
-    "matched_c_unique_bytes": 161316,
-    "total_unique_bytes": 35781400
+    "any_c_unique_bytes": 181088,
+    "groups": 67988,
+    "matched_c_groups": 1719,
+    "matched_c_unique_bytes": 178712,
+    "total_unique_bytes": 35773608
   }
 }

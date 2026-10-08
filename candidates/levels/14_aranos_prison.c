@@ -2382,3 +2382,522 @@ void LVL_14_ARANOS_PRISON_FUN_00396100(void)
     for (i = 7; i >= 0; --i)
         LVL_14_ARANOS_PRISON_F03c444112283bc5f_AT00396100_ROLE00[i + 128] = 0;
 }
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_14_ARANOS_PRISON_FUN_002AC670(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_14_ARANOS_PRISON_FUN_002DB8B0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_14_ARANOS_PRISON_FUN_002E3CD0(void) {
+    return 1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_14_ARANOS_PRISON_FUN_002E3CD8(void) {
+    return 1;
+}
+
+
+extern void LVL_14_ARANOS_PRISON_QWEN_11a4c157d102_AT002FBD08_ROLE000(unsigned char *);
+
+void LVL_14_ARANOS_PRISON_FUN_002FBD08(void *owner)
+{
+    LVL_14_ARANOS_PRISON_QWEN_11a4c157d102_AT002FBD08_ROLE000(owner);
+}
+
+
+
+void LVL_14_ARANOS_PRISON_QWEN_407ee6f17a73_AT002FBDA8_ROLE001(int);
+void LVL_14_ARANOS_PRISON_QWEN_407ee6f17a73_AT002FBDA8_ROLE000(void*);
+
+void LVL_14_ARANOS_PRISON_FUN_002FBDA8(void *param)
+{
+  LVL_14_ARANOS_PRISON_QWEN_407ee6f17a73_AT002FBDA8_ROLE001((int)param);
+  *(unsigned int *)param = 0;
+  LVL_14_ARANOS_PRISON_QWEN_407ee6f17a73_AT002FBDA8_ROLE000(param);
+}
+
+
+void LVL_14_ARANOS_PRISON_QWEN_5696fcf76f0c_AT003194A8_ROLE000(unsigned int *dst, unsigned int val, int size);
+
+void LVL_14_ARANOS_PRISON_FUN_003194A8(void)
+{
+    LVL_14_ARANOS_PRISON_QWEN_5696fcf76f0c_AT003194A8_ROLE000((unsigned int *)0x70003A00, 0x40000000, 0x3C0);
+}
+
+
+unsigned int LVL_14_ARANOS_PRISON_FUN_003356B8(unsigned int param_1)
+{
+    unsigned int inner_ptr;
+    unsigned int result;
+
+    inner_ptr = *(unsigned int *)(param_1 + 0x68);
+    result = *(unsigned int *)(inner_ptr + 0x18);
+    return result;
+}
+
+
+/*
+ * Disassembled at 0x002cd220
+ * Signature: int FUN_002cd220(void)
+ * Behavior:
+ *   - Saves RA on stack
+ *   - Calls FUN_0027C540(0)
+ *   - Calls FUN_0029C138()
+ *   - Calls FUN_0027C660()
+ *   - Restores RA from stack
+ *   - Returns 0
+ */
+extern void LVL_14_ARANOS_PRISON_QWEN_523e38f49b74_AT00350DA8_ROLE000(long);
+extern void LVL_14_ARANOS_PRISON_QWEN_523e38f49b74_AT00350DA8_ROLE002(void);
+extern void LVL_14_ARANOS_PRISON_QWEN_523e38f49b74_AT00350DA8_ROLE001(void);
+
+int LVL_14_ARANOS_PRISON_FUN_00350DA8(void)
+{
+  LVL_14_ARANOS_PRISON_QWEN_523e38f49b74_AT00350DA8_ROLE000(0);
+  LVL_14_ARANOS_PRISON_QWEN_523e38f49b74_AT00350DA8_ROLE002();
+  LVL_14_ARANOS_PRISON_QWEN_523e38f49b74_AT00350DA8_ROLE001();
+  return 0;
+}
+
+
+unsigned long long LVL_14_ARANOS_PRISON_FUN_003511A8(void);
+
+extern void LVL_14_ARANOS_PRISON_QWEN_f47929f95774_AT003511A8_ROLE000(long);
+extern void LVL_14_ARANOS_PRISON_QWEN_f47929f95774_AT003511A8_ROLE002(void);
+extern void LVL_14_ARANOS_PRISON_QWEN_f47929f95774_AT003511A8_ROLE001(void);
+
+unsigned long long LVL_14_ARANOS_PRISON_FUN_003511A8(void)
+{
+  LVL_14_ARANOS_PRISON_QWEN_f47929f95774_AT003511A8_ROLE000(0);
+  LVL_14_ARANOS_PRISON_QWEN_f47929f95774_AT003511A8_ROLE002();
+  LVL_14_ARANOS_PRISON_QWEN_f47929f95774_AT003511A8_ROLE001();
+  return 0;
+}
+
+
+/* Function at 0x002cd8c0: FUN_002CD8C0
+ * 
+ * Disassembly summary:
+ * - 12 instructions, 48 bytes total
+ * - Prologue: save ra, allocate 16-byte stack frame
+ * - Three calls to external functions:
+ *   1. FUN_0027C540(0)
+ *   2. FUN_0029C450()
+ *   3. FUN_0027C660()
+ * - Epilogue: restore ra, return 0, deallocate stack
+ * - No local variables used
+ * - Return type is void-like; returns zero in v0
+ * - Delay slots are_NOP/unused in this case
+ */
+
+/* External function declarations (exact addresses from task metadata) */
+extern void LVL_14_ARANOS_PRISON_QWEN_cb305b1f1210_AT00351448_ROLE000(long);
+extern void LVL_14_ARANOS_PRISON_QWEN_cb305b1f1210_AT00351448_ROLE002(void);
+extern void LVL_14_ARANOS_PRISON_QWEN_cb305b1f1210_AT00351448_ROLE001(void);
+
+long long LVL_14_ARANOS_PRISON_FUN_00351448(void)
+{
+    LVL_14_ARANOS_PRISON_QWEN_cb305b1f1210_AT00351448_ROLE000(0LL);
+    LVL_14_ARANOS_PRISON_QWEN_cb305b1f1210_AT00351448_ROLE002();
+    LVL_14_ARANOS_PRISON_QWEN_cb305b1f1210_AT00351448_ROLE001();
+    return 0LL;
+}
+
+
+extern void LVL_14_ARANOS_PRISON_QWEN_c23b3406f982_AT00356840_ROLE000(long);
+extern void LVL_14_ARANOS_PRISON_QWEN_c23b3406f982_AT00356840_ROLE002(void);
+extern void LVL_14_ARANOS_PRISON_QWEN_c23b3406f982_AT00356840_ROLE001(void);
+
+int LVL_14_ARANOS_PRISON_FUN_00356840(void)
+{
+    LVL_14_ARANOS_PRISON_QWEN_c23b3406f982_AT00356840_ROLE000(0);
+    LVL_14_ARANOS_PRISON_QWEN_c23b3406f982_AT00356840_ROLE002();
+    LVL_14_ARANOS_PRISON_QWEN_c23b3406f982_AT00356840_ROLE001();
+    return 0;
+}
+
+
+void LVL_14_ARANOS_PRISON_QWEN_68cf9ebb5ee2_AT003569B0_ROLE000(long);
+void LVL_14_ARANOS_PRISON_QWEN_68cf9ebb5ee2_AT003569B0_ROLE001(void);
+void LVL_14_ARANOS_PRISON_QWEN_68cf9ebb5ee2_AT003569B0_ROLE002(void);
+
+unsigned long long LVL_14_ARANOS_PRISON_FUN_003569B0(void)
+{
+    LVL_14_ARANOS_PRISON_QWEN_68cf9ebb5ee2_AT003569B0_ROLE000(0);
+    LVL_14_ARANOS_PRISON_QWEN_68cf9ebb5ee2_AT003569B0_ROLE002();
+    LVL_14_ARANOS_PRISON_QWEN_68cf9ebb5ee2_AT003569B0_ROLE001();
+    return 0;
+}
+
+
+
+/* 
+ * Function: FUN_002D2EE0
+ * 
+ * Disassembly summary:
+ * - Saves return address on stack
+ * - Calls FUN_0027C540(0) (with zero argument)
+ * - Calls FUN_0029C7A0()
+ * - Calls FUN_0027C660()
+ * - Restores return address
+ * - Returns 0
+ *
+ * Notes:
+ * - The function follows standard MIPS ABI prologue/epilogue.
+ * - Delay slots are filled with NOP or argument setup as seen in disassembly.
+ * - No local variables used.
+ * - All external function addresses come from the assigned externals list.
+ */
+
+extern void LVL_14_ARANOS_PRISON_QWEN_68f040eb20c9_AT00356A68_ROLE000(long arg0);
+extern void LVL_14_ARANOS_PRISON_QWEN_68f040eb20c9_AT00356A68_ROLE002(void);
+extern void LVL_14_ARANOS_PRISON_QWEN_68f040eb20c9_AT00356A68_ROLE001(void);
+
+unsigned long long LVL_14_ARANOS_PRISON_FUN_00356A68(void)
+{
+    LVL_14_ARANOS_PRISON_QWEN_68f040eb20c9_AT00356A68_ROLE000(0);
+    LVL_14_ARANOS_PRISON_QWEN_68f040eb20c9_AT00356A68_ROLE002();
+    LVL_14_ARANOS_PRISON_QWEN_68f040eb20c9_AT00356A68_ROLE001();
+    return 0;
+}
+
+
+/* External function declarations as per target specification */
+extern void LVL_14_ARANOS_PRISON_QWEN_92ea7c2f4a5c_AT00356E18_ROLE000(long);
+extern void LVL_14_ARANOS_PRISON_QWEN_92ea7c2f4a5c_AT00356E18_ROLE001(void);
+extern void LVL_14_ARANOS_PRISON_QWEN_92ea7c2f4a5c_AT00356E18_ROLE002(void);
+
+/* Implementation matching decompiled output */
+long LVL_14_ARANOS_PRISON_FUN_00356E18(void)
+{
+  LVL_14_ARANOS_PRISON_QWEN_92ea7c2f4a5c_AT00356E18_ROLE000(0);
+  LVL_14_ARANOS_PRISON_QWEN_92ea7c2f4a5c_AT00356E18_ROLE002();
+  LVL_14_ARANOS_PRISON_QWEN_92ea7c2f4a5c_AT00356E18_ROLE001();
+  return 0;
+}
+
+
+/* External functions declared with exact aliases from task.externals */
+extern void LVL_14_ARANOS_PRISON_QWEN_d01c568afacc_AT00356F18_ROLE000(long param_1);
+extern void LVL_14_ARANOS_PRISON_QWEN_d01c568afacc_AT00356F18_ROLE001(void);
+extern void LVL_14_ARANOS_PRISON_QWEN_d01c568afacc_AT00356F18_ROLE002(void);
+
+/* Candidate function: FUN_002d3390 */
+unsigned long long LVL_14_ARANOS_PRISON_FUN_00356F18(void)
+{
+    LVL_14_ARANOS_PRISON_QWEN_d01c568afacc_AT00356F18_ROLE000(0);
+    LVL_14_ARANOS_PRISON_QWEN_d01c568afacc_AT00356F18_ROLE002();
+    LVL_14_ARANOS_PRISON_QWEN_d01c568afacc_AT00356F18_ROLE001();
+    return 0;
+}
+
+
+/* Target: FUN_002d5540 on MIPS (SCUS_972.68, -O2 -G0 -ffunction-sections)
+ * Calls three externals: FUN_0027C540(int), FUN_0029CED8(void), FUN_0027C660(void)
+ * Returns 0. Stack frame size 16 bytes. Delay slots filled.
+ */
+extern void LVL_14_ARANOS_PRISON_QWEN_093381cf82c3_AT003590C8_ROLE000(long);
+extern void LVL_14_ARANOS_PRISON_QWEN_093381cf82c3_AT003590C8_ROLE002(void);
+extern void LVL_14_ARANOS_PRISON_QWEN_093381cf82c3_AT003590C8_ROLE001(void);
+
+long long LVL_14_ARANOS_PRISON_FUN_003590C8(void)
+{
+    LVL_14_ARANOS_PRISON_QWEN_093381cf82c3_AT003590C8_ROLE000(0);
+    LVL_14_ARANOS_PRISON_QWEN_093381cf82c3_AT003590C8_ROLE002();
+    LVL_14_ARANOS_PRISON_QWEN_093381cf82c3_AT003590C8_ROLE001();
+    return 0;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_14_ARANOS_PRISON_FUN_00362D90(void) {
+    return 1;
+}
+
+
+/* Measured partial C views; original types and object ownership are unknown. */
+typedef unsigned char QwenRecovery_4ecc6b5a4034_u8;
+typedef unsigned int QwenRecovery_4ecc6b5a4034_u32;
+
+/* Minimum external views; neither declaration allocates original game storage. */
+typedef struct {
+    QwenRecovery_4ecc6b5a4034_u8 prefix[0x24];
+    QwenRecovery_4ecc6b5a4034_u32 word;
+    QwenRecovery_4ecc6b5a4034_u8 tail[8];
+} QwenRecovery_4ecc6b5a4034_ExtraResetRecord164;
+
+
+
+extern QwenRecovery_4ecc6b5a4034_ExtraResetRecord164 LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE000[100];
+extern QwenRecovery_4ecc6b5a4034_u32 LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE001[139];
+
+void LVL_14_ARANOS_PRISON_FUN_00393688(void)
+{
+    int i;
+    for (i = 99; i >= 0; --i)
+        LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE000[i].word = 0;
+    LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE001[138] = 5;
+    LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE001[137] = 0;
+    LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE001[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE001[i] = 0;
+        LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE001[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_14_ARANOS_PRISON_QWEN_4ecc6b5a4034_AT00393688_ROLE001[i + 128] = 0;
+}
+
+
+
+unsigned int LVL_14_ARANOS_PRISON_FUN_003D18B8(unsigned int param_1)
+{
+    unsigned int inner_ptr;
+    unsigned int result;
+
+    inner_ptr = *(unsigned int *)(param_1 + 0x68);
+    result = *(unsigned int *)(inner_ptr + 0x18);
+    return result;
+}
+
+
+unsigned int LVL_14_ARANOS_PRISON_FUN_004137F8(unsigned int param_1)
+{
+    unsigned int inner_ptr;
+    unsigned int result;
+
+    inner_ptr = *(unsigned int *)(param_1 + 0x68);
+    result = *(unsigned int *)(inner_ptr + 0x18);
+    return result;
+}
+
+
+void LVL_14_ARANOS_PRISON_FUN_0044A648(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+void LVL_14_ARANOS_PRISON_FUN_0044A650(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_14_ARANOS_PRISON_FUN_0044A7A8(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_14_ARANOS_PRISON_FUN_0044A8F8(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_14_ARANOS_PRISON_FUN_0044A9C8(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern void LVL_14_ARANOS_PRISON_QWEN_df8fc8ba49cf_AT0044D390_ROLE000(unsigned char *owner, int value);
+
+void LVL_14_ARANOS_PRISON_FUN_0044D390(unsigned char *owner, int value)
+{
+    LVL_14_ARANOS_PRISON_QWEN_df8fc8ba49cf_AT0044D390_ROLE000(owner + 8, value);
+}
+
+
+
+void* LVL_14_ARANOS_PRISON_FUN_00451D90(void* param_1);
+
+extern void LVL_14_ARANOS_PRISON_QWEN_f353c206e726_AT00451D90_ROLE000(int);
+extern unsigned long long LVL_14_ARANOS_PRISON_QWEN_f353c206e726_AT00451D90_ROLE001(unsigned long long);
+
+void* LVL_14_ARANOS_PRISON_FUN_00451D90(void* param_1)
+{
+  LVL_14_ARANOS_PRISON_QWEN_f353c206e726_AT00451D90_ROLE000((int)param_1 + 8);
+  LVL_14_ARANOS_PRISON_QWEN_f353c206e726_AT00451D90_ROLE001((int)param_1 + 0x2b0);
+  return param_1;
+}
+
+
+extern int LVL_14_ARANOS_PRISON_QWEN_f2f9288a4e34_AT00451F30_ROLE000(int);
+
+int LVL_14_ARANOS_PRISON_FUN_00451F30(int owner)
+{
+    int result;
+    result = LVL_14_ARANOS_PRISON_QWEN_f2f9288a4e34_AT00451F30_ROLE000(owner);
+    return *(int *)(owner + 0x378) + result * 0x14;
+}
+
+
+
+extern int LVL_14_ARANOS_PRISON_QWEN_e41cd63258f5_AT00451F68_ROLE000(unsigned char *);
+
+int LVL_14_ARANOS_PRISON_FUN_00451F68(int owner)
+{
+    return LVL_14_ARANOS_PRISON_QWEN_e41cd63258f5_AT00451F68_ROLE000((unsigned char *)(owner + 0x2b0));
+}
+
+
+
+void LVL_14_ARANOS_PRISON_QWEN_f29f80950ce7_AT00455688_ROLE000(int);
+
+void LVL_14_ARANOS_PRISON_FUN_00455688(int param_1)
+{
+  LVL_14_ARANOS_PRISON_QWEN_f29f80950ce7_AT00455688_ROLE000(param_1 + 0x228);
+  return;
+}
+
+
+extern void LVL_14_ARANOS_PRISON_QWEN_bf824305b9f7_AT00455FA0_ROLE000(unsigned char *owner, float *records);
+
+void LVL_14_ARANOS_PRISON_FUN_00455FA0(unsigned char *owner, float *records)
+{
+    *(float **)(owner + 0x250) = records;
+    LVL_14_ARANOS_PRISON_QWEN_bf824305b9f7_AT00455FA0_ROLE000(owner + 0x188, records);
+}
+
+
+
+void LVL_14_ARANOS_PRISON_QWEN_61faeca45963_AT00456268_ROLE000(int param_1);
+
+void LVL_14_ARANOS_PRISON_FUN_00456268(int param_1)
+{
+  LVL_14_ARANOS_PRISON_QWEN_61faeca45963_AT00456268_ROLE000(param_1 + 0x188);
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_14_ARANOS_PRISON_FUN_004563D0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern int LVL_14_ARANOS_PRISON_QWEN_6add11b33414_AT00457180_ROLE000(unsigned char *owner);
+
+int LVL_14_ARANOS_PRISON_FUN_00457180(unsigned char *owner)
+{
+    return LVL_14_ARANOS_PRISON_QWEN_6add11b33414_AT00457180_ROLE000(owner + 0x298);
+}
+
+
+
+extern void LVL_14_ARANOS_PRISON_QWEN_de961518de48_AT004571A0_ROLE000(unsigned char *owner);
+
+void LVL_14_ARANOS_PRISON_FUN_004571A0(unsigned char *owner)
+{
+    LVL_14_ARANOS_PRISON_QWEN_de961518de48_AT004571A0_ROLE000(owner + 0x298);
+}
+
+
+
+extern unsigned long long LVL_14_ARANOS_PRISON_QWEN_7ba3cdeeb16b_AT0045BAC0_ROLE000(unsigned long long);
+
+unsigned long long LVL_14_ARANOS_PRISON_FUN_0045BAC0(unsigned long long value)
+{
+    LVL_14_ARANOS_PRISON_QWEN_7ba3cdeeb16b_AT0045BAC0_ROLE000(value);
+    return value;
+}
+
+
+
+void LVL_14_ARANOS_PRISON_FUN_0045BD08(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0xb8) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_14_ARANOS_PRISON_FUN_0045CD68(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+void LVL_14_ARANOS_PRISON_FUN_0045D0A8(int *param_1)
+{
+    param_1[0x150 / sizeof(int)] = 0;
+}
+
+
+void LVL_14_ARANOS_PRISON_FUN_0045D248(int param_1, int param_2) {
+    *(int *)(param_1 + 0x84) = param_2;
+}
+
+
+void LVL_14_ARANOS_PRISON_FUN_0045D290(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 32) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_14_ARANOS_PRISON_FUN_004621E8(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_14_ARANOS_PRISON_FUN_004642D8(void) {
+    return 1;
+}
+
+
+extern int LVL_14_ARANOS_PRISON_QWEN_cc83cb329fcb_AT00465B18_ROLE000(unsigned char *);
+
+int LVL_14_ARANOS_PRISON_FUN_00465B18(int *owner)
+{
+    int result;
+    long status;
+    status = LVL_14_ARANOS_PRISON_QWEN_cc83cb329fcb_AT00465B18_ROLE000((unsigned char *)owner);
+    if (status == 0)
+        result = *owner + owner[2] * 0xd0000;
+    else
+        result = 0;
+    return result;
+}
+

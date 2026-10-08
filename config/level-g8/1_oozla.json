@@ -82,7 +82,13 @@
     "LVL_1_OOZLA_Fff971bf89acc2217_AT00371A10_ROLE00": 1780936,
     "LVL_1_OOZLA_Fff971bf89acc2217_AT00371A10_ROLE01": 1755008,
     "LVL_1_OOZLA_Fff971bf89acc2217_AT00371A70_ROLE00": 1780936,
-    "LVL_1_OOZLA_Fff971bf89acc2217_AT00371A70_ROLE01": 1755056
+    "LVL_1_OOZLA_Fff971bf89acc2217_AT00371A70_ROLE01": 1755056,
+    "LVL_1_OOZLA_QWEN_339fe89f21bc_AT00371628_ROLE000": 3027408,
+    "LVL_1_OOZLA_QWEN_339fe89f21bc_AT00371628_ROLE001": 1759264,
+    "LVL_1_OOZLA_QWEN_538934d89776_AT002CC7A8_ROLE000": 1738972,
+    "LVL_1_OOZLA_QWEN_538934d89776_AT002CC7A8_ROLE001": 1735600,
+    "LVL_1_OOZLA_QWEN_538934d89776_AT002CC7A8_ROLE002": 2933624,
+    "LVL_1_OOZLA_QWEN_538934d89776_AT002CC7A8_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -317,12 +323,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_1_OOZLA_FUN_0042F820"
+    },
+    {
+      "address": 2934696,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_1_OOZLA_FUN_002CC7A8"
+    },
+    {
+      "address": 3610152,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_1_OOZLA_FUN_00371628"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "1_oozla",
-  "module": "src/levels/smalldata/1_oozla-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/1_oozla-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/1_oozla",
   "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
   "schema": 1,

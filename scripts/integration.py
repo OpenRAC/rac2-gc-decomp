@@ -279,6 +279,23 @@ def level_catalog(level: str) -> dict:
             "flags": boot["flags"], "functions": functions, "externals": externals}
 
 
+def _shared_provider_union(level: str, shared: dict) -> dict:
+    """Check every declared loaded C owner before adapting resident imports."""
+    from level_native import paths, load_catalog
+    owners = {f['symbol']: {'address': f['address'], 'size': f['size']}
+              for f in shared['functions']}
+    for profile in ('native', 'smalldata'):
+        _, catalog_path, _ = paths(level, profile)
+        if not (ROOT / catalog_path).exists():
+            continue
+        catalog = load_catalog(level, ROOT, profile)
+        for function in catalog['functions']:
+            if function['symbol'] in owners:
+                raise ValueError('Duplicate shared/native/small-data provider identity')
+            owners[function['symbol']] = {'address': function['address'], 'size': function['size']}
+    return owners
+
+
 def _compile_shared_level_c(reference: Path, directory: Path, toolchain: Path, level: str,
                             review_path: Path | None = None) -> tuple[dict, Path, dict]:
     """Compile the reviewed C again and qualify that exact object at level addresses."""
@@ -303,8 +320,24 @@ def _compile_shared_level_c(reference: Path, directory: Path, toolchain: Path, l
     snapshot, object_path = compile_snapshot(directory, toolchain, catalog["flags"])
     if file_hash(snapshot) != candidates["source_sha256"]:
         raise ValueError("C source changed while creating the level integration snapshot")
+    if file_hash(object_path) != candidates['object_sha256']:
+        raise ValueError('Fresh compiled shared object differs from reviewed boot object')
     catalog["compiled_source_sha256"] = candidates["source_sha256"]
     c_directory = object_path.parent
+    # The full immutable compiler object remains the proof owner. Only an
+    # explicitly recorded relocation-symbol view is consumed by level links.
+    from shared_imports import derive_shared_import_object
+    link_object = c_directory / 'boot-shared-link.o'
+    adapter_path = c_directory / 'boot-shared-link-adapter.json'
+    adapter = derive_shared_import_object(object_path, link_object, adapter_path,
+        catalog, boot, candidates, reference, _shared_provider_union(level, catalog))
+    catalog['shared_link_object'] = {
+        'compiled_path': object_path.relative_to(directory).as_posix(),
+        'compiled_object_sha256': file_hash(object_path),
+        'path': link_object.relative_to(directory).as_posix(),
+        'sha256': file_hash(link_object),
+        'adapter_path': adapter_path.relative_to(directory).as_posix(),
+        'adapter_sha256': file_hash(adapter_path)}
     qualification_script = c_directory / "level-qualification.ld"
     # The compiled object also carries the boot-only bodies, whose data
     # references belong to the boot image; only the sections placed in this
@@ -315,14 +348,17 @@ def _compile_shared_level_c(reference: Path, directory: Path, toolchain: Path, l
         "/DISCARD/ : { *(.reginfo) }", "/DISCARD/ : { *(.reginfo) *(.text.FUN_*) }")
     qualification_script.write_text(script, encoding="ascii")
     qualified = c_directory / "level-qualification.elf"
-    run([str(linker), "-T", str(qualification_script), "-o", str(qualified), str(object_path)],
+    run([str(linker), "-T", str(qualification_script), "-o", str(qualified), str(link_object)],
         directory / "qualify-level-object.log")
-    assert_fresh(qualified, [object_path, snapshot, qualification_script])
+    assert_fresh(qualified, [object_path, link_object, adapter_path, snapshot, qualification_script])
     results = [compare_function(reference, qualified, function["symbol"], function["address"], function["size"])
                for function in catalog["functions"]]
     if not all(result["matched"] for result in results):
         raise ValueError("The exact C object used for level integration failed its level qualification")
-    object_proof = {"target": catalog["target"], "program": level, "reference_sha256": file_hash(reference),
+    object_proof = {"link_object_sha256": file_hash(link_object),
+                    "link_object_adapter_sha256": file_hash(adapter_path),
+                    "link_object_adapter": adapter,
+                    "target": catalog["target"], "program": level, "reference_sha256": file_hash(reference),
                     "source_sha256": file_hash(snapshot), "object_sha256": file_hash(object_path),
                     "candidate_elf_sha256": file_hash(qualified),
                     "catalog_sha256": file_hash(ROOT / "config" / "level-catalog.json"),
@@ -341,11 +377,20 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
     from level_native import paths, compile_reviewed, ranges, dependencies, has_smalldata, SMALL_DATA_GP
     catalog, object_path, hashes = _compile_shared_level_c(reference, directory, toolchain, level, review_path)
     source_path, native_catalog_path, native_review_path = paths(level)
-    if not (ROOT / native_catalog_path).exists():
-        return catalog, object_path, hashes
     review = json.loads((review_path or ROOT / "progress/candidates.json").read_bytes())
     if file_hash(object_path) != review["object_sha256"]:
         raise ValueError("Shared source/object differs from the reviewed boot object")
+    link = catalog['shared_link_object']
+    link_object = directory / link['path']
+    adapter_path = directory / link['adapter_path']
+    if file_hash(link_object) != link['sha256'] or file_hash(adapter_path) != link['adapter_sha256']:
+        raise ValueError('Shared derived link object or adapter receipt changed')
+    adapter = json.loads(adapter_path.read_bytes())
+    if (adapter['compiled_object_sha256'] != review['object_sha256']
+            or adapter['link_object_sha256'] != file_hash(link_object)):
+        raise ValueError('Shared link adapter lost its immutable compiler-object identity')
+    if not (ROOT / native_catalog_path).exists():
+        return catalog, link_object, hashes
     native, native_object, native_proof = compile_reviewed(
         reference, directory / "build/c/native" / level, toolchain, level, ROOT)
     if native_proof["tools"] != hashes:
@@ -366,7 +411,7 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
         if name in externals and externals[name] != address:
             raise ValueError("Native and shared external addresses conflict")
         externals[name] = address
-    objects = {"candidates/boot.c": object_path, source_path: native_object}
+    objects = {"candidates/boot.c": link_object, source_path: native_object}
     smalldata = None
     smalldata_functions = []
     if has_smalldata(level, ROOT):
@@ -402,6 +447,8 @@ def compile_level_c(reference: Path, directory: Path, toolchain: Path, level: st
     # Reconcile against the complete union before emitting absolute bindings:
     # assigning a defined C symbol in the linker script destroys its ELF identity.
     definitions = {function["symbol"]: function["address"] for function in functions}
+    from shared_imports import validate_import_owner_union
+    validate_import_owner_union(adapter, definitions)
     for name, address in tuple(externals.items()):
         if name in definitions:
             if definitions[name] != address:

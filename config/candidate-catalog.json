@@ -45,16 +45,35 @@
     "FUN_0012EE28": 1240616,
     "FUN_00132028": 1253416,
     "FUN_00132AC8": 1256136,
+    "FUN_00132C48": 1256520,
     "FUN_00133230": 1258032,
     "FUN_00133310": 1258256,
     "FUN_00133400": 1258496,
-    "FUN_00133490": 1258640,
     "FUN_001334B8": 1258680,
     "FUN_00133688": 1259144,
     "FUN_00133890": 1259664,
-    "FUN_001338C8": 1259720,
     "FUN_001338F0": 1259760,
-    "FUN_00133930": 1259824,
+    "FUN_0027C540": 2606400,
+    "FUN_0027C660": 2606688,
+    "FUN_00282A60": 2632288,
+    "FUN_00288B38": 2657080,
+    "FUN_00291640": 2692672,
+    "FUN_00291788": 2693000,
+    "FUN_0029C138": 2736440,
+    "FUN_0029C1D8": 2736600,
+    "FUN_0029C450": 2737232,
+    "FUN_0029C680": 2737792,
+    "FUN_0029C730": 2737968,
+    "FUN_0029C7A0": 2738080,
+    "FUN_0029C8F0": 2738416,
+    "FUN_0029C960": 2738528,
+    "FUN_0029CED8": 2739928,
+    "FUN_002AFFD8": 2818008,
+    "FUN_002B50E0": 2838752,
+    "FUN_00336968": 3369320,
+    "FUN_0033AB50": 3386192,
+    "FUN_00342F70": 3420016,
+    "FUN_00348138": 3440952,
     "Fee2b87d1_D_0014B540": 1357120,
     "Fee2b87d1_D_00152CD0": 1387728,
     "__make_dp": 1192552,
@@ -1844,6 +1863,270 @@
       "size": 32,
       "symbol": "FUN_00351FA0",
       "xrefs": 0
+    },
+    {
+      "address": 1239664,
+      "meaning": "Advance the stored unsigned cursor by the signed offset shifted right three, then apply the recorded wrap subtraction.",
+      "size": 44,
+      "symbol": "FUN_0012EA70"
+    },
+    {
+      "address": 1243456,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "FUN_0012F940"
+    },
+    {
+      "address": 1244016,
+      "meaning": "Copy the signed 32-bit word at owner offset 0xC to offset 0x 8.",
+      "size": 12,
+      "symbol": "FUN_0012FB70"
+    },
+    {
+      "address": 1258640,
+      "meaning": "Send command 0x 36 with one explicitly initialized four-byte payload word and return the measured RPC status.",
+      "size": 40,
+      "symbol": "FUN_00133490"
+    },
+    {
+      "address": 1259720,
+      "meaning": "Send command 0x 3C with zero-byte input and discard the measured RPC status.",
+      "size": 36,
+      "symbol": "FUN_001338C8"
+    },
+    {
+      "address": 1259824,
+      "meaning": "Send command 0x 5A with two initialized payload words and return the measured RPC status.",
+      "size": 44,
+      "symbol": "FUN_00133930"
+    },
+    {
+      "address": 1260016,
+      "meaning": "Copy n bytes forward from the supplied source to destination when n is positive.",
+      "size": 52,
+      "symbol": "FUN_001339F0"
+    },
+    {
+      "address": 2657048,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "FUN_00288B18"
+    },
+    {
+      "address": 2657208,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "FUN_00288BB8"
+    },
+    {
+      "address": 2692952,
+      "meaning": "Invoke both measured index-based helpers with the same supplied 64-bit index.",
+      "size": 44,
+      "symbol": "FUN_00291758"
+    },
+    {
+      "address": 2752968,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "FUN_002A01C8"
+    },
+    {
+      "address": 2818224,
+      "meaning": "Forward owner+0x 10, the output-vector pointer and the 64-bit mode to the measured helper.",
+      "size": 28,
+      "symbol": "FUN_002B00B0"
+    },
+    {
+      "address": 2839160,
+      "meaning": "Pass owner, owner+0x 10 and the incoming float factor to the measured helper.",
+      "size": 28,
+      "symbol": "FUN_002B5278"
+    },
+    {
+      "address": 2937376,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002CD220"
+    },
+    {
+      "address": 2938400,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002CD620"
+    },
+    {
+      "address": 2939072,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002CD8C0"
+    },
+    {
+      "address": 2960568,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D2CB8"
+    },
+    {
+      "address": 2960936,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D2E28"
+    },
+    {
+      "address": 2961120,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D2EE0"
+    },
+    {
+      "address": 2962064,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D3290"
+    },
+    {
+      "address": 2962320,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D3390"
+    },
+    {
+      "address": 2970944,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D5540"
+    },
+    {
+      "address": 3255048,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "FUN_0031AB08"
+    },
+    {
+      "address": 3369520,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
+      "size": 8,
+      "symbol": "FUN_00336A30"
+    },
+    {
+      "address": 3369528,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
+      "size": 8,
+      "symbol": "FUN_00336A38"
+    },
+    {
+      "address": 3381104,
+      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
+      "size": 28,
+      "symbol": "FUN_00339770"
+    },
+    {
+      "address": 3400048,
+      "meaning": "Initialize the owner subviews at 8 and 0x 2B 0, then return the supplied owner pointer.",
+      "size": 52,
+      "symbol": "FUN_0033E170"
+    },
+    {
+      "address": 3400464,
+      "meaning": "Add the owner word at 0x 378 to twenty times the measured helper result.",
+      "size": 52,
+      "symbol": "FUN_0033E310"
+    },
+    {
+      "address": 3400520,
+      "meaning": "Return the signed word read by the helper from the owner subview at 0x 2B 0.",
+      "size": 28,
+      "symbol": "FUN_0033E348"
+    },
+    {
+      "address": 3414632,
+      "meaning": "Call the measured one-owner routine with owner+0x 228.",
+      "size": 28,
+      "symbol": "FUN_00341A68"
+    },
+    {
+      "address": 3416960,
+      "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
+      "size": 40,
+      "symbol": "FUN_00342380"
+    },
+    {
+      "address": 3417672,
+      "meaning": "Call the measured one-owner routine with owner+0x 188.",
+      "size": 28,
+      "symbol": "FUN_00342648"
+    },
+    {
+      "address": 3418032,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "FUN_003427B0"
+    },
+    {
+      "address": 3421496,
+      "meaning": "Pass owner+0x 298 and the supplied read-only record table to the measured helper.",
+      "size": 28,
+      "symbol": "FUN_00343538"
+    },
+    {
+      "address": 3421536,
+      "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
+      "size": 28,
+      "symbol": "FUN_00343560"
+    },
+    {
+      "address": 3421568,
+      "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
+      "size": 28,
+      "symbol": "FUN_00343580"
+    },
+    {
+      "address": 3440288,
+      "meaning": "Call the measured initializer with the supplied 64-bit value and return that original value.",
+      "size": 40,
+      "symbol": "FUN_00347EA0"
+    },
+    {
+      "address": 3440872,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0xB 8.",
+      "size": 8,
+      "symbol": "FUN_003480E8"
+    },
+    {
+      "address": 3445896,
+      "meaning": "Clear the signed 32-bit word at owner byte offset 0x 150.",
+      "size": 8,
+      "symbol": "FUN_00349488"
+    },
+    {
+      "address": 3446312,
+      "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
+      "size": 8,
+      "symbol": "FUN_00349628"
+    },
+    {
+      "address": 3446384,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 20.",
+      "size": 8,
+      "symbol": "FUN_00349670"
+    },
+    {
+      "address": 3479624,
+      "meaning": "Pass owner+0x 48 and four output-word pointers to the measured five-pointer helper.",
+      "size": 28,
+      "symbol": "FUN_00351848"
+    },
+    {
+      "address": 3479864,
+      "meaning": "Return the measured signed-word getter result for the owner subview at 0x 48.",
+      "size": 28,
+      "symbol": "FUN_00351938"
+    },
+    {
+      "address": 3481320,
+      "meaning": "When the bound helper returns zero, combine owner words 0 and 2 with factor 0xD0000; otherwise return zero.",
+      "size": 64,
+      "symbol": "FUN_00351EE8"
     }
   ],
   "gp": 1765360,
