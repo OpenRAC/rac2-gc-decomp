@@ -10,6 +10,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import uuid
 from contextlib import contextmanager
 from datetime import datetime, timezone
@@ -84,9 +85,29 @@ class Store:
             write_new(revision, data)
             temp = self.path.with_name(self.path.name + "." + uuid.uuid4().hex + ".tmp")
             write_new(temp, data)
-            os.replace(temp, self.path)
+            # Windows readers can briefly deny delete sharing. Retry only the
+            # already-written atomic rename, never the mutation or its evidence.
+            for attempt in range(11):
+                try:
+                    os.replace(temp, self.path)
+                    break
+                except OSError as error:
+                    if getattr(error, "winerror", None) not in (5, 32, 33) or attempt == 10:
+                        raise
+                    time.sleep(.05)
         finally:
             lock.unlink()
+
+
+class TrialPublicationError(RuntimeError):
+    """A real trial's retained evidence requires explicit registry recovery."""
+    def __init__(self, trial_id, outcome_path, reason):
+        self.trial_id = trial_id
+        self.outcome_path = Path(outcome_path)
+        self.reason = str(reason)
+        super().__init__(f"Trial {trial_id} final publication failed; "
+                         f"outcome path: {self.outcome_path}; reason: {self.reason}. "
+                         "Inspect retained evidence and recover the registry; do not replay compilation.")
 
 
 def normalize_task(task):
@@ -438,19 +459,24 @@ def _trial(store, repo, task_id, toolchain, profile, repeat_reason="", backend=N
                                    "reason": "shared unit did not reach target measurement", "functions": []}
                                   for target in targets]
         result["finished"] = now()
-        write_new(work / "outcome.json", encoded(result))
-        with store.edit() as registry:
-            registry["trials"][trial_id].update({k: result[k] for k in
-                ("state", "compile_attempted", "measured_functions", "finished")})
-            registry["trials"][trial_id]["outcome_sha256"] = digest(encoded(result))
-            manifest_path = work / "manifest.json"
-            registry["trials"][trial_id]["manifest_sha256"] = digest(manifest_path.read_bytes()) if manifest_path.exists() else None
-            active = registry["tasks"][task_id]
-            active.pop("active_trial", None)
-            state = "exact_private" if result["state"] == "exact_private" else "stopped"
-            active["transitions"].append({"at": now(), "from": active["state"], "to": state,
-                                          "reason": result["state"], "trial": trial_id})
-            active.update(state=state, last_trial=trial_id)
+        try:
+            write_new(work / "outcome.json", encoded(result))
+            with store.edit() as registry:
+                registry["trials"][trial_id].update({k: result[k] for k in
+                    ("state", "compile_attempted", "measured_functions", "finished")})
+                registry["trials"][trial_id]["outcome_sha256"] = digest(encoded(result))
+                manifest_path = work / "manifest.json"
+                registry["trials"][trial_id]["manifest_sha256"] = digest(manifest_path.read_bytes()) if manifest_path.exists() else None
+                active = registry["tasks"][task_id]
+                active.pop("active_trial", None)
+                state = "exact_private" if result["state"] == "exact_private" else "stopped"
+                active["transitions"].append({"at": now(), "from": active["state"], "to": state,
+                                              "reason": result["state"], "trial": trial_id})
+                active.update(state=state, last_trial=trial_id)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            # This trial may already have compiled and measured. Its identity
+            # must never become a fresh, falsely uncompiled preparation rejection.
+            raise TrialPublicationError(trial_id, work / "outcome.json", error) from error
     return result
 
 
@@ -897,6 +923,9 @@ def main(argv=None):
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
+    except TrialPublicationError as error:
+        print(f"Campaign trial publication failed: {error}", file=sys.stderr)
+        raise SystemExit(2)
     except (OSError, ValueError, KeyError, TypeError) as error:
         print(f"Campaign rejected: {error}", file=sys.stderr)
         raise SystemExit(2)
