@@ -38,6 +38,75 @@ def require_hash(value: object) -> None:
         raise ValueError("Proof requires SHA-256 hashes")
 
 
+def validate_shared_link_proof(proof: dict, expected_raw_sha256: str,
+                               functions: list[dict] | None = None) -> None:
+    """An optional link view never replaces the exact compiled-object identity."""
+    fields = ('c_link_object_sha256', 'c_link_object_adapter_sha256', 'c_link_object_adapter')
+    if not any(field in proof for field in fields):
+        return
+    if any(field not in proof for field in fields):
+        raise ValueError('Incomplete shared link-adapter proof')
+    require_hash(expected_raw_sha256)
+    if proof.get('c_object_sha256') != expected_raw_sha256:
+        raise ValueError('Shared adapter changed the raw compiler-object identity')
+    require_hash(proof['c_link_object_sha256']); require_hash(proof['c_link_object_adapter_sha256'])
+    receipt = proof['c_link_object_adapter']
+    if (not isinstance(receipt, dict) or receipt.get('schema') != 1
+            or receipt.get('kind') != 'reviewed-shared-import-relocation-adapter'
+            or receipt.get('compiled_object_sha256') != expected_raw_sha256
+            or receipt.get('link_object_sha256') != proof['c_link_object_sha256']
+            or receipt.get('compiled_code_unchanged') is not True
+            or receipt.get('symbol_table_unchanged') is not True
+            or type(receipt.get('new_physical_bytes')) is not int or receipt['new_physical_bytes'] != 0
+            or type(receipt.get('integration_credit')) is not int or receipt['integration_credit'] != 0):
+        raise ValueError('Shared link receipt identity, unchanged-code or zero-credit claim differs')
+    encoded = (json.dumps(receipt, sort_keys=True, indent=2) + '\n').encode()
+    if hashlib.sha256(encoded).hexdigest() != proof['c_link_object_adapter_sha256']:
+        raise ValueError('Shared link receipt hash differs')
+    changes = receipt.get('relocation_changes'); sections = receipt.get('unchanged_sections')
+    if not isinstance(changes, list) or not isinstance(sections, list) or not sections:
+        raise ValueError('Shared link receipt omitted relocation/unchanged-section evidence')
+    if (expected_raw_sha256 == proof['c_link_object_sha256']) != (not changes):
+        raise ValueError('Shared link hash and relocation change count disagree')
+    indices = set()
+    for section in sections:
+        if (not isinstance(section, dict) or type(section.get('index')) is not int
+                or section['index'] < 0 or section['index'] in indices
+                or not isinstance(section.get('name'), str)):
+            raise ValueError('Invalid unchanged shared object section')
+        indices.add(section['index']); require_hash(section.get('sha256'))
+    offsets = set(); rows = functions if functions is not None else proof.get('functions')
+    for edge in changes:
+        if not isinstance(edge, dict):
+            raise ValueError('Invalid shared import relocation change')
+        for name in ('caller', 'provider'):
+            if not isinstance(edge.get(name), str) or re.fullmatch('[A-Za-z_][A-Za-z0-9_]*', edge[name]) is None:
+                raise ValueError('Invalid shared import symbol identity')
+        for name in ('old_r_info', 'new_r_info', 'caller_address', 'provider_address'):
+            if type(edge.get(name)) is not int or not 0 <= edge[name] <= 0xffffffff:
+                raise ValueError('Invalid shared import relocation integer')
+        if (edge['old_r_info'] & 255 != 4 or edge['new_r_info'] & 255 != 4
+                or edge['old_r_info'] == edge['new_r_info']
+                or type(edge.get('old_symbol_index')) is not int
+                or type(edge.get('new_symbol_index')) is not int
+                or edge['old_symbol_index'] <= 0 or edge['new_symbol_index'] <= 0
+                or edge['old_r_info'] >> 8 != edge['old_symbol_index']
+                or edge['new_r_info'] >> 8 != edge['new_symbol_index']
+                or type(edge.get('r_info_offset')) is not int or edge['r_info_offset'] < 4
+                or edge['r_info_offset'] % 4 or edge['r_info_offset'] in offsets
+                or edge['caller_address'] % 4 or edge['provider_address'] % 4
+                or type(edge.get('provider_size')) is not int
+                or edge['provider_size'] <= 0 or edge['provider_size'] % 4):
+            raise ValueError('Shared import must preserve one valid R_MIPS_26 symbolic entry change')
+        offsets.add(edge['r_info_offset']); require_hash(edge.get('provider_reference_sha256'))
+        if rows is not None:
+            owners = [row for row in rows if row.get('symbol') == edge['caller']]
+            if (len(owners) != 1 or not owners[0]['address'] <= edge['caller_address']
+                    or edge['caller_address'] + 8 > owners[0]['address'] + owners[0]['size']
+                    or any(row.get('symbol') == edge['provider'] for row in rows)):
+                raise ValueError('Shared import edge contradicts complete loaded function ownership')
+
+
 def require_tools(value: object) -> None:
     if not isinstance(value, dict) or not value:
         raise ValueError("Proof requires instrument hashes")
@@ -261,6 +330,7 @@ def validate_level_proof(proof: dict, target: dict, overlays: dict, progress: di
     require_tools(proof.get("tools"))
     if any(integration["tools"].get(name) != digest for name, digest in proof["tools"].items()):
         raise ValueError("Level integration instrument mismatch")
+    validate_shared_link_proof(proof, integration.get('c_object_sha256', integration.get('object_sha256')))
     placements = level_placements(json.loads(catalog_bytes), program, target, overlays, boot_catalog)
     functions = proof.get("functions")
     if not isinstance(functions, list) or not functions:
@@ -375,6 +445,11 @@ def validate_native_level_proof(proof: dict, target: dict, overlays: dict, progr
             or any(proof.get(key) != shared.get(key) for key in
                    ("source_sha256", "catalog_sha256", "candidate_source"))):
         raise ValueError("Shared source/object or full ELF identity changed in native proof")
+    validate_shared_link_proof(proof, boot_review['object_sha256'], functions)
+    validate_shared_link_proof(shared, boot_review['object_sha256'], functions)
+    for field in ('c_link_object_sha256', 'c_link_object_adapter_sha256', 'c_link_object_adapter'):
+        if proof.get(field) != shared.get(field):
+            raise ValueError('Shared and union link-adapter identities differ')
     shared_rows = [item for item in functions if item.get("origin") == "boot-shared"]
     if any(item.get("candidate_source") != "candidates/boot.c" for item in shared_rows):
         raise ValueError("Shared functions must retain their boot C provenance")

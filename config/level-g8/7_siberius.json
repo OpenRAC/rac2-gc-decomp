@@ -102,7 +102,13 @@
     "LVL_7_SIBERIUS_Fff971bf89acc2217_AT00371828_ROLE00": 1780296,
     "LVL_7_SIBERIUS_Fff971bf89acc2217_AT00371828_ROLE01": 1754944,
     "LVL_7_SIBERIUS_Fff971bf89acc2217_AT00371888_ROLE00": 1780296,
-    "LVL_7_SIBERIUS_Fff971bf89acc2217_AT00371888_ROLE01": 1754992
+    "LVL_7_SIBERIUS_Fff971bf89acc2217_AT00371888_ROLE01": 1754992,
+    "LVL_7_SIBERIUS_QWEN_339fe89f21bc_AT00371440_ROLE000": 3031152,
+    "LVL_7_SIBERIUS_QWEN_339fe89f21bc_AT00371440_ROLE001": 1759200,
+    "LVL_7_SIBERIUS_QWEN_538934d89776_AT002CCF88_ROLE000": 1738972,
+    "LVL_7_SIBERIUS_QWEN_538934d89776_AT002CCF88_ROLE001": 1735600,
+    "LVL_7_SIBERIUS_QWEN_538934d89776_AT002CCF88_ROLE002": 2935640,
+    "LVL_7_SIBERIUS_QWEN_538934d89776_AT002CCF88_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -385,12 +391,24 @@
       "meaning": "Write four observed 32-bit command words through a numeric address cursor, then advance the same cursor by 16. The command protocol and original types are unknown.",
       "size": 92,
       "symbol": "LVL_7_SIBERIUS_FUN_003718F0"
+    },
+    {
+      "address": 2936712,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_7_SIBERIUS_FUN_002CCF88"
+    },
+    {
+      "address": 3609664,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_7_SIBERIUS_FUN_00371440"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "7_siberius",
-  "module": "src/levels/smalldata/7_siberius-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/7_siberius-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/7_siberius",
   "reference_sha256": "76b77dbbc9a3e15f1c4f202a36b37d01bdaff7936142c14b5b35a1552a85287a",
   "schema": 1,

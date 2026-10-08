@@ -108,7 +108,13 @@
     "LVL_16_SNIVELAK_Fe44fc83bd69b4f14_AT003231D0_ROLE00": 1745776,
     "LVL_16_SNIVELAK_Fe6fa55215bad26dd_AT00323208_ROLE00": 1745780,
     "LVL_16_SNIVELAK_Fef45f15dfb57feb2_AT002F57D8_ROLE00": 1741676,
-    "LVL_16_SNIVELAK_Ff0259c87ab6a3193_AT002EC898_ROLE00": 1740212
+    "LVL_16_SNIVELAK_Ff0259c87ab6a3193_AT002EC898_ROLE00": 1740212,
+    "LVL_16_SNIVELAK_QWEN_339fe89f21bc_AT00373030_ROLE000": 3043816,
+    "LVL_16_SNIVELAK_QWEN_339fe89f21bc_AT00373030_ROLE001": 1759136,
+    "LVL_16_SNIVELAK_QWEN_538934d89776_AT002D01F8_ROLE000": 1738972,
+    "LVL_16_SNIVELAK_QWEN_538934d89776_AT002D01F8_ROLE001": 1735600,
+    "LVL_16_SNIVELAK_QWEN_538934d89776_AT002D01F8_ROLE002": 2948552,
+    "LVL_16_SNIVELAK_QWEN_538934d89776_AT002D01F8_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -427,12 +433,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_16_SNIVELAK_FUN_00438260"
+    },
+    {
+      "address": 2949624,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_16_SNIVELAK_FUN_002D01F8"
+    },
+    {
+      "address": 3616816,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_16_SNIVELAK_FUN_00373030"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "16_snivelak",
-  "module": "src/levels/smalldata/16_snivelak-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/16_snivelak-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/16_snivelak",
   "reference_sha256": "ad5840ad4ebfef75199ad6196e36ba010d99970e75d0de681a050ab4c59f944b",
   "schema": 1,

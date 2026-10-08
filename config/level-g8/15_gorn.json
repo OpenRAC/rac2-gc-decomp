@@ -107,7 +107,13 @@
     "LVL_15_GORN_Fff971bf89acc2217_AT003972A8_ROLE00": 1781128,
     "LVL_15_GORN_Fff971bf89acc2217_AT003972A8_ROLE01": 1755008,
     "LVL_15_GORN_Fff971bf89acc2217_AT00397308_ROLE00": 1781128,
-    "LVL_15_GORN_Fff971bf89acc2217_AT00397308_ROLE01": 1755056
+    "LVL_15_GORN_Fff971bf89acc2217_AT00397308_ROLE01": 1755056,
+    "LVL_15_GORN_QWEN_339fe89f21bc_AT00396EC0_ROLE000": 3172752,
+    "LVL_15_GORN_QWEN_339fe89f21bc_AT00396EC0_ROLE001": 1759264,
+    "LVL_15_GORN_QWEN_538934d89776_AT002EFE10_ROLE000": 1738972,
+    "LVL_15_GORN_QWEN_538934d89776_AT002EFE10_ROLE001": 1735600,
+    "LVL_15_GORN_QWEN_538934d89776_AT002EFE10_ROLE002": 3078624,
+    "LVL_15_GORN_QWEN_538934d89776_AT002EFE10_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -420,12 +426,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_00454B90"
+    },
+    {
+      "address": 3079696,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_15_GORN_FUN_002EFE10"
+    },
+    {
+      "address": 3763904,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_15_GORN_FUN_00396EC0"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "15_gorn",
-  "module": "src/levels/smalldata/15_gorn-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/15_gorn-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/15_gorn",
   "reference_sha256": "838098ef94f05d78f79be2f65291447db6c9468e7c44e2cab36396f720cce109",
   "schema": 1,

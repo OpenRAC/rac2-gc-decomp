@@ -104,7 +104,13 @@
     "LVL_2_MAKTAR_NEBULA_Fff971bf89acc2217_AT00382F00_ROLE00": 1785096,
     "LVL_2_MAKTAR_NEBULA_Fff971bf89acc2217_AT00382F00_ROLE01": 1755072,
     "LVL_2_MAKTAR_NEBULA_Fff971bf89acc2217_AT00382F60_ROLE00": 1785096,
-    "LVL_2_MAKTAR_NEBULA_Fff971bf89acc2217_AT00382F60_ROLE01": 1755120
+    "LVL_2_MAKTAR_NEBULA_Fff971bf89acc2217_AT00382F60_ROLE01": 1755120,
+    "LVL_2_MAKTAR_NEBULA_QWEN_339fe89f21bc_AT00382B18_ROLE000": 3087520,
+    "LVL_2_MAKTAR_NEBULA_QWEN_339fe89f21bc_AT00382B18_ROLE001": 1759328,
+    "LVL_2_MAKTAR_NEBULA_QWEN_538934d89776_AT002DA4A8_ROLE000": 1738972,
+    "LVL_2_MAKTAR_NEBULA_QWEN_538934d89776_AT002DA4A8_ROLE001": 1735600,
+    "LVL_2_MAKTAR_NEBULA_QWEN_538934d89776_AT002DA4A8_ROLE002": 2990200,
+    "LVL_2_MAKTAR_NEBULA_QWEN_538934d89776_AT002DA4A8_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -399,12 +405,24 @@
       "meaning": "Return the measured GP 32-bit float through FPR0. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_2_MAKTAR_NEBULA_FUN_00385E18"
+    },
+    {
+      "address": 2991272,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_002DA4A8"
+    },
+    {
+      "address": 3681048,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_00382B18"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "2_maktar_nebula",
-  "module": "src/levels/smalldata/2_maktar_nebula-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/2_maktar_nebula-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/2_maktar_nebula",
   "reference_sha256": "ab59cf107fb30843db03cd3571af1c08d62e99e6b50594bc38dd7a70f91ac94b",
   "schema": 1,

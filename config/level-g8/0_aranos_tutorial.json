@@ -103,7 +103,13 @@
     "LVL_0_ARANOS_TUTORIAL_Fff971bf89acc2217_AT0037B750_ROLE00": 1779208,
     "LVL_0_ARANOS_TUTORIAL_Fff971bf89acc2217_AT0037B750_ROLE01": 1755072,
     "LVL_0_ARANOS_TUTORIAL_Fff971bf89acc2217_AT0037B7B0_ROLE00": 1779208,
-    "LVL_0_ARANOS_TUTORIAL_Fff971bf89acc2217_AT0037B7B0_ROLE01": 1755120
+    "LVL_0_ARANOS_TUTORIAL_Fff971bf89acc2217_AT0037B7B0_ROLE01": 1755120,
+    "LVL_0_ARANOS_TUTORIAL_QWEN_339fe89f21bc_AT0037B368_ROLE000": 3071544,
+    "LVL_0_ARANOS_TUTORIAL_QWEN_339fe89f21bc_AT0037B368_ROLE001": 1759328,
+    "LVL_0_ARANOS_TUTORIAL_QWEN_538934d89776_AT002D6FD8_ROLE000": 1738972,
+    "LVL_0_ARANOS_TUTORIAL_QWEN_538934d89776_AT002D6FD8_ROLE001": 1735600,
+    "LVL_0_ARANOS_TUTORIAL_QWEN_538934d89776_AT002D6FD8_ROLE002": 2976680,
+    "LVL_0_ARANOS_TUTORIAL_QWEN_538934d89776_AT002D6FD8_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -392,12 +398,24 @@
       "meaning": "Write four observed 32-bit command words through a numeric address cursor, then advance the same cursor by 16. The command protocol and original types are unknown.",
       "size": 92,
       "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_0037B818"
+    },
+    {
+      "address": 2977752,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_002D6FD8"
+    },
+    {
+      "address": 3650408,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_0037B368"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "0_aranos_tutorial",
-  "module": "src/levels/smalldata/0_aranos_tutorial-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/0_aranos_tutorial-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/0_aranos_tutorial",
   "reference_sha256": "c486f497920118066ed02076f540a5fad6811ce874d014a3a2bb18cb77714d11",
   "schema": 1,

@@ -104,7 +104,13 @@
     "LVL_30_INSOMNIAC_MUSEUM_Fe44fc83bd69b4f14_AT0032D1A0_ROLE00": 1745776,
     "LVL_30_INSOMNIAC_MUSEUM_Fe6fa55215bad26dd_AT0032D1D8_ROLE00": 1745780,
     "LVL_30_INSOMNIAC_MUSEUM_Fef45f15dfb57feb2_AT00302D68_ROLE00": 1741676,
-    "LVL_30_INSOMNIAC_MUSEUM_Ff0259c87ab6a3193_AT002FA200_ROLE00": 1740212
+    "LVL_30_INSOMNIAC_MUSEUM_Ff0259c87ab6a3193_AT002FA200_ROLE00": 1740212,
+    "LVL_30_INSOMNIAC_MUSEUM_QWEN_339fe89f21bc_AT0037B990_ROLE000": 3099592,
+    "LVL_30_INSOMNIAC_MUSEUM_QWEN_339fe89f21bc_AT0037B990_ROLE001": 1759136,
+    "LVL_30_INSOMNIAC_MUSEUM_QWEN_538934d89776_AT002DDE28_ROLE000": 1738972,
+    "LVL_30_INSOMNIAC_MUSEUM_QWEN_538934d89776_AT002DDE28_ROLE001": 1735600,
+    "LVL_30_INSOMNIAC_MUSEUM_QWEN_538934d89776_AT002DDE28_ROLE002": 3004920,
+    "LVL_30_INSOMNIAC_MUSEUM_QWEN_538934d89776_AT002DDE28_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -417,12 +423,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_004303F0"
+    },
+    {
+      "address": 3005992,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_002DDE28"
+    },
+    {
+      "address": 3651984,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_0037B990"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "30_insomniac_museum",
-  "module": "src/levels/smalldata/30_insomniac_museum-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/30_insomniac_museum-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/30_insomniac_museum",
   "reference_sha256": "b638bb36997a9b3e8041738f45b0c624c01fe4ad9ae601ff50e305916ff3040c",
   "schema": 1,

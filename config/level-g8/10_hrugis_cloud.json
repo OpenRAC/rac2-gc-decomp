@@ -99,7 +99,11 @@
     "LVL_10_HRUGIS_CLOUD_Fff971bf89acc2217_AT00392620_ROLE00": 1780872,
     "LVL_10_HRUGIS_CLOUD_Fff971bf89acc2217_AT00392620_ROLE01": 1755136,
     "LVL_10_HRUGIS_CLOUD_Fff971bf89acc2217_AT00392680_ROLE00": 1780872,
-    "LVL_10_HRUGIS_CLOUD_Fff971bf89acc2217_AT00392680_ROLE01": 1755184
+    "LVL_10_HRUGIS_CLOUD_Fff971bf89acc2217_AT00392680_ROLE01": 1755184,
+    "LVL_10_HRUGIS_CLOUD_QWEN_538934d89776_AT002F1D10_ROLE000": 1738972,
+    "LVL_10_HRUGIS_CLOUD_QWEN_538934d89776_AT002F1D10_ROLE001": 1735600,
+    "LVL_10_HRUGIS_CLOUD_QWEN_538934d89776_AT002F1D10_ROLE002": 3086560,
+    "LVL_10_HRUGIS_CLOUD_QWEN_538934d89776_AT002F1D10_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -382,12 +386,18 @@
       "meaning": "Return the measured GP 32-bit float through FPR0. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_10_HRUGIS_CLOUD_FUN_00395538"
+    },
+    {
+      "address": 3087632,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F1D10"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "10_hrugis_cloud",
-  "module": "src/levels/smalldata/10_hrugis_cloud-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/10_hrugis_cloud-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/10_hrugis_cloud",
   "reference_sha256": "287e8f233f0b60cf4ccb3f0ff4dc043b907cabb7b3eff8c2229ca79cc1d19b48",
   "schema": 1,

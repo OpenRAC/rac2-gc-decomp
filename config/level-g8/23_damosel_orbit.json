@@ -108,7 +108,13 @@
     "LVL_23_DAMOSEL_ORBIT_Fe44fc83bd69b4f14_AT003332B0_ROLE00": 1745776,
     "LVL_23_DAMOSEL_ORBIT_Fe6fa55215bad26dd_AT003332E8_ROLE00": 1745780,
     "LVL_23_DAMOSEL_ORBIT_Fef45f15dfb57feb2_AT003060B8_ROLE00": 1741676,
-    "LVL_23_DAMOSEL_ORBIT_Ff0259c87ab6a3193_AT002FD550_ROLE00": 1740212
+    "LVL_23_DAMOSEL_ORBIT_Ff0259c87ab6a3193_AT002FD550_ROLE00": 1740212,
+    "LVL_23_DAMOSEL_ORBIT_QWEN_339fe89f21bc_AT00383200_ROLE000": 3112640,
+    "LVL_23_DAMOSEL_ORBIT_QWEN_339fe89f21bc_AT00383200_ROLE001": 1759136,
+    "LVL_23_DAMOSEL_ORBIT_QWEN_538934d89776_AT002E19A8_ROLE000": 1738972,
+    "LVL_23_DAMOSEL_ORBIT_QWEN_538934d89776_AT002E19A8_ROLE001": 1735600,
+    "LVL_23_DAMOSEL_ORBIT_QWEN_538934d89776_AT002E19A8_ROLE002": 3020152,
+    "LVL_23_DAMOSEL_ORBIT_QWEN_538934d89776_AT002E19A8_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -427,12 +433,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00442850"
+    },
+    {
+      "address": 3021224,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_002E19A8"
+    },
+    {
+      "address": 3682816,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00383200"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "23_damosel_orbit",
-  "module": "src/levels/smalldata/23_damosel_orbit-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/23_damosel_orbit-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/23_damosel_orbit",
   "reference_sha256": "0c75617382013a703eb5fcc85845f4d1352f496bfbb4047f512454aa730d37b4",
   "schema": 1,

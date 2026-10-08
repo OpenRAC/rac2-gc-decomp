@@ -2709,3 +2709,507 @@ void LVL_19_GRELBIN_FUN_003878C0(void)
     for (i = 7; i >= 0; --i)
         LVL_19_GRELBIN_F03c444112283bc5f_AT003878C0_ROLE00[i + 128] = 0;
 }
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_19_GRELBIN_FUN_002A8960(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_19_GRELBIN_FUN_002D1A30(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_19_GRELBIN_FUN_002D9E78(void) {
+    return 1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_19_GRELBIN_FUN_002D9E80(void) {
+    return 1;
+}
+
+
+extern void LVL_19_GRELBIN_QWEN_11a4c157d102_AT002F19B8_ROLE000(unsigned char *);
+
+void LVL_19_GRELBIN_FUN_002F19B8(void *owner)
+{
+    LVL_19_GRELBIN_QWEN_11a4c157d102_AT002F19B8_ROLE000(owner);
+}
+
+
+
+void LVL_19_GRELBIN_QWEN_407ee6f17a73_AT002F1A58_ROLE001(int);
+void LVL_19_GRELBIN_QWEN_407ee6f17a73_AT002F1A58_ROLE000(void*);
+
+void LVL_19_GRELBIN_FUN_002F1A58(void *param)
+{
+  LVL_19_GRELBIN_QWEN_407ee6f17a73_AT002F1A58_ROLE001((int)param);
+  *(unsigned int *)param = 0;
+  LVL_19_GRELBIN_QWEN_407ee6f17a73_AT002F1A58_ROLE000(param);
+}
+
+
+void LVL_19_GRELBIN_QWEN_5696fcf76f0c_AT0030F740_ROLE000(unsigned int *dst, unsigned int val, int size);
+
+void LVL_19_GRELBIN_FUN_0030F740(void)
+{
+    LVL_19_GRELBIN_QWEN_5696fcf76f0c_AT0030F740_ROLE000((unsigned int *)0x70003A00, 0x40000000, 0x3C0);
+}
+
+
+unsigned int LVL_19_GRELBIN_FUN_003295E0(unsigned int param_1)
+{
+    unsigned int inner_ptr;
+    unsigned int result;
+
+    inner_ptr = *(unsigned int *)(param_1 + 0x68);
+    result = *(unsigned int *)(inner_ptr + 0x18);
+    return result;
+}
+
+
+/*
+ * Disassembled at 0x002cd220
+ * Signature: int FUN_002cd220(void)
+ * Behavior:
+ *   - Saves RA on stack
+ *   - Calls FUN_0027C540(0)
+ *   - Calls FUN_0029C138()
+ *   - Calls FUN_0027C660()
+ *   - Restores RA from stack
+ *   - Returns 0
+ */
+extern void LVL_19_GRELBIN_QWEN_523e38f49b74_AT003446B0_ROLE000(long);
+extern void LVL_19_GRELBIN_QWEN_523e38f49b74_AT003446B0_ROLE002(void);
+extern void LVL_19_GRELBIN_QWEN_523e38f49b74_AT003446B0_ROLE001(void);
+
+int LVL_19_GRELBIN_FUN_003446B0(void)
+{
+  LVL_19_GRELBIN_QWEN_523e38f49b74_AT003446B0_ROLE000(0);
+  LVL_19_GRELBIN_QWEN_523e38f49b74_AT003446B0_ROLE002();
+  LVL_19_GRELBIN_QWEN_523e38f49b74_AT003446B0_ROLE001();
+  return 0;
+}
+
+
+unsigned long long LVL_19_GRELBIN_FUN_00344AB0(void);
+
+extern void LVL_19_GRELBIN_QWEN_f47929f95774_AT00344AB0_ROLE000(long);
+extern void LVL_19_GRELBIN_QWEN_f47929f95774_AT00344AB0_ROLE002(void);
+extern void LVL_19_GRELBIN_QWEN_f47929f95774_AT00344AB0_ROLE001(void);
+
+unsigned long long LVL_19_GRELBIN_FUN_00344AB0(void)
+{
+  LVL_19_GRELBIN_QWEN_f47929f95774_AT00344AB0_ROLE000(0);
+  LVL_19_GRELBIN_QWEN_f47929f95774_AT00344AB0_ROLE002();
+  LVL_19_GRELBIN_QWEN_f47929f95774_AT00344AB0_ROLE001();
+  return 0;
+}
+
+
+/* Function at 0x002cd8c0: FUN_002CD8C0
+ * 
+ * Disassembly summary:
+ * - 12 instructions, 48 bytes total
+ * - Prologue: save ra, allocate 16-byte stack frame
+ * - Three calls to external functions:
+ *   1. FUN_0027C540(0)
+ *   2. FUN_0029C450()
+ *   3. FUN_0027C660()
+ * - Epilogue: restore ra, return 0, deallocate stack
+ * - No local variables used
+ * - Return type is void-like; returns zero in v0
+ * - Delay slots are_NOP/unused in this case
+ */
+
+/* External function declarations (exact addresses from task metadata) */
+extern void LVL_19_GRELBIN_QWEN_cb305b1f1210_AT00344D50_ROLE000(long);
+extern void LVL_19_GRELBIN_QWEN_cb305b1f1210_AT00344D50_ROLE002(void);
+extern void LVL_19_GRELBIN_QWEN_cb305b1f1210_AT00344D50_ROLE001(void);
+
+long long LVL_19_GRELBIN_FUN_00344D50(void)
+{
+    LVL_19_GRELBIN_QWEN_cb305b1f1210_AT00344D50_ROLE000(0LL);
+    LVL_19_GRELBIN_QWEN_cb305b1f1210_AT00344D50_ROLE002();
+    LVL_19_GRELBIN_QWEN_cb305b1f1210_AT00344D50_ROLE001();
+    return 0LL;
+}
+
+
+extern void LVL_19_GRELBIN_QWEN_c23b3406f982_AT0034A148_ROLE000(long);
+extern void LVL_19_GRELBIN_QWEN_c23b3406f982_AT0034A148_ROLE002(void);
+extern void LVL_19_GRELBIN_QWEN_c23b3406f982_AT0034A148_ROLE001(void);
+
+int LVL_19_GRELBIN_FUN_0034A148(void)
+{
+    LVL_19_GRELBIN_QWEN_c23b3406f982_AT0034A148_ROLE000(0);
+    LVL_19_GRELBIN_QWEN_c23b3406f982_AT0034A148_ROLE002();
+    LVL_19_GRELBIN_QWEN_c23b3406f982_AT0034A148_ROLE001();
+    return 0;
+}
+
+
+void LVL_19_GRELBIN_QWEN_68cf9ebb5ee2_AT0034A2B8_ROLE000(long);
+void LVL_19_GRELBIN_QWEN_68cf9ebb5ee2_AT0034A2B8_ROLE001(void);
+void LVL_19_GRELBIN_QWEN_68cf9ebb5ee2_AT0034A2B8_ROLE002(void);
+
+unsigned long long LVL_19_GRELBIN_FUN_0034A2B8(void)
+{
+    LVL_19_GRELBIN_QWEN_68cf9ebb5ee2_AT0034A2B8_ROLE000(0);
+    LVL_19_GRELBIN_QWEN_68cf9ebb5ee2_AT0034A2B8_ROLE002();
+    LVL_19_GRELBIN_QWEN_68cf9ebb5ee2_AT0034A2B8_ROLE001();
+    return 0;
+}
+
+
+
+/* 
+ * Function: FUN_002D2EE0
+ * 
+ * Disassembly summary:
+ * - Saves return address on stack
+ * - Calls FUN_0027C540(0) (with zero argument)
+ * - Calls FUN_0029C7A0()
+ * - Calls FUN_0027C660()
+ * - Restores return address
+ * - Returns 0
+ *
+ * Notes:
+ * - The function follows standard MIPS ABI prologue/epilogue.
+ * - Delay slots are filled with NOP or argument setup as seen in disassembly.
+ * - No local variables used.
+ * - All external function addresses come from the assigned externals list.
+ */
+
+extern void LVL_19_GRELBIN_QWEN_68f040eb20c9_AT0034A370_ROLE000(long arg0);
+extern void LVL_19_GRELBIN_QWEN_68f040eb20c9_AT0034A370_ROLE002(void);
+extern void LVL_19_GRELBIN_QWEN_68f040eb20c9_AT0034A370_ROLE001(void);
+
+unsigned long long LVL_19_GRELBIN_FUN_0034A370(void)
+{
+    LVL_19_GRELBIN_QWEN_68f040eb20c9_AT0034A370_ROLE000(0);
+    LVL_19_GRELBIN_QWEN_68f040eb20c9_AT0034A370_ROLE002();
+    LVL_19_GRELBIN_QWEN_68f040eb20c9_AT0034A370_ROLE001();
+    return 0;
+}
+
+
+/* External function declarations as per target specification */
+extern void LVL_19_GRELBIN_QWEN_92ea7c2f4a5c_AT0034A720_ROLE000(long);
+extern void LVL_19_GRELBIN_QWEN_92ea7c2f4a5c_AT0034A720_ROLE001(void);
+extern void LVL_19_GRELBIN_QWEN_92ea7c2f4a5c_AT0034A720_ROLE002(void);
+
+/* Implementation matching decompiled output */
+long LVL_19_GRELBIN_FUN_0034A720(void)
+{
+  LVL_19_GRELBIN_QWEN_92ea7c2f4a5c_AT0034A720_ROLE000(0);
+  LVL_19_GRELBIN_QWEN_92ea7c2f4a5c_AT0034A720_ROLE002();
+  LVL_19_GRELBIN_QWEN_92ea7c2f4a5c_AT0034A720_ROLE001();
+  return 0;
+}
+
+
+/* External functions declared with exact aliases from task.externals */
+extern void LVL_19_GRELBIN_QWEN_d01c568afacc_AT0034A820_ROLE000(long param_1);
+extern void LVL_19_GRELBIN_QWEN_d01c568afacc_AT0034A820_ROLE001(void);
+extern void LVL_19_GRELBIN_QWEN_d01c568afacc_AT0034A820_ROLE002(void);
+
+/* Candidate function: FUN_002d3390 */
+unsigned long long LVL_19_GRELBIN_FUN_0034A820(void)
+{
+    LVL_19_GRELBIN_QWEN_d01c568afacc_AT0034A820_ROLE000(0);
+    LVL_19_GRELBIN_QWEN_d01c568afacc_AT0034A820_ROLE002();
+    LVL_19_GRELBIN_QWEN_d01c568afacc_AT0034A820_ROLE001();
+    return 0;
+}
+
+
+/* Target: FUN_002d5540 on MIPS (SCUS_972.68, -O2 -G0 -ffunction-sections)
+ * Calls three externals: FUN_0027C540(int), FUN_0029CED8(void), FUN_0027C660(void)
+ * Returns 0. Stack frame size 16 bytes. Delay slots filled.
+ */
+extern void LVL_19_GRELBIN_QWEN_093381cf82c3_AT0034C9D0_ROLE000(long);
+extern void LVL_19_GRELBIN_QWEN_093381cf82c3_AT0034C9D0_ROLE002(void);
+extern void LVL_19_GRELBIN_QWEN_093381cf82c3_AT0034C9D0_ROLE001(void);
+
+long long LVL_19_GRELBIN_FUN_0034C9D0(void)
+{
+    LVL_19_GRELBIN_QWEN_093381cf82c3_AT0034C9D0_ROLE000(0);
+    LVL_19_GRELBIN_QWEN_093381cf82c3_AT0034C9D0_ROLE002();
+    LVL_19_GRELBIN_QWEN_093381cf82c3_AT0034C9D0_ROLE001();
+    return 0;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_19_GRELBIN_FUN_00356698(void) {
+    return 1;
+}
+
+
+/* Measured partial C views; original types and object ownership are unknown. */
+typedef unsigned char QwenRecovery_4ecc6b5a4034_u8;
+typedef unsigned int QwenRecovery_4ecc6b5a4034_u32;
+
+/* Minimum external views; neither declaration allocates original game storage. */
+typedef struct {
+    QwenRecovery_4ecc6b5a4034_u8 prefix[0x24];
+    QwenRecovery_4ecc6b5a4034_u32 word;
+    QwenRecovery_4ecc6b5a4034_u8 tail[8];
+} QwenRecovery_4ecc6b5a4034_ExtraResetRecord164;
+
+
+
+extern QwenRecovery_4ecc6b5a4034_ExtraResetRecord164 LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE000[100];
+extern QwenRecovery_4ecc6b5a4034_u32 LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE001[139];
+
+void LVL_19_GRELBIN_FUN_00384E48(void)
+{
+    int i;
+    for (i = 99; i >= 0; --i)
+        LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE000[i].word = 0;
+    LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE001[138] = 5;
+    LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE001[137] = 0;
+    LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE001[136] = 0;
+    for (i = 0; i < 64; ++i) {
+        LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE001[i] = 0;
+        LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE001[i + 64] = 0;
+    }
+    for (i = 7; i >= 0; --i)
+        LVL_19_GRELBIN_QWEN_4ecc6b5a4034_AT00384E48_ROLE001[i + 128] = 0;
+}
+
+
+
+void LVL_19_GRELBIN_FUN_003DD6E0(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0xb8) = param_2;
+  return;
+}
+
+
+void LVL_19_GRELBIN_FUN_0043D700(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+void LVL_19_GRELBIN_FUN_0043D708(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_19_GRELBIN_FUN_0043D860(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0x40) = param_2;
+  return;
+}
+
+
+void LVL_19_GRELBIN_FUN_0043D9B0(int param_1, unsigned int param_2)
+{
+  *(unsigned int*)(param_1 + 0x44) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_19_GRELBIN_FUN_0043DA80(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern void LVL_19_GRELBIN_QWEN_df8fc8ba49cf_AT00440448_ROLE000(unsigned char *owner, int value);
+
+void LVL_19_GRELBIN_FUN_00440448(unsigned char *owner, int value)
+{
+    LVL_19_GRELBIN_QWEN_df8fc8ba49cf_AT00440448_ROLE000(owner + 8, value);
+}
+
+
+
+void* LVL_19_GRELBIN_FUN_00444E48(void* param_1);
+
+extern void LVL_19_GRELBIN_QWEN_f353c206e726_AT00444E48_ROLE000(int);
+extern unsigned long long LVL_19_GRELBIN_QWEN_f353c206e726_AT00444E48_ROLE001(unsigned long long);
+
+void* LVL_19_GRELBIN_FUN_00444E48(void* param_1)
+{
+  LVL_19_GRELBIN_QWEN_f353c206e726_AT00444E48_ROLE000((int)param_1 + 8);
+  LVL_19_GRELBIN_QWEN_f353c206e726_AT00444E48_ROLE001((int)param_1 + 0x2b0);
+  return param_1;
+}
+
+
+extern int LVL_19_GRELBIN_QWEN_f2f9288a4e34_AT00444FE8_ROLE000(int);
+
+int LVL_19_GRELBIN_FUN_00444FE8(int owner)
+{
+    int result;
+    result = LVL_19_GRELBIN_QWEN_f2f9288a4e34_AT00444FE8_ROLE000(owner);
+    return *(int *)(owner + 0x378) + result * 0x14;
+}
+
+
+
+extern int LVL_19_GRELBIN_QWEN_e41cd63258f5_AT00445020_ROLE000(unsigned char *);
+
+int LVL_19_GRELBIN_FUN_00445020(int owner)
+{
+    return LVL_19_GRELBIN_QWEN_e41cd63258f5_AT00445020_ROLE000((unsigned char *)(owner + 0x2b0));
+}
+
+
+
+void LVL_19_GRELBIN_QWEN_f29f80950ce7_AT00448740_ROLE000(int);
+
+void LVL_19_GRELBIN_FUN_00448740(int param_1)
+{
+  LVL_19_GRELBIN_QWEN_f29f80950ce7_AT00448740_ROLE000(param_1 + 0x228);
+  return;
+}
+
+
+extern void LVL_19_GRELBIN_QWEN_bf824305b9f7_AT00449058_ROLE000(unsigned char *owner, float *records);
+
+void LVL_19_GRELBIN_FUN_00449058(unsigned char *owner, float *records)
+{
+    *(float **)(owner + 0x250) = records;
+    LVL_19_GRELBIN_QWEN_bf824305b9f7_AT00449058_ROLE000(owner + 0x188, records);
+}
+
+
+
+void LVL_19_GRELBIN_QWEN_61faeca45963_AT00449320_ROLE000(int param_1);
+
+void LVL_19_GRELBIN_FUN_00449320(int param_1)
+{
+  LVL_19_GRELBIN_QWEN_61faeca45963_AT00449320_ROLE000(param_1 + 0x188);
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_19_GRELBIN_FUN_00449488(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+extern int LVL_19_GRELBIN_QWEN_6add11b33414_AT0044A238_ROLE000(unsigned char *owner);
+
+int LVL_19_GRELBIN_FUN_0044A238(unsigned char *owner)
+{
+    return LVL_19_GRELBIN_QWEN_6add11b33414_AT0044A238_ROLE000(owner + 0x298);
+}
+
+
+
+extern void LVL_19_GRELBIN_QWEN_de961518de48_AT0044A258_ROLE000(unsigned char *owner);
+
+void LVL_19_GRELBIN_FUN_0044A258(unsigned char *owner)
+{
+    LVL_19_GRELBIN_QWEN_de961518de48_AT0044A258_ROLE000(owner + 0x298);
+}
+
+
+
+extern unsigned long long LVL_19_GRELBIN_QWEN_7ba3cdeeb16b_AT0044EB78_ROLE000(unsigned long long);
+
+unsigned long long LVL_19_GRELBIN_FUN_0044EB78(unsigned long long value)
+{
+    LVL_19_GRELBIN_QWEN_7ba3cdeeb16b_AT0044EB78_ROLE000(value);
+    return value;
+}
+
+
+
+void LVL_19_GRELBIN_FUN_0044EDC0(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 0xb8) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_19_GRELBIN_FUN_0044FE20(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+void LVL_19_GRELBIN_FUN_00450160(int *param_1)
+{
+    param_1[0x150 / sizeof(int)] = 0;
+}
+
+
+void LVL_19_GRELBIN_FUN_00450300(int param_1, int param_2) {
+    *(int *)(param_1 + 0x84) = param_2;
+}
+
+
+void LVL_19_GRELBIN_FUN_00450348(int param_1, unsigned int param_2)
+{
+  *(unsigned int *)(param_1 + 32) = param_2;
+  return;
+}
+
+
+/* Target: FUN_003427B0 — identity function returning its first argument */
+/* Disassembly: jr ra; move v0,a0 (MIPS delay slot) */
+/* Compiled with: -O2 -G0 -ffunction-sections */
+
+unsigned long LVL_19_GRELBIN_FUN_004552A0(unsigned long param_1)
+{
+  return param_1;
+}
+
+
+/* Returns the constant integer 1. Matches FUN_0012F940 disassembly and decompilation. */
+int LVL_19_GRELBIN_FUN_00457390(void) {
+    return 1;
+}
+
+
+extern int LVL_19_GRELBIN_QWEN_cc83cb329fcb_AT00458BD0_ROLE000(unsigned char *);
+
+int LVL_19_GRELBIN_FUN_00458BD0(int *owner)
+{
+    int result;
+    long status;
+    status = LVL_19_GRELBIN_QWEN_cc83cb329fcb_AT00458BD0_ROLE000((unsigned char *)owner);
+    if (status == 0)
+        result = *owner + owner[2] * 0xd0000;
+    else
+        result = 0;
+    return result;
+}
+

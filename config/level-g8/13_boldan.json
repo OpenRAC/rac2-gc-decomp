@@ -108,7 +108,13 @@
     "LVL_13_BOLDAN_Fe44fc83bd69b4f14_AT00333D28_ROLE00": 1745776,
     "LVL_13_BOLDAN_Fe6fa55215bad26dd_AT00333D60_ROLE00": 1745780,
     "LVL_13_BOLDAN_Fef45f15dfb57feb2_AT00306658_ROLE00": 1741676,
-    "LVL_13_BOLDAN_Ff0259c87ab6a3193_AT002FDAF0_ROLE00": 1740212
+    "LVL_13_BOLDAN_Ff0259c87ab6a3193_AT002FDAF0_ROLE00": 1740212,
+    "LVL_13_BOLDAN_QWEN_339fe89f21bc_AT00384CC8_ROLE000": 3114144,
+    "LVL_13_BOLDAN_QWEN_339fe89f21bc_AT00384CC8_ROLE001": 1759136,
+    "LVL_13_BOLDAN_QWEN_538934d89776_AT002E1A60_ROLE000": 1738972,
+    "LVL_13_BOLDAN_QWEN_538934d89776_AT002E1A60_ROLE001": 1735600,
+    "LVL_13_BOLDAN_QWEN_538934d89776_AT002E1A60_ROLE002": 3020336,
+    "LVL_13_BOLDAN_QWEN_538934d89776_AT002E1A60_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -427,12 +433,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_13_BOLDAN_FUN_00440910"
+    },
+    {
+      "address": 3021408,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_13_BOLDAN_FUN_002E1A60"
+    },
+    {
+      "address": 3689672,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_13_BOLDAN_FUN_00384CC8"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "13_boldan",
-  "module": "src/levels/smalldata/13_boldan-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/13_boldan-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/13_boldan",
   "reference_sha256": "d093f5f5922a2da0628e552a01d3b32ca5d30c23ef844b8716732343fe6c8b60",
   "schema": 1,

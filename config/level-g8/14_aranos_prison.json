@@ -108,7 +108,13 @@
     "LVL_14_ARANOS_PRISON_Fe44fc83bd69b4f14_AT003341C0_ROLE00": 1745776,
     "LVL_14_ARANOS_PRISON_Fe6fa55215bad26dd_AT003341F8_ROLE00": 1745780,
     "LVL_14_ARANOS_PRISON_Fef45f15dfb57feb2_AT00303B90_ROLE00": 1741676,
-    "LVL_14_ARANOS_PRISON_Ff0259c87ab6a3193_AT002FB028_ROLE00": 1740212
+    "LVL_14_ARANOS_PRISON_Ff0259c87ab6a3193_AT002FB028_ROLE00": 1740212,
+    "LVL_14_ARANOS_PRISON_QWEN_339fe89f21bc_AT00385B18_ROLE000": 3103080,
+    "LVL_14_ARANOS_PRISON_QWEN_339fe89f21bc_AT00385B18_ROLE001": 1759136,
+    "LVL_14_ARANOS_PRISON_QWEN_538934d89776_AT002DE8D8_ROLE000": 1738972,
+    "LVL_14_ARANOS_PRISON_QWEN_538934d89776_AT002DE8D8_ROLE001": 1735600,
+    "LVL_14_ARANOS_PRISON_QWEN_538934d89776_AT002DE8D8_ROLE002": 3007656,
+    "LVL_14_ARANOS_PRISON_QWEN_538934d89776_AT002DE8D8_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -427,12 +433,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_14_ARANOS_PRISON_FUN_0044AB08"
+    },
+    {
+      "address": 3008728,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_002DE8D8"
+    },
+    {
+      "address": 3693336,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_14_ARANOS_PRISON_FUN_00385B18"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "14_aranos_prison",
-  "module": "src/levels/smalldata/14_aranos_prison-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/14_aranos_prison-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/14_aranos_prison",
   "reference_sha256": "9e04a2a32b12a2ff31b3370ac506e96804816e3b0e918843b209797a929a40d3",
   "schema": 1,

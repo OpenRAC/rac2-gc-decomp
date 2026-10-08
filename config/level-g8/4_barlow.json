@@ -108,7 +108,13 @@
     "LVL_4_BARLOW_Fe44fc83bd69b4f14_AT0034E118_ROLE00": 1745776,
     "LVL_4_BARLOW_Fe6fa55215bad26dd_AT0034E150_ROLE00": 1745780,
     "LVL_4_BARLOW_Fef45f15dfb57feb2_AT0031CD50_ROLE00": 1741676,
-    "LVL_4_BARLOW_Ff0259c87ab6a3193_AT003141E8_ROLE00": 1740212
+    "LVL_4_BARLOW_Ff0259c87ab6a3193_AT003141E8_ROLE00": 1740212,
+    "LVL_4_BARLOW_QWEN_339fe89f21bc_AT0039EE00_ROLE000": 3205832,
+    "LVL_4_BARLOW_QWEN_339fe89f21bc_AT0039EE00_ROLE001": 1759136,
+    "LVL_4_BARLOW_QWEN_538934d89776_AT002F77C8_ROLE000": 1738972,
+    "LVL_4_BARLOW_QWEN_538934d89776_AT002F77C8_ROLE001": 1735600,
+    "LVL_4_BARLOW_QWEN_538934d89776_AT002F77C8_ROLE002": 3109784,
+    "LVL_4_BARLOW_QWEN_538934d89776_AT002F77C8_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -427,12 +433,24 @@
       "meaning": "Return the measured signed four-byte GP cell. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_4_BARLOW_FUN_0046FEE8"
+    },
+    {
+      "address": 3110856,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_4_BARLOW_FUN_002F77C8"
+    },
+    {
+      "address": 3796480,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_4_BARLOW_FUN_0039EE00"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "4_barlow",
-  "module": "src/levels/smalldata/4_barlow-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/4_barlow-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/4_barlow",
   "reference_sha256": "fdb2c733e5c52e9e30f72cef2656d6c6c5cc5fc3d9198600e224b94b7d786eb8",
   "schema": 1,

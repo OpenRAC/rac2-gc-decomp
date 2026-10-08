@@ -101,7 +101,13 @@
     "LVL_3_ENDAKO_Fff971bf89acc2217_AT0037CCC0_ROLE00": 1782152,
     "LVL_3_ENDAKO_Fff971bf89acc2217_AT0037CCC0_ROLE01": 1754944,
     "LVL_3_ENDAKO_Fff971bf89acc2217_AT0037CD20_ROLE00": 1782152,
-    "LVL_3_ENDAKO_Fff971bf89acc2217_AT0037CD20_ROLE01": 1754992
+    "LVL_3_ENDAKO_Fff971bf89acc2217_AT0037CD20_ROLE01": 1754992,
+    "LVL_3_ENDAKO_QWEN_339fe89f21bc_AT0037C8D8_ROLE000": 3075296,
+    "LVL_3_ENDAKO_QWEN_339fe89f21bc_AT0037C8D8_ROLE001": 1759200,
+    "LVL_3_ENDAKO_QWEN_538934d89776_AT002D7AB0_ROLE000": 1738972,
+    "LVL_3_ENDAKO_QWEN_538934d89776_AT002D7AB0_ROLE001": 1735600,
+    "LVL_3_ENDAKO_QWEN_538934d89776_AT002D7AB0_ROLE002": 2979456,
+    "LVL_3_ENDAKO_QWEN_538934d89776_AT002D7AB0_ROLE003": 1278336
   },
   "flags": [
     "-O2",
@@ -384,12 +390,24 @@
       "meaning": "Return the measured GP 32-bit float through FPR0. The original game role is unknown.",
       "size": 8,
       "symbol": "LVL_3_ENDAKO_FUN_0037FBD8"
+    },
+    {
+      "address": 2980528,
+      "meaning": "Collect two output words, conditionally update the accumulator and wrap byte, and store the second word low byte.",
+      "size": 132,
+      "symbol": "LVL_3_ENDAKO_FUN_002D7AB0"
+    },
+    {
+      "address": 3655896,
+      "meaning": "Call the measured delay helper while the backed signed flag word intersects the supplied 64-bit mask.",
+      "size": 76,
+      "symbol": "LVL_3_ENDAKO_FUN_0037C8D8"
     }
   ],
   "gp": 1765360,
   "kind": "level-smalldata-catalog",
   "level": "3_endako",
-  "module": "src/levels/smalldata/3_endako-parent-batch3.cfrag",
+  "module": "src/levels/smalldata/3_endako-qwen-recovery-ae36934fec6c.cfrag",
   "program": "levels/3_endako",
   "reference_sha256": "7b2caf2987c29ef7bc86c35bb2991cf0127170bd726ddbb74a7c5506b386d6d3",
   "schema": 1,
