@@ -1111,6 +1111,70 @@ Reopen condition: Independently pinned entry GP and call-preservation evidence f
 - `docs:docs/LOCAL-GP-PROOF.md`
 - `private-work:gp-proof-pilot-20261006/root-family-proof-v2/receipt.json`
 
+## c4130-new-20261007-fun_001302e0-01fd49
+
+State: `done`. Kind: `research`.
+
+Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration.
+
+- `private-work:c4130-new-functions-20261007/selected-functions.json`
+
+## c4130-new-20261007-fun_001302e0-01fd49-a01
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify this complete symbol; a private exact match needs source authoring and full-image integration before credit.
+
+Reopen condition: Only measured new ABI or source-shape evidence; preserve every refusal.
+
+- `private-work:c4130-new-functions-20261007/selected-functions.json`
+
+## c4130-new-20261007-fun_001302e0-873b37
+
+State: `done`. Kind: `research`.
+
+Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration.
+
+- `private-work:c4130-new-functions-20261007/selected-functions.json`
+
+## c4130-new-20261007-fun_001302e0-873b37-a01
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify this complete symbol; a private exact match needs source authoring and full-image integration before credit.
+
+Reopen condition: Only measured new ABI or source-shape evidence; preserve every refusal.
+
+- `private-work:c4130-new-functions-20261007/selected-functions.json`
+
+## c4130-new-20261007-fun_001302e0-873b37-a02
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify this complete symbol; a private exact match needs source authoring and full-image integration before credit.
+
+Reopen condition: Only measured new ABI or source-shape evidence; preserve every refusal.
+
+- `private-work:c4130-new-functions-20261007/selected-functions.json`
+
+## c4130-new-20261007-fun_00131760-23174f
+
+State: `done`. Kind: `research`.
+
+Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration.
+
+- `private-work:c4130-new-functions-20261007/selected-functions.json`
+
+## c4130-new-20261007-fun_00131760-23174f-a01
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify this complete symbol; a private exact match needs source authoring and full-image integration before credit.
+
+Reopen condition: Only measured new ABI or source-shape evidence; preserve every refusal.
+
+- `private-work:c4130-new-functions-20261007/selected-functions.json`
+
 ## camera-activation-state112-aranos-source-binding-v2-20261006
 
 State: `stopped`. Kind: `candidate`.

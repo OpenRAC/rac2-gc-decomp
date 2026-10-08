@@ -4808,7 +4808,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 7172,
+  "revision": 7194,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -9035,6 +9035,313 @@
           "reason": "Completed bounded intrafunction GP verifier and 28-body exact reconstruction pilot. Unsafe joins remain unknown and the sole locally resolved memory target is MMIO. No GP16 normalization or matching C credit. Full image gates and provenance replay pass.",
           "reopen_condition": "",
           "to": "done"
+        }
+      ]
+    },
+    "c4130-new-20261007-fun_001302e0-01fd49": {
+      "abi": {
+        "evidence": "Pinned instruction dataflow and direct callers; default Ghidra signature ignored."
+      },
+      "address": 1245920,
+      "amendments": [
+        {
+          "at": "2026-10-08T02:29:21.568121+00:00",
+          "before": {
+            "context": null,
+            "next_action": "At most three proposals with independent semantic checks and canonical exact trials; no integration credit."
+          },
+          "changes": {
+            "context": {
+              "evidence": "private-work:c4130-new-run-20261007-03/c4130-new-run-20261007-03-fun_001302e0/state.json",
+              "new_integrated_bytes": 0,
+              "pilot_state": "stopped_repeated_candidate",
+              "private_matches": 0,
+              "proposals": 3
+            },
+            "next_action": "Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration."
+          },
+          "reason": "Measured bounded pilot results; no integration claim"
+        }
+      ],
+      "context": {
+        "evidence": "private-work:c4130-new-run-20261007-03/c4130-new-run-20261007-03-fun_001302e0/state.json",
+        "new_integrated_bytes": 0,
+        "pilot_state": "stopped_repeated_candidate",
+        "private_matches": 0,
+        "proposals": 3
+      },
+      "created": "2026-10-08T02:28:43.561672+00:00",
+      "hypothesis": "Bounded C4130-generated C test on a complete uncovered retail boot function",
+      "id": "c4130-new-20261007-fun_001302e0-01fd49",
+      "kind": "research",
+      "next_action": "Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration.",
+      "pointers": [
+        "private-work:c4130-new-functions-20261007/selected-functions.json"
+      ],
+      "program": "boot",
+      "reopen_condition": "",
+      "size": 32,
+      "state": "done",
+      "symbols": [
+        "FUN_001302E0"
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-08T02:29:21.777394+00:00",
+          "from": "queued",
+          "reason": "Bounded research experiment complete; candidate states and strict integration requirements unchanged",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
+    "c4130-new-20261007-fun_001302e0-01fd49-a01": {
+      "budget": 1,
+      "created": "2026-10-08T02:29:18.368045+00:00",
+      "hypothesis": "Using explicit struct with named COMPONENT_REF fields instead of pointer casting/array indexing. The struct has 4-byte padding followed by four 32-bit fields at offsets 4, 8, 12, 16. This provides concrete memory layout that may produce different store scheduling than ARRAY_REF forms.",
+      "id": "c4130-new-20261007-fun_001302e0-01fd49-a01",
+      "kind": "candidate",
+      "last_trial": "bf56f7b247084cc78929460560e70a7b",
+      "next_action": "Qualify this complete symbol; a private exact match needs source authoring and full-image integration before credit.",
+      "pointers": [
+        "private-work:c4130-new-functions-20261007/selected-functions.json"
+      ],
+      "reopen_condition": "Only measured new ABI or source-shape evidence; preserve every refusal.",
+      "source": "runtime:bank/c4130-new-20261007-fun_001302e0-01fd49/attempt-01/candidate.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_001302E0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/c4130-new-20261007-fun_001302e0-01fd49/catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-08T02:29:21.256795+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "bf56f7b247084cc78929460560e70a7b"
+        }
+      ]
+    },
+    "c4130-new-20261007-fun_001302e0-873b37": {
+      "abi": {
+        "evidence": "Pinned instruction dataflow and direct callers; default Ghidra signature ignored."
+      },
+      "address": 1245920,
+      "amendments": [
+        {
+          "at": "2026-10-08T02:25:10.785398+00:00",
+          "before": {
+            "context": null,
+            "next_action": "At most three proposals with independent semantic checks and canonical exact trials; no integration credit."
+          },
+          "changes": {
+            "context": {
+              "evidence": "private-work:c4130-new-run-20261007-01/c4130-new-run-20261007-01-fun_001302e0/state.json",
+              "new_integrated_bytes": 0,
+              "pilot_state": "stopped_repeated_candidate",
+              "private_matches": 0,
+              "proposals": 2
+            },
+            "next_action": "Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration."
+          },
+          "reason": "Repair finalization CLI argument; preserve measured trials without replay"
+        }
+      ],
+      "context": {
+        "evidence": "private-work:c4130-new-run-20261007-01/c4130-new-run-20261007-01-fun_001302e0/state.json",
+        "new_integrated_bytes": 0,
+        "pilot_state": "stopped_repeated_candidate",
+        "private_matches": 0,
+        "proposals": 2
+      },
+      "created": "2026-10-08T02:23:13.308042+00:00",
+      "hypothesis": "Bounded C4130-generated C test on a complete uncovered retail boot function",
+      "id": "c4130-new-20261007-fun_001302e0-873b37",
+      "kind": "research",
+      "next_action": "Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration.",
+      "pointers": [
+        "private-work:c4130-new-functions-20261007/selected-functions.json"
+      ],
+      "program": "boot",
+      "reopen_condition": "",
+      "size": 32,
+      "state": "done",
+      "symbols": [
+        "FUN_001302E0"
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-08T02:25:10.974158+00:00",
+          "from": "queued",
+          "reason": "Bounded research experiment complete; repeated mismatching body retained, zero integration credit",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
+    "c4130-new-20261007-fun_001302e0-873b37-a01": {
+      "budget": 1,
+      "created": "2026-10-08T02:23:38.021393+00:00",
+      "hypothesis": "The function takes an object pointer and two signed 32-bit integers x and y. It performs arithmetic right shifts by 4 bits on x and y, storing the shifted results at offsets +12 and +16 from the object pointer, respectively. Then it stores the original x and y values at offsets +4 and +8. The store order observed in the delay slot and instruction stream is 12, 16, 4, 8. The function always returns 1. This matches the measured sra+sw sequence and preserves the exact register usage and ordering.",
+      "id": "c4130-new-20261007-fun_001302e0-873b37-a01",
+      "kind": "candidate",
+      "last_trial": "83861ca53ce44da2a078c06cf3d2fe20",
+      "next_action": "Qualify this complete symbol; a private exact match needs source authoring and full-image integration before credit.",
+      "pointers": [
+        "private-work:c4130-new-functions-20261007/selected-functions.json"
+      ],
+      "reopen_condition": "Only measured new ABI or source-shape evidence; preserve every refusal.",
+      "source": "runtime:bank/c4130-new-20261007-fun_001302e0-873b37/attempt-01/candidate.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_001302E0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/c4130-new-20261007-fun_001302e0-873b37/catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-08T02:23:41.332728+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "83861ca53ce44da2a078c06cf3d2fe20"
+        }
+      ]
+    },
+    "c4130-new-20261007-fun_001302e0-873b37-a02": {
+      "budget": 1,
+      "created": "2026-10-08T02:24:14.033668+00:00",
+      "hypothesis": "The function uses byte-level pointer arithmetic to force the exact store order measured (12, 16, 4, 8) and register usage. By casting to (char *) and computing offsets, we constrain the optimizer to generate individual store instructions in the order written. The arithmetic shifts (>>) are explicit on signed ints to ensure arithmetic right shift. The return value of 1 is returned last before the delay slot store.",
+      "id": "c4130-new-20261007-fun_001302e0-873b37-a02",
+      "kind": "candidate",
+      "last_trial": "c8dc707e9a24406eae6725ddd31c6fba",
+      "next_action": "Qualify this complete symbol; a private exact match needs source authoring and full-image integration before credit.",
+      "pointers": [
+        "private-work:c4130-new-functions-20261007/selected-functions.json"
+      ],
+      "reopen_condition": "Only measured new ABI or source-shape evidence; preserve every refusal.",
+      "source": "runtime:bank/c4130-new-20261007-fun_001302e0-873b37/attempt-02/candidate.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_001302E0"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/c4130-new-20261007-fun_001302e0-873b37/catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-08T02:24:17.320737+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "c8dc707e9a24406eae6725ddd31c6fba"
+        }
+      ]
+    },
+    "c4130-new-20261007-fun_00131760-23174f": {
+      "abi": {
+        "evidence": "Pinned instruction dataflow and direct callers; default Ghidra signature ignored."
+      },
+      "address": 1251168,
+      "amendments": [
+        {
+          "at": "2026-10-08T02:26:43.549957+00:00",
+          "before": {
+            "context": null,
+            "next_action": "At most three proposals with independent semantic checks and canonical exact trials; no integration credit."
+          },
+          "changes": {
+            "context": {
+              "evidence": "private-work:c4130-new-run-20261007-02/c4130-new-run-20261007-02-fun_00131760/state.json",
+              "new_integrated_bytes": 0,
+              "pilot_state": "stopped_repeated_candidate",
+              "private_matches": 0,
+              "proposals": 3
+            },
+            "next_action": "Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration."
+          },
+          "reason": "Measured bounded pilot results; no integration claim"
+        }
+      ],
+      "context": {
+        "evidence": "private-work:c4130-new-run-20261007-02/c4130-new-run-20261007-02-fun_00131760/state.json",
+        "new_integrated_bytes": 0,
+        "pilot_state": "stopped_repeated_candidate",
+        "private_matches": 0,
+        "proposals": 3
+      },
+      "created": "2026-10-08T02:25:14.615389+00:00",
+      "hypothesis": "Bounded C4130-generated C test on a complete uncovered retail boot function",
+      "id": "c4130-new-20261007-fun_00131760-23174f",
+      "kind": "research",
+      "next_action": "Bounded pilot complete. Preserve canonical candidate trials; private exact matches still need source authoring and full-image integration.",
+      "pointers": [
+        "private-work:c4130-new-functions-20261007/selected-functions.json"
+      ],
+      "program": "boot",
+      "reopen_condition": "",
+      "size": 32,
+      "state": "done",
+      "symbols": [
+        "FUN_00131760"
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-08T02:26:43.756953+00:00",
+          "from": "queued",
+          "reason": "Bounded research experiment complete; candidate states and strict integration requirements unchanged",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
+    "c4130-new-20261007-fun_00131760-23174f-a01": {
+      "budget": 1,
+      "created": "2026-10-08T02:25:43.345197+00:00",
+      "hypothesis": "The function extracts the low 8 bits of the input, computes (u - 6 * (u >> 4)) & 255, matching the measured ABI: input via a0 (low 8 bits used), output in v0 (low 8 bits), no memory side effects. The source shape follows the instruction order: mask input (andi), shift nibble (srl), multiply (mult/mflo), subtract (subu), mask output (andi).",
+      "id": "c4130-new-20261007-fun_00131760-23174f-a01",
+      "kind": "candidate",
+      "last_trial": "55885752738e454d8a64d737a0404544",
+      "next_action": "Qualify this complete symbol; a private exact match needs source authoring and full-image integration before credit.",
+      "pointers": [
+        "private-work:c4130-new-functions-20261007/selected-functions.json"
+      ],
+      "reopen_condition": "Only measured new ABI or source-shape evidence; preserve every refusal.",
+      "source": "runtime:bank/c4130-new-20261007-fun_00131760-23174f/attempt-01/candidate.c",
+      "state": "stopped",
+      "symbols": [
+        "FUN_00131760"
+      ],
+      "targets": [
+        {
+          "catalog": "runtime:bank/c4130-new-20261007-fun_00131760-23174f/catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-08T02:25:46.656786+00:00",
+          "from": "queued",
+          "reason": "mismatch",
+          "to": "stopped",
+          "trial": "55885752738e454d8a64d737a0404544"
         }
       ]
     },
@@ -148898,6 +149205,19 @@
       "state": "exact_private",
       "task": "parallel-boot-analysis-format396-8-v1"
     },
+    "55885752738e454d8a64d737a0404544": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/55885752738e454d8a64d737a0404544",
+      "finished": "2026-10-08T02:25:46.596727+00:00",
+      "id": "55885752738e454d8a64d737a0404544",
+      "manifest_sha256": "108b7084755e44d5d1098341b618c7e6ca382933544c3ae2eb02d3d108fc2c4c",
+      "measured_functions": 1,
+      "outcome_sha256": "4d3e5cb0d7bd54accc067892cbba0d46cd1b902a90b29eb2b815df2f6ebaf048",
+      "semantic_key": "47178e051c22a96f6a63b40fa7d77b732991a2f2484d8f057c1958319346ea47",
+      "started": "2026-10-08T02:25:46.067629+00:00",
+      "state": "mismatch",
+      "task": "c4130-new-20261007-fun_00131760-23174f-a01"
+    },
     "558fbc866cec4edc87debd5fda643a40": {
       "compile_attempted": true,
       "directory": "runtime:trials/558fbc866cec4edc87debd5fda643a40",
@@ -153359,6 +153679,19 @@
       "started": "2026-10-04T16:17:23.973237+00:00",
       "state": "exact_private",
       "task": "native-review-compact-family-10_hrugis_cloud-20261004"
+    },
+    "83861ca53ce44da2a078c06cf3d2fe20": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/83861ca53ce44da2a078c06cf3d2fe20",
+      "finished": "2026-10-08T02:23:41.275557+00:00",
+      "id": "83861ca53ce44da2a078c06cf3d2fe20",
+      "manifest_sha256": "7a4a5f4909cfae458aae26abc31e5417032c4a623095d9f2c8aadee31772bc19",
+      "measured_functions": 1,
+      "outcome_sha256": "2a8eab12c099b65efb2b3a67ad31b28120633e1eb0df8325adb0e3ae11a20d3b",
+      "semantic_key": "c999e35e4f4a1e094355ca3596f24d34b42fea1835d04a5ca6e1c771a7961677",
+      "started": "2026-10-08T02:23:40.767856+00:00",
+      "state": "mismatch",
+      "task": "c4130-new-20261007-fun_001302e0-873b37-a01"
     },
     "839bf9a95cb347acb326fc6f979b5347": {
       "compile_attempted": true,
@@ -159064,6 +159397,19 @@
       "state": "mismatch",
       "task": "parallel-boot-analysis-siberius-composite368-v1"
     },
+    "bf56f7b247084cc78929460560e70a7b": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/bf56f7b247084cc78929460560e70a7b",
+      "finished": "2026-10-08T02:29:21.199671+00:00",
+      "id": "bf56f7b247084cc78929460560e70a7b",
+      "manifest_sha256": "2ebd4f63b44c9f97a8d56e0f6bc0418abdb6b17e3a5c200ef334241658f51fce",
+      "measured_functions": 1,
+      "outcome_sha256": "ec049248ce8d7819ad542134f8d71bafa898d845b11767da3923616e4a23752a",
+      "semantic_key": "bc850ba3f8cdd94cfa42d159cd7530f602d144eb08dd1c1d2122aa2c65dedf64",
+      "started": "2026-10-08T02:29:20.731949+00:00",
+      "state": "mismatch",
+      "task": "c4130-new-20261007-fun_001302e0-01fd49-a01"
+    },
     "bf6ad21ecdf847fdb2823dbd94b5d99b": {
       "compile_attempted": true,
       "directory": "runtime:trials/bf6ad21ecdf847fdb2823dbd94b5d99b",
@@ -160042,6 +160388,19 @@
       "started": "2026-10-04T05:07:12.845928+00:00",
       "state": "exact_private",
       "task": "float-guard-only-24_ship_shack-20261004"
+    },
+    "c8dc707e9a24406eae6725ddd31c6fba": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/c8dc707e9a24406eae6725ddd31c6fba",
+      "finished": "2026-10-08T02:24:17.263003+00:00",
+      "id": "c8dc707e9a24406eae6725ddd31c6fba",
+      "manifest_sha256": "e35d5cb9bfad95fdc837c00fd0085a8fa7e86f77a48b0e13a922851ef2696ac0",
+      "measured_functions": 1,
+      "outcome_sha256": "6cab127b33518286162168f6418d98a99a8332c22a791819c30cc317798de34a",
+      "semantic_key": "af6590e9c348379f1c9c88641299faad90ac8b2e36630ee87ef87970746e11d5",
+      "started": "2026-10-08T02:24:16.781589+00:00",
+      "state": "mismatch",
+      "task": "c4130-new-20261007-fun_001302e0-873b37-a02"
     },
     "c93761fa3f68452b964cb59613c280c6": {
       "compile_attempted": true,
@@ -166063,6 +166422,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "37b536c46ba93c73e8655bd877a71af3ac5c69024aecf571b7a8bceaa3f04101"
+    "docs/CAMPAIGN-QUEUE.md": "06f1d46b4464ea8f0ab8ce5761963a70c94d621aa189d740dbf596e4ff54f73a"
   }
 }
