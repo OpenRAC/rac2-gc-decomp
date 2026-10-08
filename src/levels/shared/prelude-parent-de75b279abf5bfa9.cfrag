@@ -1,0 +1,27 @@
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_de75b279abf5bfa9_Slot3cde0d02 {
+    short          f00;               
+    short          f02;               
+    unsigned char  f04;               
+    char           pad05[7];
+    unsigned char *f0C;               
+    int            f10;               
+    int            f14;               
+    int            f18;               
+    int            f1C;               
+    char           pad20[32];
+} Rac2Native_de75b279abf5bfa9_Slot3cde0d02;
+
+typedef struct Rac2Native_de75b279abf5bfa9_Mid {
+    char           pad00[0x1C];
+    char          *f1C;               
+} Rac2Native_de75b279abf5bfa9_Mid;
+
+typedef struct Rac2Native_de75b279abf5bfa9_Ctx {
+    char           pad00[0x24];
+    Rac2Native_de75b279abf5bfa9_Mid           *f24;               
+    char           pad28[0x28];
+    int            f50;               
+} Rac2Native_de75b279abf5bfa9_Ctx;

@@ -1,0 +1,20 @@
+
+
+extern int @@ROLE_00_000@@[];
+
+int @@FUNCTION@@(int arg)
+{
+    int *t = @@ROLE_00_001@@;
+    int *u = t + 5;
+    int i;
+
+    for (i = 0; i < 5; i++) {
+        int k = arg ? 4 - i : i;
+        if (t[k] == 0)
+            continue;
+        if (u[k] != -1)
+            continue;
+        return k;
+    }
+    return -1;
+}

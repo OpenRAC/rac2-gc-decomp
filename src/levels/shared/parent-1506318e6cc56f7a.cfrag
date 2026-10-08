@@ -1,0 +1,26 @@
+
+
+extern char @@ROLE_00_000@@[];
+
+int @@FUNCTION@@(float f12)
+{
+    char *b;
+
+    if (f12 <= 0.0f)
+        goto fail;
+    b = @@ROLE_00_001@@;
+    if (*(short *)(*(int *)(b + 8848) + 170) != 0)
+        goto fail;
+    if (*(unsigned char *)(b + 8884) != 0)
+        goto fail;
+    if (*(int *)(b + 8852) == 49)
+        goto fail;
+    if (*(int *)(b + 8860) == 20)
+        goto fail;
+    if (*(int *)(b + 9420) > 0)
+        goto ok;
+fail:
+    return 0;
+ok:
+    return 1;
+}

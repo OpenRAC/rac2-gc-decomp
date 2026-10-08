@@ -1,0 +1,17 @@
+
+
+extern Rac2Native_2ecb4e7d1e9c0b88_u8 @@ROLE_00_000@@[];
+extern Rac2Native_2ecb4e7d1e9c0b88_u8 @@ROLE_01_000@@[];
+extern void @@ROLE_02_000@@(void *, Rac2Native_2ecb4e7d1e9c0b88_s32, void *);
+
+void @@FUNCTION@@(Rac2Native_2ecb4e7d1e9c0b88_u32 *p, Rac2Native_2ecb4e7d1e9c0b88_u32 a1, Rac2Native_2ecb4e7d1e9c0b88_u32 a2, Rac2Native_2ecb4e7d1e9c0b88_u32 a3)
+{
+    if (a1 < 4u)
+        @@ROLE_02_001@@(@@ROLE_00_001@@, 37, @@ROLE_01_001@@);
+    p[0] = a2;
+    p[1] = a3;
+    p[2] = a1;
+    p[5] = 0;
+    p[3] = 0;
+    p[4] = 0;
+}

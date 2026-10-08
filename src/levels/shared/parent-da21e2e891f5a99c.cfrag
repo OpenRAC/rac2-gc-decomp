@@ -1,0 +1,16 @@
+
+
+extern Rac2Native_da21e2e891f5a99c_ConditionalResetSlot @@ROLE_00_000@@[8];
+
+void @@FUNCTION@@(void) {
+    Rac2Native_da21e2e891f5a99c_ConditionalResetSlot *slot = @@ROLE_00_001@@;
+    Rac2Native_da21e2e891f5a99c_s32 remaining = 7;
+    do {
+        if (slot->active) {
+            slot->active = 0;
+            slot->count = 0;
+        }
+        --remaining;
+        ++slot;
+    } while (remaining >= 0);
+}

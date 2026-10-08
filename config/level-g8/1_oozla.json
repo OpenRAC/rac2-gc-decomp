@@ -1,0 +1,109 @@
+{
+  "entry": 2776968,
+  "externals": {
+    "LVL_1_OOZLA_F1716667661d8e672_AT002FF168_ROLE00": 1283040,
+    "LVL_1_OOZLA_F1716667661d8e672_AT002FF168_ROLE01": 1733668,
+    "LVL_1_OOZLA_F1716667661d8e672_AT002FF168_ROLE02": 1733664,
+    "LVL_1_OOZLA_F25b7bae55e05d925_AT002FF798_ROLE00": 1733668,
+    "LVL_1_OOZLA_F25b7bae55e05d925_AT002FF798_ROLE01": 1283040,
+    "LVL_1_OOZLA_F25b7bae55e05d925_AT002FF798_ROLE02": 1733664,
+    "LVL_1_OOZLA_F60904fd170c92806_AT002FF460_ROLE00": 1283040,
+    "LVL_1_OOZLA_F60904fd170c92806_AT002FF460_ROLE01": 1733668,
+    "LVL_1_OOZLA_F60904fd170c92806_AT002FF460_ROLE02": 1733664,
+    "LVL_1_OOZLA_F715e9b46a377ec8c_AT002FF1C8_ROLE00": 1733668,
+    "LVL_1_OOZLA_F715e9b46a377ec8c_AT002FF1C8_ROLE01": 1283040,
+    "LVL_1_OOZLA_F715e9b46a377ec8c_AT002FF1C8_ROLE02": 1733664,
+    "LVL_1_OOZLA_F8172b0f0a91a7cba_AT002FEFF8_ROLE00": 1283040,
+    "LVL_1_OOZLA_F8172b0f0a91a7cba_AT002FEFF8_ROLE01": 1733668,
+    "LVL_1_OOZLA_F8172b0f0a91a7cba_AT002FEFF8_ROLE02": 1733664,
+    "LVL_1_OOZLA_F8391b53329533f81_AT002FF5D8_ROLE00": 1283040,
+    "LVL_1_OOZLA_F8391b53329533f81_AT002FF5D8_ROLE01": 1733668,
+    "LVL_1_OOZLA_F8391b53329533f81_AT002FF5D8_ROLE02": 1733664,
+    "LVL_1_OOZLA_F83cf4a65b6159c6c_AT002FF750_ROLE00": 1733668,
+    "LVL_1_OOZLA_F83cf4a65b6159c6c_AT002FF750_ROLE01": 1283040,
+    "LVL_1_OOZLA_F83cf4a65b6159c6c_AT002FF750_ROLE02": 1733664,
+    "LVL_1_OOZLA_F99b76d48da369e8d_AT002FF258_ROLE00": 1283040,
+    "LVL_1_OOZLA_F99b76d48da369e8d_AT002FF258_ROLE01": 1733664,
+    "LVL_1_OOZLA_Fa0e246aa2dc0b8e7_AT002FF2F8_ROLE00": 1733668,
+    "LVL_1_OOZLA_Fa0e246aa2dc0b8e7_AT002FF2F8_ROLE01": 1283040,
+    "LVL_1_OOZLA_Fa0e246aa2dc0b8e7_AT002FF2F8_ROLE02": 1733664,
+    "LVL_1_OOZLA_Fa661193cb7db1192_AT002FF138_ROLE00": 1283040,
+    "LVL_1_OOZLA_Fa661193cb7db1192_AT002FF138_ROLE01": 1733664
+  },
+  "flags": [
+    "-O2",
+    "-G8",
+    "-ffunction-sections"
+  ],
+  "functions": [
+    {
+      "address": 3141624,
+      "meaning": "Always clear flag 0x20. In mode 2 at offset 0x08, select state 9 for selector 0 or -1 at offset 0x10, clearing selector -1 to zero, or state 5 for selector -2.",
+      "size": 112,
+      "symbol": "LVL_1_OOZLA_FUN_002FEFF8"
+    },
+    {
+      "address": 3141944,
+      "meaning": "Clear the signed root selector, replace a negative selection with 3 and clear its associated word, then always write state 8.",
+      "size": 44,
+      "symbol": "LVL_1_OOZLA_FUN_002FF138"
+    },
+    {
+      "address": 3141992,
+      "meaning": "When mode at 0x15C is 2 and selection at 0x164 is negative, nonzero extra at 0x16C selects state 17 and flag 0x40; zero extra selects state 14.",
+      "size": 96,
+      "symbol": "LVL_1_OOZLA_FUN_002FF168"
+    },
+    {
+      "address": 3142088,
+      "meaning": "Write state 3 for a nonzero gate; otherwise write state 10 when flag mask 6 is nonzero, or state 25 when flag 0x200 is set.",
+      "size": 76,
+      "symbol": "LVL_1_OOZLA_FUN_002FF1C8"
+    },
+    {
+      "address": 3142232,
+      "meaning": "Under mode 2 and a negative selection, choose states 12, 3, 19 or 16 from the extra/selector words, signed phase short and the signed sum threshold 475; preserve state when the measured guards reject an update.",
+      "size": 156,
+      "symbol": "LVL_1_OOZLA_FUN_002FF258"
+    },
+    {
+      "address": 3142392,
+      "meaning": "Write state 3 for a nonzero signed root selector; otherwise write state 13 when flag mask 0x2 is nonzero. Original game role and full data-object boundaries remain unknown.",
+      "size": 56,
+      "symbol": "LVL_1_OOZLA_FUN_002FF2F8"
+    },
+    {
+      "address": 3142752,
+      "meaning": "Conditionally clear flag bits 4 and 2; handle flag 0x80 with state 21 or flag 0x100 with state 20 while setting 0x40, otherwise select state 3 or 1 from the measured selector and word 0x17C.",
+      "size": 184,
+      "symbol": "LVL_1_OOZLA_FUN_002FF460"
+    },
+    {
+      "address": 3143128,
+      "meaning": "When mode at offset 0x15C is 2 and selection at 0x164 is negative, nonzero extra at 0x16C or word at 0x24 clears word 0x17C, sets state 21 and flags 0x440; otherwise write word 0x17C to 1 and state 1.",
+      "size": 112,
+      "symbol": "LVL_1_OOZLA_FUN_002FF5D8"
+    },
+    {
+      "address": 3143504,
+      "meaning": "Write state 3 when the signed root selector differs from -2; otherwise, only when flag mask 0x20 is set, clear it and write state 5. Original game role and full data-object boundaries remain unknown.",
+      "size": 72,
+      "symbol": "LVL_1_OOZLA_FUN_002FF750"
+    },
+    {
+      "address": 3143576,
+      "meaning": "Write state 3 when the signed root selector is nonzero; otherwise, only when flag mask 0x20 is set, clear it and write state 12. Original game role and full data-object boundaries remain unknown.",
+      "size": 68,
+      "symbol": "LVL_1_OOZLA_FUN_002FF798"
+    }
+  ],
+  "gp": 1765360,
+  "kind": "level-smalldata-catalog",
+  "level": "1_oozla",
+  "module": "src/levels/smalldata/1_oozla-parent-batch2.cfrag",
+  "program": "levels/1_oozla",
+  "reference_sha256": "84c7e1d55cd34f7785ca8e72d03667707474c29249891735cef9dd0e53b834e3",
+  "schema": 1,
+  "source": "candidates/levels/1_oozla-g8.c",
+  "target": "SCUS_972.68"
+}

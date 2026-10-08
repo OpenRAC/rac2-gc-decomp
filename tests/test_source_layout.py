@@ -99,6 +99,13 @@ class SourceLayoutTest(unittest.TestCase):
             destination = snapshot / relative
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(REPO / relative, destination)
+        # Recapture reads every authored G8 module, including modules belonging
+        # to other overlays than the one changed by the fixture.
+        for path in small_data_units(snapshot):
+            module = json.loads(path.read_bytes())["module"]
+            destination = snapshot / module
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(REPO / module, destination)
         return snapshot, manifest
 
     def test_authoring_edits_fragment_and_refreshes_manifest(self):
@@ -149,6 +156,40 @@ class SourceLayoutTest(unittest.TestCase):
         self.assertEqual(metrics["pilot_family_placements"], 26)
         self.assertEqual(metrics["native_unmerged_singletons"],
                          manifest["metrics"]["native_unmerged_singletons"] + 1)
+
+
+    def test_capture_preserves_complete_multifunction_small_data_module_once(self):
+        repo, _ = self.fixture_repo()
+        path = small_data_units(repo)[0]
+        catalog = json.loads(path.read_bytes())
+        (repo / catalog["module"]).parent.mkdir(parents=True, exist_ok=True)
+        symbol = "LVL_" + catalog["level"].upper() + "_FUN_00ABCDE0"
+        source = (repo / catalog["source"]).read_bytes() + ("\nvoid " + symbol + "(void) {}\n").encode()
+        (repo / catalog["module"]).write_bytes(source)
+        (repo / catalog["source"]).write_bytes(source)
+        catalog["functions"].append({"symbol": symbol, "address": 0xABCDE0, "size": 8})
+        path.write_text(json.dumps(catalog))
+        recaptured = self.layout / "recaptured"
+        manifest = tool.capture(repo, recaptured)
+        pieces = manifest["recipes"][catalog["source"]]["pieces"]
+        self.assertEqual(len(pieces), 1)
+        self.assertNotIn("replacements", pieces[0])
+        tool.verify(repo, recaptured, recaptured / "generated")
+        self.assertEqual((recaptured / "generated" / catalog["source"]).read_bytes(), source)
+
+    def test_capture_rejects_ambiguous_or_stale_small_data_module(self):
+        repo, _ = self.fixture_repo()
+        path = small_data_units(repo)[0]
+        catalog = json.loads(path.read_bytes())
+        (repo / catalog["module"]).parent.mkdir(parents=True, exist_ok=True)
+        catalog["functions"].append({"symbol": "LVL_TEST_FUN_00ABCDE0", "address": 0xABCDE0, "size": 8})
+        path.write_text(json.dumps(catalog))
+        (repo / catalog["module"]).write_bytes(b"void @@FUNCTION@@(void) {}\n")
+        with self.assertRaisesRegex(ValueError, "template requires exactly one"):
+            tool.capture(repo, self.layout / "ambiguous-template")
+        (repo / catalog["module"]).write_bytes((repo / catalog["source"]).read_bytes() + b"/* stale */\n")
+        with self.assertRaisesRegex(ValueError, "does not reproduce"):
+            tool.capture(repo, self.layout / "stale-module")
 
 
 if __name__ == "__main__":

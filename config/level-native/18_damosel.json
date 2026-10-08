@@ -60,6 +60,7 @@
     "LVL_18_DAMOSEL_F25780968_D_001A7350": 1733456,
     "LVL_18_DAMOSEL_F25780968_D_001A7354": 1733460,
     "LVL_18_DAMOSEL_F25780968_D_001B2F88": 1781640,
+    "LVL_18_DAMOSEL_F28c929cadd7aca24_AT002ECCD0_ROLE00": 1613344,
     "LVL_18_DAMOSEL_F32969de2_D_001AC000": 1753088,
     "LVL_18_DAMOSEL_F32969de2_D_001B2820": 1779744,
     "LVL_18_DAMOSEL_F32969de2_D_001B2824": 1779748,
@@ -80,10 +81,14 @@
     "LVL_18_DAMOSEL_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_18_DAMOSEL_F55a1acb8_FUN_00133688": 1259144,
     "LVL_18_DAMOSEL_F5b4b17178a13f443_AT0033DC28_ROLE00": 3322976,
+    "LVL_18_DAMOSEL_F5fc519c90e0e763a_AT002EDF98_ROLE00": 3071200,
     "LVL_18_DAMOSEL_F62e6ff2b_D_00188660": 1607264,
     "LVL_18_DAMOSEL_F62e6ff2b_D_00189E20": 1613344,
     "LVL_18_DAMOSEL_F6894d7c1_D_001A8E60": 1740384,
     "LVL_18_DAMOSEL_F6af85cabb56d3b41_AT004579F8_ROLE00": 1613344,
+    "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE00": 1618620,
+    "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE01": 2898928,
+    "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE02": 2976952,
     "LVL_18_DAMOSEL_F74e6a904_D_001A8F10": 1740560,
     "LVL_18_DAMOSEL_F74e6a904_D_001B2370": 1778544,
     "LVL_18_DAMOSEL_F74e6a904_D_001B2374": 1778548,
@@ -978,6 +983,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_18_DAMOSEL_FUN_0046D5A8"
+    },
+    {
+      "address": 2898864,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_18_DAMOSEL_FUN_002C3BB0"
+    },
+    {
+      "address": 3067088,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_18_DAMOSEL_FUN_002ECCD0"
+    },
+    {
+      "address": 3071896,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_18_DAMOSEL_FUN_002EDF98"
+    },
+    {
+      "address": 3793040,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_0039E090"
     }
   ],
   "gp": 1765360,

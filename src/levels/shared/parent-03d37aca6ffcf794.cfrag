@@ -1,0 +1,36 @@
+
+
+extern int @@ROLE_02_000@@ __attribute__((nosda));
+extern int *@@ROLE_00_000@@[];
+extern Rac2Native_03d37aca6ffcf794_T2 @@ROLE_01_000@@[];
+
+void @@FUNCTION@@(void)
+{
+    int *wp;
+    int *ent;
+    int i;
+    int j;
+    int k;
+    int *arr;
+    int *pe;
+    int *base;
+    int *e;
+
+    for (wp = &@@ROLE_02_001@@; *wp >= 0; wp++) {
+        ent = @@ROLE_00_001@@[*wp];
+        for (i = 0; i < *(short *)((char *)ent + 40); i++) {
+            arr = ent + 16;
+            pe = *(int **)((char *)arr + (i << 3));
+            base = pe + 4;
+            e = (int *)((char *)base + (base[1] << 4)) + 4;
+            for (j = 0; j < base[0]; j++) {
+                Rac2Native_03d37aca6ffcf794_T2 *s = &@@ROLE_01_001@@[((unsigned char *)e)[19]];
+                if (s->a != 0)
+                    e[12] = (e[12] & 0xFFFFC000) | s->a;
+                if (s->b != 0)
+                    e[8] = (e[8] & 0xFFFFC000) | s->b;
+                e += 16;
+            }
+        }
+    }
+}

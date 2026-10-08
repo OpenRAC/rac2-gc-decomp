@@ -40,6 +40,7 @@
     "LVL_12_TODANO_F250a61cf_D_001AD680": 1758848,
     "LVL_12_TODANO_F250a61cf_D_001AD688": 1758856,
     "LVL_12_TODANO_F250a61cf_FUN_00115DA8": 1138088,
+    "LVL_12_TODANO_F28c929cadd7aca24_AT002D5BD0_ROLE00": 1613344,
     "LVL_12_TODANO_F490e2c59_D_001A79F0": 1735152,
     "LVL_12_TODANO_F490e2c59_D_001AA7F0": 1746928,
     "LVL_12_TODANO_F4e5bde81_D_00189E20": 1613344,
@@ -51,10 +52,14 @@
     "LVL_12_TODANO_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_12_TODANO_F55a1acb8_FUN_00133688": 1259144,
     "LVL_12_TODANO_F5b4b17178a13f443_AT00326838_ROLE00": 3227656,
+    "LVL_12_TODANO_F5fc519c90e0e763a_AT002D6ED8_ROLE00": 2976800,
     "LVL_12_TODANO_F62e6ff2b_D_00188660": 1607264,
     "LVL_12_TODANO_F62e6ff2b_D_00189E20": 1613344,
     "LVL_12_TODANO_F6894d7c1_D_001A8E60": 1740384,
     "LVL_12_TODANO_F6af85cabb56d3b41_AT0043F128_ROLE00": 1613344,
+    "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE00": 1618620,
+    "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE01": 2800968,
+    "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE02": 2880648,
     "LVL_12_TODANO_F79744baad5ad7f65_AT00456580_ROLE00": 1622228,
     "LVL_12_TODANO_F86f665335d9cb905_AT003C6170_ROLE00": 3954632,
     "LVL_12_TODANO_F9cdc323a4d0c2fbd_AT0039DE20_ROLE00": 3679224,
@@ -850,6 +855,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_12_TODANO_FUN_00456580"
+    },
+    {
+      "address": 2800904,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_12_TODANO_FUN_002ABD08"
+    },
+    {
+      "address": 2972624,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_12_TODANO_FUN_002D5BD0"
+    },
+    {
+      "address": 2977496,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_12_TODANO_FUN_002D6ED8"
+    },
+    {
+      "address": 3691736,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_12_TODANO_FUN_003854D8"
     }
   ],
   "gp": 1765360,

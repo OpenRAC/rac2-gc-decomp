@@ -1,0 +1,28 @@
+
+
+extern Rac2Native_de75b279abf5bfa9_Slot3cde0d02 @@ROLE_01_000@@[6];
+extern unsigned char @@ROLE_00_000@@[];
+
+Rac2Native_de75b279abf5bfa9_Slot3cde0d02 *@@FUNCTION@@(Rac2Native_de75b279abf5bfa9_Ctx *ctx, int index)
+{
+    int i;
+    Rac2Native_de75b279abf5bfa9_Slot3cde0d02 *slot;
+    unsigned char *p;
+
+    for (i = 0; i < 6; i++) {
+        if (@@ROLE_01_001@@[i].f04 == 0) {
+            break;
+        }
+    }
+    slot = &@@ROLE_01_002@@[i];
+    slot->f04 = 1;
+    slot->f00 = index;
+    slot->f10 = (int)(@@ROLE_00_001@@ + i * 5376);
+    slot->f14 = (int)ctx->f24;
+    p = (unsigned char *)*(unsigned int *)(ctx->f24->f1C + (short)index * 4 + 4);
+    slot->f02 = p[2];
+    slot->f0C = p + (p[0] + 4);
+    slot->f1C = ctx->f50;
+    ctx->f50 = (int)slot;
+    return slot;
+}

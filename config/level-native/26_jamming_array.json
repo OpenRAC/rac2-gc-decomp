@@ -40,6 +40,7 @@
     "LVL_26_JAMMING_ARRAY_F250a61cf_D_001AD680": 1758848,
     "LVL_26_JAMMING_ARRAY_F250a61cf_D_001AD688": 1758856,
     "LVL_26_JAMMING_ARRAY_F250a61cf_FUN_00115DA8": 1138088,
+    "LVL_26_JAMMING_ARRAY_F28c929cadd7aca24_AT002D2BF0_ROLE00": 1613344,
     "LVL_26_JAMMING_ARRAY_F32fd6f60_D_002A4100": 2769152,
     "LVL_26_JAMMING_ARRAY_F490e2c59_D_001A79F0": 1735152,
     "LVL_26_JAMMING_ARRAY_F490e2c59_D_001AA7F0": 1746928,
@@ -52,10 +53,14 @@
     "LVL_26_JAMMING_ARRAY_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_26_JAMMING_ARRAY_F55a1acb8_FUN_00133688": 1259144,
     "LVL_26_JAMMING_ARRAY_F5b4b17178a13f443_AT00323000_ROLE00": 3212744,
+    "LVL_26_JAMMING_ARRAY_F5fc519c90e0e763a_AT002D3EF8_ROLE00": 2964544,
     "LVL_26_JAMMING_ARRAY_F62e6ff2b_D_00188660": 1607264,
     "LVL_26_JAMMING_ARRAY_F62e6ff2b_D_00189E20": 1613344,
     "LVL_26_JAMMING_ARRAY_F6894d7c1_D_001A8E60": 1740384,
     "LVL_26_JAMMING_ARRAY_F6af85cabb56d3b41_AT0041BD28_ROLE00": 1613344,
+    "LVL_26_JAMMING_ARRAY_F6b0741c38bf00fee_AT002A6788_ROLE00": 1618620,
+    "LVL_26_JAMMING_ARRAY_F6b0741c38bf00fee_AT002A6788_ROLE01": 2779080,
+    "LVL_26_JAMMING_ARRAY_F6b0741c38bf00fee_AT002A6788_ROLE02": 2859992,
     "LVL_26_JAMMING_ARRAY_F79744baad5ad7f65_AT00432378_ROLE00": 1622228,
     "LVL_26_JAMMING_ARRAY_F86f665335d9cb905_AT003B8958_ROLE00": 3899312,
     "LVL_26_JAMMING_ARRAY_F9cdc323a4d0c2fbd_AT003964F0_ROLE00": 3654440,
@@ -810,6 +815,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_26_JAMMING_ARRAY_FUN_00432378"
+    },
+    {
+      "address": 2779016,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_002A6788"
+    },
+    {
+      "address": 2960368,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_002D2BF0"
+    },
+    {
+      "address": 2965240,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_002D3EF8"
+    },
+    {
+      "address": 3666952,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_26_JAMMING_ARRAY_FUN_0037F408"
     }
   ],
   "gp": 1765360,

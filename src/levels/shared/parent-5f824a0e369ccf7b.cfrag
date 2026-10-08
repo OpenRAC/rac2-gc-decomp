@@ -1,0 +1,44 @@
+
+
+extern struct Rac2Native_5f824a0e369ccf7b_dst_record @@ROLE_00_000@@[8] __attribute__((nosda));
+
+int @@FUNCTION@@(struct Rac2Native_5f824a0e369ccf7b_src_record *src)
+{
+    int n = 0;
+    int i;
+    int j;
+
+    while (n < 8 && src[n].b0 != 255)
+        n++;
+
+    j = 0;
+    for (i = 0; i < 8 && j < n; i++) {
+        if (@@ROLE_00_001@@[i].b0 == 0)
+            j++;
+    }
+
+    if (j != n)
+        return -1;
+
+    for (j = 0; j < n; j++) {
+        i = 0;
+        while (i < 8 && @@ROLE_00_002@@[i].b0 != 0)
+            i++;
+        if (i < 8) {
+            @@ROLE_00_003@@[i].b0 = src[j].b0;
+            @@ROLE_00_004@@[i].b1 = src[j].b1;
+            @@ROLE_00_005@@[i].b2 = src[j].b2;
+            @@ROLE_00_006@@[i].b3 = src[j].b3;
+            @@ROLE_00_007@@[i].s4 = src[j].s4;
+            @@ROLE_00_008@@[i].s6 = src[j].s6;
+            @@ROLE_00_009@@[i].s8 = src[j].s8;
+            @@ROLE_00_010@@[i].s10 = src[j].s10;
+            @@ROLE_00_011@@[i].s12 = src[j].s12;
+            @@ROLE_00_012@@[i].e = src[j].e - src[j].f;
+            @@ROLE_00_013@@[i].f = src[j].f;
+            if (@@ROLE_00_014@@[i].s10 + @@ROLE_00_015@@[i].s12 == 0)
+                @@ROLE_00_016@@[i].s10++;
+        }
+    }
+    return i;
+}

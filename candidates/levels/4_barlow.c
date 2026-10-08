@@ -1921,3 +1921,564 @@ void LVL_4_BARLOW_FUN_004834B0(Rac2Native_79744baad5ad7f65_ScalarChange48Owner *
     }
     owner->value_04 = value;
 }
+
+
+extern char LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00[];
+
+void LVL_4_BARLOW_FUN_002F3848(void)
+{
+    char *b = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+    char *p;
+    int i;
+
+    p = *(char **)(b + 3096);
+    *(unsigned short *)(p + 52) &= 0xFFFE;
+
+    for (i = 0; i < 7; i++) {
+        p = *(char **)(b + 4640 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+        p = *(char **)(b + 4644 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+        p = *(char **)(b + 4648 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+    }
+
+    if (1) {
+        char *c = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+        p = *(char **)(c + 4892);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+    }
+
+    if (1) {
+        char *c = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+        if (*(unsigned char *)(c + 8884) == 1) {
+            c = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+            p = *(char **)(c + 6244);
+            if (p != 0)
+                *(unsigned short *)(p + 52) &= 0xFFFE;
+        }
+    }
+
+    if (1) {
+        char *c = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+        if (*(short *)(c + 9468) != 0 || *(int *)(c + 8860) == 31) {
+            c = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+            p = *(char **)(c + 4880);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+            c = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+            p = *(char **)(c + 4884);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+            c = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+            p = *(char **)(c + 4892);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+        }
+    }
+
+    if (1) {
+        char *c = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+        if ((*(unsigned char *)(c + 8894) != 0 && *(int *)(c + 4680) == 10) ||
+            *(unsigned char *)(c + 8895) != 0) {
+            char *d = LVL_4_BARLOW_F5cf1984565447a84_AT002F3848_ROLE00;
+            p = *(char **)(d + 4640);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+        }
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+struct Rac2Native_5f824a0e369ccf7b_src_record {
+    unsigned char b0;
+    unsigned char b1;
+    unsigned char b2;
+    unsigned char b3;
+    unsigned short s4;
+    unsigned short s6;
+    unsigned short s8;
+    unsigned short s10;
+    unsigned short s12;
+    unsigned char e;
+    unsigned char f;
+};
+
+struct Rac2Native_5f824a0e369ccf7b_dst_record {
+    unsigned char b0;
+    unsigned char b1;
+    unsigned char b2;
+    unsigned char b3;
+    unsigned short s4;
+    unsigned short s6;
+    unsigned short s8;
+    short s10;
+    short s12;
+    unsigned char e;
+    unsigned char f;
+};
+
+
+extern struct Rac2Native_5f824a0e369ccf7b_dst_record LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[8] __attribute__((nosda));
+
+int LVL_4_BARLOW_FUN_002F7188(struct Rac2Native_5f824a0e369ccf7b_src_record *src)
+{
+    int n = 0;
+    int i;
+    int j;
+
+    while (n < 8 && src[n].b0 != 255)
+        n++;
+
+    j = 0;
+    for (i = 0; i < 8 && j < n; i++) {
+        if (LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].b0 == 0)
+            j++;
+    }
+
+    if (j != n)
+        return -1;
+
+    for (j = 0; j < n; j++) {
+        i = 0;
+        while (i < 8 && LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].b0 != 0)
+            i++;
+        if (i < 8) {
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].b0 = src[j].b0;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].b1 = src[j].b1;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].b2 = src[j].b2;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].b3 = src[j].b3;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].s4 = src[j].s4;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].s6 = src[j].s6;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].s8 = src[j].s8;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].s10 = src[j].s10;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].s12 = src[j].s12;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].e = src[j].e - src[j].f;
+            LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].f = src[j].f;
+            if (LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].s10 + LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].s12 == 0)
+                LVL_4_BARLOW_F5f824a0e369ccf7b_AT002F7188_ROLE00[i].s10++;
+        }
+    }
+    return i;
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned char Rac2Native_da21e2e891f5a99c_u8;
+
+typedef int Rac2Native_da21e2e891f5a99c_s32;
+
+typedef struct {
+    Rac2Native_da21e2e891f5a99c_u8 field0;
+    Rac2Native_da21e2e891f5a99c_u8 active;
+    Rac2Native_da21e2e891f5a99c_u8 middle[4];
+    unsigned short count;
+    Rac2Native_da21e2e891f5a99c_u8 trailing[8];
+} Rac2Native_da21e2e891f5a99c_ConditionalResetSlot;
+
+
+extern Rac2Native_da21e2e891f5a99c_ConditionalResetSlot LVL_4_BARLOW_Fda21e2e891f5a99c_AT002F7360_ROLE00[8];
+
+void LVL_4_BARLOW_FUN_002F7360(void) {
+    Rac2Native_da21e2e891f5a99c_ConditionalResetSlot *slot = LVL_4_BARLOW_Fda21e2e891f5a99c_AT002F7360_ROLE00;
+    Rac2Native_da21e2e891f5a99c_s32 remaining = 7;
+    do {
+        if (slot->active) {
+            slot->active = 0;
+            slot->count = 0;
+        }
+        --remaining;
+        ++slot;
+    } while (remaining >= 0);
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+struct Rac2Native_00169805055547ed_Rec31cd0302 {
+    int v[10];
+};
+
+
+extern struct Rac2Native_00169805055547ed_Rec31cd0302 LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[];
+
+void LVL_4_BARLOW_FUN_00303418(int p0, int p1, int p2, int p3, int p4, int p5,
+                                      int p6, int p7, int p8, int p9, unsigned idx)
+{
+    if (idx >= 32u)
+        return;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[0] = p0;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[1] = p1;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[2] = p2;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[3] = p3;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[4] = p4;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[5] = p5;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[6] = p6;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[7] = p7;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[8] = p8;
+    LVL_4_BARLOW_F00169805055547ed_AT00303418_ROLE00[idx].v[9] = p9;
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct { int v[12]; } Rac2Native_d32adabb98ee8ec5_Blob;
+
+
+extern Rac2Native_d32adabb98ee8ec5_Blob LVL_4_BARLOW_Fd32adabb98ee8ec5_AT00314420_ROLE00;
+
+int LVL_4_BARLOW_FUN_00314420(int x)
+{
+    Rac2Native_d32adabb98ee8ec5_Blob b;
+    int i;
+    b = LVL_4_BARLOW_Fd32adabb98ee8ec5_AT00314420_ROLE00;
+    for (i = 0; b.v[i]; i++)
+        if (x == b.v[i])
+            return 1;
+    return 0;
+}
+
+
+extern int LVL_4_BARLOW_F96440df89b3adb3c_AT00326A48_ROLE00[];
+
+int LVL_4_BARLOW_FUN_00326A48(int arg)
+{
+    int *t = LVL_4_BARLOW_F96440df89b3adb3c_AT00326A48_ROLE00;
+    int *u = t + 5;
+    int i;
+
+    for (i = 0; i < 5; i++) {
+        int k = arg ? 4 - i : i;
+        if (t[k] == 0)
+            continue;
+        if (u[k] != -1)
+            continue;
+        return k;
+    }
+    return -1;
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned char Rac2Native_00c75cc26bc5c876_u8;
+
+
+extern Rac2Native_00c75cc26bc5c876_u8 LVL_4_BARLOW_F00c75cc26bc5c876_AT00331840_ROLE00[];
+
+void LVL_4_BARLOW_FUN_00331840(Rac2Native_00c75cc26bc5c876_u8 *param_1)
+{
+    if (param_1[66] != 255) {
+        Rac2Native_00c75cc26bc5c876_u8 *tbl = (Rac2Native_00c75cc26bc5c876_u8 *)(*(volatile int *)(param_1 + 36) + 72);
+
+        *(int *)(param_1 + 88) = *(int *)(*(int *)(tbl + (*(volatile Rac2Native_00c75cc26bc5c876_u8 *)(param_1 + 66) << 2)) + (param_1[64] << 2) + 28);
+        param_1[110] = *(Rac2Native_00c75cc26bc5c876_u8 *)(*(int *)(tbl + (*(volatile Rac2Native_00c75cc26bc5c876_u8 *)(param_1 + 66) << 2)) + 18);
+        param_1[108] = *(Rac2Native_00c75cc26bc5c876_u8 *)(*(int *)(tbl + (*(volatile Rac2Native_00c75cc26bc5c876_u8 *)(param_1 + 66) << 2)) + 17);
+    } else {
+        param_1[108] = 255;
+        param_1[110] = 0;
+        *(int *)(param_1 + 88) = (int)(LVL_4_BARLOW_F00c75cc26bc5c876_AT00331840_ROLE00 + (param_1[64] << 11));
+    }
+
+    *(int *)(param_1 + 92) = *(int *)(*(int *)(*(volatile int *)(param_1 + 36) + (param_1[67] << 2) + 72) + (param_1[65] << 2) + 28);
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_de75b279abf5bfa9_Slot3cde0d02 {
+    short          f00;               
+    short          f02;               
+    unsigned char  f04;               
+    char           pad05[7];
+    unsigned char *f0C;               
+    int            f10;               
+    int            f14;               
+    int            f18;               
+    int            f1C;               
+    char           pad20[32];
+} Rac2Native_de75b279abf5bfa9_Slot3cde0d02;
+
+typedef struct Rac2Native_de75b279abf5bfa9_Mid {
+    char           pad00[0x1C];
+    char          *f1C;               
+} Rac2Native_de75b279abf5bfa9_Mid;
+
+typedef struct Rac2Native_de75b279abf5bfa9_Ctx {
+    char           pad00[0x24];
+    Rac2Native_de75b279abf5bfa9_Mid           *f24;               
+    char           pad28[0x28];
+    int            f50;               
+} Rac2Native_de75b279abf5bfa9_Ctx;
+
+
+extern Rac2Native_de75b279abf5bfa9_Slot3cde0d02 LVL_4_BARLOW_Fde75b279abf5bfa9_AT00331F70_ROLE01[6];
+extern unsigned char LVL_4_BARLOW_Fde75b279abf5bfa9_AT00331F70_ROLE00[];
+
+Rac2Native_de75b279abf5bfa9_Slot3cde0d02 *LVL_4_BARLOW_FUN_00331F70(Rac2Native_de75b279abf5bfa9_Ctx *ctx, int index)
+{
+    int i;
+    Rac2Native_de75b279abf5bfa9_Slot3cde0d02 *slot;
+    unsigned char *p;
+
+    for (i = 0; i < 6; i++) {
+        if (LVL_4_BARLOW_Fde75b279abf5bfa9_AT00331F70_ROLE01[i].f04 == 0) {
+            break;
+        }
+    }
+    slot = &LVL_4_BARLOW_Fde75b279abf5bfa9_AT00331F70_ROLE01[i];
+    slot->f04 = 1;
+    slot->f00 = index;
+    slot->f10 = (int)(LVL_4_BARLOW_Fde75b279abf5bfa9_AT00331F70_ROLE00 + i * 5376);
+    slot->f14 = (int)ctx->f24;
+    p = (unsigned char *)*(unsigned int *)(ctx->f24->f1C + (short)index * 4 + 4);
+    slot->f02 = p[2];
+    slot->f0C = p + (p[0] + 4);
+    slot->f1C = ctx->f50;
+    ctx->f50 = (int)slot;
+    return slot;
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+struct Rac2Native_d0cffb39a6f928f2_Sep6 {
+    int v[6];
+};
+
+
+extern struct Rac2Native_d0cffb39a6f928f2_Sep6 LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE00;
+extern char LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE01[];
+extern char LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE02[];
+extern char LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE03[];
+extern void LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE04();
+
+void LVL_4_BARLOW_FUN_00351AC0(char *buf, int value, int index) {
+    struct Rac2Native_d0cffb39a6f928f2_Sep6 sep = LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE00;
+    int rest;
+    if (value > 999999) {
+        rest = value % 1000000;
+        LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE04(buf, LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE01, value / 1000000, sep.v[index % 6], rest / 1000,
+                sep.v[index % 6], rest % 1000);
+    } else if (value >= 1000) {
+        LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE04(buf, LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE02, value / 1000, sep.v[index % 6], value % 1000);
+    } else {
+        LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE04(buf, LVL_4_BARLOW_Fd0cffb39a6f928f2_AT00351AC0_ROLE03, value);
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct {
+    short a;
+    short b;
+} Rac2Native_03d37aca6ffcf794_T2;
+
+
+extern int LVL_4_BARLOW_F03d37aca6ffcf794_AT0037E338_ROLE02 __attribute__((nosda));
+extern int *LVL_4_BARLOW_F03d37aca6ffcf794_AT0037E338_ROLE00[];
+extern Rac2Native_03d37aca6ffcf794_T2 LVL_4_BARLOW_F03d37aca6ffcf794_AT0037E338_ROLE01[];
+
+void LVL_4_BARLOW_FUN_0037E338(void)
+{
+    int *wp;
+    int *ent;
+    int i;
+    int j;
+    int k;
+    int *arr;
+    int *pe;
+    int *base;
+    int *e;
+
+    for (wp = &LVL_4_BARLOW_F03d37aca6ffcf794_AT0037E338_ROLE02; *wp >= 0; wp++) {
+        ent = LVL_4_BARLOW_F03d37aca6ffcf794_AT0037E338_ROLE00[*wp];
+        for (i = 0; i < *(short *)((char *)ent + 40); i++) {
+            arr = ent + 16;
+            pe = *(int **)((char *)arr + (i << 3));
+            base = pe + 4;
+            e = (int *)((char *)base + (base[1] << 4)) + 4;
+            for (j = 0; j < base[0]; j++) {
+                Rac2Native_03d37aca6ffcf794_T2 *s = &LVL_4_BARLOW_F03d37aca6ffcf794_AT0037E338_ROLE01[((unsigned char *)e)[19]];
+                if (s->a != 0)
+                    e[12] = (e[12] & 0xFFFFC000) | s->a;
+                if (s->b != 0)
+                    e[8] = (e[8] & 0xFFFFC000) | s->b;
+                e += 16;
+            }
+        }
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned char Rac2Native_281b526f0a7a8938_u8;
+
+typedef int Rac2Native_281b526f0a7a8938_s32;
+
+typedef unsigned int Rac2Native_281b526f0a7a8938_u32;
+
+typedef struct {
+    Rac2Native_281b526f0a7a8938_u8 pad0[4640];
+    Rac2Native_281b526f0a7a8938_u32 field4640;
+    Rac2Native_281b526f0a7a8938_u8 gap[4204];
+    Rac2Native_281b526f0a7a8938_u32 field8848;
+} Rac2Native_281b526f0a7a8938_NativeView;
+
+
+extern Rac2Native_281b526f0a7a8938_u8 LVL_4_BARLOW_F281b526f0a7a8938_AT00382B50_ROLE01[];
+extern Rac2Native_281b526f0a7a8938_u8 LVL_4_BARLOW_F281b526f0a7a8938_AT00382B50_ROLE00[];
+
+Rac2Native_281b526f0a7a8938_s32 LVL_4_BARLOW_FUN_00382B50(Rac2Native_281b526f0a7a8938_s32 id)
+{
+    Rac2Native_281b526f0a7a8938_u8 *record;
+    Rac2Native_281b526f0a7a8938_u8 *cursor;
+    Rac2Native_281b526f0a7a8938_s32 limit;
+
+    limit = 52;
+    if (id == 0 || (((Rac2Native_281b526f0a7a8938_NativeView *)&LVL_4_BARLOW_F281b526f0a7a8938_AT00382B50_ROLE01)->field8848 != (Rac2Native_281b526f0a7a8938_u32)id &&
+                    ((Rac2Native_281b526f0a7a8938_NativeView *)&LVL_4_BARLOW_F281b526f0a7a8938_AT00382B50_ROLE01)->field4640 != (Rac2Native_281b526f0a7a8938_u32)id))
+        limit = 42;
+
+    id = 0;
+    if (limit != 0) {
+        record = (Rac2Native_281b526f0a7a8938_u8 *)&LVL_4_BARLOW_F281b526f0a7a8938_AT00382B50_ROLE00;
+        if (record[116] != 0) {
+            cursor = record + 116;
+            do {
+                id++;
+                if (id >= limit)
+                    break;
+                cursor += 112;
+            } while (*cursor != 0);
+        }
+    }
+    return (id != limit) ? id : 52;
+}
+
+
+extern int LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE03(char *, char *, ...);
+extern char LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE00[];
+extern char LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE01[];
+extern char LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE02[];
+
+void LVL_4_BARLOW_FUN_00399390(char *dst, int value)
+{
+    if (value > 999999)
+        LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE03(dst, LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE00, value / 1000000, (value / 1000) % 1000, value % 1000);
+    else if (value >= 1000)
+        LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE03(dst, LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE01, value / 1000, value % 1000);
+    else
+        LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE03(dst, LVL_4_BARLOW_F05b44b3867278dac_AT00399390_ROLE02, value);
+}
+
+
+extern char LVL_4_BARLOW_F1506318e6cc56f7a_AT003F1318_ROLE00[];
+
+int LVL_4_BARLOW_FUN_003F1318(float f12)
+{
+    char *b;
+
+    if (f12 <= 0.0f)
+        goto fail;
+    b = LVL_4_BARLOW_F1506318e6cc56f7a_AT003F1318_ROLE00;
+    if (*(short *)(*(int *)(b + 8848) + 170) != 0)
+        goto fail;
+    if (*(unsigned char *)(b + 8884) != 0)
+        goto fail;
+    if (*(int *)(b + 8852) == 49)
+        goto fail;
+    if (*(int *)(b + 8860) == 20)
+        goto fail;
+    if (*(int *)(b + 9420) > 0)
+        goto ok;
+fail:
+    return 0;
+ok:
+    return 1;
+}
+
+
+void LVL_4_BARLOW_FUN_004468A0(char *object)
+{
+    char *o = object;
+    int *q = *(int **)(o + 104);
+
+    if (*(unsigned char *)(o + 32))
+        return;
+
+    q[2] = 64;
+    q[4] = 50;
+    q[0] = 0;
+    q[3] = -1;
+    q[5] = 0;
+    *(unsigned char *)(o + 32) = 1;
+    q[6] = -1;
+
+    *(float *)(o + 44) = *(float *)(*(int *)(o + 36) + 36) * 0.8f;
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned char Rac2Native_2ecb4e7d1e9c0b88_u8;
+
+typedef int Rac2Native_2ecb4e7d1e9c0b88_s32;
+
+typedef unsigned int Rac2Native_2ecb4e7d1e9c0b88_u32;
+
+
+extern Rac2Native_2ecb4e7d1e9c0b88_u8 LVL_4_BARLOW_F2ecb4e7d1e9c0b88_AT0046FDB0_ROLE00[];
+extern Rac2Native_2ecb4e7d1e9c0b88_u8 LVL_4_BARLOW_F2ecb4e7d1e9c0b88_AT0046FDB0_ROLE01[];
+extern void LVL_4_BARLOW_F2ecb4e7d1e9c0b88_AT0046FDB0_ROLE02(void *, Rac2Native_2ecb4e7d1e9c0b88_s32, void *);
+
+void LVL_4_BARLOW_FUN_0046FDB0(Rac2Native_2ecb4e7d1e9c0b88_u32 *p, Rac2Native_2ecb4e7d1e9c0b88_u32 a1, Rac2Native_2ecb4e7d1e9c0b88_u32 a2, Rac2Native_2ecb4e7d1e9c0b88_u32 a3)
+{
+    if (a1 < 4u)
+        LVL_4_BARLOW_F2ecb4e7d1e9c0b88_AT0046FDB0_ROLE02(LVL_4_BARLOW_F2ecb4e7d1e9c0b88_AT0046FDB0_ROLE00, 37, LVL_4_BARLOW_F2ecb4e7d1e9c0b88_AT0046FDB0_ROLE01);
+    p[0] = a2;
+    p[1] = a3;
+    p[2] = a1;
+    p[5] = 0;
+    p[3] = 0;
+    p[4] = 0;
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct {
+    char *base;
+    unsigned limit;
+    unsigned size;
+    unsigned cur;
+    int count;
+    void *free;
+} Rac2Native_0fef0b35cd771f1a_Hdr;
+
+
+extern int LVL_4_BARLOW_F0fef0b35cd771f1a_AT0046FE38_ROLE02(char *, int, char *);
+extern char LVL_4_BARLOW_F0fef0b35cd771f1a_AT0046FE38_ROLE00[];
+extern char LVL_4_BARLOW_F0fef0b35cd771f1a_AT0046FE38_ROLE01[];
+
+void *LVL_4_BARLOW_FUN_0046FE38(Rac2Native_0fef0b35cd771f1a_Hdr *p)
+{
+    void *q;
+    unsigned cur;
+    unsigned n;
+    char *r;
+
+    if (p->free != 0) {
+        q = p->free;
+        p->free = *(void **)q;
+        p->count++;
+        return q;
+    }
+    cur = p->cur;
+    if (p->limit < cur + p->size) {
+        LVL_4_BARLOW_F0fef0b35cd771f1a_AT0046FE38_ROLE02(LVL_4_BARLOW_F0fef0b35cd771f1a_AT0046FE38_ROLE00, 83, LVL_4_BARLOW_F0fef0b35cd771f1a_AT0046FE38_ROLE01);
+        return 0;
+    }
+    r = p->base + cur;
+    p->cur = cur + p->size;
+    p->count++;
+    return r;
+}

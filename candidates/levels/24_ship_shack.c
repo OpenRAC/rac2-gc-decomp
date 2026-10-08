@@ -2236,3 +2236,24 @@ void LVL_24_SHIP_SHACK_FUN_0041ECC8(Rac2Native_79744baad5ad7f65_ScalarChange48Ow
     }
     owner->value_04 = value;
 }
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned int Rac2Native_74a5d71aacb394c6_u32;
+
+typedef struct {
+    Rac2Native_74a5d71aacb394c6_u32 first[64];
+    Rac2Native_74a5d71aacb394c6_u32 second[64];
+    unsigned char gap[0x20];
+    int count;
+    Rac2Native_74a5d71aacb394c6_u32 current;
+} Rac2Native_74a5d71aacb394c6_ExtraIndexState48;
+
+
+void LVL_24_SHIP_SHACK_FUN_00376EE8(Rac2Native_74a5d71aacb394c6_ExtraIndexState48 *state, int index) {
+    state->first[index] = 0;
+    state->second[index] = 0;
+    if (--state->count == 0) {
+        state->current = 0;
+    }
+}

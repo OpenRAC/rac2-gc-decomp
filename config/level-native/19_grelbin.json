@@ -41,6 +41,7 @@
     "LVL_19_GRELBIN_F1c0a2bbf_D_001ADD18": 1760536,
     "LVL_19_GRELBIN_F1c0a2bbf_D_001ADD38": 1760568,
     "LVL_19_GRELBIN_F1c0a2bbf_FUN_00115E38": 1138232,
+    "LVL_19_GRELBIN_F28c929cadd7aca24_AT002CFF30_ROLE00": 1613344,
     "LVL_19_GRELBIN_F349daa69_D_001B31A0": 1782176,
     "LVL_19_GRELBIN_F349daa69_D_001B31A4": 1782180,
     "LVL_19_GRELBIN_F349daa69_FUN_0011A950": 1157456,
@@ -64,6 +65,7 @@
     "LVL_19_GRELBIN_F5e27257c_D_001A7350": 1733456,
     "LVL_19_GRELBIN_F5e27257c_D_001A7354": 1733460,
     "LVL_19_GRELBIN_F5e27257c_D_001B3188": 1782152,
+    "LVL_19_GRELBIN_F5fc519c90e0e763a_AT002D11F8_ROLE00": 2953024,
     "LVL_19_GRELBIN_F6230a760_D_001B2498": 1778840,
     "LVL_19_GRELBIN_F6230a760_D_001B24A8": 1778856,
     "LVL_19_GRELBIN_F6230a760_D_001B24B8": 1778872,
@@ -71,6 +73,9 @@
     "LVL_19_GRELBIN_F62e6ff2b_D_00189E20": 1613344,
     "LVL_19_GRELBIN_F6894d7c1_D_001A8E60": 1740384,
     "LVL_19_GRELBIN_F6af85cabb56d3b41_AT0043AE38_ROLE00": 1613344,
+    "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE00": 1618620,
+    "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE01": 2791264,
+    "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE02": 2866896,
     "LVL_19_GRELBIN_F79744baad5ad7f65_AT00451188_ROLE00": 1622228,
     "LVL_19_GRELBIN_F86f665335d9cb905_AT003C0340_ROLE00": 3930520,
     "LVL_19_GRELBIN_F8a42bc68_D_002325D0": 2303440,
@@ -910,6 +915,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_19_GRELBIN_FUN_00451188"
+    },
+    {
+      "address": 2791200,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_19_GRELBIN_FUN_002A9720"
+    },
+    {
+      "address": 2948912,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_19_GRELBIN_FUN_002CFF30"
+    },
+    {
+      "address": 2953720,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_19_GRELBIN_FUN_002D11F8"
+    },
+    {
+      "address": 3661240,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_19_GRELBIN_FUN_0037DDB8"
     }
   ],
   "gp": 1765360,

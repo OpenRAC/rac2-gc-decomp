@@ -1,0 +1,9 @@
+
+
+void @@FUNCTION@@(Rac2Native_74a5d71aacb394c6_ExtraIndexState48 *state, int index) {
+    state->first[index] = 0;
+    state->second[index] = 0;
+    if (--state->count == 0) {
+        state->current = 0;
+    }
+}

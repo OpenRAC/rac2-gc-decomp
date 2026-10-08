@@ -1,0 +1,139 @@
+{
+  "entry": 2795912,
+  "externals": {
+    "LVL_30_INSOMNIAC_MUSEUM_F1716667661d8e672_AT003100B0_ROLE00": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F1716667661d8e672_AT003100B0_ROLE01": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F1716667661d8e672_AT003100B0_ROLE02": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F25b7bae55e05d925_AT003106E0_ROLE00": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F25b7bae55e05d925_AT003106E0_ROLE01": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F25b7bae55e05d925_AT003106E0_ROLE02": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F584c3844a02fd1eb_AT00310000_ROLE00": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F584c3844a02fd1eb_AT00310000_ROLE01": 1740760,
+    "LVL_30_INSOMNIAC_MUSEUM_F584c3844a02fd1eb_AT00310000_ROLE02": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F584c3844a02fd1eb_AT00310000_ROLE03": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F60904fd170c92806_AT003103A8_ROLE00": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F60904fd170c92806_AT003103A8_ROLE01": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F60904fd170c92806_AT003103A8_ROLE02": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F715e9b46a377ec8c_AT00310110_ROLE00": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F715e9b46a377ec8c_AT00310110_ROLE01": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F715e9b46a377ec8c_AT00310110_ROLE02": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F8172b0f0a91a7cba_AT0030FF40_ROLE00": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F8172b0f0a91a7cba_AT0030FF40_ROLE01": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F8172b0f0a91a7cba_AT0030FF40_ROLE02": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F8391b53329533f81_AT00310520_ROLE00": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F8391b53329533f81_AT00310520_ROLE01": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F8391b53329533f81_AT00310520_ROLE02": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F83cf4a65b6159c6c_AT00310698_ROLE00": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F83cf4a65b6159c6c_AT00310698_ROLE01": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F83cf4a65b6159c6c_AT00310698_ROLE02": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F998ff33d7f808dbf_AT00310278_ROLE00": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_F998ff33d7f808dbf_AT00310278_ROLE01": 1740760,
+    "LVL_30_INSOMNIAC_MUSEUM_F998ff33d7f808dbf_AT00310278_ROLE02": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F998ff33d7f808dbf_AT00310278_ROLE03": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_F99b76d48da369e8d_AT003101A0_ROLE00": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_F99b76d48da369e8d_AT003101A0_ROLE01": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_Fa0e246aa2dc0b8e7_AT00310240_ROLE00": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_Fa0e246aa2dc0b8e7_AT00310240_ROLE01": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_Fa0e246aa2dc0b8e7_AT00310240_ROLE02": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_Fa661193cb7db1192_AT00310080_ROLE00": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_Fa661193cb7db1192_AT00310080_ROLE01": 1733664,
+    "LVL_30_INSOMNIAC_MUSEUM_Fb09e58bdde03cd06_AT0030FFB0_ROLE00": 1733668,
+    "LVL_30_INSOMNIAC_MUSEUM_Fb09e58bdde03cd06_AT0030FFB0_ROLE01": 1740764,
+    "LVL_30_INSOMNIAC_MUSEUM_Fb09e58bdde03cd06_AT0030FFB0_ROLE02": 1283040,
+    "LVL_30_INSOMNIAC_MUSEUM_Fb09e58bdde03cd06_AT0030FFB0_ROLE03": 1733664
+  },
+  "flags": [
+    "-O2",
+    "-G8",
+    "-ffunction-sections"
+  ],
+  "functions": [
+    {
+      "address": 3211072,
+      "meaning": "Always clear flag 0x20. In mode 2 at offset 0x08, select state 9 for selector 0 or -1 at offset 0x10, clearing selector -1 to zero, or state 5 for selector -2.",
+      "size": 112,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_0030FF40"
+    },
+    {
+      "address": 3211184,
+      "meaning": "Write state 3 when the signed root selector differs from -2; otherwise write state 6 if the marker word or flag mask 0x2 is nonzero. Original game role and full data-object boundaries remain unknown.",
+      "size": 76,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_0030FFB0"
+    },
+    {
+      "address": 3211264,
+      "meaning": "Write state 3 when the signed gate differs from -2. Otherwise clear flag 0x20 and select state 23 or 5 by a nonzero or zero marker; when 0x20 is clear, clear flag 0x08 and write state 7 if that flag is set.",
+      "size": 124,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_00310000"
+    },
+    {
+      "address": 3211392,
+      "meaning": "Clear the signed root selector, replace a negative selection with 3 and clear its associated word, then always write state 8.",
+      "size": 44,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_00310080"
+    },
+    {
+      "address": 3211440,
+      "meaning": "When mode at 0x15C is 2 and selection at 0x164 is negative, nonzero extra at 0x16C selects state 17 and flag 0x40; zero extra selects state 14.",
+      "size": 96,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_003100B0"
+    },
+    {
+      "address": 3211536,
+      "meaning": "Write state 3 for a nonzero gate; otherwise write state 10 when flag mask 6 is nonzero, or state 25 when flag 0x200 is set.",
+      "size": 76,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_00310110"
+    },
+    {
+      "address": 3211680,
+      "meaning": "Under mode 2 and a negative selection, choose states 12, 3, 19 or 16 from the extra/selector words, signed phase short and the signed sum threshold 475; preserve state when the measured guards reject an update.",
+      "size": 156,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_003101A0"
+    },
+    {
+      "address": 3211840,
+      "meaning": "Write state 3 for a nonzero signed root selector; otherwise write state 13 when flag mask 0x2 is nonzero. Original game role and full data-object boundaries remain unknown.",
+      "size": 56,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_00310240"
+    },
+    {
+      "address": 3211896,
+      "meaning": "Write state 3 when the signed gate is nonzero. Otherwise clear flag 0x20 and select state 24 or 12 by a nonzero or zero marker; when 0x20 is clear, clear flag 0x10 and write state 14 if that flag is set.",
+      "size": 120,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_00310278"
+    },
+    {
+      "address": 3212200,
+      "meaning": "Conditionally clear flag bits 4 and 2; handle flag 0x80 with state 21 or flag 0x100 with state 20 while setting 0x40, otherwise select state 3 or 1 from the measured selector and word 0x17C.",
+      "size": 184,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_003103A8"
+    },
+    {
+      "address": 3212576,
+      "meaning": "When mode at offset 0x15C is 2 and selection at 0x164 is negative, nonzero extra at 0x16C or word at 0x24 clears word 0x17C, sets state 21 and flags 0x440; otherwise write word 0x17C to 1 and state 1.",
+      "size": 112,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_00310520"
+    },
+    {
+      "address": 3212952,
+      "meaning": "Write state 3 when the signed root selector differs from -2; otherwise, only when flag mask 0x20 is set, clear it and write state 5. Original game role and full data-object boundaries remain unknown.",
+      "size": 72,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_00310698"
+    },
+    {
+      "address": 3213024,
+      "meaning": "Write state 3 when the signed root selector is nonzero; otherwise, only when flag mask 0x20 is set, clear it and write state 12. Original game role and full data-object boundaries remain unknown.",
+      "size": 68,
+      "symbol": "LVL_30_INSOMNIAC_MUSEUM_FUN_003106E0"
+    }
+  ],
+  "gp": 1765360,
+  "kind": "level-smalldata-catalog",
+  "level": "30_insomniac_museum",
+  "module": "src/levels/smalldata/30_insomniac_museum-parent-batch2.cfrag",
+  "program": "levels/30_insomniac_museum",
+  "reference_sha256": "b638bb36997a9b3e8041738f45b0c624c01fe4ad9ae601ff50e305916ff3040c",
+  "schema": 1,
+  "source": "candidates/levels/30_insomniac_museum-g8.c",
+  "target": "SCUS_972.68"
+}

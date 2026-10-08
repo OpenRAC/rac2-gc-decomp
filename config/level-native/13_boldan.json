@@ -42,6 +42,7 @@
     "LVL_13_BOLDAN_F1c0a2bbf_D_001ADD18": 1760536,
     "LVL_13_BOLDAN_F1c0a2bbf_D_001ADD38": 1760568,
     "LVL_13_BOLDAN_F1c0a2bbf_FUN_00115E38": 1138232,
+    "LVL_13_BOLDAN_F28c929cadd7aca24_AT002DCEF8_ROLE00": 1613344,
     "LVL_13_BOLDAN_F4e5bde81_D_00189E20": 1613344,
     "LVL_13_BOLDAN_F4e5bde81_D_001A7B08": 1735432,
     "LVL_13_BOLDAN_F4e5bde81_D_001A8FF0": 1740784,
@@ -51,10 +52,14 @@
     "LVL_13_BOLDAN_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_13_BOLDAN_F55a1acb8_FUN_00133688": 1259144,
     "LVL_13_BOLDAN_F5b4b17178a13f443_AT0032CBA0_ROLE00": 3254040,
+    "LVL_13_BOLDAN_F5fc519c90e0e763a_AT002DE200_ROLE00": 3006280,
     "LVL_13_BOLDAN_F62e6ff2b_D_00188660": 1607264,
     "LVL_13_BOLDAN_F62e6ff2b_D_00189E20": 1613344,
     "LVL_13_BOLDAN_F6894d7c1_D_001A8E60": 1740384,
     "LVL_13_BOLDAN_F6af85cabb56d3b41_AT0043C920_ROLE00": 1613344,
+    "LVL_13_BOLDAN_F6b0741c38bf00fee_AT002B1108_ROLE00": 1618620,
+    "LVL_13_BOLDAN_F6b0741c38bf00fee_AT002B1108_ROLE01": 2822472,
+    "LVL_13_BOLDAN_F6b0741c38bf00fee_AT002B1108_ROLE02": 2903008,
     "LVL_13_BOLDAN_F79744baad5ad7f65_AT00453ED8_ROLE00": 1622228,
     "LVL_13_BOLDAN_F86f665335d9cb905_AT003C88B8_ROLE00": 3964688,
     "LVL_13_BOLDAN_F9328256b_D_00226700": 2254592,
@@ -839,6 +844,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_13_BOLDAN_FUN_00453ED8"
+    },
+    {
+      "address": 2822408,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_13_BOLDAN_FUN_002B1108"
+    },
+    {
+      "address": 3002104,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_13_BOLDAN_FUN_002DCEF8"
+    },
+    {
+      "address": 3006976,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_13_BOLDAN_FUN_002DE200"
+    },
+    {
+      "address": 3708352,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_13_BOLDAN_FUN_003895C0"
     }
   ],
   "gp": 1765360,

@@ -44,6 +44,7 @@
     "LVL_3_ENDAKO_F1157be91_FUN_00132028": 1253416,
     "LVL_3_ENDAKO_F1157be91_FUN_00133230": 1258032,
     "LVL_3_ENDAKO_F1157be91_FUN_001334B8": 1258680,
+    "LVL_3_ENDAKO_F28c929cadd7aca24_AT002D2EF8_ROLE00": 1613344,
     "LVL_3_ENDAKO_F349daa69_D_001B31A0": 1782176,
     "LVL_3_ENDAKO_F349daa69_D_001B31A4": 1782180,
     "LVL_3_ENDAKO_F349daa69_FUN_0011A950": 1157456,
@@ -69,10 +70,14 @@
     "LVL_3_ENDAKO_F5e27257c_D_001A7350": 1733456,
     "LVL_3_ENDAKO_F5e27257c_D_001A7354": 1733460,
     "LVL_3_ENDAKO_F5e27257c_D_001B3188": 1782152,
+    "LVL_3_ENDAKO_F5fc519c90e0e763a_AT002D4200_ROLE00": 2965320,
     "LVL_3_ENDAKO_F62e6ff2b_D_00188660": 1607264,
     "LVL_3_ENDAKO_F62e6ff2b_D_00189E20": 1613344,
     "LVL_3_ENDAKO_F6894d7c1_D_001A8E60": 1740384,
     "LVL_3_ENDAKO_F6af85cabb56d3b41_AT0043B020_ROLE00": 1613344,
+    "LVL_3_ENDAKO_F6b0741c38bf00fee_AT002AC8F8_ROLE00": 1618620,
+    "LVL_3_ENDAKO_F6b0741c38bf00fee_AT002AC8F8_ROLE01": 2804024,
+    "LVL_3_ENDAKO_F6b0741c38bf00fee_AT002AC8F8_ROLE02": 2878832,
     "LVL_3_ENDAKO_F79744baad5ad7f65_AT00450D50_ROLE00": 1622228,
     "LVL_3_ENDAKO_F7b754363_D_001ADD58": 1760600,
     "LVL_3_ENDAKO_F7b754363_D_001ADDA0": 1760672,
@@ -900,6 +905,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_3_ENDAKO_FUN_00450D50"
+    },
+    {
+      "address": 2803960,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_3_ENDAKO_FUN_002AC8F8"
+    },
+    {
+      "address": 2961144,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_3_ENDAKO_FUN_002D2EF8"
+    },
+    {
+      "address": 2966016,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_3_ENDAKO_FUN_002D4200"
+    },
+    {
+      "address": 3674576,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_3_ENDAKO_FUN_003811D0"
     }
   ],
   "gp": 1765360,

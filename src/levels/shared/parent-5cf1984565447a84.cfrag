@@ -1,0 +1,71 @@
+
+
+extern char @@ROLE_00_000@@[];
+
+void @@FUNCTION@@(void)
+{
+    char *b = @@ROLE_00_001@@;
+    char *p;
+    int i;
+
+    p = *(char **)(b + 3096);
+    *(unsigned short *)(p + 52) &= 0xFFFE;
+
+    for (i = 0; i < 7; i++) {
+        p = *(char **)(b + 4640 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+        p = *(char **)(b + 4644 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+        p = *(char **)(b + 4648 + i * 80);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+    }
+
+    if (1) {
+        char *c = @@ROLE_00_002@@;
+        p = *(char **)(c + 4892);
+        if (p != 0)
+            *(unsigned short *)(p + 52) &= 0xFFFE;
+    }
+
+    if (1) {
+        char *c = @@ROLE_00_003@@;
+        if (*(unsigned char *)(c + 8884) == 1) {
+            c = @@ROLE_00_004@@;
+            p = *(char **)(c + 6244);
+            if (p != 0)
+                *(unsigned short *)(p + 52) &= 0xFFFE;
+        }
+    }
+
+    if (1) {
+        char *c = @@ROLE_00_005@@;
+        if (*(short *)(c + 9468) != 0 || *(int *)(c + 8860) == 31) {
+            c = @@ROLE_00_006@@;
+            p = *(char **)(c + 4880);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+            c = @@ROLE_00_007@@;
+            p = *(char **)(c + 4884);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+            c = @@ROLE_00_008@@;
+            p = *(char **)(c + 4892);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+        }
+    }
+
+    if (1) {
+        char *c = @@ROLE_00_009@@;
+        if ((*(unsigned char *)(c + 8894) != 0 && *(int *)(c + 4680) == 10) ||
+            *(unsigned char *)(c + 8895) != 0) {
+            char *d = @@ROLE_00_010@@;
+            p = *(char **)(d + 4640);
+            if (p != 0)
+                *(unsigned short *)(p + 52) |= 0x41;
+        }
+    }
+}

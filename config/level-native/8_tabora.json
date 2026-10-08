@@ -35,6 +35,7 @@
     "LVL_8_TABORA_F1157be91_FUN_00132028": 1253416,
     "LVL_8_TABORA_F1157be91_FUN_00133230": 1258032,
     "LVL_8_TABORA_F1157be91_FUN_001334B8": 1258680,
+    "LVL_8_TABORA_F28c929cadd7aca24_AT002DE248_ROLE00": 1613344,
     "LVL_8_TABORA_F4a421ea7_D_00226940": 2255168,
     "LVL_8_TABORA_F4a421ea7_D_00226C40": 2255936,
     "LVL_8_TABORA_F4e5bde81_D_00189E20": 1613344,
@@ -49,6 +50,7 @@
     "LVL_8_TABORA_F5b6bba31_D_001ADDD8": 1760728,
     "LVL_8_TABORA_F5b6bba31_D_001ADDF8": 1760760,
     "LVL_8_TABORA_F5b6bba31_FUN_00115E38": 1138232,
+    "LVL_8_TABORA_F5fc519c90e0e763a_AT002DF510_ROLE00": 3011160,
     "LVL_8_TABORA_F60657994_D_0021F760": 2226016,
     "LVL_8_TABORA_F60657994_D_00220CE0": 2231520,
     "LVL_8_TABORA_F60657994_D_002211E0": 2232800,
@@ -61,6 +63,9 @@
     "LVL_8_TABORA_F62e6ff2b_D_00189E20": 1613344,
     "LVL_8_TABORA_F6894d7c1_D_001A8E60": 1740384,
     "LVL_8_TABORA_F6af85cabb56d3b41_AT00445E80_ROLE00": 1613344,
+    "LVL_8_TABORA_F6b0741c38bf00fee_AT002B8598_ROLE00": 1618620,
+    "LVL_8_TABORA_F6b0741c38bf00fee_AT002B8598_ROLE01": 2852312,
+    "LVL_8_TABORA_F6b0741c38bf00fee_AT002B8598_ROLE02": 2927952,
     "LVL_8_TABORA_F79744baad5ad7f65_AT0045BCD0_ROLE00": 1622228,
     "LVL_8_TABORA_F7f9c1f18_D_001BD2C8": 1823432,
     "LVL_8_TABORA_F86f665335d9cb905_AT003D2F30_ROLE00": 4007304,
@@ -873,6 +878,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_8_TABORA_FUN_0045BCD0"
+    },
+    {
+      "address": 2852248,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_8_TABORA_FUN_002B8598"
+    },
+    {
+      "address": 3007048,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_8_TABORA_FUN_002DE248"
+    },
+    {
+      "address": 3011856,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_8_TABORA_FUN_002DF510"
+    },
+    {
+      "address": 3736984,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_8_TABORA_FUN_00390598"
     }
   ],
   "gp": 1765360,
