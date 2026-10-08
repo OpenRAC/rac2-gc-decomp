@@ -53,13 +53,24 @@
     "LVL_25_WUPASH_NEBULA_F55a1acb8_D_001A63AC": 1729452,
     "LVL_25_WUPASH_NEBULA_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_25_WUPASH_NEBULA_F55a1acb8_FUN_00133688": 1259144,
+    "LVL_25_WUPASH_NEBULA_F5b4b17178a13f443_AT003346D0_ROLE00": 3288008,
     "LVL_25_WUPASH_NEBULA_F62e6ff2b_D_00188660": 1607264,
     "LVL_25_WUPASH_NEBULA_F62e6ff2b_D_00189E20": 1613344,
     "LVL_25_WUPASH_NEBULA_F6894d7c1_D_001A8E60": 1740384,
+    "LVL_25_WUPASH_NEBULA_F6af85cabb56d3b41_AT00432698_ROLE00": 1613344,
     "LVL_25_WUPASH_NEBULA_F777b9bda_D_001B9040": 1806400,
+    "LVL_25_WUPASH_NEBULA_F79744baad5ad7f65_AT0044C460_ROLE00": 1622228,
     "LVL_25_WUPASH_NEBULA_F7abba11e_D_001DA340": 1942336,
     "LVL_25_WUPASH_NEBULA_F7abba11e_D_001DD1C0": 1954240,
     "LVL_25_WUPASH_NEBULA_F7abba11e_D_001DD980": 1956224,
+    "LVL_25_WUPASH_NEBULA_F86f665335d9cb905_AT003C7C20_ROLE00": 3961464,
+    "LVL_25_WUPASH_NEBULA_F9cdc323a4d0c2fbd_AT003A7348_ROLE00": 3718168,
+    "LVL_25_WUPASH_NEBULA_F9cdc323a4d0c2fbd_AT003ABE28_ROLE00": 3718168,
+    "LVL_25_WUPASH_NEBULA_F9cdc323a4d0c2fbd_AT003CF390_ROLE00": 3718168,
+    "LVL_25_WUPASH_NEBULA_F9cdc323a4d0c2fbd_AT003D4A08_ROLE00": 3718168,
+    "LVL_25_WUPASH_NEBULA_F9cdc323a4d0c2fbd_AT003EB9C0_ROLE00": 3718168,
+    "LVL_25_WUPASH_NEBULA_F9cdc323a4d0c2fbd_AT003EED90_ROLE00": 3718168,
+    "LVL_25_WUPASH_NEBULA_F9cdc323a4d0c2fbd_AT003FDBE8_ROLE00": 3718168,
     "LVL_25_WUPASH_NEBULA_FUN_00115DA8": 1138088,
     "LVL_25_WUPASH_NEBULA_FUN_00115E38": 1138232,
     "LVL_25_WUPASH_NEBULA_FUN_0011AEA0": 1158816,
@@ -78,10 +89,16 @@
     "LVL_25_WUPASH_NEBULA_FUN_0036BAA0": 3586720,
     "LVL_25_WUPASH_NEBULA_FUN_0038A5A0": 3712416,
     "LVL_25_WUPASH_NEBULA_Fa2dbe766_D_00189E20": 1613344,
+    "LVL_25_WUPASH_NEBULA_Fabf21065e887d7a9_AT00321640_ROLE00": 1283944,
+    "LVL_25_WUPASH_NEBULA_Facdcf1600d770d3b_AT0036BDD8_ROLE00": 1607264,
     "LVL_25_WUPASH_NEBULA_Fafab4c55_D_001AD5F0": 1758704,
     "LVL_25_WUPASH_NEBULA_Fafab4c55_D_001AD600": 1758720,
     "LVL_25_WUPASH_NEBULA_Fafab4c55_D_001AD608": 1758728,
     "LVL_25_WUPASH_NEBULA_Fafab4c55_FUN_00115DA8": 1138088,
+    "LVL_25_WUPASH_NEBULA_Fb1b523716b470b36_AT00396748_ROLE00": 3148800,
+    "LVL_25_WUPASH_NEBULA_Fb1b523716b470b36_AT00396748_ROLE01": 3148848,
+    "LVL_25_WUPASH_NEBULA_Fb1b523716b470b36_AT003991F0_ROLE00": 3148800,
+    "LVL_25_WUPASH_NEBULA_Fb1b523716b470b36_AT003991F0_ROLE01": 3148848,
     "LVL_25_WUPASH_NEBULA_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_25_WUPASH_NEBULA_Fc895cb79_D_001D1D00": 1907968,
     "LVL_25_WUPASH_NEBULA_Fe77c6258_D_001ADD18": 1760536,
@@ -723,6 +740,120 @@
       "address": 4537856,
       "size": 8,
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_00453E00"
+    },
+    {
+      "address": 3282496,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00321640"
+    },
+    {
+      "address": 3360464,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003346D0"
+    },
+    {
+      "address": 3587544,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_0036BDD8"
+    },
+    {
+      "address": 3761992,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00396748"
+    },
+    {
+      "address": 3772912,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003991F0"
+    },
+    {
+      "address": 3830600,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003A7348"
+    },
+    {
+      "address": 3849768,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003ABE28"
+    },
+    {
+      "address": 3963936,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003C7C20"
+    },
+    {
+      "address": 3994512,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003CF390"
+    },
+    {
+      "address": 4016648,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003D4A08"
+    },
+    {
+      "address": 4110784,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003EB9C0"
+    },
+    {
+      "address": 4124048,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003EED90"
+    },
+    {
+      "address": 4185064,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003FDBE8"
+    },
+    {
+      "address": 4400792,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00432698"
+    },
+    {
+      "address": 4422328,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00437AB8"
+    },
+    {
+      "address": 4422760,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00437C68"
+    },
+    {
+      "address": 4444104,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_0043CFC8"
+    },
+    {
+      "address": 4476912,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00444FF0"
+    },
+    {
+      "address": 4506720,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_0044C460"
     }
   ],
   "gp": 1765360,

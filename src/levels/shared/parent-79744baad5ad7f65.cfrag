@@ -1,0 +1,14 @@
+
+
+extern unsigned char @@ROLE_00_000@@[];
+
+void @@FUNCTION@@(Rac2Native_79744baad5ad7f65_ScalarChange48Owner *owner, int value)
+{
+    int previous = owner->value_04;
+    if (previous != value && @@ROLE_00_001@@[0] == 0) {
+        owner->previous_3fc = previous;
+        owner->counter_3f8 = 180;
+        owner->counter_3f4 = 300;
+    }
+    owner->value_04 = value;
+}

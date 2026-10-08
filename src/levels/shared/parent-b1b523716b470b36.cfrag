@@ -1,0 +1,39 @@
+
+
+extern void @@ROLE_01_000@@(Rac2Native_b1b523716b470b36_FamilyNative192Vector *out,
+    const Rac2Native_b1b523716b470b36_FamilyNative192Vector *first, const Rac2Native_b1b523716b470b36_FamilyNative192Vector *second);
+extern void @@ROLE_00_000@@(Rac2Native_b1b523716b470b36_FamilyNative192Vector *out,
+    const Rac2Native_b1b523716b470b36_FamilyNative192Vector *first, const Rac2Native_b1b523716b470b36_FamilyNative192Vector *second);
+
+void @@FUNCTION@@(void *object)
+{
+    Rac2Native_b1b523716b470b36_FamilyNative192Vector input;
+    Rac2Native_b1b523716b470b36_FamilyNative192Vector output;
+    char *base = (char *)object;
+    char *state;
+    char *source;
+    char *kind;
+    char *extra;
+
+    input.w = 0.0f;
+    state = *(char **)(base + 0x68);
+    input.x = *(float *)(state + 0x74);
+    input.y = *(float *)(state + 0x78);
+    input.z = *(float *)(state + 0x7c);
+    source = *(char **)(state + 0x70);
+    @@ROLE_01_001@@(&output,
+        (const Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(source + 0x10), &input);
+    @@ROLE_00_001@@((Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(base + 0x10), &output,
+        (const Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(base + 0x10));
+    source = *(char **)(state + 0x70);
+    *(float *)(state + 0x74) = *(float *)(source + 0x10);
+    *(float *)(state + 0x78) = *(float *)(source + 0x14);
+    *(float *)(state + 0x7c) = *(float *)(source + 0x18);
+    kind = *(char **)(source + 0x24);
+    if (*(short *)(kind + 0x46) == 0x12) {
+        extra = *(char **)(source + 0x68);
+        if (*(unsigned char *)(extra + 0x14) == 0) {
+            *(unsigned char *)(base + 0x20) = 7;
+        }
+    }
+}

@@ -47,9 +47,20 @@
     "LVL_23_DAMOSEL_ORBIT_F55a1acb8_D_001A63AC": 1729452,
     "LVL_23_DAMOSEL_ORBIT_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_23_DAMOSEL_ORBIT_F55a1acb8_FUN_00133688": 1259144,
+    "LVL_23_DAMOSEL_ORBIT_F5b4b17178a13f443_AT0032C590_ROLE00": 3252488,
     "LVL_23_DAMOSEL_ORBIT_F62e6ff2b_D_00188660": 1607264,
     "LVL_23_DAMOSEL_ORBIT_F62e6ff2b_D_00189E20": 1613344,
     "LVL_23_DAMOSEL_ORBIT_F6894d7c1_D_001A8E60": 1740384,
+    "LVL_23_DAMOSEL_ORBIT_F6af85cabb56d3b41_AT0043FA68_ROLE00": 1613344,
+    "LVL_23_DAMOSEL_ORBIT_F79744baad5ad7f65_AT00455E18_ROLE00": 1622228,
+    "LVL_23_DAMOSEL_ORBIT_F86f665335d9cb905_AT003CE9B0_ROLE00": 3989512,
+    "LVL_23_DAMOSEL_ORBIT_F9cdc323a4d0c2fbd_AT0039EBE0_ROLE00": 3688984,
+    "LVL_23_DAMOSEL_ORBIT_F9cdc323a4d0c2fbd_AT003AD118_ROLE00": 3688984,
+    "LVL_23_DAMOSEL_ORBIT_F9cdc323a4d0c2fbd_AT003D1998_ROLE00": 3688984,
+    "LVL_23_DAMOSEL_ORBIT_F9cdc323a4d0c2fbd_AT003D7010_ROLE00": 3688984,
+    "LVL_23_DAMOSEL_ORBIT_F9cdc323a4d0c2fbd_AT003EE288_ROLE00": 3688984,
+    "LVL_23_DAMOSEL_ORBIT_F9cdc323a4d0c2fbd_AT003F1360_ROLE00": 3688984,
+    "LVL_23_DAMOSEL_ORBIT_F9cdc323a4d0c2fbd_AT004019E0_ROLE00": 3688984,
     "LVL_23_DAMOSEL_ORBIT_FUN_00115DA8": 1138088,
     "LVL_23_DAMOSEL_ORBIT_FUN_00115E38": 1138232,
     "LVL_23_DAMOSEL_ORBIT_FUN_0011AEA0": 1158816,
@@ -68,10 +79,16 @@
     "LVL_23_DAMOSEL_ORBIT_FUN_003675B0": 3569072,
     "LVL_23_DAMOSEL_ORBIT_FUN_003833A0": 3683232,
     "LVL_23_DAMOSEL_ORBIT_Fa2dbe766_D_00189E20": 1613344,
+    "LVL_23_DAMOSEL_ORBIT_Fabf21065e887d7a9_AT00318B80_ROLE00": 1283944,
+    "LVL_23_DAMOSEL_ORBIT_Facdcf1600d770d3b_AT003678E8_ROLE00": 1607264,
     "LVL_23_DAMOSEL_ORBIT_Fafab4c55_D_001AD5F0": 1758704,
     "LVL_23_DAMOSEL_ORBIT_Fafab4c55_D_001AD600": 1758720,
     "LVL_23_DAMOSEL_ORBIT_Fafab4c55_D_001AD608": 1758728,
     "LVL_23_DAMOSEL_ORBIT_Fafab4c55_FUN_00115DA8": 1138088,
+    "LVL_23_DAMOSEL_ORBIT_Fb1b523716b470b36_AT0038DFE0_ROLE00": 3113312,
+    "LVL_23_DAMOSEL_ORBIT_Fb1b523716b470b36_AT0038DFE0_ROLE01": 3113360,
+    "LVL_23_DAMOSEL_ORBIT_Fb1b523716b470b36_AT00390A88_ROLE00": 3113312,
+    "LVL_23_DAMOSEL_ORBIT_Fb1b523716b470b36_AT00390A88_ROLE01": 3113360,
     "LVL_23_DAMOSEL_ORBIT_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_23_DAMOSEL_ORBIT_Fcbc1388e_D_001A63A8": 1729448,
     "LVL_23_DAMOSEL_ORBIT_Fe77c6258_D_001ADD18": 1760536,
@@ -683,6 +700,120 @@
       "address": 4577208,
       "size": 8,
       "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0045D7B8"
+    },
+    {
+      "address": 3246976,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00318B80"
+    },
+    {
+      "address": 3327376,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0032C590"
+    },
+    {
+      "address": 3569896,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003678E8"
+    },
+    {
+      "address": 3727328,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0038DFE0"
+    },
+    {
+      "address": 3738248,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00390A88"
+    },
+    {
+      "address": 3795936,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0039EBE0"
+    },
+    {
+      "address": 3854616,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003AD118"
+    },
+    {
+      "address": 3991984,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003CE9B0"
+    },
+    {
+      "address": 4004248,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003D1998"
+    },
+    {
+      "address": 4026384,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003D7010"
+    },
+    {
+      "address": 4121224,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003EE288"
+    },
+    {
+      "address": 4133728,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_003F1360"
+    },
+    {
+      "address": 4200928,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_004019E0"
+    },
+    {
+      "address": 4455016,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0043FA68"
+    },
+    {
+      "address": 4461680,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00441470"
+    },
+    {
+      "address": 4462112,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00441620"
+    },
+    {
+      "address": 4483456,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00446980"
+    },
+    {
+      "address": 4516264,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_0044E9A8"
+    },
+    {
+      "address": 4546072,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_23_DAMOSEL_ORBIT_FUN_00455E18"
     }
   ],
   "gp": 1765360,

@@ -1,0 +1,12 @@
+
+
+extern void @@ROLE_00_000@@(float scale, Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context,
+                                    float *vector, int mode);
+
+void @@FUNCTION@@(Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner *owner)
+{
+    Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context = owner->context_68;
+    if (context->active_24 != 0) {
+        @@ROLE_00_001@@(1.0f, context, context->vector_10, 0);
+    }
+}

@@ -33,6 +33,29 @@
     "LVL_4_BARLOW_D_0026C0D0": 2539728,
     "LVL_4_BARLOW_D_0027B470": 2602096,
     "LVL_4_BARLOW_D_00296C00": 2714624,
+    "LVL_4_BARLOW_F170b399a2496b87e_AT0032A148_ROLE00": 1283040,
+    "LVL_4_BARLOW_F170b399a2496b87e_AT0032A148_ROLE01": 1733664,
+    "LVL_4_BARLOW_F3e18d05650488ad4_AT0032A448_ROLE00": 1733668,
+    "LVL_4_BARLOW_F3e18d05650488ad4_AT0032A448_ROLE01": 1733664,
+    "LVL_4_BARLOW_F3e18d05650488ad4_AT0032A470_ROLE00": 1733668,
+    "LVL_4_BARLOW_F3e18d05650488ad4_AT0032A470_ROLE01": 1733664,
+    "LVL_4_BARLOW_F3e18d05650488ad4_AT0032A4B8_ROLE00": 1733668,
+    "LVL_4_BARLOW_F3e18d05650488ad4_AT0032A4B8_ROLE01": 1733664,
+    "LVL_4_BARLOW_F3e18d05650488ad4_AT0032A4E0_ROLE00": 1733668,
+    "LVL_4_BARLOW_F3e18d05650488ad4_AT0032A4E0_ROLE01": 1733664,
+    "LVL_4_BARLOW_F5b4b17178a13f443_AT00345218_ROLE00": 3348456,
+    "LVL_4_BARLOW_F6af85cabb56d3b41_AT0046B830_ROLE00": 1613344,
+    "LVL_4_BARLOW_F79744baad5ad7f65_AT004834B0_ROLE00": 1622228,
+    "LVL_4_BARLOW_F86f665335d9cb905_AT003E7E48_ROLE00": 4093088,
+    "LVL_4_BARLOW_F87e90c235703f6b4_AT0032A2D8_ROLE00": 1283040,
+    "LVL_4_BARLOW_F87e90c235703f6b4_AT0032A2D8_ROLE01": 1733664,
+    "LVL_4_BARLOW_F9cdc323a4d0c2fbd_AT003BDB30_ROLE00": 3811488,
+    "LVL_4_BARLOW_F9cdc323a4d0c2fbd_AT003C2AB8_ROLE00": 3811488,
+    "LVL_4_BARLOW_F9cdc323a4d0c2fbd_AT003EEBE0_ROLE00": 3811488,
+    "LVL_4_BARLOW_F9cdc323a4d0c2fbd_AT003F4258_ROLE00": 3811488,
+    "LVL_4_BARLOW_F9cdc323a4d0c2fbd_AT004268D8_ROLE00": 3811488,
+    "LVL_4_BARLOW_F9cdc323a4d0c2fbd_AT00429B78_ROLE00": 3811488,
+    "LVL_4_BARLOW_F9cdc323a4d0c2fbd_AT0043ABA8_ROLE00": 3811488,
     "LVL_4_BARLOW_FUN_00115DA8": 1138088,
     "LVL_4_BARLOW_FUN_00115E38": 1138232,
     "LVL_4_BARLOW_FUN_0011AEA0": 1158816,
@@ -56,6 +79,12 @@
     "LVL_4_BARLOW_FUN_00382F58": 3682136,
     "LVL_4_BARLOW_FUN_00394268": 3752552,
     "LVL_4_BARLOW_FUN_0039EFA0": 3796896,
+    "LVL_4_BARLOW_Fabf21065e887d7a9_AT00330260_ROLE00": 1283944,
+    "LVL_4_BARLOW_Facdcf1600d770d3b_AT00383340_ROLE00": 1607264,
+    "LVL_4_BARLOW_Fb1b523716b470b36_AT003AC058_ROLE00": 3206552,
+    "LVL_4_BARLOW_Fb1b523716b470b36_AT003AC058_ROLE01": 3206600,
+    "LVL_4_BARLOW_Fb1b523716b470b36_AT003AEB00_ROLE00": 3206552,
+    "LVL_4_BARLOW_Fb1b523716b470b36_AT003AEB00_ROLE01": 3206600,
     "LVL_4_BARLOW_UPDATE775_HELPER_003317E8": 3348456
   },
   "flags": [
@@ -575,6 +604,156 @@
       "address": 4763216,
       "size": 8,
       "symbol": "LVL_4_BARLOW_FUN_0048AE50"
+    },
+    {
+      "address": 3318088,
+      "meaning": "When mode at data offset 0x15C equals 2 and the signed selection at offset 0x164 is negative, write selection 7, clear the word at offset 0x168 and write absolute state value 11.",
+      "size": 64,
+      "symbol": "LVL_4_BARLOW_FUN_0032A148"
+    },
+    {
+      "address": 3318488,
+      "meaning": "When mode at data offset 0x15C equals 2 and the signed selection at offset 0x164 is negative, write selection 9, clear the word at offset 0x168 and write absolute state value 15.",
+      "size": 64,
+      "symbol": "LVL_4_BARLOW_FUN_0032A2D8"
+    },
+    {
+      "address": 3318856,
+      "meaning": "Write state value 3 when bit 0x40 is clear in the absolute flag word; preserve the existing value otherwise.",
+      "size": 36,
+      "symbol": "LVL_4_BARLOW_FUN_0032A448"
+    },
+    {
+      "address": 3318896,
+      "meaning": "Write state value 3 when bit 0x40 is clear in the absolute flag word; preserve the existing value otherwise.",
+      "size": 36,
+      "symbol": "LVL_4_BARLOW_FUN_0032A470"
+    },
+    {
+      "address": 3318968,
+      "meaning": "Write state value 3 when bit 0x40 is clear in the absolute flag word; preserve the existing value otherwise.",
+      "size": 36,
+      "symbol": "LVL_4_BARLOW_FUN_0032A4B8"
+    },
+    {
+      "address": 3319008,
+      "meaning": "Write state value 3 when bit 0x40 is clear in the absolute flag word; preserve the existing value otherwise.",
+      "size": 36,
+      "symbol": "LVL_4_BARLOW_FUN_0032A4E0"
+    },
+    {
+      "address": 3342944,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_4_BARLOW_FUN_00330260"
+    },
+    {
+      "address": 3428888,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_4_BARLOW_FUN_00345218"
+    },
+    {
+      "address": 3683136,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_4_BARLOW_FUN_00383340"
+    },
+    {
+      "address": 3850328,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_4_BARLOW_FUN_003AC058"
+    },
+    {
+      "address": 3861248,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_4_BARLOW_FUN_003AEB00"
+    },
+    {
+      "address": 3922736,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_4_BARLOW_FUN_003BDB30"
+    },
+    {
+      "address": 3943096,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_4_BARLOW_FUN_003C2AB8"
+    },
+    {
+      "address": 4095560,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_4_BARLOW_FUN_003E7E48"
+    },
+    {
+      "address": 4123616,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_4_BARLOW_FUN_003EEBE0"
+    },
+    {
+      "address": 4145752,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_4_BARLOW_FUN_003F4258"
+    },
+    {
+      "address": 4352216,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_4_BARLOW_FUN_004268D8"
+    },
+    {
+      "address": 4365176,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_4_BARLOW_FUN_00429B78"
+    },
+    {
+      "address": 4434856,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_4_BARLOW_FUN_0043ABA8"
+    },
+    {
+      "address": 4634672,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_4_BARLOW_FUN_0046B830"
+    },
+    {
+      "address": 4647688,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_4_BARLOW_FUN_0046EB08"
+    },
+    {
+      "address": 4648120,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_4_BARLOW_FUN_0046ECB8"
+    },
+    {
+      "address": 4669464,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_4_BARLOW_FUN_00474018"
+    },
+    {
+      "address": 4702272,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_4_BARLOW_FUN_0047C040"
+    },
+    {
+      "address": 4732080,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_4_BARLOW_FUN_004834B0"
     }
   ],
   "gp": 1765360,

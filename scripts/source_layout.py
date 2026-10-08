@@ -155,6 +155,16 @@ BASE_SEED_PLACEMENTS = (
     ("11_joba", "LVL_11_JOBA_FUN_0048E0C0"),
     ("3_endako", "LVL_3_ENDAKO_FUN_00347A08"),
     ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_00304FF0"),
+    # Exact authored-source identities for the parent native scalar lot.
+    # Function/external token substitutions alone group these noncalling bodies.
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_00430948"),
+    ("4_barlow", "LVL_4_BARLOW_FUN_0032A448"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0043FDE0"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_00428FE8"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0030EEB8"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0042B438"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0042B5E8"),
+    ("0_aranos_tutorial", "LVL_0_ARANOS_TUTORIAL_FUN_0035F8D0"),
 )
 BASE_SEED_SYMBOLS = tuple(symbol for _, symbol in BASE_SEED_PLACEMENTS)
 

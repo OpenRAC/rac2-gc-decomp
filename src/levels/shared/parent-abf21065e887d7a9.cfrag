@@ -1,0 +1,14 @@
+
+
+extern Rac2Native_abf21065e887d7a9_FallbackPredicate112Layout @@ROLE_00_000@@;
+
+int @@FUNCTION@@(void)
+{
+    if ((@@ROLE_00_001@@.flags_90 & 0x10000u) == 0 &&
+        (@@ROLE_00_002@@.flags_98 & 0x04000000u) != 0)
+        return 0;
+    if ((@@ROLE_00_003@@.flags_90 & 0x10000u) != 0 &&
+        (@@ROLE_00_004@@.flags_98 & 0x04000000u) != 0)
+        return 1;
+    return 0;
+}

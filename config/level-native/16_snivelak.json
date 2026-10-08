@@ -48,6 +48,7 @@
     "LVL_16_SNIVELAK_F55a1acb8_D_001A63AC": 1729452,
     "LVL_16_SNIVELAK_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_16_SNIVELAK_F55a1acb8_FUN_00133688": 1259144,
+    "LVL_16_SNIVELAK_F5b4b17178a13f443_AT0031C2B8_ROLE00": 3185672,
     "LVL_16_SNIVELAK_F60657994_D_0021F760": 2226016,
     "LVL_16_SNIVELAK_F60657994_D_00220CE0": 2231520,
     "LVL_16_SNIVELAK_F60657994_D_002211E0": 2232800,
@@ -56,8 +57,18 @@
     "LVL_16_SNIVELAK_F62e6ff2b_D_00188660": 1607264,
     "LVL_16_SNIVELAK_F62e6ff2b_D_00189E20": 1613344,
     "LVL_16_SNIVELAK_F6894d7c1_D_001A8E60": 1740384,
+    "LVL_16_SNIVELAK_F6af85cabb56d3b41_AT00435478_ROLE00": 1613344,
+    "LVL_16_SNIVELAK_F79744baad5ad7f65_AT0044B828_ROLE00": 1622228,
     "LVL_16_SNIVELAK_F7f9c1f18_D_001BD2C8": 1823432,
+    "LVL_16_SNIVELAK_F86f665335d9cb905_AT003B8EF8_ROLE00": 3900752,
     "LVL_16_SNIVELAK_F909a5233_D_001B9940": 1808704,
+    "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT00392A38_ROLE00": 3622984,
+    "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT00398458_ROLE00": 3622984,
+    "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT003BC670_ROLE00": 3622984,
+    "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT003C1CE8_ROLE00": 3622984,
+    "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT003D9E78_ROLE00": 3622984,
+    "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT003DE848_ROLE00": 3622984,
+    "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT003EF6E0_ROLE00": 3622984,
     "LVL_16_SNIVELAK_FUN_00115DA8": 1138088,
     "LVL_16_SNIVELAK_FUN_00115E38": 1138232,
     "LVL_16_SNIVELAK_FUN_0011AEA0": 1158816,
@@ -78,13 +89,19 @@
     "LVL_16_SNIVELAK_Fa3822957_D_001A7240": 1733184,
     "LVL_16_SNIVELAK_Fa3822957_D_00226210": 2253328,
     "LVL_16_SNIVELAK_Fa3822957_FUN_0011AFE0": 1159136,
+    "LVL_16_SNIVELAK_Fabf21065e887d7a9_AT00308680_ROLE00": 1283944,
     "LVL_16_SNIVELAK_Fac18d0d0_D_001DAC40": 1944640,
     "LVL_16_SNIVELAK_Fac18d0d0_D_001DDAC0": 1956544,
     "LVL_16_SNIVELAK_Fac18d0d0_D_001DE280": 1958528,
+    "LVL_16_SNIVELAK_Facdcf1600d770d3b_AT00357720_ROLE00": 1607264,
     "LVL_16_SNIVELAK_Fafab4c55_D_001AD5F0": 1758704,
     "LVL_16_SNIVELAK_Fafab4c55_D_001AD600": 1758720,
     "LVL_16_SNIVELAK_Fafab4c55_D_001AD608": 1758728,
     "LVL_16_SNIVELAK_Fafab4c55_FUN_00115DA8": 1138088,
+    "LVL_16_SNIVELAK_Fb1b523716b470b36_AT00380F60_ROLE00": 3044488,
+    "LVL_16_SNIVELAK_Fb1b523716b470b36_AT00380F60_ROLE01": 3044536,
+    "LVL_16_SNIVELAK_Fb1b523716b470b36_AT00383A08_ROLE00": 3044488,
+    "LVL_16_SNIVELAK_Fb1b523716b470b36_AT00383A08_ROLE01": 3044536,
     "LVL_16_SNIVELAK_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_16_SNIVELAK_Fd1a69f7e_D_00238000": 2326528,
     "LVL_16_SNIVELAK_Fd1a69f7e_D_002392C0": 2331328,
@@ -759,6 +776,120 @@
       "address": 4534728,
       "size": 8,
       "symbol": "LVL_16_SNIVELAK_FUN_004531C8"
+    },
+    {
+      "address": 3180160,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_16_SNIVELAK_FUN_00308680"
+    },
+    {
+      "address": 3261112,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_16_SNIVELAK_FUN_0031C2B8"
+    },
+    {
+      "address": 3503904,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_16_SNIVELAK_FUN_00357720"
+    },
+    {
+      "address": 3673952,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_16_SNIVELAK_FUN_00380F60"
+    },
+    {
+      "address": 3684872,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_16_SNIVELAK_FUN_00383A08"
+    },
+    {
+      "address": 3746360,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_00392A38"
+    },
+    {
+      "address": 3769432,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_00398458"
+    },
+    {
+      "address": 3903224,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_16_SNIVELAK_FUN_003B8EF8"
+    },
+    {
+      "address": 3917424,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003BC670"
+    },
+    {
+      "address": 3939560,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003C1CE8"
+    },
+    {
+      "address": 4038264,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003D9E78"
+    },
+    {
+      "address": 4057160,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003DE848"
+    },
+    {
+      "address": 4126432,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003EF6E0"
+    },
+    {
+      "address": 4412536,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_00435478"
+    },
+    {
+      "address": 4419200,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_16_SNIVELAK_FUN_00436E80"
+    },
+    {
+      "address": 4419632,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_16_SNIVELAK_FUN_00437030"
+    },
+    {
+      "address": 4440976,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_16_SNIVELAK_FUN_0043C390"
+    },
+    {
+      "address": 4473784,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_16_SNIVELAK_FUN_004443B8"
+    },
+    {
+      "address": 4503592,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_16_SNIVELAK_FUN_0044B828"
     }
   ],
   "gp": 1765360,

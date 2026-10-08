@@ -1,0 +1,23 @@
+
+
+extern Rac2Native_acdcf1600d770d3b_ScalarConfigure116State @@ROLE_00_000@@[];
+
+void @@FUNCTION@@(unsigned int value, unsigned int selector, int other,
+                        unsigned int axis, unsigned int mode)
+{
+    Rac2Native_acdcf1600d770d3b_ScalarConfigure116State *state = @@ROLE_00_001@@;
+    state->value_60 = value;
+    if (state->selector_68 != selector) {
+        state->dirty_6b |= 1;
+        state->selector_68 = selector;
+    }
+    if (state->value_64 != other) {
+        state->dirty_6b |= 4;
+        state->value_64 = other;
+    }
+    if (state->axis_69 != axis || state->mode_6a != mode) {
+        state->dirty_6b |= 2;
+        state->axis_69 = axis;
+        state->mode_6a = mode;
+    }
+}
