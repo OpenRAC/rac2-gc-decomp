@@ -141,20 +141,20 @@ ABI are documented in [the family evidence](UPDATE-MOBY775-76-EVIDENCE.md).
 Its helper addresses remain contextual inventory operands, so sharing a source
 fragment does not itself collapse those entries or prove machine equivalence.
 
-The current integration exporter accepts **659,380 / 48,788,176 bytes**:
-244 boot functions contribute 13,456 bytes; 9,373 overlay placements
-contribute 645,924 bytes. The latest batch adds **1,003 complete placements /
-41,180 new physical C bytes**, following 53 complete translation-unit gates over
-4,846 old and new definitions. Reserved worker targets and equivalent copies remain excluded.
+The current integration exporter accepts **700,256 / 48,788,176 bytes**:
+288 boot functions contribute 14,908 bytes; 10,585 overlay placements
+contribute 685,348 bytes. The latest batch adds **1,256 complete placements /
+40,876 new physical C bytes**, following 55 complete translation-unit gates over
+6,474 old and new definitions. Reserved worker targets and equivalent copies remain excluded.
 
 Fresh boot and all 27 overlay PT_LOAD bytes and metadata pass under campaign
-`de67b0a1d85e444189796aef63509496`: 79,486,851 loaded bytes were compared. Existing default profiles and
+`ae7eab53509847d5ac11b11e4a7f8ba6`: 79,486,851 loaded bytes were compared. Existing default profiles and
 the separate small-data profile retain their measured settings. Observed source
 effects are recorded; original game roles and complete object boundaries remain unknown.
 
-The conservative all-members unique measure is **161,316 / 44,408,040 bytes**.
+The conservative all-members unique measure is **178,712 / 44,400,168 bytes**.
 Catalogue reconstruction and pointer-theorem replay pass over the current scoped
 inventory. See the [unique report](../progress/unique-code-report.json) and
-[latest batch evidence](NATIVE-SCALAR-41K-EVIDENCE.md). Static target classes and
+[latest batch evidence](QWEN-RECOVERY-41K-EVIDENCE.md). Static target classes and
 retained unowned data operands can keep copies separate. Source identity alone
 does not establish original source, data-object, module or runtime equivalence.
