@@ -1,0 +1,12 @@
+
+
+void @@FUNCTION@@(float factor, void *context,
+                                   float *destination,
+                                   const float *first, const float *second)
+{
+    float complement = 1.0f - factor;
+    destination[0] = complement * first[0] + factor * second[0];
+    destination[1] = complement * first[1] + factor * second[1];
+    destination[2] = complement * first[2] + factor * second[2];
+    destination[3] = complement * first[3] + factor * second[3];
+}

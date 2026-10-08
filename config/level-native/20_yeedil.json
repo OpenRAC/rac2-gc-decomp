@@ -50,9 +50,20 @@
     "LVL_20_YEEDIL_F55a1acb8_D_001A63AC": 1729452,
     "LVL_20_YEEDIL_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_20_YEEDIL_F55a1acb8_FUN_00133688": 1259144,
+    "LVL_20_YEEDIL_F5b4b17178a13f443_AT00338100_ROLE00": 3298216,
     "LVL_20_YEEDIL_F62e6ff2b_D_00188660": 1607264,
     "LVL_20_YEEDIL_F62e6ff2b_D_00189E20": 1613344,
     "LVL_20_YEEDIL_F6894d7c1_D_001A8E60": 1740384,
+    "LVL_20_YEEDIL_F6af85cabb56d3b41_AT004604B0_ROLE00": 1613344,
+    "LVL_20_YEEDIL_F79744baad5ad7f65_AT00476F50_ROLE00": 1622228,
+    "LVL_20_YEEDIL_F86f665335d9cb905_AT003DD350_ROLE00": 4049320,
+    "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT003B5A58_ROLE00": 3755184,
+    "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT003BA638_ROLE00": 3755184,
+    "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT003E47F8_ROLE00": 3755184,
+    "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT003E9E70_ROLE00": 3755184,
+    "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT0040C618_ROLE00": 3755184,
+    "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT00412098_ROLE00": 3755184,
+    "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT00425630_ROLE00": 3755184,
     "LVL_20_YEEDIL_FUN_00115E38": 1138232,
     "LVL_20_YEEDIL_FUN_0011AEA0": 1158816,
     "LVL_20_YEEDIL_FUN_00133688": 1259144,
@@ -71,6 +82,12 @@
     "LVL_20_YEEDIL_FUN_003913B0": 3740592,
     "LVL_20_YEEDIL_FUN_0041CB08": 4311816,
     "LVL_20_YEEDIL_Fa2dbe766_D_00189E20": 1613344,
+    "LVL_20_YEEDIL_Fabf21065e887d7a9_AT00323E20_ROLE00": 1283944,
+    "LVL_20_YEEDIL_Facdcf1600d770d3b_AT003759A8_ROLE00": 1607264,
+    "LVL_20_YEEDIL_Fb1b523716b470b36_AT003A3F50_ROLE00": 3154528,
+    "LVL_20_YEEDIL_Fb1b523716b470b36_AT003A3F50_ROLE01": 3154576,
+    "LVL_20_YEEDIL_Fb1b523716b470b36_AT003A6A10_ROLE00": 3154528,
+    "LVL_20_YEEDIL_Fb1b523716b470b36_AT003A6A10_ROLE01": 3154576,
     "LVL_20_YEEDIL_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_20_YEEDIL_Fc84472d1_D_001ADD98": 1760664,
     "LVL_20_YEEDIL_Fc84472d1_D_001ADDB8": 1760696,
@@ -713,6 +730,120 @@
       "address": 4712688,
       "size": 8,
       "symbol": "LVL_20_YEEDIL_FUN_0047E8F0"
+    },
+    {
+      "address": 3292704,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_20_YEEDIL_FUN_00323E20"
+    },
+    {
+      "address": 3375360,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_20_YEEDIL_FUN_00338100"
+    },
+    {
+      "address": 3627432,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_20_YEEDIL_FUN_003759A8"
+    },
+    {
+      "address": 3817296,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_20_YEEDIL_FUN_003A3F50"
+    },
+    {
+      "address": 3828240,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_20_YEEDIL_FUN_003A6A10"
+    },
+    {
+      "address": 3889752,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_003B5A58"
+    },
+    {
+      "address": 3909176,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_003BA638"
+    },
+    {
+      "address": 4051792,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_20_YEEDIL_FUN_003DD350"
+    },
+    {
+      "address": 4081656,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_003E47F8"
+    },
+    {
+      "address": 4103792,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_003E9E70"
+    },
+    {
+      "address": 4245016,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_0040C618"
+    },
+    {
+      "address": 4268184,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_00412098"
+    },
+    {
+      "address": 4347440,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_00425630"
+    },
+    {
+      "address": 4588720,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_004604B0"
+    },
+    {
+      "address": 4597160,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_20_YEEDIL_FUN_004625A8"
+    },
+    {
+      "address": 4597592,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_20_YEEDIL_FUN_00462758"
+    },
+    {
+      "address": 4618936,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_20_YEEDIL_FUN_00467AB8"
+    },
+    {
+      "address": 4651744,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_20_YEEDIL_FUN_0046FAE0"
+    },
+    {
+      "address": 4681552,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_20_YEEDIL_FUN_00476F50"
     }
   ],
   "gp": 1765360,

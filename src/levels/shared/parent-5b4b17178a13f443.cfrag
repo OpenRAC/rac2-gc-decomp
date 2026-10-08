@@ -1,0 +1,17 @@
+
+
+extern void @@ROLE_00_000@@(void *object);
+
+void @@FUNCTION@@(Rac2Native_5b4b17178a13f443_SmallSlotReset128Owner *owner)
+{
+    int index;
+    if (owner->active_14c != 0) {
+        for (index = 0; index < owner->count_148; ++index) {
+            if (owner->slots_120[index] != 0) {
+                @@ROLE_00_001@@(owner->slots_120[index]);
+                owner->slots_120[index] = 0;
+            }
+        }
+        owner->active_14c = 0;
+    }
+}

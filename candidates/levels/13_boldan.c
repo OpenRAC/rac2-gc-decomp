@@ -1899,3 +1899,395 @@ int LVL_13_BOLDAN_FUN_003724E8(int p0, int p1, int p2, int p3)
     LVL_13_BOLDAN_F0451f37d_D_001A7240.cursor = LVL_13_BOLDAN_F0451f37d_D_001A7240.cursor + p2 * 16;
     return k;
 }
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef unsigned int Rac2Native_abf21065e887d7a9_FallbackU32;
+
+typedef struct Rac2Native_abf21065e887d7a9_FallbackPredicate112Layout {
+    unsigned char unknown_00[0x90];
+    Rac2Native_abf21065e887d7a9_FallbackU32 flags_90;
+    Rac2Native_abf21065e887d7a9_FallbackU32 unknown_94;
+    Rac2Native_abf21065e887d7a9_FallbackU32 flags_98;
+} Rac2Native_abf21065e887d7a9_FallbackPredicate112Layout;
+
+
+extern Rac2Native_abf21065e887d7a9_FallbackPredicate112Layout LVL_13_BOLDAN_Fabf21065e887d7a9_AT00319190_ROLE00;
+
+int LVL_13_BOLDAN_FUN_00319190(void)
+{
+    if ((LVL_13_BOLDAN_Fabf21065e887d7a9_AT00319190_ROLE00.flags_90 & 0x10000u) == 0 &&
+        (LVL_13_BOLDAN_Fabf21065e887d7a9_AT00319190_ROLE00.flags_98 & 0x04000000u) != 0)
+        return 0;
+    if ((LVL_13_BOLDAN_Fabf21065e887d7a9_AT00319190_ROLE00.flags_90 & 0x10000u) != 0 &&
+        (LVL_13_BOLDAN_Fabf21065e887d7a9_AT00319190_ROLE00.flags_98 & 0x04000000u) != 0)
+        return 1;
+    return 0;
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_5b4b17178a13f443_SmallSlotReset128Owner {
+    unsigned char prefix_00[0x120];
+    void *slots_120[10];
+    int count_148;
+    int active_14c;
+} Rac2Native_5b4b17178a13f443_SmallSlotReset128Owner;
+
+
+extern void LVL_13_BOLDAN_F5b4b17178a13f443_AT0032CBA0_ROLE00(void *object);
+
+void LVL_13_BOLDAN_FUN_0032CBA0(Rac2Native_5b4b17178a13f443_SmallSlotReset128Owner *owner)
+{
+    int index;
+    if (owner->active_14c != 0) {
+        for (index = 0; index < owner->count_148; ++index) {
+            if (owner->slots_120[index] != 0) {
+                LVL_13_BOLDAN_F5b4b17178a13f443_AT0032CBA0_ROLE00(owner->slots_120[index]);
+                owner->slots_120[index] = 0;
+            }
+        }
+        owner->active_14c = 0;
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_acdcf1600d770d3b_ScalarConfigure116State {
+    unsigned char prefix_00[0x60];
+    unsigned int value_60;
+    int value_64;
+    unsigned char selector_68;
+    unsigned char axis_69;
+    unsigned char mode_6a;
+    unsigned char dirty_6b;
+} Rac2Native_acdcf1600d770d3b_ScalarConfigure116State;
+
+
+extern Rac2Native_acdcf1600d770d3b_ScalarConfigure116State LVL_13_BOLDAN_Facdcf1600d770d3b_AT00369378_ROLE00[];
+
+void LVL_13_BOLDAN_FUN_00369378(unsigned int value, unsigned int selector, int other,
+                        unsigned int axis, unsigned int mode)
+{
+    Rac2Native_acdcf1600d770d3b_ScalarConfigure116State *state = LVL_13_BOLDAN_Facdcf1600d770d3b_AT00369378_ROLE00;
+    state->value_60 = value;
+    if (state->selector_68 != selector) {
+        state->dirty_6b |= 1;
+        state->selector_68 = selector;
+    }
+    if (state->value_64 != other) {
+        state->dirty_6b |= 4;
+        state->value_64 = other;
+    }
+    if (state->axis_69 != axis || state->mode_6a != mode) {
+        state->dirty_6b |= 2;
+        state->axis_69 = axis;
+        state->mode_6a = mode;
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_b1b523716b470b36_FamilyNative192Vector {
+    float x;
+    float y;
+    float z;
+    float w;
+} Rac2Native_b1b523716b470b36_FamilyNative192Vector;
+
+
+extern void LVL_13_BOLDAN_Fb1b523716b470b36_AT003904F0_ROLE01(Rac2Native_b1b523716b470b36_FamilyNative192Vector *out,
+    const Rac2Native_b1b523716b470b36_FamilyNative192Vector *first, const Rac2Native_b1b523716b470b36_FamilyNative192Vector *second);
+extern void LVL_13_BOLDAN_Fb1b523716b470b36_AT003904F0_ROLE00(Rac2Native_b1b523716b470b36_FamilyNative192Vector *out,
+    const Rac2Native_b1b523716b470b36_FamilyNative192Vector *first, const Rac2Native_b1b523716b470b36_FamilyNative192Vector *second);
+
+void LVL_13_BOLDAN_FUN_003904F0(void *object)
+{
+    Rac2Native_b1b523716b470b36_FamilyNative192Vector input;
+    Rac2Native_b1b523716b470b36_FamilyNative192Vector output;
+    char *base = (char *)object;
+    char *state;
+    char *source;
+    char *kind;
+    char *extra;
+
+    input.w = 0.0f;
+    state = *(char **)(base + 0x68);
+    input.x = *(float *)(state + 0x74);
+    input.y = *(float *)(state + 0x78);
+    input.z = *(float *)(state + 0x7c);
+    source = *(char **)(state + 0x70);
+    LVL_13_BOLDAN_Fb1b523716b470b36_AT003904F0_ROLE01(&output,
+        (const Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(source + 0x10), &input);
+    LVL_13_BOLDAN_Fb1b523716b470b36_AT003904F0_ROLE00((Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(base + 0x10), &output,
+        (const Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(base + 0x10));
+    source = *(char **)(state + 0x70);
+    *(float *)(state + 0x74) = *(float *)(source + 0x10);
+    *(float *)(state + 0x78) = *(float *)(source + 0x14);
+    *(float *)(state + 0x7c) = *(float *)(source + 0x18);
+    kind = *(char **)(source + 0x24);
+    if (*(short *)(kind + 0x46) == 0x12) {
+        extra = *(char **)(source + 0x68);
+        if (*(unsigned char *)(extra + 0x14) == 0) {
+            *(unsigned char *)(base + 0x20) = 7;
+        }
+    }
+}
+
+
+extern void LVL_13_BOLDAN_Fb1b523716b470b36_AT00392F98_ROLE01(Rac2Native_b1b523716b470b36_FamilyNative192Vector *out,
+    const Rac2Native_b1b523716b470b36_FamilyNative192Vector *first, const Rac2Native_b1b523716b470b36_FamilyNative192Vector *second);
+extern void LVL_13_BOLDAN_Fb1b523716b470b36_AT00392F98_ROLE00(Rac2Native_b1b523716b470b36_FamilyNative192Vector *out,
+    const Rac2Native_b1b523716b470b36_FamilyNative192Vector *first, const Rac2Native_b1b523716b470b36_FamilyNative192Vector *second);
+
+void LVL_13_BOLDAN_FUN_00392F98(void *object)
+{
+    Rac2Native_b1b523716b470b36_FamilyNative192Vector input;
+    Rac2Native_b1b523716b470b36_FamilyNative192Vector output;
+    char *base = (char *)object;
+    char *state;
+    char *source;
+    char *kind;
+    char *extra;
+
+    input.w = 0.0f;
+    state = *(char **)(base + 0x68);
+    input.x = *(float *)(state + 0x74);
+    input.y = *(float *)(state + 0x78);
+    input.z = *(float *)(state + 0x7c);
+    source = *(char **)(state + 0x70);
+    LVL_13_BOLDAN_Fb1b523716b470b36_AT00392F98_ROLE01(&output,
+        (const Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(source + 0x10), &input);
+    LVL_13_BOLDAN_Fb1b523716b470b36_AT00392F98_ROLE00((Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(base + 0x10), &output,
+        (const Rac2Native_b1b523716b470b36_FamilyNative192Vector *)(base + 0x10));
+    source = *(char **)(state + 0x70);
+    *(float *)(state + 0x74) = *(float *)(source + 0x10);
+    *(float *)(state + 0x78) = *(float *)(source + 0x14);
+    *(float *)(state + 0x7c) = *(float *)(source + 0x18);
+    kind = *(char **)(source + 0x24);
+    if (*(short *)(kind + 0x46) == 0x12) {
+        extra = *(char **)(source + 0x68);
+        if (*(unsigned char *)(extra + 0x14) == 0) {
+            *(unsigned char *)(base + 0x20) = 7;
+        }
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner {
+    unsigned char prefix_00[0x68];
+    void *context_68;
+} Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner;
+
+typedef struct Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext {
+    unsigned char prefix_00[0x10];
+    float vector_10[4];
+    unsigned int field_20;
+    unsigned int active_24;
+} Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext;
+
+
+extern void LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003A1FC8_ROLE00(float scale, Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context,
+                                    float *vector, int mode);
+
+void LVL_13_BOLDAN_FUN_003A1FC8(Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner *owner)
+{
+    Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context = owner->context_68;
+    if (context->active_24 != 0) {
+        LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003A1FC8_ROLE00(1.0f, context, context->vector_10, 0);
+    }
+}
+
+
+extern void LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003A6F50_ROLE00(float scale, Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context,
+                                    float *vector, int mode);
+
+void LVL_13_BOLDAN_FUN_003A6F50(Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner *owner)
+{
+    Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context = owner->context_68;
+    if (context->active_24 != 0) {
+        LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003A6F50_ROLE00(1.0f, context, context->vector_10, 0);
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_86f665335d9cb905_AnalysisOwner {
+    unsigned char prefix_00[0x68];
+    void *context_68;
+} Rac2Native_86f665335d9cb905_AnalysisOwner;
+
+
+extern void LVL_13_BOLDAN_F86f665335d9cb905_AT003C88B8_ROLE00(Rac2Native_86f665335d9cb905_AnalysisOwner *owner, void *context);
+
+void LVL_13_BOLDAN_FUN_003C88B8(Rac2Native_86f665335d9cb905_AnalysisOwner *owner)
+{
+    LVL_13_BOLDAN_F86f665335d9cb905_AT003C88B8_ROLE00(owner, owner->context_68);
+}
+
+
+extern void LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003CEFD0_ROLE00(float scale, Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context,
+                                    float *vector, int mode);
+
+void LVL_13_BOLDAN_FUN_003CEFD0(Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner *owner)
+{
+    Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context = owner->context_68;
+    if (context->active_24 != 0) {
+        LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003CEFD0_ROLE00(1.0f, context, context->vector_10, 0);
+    }
+}
+
+
+extern void LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003D4648_ROLE00(float scale, Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context,
+                                    float *vector, int mode);
+
+void LVL_13_BOLDAN_FUN_003D4648(Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner *owner)
+{
+    Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context = owner->context_68;
+    if (context->active_24 != 0) {
+        LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003D4648_ROLE00(1.0f, context, context->vector_10, 0);
+    }
+}
+
+
+extern void LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003EBA10_ROLE00(float scale, Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context,
+                                    float *vector, int mode);
+
+void LVL_13_BOLDAN_FUN_003EBA10(Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner *owner)
+{
+    Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context = owner->context_68;
+    if (context->active_24 != 0) {
+        LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003EBA10_ROLE00(1.0f, context, context->vector_10, 0);
+    }
+}
+
+
+extern void LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003F02F0_ROLE00(float scale, Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context,
+                                    float *vector, int mode);
+
+void LVL_13_BOLDAN_FUN_003F02F0(Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner *owner)
+{
+    Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context = owner->context_68;
+    if (context->active_24 != 0) {
+        LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT003F02F0_ROLE00(1.0f, context, context->vector_10, 0);
+    }
+}
+
+
+extern void LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT00400F30_ROLE00(float scale, Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context,
+                                    float *vector, int mode);
+
+void LVL_13_BOLDAN_FUN_00400F30(Rac2Native_9cdc323a4d0c2fbd_AnalysisOwner *owner)
+{
+    Rac2Native_9cdc323a4d0c2fbd_AnalysisConditionalContext *context = owner->context_68;
+    if (context->active_24 != 0) {
+        LVL_13_BOLDAN_F9cdc323a4d0c2fbd_AT00400F30_ROLE00(1.0f, context, context->vector_10, 0);
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_6af85cabb56d3b41_SmallConditional52Owner {
+    unsigned char unknown_00[0x7d];
+    unsigned char value_7d;
+    short value_7e;
+    unsigned char unknown_80[6];
+    short identity_86;
+} Rac2Native_6af85cabb56d3b41_SmallConditional52Owner;
+
+typedef struct Rac2Native_6af85cabb56d3b41_SmallConditional52Global {
+    unsigned char unknown_00[0x2294];
+    int mode_2294;
+    unsigned char unknown_2298[0x208];
+    int identity_24a0;
+} Rac2Native_6af85cabb56d3b41_SmallConditional52Global;
+
+
+extern Rac2Native_6af85cabb56d3b41_SmallConditional52Global LVL_13_BOLDAN_F6af85cabb56d3b41_AT0043C920_ROLE00;
+
+void LVL_13_BOLDAN_FUN_0043C920(Rac2Native_6af85cabb56d3b41_SmallConditional52Owner *owner)
+{
+    if (LVL_13_BOLDAN_F6af85cabb56d3b41_AT0043C920_ROLE00.identity_24a0 != owner->identity_86 &&
+        LVL_13_BOLDAN_F6af85cabb56d3b41_AT0043C920_ROLE00.mode_2294 != 6) {
+        owner->value_7d = 0;
+        owner->value_7e = 3;
+    }
+}
+
+
+void LVL_13_BOLDAN_FUN_0043F530(float factor, void *context,
+                                   float *destination,
+                                   const float *first, const float *second)
+{
+    float complement = 1.0f - factor;
+    destination[0] = complement * first[0] + factor * second[0];
+    destination[1] = complement * first[1] + factor * second[1];
+    destination[2] = complement * first[2] + factor * second[2];
+    destination[3] = complement * first[3] + factor * second[3];
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_81be3b52930eb806_FallbackInterleavedFloat4Layout {
+    unsigned char unknown_00[8];
+    float first_0;
+    float second_0;
+    float first_1;
+    float second_1;
+    float first_2;
+    float second_2;
+    float first_3;
+    float second_3;
+} Rac2Native_81be3b52930eb806_FallbackInterleavedFloat4Layout;
+
+
+void LVL_13_BOLDAN_FUN_0043F6E0(float factor,
+                                     const Rac2Native_81be3b52930eb806_FallbackInterleavedFloat4Layout *source,
+                                     float *destination)
+{
+    float complement = 1.0f - factor;
+    destination[0] = complement * source->first_0 + factor * source->second_0;
+    destination[1] = complement * source->first_1 + factor * source->second_1;
+    destination[2] = complement * source->first_2 + factor * source->second_2;
+    destination[3] = complement * source->first_3 + factor * source->second_3;
+}
+
+
+void LVL_13_BOLDAN_FUN_00444A40(float first, float second, float **cell)
+{
+    (*cell)[0] = first;
+    (*cell)[1] = second;
+}
+
+
+void LVL_13_BOLDAN_FUN_0044CA68(float first, float second, float **cell)
+{
+    (*cell)[0] = first;
+    (*cell)[1] = second;
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef struct Rac2Native_79744baad5ad7f65_ScalarChange48Owner {
+    unsigned int field_00;
+    int value_04;
+    unsigned char gap_08[0x3ec];
+    int counter_3f4;
+    int counter_3f8;
+    int previous_3fc;
+} Rac2Native_79744baad5ad7f65_ScalarChange48Owner;
+
+
+extern unsigned char LVL_13_BOLDAN_F79744baad5ad7f65_AT00453ED8_ROLE00[];
+
+void LVL_13_BOLDAN_FUN_00453ED8(Rac2Native_79744baad5ad7f65_ScalarChange48Owner *owner, int value)
+{
+    int previous = owner->value_04;
+    if (previous != value && LVL_13_BOLDAN_F79744baad5ad7f65_AT00453ED8_ROLE00[0] == 0) {
+        owner->previous_3fc = previous;
+        owner->counter_3f8 = 180;
+        owner->counter_3f4 = 300;
+    }
+    owner->value_04 = value;
+}

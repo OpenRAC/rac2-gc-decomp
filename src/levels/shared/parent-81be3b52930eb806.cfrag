@@ -1,0 +1,12 @@
+
+
+void @@FUNCTION@@(float factor,
+                                     const Rac2Native_81be3b52930eb806_FallbackInterleavedFloat4Layout *source,
+                                     float *destination)
+{
+    float complement = 1.0f - factor;
+    destination[0] = complement * source->first_0 + factor * source->second_0;
+    destination[1] = complement * source->first_1 + factor * source->second_1;
+    destination[2] = complement * source->first_2 + factor * source->second_2;
+    destination[3] = complement * source->first_3 + factor * source->second_3;
+}

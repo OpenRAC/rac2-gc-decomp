@@ -55,9 +55,20 @@
     "LVL_15_GORN_F55a1acb8_D_001A63AC": 1729452,
     "LVL_15_GORN_F55a1acb8_FUN_0011AEA0": 1158816,
     "LVL_15_GORN_F55a1acb8_FUN_00133688": 1259144,
+    "LVL_15_GORN_F5b4b17178a13f443_AT0033B4D0_ROLE00": 3313736,
     "LVL_15_GORN_F62e6ff2b_D_00188660": 1607264,
     "LVL_15_GORN_F62e6ff2b_D_00189E20": 1613344,
     "LVL_15_GORN_F6894d7c1_D_001A8E60": 1740384,
+    "LVL_15_GORN_F6af85cabb56d3b41_AT0044DE88_ROLE00": 1613344,
+    "LVL_15_GORN_F79744baad5ad7f65_AT00468158_ROLE00": 1622228,
+    "LVL_15_GORN_F86f665335d9cb905_AT003D5AE0_ROLE00": 4018488,
+    "LVL_15_GORN_F9cdc323a4d0c2fbd_AT003B4848_ROLE00": 3770072,
+    "LVL_15_GORN_F9cdc323a4d0c2fbd_AT003B9328_ROLE00": 3770072,
+    "LVL_15_GORN_F9cdc323a4d0c2fbd_AT003DFFE0_ROLE00": 3770072,
+    "LVL_15_GORN_F9cdc323a4d0c2fbd_AT003E5658_ROLE00": 3770072,
+    "LVL_15_GORN_F9cdc323a4d0c2fbd_AT003FD080_ROLE00": 3770072,
+    "LVL_15_GORN_F9cdc323a4d0c2fbd_AT00400450_ROLE00": 3770072,
+    "LVL_15_GORN_F9cdc323a4d0c2fbd_AT0040F2B0_ROLE00": 3770072,
     "LVL_15_GORN_FUN_00115E38": 1138232,
     "LVL_15_GORN_FUN_0011AEA0": 1158816,
     "LVL_15_GORN_FUN_00133688": 1259144,
@@ -75,6 +86,12 @@
     "LVL_15_GORN_FUN_003781D0": 3637712,
     "LVL_15_GORN_FUN_00397060": 3764320,
     "LVL_15_GORN_Fa2dbe766_D_00189E20": 1613344,
+    "LVL_15_GORN_Fabf21065e887d7a9_AT00327AC0_ROLE00": 1283944,
+    "LVL_15_GORN_Facdcf1600d770d3b_AT003785B8_ROLE00": 1607264,
+    "LVL_15_GORN_Fb1b523716b470b36_AT003A3C48_ROLE00": 3173424,
+    "LVL_15_GORN_Fb1b523716b470b36_AT003A3C48_ROLE01": 3173472,
+    "LVL_15_GORN_Fb1b523716b470b36_AT003A66F0_ROLE00": 3173424,
+    "LVL_15_GORN_Fb1b523716b470b36_AT003A66F0_ROLE01": 3173472,
     "LVL_15_GORN_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_15_GORN_Fc84472d1_D_001ADD98": 1760664,
     "LVL_15_GORN_Fc84472d1_D_001ADDB8": 1760696,
@@ -734,6 +751,120 @@
       "address": 4651768,
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_0046FAF8"
+    },
+    {
+      "address": 3308224,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_15_GORN_FUN_00327AC0"
+    },
+    {
+      "address": 3388624,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_15_GORN_FUN_0033B4D0"
+    },
+    {
+      "address": 3638712,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_15_GORN_FUN_003785B8"
+    },
+    {
+      "address": 3816520,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_15_GORN_FUN_003A3C48"
+    },
+    {
+      "address": 3827440,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_15_GORN_FUN_003A66F0"
+    },
+    {
+      "address": 3885128,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003B4848"
+    },
+    {
+      "address": 3904296,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003B9328"
+    },
+    {
+      "address": 4020960,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_15_GORN_FUN_003D5AE0"
+    },
+    {
+      "address": 4063200,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003DFFE0"
+    },
+    {
+      "address": 4085336,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003E5658"
+    },
+    {
+      "address": 4182144,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003FD080"
+    },
+    {
+      "address": 4195408,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_00400450"
+    },
+    {
+      "address": 4256432,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_0040F2B0"
+    },
+    {
+      "address": 4513416,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_0044DE88"
+    },
+    {
+      "address": 4536240,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_15_GORN_FUN_004537B0"
+    },
+    {
+      "address": 4536672,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_15_GORN_FUN_00453960"
+    },
+    {
+      "address": 4558016,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_15_GORN_FUN_00458CC0"
+    },
+    {
+      "address": 4590824,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_15_GORN_FUN_00460CE8"
+    },
+    {
+      "address": 4620632,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_00468158"
     }
   ],
   "gp": 1765360,
