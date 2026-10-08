@@ -16341,6 +16341,3216 @@ Reopen condition: Concrete independently reviewed family/binding or instrument e
 - `private-work:public-family-tools-20261005/feature-receipt.json`
 - `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
 
+## qwen-reserved-20261008-fun_00115cf0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00115e68
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001163e0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00118460
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001184d0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00119bc8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011b978
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011b9c8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011b9f8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011ba20
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011ba58
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011baa0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011baf0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011c7e8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011cd20
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011cd60
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011d140
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011d1e8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011d350
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011d810
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011ed08
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011eea0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011f130
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0011f8d0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00120390
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00120810
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00120a30
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00120ab8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001212c8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001213b8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00122a40
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00122a98
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00122f10
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00123028
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00123078
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00123298
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001232f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00123530
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00123578
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001235c8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00123978
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00123a00
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00124568
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00125970
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00126e60
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00126ed8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00126f00
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00127220
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00128898
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00128e98
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00128f50
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00128fd0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012b3c0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012b568
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012b780
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012b8b0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012baa0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012c008
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012c230
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012ca48
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012cab0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012d1c8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012d350
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012d420
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012d768
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012dac0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012e980
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012e9d0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012ea70
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012ef20
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012f940
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012f950
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012f9b8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012fa18
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012fa70
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012fae8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012fb60
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012fb70
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012fd60
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012fe78
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0012fec0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00130020
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00130098
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00130118
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00130250
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00130288
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00130890
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001309c0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00131400
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00131780
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001317e8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132828
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132858
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132888
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132938
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132978
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001329b0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132a10
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132a70
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132ac8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132af8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132b28
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132b58
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00132bc0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133310
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001333d0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133400
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133430
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133460
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133490
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133710
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133750
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133788
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001337f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133820
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133850
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133890
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001338c8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001338f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133930
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133960
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_001339f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133a28
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00133a78
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0026eb98
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0026ec58
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0026fc78
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00273d10
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00274128
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002746c8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00274768
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00279988
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027b9c0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027ba48
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027c520
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027eb88
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027ecc8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027f178
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027f198
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027f1b8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027f288
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027f538
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027f5b8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027f980
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027fa10
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027faa8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027fb40
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0027fbd8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00280190
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00280200
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00280270
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00280600
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002820a0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00282a38
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00282c30
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00283150
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00283c28
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00283cb8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00283cc8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00283cf0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00288b18
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00288bb8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0028a130
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0028ba50
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0028bca0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0028bdb0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0028df38
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00290a40
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00290ab0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00291108
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00291128
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00291450
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00291758
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002932b8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002945e8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00298d28
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029ada0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029ae48
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029aeb0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029af58
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029af98
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029f390
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029f840
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029f9f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029fc20
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029fcc0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0029fd48
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a01c8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a01f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a0220
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a0468
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a0488
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a04b8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a8a20
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a8bd0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a90c8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a91f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a9548
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002a9568
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002aafa0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002ab0e8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002ab600
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002aec18
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002afd88
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002afeb8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002aff08
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002aff38
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002b00b0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002b0158
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002b0a48
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002b5258
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002b5278
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002b66f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002b9000
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002bf6f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002c28f8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002c30f8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002c3ee8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002c4788
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002c9b88
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002cb7d0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002cd220
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002cd620
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002cd6f0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002cd8c0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d2cb8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d2e28
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d2ee0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d3290
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d3390
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d5540
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d5b08
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d5b38
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d5e38
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d5e70
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d5e98
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002d7ae0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002dbb48
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002df750
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002f2a0c
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_002fe880
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00300618
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00302440
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00307bd0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00313548
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00316da0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_003181e0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00319fb8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0031aab0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0031ab08
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0031c7a0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00321e28
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00328d30
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00335ac8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00335ae0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00335b80
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00335fb0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00336968
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00336a08
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00336a30
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00336a38
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00336db8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00338718
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00339770
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00339798
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00339a38
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033b050
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033c178
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033cd80
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033e170
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033e310
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033e348
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033e368
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033e3a0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033e480
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033e5c0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0033e620
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00340d18
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00341a48
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00341a68
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00341e58
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00341e90
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00341eb0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00341ee8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00342380
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00342648
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00342758
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_003427b0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00343538
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00343560
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00343580
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_003439a0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00344160
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_003465d0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00346670
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00347ea0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00347f80
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_003480e8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00348640
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00349488
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_003494d0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00349628
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00349670
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034ca90
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034cae8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034ce28
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034e478
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034e4b8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034e4d8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034eb20
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034ecb0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034f780
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_0034faf8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_003508a0
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00351848
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00351868
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00351890
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00351938
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00351a38
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00351cd8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## qwen-reserved-20261008-fun_00351ee8
+
+State: `blocked`. Kind: `research`.
+
+Do not reconstruct or claim this target or its identical/call-shape copies in the parent campaign. Review the Qwen branch and retained receipts before explicit release; no automatic integration.
+
+Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
+
+- `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
 ## reset-state-signs136-0_aranos_tutorial
 
 State: `integrated`. Kind: `candidate`.
