@@ -1,25 +1,25 @@
 {
-  "catalog_sha256": "4a106337cccead635bd08f0de4e8c0b93109106d3ad76aceec63e3e74c7e2959",
+  "catalog_sha256": "df23b91289baeada02b1f69c3425cf9416db11bb8b8753801fd06d8beb064b6d",
   "catalogue_complete": false,
   "coverage": {
-    "aliases": 8129,
+    "aliases": 8614,
     "catalogued_interval_bytes": 48470076,
     "excluded_vu_bytes": 86368,
     "placements": 109725,
     "scoped_ee_bytes": 48701808,
     "unresolved_gap_bytes": 231732,
-    "verified_boundary_bytes": 40040496
+    "verified_boundary_bytes": 40075168
   },
   "data_policy": "retain-unowned-data-address-operands",
   "graph_refinement": {
-    "boot_binding_artifact_sha256": "17979261e9290666035180e655e7fd6bfef492b83434478d8bfedcdae1bae3c4",
+    "boot_binding_artifact_sha256": "9d3cfe23bbd19ebe40434428c52ad597e7d5b19842654bc675605b8daf3fa71d",
     "boot_binding_scope": "combined-pinned-reference-images",
     "combined_reference_boot_edges": 22522,
     "complete_dependency_rows": 109725,
     "complete_graph_coverage_claimed": true,
     "external_static_edge_count": 878656,
-    "final_class_count": 82986,
-    "initial_class_count": 67038,
+    "final_class_count": 82651,
+    "initial_class_count": 66703,
     "iterations": 7,
     "legacy_dependency_rows": 0,
     "limits": [
@@ -34,11 +34,11 @@
   "group_policy": "graph-refined-structural-templates",
   "kind": "unique-code-progress",
   "metrics": {
-    "physical_matched_bytes": 571888,
+    "physical_matched_bytes": 618200,
     "physical_total_bytes": 48701808,
-    "unique_matched_bytes": 122864,
-    "unique_matched_percent": 0.27646283817779344,
-    "unique_total_bytes": 44441416
+    "unique_matched_bytes": 132100,
+    "unique_matched_percent": 0.2974686565766019,
+    "unique_total_bytes": 44408040
   },
   "policy": "one equal-sized representative per conservative structural class refined by static target classes and retained unowned data address operands; all verified placements require current exact C integration; no semantic, original-data-object or original-source equivalence claim",
   "provisional_partition": {
@@ -47,7 +47,7 @@
     "representative_bytes": 37641816
   },
   "quality": {
-    "boundary_supported_bytes": 40040496,
+    "boundary_supported_bytes": 40075168,
     "certified": false,
     "data_policy": "retain-unowned-data-address-operands",
     "original_data_ownership_proven": false,
@@ -56,15 +56,15 @@
     "provisional_total_bytes": 37873548,
     "residual_gap_bytes": 231732,
     "structural_partition_complete": false,
-    "unknown_bytes": 8661312
+    "unknown_bytes": 8626640
   },
   "schema": 1,
   "target": "SCUS_972.68",
   "validated_subset": {
-    "any_c_unique_bytes": 127720,
-    "groups": 68037,
-    "matched_c_groups": 978,
-    "matched_c_unique_bytes": 122864,
-    "total_unique_bytes": 35780104
+    "any_c_unique_bytes": 134272,
+    "groups": 68050,
+    "matched_c_groups": 1053,
+    "matched_c_unique_bytes": 132100,
+    "total_unique_bytes": 35781400
   }
 }

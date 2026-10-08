@@ -1,0 +1,29 @@
+
+
+extern int @@ROLE_02_000@@(char *, int, char *);
+extern char @@ROLE_00_000@@[];
+extern char @@ROLE_01_000@@[];
+
+void *@@FUNCTION@@(Rac2Native_0fef0b35cd771f1a_Hdr *p)
+{
+    void *q;
+    unsigned cur;
+    unsigned n;
+    char *r;
+
+    if (p->free != 0) {
+        q = p->free;
+        p->free = *(void **)q;
+        p->count++;
+        return q;
+    }
+    cur = p->cur;
+    if (p->limit < cur + p->size) {
+        @@ROLE_02_001@@(@@ROLE_00_001@@, 83, @@ROLE_01_001@@);
+        return 0;
+    }
+    r = p->base + cur;
+    p->cur = cur + p->size;
+    p->count++;
+    return r;
+}

@@ -2433,3 +2433,64 @@ void LVL_15_GORN_FUN_00468158(Rac2Native_79744baad5ad7f65_ScalarChange48Owner *o
     }
     owner->value_04 = value;
 }
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef int Rac2Native_6b0741c38bf00fee_s32;
+
+typedef unsigned char Rac2Native_6b0741c38bf00fee_u8;
+
+typedef long Rac2Native_6b0741c38bf00fee_s64;
+
+typedef unsigned long Rac2Native_6b0741c38bf00fee_u64;
+
+
+extern Rac2Native_6b0741c38bf00fee_u8 LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE00[];
+extern void LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE01(Rac2Native_6b0741c38bf00fee_u64, Rac2Native_6b0741c38bf00fee_s64, Rac2Native_6b0741c38bf00fee_s64, Rac2Native_6b0741c38bf00fee_s32);
+extern void LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE02(short, short, short);
+
+void LVL_15_GORN_FUN_002BF008(void) {
+ LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE01(LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE00[1],0,1,0x32);
+ LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE02(0x16,7,0);
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef int Rac2Native_28c929cadd7aca24_s32;
+
+typedef unsigned char Rac2Native_28c929cadd7aca24_u8;
+
+typedef struct {
+    Rac2Native_28c929cadd7aca24_u8 prefix[0xc40];
+    Rac2Native_28c929cadd7aca24_s32 selected;
+    Rac2Native_28c929cadd7aca24_s32 index;
+    Rac2Native_28c929cadd7aca24_u8 gap[0x1648];
+    Rac2Native_28c929cadd7aca24_u8 *object;
+} Rac2Native_28c929cadd7aca24_NativeResidentView;
+
+
+extern Rac2Native_28c929cadd7aca24_NativeResidentView LVL_15_GORN_F28c929cadd7aca24_AT002EB2F0_ROLE00;
+
+void LVL_15_GORN_FUN_002EB2F0(Rac2Native_28c929cadd7aca24_s32 selected, Rac2Native_28c929cadd7aca24_s32 index) {
+    if (selected >= 0) {
+        Rac2Native_28c929cadd7aca24_u8 *object = LVL_15_GORN_F28c929cadd7aca24_AT002EB2F0_ROLE00.object;
+        Rac2Native_28c929cadd7aca24_s32 offset = object[0x43] * 4;
+        Rac2Native_28c929cadd7aca24_u8 *table = *(Rac2Native_28c929cadd7aca24_u8 **)(object + 0x24);
+        Rac2Native_28c929cadd7aca24_u8 *entry = *(Rac2Native_28c929cadd7aca24_u8 **)(table + offset + 0x48);
+        if (index < entry[0x10]) {
+            LVL_15_GORN_F28c929cadd7aca24_AT002EB2F0_ROLE00.selected = selected;
+            LVL_15_GORN_F28c929cadd7aca24_AT002EB2F0_ROLE00.index = index;
+        }
+    }
+}
+
+
+/* Measured partial layouts; original type and game roles are unknown. */
+typedef float Rac2Native_5fc519c90e0e763a_f32;
+
+
+extern void LVL_15_GORN_F5fc519c90e0e763a_AT002EC5F8_ROLE00(Rac2Native_5fc519c90e0e763a_f32);
+
+void LVL_15_GORN_FUN_002EC5F8(Rac2Native_5fc519c90e0e763a_f32 value) {
+ LVL_15_GORN_F5fc519c90e0e763a_AT002EC5F8_ROLE00(-value);
+}

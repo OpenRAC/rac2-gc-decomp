@@ -1,0 +1,16 @@
+
+
+extern int @@ROLE_03_000@@(char *, char *, ...);
+extern char @@ROLE_00_000@@[];
+extern char @@ROLE_01_000@@[];
+extern char @@ROLE_02_000@@[];
+
+void @@FUNCTION@@(char *dst, int value)
+{
+    if (value > 999999)
+        @@ROLE_03_001@@(dst, @@ROLE_00_001@@, value / 1000000, (value / 1000) % 1000, value % 1000);
+    else if (value >= 1000)
+        @@ROLE_03_002@@(dst, @@ROLE_01_001@@, value / 1000, value % 1000);
+    else
+        @@ROLE_03_003@@(dst, @@ROLE_02_001@@, value);
+}

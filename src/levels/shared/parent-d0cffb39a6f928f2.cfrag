@@ -1,0 +1,21 @@
+
+
+extern struct Rac2Native_d0cffb39a6f928f2_Sep6 @@ROLE_00_000@@;
+extern char @@ROLE_01_000@@[];
+extern char @@ROLE_02_000@@[];
+extern char @@ROLE_03_000@@[];
+extern void @@ROLE_04_000@@();
+
+void @@FUNCTION@@(char *buf, int value, int index) {
+    struct Rac2Native_d0cffb39a6f928f2_Sep6 sep = @@ROLE_00_001@@;
+    int rest;
+    if (value > 999999) {
+        rest = value % 1000000;
+        @@ROLE_04_001@@(buf, @@ROLE_01_001@@, value / 1000000, sep.v[index % 6], rest / 1000,
+                sep.v[index % 6], rest % 1000);
+    } else if (value >= 1000) {
+        @@ROLE_04_002@@(buf, @@ROLE_02_001@@, value / 1000, sep.v[index % 6], value % 1000);
+    } else {
+        @@ROLE_04_003@@(buf, @@ROLE_03_001@@, value);
+    }
+}

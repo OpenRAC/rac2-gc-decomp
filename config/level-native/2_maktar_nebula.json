@@ -36,6 +36,7 @@
     "LVL_2_MAKTAR_NEBULA_F1157be91_FUN_00132028": 1253416,
     "LVL_2_MAKTAR_NEBULA_F1157be91_FUN_00133230": 1258032,
     "LVL_2_MAKTAR_NEBULA_F1157be91_FUN_001334B8": 1258680,
+    "LVL_2_MAKTAR_NEBULA_F28c929cadd7aca24_AT002D58F0_ROLE00": 1613344,
     "LVL_2_MAKTAR_NEBULA_F489bf28e_D_001B3058": 1781848,
     "LVL_2_MAKTAR_NEBULA_F489bf28e_D_001B3068": 1781864,
     "LVL_2_MAKTAR_NEBULA_F489bf28e_D_001B3078": 1781880,
@@ -51,10 +52,14 @@
     "LVL_2_MAKTAR_NEBULA_F5b6bba31_D_001ADDD8": 1760728,
     "LVL_2_MAKTAR_NEBULA_F5b6bba31_D_001ADDF8": 1760760,
     "LVL_2_MAKTAR_NEBULA_F5b6bba31_FUN_00115E38": 1138232,
+    "LVL_2_MAKTAR_NEBULA_F5fc519c90e0e763a_AT002D6BF8_ROLE00": 2976064,
     "LVL_2_MAKTAR_NEBULA_F62e6ff2b_D_00188660": 1607264,
     "LVL_2_MAKTAR_NEBULA_F62e6ff2b_D_00189E20": 1613344,
     "LVL_2_MAKTAR_NEBULA_F6894d7c1_D_001A8E60": 1740384,
     "LVL_2_MAKTAR_NEBULA_F6af85cabb56d3b41_AT00454798_ROLE00": 1613344,
+    "LVL_2_MAKTAR_NEBULA_F6b0741c38bf00fee_AT002A9488_ROLE00": 1618620,
+    "LVL_2_MAKTAR_NEBULA_F6b0741c38bf00fee_AT002A9488_ROLE01": 2790600,
+    "LVL_2_MAKTAR_NEBULA_F6b0741c38bf00fee_AT002A9488_ROLE02": 2871512,
     "LVL_2_MAKTAR_NEBULA_F79744baad5ad7f65_AT0046B218_ROLE00": 1622228,
     "LVL_2_MAKTAR_NEBULA_F86f665335d9cb905_AT003C71A8_ROLE00": 3958784,
     "LVL_2_MAKTAR_NEBULA_F9b94f3cd_D_001A7350": 1733456,
@@ -884,6 +889,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_2_MAKTAR_NEBULA_FUN_0046B218"
+    },
+    {
+      "address": 2790536,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_002A9488"
+    },
+    {
+      "address": 2971888,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_002D58F0"
+    },
+    {
+      "address": 2976760,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_002D6BF8"
+    },
+    {
+      "address": 3699728,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_2_MAKTAR_NEBULA_FUN_00387410"
     }
   ],
   "gp": 1765360,

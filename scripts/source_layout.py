@@ -413,16 +413,24 @@ def capture(repo: Path, layout: Path, write: bool = True, expected_manifest_hash
         catalog_path = unit_spec(sdk["unit_id"])["catalog"]
         inputs[catalog_path] = digest(contained(repo, catalog_path).read_bytes())
         inputs[sdk["source"]] = inputs[sdk["module"]] = digest(data)
-    # A small-data unit is one authored fragment holding the measured body.
+    # Preserve the single-function pilot template or a complete authored unit.
+    # A concrete multi-function module is copied once, never once per symbol.
     for _, catalog in small_catalogs:
-        pieces = []
-        for function in catalog["functions"]:
-            data = contained(repo, catalog["module"]).read_bytes()
-            pieces.append({**fragment(catalog["module"], data),
-                           "replacements": {"@@FUNCTION@@": function["symbol"]}})
+        data = contained(repo, catalog["module"]).read_bytes()
         rendered = contained(repo, catalog["source"]).read_bytes()
+        piece = fragment(catalog["module"], data)
+        if b"@@FUNCTION@@" in data:
+            if len(catalog["functions"]) != 1 or data.count(b"@@FUNCTION@@") != 1:
+                raise ValueError("small-data template requires exactly one function and token")
+            symbol = catalog["functions"][0]["symbol"]
+            piece["replacements"] = {"@@FUNCTION@@": symbol}
+            expected = data.replace(b"@@FUNCTION@@", symbol.encode())
+        else:
+            expected = data
+        if b"@@" in expected or expected != rendered:
+            raise ValueError("small-data module does not reproduce its generated source")
         recipes[catalog["source"]] = {"sha256": digest(rendered), "source_text_bytes": len(rendered),
-                                      "pieces": pieces}
+                                      "pieces": [piece]}
         inputs[catalog["source"]] = digest(rendered)
     families = [{k: v for k, v in family.items() if k != "normalized_source"} for family in base_templates.values()]
     native_functions = sum(len(c["functions"]) for _, c in native)

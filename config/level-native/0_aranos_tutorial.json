@@ -36,6 +36,7 @@
     "LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_00132028": 1253416,
     "LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_00133230": 1258032,
     "LVL_0_ARANOS_TUTORIAL_F1157be91_FUN_001334B8": 1258680,
+    "LVL_0_ARANOS_TUTORIAL_F28c929cadd7aca24_AT002D2470_ROLE00": 1613344,
     "LVL_0_ARANOS_TUTORIAL_F4e5bde81_D_00189E20": 1613344,
     "LVL_0_ARANOS_TUTORIAL_F4e5bde81_D_001A7B08": 1735432,
     "LVL_0_ARANOS_TUTORIAL_F4e5bde81_D_001A8FF0": 1740784,
@@ -48,10 +49,14 @@
     "LVL_0_ARANOS_TUTORIAL_F5b6bba31_D_001ADDD8": 1760728,
     "LVL_0_ARANOS_TUTORIAL_F5b6bba31_D_001ADDF8": 1760760,
     "LVL_0_ARANOS_TUTORIAL_F5b6bba31_FUN_00115E38": 1138232,
+    "LVL_0_ARANOS_TUTORIAL_F5fc519c90e0e763a_AT002D3778_ROLE00": 2962624,
     "LVL_0_ARANOS_TUTORIAL_F62e6ff2b_D_00188660": 1607264,
     "LVL_0_ARANOS_TUTORIAL_F62e6ff2b_D_00189E20": 1613344,
     "LVL_0_ARANOS_TUTORIAL_F6894d7c1_D_001A8E60": 1740384,
     "LVL_0_ARANOS_TUTORIAL_F6af85cabb56d3b41_AT00428FE8_ROLE00": 1613344,
+    "LVL_0_ARANOS_TUTORIAL_F6b0741c38bf00fee_AT002A6188_ROLE00": 1618620,
+    "LVL_0_ARANOS_TUTORIAL_F6b0741c38bf00fee_AT002A6188_ROLE01": 2777544,
+    "LVL_0_ARANOS_TUTORIAL_F6b0741c38bf00fee_AT002A6188_ROLE02": 2858072,
     "LVL_0_ARANOS_TUTORIAL_F79744baad5ad7f65_AT0043FDE0_ROLE00": 1622228,
     "LVL_0_ARANOS_TUTORIAL_F86f665335d9cb905_AT003B9CB8_ROLE00": 3904272,
     "LVL_0_ARANOS_TUTORIAL_F9cdc323a4d0c2fbd_AT00398118_ROLE00": 3656576,
@@ -820,6 +825,30 @@
       "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
       "size": 48,
       "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_0043FDE0"
+    },
+    {
+      "address": 2777480,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_002A6188"
+    },
+    {
+      "address": 2958448,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_002D2470"
+    },
+    {
+      "address": 2963320,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_002D3778"
+    },
+    {
+      "address": 3669088,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_0_ARANOS_TUTORIAL_FUN_0037FC60"
     }
   ],
   "gp": 1765360,

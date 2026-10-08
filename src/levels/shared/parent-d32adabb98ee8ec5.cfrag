@@ -1,0 +1,14 @@
+
+
+extern Rac2Native_d32adabb98ee8ec5_Blob @@ROLE_00_000@@;
+
+int @@FUNCTION@@(int x)
+{
+    Rac2Native_d32adabb98ee8ec5_Blob b;
+    int i;
+    b = @@ROLE_00_001@@;
+    for (i = 0; b.v[i]; i++)
+        if (x == b.v[i])
+            return 1;
+    return 0;
+}

@@ -1,0 +1,149 @@
+{
+  "entry": 2782472,
+  "externals": {
+    "LVL_9_DOBBO_F1716667661d8e672_AT00305A88_ROLE00": 1283040,
+    "LVL_9_DOBBO_F1716667661d8e672_AT00305A88_ROLE01": 1733668,
+    "LVL_9_DOBBO_F1716667661d8e672_AT00305A88_ROLE02": 1733664,
+    "LVL_9_DOBBO_F25b7bae55e05d925_AT003060B8_ROLE00": 1733668,
+    "LVL_9_DOBBO_F25b7bae55e05d925_AT003060B8_ROLE01": 1283040,
+    "LVL_9_DOBBO_F25b7bae55e05d925_AT003060B8_ROLE02": 1733664,
+    "LVL_9_DOBBO_F584c3844a02fd1eb_AT003059D8_ROLE00": 1733668,
+    "LVL_9_DOBBO_F584c3844a02fd1eb_AT003059D8_ROLE01": 1740760,
+    "LVL_9_DOBBO_F584c3844a02fd1eb_AT003059D8_ROLE02": 1283040,
+    "LVL_9_DOBBO_F584c3844a02fd1eb_AT003059D8_ROLE03": 1733664,
+    "LVL_9_DOBBO_F60904fd170c92806_AT00305D80_ROLE00": 1283040,
+    "LVL_9_DOBBO_F60904fd170c92806_AT00305D80_ROLE01": 1733668,
+    "LVL_9_DOBBO_F60904fd170c92806_AT00305D80_ROLE02": 1733664,
+    "LVL_9_DOBBO_F715e9b46a377ec8c_AT00305AE8_ROLE00": 1733668,
+    "LVL_9_DOBBO_F715e9b46a377ec8c_AT00305AE8_ROLE01": 1283040,
+    "LVL_9_DOBBO_F715e9b46a377ec8c_AT00305AE8_ROLE02": 1733664,
+    "LVL_9_DOBBO_F8172b0f0a91a7cba_AT00305918_ROLE00": 1283040,
+    "LVL_9_DOBBO_F8172b0f0a91a7cba_AT00305918_ROLE01": 1733668,
+    "LVL_9_DOBBO_F8172b0f0a91a7cba_AT00305918_ROLE02": 1733664,
+    "LVL_9_DOBBO_F8391b53329533f81_AT00305EF8_ROLE00": 1283040,
+    "LVL_9_DOBBO_F8391b53329533f81_AT00305EF8_ROLE01": 1733668,
+    "LVL_9_DOBBO_F8391b53329533f81_AT00305EF8_ROLE02": 1733664,
+    "LVL_9_DOBBO_F83cf4a65b6159c6c_AT00306070_ROLE00": 1733668,
+    "LVL_9_DOBBO_F83cf4a65b6159c6c_AT00306070_ROLE01": 1283040,
+    "LVL_9_DOBBO_F83cf4a65b6159c6c_AT00306070_ROLE02": 1733664,
+    "LVL_9_DOBBO_F998ff33d7f808dbf_AT00305C50_ROLE00": 1733668,
+    "LVL_9_DOBBO_F998ff33d7f808dbf_AT00305C50_ROLE01": 1740760,
+    "LVL_9_DOBBO_F998ff33d7f808dbf_AT00305C50_ROLE02": 1283040,
+    "LVL_9_DOBBO_F998ff33d7f808dbf_AT00305C50_ROLE03": 1733664,
+    "LVL_9_DOBBO_F99b76d48da369e8d_AT00305B78_ROLE00": 1283040,
+    "LVL_9_DOBBO_F99b76d48da369e8d_AT00305B78_ROLE01": 1733664,
+    "LVL_9_DOBBO_Fa0e246aa2dc0b8e7_AT00305C18_ROLE00": 1733668,
+    "LVL_9_DOBBO_Fa0e246aa2dc0b8e7_AT00305C18_ROLE01": 1283040,
+    "LVL_9_DOBBO_Fa0e246aa2dc0b8e7_AT00305C18_ROLE02": 1733664,
+    "LVL_9_DOBBO_Fa661193cb7db1192_AT00305A58_ROLE00": 1283040,
+    "LVL_9_DOBBO_Fa661193cb7db1192_AT00305A58_ROLE01": 1733664,
+    "LVL_9_DOBBO_Fb09e58bdde03cd06_AT00305988_ROLE00": 1733668,
+    "LVL_9_DOBBO_Fb09e58bdde03cd06_AT00305988_ROLE01": 1740764,
+    "LVL_9_DOBBO_Fb09e58bdde03cd06_AT00305988_ROLE02": 1283040,
+    "LVL_9_DOBBO_Fb09e58bdde03cd06_AT00305988_ROLE03": 1733664,
+    "LVL_9_DOBBO_Fbf55aa2a4d0dd351_AT00324088_ROLE00": 3296888,
+    "LVL_9_DOBBO_Fbf55aa2a4d0dd351_AT00324088_ROLE01": 3294104,
+    "LVL_9_DOBBO_Fbf55aa2a4d0dd351_AT00324088_ROLE02": 1740784,
+    "LVL_9_DOBBO_Fbf55aa2a4d0dd351_AT00324088_ROLE03": 3255632
+  },
+  "flags": [
+    "-O2",
+    "-G8",
+    "-ffunction-sections"
+  ],
+  "functions": [
+    {
+      "address": 3168536,
+      "meaning": "Always clear flag 0x20. In mode 2 at offset 0x08, select state 9 for selector 0 or -1 at offset 0x10, clearing selector -1 to zero, or state 5 for selector -2.",
+      "size": 112,
+      "symbol": "LVL_9_DOBBO_FUN_00305918"
+    },
+    {
+      "address": 3168648,
+      "meaning": "Write state 3 when the signed root selector differs from -2; otherwise write state 6 if the marker word or flag mask 0x2 is nonzero. Original game role and full data-object boundaries remain unknown.",
+      "size": 76,
+      "symbol": "LVL_9_DOBBO_FUN_00305988"
+    },
+    {
+      "address": 3168728,
+      "meaning": "Write state 3 when the signed gate differs from -2. Otherwise clear flag 0x20 and select state 23 or 5 by a nonzero or zero marker; when 0x20 is clear, clear flag 0x08 and write state 7 if that flag is set.",
+      "size": 124,
+      "symbol": "LVL_9_DOBBO_FUN_003059D8"
+    },
+    {
+      "address": 3168856,
+      "meaning": "Clear the signed root selector, replace a negative selection with 3 and clear its associated word, then always write state 8.",
+      "size": 44,
+      "symbol": "LVL_9_DOBBO_FUN_00305A58"
+    },
+    {
+      "address": 3168904,
+      "meaning": "When mode at 0x15C is 2 and selection at 0x164 is negative, nonzero extra at 0x16C selects state 17 and flag 0x40; zero extra selects state 14.",
+      "size": 96,
+      "symbol": "LVL_9_DOBBO_FUN_00305A88"
+    },
+    {
+      "address": 3169000,
+      "meaning": "Write state 3 for a nonzero gate; otherwise write state 10 when flag mask 6 is nonzero, or state 25 when flag 0x200 is set.",
+      "size": 76,
+      "symbol": "LVL_9_DOBBO_FUN_00305AE8"
+    },
+    {
+      "address": 3169144,
+      "meaning": "Under mode 2 and a negative selection, choose states 12, 3, 19 or 16 from the extra/selector words, signed phase short and the signed sum threshold 475; preserve state when the measured guards reject an update.",
+      "size": 156,
+      "symbol": "LVL_9_DOBBO_FUN_00305B78"
+    },
+    {
+      "address": 3169304,
+      "meaning": "Write state 3 for a nonzero signed root selector; otherwise write state 13 when flag mask 0x2 is nonzero. Original game role and full data-object boundaries remain unknown.",
+      "size": 56,
+      "symbol": "LVL_9_DOBBO_FUN_00305C18"
+    },
+    {
+      "address": 3169360,
+      "meaning": "Write state 3 when the signed gate is nonzero. Otherwise clear flag 0x20 and select state 24 or 12 by a nonzero or zero marker; when 0x20 is clear, clear flag 0x10 and write state 14 if that flag is set.",
+      "size": 120,
+      "symbol": "LVL_9_DOBBO_FUN_00305C50"
+    },
+    {
+      "address": 3169664,
+      "meaning": "Conditionally clear flag bits 4 and 2; handle flag 0x80 with state 21 or flag 0x100 with state 20 while setting 0x40, otherwise select state 3 or 1 from the measured selector and word 0x17C.",
+      "size": 184,
+      "symbol": "LVL_9_DOBBO_FUN_00305D80"
+    },
+    {
+      "address": 3170040,
+      "meaning": "When mode at offset 0x15C is 2 and selection at 0x164 is negative, nonzero extra at 0x16C or word at 0x24 clears word 0x17C, sets state 21 and flags 0x440; otherwise write word 0x17C to 1 and state 1.",
+      "size": 112,
+      "symbol": "LVL_9_DOBBO_FUN_00305EF8"
+    },
+    {
+      "address": 3170416,
+      "meaning": "Write state 3 when the signed root selector differs from -2; otherwise, only when flag mask 0x20 is set, clear it and write state 5. Original game role and full data-object boundaries remain unknown.",
+      "size": 72,
+      "symbol": "LVL_9_DOBBO_FUN_00306070"
+    },
+    {
+      "address": 3170488,
+      "meaning": "Write state 3 when the signed root selector is nonzero; otherwise, only when flag mask 0x20 is set, clear it and write state 12. Original game role and full data-object boundaries remain unknown.",
+      "size": 68,
+      "symbol": "LVL_9_DOBBO_FUN_003060B8"
+    },
+    {
+      "address": 3293320,
+      "meaning": "Optionally prepare the context payload when enabled is one and count is nonzero. For kinds zero through two, call the helper selected by the bound mode, clear enabled when returned flag bit 1 is set, and return those flags; other kinds return zero. Original game role and retail source ownership remain unknown.",
+      "size": 164,
+      "symbol": "LVL_9_DOBBO_FUN_00324088"
+    }
+  ],
+  "gp": 1765360,
+  "kind": "level-smalldata-catalog",
+  "level": "9_dobbo",
+  "module": "src/levels/smalldata/9_dobbo-parent-batch2.cfrag",
+  "program": "levels/9_dobbo",
+  "reference_sha256": "a47999f3aa251431498e068932ac542399b5e402ab8dcddcbfe246dc220b7810",
+  "schema": 1,
+  "source": "candidates/levels/9_dobbo-g8.c",
+  "target": "SCUS_972.68"
+}

@@ -6,10 +6,10 @@
   "reference_sha256": "838098ef94f05d78f79be2f65291447db6c9468e7c44e2cab36396f720cce109",
   "reference_entry": 2869768,
   "candidate_source": "candidates/levels/15_gorn.c",
-  "source_sha256": "d02e64a776f726eff0c23f82bf32b5fe418b89c2443138a71b357b8b04631520",
-  "catalog_sha256": "24821a7f7c073e6f44f360d678daae12de9afc14efbda3e367e82de50143b26f",
-  "object_sha256": "0b5ea6d03a12e0f27aaf9e0c1b44808dcd7e5cc6f2212aa6b76a10fdfdf02f32",
-  "candidate_elf_sha256": "a73296d880cd6fe77435e4f964ba9a1059fe99b0c37027df221655e9f1fa04ac",
+  "source_sha256": "f61e097122c2e6cd92feb719e7ea17a8327cb90536769bcfce9664c543c1628c",
+  "catalog_sha256": "768fd797b61a51b6055ec17cc17ca5c0a31a8a812c9d8008c434b54dc5013628",
+  "object_sha256": "4c5c87b748dc151fa89f3d5cb6cb4f7e7f461f1b9932becdae7ee95070cd4a32",
+  "candidate_elf_sha256": "62ff3418ad23f547b0d8c8796904e7a847927acb7716900b566807d389d7af98",
   "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
   "tools": {
     "cc1": "8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d",
@@ -1453,8 +1453,41 @@
       "different_bytes": 0,
       "state": "matched_unintegrated",
       "produced_size": 48
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002BF008",
+      "address": 2879496,
+      "size": 60,
+      "matched": true,
+      "reference_sha256": "a7e390d81f6a94474d9033ad6ecebc029c0556bb0003e8b91178b59c831c1ac1",
+      "candidate_sha256": "a7e390d81f6a94474d9033ad6ecebc029c0556bb0003e8b91178b59c831c1ac1",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 60
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002EB2F0",
+      "address": 3060464,
+      "size": 72,
+      "matched": true,
+      "reference_sha256": "a40595503eea2961eba43d7f4aae73d0472723b093b34febc516a37264963200",
+      "candidate_sha256": "a40595503eea2961eba43d7f4aae73d0472723b093b34febc516a37264963200",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 72
+    },
+    {
+      "symbol": "LVL_15_GORN_FUN_002EC5F8",
+      "address": 3065336,
+      "size": 28,
+      "matched": true,
+      "reference_sha256": "16662c35cecc045c6126a60e67ed7f0eaf29d507a100462c1245fe74f7bcf3fb",
+      "candidate_sha256": "16662c35cecc045c6126a60e67ed7f0eaf29d507a100462c1245fe74f7bcf3fb",
+      "different_bytes": 0,
+      "state": "matched_unintegrated",
+      "produced_size": 28
     }
   ],
   "read_only_sections": [],
-  "matched_code_bytes": 11920
+  "matched_code_bytes": 12080
 }

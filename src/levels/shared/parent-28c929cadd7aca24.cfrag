@@ -1,0 +1,16 @@
+
+
+extern Rac2Native_28c929cadd7aca24_NativeResidentView @@ROLE_00_000@@;
+
+void @@FUNCTION@@(Rac2Native_28c929cadd7aca24_s32 selected, Rac2Native_28c929cadd7aca24_s32 index) {
+    if (selected >= 0) {
+        Rac2Native_28c929cadd7aca24_u8 *object = @@ROLE_00_001@@.object;
+        Rac2Native_28c929cadd7aca24_s32 offset = object[0x43] * 4;
+        Rac2Native_28c929cadd7aca24_u8 *table = *(Rac2Native_28c929cadd7aca24_u8 **)(object + 0x24);
+        Rac2Native_28c929cadd7aca24_u8 *entry = *(Rac2Native_28c929cadd7aca24_u8 **)(table + offset + 0x48);
+        if (index < entry[0x10]) {
+            @@ROLE_00_002@@.selected = selected;
+            @@ROLE_00_003@@.index = index;
+        }
+    }
+}

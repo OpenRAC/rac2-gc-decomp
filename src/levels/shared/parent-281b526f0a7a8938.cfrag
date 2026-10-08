@@ -1,0 +1,31 @@
+
+
+extern Rac2Native_281b526f0a7a8938_u8 @@ROLE_01_000@@[];
+extern Rac2Native_281b526f0a7a8938_u8 @@ROLE_00_000@@[];
+
+Rac2Native_281b526f0a7a8938_s32 @@FUNCTION@@(Rac2Native_281b526f0a7a8938_s32 id)
+{
+    Rac2Native_281b526f0a7a8938_u8 *record;
+    Rac2Native_281b526f0a7a8938_u8 *cursor;
+    Rac2Native_281b526f0a7a8938_s32 limit;
+
+    limit = 52;
+    if (id == 0 || (((Rac2Native_281b526f0a7a8938_NativeView *)&@@ROLE_01_001@@)->field8848 != (Rac2Native_281b526f0a7a8938_u32)id &&
+                    ((Rac2Native_281b526f0a7a8938_NativeView *)&@@ROLE_01_002@@)->field4640 != (Rac2Native_281b526f0a7a8938_u32)id))
+        limit = 42;
+
+    id = 0;
+    if (limit != 0) {
+        record = (Rac2Native_281b526f0a7a8938_u8 *)&@@ROLE_00_001@@;
+        if (record[116] != 0) {
+            cursor = record + 116;
+            do {
+                id++;
+                if (id >= limit)
+                    break;
+                cursor += 112;
+            } while (*cursor != 0);
+        }
+    }
+    return (id != limit) ? id : 52;
+}
