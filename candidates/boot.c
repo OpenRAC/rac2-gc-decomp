@@ -35,6 +35,7 @@ typedef struct {
 extern void *D_00133E74;
 extern void *D_0013A308;
 extern unsigned char D_00137E00;
+extern int D_00134688;
 
 struct IndirectWord
 {
@@ -50,6 +51,11 @@ void *FUN_00115200(void)
 void **FUN_00115210(void)
 {
     return &D_0013A308;
+}
+
+void FUN_0011B0A0(void)
+{
+    D_00134688 = 0;
 }
 
 void FUN_00120BC8(void)
