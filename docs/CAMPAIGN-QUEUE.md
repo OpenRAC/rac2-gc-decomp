@@ -28825,6 +28825,27 @@ Compare all complete native symbols and declared read-only sections; retain ever
 
 Reopen condition: Independent measured ABI/layout/compiler-context evidence; no flag cycling or partial/masked acceptance.
 
+## pr54-liolu-boot-fun_0011b0a0
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete current boot unit, then all 28 loaded images and guarded finalization before PR54 merge.
+
+Reopen condition: New ABI, caller return-use, data-layout or compiler evidence only.
+
+- `runtime:bank/pr54-liolu-review-20261008/ABI-EVIDENCE.json`
+
+## pr54-liolu-external-history
+
+State: `done`. Kind: `research`.
+
+Retain the original contribution and exact private action records; current acceptance uses independent local proofs.
+
+Reopen condition: New immutable contributor proof files supplied for independent audit.
+
+- `runtime:bank/pr54-liolu-review-20261008/external-actions.json`
+- `https://github.com/OpenRAC/rac2-gc-decomp/commit/0634723e4a72597252b5e4385ca0e62cdbe0d72a`
+
 ## private-row360-aranos-flag-sweep-0_aranos_tutorial-20261005
 
 State: `stopped`. Kind: `candidate`.

@@ -141,6 +141,19 @@
       "returncode": 0,
       "state": "passed"
     },
+    "1c29b1a1ee654c02a5154350b275ea36": {
+      "action_manifest_sha256": "11874393ace1d9a69239514d4ad758f6ee2fa2ab4e704b33af2f65218f907527",
+      "action_outcome_sha256": "f8aef2eae3df30626009e8acfdf8e6ac2aa35d0587df5ab5614a2d9f34c5f6cf",
+      "artifact": "prepared-run:builds/campaign-1c29b1a1ee654c02a5154350b275ea36/report.json",
+      "artifact_sha256": "54aec7c8d9d1b15377e4638c0b8e79a93e4c78dd1b4d684f40ffe24ebbd23783",
+      "directory": "runtime:actions/1c29b1a1ee654c02a5154350b275ea36",
+      "finished": "2026-10-08T22:28:59.114242+00:00",
+      "id": "1c29b1a1ee654c02a5154350b275ea36",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "1ce49e9ea7a342a18efca08b4d0ad084": {
       "directory": "runtime:actions/1ce49e9ea7a342a18efca08b4d0ad084",
       "finished": "2026-10-05T19:24:27.347822+00:00",
@@ -4882,7 +4895,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 12157,
+  "revision": 12168,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -190763,6 +190776,146 @@
         }
       ]
     },
+    "pr54-liolu-boot-fun_0011b0a0": {
+      "budget": 2,
+      "created": "2026-10-08T22:18:51.952306+00:00",
+      "hypothesis": "Reviewed zero store to one aligned resident 32-bit cell; void return has no observed caller contradiction.",
+      "id": "pr54-liolu-boot-fun_0011b0a0",
+      "kind": "candidate",
+      "last_trial": "8dfac6db9ac849b69566b3b25d4f8f89",
+      "next_action": "Qualify the complete current boot unit, then all 28 loaded images and guarded finalization before PR54 merge.",
+      "pointers": [
+        "runtime:bank/pr54-liolu-review-20261008/ABI-EVIDENCE.json"
+      ],
+      "reopen_condition": "New ABI, caller return-use, data-layout or compiler evidence only.",
+      "source": "candidates/boot.c",
+      "state": "integrated",
+      "symbols": [
+        "FUN_0011B0A0"
+      ],
+      "targets": [
+        {
+          "catalog": "config/candidate-catalog.json",
+          "id": "boot",
+          "program": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-08T22:18:56.157950+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "8dfac6db9ac849b69566b3b25d4f8f89"
+        },
+        {
+          "at": "2026-10-08T23:01:40.834699+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "76cb1d02b6fe57a64e170d9edcbe6f1a62607586176b22deca16b1077c11b5b0",
+            "progress/integration.json": "439cd39d44c251949bb40b1c29df5d36f4e27866cb7a1a527d9ae14757967cae",
+            "progress/levels/0_aranos_tutorial.json": "7da8ee93bd630fb59d49149b947bc6135e359991eb1dc756fd294a5b43a43a8c",
+            "progress/levels/10_hrugis_cloud.json": "a2839df3f3d499dbff3d10e268a8d801d7c2704d7800d38e26a46248837ef5a6",
+            "progress/levels/11_joba.json": "4778e484323a7f4d556fe40d3b2d69670180510d02d06d5df1cb6b68ed402aa4",
+            "progress/levels/12_todano.json": "918cefb568a5d97f8698ffa687efec0087553ef49e7f81e7ea01230157ddd6b9",
+            "progress/levels/13_boldan.json": "7961c453a26847b87ae60906c0101d0903aa88159ca21f0af0a891b66d25aa63",
+            "progress/levels/14_aranos_prison.json": "323bf24af8f96ee17e0e1f505d11f9eba9dad81c3c916c647fee06b2005ce36b",
+            "progress/levels/15_gorn.json": "bb584af1d255546303c212bd91181f167e4bf4736ebb38e4dc2bbc8b864a3c8b",
+            "progress/levels/16_snivelak.json": "986aa5e94193af4c9e2a395089448f52f7df86736450eea1cfe966c29fd9bc01",
+            "progress/levels/17_smolg.json": "bf7db1d208f0175c3364c74cdcf55385fab8f71a902c4a3c8f45ebea12521243",
+            "progress/levels/18_damosel.json": "bc7e8a601d2935177f122e301501311bac1bd5fe3ea8b55e36d348c2993fad76",
+            "progress/levels/19_grelbin.json": "176c484e469545785ece9e047395aa44abe74e5015701ff7156822978158ef79",
+            "progress/levels/1_oozla.json": "94d9f060921cef10fca54964aa75bcf35a868cb1880fa6df0fb2f2f938e1ed65",
+            "progress/levels/20_yeedil.json": "8200932cc3247d81f69c95228dc14b492de44f785a7db00f724d0452cc3e38ec",
+            "progress/levels/22_dobbo_orbit.json": "4e4ed6ee6ed9945d0e5e8120af70a58f4f1f50377556256a29c521d708a10117",
+            "progress/levels/23_damosel_orbit.json": "9f7f14a304d7a03a7c13191f1b2121227f84f39d508a8b2a602297f4c6994c37",
+            "progress/levels/24_ship_shack.json": "e373846648a9ad91e81ef69fabc592ecdde6d2552afb0806058fe50c3add7475",
+            "progress/levels/25_wupash_nebula.json": "a5f97b77be2c67e95b05f3fc3a1ce08101c75d2e7e30f8a17d962a1488c1b793",
+            "progress/levels/26_jamming_array.json": "28a39b5d6a0e87ef27f2f1c511260d519983391344583a382249e2507b8d9bb9",
+            "progress/levels/2_maktar_nebula.json": "c51ff23b792ed1bc9a2a7676ad5646f6221850594fe149f2523a215d8b32a139",
+            "progress/levels/30_insomniac_museum.json": "e5ddd81ecd8a05576ea7f661382e876384f4e35b14e9107eea3c688035c5ce11",
+            "progress/levels/3_endako.json": "caf8667b58081b45a619f20b7c9fd8d3db900d7001ced821f14787e7a2a998a5",
+            "progress/levels/4_barlow.json": "29c78d85cad171c82f9cbc8a6aebb28e2044277722764d031c7bf73ea47f4b4c",
+            "progress/levels/5_feltzin_system.json": "d4657ffb9e0af5d561a18aac7a2d612156942a8a0e56b11b753cf9b52ae320b5",
+            "progress/levels/6_notak.json": "d304e7829175e3a97b29f14a865f8749a6748e16ef253823a63ad2fba607d6f0",
+            "progress/levels/7_siberius.json": "431801e5ee5ea71b79afeec0c909e5632b7c991fed394116ff5fd2dc44fe548c",
+            "progress/levels/8_tabora.json": "b97066f78e27a4afa740e1a9d9b89c7bff88ed09b981e91823f7283bf60d763e",
+            "progress/levels/9_dobbo.json": "a0dda9e629070c97f21a12d67758b4714d233c197da4ee554a8d9b83488fc2cd",
+            "progress/report.json": "9532dfeb6023a36df6234bad0c03f7083216110ab75648b00a80a9e2b1173baf"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "pr54-liolu-external-history": {
+      "context": {
+        "action_claims": {
+          "4f3669a76a8d493fbd5ddae953f4c167": {
+            "action_manifest_sha256": "877a6f7f6a2f3df134e8fc96598b428442e2592a874f8d408b4366c0e0d08611",
+            "action_outcome_sha256": "72a9b1ced85136b8f3ab0caef6a980442a0636b3ab428633f1f01af3b9e35330",
+            "directory": "runtime:actions/4f3669a76a8d493fbd5ddae953f4c167",
+            "finished": "2026-10-08T19:55:34.545566+00:00",
+            "id": "4f3669a76a8d493fbd5ddae953f4c167",
+            "integration_credit": 0,
+            "kind": "integrate",
+            "returncode": 1,
+            "state": "failed"
+          },
+          "6490839d55f04d748e3bcb33269359be": {
+            "action_manifest_sha256": "fcb49477958f9a80f47904ed7948ebeadc5523c42e3bb636c4089805887628b8",
+            "action_outcome_sha256": "4ea882166c11b3f1992d9e81036342dedb35ab87c1ad3f2c4752f2a16aedb282",
+            "artifact": "runtime:runs/20261008T175442Z-fe78a611/builds/campaign-6490839d55f04d748e3bcb33269359be/report.json",
+            "artifact_sha256": "26d7dcae7ccd46c92e223924e0570875ba14318fb97c85fda5a1a643fb1a935e",
+            "directory": "runtime:actions/6490839d55f04d748e3bcb33269359be",
+            "finished": "2026-10-08T20:03:05.820133+00:00",
+            "id": "6490839d55f04d748e3bcb33269359be",
+            "integration_credit": 0,
+            "kind": "integrate",
+            "returncode": 0,
+            "state": "passed"
+          },
+          "82c724333ae34e1fb6c83bae72f05236": {
+            "action_manifest_sha256": "19682797037cbbbe5cc9fe4274e0e087bd9c2234437492b7917d3d37958135c3",
+            "action_outcome_sha256": "db493cfebdaf0dac5a226aaee67e97a0d92751774c9f1906541959337310985d",
+            "artifact": "runtime:runs/20261008T175442Z-fe78a611/builds/campaign-82c724333ae34e1fb6c83bae72f05236/report.json",
+            "artifact_sha256": "cc2e0041fe1b4492b0aa5794031d88a4ff23e99bf93e842804937da65d9e3c62",
+            "directory": "runtime:actions/82c724333ae34e1fb6c83bae72f05236",
+            "finished": "2026-10-08T20:11:24.644716+00:00",
+            "id": "82c724333ae34e1fb6c83bae72f05236",
+            "integration_credit": 0,
+            "kind": "integrate",
+            "returncode": 0,
+            "state": "passed"
+          }
+        },
+        "external_history_sha256": "764de3beb86a553baf23117195b1de34020a1a82dc5510c81a1072ea88b192d7",
+        "source_commit": "0634723e4a72597252b5e4385ca0e62cdbe0d72a",
+        "validity": "historical_unverified"
+      },
+      "created": "2026-10-08T22:52:03.858227+00:00",
+      "hypothesis": "Three contributor action claims are historical external evidence; they are not trusted local actions or new C credit.",
+      "id": "pr54-liolu-external-history",
+      "integration_credit": 0,
+      "kind": "research",
+      "next_action": "Retain the original contribution and exact private action records; current acceptance uses independent local proofs.",
+      "pointers": [
+        "runtime:bank/pr54-liolu-review-20261008/external-actions.json",
+        "https://github.com/OpenRAC/rac2-gc-decomp/commit/0634723e4a72597252b5e4385ca0e62cdbe0d72a"
+      ],
+      "reopen_condition": "New immutable contributor proof files supplied for independent audit.",
+      "state": "done",
+      "transitions": [
+        {
+          "at": "2026-10-08T22:52:04.179989+00:00",
+          "from": "queued",
+          "reason": "Original contributor commit and exact external action records retained; no foreign action or source trial fabricated locally and no matching credit.",
+          "reopen_condition": "",
+          "to": "done"
+        }
+      ]
+    },
     "private-row360-aranos-flag-sweep-0_aranos_tutorial-20261005": {
       "budget": 1,
       "created": "2026-10-05T16:59:35.827944+00:00",
@@ -276041,6 +276194,19 @@
       "state": "exact_private",
       "task": "small-positive-bit32-query16-combined-13_boldan-20261006"
     },
+    "8dfac6db9ac849b69566b3b25d4f8f89": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8dfac6db9ac849b69566b3b25d4f8f89",
+      "finished": "2026-10-08T22:18:56.083312+00:00",
+      "id": "8dfac6db9ac849b69566b3b25d4f8f89",
+      "manifest_sha256": "95a820942b5a6e12e3d851cc882a6f5e4c74388f4a36858d64f49e226b58ee8d",
+      "measured_functions": 286,
+      "outcome_sha256": "28706bffd4494491b515d15e4edf051e3aeba8b561bb5c20cffd5e75d0802eb8",
+      "semantic_key": "ece1605cb28076c6113673929242b9dd68f9bb656962eff9e13f1b65dc505bcf",
+      "started": "2026-10-08T22:18:54.441760+00:00",
+      "state": "exact_private",
+      "task": "pr54-liolu-boot-fun_0011b0a0"
+    },
     "8e1bbcd9c05149f9a245cebe790b1b4a": {
       "compile_attempted": true,
       "directory": "runtime:trials/8e1bbcd9c05149f9a245cebe790b1b4a",
@@ -297613,6 +297779,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "fde329afaeb83a7cc38a432b67ff69d1fe311da8993f03ddd33a2fea3213f842"
+    "docs/CAMPAIGN-QUEUE.md": "56f3547c8fe1df102c5ceba30398040658a099d24c10326e4123417cab6bfc84"
   }
 }
