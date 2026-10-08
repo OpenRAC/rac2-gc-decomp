@@ -1,13 +1,25 @@
 {
   "game": "Ratchet & Clank 2: Locked and Loaded",
   "region": "Europe",
-  "version": null,
+  "version": 1.00,
   "serial": "SCES_516.07",
-  "volume_label": null,
-  "redump": null,
-  "iso": null,
-  "boot": null,
-  "expected_levels": null,
+  "volume_label": "RATCHETANDCLANK2",
+  "redump": "https://redump.info/disc/234",
+  "iso": {
+    "size": 3548545024,
+    "crc32": "36ec8963",
+    "sha1": "5a64211823e62faf33c0e86f1ad4df962a028ed0",
+    "md5": "e184fc2a495a4654f748a8e8c587261c",
+    "sha256": "519f9fa78b8e821b6bb7fa501fc10e8b10f378e27a6410f68d0dd8952860b41a"
+  },
+  "boot": {
+    "size": 2878084,
+    "crc32": "294c7dfa",
+    "sha1": "cb59ce5396ddebb8aa539b0847f8bf66d6a47fe0",
+    "md5": "fd4e9603e89e12fa4c230f0fda56789f",
+    "sha256": "b0a28fe71142fede63d60a5981508fbf65f051e9acb801878f12f8d519438357"
+  },
+  "expected_levels": 27,
   "compiler_flags": null,
   "compiler_status": "No PAL compiler measurement; the USA profile is not assumed",
   "identity_status": "unmeasured: run scripts/setup.py --region pal --measure-identity on a legally acquired disc, review identity-proposal.json and pin it here and in config/regions/pal/overlays.json"
