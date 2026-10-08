@@ -388,7 +388,7 @@
   ],
   "generator_sha256": "462a150fb73e0f889ff0b85a2198393f1590cf93fed4296bfea87da72d942316",
   "input_sha256": {
-    "candidates/boot.c": "0631bd292a6e5c0dff6019e0e02f4d2dd509787c57f7b09fc155db9769b5ae9c",
+    "candidates/boot.c": "12e7e97a8ae84030a4e06477574a630b9deb14ccbe6608ea0877ad0c0b094fd5",
     "candidates/levels/0_aranos_tutorial-g8.c": "2a15b93577214747174feb76aa75ff2722a42296cd9e0232d2a63d1bf8eaab3a",
     "candidates/levels/0_aranos_tutorial.c": "0727b05b8c9e3a4750ed03826993608f0ed8dfea3f7d2d81e42f2f6c48dda7c4",
     "candidates/levels/10_hrugis_cloud-g8.c": "115b6ec66cf2ab446f75a1100ea318cee8fb2f7bd5cbd8c95449228278aad336",
@@ -449,7 +449,7 @@
     "config/boot-units/sdk-cpr8.json": "d3b35d02f2ab660e84aeedf65aabde12b89286d97ba012bc27fa8fd5291175c5",
     "config/boot-units/sdk-ipu-restart-dma.json": "186e6faca67f024ca46baf69e37b0625cbaae33cc143df3204d9d01332175c31",
     "config/boot-units/sdk-sysbit-flush.json": "8997e4370cf6c1a4aaf13d44c4234d78b0226618a7895319ecc1618d93e1d031",
-    "config/candidate-catalog.json": "6a05d070e38fd68b9a9a9a8160e9822166e6e35b6ffe99225e7742faa1a3d29d",
+    "config/candidate-catalog.json": "57fd0fac5feaea5327fd4135ccafd60eb9cb835c457e93a1050a85762254b8e3",
     "config/compiler-profiles/owned-sdk-b9-single-text-controls-v1.json": "b6274a824c321458200375da3012c3cd35163f1994402caf6f9c78bfb71023b6",
     "config/level-g8/0_aranos_tutorial.json": "b056227f11576382d3a0be45ade59b24146a2176ef545bd5e9076c016ecf150c",
     "config/level-g8/10_hrugis_cloud.json": "cc2b382cc0049b4e556d6e764926b52e86649c5ef331243f6c7161a5728f854a",
@@ -513,8 +513,8 @@
   },
   "machine_proof_status": "unverified after authoring; regenerate all affected reviews and loaded-byte gates",
   "metrics": {
-    "boot_authored_functions": 241,
-    "boot_catalogued_machine_bytes": 12312,
+    "boot_authored_functions": 242,
+    "boot_catalogued_machine_bytes": 12324,
     "identity_basis": "catalogued definitions compared as exact source bytes after recorded symbol-only substitutions; not a new machine proof",
     "native_authored_variant_catalogued_bytes_upper_bound": 164992,
     "native_base_family_placements": 1516,
@@ -533,7 +533,7 @@
     "sdk_authored_functions": 3,
     "sdk_catalogued_machine_bytes": 1144,
     "shared_native_prelude_variants": 29,
-    "total_unique_authored_source_variants_in_scope": 2491,
+    "total_unique_authored_source_variants_in_scope": 2492,
     "warning": "Representative catalogued bytes are an organization metric, not loaded-byte progress or a new accepted match. Do not add this numerator to the public report."
   },
   "native_source_families": [
@@ -55679,13 +55679,13 @@
       "pieces": [
         {
           "fragment": "src/boot/00-types-and-layouts.cfrag",
-          "sha256": "8e002b9077ad974b9b18c20205ea15b19b4251008fa1f15842360b7f0a4ea80b",
-          "source_text_bytes": 744
+          "sha256": "e40f31b61d5e9de0a9cb4ff20aed9028f57d957204f7ff911cd40855740bc075",
+          "source_text_bytes": 767
         },
         {
           "fragment": "src/boot/01-resident-accessors.cfrag",
-          "sha256": "ca494bd9c8c6b148e80a0ea72fd17b7c8dcfa2e12d450a83fa027a4c2da06fde",
-          "source_text_bytes": 362
+          "sha256": "7ea4ce39753b55289b9094f605cdf831e3c1b2fe5f8f92c20ef0e7890a5739c8",
+          "source_text_bytes": 411
         },
         {
           "fragment": "src/boot/02-hud-and-math.cfrag",
@@ -56241,8 +56241,8 @@
           "source_text_bytes": 722
         }
       ],
-      "sha256": "0631bd292a6e5c0dff6019e0e02f4d2dd509787c57f7b09fc155db9769b5ae9c",
-      "source_text_bytes": 76967
+      "sha256": "12e7e97a8ae84030a4e06477574a630b9deb14ccbe6608ea0877ad0c0b094fd5",
+      "source_text_bytes": 77039
     },
     "candidates/levels/0_aranos_tutorial-g8.c": {
       "pieces": [
