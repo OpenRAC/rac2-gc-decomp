@@ -20,6 +20,12 @@ Edit authored modules under `src/`, then regenerate the standalone compilation
 units using the [source layout workflow](docs/SOURCE-LAYOUT.md). Preserve the
 complete compilation context and refresh affected proofs after source changes.
 
+Reserve your small lot through [shared GitHub reservations](docs/CONTRIBUTOR-RESERVATIONS.md)
+and wait for acknowledged ownership before decompiling. Check the
+[nonmatching shelf](nonmatching/README.md) for a retained starting point.
+Respect previous refusals; neither a reservation nor an unfinished C attempt
+adds matching credit. Keep the claim while your result is under review.
+
 ## The three things this repository cannot ship
 
 1. **Your own copy of the game** — the USA v1.01 disc (`SCUS_972.68`), verified against the

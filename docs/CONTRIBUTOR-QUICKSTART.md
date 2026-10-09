@@ -105,6 +105,12 @@ and the selected `packet`. It respects parked targets and their reopening
 conditions. New game C requires complete symbol and affected full-image gates;
 metadata/diagnostic changes need their relevant checks too.
 
+Before decompiling, inspect the [nonmatching shelf](../nonmatching/README.md)
+and [reserve a small lot](CONTRIBUTOR-RESERVATIONS.md) through the shared upstream
+CLI. Wait for the exact claim acknowledgement; an open draft PR or local lock
+does not reserve functions across forks. Check ownership before trials. Keep
+the reservation during review and release it only after stopping your work.
+
 Before submitting, run the repository tests, source/view freshness checks and
 the README bar check. Keep game images, BIOS, SDKs, objects, extracted assembly
 and logs out of Git. Retain the actual private evidence rather than guessed results.

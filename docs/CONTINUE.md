@@ -23,6 +23,10 @@ required. The game target is Going Commando USA v1.01, `SCUS_972.68`.
 4. Run `campaign.py status`, `queue` and the selected `packet` using the private
    runtime binding. Choose the current task and its explicit reopening condition.
    Do not restart parked source permutations or historical jobs.
+5. Use [shared reservations](CONTRIBUTOR-RESERVATIONS.md) before starting the
+   selected small lot, and inspect the [nonmatching shelf](../nonmatching/README.md)
+   for retained work. Fresh ownership checks precede compiler trials; an expired
+   or uncertain claim stops admission. Reservation is not matching evidence.
 
 Use the [official campaign tools](CAMPAIGN-TOOLS.md) to inspect a recorded trial
 with `campaign.py diff` and finalize a completed validated batch with
