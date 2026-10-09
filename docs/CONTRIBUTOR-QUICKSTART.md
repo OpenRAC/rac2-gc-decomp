@@ -117,6 +117,11 @@ and logs out of Git. Retain the actual private evidence rather than guessed resu
 
 ## 5. Update your topic branch before requesting review
 
+After review, use the [merge queue](MERGE-QUEUE.md) for integration. It validates
+the contribution against the newest target branch, so an older base alone does
+not require another manual topic-branch merge. Real source conflicts or stale
+combined proof inputs still require the update and validation described below.
+
 The upstream `RAC2` branch can advance while you work. Ask your AI to check it
 before starting a contribution, before requesting review and whenever GitHub
 reports that the PR needs an update. Keep working on your existing topic branch.
