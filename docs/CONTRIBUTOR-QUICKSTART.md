@@ -105,11 +105,63 @@ and the selected `packet`. It respects parked targets and their reopening
 conditions. New game C requires complete symbol and affected full-image gates;
 metadata/diagnostic changes need their relevant checks too.
 
+Before decompiling, inspect the [nonmatching shelf](../nonmatching/README.md)
+and [reserve a small lot](CONTRIBUTOR-RESERVATIONS.md) through the shared upstream
+CLI. Wait for the exact claim acknowledgement; an open draft PR or local lock
+does not reserve functions across forks. Check ownership before trials. Keep
+the reservation during review and release it only after stopping your work.
+
 Before submitting, run the repository tests, source/view freshness checks and
 the README bar check. Keep game images, BIOS, SDKs, objects, extracted assembly
 and logs out of Git. Retain the actual private evidence rather than guessed results.
 
-## 5. Submit through your own fork
+## 5. Update your topic branch before requesting review
+
+The upstream `RAC2` branch can advance while you work. Ask your AI to check it
+before starting a contribution, before requesting review and whenever GitHub
+reports that the PR needs an update. Keep working on your existing topic branch.
+
+First inspect `git status --short` and `git remote -v`. Preserve unfinished work
+with a local commit or another reviewed backup before merging. Verify that
+`upstream` points to `https://github.com/OpenRAC/rac2-gc-decomp.git`; if that
+remote name is already used for something else, choose and use a different name.
+If the upstream remote is absent, the AI can add it:
+
+```sh
+git remote add upstream https://github.com/OpenRAC/rac2-gc-decomp.git
+```
+
+Fetch the current target and compare it with your topic branch:
+
+```sh
+git fetch upstream RAC2
+git log --oneline HEAD..upstream/RAC2
+```
+
+If upstream has new commits, merge them into the topic branch:
+
+```sh
+git merge upstream/RAC2
+```
+
+Resolve conflicts while preserving both the upstream changes and your authored
+work. Generated source, catalogue/register views and proof/progress files must
+describe the combined source snapshot. Do not take an older generated file
+wholesale, hand-edit hashes or counts, or discard experiment history to finish
+the merge. Use the maintained [source layout](SOURCE-LAYOUT.md),
+[campaign workflow](CAMPAIGN-WORKFLOW.md) and
+[guarded finalizer](CAMPAIGN-TOOLS.md) to regenerate affected outputs and validate
+the complete affected symbols and full images. Keep your own verified runtime
+and tool bindings private; another contributor's local paths are not portable.
+
+Run the relevant freshness checks and tests after resolving the update. Commit
+the coherent result and push normally to your fork; do not force-push. If the
+target advances again and changes your validated inputs, repeat the update and
+affected validation. Required CI must pass on the final PR commit before merge.
+Documentation-only updates use documentation checks and do not require a new
+game reconstruction.
+
+## 6. Submit through your own fork
 
 A **fork** is your copy of the project on GitHub. A **branch** isolates your task.
 A **pull request (PR)** asks the maintainer to review your changes; it does not

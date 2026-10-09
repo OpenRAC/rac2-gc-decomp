@@ -19,6 +19,12 @@ authority for experiment history and task decisions. Generate queue/history view
 through `scripts/campaign.py views`; do not maintain a parallel queue or overwrite
 an unregistered view edit. Preserve negative trials and explicit reopening conditions.
 
+Before function decompilation, use the [shared reservations](docs/CONTRIBUTOR-RESERVATIONS.md).
+Claim a small lot and wait for acknowledged ownership; a local Git lock or open
+PR does not reserve work across forks. Check the [nonmatching shelf](nonmatching/README.md)
+for retained attempts and preserve their provenance. The shelf and reservation
+ledger add no matching credit and do not replace campaign decisions or proofs.
+
 Author C under `src/` and follow [source organization](docs/SOURCE-LAYOUT.md).
 `candidates/` contains generated standalone compilation units. Keep declaration
 context, explicit per-program placements and source/checker hashes coherent.

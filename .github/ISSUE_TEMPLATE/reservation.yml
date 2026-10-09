@@ -1,0 +1,26 @@
+name: Reserve a small function batch
+description: Coordinate a small contribution without overlapping another contributor.
+title: "[Reservation] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use `python scripts/reservations.py claim` for automatic target validation and acknowledgement.
+        Alternatively open this issue, then post one `/reserve {"op":"claim",...}` comment using the documented target format.
+        An open issue alone does not reserve functions. Wait for the shared ledger acknowledgement.
+        See docs/CONTRIBUTOR-RESERVATIONS.md. Never paste game bytes, assembly, logs, credentials or private paths.
+  - type: textarea
+    id: targets
+    attributes:
+      label: Complete function targets
+      description: Up to five target identities resolved with scripts/reservations.py describe.
+      render: json
+    validations:
+      required: true
+  - type: input
+    id: branch
+    attributes:
+      label: Your public fork and topic branch
+      placeholder: owner/repository, contribution-branch
+    validations:
+      required: true
