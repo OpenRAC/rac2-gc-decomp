@@ -117,25 +117,6 @@ def api(method: str, endpoint: str, payload: dict | None = None):
         return json.load(response)
 
 
-QUEUE_QUERY = """query($owner:String!,$name:String!,$headRef:String!,$after:String) {
-  repository(owner:$owner,name:$name) {
-    nameWithOwner
-    base:ref(qualifiedName:"refs/heads/RAC2") { target { oid } }
-    group:ref(qualifiedName:$headRef) { target { oid } }
-    mergeQueue(branch:"RAC2") {
-      id
-      configuration { maximumEntriesToBuild maximumEntriesToMerge
-        minimumEntriesToMerge mergingStrategy }
-      entries(first:100,after:$after) {
-        totalCount pageInfo { hasNextPage endCursor }
-        nodes { id position baseCommit { oid } headCommit { oid }
-          pullRequest { number state headRefOid baseRefOid baseRefName
-            repository { nameWithOwner } } }
-      }
-    }
-  }
-}"""
-MAX_QUEUE_PAGES = 10
 MAX_REST_PAGES = 30
 
 
@@ -159,86 +140,67 @@ def bounded_list(endpoint: str) -> list[dict]:
     raise ValueError("Pagination limit reached; refusing incomplete evidence")
 
 
-def queue_member(repo: str, group: dict) -> dict:
-    """Bind one synthetic commit to its live queue entry, never to PR prose.
+def queue_member(repo: str, group: dict, stage_hook=None) -> dict:
+    """Bind a single-PR merge group through live refs and exact commit parents.
 
-    This deliberately supports only the reviewed one-entry ALLGREEN policy.
-    Position one and an unchanged protected base exclude an earlier queued PR
-    from the synthetic group. Ref names are checked, not parsed for PR numbers.
+    No queue-number/ref-message parsing or GraphQL permission dependency. The
+    applicable-rules endpoint returns only active rules; exactly one reviewed
+    MERGE/ALLGREEN one-entry policy is required. A synthetic commit containing
+    an earlier queued commit fails because its first parent is not current RAC2.
     """
-    owner, name = repo.split("/")
-    after = None
-    cursors = set()
-    rows = []
-    anchor = None
-    for _ in range(MAX_QUEUE_PAGES):
-        reply = api("POST", "graphql", {"query": QUEUE_QUERY, "variables": {
-            "owner": owner, "name": name, "headRef": group["head_ref"], "after": after}})
-        if not isinstance(reply, dict) or reply.get("errors"):
-            raise ValueError("Queue query failed")
-        current = reply["data"]["repository"]
-        queue = current["mergeQueue"]
-        config = queue["configuration"]
-        if (current["nameWithOwner"] != repo
-                or sha_value(current["base"]["target"]["oid"]) != group["base_sha"]
-                or sha_value(current["group"]["target"]["oid"]) != group["head_sha"]
-                or config["mergingStrategy"] != "ALLGREEN"
-                or any(type(config[key]) is not int or config[key] != 1 for key in (
-                    "maximumEntriesToBuild", "maximumEntriesToMerge", "minimumEntriesToMerge"))):
-            raise ValueError("Queue refs or one-entry policy do not match")
-        connection = queue["entries"]
-        total = connection["totalCount"]
-        if type(total) is not int or not 1 <= total <= MAX_QUEUE_PAGES * 100:
-            raise ValueError("Invalid queue length")
-        current_anchor = (queue["id"], config, total)
-        if not isinstance(queue["id"], str) or not queue["id"] or (anchor is not None and anchor != current_anchor):
-            raise ValueError("Queue changed while paging")
-        anchor = current_anchor
-        batch = connection["nodes"]
-        if not isinstance(batch, list) or len(batch) > 100 or any(not isinstance(row, dict) for row in batch):
-            raise ValueError("Malformed queue entries")
-        rows.extend(batch)
-        page = connection["pageInfo"]
-        if type(page["hasNextPage"]) is not bool:
-            raise ValueError("Malformed queue pagination")
-        if not page["hasNextPage"]:
-            if len(rows) != total:
-                raise ValueError("Incomplete queue membership")
-            break
-        cursor = page["endCursor"]
-        if not isinstance(cursor, str) or not cursor or cursor in cursors or not batch:
-            raise ValueError("Invalid queue cursor")
-        cursors.add(cursor)
-        after = cursor
-    else:
-        raise ValueError("Queue pagination limit reached")
-    ids, positions = set(), set()
+    stage = stage_hook or (lambda name: None)
+    stage("policy")
+    rules = bounded_list(f"repos/{repo}/rules/branches/RAC2")
+    if len(rules) > 1000 or any(not isinstance(rule.get("type"), str) or not rule["type"] for rule in rules):
+        raise ValueError("Malformed applicable rules")
+    queues = [rule for rule in rules if rule.get("type") == "merge_queue"]
+    if len(queues) != 1:
+        raise ValueError("An active unambiguous merge queue rule is required")
+    rule = queues[0]
+    params = rule["parameters"]
+    if (type(rule["ruleset_id"]) is not int or rule["ruleset_id"] < 1
+            or rule["ruleset_source_type"] != "Repository" or rule["ruleset_source"] != repo
+            or params["grouping_strategy"] != "ALLGREEN" or params["merge_method"] != "MERGE"
+            or any(type(params[key]) is not int or params[key] != 1 for key in (
+                "max_entries_to_build", "max_entries_to_merge", "min_entries_to_merge"))):
+        raise ValueError("Unsupported queue policy")
+    stage("refs")
+    for ref, expected in (("refs/heads/RAC2", group["base_sha"]), (group["head_ref"], group["head_sha"])):
+        actual = api("GET", f"repos/{repo}/git/ref/{ref.removeprefix('refs/')}")
+        if (actual["ref"] != ref or actual["object"]["type"] != "commit"
+                or sha_value(actual["object"]["sha"]) != expected):
+            raise ValueError("Live queue or protected ref changed")
+    stage("ancestry")
+    commit = api("GET", f"repos/{repo}/git/commits/{group['head_sha']}")
+    parents = commit["parents"]
+    if (sha_value(commit["sha"]) != group["head_sha"] or not isinstance(parents, list) or len(parents) != 2
+            or any(not isinstance(parent, dict) for parent in parents)):
+        raise ValueError("Synthetic commit must have exactly two parents")
+    base, source = (sha_value(parent["sha"]) for parent in parents)
+    if base != group["base_sha"] or source in {base, group["head_sha"]}:
+        raise ValueError("Synthetic ancestry does not bind the current base and source")
+    stage("association")
+    associated = bounded_list(f"repos/{repo}/commits/{source}/pulls")
     matches = []
-    for row in rows:
-        if (not isinstance(row["id"], str) or not row["id"] or row["id"] in ids
-                or type(row["position"]) is not int or row["position"] < 1 or row["position"] in positions):
-            raise ValueError("Duplicate or malformed queue membership")
-        ids.add(row["id"])
-        positions.add(row["position"])
-        if row["headCommit"] is not None and sha_value(row["headCommit"]["oid"]) == group["head_sha"]:
-            matches.append(row)
-    if positions != set(range(1, len(rows) + 1)):
-        raise ValueError("Incomplete or changing queue positions")
+    numbers = set()
+    for pr in associated:
+        number = pr["number"]
+        if type(number) is not int or number < 1 or number in numbers:
+            raise ValueError("Malformed or duplicate commit association")
+        numbers.add(number)
+        head = sha_value(pr["head"]["sha"])
+        pr_base = sha_value(pr["base"]["sha"])
+        if (pr["state"] == "open" and head == source and pr["base"]["ref"] == "RAC2"
+                and pr["base"]["repo"]["full_name"] == repo):
+            if pr["draft"] is not False:
+                raise ValueError("Queued source is draft")
+            matches.append({"number": number, "headRefOid": head, "baseRefOid": pr_base,
+                            "baseRefName": "RAC2", "repository": {"nameWithOwner": repo}})
     if len(matches) != 1:
-        raise ValueError("Synthetic head has no unique live queue entry")
-    member = matches[0]
-    pr = member["pullRequest"]
-    if (member["position"] != 1 or sha_value(member["baseCommit"]["oid"]) != group["base_sha"]
-            or type(pr["number"]) is not int or pr["number"] < 1 or pr["state"] != "OPEN"
-            or pr["baseRefName"] != "RAC2" or pr["repository"]["nameWithOwner"] != repo):
-        raise ValueError("Queue entry is not the current single-PR RAC2 group")
-    sha_value(pr["headRefOid"])
-    # A PR can retain the older target SHA against which it was opened. The
-    # synthetic entry/protected ref supplies the current integration base;
-    # original PR base metadata is separately pinned across the live reads.
-    sha_value(pr["baseRefOid"])
-    return {"queue_id": anchor[0], "entry_id": member["id"], "position": member["position"],
-            "head": group["head_sha"], "base": group["base_sha"], "pr": pr}
+        raise ValueError("No unique open RAC2 PR matches the source parent")
+    # Cached PR base metadata can be older than current RAC2; retain it separately.
+    return {"head": group["head_sha"], "base": base, "source": source,
+            "policy": {"ruleset_id": rule["ruleset_id"], "parameters": params}, "pr": matches[0]}
 
 
 def queued_pr_snapshot(pr: dict, repo: str, member: dict) -> tuple:
@@ -267,22 +229,33 @@ def queued_head_duplicates(repo: str, number: int, sha: str) -> bool:
 
 
 def handle_merge_group(event: dict) -> int:
-    """Read-only queue admission; the Actions job supplies the synthetic check.
+    """Read-only admission; Actions supplies the synthetic named job check.
 
-    Never post commit statuses from merge_group: its workflow runs on a queue
-    ref and receives no write-capable token. Query errors/logs are not echoed,
-    nor is contributor prose. A small asynchronous change window remains after
-    the final live read, as for the existing PR-description status handler.
+    Log only fixed stages/classifications, never API errors or contributor prose.
+    All freshness checks are repeated; later asynchronous edits still require
+    GitHub's PR-head checks and rerunning/requeuing when appropriate.
     """
+    phase = "event"
+
+    def stage(name):
+        nonlocal phase
+        phase = name
+
     try:
         repo = os.environ["GITHUB_REPOSITORY"]
-        group = event["merge_group"]
+        original = event["merge_group"]
+        if not isinstance(original, dict):
+            raise ValueError("Merge group must be an object")
+        group = dict(original)
+        if isinstance(group.get("head_ref"), str) and group["head_ref"].startswith("gh-readonly-queue/"):
+            group["head_ref"] = "refs/heads/" + group["head_ref"]
+        if group.get("base_ref") == "RAC2":
+            group["base_ref"] = "refs/heads/RAC2"
         if (not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo)
                 or event.get("action") != "checks_requested"
                 or event["repository"]["full_name"] != repo
                 or group["base_ref"] != "refs/heads/RAC2"
                 or not isinstance(group["head_ref"], str)
-                or not group["head_ref"].startswith("refs/heads/gh-readonly-queue/RAC2/")
                 or not re.fullmatch(r"refs/heads/gh-readonly-queue/RAC2/[A-Za-z0-9_-][A-Za-z0-9_./-]*", group["head_ref"])
                 or ".." in group["head_ref"] or "//" in group["head_ref"]
                 or group["head_ref"].endswith(("/", "."))):
@@ -291,32 +264,48 @@ def handle_merge_group(event: dict) -> int:
         sha_value(group["base_sha"])
         if group["head_sha"] == group["base_sha"]:
             raise ValueError("Synthetic head cannot equal protected base")
-        member = queue_member(repo, group)
+        if "GITHUB_SHA" in os.environ and sha_value(os.environ["GITHUB_SHA"]) != group["head_sha"]:
+            raise ValueError("Actions SHA does not match merge group")
+        member = queue_member(repo, group, stage)
         number = member["pr"]["number"]
         endpoint = f"repos/{repo}/pulls/{number}"
+        stage("pr_snapshot")
         pr = api("GET", endpoint)
         snapshot = queued_pr_snapshot(pr, repo, member)
+        stage("files")
         files = bounded_list(endpoint + "/files")
         names = [row["filename"] for row in files]
-        if (len(names) != pr["changed_files"] or len(set(names)) != len(names)
-                or any(not isinstance(name, str) or not name for name in names)):
+        if (any(not isinstance(name, str) or not name for name in names)
+                or len(names) != pr["changed_files"] or len(set(names)) != len(names)):
             raise ValueError("Incomplete or changing queued PR file list")
         errors = validate(pr.get("body") or "", names)
+        stage("duplicate_head")
         duplicate = queued_head_duplicates(repo, number, pr["head"]["sha"])
-        if queue_member(repo, group) != member:
-            raise ValueError("Queue membership changed during validation")
+        if queue_member(repo, group, stage) != member:
+            raise ValueError("Group ancestry, policy or PR association changed")
+        stage("pr_snapshot_final")
         if queued_pr_snapshot(api("GET", endpoint), repo, member) != snapshot:
             raise ValueError("Queued PR changed during validation")
+        stage("duplicate_head_final")
         duplicate = duplicate or queued_head_duplicates(repo, number, pr["head"]["sha"])
         if errors or duplicate:
             print("Description: queued PR description is incomplete or its head is ambiguous.")
             return 1
         print("Description: live single-PR merge group passed the description contract; claims still need review.")
         return 0
-    except Exception:
-        # Do not expose token-bearing HTTP errors or contributor-controlled API
-        # payloads as workflow commands. All failures produce a failed job.
-        print("Description: queue evidence is missing, malformed or changed; rerun required.")
+    except Exception as error:
+        if isinstance(error, urllib.error.HTTPError):
+            kind = {401: "api_unauthorized", 403: "api_forbidden", 404: "api_missing",
+                    429: "api_rate_limited"}.get(error.code, "api_http_error")
+        elif isinstance(error, urllib.error.URLError):
+            kind = "api_transport_error"
+        elif isinstance(error, (ValueError, KeyError, TypeError)):
+            kind = "invalid_or_changed_evidence"
+        elif isinstance(error, TimeoutError):
+            kind = "api_timeout"
+        else:
+            kind = "api_error"
+        print(f"Description: queue check failed at {phase} ({kind}); rerun required.")
         return 1
 
 
