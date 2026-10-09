@@ -27,6 +27,7 @@ separate runner or queue for each target.
 | **SN ProDG 2.0** EE toolchain (`ee/bin/Ps2EeAs.exe`, `ee/bin/ld.exe`) | you supply it | assembly reconstruction, the build gate |
 | **Reconstructed GNU EE 2.9-ee-991111b** `cpp`/`cc1`/`as` profile | locally rebuilt; see [compiler notes](COMPILER-NOTES.md) | current authored-C compilation and assembly |
 | **SN ProDG 3.01** EE toolchain (`ee/bin/ld.exe`; earlier compiler profile `ee-gcc2953`) | you supply it | linking the current C objects; retaining the earlier SN profile |
+| **Qualified source-specific SDK instruments and a private runtime binding** | your authorized local tools; see [the binding requirements](../toolchain/README.md#source-specific-sdk-boot-owner) | integrating the separately owned sysbit, CPR8 and IPU DMA restart units |
 | **Wrench** (`wrenchbuild`) | you supply it | unpacking the 27 level overlays |
 | A runtime directory **outside** this repository | you create it | every generated file lands there |
 
@@ -108,20 +109,45 @@ It supports the assembly round trip only; read [game regions](REGIONS.md) first.
 
 ## 3. Rebuild, and gate every byte
 
+The assembly reconstruction command is a useful setup check:
+
 ```powershell
 python scripts/build.py --manifest <runtime>\runs\<id>\manifest.json --toolchain <ProDG-2.0> --all-levels
 ```
 
-Add `--c-toolchain <ProDG-3.01>` to link the reviewed C bodies into the boot as well. A good run
-ends with:
+It rebuilds the boot and all 27 overlays without integrating authored C. On
+success it prints `Verified report: <manifest-directory>\builds\<id>\report.json`.
+Each program's `gate.json` records `"matched": true` and the compared byte count.
 
-```text
-Verified report: <manifest-directory>\builds\<id>\report.json
+Before selecting a contribution, also reproduce the **complete C baseline**
+through the maintained campaign route. Replace the quoted placeholders with
+your own verified paths. The manifest is the one prepared in step 2; use the
+same private runtime and configured WSL environment:
+
+```powershell
+python scripts/campaign.py --runtime "<runtime>" integrate -- `
+  --manifest "<runtime>\runs\<id>\manifest.json" `
+  --toolchain "<ProDG-2.0>" --c-toolchain "<ProDG-3.01>" `
+  --sdk-binding "<private-sdk-binding.json>" --program-jobs 4 --jobs 2
 ```
 
-and each program's `gate.json` carries `"matched": true` with the number of bytes compared.
-A refusal ends with `Build failed: <reason>` — see the table below. `--all-levels` rebuilds the
-boot gate inside every one of the 27 overlays; on a cold cache that is roughly 40 minutes.
+The binding supplies the separately qualified SDK instruments used by the
+current boot. Its exact fields, path rules and seven tool roles are documented
+in [the toolchain guide](../toolchain/README.md#source-specific-sdk-boot-owner).
+Keep it and the tools private. Merely adding `--c-toolchain` to `build.py` cannot
+supply this binding: that CLI has no `--sdk-binding` option and the current boot
+refuses C integration without it. Missing or mismatched SDK instruments remain
+setup blockers.
+
+A successful campaign exits zero and identifies a fresh private report under
+`<manifest-directory>\builds\campaign-<batch-id>\report.json`. Inspect the report:
+`matched` must be `true`, `failures` empty, and `g1` plus all 27 `g3` entries must
+each have `matched: true`. These gates compare complete PT_LOAD bytes and
+metadata. The command records the action in the campaign register; it does not
+publish new progress proofs or add matching credit. Preserve that validation
+record and follow [the campaign workflow](CAMPAIGN-WORKFLOW.md) for contribution
+selection and any later proof publication. Freeze source and proof inputs while
+the batch runs; allow time for all 28 fresh image builds to finish.
 
 ## 4. Run the tests
 
@@ -169,6 +195,7 @@ The rules are deliberate; each one exists because a wrong result once got throug
 | `Use pinned splat64 0.50.0` | your environment has another version | `pip install -r requirements.txt` |
 | `C linker ... is missing ee/bin/ld.exe` | the C linker root is incomplete or incorrect | use the root containing `ee/bin/ld.exe`; the old SN frontend is not required |
 | `GNU WSL profile unavailable` or `hash mismatch` | the actual GNU tools are missing or differ from the current qualified hashes | see [toolchain setup](../toolchain/README.md); do not substitute another compiler |
+| `An explicit private SDK runtime binding is required` | current boot C integration needs its separately qualified SDK owners | prepare the authorized tools and private binding, then use `campaign.py integrate -- ... --sdk-binding <binding>` from step 3 |
 | `ISO: wrong size, sha1, …` | not the supported release | USA v1.01, `SCUS_972.68`; v2.00 is another target |
 | `Runtime must be outside the source repository` | your `--runtime` is inside the clone | pick a directory elsewhere |
 | `Wrong RAC2 reference identity` | `--reference` is not the pinned boot | use the `boot.elf` that `setup.py` extracted |
