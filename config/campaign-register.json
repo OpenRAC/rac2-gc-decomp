@@ -854,6 +854,19 @@
       "returncode": 0,
       "state": "passed"
     },
+    "8f8f824c72f145ddbe6ca5a6e61258f5": {
+      "action_manifest_sha256": "61cfa13c7a5ae6dfb279401bb86fd3cad4f73900acb6110fd8db0378623035ad",
+      "action_outcome_sha256": "aee5200018d217351628cdfa8e7b880e1516b4f0c19e37855281b6fa472f4be2",
+      "artifact": "runtime:runs/20261008T134500Z-a6a86dcc/builds/campaign-8f8f824c72f145ddbe6ca5a6e61258f5/report.json",
+      "artifact_sha256": "088176d3b579d59ae9f8a735d9a3d6e7f0ca0c78a34500f42eed78b7bcdb9702",
+      "directory": "runtime:actions/8f8f824c72f145ddbe6ca5a6e61258f5",
+      "finished": "2026-10-09T00:49:04.343293+00:00",
+      "id": "8f8f824c72f145ddbe6ca5a6e61258f5",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "909614e782f94e7da713bdf92d4e73b0": {
       "artifact": "prepared-run:builds/campaign-909614e782f94e7da713bdf92d4e73b0/report.json",
       "artifact_sha256": "f86608686fe3c1d88ba8596f4edf9ce32fe435a4285d6daefef6f5a3684312a0",
@@ -1258,6 +1271,19 @@
       "id": "db50ab55a0ab4b469ada7e72a0e0939b",
       "integration_credit": 0,
       "kind": "report",
+      "returncode": 0,
+      "state": "passed"
+    },
+    "db93f01698ad46228eda23f68aae5af0": {
+      "action_manifest_sha256": "49ce2b0f45279126dd5d2fc6630af59e104e3c7901ca00343469ee25eee76290",
+      "action_outcome_sha256": "ddd080c6320e4bbc3a08837f1ea08527e86ad9ddb9377955d35ca95b8cdf0c27",
+      "artifact": "runtime:runs/20261008T134500Z-a6a86dcc/builds/campaign-db93f01698ad46228eda23f68aae5af0/report.json",
+      "artifact_sha256": "ca5114ce1b614feb3c1d5e52eceb98d199a685bbf1d65fab2204ca2dd9169012",
+      "directory": "runtime:actions/db93f01698ad46228eda23f68aae5af0",
+      "finished": "2026-10-09T00:40:04.120234+00:00",
+      "id": "db93f01698ad46228eda23f68aae5af0",
+      "integration_credit": 0,
+      "kind": "integrate",
       "returncode": 0,
       "state": "passed"
     },
@@ -4895,7 +4921,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 12168,
+  "revision": 12178,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -8997,6 +9023,79 @@
           "reason": "mismatch",
           "to": "stopped",
           "trial": "08c3c6a1bb68422088f6e34ef38a577d"
+        }
+      ]
+    },
+    "boot-resident-word58-setter-20261009": {
+      "budget": 3,
+      "created": "2026-10-09T00:31:08.833014+00:00",
+      "hypothesis": "The complete 16-byte retail leaf stores the low 32 bits of A0 at offset 0x58 through the pointer in absolute cell 0x00133E74. One direct caller computes an integer product in A0 and does not consume a return value. Ordinary C pointer arithmetic preserves the existing opaque pointer declaration, without GP access, calls, output patching or invented object semantics.",
+      "id": "boot-resident-word58-setter-20261009",
+      "kind": "candidate",
+      "last_trial": "b04e8fbb82fe4a0ea594660fb0b32903",
+      "next_action": "Author the measured word setter, qualify it and all existing boot controls through one complete-unit trial, then integrate the boot and all 27 overlays only if the unit matches exactly.",
+      "pointers": [
+        "config/function-catalog/boot.ndjson.gz",
+        "src/boot/01-resident-accessors.cfrag"
+      ],
+      "reopen_condition": "After the three-event budget, only independently measured ABI, layout or compiler evidence; no equivalent-expression cycling.",
+      "source": "candidates/boot.c",
+      "state": "integrated",
+      "symbols": [
+        "FUN_001163A0"
+      ],
+      "targets": [
+        {
+          "catalog": "config/candidate-catalog.json",
+          "id": "boot",
+          "reference": "runtime:runs/20261008T134500Z-a6a86dcc/reference/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T00:31:40.705117+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "b04e8fbb82fe4a0ea594660fb0b32903"
+        },
+        {
+          "at": "2026-10-09T00:58:07.059938+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "113864393b42efdacf99233160bd8ac1f8792a3e7aa33336b2d76c5920317d55",
+            "progress/integration.json": "8bcd155260fc09f6d0692f5ae67efb26386c599dc5333f4daf43bf4ae91f22b3",
+            "progress/levels/0_aranos_tutorial.json": "e76c1ab090f369f82e2b990fea696d7cbafef33944e1108b7321e56465fdd8c1",
+            "progress/levels/10_hrugis_cloud.json": "54fc06c5570de623ec917b865caf4874061b075e9d0ae3546835f616ba7edbc3",
+            "progress/levels/11_joba.json": "48ac702f4baecaa093051b04adbeb08758cdfce7ee69079f88788ab82426bf1c",
+            "progress/levels/12_todano.json": "0d898d80efad4e73b7e7313a1394f9518fc15a0c8f9cbc027f4280e45ca213e2",
+            "progress/levels/13_boldan.json": "2223cfcdabe219a32d2ea7018b683077d7270ce14db4faeb730a2ca3d7c9f336",
+            "progress/levels/14_aranos_prison.json": "1ab98112a573dd9dab42ec426611e8928a9008141d02e427e9076b80e1a0df1f",
+            "progress/levels/15_gorn.json": "0c5c81984cc450ac868962c88d9e72ffb796d62ecaf23301febe385ecf2960c9",
+            "progress/levels/16_snivelak.json": "58becdae934183cdbf7b6cd4fd3b1758d557d9d90d56bfe3ac804ae3826126c0",
+            "progress/levels/17_smolg.json": "fe17fe89847fe83a7da8db0d129fe1e0fb4618cabb047827c5c28ef909d3284f",
+            "progress/levels/18_damosel.json": "c5633789a14cde4a85a0458bbb9ff8e80bf3a42da7a3bc59f16c1de3919bb97c",
+            "progress/levels/19_grelbin.json": "1d0b48b833fb9ac2a4eb187657b623764774fe33cc7fac63d1e8ae3f66ab443e",
+            "progress/levels/1_oozla.json": "a5b6a9342c530315e151ddd843d060f19a9201f9bba8ae5c72353ac4b012fc95",
+            "progress/levels/20_yeedil.json": "fcc9b23d084b786f48202f9b3c91d20f44292c1d39ebbbc93489ac48595667aa",
+            "progress/levels/22_dobbo_orbit.json": "01949d57e83f9d07862ba22068a0ca376e9bbc2a8b6144ab072c5d4184264a0d",
+            "progress/levels/23_damosel_orbit.json": "1babdfde24bc912e724ce0f8d22d924053b2649266a16e824e4d3e74e4b58eb6",
+            "progress/levels/24_ship_shack.json": "335a51ed94b3806e990c57459ed0f8e5147d0dfea185da49bcab770b3bb9502c",
+            "progress/levels/25_wupash_nebula.json": "f98268c698bfebe15310361dd4034172966162779a78c9f58e6e033873d30fb7",
+            "progress/levels/26_jamming_array.json": "03d76a0321153ab5b7bed6542ead0b8b424024cbb903730942a77bb45b57ac35",
+            "progress/levels/2_maktar_nebula.json": "065206e193f6479dc40834ef6aa378b8d327e09195249ebcec062268487a391d",
+            "progress/levels/30_insomniac_museum.json": "6221a8d68b72ccbe5d37f0fdec110799901d38acde292dc6f8ea505260180f00",
+            "progress/levels/3_endako.json": "e14bb273acfb1d8bd151a570249675d18440a60786e3339a70fd7d7faf2f56f9",
+            "progress/levels/4_barlow.json": "ff9f628fb873c9f961a09c503badb2f11e37768b24a205b6305e31309e7b0dcb",
+            "progress/levels/5_feltzin_system.json": "8491b0c9c97d4c48f6f98ce8d478d987b2c5e5007364cc3fa7124e4d09ee4eaf",
+            "progress/levels/6_notak.json": "c2925abd96c446cee1df4c9f879b21f0398c8c10092cb482ed7f08bf4ee8adf6",
+            "progress/levels/7_siberius.json": "c9e485fe3ccbbad467d3946b8ec85d64232b84e04458d302b24594657c28109b",
+            "progress/levels/8_tabora.json": "df5398c1d2f4529644346f530d955a9abde1f7f6f789755699d84cc56d01b18f",
+            "progress/levels/9_dobbo.json": "356b194950b9062df3658bac3683be163a7c839e80379b7cd2cdbc3b814541c2",
+            "progress/report.json": "c5f065e237a8e7c72c12fc5bed71ccebf7cbd02e741e47a23fd1ee6f9405192d"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
         }
       ]
     },
@@ -282418,6 +282517,19 @@
       "state": "mismatch",
       "task": "parent-20261008-native-extra3-tiny-a1-clear80-g0-s6-seed"
     },
+    "b04e8fbb82fe4a0ea594660fb0b32903": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/b04e8fbb82fe4a0ea594660fb0b32903",
+      "finished": "2026-10-09T00:31:40.621843+00:00",
+      "id": "b04e8fbb82fe4a0ea594660fb0b32903",
+      "manifest_sha256": "586b1717aff6d0f8ca7f0196256785ac8938f807e6316dabcb237cff51d7b4ce",
+      "measured_functions": 287,
+      "outcome_sha256": "3edae0a6a15b605ba5b6700505061ad9b441804f55e9cc7aee9836f2f67ed1ad",
+      "semantic_key": "368eb0bdcc2cff84171a455c672b87480f29379adae072bc47a15a32c8693468",
+      "started": "2026-10-09T00:31:39.064225+00:00",
+      "state": "exact_private",
+      "task": "boot-resident-word58-setter-20261009"
+    },
     "b07a898507014e3298530a6a67186504": {
       "compile_attempted": true,
       "directory": "runtime:trials/b07a898507014e3298530a6a67186504",
@@ -297779,6 +297891,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "56f3547c8fe1df102c5ceba30398040658a099d24c10326e4123417cab6bfc84"
+    "docs/CAMPAIGN-QUEUE.md": "cb1a0b02171f661a13bf9fc2a3b7f3eb8c30993024433a10072efebcfe4abb32"
   }
 }

@@ -81,6 +81,11 @@ void FUN_0026F718(void)
 {
 }
 
+void FUN_001163A0(unsigned int value)
+{
+    *(unsigned int *)((unsigned char *)D_00133E74 + 0x58) = value;
+}
+
 int FUN_0028B740(HudElem *rec, int *x, int *y) {
     int w = rec->w;
     int h = rec->h;
