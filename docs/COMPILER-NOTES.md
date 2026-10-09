@@ -148,22 +148,38 @@ body or a retail witness contradicting the restricted patterns would falsify
 the compatibility claim. The four exception functions remain explained by a
 sufficient mechanism; their original source directives remain unresolved.
 
-6. **Architectural zero in TImode stores.** The recognition condition already
-   admits zero, but the memory-store alternatives constrained the source to a
-   register. The [zero-store patch](../scripts/compiler/allow_zero_ti_store.patch)
-   admits constraint `J` and prints that source using `%z1`. It permits an
-   actual zero constant reaching the store to select `sq` from architectural
-   zero. It does not eliminate every materialised zero: five independent
-   source witnesses, including a simple zero store and nonzero/copy cases,
-   retain their previous output. The complete 168-byte `FUN_002E5FE0` becomes
-   exact with a counted 52-entry loop, while the older compiler differs in
-   six bytes on the same source and flags.
-   A fresh current-profile qualification also reproduces the complete 8-byte
-   `FUN_00282C88`: one 128-bit zero assignment. Its historical `dff08a34`
-   baseline produced 12 bytes; the full boot source now reuses the existing
-   `TI` typedef and passes 178/178 complete symbols. This additional source
-   witness is recorded in the [experiment register](C-NATIVE-EXPERIMENT-REGISTER.md);
-   it does not imply that every zero-store spelling selects the same form.
+6. **A TImode zero is folded into the store that consumes it.** The earlier
+   `allow_zero_ti_store.patch` (retired on 9 October 2026 and no longer in the
+   tree; its text stays in the file's history) admitted
+   constraint `J` on the register alternatives of `movti_internal` and printed
+   that alternative with `%z1`, so an actual zero reaching a 128-bit store
+   selected `sq` from architectural zero. It earned no witness of its own: the
+   control sources that store a
+   zero through a `mode(TI)` pointer — including the `FUN_00282C88` spelling —
+   are byte-identical with and without it, and it only ever moved the *memory*
+   alternatives, which already accepted `J`.
+   Removing it bare is not neutral either: the retail writes a TImode zero by
+   materialising it once and storing the register, and two published bodies
+   that the patch used to fold to `sq $zero` regress — `FUN_00282C88` (8 bytes)
+   and the complete 168-byte `FUN_002E5FE0`, whose counted 52-entry loop needs
+   the register form. The [fold transformer](../scripts/compiler/fold_zero_ti_store.py)
+   restores both without the constraint: `rac2_fold_zero_ti_store` rewrites a
+   `(set (mem:TI) (reg))` back to architectural zero when that register is dead
+   after the store, and leaves the register in place when it feeds several
+   stores, which is what the families that need the shared
+   `por $rd,$zero,$zero` require.
+   **Placement is part of the identity.** A naive repair at the obvious hook
+   (`MACHINE_DEPENDENT_REORG_AFTER_DBR_2`, i.e. after reload but after the
+   second scheduler has already run) loses `FUN_002E5FE0`: sched2 never sees
+   the folded form and emits `addiu $v1,$v1,-1` before the store instead of
+   after. The pass must run from `toplev.c` **before
+   `flag_schedule_insns_after_reload`** through the new
+   `MACHINE_DEPENDENT_REORG_AFTER_RELOAD` hook.
+   A fresh current-profile qualification reproduces the complete 8-byte
+   `FUN_00282C88` (one 128-bit zero assignment) and the complete 168-byte
+   `FUN_002E5FE0`. The `FUN_00282C88` witness is recorded in the
+   [experiment register](C-NATIVE-EXPERIMENT-REGISTER.md); it does not imply
+   that every zero-store spelling selects the same form.
 7. **Preserve the generic frame scheduler by default.** The cumulative P21
    option forces emission order between two frame-related instructions. The
    earlier RAC2 recipe enabled that option. The
@@ -180,7 +196,11 @@ Two complete builds reproduce release compiler `1ae7dceb` with the zero-store
 change, and another two reproduce `8bed6eae` with the frame option default off.
 `cpp` and GNU `as` retain their hashes. The complete release rebuilds exclude
 all diagnostic buffer/ranking instrumentation. The intermediate object-rebuild
-hashes remain private diagnostics rather than release identities.
+hashes remain private diagnostics rather than release identities. The current
+`5fed4e23` was built from the four sources the
+[fold transformer](../scripts/compiler/fold_zero_ti_store.py) produces; applying
+that script to the qualified source tree was re-verified on 9 October 2026 to
+reproduce the four file hashes below byte for byte.
 
 Source-level lessons the witnesses also pinned down:
 
@@ -196,6 +216,67 @@ Source-level lessons the witnesses also pinned down:
   value-returning declaration while reproducing the register allocation at a
   particular call. The accepted call still targets the same measured address;
   this does not recover the library's original C prototype.
+
+## Adoption of the folded zero store (9 October 2026)
+
+**Identity.** `cc1` moves from `8bed6eae…` to `5fed4e23…`. `cpp` (`2ac3d8d3…`)
+and GNU `as` (`cda1a4e4…`) are unchanged, so the assembler half of the identity
+is untouched. Four sources change: `config/mips/mips.md` (constraint and printer
+change retired), `config/mips/mips.c` (the fold pass), `config/mips/mips.h` (the
+hook) and `toplev.c` (the call site). The retired
+`allow_zero_ti_store.patch` was removed from the tree;
+`git show 2690e43:scripts/compiler/allow_zero_ti_store.patch` still returns its
+text. The public
+[`fold_zero_ti_store.py`](../scripts/compiler/fold_zero_ti_store.py) produces
+the four sources, and applying it to the qualified source tree reproduces their
+hashes byte for byte (checkpoint table above).
+
+**Why the patch went.** It earned no witness of its own. The control sources
+that store a 128-bit zero through a `mode(TI)` pointer — including the
+`FUN_00282C88` spelling — are byte-identical with and without it, because it
+only ever moved the *memory* alternatives of `movti_internal`, which already
+accepted `J`. What it did do was suppress the register form the retail uses when
+one materialised zero feeds several stores, and that is what parked the
+`41eb487e64fb6b76` family (444 bytes × 27 placements): 110 of its 111
+instructions matched and the missing one was the shared
+`por $v0,$zero,$zero`.
+
+**What it costs to revert naively.** Two published bodies regress when the
+constraint is removed without a replacement: `FUN_00282C88` (8 bytes, the
+`j $31 ; sq $0,0($4)` witness) and `FUN_002E5FE0` (168 bytes, the counted
+52-entry loop). The pass restores both, and keeps the register form where the
+retail keeps it.
+
+**The pitfall.** The pass must run **before the second scheduler**. Hooked where
+the other reload-range passes run (after reload, i.e. after sched2),
+`FUN_002E5FE0` comes out with `addiu $v1,$v1,-1` before the store instead of
+after: sched2 never saw the folded form. It is called from `toplev.c` before
+`flag_schedule_insns_after_reload` through `MACHINE_DEPENDENT_REORG_AFTER_RELOAD`.
+
+**Requalification.** The whole published corpus was re-qualified on the current
+tree with `5fed4e23`, function by function: **6996 / 6996 complete C functions
+exact — 309 in boot (17 148 bytes), 5289 across the 27 native units
+(472 932 bytes) and 1398 across the 27 small-data units (81 664 bytes)**, with
+zero non-exact bodies. Every published review differs from the `8bed6eae`
+artifact in exactly one line, the recorded `cc1` hash: no function record, no
+object hash, no candidate ELF hash and no matched byte moved. The boot object is
+byte-identical (`object_sha256` `b5a2be9b…` before and after), and the full
+boot-and-27-overlay loaded-image gate passes unchanged on the new chain
+(79,486,851 loaded bytes compared, `failures: []`, 812,824 integrated C bytes —
+the same totals as under `8bed6eae`). The batch-specific intermediate candidate
+images differ from the previous batch only inside the build path they embed;
+the compared `PT_LOAD` content and every published function record are identical.
+
+**Family `41eb487e64fb6b76`.** With the fold pass the recovered body reaches the
+retail's full size at every one of its 27 placements — 111 instructions /
+444 bytes, against 110 / 440 under `8bed6eae` — and the shared
+`por $v0,$zero,$zero` feeding three `sq $v0` stores comes back. It is still
+**not** byte-exact and stays unintegrated: on the seed placement
+`0_aranos_tutorial@0x002B91C0`, 110 of the 111 instructions are identical and in
+the retail order, and the single remaining difference is the `== 2` constant
+materialised in `$v0` where the retail has it in `$a0`. The other placements
+carry overlay-specific callee addresses, so each still needs its own placement
+verification before any promotion.
 
 ## Reproducing the chain
 
@@ -304,19 +385,26 @@ patch -R -p1 -s < "$P/0001-r5900-quad-saves.patch"
 | `gcc/config/mips/mips.c` | emit the GPR save loop in **ascending** register order, with `gp_offset -= GET_MODE_SIZE (mips_reg_mode[0]) * (n_rac2 - 1)` pre-computed when more than one register is saved and the per-register decrement turned into `+=` | the retail saves in ascending order with the same layout and offsets |
 | `gcc/config/mips/mips.c` | run the FPR save block before the GPR save block (and keep GPR restores before FPR restores) | the retail orders the two intact blocks that way; patch `0026` covers the frame-save case, this completes it |
 | `gas/config/tc-mips.c` | insert the `rac2_mtc1_nop_ok()` helper and guard both `++nops` sites with it: a `nop` follows `mtc1` when the next instruction reads the written FPR, except when `mtc1` is the function's first instruction | measured 587 nop in 598 cases; the single exception is `FUN_00283CE0` |
+| `gcc/config/mips/mips.md` | the `movti_internal` register alternatives lose the `J` constraint (`"d,R,m,dJ,dJ,…"` becomes `"d,R,m,d,d,…"`) and the two store alternatives print `%1` again instead of `%z1` | the retired `allow_zero_ti_store.patch` earned no witness of its own; the architectural-zero fold is now the back-end pass below |
+| `gcc/config/mips/mips.c`, `gcc/config/mips/mips.h`, `gcc/toplev.c` | add `rac2_reg_live_after_store_p` and `rac2_fold_zero_ti_store` before `machine_dependent_reorg`, declare `MACHINE_DEPENDENT_REORG_AFTER_RELOAD`, and call it from `toplev.c` **before** `flag_schedule_insns_after_reload` | the retail materialises a TImode zero once and re-folds it into the store; running the pass after the second scheduler loses `FUN_002E5FE0` |
 
 **4. Public transformers.** Every measured adjustment above is shipped as a
 script that carries its exact replacement text; the five source adjustments are
 `neutralise_timode_anchor.py`, `enable_loop_padding.py`,
 `count_trap_length.py`, `ascending_save_order.py` and `reorder_save_blocks.py`,
 and the three that touch the assembler and the machine description are
-`allow_zero_ti_store.patch`, `disable_frame_order_default.py` and
-`restrict_mtc1_exemption.py`. Applying the table above as prose instead of
+`fold_zero_ti_store.py`, `disable_frame_order_default.py` and
+`restrict_mtc1_exemption.py`. `fold_zero_ti_store.py` takes the `gcc` source
+directory rather than one file, because it retires a machine-description change
+and inserts a back-end pass across three more sources at once; the
+`allow_zero_ti_store.patch` it replaces was removed from the tree on
+9 October 2026 and must not be applied again (its text is preserved in that
+file's history). Applying the table above as prose instead of
 running these files yields a *different* `mips.c`: two of the replacements carry
 annotation text, and a differently worded comment changes the hash even though
 the generated code is identical. The order of the last three is immaterial —
-they touch `mips.md`, `mips.c` (one line) and `gas/config/tc-mips.c`
-respectively — but the relative order of the five source adjustments is not:
+they touch disjoint regions of the machine description, `mips.c` and
+`gas/config/tc-mips.c` — but the relative order of the five source adjustments is not:
 the save-block reorder rewrites the region the ascending-order replacement has
 already produced.
 
@@ -336,20 +424,24 @@ export CFLAGS='-O2 -fno-strict-aliasing -fcommon -std=gnu89 -D_GNU_SOURCE'
 (cd gas && make -j16 CC="$CC" CFLAGS="$CFLAGS")     # produces gas/as-new
 ```
 
-**6. Checkpoints.** The build is the qualified one only when all six identities
+**6. Checkpoints.** The build is the qualified one only when all eight identities
 match:
 
 | Artifact | sha256 |
 | --- | --- |
-| `gcc/config/mips/mips.c` | `c76c0bec5b56c198381ab2a4fc60c161a4287e8312d7d1fdea3d1e6a0e1af614` |
-| `gcc/config/mips/mips.h` | `52f470a043ffbba535582e2f08a8353d23bbf6521b1b63e241847f464891d9e6` |
+| `gcc/config/mips/mips.c` | `7952e5da98031f907c8650b5ed5bd262b7c10ac27157af4463381adb87e59e3c` |
+| `gcc/config/mips/mips.h` | `87d59c06d047cf7252349cb02aebc266f8b4dcecd537c827e6ec3966a10bbfc3` |
+| `gcc/config/mips/mips.md` | `177caa696e7de5e58515d1500abce727f8783454b4522fd3e5cd3e0630b99acf` |
+| `gcc/toplev.c` | `38d52727addc0b0b299700835788808cf23fe59c863a961cdd6f28170faaf3cc` |
 | `gas/config/tc-mips.c` | `61e51c1ebcdf860db4503b6cc6a11c40596d1f3c969daf66ee56a45f454130ca` |
-| `gcc/cc1` | `8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d` |
+| `gcc/cc1` | `5fed4e239d6fe3ef19d3b18483844eaf5fb1e647c5d8556652c75fc8e9a73bc6` |
 | `gcc/cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `gas/as-new` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
 
-A fresh build from this recipe was verified on 7 October 2026 and reproduced all
-six identities. A `mips.c` that hashes differently means a step above is missing
+The whole recipe was last verified end to end on 7 October 2026 (six identities,
+then-current `cc1`); the four source rows and the `cc1` row above are the
+9 October 2026 identities, and the four source hashes were re-derived from the
+public `fold_zero_ti_store.py` on that date. A `mips.c` that hashes differently means a step above is missing
 — a rebuild that skips the adjustments produces a compiler that still matches the
 measured corpus on simple bodies and diverges elsewhere, which is exactly the
 failure mode this section exists to prevent.
