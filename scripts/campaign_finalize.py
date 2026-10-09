@@ -441,7 +441,7 @@ def _check_reuse_exports(catalog_path, private_summary, private_families, portab
             "portable_export_identical": True}
 
 
-def _prepare(store, repo, action_id, manifest, output, references, tasks, runner):
+def _prepare(store, repo, action_id, manifest, output, references, tasks, runner, test_policy=None):
     evidence = _preflight(store, repo, action_id, manifest, references, tasks)
     before = _inventory(repo)
     output.mkdir(parents=True, exist_ok=False)
@@ -585,7 +585,15 @@ def _prepare(store, repo, action_id, manifest, output, references, tasks, runner
     run("16-source-inventory", "source_layout.py", ["--repo", mirror, "--inventory-output", mirror / "progress/source-inventory.json"])
     run("17-source-inventory-check", "source_layout.py", ["--repo", mirror, "--check", "--inventory-check", mirror / "progress/source-inventory.json"])
     run("18-physical-display-check", "readme_progress.py", ["--check"])
-    run("19-tool-tests", "", [], [sys.executable, "-m", "unittest", "discover", "-s", str(mirror / "tests"), "-q"])
+    if test_policy is None:
+        run("19-tool-tests", "", [], [sys.executable, "-m", "unittest", "discover", "-s", str(mirror / "tests"), "-q"])
+    else:
+        # Identity was authenticated before preparation. This private snapshot
+        # has no Git origin; run its explicit tests without re-authenticating it.
+        code = ("import sys;from pathlib import Path;sys.path.insert(0,'scripts');"
+                "from maintainer_tests import run_modules;"
+                "sys.exit(run_modules(Path.cwd(),sys.argv[1:]))")
+        run("19-targeted-maintainer-tests", "", [], [sys.executable, "-c", code, *test_policy["modules"]])
     # All output chunks are explicitly declared by the independently validated manifest.
     allowed = FIXED_OUTPUTS | {"progress/levels/" + level + ".json" for level in levels} | {"config/function-catalog/catalog.json"}
     for chunk in catalog["function_chunks"]:
@@ -626,6 +634,8 @@ def _prepare(store, repo, action_id, manifest, output, references, tasks, runner
             "boot_binding_validation": boot_summary,
             "private_supplementary_replay": private_reuse_validation,
             "runtime_preservation_proven": False, "private_validation_exports": sorted(PRIVATE_EXPORTS)}
+    if test_policy is not None:
+        plan["local_test_policy"] = test_policy
     _new(output / "plan.json", _encoded(plan))
     _new(output / "journal.json", _encoded({"state": "prepared", "plan_sha256": _sha(_encoded(plan)), "published": []}))
     return plan
@@ -973,7 +983,7 @@ def _publish(repo, output, plan, journal):
 
 
 def finalize(store, repo, action_id, *, manifest, output, tasks=(), apply=False,
-             references=None, runner=subprocess.run):
+             references=None, runner=subprocess.run, maintainer_tests=()):
     """Return a private review receipt; ``apply`` publishes the same prepared plan.
 
     ``manifest`` is the exact reference manifest recorded by build/integrate.
@@ -982,6 +992,12 @@ def finalize(store, repo, action_id, *, manifest, output, tasks=(), apply=False,
     Research tasks remain explicit outstanding decisions and gain no false closure.
     """
     repo = Path(repo).resolve()
+    test_policy = None
+    if maintainer_tests:
+        from maintainer_tests import authenticate, validate_modules
+        modules = validate_modules(repo, [*maintainer_tests, "test_campaign_finalize", "test_maintainer_tests", "test_maintainer_test_policy"])
+        test_policy = {"mode": "targeted", "actor": authenticate(repo), "modules": modules,
+                       "full_merge_queue_suite_required": True, "matching_gates_unchanged": True}
     output = _private_output(output, repo)
     manifest = _private(manifest, repo)
     tasks = tuple(tasks)
@@ -992,12 +1008,13 @@ def finalize(store, repo, action_id, *, manifest, output, tasks=(), apply=False,
         if (journal.get("plan_sha256") != _sha(_encoded(plan)) or plan.get("repo") != str(repo)
                 or plan.get("action") != action_id or plan.get("manifest") != str(manifest)
                 or plan.get("runtime") != str(store.runtime) or plan.get("tasks") != list(tasks)
+                or plan.get("local_test_policy") != test_policy
                 or (references is not None and plan.get("references") != str(Path(references).resolve()))):
             raise ValueError("Existing finalization plan does not match this invocation")
         if journal.get("state") == "conflict":
             raise ValueError("Interrupted publication has concurrent conflicts; inspect retained journal")
     else:
-        plan = _prepare(store, repo, action_id, manifest, output, references, tasks, runner)
+        plan = _prepare(store, repo, action_id, manifest, output, references, tasks, runner, test_policy)
         journal = _read(output / "journal.json")
     if journal.get("state") == "applied":
         _guard(repo, plan, {row["path"] for row in plan["changes"]})
@@ -1024,5 +1041,7 @@ def finalize(store, repo, action_id, *, manifest, output, tasks=(), apply=False,
                "closed_candidates": plan["closed_candidates"], "retained_research_tasks": plan["retained_research_tasks"],
                "backup_count": journal.get("backup_count", 0), "git_mutated": False,
                "integration_credit_added_by_finalizer": 0}
+    if test_policy is not None:
+        receipt["local_test_policy"] = test_policy
     _atomic(output / "receipt.json", _encoded(receipt))
     return receipt

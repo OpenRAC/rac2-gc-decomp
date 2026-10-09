@@ -120,6 +120,8 @@ class FinalizeTests(unittest.TestCase):
         self.calls.append(command)
         mirror = Path(kwargs["cwd"])
         if command[1] == "-c":
+            if "from maintainer_tests import run_modules" in command[2]:
+                return subprocess.CompletedProcess(command, 0)
             if "_validate_boot_summary" in command[2]:
                 write(Path(command[-1]), {"expected_edges": 1, "validated_edges": 1, "programs": 28, "blocked": 0})
             else:
@@ -197,6 +199,31 @@ class FinalizeTests(unittest.TestCase):
     def finish(self, **kwargs):
         return finalize.finalize(self.store, self.repo, self.action, manifest=self.manifest,
                                  output=self.output, runner=self.runner, **kwargs)
+
+    def test_explicit_maintainer_targeted_tests_preserve_every_other_check(self):
+        for name in ("test_campaign_finalize", "test_maintainer_tests", "test_maintainer_test_policy"):
+            write(self.repo / "tests" / (name + ".py"), b"# targeted fixture\n")
+        actor = {"id": 191315338, "login": "llesieur99"}
+        with patch("maintainer_tests.authenticate", return_value=actor):
+            result = self.finish(maintainer_tests=("test_fixture",))
+        plan = json.loads((self.output / "plan.json").read_bytes())
+        self.assertEqual(plan["local_test_policy"]["mode"], "targeted")
+        self.assertEqual(result["local_test_policy"]["actor"], actor)
+        self.assertTrue(result["local_test_policy"]["full_merge_queue_suite_required"])
+        self.assertIn("test_campaign_finalize", plan["local_test_policy"]["modules"])
+        self.assertEqual(plan["checks"][-1]["step"], "19-targeted-maintainer-tests")
+        self.assertIn("01-validate-private-proofs", [row["step"] for row in plan["checks"]])
+        self.assertIn("18-physical-display-check", [row["step"] for row in plan["checks"]])
+        with self.assertRaisesRegex(ValueError, "does not match"):
+            self.finish()
+
+    def test_targeted_finalizer_auth_failure_does_not_create_output(self):
+        for name in ("test_campaign_finalize", "test_maintainer_tests", "test_maintainer_test_policy"):
+            write(self.repo / "tests" / (name + ".py"), b"# targeted fixture\n")
+        with patch("maintainer_tests.authenticate", side_effect=ValueError("not primary maintainer")), \
+             self.assertRaisesRegex(ValueError, "not primary maintainer"):
+            self.finish(maintainer_tests=("test_fixture",))
+        self.assertFalse(self.output.exists())
 
     def rewrite_gate(self, callback):
         gate = json.loads((self.build / "report.json").read_bytes())

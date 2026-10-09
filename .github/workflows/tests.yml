@@ -10,18 +10,69 @@ on:
 
 permissions:
   contents: read
+  actions: read
+  pull-requests: read
 
 jobs:
+  policy:
+    runs-on: ubuntu-latest
+    outputs:
+      mode: ${{ steps.route.outputs.mode }}
+      base_sha: ${{ steps.route.outputs.base_sha }}
+    steps:
+      # A PR cannot replace its own identity/provenance selector. Missing older
+      # policy versions fall back to the complete suite during rollout.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - id: route
+        name: Verify test route
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = merge_group ] || [ ! -f scripts/maintainer_test_policy.py ]; then
+            echo 'mode=full' >> "$GITHUB_OUTPUT"
+          else
+            python scripts/maintainer_test_policy.py --event "$GITHUB_EVENT_PATH" --output "$GITHUB_OUTPUT"
+          fi
   tests:
+    needs: policy
+    if: always()
     runs-on: ubuntu-latest
     steps:
+      - name: Require a completed test-route decision
+        env:
+          POLICY_RESULT: ${{ needs.policy.result }}
+          TEST_MODE: ${{ needs.policy.outputs.mode }}
+        run: |
+          test "$POLICY_RESULT" = success
+          case "$GITHUB_EVENT_NAME:$TEST_MODE" in
+            merge_group:full|pull_request:full|pull_request:targeted|push:full|push:reuse) ;;
+            *) echo 'Missing or invalid test route'; exit 1 ;;
+          esac
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install qualified boundary decoder
         run: python -m pip install rabbitizer==1.16.2
-      - run: python -m unittest discover -s tests -v
+      # No policy output can suppress the full merge-group suite.
+      - name: Run complete tool suite
+        if: github.event_name == 'merge_group' || needs.policy.outputs.mode == 'full'
+        run: python -m unittest discover -s tests -v
+      - name: Run primary maintainer focused checks
+        if: github.event_name == 'pull_request' && needs.policy.outputs.mode == 'targeted'
+        env:
+          VERIFIED_BASE_SHA: ${{ needs.policy.outputs.base_sha }}
+        run: python scripts/maintainer_tests.py --ci-base "$VERIFIED_BASE_SHA"
+      - name: Record verified queue-suite reuse
+        if: github.event_name == 'push' && needs.policy.outputs.mode == 'reuse'
+        run: echo 'The exact commit passed the qualified full merge-group suite; its provenance is recorded by the policy job.' >> "$GITHUB_STEP_SUMMARY"
       - name: Check authored source and campaign views
         run: |
           python scripts/source_layout.py --check --inventory-check progress/source-inventory.json
