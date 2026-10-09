@@ -1,6 +1,6 @@
 {
-  "candidate_elf_sha256": "c27376061edd4df75aed09b64a40deb6dc10ed61aaec867e2bb8c605a7086a30",
-  "catalog_sha256": "7f12f2119bf1cfcfebe3e1226a82b74587f2836438318b23988f9769f5b32817",
+  "candidate_elf_sha256": "8129cf25c91072d2f4f481546ffc90e9540eff5b047ba8f38f4042529b606261",
+  "catalog_sha256": "bf4c69bc3e40cda1473288e7fa2bb9e96e2fc62ad45e8ef821039e7450d61454",
   "checker_sha256": "7c40d149419ff91694c03789372ef51da25fc9c9f3c37265d2a1bbfaa915fb07",
   "flags": [
     "-O2",
@@ -1137,6 +1137,16 @@
       "size": 28,
       "state": "matched_unintegrated",
       "symbol": "FUN_002B5278"
+    },
+    {
+      "address": 2841896,
+      "candidate_sha256": "b6511d447327d07666300ce9a613e093a89cfad9245015e1525f82e2b6d315d1",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "b6511d447327d07666300ce9a613e093a89cfad9245015e1525f82e2b6d315d1",
+      "size": 12,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_002B5D28"
     },
     {
       "address": 2844528,
@@ -2980,11 +2990,11 @@
     }
   ],
   "integrated_functions": 0,
-  "object_sha256": "3ec30b63146602cb238f1d147ba87f884180abda7c9c307aa12bf2314a85afe0",
+  "object_sha256": "5be949c5500d2185a78d4ba1ad4a881f751048f27b09bcd641b7f1a9634c1681",
   "profile_scope": "Only the fully matched functions below; not a general RAC2 compiler qualification",
   "read_only_sections": [],
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "7eb2d72d5c61e933f0e0b7ffe6155020f8eac763482196aef552c0c7bc6a9f3b",
+  "source_sha256": "12b78ce1b352ebe1cac203bbb14b7609ea2ddfc9efb74eb81406da6221164843",
   "target": "SCUS_972.68",
   "tools": {
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
@@ -2992,5 +3002,5 @@
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "verified_at": "2026-10-09T04:04:15.436250+00:00"
+  "verified_at": "2026-10-09T11:45:40.034866+00:00"
 }
