@@ -1071,6 +1071,17 @@ Reopen condition: Independent original source/declaration/storage-lifetime or se
 - `private-work:c-campaign-20261006/bank/fresh-medium-families-frame/source-ready.json`
 - `private-work:c-campaign-20261006/bank/fresh-medium-families-frame/COPY160-RESEARCH.md`
 
+## boot-resident-word58-setter-20261009
+
+State: `integrated`. Kind: `candidate`.
+
+Author the measured word setter, qualify it and all existing boot controls through one complete-unit trial, then integrate the boot and all 27 overlays only if the unit matches exactly.
+
+Reopen condition: After the three-event budget, only independently measured ABI, layout or compiler evidence; no equivalent-expression cycling.
+
+- `config/function-catalog/boot.ndjson.gz`
+- `src/boot/01-resident-accessors.cfrag`
+
 ## boot-shared-code-verification-20261005
 
 State: `done`. Kind: `research`.
