@@ -1,6 +1,6 @@
 {
-  "candidate_elf_sha256": "c27376061edd4df75aed09b64a40deb6dc10ed61aaec867e2bb8c605a7086a30",
-  "catalog_sha256": "7f12f2119bf1cfcfebe3e1226a82b74587f2836438318b23988f9769f5b32817",
+  "candidate_elf_sha256": "0e3d1024f57ed09bf9dd6055a11a08246e9d4fa4e206f3fcb66fe4336c049425",
+  "catalog_sha256": "72048ff4e4e1336ab5ee4a6ff053120222c1c75c3da1c5d737a0206552e44813",
   "checker_sha256": "7c40d149419ff91694c03789372ef51da25fc9c9f3c37265d2a1bbfaa915fb07",
   "flags": [
     "-O2",
@@ -1819,6 +1819,16 @@
       "symbol": "FUN_00336A38"
     },
     {
+      "address": 3369872,
+      "candidate_sha256": "02263fc4c03de913f64b4c881536a4f40a6dd71da8d2e05d6d19e16c55ec3545",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "02263fc4c03de913f64b4c881536a4f40a6dd71da8d2e05d6d19e16c55ec3545",
+      "size": 8,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_00336B90"
+    },
+    {
       "address": 3370176,
       "candidate_sha256": "beb24a314e473a620481c7d42afcf1d5938664f66cba3f91b50130e2d691df7b",
       "different_bytes": 0,
@@ -2980,11 +2990,11 @@
     }
   ],
   "integrated_functions": 0,
-  "object_sha256": "3ec30b63146602cb238f1d147ba87f884180abda7c9c307aa12bf2314a85afe0",
+  "object_sha256": "f18f0cc9b23b60a18b45f8e1dad07254597ce2e94c78f8299bdeef89e0c85d8a",
   "profile_scope": "Only the fully matched functions below; not a general RAC2 compiler qualification",
   "read_only_sections": [],
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "7eb2d72d5c61e933f0e0b7ffe6155020f8eac763482196aef552c0c7bc6a9f3b",
+  "source_sha256": "2aaa0501481e0d5871b514f3b60e95c32b896840f874db3892a7a37318c1ea86",
   "target": "SCUS_972.68",
   "tools": {
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
@@ -2992,5 +3002,5 @@
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "verified_at": "2026-10-09T04:04:15.436250+00:00"
+  "verified_at": "2026-10-09T08:06:42.730006+00:00"
 }

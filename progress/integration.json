@@ -1,15 +1,15 @@
 {
   "default": {
-    "c_object_sha256": "3ec30b63146602cb238f1d147ba87f884180abda7c9c307aa12bf2314a85afe0",
-    "candidate_elf_sha256": "5d6d8e41e8d64c536a386db7863ae141fde133240be348555e0da254db8d28e5",
+    "c_object_sha256": "f18f0cc9b23b60a18b45f8e1dad07254597ce2e94c78f8299bdeef89e0c85d8a",
+    "candidate_elf_sha256": "e12285cb790d73d21dc51333d759850e17f1e97a44b2d77791c80182003d9ba4",
     "candidate_source": "candidates/boot.c",
-    "catalog_sha256": "7f12f2119bf1cfcfebe3e1226a82b74587f2836438318b23988f9769f5b32817",
+    "catalog_sha256": "72048ff4e4e1336ab5ee4a6ff053120222c1c75c3da1c5d737a0206552e44813",
     "full_boot_gate": {
       "bytes_compared": 2521763,
       "matched": true,
       "segments": 2
     },
-    "matched_code_bytes": 14040,
+    "matched_code_bytes": 14048,
     "program": "boot",
     "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
     "replacement_inputs": {
@@ -174,6 +174,7 @@
         "FUN_003367B8",
         "FUN_00336920",
         "FUN_00336950",
+        "FUN_00336B90",
         "FUN_00336CC0",
         "FUN_00336CC8",
         "FUN_00336D50",
@@ -318,7 +319,7 @@
         "FUN_002EE678"
       ]
     },
-    "source_sha256": "7eb2d72d5c61e933f0e0b7ffe6155020f8eac763482196aef552c0c7bc6a9f3b",
+    "source_sha256": "2aaa0501481e0d5871b514f3b60e95c32b896840f874db3892a7a37318c1ea86",
     "state": "integrated",
     "target": "SCUS_972.68",
     "tools": {
@@ -2522,6 +2523,21 @@
       "size": 24,
       "state": "integrated",
       "symbol": "FUN_00336950",
+      "unit_id": "default-gnu8bed"
+    },
+    {
+      "address": 3369872,
+      "candidate_sha256": "02263fc4c03de913f64b4c881536a4f40a6dd71da8d2e05d6d19e16c55ec3545",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "02263fc4c03de913f64b4c881536a4f40a6dd71da8d2e05d6d19e16c55ec3545",
+      "size": 8,
+      "state": "integrated",
+      "symbol": "FUN_00336B90",
       "unit_id": "default-gnu8bed"
     },
     {
@@ -4836,7 +4852,7 @@
     }
   ],
   "kind": "boot-c-owner-integration",
-  "matched_code_bytes": 15184,
+  "matched_code_bytes": 15192,
   "program": "boot",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
   "schema": 3,
