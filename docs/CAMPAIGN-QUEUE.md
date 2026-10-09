@@ -28891,6 +28891,44 @@ Reopen condition: Concrete independently reviewed family/binding or instrument e
 - `private-work:public-family-tools-20261005/feature-receipt.json`
 - `prepared-run:builds/campaign-8209ac0d24a5462c8933a65cf59006ad/report.json`
 
+## qwen-backlog-retained-fun_0012fb48-20261009
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify one frozen owner-reviewed research source under current instruments before zero-credit shelf publication
+
+Reopen condition: New independent ABI, declaration or structural evidence must justify any source correction
+
+## qwen-backlog-retained-fun_0028b288-20261009
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify one frozen owner-reviewed research source under current instruments before zero-credit shelf publication
+
+Reopen condition: New independent ABI, declaration or structural evidence must justify any source correction
+
+## qwen-backlog-retained-fun_002c9a60-20261009
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify one frozen owner-reviewed research source under current instruments before zero-credit shelf publication
+
+Reopen condition: New independent ABI, declaration or structural evidence must justify any source correction
+
+## qwen-backlog-selected-20261008
+
+State: `stopped`. Kind: `candidate`.
+
+Qualify one frozen owner-reviewed C source set; park any mismatching function without source/flag cycling
+
+Reopen condition: Only new target-specific declaration evidence for the retained FUN_002C9A60 mismatch
+
+## qwen-backlog-whole-boot-20261009
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the entire current generated boot unit, preserving every prior complete symbol and readonly section before full images
+
 ## qwen-recovery-boot-abi-corrections-a1-fun_00133490
 
 State: `exact_private`. Kind: `candidate`.
@@ -32936,6 +32974,1372 @@ Do not reconstruct or claim this target or its identical/call-shape copies in th
 Reopen condition: Owner review of the Qwen outcome and an explicit reservation release. Expiry alone does not reopen a refused experiment.
 
 - `https://github.com/OpenRAC/rac2-gc-decomp/tree/qwen/autonomy-20261007`
+
+## ratchet-02d95825-e84d-4afe-bf0a-22a33444b0c0
+
+State: `done`. Kind: `research`.
+
+Retained trial e0eda8c9057f4e85a2644701a35d9193 measures a complete linked symbol: 72 compiled bytes versus 72 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/02d95825-e84d-4afe-bf0a-22a33444b0c0`
+- `private-work:scope/02d95825-e84d-4afe-bf0a-22a33444b0c0`
+
+## ratchet-02d95825-e84d-4afe-bf0a-22a33444b0c0-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial e0eda8c9057f4e85a2644701a35d9193 measures a complete linked symbol: 72 compiled bytes versus 72 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-04ba7e0b-29d5-409a-97be-87b25e348644
+
+State: `done`. Kind: `research`.
+
+Retained trial bdde299110a94b5ea7a49899f3e11487 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/04ba7e0b-29d5-409a-97be-87b25e348644`
+- `private-work:scope/04ba7e0b-29d5-409a-97be-87b25e348644`
+
+## ratchet-04ba7e0b-29d5-409a-97be-87b25e348644-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial bdde299110a94b5ea7a49899f3e11487 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-04fa940c-e64d-417e-861f-d2c87973f2ba
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/04fa940c-e64d-417e-861f-d2c87973f2ba`
+- `private-work:scope/04fa940c-e64d-417e-861f-d2c87973f2ba`
+
+## ratchet-04fa940c-e64d-417e-861f-d2c87973f2ba-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-05b95989-844b-4f95-a703-cefa705f7baf
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/05b95989-844b-4f95-a703-cefa705f7baf`
+- `private-work:scope/05b95989-844b-4f95-a703-cefa705f7baf`
+
+## ratchet-05b95989-844b-4f95-a703-cefa705f7baf-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-0a325cfa-c821-4416-817f-f1cf2bbe8d1e
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/0a325cfa-c821-4416-817f-f1cf2bbe8d1e`
+- `private-work:scope/0a325cfa-c821-4416-817f-f1cf2bbe8d1e`
+
+## ratchet-0a325cfa-c821-4416-817f-f1cf2bbe8d1e-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-0a8b7870-4c1e-4f87-9564-41e172c6b825
+
+State: `done`. Kind: `research`.
+
+Retained trial 1a070158401a4e8eac70a14e528d2cb6 measures a complete linked symbol: 72 compiled bytes versus 76 reference bytes, 26 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/0a8b7870-4c1e-4f87-9564-41e172c6b825`
+- `private-work:scope/0a8b7870-4c1e-4f87-9564-41e172c6b825`
+
+## ratchet-0a8b7870-4c1e-4f87-9564-41e172c6b825-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 1a070158401a4e8eac70a14e528d2cb6 measures a complete linked symbol: 72 compiled bytes versus 76 reference bytes, 26 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-11aeb89a-71db-4971-b39d-a1400e74c972
+
+State: `done`. Kind: `research`.
+
+Retained trial 2e75a23e36ce4e779a04bcd2420da7f8 measures a complete linked symbol: 120 compiled bytes versus 148 reference bytes, 127 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/11aeb89a-71db-4971-b39d-a1400e74c972`
+- `private-work:scope/11aeb89a-71db-4971-b39d-a1400e74c972`
+
+## ratchet-11aeb89a-71db-4971-b39d-a1400e74c972-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 2e75a23e36ce4e779a04bcd2420da7f8 measures a complete linked symbol: 120 compiled bytes versus 148 reference bytes, 127 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-1408bc85-332a-4855-ae2c-384aee32953c
+
+State: `done`. Kind: `research`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+- `runtime:ratchet-scope-bind/1408bc85-332a-4855-ae2c-384aee32953c`
+- `private-work:scope/1408bc85-332a-4855-ae2c-384aee32953c`
+
+## ratchet-1408bc85-332a-4855-ae2c-384aee32953c-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+Reopen condition: Independent owner-reviewed ABI/declaration/structural evidence and a coherent ordinary-C source correction, followed by fresh qualification. Do not launder the existing source through metadata changes.
+
+## ratchet-143a05be-f49f-4b3c-bc9e-7b63aa83dc6b
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/143a05be-f49f-4b3c-bc9e-7b63aa83dc6b`
+- `private-work:scope/143a05be-f49f-4b3c-bc9e-7b63aa83dc6b`
+
+## ratchet-143a05be-f49f-4b3c-bc9e-7b63aa83dc6b-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-19122645-798a-4cb1-976f-e3df335bdf27
+
+State: `done`. Kind: `research`.
+
+Retained trial 945d86caba0c461faf01731fa3d6577e measures a complete linked symbol: 44 compiled bytes versus 40 reference bytes, 25 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/19122645-798a-4cb1-976f-e3df335bdf27`
+- `private-work:scope/19122645-798a-4cb1-976f-e3df335bdf27`
+
+## ratchet-19122645-798a-4cb1-976f-e3df335bdf27-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 945d86caba0c461faf01731fa3d6577e measures a complete linked symbol: 44 compiled bytes versus 40 reference bytes, 25 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-1b429eba-7e10-47fe-af19-f4a2c340b4cb
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/1b429eba-7e10-47fe-af19-f4a2c340b4cb`
+- `private-work:scope/1b429eba-7e10-47fe-af19-f4a2c340b4cb`
+
+## ratchet-1b429eba-7e10-47fe-af19-f4a2c340b4cb-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-1c966bfe-b806-4053-ab81-fdc2cc437b78
+
+State: `done`. Kind: `research`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+- `runtime:ratchet-scope-bind/1c966bfe-b806-4053-ab81-fdc2cc437b78`
+- `private-work:scope/1c966bfe-b806-4053-ab81-fdc2cc437b78`
+
+## ratchet-1c966bfe-b806-4053-ab81-fdc2cc437b78-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+Reopen condition: Independent owner-reviewed ABI/declaration/structural evidence and a coherent ordinary-C source correction, followed by fresh qualification. Do not launder the existing source through metadata changes.
+
+## ratchet-214d2147-5708-4f74-b6a0-d15bacfb6a3c
+
+State: `done`. Kind: `research`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+- `runtime:ratchet-scope-bind/214d2147-5708-4f74-b6a0-d15bacfb6a3c`
+- `private-work:scope/214d2147-5708-4f74-b6a0-d15bacfb6a3c`
+
+## ratchet-214d2147-5708-4f74-b6a0-d15bacfb6a3c-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+Reopen condition: Independent owner-reviewed ABI/declaration/structural evidence and a coherent ordinary-C source correction, followed by fresh qualification. Do not launder the existing source through metadata changes.
+
+## ratchet-26a52283-4d2b-4292-863e-a2fc7871929d
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/26a52283-4d2b-4292-863e-a2fc7871929d`
+- `private-work:scope/26a52283-4d2b-4292-863e-a2fc7871929d`
+
+## ratchet-26a52283-4d2b-4292-863e-a2fc7871929d-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-28c46278-090f-417d-9ae1-0dff1e75c598
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/28c46278-090f-417d-9ae1-0dff1e75c598`
+- `private-work:scope/28c46278-090f-417d-9ae1-0dff1e75c598`
+
+## ratchet-28c46278-090f-417d-9ae1-0dff1e75c598-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-2bdb4ba9-104e-4899-9374-f4ad0af7bb88
+
+State: `done`. Kind: `research`.
+
+Keep the safe corrected mismatch and original counterproof; admit only as zero-credit research after one fresh standalone retained-source qualification
+
+- `runtime:ratchet-scope-bind/2bdb4ba9-104e-4899-9374-f4ad0af7bb88`
+- `private-work:scope/2bdb4ba9-104e-4899-9374-f4ad0af7bb88`
+
+## ratchet-2bdb4ba9-104e-4899-9374-f4ad0af7bb88-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Keep the safe corrected mismatch and original counterproof; admit only as zero-credit research after one fresh standalone retained-source qualification
+
+Reopen condition: New independently evidenced original object/declaration structure that yields correct complete code without out-of-bounds C or blind expression/flag cycling
+
+## ratchet-2ddab812-0983-4e7d-8496-8eef6e308e05
+
+State: `done`. Kind: `research`.
+
+Retained trial 622fd74294d0448da62317616aef2a84 measures a complete linked symbol: 44 compiled bytes versus 44 reference bytes, 14 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/2ddab812-0983-4e7d-8496-8eef6e308e05`
+- `private-work:scope/2ddab812-0983-4e7d-8496-8eef6e308e05`
+
+## ratchet-2ddab812-0983-4e7d-8496-8eef6e308e05-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 622fd74294d0448da62317616aef2a84 measures a complete linked symbol: 44 compiled bytes versus 44 reference bytes, 14 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-38a23e6b-8e2c-461f-b1f6-e53226d304fe
+
+State: `done`. Kind: `research`.
+
+Retained trial 5da329184172465181f003ca200be1a1 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/38a23e6b-8e2c-461f-b1f6-e53226d304fe`
+- `private-work:scope/38a23e6b-8e2c-461f-b1f6-e53226d304fe`
+
+## ratchet-38a23e6b-8e2c-461f-b1f6-e53226d304fe-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 5da329184172465181f003ca200be1a1 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-3d6fe948-a02d-4e8e-925e-cdb57642974b
+
+State: `done`. Kind: `research`.
+
+Retained trial bf6030df5707432eb85e69043a44b8a5 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/3d6fe948-a02d-4e8e-925e-cdb57642974b`
+- `private-work:scope/3d6fe948-a02d-4e8e-925e-cdb57642974b`
+
+## ratchet-3d6fe948-a02d-4e8e-925e-cdb57642974b-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial bf6030df5707432eb85e69043a44b8a5 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-45311fbf-e1f5-42d9-817f-0b2704242fba
+
+State: `done`. Kind: `research`.
+
+Retained trial 71c648a940c447d3a54be320b7aa58eb measures a complete linked symbol: 156 compiled bytes versus 156 reference bytes, 115 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/45311fbf-e1f5-42d9-817f-0b2704242fba`
+- `private-work:scope/45311fbf-e1f5-42d9-817f-0b2704242fba`
+
+## ratchet-45311fbf-e1f5-42d9-817f-0b2704242fba-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 71c648a940c447d3a54be320b7aa58eb measures a complete linked symbol: 156 compiled bytes versus 156 reference bytes, 115 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-49715c0a-45eb-4938-9df7-b647b3cab904
+
+State: `done`. Kind: `research`.
+
+Retained trial 0c39b84810a34cc2bdfb8377237c780a measures a complete linked symbol: 88 compiled bytes versus 128 reference bytes, 108 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/49715c0a-45eb-4938-9df7-b647b3cab904`
+- `private-work:scope/49715c0a-45eb-4938-9df7-b647b3cab904`
+
+## ratchet-49715c0a-45eb-4938-9df7-b647b3cab904-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 0c39b84810a34cc2bdfb8377237c780a measures a complete linked symbol: 88 compiled bytes versus 128 reference bytes, 108 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-4c43381d-5005-446b-9e5c-072738843425
+
+State: `done`. Kind: `research`.
+
+Retained trial c3dbb87e10354b11a66b9f3a65737e01 measures a complete linked symbol: 48 compiled bytes versus 36 reference bytes, 41 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/4c43381d-5005-446b-9e5c-072738843425`
+- `private-work:scope/4c43381d-5005-446b-9e5c-072738843425`
+
+## ratchet-4c43381d-5005-446b-9e5c-072738843425-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial c3dbb87e10354b11a66b9f3a65737e01 measures a complete linked symbol: 48 compiled bytes versus 36 reference bytes, 41 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-55aa592a-9fda-443f-80af-dd9ab8b29063
+
+State: `done`. Kind: `research`.
+
+Retained trial f9e3f0bf7e024acdb387a96823c76195 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/55aa592a-9fda-443f-80af-dd9ab8b29063`
+- `private-work:scope/55aa592a-9fda-443f-80af-dd9ab8b29063`
+
+## ratchet-55aa592a-9fda-443f-80af-dd9ab8b29063-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial f9e3f0bf7e024acdb387a96823c76195 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-55d0adfe-0aa0-4c95-9b1d-6c07934741bd
+
+State: `done`. Kind: `research`.
+
+Retained trial b50e2eaa266e44f59eccfa1c463b12b6 measures a complete linked symbol: 164 compiled bytes versus 212 reference bytes, 182 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/55d0adfe-0aa0-4c95-9b1d-6c07934741bd`
+- `private-work:scope/55d0adfe-0aa0-4c95-9b1d-6c07934741bd`
+
+## ratchet-55d0adfe-0aa0-4c95-9b1d-6c07934741bd-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial b50e2eaa266e44f59eccfa1c463b12b6 measures a complete linked symbol: 164 compiled bytes versus 212 reference bytes, 182 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-56f6180f-b67c-44ce-81a5-ad25103082e4
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/56f6180f-b67c-44ce-81a5-ad25103082e4`
+- `private-work:scope/56f6180f-b67c-44ce-81a5-ad25103082e4`
+
+## ratchet-56f6180f-b67c-44ce-81a5-ad25103082e4-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-581f0e27-4c3e-40f1-8ab9-ee22a1c562df
+
+State: `done`. Kind: `research`.
+
+Retained trial 7360673f12e04de8925c2f0b6be0ac8c measures a complete linked symbol: 56 compiled bytes versus 48 reference bytes, 45 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/581f0e27-4c3e-40f1-8ab9-ee22a1c562df`
+- `private-work:scope/581f0e27-4c3e-40f1-8ab9-ee22a1c562df`
+
+## ratchet-581f0e27-4c3e-40f1-8ab9-ee22a1c562df-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 7360673f12e04de8925c2f0b6be0ac8c measures a complete linked symbol: 56 compiled bytes versus 48 reference bytes, 45 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-5dcf07e7-aff3-4099-961b-faf7d8e46827
+
+State: `done`. Kind: `research`.
+
+Retained trial 3af3bb5b703a40558ede516aac22de81 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/5dcf07e7-aff3-4099-961b-faf7d8e46827`
+- `private-work:scope/5dcf07e7-aff3-4099-961b-faf7d8e46827`
+
+## ratchet-5dcf07e7-aff3-4099-961b-faf7d8e46827-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 3af3bb5b703a40558ede516aac22de81 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-5eaed4e5-0c38-415b-952c-ec7ff68b4626
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/5eaed4e5-0c38-415b-952c-ec7ff68b4626`
+- `private-work:scope/5eaed4e5-0c38-415b-952c-ec7ff68b4626`
+
+## ratchet-5eaed4e5-0c38-415b-952c-ec7ff68b4626-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-5f0924f6-b37a-425d-97b6-0f7a0f2b30a4
+
+State: `done`. Kind: `research`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+- `runtime:ratchet-scope-bind/5f0924f6-b37a-425d-97b6-0f7a0f2b30a4`
+- `private-work:scope/5f0924f6-b37a-425d-97b6-0f7a0f2b30a4`
+
+## ratchet-5f0924f6-b37a-425d-97b6-0f7a0f2b30a4-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+Reopen condition: Independent owner-reviewed ABI/declaration/structural evidence and a coherent ordinary-C source correction, followed by fresh qualification. Do not launder the existing source through metadata changes.
+
+## ratchet-63039f46-0420-4531-a504-c299aeb0eac4
+
+State: `done`. Kind: `research`.
+
+Retained trial 2f967e79e4ae4cb88bb5500da88d61ab measures a complete linked symbol: 176 compiled bytes versus 176 reference bytes, 33 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/63039f46-0420-4531-a504-c299aeb0eac4`
+- `private-work:scope/63039f46-0420-4531-a504-c299aeb0eac4`
+
+## ratchet-63039f46-0420-4531-a504-c299aeb0eac4-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 2f967e79e4ae4cb88bb5500da88d61ab measures a complete linked symbol: 176 compiled bytes versus 176 reference bytes, 33 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-64227b71-990f-45da-8e65-c7c9cb57de06
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/64227b71-990f-45da-8e65-c7c9cb57de06`
+- `private-work:scope/64227b71-990f-45da-8e65-c7c9cb57de06`
+
+## ratchet-64227b71-990f-45da-8e65-c7c9cb57de06-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-6770b9cd-b09b-4539-851e-600060469687
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/6770b9cd-b09b-4539-851e-600060469687`
+- `private-work:scope/6770b9cd-b09b-4539-851e-600060469687`
+
+## ratchet-6770b9cd-b09b-4539-851e-600060469687-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-6d33e32f-90c4-4283-b5af-b85af15a71cd
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/6d33e32f-90c4-4283-b5af-b85af15a71cd`
+- `private-work:scope/6d33e32f-90c4-4283-b5af-b85af15a71cd`
+
+## ratchet-6d33e32f-90c4-4283-b5af-b85af15a71cd-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-6db6c7c6-1b0f-4f45-bc1b-9d44a70305d9
+
+State: `done`. Kind: `research`.
+
+Covered by ThorpenCodes PR60; preserve Qwen source refusals and do not requalify or count the function again
+
+- `runtime:ratchet-scope-bind/6db6c7c6-1b0f-4f45-bc1b-9d44a70305d9`
+- `private-work:scope/6db6c7c6-1b0f-4f45-bc1b-9d44a70305d9`
+
+## ratchet-6f0dcf1e-0d55-4148-855c-fc6dba92d739
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/6f0dcf1e-0d55-4148-855c-fc6dba92d739`
+- `private-work:scope/6f0dcf1e-0d55-4148-855c-fc6dba92d739`
+
+## ratchet-6f0dcf1e-0d55-4148-855c-fc6dba92d739-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-71f5ba39-066b-4efe-b763-850197db6d7f
+
+State: `done`. Kind: `research`.
+
+Retained trial 49d2c0e06bd645318e61925d1a4eb66e measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/71f5ba39-066b-4efe-b763-850197db6d7f`
+- `private-work:scope/71f5ba39-066b-4efe-b763-850197db6d7f`
+
+## ratchet-71f5ba39-066b-4efe-b763-850197db6d7f-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 49d2c0e06bd645318e61925d1a4eb66e measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-76786c5e-f134-4641-9093-9e66e87b1d05
+
+State: `stopped`. Kind: `research`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+- `runtime:ratchet-scope-bind/76786c5e-f134-4641-9093-9e66e87b1d05`
+- `private-work:scope/76786c5e-f134-4641-9093-9e66e87b1d05`
+
+## ratchet-76786c5e-f134-4641-9093-9e66e87b1d05-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+Reopen condition: Independent owner-reviewed ABI/declaration/structural evidence and a coherent ordinary-C source correction, followed by fresh qualification. Do not launder the existing source through metadata changes.
+
+## ratchet-7a12e0f3-abef-4d0a-95c3-ec37ccc95758
+
+State: `done`. Kind: `research`.
+
+Retained trial 98ff6d78918141a68bbf4bfe78670896 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/7a12e0f3-abef-4d0a-95c3-ec37ccc95758`
+- `private-work:scope/7a12e0f3-abef-4d0a-95c3-ec37ccc95758`
+
+## ratchet-7a12e0f3-abef-4d0a-95c3-ec37ccc95758-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 98ff6d78918141a68bbf4bfe78670896 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-7baf7c4e-f8fb-49c5-9bf5-2f082dff23be
+
+State: `done`. Kind: `research`.
+
+Retained trial a99a3ba85a564f838ba4bb17900762d4 measures a complete linked symbol: 40 compiled bytes versus 40 reference bytes, 21 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/7baf7c4e-f8fb-49c5-9bf5-2f082dff23be`
+- `private-work:scope/7baf7c4e-f8fb-49c5-9bf5-2f082dff23be`
+
+## ratchet-7baf7c4e-f8fb-49c5-9bf5-2f082dff23be-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial a99a3ba85a564f838ba4bb17900762d4 measures a complete linked symbol: 40 compiled bytes versus 40 reference bytes, 21 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-7f0f5dc8-8be2-4617-9a8d-e7fabaca673f
+
+State: `done`. Kind: `research`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+- `runtime:ratchet-scope-bind/7f0f5dc8-8be2-4617-9a8d-e7fabaca673f`
+- `private-work:scope/7f0f5dc8-8be2-4617-9a8d-e7fabaca673f`
+
+## ratchet-7f0f5dc8-8be2-4617-9a8d-e7fabaca673f-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+Reopen condition: Independent owner-reviewed ABI/declaration/structural evidence and a coherent ordinary-C source correction, followed by fresh qualification. Do not launder the existing source through metadata changes.
+
+## ratchet-81bf184c-c023-49d5-aa0e-f4e24b0ddb0c
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/81bf184c-c023-49d5-aa0e-f4e24b0ddb0c`
+- `private-work:scope/81bf184c-c023-49d5-aa0e-f4e24b0ddb0c`
+
+## ratchet-81bf184c-c023-49d5-aa0e-f4e24b0ddb0c-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-85daaae8-b49f-4caa-9a5c-73f592ad7a60
+
+State: `done`. Kind: `research`.
+
+Retained trial 012fd0f4d29a42b9bbe852469c2aa1a4 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 17 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/85daaae8-b49f-4caa-9a5c-73f592ad7a60`
+- `private-work:scope/85daaae8-b49f-4caa-9a5c-73f592ad7a60`
+
+## ratchet-85daaae8-b49f-4caa-9a5c-73f592ad7a60-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 012fd0f4d29a42b9bbe852469c2aa1a4 measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 17 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-8cc01357-4157-4366-ac4a-a7924809ee68
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/8cc01357-4157-4366-ac4a-a7924809ee68`
+- `private-work:scope/8cc01357-4157-4366-ac4a-a7924809ee68`
+
+## ratchet-8cc01357-4157-4366-ac4a-a7924809ee68-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-8e8e4fb3-8f86-4ad1-a4ef-56c34d0c364b
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/8e8e4fb3-8f86-4ad1-a4ef-56c34d0c364b`
+- `private-work:scope/8e8e4fb3-8f86-4ad1-a4ef-56c34d0c364b`
+
+## ratchet-8e8e4fb3-8f86-4ad1-a4ef-56c34d0c364b-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-91849d87-f97f-4769-b8cd-67427cc391b0
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/91849d87-f97f-4769-b8cd-67427cc391b0`
+- `private-work:scope/91849d87-f97f-4769-b8cd-67427cc391b0`
+
+## ratchet-91849d87-f97f-4769-b8cd-67427cc391b0-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-919d7dd3-0383-4953-87de-2383f1e00166
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/919d7dd3-0383-4953-87de-2383f1e00166`
+- `private-work:scope/919d7dd3-0383-4953-87de-2383f1e00166`
+
+## ratchet-919d7dd3-0383-4953-87de-2383f1e00166-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-a33fbdca-a682-4263-b0ec-7524207725f2
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/a33fbdca-a682-4263-b0ec-7524207725f2`
+- `private-work:scope/a33fbdca-a682-4263-b0ec-7524207725f2`
+
+## ratchet-a33fbdca-a682-4263-b0ec-7524207725f2-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-a61365e3-83f6-4ce1-bd5e-dff86eb8a61f
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/a61365e3-83f6-4ce1-bd5e-dff86eb8a61f`
+- `private-work:scope/a61365e3-83f6-4ce1-bd5e-dff86eb8a61f`
+
+## ratchet-a61365e3-83f6-4ce1-bd5e-dff86eb8a61f-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-a66e5dba-201f-40e6-a51f-954aa33f5d68
+
+State: `done`. Kind: `research`.
+
+Retained trial 22d6acc99bdd4670822e1ff04ac2f7ad measures a complete linked symbol: 76 compiled bytes versus 80 reference bytes, 28 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/a66e5dba-201f-40e6-a51f-954aa33f5d68`
+- `private-work:scope/a66e5dba-201f-40e6-a51f-954aa33f5d68`
+
+## ratchet-a66e5dba-201f-40e6-a51f-954aa33f5d68-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 22d6acc99bdd4670822e1ff04ac2f7ad measures a complete linked symbol: 76 compiled bytes versus 80 reference bytes, 28 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-aa454ec7-0ce2-4318-a7d5-10568abefad2
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/aa454ec7-0ce2-4318-a7d5-10568abefad2`
+- `private-work:scope/aa454ec7-0ce2-4318-a7d5-10568abefad2`
+
+## ratchet-aa454ec7-0ce2-4318-a7d5-10568abefad2-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-abde1294-c924-449d-befd-029f5f6ce17b
+
+State: `done`. Kind: `research`.
+
+Retained trial 404064ecdb2f4e8a8f94d83468bd1ee2 measures a complete linked symbol: 76 compiled bytes versus 92 reference bytes, 70 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/abde1294-c924-449d-befd-029f5f6ce17b`
+- `private-work:scope/abde1294-c924-449d-befd-029f5f6ce17b`
+
+## ratchet-abde1294-c924-449d-befd-029f5f6ce17b-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 404064ecdb2f4e8a8f94d83468bd1ee2 measures a complete linked symbol: 76 compiled bytes versus 92 reference bytes, 70 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-ad393208-7909-4f05-a238-775715f448b6
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/ad393208-7909-4f05-a238-775715f448b6`
+- `private-work:scope/ad393208-7909-4f05-a238-775715f448b6`
+
+## ratchet-ad393208-7909-4f05-a238-775715f448b6-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-b9557125-f22e-403e-9979-310f05dbed28
+
+State: `done`. Kind: `research`.
+
+Retained trial 2d38d52581c14814a457b4be37b6eacd measures a complete linked symbol: 76 compiled bytes versus 76 reference bytes, 49 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/b9557125-f22e-403e-9979-310f05dbed28`
+- `private-work:scope/b9557125-f22e-403e-9979-310f05dbed28`
+
+## ratchet-b9557125-f22e-403e-9979-310f05dbed28-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 2d38d52581c14814a457b4be37b6eacd measures a complete linked symbol: 76 compiled bytes versus 76 reference bytes, 49 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-bbc1e9a3-9daf-449f-89fa-33dc8c2f4cf1
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/bbc1e9a3-9daf-449f-89fa-33dc8c2f4cf1`
+- `private-work:scope/bbc1e9a3-9daf-449f-89fa-33dc8c2f4cf1`
+
+## ratchet-bbc1e9a3-9daf-449f-89fa-33dc8c2f4cf1-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-bd58228f-a98c-4fd1-aa21-de3d43e8b13c
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/bd58228f-a98c-4fd1-aa21-de3d43e8b13c`
+- `private-work:scope/bd58228f-a98c-4fd1-aa21-de3d43e8b13c`
+
+## ratchet-bd58228f-a98c-4fd1-aa21-de3d43e8b13c-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-bd80fb9a-f4c8-4d07-84da-9a18ffbe7845
+
+State: `done`. Kind: `research`.
+
+Retained trial 1f14a442af73470ebf83f2f74b506bd0 measures a complete linked symbol: 52 compiled bytes versus 44 reference bytes, 35 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/bd80fb9a-f4c8-4d07-84da-9a18ffbe7845`
+- `private-work:scope/bd80fb9a-f4c8-4d07-84da-9a18ffbe7845`
+
+## ratchet-bd80fb9a-f4c8-4d07-84da-9a18ffbe7845-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 1f14a442af73470ebf83f2f74b506bd0 measures a complete linked symbol: 52 compiled bytes versus 44 reference bytes, 35 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-c08a8f7d-73f8-42d4-9f8e-211c6c89218b
+
+State: `done`. Kind: `research`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+- `runtime:ratchet-scope-bind/c08a8f7d-73f8-42d4-9f8e-211c6c89218b`
+- `private-work:scope/c08a8f7d-73f8-42d4-9f8e-211c6c89218b`
+
+## ratchet-c08a8f7d-73f8-42d4-9f8e-211c6c89218b-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+Reopen condition: Independent owner-reviewed ABI/declaration/structural evidence and a coherent ordinary-C source correction, followed by fresh qualification. Do not launder the existing source through metadata changes.
+
+## ratchet-c0bdec26-0755-4dd8-b0b4-6a951cd36b6e
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/c0bdec26-0755-4dd8-b0b4-6a951cd36b6e`
+- `private-work:scope/c0bdec26-0755-4dd8-b0b4-6a951cd36b6e`
+
+## ratchet-c0bdec26-0755-4dd8-b0b4-6a951cd36b6e-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-c76c4f10-2835-41d3-8a0a-81a4454e1d4b
+
+State: `done`. Kind: `research`.
+
+Retained trial 083fe06fd70042f882bd71bb983aeb88 measures a complete linked symbol: 32 compiled bytes versus 32 reference bytes, 4 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/c76c4f10-2835-41d3-8a0a-81a4454e1d4b`
+- `private-work:scope/c76c4f10-2835-41d3-8a0a-81a4454e1d4b`
+
+## ratchet-c76c4f10-2835-41d3-8a0a-81a4454e1d4b-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 083fe06fd70042f882bd71bb983aeb88 measures a complete linked symbol: 32 compiled bytes versus 32 reference bytes, 4 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-c84912f0-4c7f-4f9f-a3f8-c311d8d4d2e4
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/c84912f0-4c7f-4f9f-a3f8-c311d8d4d2e4`
+- `private-work:scope/c84912f0-4c7f-4f9f-a3f8-c311d8d4d2e4`
+
+## ratchet-c84912f0-4c7f-4f9f-a3f8-c311d8d4d2e4-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-c9212cca-e9d4-419b-a98a-7fc502e1ba9d
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/c9212cca-e9d4-419b-a98a-7fc502e1ba9d`
+- `private-work:scope/c9212cca-e9d4-419b-a98a-7fc502e1ba9d`
+
+## ratchet-c9212cca-e9d4-419b-a98a-7fc502e1ba9d-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-cea70e45-b6a8-4fef-9467-d1ab917a1f29
+
+State: `done`. Kind: `research`.
+
+Retained trial f514466fa77b4cf99bfdf5ec2f57911f measures a complete linked symbol: 248 compiled bytes versus 228 reference bytes, 206 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/cea70e45-b6a8-4fef-9467-d1ab917a1f29`
+- `private-work:scope/cea70e45-b6a8-4fef-9467-d1ab917a1f29`
+
+## ratchet-cea70e45-b6a8-4fef-9467-d1ab917a1f29-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial f514466fa77b4cf99bfdf5ec2f57911f measures a complete linked symbol: 248 compiled bytes versus 228 reference bytes, 206 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-d2de8724-d5df-4647-be90-6146b8beccc3
+
+State: `done`. Kind: `research`.
+
+Retained trial f05c65a83d564dbb954262cb909ad3cf measures a complete linked symbol: 16 compiled bytes versus 16 reference bytes, 2 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/d2de8724-d5df-4647-be90-6146b8beccc3`
+- `private-work:scope/d2de8724-d5df-4647-be90-6146b8beccc3`
+
+## ratchet-d2de8724-d5df-4647-be90-6146b8beccc3-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial f05c65a83d564dbb954262cb909ad3cf measures a complete linked symbol: 16 compiled bytes versus 16 reference bytes, 2 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-d6b74fa0-75ca-4859-97a1-1de1fe51f85a
+
+State: `done`. Kind: `research`.
+
+Retained trial c4e55e4c76f7442d83ac46b558adb8bd measures a complete linked symbol: 44 compiled bytes versus 48 reference bytes, 34 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/d6b74fa0-75ca-4859-97a1-1de1fe51f85a`
+- `private-work:scope/d6b74fa0-75ca-4859-97a1-1de1fe51f85a`
+
+## ratchet-d6b74fa0-75ca-4859-97a1-1de1fe51f85a-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial c4e55e4c76f7442d83ac46b558adb8bd measures a complete linked symbol: 44 compiled bytes versus 48 reference bytes, 34 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-d9cdf35b-acbe-4a17-ad0a-bc9ad362be77
+
+State: `done`. Kind: `research`.
+
+Retained trial 920ed67316d54da4ad4bad54619839ee measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/d9cdf35b-acbe-4a17-ad0a-bc9ad362be77`
+- `private-work:scope/d9cdf35b-acbe-4a17-ad0a-bc9ad362be77`
+
+## ratchet-d9cdf35b-acbe-4a17-ad0a-bc9ad362be77-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 920ed67316d54da4ad4bad54619839ee measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-e0440900-46ae-4c32-a962-d58731e140ff
+
+State: `done`. Kind: `research`.
+
+Retained trial 976afcfdf335401794d6915d821297dc measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/e0440900-46ae-4c32-a962-d58731e140ff`
+- `private-work:scope/e0440900-46ae-4c32-a962-d58731e140ff`
+
+## ratchet-e0440900-46ae-4c32-a962-d58731e140ff-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 976afcfdf335401794d6915d821297dc measures a complete linked symbol: 48 compiled bytes versus 48 reference bytes, 8 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-e12600a0-ed84-4c46-b42f-6eb4d6fe45ee
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/e12600a0-ed84-4c46-b42f-6eb4d6fe45ee`
+- `private-work:scope/e12600a0-ed84-4c46-b42f-6eb4d6fe45ee`
+
+## ratchet-e12600a0-ed84-4c46-b42f-6eb4d6fe45ee-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-e1d70219-10da-4ec2-8ac2-adb66317b2a2
+
+State: `done`. Kind: `research`.
+
+Retained trial 307d30a4eb8d49179be7f9aebaacf9eb measures a complete linked symbol: 104 compiled bytes versus 100 reference bytes, 37 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/e1d70219-10da-4ec2-8ac2-adb66317b2a2`
+- `private-work:scope/e1d70219-10da-4ec2-8ac2-adb66317b2a2`
+
+## ratchet-e1d70219-10da-4ec2-8ac2-adb66317b2a2-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 307d30a4eb8d49179be7f9aebaacf9eb measures a complete linked symbol: 104 compiled bytes versus 100 reference bytes, 37 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-e2ddb21c-8737-4c36-81f4-de22eca65949
+
+State: `done`. Kind: `research`.
+
+Retained trial d069d0681c5a473cafa90dde506425d9 measures a complete linked symbol: 72 compiled bytes versus 72 reference bytes, 43 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/e2ddb21c-8737-4c36-81f4-de22eca65949`
+- `private-work:scope/e2ddb21c-8737-4c36-81f4-de22eca65949`
+
+## ratchet-e2ddb21c-8737-4c36-81f4-de22eca65949-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial d069d0681c5a473cafa90dde506425d9 measures a complete linked symbol: 72 compiled bytes versus 72 reference bytes, 43 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-e54994b4-bcc0-45b0-9192-76868192a3c4
+
+State: `done`. Kind: `research`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+- `runtime:ratchet-scope-bind/e54994b4-bcc0-45b0-9192-76868192a3c4`
+- `private-work:scope/e54994b4-bcc0-45b0-9192-76868192a3c4`
+
+## ratchet-e54994b4-bcc0-45b0-9192-76868192a3c4-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Current authored-source scope/privacy policy does not admit the retained source. Keep every private source, receipt and measured mismatch; add no C or shelf credit.
+
+Reopen condition: Independent owner-reviewed ABI/declaration/structural evidence and a coherent ordinary-C source correction, followed by fresh qualification. Do not launder the existing source through metadata changes.
+
+## ratchet-e745039e-772d-4c40-aec2-16c6b83845eb
+
+State: `done`. Kind: `research`.
+
+Retained trial 933b531caa674b9fb4f0308eea9265b8 measures a complete linked symbol: 24 compiled bytes versus 20 reference bytes, 21 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/e745039e-772d-4c40-aec2-16c6b83845eb`
+- `private-work:scope/e745039e-772d-4c40-aec2-16c6b83845eb`
+
+## ratchet-e745039e-772d-4c40-aec2-16c6b83845eb-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 933b531caa674b9fb4f0308eea9265b8 measures a complete linked symbol: 24 compiled bytes versus 20 reference bytes, 21 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-eabe67d2-5eeb-423f-95cb-178af202e0b3
+
+State: `done`. Kind: `research`.
+
+Retained trial 74e81ebd21f44608851d996f42206b86 measures a complete linked symbol: 20 compiled bytes versus 20 reference bytes, 3 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/eabe67d2-5eeb-423f-95cb-178af202e0b3`
+- `private-work:scope/eabe67d2-5eeb-423f-95cb-178af202e0b3`
+
+## ratchet-eabe67d2-5eeb-423f-95cb-178af202e0b3-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 74e81ebd21f44608851d996f42206b86 measures a complete linked symbol: 20 compiled bytes versus 20 reference bytes, 3 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-ec323197-ec9d-42db-815d-e5d368adeb01
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/ec323197-ec9d-42db-815d-e5d368adeb01`
+- `private-work:scope/ec323197-ec9d-42db-815d-e5d368adeb01`
+
+## ratchet-ec323197-ec9d-42db-815d-e5d368adeb01-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-ede757a7-0e74-4088-b067-ab460d2eb132
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/ede757a7-0e74-4088-b067-ab460d2eb132`
+- `private-work:scope/ede757a7-0e74-4088-b067-ab460d2eb132`
+
+## ratchet-ede757a7-0e74-4088-b067-ab460d2eb132-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-ef93450e-0689-4b4a-beef-d305b06ab6bf
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/ef93450e-0689-4b4a-beef-d305b06ab6bf`
+- `private-work:scope/ef93450e-0689-4b4a-beef-d305b06ab6bf`
+
+## ratchet-ef93450e-0689-4b4a-beef-d305b06ab6bf-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-f195198c-a020-497d-8ee5-6654be622913
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/f195198c-a020-497d-8ee5-6654be622913`
+- `private-work:scope/f195198c-a020-497d-8ee5-6654be622913`
+
+## ratchet-f195198c-a020-497d-8ee5-6654be622913-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-f1e8ce53-c493-404b-a82f-c7ec84602ca2
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/f1e8ce53-c493-404b-a82f-c7ec84602ca2`
+- `private-work:scope/f1e8ce53-c493-404b-a82f-c7ec84602ca2`
+
+## ratchet-f1e8ce53-c493-404b-a82f-c7ec84602ca2-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-f53d0759-ca8a-4dc5-8a70-fb1c0cf267d6
+
+State: `done`. Kind: `research`.
+
+Retain the private Qwen research result; canonical matching admission is pending the current full-image finalizer
+
+- `runtime:ratchet-scope-bind/f53d0759-ca8a-4dc5-8a70-fb1c0cf267d6`
+- `private-work:scope/f53d0759-ca8a-4dc5-8a70-fb1c0cf267d6`
+
+## ratchet-f53d0759-ca8a-4dc5-8a70-fb1c0cf267d6-candidate
+
+State: `integrated`. Kind: `candidate`.
+
+Finalize this target only against the current complete source/object/full-image proofs
+
+## ratchet-f9829e81-52cf-4fc4-a27e-26ea18fd5c22
+
+State: `done`. Kind: `research`.
+
+Retained trial 118d8bbdb4cc443d9fa599cc9fffa37e measures a complete linked symbol: 304 compiled bytes versus 352 reference bytes, 307 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/f9829e81-52cf-4fc4-a27e-26ea18fd5c22`
+- `private-work:scope/f9829e81-52cf-4fc4-a27e-26ea18fd5c22`
+
+## ratchet-f9829e81-52cf-4fc4-a27e-26ea18fd5c22-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 118d8bbdb4cc443d9fa599cc9fffa37e measures a complete linked symbol: 304 compiled bytes versus 352 reference bytes, 307 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-faab9b8e-5854-4c83-83ba-c6ee6401c54c
+
+State: `done`. Kind: `research`.
+
+Retained trial 11a174593a4b400da5fa4ea196071721 measures a complete linked symbol: 240 compiled bytes versus 300 reference bytes, 257 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/faab9b8e-5854-4c83-83ba-c6ee6401c54c`
+- `private-work:scope/faab9b8e-5854-4c83-83ba-c6ee6401c54c`
+
+## ratchet-faab9b8e-5854-4c83-83ba-c6ee6401c54c-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 11a174593a4b400da5fa4ea196071721 measures a complete linked symbol: 240 compiled bytes versus 300 reference bytes, 257 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
+
+## ratchet-fc58bb95-bdb4-4b5b-88fb-fec66624b3de
+
+State: `done`. Kind: `research`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+- `runtime:ratchet-scope-bind/fc58bb95-bdb4-4b5b-88fb-fec66624b3de`
+- `private-work:scope/fc58bb95-bdb4-4b5b-88fb-fec66624b3de`
+
+## ratchet-fc58bb95-bdb4-4b5b-88fb-fec66624b3de-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Preserve compile/source/link failures and any unmeasured authored draft privately. There is no admitted complete linked mismatch for shelf staging; no matching credit.
+
+Reopen condition: Concrete new target-specific ABI, declaration, structural or compiler evidence plus acknowledged shared ownership before another trial. No blind replay of the old source.
+
+## ratchet-feb7686d-cf42-47a0-8908-d7c3aa0a21b4
+
+State: `done`. Kind: `research`.
+
+Retained trial 6f6961c647ba4f169e15f78640017863 measures a complete linked symbol: 44 compiled bytes versus 44 reference bytes, 9 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+- `runtime:ratchet-scope-bind/feb7686d-cf42-47a0-8908-d7c3aa0a21b4`
+- `private-work:scope/feb7686d-cf42-47a0-8908-d7c3aa0a21b4`
+
+## ratchet-feb7686d-cf42-47a0-8908-d7c3aa0a21b4-candidate
+
+State: `stopped`. Kind: `candidate`.
+
+Retained trial 6f6961c647ba4f169e15f78640017863 measures a complete linked symbol: 44 compiled bytes versus 44 reference bytes, 9 complete-body differing/missing/extra bytes. All old bytes and negative trials remain immutable. Owner ABI/defined-behavior review and one current-profile qualification are required before any nonmatching shelf admission.
+
+Reopen condition: New target-specific ABI/declaration/structural evidence, or the already identified current instrument-context change after owner ABI review. No expression/flag/register permutations, prefix comparison, invented volatile or inferred helper prototype.
 
 ## reset-state-signs136-0_aranos_tutorial
 

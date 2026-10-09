@@ -735,6 +735,33 @@ class FinalizeTests(unittest.TestCase):
         for name, data in values.items():
             self.assertEqual((self.repo / name).read_bytes(), data)
 
+    def test_github_test_inputs_are_pinned_snapshotted_and_not_published(self):
+        values = {
+            ".github/pull_request_template.md": b"## Synthetic template\n",
+            ".github/workflows/reservations.yml": b"name: Synthetic coordination\n",
+            ".github/workflows/pr-description.yaml": b"name: Synthetic description\n",
+        }
+        for name, data in values.items():
+            write(self.repo / name, data)
+        self.finish()
+        plan = json.loads((self.output / "plan.json").read_bytes())
+        proposed = {row["path"] for row in plan["changes"]}
+        for name, data in values.items():
+            self.assertEqual((self.output / "snapshot" / name).read_bytes(), data)
+            self.assertEqual(plan["before"][name], sha(data))
+            self.assertNotIn(name, proposed)
+        self.finish(apply=True)
+        for name, data in values.items():
+            self.assertEqual((self.repo / name).read_bytes(), data)
+
+    def test_github_input_drift_prevents_prepared_publication(self):
+        name = ".github/workflows/description.yml"
+        write(self.repo / name, b"name: Synthetic trusted code\n")
+        self.finish()
+        write(self.repo / name, b"name: Changed after validation\n")
+        with self.assertRaisesRegex(ValueError, "Concurrent source"):
+            self.finish(apply=True)
+
     def test_unknown_compressed_verification_input_is_still_refused(self):
         write(self.repo / "progress/verification/unknown.json.gz", finalize._compress(b"{}\n"))
         with self.assertRaisesRegex(ValueError, "Unknown compressed input"):
