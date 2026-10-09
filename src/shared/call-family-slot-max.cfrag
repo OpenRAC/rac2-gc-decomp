@@ -1,0 +1,57 @@
+extern void @@ROLE_0_00@@(int a, int b);
+extern void @@ROLE_2_00@@(int a);
+extern void *@@ROLE_3_00@@(int id);
+extern int @@ROLE_4_00@@(void *p, int i);
+extern void @@ROLE_15_00@@(void);
+extern void @@ROLE_17_00@@(int a, int b, long c, void *d, int e);
+extern void @@ROLE_26_00@@(void);
+extern void @@ROLE_27_00@@(void);
+
+int @@FUNCTION@@(int *arg0)
+{
+    int min;
+    int v;
+    int slot;
+    int count;
+    int off;
+
+    @@ROLE_0_01@@(66, 68);
+    @@ROLE_0_02@@(71, 11);
+    @@ROLE_2_01@@(0);
+    min = @@ROLE_4_01@@(@@ROLE_3_01@@(11613), -1);
+    v = @@ROLE_4_02@@(@@ROLE_3_02@@(11625), -1);
+    if (v >= min)
+        min = v;
+    if (*(int *)0x1A79F0 != 0) {
+        v = @@ROLE_4_03@@(@@ROLE_3_03@@(11614), -1);
+        if (v >= min)
+            min = v;
+    }
+    v = @@ROLE_4_04@@(@@ROLE_3_04@@(11626), -1);
+    if (v >= min)
+        min = v;
+    v = @@ROLE_4_05@@(@@ROLE_3_05@@(11627), -1);
+    if (v >= min)
+        min = v;
+    v = @@ROLE_4_06@@(@@ROLE_3_06@@(11599), -1);
+    if (v >= min)
+        min = v;
+    slot = (arg0[8] - min) >> 1;
+    if (slot <= 1)
+        slot = 2;
+    count = arg0[9] / (*(int *)0x1A79F0 != 0 ? 7 : 6);
+    @@ROLE_15_01@@();
+    off = count - 6;
+    @@ROLE_17_01@@(slot, off, 0x80FFA888L, @@ROLE_3_07@@(11613), -1);
+    off += count;
+    @@ROLE_17_02@@(slot, off, 0x80FFA888L, @@ROLE_3_08@@(11625), -1);
+    off += count;
+    @@ROLE_17_03@@(slot, off, 0x80FFA888L, @@ROLE_3_09@@(11626), -1);
+    off += count;
+    @@ROLE_17_04@@(slot, off, 0x80FFA888L, @@ROLE_3_10@@(11627), -1);
+    off += count;
+    @@ROLE_17_05@@(slot, off, 0x80FFA888L, @@ROLE_3_11@@(11599), -1);
+    @@ROLE_26_01@@();
+    @@ROLE_27_01@@();
+    return 2;
+}

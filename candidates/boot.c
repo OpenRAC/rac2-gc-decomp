@@ -4058,3 +4058,260 @@ void FUN_0011D118(void)
   D_001346A0 = 0;
   return;
 }
+extern void Fc936841d_FUN_00282CF0(char *local, char *first, char *second);
+extern void Fc936841d_FUN_00282CC0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void FUN_00316DA0(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    Fc936841d_FUN_00282CF0(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    Fc936841d_FUN_00282CC0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void Fc936841d_FUN_00282CF0(char *local, char *first, char *second);
+extern void Fc936841d_FUN_00282CC0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void FUN_0031F1A8(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    Fc936841d_FUN_00282CF0(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    Fc936841d_FUN_00282CC0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void Fc936841d_FUN_00282CF0(char *local, char *first, char *second);
+extern void Fc936841d_FUN_00282CC0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void FUN_0032BDC8(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    Fc936841d_FUN_00282CF0(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    Fc936841d_FUN_00282CC0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+
+
+
+extern void F01bd4546_FUN_00335E68(char *p, int v);
+extern void F01bd4546_FUN_00349630(char *p, int v);
+extern void F01bd4546_FUN_00349630(char *p, int v);
+extern void F01bd4546_FUN_00349630(char *p, int v);
+extern void F01bd4546_FUN_00349630(char *p, int v);
+extern void F01bd4546_FUN_00349630(char *p, int v);
+extern void F01bd4546_FUN_00349630(char *p, int v);
+extern void F01bd4546_FUN_00349678(char *p, float v);
+extern void F01bd4546_FUN_00349678(char *p, float v);
+extern void F01bd4546_FUN_00349678(char *p, float v);
+extern void F01bd4546_FUN_00349678(char *p, float v);
+extern void F01bd4546_FUN_00349678(char *p, float v);
+extern void F01bd4546_FUN_00349678(char *p, float v);
+
+void FUN_0034CB88(char *self, int x)
+{
+    char *p1, *p2, *p3, *p4, *p5, *p6;
+
+    *(s32 *)(self + 5492) = x;
+    if (*(s32 *)(self + 5496) != 0) {
+        *(s32 *)(self + 5496) = 0;
+        F01bd4546_FUN_00335E68(self + 1464, 0);
+        p1 = self + 3052;
+        p2 = self + 3188;
+        p3 = self + 3324;
+        p4 = self + 3460;
+        p5 = self + 3596;
+        p6 = self + 3732;
+        F01bd4546_FUN_00349630(p1, 1);
+        F01bd4546_FUN_00349630(p2, 1);
+        F01bd4546_FUN_00349630(p3, 1);
+        F01bd4546_FUN_00349630(p4, 1);
+        F01bd4546_FUN_00349630(p5, 1);
+        F01bd4546_FUN_00349630(p6, 1);
+        F01bd4546_FUN_00349678(p1, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        F01bd4546_FUN_00349678(p2, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        F01bd4546_FUN_00349678(p3, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        F01bd4546_FUN_00349678(p4, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        F01bd4546_FUN_00349678(p5, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        F01bd4546_FUN_00349678(p6, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+    }
+}
+extern void F70997ba9_FUN_002FC560(int a, int b);
+extern void F70997ba9_FUN_0027C540(int a);
+extern void *F70997ba9_FUN_00288FB8(int id);
+extern int F70997ba9_FUN_0027F198(void *p, int i);
+extern void F70997ba9_FUN_0027F120(void);
+extern void F70997ba9_FUN_0027F5B8(int a, int b, long c, void *d, int e);
+extern void F70997ba9_FUN_0027F110(void);
+extern void F70997ba9_FUN_0027C660(void);
+
+int FUN_002D9798(int *arg0)
+{
+    int min;
+    int v;
+    int slot;
+    int count;
+    int off;
+
+    F70997ba9_FUN_002FC560(66, 68);
+    F70997ba9_FUN_002FC560(71, 11);
+    F70997ba9_FUN_0027C540(0);
+    min = F70997ba9_FUN_0027F198(F70997ba9_FUN_00288FB8(11613), -1);
+    v = F70997ba9_FUN_0027F198(F70997ba9_FUN_00288FB8(11625), -1);
+    if (v >= min)
+        min = v;
+    if (*(int *)0x1A79F0 != 0) {
+        v = F70997ba9_FUN_0027F198(F70997ba9_FUN_00288FB8(11614), -1);
+        if (v >= min)
+            min = v;
+    }
+    v = F70997ba9_FUN_0027F198(F70997ba9_FUN_00288FB8(11626), -1);
+    if (v >= min)
+        min = v;
+    v = F70997ba9_FUN_0027F198(F70997ba9_FUN_00288FB8(11627), -1);
+    if (v >= min)
+        min = v;
+    v = F70997ba9_FUN_0027F198(F70997ba9_FUN_00288FB8(11599), -1);
+    if (v >= min)
+        min = v;
+    slot = (arg0[8] - min) >> 1;
+    if (slot <= 1)
+        slot = 2;
+    count = arg0[9] / (*(int *)0x1A79F0 != 0 ? 7 : 6);
+    F70997ba9_FUN_0027F120();
+    off = count - 6;
+    F70997ba9_FUN_0027F5B8(slot, off, 0x80FFA888L, F70997ba9_FUN_00288FB8(11613), -1);
+    off += count;
+    F70997ba9_FUN_0027F5B8(slot, off, 0x80FFA888L, F70997ba9_FUN_00288FB8(11625), -1);
+    off += count;
+    F70997ba9_FUN_0027F5B8(slot, off, 0x80FFA888L, F70997ba9_FUN_00288FB8(11626), -1);
+    off += count;
+    F70997ba9_FUN_0027F5B8(slot, off, 0x80FFA888L, F70997ba9_FUN_00288FB8(11627), -1);
+    off += count;
+    F70997ba9_FUN_0027F5B8(slot, off, 0x80FFA888L, F70997ba9_FUN_00288FB8(11599), -1);
+    F70997ba9_FUN_0027F110();
+    F70997ba9_FUN_0027C660();
+    return 2;
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float F9e2cd219_FUN_002A7798(float value);
+extern void F9e2cd219_FUN_002ACF68(void *out, void *in, void *tmp, int mode, float value);
+extern void F9e2cd219_FUN_00305310(void *owner, void *out);
+
+void FUN_00305228(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    F9e2cd219_FUN_002ACF68((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            F9e2cd219_FUN_002A7798(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    F9e2cd219_FUN_00305310(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float F9e2cd219_FUN_002A7798(float value);
+extern void F9e2cd219_FUN_002ACF68(void *out, void *in, void *tmp, int mode, float value);
+extern void F9e2cd219_FUN_00307AD0(void *owner, void *out);
+
+void FUN_003079E8(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    F9e2cd219_FUN_002ACF68((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            F9e2cd219_FUN_002A7798(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    F9e2cd219_FUN_00307AD0(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}

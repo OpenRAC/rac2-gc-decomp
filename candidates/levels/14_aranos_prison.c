@@ -2901,3 +2901,439 @@ int LVL_14_ARANOS_PRISON_FUN_00465B18(int *owner)
     return result;
 }
 
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(char *local, char *first, char *second);
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_14_ARANOS_PRISON_FUN_003AF110(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(char *local, char *first, char *second);
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_14_ARANOS_PRISON_FUN_003BF700(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(char *local, char *first, char *second);
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_14_ARANOS_PRISON_FUN_003CDD60(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(char *local, char *first, char *second);
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_14_ARANOS_PRISON_FUN_003DBFF8(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(char *local, char *first, char *second);
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_14_ARANOS_PRISON_FUN_003F7428(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(char *local, char *first, char *second);
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_14_ARANOS_PRISON_FUN_003FFBD8(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(char *local, char *first, char *second);
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_14_ARANOS_PRISON_FUN_0042E788(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(char *local, char *first, char *second);
+extern void LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_14_ARANOS_PRISON_FUN_00436768(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C68(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_14_ARANOS_PRISON_Fc936841d_FUN_002F5C38((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+
+
+
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_00449A80(char *p, int v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(char *p, int v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(char *p, int v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(char *p, int v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(char *p, int v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(char *p, int v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(char *p, int v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(char *p, float v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(char *p, float v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(char *p, float v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(char *p, float v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(char *p, float v);
+extern void LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(char *p, float v);
+
+void LVL_14_ARANOS_PRISON_FUN_004607A8(char *self, int x)
+{
+    char *p1, *p2, *p3, *p4, *p5, *p6;
+
+    *(s32 *)(self + 5492) = x;
+    if (*(s32 *)(self + 5496) != 0) {
+        *(s32 *)(self + 5496) = 0;
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_00449A80(self + 1464, 0);
+        p1 = self + 3052;
+        p2 = self + 3188;
+        p3 = self + 3324;
+        p4 = self + 3460;
+        p5 = self + 3596;
+        p6 = self + 3732;
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(p1, 1);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(p2, 1);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(p3, 1);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(p4, 1);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(p5, 1);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D250(p6, 1);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(p1, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(p2, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(p3, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(p4, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(p5, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_14_ARANOS_PRISON_F01bd4546_FUN_0045D298(p6, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+    }
+}
+extern void LVL_14_ARANOS_PRISON_F70997ba9_FUN_00385CB8(int a, int b);
+extern void LVL_14_ARANOS_PRISON_F70997ba9_FUN_002EDD68(int a);
+extern void *LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(int id);
+extern int LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0A20(void *p, int i);
+extern void LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F09A8(void);
+extern void LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0E40(int a, int b, long c, void *d, int e);
+extern void LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0998(void);
+extern void LVL_14_ARANOS_PRISON_F70997ba9_FUN_002EDE88(void);
+
+int LVL_14_ARANOS_PRISON_FUN_0035D320(int *arg0)
+{
+    int min;
+    int v;
+    int slot;
+    int count;
+    int off;
+
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_00385CB8(66, 68);
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_00385CB8(71, 11);
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002EDD68(0);
+    min = LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0A20(LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11613), -1);
+    v = LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0A20(LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11625), -1);
+    if (v >= min)
+        min = v;
+    if (*(int *)0x1A79F0 != 0) {
+        v = LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0A20(LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11614), -1);
+        if (v >= min)
+            min = v;
+    }
+    v = LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0A20(LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11626), -1);
+    if (v >= min)
+        min = v;
+    v = LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0A20(LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11627), -1);
+    if (v >= min)
+        min = v;
+    v = LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0A20(LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11599), -1);
+    if (v >= min)
+        min = v;
+    slot = (arg0[8] - min) >> 1;
+    if (slot <= 1)
+        slot = 2;
+    count = arg0[9] / (*(int *)0x1A79F0 != 0 ? 7 : 6);
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F09A8();
+    off = count - 6;
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0E40(slot, off, 0x80FFA888L, LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11613), -1);
+    off += count;
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0E40(slot, off, 0x80FFA888L, LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11625), -1);
+    off += count;
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0E40(slot, off, 0x80FFA888L, LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11626), -1);
+    off += count;
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0E40(slot, off, 0x80FFA888L, LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11627), -1);
+    off += count;
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0E40(slot, off, 0x80FFA888L, LVL_14_ARANOS_PRISON_F70997ba9_FUN_002FC1F0(11599), -1);
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002F0998();
+    LVL_14_ARANOS_PRISON_F70997ba9_FUN_002EDE88();
+    return 2;
+}
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6228(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6228(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(float);
+
+void LVL_14_ARANOS_PRISON_FUN_003AECD8(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[0], v[3]);
+        v[1] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[1], v[4]);
+        v[2] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[2], v[5]);
+        v[9] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[9], v[12]);
+        v[10] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[10], v[13]);
+        v[11] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[11], v[14]);
+        v[20] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6228(v[0]) * v[6];
+        v[21] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(v[1]) * v[7];
+        v[22] = -LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(v[2]) * v[8];
+        v[24] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6228(v[9]) * v[15];
+        v[25] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(v[10]) * v[16];
+        v[26] = -LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(float, float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6228(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6228(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(float);
+extern float LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(float);
+
+void LVL_14_ARANOS_PRISON_FUN_003F6FF0(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[0], v[3]);
+        v[1] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[1], v[4]);
+        v[2] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[2], v[5]);
+        v[9] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[9], v[12]);
+        v[10] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[10], v[13]);
+        v[11] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6C80(v[11], v[14]);
+        v[20] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6228(v[0]) * v[6];
+        v[21] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(v[1]) * v[7];
+        v[22] = -LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(v[2]) * v[8];
+        v[24] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6228(v[9]) * v[15];
+        v[25] = LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(v[10]) * v[16];
+        v[26] = -LVL_14_ARANOS_PRISON_F307ea0ee_FUN_002F6240(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float LVL_14_ARANOS_PRISON_F9e2cd219_FUN_00321FA0(float value);
+extern void LVL_14_ARANOS_PRISON_F9e2cd219_FUN_003283E8(void *out, void *in, void *tmp, int mode, float value);
+extern void LVL_14_ARANOS_PRISON_F9e2cd219_FUN_00393348(void *owner, void *out);
+
+void LVL_14_ARANOS_PRISON_FUN_00393260(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    LVL_14_ARANOS_PRISON_F9e2cd219_FUN_003283E8((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            LVL_14_ARANOS_PRISON_F9e2cd219_FUN_00321FA0(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    LVL_14_ARANOS_PRISON_F9e2cd219_FUN_00393348(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float LVL_14_ARANOS_PRISON_F9e2cd219_FUN_00321FA0(float value);
+extern void LVL_14_ARANOS_PRISON_F9e2cd219_FUN_003283E8(void *out, void *in, void *tmp, int mode, float value);
+extern void LVL_14_ARANOS_PRISON_F9e2cd219_FUN_00395DE8(void *owner, void *out);
+
+void LVL_14_ARANOS_PRISON_FUN_00395D00(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    LVL_14_ARANOS_PRISON_F9e2cd219_FUN_003283E8((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            LVL_14_ARANOS_PRISON_F9e2cd219_FUN_00321FA0(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    LVL_14_ARANOS_PRISON_F9e2cd219_FUN_00395DE8(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}

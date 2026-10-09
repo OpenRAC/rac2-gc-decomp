@@ -28,6 +28,9 @@
     "LVL_12_TODANO_D_00254540": 2442560,
     "LVL_12_TODANO_D_002636F0": 2504432,
     "LVL_12_TODANO_D_0027EE80": 2616960,
+    "LVL_12_TODANO_F01bd4546_FUN_00441F30": 4464432,
+    "LVL_12_TODANO_F01bd4546_FUN_00455700": 4544256,
+    "LVL_12_TODANO_F01bd4546_FUN_00455748": 4544328,
     "LVL_12_TODANO_F03c444112283bc5f_AT0038F798_ROLE00": 2334256,
     "LVL_12_TODANO_F0be97c76_D_00189E20": 1613344,
     "LVL_12_TODANO_F1157be91_D_001A63E8": 1729512,
@@ -42,6 +45,9 @@
     "LVL_12_TODANO_F250a61cf_D_001AD688": 1758856,
     "LVL_12_TODANO_F250a61cf_FUN_00115DA8": 1138088,
     "LVL_12_TODANO_F28c929cadd7aca24_AT002D5BD0_ROLE00": 1613344,
+    "LVL_12_TODANO_F307ea0ee_FUN_002F1F38": 3088184,
+    "LVL_12_TODANO_F307ea0ee_FUN_002F1F50": 3088208,
+    "LVL_12_TODANO_F307ea0ee_FUN_002F2950": 3090768,
     "LVL_12_TODANO_F490e2c59_D_001A79F0": 1735152,
     "LVL_12_TODANO_F490e2c59_D_001AA7F0": 1746928,
     "LVL_12_TODANO_F4e5bde81_D_00189E20": 1613344,
@@ -61,6 +67,14 @@
     "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE00": 1618620,
     "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE01": 2800968,
     "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE02": 2880648,
+    "LVL_12_TODANO_F70997ba9_FUN_002E9AF8": 3054328,
+    "LVL_12_TODANO_F70997ba9_FUN_002E9C18": 3054616,
+    "LVL_12_TODANO_F70997ba9_FUN_002EC728": 3065640,
+    "LVL_12_TODANO_F70997ba9_FUN_002EC738": 3065656,
+    "LVL_12_TODANO_F70997ba9_FUN_002EC7B0": 3065776,
+    "LVL_12_TODANO_F70997ba9_FUN_002ECBD0": 3066832,
+    "LVL_12_TODANO_F70997ba9_FUN_002F7EC0": 3112640,
+    "LVL_12_TODANO_F70997ba9_FUN_00380D80": 3673472,
     "LVL_12_TODANO_F79744baad5ad7f65_AT00456580_ROLE00": 1622228,
     "LVL_12_TODANO_F86f665335d9cb905_AT003C6170_ROLE00": 3954632,
     "LVL_12_TODANO_F9cdc323a4d0c2fbd_AT0039DE20_ROLE00": 3679224,
@@ -70,6 +84,10 @@
     "LVL_12_TODANO_F9cdc323a4d0c2fbd_AT003EE6D0_ROLE00": 3679224,
     "LVL_12_TODANO_F9cdc323a4d0c2fbd_AT003F1970_ROLE00": 3679224,
     "LVL_12_TODANO_F9cdc323a4d0c2fbd_AT00401370_ROLE00": 3679224,
+    "LVL_12_TODANO_F9e2cd219_FUN_0031E218": 3269144,
+    "LVL_12_TODANO_F9e2cd219_FUN_003245B8": 3294648,
+    "LVL_12_TODANO_F9e2cd219_FUN_0038C9E0": 3721696,
+    "LVL_12_TODANO_F9e2cd219_FUN_0038F480": 3732608,
     "LVL_12_TODANO_FUN_00115E38": 1138232,
     "LVL_12_TODANO_FUN_0011AEA0": 1158816,
     "LVL_12_TODANO_FUN_00133688": 1259144,
@@ -100,6 +118,8 @@
     "LVL_12_TODANO_Fc84472d1_D_001ADD98": 1760664,
     "LVL_12_TODANO_Fc84472d1_D_001ADDB8": 1760696,
     "LVL_12_TODANO_Fc84472d1_FUN_00115E38": 1138232,
+    "LVL_12_TODANO_Fc936841d_FUN_002F1928": 3086632,
+    "LVL_12_TODANO_Fc936841d_FUN_002F1958": 3086680,
     "LVL_12_TODANO_Fd1b66aa7_D_001AA550": 1746256,
     "LVL_12_TODANO_Fd1b66aa7_D_001AA568": 1746280,
     "LVL_12_TODANO_Fd1b66aa7_D_001AA578": 1746296,
@@ -164,10 +184,22 @@
   ],
   "functions": [
     {
+      "address": 2796144,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_002AAA70"
+    },
+    {
       "address": 2796392,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
       "symbol": "LVL_12_TODANO_FUN_002AAB68"
+    },
+    {
+      "address": 2800904,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_12_TODANO_FUN_002ABD08"
     },
     {
       "address": 2804712,
@@ -247,6 +279,12 @@
       "symbol": "LVL_12_TODANO_FUN_002D56D8"
     },
     {
+      "address": 2972624,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_12_TODANO_FUN_002D5BD0"
+    },
+    {
       "address": 2975688,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
@@ -269,6 +307,18 @@
       "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
       "size": 188,
       "symbol": "LVL_12_TODANO_FUN_002D6B60"
+    },
+    {
+      "address": 2977496,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_12_TODANO_FUN_002D6ED8"
+    },
+    {
+      "address": 2979600,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_002D7710"
     },
     {
       "address": 2989784,
@@ -310,6 +360,18 @@
       "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
       "symbol": "LVL_12_TODANO_FUN_002DB058"
+    },
+    {
+      "address": 3013352,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_002DFAE8"
+    },
+    {
+      "address": 3013360,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_002DFAF0"
     },
     {
       "address": 3014968,
@@ -357,6 +419,18 @@
       "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
       "symbol": "LVL_12_TODANO_FUN_002F7628"
+    },
+    {
+      "address": 3111384,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_12_TODANO_FUN_002F79D8"
+    },
+    {
+      "address": 3111544,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_12_TODANO_FUN_002F7A78"
     },
     {
       "address": 3112024,
@@ -420,10 +494,22 @@
       "symbol": "LVL_12_TODANO_FUN_0030CF30"
     },
     {
+      "address": 3222144,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_12_TODANO_FUN_00312A80"
+    },
+    {
       "address": 3231504,
       "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
       "symbol": "LVL_12_TODANO_FUN_00314F10"
+    },
+    {
+      "address": 3233568,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_12_TODANO_FUN_00315720"
     },
     {
       "address": 3269184,
@@ -437,6 +523,12 @@
       "symbol": "LVL_12_TODANO_FUN_00322E38"
     },
     {
+      "address": 3303480,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_12_TODANO_FUN_00326838"
+    },
+    {
       "address": 3318608,
       "meaning": "Count non-zero bytes in the resident 0x1C by four unsigned-byte table and clamp the count to zero through 0x28",
       "size": 112,
@@ -446,6 +538,12 @@
       "address": 3332456,
       "size": 32,
       "symbol": "LVL_12_TODANO_FUN_0032D968"
+    },
+    {
+      "address": 3344048,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_12_TODANO_FUN_003306B0"
     },
     {
       "address": 3351912,
@@ -482,503 +580,6 @@
       "meaning": "five independent `cond ? 3 : 0` stores to fixed absolute globals.",
       "size": 148,
       "symbol": "LVL_12_TODANO_FUN_0034BD80"
-    },
-    {
-      "address": 3558224,
-      "meaning": "shared native body of family 62e6ff2b3d3a",
-      "size": 124,
-      "symbol": "LVL_12_TODANO_FUN_00364B50"
-    },
-    {
-      "address": 3605904,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
-      "size": 192,
-      "symbol": "LVL_12_TODANO_FUN_00370590"
-    },
-    {
-      "address": 3624024,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_00374C58"
-    },
-    {
-      "address": 3643248,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_00379770"
-    },
-    {
-      "address": 3649904,
-      "meaning": "shared native body of family 250a61cf2f35cf62",
-      "size": 188,
-      "symbol": "LVL_12_TODANO_FUN_0037B170"
-    },
-    {
-      "address": 3671944,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_00380788"
-    },
-    {
-      "address": 3683936,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
-      "size": 68,
-      "symbol": "LVL_12_TODANO_FUN_00383660"
-    },
-    {
-      "address": 3686672,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_00384110"
-    },
-    {
-      "address": 3692992,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
-      "size": 300,
-      "symbol": "LVL_12_TODANO_FUN_003859C0"
-    },
-    {
-      "address": 3700720,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_003877F0"
-    },
-    {
-      "address": 3723752,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_12_TODANO_FUN_0038D1E8"
-    },
-    {
-      "address": 3733616,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_12_TODANO_FUN_0038F870"
-    },
-    {
-      "address": 3817512,
-      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
-      "size": 76,
-      "symbol": "LVL_12_TODANO_FUN_003A4028"
-    },
-    {
-      "address": 3818888,
-      "size": 16,
-      "symbol": "LVL_12_TODANO_FUN_003A4588"
-    },
-    {
-      "address": 3845928,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_12_TODANO_FUN_003AAF28"
-    },
-    {
-      "address": 3913240,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_003BB618"
-    },
-    {
-      "address": 3962336,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_003C75E0"
-    },
-    {
-      "address": 3981520,
-      "meaning": "one float gate followed by five integer gates; every failing gate",
-      "size": 108,
-      "symbol": "LVL_12_TODANO_FUN_003CC0D0"
-    },
-    {
-      "address": 4009016,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_003D2C38"
-    },
-    {
-      "address": 4050536,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_003DCE68"
-    },
-    {
-      "address": 4082168,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_003E49F8"
-    },
-    {
-      "address": 4107480,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_003EACD8"
-    },
-    {
-      "address": 4119504,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_12_TODANO_FUN_003EDBD0"
-    },
-    {
-      "address": 4121256,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_12_TODANO_FUN_003EE2A8"
-    },
-    {
-      "address": 4143784,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_003F3AA8"
-    },
-    {
-      "address": 4148816,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_003F4E50"
-    },
-    {
-      "address": 4161696,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_003F80A0"
-    },
-    {
-      "address": 4175992,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
-      "size": 88,
-      "symbol": "LVL_12_TODANO_FUN_003FB878"
-    },
-    {
-      "address": 4227808,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_004082E0"
-    },
-    {
-      "address": 4252296,
-      "meaning": "shared native body of family af5b3bc3a678ed5c",
-      "size": 96,
-      "symbol": "LVL_12_TODANO_FUN_0040E288"
-    },
-    {
-      "address": 4302312,
-      "size": 16,
-      "symbol": "LVL_12_TODANO_FUN_0041A5E8"
-    },
-    {
-      "address": 4308464,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_0041BDF0"
-    },
-    {
-      "address": 4335880,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_00422908"
-    },
-    {
-      "address": 4341736,
-      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
-      "size": 36,
-      "symbol": "LVL_12_TODANO_FUN_00423FE8"
-    },
-    {
-      "address": 4351280,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_00426530"
-    },
-    {
-      "address": 4357952,
-      "meaning": "computes a local target direction and stores bounded horizontal and vertical angles through the original math helpers",
-      "size": 252,
-      "symbol": "LVL_12_TODANO_FUN_00427F40"
-    },
-    {
-      "address": 4365904,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_00429E50"
-    },
-    {
-      "address": 4384968,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_12_TODANO_FUN_0042E8C8"
-    },
-    {
-      "address": 4395032,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_12_TODANO_FUN_00431018"
-    },
-    {
-      "address": 4395136,
-      "meaning": "shared native body of family 9a8a2404",
-      "size": 112,
-      "symbol": "LVL_12_TODANO_FUN_00431080"
-    },
-    {
-      "address": 4468328,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_00442E68"
-    },
-    {
-      "address": 4468352,
-      "meaning": "shared native body of family c84472d1b784fec8",
-      "size": 124,
-      "symbol": "LVL_12_TODANO_FUN_00442E80"
-    },
-    {
-      "address": 4468488,
-      "meaning": "shared native body of family eab1f2e53b7d3238",
-      "size": 140,
-      "symbol": "LVL_12_TODANO_FUN_00442F08"
-    },
-    {
-      "address": 4475096,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_004448D8"
-    },
-    {
-      "address": 4475688,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_00444B28"
-    },
-    {
-      "address": 4476960,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_00445020"
-    },
-    {
-      "address": 4511896,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_0044D898"
-    },
-    {
-      "address": 4515056,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_0044E4F0"
-    },
-    {
-      "address": 4522544,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_12_TODANO_FUN_00450230"
-    },
-    {
-      "address": 4544168,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_004556A8"
-    },
-    {
-      "address": 4545344,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_00455B40"
-    },
-    {
-      "address": 4563704,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_0045A2F8"
-    },
-    {
-      "address": 4572808,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_0045C688"
-    },
-    {
-      "address": 4579104,
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_0045DF20"
-    },
-    {
-      "address": 3222144,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_12_TODANO_FUN_00312A80"
-    },
-    {
-      "address": 3303480,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_12_TODANO_FUN_00326838"
-    },
-    {
-      "address": 3560080,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_12_TODANO_FUN_00365290"
-    },
-    {
-      "address": 3720008,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_12_TODANO_FUN_0038C348"
-    },
-    {
-      "address": 3730928,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_12_TODANO_FUN_0038EDF0"
-    },
-    {
-      "address": 3792416,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_0039DE20"
-    },
-    {
-      "address": 3813736,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_003A3168"
-    },
-    {
-      "address": 3957104,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
-      "size": 28,
-      "symbol": "LVL_12_TODANO_FUN_003C6170"
-    },
-    {
-      "address": 3971480,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_003C9998"
-    },
-    {
-      "address": 3996176,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_003CFA10"
-    },
-    {
-      "address": 4122320,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_003EE6D0"
-    },
-    {
-      "address": 4135280,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_003F1970"
-    },
-    {
-      "address": 4199280,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_00401370"
-    },
-    {
-      "address": 4452648,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_12_TODANO_FUN_0043F128"
-    },
-    {
-      "address": 4463576,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_12_TODANO_FUN_00441BD8"
-    },
-    {
-      "address": 4464008,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_12_TODANO_FUN_00441D88"
-    },
-    {
-      "address": 4485352,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_12_TODANO_FUN_004470E8"
-    },
-    {
-      "address": 4518160,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_12_TODANO_FUN_0044F110"
-    },
-    {
-      "address": 4547968,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_12_TODANO_FUN_00456580"
-    },
-    {
-      "address": 2800904,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_12_TODANO_FUN_002ABD08"
-    },
-    {
-      "address": 2972624,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_12_TODANO_FUN_002D5BD0"
-    },
-    {
-      "address": 2977496,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_12_TODANO_FUN_002D6ED8"
-    },
-    {
-      "address": 3691736,
-      "meaning": "Clear corresponding indexed words and decrement a record count",
-      "size": 48,
-      "symbol": "LVL_12_TODANO_FUN_003854D8"
-    },
-    {
-      "address": 3733400,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_12_TODANO_FUN_0038F798"
-    },
-    {
-      "address": 2796144,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_002AAA70"
-    },
-    {
-      "address": 2979600,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_002D7710"
-    },
-    {
-      "address": 3013352,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_002DFAE8"
-    },
-    {
-      "address": 3013360,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_12_TODANO_FUN_002DFAF0"
-    },
-    {
-      "address": 3111384,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_12_TODANO_FUN_002F79D8"
-    },
-    {
-      "address": 3111544,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_12_TODANO_FUN_002F7A78"
-    },
-    {
-      "address": 3233568,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_12_TODANO_FUN_00315720"
-    },
-    {
-      "address": 3344048,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_12_TODANO_FUN_003306B0"
     },
     {
       "address": 3457232,
@@ -1035,16 +636,420 @@
       "symbol": "LVL_12_TODANO_FUN_003543F0"
     },
     {
+      "address": 3507784,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_12_TODANO_FUN_00358648"
+    },
+    {
       "address": 3530936,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_12_TODANO_FUN_0035E0B8"
     },
     {
+      "address": 3558224,
+      "meaning": "shared native body of family 62e6ff2b3d3a",
+      "size": 124,
+      "symbol": "LVL_12_TODANO_FUN_00364B50"
+    },
+    {
+      "address": 3560080,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_12_TODANO_FUN_00365290"
+    },
+    {
+      "address": 3605904,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
+      "size": 192,
+      "symbol": "LVL_12_TODANO_FUN_00370590"
+    },
+    {
+      "address": 3624024,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_00374C58"
+    },
+    {
+      "address": 3643248,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_00379770"
+    },
+    {
+      "address": 3649904,
+      "meaning": "shared native body of family 250a61cf2f35cf62",
+      "size": 188,
+      "symbol": "LVL_12_TODANO_FUN_0037B170"
+    },
+    {
+      "address": 3671944,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_00380788"
+    },
+    {
+      "address": 3683936,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
+      "size": 68,
+      "symbol": "LVL_12_TODANO_FUN_00383660"
+    },
+    {
+      "address": 3686672,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_00384110"
+    },
+    {
+      "address": 3691736,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_12_TODANO_FUN_003854D8"
+    },
+    {
+      "address": 3692992,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
+      "size": 300,
+      "symbol": "LVL_12_TODANO_FUN_003859C0"
+    },
+    {
+      "address": 3700720,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_003877F0"
+    },
+    {
+      "address": 3720008,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_12_TODANO_FUN_0038C348"
+    },
+    {
+      "address": 3721464,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_12_TODANO_FUN_0038C8F8"
+    },
+    {
       "address": 3722528,
       "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
       "size": 164,
       "symbol": "LVL_12_TODANO_FUN_0038CD20"
+    },
+    {
+      "address": 3723752,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_12_TODANO_FUN_0038D1E8"
+    },
+    {
+      "address": 3730928,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_12_TODANO_FUN_0038EDF0"
+    },
+    {
+      "address": 3732376,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_12_TODANO_FUN_0038F398"
+    },
+    {
+      "address": 3733400,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_12_TODANO_FUN_0038F798"
+    },
+    {
+      "address": 3733616,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_12_TODANO_FUN_0038F870"
+    },
+    {
+      "address": 3792416,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_0039DE20"
+    },
+    {
+      "address": 3813736,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_003A3168"
+    },
+    {
+      "address": 3817512,
+      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
+      "size": 76,
+      "symbol": "LVL_12_TODANO_FUN_003A4028"
+    },
+    {
+      "address": 3818888,
+      "size": 16,
+      "symbol": "LVL_12_TODANO_FUN_003A4588"
+    },
+    {
+      "address": 3843384,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_12_TODANO_FUN_003AA538"
+    },
+    {
+      "address": 3844464,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_12_TODANO_FUN_003AA970"
+    },
+    {
+      "address": 3845928,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_12_TODANO_FUN_003AAF28"
+    },
+    {
+      "address": 3913240,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_003BB618"
+    },
+    {
+      "address": 3913848,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_12_TODANO_FUN_003BB878"
+    },
+    {
+      "address": 3957104,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_12_TODANO_FUN_003C6170"
+    },
+    {
+      "address": 3962336,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_003C75E0"
+    },
+    {
+      "address": 3963232,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_12_TODANO_FUN_003C7960"
+    },
+    {
+      "address": 3971480,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_003C9998"
+    },
+    {
+      "address": 3981520,
+      "meaning": "one float gate followed by five integer gates; every failing gate",
+      "size": 108,
+      "symbol": "LVL_12_TODANO_FUN_003CC0D0"
+    },
+    {
+      "address": 3996176,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_003CFA10"
+    },
+    {
+      "address": 4009016,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_003D2C38"
+    },
+    {
+      "address": 4011664,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_12_TODANO_FUN_003D3690"
+    },
+    {
+      "address": 4050536,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_003DCE68"
+    },
+    {
+      "address": 4082168,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_003E49F8"
+    },
+    {
+      "address": 4107480,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_003EACD8"
+    },
+    {
+      "address": 4116960,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_12_TODANO_FUN_003ED1E0"
+    },
+    {
+      "address": 4118040,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_12_TODANO_FUN_003ED618"
+    },
+    {
+      "address": 4119504,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_12_TODANO_FUN_003EDBD0"
+    },
+    {
+      "address": 4121256,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_12_TODANO_FUN_003EE2A8"
+    },
+    {
+      "address": 4122320,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_003EE6D0"
+    },
+    {
+      "address": 4135280,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_003F1970"
+    },
+    {
+      "address": 4143784,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_003F3AA8"
+    },
+    {
+      "address": 4148816,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_003F4E50"
+    },
+    {
+      "address": 4151592,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_12_TODANO_FUN_003F5928"
+    },
+    {
+      "address": 4161696,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_003F80A0"
+    },
+    {
+      "address": 4175992,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
+      "size": 88,
+      "symbol": "LVL_12_TODANO_FUN_003FB878"
+    },
+    {
+      "address": 4199280,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_00401370"
+    },
+    {
+      "address": 4227808,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_004082E0"
+    },
+    {
+      "address": 4252296,
+      "meaning": "shared native body of family af5b3bc3a678ed5c",
+      "size": 96,
+      "symbol": "LVL_12_TODANO_FUN_0040E288"
+    },
+    {
+      "address": 4302312,
+      "size": 16,
+      "symbol": "LVL_12_TODANO_FUN_0041A5E8"
+    },
+    {
+      "address": 4308464,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_0041BDF0"
+    },
+    {
+      "address": 4335880,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_00422908"
+    },
+    {
+      "address": 4336776,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_12_TODANO_FUN_00422C88"
+    },
+    {
+      "address": 4341736,
+      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
+      "size": 36,
+      "symbol": "LVL_12_TODANO_FUN_00423FE8"
+    },
+    {
+      "address": 4351280,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_00426530"
+    },
+    {
+      "address": 4357952,
+      "meaning": "computes a local target direction and stores bounded horizontal and vertical angles through the original math helpers",
+      "size": 252,
+      "symbol": "LVL_12_TODANO_FUN_00427F40"
+    },
+    {
+      "address": 4365904,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_00429E50"
+    },
+    {
+      "address": 4384864,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_12_TODANO_FUN_0042E860"
+    },
+    {
+      "address": 4384968,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_12_TODANO_FUN_0042E8C8"
+    },
+    {
+      "address": 4395032,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_12_TODANO_FUN_00431018"
+    },
+    {
+      "address": 4395136,
+      "meaning": "shared native body of family 9a8a2404",
+      "size": 112,
+      "symbol": "LVL_12_TODANO_FUN_00431080"
+    },
+    {
+      "address": 4452648,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_0043F128"
+    },
+    {
+      "address": 4463576,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_12_TODANO_FUN_00441BD8"
+    },
+    {
+      "address": 4464008,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_12_TODANO_FUN_00441D88"
     },
     {
       "address": 4467448,
@@ -1071,16 +1076,54 @@
       "symbol": "LVL_12_TODANO_FUN_00442DA8"
     },
     {
+      "address": 4468328,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_00442E68"
+    },
+    {
       "address": 4468344,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_12_TODANO_FUN_00442E78"
     },
     {
+      "address": 4468352,
+      "meaning": "shared native body of family c84472d1b784fec8",
+      "size": 124,
+      "symbol": "LVL_12_TODANO_FUN_00442E80"
+    },
+    {
+      "address": 4468488,
+      "meaning": "shared native body of family eab1f2e53b7d3238",
+      "size": 140,
+      "symbol": "LVL_12_TODANO_FUN_00442F08"
+    },
+    {
+      "address": 4475096,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_004448D8"
+    },
+    {
+      "address": 4475688,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_00444B28"
+    },
+    {
+      "address": 4476960,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_00445020"
+    },
+    {
       "address": 4479040,
       "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
       "symbol": "LVL_12_TODANO_FUN_00445840"
+    },
+    {
+      "address": 4485352,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_12_TODANO_FUN_004470E8"
     },
     {
       "address": 4497984,
@@ -1101,6 +1144,11 @@
       "symbol": "LVL_12_TODANO_FUN_0044A418"
     },
     {
+      "address": 4511896,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_0044D898"
+    },
+    {
       "address": 4512568,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1111,6 +1159,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_12_TODANO_FUN_0044E450"
+    },
+    {
+      "address": 4515056,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_0044E4F0"
     },
     {
       "address": 4515608,
@@ -1125,6 +1178,12 @@
       "symbol": "LVL_12_TODANO_FUN_0044E880"
     },
     {
+      "address": 4518160,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_12_TODANO_FUN_0044F110"
+    },
+    {
       "address": 4519472,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1135,6 +1194,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_12_TODANO_FUN_0044F650"
+    },
+    {
+      "address": 4522544,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_12_TODANO_FUN_00450230"
     },
     {
       "address": 4538224,
@@ -1161,6 +1226,12 @@
       "symbol": "LVL_12_TODANO_FUN_00455558"
     },
     {
+      "address": 4544168,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_004556A8"
+    },
+    {
       "address": 4544248,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1173,16 +1244,49 @@
       "symbol": "LVL_12_TODANO_FUN_00455740"
     },
     {
+      "address": 4545344,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_12_TODANO_FUN_00455B40"
+    },
+    {
+      "address": 4547968,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_12_TODANO_FUN_00456580"
+    },
+    {
+      "address": 4557912,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_12_TODANO_FUN_00458C58"
+    },
+    {
+      "address": 4563704,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_0045A2F8"
+    },
+    {
       "address": 4564632,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_12_TODANO_FUN_0045A698"
     },
     {
+      "address": 4572808,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_0045C688"
+    },
+    {
       "address": 4573064,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_12_TODANO_FUN_0045C788"
+    },
+    {
+      "address": 4579104,
+      "size": 8,
+      "symbol": "LVL_12_TODANO_FUN_0045DF20"
     },
     {
       "address": 4579272,

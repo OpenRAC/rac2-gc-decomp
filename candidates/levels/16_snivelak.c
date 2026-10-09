@@ -3235,3 +3235,439 @@ int LVL_16_SNIVELAK_FUN_00453270(int *owner)
     return result;
 }
 
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(char *local, char *first, char *second);
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E7488(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_16_SNIVELAK_FUN_0039E568(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E7488((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(char *local, char *first, char *second);
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E7488(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_16_SNIVELAK_FUN_003B0FB0(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E7488((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(char *local, char *first, char *second);
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E7488(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_16_SNIVELAK_FUN_003BA748(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E7488((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(char *local, char *first, char *second);
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E7488(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_16_SNIVELAK_FUN_003C6890(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E7488((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(char *local, char *first, char *second);
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E7488(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_16_SNIVELAK_FUN_003D8DC0(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E7488((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(char *local, char *first, char *second);
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E7488(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_16_SNIVELAK_FUN_003E2800(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E7488((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(char *local, char *first, char *second);
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E7488(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_16_SNIVELAK_FUN_0041B318(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E7488((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(char *local, char *first, char *second);
+extern void LVL_16_SNIVELAK_Fc936841d_FUN_002E7488(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_16_SNIVELAK_FUN_004236C0(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_16_SNIVELAK_Fc936841d_FUN_002E7488((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+
+
+
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_004371D8(char *p, int v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(char *p, int v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(char *p, int v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(char *p, int v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(char *p, int v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(char *p, int v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(char *p, int v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(char *p, float v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(char *p, float v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(char *p, float v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(char *p, float v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(char *p, float v);
+extern void LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(char *p, float v);
+
+void LVL_16_SNIVELAK_FUN_0044DF00(char *self, int x)
+{
+    char *p1, *p2, *p3, *p4, *p5, *p6;
+
+    *(s32 *)(self + 5492) = x;
+    if (*(s32 *)(self + 5496) != 0) {
+        *(s32 *)(self + 5496) = 0;
+        LVL_16_SNIVELAK_F01bd4546_FUN_004371D8(self + 1464, 0);
+        p1 = self + 3052;
+        p2 = self + 3188;
+        p3 = self + 3324;
+        p4 = self + 3460;
+        p5 = self + 3596;
+        p6 = self + 3732;
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(p1, 1);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(p2, 1);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(p3, 1);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(p4, 1);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(p5, 1);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8(p6, 1);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(p1, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(p2, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(p3, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(p4, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(p5, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0(p6, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+    }
+}
+extern void LVL_16_SNIVELAK_F70997ba9_FUN_003731D0(int a, int b);
+extern void LVL_16_SNIVELAK_F70997ba9_FUN_002DF6C0(int a);
+extern void *LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(int id);
+extern int LVL_16_SNIVELAK_F70997ba9_FUN_002E2378(void *p, int i);
+extern void LVL_16_SNIVELAK_F70997ba9_FUN_002E2300(void);
+extern void LVL_16_SNIVELAK_F70997ba9_FUN_002E2798(int a, int b, long c, void *d, int e);
+extern void LVL_16_SNIVELAK_F70997ba9_FUN_002E22F0(void);
+extern void LVL_16_SNIVELAK_F70997ba9_FUN_002DF7E0(void);
+
+int LVL_16_SNIVELAK_FUN_0034AAD8(int *arg0)
+{
+    int min;
+    int v;
+    int slot;
+    int count;
+    int off;
+
+    LVL_16_SNIVELAK_F70997ba9_FUN_003731D0(66, 68);
+    LVL_16_SNIVELAK_F70997ba9_FUN_003731D0(71, 11);
+    LVL_16_SNIVELAK_F70997ba9_FUN_002DF6C0(0);
+    min = LVL_16_SNIVELAK_F70997ba9_FUN_002E2378(LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11613), -1);
+    v = LVL_16_SNIVELAK_F70997ba9_FUN_002E2378(LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11625), -1);
+    if (v >= min)
+        min = v;
+    if (*(int *)0x1A79F0 != 0) {
+        v = LVL_16_SNIVELAK_F70997ba9_FUN_002E2378(LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11614), -1);
+        if (v >= min)
+            min = v;
+    }
+    v = LVL_16_SNIVELAK_F70997ba9_FUN_002E2378(LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11626), -1);
+    if (v >= min)
+        min = v;
+    v = LVL_16_SNIVELAK_F70997ba9_FUN_002E2378(LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11627), -1);
+    if (v >= min)
+        min = v;
+    v = LVL_16_SNIVELAK_F70997ba9_FUN_002E2378(LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11599), -1);
+    if (v >= min)
+        min = v;
+    slot = (arg0[8] - min) >> 1;
+    if (slot <= 1)
+        slot = 2;
+    count = arg0[9] / (*(int *)0x1A79F0 != 0 ? 7 : 6);
+    LVL_16_SNIVELAK_F70997ba9_FUN_002E2300();
+    off = count - 6;
+    LVL_16_SNIVELAK_F70997ba9_FUN_002E2798(slot, off, 0x80FFA888L, LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11613), -1);
+    off += count;
+    LVL_16_SNIVELAK_F70997ba9_FUN_002E2798(slot, off, 0x80FFA888L, LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11625), -1);
+    off += count;
+    LVL_16_SNIVELAK_F70997ba9_FUN_002E2798(slot, off, 0x80FFA888L, LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11626), -1);
+    off += count;
+    LVL_16_SNIVELAK_F70997ba9_FUN_002E2798(slot, off, 0x80FFA888L, LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11627), -1);
+    off += count;
+    LVL_16_SNIVELAK_F70997ba9_FUN_002E2798(slot, off, 0x80FFA888L, LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60(11599), -1);
+    LVL_16_SNIVELAK_F70997ba9_FUN_002E22F0();
+    LVL_16_SNIVELAK_F70997ba9_FUN_002DF7E0();
+    return 2;
+}
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(float);
+
+void LVL_16_SNIVELAK_FUN_0039E130(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[0], v[3]);
+        v[1] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[1], v[4]);
+        v[2] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[2], v[5]);
+        v[9] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[9], v[12]);
+        v[10] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[10], v[13]);
+        v[11] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[11], v[14]);
+        v[20] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98(v[0]) * v[6];
+        v[21] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(v[1]) * v[7];
+        v[22] = -LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(v[2]) * v[8];
+        v[24] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98(v[9]) * v[15];
+        v[25] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(v[10]) * v[16];
+        v[26] = -LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(float, float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(float);
+extern float LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(float);
+
+void LVL_16_SNIVELAK_FUN_003D8988(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[0], v[3]);
+        v[1] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[1], v[4]);
+        v[2] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[2], v[5]);
+        v[9] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[9], v[12]);
+        v[10] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[10], v[13]);
+        v[11] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0(v[11], v[14]);
+        v[20] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98(v[0]) * v[6];
+        v[21] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(v[1]) * v[7];
+        v[22] = -LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(v[2]) * v[8];
+        v[24] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98(v[9]) * v[15];
+        v[25] = LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(v[10]) * v[16];
+        v[26] = -LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float LVL_16_SNIVELAK_F9e2cd219_FUN_00313E18(float value);
+extern void LVL_16_SNIVELAK_F9e2cd219_FUN_0031A038(void *out, void *in, void *tmp, int mode, float value);
+extern void LVL_16_SNIVELAK_F9e2cd219_FUN_003815F8(void *owner, void *out);
+
+void LVL_16_SNIVELAK_FUN_00381510(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    LVL_16_SNIVELAK_F9e2cd219_FUN_0031A038((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            LVL_16_SNIVELAK_F9e2cd219_FUN_00313E18(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    LVL_16_SNIVELAK_F9e2cd219_FUN_003815F8(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float LVL_16_SNIVELAK_F9e2cd219_FUN_00313E18(float value);
+extern void LVL_16_SNIVELAK_F9e2cd219_FUN_0031A038(void *out, void *in, void *tmp, int mode, float value);
+extern void LVL_16_SNIVELAK_F9e2cd219_FUN_00384098(void *owner, void *out);
+
+void LVL_16_SNIVELAK_FUN_00383FB0(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    LVL_16_SNIVELAK_F9e2cd219_FUN_0031A038((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            LVL_16_SNIVELAK_F9e2cd219_FUN_00313E18(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    LVL_16_SNIVELAK_F9e2cd219_FUN_00384098(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}

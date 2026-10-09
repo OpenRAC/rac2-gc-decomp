@@ -27,6 +27,9 @@
     "LVL_6_NOTAK_D_00254A30": 2443824,
     "LVL_6_NOTAK_D_0026C7F0": 2541552,
     "LVL_6_NOTAK_D_00287F80": 2654080,
+    "LVL_6_NOTAK_F01bd4546_FUN_0047D3F0": 4707312,
+    "LVL_6_NOTAK_F01bd4546_FUN_00490BC0": 4787136,
+    "LVL_6_NOTAK_F01bd4546_FUN_00490C08": 4787208,
     "LVL_6_NOTAK_F023cd14a_D_001B22D8": 1778392,
     "LVL_6_NOTAK_F023cd14a_D_001B22E8": 1778408,
     "LVL_6_NOTAK_F023cd14a_D_001B22F8": 1778424,
@@ -57,6 +60,9 @@
     "LVL_6_NOTAK_F25780968_D_001A7354": 1733460,
     "LVL_6_NOTAK_F25780968_D_001B2F88": 1781640,
     "LVL_6_NOTAK_F28c929cadd7aca24_AT00311BF0_ROLE00": 1613344,
+    "LVL_6_NOTAK_F307ea0ee_FUN_0032DBB8": 3333048,
+    "LVL_6_NOTAK_F307ea0ee_FUN_0032DBD0": 3333072,
+    "LVL_6_NOTAK_F307ea0ee_FUN_0032E5D0": 3335632,
     "LVL_6_NOTAK_F32969de2_D_001AC000": 1753088,
     "LVL_6_NOTAK_F32969de2_D_001B2820": 1779744,
     "LVL_6_NOTAK_F32969de2_D_001B2824": 1779748,
@@ -85,6 +91,14 @@
     "LVL_6_NOTAK_F6b0741c38bf00fee_AT002E5788_ROLE00": 1618620,
     "LVL_6_NOTAK_F6b0741c38bf00fee_AT002E5788_ROLE01": 3037128,
     "LVL_6_NOTAK_F6b0741c38bf00fee_AT002E5788_ROLE02": 3118040,
+    "LVL_6_NOTAK_F70997ba9_FUN_00325AC8": 3300040,
+    "LVL_6_NOTAK_F70997ba9_FUN_00325BE8": 3300328,
+    "LVL_6_NOTAK_F70997ba9_FUN_003286F8": 3311352,
+    "LVL_6_NOTAK_F70997ba9_FUN_00328708": 3311368,
+    "LVL_6_NOTAK_F70997ba9_FUN_00328780": 3311488,
+    "LVL_6_NOTAK_F70997ba9_FUN_00328BA0": 3312544,
+    "LVL_6_NOTAK_F70997ba9_FUN_00333B40": 3357504,
+    "LVL_6_NOTAK_F70997ba9_FUN_003BC960": 3918176,
     "LVL_6_NOTAK_F74e6a904_D_001A8F10": 1740560,
     "LVL_6_NOTAK_F74e6a904_D_001B2370": 1778544,
     "LVL_6_NOTAK_F74e6a904_D_001B2374": 1778548,
@@ -101,6 +115,10 @@
     "LVL_6_NOTAK_F9cdc323a4d0c2fbd_AT0042C108_ROLE00": 3932768,
     "LVL_6_NOTAK_F9cdc323a4d0c2fbd_AT00431660_ROLE00": 3932768,
     "LVL_6_NOTAK_F9cdc323a4d0c2fbd_AT004454D8_ROLE00": 3932768,
+    "LVL_6_NOTAK_F9e2cd219_FUN_0035A598": 3515800,
+    "LVL_6_NOTAK_F9e2cd219_FUN_003613A8": 3543976,
+    "LVL_6_NOTAK_F9e2cd219_FUN_003CA050": 3973200,
+    "LVL_6_NOTAK_F9e2cd219_FUN_003CCAF0": 3984112,
     "LVL_6_NOTAK_FUN_00115DA8": 1138088,
     "LVL_6_NOTAK_FUN_00115E38": 1138232,
     "LVL_6_NOTAK_FUN_0011AEA0": 1158816,
@@ -133,6 +151,8 @@
     "LVL_6_NOTAK_Fb1b523716b470b36_AT003CC460_ROLE00": 3331528,
     "LVL_6_NOTAK_Fb1b523716b470b36_AT003CC460_ROLE01": 3331576,
     "LVL_6_NOTAK_Fc68ad20a_D_0018C2B8": 1622712,
+    "LVL_6_NOTAK_Fc936841d_FUN_0032D5C8": 3331528,
+    "LVL_6_NOTAK_Fc936841d_FUN_0032D5F8": 3331576,
     "LVL_6_NOTAK_Fe77c6258_D_001ADD18": 1760536,
     "LVL_6_NOTAK_Fe77c6258_D_001ADD60": 1760608,
     "LVL_6_NOTAK_Fe77c6258_FUN_00115E38": 1138232,
@@ -198,10 +218,22 @@
   ],
   "functions": [
     {
+      "address": 3032304,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_002E44F0"
+    },
+    {
       "address": 3032552,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
       "symbol": "LVL_6_NOTAK_FUN_002E45E8"
+    },
+    {
+      "address": 3037064,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_6_NOTAK_FUN_002E5788"
     },
     {
       "address": 3040880,
@@ -281,6 +313,12 @@
       "symbol": "LVL_6_NOTAK_FUN_003116F8"
     },
     {
+      "address": 3218416,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_6_NOTAK_FUN_00311BF0"
+    },
+    {
       "address": 3221480,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
@@ -303,6 +341,18 @@
       "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
       "size": 188,
       "symbol": "LVL_6_NOTAK_FUN_00312B80"
+    },
+    {
+      "address": 3223288,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_6_NOTAK_FUN_00312EF8"
+    },
+    {
+      "address": 3225392,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_00313730"
     },
     {
       "address": 3235496,
@@ -344,6 +394,18 @@
       "meaning": "shared native body of family 34e74db3063e7a24",
       "size": 108,
       "symbol": "LVL_6_NOTAK_FUN_00317100"
+    },
+    {
+      "address": 3259064,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_0031BAB8"
+    },
+    {
+      "address": 3259072,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_0031BAC0"
     },
     {
       "address": 3260680,
@@ -417,6 +479,18 @@
       "symbol": "LVL_6_NOTAK_FUN_003332A8"
     },
     {
+      "address": 3356248,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_6_NOTAK_FUN_00333658"
+    },
+    {
+      "address": 3356408,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_003336F8"
+    },
+    {
       "address": 3356888,
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_003338D8"
@@ -483,6 +557,12 @@
       "symbol": "LVL_6_NOTAK_FUN_00348868"
     },
     {
+      "address": 3468800,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_6_NOTAK_FUN_0034EE00"
+    },
+    {
       "address": 3473296,
       "meaning": "shared native body of family 0f425722ec0b6d0f",
       "size": 140,
@@ -493,6 +573,12 @@
       "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
       "symbol": "LVL_6_NOTAK_FUN_00351290"
+    },
+    {
+      "address": 3480224,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_6_NOTAK_FUN_00351AA0"
     },
     {
       "address": 3515840,
@@ -517,6 +603,12 @@
       "symbol": "LVL_6_NOTAK_FUN_00360DE0"
     },
     {
+      "address": 3554248,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_6_NOTAK_FUN_00363BC8"
+    },
+    {
       "address": 3566936,
       "meaning": "Count non-zero bytes in the resident 0x1C by four unsigned-byte table and clamp the count to zero through 0x28",
       "size": 112,
@@ -526,6 +618,12 @@
       "address": 3580536,
       "size": 32,
       "symbol": "LVL_6_NOTAK_FUN_0036A278"
+    },
+    {
+      "address": 3591856,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_6_NOTAK_FUN_0036CEB0"
     },
     {
       "address": 3595888,
@@ -564,6 +662,72 @@
       "symbol": "LVL_6_NOTAK_FUN_003877B0"
     },
     {
+      "address": 3701504,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_00387B00"
+    },
+    {
+      "address": 3702528,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_00387F00"
+    },
+    {
+      "address": 3703200,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_003881A0"
+    },
+    {
+      "address": 3724696,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_0038D598"
+    },
+    {
+      "address": 3725064,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_0038D708"
+    },
+    {
+      "address": 3725248,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_0038D7C0"
+    },
+    {
+      "address": 3726192,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_0038DB70"
+    },
+    {
+      "address": 3726448,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_0038DC70"
+    },
+    {
+      "address": 3735072,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_0038FE20"
+    },
+    {
+      "address": 3752056,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_6_NOTAK_FUN_00394078"
+    },
+    {
+      "address": 3775208,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_00399AE8"
+    },
+    {
       "address": 3794304,
       "meaning": "shared native body of family 412a47f9525bd6a2",
       "size": 112,
@@ -574,6 +738,12 @@
       "meaning": "shared native body of family 62e6ff2b3d3a",
       "size": 124,
       "symbol": "LVL_6_NOTAK_FUN_003A06A0"
+    },
+    {
+      "address": 3804784,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_6_NOTAK_FUN_003A0E70"
     },
     {
       "address": 3850608,
@@ -644,6 +814,12 @@
       "symbol": "LVL_6_NOTAK_FUN_003C1F78"
     },
     {
+      "address": 3945280,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_003C3340"
+    },
+    {
       "address": 3946592,
       "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
@@ -655,10 +831,46 @@
       "symbol": "LVL_6_NOTAK_FUN_003C5690"
     },
     {
+      "address": 3971512,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_6_NOTAK_FUN_003C99B8"
+    },
+    {
+      "address": 3972968,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_6_NOTAK_FUN_003C9F68"
+    },
+    {
+      "address": 3974032,
+      "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
+      "size": 164,
+      "symbol": "LVL_6_NOTAK_FUN_003CA390"
+    },
+    {
       "address": 3975256,
       "meaning": "shared native body of family a04928c6",
       "size": 144,
       "symbol": "LVL_6_NOTAK_FUN_003CA858"
+    },
+    {
+      "address": 3982432,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_6_NOTAK_FUN_003CC460"
+    },
+    {
+      "address": 3983880,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_6_NOTAK_FUN_003CCA08"
+    },
+    {
+      "address": 3984904,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_6_NOTAK_FUN_003CCE08"
     },
     {
       "address": 3985120,
@@ -667,10 +879,34 @@
       "symbol": "LVL_6_NOTAK_FUN_003CCEE0"
     },
     {
+      "address": 4043920,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_003DB490"
+    },
+    {
+      "address": 4063088,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_003DFF70"
+    },
+    {
       "address": 4067664,
       "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
       "size": 76,
       "symbol": "LVL_6_NOTAK_FUN_003E1150"
+    },
+    {
+      "address": 4097112,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_6_NOTAK_FUN_003E8458"
+    },
+    {
+      "address": 4098192,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_6_NOTAK_FUN_003E8890"
     },
     {
       "address": 4099656,
@@ -685,10 +921,22 @@
       "symbol": "LVL_6_NOTAK_FUN_003FA500"
     },
     {
+      "address": 4171616,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_6_NOTAK_FUN_003FA760"
+    },
+    {
       "address": 4194496,
       "meaning": "shared native body of family 32969de2c02196ef",
       "size": 184,
       "symbol": "LVL_6_NOTAK_FUN_004000C0"
+    },
+    {
+      "address": 4217128,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_6_NOTAK_FUN_00405928"
     },
     {
       "address": 4222360,
@@ -697,16 +945,40 @@
       "symbol": "LVL_6_NOTAK_FUN_00406D98"
     },
     {
+      "address": 4223256,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_6_NOTAK_FUN_00407118"
+    },
+    {
+      "address": 4233928,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_00409AC8"
+    },
+    {
       "address": 4243968,
       "meaning": "one float gate followed by five integer gates; every failing gate",
       "size": 108,
       "symbol": "LVL_6_NOTAK_FUN_0040C200"
     },
     {
+      "address": 4256064,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_0040F140"
+    },
+    {
       "address": 4268904,
       "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
       "size": 136,
       "symbol": "LVL_6_NOTAK_FUN_00412368"
+    },
+    {
+      "address": 4271552,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_6_NOTAK_FUN_00412DC0"
     },
     {
       "address": 4297232,
@@ -733,6 +1005,18 @@
       "symbol": "LVL_6_NOTAK_FUN_00428810"
     },
     {
+      "address": 4369088,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_6_NOTAK_FUN_0042AAC0"
+    },
+    {
+      "address": 4370168,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_6_NOTAK_FUN_0042AEF8"
+    },
+    {
       "address": 4371632,
       "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
       "size": 144,
@@ -743,6 +1027,18 @@
       "meaning": "shared native body of family 5a97ab89858c",
       "size": 104,
       "symbol": "LVL_6_NOTAK_FUN_0042BCE0"
+    },
+    {
+      "address": 4374792,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_0042C108"
+    },
+    {
+      "address": 4396640,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_00431660"
     },
     {
       "address": 4405144,
@@ -757,6 +1053,12 @@
       "symbol": "LVL_6_NOTAK_FUN_00434B40"
     },
     {
+      "address": 4412952,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_6_NOTAK_FUN_00435618"
+    },
+    {
       "address": 4424656,
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_004383D0"
@@ -766,6 +1068,12 @@
       "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
       "symbol": "LVL_6_NOTAK_FUN_0043BBA8"
+    },
+    {
+      "address": 4478168,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_004454D8"
     },
     {
       "address": 4524808,
@@ -785,6 +1093,12 @@
       "symbol": "LVL_6_NOTAK_FUN_0045F470"
     },
     {
+      "address": 4585456,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_6_NOTAK_FUN_0045F7F0"
+    },
+    {
       "address": 4590416,
       "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
       "size": 36,
@@ -794,6 +1108,12 @@
       "address": 4601312,
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_004635E0"
+    },
+    {
+      "address": 4624928,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_6_NOTAK_FUN_00469220"
     },
     {
       "address": 4625032,
@@ -814,9 +1134,57 @@
       "symbol": "LVL_6_NOTAK_FUN_0046C128"
     },
     {
+      "address": 4694576,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_0047A230"
+    },
+    {
+      "address": 4706456,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_6_NOTAK_FUN_0047D098"
+    },
+    {
+      "address": 4706888,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_6_NOTAK_FUN_0047D248"
+    },
+    {
+      "address": 4710328,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_0047DFB8"
+    },
+    {
+      "address": 4710336,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_0047DFC0"
+    },
+    {
+      "address": 4710680,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_0047E118"
+    },
+    {
+      "address": 4711016,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_0047E268"
+    },
+    {
       "address": 4711208,
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_0047E328"
+    },
+    {
+      "address": 4711224,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_0047E338"
     },
     {
       "address": 4711232,
@@ -846,341 +1214,16 @@
       "symbol": "LVL_6_NOTAK_FUN_004804E0"
     },
     {
-      "address": 4754776,
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_00488D58"
-    },
-    {
-      "address": 4757936,
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_004899B0"
-    },
-    {
-      "address": 4765424,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_6_NOTAK_FUN_0048B6F0"
-    },
-    {
-      "address": 4787048,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_00490B68"
-    },
-    {
-      "address": 4788224,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_00491000"
-    },
-    {
-      "address": 4806584,
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_004957B8"
-    },
-    {
-      "address": 4815688,
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_00497B48"
-    },
-    {
-      "address": 4821984,
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_004993E0"
-    },
-    {
-      "address": 3468800,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_6_NOTAK_FUN_0034EE00"
-    },
-    {
-      "address": 3554248,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_6_NOTAK_FUN_00363BC8"
-    },
-    {
-      "address": 3804784,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_6_NOTAK_FUN_003A0E70"
-    },
-    {
-      "address": 3971512,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_6_NOTAK_FUN_003C99B8"
-    },
-    {
-      "address": 3982432,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_6_NOTAK_FUN_003CC460"
-    },
-    {
-      "address": 4043920,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_003DB490"
-    },
-    {
-      "address": 4063088,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_003DFF70"
-    },
-    {
-      "address": 4217128,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "address": 4721920,
+      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
-      "symbol": "LVL_6_NOTAK_FUN_00405928"
-    },
-    {
-      "address": 4233928,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_00409AC8"
-    },
-    {
-      "address": 4256064,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_0040F140"
-    },
-    {
-      "address": 4374792,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_0042C108"
-    },
-    {
-      "address": 4396640,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_00431660"
-    },
-    {
-      "address": 4478168,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_004454D8"
-    },
-    {
-      "address": 4694576,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_6_NOTAK_FUN_0047A230"
-    },
-    {
-      "address": 4706456,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_6_NOTAK_FUN_0047D098"
-    },
-    {
-      "address": 4706888,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_6_NOTAK_FUN_0047D248"
+      "symbol": "LVL_6_NOTAK_FUN_00480D00"
     },
     {
       "address": 4728232,
       "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
       "size": 20,
       "symbol": "LVL_6_NOTAK_FUN_004825A8"
-    },
-    {
-      "address": 4761040,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_6_NOTAK_FUN_0048A5D0"
-    },
-    {
-      "address": 4790848,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_00491A40"
-    },
-    {
-      "address": 3037064,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_6_NOTAK_FUN_002E5788"
-    },
-    {
-      "address": 3218416,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_6_NOTAK_FUN_00311BF0"
-    },
-    {
-      "address": 3223288,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_6_NOTAK_FUN_00312EF8"
-    },
-    {
-      "address": 3945280,
-      "meaning": "Clear corresponding indexed words and decrement a record count",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_003C3340"
-    },
-    {
-      "address": 3984904,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_6_NOTAK_FUN_003CCE08"
-    },
-    {
-      "address": 3032304,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_002E44F0"
-    },
-    {
-      "address": 3225392,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_00313730"
-    },
-    {
-      "address": 3259064,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_0031BAB8"
-    },
-    {
-      "address": 3259072,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_0031BAC0"
-    },
-    {
-      "address": 3356248,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_6_NOTAK_FUN_00333658"
-    },
-    {
-      "address": 3356408,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_003336F8"
-    },
-    {
-      "address": 3480224,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_6_NOTAK_FUN_00351AA0"
-    },
-    {
-      "address": 3591856,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_6_NOTAK_FUN_0036CEB0"
-    },
-    {
-      "address": 3701504,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_00387B00"
-    },
-    {
-      "address": 3702528,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_00387F00"
-    },
-    {
-      "address": 3703200,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_003881A0"
-    },
-    {
-      "address": 3724696,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_0038D598"
-    },
-    {
-      "address": 3725064,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_0038D708"
-    },
-    {
-      "address": 3725248,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_0038D7C0"
-    },
-    {
-      "address": 3726192,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_0038DB70"
-    },
-    {
-      "address": 3726448,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_0038DC70"
-    },
-    {
-      "address": 3735072,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_6_NOTAK_FUN_0038FE20"
-    },
-    {
-      "address": 3775208,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_00399AE8"
-    },
-    {
-      "address": 3974032,
-      "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
-      "size": 164,
-      "symbol": "LVL_6_NOTAK_FUN_003CA390"
-    },
-    {
-      "address": 4710328,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_0047DFB8"
-    },
-    {
-      "address": 4710336,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_0047DFC0"
-    },
-    {
-      "address": 4710680,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_0047E118"
-    },
-    {
-      "address": 4711016,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_0047E268"
-    },
-    {
-      "address": 4711224,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_6_NOTAK_FUN_0047E338"
-    },
-    {
-      "address": 4721920,
-      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
-      "size": 28,
-      "symbol": "LVL_6_NOTAK_FUN_00480D00"
     },
     {
       "address": 4740864,
@@ -1201,6 +1244,11 @@
       "symbol": "LVL_6_NOTAK_FUN_004858D8"
     },
     {
+      "address": 4754776,
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_00488D58"
+    },
+    {
       "address": 4755448,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1211,6 +1259,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_6_NOTAK_FUN_00489910"
+    },
+    {
+      "address": 4757936,
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_004899B0"
     },
     {
       "address": 4758488,
@@ -1225,6 +1278,12 @@
       "symbol": "LVL_6_NOTAK_FUN_00489D40"
     },
     {
+      "address": 4761040,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_6_NOTAK_FUN_0048A5D0"
+    },
+    {
       "address": 4762352,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1235,6 +1294,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_6_NOTAK_FUN_0048AB10"
+    },
+    {
+      "address": 4765424,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_6_NOTAK_FUN_0048B6F0"
     },
     {
       "address": 4781104,
@@ -1261,6 +1326,12 @@
       "symbol": "LVL_6_NOTAK_FUN_00490A18"
     },
     {
+      "address": 4787048,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_00490B68"
+    },
+    {
       "address": 4787128,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1273,16 +1344,49 @@
       "symbol": "LVL_6_NOTAK_FUN_00490C00"
     },
     {
+      "address": 4788224,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_6_NOTAK_FUN_00491000"
+    },
+    {
+      "address": 4790848,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_6_NOTAK_FUN_00491A40"
+    },
+    {
+      "address": 4800792,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_6_NOTAK_FUN_00494118"
+    },
+    {
+      "address": 4806584,
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_004957B8"
+    },
+    {
       "address": 4807512,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_00495B58"
     },
     {
+      "address": 4815688,
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_00497B48"
+    },
+    {
       "address": 4815944,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_00497C48"
+    },
+    {
+      "address": 4821984,
+      "size": 8,
+      "symbol": "LVL_6_NOTAK_FUN_004993E0"
     },
     {
       "address": 4822152,

@@ -28,6 +28,9 @@
     "LVL_16_SNIVELAK_D_00254CF0": 2444528,
     "LVL_16_SNIVELAK_D_00263DA0": 2506144,
     "LVL_16_SNIVELAK_D_0027F530": 2618672,
+    "LVL_16_SNIVELAK_F01bd4546_FUN_004371D8": 4420056,
+    "LVL_16_SNIVELAK_F01bd4546_FUN_0044A9A8": 4499880,
+    "LVL_16_SNIVELAK_F01bd4546_FUN_0044A9F0": 4499952,
     "LVL_16_SNIVELAK_F03c444112283bc5f_AT003843B0_ROLE00": 2333488,
     "LVL_16_SNIVELAK_F1157be91_D_001A63E8": 1729512,
     "LVL_16_SNIVELAK_F1157be91_D_001A7430": 1733680,
@@ -40,6 +43,9 @@
     "LVL_16_SNIVELAK_F1c0a2bbf_D_001ADD38": 1760568,
     "LVL_16_SNIVELAK_F1c0a2bbf_FUN_00115E38": 1138232,
     "LVL_16_SNIVELAK_F28c929cadd7aca24_AT002CB6D0_ROLE00": 1613344,
+    "LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98": 3046040,
+    "LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0": 3046064,
+    "LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0": 3048688,
     "LVL_16_SNIVELAK_F4a421ea7_D_00226940": 2255168,
     "LVL_16_SNIVELAK_F4a421ea7_D_00226C40": 2255936,
     "LVL_16_SNIVELAK_F4e5bde81_D_00189E20": 1613344,
@@ -64,6 +70,14 @@
     "LVL_16_SNIVELAK_F6b0741c38bf00fee_AT002A7508_ROLE00": 1618620,
     "LVL_16_SNIVELAK_F6b0741c38bf00fee_AT002A7508_ROLE01": 2782536,
     "LVL_16_SNIVELAK_F6b0741c38bf00fee_AT002A7508_ROLE02": 2856048,
+    "LVL_16_SNIVELAK_F70997ba9_FUN_002DF6C0": 3012288,
+    "LVL_16_SNIVELAK_F70997ba9_FUN_002DF7E0": 3012576,
+    "LVL_16_SNIVELAK_F70997ba9_FUN_002E22F0": 3023600,
+    "LVL_16_SNIVELAK_F70997ba9_FUN_002E2300": 3023616,
+    "LVL_16_SNIVELAK_F70997ba9_FUN_002E2378": 3023736,
+    "LVL_16_SNIVELAK_F70997ba9_FUN_002E2798": 3024792,
+    "LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60": 3070560,
+    "LVL_16_SNIVELAK_F70997ba9_FUN_003731D0": 3617232,
     "LVL_16_SNIVELAK_F79744baad5ad7f65_AT0044B828_ROLE00": 1622228,
     "LVL_16_SNIVELAK_F7f9c1f18_D_001BD2C8": 1823432,
     "LVL_16_SNIVELAK_F86f665335d9cb905_AT003B8EF8_ROLE00": 3900752,
@@ -75,6 +89,10 @@
     "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT003D9E78_ROLE00": 3622984,
     "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT003DE848_ROLE00": 3622984,
     "LVL_16_SNIVELAK_F9cdc323a4d0c2fbd_AT003EF6E0_ROLE00": 3622984,
+    "LVL_16_SNIVELAK_F9e2cd219_FUN_00313E18": 3227160,
+    "LVL_16_SNIVELAK_F9e2cd219_FUN_0031A038": 3252280,
+    "LVL_16_SNIVELAK_F9e2cd219_FUN_003815F8": 3675640,
+    "LVL_16_SNIVELAK_F9e2cd219_FUN_00384098": 3686552,
     "LVL_16_SNIVELAK_FUN_00115DA8": 1138088,
     "LVL_16_SNIVELAK_FUN_00115E38": 1138232,
     "LVL_16_SNIVELAK_FUN_0011AEA0": 1158816,
@@ -109,6 +127,8 @@
     "LVL_16_SNIVELAK_Fb1b523716b470b36_AT00383A08_ROLE00": 3044488,
     "LVL_16_SNIVELAK_Fb1b523716b470b36_AT00383A08_ROLE01": 3044536,
     "LVL_16_SNIVELAK_Fc68ad20a_D_0018C2B8": 1622712,
+    "LVL_16_SNIVELAK_Fc936841d_FUN_002E7488": 3044488,
+    "LVL_16_SNIVELAK_Fc936841d_FUN_002E74B8": 3044536,
     "LVL_16_SNIVELAK_Fd1a69f7e_D_00238000": 2326528,
     "LVL_16_SNIVELAK_Fd1a69f7e_D_002392C0": 2331328,
     "LVL_16_SNIVELAK_Fd1a69f7e_D_002392C0_1": 2331328,
@@ -170,10 +190,22 @@
   ],
   "functions": [
     {
+      "address": 2778952,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_002A6748"
+    },
+    {
       "address": 2779200,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
       "symbol": "LVL_16_SNIVELAK_FUN_002A6840"
+    },
+    {
+      "address": 2782472,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_16_SNIVELAK_FUN_002A7508"
     },
     {
       "address": 2786152,
@@ -241,6 +273,12 @@
       "symbol": "LVL_16_SNIVELAK_FUN_002CB1D8"
     },
     {
+      "address": 2930384,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_16_SNIVELAK_FUN_002CB6D0"
+    },
+    {
       "address": 2933448,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
@@ -251,6 +289,18 @@
       "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
       "size": 188,
       "symbol": "LVL_16_SNIVELAK_FUN_002CC620"
+    },
+    {
+      "address": 2935192,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_16_SNIVELAK_FUN_002CC998"
+    },
+    {
+      "address": 2937296,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_002CD1D0"
     },
     {
       "address": 2947400,
@@ -306,6 +356,18 @@
       "symbol": "LVL_16_SNIVELAK_FUN_002D0B60"
     },
     {
+      "address": 2971312,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_002D56B0"
+    },
+    {
+      "address": 2971320,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_002D56B8"
+    },
+    {
       "address": 2972928,
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
@@ -357,6 +419,18 @@
       "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
       "symbol": "LVL_16_SNIVELAK_FUN_002ED1C8"
+    },
+    {
+      "address": 3069304,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_16_SNIVELAK_FUN_002ED578"
+    },
+    {
+      "address": 3069464,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_16_SNIVELAK_FUN_002ED618"
     },
     {
       "address": 3069944,
@@ -419,6 +493,12 @@
       "symbol": "LVL_16_SNIVELAK_FUN_00302B30"
     },
     {
+      "address": 3180160,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_16_SNIVELAK_FUN_00308680"
+    },
+    {
       "address": 3187600,
       "meaning": "shared native body of family 6251b968321f4f37",
       "size": 192,
@@ -437,6 +517,12 @@
       "symbol": "LVL_16_SNIVELAK_FUN_0030B038"
     },
     {
+      "address": 3191584,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_16_SNIVELAK_FUN_0030B320"
+    },
+    {
       "address": 3227200,
       "meaning": "computes a scalar complement-power curve by repeated multiplication",
       "size": 68,
@@ -448,6 +534,12 @@
       "symbol": "LVL_16_SNIVELAK_FUN_00318BC8"
     },
     {
+      "address": 3261112,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_16_SNIVELAK_FUN_0031C2B8"
+    },
+    {
       "address": 3272632,
       "meaning": "Count non-zero bytes in the resident 0x1C by four unsigned-byte table and clamp the count to zero through 0x28",
       "size": 112,
@@ -457,6 +549,12 @@
       "address": 3283328,
       "size": 32,
       "symbol": "LVL_16_SNIVELAK_FUN_00321980"
+    },
+    {
+      "address": 3294808,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_16_SNIVELAK_FUN_00324658"
     },
     {
       "address": 3299280,
@@ -487,536 +585,6 @@
       "meaning": "",
       "size": 148,
       "symbol": "LVL_16_SNIVELAK_FUN_0033E210"
-    },
-    {
-      "address": 3483592,
-      "meaning": "shared native body of family 6065799417900311",
-      "size": 260,
-      "symbol": "LVL_16_SNIVELAK_FUN_003527C8"
-    },
-    {
-      "address": 3502048,
-      "meaning": "shared native body of family 62e6ff2b3d3a",
-      "size": 124,
-      "symbol": "LVL_16_SNIVELAK_FUN_00356FE0"
-    },
-    {
-      "address": 3541136,
-      "meaning": "shared native body of family a3822957b4bc1bd2",
-      "size": 244,
-      "symbol": "LVL_16_SNIVELAK_FUN_00360890"
-    },
-    {
-      "address": 3542776,
-      "meaning": "shared native body of family 4a421ea79c7cd35b",
-      "size": 156,
-      "symbol": "LVL_16_SNIVELAK_FUN_00360EF8"
-    },
-    {
-      "address": 3549728,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
-      "size": 192,
-      "symbol": "LVL_16_SNIVELAK_FUN_00362A20"
-    },
-    {
-      "address": 3567848,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_003670E8"
-    },
-    {
-      "address": 3587008,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_0036BBC0"
-    },
-    {
-      "address": 3593664,
-      "meaning": "the format strings are *data* the",
-      "size": 188,
-      "symbol": "LVL_16_SNIVELAK_FUN_0036D5C0"
-    },
-    {
-      "address": 3615704,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00372BD8"
-    },
-    {
-      "address": 3627696,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
-      "size": 68,
-      "symbol": "LVL_16_SNIVELAK_FUN_00375AB0"
-    },
-    {
-      "address": 3630432,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00376560"
-    },
-    {
-      "address": 3636904,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
-      "size": 300,
-      "symbol": "LVL_16_SNIVELAK_FUN_00377EA8"
-    },
-    {
-      "address": 3644632,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00379CD8"
-    },
-    {
-      "address": 3676472,
-      "meaning": "shared native body of family d1a69f7ea211c0b2",
-      "size": 164,
-      "symbol": "LVL_16_SNIVELAK_FUN_00381938"
-    },
-    {
-      "address": 3677696,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_16_SNIVELAK_FUN_00381E00"
-    },
-    {
-      "address": 3687560,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_16_SNIVELAK_FUN_00384488"
-    },
-    {
-      "address": 3773208,
-      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
-      "size": 76,
-      "symbol": "LVL_16_SNIVELAK_FUN_00399318"
-    },
-    {
-      "address": 3795744,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_16_SNIVELAK_FUN_0039EB20"
-    },
-    {
-      "address": 3838520,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_16_SNIVELAK_FUN_003A9238"
-    },
-    {
-      "address": 3870032,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003B0D50"
-    },
-    {
-      "address": 3908552,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003BA3C8"
-    },
-    {
-      "address": 3927464,
-      "meaning": "one float gate followed by five integer gates; every failing gate",
-      "size": 108,
-      "symbol": "LVL_16_SNIVELAK_FUN_003BEDA8"
-    },
-    {
-      "address": 3956280,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003C5E38"
-    },
-    {
-      "address": 3984608,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003CCCE0"
-    },
-    {
-      "address": 3998344,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003D0288"
-    },
-    {
-      "address": 4023656,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003D6568"
-    },
-    {
-      "address": 4035448,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_16_SNIVELAK_FUN_003D9378"
-    },
-    {
-      "address": 4037200,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_16_SNIVELAK_FUN_003D9A50"
-    },
-    {
-      "address": 4065664,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003E0980"
-    },
-    {
-      "address": 4070696,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003E1D28"
-    },
-    {
-      "address": 4085176,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_003E55B8"
-    },
-    {
-      "address": 4092352,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003E71C0"
-    },
-    {
-      "address": 4101312,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
-      "size": 88,
-      "symbol": "LVL_16_SNIVELAK_FUN_003E94C0"
-    },
-    {
-      "address": 4122888,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003EE908"
-    },
-    {
-      "address": 4176776,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003FBB88"
-    },
-    {
-      "address": 4180592,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_003FCA70"
-    },
-    {
-      "address": 4216720,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_00405790"
-    },
-    {
-      "address": 4226216,
-      "meaning": "shared native body of family af5b3bc3a678ed5c",
-      "size": 96,
-      "symbol": "LVL_16_SNIVELAK_FUN_00407CA8"
-    },
-    {
-      "address": 4276144,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_00413FB0"
-    },
-    {
-      "address": 4304792,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_0041AF98"
-    },
-    {
-      "address": 4310648,
-      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
-      "size": 36,
-      "symbol": "LVL_16_SNIVELAK_FUN_0041C678"
-    },
-    {
-      "address": 4318056,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_0041E368"
-    },
-    {
-      "address": 4339496,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_16_SNIVELAK_FUN_00423728"
-    },
-    {
-      "address": 4349520,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_16_SNIVELAK_FUN_00425E50"
-    },
-    {
-      "address": 4349624,
-      "meaning": "shared native body of family 9a8a2404",
-      "size": 112,
-      "symbol": "LVL_16_SNIVELAK_FUN_00425EB8"
-    },
-    {
-      "address": 4423952,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00438110"
-    },
-    {
-      "address": 4423976,
-      "meaning": "shared native body of family 1c0a2bbf68ff",
-      "size": 124,
-      "symbol": "LVL_16_SNIVELAK_FUN_00438128"
-    },
-    {
-      "address": 4424112,
-      "meaning": "shared native body of family e77c6258",
-      "size": 140,
-      "symbol": "LVL_16_SNIVELAK_FUN_004381B0"
-    },
-    {
-      "address": 4430720,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00439B80"
-    },
-    {
-      "address": 4431312,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00439DD0"
-    },
-    {
-      "address": 4432584,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_0043A2C8"
-    },
-    {
-      "address": 4467520,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00442B40"
-    },
-    {
-      "address": 4470680,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00443798"
-    },
-    {
-      "address": 4478168,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_16_SNIVELAK_FUN_004454D8"
-    },
-    {
-      "address": 4499792,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_0044A950"
-    },
-    {
-      "address": 4500968,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_0044ADE8"
-    },
-    {
-      "address": 4519328,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_0044F5A0"
-    },
-    {
-      "address": 4528432,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_00451930"
-    },
-    {
-      "address": 4534728,
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_004531C8"
-    },
-    {
-      "address": 3180160,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_16_SNIVELAK_FUN_00308680"
-    },
-    {
-      "address": 3261112,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_16_SNIVELAK_FUN_0031C2B8"
-    },
-    {
-      "address": 3503904,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_16_SNIVELAK_FUN_00357720"
-    },
-    {
-      "address": 3673952,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_16_SNIVELAK_FUN_00380F60"
-    },
-    {
-      "address": 3684872,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_16_SNIVELAK_FUN_00383A08"
-    },
-    {
-      "address": 3746360,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_00392A38"
-    },
-    {
-      "address": 3769432,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_00398458"
-    },
-    {
-      "address": 3903224,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
-      "size": 28,
-      "symbol": "LVL_16_SNIVELAK_FUN_003B8EF8"
-    },
-    {
-      "address": 3917424,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_003BC670"
-    },
-    {
-      "address": 3939560,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_003C1CE8"
-    },
-    {
-      "address": 4038264,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_003D9E78"
-    },
-    {
-      "address": 4057160,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_003DE848"
-    },
-    {
-      "address": 4126432,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_003EF6E0"
-    },
-    {
-      "address": 4412536,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_16_SNIVELAK_FUN_00435478"
-    },
-    {
-      "address": 4419200,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_16_SNIVELAK_FUN_00436E80"
-    },
-    {
-      "address": 4419632,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_16_SNIVELAK_FUN_00437030"
-    },
-    {
-      "address": 4440976,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_16_SNIVELAK_FUN_0043C390"
-    },
-    {
-      "address": 4473784,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_16_SNIVELAK_FUN_004443B8"
-    },
-    {
-      "address": 4503592,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_16_SNIVELAK_FUN_0044B828"
-    },
-    {
-      "address": 2782472,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_16_SNIVELAK_FUN_002A7508"
-    },
-    {
-      "address": 2930384,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_16_SNIVELAK_FUN_002CB6D0"
-    },
-    {
-      "address": 2935192,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_16_SNIVELAK_FUN_002CC998"
-    },
-    {
-      "address": 3635496,
-      "meaning": "Clear corresponding indexed words and decrement a record count",
-      "size": 48,
-      "symbol": "LVL_16_SNIVELAK_FUN_00377928"
-    },
-    {
-      "address": 3687344,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_16_SNIVELAK_FUN_003843B0"
-    },
-    {
-      "address": 2778952,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_002A6748"
-    },
-    {
-      "address": 2937296,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_002CD1D0"
-    },
-    {
-      "address": 2971312,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_002D56B0"
-    },
-    {
-      "address": 2971320,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_16_SNIVELAK_FUN_002D56B8"
-    },
-    {
-      "address": 3069304,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_16_SNIVELAK_FUN_002ED578"
-    },
-    {
-      "address": 3069464,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_16_SNIVELAK_FUN_002ED618"
-    },
-    {
-      "address": 3191584,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_16_SNIVELAK_FUN_0030B320"
-    },
-    {
-      "address": 3294808,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_16_SNIVELAK_FUN_00324658"
     },
     {
       "address": 3401056,
@@ -1073,10 +641,155 @@
       "symbol": "LVL_16_SNIVELAK_FUN_00346880"
     },
     {
+      "address": 3451608,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_16_SNIVELAK_FUN_0034AAD8"
+    },
+    {
       "address": 3474760,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_16_SNIVELAK_FUN_00350548"
+    },
+    {
+      "address": 3483592,
+      "meaning": "shared native body of family 6065799417900311",
+      "size": 260,
+      "symbol": "LVL_16_SNIVELAK_FUN_003527C8"
+    },
+    {
+      "address": 3502048,
+      "meaning": "shared native body of family 62e6ff2b3d3a",
+      "size": 124,
+      "symbol": "LVL_16_SNIVELAK_FUN_00356FE0"
+    },
+    {
+      "address": 3503904,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_16_SNIVELAK_FUN_00357720"
+    },
+    {
+      "address": 3541136,
+      "meaning": "shared native body of family a3822957b4bc1bd2",
+      "size": 244,
+      "symbol": "LVL_16_SNIVELAK_FUN_00360890"
+    },
+    {
+      "address": 3542776,
+      "meaning": "shared native body of family 4a421ea79c7cd35b",
+      "size": 156,
+      "symbol": "LVL_16_SNIVELAK_FUN_00360EF8"
+    },
+    {
+      "address": 3549728,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
+      "size": 192,
+      "symbol": "LVL_16_SNIVELAK_FUN_00362A20"
+    },
+    {
+      "address": 3567848,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_003670E8"
+    },
+    {
+      "address": 3587008,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_0036BBC0"
+    },
+    {
+      "address": 3593664,
+      "meaning": "the format strings are *data* the",
+      "size": 188,
+      "symbol": "LVL_16_SNIVELAK_FUN_0036D5C0"
+    },
+    {
+      "address": 3615704,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00372BD8"
+    },
+    {
+      "address": 3627696,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
+      "size": 68,
+      "symbol": "LVL_16_SNIVELAK_FUN_00375AB0"
+    },
+    {
+      "address": 3630432,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00376560"
+    },
+    {
+      "address": 3635496,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_16_SNIVELAK_FUN_00377928"
+    },
+    {
+      "address": 3636904,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
+      "size": 300,
+      "symbol": "LVL_16_SNIVELAK_FUN_00377EA8"
+    },
+    {
+      "address": 3644632,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00379CD8"
+    },
+    {
+      "address": 3673952,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_16_SNIVELAK_FUN_00380F60"
+    },
+    {
+      "address": 3675408,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_16_SNIVELAK_FUN_00381510"
+    },
+    {
+      "address": 3676472,
+      "meaning": "shared native body of family d1a69f7ea211c0b2",
+      "size": 164,
+      "symbol": "LVL_16_SNIVELAK_FUN_00381938"
+    },
+    {
+      "address": 3677696,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_16_SNIVELAK_FUN_00381E00"
+    },
+    {
+      "address": 3684872,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_16_SNIVELAK_FUN_00383A08"
+    },
+    {
+      "address": 3686320,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_16_SNIVELAK_FUN_00383FB0"
+    },
+    {
+      "address": 3687344,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_16_SNIVELAK_FUN_003843B0"
+    },
+    {
+      "address": 3687560,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_16_SNIVELAK_FUN_00384488"
+    },
+    {
+      "address": 3746360,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_00392A38"
     },
     {
       "address": 3760360,
@@ -1085,10 +798,302 @@
       "symbol": "LVL_16_SNIVELAK_FUN_003960E8"
     },
     {
+      "address": 3769432,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_00398458"
+    },
+    {
+      "address": 3773208,
+      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
+      "size": 76,
+      "symbol": "LVL_16_SNIVELAK_FUN_00399318"
+    },
+    {
+      "address": 3793200,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_16_SNIVELAK_FUN_0039E130"
+    },
+    {
+      "address": 3794280,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_16_SNIVELAK_FUN_0039E568"
+    },
+    {
+      "address": 3795744,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_16_SNIVELAK_FUN_0039EB20"
+    },
+    {
+      "address": 3838520,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_16_SNIVELAK_FUN_003A9238"
+    },
+    {
+      "address": 3870032,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003B0D50"
+    },
+    {
+      "address": 3870640,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_16_SNIVELAK_FUN_003B0FB0"
+    },
+    {
+      "address": 3903224,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_16_SNIVELAK_FUN_003B8EF8"
+    },
+    {
+      "address": 3908552,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003BA3C8"
+    },
+    {
+      "address": 3909448,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_16_SNIVELAK_FUN_003BA748"
+    },
+    {
+      "address": 3917424,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003BC670"
+    },
+    {
+      "address": 3927464,
+      "meaning": "one float gate followed by five integer gates; every failing gate",
+      "size": 108,
+      "symbol": "LVL_16_SNIVELAK_FUN_003BEDA8"
+    },
+    {
+      "address": 3939560,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003C1CE8"
+    },
+    {
+      "address": 3956280,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003C5E38"
+    },
+    {
+      "address": 3958928,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_16_SNIVELAK_FUN_003C6890"
+    },
+    {
+      "address": 3984608,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003CCCE0"
+    },
+    {
+      "address": 3998344,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003D0288"
+    },
+    {
+      "address": 4023656,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003D6568"
+    },
+    {
+      "address": 4032904,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_16_SNIVELAK_FUN_003D8988"
+    },
+    {
+      "address": 4033984,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_16_SNIVELAK_FUN_003D8DC0"
+    },
+    {
+      "address": 4035448,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_16_SNIVELAK_FUN_003D9378"
+    },
+    {
+      "address": 4037200,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_16_SNIVELAK_FUN_003D9A50"
+    },
+    {
+      "address": 4038264,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003D9E78"
+    },
+    {
+      "address": 4057160,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003DE848"
+    },
+    {
+      "address": 4065664,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003E0980"
+    },
+    {
+      "address": 4070696,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003E1D28"
+    },
+    {
+      "address": 4073472,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_16_SNIVELAK_FUN_003E2800"
+    },
+    {
+      "address": 4085176,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_003E55B8"
+    },
+    {
+      "address": 4092352,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003E71C0"
+    },
+    {
+      "address": 4101312,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
+      "size": 88,
+      "symbol": "LVL_16_SNIVELAK_FUN_003E94C0"
+    },
+    {
+      "address": 4122888,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003EE908"
+    },
+    {
+      "address": 4126432,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_003EF6E0"
+    },
+    {
       "address": 4161528,
       "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
       "size": 12,
       "symbol": "LVL_16_SNIVELAK_FUN_003F7FF8"
+    },
+    {
+      "address": 4176776,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003FBB88"
+    },
+    {
+      "address": 4180592,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_003FCA70"
+    },
+    {
+      "address": 4216720,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_00405790"
+    },
+    {
+      "address": 4226216,
+      "meaning": "shared native body of family af5b3bc3a678ed5c",
+      "size": 96,
+      "symbol": "LVL_16_SNIVELAK_FUN_00407CA8"
+    },
+    {
+      "address": 4276144,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_00413FB0"
+    },
+    {
+      "address": 4304792,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_0041AF98"
+    },
+    {
+      "address": 4305688,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_16_SNIVELAK_FUN_0041B318"
+    },
+    {
+      "address": 4310648,
+      "meaning": "evaluates the ordered scalar cubic value squared times negative two times value plus three",
+      "size": 36,
+      "symbol": "LVL_16_SNIVELAK_FUN_0041C678"
+    },
+    {
+      "address": 4318056,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_0041E368"
+    },
+    {
+      "address": 4339392,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_16_SNIVELAK_FUN_004236C0"
+    },
+    {
+      "address": 4339496,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_16_SNIVELAK_FUN_00423728"
+    },
+    {
+      "address": 4349520,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_16_SNIVELAK_FUN_00425E50"
+    },
+    {
+      "address": 4349624,
+      "meaning": "shared native body of family 9a8a2404",
+      "size": 112,
+      "symbol": "LVL_16_SNIVELAK_FUN_00425EB8"
+    },
+    {
+      "address": 4412536,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_00435478"
+    },
+    {
+      "address": 4419200,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_16_SNIVELAK_FUN_00436E80"
+    },
+    {
+      "address": 4419632,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_16_SNIVELAK_FUN_00437030"
     },
     {
       "address": 4423072,
@@ -1115,16 +1120,54 @@
       "symbol": "LVL_16_SNIVELAK_FUN_00438050"
     },
     {
+      "address": 4423952,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00438110"
+    },
+    {
       "address": 4423968,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_16_SNIVELAK_FUN_00438120"
     },
     {
+      "address": 4423976,
+      "meaning": "shared native body of family 1c0a2bbf68ff",
+      "size": 124,
+      "symbol": "LVL_16_SNIVELAK_FUN_00438128"
+    },
+    {
+      "address": 4424112,
+      "meaning": "shared native body of family e77c6258",
+      "size": 140,
+      "symbol": "LVL_16_SNIVELAK_FUN_004381B0"
+    },
+    {
+      "address": 4430720,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00439B80"
+    },
+    {
+      "address": 4431312,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00439DD0"
+    },
+    {
+      "address": 4432584,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_0043A2C8"
+    },
+    {
       "address": 4434664,
       "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
       "symbol": "LVL_16_SNIVELAK_FUN_0043AAE8"
+    },
+    {
+      "address": 4440976,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_16_SNIVELAK_FUN_0043C390"
     },
     {
       "address": 4453608,
@@ -1145,6 +1188,11 @@
       "symbol": "LVL_16_SNIVELAK_FUN_0043F6C0"
     },
     {
+      "address": 4467520,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00442B40"
+    },
+    {
       "address": 4468192,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1155,6 +1203,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_16_SNIVELAK_FUN_004436F8"
+    },
+    {
+      "address": 4470680,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00443798"
     },
     {
       "address": 4471232,
@@ -1169,6 +1222,12 @@
       "symbol": "LVL_16_SNIVELAK_FUN_00443B28"
     },
     {
+      "address": 4473784,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_16_SNIVELAK_FUN_004443B8"
+    },
+    {
       "address": 4475096,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1179,6 +1238,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_16_SNIVELAK_FUN_004448F8"
+    },
+    {
+      "address": 4478168,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_16_SNIVELAK_FUN_004454D8"
     },
     {
       "address": 4493848,
@@ -1205,6 +1270,12 @@
       "symbol": "LVL_16_SNIVELAK_FUN_0044A800"
     },
     {
+      "address": 4499792,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_0044A950"
+    },
+    {
       "address": 4499872,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1217,16 +1288,49 @@
       "symbol": "LVL_16_SNIVELAK_FUN_0044A9E8"
     },
     {
+      "address": 4500968,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_16_SNIVELAK_FUN_0044ADE8"
+    },
+    {
+      "address": 4503592,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_16_SNIVELAK_FUN_0044B828"
+    },
+    {
+      "address": 4513536,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_16_SNIVELAK_FUN_0044DF00"
+    },
+    {
+      "address": 4519328,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_0044F5A0"
+    },
+    {
       "address": 4520256,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_16_SNIVELAK_FUN_0044F940"
     },
     {
+      "address": 4528432,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_00451930"
+    },
+    {
       "address": 4528688,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_16_SNIVELAK_FUN_00451A30"
+    },
+    {
+      "address": 4534728,
+      "size": 8,
+      "symbol": "LVL_16_SNIVELAK_FUN_004531C8"
     },
     {
       "address": 4534896,

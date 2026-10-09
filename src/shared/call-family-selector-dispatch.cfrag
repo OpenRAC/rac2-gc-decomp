@@ -1,0 +1,45 @@
+
+
+
+extern void @@ROLE_0_00@@(char *p, int v);
+extern void @@ROLE_1_00@@(char *p, int v);
+extern void @@ROLE_2_00@@(char *p, int v);
+extern void @@ROLE_3_00@@(char *p, int v);
+extern void @@ROLE_4_00@@(char *p, int v);
+extern void @@ROLE_5_00@@(char *p, int v);
+extern void @@ROLE_6_00@@(char *p, int v);
+extern void @@ROLE_7_00@@(char *p, float v);
+extern void @@ROLE_8_00@@(char *p, float v);
+extern void @@ROLE_9_00@@(char *p, float v);
+extern void @@ROLE_10_00@@(char *p, float v);
+extern void @@ROLE_11_00@@(char *p, float v);
+extern void @@ROLE_12_00@@(char *p, float v);
+
+void @@FUNCTION@@(char *self, int x)
+{
+    char *p1, *p2, *p3, *p4, *p5, *p6;
+
+    *(s32 *)(self + 5492) = x;
+    if (*(s32 *)(self + 5496) != 0) {
+        *(s32 *)(self + 5496) = 0;
+        @@ROLE_0_01@@(self + 1464, 0);
+        p1 = self + 3052;
+        p2 = self + 3188;
+        p3 = self + 3324;
+        p4 = self + 3460;
+        p5 = self + 3596;
+        p6 = self + 3732;
+        @@ROLE_1_01@@(p1, 1);
+        @@ROLE_2_01@@(p2, 1);
+        @@ROLE_3_01@@(p3, 1);
+        @@ROLE_4_01@@(p4, 1);
+        @@ROLE_5_01@@(p5, 1);
+        @@ROLE_6_01@@(p6, 1);
+        @@ROLE_7_01@@(p1, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        @@ROLE_8_01@@(p2, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        @@ROLE_9_01@@(p3, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        @@ROLE_10_01@@(p4, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        @@ROLE_11_01@@(p5, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        @@ROLE_12_01@@(p6, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+    }
+}

@@ -1,0 +1,37 @@
+extern float @@ROLE_0_00@@(float, float);
+extern float @@ROLE_1_00@@(float, float);
+extern float @@ROLE_2_00@@(float, float);
+extern float @@ROLE_3_00@@(float, float);
+extern float @@ROLE_4_00@@(float, float);
+extern float @@ROLE_5_00@@(float, float);
+extern float @@ROLE_6_00@@(float);
+extern float @@ROLE_7_00@@(float);
+extern float @@ROLE_8_00@@(float);
+extern float @@ROLE_9_00@@(float);
+extern float @@ROLE_10_00@@(float);
+extern float @@ROLE_11_00@@(float);
+
+void @@FUNCTION@@(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = @@ROLE_0_01@@(v[0], v[3]);
+        v[1] = @@ROLE_1_01@@(v[1], v[4]);
+        v[2] = @@ROLE_2_01@@(v[2], v[5]);
+        v[9] = @@ROLE_3_01@@(v[9], v[12]);
+        v[10] = @@ROLE_4_01@@(v[10], v[13]);
+        v[11] = @@ROLE_5_01@@(v[11], v[14]);
+        v[20] = @@ROLE_6_01@@(v[0]) * v[6];
+        v[21] = @@ROLE_7_01@@(v[1]) * v[7];
+        v[22] = -@@ROLE_8_01@@(v[2]) * v[8];
+        v[24] = @@ROLE_9_01@@(v[9]) * v[15];
+        v[25] = @@ROLE_10_01@@(v[10]) * v[16];
+        v[26] = -@@ROLE_11_01@@(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}

@@ -29,6 +29,9 @@
     "LVL_15_GORN_D_00276FF0": 2584560,
     "LVL_15_GORN_D_00292780": 2697088,
     "LVL_15_GORN_D_0029FD80": 2751872,
+    "LVL_15_GORN_F01bd4546_FUN_00453B08": 4537096,
+    "LVL_15_GORN_F01bd4546_FUN_004672D8": 4616920,
+    "LVL_15_GORN_F01bd4546_FUN_00467320": 4616992,
     "LVL_15_GORN_F03c444112283bc5f_AT003A7098_ROLE00": 2337904,
     "LVL_15_GORN_F07a718bf_D_001BCF88": 1822600,
     "LVL_15_GORN_F0be97c76_D_00189E20": 1613344,
@@ -47,6 +50,9 @@
     "LVL_15_GORN_F250a61cf_D_001AD688": 1758856,
     "LVL_15_GORN_F250a61cf_FUN_00115DA8": 1138088,
     "LVL_15_GORN_F28c929cadd7aca24_AT002EB2F0_ROLE00": 1613344,
+    "LVL_15_GORN_F307ea0ee_FUN_00307208": 3174920,
+    "LVL_15_GORN_F307ea0ee_FUN_00307220": 3174944,
+    "LVL_15_GORN_F307ea0ee_FUN_00307C20": 3177504,
     "LVL_15_GORN_F490e2c59_D_001A79F0": 1735152,
     "LVL_15_GORN_F490e2c59_D_001AA7F0": 1746928,
     "LVL_15_GORN_F4e5bde81_D_00189E20": 1613344,
@@ -66,6 +72,14 @@
     "LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE00": 1618620,
     "LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE01": 2879560,
     "LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE02": 2960088,
+    "LVL_15_GORN_F70997ba9_FUN_002FF208": 3142152,
+    "LVL_15_GORN_F70997ba9_FUN_002FF328": 3142440,
+    "LVL_15_GORN_F70997ba9_FUN_00302068": 3154024,
+    "LVL_15_GORN_F70997ba9_FUN_00302078": 3154040,
+    "LVL_15_GORN_F70997ba9_FUN_003020F0": 3154160,
+    "LVL_15_GORN_F70997ba9_FUN_00302510": 3155216,
+    "LVL_15_GORN_F70997ba9_FUN_0030D1A8": 3199400,
+    "LVL_15_GORN_F70997ba9_FUN_00397060": 3764320,
     "LVL_15_GORN_F79744baad5ad7f65_AT00468158_ROLE00": 1622228,
     "LVL_15_GORN_F86f665335d9cb905_AT003D5AE0_ROLE00": 4018488,
     "LVL_15_GORN_F9cdc323a4d0c2fbd_AT003B4848_ROLE00": 3770072,
@@ -75,6 +89,10 @@
     "LVL_15_GORN_F9cdc323a4d0c2fbd_AT003FD080_ROLE00": 3770072,
     "LVL_15_GORN_F9cdc323a4d0c2fbd_AT00400450_ROLE00": 3770072,
     "LVL_15_GORN_F9cdc323a4d0c2fbd_AT0040F2B0_ROLE00": 3770072,
+    "LVL_15_GORN_F9e2cd219_FUN_00333258": 3355224,
+    "LVL_15_GORN_F9e2cd219_FUN_00339250": 3379792,
+    "LVL_15_GORN_F9e2cd219_FUN_003A42E0": 3818208,
+    "LVL_15_GORN_F9e2cd219_FUN_003A6D80": 3829120,
     "LVL_15_GORN_FUN_00115E38": 1138232,
     "LVL_15_GORN_FUN_0011AEA0": 1158816,
     "LVL_15_GORN_FUN_00133688": 1259144,
@@ -102,6 +120,8 @@
     "LVL_15_GORN_Fc84472d1_D_001ADD98": 1760664,
     "LVL_15_GORN_Fc84472d1_D_001ADDB8": 1760696,
     "LVL_15_GORN_Fc84472d1_FUN_00115E38": 1138232,
+    "LVL_15_GORN_Fc936841d_FUN_00306C30": 3173424,
+    "LVL_15_GORN_Fc936841d_FUN_00306C60": 3173472,
     "LVL_15_GORN_Fe6db7296_D_001B9600": 1807872,
     "LVL_15_GORN_Fea34650e_D_00189E20": 1613344,
     "LVL_15_GORN_Feab1f2e5_D_001ADD98": 1760664,
@@ -165,10 +185,22 @@
   ],
   "functions": [
     {
+      "address": 2874736,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_002BDD70"
+    },
+    {
       "address": 2874984,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
       "symbol": "LVL_15_GORN_FUN_002BDE68"
+    },
+    {
+      "address": 2879496,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_15_GORN_FUN_002BF008"
     },
     {
       "address": 2883312,
@@ -248,6 +280,12 @@
       "symbol": "LVL_15_GORN_FUN_002EADF8"
     },
     {
+      "address": 3060464,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_15_GORN_FUN_002EB2F0"
+    },
+    {
       "address": 3063528,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
@@ -270,6 +308,18 @@
       "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
       "size": 188,
       "symbol": "LVL_15_GORN_FUN_002EC280"
+    },
+    {
+      "address": 3065336,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_15_GORN_FUN_002EC5F8"
+    },
+    {
+      "address": 3067440,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_002ECE30"
     },
     {
       "address": 3077472,
@@ -317,6 +367,18 @@
       "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
       "symbol": "LVL_15_GORN_FUN_002F06E0"
+    },
+    {
+      "address": 3101040,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_002F5170"
+    },
+    {
+      "address": 3101048,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_002F5178"
     },
     {
       "address": 3102656,
@@ -370,6 +432,18 @@
       "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
       "symbol": "LVL_15_GORN_FUN_0030C8F8"
+    },
+    {
+      "address": 3198120,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_15_GORN_FUN_0030CCA8"
+    },
+    {
+      "address": 3198280,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_0030CD48"
     },
     {
       "address": 3198760,
@@ -444,6 +518,12 @@
       "symbol": "LVL_15_GORN_FUN_00321F10"
     },
     {
+      "address": 3308224,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_15_GORN_FUN_00327AC0"
+    },
+    {
       "address": 3315664,
       "meaning": "shared native body of family 19c820e81a180575",
       "size": 192,
@@ -456,6 +536,12 @@
       "symbol": "LVL_15_GORN_FUN_00329F50"
     },
     {
+      "address": 3319648,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_15_GORN_FUN_0032A760"
+    },
+    {
       "address": 3355264,
       "meaning": "computes a scalar complement-power curve by repeated multiplication",
       "size": 68,
@@ -465,6 +551,12 @@
       "address": 3374560,
       "size": 16,
       "symbol": "LVL_15_GORN_FUN_00337DE0"
+    },
+    {
+      "address": 3388624,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_15_GORN_FUN_0033B4D0"
     },
     {
       "address": 3392592,
@@ -482,6 +574,12 @@
       "address": 3413416,
       "size": 32,
       "symbol": "LVL_15_GORN_FUN_003415A8"
+    },
+    {
+      "address": 3424232,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_15_GORN_FUN_00343FE8"
     },
     {
       "address": 3431952,
@@ -514,6 +612,72 @@
       "symbol": "LVL_15_GORN_FUN_0035EFF8"
     },
     {
+      "address": 3535688,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_0035F348"
+    },
+    {
+      "address": 3536712,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_0035F748"
+    },
+    {
+      "address": 3537384,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_0035F9E8"
+    },
+    {
+      "address": 3558880,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_00364DE0"
+    },
+    {
+      "address": 3559248,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_00364F50"
+    },
+    {
+      "address": 3559432,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_00365008"
+    },
+    {
+      "address": 3560376,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_003653B8"
+    },
+    {
+      "address": 3560632,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_003654B8"
+    },
+    {
+      "address": 3569256,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_00367668"
+    },
+    {
+      "address": 3586240,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_15_GORN_FUN_0036B8C0"
+    },
+    {
+      "address": 3609392,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_00371330"
+    },
+    {
       "address": 3618224,
       "meaning": "shared native body of family ffb5b86c8c05572c",
       "size": 260,
@@ -524,6 +688,12 @@
       "meaning": "shared native body of family 62e6ff2b3d3a",
       "size": 124,
       "symbol": "LVL_15_GORN_FUN_00377DC8"
+    },
+    {
+      "address": 3638712,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_15_GORN_FUN_003785B8"
     },
     {
       "address": 3686456,
@@ -587,10 +757,34 @@
       "symbol": "LVL_15_GORN_FUN_0039DAD0"
     },
     {
+      "address": 3797680,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_0039F2B0"
+    },
+    {
       "address": 3797784,
       "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
       "size": 136,
       "symbol": "LVL_15_GORN_FUN_0039F318"
+    },
+    {
+      "address": 3816520,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_15_GORN_FUN_003A3C48"
+    },
+    {
+      "address": 3817976,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_15_GORN_FUN_003A41F8"
+    },
+    {
+      "address": 3819040,
+      "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
+      "size": 164,
+      "symbol": "LVL_15_GORN_FUN_003A4620"
     },
     {
       "address": 3820264,
@@ -599,16 +793,58 @@
       "symbol": "LVL_15_GORN_FUN_003A4AE8"
     },
     {
+      "address": 3827440,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_15_GORN_FUN_003A66F0"
+    },
+    {
+      "address": 3828888,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_15_GORN_FUN_003A6C98"
+    },
+    {
+      "address": 3829912,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_15_GORN_FUN_003A7098"
+    },
+    {
       "address": 3830128,
       "meaning": "shared native body of family a04928c6",
       "size": 144,
       "symbol": "LVL_15_GORN_FUN_003A7170"
     },
     {
+      "address": 3885128,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003B4848"
+    },
+    {
+      "address": 3904296,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003B9328"
+    },
+    {
       "address": 3908072,
       "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
       "size": 76,
       "symbol": "LVL_15_GORN_FUN_003BA1E8"
+    },
+    {
+      "address": 3924000,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_15_GORN_FUN_003BE020"
+    },
+    {
+      "address": 3925080,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_003BE458"
     },
     {
       "address": 3926544,
@@ -623,10 +859,34 @@
       "symbol": "LVL_15_GORN_FUN_003CE7E8"
     },
     {
+      "address": 3992136,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_003CEA48"
+    },
+    {
+      "address": 4020960,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_15_GORN_FUN_003D5AE0"
+    },
+    {
       "address": 4037752,
       "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
       "size": 136,
       "symbol": "LVL_15_GORN_FUN_003D9C78"
+    },
+    {
+      "address": 4038648,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_003D9FF8"
+    },
+    {
+      "address": 4063200,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003DFFE0"
     },
     {
       "address": 4073240,
@@ -635,10 +895,22 @@
       "symbol": "LVL_15_GORN_FUN_003E2718"
     },
     {
+      "address": 4085336,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003E5658"
+    },
+    {
       "address": 4098176,
       "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
       "size": 136,
       "symbol": "LVL_15_GORN_FUN_003E8880"
+    },
+    {
+      "address": 4100824,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_003E92D8"
     },
     {
       "address": 4126504,
@@ -659,6 +931,18 @@
       "symbol": "LVL_15_GORN_FUN_003F98E0"
     },
     {
+      "address": 4176784,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_15_GORN_FUN_003FBB90"
+    },
+    {
+      "address": 4177864,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_003FBFC8"
+    },
+    {
       "address": 4179328,
       "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
       "size": 144,
@@ -669,6 +953,18 @@
       "meaning": "shared native body of family 5a97ab89858c",
       "size": 104,
       "symbol": "LVL_15_GORN_FUN_003FCC58"
+    },
+    {
+      "address": 4182144,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_003FD080"
+    },
+    {
+      "address": 4195408,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_00400450"
     },
     {
       "address": 4203912,
@@ -683,6 +979,12 @@
       "symbol": "LVL_15_GORN_FUN_00403930"
     },
     {
+      "address": 4211720,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_00404408"
+    },
+    {
       "address": 4221824,
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_00406B80"
@@ -692,6 +994,12 @@
       "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
       "symbol": "LVL_15_GORN_FUN_00409FA0"
+    },
+    {
+      "address": 4256432,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_0040F2B0"
     },
     {
       "address": 4301376,
@@ -706,9 +1014,21 @@
       "symbol": "LVL_15_GORN_FUN_00427120"
     },
     {
+      "address": 4355232,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_004274A0"
+    },
+    {
       "address": 4381912,
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_0042DCD8"
+    },
+    {
+      "address": 4445576,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_15_GORN_FUN_0043D588"
     },
     {
       "address": 4445680,
@@ -729,9 +1049,57 @@
       "symbol": "LVL_15_GORN_FUN_0043FE00"
     },
     {
+      "address": 4513416,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_0044DE88"
+    },
+    {
+      "address": 4536240,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_15_GORN_FUN_004537B0"
+    },
+    {
+      "address": 4536672,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_15_GORN_FUN_00453960"
+    },
+    {
+      "address": 4540112,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_004546D0"
+    },
+    {
+      "address": 4540120,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_004546D8"
+    },
+    {
+      "address": 4540464,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_00454830"
+    },
+    {
+      "address": 4540800,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_00454980"
+    },
+    {
       "address": 4540992,
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_00454A40"
+    },
+    {
+      "address": 4541008,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_00454A50"
     },
     {
       "address": 4541016,
@@ -761,335 +1129,16 @@
       "symbol": "LVL_15_GORN_FUN_00456BF8"
     },
     {
-      "address": 4584560,
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_0045F470"
-    },
-    {
-      "address": 4587720,
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_004600C8"
-    },
-    {
-      "address": 4595208,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_15_GORN_FUN_00461E08"
-    },
-    {
-      "address": 4616832,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_00467280"
-    },
-    {
-      "address": 4618008,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_00467718"
-    },
-    {
-      "address": 4636368,
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_0046BED0"
-    },
-    {
-      "address": 4645472,
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_0046E260"
-    },
-    {
-      "address": 4651768,
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_0046FAF8"
-    },
-    {
-      "address": 3308224,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_15_GORN_FUN_00327AC0"
-    },
-    {
-      "address": 3388624,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_15_GORN_FUN_0033B4D0"
-    },
-    {
-      "address": 3638712,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_15_GORN_FUN_003785B8"
-    },
-    {
-      "address": 3816520,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_15_GORN_FUN_003A3C48"
-    },
-    {
-      "address": 3827440,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_15_GORN_FUN_003A66F0"
-    },
-    {
-      "address": 3885128,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_003B4848"
-    },
-    {
-      "address": 3904296,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_003B9328"
-    },
-    {
-      "address": 4020960,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "address": 4551704,
+      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
-      "symbol": "LVL_15_GORN_FUN_003D5AE0"
-    },
-    {
-      "address": 4063200,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_003DFFE0"
-    },
-    {
-      "address": 4085336,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_003E5658"
-    },
-    {
-      "address": 4182144,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_003FD080"
-    },
-    {
-      "address": 4195408,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_00400450"
-    },
-    {
-      "address": 4256432,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_0040F2B0"
-    },
-    {
-      "address": 4513416,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_15_GORN_FUN_0044DE88"
-    },
-    {
-      "address": 4536240,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_15_GORN_FUN_004537B0"
-    },
-    {
-      "address": 4536672,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_15_GORN_FUN_00453960"
+      "symbol": "LVL_15_GORN_FUN_00457418"
     },
     {
       "address": 4558016,
       "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
       "size": 20,
       "symbol": "LVL_15_GORN_FUN_00458CC0"
-    },
-    {
-      "address": 4590824,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_15_GORN_FUN_00460CE8"
-    },
-    {
-      "address": 4620632,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_00468158"
-    },
-    {
-      "address": 2879496,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_15_GORN_FUN_002BF008"
-    },
-    {
-      "address": 3060464,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_15_GORN_FUN_002EB2F0"
-    },
-    {
-      "address": 3065336,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_15_GORN_FUN_002EC5F8"
-    },
-    {
-      "address": 3829912,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_15_GORN_FUN_003A7098"
-    },
-    {
-      "address": 2874736,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_002BDD70"
-    },
-    {
-      "address": 3067440,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_002ECE30"
-    },
-    {
-      "address": 3101040,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_002F5170"
-    },
-    {
-      "address": 3101048,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_002F5178"
-    },
-    {
-      "address": 3198120,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_15_GORN_FUN_0030CCA8"
-    },
-    {
-      "address": 3198280,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_0030CD48"
-    },
-    {
-      "address": 3319648,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_15_GORN_FUN_0032A760"
-    },
-    {
-      "address": 3424232,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_15_GORN_FUN_00343FE8"
-    },
-    {
-      "address": 3535688,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_0035F348"
-    },
-    {
-      "address": 3536712,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_0035F748"
-    },
-    {
-      "address": 3537384,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_0035F9E8"
-    },
-    {
-      "address": 3558880,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_00364DE0"
-    },
-    {
-      "address": 3559248,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_00364F50"
-    },
-    {
-      "address": 3559432,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_00365008"
-    },
-    {
-      "address": 3560376,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_003653B8"
-    },
-    {
-      "address": 3560632,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_003654B8"
-    },
-    {
-      "address": 3569256,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_15_GORN_FUN_00367668"
-    },
-    {
-      "address": 3609392,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_00371330"
-    },
-    {
-      "address": 3819040,
-      "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
-      "size": 164,
-      "symbol": "LVL_15_GORN_FUN_003A4620"
-    },
-    {
-      "address": 4540112,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_004546D0"
-    },
-    {
-      "address": 4540120,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_004546D8"
-    },
-    {
-      "address": 4540464,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_00454830"
-    },
-    {
-      "address": 4540800,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_00454980"
-    },
-    {
-      "address": 4541008,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_15_GORN_FUN_00454A50"
-    },
-    {
-      "address": 4551704,
-      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
-      "size": 28,
-      "symbol": "LVL_15_GORN_FUN_00457418"
     },
     {
       "address": 4570648,
@@ -1110,6 +1159,11 @@
       "symbol": "LVL_15_GORN_FUN_0045BFF0"
     },
     {
+      "address": 4584560,
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_0045F470"
+    },
+    {
       "address": 4585232,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1120,6 +1174,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_15_GORN_FUN_00460028"
+    },
+    {
+      "address": 4587720,
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_004600C8"
     },
     {
       "address": 4588272,
@@ -1134,6 +1193,12 @@
       "symbol": "LVL_15_GORN_FUN_00460458"
     },
     {
+      "address": 4590824,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_15_GORN_FUN_00460CE8"
+    },
+    {
       "address": 4592136,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1144,6 +1209,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_15_GORN_FUN_00461228"
+    },
+    {
+      "address": 4595208,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_15_GORN_FUN_00461E08"
     },
     {
       "address": 4610888,
@@ -1170,6 +1241,12 @@
       "symbol": "LVL_15_GORN_FUN_00467130"
     },
     {
+      "address": 4616832,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_00467280"
+    },
+    {
       "address": 4616912,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1182,16 +1259,49 @@
       "symbol": "LVL_15_GORN_FUN_00467318"
     },
     {
+      "address": 4618008,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_15_GORN_FUN_00467718"
+    },
+    {
+      "address": 4620632,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_15_GORN_FUN_00468158"
+    },
+    {
+      "address": 4630576,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_15_GORN_FUN_0046A830"
+    },
+    {
+      "address": 4636368,
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_0046BED0"
+    },
+    {
       "address": 4637296,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_0046C270"
     },
     {
+      "address": 4645472,
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_0046E260"
+    },
+    {
       "address": 4645728,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_0046E360"
+    },
+    {
+      "address": 4651768,
+      "size": 8,
+      "symbol": "LVL_15_GORN_FUN_0046FAF8"
     },
     {
       "address": 4651936,

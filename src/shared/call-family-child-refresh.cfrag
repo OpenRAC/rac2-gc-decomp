@@ -1,0 +1,46 @@
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float @@ROLE_0_00@@(float value);
+extern void @@ROLE_1_00@@(void *out, void *in, void *tmp, int mode, float value);
+extern void @@ROLE_2_00@@(void *owner, void *out);
+
+void @@FUNCTION@@(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    @@ROLE_1_01@@((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            @@ROLE_0_01@@(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    @@ROLE_2_01@@(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}

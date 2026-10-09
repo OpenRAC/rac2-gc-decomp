@@ -1,0 +1,21 @@
+extern void @@ROLE_0_00@@(char *local, char *first, char *second);
+extern void @@ROLE_1_00@@(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void @@FUNCTION@@(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    @@ROLE_0_01@@(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    @@ROLE_1_01@@((char *)&object[index - 1], (char *)&object[index - 2], local);
+}

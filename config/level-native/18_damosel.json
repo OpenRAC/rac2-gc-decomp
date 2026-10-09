@@ -28,6 +28,9 @@
     "LVL_18_DAMOSEL_D_002549B0": 2443696,
     "LVL_18_DAMOSEL_D_0026BCF0": 2538736,
     "LVL_18_DAMOSEL_D_00287480": 2651264,
+    "LVL_18_DAMOSEL_F01bd4546_FUN_00458F58": 4558680,
+    "LVL_18_DAMOSEL_F01bd4546_FUN_0046C728": 4638504,
+    "LVL_18_DAMOSEL_F01bd4546_FUN_0046C770": 4638576,
     "LVL_18_DAMOSEL_F023cd14a_D_001B22D8": 1778392,
     "LVL_18_DAMOSEL_F023cd14a_D_001B22E8": 1778408,
     "LVL_18_DAMOSEL_F023cd14a_D_001B22F8": 1778424,
@@ -62,6 +65,9 @@
     "LVL_18_DAMOSEL_F25780968_D_001A7354": 1733460,
     "LVL_18_DAMOSEL_F25780968_D_001B2F88": 1781640,
     "LVL_18_DAMOSEL_F28c929cadd7aca24_AT002ECCD0_ROLE00": 1613344,
+    "LVL_18_DAMOSEL_F307ea0ee_FUN_00308EE8": 3182312,
+    "LVL_18_DAMOSEL_F307ea0ee_FUN_00308F00": 3182336,
+    "LVL_18_DAMOSEL_F307ea0ee_FUN_00309900": 3184896,
     "LVL_18_DAMOSEL_F32969de2_D_001AC000": 1753088,
     "LVL_18_DAMOSEL_F32969de2_D_001B2820": 1779744,
     "LVL_18_DAMOSEL_F32969de2_D_001B2824": 1779748,
@@ -90,6 +96,14 @@
     "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE00": 1618620,
     "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE01": 2898928,
     "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE02": 2976952,
+    "LVL_18_DAMOSEL_F70997ba9_FUN_00300C90": 3148944,
+    "LVL_18_DAMOSEL_F70997ba9_FUN_00300DB0": 3149232,
+    "LVL_18_DAMOSEL_F70997ba9_FUN_003038C0": 3160256,
+    "LVL_18_DAMOSEL_F70997ba9_FUN_003038D0": 3160272,
+    "LVL_18_DAMOSEL_F70997ba9_FUN_00303948": 3160392,
+    "LVL_18_DAMOSEL_F70997ba9_FUN_00303D88": 3161480,
+    "LVL_18_DAMOSEL_F70997ba9_FUN_0030EE70": 3206768,
+    "LVL_18_DAMOSEL_F70997ba9_FUN_003976B0": 3765936,
     "LVL_18_DAMOSEL_F74e6a904_D_001A8F10": 1740560,
     "LVL_18_DAMOSEL_F74e6a904_D_001B2370": 1778544,
     "LVL_18_DAMOSEL_F74e6a904_D_001B2374": 1778548,
@@ -106,6 +120,10 @@
     "LVL_18_DAMOSEL_F9cdc323a4d0c2fbd_AT00408558_ROLE00": 3780528,
     "LVL_18_DAMOSEL_F9cdc323a4d0c2fbd_AT0040CA60_ROLE00": 3780528,
     "LVL_18_DAMOSEL_F9cdc323a4d0c2fbd_AT0041BCE0_ROLE00": 3780528,
+    "LVL_18_DAMOSEL_F9e2cd219_FUN_003356B0": 3364528,
+    "LVL_18_DAMOSEL_F9e2cd219_FUN_0033B8B8": 3389624,
+    "LVL_18_DAMOSEL_F9e2cd219_FUN_003A4E50": 3821136,
+    "LVL_18_DAMOSEL_F9e2cd219_FUN_003A78F0": 3832048,
     "LVL_18_DAMOSEL_FUN_00115DA8": 1138088,
     "LVL_18_DAMOSEL_FUN_00115E38": 1138232,
     "LVL_18_DAMOSEL_FUN_0011AEA0": 1158816,
@@ -137,6 +155,8 @@
     "LVL_18_DAMOSEL_Fb1b523716b470b36_AT003A7260_ROLE00": 3180784,
     "LVL_18_DAMOSEL_Fb1b523716b470b36_AT003A7260_ROLE01": 3180832,
     "LVL_18_DAMOSEL_Fc68ad20a_D_0018C2B8": 1622712,
+    "LVL_18_DAMOSEL_Fc936841d_FUN_003088F0": 3180784,
+    "LVL_18_DAMOSEL_Fc936841d_FUN_00308920": 3180832,
     "LVL_18_DAMOSEL_Fe6db7296_D_001B9600": 1807872,
     "LVL_18_DAMOSEL_Fe77c6258_D_001ADD18": 1760536,
     "LVL_18_DAMOSEL_Fe77c6258_D_001ADD60": 1760608,
@@ -206,10 +226,22 @@
   ],
   "functions": [
     {
+      "address": 2895344,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_002C2DF0"
+    },
+    {
       "address": 2895592,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
       "symbol": "LVL_18_DAMOSEL_FUN_002C2EE8"
+    },
+    {
+      "address": 2898864,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_18_DAMOSEL_FUN_002C3BB0"
     },
     {
       "address": 2903288,
@@ -283,6 +315,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_002EC7D8"
     },
     {
+      "address": 3067088,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_18_DAMOSEL_FUN_002ECCD0"
+    },
+    {
       "address": 3070152,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
@@ -293,6 +331,18 @@
       "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
       "size": 188,
       "symbol": "LVL_18_DAMOSEL_FUN_002EDC20"
+    },
+    {
+      "address": 3071896,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_18_DAMOSEL_FUN_002EDF98"
+    },
+    {
+      "address": 3074000,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_002EE7D0"
     },
     {
       "address": 3084104,
@@ -341,6 +391,18 @@
       "meaning": "shared native body of family 34e74db3063e7a24",
       "size": 108,
       "symbol": "LVL_18_DAMOSEL_FUN_002F22C8"
+    },
+    {
+      "address": 3107968,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_002F6C80"
+    },
+    {
+      "address": 3107976,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_002F6C88"
     },
     {
       "address": 3109584,
@@ -420,6 +482,18 @@
       "symbol": "LVL_18_DAMOSEL_FUN_0030E5D8"
     },
     {
+      "address": 3205512,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_18_DAMOSEL_FUN_0030E988"
+    },
+    {
+      "address": 3205672,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_0030EA28"
+    },
+    {
       "address": 3206152,
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_0030EC08"
@@ -492,6 +566,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_00323940"
     },
     {
+      "address": 3317464,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_18_DAMOSEL_FUN_00329ED8"
+    },
+    {
       "address": 3321960,
       "meaning": "shared native body of family 0f425722ec0b6d0f",
       "size": 140,
@@ -508,6 +588,12 @@
       "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
       "symbol": "LVL_18_DAMOSEL_FUN_0032C3A8"
+    },
+    {
+      "address": 3328952,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_18_DAMOSEL_FUN_0032CBB8"
     },
     {
       "address": 3364568,
@@ -527,6 +613,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_0033B298"
     },
     {
+      "address": 3398696,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_18_DAMOSEL_FUN_0033DC28"
+    },
+    {
       "address": 3412536,
       "meaning": "Count non-zero bytes in the resident 0x1C by four unsigned-byte table and clamp the count to zero through 0x28",
       "size": 112,
@@ -536,6 +628,12 @@
       "address": 3425776,
       "size": 32,
       "symbol": "LVL_18_DAMOSEL_FUN_003445F0"
+    },
+    {
+      "address": 3437280,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_18_DAMOSEL_FUN_003472E0"
     },
     {
       "address": 3442592,
@@ -574,6 +672,72 @@
       "symbol": "LVL_18_DAMOSEL_FUN_00362638"
     },
     {
+      "address": 3549576,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_00362988"
+    },
+    {
+      "address": 3550600,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_00362D88"
+    },
+    {
+      "address": 3551272,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_00363028"
+    },
+    {
+      "address": 3572768,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_00368420"
+    },
+    {
+      "address": 3573136,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_00368590"
+    },
+    {
+      "address": 3573320,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_00368648"
+    },
+    {
+      "address": 3574264,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_003689F8"
+    },
+    {
+      "address": 3574520,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_00368AF8"
+    },
+    {
+      "address": 3583144,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_0036ACA8"
+    },
+    {
+      "address": 3600128,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_18_DAMOSEL_FUN_0036EF00"
+    },
+    {
+      "address": 3623280,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00374970"
+    },
+    {
       "address": 3632112,
       "meaning": "shared native body of family ffb5b86c8c05572c",
       "size": 260,
@@ -590,6 +754,12 @@
       "meaning": "shared native body of family 62e6ff2b3d3a",
       "size": 124,
       "symbol": "LVL_18_DAMOSEL_FUN_0037B408"
+    },
+    {
+      "address": 3652424,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_18_DAMOSEL_FUN_0037BB48"
     },
     {
       "address": 3698264,
@@ -660,6 +830,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_0039CCC8"
     },
     {
+      "address": 3793040,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_0039E090"
+    },
+    {
       "address": 3794352,
       "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
       "size": 300,
@@ -671,10 +847,46 @@
       "symbol": "LVL_18_DAMOSEL_FUN_003A03E0"
     },
     {
+      "address": 3819448,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_18_DAMOSEL_FUN_003A47B8"
+    },
+    {
+      "address": 3820904,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_18_DAMOSEL_FUN_003A4D68"
+    },
+    {
+      "address": 3821968,
+      "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
+      "size": 164,
+      "symbol": "LVL_18_DAMOSEL_FUN_003A5190"
+    },
+    {
       "address": 3823192,
       "meaning": "shared native body of family a04928c6",
       "size": 144,
       "symbol": "LVL_18_DAMOSEL_FUN_003A5658"
+    },
+    {
+      "address": 3830368,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_18_DAMOSEL_FUN_003A7260"
+    },
+    {
+      "address": 3831816,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_18_DAMOSEL_FUN_003A7808"
+    },
+    {
+      "address": 3832840,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_18_DAMOSEL_FUN_003A7C08"
     },
     {
       "address": 3833056,
@@ -683,10 +895,34 @@
       "symbol": "LVL_18_DAMOSEL_FUN_003A7CE0"
     },
     {
+      "address": 3891856,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_003B6290"
+    },
+    {
+      "address": 3911024,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_003BAD70"
+    },
+    {
       "address": 3916640,
       "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
       "size": 76,
       "symbol": "LVL_18_DAMOSEL_FUN_003BC360"
+    },
+    {
+      "address": 3941680,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_18_DAMOSEL_FUN_003C2530"
+    },
+    {
+      "address": 3942760,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_18_DAMOSEL_FUN_003C2968"
     },
     {
       "address": 3944224,
@@ -707,10 +943,22 @@
       "symbol": "LVL_18_DAMOSEL_FUN_003D4068"
     },
     {
+      "address": 4014792,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_18_DAMOSEL_FUN_003D42C8"
+    },
+    {
       "address": 4033840,
       "meaning": "shared native body of family 32969de2c02196ef",
       "size": 184,
       "symbol": "LVL_18_DAMOSEL_FUN_003D8D30"
+    },
+    {
+      "address": 4047520,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_18_DAMOSEL_FUN_003DC2A0"
     },
     {
       "address": 4052752,
@@ -719,10 +967,28 @@
       "symbol": "LVL_18_DAMOSEL_FUN_003DD710"
     },
     {
+      "address": 4053648,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_18_DAMOSEL_FUN_003DDA90"
+    },
+    {
+      "address": 4073912,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_003E29B8"
+    },
+    {
       "address": 4083952,
       "meaning": "one float gate followed by five integer gates; every failing gate",
       "size": 108,
       "symbol": "LVL_18_DAMOSEL_FUN_003E50F0"
+    },
+    {
+      "address": 4096048,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_003E8030"
     },
     {
       "address": 4108888,
@@ -731,10 +997,22 @@
       "symbol": "LVL_18_DAMOSEL_FUN_003EB258"
     },
     {
+      "address": 4111536,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_18_DAMOSEL_FUN_003EBCB0"
+    },
+    {
       "address": 4138456,
       "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
       "size": 136,
       "symbol": "LVL_18_DAMOSEL_FUN_003F25D8"
+    },
+    {
+      "address": 4164896,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0xB 8.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_003F8D20"
     },
     {
       "address": 4182304,
@@ -755,6 +1033,18 @@
       "symbol": "LVL_18_DAMOSEL_FUN_00404DB8"
     },
     {
+      "address": 4223080,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_18_DAMOSEL_FUN_00407068"
+    },
+    {
+      "address": 4224160,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_18_DAMOSEL_FUN_004074A0"
+    },
+    {
       "address": 4225624,
       "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
       "size": 144,
@@ -765,6 +1055,18 @@
       "meaning": "shared native body of family 5a97ab89858c",
       "size": 104,
       "symbol": "LVL_18_DAMOSEL_FUN_00408130"
+    },
+    {
+      "address": 4228440,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_00408558"
+    },
+    {
+      "address": 4246112,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_0040CA60"
     },
     {
       "address": 4254616,
@@ -779,6 +1081,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_0040FF40"
     },
     {
+      "address": 4262424,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_18_DAMOSEL_FUN_00410A18"
+    },
+    {
       "address": 4272528,
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_00413190"
@@ -788,6 +1096,12 @@
       "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
       "size": 88,
       "symbol": "LVL_18_DAMOSEL_FUN_004165B0"
+    },
+    {
+      "address": 4308192,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_0041BCE0"
     },
     {
       "address": 4367840,
@@ -808,6 +1122,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_0043B478"
     },
     {
+      "address": 4438008,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_18_DAMOSEL_FUN_0043B7F8"
+    },
+    {
       "address": 4447768,
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_0043DE18"
@@ -822,6 +1142,12 @@
       "address": 4462272,
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_004416C0"
+    },
+    {
+      "address": 4478952,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_18_DAMOSEL_FUN_004457E8"
     },
     {
       "address": 4479056,
@@ -842,9 +1168,57 @@
       "symbol": "LVL_18_DAMOSEL_FUN_00448400"
     },
     {
+      "address": 4553208,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_004579F8"
+    },
+    {
+      "address": 4557824,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_18_DAMOSEL_FUN_00458C00"
+    },
+    {
+      "address": 4558256,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_18_DAMOSEL_FUN_00458DB0"
+    },
+    {
+      "address": 4561696,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00459B20"
+    },
+    {
+      "address": 4561704,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00459B28"
+    },
+    {
+      "address": 4562048,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00459C80"
+    },
+    {
+      "address": 4562384,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00459DD0"
+    },
+    {
       "address": 4562576,
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_00459E90"
+    },
+    {
+      "address": 4562592,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00459EA0"
     },
     {
       "address": 4562600,
@@ -874,347 +1248,16 @@
       "symbol": "LVL_18_DAMOSEL_FUN_0045C048"
     },
     {
-      "address": 4606144,
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_004648C0"
-    },
-    {
-      "address": 4609304,
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00465518"
-    },
-    {
-      "address": 4616792,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_18_DAMOSEL_FUN_00467258"
-    },
-    {
-      "address": 4638416,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_0046C6D0"
-    },
-    {
-      "address": 4639592,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_0046CB68"
-    },
-    {
-      "address": 4657952,
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00471320"
-    },
-    {
-      "address": 4667056,
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_004736B0"
-    },
-    {
-      "address": 4673352,
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00474F48"
-    },
-    {
-      "address": 3317464,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_18_DAMOSEL_FUN_00329ED8"
-    },
-    {
-      "address": 3398696,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_18_DAMOSEL_FUN_0033DC28"
-    },
-    {
-      "address": 3652424,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_18_DAMOSEL_FUN_0037BB48"
-    },
-    {
-      "address": 3819448,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_18_DAMOSEL_FUN_003A47B8"
-    },
-    {
-      "address": 3830368,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_18_DAMOSEL_FUN_003A7260"
-    },
-    {
-      "address": 3891856,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_003B6290"
-    },
-    {
-      "address": 3911024,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_003BAD70"
-    },
-    {
-      "address": 4047520,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "address": 4573288,
+      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
-      "symbol": "LVL_18_DAMOSEL_FUN_003DC2A0"
-    },
-    {
-      "address": 4073912,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_003E29B8"
-    },
-    {
-      "address": 4096048,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_003E8030"
-    },
-    {
-      "address": 4228440,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_00408558"
-    },
-    {
-      "address": 4246112,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_0040CA60"
-    },
-    {
-      "address": 4308192,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_0041BCE0"
-    },
-    {
-      "address": 4553208,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_18_DAMOSEL_FUN_004579F8"
-    },
-    {
-      "address": 4557824,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_18_DAMOSEL_FUN_00458C00"
-    },
-    {
-      "address": 4558256,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_18_DAMOSEL_FUN_00458DB0"
+      "symbol": "LVL_18_DAMOSEL_FUN_0045C868"
     },
     {
       "address": 4579600,
       "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
       "size": 20,
       "symbol": "LVL_18_DAMOSEL_FUN_0045E110"
-    },
-    {
-      "address": 4612408,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_18_DAMOSEL_FUN_00466138"
-    },
-    {
-      "address": 4642216,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_0046D5A8"
-    },
-    {
-      "address": 2898864,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_18_DAMOSEL_FUN_002C3BB0"
-    },
-    {
-      "address": 3067088,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_18_DAMOSEL_FUN_002ECCD0"
-    },
-    {
-      "address": 3071896,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_18_DAMOSEL_FUN_002EDF98"
-    },
-    {
-      "address": 3793040,
-      "meaning": "Clear corresponding indexed words and decrement a record count",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_0039E090"
-    },
-    {
-      "address": 3832840,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_18_DAMOSEL_FUN_003A7C08"
-    },
-    {
-      "address": 2895344,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_002C2DF0"
-    },
-    {
-      "address": 3074000,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_002EE7D0"
-    },
-    {
-      "address": 3107968,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_002F6C80"
-    },
-    {
-      "address": 3107976,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_002F6C88"
-    },
-    {
-      "address": 3205512,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_18_DAMOSEL_FUN_0030E988"
-    },
-    {
-      "address": 3205672,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_0030EA28"
-    },
-    {
-      "address": 3328952,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_18_DAMOSEL_FUN_0032CBB8"
-    },
-    {
-      "address": 3437280,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_18_DAMOSEL_FUN_003472E0"
-    },
-    {
-      "address": 3549576,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_00362988"
-    },
-    {
-      "address": 3550600,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_00362D88"
-    },
-    {
-      "address": 3551272,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_00363028"
-    },
-    {
-      "address": 3572768,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_00368420"
-    },
-    {
-      "address": 3573136,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_00368590"
-    },
-    {
-      "address": 3573320,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_00368648"
-    },
-    {
-      "address": 3574264,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_003689F8"
-    },
-    {
-      "address": 3574520,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_00368AF8"
-    },
-    {
-      "address": 3583144,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "LVL_18_DAMOSEL_FUN_0036ACA8"
-    },
-    {
-      "address": 3623280,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00374970"
-    },
-    {
-      "address": 3821968,
-      "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
-      "size": 164,
-      "symbol": "LVL_18_DAMOSEL_FUN_003A5190"
-    },
-    {
-      "address": 4164896,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0xB 8.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_003F8D20"
-    },
-    {
-      "address": 4561696,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00459B20"
-    },
-    {
-      "address": 4561704,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00459B28"
-    },
-    {
-      "address": 4562048,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00459C80"
-    },
-    {
-      "address": 4562384,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00459DD0"
-    },
-    {
-      "address": 4562592,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_18_DAMOSEL_FUN_00459EA0"
-    },
-    {
-      "address": 4573288,
-      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
-      "size": 28,
-      "symbol": "LVL_18_DAMOSEL_FUN_0045C868"
     },
     {
       "address": 4592232,
@@ -1235,6 +1278,11 @@
       "symbol": "LVL_18_DAMOSEL_FUN_00461440"
     },
     {
+      "address": 4606144,
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_004648C0"
+    },
+    {
       "address": 4606816,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1245,6 +1293,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_18_DAMOSEL_FUN_00465478"
+    },
+    {
+      "address": 4609304,
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00465518"
     },
     {
       "address": 4609856,
@@ -1259,6 +1312,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_004658A8"
     },
     {
+      "address": 4612408,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_18_DAMOSEL_FUN_00466138"
+    },
+    {
       "address": 4613720,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1269,6 +1328,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_18_DAMOSEL_FUN_00466678"
+    },
+    {
+      "address": 4616792,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_18_DAMOSEL_FUN_00467258"
     },
     {
       "address": 4632472,
@@ -1295,6 +1360,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_0046C580"
     },
     {
+      "address": 4638416,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_0046C6D0"
+    },
+    {
       "address": 4638496,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1307,16 +1378,49 @@
       "symbol": "LVL_18_DAMOSEL_FUN_0046C768"
     },
     {
+      "address": 4639592,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_18_DAMOSEL_FUN_0046CB68"
+    },
+    {
+      "address": 4642216,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_18_DAMOSEL_FUN_0046D5A8"
+    },
+    {
+      "address": 4652160,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_18_DAMOSEL_FUN_0046FC80"
+    },
+    {
+      "address": 4657952,
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00471320"
+    },
+    {
       "address": 4658880,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_004716C0"
     },
     {
+      "address": 4667056,
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_004736B0"
+    },
+    {
       "address": 4667312,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_004737B0"
+    },
+    {
+      "address": 4673352,
+      "size": 8,
+      "symbol": "LVL_18_DAMOSEL_FUN_00474F48"
     },
     {
       "address": 4673520,

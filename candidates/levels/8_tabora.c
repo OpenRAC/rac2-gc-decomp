@@ -3105,3 +3105,439 @@ int LVL_8_TABORA_FUN_00463718(int *owner)
     return result;
 }
 
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9E20(char *local, char *first, char *second);
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9DF0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_8_TABORA_FUN_003B4A60(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_8_TABORA_Fc936841d_FUN_002F9E20(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_8_TABORA_Fc936841d_FUN_002F9DF0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9E20(char *local, char *first, char *second);
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9DF0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_8_TABORA_FUN_003C5050(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_8_TABORA_Fc936841d_FUN_002F9E20(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_8_TABORA_Fc936841d_FUN_002F9DF0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9E20(char *local, char *first, char *second);
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9DF0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_8_TABORA_FUN_003D60C0(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_8_TABORA_Fc936841d_FUN_002F9E20(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_8_TABORA_Fc936841d_FUN_002F9DF0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9E20(char *local, char *first, char *second);
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9DF0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_8_TABORA_FUN_003E5138(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_8_TABORA_Fc936841d_FUN_002F9E20(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_8_TABORA_Fc936841d_FUN_002F9DF0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9E20(char *local, char *first, char *second);
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9DF0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_8_TABORA_FUN_003F9C28(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_8_TABORA_Fc936841d_FUN_002F9E20(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_8_TABORA_Fc936841d_FUN_002F9DF0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9E20(char *local, char *first, char *second);
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9DF0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_8_TABORA_FUN_00402230(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_8_TABORA_Fc936841d_FUN_002F9E20(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_8_TABORA_Fc936841d_FUN_002F9DF0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9E20(char *local, char *first, char *second);
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9DF0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_8_TABORA_FUN_0042C520(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_8_TABORA_Fc936841d_FUN_002F9E20(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_8_TABORA_Fc936841d_FUN_002F9DF0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9E20(char *local, char *first, char *second);
+extern void LVL_8_TABORA_Fc936841d_FUN_002F9DF0(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_8_TABORA_FUN_004340A8(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_8_TABORA_Fc936841d_FUN_002F9E20(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_8_TABORA_Fc936841d_FUN_002F9DF0((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+
+
+
+extern void LVL_8_TABORA_F01bd4546_FUN_00447680(char *p, int v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE50(char *p, int v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE50(char *p, int v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE50(char *p, int v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE50(char *p, int v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE50(char *p, int v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE50(char *p, int v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE98(char *p, float v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE98(char *p, float v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE98(char *p, float v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE98(char *p, float v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE98(char *p, float v);
+extern void LVL_8_TABORA_F01bd4546_FUN_0045AE98(char *p, float v);
+
+void LVL_8_TABORA_FUN_0045E3A8(char *self, int x)
+{
+    char *p1, *p2, *p3, *p4, *p5, *p6;
+
+    *(s32 *)(self + 5492) = x;
+    if (*(s32 *)(self + 5496) != 0) {
+        *(s32 *)(self + 5496) = 0;
+        LVL_8_TABORA_F01bd4546_FUN_00447680(self + 1464, 0);
+        p1 = self + 3052;
+        p2 = self + 3188;
+        p3 = self + 3324;
+        p4 = self + 3460;
+        p5 = self + 3596;
+        p6 = self + 3732;
+        LVL_8_TABORA_F01bd4546_FUN_0045AE50(p1, 1);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE50(p2, 1);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE50(p3, 1);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE50(p4, 1);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE50(p5, 1);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE50(p6, 1);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE98(p1, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE98(p2, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE98(p3, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE98(p4, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE98(p5, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_8_TABORA_F01bd4546_FUN_0045AE98(p6, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+    }
+}
+extern void LVL_8_TABORA_F70997ba9_FUN_00389AB0(int a, int b);
+extern void LVL_8_TABORA_F70997ba9_FUN_002F2230(int a);
+extern void *LVL_8_TABORA_F70997ba9_FUN_003003D8(int id);
+extern int LVL_8_TABORA_F70997ba9_FUN_002F5168(void *p, int i);
+extern void LVL_8_TABORA_F70997ba9_FUN_002F50F0(void);
+extern void LVL_8_TABORA_F70997ba9_FUN_002F5588(int a, int b, long c, void *d, int e);
+extern void LVL_8_TABORA_F70997ba9_FUN_002F50E0(void);
+extern void LVL_8_TABORA_F70997ba9_FUN_002F2350(void);
+
+int LVL_8_TABORA_FUN_00361130(int *arg0)
+{
+    int min;
+    int v;
+    int slot;
+    int count;
+    int off;
+
+    LVL_8_TABORA_F70997ba9_FUN_00389AB0(66, 68);
+    LVL_8_TABORA_F70997ba9_FUN_00389AB0(71, 11);
+    LVL_8_TABORA_F70997ba9_FUN_002F2230(0);
+    min = LVL_8_TABORA_F70997ba9_FUN_002F5168(LVL_8_TABORA_F70997ba9_FUN_003003D8(11613), -1);
+    v = LVL_8_TABORA_F70997ba9_FUN_002F5168(LVL_8_TABORA_F70997ba9_FUN_003003D8(11625), -1);
+    if (v >= min)
+        min = v;
+    if (*(int *)0x1A79F0 != 0) {
+        v = LVL_8_TABORA_F70997ba9_FUN_002F5168(LVL_8_TABORA_F70997ba9_FUN_003003D8(11614), -1);
+        if (v >= min)
+            min = v;
+    }
+    v = LVL_8_TABORA_F70997ba9_FUN_002F5168(LVL_8_TABORA_F70997ba9_FUN_003003D8(11626), -1);
+    if (v >= min)
+        min = v;
+    v = LVL_8_TABORA_F70997ba9_FUN_002F5168(LVL_8_TABORA_F70997ba9_FUN_003003D8(11627), -1);
+    if (v >= min)
+        min = v;
+    v = LVL_8_TABORA_F70997ba9_FUN_002F5168(LVL_8_TABORA_F70997ba9_FUN_003003D8(11599), -1);
+    if (v >= min)
+        min = v;
+    slot = (arg0[8] - min) >> 1;
+    if (slot <= 1)
+        slot = 2;
+    count = arg0[9] / (*(int *)0x1A79F0 != 0 ? 7 : 6);
+    LVL_8_TABORA_F70997ba9_FUN_002F50F0();
+    off = count - 6;
+    LVL_8_TABORA_F70997ba9_FUN_002F5588(slot, off, 0x80FFA888L, LVL_8_TABORA_F70997ba9_FUN_003003D8(11613), -1);
+    off += count;
+    LVL_8_TABORA_F70997ba9_FUN_002F5588(slot, off, 0x80FFA888L, LVL_8_TABORA_F70997ba9_FUN_003003D8(11625), -1);
+    off += count;
+    LVL_8_TABORA_F70997ba9_FUN_002F5588(slot, off, 0x80FFA888L, LVL_8_TABORA_F70997ba9_FUN_003003D8(11626), -1);
+    off += count;
+    LVL_8_TABORA_F70997ba9_FUN_002F5588(slot, off, 0x80FFA888L, LVL_8_TABORA_F70997ba9_FUN_003003D8(11627), -1);
+    off += count;
+    LVL_8_TABORA_F70997ba9_FUN_002F5588(slot, off, 0x80FFA888L, LVL_8_TABORA_F70997ba9_FUN_003003D8(11599), -1);
+    LVL_8_TABORA_F70997ba9_FUN_002F50E0();
+    LVL_8_TABORA_F70997ba9_FUN_002F2350();
+    return 2;
+}
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3C8(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3C8(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(float);
+
+void LVL_8_TABORA_FUN_003B4628(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[0], v[3]);
+        v[1] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[1], v[4]);
+        v[2] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[2], v[5]);
+        v[9] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[9], v[12]);
+        v[10] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[10], v[13]);
+        v[11] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[11], v[14]);
+        v[20] = LVL_8_TABORA_F307ea0ee_FUN_002FA3C8(v[0]) * v[6];
+        v[21] = LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(v[1]) * v[7];
+        v[22] = -LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(v[2]) * v[8];
+        v[24] = LVL_8_TABORA_F307ea0ee_FUN_002FA3C8(v[9]) * v[15];
+        v[25] = LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(v[10]) * v[16];
+        v[26] = -LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FADE0(float, float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3C8(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3C8(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(float);
+extern float LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(float);
+
+void LVL_8_TABORA_FUN_003F97F0(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[0], v[3]);
+        v[1] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[1], v[4]);
+        v[2] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[2], v[5]);
+        v[9] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[9], v[12]);
+        v[10] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[10], v[13]);
+        v[11] = LVL_8_TABORA_F307ea0ee_FUN_002FADE0(v[11], v[14]);
+        v[20] = LVL_8_TABORA_F307ea0ee_FUN_002FA3C8(v[0]) * v[6];
+        v[21] = LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(v[1]) * v[7];
+        v[22] = -LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(v[2]) * v[8];
+        v[24] = LVL_8_TABORA_F307ea0ee_FUN_002FA3C8(v[9]) * v[15];
+        v[25] = LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(v[10]) * v[16];
+        v[26] = -LVL_8_TABORA_F307ea0ee_FUN_002FA3E0(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float LVL_8_TABORA_F9e2cd219_FUN_003277A0(float value);
+extern void LVL_8_TABORA_F9e2cd219_FUN_0032F180(void *out, void *in, void *tmp, int mode, float value);
+extern void LVL_8_TABORA_F9e2cd219_FUN_00397170(void *owner, void *out);
+
+void LVL_8_TABORA_FUN_00397088(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    LVL_8_TABORA_F9e2cd219_FUN_0032F180((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            LVL_8_TABORA_F9e2cd219_FUN_003277A0(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    LVL_8_TABORA_F9e2cd219_FUN_00397170(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float LVL_8_TABORA_F9e2cd219_FUN_003277A0(float value);
+extern void LVL_8_TABORA_F9e2cd219_FUN_0032F180(void *out, void *in, void *tmp, int mode, float value);
+extern void LVL_8_TABORA_F9e2cd219_FUN_00399C10(void *owner, void *out);
+
+void LVL_8_TABORA_FUN_00399B28(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    LVL_8_TABORA_F9e2cd219_FUN_0032F180((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            LVL_8_TABORA_F9e2cd219_FUN_003277A0(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    LVL_8_TABORA_F9e2cd219_FUN_00399C10(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}
