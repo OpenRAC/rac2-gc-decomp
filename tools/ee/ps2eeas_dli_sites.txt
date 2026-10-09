@@ -1,0 +1,22 @@
+# ps2eeas_dli_sites.txt — allowlist of dli instructions to replace with PS2EeAs.exe expansion.
+#
+# Each row: <region> <function> <operands> <expansion_words>
+#   <region>: usa|eu
+#   <function>: function name (no prefix, e.g. func_0027C020)
+#   <operands>: space-separated operand list (no $ prefixes)
+#   <expansion_words>: 4 hex words (64-bit instruction sequence)
+#
+# Example:
+#   usa func_0027C020 a0 a1 0000003c 00404025 00000000 00000000
+#
+# The ps2eeas_dli.awk pass replaces cc1's `dli` pseudo with the ROM's expansion
+# only at sites listed here, keyed on the same function and operands. Every
+# other `dli` stays GNU as's default (lui/ori for 32-bit, or 32-bit lui/ori + 32-bit
+# lui/ori for 64-bit).
+#
+# PS2EeAs.exe is SN's assembler that the original ROM was built with. It expands
+# `dli` differently from GNU as in certain cases, and only the sites listed here
+# match the original binary's actual instruction sequence.
+#
+# See tools/ee/ps2eeas_dli.awk for the pass implementation.
+# See tools/ee/ps2eeas_dli_sites.py for the derivation script.

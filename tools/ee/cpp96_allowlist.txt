@@ -1,0 +1,13 @@
+# cpp96_allowlist.txt — units whose .cpp sources compile with SN 2.96 cc1plus.
+#
+# Each row: <region> <unit>
+#   <region>: usa|eu
+#   <unit>: unit path without extension
+#
+# The engine96 C++ route (SN 2.96 cc1plus) is NOT codegen-identical to the
+# 2.96 cc1 over MATCH_ members (FACT #8914). RULING #8915 item 3 keeps every
+# unlisted MATCH_ unit .c. Only units listed here may use .cpp with engine96.
+#
+# Example:
+#   usa text/248B50
+#   eu text/248B50
