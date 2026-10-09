@@ -102,11 +102,20 @@ class DescriptionTests(unittest.TestCase):
 
     def test_matching_catalogue_cannot_hide_as_tooling(self):
         self.assertTrue(contract.validate(body(), ["config/candidate-catalog.json"]))
+        self.assertTrue(contract.validate(body(), ["config/level-catalog.json"]))
         self.assertTrue(contract.validate(body(), ["progress/levels/oozla.json"]))
 
     def test_text_is_not_executed(self):
         text = body().replace("python -m unittest discover -s tests -p test_pr_description.py -v", "$(touch /tmp/do-not-create); `echo text`; ${{ secrets.EXAMPLE }}")
         self.assertEqual(contract.validate(text), [])
+
+    def test_privileged_workflow_serializes_all_status_writers(self):
+        workflow = (ROOT / ".github/workflows/pr-description.yml").read_text()
+        self.assertIn("group: pr-description-RAC2", workflow)
+        self.assertIn("cancel-in-progress: false", workflow)
+        self.assertIn("github.event.pull_request.base.sha || github.sha", workflow)
+        self.assertIn("persist-credentials: false", workflow)
+        self.assertNotIn("github.event.pull_request.head.sha", workflow)
 
 
 class EventTests(unittest.TestCase):

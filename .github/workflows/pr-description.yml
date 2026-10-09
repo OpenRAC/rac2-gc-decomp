@@ -16,10 +16,11 @@ permissions:
   pull-requests: read
   statuses: write
 
-# Serialize rather than cancel: a cancelled older run must not publish a status
-# over a newer description. Each run fetches current PR data before validation.
+# Serialize across the repository: statuses belong to a SHA, and different PRs
+# or manual reruns can share one. No older run may overwrite a duplicate failure.
+# Each run fetches current PR data; rerun manually if a queued event was replaced.
 concurrency:
-  group: pr-description-${{ github.event.pull_request.number || inputs.pr_number }}
+  group: pr-description-RAC2
   cancel-in-progress: false
 
 jobs:

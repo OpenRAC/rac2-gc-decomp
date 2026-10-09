@@ -118,5 +118,8 @@ description and latest run before merging, especially during concurrent edits.
 Commit statuses belong to a SHA, so two open PRs targeting `RAC2` must not share
 the same head SHA. Close the duplicate (or use distinct commits) and rerun the
 description check; one PR's description must not grant another PR a pass.
+Status-writing runs are serialized across the repository, including manual
+reruns. If GitHub replaces an intermediate queued event, a maintainer can
+manually rerun a PR still showing a pending or missing description status.
 Existing open PRs must adopt this format when the required status is enabled;
 no historic test or gate should be fabricated to fill a field.

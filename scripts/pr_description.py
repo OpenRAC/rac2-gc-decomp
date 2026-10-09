@@ -83,7 +83,7 @@ def validate(body: str, files: list[str] | None = None) -> list[str]:
     if files and any(p.startswith(("src/", "candidates/")) and p.endswith((".c", ".h", ".cfrag")) for p in files):
         if not decomp:
             errors.append("Changes to maintained authored/generated C require matching or placement Type; retained nonmatching attempts belong on the shelf.")
-    if files and any(p in {"config/candidate-catalog.json", "progress/candidates.json", "progress/integration.json"} or p.startswith(("config/level-native/", "config/level-g8/", "config/boot-units/", "config/function-catalog/", "progress/levels/", "progress/level-candidates/", "progress/level-g8/", "progress/boot-units/")) for p in files) and not decomp:
+    if files and any(p in {"config/candidate-catalog.json", "config/level-catalog.json", "progress/candidates.json", "progress/integration.json"} or p.startswith(("config/level-native/", "config/level-g8/", "config/boot-units/", "config/function-catalog/", "progress/levels/", "progress/level-candidates/", "progress/level-g8/", "progress/boot-units/")) for p in files) and not decomp:
         errors.append("Changes to matching catalogue/proof inputs require matching or placement Type (zero delta is valid).")
 
     pairs = re.findall(r"^- (Command|Result):[ \t]*([^\r\n]*)$", sections.get("Validation", ""), re.M)
