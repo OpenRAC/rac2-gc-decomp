@@ -132,7 +132,10 @@ class EventTests(unittest.TestCase):
         self.other = []
         self.latest = None
         self.fail_files = False
-        self.env = patch.dict(os.environ, {"GITHUB_REPOSITORY": "OpenRAC/rac2-gc-decomp", "GITHUB_RUN_ID": "1234"})
+        # These are PR-target/dispatch fixtures even when the whole suite is
+        # itself run by a merge_group workflow. Do not inherit its event kind.
+        self.env = patch.dict(os.environ, {"GITHUB_REPOSITORY": "OpenRAC/rac2-gc-decomp", "GITHUB_RUN_ID": "1234",
+                                          "GITHUB_EVENT_NAME": "pull_request_target"})
         self.env.start()
         self.addCleanup(self.env.stop)
 
