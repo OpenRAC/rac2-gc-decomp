@@ -319,6 +319,9 @@ s32 FUN_00336318(u8 *a0) { return *(s32 *)(a0 + 0x38); }
 /* Measured target: byte-identical across all 27 levels. */
 s32 FUN_003367B8(u8 *a0) { return *(s32 *)(a0 + 0x34); }
 
+/* Measured target: complete 8-byte boot body; 17 direct callers. */
+void FUN_00336B90(u8 *a0, s32 a1) { *(s32 *)(a0 + 0x40) = a1; }
+
 /* Measured target: byte-identical across all 27 levels. */
 void FUN_00336CC0(u8 *a0, s32 a1) { *(s32 *)(a0 + 0x38) = a1; }
 
