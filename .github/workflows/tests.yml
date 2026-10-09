@@ -1,5 +1,16 @@
 name: Tool tests
-on: [push, pull_request]
+on:
+  push:
+    branches: [RAC2]
+  pull_request:
+    branches: [RAC2]
+  merge_group:
+    branches: [RAC2]
+    types: [checks_requested]
+
+permissions:
+  contents: read
+
 jobs:
   tests:
     runs-on: ubuntu-latest

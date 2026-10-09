@@ -6,6 +6,10 @@ do not paste the instructions back or tick checks you did not perform. Write in
 English. Keep explanations concise, but supply enough evidence for a reviewer
 to assess your result without reconstructing your session.
 
+The [merge queue](MERGE-QUEUE.md) revalidates descriptions for its temporary
+combined commit. Keep the validated base you actually used; queue validation
+does not fabricate a new private reconstruction or matching proof.
+
 ## Common fields
 
 - **Summary:** the concrete problem and resulting behavior.
