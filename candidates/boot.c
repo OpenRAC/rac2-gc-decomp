@@ -3968,3 +3968,93 @@ int FUN_00351EE8(int *owner)
     return result;
 }
 
+
+/* Owner-reviewed Qwen backlog: observed operations, not recovered original object boundaries. */
+
+/* FUN_00285840: owner ABI/declaration review retained. */
+/* extern declaration for global variable referenced in FUN_00285840 */
+extern unsigned int D_001BACC0;
+
+unsigned int FUN_00285840(void)
+{
+    return D_001BACC0;
+}
+
+/* FUN_00285850: owner ABI/declaration review retained. */
+extern unsigned int D_001BAD08;
+
+unsigned int FUN_00285850(void)
+{
+    return D_001BAD08;
+}
+
+/* FUN_002858B0: owner ABI/declaration review retained. */
+extern int D_001BAD14;
+
+void FUN_002858B0(int param_1)
+{
+  D_001BAD14 = param_1;
+}
+
+/* FUN_002ED870: owner ABI/declaration review retained. */
+extern unsigned int D_00214FCC;
+
+unsigned int FUN_002ED870(void)
+{
+    return D_00214FCC;
+}
+
+/* FUN_00287E48: owner ABI/declaration review retained. */
+/* Compare the observed 32-bit cell with 7; original signedness is unknown. */
+extern unsigned int D_001BACC0;
+int FUN_00287E48(void)
+{
+    return D_001BACC0 == 7;
+}
+
+/* FUN_002D7AC8: owner ABI/declaration review retained. */
+extern int D_001C51D4;
+int FUN_002D7AC8(void)
+{
+    D_001C51D4 = -1;
+    return 0;
+}
+
+/* FUN_002EE6A8: owner ABI/declaration review retained. */
+extern int FUN_002ED688(unsigned char *owner);
+unsigned int FUN_002EE6A8(unsigned char *owner)
+{
+    unsigned int address = (unsigned int)FUN_002ED688(owner);
+    if (address == 0)
+        return 0;
+    return *(unsigned int *)(address + 0x100u);
+}
+
+/* FUN_0034CA68: owner ABI/declaration review retained. */
+extern int FUN_00335E20(unsigned char *field);
+unsigned int FUN_0034CA68(unsigned char *owner)
+{
+    unsigned int address = (unsigned int)FUN_00335E20(owner + 0x358);
+    return *(unsigned int *)address & 0xff000000u;
+}
+
+/* FUN_002EE678: owner ABI/declaration review retained. */
+extern int FUN_002ED688(unsigned char *owner);
+void FUN_002EE678(unsigned char *owner, unsigned int value)
+{
+    unsigned int address = (unsigned int)FUN_002ED688(owner);
+    if (address != 0)
+        *(unsigned int *)(address + 0x100u) = value;
+}
+
+/* FUN_0011D118: owner ABI/declaration review retained. */
+void FUN_0011CB58(void);
+
+extern int D_001346A0;
+
+void FUN_0011D118(void)
+{
+  FUN_0011CB58();
+  D_001346A0 = 0;
+  return;
+}

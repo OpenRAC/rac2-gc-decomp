@@ -4,6 +4,7 @@
     "BOOT_D_001395B8": 1283512,
     "D_00133E74": 1261172,
     "D_00134688": 1263240,
+    "D_001346A0": 1263264,
     "D_00137E00": 1277440,
     "D_00139648": 1283656,
     "D_0013A308": 1286920,
@@ -23,6 +24,11 @@
     "D_001A7A0A": 1735178,
     "D_001A7B90": 1735568,
     "D_001A7BB8": 1735608,
+    "D_001BACC0": 1813696,
+    "D_001BAD08": 1813768,
+    "D_001BAD14": 1813780,
+    "D_001C51D4": 1855956,
+    "D_00214FCC": 2183116,
     "D_19B278": 1684088,
     "FUN_00115484": 1135748,
     "FUN_001163B0": 1139632,
@@ -32,6 +38,7 @@
     "FUN_0011AEA0": 1158816,
     "FUN_0011AFC0": 1159104,
     "FUN_0011AFE0": 1159136,
+    "FUN_0011CB58": 1166168,
     "FUN_0011F5E0": 1177056,
     "FUN_0011F628": 1177128,
     "FUN_00122630": 1189424,
@@ -2144,6 +2151,76 @@
       "size": 16,
       "symbol": "FUN_001163A0",
       "xrefs": 1
+    },
+    {
+      "address": 2644032,
+      "meaning": "Read the 32-bit word at absolute address 001BACC0; original role and signedness are unknown.",
+      "ranges": 1,
+      "size": 12,
+      "symbol": "FUN_00285840"
+    },
+    {
+      "address": 2644048,
+      "meaning": "Read the 32-bit word at absolute address 001BAD08; original role and signedness are unknown.",
+      "ranges": 1,
+      "size": 12,
+      "symbol": "FUN_00285850"
+    },
+    {
+      "address": 2644144,
+      "meaning": "Write the low 32 bits of the argument to absolute address 001BAD14; original role is unknown.",
+      "ranges": 1,
+      "size": 12,
+      "symbol": "FUN_002858B0"
+    },
+    {
+      "address": 3070064,
+      "meaning": "Read the 32-bit word at absolute address 00214FCC; original role and signedness are unknown.",
+      "ranges": 1,
+      "size": 12,
+      "symbol": "FUN_002ED870"
+    },
+    {
+      "address": 2653768,
+      "meaning": "Return whether the 32-bit word at absolute address 001BACC0 equals 7.",
+      "ranges": 1,
+      "size": 20,
+      "symbol": "FUN_00287E48"
+    },
+    {
+      "address": 2980552,
+      "meaning": "Write all-one word bits at absolute address 001C51D4 and return zero.",
+      "ranges": 1,
+      "size": 20,
+      "symbol": "FUN_002D7AC8"
+    },
+    {
+      "address": 3073704,
+      "meaning": "Call the qualified owner-field helper and read word offset 100 from its nonzero encoded address, otherwise return zero.",
+      "ranges": 1,
+      "size": 40,
+      "symbol": "FUN_002EE6A8"
+    },
+    {
+      "address": 3459688,
+      "meaning": "Call the qualified field accessor with owner offset 358, read its returned encoded address and retain the top byte of the word.",
+      "ranges": 1,
+      "size": 40,
+      "symbol": "FUN_0034CA68"
+    },
+    {
+      "address": 3073656,
+      "meaning": "Call the qualified owner-field helper and write the value argument at word offset 100 through its nonzero encoded address.",
+      "ranges": 1,
+      "size": 44,
+      "symbol": "FUN_002EE678"
+    },
+    {
+      "address": 1167640,
+      "meaning": "Call the no-incoming-argument cleanup helper and clear the word at absolute address 001346A0.",
+      "ranges": 1,
+      "size": 36,
+      "symbol": "FUN_0011D118"
     }
   ],
   "gp": 1765360,

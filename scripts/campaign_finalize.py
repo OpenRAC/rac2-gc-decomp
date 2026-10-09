@@ -169,7 +169,8 @@ def _inventory(repo):
     result = {}
     patterns = {"scripts": {".py"}, "tests": {".py"}, "src": {".c", ".h", ".cfrag"},
                 "candidates": {".c"}, "config": {".json", ".gz"},
-                "progress": {".json", ".gz", ".md", ".svg"}, "docs": {".md"}}
+                "progress": {".json", ".gz", ".md", ".svg"}, "docs": {".md"},
+                ".github": {".md", ".yml", ".yaml"}}
     for directory, suffixes in patterns.items():
         for path in sorted((repo / directory).rglob("*")):
             name = path.relative_to(repo).as_posix()

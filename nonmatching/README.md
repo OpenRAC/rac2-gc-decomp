@@ -50,6 +50,10 @@ complete C parser or privacy scanner; owner source/ABI/behavior review is requir
 Replacements require a strictly better complete measurement and first retain
 the old public pair in private backups. Old canonical/private attempts remain.
 
-Visible research entries: **0**.
+Visible research entries: **3**.
 
-No attempts are staged. Existing private trials have not been imported.
+| Program | Complete extent | Candidate bytes | Different bytes | Task / trial | Checked | Source |
+|---|---:|---:|---:|---|---|---|
+| `boot` | `0x0012FB48` / 20 | 20 | 3 | `qwen-backlog-retained-fun_0012fb48-20261009` / `b0c8328b644c49a4879bf12948f4d848` | 2026-10-09 | [FUN_0012FB48](boot/0012fb48-14.c) |
+| `boot` | `0x0028B288` / 44 | 44 | 14 | `qwen-backlog-retained-fun_0028b288-20261009` / `4c420cb545b448a1ba2f60ef4b86de30` | 2026-10-09 | [FUN_0028B288](boot/0028b288-2c.c) |
+| `boot` | `0x002C9A60` / 20 | 20 | 9 | `qwen-backlog-retained-fun_002c9a60-20261009` / `eb241e4ccd8740d78750da20f9e05924` | 2026-10-09 | [FUN_002C9A60](boot/002c9a60-14.c) |
