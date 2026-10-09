@@ -28,6 +28,9 @@
     "LVL_19_GRELBIN_D_002564C0": 2450624,
     "LVL_19_GRELBIN_D_00265870": 2513008,
     "LVL_19_GRELBIN_D_00281000": 2625536,
+    "LVL_19_GRELBIN_F01bd4546_FUN_0043CB38": 4442936,
+    "LVL_19_GRELBIN_F01bd4546_FUN_00450308": 4522760,
+    "LVL_19_GRELBIN_F01bd4546_FUN_00450350": 4522832,
     "LVL_19_GRELBIN_F03c444112283bc5f_AT003878C0_ROLE00": 2333296,
     "LVL_19_GRELBIN_F0820eb11_D_001CA5C0": 1877440,
     "LVL_19_GRELBIN_F0820eb11_D_001D23C0": 1909696,
@@ -43,6 +46,9 @@
     "LVL_19_GRELBIN_F1c0a2bbf_D_001ADD38": 1760568,
     "LVL_19_GRELBIN_F1c0a2bbf_FUN_00115E38": 1138232,
     "LVL_19_GRELBIN_F28c929cadd7aca24_AT002CFF30_ROLE00": 1613344,
+    "LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18": 3063576,
+    "LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30": 3063600,
+    "LVL_19_GRELBIN_F307ea0ee_FUN_002EC930": 3066160,
     "LVL_19_GRELBIN_F349daa69_D_001B31A0": 1782176,
     "LVL_19_GRELBIN_F349daa69_D_001B31A4": 1782180,
     "LVL_19_GRELBIN_F349daa69_FUN_0011A950": 1157456,
@@ -77,6 +83,14 @@
     "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE00": 1618620,
     "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE01": 2791264,
     "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE02": 2866896,
+    "LVL_19_GRELBIN_F70997ba9_FUN_002E3E88": 3030664,
+    "LVL_19_GRELBIN_F70997ba9_FUN_002E3FA8": 3030952,
+    "LVL_19_GRELBIN_F70997ba9_FUN_002E6D38": 3042616,
+    "LVL_19_GRELBIN_F70997ba9_FUN_002E6D48": 3042632,
+    "LVL_19_GRELBIN_F70997ba9_FUN_002E6DC0": 3042752,
+    "LVL_19_GRELBIN_F70997ba9_FUN_002E7200": 3043840,
+    "LVL_19_GRELBIN_F70997ba9_FUN_002F1F28": 3088168,
+    "LVL_19_GRELBIN_F70997ba9_FUN_00379558": 3642712,
     "LVL_19_GRELBIN_F79744baad5ad7f65_AT00451188_ROLE00": 1622228,
     "LVL_19_GRELBIN_F86f665335d9cb905_AT003C0340_ROLE00": 3930520,
     "LVL_19_GRELBIN_F8a42bc68_D_002325D0": 2303440,
@@ -88,6 +102,10 @@
     "LVL_19_GRELBIN_F9cdc323a4d0c2fbd_AT003EC770_ROLE00": 3648728,
     "LVL_19_GRELBIN_F9cdc323a4d0c2fbd_AT003EFB40_ROLE00": 3648728,
     "LVL_19_GRELBIN_F9cdc323a4d0c2fbd_AT003FEDC0_ROLE00": 3648728,
+    "LVL_19_GRELBIN_F9e2cd219_FUN_00318288": 3244680,
+    "LVL_19_GRELBIN_F9e2cd219_FUN_0031E5D0": 3270096,
+    "LVL_19_GRELBIN_F9e2cd219_FUN_00384B08": 3689224,
+    "LVL_19_GRELBIN_F9e2cd219_FUN_003875A8": 3700136,
     "LVL_19_GRELBIN_FUN_00115DA8": 1138088,
     "LVL_19_GRELBIN_FUN_00115E38": 1138232,
     "LVL_19_GRELBIN_FUN_0011AEA0": 1158816,
@@ -123,6 +141,8 @@
     "LVL_19_GRELBIN_Fc459a266_D_00138180": 1278336,
     "LVL_19_GRELBIN_Fc459a266_D_00189E20": 1613344,
     "LVL_19_GRELBIN_Fc68ad20a_D_0018C2B8": 1622712,
+    "LVL_19_GRELBIN_Fc936841d_FUN_002EB920": 3062048,
+    "LVL_19_GRELBIN_Fc936841d_FUN_002EB950": 3062096,
     "LVL_19_GRELBIN_Fcceeec15_D_001A6D40": 1731904,
     "LVL_19_GRELBIN_Fcceeec15_D_001A6E90": 1732240,
     "LVL_19_GRELBIN_Fcceeec15_D_001B3188": 1782152,
@@ -191,10 +211,22 @@
   ],
   "functions": [
     {
+      "address": 2787680,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_002A8960"
+    },
+    {
       "address": 2787928,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
       "symbol": "LVL_19_GRELBIN_FUN_002A8A58"
+    },
+    {
+      "address": 2791200,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_19_GRELBIN_FUN_002A9720"
     },
     {
       "address": 2795616,
@@ -268,6 +300,12 @@
       "symbol": "LVL_19_GRELBIN_FUN_002CFA38"
     },
     {
+      "address": 2948912,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_19_GRELBIN_FUN_002CFF30"
+    },
+    {
       "address": 2951976,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
@@ -278,6 +316,18 @@
       "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
       "size": 188,
       "symbol": "LVL_19_GRELBIN_FUN_002D0E80"
+    },
+    {
+      "address": 2953720,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_19_GRELBIN_FUN_002D11F8"
+    },
+    {
+      "address": 2955824,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_002D1A30"
     },
     {
       "address": 2965928,
@@ -320,6 +370,18 @@
       "meaning": "shared native body of family be569dc253cd5555",
       "size": 108,
       "symbol": "LVL_19_GRELBIN_FUN_002D54C0"
+    },
+    {
+      "address": 2989688,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_002D9E78"
+    },
+    {
+      "address": 2989696,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_002D9E80"
     },
     {
       "address": 2991304,
@@ -385,6 +447,18 @@
       "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
       "symbol": "LVL_19_GRELBIN_FUN_002F1608"
+    },
+    {
+      "address": 3086776,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_19_GRELBIN_FUN_002F19B8"
+    },
+    {
+      "address": 3086936,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_19_GRELBIN_FUN_002F1A58"
     },
     {
       "address": 3087552,
@@ -465,6 +539,12 @@
       "symbol": "LVL_19_GRELBIN_FUN_00306EC8"
     },
     {
+      "address": 3197536,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_19_GRELBIN_FUN_0030CA60"
+    },
+    {
       "address": 3203136,
       "meaning": "shared native body of family d1172b6afb7d978b",
       "size": 188,
@@ -489,6 +569,12 @@
       "symbol": "LVL_19_GRELBIN_FUN_0030F458"
     },
     {
+      "address": 3209024,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_19_GRELBIN_FUN_0030F740"
+    },
+    {
       "address": 3244768,
       "meaning": "computes a scalar complement-power curve by repeated multiplication",
       "size": 68,
@@ -506,6 +592,12 @@
       "symbol": "LVL_19_GRELBIN_FUN_0031DFB0"
     },
     {
+      "address": 3279616,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_19_GRELBIN_FUN_00320B00"
+    },
+    {
       "address": 3292808,
       "meaning": "Count non-zero bytes in the resident 0x1C by four unsigned-byte table and clamp the count to zero through 0x28",
       "size": 112,
@@ -515,6 +607,12 @@
       "address": 3303504,
       "size": 32,
       "symbol": "LVL_19_GRELBIN_FUN_00326850"
+    },
+    {
+      "address": 3315168,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_19_GRELBIN_FUN_003295E0"
     },
     {
       "address": 3320480,
@@ -545,500 +643,6 @@
       "meaning": "",
       "size": 148,
       "symbol": "LVL_19_GRELBIN_FUN_00344360"
-    },
-    {
-      "address": 3526960,
-      "meaning": "shared native body of family 62e6ff2b3d3a",
-      "size": 124,
-      "symbol": "LVL_19_GRELBIN_FUN_0035D130"
-    },
-    {
-      "address": 3566448,
-      "meaning": "shared native body of family 5a29d35dd7a7809a",
-      "size": 244,
-      "symbol": "LVL_19_GRELBIN_FUN_00366B70"
-    },
-    {
-      "address": 3575040,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
-      "size": 192,
-      "symbol": "LVL_19_GRELBIN_FUN_00368D00"
-    },
-    {
-      "address": 3593264,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_0036D430"
-    },
-    {
-      "address": 3612488,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_00371F48"
-    },
-    {
-      "address": 3619144,
-      "meaning": "the format strings are *data* the",
-      "size": 188,
-      "symbol": "LVL_19_GRELBIN_FUN_00373948"
-    },
-    {
-      "address": 3641184,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_00378F60"
-    },
-    {
-      "address": 3645096,
-      "meaning": "shared native body of family 349daa693c44d158",
-      "size": 112,
-      "symbol": "LVL_19_GRELBIN_FUN_00379EA8"
-    },
-    {
-      "address": 3653440,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
-      "size": 68,
-      "symbol": "LVL_19_GRELBIN_FUN_0037BF40"
-    },
-    {
-      "address": 3656176,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_0037C9F0"
-    },
-    {
-      "address": 3661888,
-      "meaning": "shared native body of family 8a42bc68419c7402",
-      "size": 96,
-      "symbol": "LVL_19_GRELBIN_FUN_0037E040"
-    },
-    {
-      "address": 3662496,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
-      "size": 300,
-      "symbol": "LVL_19_GRELBIN_FUN_0037E2A0"
-    },
-    {
-      "address": 3670224,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_003800D0"
-    },
-    {
-      "address": 3691280,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_19_GRELBIN_FUN_00385310"
-    },
-    {
-      "address": 3701144,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_19_GRELBIN_FUN_00387998"
-    },
-    {
-      "address": 3788656,
-      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
-      "size": 76,
-      "symbol": "LVL_19_GRELBIN_FUN_0039CF70"
-    },
-    {
-      "address": 3814872,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_19_GRELBIN_FUN_003A35D8"
-    },
-    {
-      "address": 3857648,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_19_GRELBIN_FUN_003ADCF0"
-    },
-    {
-      "address": 3884832,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003B4720"
-    },
-    {
-      "address": 3941952,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003C2640"
-    },
-    {
-      "address": 3962280,
-      "meaning": "one float gate followed by five integer gates; every failing gate",
-      "size": 108,
-      "symbol": "LVL_19_GRELBIN_FUN_003C75A8"
-    },
-    {
-      "address": 3987216,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003CD710"
-    },
-    {
-      "address": 4027952,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003D7630"
-    },
-    {
-      "address": 4069256,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003E1788"
-    },
-    {
-      "address": 4073864,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003E2988"
-    },
-    {
-      "address": 4099176,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003E8C68"
-    },
-    {
-      "address": 4111472,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_19_GRELBIN_FUN_003EBC70"
-    },
-    {
-      "address": 4113224,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_19_GRELBIN_FUN_003EC348"
-    },
-    {
-      "address": 4136056,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003F1C78"
-    },
-    {
-      "address": 4141088,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_003F3020"
-    },
-    {
-      "address": 4153968,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_003F6270"
-    },
-    {
-      "address": 4167312,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
-      "size": 88,
-      "symbol": "LVL_19_GRELBIN_FUN_003F9690"
-    },
-    {
-      "address": 4248248,
-      "meaning": "shared native body of family af5b3bc3a678ed5c",
-      "size": 96,
-      "symbol": "LVL_19_GRELBIN_FUN_0040D2B8"
-    },
-    {
-      "address": 4271984,
-      "meaning": "shared native body of family c459a266b43242d6",
-      "size": 352,
-      "symbol": "LVL_19_GRELBIN_FUN_00412F70"
-    },
-    {
-      "address": 4315088,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_0041D7D0"
-    },
-    {
-      "address": 4326376,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_004203E8"
-    },
-    {
-      "address": 4359128,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_19_GRELBIN_FUN_004283D8"
-    },
-    {
-      "address": 4377800,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_19_GRELBIN_FUN_0042CCC8"
-    },
-    {
-      "address": 4377904,
-      "meaning": "shared native body of family 9a8a2404",
-      "size": 112,
-      "symbol": "LVL_19_GRELBIN_FUN_0042CD30"
-    },
-    {
-      "address": 4446832,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_0043DA70"
-    },
-    {
-      "address": 4446856,
-      "meaning": "shared native body of family 1c0a2bbf68ff",
-      "size": 124,
-      "symbol": "LVL_19_GRELBIN_FUN_0043DA88"
-    },
-    {
-      "address": 4446992,
-      "meaning": "shared native body of family e77c6258",
-      "size": 140,
-      "symbol": "LVL_19_GRELBIN_FUN_0043DB10"
-    },
-    {
-      "address": 4453600,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_0043F4E0"
-    },
-    {
-      "address": 4454192,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_0043F730"
-    },
-    {
-      "address": 4455464,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_0043FC28"
-    },
-    {
-      "address": 4490400,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_004484A0"
-    },
-    {
-      "address": 4493560,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_004490F8"
-    },
-    {
-      "address": 4501048,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_19_GRELBIN_FUN_0044AE38"
-    },
-    {
-      "address": 4522672,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_004502B0"
-    },
-    {
-      "address": 4523848,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_00450748"
-    },
-    {
-      "address": 4542208,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_00454F00"
-    },
-    {
-      "address": 4551312,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_00457290"
-    },
-    {
-      "address": 4557608,
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_00458B28"
-    },
-    {
-      "address": 3197536,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_19_GRELBIN_FUN_0030CA60"
-    },
-    {
-      "address": 3279616,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_19_GRELBIN_FUN_00320B00"
-    },
-    {
-      "address": 3528992,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_19_GRELBIN_FUN_0035D920"
-    },
-    {
-      "address": 3687536,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_19_GRELBIN_FUN_00384470"
-    },
-    {
-      "address": 3698456,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_19_GRELBIN_FUN_00386F18"
-    },
-    {
-      "address": 3759944,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_00395F48"
-    },
-    {
-      "address": 3779112,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_0039AA28"
-    },
-    {
-      "address": 3932992,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
-      "size": 28,
-      "symbol": "LVL_19_GRELBIN_FUN_003C0340"
-    },
-    {
-      "address": 3952240,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_003C4E70"
-    },
-    {
-      "address": 3974376,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_003CA4E8"
-    },
-    {
-      "address": 4114288,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_003EC770"
-    },
-    {
-      "address": 4127552,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_003EFB40"
-    },
-    {
-      "address": 4189632,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_003FEDC0"
-    },
-    {
-      "address": 4435512,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_19_GRELBIN_FUN_0043AE38"
-    },
-    {
-      "address": 4442080,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_19_GRELBIN_FUN_0043C7E0"
-    },
-    {
-      "address": 4442512,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_19_GRELBIN_FUN_0043C990"
-    },
-    {
-      "address": 4463856,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_19_GRELBIN_FUN_00441CF0"
-    },
-    {
-      "address": 4496664,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_19_GRELBIN_FUN_00449D18"
-    },
-    {
-      "address": 4526472,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_19_GRELBIN_FUN_00451188"
-    },
-    {
-      "address": 2791200,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_19_GRELBIN_FUN_002A9720"
-    },
-    {
-      "address": 2948912,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_19_GRELBIN_FUN_002CFF30"
-    },
-    {
-      "address": 2953720,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_19_GRELBIN_FUN_002D11F8"
-    },
-    {
-      "address": 3661240,
-      "meaning": "Clear corresponding indexed words and decrement a record count",
-      "size": 48,
-      "symbol": "LVL_19_GRELBIN_FUN_0037DDB8"
-    },
-    {
-      "address": 3700928,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_19_GRELBIN_FUN_003878C0"
-    },
-    {
-      "address": 2787680,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_002A8960"
-    },
-    {
-      "address": 2955824,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_002D1A30"
-    },
-    {
-      "address": 2989688,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_002D9E78"
-    },
-    {
-      "address": 2989696,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_19_GRELBIN_FUN_002D9E80"
-    },
-    {
-      "address": 3086776,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_19_GRELBIN_FUN_002F19B8"
-    },
-    {
-      "address": 3086936,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_19_GRELBIN_FUN_002F1A58"
-    },
-    {
-      "address": 3209024,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_19_GRELBIN_FUN_0030F740"
-    },
-    {
-      "address": 3315168,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_19_GRELBIN_FUN_003295E0"
     },
     {
       "address": 3425968,
@@ -1095,10 +699,113 @@
       "symbol": "LVL_19_GRELBIN_FUN_0034C9D0"
     },
     {
+      "address": 3476520,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_19_GRELBIN_FUN_00350C28"
+    },
+    {
       "address": 3499672,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_19_GRELBIN_FUN_00356698"
+    },
+    {
+      "address": 3526960,
+      "meaning": "shared native body of family 62e6ff2b3d3a",
+      "size": 124,
+      "symbol": "LVL_19_GRELBIN_FUN_0035D130"
+    },
+    {
+      "address": 3528992,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_19_GRELBIN_FUN_0035D920"
+    },
+    {
+      "address": 3566448,
+      "meaning": "shared native body of family 5a29d35dd7a7809a",
+      "size": 244,
+      "symbol": "LVL_19_GRELBIN_FUN_00366B70"
+    },
+    {
+      "address": 3575040,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
+      "size": 192,
+      "symbol": "LVL_19_GRELBIN_FUN_00368D00"
+    },
+    {
+      "address": 3593264,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_0036D430"
+    },
+    {
+      "address": 3612488,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_00371F48"
+    },
+    {
+      "address": 3619144,
+      "meaning": "the format strings are *data* the",
+      "size": 188,
+      "symbol": "LVL_19_GRELBIN_FUN_00373948"
+    },
+    {
+      "address": 3641184,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_00378F60"
+    },
+    {
+      "address": 3645096,
+      "meaning": "shared native body of family 349daa693c44d158",
+      "size": 112,
+      "symbol": "LVL_19_GRELBIN_FUN_00379EA8"
+    },
+    {
+      "address": 3653440,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
+      "size": 68,
+      "symbol": "LVL_19_GRELBIN_FUN_0037BF40"
+    },
+    {
+      "address": 3656176,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_0037C9F0"
+    },
+    {
+      "address": 3661240,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_19_GRELBIN_FUN_0037DDB8"
+    },
+    {
+      "address": 3661888,
+      "meaning": "shared native body of family 8a42bc68419c7402",
+      "size": 96,
+      "symbol": "LVL_19_GRELBIN_FUN_0037E040"
+    },
+    {
+      "address": 3662496,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
+      "size": 300,
+      "symbol": "LVL_19_GRELBIN_FUN_0037E2A0"
+    },
+    {
+      "address": 3670224,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_003800D0"
+    },
+    {
+      "address": 3687536,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_19_GRELBIN_FUN_00384470"
+    },
+    {
+      "address": 3688992,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_19_GRELBIN_FUN_00384A20"
     },
     {
       "address": 3690056,
@@ -1107,10 +814,308 @@
       "symbol": "LVL_19_GRELBIN_FUN_00384E48"
     },
     {
+      "address": 3691280,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_19_GRELBIN_FUN_00385310"
+    },
+    {
+      "address": 3698456,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_19_GRELBIN_FUN_00386F18"
+    },
+    {
+      "address": 3699904,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_19_GRELBIN_FUN_003874C0"
+    },
+    {
+      "address": 3700928,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_19_GRELBIN_FUN_003878C0"
+    },
+    {
+      "address": 3701144,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_19_GRELBIN_FUN_00387998"
+    },
+    {
+      "address": 3759944,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_00395F48"
+    },
+    {
+      "address": 3779112,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_0039AA28"
+    },
+    {
+      "address": 3788656,
+      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
+      "size": 76,
+      "symbol": "LVL_19_GRELBIN_FUN_0039CF70"
+    },
+    {
+      "address": 3812328,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_19_GRELBIN_FUN_003A2BE8"
+    },
+    {
+      "address": 3813408,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_19_GRELBIN_FUN_003A3020"
+    },
+    {
+      "address": 3814872,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_19_GRELBIN_FUN_003A35D8"
+    },
+    {
+      "address": 3857648,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_19_GRELBIN_FUN_003ADCF0"
+    },
+    {
+      "address": 3884832,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003B4720"
+    },
+    {
+      "address": 3885440,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_19_GRELBIN_FUN_003B4980"
+    },
+    {
+      "address": 3932992,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_19_GRELBIN_FUN_003C0340"
+    },
+    {
+      "address": 3941952,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003C2640"
+    },
+    {
+      "address": 3942848,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_19_GRELBIN_FUN_003C29C0"
+    },
+    {
+      "address": 3952240,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_003C4E70"
+    },
+    {
+      "address": 3962280,
+      "meaning": "one float gate followed by five integer gates; every failing gate",
+      "size": 108,
+      "symbol": "LVL_19_GRELBIN_FUN_003C75A8"
+    },
+    {
+      "address": 3974376,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_003CA4E8"
+    },
+    {
+      "address": 3987216,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003CD710"
+    },
+    {
+      "address": 3989864,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_19_GRELBIN_FUN_003CE168"
+    },
+    {
+      "address": 4027952,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003D7630"
+    },
+    {
       "address": 4052704,
       "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0xB 8.",
       "size": 8,
       "symbol": "LVL_19_GRELBIN_FUN_003DD6E0"
+    },
+    {
+      "address": 4069256,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003E1788"
+    },
+    {
+      "address": 4073864,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003E2988"
+    },
+    {
+      "address": 4099176,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003E8C68"
+    },
+    {
+      "address": 4108928,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_19_GRELBIN_FUN_003EB280"
+    },
+    {
+      "address": 4110008,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_19_GRELBIN_FUN_003EB6B8"
+    },
+    {
+      "address": 4111472,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_19_GRELBIN_FUN_003EBC70"
+    },
+    {
+      "address": 4113224,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_19_GRELBIN_FUN_003EC348"
+    },
+    {
+      "address": 4114288,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_003EC770"
+    },
+    {
+      "address": 4127552,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_003EFB40"
+    },
+    {
+      "address": 4136056,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003F1C78"
+    },
+    {
+      "address": 4141088,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_003F3020"
+    },
+    {
+      "address": 4143864,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_19_GRELBIN_FUN_003F3AF8"
+    },
+    {
+      "address": 4153968,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_003F6270"
+    },
+    {
+      "address": 4167312,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
+      "size": 88,
+      "symbol": "LVL_19_GRELBIN_FUN_003F9690"
+    },
+    {
+      "address": 4189632,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_003FEDC0"
+    },
+    {
+      "address": 4248248,
+      "meaning": "shared native body of family af5b3bc3a678ed5c",
+      "size": 96,
+      "symbol": "LVL_19_GRELBIN_FUN_0040D2B8"
+    },
+    {
+      "address": 4271984,
+      "meaning": "shared native body of family c459a266b43242d6",
+      "size": 352,
+      "symbol": "LVL_19_GRELBIN_FUN_00412F70"
+    },
+    {
+      "address": 4315088,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_0041D7D0"
+    },
+    {
+      "address": 4315984,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_19_GRELBIN_FUN_0041DB50"
+    },
+    {
+      "address": 4326376,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_004203E8"
+    },
+    {
+      "address": 4359024,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_19_GRELBIN_FUN_00428370"
+    },
+    {
+      "address": 4359128,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_19_GRELBIN_FUN_004283D8"
+    },
+    {
+      "address": 4377800,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_19_GRELBIN_FUN_0042CCC8"
+    },
+    {
+      "address": 4377904,
+      "meaning": "shared native body of family 9a8a2404",
+      "size": 112,
+      "symbol": "LVL_19_GRELBIN_FUN_0042CD30"
+    },
+    {
+      "address": 4435512,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_0043AE38"
+    },
+    {
+      "address": 4442080,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_19_GRELBIN_FUN_0043C7E0"
+    },
+    {
+      "address": 4442512,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_19_GRELBIN_FUN_0043C990"
     },
     {
       "address": 4445952,
@@ -1137,16 +1142,54 @@
       "symbol": "LVL_19_GRELBIN_FUN_0043D9B0"
     },
     {
+      "address": 4446832,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_0043DA70"
+    },
+    {
       "address": 4446848,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_19_GRELBIN_FUN_0043DA80"
     },
     {
+      "address": 4446856,
+      "meaning": "shared native body of family 1c0a2bbf68ff",
+      "size": 124,
+      "symbol": "LVL_19_GRELBIN_FUN_0043DA88"
+    },
+    {
+      "address": 4446992,
+      "meaning": "shared native body of family e77c6258",
+      "size": 140,
+      "symbol": "LVL_19_GRELBIN_FUN_0043DB10"
+    },
+    {
+      "address": 4453600,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_0043F4E0"
+    },
+    {
+      "address": 4454192,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_0043F730"
+    },
+    {
+      "address": 4455464,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_0043FC28"
+    },
+    {
       "address": 4457544,
       "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
       "symbol": "LVL_19_GRELBIN_FUN_00440448"
+    },
+    {
+      "address": 4463856,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_19_GRELBIN_FUN_00441CF0"
     },
     {
       "address": 4476488,
@@ -1167,6 +1210,11 @@
       "symbol": "LVL_19_GRELBIN_FUN_00445020"
     },
     {
+      "address": 4490400,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_004484A0"
+    },
+    {
       "address": 4491072,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1177,6 +1225,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_19_GRELBIN_FUN_00449058"
+    },
+    {
+      "address": 4493560,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_004490F8"
     },
     {
       "address": 4494112,
@@ -1191,6 +1244,12 @@
       "symbol": "LVL_19_GRELBIN_FUN_00449488"
     },
     {
+      "address": 4496664,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_19_GRELBIN_FUN_00449D18"
+    },
+    {
       "address": 4497976,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1201,6 +1260,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_19_GRELBIN_FUN_0044A258"
+    },
+    {
+      "address": 4501048,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_19_GRELBIN_FUN_0044AE38"
     },
     {
       "address": 4516728,
@@ -1227,6 +1292,12 @@
       "symbol": "LVL_19_GRELBIN_FUN_00450160"
     },
     {
+      "address": 4522672,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_004502B0"
+    },
+    {
       "address": 4522752,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1239,16 +1310,49 @@
       "symbol": "LVL_19_GRELBIN_FUN_00450348"
     },
     {
+      "address": 4523848,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_19_GRELBIN_FUN_00450748"
+    },
+    {
+      "address": 4526472,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_19_GRELBIN_FUN_00451188"
+    },
+    {
+      "address": 4536416,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_19_GRELBIN_FUN_00453860"
+    },
+    {
+      "address": 4542208,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_00454F00"
+    },
+    {
       "address": 4543136,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_19_GRELBIN_FUN_004552A0"
     },
     {
+      "address": 4551312,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_00457290"
+    },
+    {
       "address": 4551568,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_19_GRELBIN_FUN_00457390"
+    },
+    {
+      "address": 4557608,
+      "size": 8,
+      "symbol": "LVL_19_GRELBIN_FUN_00458B28"
     },
     {
       "address": 4557776,

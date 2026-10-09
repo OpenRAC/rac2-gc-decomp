@@ -28,6 +28,9 @@
     "LVL_7_SIBERIUS_D_002537F0": 2439152,
     "LVL_7_SIBERIUS_D_002628A0": 2500768,
     "LVL_7_SIBERIUS_D_0027E030": 2613296,
+    "LVL_7_SIBERIUS_F01bd4546_FUN_00427328": 4354856,
+    "LVL_7_SIBERIUS_F01bd4546_FUN_0043AAF8": 4434680,
+    "LVL_7_SIBERIUS_F01bd4546_FUN_0043AB40": 4434752,
     "LVL_7_SIBERIUS_F03c444112283bc5f_AT00380800_ROLE00": 2331184,
     "LVL_7_SIBERIUS_F0477ffed_D_001AD630": 1758768,
     "LVL_7_SIBERIUS_F0477ffed_D_001AD640": 1758784,
@@ -44,6 +47,9 @@
     "LVL_7_SIBERIUS_F1157be91_FUN_00133230": 1258032,
     "LVL_7_SIBERIUS_F1157be91_FUN_001334B8": 1258680,
     "LVL_7_SIBERIUS_F28c929cadd7aca24_AT002C8460_ROLE00": 1613344,
+    "LVL_7_SIBERIUS_F307ea0ee_FUN_002E4900": 3033344,
+    "LVL_7_SIBERIUS_F307ea0ee_FUN_002E4918": 3033368,
+    "LVL_7_SIBERIUS_F307ea0ee_FUN_002E5318": 3035928,
     "LVL_7_SIBERIUS_F32fd6f60_D_002A4100": 2769152,
     "LVL_7_SIBERIUS_F3777c7f5_D_0021EE60": 2223712,
     "LVL_7_SIBERIUS_F3777c7f5_D_002203E0": 2229216,
@@ -70,6 +76,14 @@
     "LVL_7_SIBERIUS_F6b0741c38bf00fee_AT002A6288_ROLE00": 1618620,
     "LVL_7_SIBERIUS_F6b0741c38bf00fee_AT002A6288_ROLE01": 2777800,
     "LVL_7_SIBERIUS_F6b0741c38bf00fee_AT002A6288_ROLE02": 2849920,
+    "LVL_7_SIBERIUS_F70997ba9_FUN_002DC440": 2999360,
+    "LVL_7_SIBERIUS_F70997ba9_FUN_002DC560": 2999648,
+    "LVL_7_SIBERIUS_F70997ba9_FUN_002DF070": 3010672,
+    "LVL_7_SIBERIUS_F70997ba9_FUN_002DF080": 3010688,
+    "LVL_7_SIBERIUS_F70997ba9_FUN_002DF0F8": 3010808,
+    "LVL_7_SIBERIUS_F70997ba9_FUN_002DF518": 3011864,
+    "LVL_7_SIBERIUS_F70997ba9_FUN_002EA888": 3057800,
+    "LVL_7_SIBERIUS_F70997ba9_FUN_003715E0": 3610080,
     "LVL_7_SIBERIUS_F777b9bda_D_001B9040": 1806400,
     "LVL_7_SIBERIUS_F79744baad5ad7f65_AT0043B978_ROLE00": 1622228,
     "LVL_7_SIBERIUS_F7abba11e_D_001DA340": 1942336,
@@ -86,6 +100,10 @@
     "LVL_7_SIBERIUS_F9cdc323a4d0c2fbd_AT003D56C8_ROLE00": 3615832,
     "LVL_7_SIBERIUS_F9cdc323a4d0c2fbd_AT003D9D98_ROLE00": 3615832,
     "LVL_7_SIBERIUS_F9cdc323a4d0c2fbd_AT003F3E48_ROLE00": 3615832,
+    "LVL_7_SIBERIUS_F9e2cd219_FUN_00310A10": 3213840,
+    "LVL_7_SIBERIUS_F9e2cd219_FUN_00316C58": 3239000,
+    "LVL_7_SIBERIUS_F9e2cd219_FUN_0037DA48": 3660360,
+    "LVL_7_SIBERIUS_F9e2cd219_FUN_003804E8": 3671272,
     "LVL_7_SIBERIUS_FUN_0011AEA0": 1158816,
     "LVL_7_SIBERIUS_FUN_00133688": 1259144,
     "LVL_7_SIBERIUS_FUN_002CD648": 2938440,
@@ -109,6 +127,8 @@
     "LVL_7_SIBERIUS_Fb1b523716b470b36_AT0037FE58_ROLE01": 3031872,
     "LVL_7_SIBERIUS_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_7_SIBERIUS_Fc895cb79_D_001D1D00": 1907968,
+    "LVL_7_SIBERIUS_Fc936841d_FUN_002E4310": 3031824,
+    "LVL_7_SIBERIUS_Fc936841d_FUN_002E4340": 3031872,
     "LVL_7_SIBERIUS_Fea34650e_D_00189E20": 1613344,
     "LVL_7_SIBERIUS_Fee2b87d1_D_0014B540": 1357120,
     "LVL_7_SIBERIUS_Fee2b87d1_D_00152CD0": 1387728,
@@ -165,10 +185,22 @@
   ],
   "functions": [
     {
+      "address": 2774216,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_002A54C8"
+    },
+    {
       "address": 2774464,
       "meaning": "select pointer for kind0/2/3/4/5,kind1,kind6; other kinds returnnull",
       "size": 96,
       "symbol": "LVL_7_SIBERIUS_FUN_002A55C0"
+    },
+    {
+      "address": 2777736,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_7_SIBERIUS_FUN_002A6288"
     },
     {
       "address": 2781408,
@@ -230,6 +262,12 @@
       "symbol": "LVL_7_SIBERIUS_FUN_002C7F68"
     },
     {
+      "address": 2917472,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_7_SIBERIUS_FUN_002C8460"
+    },
+    {
       "address": 2920536,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
@@ -240,6 +278,18 @@
       "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
       "size": 188,
       "symbol": "LVL_7_SIBERIUS_FUN_002C93B0"
+    },
+    {
+      "address": 2922280,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_7_SIBERIUS_FUN_002C9728"
+    },
+    {
+      "address": 2924384,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_002C9F60"
     },
     {
       "address": 2934488,
@@ -287,6 +337,18 @@
       "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
       "symbol": "LVL_7_SIBERIUS_FUN_002CD8F0"
+    },
+    {
+      "address": 2958384,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_002D2430"
+    },
+    {
+      "address": 2958392,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_002D2438"
     },
     {
       "address": 2960000,
@@ -340,6 +402,18 @@
       "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
       "symbol": "LVL_7_SIBERIUS_FUN_002E9FF0"
+    },
+    {
+      "address": 3056544,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_7_SIBERIUS_FUN_002EA3A0"
+    },
+    {
+      "address": 3056704,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_7_SIBERIUS_FUN_002EA440"
     },
     {
       "address": 3057184,
@@ -403,6 +477,12 @@
       "symbol": "LVL_7_SIBERIUS_FUN_002FF728"
     },
     {
+      "address": 3166840,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_7_SIBERIUS_FUN_00305278"
+    },
+    {
       "address": 3172440,
       "meaning": "shared native body of family c895cb791e7df74f",
       "size": 188,
@@ -427,6 +507,12 @@
       "symbol": "LVL_7_SIBERIUS_FUN_00307C30"
     },
     {
+      "address": 3178264,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_7_SIBERIUS_FUN_00307F18"
+    },
+    {
       "address": 3213880,
       "meaning": "computes a scalar complement-power curve by repeated multiplication",
       "size": 68,
@@ -438,6 +524,12 @@
       "symbol": "LVL_7_SIBERIUS_FUN_003157E8"
     },
     {
+      "address": 3248368,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_7_SIBERIUS_FUN_003190F0"
+    },
+    {
       "address": 3264744,
       "meaning": "counts the non-zero bytes of the 0x1C by 4 byte table at 0x19B278 and returns the count clamped into 0..0x28",
       "size": 112,
@@ -447,6 +539,12 @@
       "address": 3275440,
       "size": 32,
       "symbol": "LVL_7_SIBERIUS_FUN_0031FAB0"
+    },
+    {
+      "address": 3287160,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_7_SIBERIUS_FUN_00322878"
     },
     {
       "address": 3292744,
@@ -471,499 +569,6 @@
       "meaning": "shared native body of family ed488fa4dc038a86",
       "size": 148,
       "symbol": "LVL_7_SIBERIUS_FUN_0033C410"
-    },
-    {
-      "address": 3475912,
-      "meaning": "shared native body of family 3777c7f5d4234584",
-      "size": 260,
-      "symbol": "LVL_7_SIBERIUS_FUN_003509C8"
-    },
-    {
-      "address": 3494368,
-      "meaning": "shared native body of family 62e6ff2b3d3a",
-      "size": 124,
-      "symbol": "LVL_7_SIBERIUS_FUN_003551E0"
-    },
-    {
-      "address": 3496168,
-      "meaning": "shared native body of family 32fd6f604b71fbbf",
-      "size": 112,
-      "symbol": "LVL_7_SIBERIUS_FUN_003558E8"
-    },
-    {
-      "address": 3542224,
-      "meaning": "apply nonzero signed halfword pair overrides to selected objects with row50/key33/count0F projections",
-      "size": 192,
-      "symbol": "LVL_7_SIBERIUS_FUN_00360CD0"
-    },
-    {
-      "address": 3560696,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_003654F8"
-    },
-    {
-      "address": 3579856,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00369FD0"
-    },
-    {
-      "address": 3586512,
-      "meaning": "shared native body of family 0477ffede9c6ef96",
-      "size": 188,
-      "symbol": "LVL_7_SIBERIUS_FUN_0036B9D0"
-    },
-    {
-      "address": 3608552,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00370FE8"
-    },
-    {
-      "address": 3620544,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
-      "size": 68,
-      "symbol": "LVL_7_SIBERIUS_FUN_00373EC0"
-    },
-    {
-      "address": 3623280,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00374970"
-    },
-    {
-      "address": 3629600,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
-      "size": 300,
-      "symbol": "LVL_7_SIBERIUS_FUN_00376220"
-    },
-    {
-      "address": 3637328,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00378050"
-    },
-    {
-      "address": 3662416,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_7_SIBERIUS_FUN_0037E250"
-    },
-    {
-      "address": 3672280,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_7_SIBERIUS_FUN_003808D8"
-    },
-    {
-      "address": 3754744,
-      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
-      "size": 76,
-      "symbol": "LVL_7_SIBERIUS_FUN_00394AF8"
-    },
-    {
-      "address": 3776568,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_7_SIBERIUS_FUN_0039A038"
-    },
-    {
-      "address": 3841552,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003A9E10"
-    },
-    {
-      "address": 3874664,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003B1F68"
-    },
-    {
-      "address": 3908704,
-      "meaning": "one float gate followed by five integer gates; every failing gate",
-      "size": 108,
-      "symbol": "LVL_7_SIBERIUS_FUN_003BA460"
-    },
-    {
-      "address": 3934544,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003C0950"
-    },
-    {
-      "address": 3962872,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003C77F8"
-    },
-    {
-      "address": 3976064,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003CAB80"
-    },
-    {
-      "address": 3979472,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003CB8D0"
-    },
-    {
-      "address": 4005992,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003D2068"
-    },
-    {
-      "address": 4017096,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_7_SIBERIUS_FUN_003D4BC8"
-    },
-    {
-      "address": 4018848,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_7_SIBERIUS_FUN_003D52A0"
-    },
-    {
-      "address": 4046544,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003DBED0"
-    },
-    {
-      "address": 4051576,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_003DD278"
-    },
-    {
-      "address": 4066056,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_003E0B08"
-    },
-    {
-      "address": 4080352,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
-      "size": 88,
-      "symbol": "LVL_7_SIBERIUS_FUN_003E42E0"
-    },
-    {
-      "address": 4102920,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_7_SIBERIUS_FUN_003E9B08"
-    },
-    {
-      "address": 4118424,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_7_SIBERIUS_FUN_003ED798"
-    },
-    {
-      "address": 4210360,
-      "meaning": "shared native body of family af5b3bc3a678ed5c",
-      "size": 96,
-      "symbol": "LVL_7_SIBERIUS_FUN_00403EB8"
-    },
-    {
-      "address": 4244368,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_0040C390"
-    },
-    {
-      "address": 4252048,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_0040E190"
-    },
-    {
-      "address": 4257456,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_0040F6B0"
-    },
-    {
-      "address": 4280560,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_7_SIBERIUS_FUN_004150F0"
-    },
-    {
-      "address": 4290424,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_7_SIBERIUS_FUN_00417778"
-    },
-    {
-      "address": 4290528,
-      "meaning": "shared native body of family 9a8a2404",
-      "size": 112,
-      "symbol": "LVL_7_SIBERIUS_FUN_004177E0"
-    },
-    {
-      "address": 4358752,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00428260"
-    },
-    {
-      "address": 4358776,
-      "meaning": "shared native body of family 0b67d26422",
-      "size": 124,
-      "symbol": "LVL_7_SIBERIUS_FUN_00428278"
-    },
-    {
-      "address": 4358912,
-      "meaning": "shared native body of family 7b754363b753d187",
-      "size": 140,
-      "symbol": "LVL_7_SIBERIUS_FUN_00428300"
-    },
-    {
-      "address": 4365520,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00429CD0"
-    },
-    {
-      "address": 4366112,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00429F20"
-    },
-    {
-      "address": 4367384,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_0042A418"
-    },
-    {
-      "address": 4402320,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00432C90"
-    },
-    {
-      "address": 4405480,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_004338E8"
-    },
-    {
-      "address": 4412968,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_7_SIBERIUS_FUN_00435628"
-    },
-    {
-      "address": 4434592,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_0043AAA0"
-    },
-    {
-      "address": 4435768,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_0043AF38"
-    },
-    {
-      "address": 4454128,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_0043F6F0"
-    },
-    {
-      "address": 4463232,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00441A80"
-    },
-    {
-      "address": 4469528,
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_00443318"
-    },
-    {
-      "address": 3166840,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_7_SIBERIUS_FUN_00305278"
-    },
-    {
-      "address": 3248368,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_7_SIBERIUS_FUN_003190F0"
-    },
-    {
-      "address": 3496400,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_7_SIBERIUS_FUN_003559D0"
-    },
-    {
-      "address": 3658672,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_7_SIBERIUS_FUN_0037D3B0"
-    },
-    {
-      "address": 3669592,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_7_SIBERIUS_FUN_0037FE58"
-    },
-    {
-      "address": 3731080,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_0038EE88"
-    },
-    {
-      "address": 3750248,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_00393968"
-    },
-    {
-      "address": 3869432,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
-      "size": 28,
-      "symbol": "LVL_7_SIBERIUS_FUN_003B0AF8"
-    },
-    {
-      "address": 3898664,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_003B7D28"
-    },
-    {
-      "address": 3920800,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_003BD3A0"
-    },
-    {
-      "address": 4019912,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_003D56C8"
-    },
-    {
-      "address": 4038040,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_003D9D98"
-    },
-    {
-      "address": 4144712,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_003F3E48"
-    },
-    {
-      "address": 4348736,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_7_SIBERIUS_FUN_00425B40"
-    },
-    {
-      "address": 4354000,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_7_SIBERIUS_FUN_00426FD0"
-    },
-    {
-      "address": 4354432,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_7_SIBERIUS_FUN_00427180"
-    },
-    {
-      "address": 4375776,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_7_SIBERIUS_FUN_0042C4E0"
-    },
-    {
-      "address": 4408584,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_7_SIBERIUS_FUN_00434508"
-    },
-    {
-      "address": 4438392,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_7_SIBERIUS_FUN_0043B978"
-    },
-    {
-      "address": 2777736,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_7_SIBERIUS_FUN_002A6288"
-    },
-    {
-      "address": 2917472,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_7_SIBERIUS_FUN_002C8460"
-    },
-    {
-      "address": 2922280,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_7_SIBERIUS_FUN_002C9728"
-    },
-    {
-      "address": 3628344,
-      "meaning": "Clear corresponding indexed words and decrement a record count",
-      "size": 48,
-      "symbol": "LVL_7_SIBERIUS_FUN_00375D38"
-    },
-    {
-      "address": 3672064,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_7_SIBERIUS_FUN_00380800"
-    },
-    {
-      "address": 2774216,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_002A54C8"
-    },
-    {
-      "address": 2924384,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_002C9F60"
-    },
-    {
-      "address": 2958384,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_002D2430"
-    },
-    {
-      "address": 2958392,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_7_SIBERIUS_FUN_002D2438"
-    },
-    {
-      "address": 3056544,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_7_SIBERIUS_FUN_002EA3A0"
-    },
-    {
-      "address": 3056704,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_7_SIBERIUS_FUN_002EA440"
-    },
-    {
-      "address": 3178264,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_7_SIBERIUS_FUN_00307F18"
-    },
-    {
-      "address": 3287160,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_7_SIBERIUS_FUN_00322878"
     },
     {
       "address": 3393376,
@@ -1020,16 +625,416 @@
       "symbol": "LVL_7_SIBERIUS_FUN_00344A80"
     },
     {
+      "address": 3443928,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_7_SIBERIUS_FUN_00348CD8"
+    },
+    {
       "address": 3467080,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_7_SIBERIUS_FUN_0034E748"
     },
     {
+      "address": 3475912,
+      "meaning": "shared native body of family 3777c7f5d4234584",
+      "size": 260,
+      "symbol": "LVL_7_SIBERIUS_FUN_003509C8"
+    },
+    {
+      "address": 3494368,
+      "meaning": "shared native body of family 62e6ff2b3d3a",
+      "size": 124,
+      "symbol": "LVL_7_SIBERIUS_FUN_003551E0"
+    },
+    {
+      "address": 3496168,
+      "meaning": "shared native body of family 32fd6f604b71fbbf",
+      "size": 112,
+      "symbol": "LVL_7_SIBERIUS_FUN_003558E8"
+    },
+    {
+      "address": 3496400,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_7_SIBERIUS_FUN_003559D0"
+    },
+    {
+      "address": 3542224,
+      "meaning": "apply nonzero signed halfword pair overrides to selected objects with row50/key33/count0F projections",
+      "size": 192,
+      "symbol": "LVL_7_SIBERIUS_FUN_00360CD0"
+    },
+    {
+      "address": 3560696,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_003654F8"
+    },
+    {
+      "address": 3579856,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00369FD0"
+    },
+    {
+      "address": 3586512,
+      "meaning": "shared native body of family 0477ffede9c6ef96",
+      "size": 188,
+      "symbol": "LVL_7_SIBERIUS_FUN_0036B9D0"
+    },
+    {
+      "address": 3608552,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00370FE8"
+    },
+    {
+      "address": 3620544,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
+      "size": 68,
+      "symbol": "LVL_7_SIBERIUS_FUN_00373EC0"
+    },
+    {
+      "address": 3623280,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00374970"
+    },
+    {
+      "address": 3628344,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_7_SIBERIUS_FUN_00375D38"
+    },
+    {
+      "address": 3629600,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
+      "size": 300,
+      "symbol": "LVL_7_SIBERIUS_FUN_00376220"
+    },
+    {
+      "address": 3637328,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00378050"
+    },
+    {
+      "address": 3658672,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_7_SIBERIUS_FUN_0037D3B0"
+    },
+    {
+      "address": 3660128,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_7_SIBERIUS_FUN_0037D960"
+    },
+    {
       "address": 3661192,
       "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
       "size": 164,
       "symbol": "LVL_7_SIBERIUS_FUN_0037DD88"
+    },
+    {
+      "address": 3662416,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_7_SIBERIUS_FUN_0037E250"
+    },
+    {
+      "address": 3669592,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_7_SIBERIUS_FUN_0037FE58"
+    },
+    {
+      "address": 3671040,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_7_SIBERIUS_FUN_00380400"
+    },
+    {
+      "address": 3672064,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_7_SIBERIUS_FUN_00380800"
+    },
+    {
+      "address": 3672280,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_7_SIBERIUS_FUN_003808D8"
+    },
+    {
+      "address": 3731080,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_0038EE88"
+    },
+    {
+      "address": 3750248,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_00393968"
+    },
+    {
+      "address": 3754744,
+      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
+      "size": 76,
+      "symbol": "LVL_7_SIBERIUS_FUN_00394AF8"
+    },
+    {
+      "address": 3774024,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_7_SIBERIUS_FUN_00399648"
+    },
+    {
+      "address": 3775104,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_7_SIBERIUS_FUN_00399A80"
+    },
+    {
+      "address": 3776568,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_7_SIBERIUS_FUN_0039A038"
+    },
+    {
+      "address": 3841552,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003A9E10"
+    },
+    {
+      "address": 3842160,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_7_SIBERIUS_FUN_003AA070"
+    },
+    {
+      "address": 3869432,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_7_SIBERIUS_FUN_003B0AF8"
+    },
+    {
+      "address": 3874664,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003B1F68"
+    },
+    {
+      "address": 3875560,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_7_SIBERIUS_FUN_003B22E8"
+    },
+    {
+      "address": 3898664,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_003B7D28"
+    },
+    {
+      "address": 3908704,
+      "meaning": "one float gate followed by five integer gates; every failing gate",
+      "size": 108,
+      "symbol": "LVL_7_SIBERIUS_FUN_003BA460"
+    },
+    {
+      "address": 3920800,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_003BD3A0"
+    },
+    {
+      "address": 3934544,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003C0950"
+    },
+    {
+      "address": 3937192,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_7_SIBERIUS_FUN_003C13A8"
+    },
+    {
+      "address": 3962872,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003C77F8"
+    },
+    {
+      "address": 3976064,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003CAB80"
+    },
+    {
+      "address": 3979472,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003CB8D0"
+    },
+    {
+      "address": 4005992,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003D2068"
+    },
+    {
+      "address": 4014552,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_7_SIBERIUS_FUN_003D41D8"
+    },
+    {
+      "address": 4015632,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_7_SIBERIUS_FUN_003D4610"
+    },
+    {
+      "address": 4017096,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_7_SIBERIUS_FUN_003D4BC8"
+    },
+    {
+      "address": 4018848,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_7_SIBERIUS_FUN_003D52A0"
+    },
+    {
+      "address": 4019912,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_003D56C8"
+    },
+    {
+      "address": 4038040,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_003D9D98"
+    },
+    {
+      "address": 4046544,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003DBED0"
+    },
+    {
+      "address": 4051576,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_003DD278"
+    },
+    {
+      "address": 4054352,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_7_SIBERIUS_FUN_003DDD50"
+    },
+    {
+      "address": 4066056,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_003E0B08"
+    },
+    {
+      "address": 4080352,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
+      "size": 88,
+      "symbol": "LVL_7_SIBERIUS_FUN_003E42E0"
+    },
+    {
+      "address": 4102920,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_7_SIBERIUS_FUN_003E9B08"
+    },
+    {
+      "address": 4118424,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_7_SIBERIUS_FUN_003ED798"
+    },
+    {
+      "address": 4144712,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_003F3E48"
+    },
+    {
+      "address": 4210360,
+      "meaning": "shared native body of family af5b3bc3a678ed5c",
+      "size": 96,
+      "symbol": "LVL_7_SIBERIUS_FUN_00403EB8"
+    },
+    {
+      "address": 4244368,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_0040C390"
+    },
+    {
+      "address": 4245264,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_7_SIBERIUS_FUN_0040C710"
+    },
+    {
+      "address": 4252048,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_0040E190"
+    },
+    {
+      "address": 4257456,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_0040F6B0"
+    },
+    {
+      "address": 4280456,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_7_SIBERIUS_FUN_00415088"
+    },
+    {
+      "address": 4280560,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_7_SIBERIUS_FUN_004150F0"
+    },
+    {
+      "address": 4290424,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_7_SIBERIUS_FUN_00417778"
+    },
+    {
+      "address": 4290528,
+      "meaning": "shared native body of family 9a8a2404",
+      "size": 112,
+      "symbol": "LVL_7_SIBERIUS_FUN_004177E0"
+    },
+    {
+      "address": 4348736,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_00425B40"
+    },
+    {
+      "address": 4354000,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_7_SIBERIUS_FUN_00426FD0"
+    },
+    {
+      "address": 4354432,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_7_SIBERIUS_FUN_00427180"
     },
     {
       "address": 4357872,
@@ -1056,16 +1061,54 @@
       "symbol": "LVL_7_SIBERIUS_FUN_004281A0"
     },
     {
+      "address": 4358752,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00428260"
+    },
+    {
       "address": 4358768,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_7_SIBERIUS_FUN_00428270"
     },
     {
+      "address": 4358776,
+      "meaning": "shared native body of family 0b67d26422",
+      "size": 124,
+      "symbol": "LVL_7_SIBERIUS_FUN_00428278"
+    },
+    {
+      "address": 4358912,
+      "meaning": "shared native body of family 7b754363b753d187",
+      "size": 140,
+      "symbol": "LVL_7_SIBERIUS_FUN_00428300"
+    },
+    {
+      "address": 4365520,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00429CD0"
+    },
+    {
+      "address": 4366112,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00429F20"
+    },
+    {
+      "address": 4367384,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_0042A418"
+    },
+    {
       "address": 4369464,
       "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
       "symbol": "LVL_7_SIBERIUS_FUN_0042AC38"
+    },
+    {
+      "address": 4375776,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_7_SIBERIUS_FUN_0042C4E0"
     },
     {
       "address": 4388408,
@@ -1086,6 +1129,11 @@
       "symbol": "LVL_7_SIBERIUS_FUN_0042F810"
     },
     {
+      "address": 4402320,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00432C90"
+    },
+    {
       "address": 4402992,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1096,6 +1144,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_7_SIBERIUS_FUN_00433848"
+    },
+    {
+      "address": 4405480,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_004338E8"
     },
     {
       "address": 4406032,
@@ -1110,6 +1163,12 @@
       "symbol": "LVL_7_SIBERIUS_FUN_00433C78"
     },
     {
+      "address": 4408584,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_7_SIBERIUS_FUN_00434508"
+    },
+    {
       "address": 4409896,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1120,6 +1179,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_7_SIBERIUS_FUN_00434A48"
+    },
+    {
+      "address": 4412968,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_7_SIBERIUS_FUN_00435628"
     },
     {
       "address": 4428648,
@@ -1146,6 +1211,12 @@
       "symbol": "LVL_7_SIBERIUS_FUN_0043A950"
     },
     {
+      "address": 4434592,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_0043AAA0"
+    },
+    {
       "address": 4434672,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1158,16 +1229,49 @@
       "symbol": "LVL_7_SIBERIUS_FUN_0043AB38"
     },
     {
+      "address": 4435768,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_7_SIBERIUS_FUN_0043AF38"
+    },
+    {
+      "address": 4438392,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_7_SIBERIUS_FUN_0043B978"
+    },
+    {
+      "address": 4448336,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_7_SIBERIUS_FUN_0043E050"
+    },
+    {
+      "address": 4454128,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_0043F6F0"
+    },
+    {
       "address": 4455056,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_7_SIBERIUS_FUN_0043FA90"
     },
     {
+      "address": 4463232,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00441A80"
+    },
+    {
       "address": 4463488,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_7_SIBERIUS_FUN_00441B80"
+    },
+    {
+      "address": 4469528,
+      "size": 8,
+      "symbol": "LVL_7_SIBERIUS_FUN_00443318"
     },
     {
       "address": 4469696,

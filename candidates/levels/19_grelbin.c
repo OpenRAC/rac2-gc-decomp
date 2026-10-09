@@ -3213,3 +3213,439 @@ int LVL_19_GRELBIN_FUN_00458BD0(int *owner)
     return result;
 }
 
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB950(char *local, char *first, char *second);
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB920(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_19_GRELBIN_FUN_003A3020(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB950(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB920((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB950(char *local, char *first, char *second);
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB920(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_19_GRELBIN_FUN_003B4980(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB950(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB920((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB950(char *local, char *first, char *second);
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB920(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_19_GRELBIN_FUN_003C29C0(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB950(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB920((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB950(char *local, char *first, char *second);
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB920(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_19_GRELBIN_FUN_003CE168(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB950(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB920((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB950(char *local, char *first, char *second);
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB920(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_19_GRELBIN_FUN_003EB6B8(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB950(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB920((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB950(char *local, char *first, char *second);
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB920(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_19_GRELBIN_FUN_003F3AF8(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB950(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB920((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB950(char *local, char *first, char *second);
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB920(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_19_GRELBIN_FUN_0041DB50(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB950(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB920((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB950(char *local, char *first, char *second);
+extern void LVL_19_GRELBIN_Fc936841d_FUN_002EB920(char *target, char *first, char *local);
+
+#ifndef RAC2_T_VEC16_FC936841D
+#define RAC2_T_VEC16_FC936841D
+typedef struct {
+    float x;
+    float y;
+    float z;
+    float w;
+} Vec16_Fc936841d;
+#endif
+
+
+void LVL_19_GRELBIN_FUN_00428370(Vec16_Fc936841d *object, int index)
+{
+    char local[16];
+
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB950(local, (char *)&object[index - 2], (char *)&object[index - 3]);
+    LVL_19_GRELBIN_Fc936841d_FUN_002EB920((char *)&object[index - 1], (char *)&object[index - 2], local);
+}
+
+
+
+extern void LVL_19_GRELBIN_F01bd4546_FUN_0043CB38(char *p, int v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450308(char *p, int v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450308(char *p, int v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450308(char *p, int v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450308(char *p, int v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450308(char *p, int v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450308(char *p, int v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450350(char *p, float v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450350(char *p, float v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450350(char *p, float v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450350(char *p, float v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450350(char *p, float v);
+extern void LVL_19_GRELBIN_F01bd4546_FUN_00450350(char *p, float v);
+
+void LVL_19_GRELBIN_FUN_00453860(char *self, int x)
+{
+    char *p1, *p2, *p3, *p4, *p5, *p6;
+
+    *(s32 *)(self + 5492) = x;
+    if (*(s32 *)(self + 5496) != 0) {
+        *(s32 *)(self + 5496) = 0;
+        LVL_19_GRELBIN_F01bd4546_FUN_0043CB38(self + 1464, 0);
+        p1 = self + 3052;
+        p2 = self + 3188;
+        p3 = self + 3324;
+        p4 = self + 3460;
+        p5 = self + 3596;
+        p6 = self + 3732;
+        LVL_19_GRELBIN_F01bd4546_FUN_00450308(p1, 1);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450308(p2, 1);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450308(p3, 1);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450308(p4, 1);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450308(p5, 1);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450308(p6, 1);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450350(p1, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450350(p2, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450350(p3, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450350(p4, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450350(p5, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+        LVL_19_GRELBIN_F01bd4546_FUN_00450350(p6, *(s32 *)0x1A7B90 ? 0.14f : 0.116666675f);
+    }
+}
+extern void LVL_19_GRELBIN_F70997ba9_FUN_00379558(int a, int b);
+extern void LVL_19_GRELBIN_F70997ba9_FUN_002E3E88(int a);
+extern void *LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(int id);
+extern int LVL_19_GRELBIN_F70997ba9_FUN_002E6DC0(void *p, int i);
+extern void LVL_19_GRELBIN_F70997ba9_FUN_002E6D48(void);
+extern void LVL_19_GRELBIN_F70997ba9_FUN_002E7200(int a, int b, long c, void *d, int e);
+extern void LVL_19_GRELBIN_F70997ba9_FUN_002E6D38(void);
+extern void LVL_19_GRELBIN_F70997ba9_FUN_002E3FA8(void);
+
+int LVL_19_GRELBIN_FUN_00350C28(int *arg0)
+{
+    int min;
+    int v;
+    int slot;
+    int count;
+    int off;
+
+    LVL_19_GRELBIN_F70997ba9_FUN_00379558(66, 68);
+    LVL_19_GRELBIN_F70997ba9_FUN_00379558(71, 11);
+    LVL_19_GRELBIN_F70997ba9_FUN_002E3E88(0);
+    min = LVL_19_GRELBIN_F70997ba9_FUN_002E6DC0(LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11613), -1);
+    v = LVL_19_GRELBIN_F70997ba9_FUN_002E6DC0(LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11625), -1);
+    if (v >= min)
+        min = v;
+    if (*(int *)0x1A79F0 != 0) {
+        v = LVL_19_GRELBIN_F70997ba9_FUN_002E6DC0(LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11614), -1);
+        if (v >= min)
+            min = v;
+    }
+    v = LVL_19_GRELBIN_F70997ba9_FUN_002E6DC0(LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11626), -1);
+    if (v >= min)
+        min = v;
+    v = LVL_19_GRELBIN_F70997ba9_FUN_002E6DC0(LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11627), -1);
+    if (v >= min)
+        min = v;
+    v = LVL_19_GRELBIN_F70997ba9_FUN_002E6DC0(LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11599), -1);
+    if (v >= min)
+        min = v;
+    slot = (arg0[8] - min) >> 1;
+    if (slot <= 1)
+        slot = 2;
+    count = arg0[9] / (*(int *)0x1A79F0 != 0 ? 7 : 6);
+    LVL_19_GRELBIN_F70997ba9_FUN_002E6D48();
+    off = count - 6;
+    LVL_19_GRELBIN_F70997ba9_FUN_002E7200(slot, off, 0x80FFA888L, LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11613), -1);
+    off += count;
+    LVL_19_GRELBIN_F70997ba9_FUN_002E7200(slot, off, 0x80FFA888L, LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11625), -1);
+    off += count;
+    LVL_19_GRELBIN_F70997ba9_FUN_002E7200(slot, off, 0x80FFA888L, LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11626), -1);
+    off += count;
+    LVL_19_GRELBIN_F70997ba9_FUN_002E7200(slot, off, 0x80FFA888L, LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11627), -1);
+    off += count;
+    LVL_19_GRELBIN_F70997ba9_FUN_002E7200(slot, off, 0x80FFA888L, LVL_19_GRELBIN_F70997ba9_FUN_002F1F28(11599), -1);
+    LVL_19_GRELBIN_F70997ba9_FUN_002E6D38();
+    LVL_19_GRELBIN_F70997ba9_FUN_002E3FA8();
+    return 2;
+}
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(float);
+
+void LVL_19_GRELBIN_FUN_003A2BE8(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[0], v[3]);
+        v[1] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[1], v[4]);
+        v[2] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[2], v[5]);
+        v[9] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[9], v[12]);
+        v[10] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[10], v[13]);
+        v[11] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[11], v[14]);
+        v[20] = LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18(v[0]) * v[6];
+        v[21] = LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(v[1]) * v[7];
+        v[22] = -LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(v[2]) * v[8];
+        v[24] = LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18(v[9]) * v[15];
+        v[25] = LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(v[10]) * v[16];
+        v[26] = -LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(float, float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(float);
+extern float LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(float);
+
+void LVL_19_GRELBIN_FUN_003EB280(int unused, float *p, int n)
+{
+    float *v;
+    int count;
+    if (n <= 0)
+        return;
+    v = p;
+    count = n;
+    do {
+        v[0] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[0], v[3]);
+        v[1] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[1], v[4]);
+        v[2] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[2], v[5]);
+        v[9] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[9], v[12]);
+        v[10] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[10], v[13]);
+        v[11] = LVL_19_GRELBIN_F307ea0ee_FUN_002EC930(v[11], v[14]);
+        v[20] = LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18(v[0]) * v[6];
+        v[21] = LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(v[1]) * v[7];
+        v[22] = -LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(v[2]) * v[8];
+        v[24] = LVL_19_GRELBIN_F307ea0ee_FUN_002EBF18(v[9]) * v[15];
+        v[25] = LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(v[10]) * v[16];
+        v[26] = -LVL_19_GRELBIN_F307ea0ee_FUN_002EBF30(v[11]) * v[17];
+        v += 32;
+    } while (--count != 0);
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float LVL_19_GRELBIN_F9e2cd219_FUN_00318288(float value);
+extern void LVL_19_GRELBIN_F9e2cd219_FUN_0031E5D0(void *out, void *in, void *tmp, int mode, float value);
+extern void LVL_19_GRELBIN_F9e2cd219_FUN_00384B08(void *owner, void *out);
+
+void LVL_19_GRELBIN_FUN_00384A20(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    LVL_19_GRELBIN_F9e2cd219_FUN_0031E5D0((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            LVL_19_GRELBIN_F9e2cd219_FUN_00318288(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    LVL_19_GRELBIN_F9e2cd219_FUN_00384B08(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}
+#ifndef RAC2_T_WORKER_F9E2CD219
+#define RAC2_T_WORKER_F9E2CD219
+typedef struct {
+    unsigned char pad00[76];
+    short field4C;
+    unsigned char pad4E[2];
+    int field50;
+    float field54;
+    float field58;
+} Worker_F9e2cd219;
+#endif
+
+
+#ifndef RAC2_T_OWNER_F9E2CD219
+#define RAC2_T_OWNER_F9E2CD219
+typedef struct {
+    unsigned char pad00[104];
+    Worker_F9e2cd219 *child;
+} Owner_F9e2cd219;
+#endif
+
+
+extern float LVL_19_GRELBIN_F9e2cd219_FUN_00318288(float value);
+extern void LVL_19_GRELBIN_F9e2cd219_FUN_0031E5D0(void *out, void *in, void *tmp, int mode, float value);
+extern void LVL_19_GRELBIN_F9e2cd219_FUN_003875A8(void *owner, void *out);
+
+void LVL_19_GRELBIN_FUN_003874C0(Owner_F9e2cd219 *self)
+{
+    Worker_F9e2cd219 *child = self->child;
+
+    LVL_19_GRELBIN_F9e2cd219_FUN_0031E5D0((char *)child + 48, (char *)child + 16, (char *)child + 32, 0,
+            LVL_19_GRELBIN_F9e2cd219_FUN_00318288(child->field54));
+
+    child->field54 = child->field54 + child->field58;
+    LVL_19_GRELBIN_F9e2cd219_FUN_003875A8(self, (char *)child + 48);
+
+    if (child->field54 > 0.9f)
+        child->field50 = 1;
+    else
+        child->field50 = 0;
+
+    if (child->field54 >= 1.0f) {
+        child->field54 = 1.0f;
+        child->field4C = 1;
+    }
+}

@@ -28,6 +28,9 @@
     "LVL_1_OOZLA_D_002546B0": 2442928,
     "LVL_1_OOZLA_D_002637A0": 2504608,
     "LVL_1_OOZLA_D_0027EF80": 2617216,
+    "LVL_1_OOZLA_F01bd4546_FUN_0042E798": 4384664,
+    "LVL_1_OOZLA_F01bd4546_FUN_00441F68": 4464488,
+    "LVL_1_OOZLA_F01bd4546_FUN_00441FB0": 4464560,
     "LVL_1_OOZLA_F03c444112283bc5f_AT0037F918_ROLE00": 2331888,
     "LVL_1_OOZLA_F1157be91_D_001A63E8": 1729512,
     "LVL_1_OOZLA_F1157be91_D_001A7430": 1733680,
@@ -41,6 +44,9 @@
     "LVL_1_OOZLA_F250a61cf_D_001AD688": 1758856,
     "LVL_1_OOZLA_F250a61cf_FUN_00115DA8": 1138088,
     "LVL_1_OOZLA_F28c929cadd7aca24_AT002C7C30_ROLE00": 1613344,
+    "LVL_1_OOZLA_F307ea0ee_FUN_002E3A48": 3029576,
+    "LVL_1_OOZLA_F307ea0ee_FUN_002E3A60": 3029600,
+    "LVL_1_OOZLA_F307ea0ee_FUN_002E4460": 3032160,
     "LVL_1_OOZLA_F490e2c59_D_001A79F0": 1735152,
     "LVL_1_OOZLA_F490e2c59_D_001AA7F0": 1746928,
     "LVL_1_OOZLA_F55a1acb8_D_001A63A8": 1729448,
@@ -56,6 +62,14 @@
     "LVL_1_OOZLA_F6b0741c38bf00fee_AT002A8088_ROLE00": 1618620,
     "LVL_1_OOZLA_F6b0741c38bf00fee_AT002A8088_ROLE01": 2785480,
     "LVL_1_OOZLA_F6b0741c38bf00fee_AT002A8088_ROLE02": 2857000,
+    "LVL_1_OOZLA_F70997ba9_FUN_002DBBB0": 2997168,
+    "LVL_1_OOZLA_F70997ba9_FUN_002DBCD0": 2997456,
+    "LVL_1_OOZLA_F70997ba9_FUN_002DE7E0": 3008480,
+    "LVL_1_OOZLA_F70997ba9_FUN_002DE7F0": 3008496,
+    "LVL_1_OOZLA_F70997ba9_FUN_002DE868": 3008616,
+    "LVL_1_OOZLA_F70997ba9_FUN_002DEC88": 3009672,
+    "LVL_1_OOZLA_F70997ba9_FUN_002E99D0": 3054032,
+    "LVL_1_OOZLA_F70997ba9_FUN_003717C8": 3610568,
     "LVL_1_OOZLA_F79744baad5ad7f65_AT00442DE8_ROLE00": 1622228,
     "LVL_1_OOZLA_F86f665335d9cb905_AT003B41E0_ROLE00": 3881016,
     "LVL_1_OOZLA_F9cdc323a4d0c2fbd_AT0038DFA0_ROLE00": 3616320,
@@ -65,6 +79,10 @@
     "LVL_1_OOZLA_F9cdc323a4d0c2fbd_AT003ECAF8_ROLE00": 3616320,
     "LVL_1_OOZLA_F9cdc323a4d0c2fbd_AT003F0280_ROLE00": 3616320,
     "LVL_1_OOZLA_F9cdc323a4d0c2fbd_AT003FF718_ROLE00": 3616320,
+    "LVL_1_OOZLA_F9e2cd219_FUN_00310460": 3212384,
+    "LVL_1_OOZLA_F9e2cd219_FUN_003168C8": 3238088,
+    "LVL_1_OOZLA_F9e2cd219_FUN_0037CB60": 3656544,
+    "LVL_1_OOZLA_F9e2cd219_FUN_0037F600": 3667456,
     "LVL_1_OOZLA_FUN_00115E38": 1138232,
     "LVL_1_OOZLA_FUN_0011AEA0": 1158816,
     "LVL_1_OOZLA_FUN_00133688": 1259144,
@@ -91,6 +109,8 @@
     "LVL_1_OOZLA_Fc84472d1_D_001ADD98": 1760664,
     "LVL_1_OOZLA_Fc84472d1_D_001ADDB8": 1760696,
     "LVL_1_OOZLA_Fc84472d1_FUN_00115E38": 1138232,
+    "LVL_1_OOZLA_Fc936841d_FUN_002E3470": 3028080,
+    "LVL_1_OOZLA_Fc936841d_FUN_002E34A0": 3028128,
     "LVL_1_OOZLA_Fd1b66aa7_D_001AA550": 1746256,
     "LVL_1_OOZLA_Fd1b66aa7_D_001AA568": 1746280,
     "LVL_1_OOZLA_Fd1b66aa7_D_001AA578": 1746296,
@@ -155,10 +175,22 @@
   ],
   "functions": [
     {
+      "address": 2781896,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_002A72C8"
+    },
+    {
       "address": 2782144,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
       "symbol": "LVL_1_OOZLA_FUN_002A73C0"
+    },
+    {
+      "address": 2785416,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_1_OOZLA_FUN_002A8088"
     },
     {
       "address": 2789088,
@@ -236,10 +268,28 @@
       "symbol": "LVL_1_OOZLA_FUN_002C7738"
     },
     {
+      "address": 2915376,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_1_OOZLA_FUN_002C7C30"
+    },
+    {
       "address": 2918440,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
       "symbol": "LVL_1_OOZLA_FUN_002C8828"
+    },
+    {
+      "address": 2920184,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_1_OOZLA_FUN_002C8EF8"
+    },
+    {
+      "address": 2922288,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_002C9730"
     },
     {
       "address": 2932472,
@@ -281,6 +331,18 @@
       "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
       "symbol": "LVL_1_OOZLA_FUN_002CD110"
+    },
+    {
+      "address": 2956192,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_002D1BA0"
+    },
+    {
+      "address": 2956200,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_002D1BA8"
     },
     {
       "address": 2957808,
@@ -328,6 +390,18 @@
       "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
       "symbol": "LVL_1_OOZLA_FUN_002E9138"
+    },
+    {
+      "address": 3052776,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_1_OOZLA_FUN_002E94E8"
+    },
+    {
+      "address": 3052936,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_1_OOZLA_FUN_002E9588"
     },
     {
       "address": 3053416,
@@ -391,10 +465,22 @@
       "symbol": "LVL_1_OOZLA_FUN_002FED98"
     },
     {
+      "address": 3165328,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_1_OOZLA_FUN_00304C90"
+    },
+    {
       "address": 3174744,
       "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
       "symbol": "LVL_1_OOZLA_FUN_00307158"
+    },
+    {
+      "address": 3176808,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_1_OOZLA_FUN_00307968"
     },
     {
       "address": 3212424,
@@ -408,6 +494,12 @@
       "symbol": "LVL_1_OOZLA_FUN_003153A8"
     },
     {
+      "address": 3247608,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_1_OOZLA_FUN_00318DF8"
+    },
+    {
       "address": 3262176,
       "meaning": "counts the non-zero bytes of the 0x1C by 4 byte table at 0x19B278 and returns the count clamped into 0..0x28",
       "size": 112,
@@ -417,6 +509,12 @@
       "address": 3272840,
       "size": 32,
       "symbol": "LVL_1_OOZLA_FUN_0031F088"
+    },
+    {
+      "address": 3284744,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_1_OOZLA_FUN_00321F08"
     },
     {
       "address": 3288776,
@@ -453,464 +551,6 @@
       "meaning": "five independent `cond ? 3 : 0` stores to fixed absolute globals.",
       "size": 148,
       "symbol": "LVL_1_OOZLA_FUN_0033C708"
-    },
-    {
-      "address": 3495128,
-      "meaning": "shared native body of family 62e6ff2b3d3a",
-      "size": 124,
-      "symbol": "LVL_1_OOZLA_FUN_003554D8"
-    },
-    {
-      "address": 3543000,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
-      "size": 192,
-      "symbol": "LVL_1_OOZLA_FUN_00360FD8"
-    },
-    {
-      "address": 3561120,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_003656A0"
-    },
-    {
-      "address": 3580344,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_0036A1B8"
-    },
-    {
-      "address": 3587000,
-      "meaning": "shared native body of family 250a61cf2f35cf62",
-      "size": 188,
-      "symbol": "LVL_1_OOZLA_FUN_0036BBB8"
-    },
-    {
-      "address": 3609040,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_003711D0"
-    },
-    {
-      "address": 3621032,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
-      "size": 68,
-      "symbol": "LVL_1_OOZLA_FUN_003740A8"
-    },
-    {
-      "address": 3623768,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_00374B58"
-    },
-    {
-      "address": 3630088,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
-      "size": 300,
-      "symbol": "LVL_1_OOZLA_FUN_00376408"
-    },
-    {
-      "address": 3637816,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_00378238"
-    },
-    {
-      "address": 3658600,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_1_OOZLA_FUN_0037D368"
-    },
-    {
-      "address": 3668464,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_1_OOZLA_FUN_0037F9F0"
-    },
-    {
-      "address": 3754272,
-      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
-      "size": 76,
-      "symbol": "LVL_1_OOZLA_FUN_00394920"
-    },
-    {
-      "address": 3783040,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_1_OOZLA_FUN_0039B980"
-    },
-    {
-      "address": 3852992,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_003ACAC0"
-    },
-    {
-      "address": 3899448,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_003B8038"
-    },
-    {
-      "address": 3953512,
-      "meaning": "one float gate followed by five integer gates; every failing gate",
-      "size": 108,
-      "symbol": "LVL_1_OOZLA_FUN_003C5368"
-    },
-    {
-      "address": 3999088,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_003D0570"
-    },
-    {
-      "address": 4058808,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_003DEEB8"
-    },
-    {
-      "address": 4072544,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_003E2460"
-    },
-    {
-      "address": 4097856,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_003E8740"
-    },
-    {
-      "address": 4111624,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_1_OOZLA_FUN_003EBD08"
-    },
-    {
-      "address": 4114128,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_1_OOZLA_FUN_003EC6D0"
-    },
-    {
-      "address": 4137912,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_003F23B8"
-    },
-    {
-      "address": 4142944,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_003F3760"
-    },
-    {
-      "address": 4157424,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_003F6FF0"
-    },
-    {
-      "address": 4170768,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
-      "size": 88,
-      "symbol": "LVL_1_OOZLA_FUN_003FA410"
-    },
-    {
-      "address": 4238504,
-      "meaning": "shared native body of family af5b3bc3a678ed5c",
-      "size": 96,
-      "symbol": "LVL_1_OOZLA_FUN_0040ACA8"
-    },
-    {
-      "address": 4277816,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_00414638"
-    },
-    {
-      "address": 4285496,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_00416438"
-    },
-    {
-      "address": 4306032,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_1_OOZLA_FUN_0041B470"
-    },
-    {
-      "address": 4317448,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_1_OOZLA_FUN_0041E108"
-    },
-    {
-      "address": 4317552,
-      "meaning": "shared native body of family 9a8a2404",
-      "size": 112,
-      "symbol": "LVL_1_OOZLA_FUN_0041E170"
-    },
-    {
-      "address": 4388560,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_0042F6D0"
-    },
-    {
-      "address": 4388584,
-      "meaning": "shared native body of family c84472d1b784fec8",
-      "size": 124,
-      "symbol": "LVL_1_OOZLA_FUN_0042F6E8"
-    },
-    {
-      "address": 4388720,
-      "meaning": "shared native body of family eab1f2e53b7d3238",
-      "size": 140,
-      "symbol": "LVL_1_OOZLA_FUN_0042F770"
-    },
-    {
-      "address": 4395328,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_00431140"
-    },
-    {
-      "address": 4395920,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_00431390"
-    },
-    {
-      "address": 4397192,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_00431888"
-    },
-    {
-      "address": 4432128,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_0043A100"
-    },
-    {
-      "address": 4435288,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_0043AD58"
-    },
-    {
-      "address": 4442776,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_1_OOZLA_FUN_0043CA98"
-    },
-    {
-      "address": 4464400,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_00441F10"
-    },
-    {
-      "address": 4465576,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_004423A8"
-    },
-    {
-      "address": 4483936,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_00446B60"
-    },
-    {
-      "address": 4493040,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_00448EF0"
-    },
-    {
-      "address": 4499336,
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_0044A788"
-    },
-    {
-      "address": 3165328,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_1_OOZLA_FUN_00304C90"
-    },
-    {
-      "address": 3247608,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_1_OOZLA_FUN_00318DF8"
-    },
-    {
-      "address": 3497160,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_1_OOZLA_FUN_00355CC8"
-    },
-    {
-      "address": 3654856,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_1_OOZLA_FUN_0037C4C8"
-    },
-    {
-      "address": 3665776,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_1_OOZLA_FUN_0037EF70"
-    },
-    {
-      "address": 3727264,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_0038DFA0"
-    },
-    {
-      "address": 3747712,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_00392F80"
-    },
-    {
-      "address": 3883488,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
-      "size": 28,
-      "symbol": "LVL_1_OOZLA_FUN_003B41E0"
-    },
-    {
-      "address": 3943472,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_003C2C30"
-    },
-    {
-      "address": 3965608,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_003C82A8"
-    },
-    {
-      "address": 4115192,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_003ECAF8"
-    },
-    {
-      "address": 4129408,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_003F0280"
-    },
-    {
-      "address": 4192024,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_003FF718"
-    },
-    {
-      "address": 4375536,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_1_OOZLA_FUN_0042C3F0"
-    },
-    {
-      "address": 4383808,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_1_OOZLA_FUN_0042E440"
-    },
-    {
-      "address": 4384240,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_1_OOZLA_FUN_0042E5F0"
-    },
-    {
-      "address": 4405584,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_1_OOZLA_FUN_00433950"
-    },
-    {
-      "address": 4438392,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_1_OOZLA_FUN_0043B978"
-    },
-    {
-      "address": 4468200,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_1_OOZLA_FUN_00442DE8"
-    },
-    {
-      "address": 2785416,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_1_OOZLA_FUN_002A8088"
-    },
-    {
-      "address": 2915376,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_1_OOZLA_FUN_002C7C30"
-    },
-    {
-      "address": 2920184,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_1_OOZLA_FUN_002C8EF8"
-    },
-    {
-      "address": 3628832,
-      "meaning": "Clear corresponding indexed words and decrement a record count",
-      "size": 48,
-      "symbol": "LVL_1_OOZLA_FUN_00375F20"
-    },
-    {
-      "address": 3668248,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_1_OOZLA_FUN_0037F918"
-    },
-    {
-      "address": 2781896,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_002A72C8"
-    },
-    {
-      "address": 2922288,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_002C9730"
-    },
-    {
-      "address": 2956192,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_002D1BA0"
-    },
-    {
-      "address": 2956200,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_1_OOZLA_FUN_002D1BA8"
-    },
-    {
-      "address": 3052776,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_1_OOZLA_FUN_002E94E8"
-    },
-    {
-      "address": 3052936,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_1_OOZLA_FUN_002E9588"
-    },
-    {
-      "address": 3176808,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_1_OOZLA_FUN_00307968"
-    },
-    {
-      "address": 3284744,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_1_OOZLA_FUN_00321F08"
     },
     {
       "address": 3394136,
@@ -967,16 +607,381 @@
       "symbol": "LVL_1_OOZLA_FUN_00344D78"
     },
     {
+      "address": 3444688,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_1_OOZLA_FUN_00348FD0"
+    },
+    {
       "address": 3467840,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_1_OOZLA_FUN_0034EA40"
     },
     {
+      "address": 3495128,
+      "meaning": "shared native body of family 62e6ff2b3d3a",
+      "size": 124,
+      "symbol": "LVL_1_OOZLA_FUN_003554D8"
+    },
+    {
+      "address": 3497160,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_1_OOZLA_FUN_00355CC8"
+    },
+    {
+      "address": 3543000,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
+      "size": 192,
+      "symbol": "LVL_1_OOZLA_FUN_00360FD8"
+    },
+    {
+      "address": 3561120,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_003656A0"
+    },
+    {
+      "address": 3580344,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_0036A1B8"
+    },
+    {
+      "address": 3587000,
+      "meaning": "shared native body of family 250a61cf2f35cf62",
+      "size": 188,
+      "symbol": "LVL_1_OOZLA_FUN_0036BBB8"
+    },
+    {
+      "address": 3609040,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_003711D0"
+    },
+    {
+      "address": 3621032,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
+      "size": 68,
+      "symbol": "LVL_1_OOZLA_FUN_003740A8"
+    },
+    {
+      "address": 3623768,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_00374B58"
+    },
+    {
+      "address": 3628832,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_1_OOZLA_FUN_00375F20"
+    },
+    {
+      "address": 3630088,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
+      "size": 300,
+      "symbol": "LVL_1_OOZLA_FUN_00376408"
+    },
+    {
+      "address": 3637816,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_00378238"
+    },
+    {
+      "address": 3654856,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_1_OOZLA_FUN_0037C4C8"
+    },
+    {
+      "address": 3656312,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_1_OOZLA_FUN_0037CA78"
+    },
+    {
       "address": 3657376,
       "meaning": "Clear the selected word in 100 records, reset 136 state words, and set the three trailing state words.",
       "size": 164,
       "symbol": "LVL_1_OOZLA_FUN_0037CEA0"
+    },
+    {
+      "address": 3658600,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_1_OOZLA_FUN_0037D368"
+    },
+    {
+      "address": 3665776,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_1_OOZLA_FUN_0037EF70"
+    },
+    {
+      "address": 3667224,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_1_OOZLA_FUN_0037F518"
+    },
+    {
+      "address": 3668248,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_1_OOZLA_FUN_0037F918"
+    },
+    {
+      "address": 3668464,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_1_OOZLA_FUN_0037F9F0"
+    },
+    {
+      "address": 3727264,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_0038DFA0"
+    },
+    {
+      "address": 3747712,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_00392F80"
+    },
+    {
+      "address": 3754272,
+      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
+      "size": 76,
+      "symbol": "LVL_1_OOZLA_FUN_00394920"
+    },
+    {
+      "address": 3780496,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_1_OOZLA_FUN_0039AF90"
+    },
+    {
+      "address": 3781576,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_1_OOZLA_FUN_0039B3C8"
+    },
+    {
+      "address": 3783040,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_1_OOZLA_FUN_0039B980"
+    },
+    {
+      "address": 3852992,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_003ACAC0"
+    },
+    {
+      "address": 3853600,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_1_OOZLA_FUN_003ACD20"
+    },
+    {
+      "address": 3883488,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_1_OOZLA_FUN_003B41E0"
+    },
+    {
+      "address": 3899448,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_003B8038"
+    },
+    {
+      "address": 3900344,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_1_OOZLA_FUN_003B83B8"
+    },
+    {
+      "address": 3943472,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_003C2C30"
+    },
+    {
+      "address": 3953512,
+      "meaning": "one float gate followed by five integer gates; every failing gate",
+      "size": 108,
+      "symbol": "LVL_1_OOZLA_FUN_003C5368"
+    },
+    {
+      "address": 3965608,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_003C82A8"
+    },
+    {
+      "address": 3999088,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_003D0570"
+    },
+    {
+      "address": 4001736,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_1_OOZLA_FUN_003D0FC8"
+    },
+    {
+      "address": 4058808,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_003DEEB8"
+    },
+    {
+      "address": 4072544,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_003E2460"
+    },
+    {
+      "address": 4097856,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_003E8740"
+    },
+    {
+      "address": 4109080,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_1_OOZLA_FUN_003EB318"
+    },
+    {
+      "address": 4110160,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_1_OOZLA_FUN_003EB750"
+    },
+    {
+      "address": 4111624,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_1_OOZLA_FUN_003EBD08"
+    },
+    {
+      "address": 4114128,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_1_OOZLA_FUN_003EC6D0"
+    },
+    {
+      "address": 4115192,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_003ECAF8"
+    },
+    {
+      "address": 4129408,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_003F0280"
+    },
+    {
+      "address": 4137912,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_003F23B8"
+    },
+    {
+      "address": 4142944,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_003F3760"
+    },
+    {
+      "address": 4145720,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_1_OOZLA_FUN_003F4238"
+    },
+    {
+      "address": 4157424,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_003F6FF0"
+    },
+    {
+      "address": 4170768,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
+      "size": 88,
+      "symbol": "LVL_1_OOZLA_FUN_003FA410"
+    },
+    {
+      "address": 4192024,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_003FF718"
+    },
+    {
+      "address": 4238504,
+      "meaning": "shared native body of family af5b3bc3a678ed5c",
+      "size": 96,
+      "symbol": "LVL_1_OOZLA_FUN_0040ACA8"
+    },
+    {
+      "address": 4277816,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_00414638"
+    },
+    {
+      "address": 4278712,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_1_OOZLA_FUN_004149B8"
+    },
+    {
+      "address": 4285496,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_00416438"
+    },
+    {
+      "address": 4305928,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_1_OOZLA_FUN_0041B408"
+    },
+    {
+      "address": 4306032,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_1_OOZLA_FUN_0041B470"
+    },
+    {
+      "address": 4317448,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_1_OOZLA_FUN_0041E108"
+    },
+    {
+      "address": 4317552,
+      "meaning": "shared native body of family 9a8a2404",
+      "size": 112,
+      "symbol": "LVL_1_OOZLA_FUN_0041E170"
+    },
+    {
+      "address": 4375536,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_0042C3F0"
+    },
+    {
+      "address": 4383808,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_1_OOZLA_FUN_0042E440"
+    },
+    {
+      "address": 4384240,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_1_OOZLA_FUN_0042E5F0"
     },
     {
       "address": 4387680,
@@ -1003,16 +1008,54 @@
       "symbol": "LVL_1_OOZLA_FUN_0042F610"
     },
     {
+      "address": 4388560,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_0042F6D0"
+    },
+    {
       "address": 4388576,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_1_OOZLA_FUN_0042F6E0"
     },
     {
+      "address": 4388584,
+      "meaning": "shared native body of family c84472d1b784fec8",
+      "size": 124,
+      "symbol": "LVL_1_OOZLA_FUN_0042F6E8"
+    },
+    {
+      "address": 4388720,
+      "meaning": "shared native body of family eab1f2e53b7d3238",
+      "size": 140,
+      "symbol": "LVL_1_OOZLA_FUN_0042F770"
+    },
+    {
+      "address": 4395328,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_00431140"
+    },
+    {
+      "address": 4395920,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_00431390"
+    },
+    {
+      "address": 4397192,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_00431888"
+    },
+    {
       "address": 4399272,
       "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
       "symbol": "LVL_1_OOZLA_FUN_004320A8"
+    },
+    {
+      "address": 4405584,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_1_OOZLA_FUN_00433950"
     },
     {
       "address": 4418216,
@@ -1033,6 +1076,11 @@
       "symbol": "LVL_1_OOZLA_FUN_00436C80"
     },
     {
+      "address": 4432128,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_0043A100"
+    },
+    {
       "address": 4432800,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1043,6 +1091,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_1_OOZLA_FUN_0043ACB8"
+    },
+    {
+      "address": 4435288,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_0043AD58"
     },
     {
       "address": 4435840,
@@ -1057,6 +1110,12 @@
       "symbol": "LVL_1_OOZLA_FUN_0043B0E8"
     },
     {
+      "address": 4438392,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_1_OOZLA_FUN_0043B978"
+    },
+    {
       "address": 4439704,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1067,6 +1126,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_1_OOZLA_FUN_0043BEB8"
+    },
+    {
+      "address": 4442776,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_1_OOZLA_FUN_0043CA98"
     },
     {
       "address": 4458456,
@@ -1093,6 +1158,12 @@
       "symbol": "LVL_1_OOZLA_FUN_00441DC0"
     },
     {
+      "address": 4464400,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_00441F10"
+    },
+    {
       "address": 4464480,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1105,16 +1176,49 @@
       "symbol": "LVL_1_OOZLA_FUN_00441FA8"
     },
     {
+      "address": 4465576,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_1_OOZLA_FUN_004423A8"
+    },
+    {
+      "address": 4468200,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_1_OOZLA_FUN_00442DE8"
+    },
+    {
+      "address": 4478144,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_1_OOZLA_FUN_004454C0"
+    },
+    {
+      "address": 4483936,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_00446B60"
+    },
+    {
       "address": 4484864,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_1_OOZLA_FUN_00446F00"
     },
     {
+      "address": 4493040,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_00448EF0"
+    },
+    {
       "address": 4493296,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_1_OOZLA_FUN_00448FF0"
+    },
+    {
+      "address": 4499336,
+      "size": 8,
+      "symbol": "LVL_1_OOZLA_FUN_0044A788"
     },
     {
       "address": 4499504,

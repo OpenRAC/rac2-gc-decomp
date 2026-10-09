@@ -28,6 +28,9 @@
     "LVL_20_YEEDIL_D_00256740": 2451264,
     "LVL_20_YEEDIL_D_0026D970": 2546032,
     "LVL_20_YEEDIL_D_00289100": 2658560,
+    "LVL_20_YEEDIL_F01bd4546_FUN_00462900": 4598016,
+    "LVL_20_YEEDIL_F01bd4546_FUN_004760D0": 4677840,
+    "LVL_20_YEEDIL_F01bd4546_FUN_00476118": 4677912,
     "LVL_20_YEEDIL_F03c444112283bc5f_AT003A73B8_ROLE00": 2342736,
     "LVL_20_YEEDIL_F0be97c76_D_00189E20": 1613344,
     "LVL_20_YEEDIL_F1157be91_D_001A63E8": 1729512,
@@ -42,6 +45,9 @@
     "LVL_20_YEEDIL_F250a61cf_D_001AD688": 1758856,
     "LVL_20_YEEDIL_F250a61cf_FUN_00115DA8": 1138088,
     "LVL_20_YEEDIL_F28c929cadd7aca24_AT002E6398_ROLE00": 1613344,
+    "LVL_20_YEEDIL_F307ea0ee_FUN_00302858": 3156056,
+    "LVL_20_YEEDIL_F307ea0ee_FUN_00302870": 3156080,
+    "LVL_20_YEEDIL_F307ea0ee_FUN_00303270": 3158640,
     "LVL_20_YEEDIL_F490e2c59_D_001A79F0": 1735152,
     "LVL_20_YEEDIL_F490e2c59_D_001AA7F0": 1746928,
     "LVL_20_YEEDIL_F4e5bde81_D_00189E20": 1613344,
@@ -61,6 +67,14 @@
     "LVL_20_YEEDIL_F6b0741c38bf00fee_AT002B8DA0_ROLE00": 1618620,
     "LVL_20_YEEDIL_F6b0741c38bf00fee_AT002B8DA0_ROLE01": 2854368,
     "LVL_20_YEEDIL_F6b0741c38bf00fee_AT002B8DA0_ROLE02": 2936232,
+    "LVL_20_YEEDIL_F70997ba9_FUN_002FA3E8": 3122152,
+    "LVL_20_YEEDIL_F70997ba9_FUN_002FA508": 3122440,
+    "LVL_20_YEEDIL_F70997ba9_FUN_002FD018": 3133464,
+    "LVL_20_YEEDIL_F70997ba9_FUN_002FD028": 3133480,
+    "LVL_20_YEEDIL_F70997ba9_FUN_002FD0A0": 3133600,
+    "LVL_20_YEEDIL_F70997ba9_FUN_002FD4E0": 3134688,
+    "LVL_20_YEEDIL_F70997ba9_FUN_003087E0": 3180512,
+    "LVL_20_YEEDIL_F70997ba9_FUN_003913B0": 3740592,
     "LVL_20_YEEDIL_F79744baad5ad7f65_AT00476F50_ROLE00": 1622228,
     "LVL_20_YEEDIL_F86f665335d9cb905_AT003DD350_ROLE00": 4049320,
     "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT003B5A58_ROLE00": 3755184,
@@ -70,6 +84,10 @@
     "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT0040C618_ROLE00": 3755184,
     "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT00412098_ROLE00": 3755184,
     "LVL_20_YEEDIL_F9cdc323a4d0c2fbd_AT00425630_ROLE00": 3755184,
+    "LVL_20_YEEDIL_F9e2cd219_FUN_0032F5F8": 3339768,
+    "LVL_20_YEEDIL_F9e2cd219_FUN_00335BD0": 3365840,
+    "LVL_20_YEEDIL_F9e2cd219_FUN_003A45E8": 3818984,
+    "LVL_20_YEEDIL_F9e2cd219_FUN_003A70A0": 3829920,
     "LVL_20_YEEDIL_FUN_00115E38": 1138232,
     "LVL_20_YEEDIL_FUN_0011AEA0": 1158816,
     "LVL_20_YEEDIL_FUN_00133688": 1259144,
@@ -98,6 +116,8 @@
     "LVL_20_YEEDIL_Fc84472d1_D_001ADD98": 1760664,
     "LVL_20_YEEDIL_Fc84472d1_D_001ADDB8": 1760696,
     "LVL_20_YEEDIL_Fc84472d1_FUN_00115E38": 1138232,
+    "LVL_20_YEEDIL_Fc936841d_FUN_00302260": 3154528,
+    "LVL_20_YEEDIL_Fc936841d_FUN_00302290": 3154576,
     "LVL_20_YEEDIL_Fea34650e_D_00189E20": 1613344,
     "LVL_20_YEEDIL_Feab1f2e5_D_001ADD98": 1760664,
     "LVL_20_YEEDIL_Feab1f2e5_D_001ADDE0": 1760736,
@@ -157,10 +177,22 @@
   ],
   "functions": [
     {
+      "address": 2849544,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_002B7B08"
+    },
+    {
       "address": 2849792,
       "meaning": "select primary pointer forkind0/2/3/4/5, secondary for1,tertiary for6; otherwiseNULL",
       "size": 96,
       "symbol": "LVL_20_YEEDIL_FUN_002B7C00"
+    },
+    {
+      "address": 2854304,
+      "meaning": "passes the measured byte and constants to two callees",
+      "size": 60,
+      "symbol": "LVL_20_YEEDIL_FUN_002B8DA0"
     },
     {
       "address": 2858864,
@@ -234,6 +266,12 @@
       "symbol": "LVL_20_YEEDIL_FUN_002E5EA0"
     },
     {
+      "address": 3040152,
+      "meaning": "updates the resident selection and index after validating the selected table entry",
+      "size": 72,
+      "symbol": "LVL_20_YEEDIL_FUN_002E6398"
+    },
+    {
       "address": 3043216,
       "meaning": "shared native body of family ea34650e369e",
       "size": 356,
@@ -256,6 +294,18 @@
       "meaning": "resident mode predicate: returns 0, 1 or 2 from the resident state words",
       "size": 188,
       "symbol": "LVL_20_YEEDIL_FUN_002E7328"
+    },
+    {
+      "address": 3045024,
+      "meaning": "calls the measured float callee with the negated input",
+      "size": 28,
+      "symbol": "LVL_20_YEEDIL_FUN_002E76A0"
+    },
+    {
+      "address": 3047128,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_002E7ED8"
     },
     {
       "address": 3057312,
@@ -292,6 +342,18 @@
       "meaning": "clear five object fields; independently qualified in this overlay",
       "size": 24,
       "symbol": "LVL_20_YEEDIL_FUN_002EB8E0"
+    },
+    {
+      "address": 3081176,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_002F03D8"
+    },
+    {
+      "address": 3081184,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_002F03E0"
     },
     {
       "address": 3082792,
@@ -339,6 +401,18 @@
       "meaning": "indexed copy of overlay-owned five-entry table",
       "size": 72,
       "symbol": "LVL_20_YEEDIL_FUN_00307F48"
+    },
+    {
+      "address": 3179256,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "LVL_20_YEEDIL_FUN_003082F8"
+    },
+    {
+      "address": 3179416,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "LVL_20_YEEDIL_FUN_00308398"
     },
     {
       "address": 3179896,
@@ -407,10 +481,22 @@
       "symbol": "LVL_20_YEEDIL_FUN_0031D888"
     },
     {
+      "address": 3292704,
+      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
+      "size": 112,
+      "symbol": "LVL_20_YEEDIL_FUN_00323E20"
+    },
+    {
       "address": 3302128,
       "meaning": "Reserve or reuse an object slot, reset its associated state and return signed slot index",
       "size": 84,
       "symbol": "LVL_20_YEEDIL_FUN_003262F0"
+    },
+    {
+      "address": 3304192,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "LVL_20_YEEDIL_FUN_00326B00"
     },
     {
       "address": 3339808,
@@ -424,6 +510,12 @@
       "symbol": "LVL_20_YEEDIL_FUN_003343F8"
     },
     {
+      "address": 3375360,
+      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
+      "size": 128,
+      "symbol": "LVL_20_YEEDIL_FUN_00338100"
+    },
+    {
       "address": 3390992,
       "meaning": "Count non-zero bytes in the resident 0x1C by four unsigned-byte table and clamp the count to zero through 0x28",
       "size": 112,
@@ -433,6 +525,12 @@
       "address": 3401688,
       "size": 32,
       "symbol": "LVL_20_YEEDIL_FUN_0033E7D8"
+    },
+    {
+      "address": 3413800,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "LVL_20_YEEDIL_FUN_00341728"
     },
     {
       "address": 3419112,
@@ -463,516 +561,6 @@
       "meaning": "five independent `cond ? 3 : 0` stores to fixed absolute globals.",
       "size": 148,
       "symbol": "LVL_20_YEEDIL_FUN_0035C3B0"
-    },
-    {
-      "address": 3625432,
-      "meaning": "shared native body of family 62e6ff2b3d3a",
-      "size": 124,
-      "symbol": "LVL_20_YEEDIL_FUN_003751D8"
-    },
-    {
-      "address": 3673272,
-      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
-      "size": 192,
-      "symbol": "LVL_20_YEEDIL_FUN_00380CB8"
-    },
-    {
-      "address": 3691144,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_00385288"
-    },
-    {
-      "address": 3710368,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_00389DA0"
-    },
-    {
-      "address": 3717024,
-      "meaning": "shared native body of family 250a61cf2f35cf62",
-      "size": 188,
-      "symbol": "LVL_20_YEEDIL_FUN_0038B7A0"
-    },
-    {
-      "address": 3739064,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_00390DB8"
-    },
-    {
-      "address": 3750224,
-      "meaning": "returns the packed header's signed rounded sixteen-byte block count in word units",
-      "size": 56,
-      "symbol": "LVL_20_YEEDIL_FUN_00393950"
-    },
-    {
-      "address": 3759896,
-      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
-      "size": 68,
-      "symbol": "LVL_20_YEEDIL_FUN_00395F18"
-    },
-    {
-      "address": 3762632,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_003969C8"
-    },
-    {
-      "address": 3769008,
-      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
-      "size": 300,
-      "symbol": "LVL_20_YEEDIL_FUN_003982B0"
-    },
-    {
-      "address": 3776736,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_0039A0E0"
-    },
-    {
-      "address": 3821040,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_20_YEEDIL_FUN_003A4DF0"
-    },
-    {
-      "address": 3830928,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_20_YEEDIL_FUN_003A7490"
-    },
-    {
-      "address": 3915512,
-      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
-      "size": 76,
-      "symbol": "LVL_20_YEEDIL_FUN_003BBEF8"
-    },
-    {
-      "address": 3916888,
-      "size": 16,
-      "symbol": "LVL_20_YEEDIL_FUN_003BC458"
-    },
-    {
-      "address": 3940384,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_20_YEEDIL_FUN_003C2020"
-    },
-    {
-      "address": 3983712,
-      "meaning": "shared native body of family a04928c6",
-      "size": 144,
-      "symbol": "LVL_20_YEEDIL_FUN_003CC960"
-    },
-    {
-      "address": 4010896,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_003D3390"
-    },
-    {
-      "address": 4057120,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_003DE820"
-    },
-    {
-      "address": 4091696,
-      "meaning": "one float gate followed by five integer gates; every failing gate",
-      "size": 108,
-      "symbol": "LVL_20_YEEDIL_FUN_003E6F30"
-    },
-    {
-      "address": 4116632,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_003ED098"
-    },
-    {
-      "address": 4157384,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_003F6FC8"
-    },
-    {
-      "address": 4198688,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_00401120"
-    },
-    {
-      "address": 4203296,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_00402320"
-    },
-    {
-      "address": 4228608,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_00408600"
-    },
-    {
-      "address": 4242200,
-      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
-      "size": 144,
-      "symbol": "LVL_20_YEEDIL_FUN_0040BB18"
-    },
-    {
-      "address": 4243952,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_20_YEEDIL_FUN_0040C1F0"
-    },
-    {
-      "address": 4276688,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_004141D0"
-    },
-    {
-      "address": 4281720,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_00415578"
-    },
-    {
-      "address": 4294600,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_004187C8"
-    },
-    {
-      "address": 4307944,
-      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
-      "size": 88,
-      "symbol": "LVL_20_YEEDIL_FUN_0041BBE8"
-    },
-    {
-      "address": 4311080,
-      "meaning": "shared native body of family cd6f3d9eca5f8edd",
-      "size": 112,
-      "symbol": "LVL_20_YEEDIL_FUN_0041C828"
-    },
-    {
-      "address": 4319208,
-      "meaning": "validate descriptorparent classD0E/status then attach two optionalparts, propagate flag/disabled state and original packed-color helper",
-      "size": 252,
-      "symbol": "LVL_20_YEEDIL_FUN_0041E7E8"
-    },
-    {
-      "address": 4392384,
-      "meaning": "shared native body of family af5b3bc3a678ed5c",
-      "size": 96,
-      "symbol": "LVL_20_YEEDIL_FUN_004305C0"
-    },
-    {
-      "address": 4441744,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_0043C690"
-    },
-    {
-      "address": 4450488,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_0043E8B8"
-    },
-    {
-      "address": 4484120,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_00446C18"
-    },
-    {
-      "address": 4496072,
-      "size": 16,
-      "symbol": "LVL_20_YEEDIL_FUN_00449AC8"
-    },
-    {
-      "address": 4502336,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_0044B340"
-    },
-    {
-      "address": 4520216,
-      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
-      "size": 136,
-      "symbol": "LVL_20_YEEDIL_FUN_0044F918"
-    },
-    {
-      "address": 4530280,
-      "meaning": "shared native body of family 5a97ab89858c",
-      "size": 104,
-      "symbol": "LVL_20_YEEDIL_FUN_00452068"
-    },
-    {
-      "address": 4530384,
-      "meaning": "shared native body of family 9a8a2404",
-      "size": 112,
-      "symbol": "LVL_20_YEEDIL_FUN_004520D0"
-    },
-    {
-      "address": 4601912,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_00463838"
-    },
-    {
-      "address": 4601936,
-      "meaning": "shared native body of family c84472d1b784fec8",
-      "size": 124,
-      "symbol": "LVL_20_YEEDIL_FUN_00463850"
-    },
-    {
-      "address": 4602072,
-      "meaning": "shared native body of family eab1f2e53b7d3238",
-      "size": 140,
-      "symbol": "LVL_20_YEEDIL_FUN_004638D8"
-    },
-    {
-      "address": 4608680,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_004652A8"
-    },
-    {
-      "address": 4609272,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_004654F8"
-    },
-    {
-      "address": 4610544,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_004659F0"
-    },
-    {
-      "address": 4645480,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_0046E268"
-    },
-    {
-      "address": 4648640,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_0046EEC0"
-    },
-    {
-      "address": 4656128,
-      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
-      "size": 312,
-      "symbol": "LVL_20_YEEDIL_FUN_00470C00"
-    },
-    {
-      "address": 4677752,
-      "meaning": "Store an indexed four-component parameter row and its float weight",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_00476078"
-    },
-    {
-      "address": 4678928,
-      "meaning": "Store four float components in a selected row of a parameter group",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_00476510"
-    },
-    {
-      "address": 4697288,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_0047ACC8"
-    },
-    {
-      "address": 4706392,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_0047D058"
-    },
-    {
-      "address": 4712688,
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_0047E8F0"
-    },
-    {
-      "address": 3292704,
-      "meaning": "Return whether both flag bit 0x10000 at data offset 0x90 and flag bit 0x04000000 at offset 0x98 are set, retaining the measured early rejection path.",
-      "size": 112,
-      "symbol": "LVL_20_YEEDIL_FUN_00323E20"
-    },
-    {
-      "address": 3375360,
-      "meaning": "When active field 0x14C is nonzero, iterate the slots beginning at 0x120 using count 0x148, call the bound helper for each non-null slot, clear each processed slot, and reset the active field. Original game role is unknown.",
-      "size": 128,
-      "symbol": "LVL_20_YEEDIL_FUN_00338100"
-    },
-    {
-      "address": 3627432,
-      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_20_YEEDIL_FUN_003759A8"
-    },
-    {
-      "address": 3817296,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_20_YEEDIL_FUN_003A3F50"
-    },
-    {
-      "address": 3828240,
-      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
-      "size": 192,
-      "symbol": "LVL_20_YEEDIL_FUN_003A6A10"
-    },
-    {
-      "address": 3889752,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_003B5A58"
-    },
-    {
-      "address": 3909176,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_003BA638"
-    },
-    {
-      "address": 4051792,
-      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
-      "size": 28,
-      "symbol": "LVL_20_YEEDIL_FUN_003DD350"
-    },
-    {
-      "address": 4081656,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_003E47F8"
-    },
-    {
-      "address": 4103792,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_003E9E70"
-    },
-    {
-      "address": 4245016,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_0040C618"
-    },
-    {
-      "address": 4268184,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_00412098"
-    },
-    {
-      "address": 4347440,
-      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_00425630"
-    },
-    {
-      "address": 4588720,
-      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
-      "size": 52,
-      "symbol": "LVL_20_YEEDIL_FUN_004604B0"
-    },
-    {
-      "address": 4597160,
-      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_20_YEEDIL_FUN_004625A8"
-    },
-    {
-      "address": 4597592,
-      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
-      "size": 112,
-      "symbol": "LVL_20_YEEDIL_FUN_00462758"
-    },
-    {
-      "address": 4618936,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_20_YEEDIL_FUN_00467AB8"
-    },
-    {
-      "address": 4651744,
-      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
-      "size": 20,
-      "symbol": "LVL_20_YEEDIL_FUN_0046FAE0"
-    },
-    {
-      "address": 4681552,
-      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
-      "size": 48,
-      "symbol": "LVL_20_YEEDIL_FUN_00476F50"
-    },
-    {
-      "address": 2854304,
-      "meaning": "passes the measured byte and constants to two callees",
-      "size": 60,
-      "symbol": "LVL_20_YEEDIL_FUN_002B8DA0"
-    },
-    {
-      "address": 3040152,
-      "meaning": "updates the resident selection and index after validating the selected table entry",
-      "size": 72,
-      "symbol": "LVL_20_YEEDIL_FUN_002E6398"
-    },
-    {
-      "address": 3045024,
-      "meaning": "calls the measured float callee with the negated input",
-      "size": 28,
-      "symbol": "LVL_20_YEEDIL_FUN_002E76A0"
-    },
-    {
-      "address": 3767696,
-      "meaning": "Clear corresponding indexed words and decrement a record count",
-      "size": 48,
-      "symbol": "LVL_20_YEEDIL_FUN_00397D90"
-    },
-    {
-      "address": 3830712,
-      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
-      "size": 116,
-      "symbol": "LVL_20_YEEDIL_FUN_003A73B8"
-    },
-    {
-      "address": 2849544,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_002B7B08"
-    },
-    {
-      "address": 3047128,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_002E7ED8"
-    },
-    {
-      "address": 3081176,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_002F03D8"
-    },
-    {
-      "address": 3081184,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "LVL_20_YEEDIL_FUN_002F03E0"
-    },
-    {
-      "address": 3179256,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "LVL_20_YEEDIL_FUN_003082F8"
-    },
-    {
-      "address": 3179416,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "LVL_20_YEEDIL_FUN_00308398"
-    },
-    {
-      "address": 3304192,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "LVL_20_YEEDIL_FUN_00326B00"
-    },
-    {
-      "address": 3413800,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "LVL_20_YEEDIL_FUN_00341728"
     },
     {
       "address": 3524352,
@@ -1029,10 +617,101 @@
       "symbol": "LVL_20_YEEDIL_FUN_00364A20"
     },
     {
+      "address": 3574904,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 592,
+      "symbol": "LVL_20_YEEDIL_FUN_00368C78"
+    },
+    {
       "address": 3598056,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_20_YEEDIL_FUN_0036E6E8"
+    },
+    {
+      "address": 3625432,
+      "meaning": "shared native body of family 62e6ff2b3d3a",
+      "size": 124,
+      "symbol": "LVL_20_YEEDIL_FUN_003751D8"
+    },
+    {
+      "address": 3627432,
+      "meaning": "Update fields at offsets 0x60 through 0x6A and set the corresponding dirty bits when selector, value, axis or mode changes; original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_20_YEEDIL_FUN_003759A8"
+    },
+    {
+      "address": 3673272,
+      "meaning": "apply nonzero signed halfword overrides to selected object rows; observed count0F, rows1C, stride50 and key33",
+      "size": 192,
+      "symbol": "LVL_20_YEEDIL_FUN_00380CB8"
+    },
+    {
+      "address": 3691144,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_00385288"
+    },
+    {
+      "address": 3710368,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_00389DA0"
+    },
+    {
+      "address": 3717024,
+      "meaning": "shared native body of family 250a61cf2f35cf62",
+      "size": 188,
+      "symbol": "LVL_20_YEEDIL_FUN_0038B7A0"
+    },
+    {
+      "address": 3739064,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_00390DB8"
+    },
+    {
+      "address": 3750224,
+      "meaning": "returns the packed header's signed rounded sixteen-byte block count in word units",
+      "size": 56,
+      "symbol": "LVL_20_YEEDIL_FUN_00393950"
+    },
+    {
+      "address": 3759896,
+      "meaning": "searches 32 sixteen-byte records for matching key and owner words and returns the value word or minus one",
+      "size": 68,
+      "symbol": "LVL_20_YEEDIL_FUN_00395F18"
+    },
+    {
+      "address": 3762632,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_003969C8"
+    },
+    {
+      "address": 3767696,
+      "meaning": "Clear corresponding indexed words and decrement a record count",
+      "size": 48,
+      "symbol": "LVL_20_YEEDIL_FUN_00397D90"
+    },
+    {
+      "address": 3769008,
+      "meaning": "relocates serialized offsets and compacts16-byte rows in their original storage using captured sourcewords",
+      "size": 300,
+      "symbol": "LVL_20_YEEDIL_FUN_003982B0"
+    },
+    {
+      "address": 3776736,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_0039A0E0"
+    },
+    {
+      "address": 3817296,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_20_YEEDIL_FUN_003A3F50"
+    },
+    {
+      "address": 3818752,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_20_YEEDIL_FUN_003A4500"
     },
     {
       "address": 3819816,
@@ -1041,10 +720,336 @@
       "symbol": "LVL_20_YEEDIL_FUN_003A4928"
     },
     {
+      "address": 3821040,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_20_YEEDIL_FUN_003A4DF0"
+    },
+    {
+      "address": 3828240,
+      "meaning": "Update the owner vector using the two bound vector helpers, refresh the three saved source coordinates, and conditionally set the measured owner byte to 7; original game role is unknown.",
+      "size": 192,
+      "symbol": "LVL_20_YEEDIL_FUN_003A6A10"
+    },
+    {
+      "address": 3829688,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 228,
+      "symbol": "LVL_20_YEEDIL_FUN_003A6FB8"
+    },
+    {
+      "address": 3830712,
+      "meaning": "Reset two 64-word banks, eight trailing words, and three state words. The original game role is unknown.",
+      "size": 116,
+      "symbol": "LVL_20_YEEDIL_FUN_003A73B8"
+    },
+    {
+      "address": 3830928,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_20_YEEDIL_FUN_003A7490"
+    },
+    {
+      "address": 3889752,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_003B5A58"
+    },
+    {
+      "address": 3909176,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_003BA638"
+    },
+    {
+      "address": 3915512,
+      "meaning": "Fixed prototype775 research callback: binary32field2C *=1.025f, ubytefield23 -=3 modulo256; call original88-bytepointerhelper if updatedubyte<4. Neutralpartialview, original semanticnames unknown.",
+      "size": 76,
+      "symbol": "LVL_20_YEEDIL_FUN_003BBEF8"
+    },
+    {
+      "address": 3916888,
+      "size": 16,
+      "symbol": "LVL_20_YEEDIL_FUN_003BC458"
+    },
+    {
+      "address": 3937840,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_20_YEEDIL_FUN_003C1630"
+    },
+    {
+      "address": 3938920,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_20_YEEDIL_FUN_003C1A68"
+    },
+    {
+      "address": 3940384,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_20_YEEDIL_FUN_003C2020"
+    },
+    {
+      "address": 3983712,
+      "meaning": "shared native body of family a04928c6",
+      "size": 144,
+      "symbol": "LVL_20_YEEDIL_FUN_003CC960"
+    },
+    {
+      "address": 4010896,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_003D3390"
+    },
+    {
+      "address": 4011504,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_20_YEEDIL_FUN_003D35F0"
+    },
+    {
+      "address": 4051792,
+      "meaning": "Pass the owner and its pointer at offset 0x68 to the explicitly bound helper; original game role is unknown.",
+      "size": 28,
+      "symbol": "LVL_20_YEEDIL_FUN_003DD350"
+    },
+    {
+      "address": 4057120,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_003DE820"
+    },
+    {
+      "address": 4058016,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_20_YEEDIL_FUN_003DEBA0"
+    },
+    {
+      "address": 4081656,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_003E47F8"
+    },
+    {
+      "address": 4091696,
+      "meaning": "one float gate followed by five integer gates; every failing gate",
+      "size": 108,
+      "symbol": "LVL_20_YEEDIL_FUN_003E6F30"
+    },
+    {
+      "address": 4103792,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_003E9E70"
+    },
+    {
+      "address": 4116632,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_003ED098"
+    },
+    {
+      "address": 4119280,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_20_YEEDIL_FUN_003EDAF0"
+    },
+    {
+      "address": 4157384,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_003F6FC8"
+    },
+    {
       "address": 4182136,
       "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0xB 8.",
       "size": 8,
       "symbol": "LVL_20_YEEDIL_FUN_003FD078"
+    },
+    {
+      "address": 4198688,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_00401120"
+    },
+    {
+      "address": 4203296,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_00402320"
+    },
+    {
+      "address": 4228608,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_00408600"
+    },
+    {
+      "address": 4239656,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 288,
+      "symbol": "LVL_20_YEEDIL_FUN_0040B128"
+    },
+    {
+      "address": 4240736,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_20_YEEDIL_FUN_0040B560"
+    },
+    {
+      "address": 4242200,
+      "meaning": "straight-line constant-store body (no calls, no branches, no loads)",
+      "size": 144,
+      "symbol": "LVL_20_YEEDIL_FUN_0040BB18"
+    },
+    {
+      "address": 4243952,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_20_YEEDIL_FUN_0040C1F0"
+    },
+    {
+      "address": 4245016,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_0040C618"
+    },
+    {
+      "address": 4268184,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_00412098"
+    },
+    {
+      "address": 4276688,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_004141D0"
+    },
+    {
+      "address": 4281720,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_00415578"
+    },
+    {
+      "address": 4284496,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_20_YEEDIL_FUN_00416050"
+    },
+    {
+      "address": 4294600,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_004187C8"
+    },
+    {
+      "address": 4307944,
+      "meaning": "finds the first matching object pointer in thirty resident32-byte records or returns-1",
+      "size": 88,
+      "symbol": "LVL_20_YEEDIL_FUN_0041BBE8"
+    },
+    {
+      "address": 4311080,
+      "meaning": "shared native body of family cd6f3d9eca5f8edd",
+      "size": 112,
+      "symbol": "LVL_20_YEEDIL_FUN_0041C828"
+    },
+    {
+      "address": 4319208,
+      "meaning": "validate descriptorparent classD0E/status then attach two optionalparts, propagate flag/disabled state and original packed-color helper",
+      "size": 252,
+      "symbol": "LVL_20_YEEDIL_FUN_0041E7E8"
+    },
+    {
+      "address": 4347440,
+      "meaning": "When the context flag at offset 0x24 is nonzero, pass scale 1.0, the context, its vector at offset 0x10 and mode zero to the bound helper; original game role is unknown.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_00425630"
+    },
+    {
+      "address": 4392384,
+      "meaning": "shared native body of family af5b3bc3a678ed5c",
+      "size": 96,
+      "symbol": "LVL_20_YEEDIL_FUN_004305C0"
+    },
+    {
+      "address": 4441744,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_0043C690"
+    },
+    {
+      "address": 4442640,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_20_YEEDIL_FUN_0043CA10"
+    },
+    {
+      "address": 4450488,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_0043E8B8"
+    },
+    {
+      "address": 4484120,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_00446C18"
+    },
+    {
+      "address": 4496072,
+      "size": 16,
+      "symbol": "LVL_20_YEEDIL_FUN_00449AC8"
+    },
+    {
+      "address": 4502336,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_0044B340"
+    },
+    {
+      "address": 4520112,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "size": 100,
+      "symbol": "LVL_20_YEEDIL_FUN_0044F8B0"
+    },
+    {
+      "address": 4520216,
+      "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
+      "size": 136,
+      "symbol": "LVL_20_YEEDIL_FUN_0044F918"
+    },
+    {
+      "address": 4530280,
+      "meaning": "shared native body of family 5a97ab89858c",
+      "size": 104,
+      "symbol": "LVL_20_YEEDIL_FUN_00452068"
+    },
+    {
+      "address": 4530384,
+      "meaning": "shared native body of family 9a8a2404",
+      "size": 112,
+      "symbol": "LVL_20_YEEDIL_FUN_004520D0"
+    },
+    {
+      "address": 4588720,
+      "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_004604B0"
+    },
+    {
+      "address": 4597160,
+      "meaning": "Interpolate four scalar float components from separate input arrays using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_20_YEEDIL_FUN_004625A8"
+    },
+    {
+      "address": 4597592,
+      "meaning": "Interpolate four scalar float components from interleaved endpoint pairs at source offsets 0x08 through 0x24 using (1.0f - factor) * first + factor * second, writing each component to the destination.",
+      "size": 112,
+      "symbol": "LVL_20_YEEDIL_FUN_00462758"
     },
     {
       "address": 4601032,
@@ -1071,16 +1076,54 @@
       "symbol": "LVL_20_YEEDIL_FUN_00463778"
     },
     {
+      "address": 4601912,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_00463838"
+    },
+    {
       "address": 4601928,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_20_YEEDIL_FUN_00463848"
     },
     {
+      "address": 4601936,
+      "meaning": "shared native body of family c84472d1b784fec8",
+      "size": 124,
+      "symbol": "LVL_20_YEEDIL_FUN_00463850"
+    },
+    {
+      "address": 4602072,
+      "meaning": "shared native body of family eab1f2e53b7d3238",
+      "size": 140,
+      "symbol": "LVL_20_YEEDIL_FUN_004638D8"
+    },
+    {
+      "address": 4608680,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_004652A8"
+    },
+    {
+      "address": 4609272,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_004654F8"
+    },
+    {
+      "address": 4610544,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_004659F0"
+    },
+    {
       "address": 4612624,
       "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
       "size": 28,
       "symbol": "LVL_20_YEEDIL_FUN_00466210"
+    },
+    {
+      "address": 4618936,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_20_YEEDIL_FUN_00467AB8"
     },
     {
       "address": 4631568,
@@ -1101,6 +1144,11 @@
       "symbol": "LVL_20_YEEDIL_FUN_0046ADE8"
     },
     {
+      "address": 4645480,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_0046E268"
+    },
+    {
       "address": 4646152,
       "meaning": "Call the measured one-owner routine with owner+0x 228.",
       "size": 28,
@@ -1111,6 +1159,11 @@
       "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
       "size": 40,
       "symbol": "LVL_20_YEEDIL_FUN_0046EE20"
+    },
+    {
+      "address": 4648640,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_0046EEC0"
     },
     {
       "address": 4649192,
@@ -1125,6 +1178,12 @@
       "symbol": "LVL_20_YEEDIL_FUN_0046F250"
     },
     {
+      "address": 4651744,
+      "meaning": "Store the two scalar floating arguments through the supplied pointer cell; original game role is unknown.",
+      "size": 20,
+      "symbol": "LVL_20_YEEDIL_FUN_0046FAE0"
+    },
+    {
       "address": 4653056,
       "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
       "size": 28,
@@ -1135,6 +1194,12 @@
       "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
       "size": 28,
       "symbol": "LVL_20_YEEDIL_FUN_00470020"
+    },
+    {
+      "address": 4656128,
+      "meaning": "prioritized masks1000/4000/8000/2000 update signedcolumns43C/rows440 and mode448 with originalevent3 flags0/entitynull; index444=column+2row",
+      "size": 312,
+      "symbol": "LVL_20_YEEDIL_FUN_00470C00"
     },
     {
       "address": 4671808,
@@ -1161,6 +1226,12 @@
       "symbol": "LVL_20_YEEDIL_FUN_00475F28"
     },
     {
+      "address": 4677752,
+      "meaning": "Store an indexed four-component parameter row and its float weight",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_00476078"
+    },
+    {
       "address": 4677832,
       "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
       "size": 8,
@@ -1173,16 +1244,49 @@
       "symbol": "LVL_20_YEEDIL_FUN_00476110"
     },
     {
+      "address": 4678928,
+      "meaning": "Store four float components in a selected row of a parameter group",
+      "size": 52,
+      "symbol": "LVL_20_YEEDIL_FUN_00476510"
+    },
+    {
+      "address": 4681552,
+      "meaning": "Replace the value at offset 0x04 and, when it changes while the bound debug byte is zero, retain the previous value and set the two counters to 180 and 300; original game role is unknown.",
+      "size": 48,
+      "symbol": "LVL_20_YEEDIL_FUN_00476F50"
+    },
+    {
+      "address": 4691496,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 484,
+      "symbol": "LVL_20_YEEDIL_FUN_00479628"
+    },
+    {
+      "address": 4697288,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_0047ACC8"
+    },
+    {
       "address": 4698216,
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_20_YEEDIL_FUN_0047B068"
     },
     {
+      "address": 4706392,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_0047D058"
+    },
+    {
       "address": 4706648,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
       "symbol": "LVL_20_YEEDIL_FUN_0047D158"
+    },
+    {
+      "address": 4712688,
+      "size": 8,
+      "symbol": "LVL_20_YEEDIL_FUN_0047E8F0"
     },
     {
       "address": 4712856,

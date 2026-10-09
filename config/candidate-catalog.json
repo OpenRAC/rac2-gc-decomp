@@ -30,6 +30,21 @@
     "D_001C51D4": 1855956,
     "D_00214FCC": 2183116,
     "D_19B278": 1684088,
+    "F01bd4546_FUN_00335E68": 3366504,
+    "F01bd4546_FUN_00349630": 3446320,
+    "F01bd4546_FUN_00349678": 3446392,
+    "F70997ba9_FUN_0027C540": 2606400,
+    "F70997ba9_FUN_0027C660": 2606688,
+    "F70997ba9_FUN_0027F110": 2617616,
+    "F70997ba9_FUN_0027F120": 2617632,
+    "F70997ba9_FUN_0027F198": 2617752,
+    "F70997ba9_FUN_0027F5B8": 2618808,
+    "F70997ba9_FUN_00288FB8": 2658232,
+    "F70997ba9_FUN_002FC560": 3130720,
+    "F9e2cd219_FUN_002A7798": 2783128,
+    "F9e2cd219_FUN_002ACF68": 2805608,
+    "F9e2cd219_FUN_00305310": 3166992,
+    "F9e2cd219_FUN_00307AD0": 3177168,
     "FUN_00115484": 1135748,
     "FUN_001163B0": 1139632,
     "FUN_0011AAD0": 1157840,
@@ -82,6 +97,8 @@
     "FUN_0033AB50": 3386192,
     "FUN_00342F70": 3420016,
     "FUN_00348138": 3440952,
+    "Fc936841d_FUN_00282CC0": 2632896,
+    "Fc936841d_FUN_00282CF0": 2632944,
     "Fee2b87d1_D_0014B540": 1357120,
     "Fee2b87d1_D_00152CD0": 1387728,
     "__make_dp": 1192552,
@@ -110,6 +127,14 @@
       "xrefs": 1
     },
     {
+      "address": 1139616,
+      "meaning": "Store a 32-bit argument at offset 0x58 through the pointer in absolute cell 00133E74; original field purpose and type remain unknown",
+      "ranges": 1,
+      "size": 16,
+      "symbol": "FUN_001163A0",
+      "xrefs": 1
+    },
+    {
       "address": 1159328,
       "meaning": "Clear absolute cell 00134688",
       "ranges": 1,
@@ -132,6 +157,13 @@
       "size": 12,
       "symbol": "FUN_0011C8A0",
       "xrefs": 0
+    },
+    {
+      "address": 1167640,
+      "meaning": "Call the no-incoming-argument cleanup helper and clear the word at absolute address 001346A0.",
+      "ranges": 1,
+      "size": 36,
+      "symbol": "FUN_0011D118"
     },
     {
       "address": 1182664,
@@ -183,6 +215,18 @@
       "xrefs": 0
     },
     {
+      "address": 1239664,
+      "meaning": "Advance the stored unsigned cursor by the signed offset shifted right three, then apply the recorded wrap subtraction.",
+      "size": 44,
+      "symbol": "FUN_0012EA70"
+    },
+    {
+      "address": 1243456,
+      "meaning": "Return the constant signed integer one.",
+      "size": 8,
+      "symbol": "FUN_0012F940"
+    },
+    {
       "address": 1243560,
       "meaning": "Load a pointer at argument offset 0x40 and return the pointed 32-bit word",
       "ranges": 1,
@@ -191,10 +235,40 @@
       "xrefs": 1
     },
     {
+      "address": 1244016,
+      "meaning": "Copy the signed 32-bit word at owner offset 0xC to offset 0x 8.",
+      "size": 12,
+      "symbol": "FUN_0012FB70"
+    },
+    {
       "address": 1248696,
       "meaning": "Fixed licensed Lombyte scalar ipusync source transfer; no RAC2 acceptance assumed",
       "size": 104,
       "symbol": "FUN_00130DB8"
+    },
+    {
+      "address": 1258640,
+      "meaning": "Send command 0x 36 with one explicitly initialized four-byte payload word and return the measured RPC status.",
+      "size": 40,
+      "symbol": "FUN_00133490"
+    },
+    {
+      "address": 1259720,
+      "meaning": "Send command 0x 3C with zero-byte input and discard the measured RPC status.",
+      "size": 36,
+      "symbol": "FUN_001338C8"
+    },
+    {
+      "address": 1259824,
+      "meaning": "Send command 0x 5A with two initialized payload words and return the measured RPC status.",
+      "size": 44,
+      "symbol": "FUN_00133930"
+    },
+    {
+      "address": 1260016,
+      "meaning": "Copy n bytes forward from the supplied source to destination when n is positive.",
+      "size": 52,
+      "symbol": "FUN_001339F0"
     },
     {
       "address": 2553616,
@@ -441,6 +515,34 @@
       "xrefs": 0
     },
     {
+      "address": 2644032,
+      "meaning": "Read the 32-bit word at absolute address 001BACC0; original role and signedness are unknown.",
+      "ranges": 1,
+      "size": 12,
+      "symbol": "FUN_00285840"
+    },
+    {
+      "address": 2644048,
+      "meaning": "Read the 32-bit word at absolute address 001BAD08; original role and signedness are unknown.",
+      "ranges": 1,
+      "size": 12,
+      "symbol": "FUN_00285850"
+    },
+    {
+      "address": 2644144,
+      "meaning": "Write the low 32 bits of the argument to absolute address 001BAD14; original role is unknown.",
+      "ranges": 1,
+      "size": 12,
+      "symbol": "FUN_002858B0"
+    },
+    {
+      "address": 2653768,
+      "meaning": "Return whether the 32-bit word at absolute address 001BACC0 equals 7.",
+      "ranges": 1,
+      "size": 20,
+      "symbol": "FUN_00287E48"
+    },
+    {
       "address": 2656696,
       "meaning": "clear three fields, initialize a block, then set two flags",
       "ranges": 1,
@@ -463,6 +565,18 @@
       "size": 116,
       "symbol": "FUN_00288AA0",
       "xrefs": 0
+    },
+    {
+      "address": 2657048,
+      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
+      "size": 28,
+      "symbol": "FUN_00288B18"
+    },
+    {
+      "address": 2657208,
+      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
+      "size": 48,
+      "symbol": "FUN_00288BB8"
     },
     {
       "address": 2657672,
@@ -494,6 +608,12 @@
       "address": 2691824,
       "size": 8,
       "symbol": "FUN_002912F0"
+    },
+    {
+      "address": 2692952,
+      "meaning": "Invoke both measured index-based helpers with the same supplied 64-bit index.",
+      "size": 44,
+      "symbol": "FUN_00291758"
     },
     {
       "address": 2700472,
@@ -553,6 +673,12 @@
       "size": 120,
       "symbol": "FUN_0029F978",
       "xrefs": 0
+    },
+    {
+      "address": 2752968,
+      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
+      "size": 40,
+      "symbol": "FUN_002A01C8"
     },
     {
       "address": 2783056,
@@ -707,6 +833,12 @@
       "xrefs": 0
     },
     {
+      "address": 2818224,
+      "meaning": "Forward owner+0x 10, the output-vector pointer and the 64-bit mode to the measured helper.",
+      "size": 28,
+      "symbol": "FUN_002B00B0"
+    },
+    {
       "address": 2821472,
       "meaning": "read a global byte; byte-identical body in all 27 levels",
       "ranges": 1,
@@ -727,6 +859,12 @@
       "size": 40,
       "symbol": "FUN_002B3868",
       "xrefs": 0
+    },
+    {
+      "address": 2839160,
+      "meaning": "Pass owner, owner+0x 10 and the incoming float factor to the measured helper.",
+      "size": 28,
+      "symbol": "FUN_002B5278"
     },
     {
       "address": 2844528,
@@ -831,6 +969,75 @@
       "xrefs": 0
     },
     {
+      "address": 2937376,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002CD220"
+    },
+    {
+      "address": 2938400,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002CD620"
+    },
+    {
+      "address": 2939072,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002CD8C0"
+    },
+    {
+      "address": 2960568,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D2CB8"
+    },
+    {
+      "address": 2960936,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D2E28"
+    },
+    {
+      "address": 2961120,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D2EE0"
+    },
+    {
+      "address": 2962064,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D3290"
+    },
+    {
+      "address": 2962320,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D3390"
+    },
+    {
+      "address": 2970944,
+      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
+      "size": 48,
+      "symbol": "FUN_002D5540"
+    },
+    {
+      "address": 2980552,
+      "meaning": "Write all-one word bits at absolute address 001C51D4 and return zero.",
+      "ranges": 1,
+      "size": 20,
+      "symbol": "FUN_002D7AC8"
+    },
+    {
+      "address": 2987928,
+      "meaning": "Shared native body; original game role is unknown.",
+      "ranges": 1,
+      "size": 592,
+      "symbol": "FUN_002D9798",
+      "xrefs": 1
+    },
+    {
       "address": 3008528,
       "meaning": "initialize six 16-bit values from dimensions and halves",
       "ranges": 1,
@@ -895,6 +1102,27 @@
       "xrefs": 0
     },
     {
+      "address": 3070064,
+      "meaning": "Read the 32-bit word at absolute address 00214FCC; original role and signedness are unknown.",
+      "ranges": 1,
+      "size": 12,
+      "symbol": "FUN_002ED870"
+    },
+    {
+      "address": 3073656,
+      "meaning": "Call the qualified owner-field helper and write the value argument at word offset 100 through its nonzero encoded address.",
+      "ranges": 1,
+      "size": 44,
+      "symbol": "FUN_002EE678"
+    },
+    {
+      "address": 3073704,
+      "meaning": "Call the qualified owner-field helper and read word offset 100 from its nonzero encoded address, otherwise return zero.",
+      "ranges": 1,
+      "size": 40,
+      "symbol": "FUN_002EE6A8"
+    },
+    {
       "address": 3131600,
       "meaning": "extract GS blocks rounded to 16384 bytes, with the remaining count in the for clause; exact boot match, level placements qualified separately",
       "ranges": 1,
@@ -924,11 +1152,27 @@
       "xrefs": 0
     },
     {
+      "address": 3166760,
+      "meaning": "Shared native body; original game role is unknown.",
+      "ranges": 1,
+      "size": 228,
+      "symbol": "FUN_00305228",
+      "xrefs": 1
+    },
+    {
       "address": 3168312,
       "meaning": "shared native body of family a04928c6",
       "ranges": 1,
       "size": 144,
       "symbol": "FUN_00305838",
+      "xrefs": 1
+    },
+    {
+      "address": 3176936,
+      "meaning": "Shared native body; original game role is unknown.",
+      "ranges": 1,
+      "size": 228,
+      "symbol": "FUN_003079E8",
       "xrefs": 1
     },
     {
@@ -964,6 +1208,20 @@
       "xrefs": 1
     },
     {
+      "address": 3239328,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "ranges": 1,
+      "size": 100,
+      "symbol": "FUN_00316DA0",
+      "xrefs": 1
+    },
+    {
+      "address": 3255048,
+      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
+      "size": 12,
+      "symbol": "FUN_0031AB08"
+    },
+    {
       "address": 3262688,
       "meaning": "shared native body of family a04928c6",
       "ranges": 1,
@@ -977,6 +1235,14 @@
       "ranges": 1,
       "size": 136,
       "symbol": "FUN_0031E750",
+      "xrefs": 1
+    },
+    {
+      "address": 3273128,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "ranges": 1,
+      "size": 100,
+      "symbol": "FUN_0031F1A8",
       "xrefs": 1
     },
     {
@@ -1009,6 +1275,14 @@
       "ranges": 1,
       "size": 136,
       "symbol": "FUN_0032B2F0",
+      "xrefs": 1
+    },
+    {
+      "address": 3325384,
+      "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
+      "ranges": 1,
+      "size": 100,
+      "symbol": "FUN_0032BDC8",
       "xrefs": 1
     },
     {
@@ -1140,6 +1414,18 @@
       "xrefs": 0
     },
     {
+      "address": 3369520,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
+      "size": 8,
+      "symbol": "FUN_00336A30"
+    },
+    {
+      "address": 3369528,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
+      "size": 8,
+      "symbol": "FUN_00336A38"
+    },
+    {
       "address": 3370176,
       "meaning": "write a word at 0x38; byte-identical body in all 27 levels",
       "ranges": 1,
@@ -1198,6 +1484,12 @@
       "size": 12,
       "symbol": "FUN_00339760",
       "xrefs": 0
+    },
+    {
+      "address": 3381104,
+      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
+      "size": 28,
+      "symbol": "FUN_00339770"
     },
     {
       "address": 3381136,
@@ -1272,6 +1564,24 @@
       "xrefs": 0
     },
     {
+      "address": 3400048,
+      "meaning": "Initialize the owner subviews at 8 and 0x 2B 0, then return the supplied owner pointer.",
+      "size": 52,
+      "symbol": "FUN_0033E170"
+    },
+    {
+      "address": 3400464,
+      "meaning": "Add the owner word at 0x 378 to twenty times the measured helper result.",
+      "size": 52,
+      "symbol": "FUN_0033E310"
+    },
+    {
+      "address": 3400520,
+      "meaning": "Return the signed word read by the helper from the owner subview at 0x 2B 0.",
+      "size": 28,
+      "symbol": "FUN_0033E348"
+    },
+    {
       "address": 3413312,
       "meaning": "store three consecutive words; byte-identical body in all 27 levels",
       "ranges": 1,
@@ -1293,12 +1603,24 @@
       "symbol": "FUN_003417C8"
     },
     {
+      "address": 3414632,
+      "meaning": "Call the measured one-owner routine with owner+0x 228.",
+      "size": 28,
+      "symbol": "FUN_00341A68"
+    },
+    {
       "address": 3415256,
       "meaning": "write a word at 0x8; byte-identical body in all 27 levels",
       "ranges": 1,
       "size": 8,
       "symbol": "FUN_00341CD8",
       "xrefs": 0
+    },
+    {
+      "address": 3416960,
+      "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
+      "size": 40,
+      "symbol": "FUN_00342380"
     },
     {
       "address": 3417000,
@@ -1320,6 +1642,18 @@
       "address": 3417120,
       "size": 8,
       "symbol": "FUN_00342420"
+    },
+    {
+      "address": 3417672,
+      "meaning": "Call the measured one-owner routine with owner+0x 188.",
+      "size": 28,
+      "symbol": "FUN_00342648"
+    },
+    {
+      "address": 3418032,
+      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
+      "size": 8,
+      "symbol": "FUN_003427B0"
     },
     {
       "address": 3419072,
@@ -1362,6 +1696,24 @@
       "xrefs": 0
     },
     {
+      "address": 3421496,
+      "meaning": "Pass owner+0x 298 and the supplied read-only record table to the measured helper.",
+      "size": 28,
+      "symbol": "FUN_00343538"
+    },
+    {
+      "address": 3421536,
+      "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
+      "size": 28,
+      "symbol": "FUN_00343560"
+    },
+    {
+      "address": 3421568,
+      "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
+      "size": 28,
+      "symbol": "FUN_00343580"
+    },
+    {
       "address": 3421600,
       "meaning": "write a word at 0x330; byte-identical body in all 27 levels",
       "ranges": 1,
@@ -1386,6 +1738,12 @@
       "xrefs": 0
     },
     {
+      "address": 3440288,
+      "meaning": "Call the measured initializer with the supplied 64-bit value and return that original value.",
+      "size": 40,
+      "symbol": "FUN_00347EA0"
+    },
+    {
       "address": 3440744,
       "meaning": "count positive records and bound an index",
       "ranges": 1,
@@ -1400,6 +1758,12 @@
       "size": 12,
       "symbol": "FUN_003480D8",
       "xrefs": 0
+    },
+    {
+      "address": 3440872,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0xB 8.",
+      "size": 8,
+      "symbol": "FUN_003480E8"
     },
     {
       "address": 3440880,
@@ -1474,6 +1838,12 @@
       "xrefs": 0
     },
     {
+      "address": 3445896,
+      "meaning": "Clear the signed 32-bit word at owner byte offset 0x 150.",
+      "size": 8,
+      "symbol": "FUN_00349488"
+    },
+    {
       "address": 3445904,
       "meaning": "write a word at 0x144; byte-identical body in all 27 levels",
       "ranges": 1,
@@ -1514,12 +1884,24 @@
       "xrefs": 0
     },
     {
+      "address": 3446312,
+      "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
+      "size": 8,
+      "symbol": "FUN_00349628"
+    },
+    {
       "address": 3446320,
       "meaning": "store a value and initialize a float only once",
       "ranges": 1,
       "size": 60,
       "symbol": "FUN_00349630",
       "xrefs": 0
+    },
+    {
+      "address": 3446384,
+      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 20.",
+      "size": 8,
+      "symbol": "FUN_00349670"
     },
     {
       "address": 3446392,
@@ -1592,6 +1974,21 @@
       "size": 20,
       "symbol": "FUN_0034AFE8",
       "xrefs": 0
+    },
+    {
+      "address": 3459688,
+      "meaning": "Call the qualified field accessor with owner offset 358, read its returned encoded address and retain the top byte of the word.",
+      "ranges": 1,
+      "size": 40,
+      "symbol": "FUN_0034CA68"
+    },
+    {
+      "address": 3459976,
+      "meaning": "Shared native body; original game role is unknown.",
+      "ranges": 1,
+      "size": 484,
+      "symbol": "FUN_0034CB88",
+      "xrefs": 1
     },
     {
       "address": 3460760,
@@ -1804,6 +2201,12 @@
       "xrefs": 0
     },
     {
+      "address": 3479624,
+      "meaning": "Pass owner+0x 48 and four output-word pointers to the measured five-pointer helper.",
+      "size": 28,
+      "symbol": "FUN_00351848"
+    },
+    {
       "address": 3479688,
       "meaning": "clear the word at 0xa8; byte-identical body in all 27 levels",
       "ranges": 1,
@@ -1836,6 +2239,12 @@
       "xrefs": 0
     },
     {
+      "address": 3479864,
+      "meaning": "Return the measured signed-word getter result for the owner subview at 0x 48.",
+      "size": 28,
+      "symbol": "FUN_00351938"
+    },
+    {
       "address": 3481152,
       "size": 8,
       "symbol": "FUN_00351E40"
@@ -1865,6 +2274,12 @@
       "xrefs": 0
     },
     {
+      "address": 3481320,
+      "meaning": "When the bound helper returns zero, combine owner words 0 and 2 with factor 0xD0000; otherwise return zero.",
+      "size": 64,
+      "symbol": "FUN_00351EE8"
+    },
+    {
       "address": 3481384,
       "meaning": "true if the counter is zero; byte-identical body in all 27 levels",
       "ranges": 1,
@@ -1879,348 +2294,6 @@
       "size": 32,
       "symbol": "FUN_00351FA0",
       "xrefs": 0
-    },
-    {
-      "address": 1239664,
-      "meaning": "Advance the stored unsigned cursor by the signed offset shifted right three, then apply the recorded wrap subtraction.",
-      "size": 44,
-      "symbol": "FUN_0012EA70"
-    },
-    {
-      "address": 1243456,
-      "meaning": "Return the constant signed integer one.",
-      "size": 8,
-      "symbol": "FUN_0012F940"
-    },
-    {
-      "address": 1244016,
-      "meaning": "Copy the signed 32-bit word at owner offset 0xC to offset 0x 8.",
-      "size": 12,
-      "symbol": "FUN_0012FB70"
-    },
-    {
-      "address": 1258640,
-      "meaning": "Send command 0x 36 with one explicitly initialized four-byte payload word and return the measured RPC status.",
-      "size": 40,
-      "symbol": "FUN_00133490"
-    },
-    {
-      "address": 1259720,
-      "meaning": "Send command 0x 3C with zero-byte input and discard the measured RPC status.",
-      "size": 36,
-      "symbol": "FUN_001338C8"
-    },
-    {
-      "address": 1259824,
-      "meaning": "Send command 0x 5A with two initialized payload words and return the measured RPC status.",
-      "size": 44,
-      "symbol": "FUN_00133930"
-    },
-    {
-      "address": 1260016,
-      "meaning": "Copy n bytes forward from the supplied source to destination when n is positive.",
-      "size": 52,
-      "symbol": "FUN_001339F0"
-    },
-    {
-      "address": 2657048,
-      "meaning": "Pass the supplied owner pointer to the measured owner initializer.",
-      "size": 28,
-      "symbol": "FUN_00288B18"
-    },
-    {
-      "address": 2657208,
-      "meaning": "Run the measured owner cleanup, clear its first word, then invoke the measured initializer.",
-      "size": 48,
-      "symbol": "FUN_00288BB8"
-    },
-    {
-      "address": 2692952,
-      "meaning": "Invoke both measured index-based helpers with the same supplied 64-bit index.",
-      "size": 44,
-      "symbol": "FUN_00291758"
-    },
-    {
-      "address": 2752968,
-      "meaning": "Fill 0x3C0 bytes beginning at 0x70003A00 with word 0x40000000.",
-      "size": 40,
-      "symbol": "FUN_002A01C8"
-    },
-    {
-      "address": 2818224,
-      "meaning": "Forward owner+0x 10, the output-vector pointer and the 64-bit mode to the measured helper.",
-      "size": 28,
-      "symbol": "FUN_002B00B0"
-    },
-    {
-      "address": 2839160,
-      "meaning": "Pass owner, owner+0x 10 and the incoming float factor to the measured helper.",
-      "size": 28,
-      "symbol": "FUN_002B5278"
-    },
-    {
-      "address": 2937376,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002CD220"
-    },
-    {
-      "address": 2938400,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002CD620"
-    },
-    {
-      "address": 2939072,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002CD8C0"
-    },
-    {
-      "address": 2960568,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002D2CB8"
-    },
-    {
-      "address": 2960936,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002D2E28"
-    },
-    {
-      "address": 2961120,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002D2EE0"
-    },
-    {
-      "address": 2962064,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002D3290"
-    },
-    {
-      "address": 2962320,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002D3390"
-    },
-    {
-      "address": 2970944,
-      "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
-      "size": 48,
-      "symbol": "FUN_002D5540"
-    },
-    {
-      "address": 3255048,
-      "meaning": "Read the word at offset 0x 18 through the pointer stored at owner offset 0x 68.",
-      "size": 12,
-      "symbol": "FUN_0031AB08"
-    },
-    {
-      "address": 3369520,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 44.",
-      "size": 8,
-      "symbol": "FUN_00336A30"
-    },
-    {
-      "address": 3369528,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 40.",
-      "size": 8,
-      "symbol": "FUN_00336A38"
-    },
-    {
-      "address": 3381104,
-      "meaning": "Forward owner+8 and the supplied signed word to the measured two-argument setter.",
-      "size": 28,
-      "symbol": "FUN_00339770"
-    },
-    {
-      "address": 3400048,
-      "meaning": "Initialize the owner subviews at 8 and 0x 2B 0, then return the supplied owner pointer.",
-      "size": 52,
-      "symbol": "FUN_0033E170"
-    },
-    {
-      "address": 3400464,
-      "meaning": "Add the owner word at 0x 378 to twenty times the measured helper result.",
-      "size": 52,
-      "symbol": "FUN_0033E310"
-    },
-    {
-      "address": 3400520,
-      "meaning": "Return the signed word read by the helper from the owner subview at 0x 2B 0.",
-      "size": 28,
-      "symbol": "FUN_0033E348"
-    },
-    {
-      "address": 3414632,
-      "meaning": "Call the measured one-owner routine with owner+0x 228.",
-      "size": 28,
-      "symbol": "FUN_00341A68"
-    },
-    {
-      "address": 3416960,
-      "meaning": "Store the supplied float-record pointer at owner+0x 250 and pass it with owner+0x 188 to the helper.",
-      "size": 40,
-      "symbol": "FUN_00342380"
-    },
-    {
-      "address": 3417672,
-      "meaning": "Call the measured one-owner routine with owner+0x 188.",
-      "size": 28,
-      "symbol": "FUN_00342648"
-    },
-    {
-      "address": 3418032,
-      "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
-      "size": 8,
-      "symbol": "FUN_003427B0"
-    },
-    {
-      "address": 3421496,
-      "meaning": "Pass owner+0x 298 and the supplied read-only record table to the measured helper.",
-      "size": 28,
-      "symbol": "FUN_00343538"
-    },
-    {
-      "address": 3421536,
-      "meaning": "Return the measured signed-word getter result for the owner subview at 0x 298.",
-      "size": 28,
-      "symbol": "FUN_00343560"
-    },
-    {
-      "address": 3421568,
-      "meaning": "Invoke the measured cleanup helper on the owner subview at 0x 298.",
-      "size": 28,
-      "symbol": "FUN_00343580"
-    },
-    {
-      "address": 3440288,
-      "meaning": "Call the measured initializer with the supplied 64-bit value and return that original value.",
-      "size": 40,
-      "symbol": "FUN_00347EA0"
-    },
-    {
-      "address": 3440872,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0xB 8.",
-      "size": 8,
-      "symbol": "FUN_003480E8"
-    },
-    {
-      "address": 3445896,
-      "meaning": "Clear the signed 32-bit word at owner byte offset 0x 150.",
-      "size": 8,
-      "symbol": "FUN_00349488"
-    },
-    {
-      "address": 3446312,
-      "meaning": "Store the supplied signed 32-bit word at owner byte offset 0x 84.",
-      "size": 8,
-      "symbol": "FUN_00349628"
-    },
-    {
-      "address": 3446384,
-      "meaning": "Store the supplied unsigned 32-bit word at owner byte offset 0x 20.",
-      "size": 8,
-      "symbol": "FUN_00349670"
-    },
-    {
-      "address": 3479624,
-      "meaning": "Pass owner+0x 48 and four output-word pointers to the measured five-pointer helper.",
-      "size": 28,
-      "symbol": "FUN_00351848"
-    },
-    {
-      "address": 3479864,
-      "meaning": "Return the measured signed-word getter result for the owner subview at 0x 48.",
-      "size": 28,
-      "symbol": "FUN_00351938"
-    },
-    {
-      "address": 3481320,
-      "meaning": "When the bound helper returns zero, combine owner words 0 and 2 with factor 0xD0000; otherwise return zero.",
-      "size": 64,
-      "symbol": "FUN_00351EE8"
-    },
-    {
-      "address": 1139616,
-      "meaning": "Store a 32-bit argument at offset 0x58 through the pointer in absolute cell 00133E74; original field purpose and type remain unknown",
-      "ranges": 1,
-      "size": 16,
-      "symbol": "FUN_001163A0",
-      "xrefs": 1
-    },
-    {
-      "address": 2644032,
-      "meaning": "Read the 32-bit word at absolute address 001BACC0; original role and signedness are unknown.",
-      "ranges": 1,
-      "size": 12,
-      "symbol": "FUN_00285840"
-    },
-    {
-      "address": 2644048,
-      "meaning": "Read the 32-bit word at absolute address 001BAD08; original role and signedness are unknown.",
-      "ranges": 1,
-      "size": 12,
-      "symbol": "FUN_00285850"
-    },
-    {
-      "address": 2644144,
-      "meaning": "Write the low 32 bits of the argument to absolute address 001BAD14; original role is unknown.",
-      "ranges": 1,
-      "size": 12,
-      "symbol": "FUN_002858B0"
-    },
-    {
-      "address": 3070064,
-      "meaning": "Read the 32-bit word at absolute address 00214FCC; original role and signedness are unknown.",
-      "ranges": 1,
-      "size": 12,
-      "symbol": "FUN_002ED870"
-    },
-    {
-      "address": 2653768,
-      "meaning": "Return whether the 32-bit word at absolute address 001BACC0 equals 7.",
-      "ranges": 1,
-      "size": 20,
-      "symbol": "FUN_00287E48"
-    },
-    {
-      "address": 2980552,
-      "meaning": "Write all-one word bits at absolute address 001C51D4 and return zero.",
-      "ranges": 1,
-      "size": 20,
-      "symbol": "FUN_002D7AC8"
-    },
-    {
-      "address": 3073704,
-      "meaning": "Call the qualified owner-field helper and read word offset 100 from its nonzero encoded address, otherwise return zero.",
-      "ranges": 1,
-      "size": 40,
-      "symbol": "FUN_002EE6A8"
-    },
-    {
-      "address": 3459688,
-      "meaning": "Call the qualified field accessor with owner offset 358, read its returned encoded address and retain the top byte of the word.",
-      "ranges": 1,
-      "size": 40,
-      "symbol": "FUN_0034CA68"
-    },
-    {
-      "address": 3073656,
-      "meaning": "Call the qualified owner-field helper and write the value argument at word offset 100 through its nonzero encoded address.",
-      "ranges": 1,
-      "size": 44,
-      "symbol": "FUN_002EE678"
-    },
-    {
-      "address": 1167640,
-      "meaning": "Call the no-incoming-argument cleanup helper and clear the word at absolute address 001346A0.",
-      "ranges": 1,
-      "size": 36,
-      "symbol": "FUN_0011D118"
     }
   ],
   "gp": 1765360,
