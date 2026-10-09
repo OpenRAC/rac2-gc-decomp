@@ -10,6 +10,40 @@ Check freshness before a trial, a build or a publication:
 python scripts/source_layout.py --check --inventory-check progress/source-inventory.json
 ```
 
+## Progress display by authored module
+
+The physical decomp.dev artifact groups accepted function placements by program,
+proof owner and their verified authored source fragment. Each level has its own
+category. Shared placements stay separate in every physical program; this display
+does not deduplicate matching credit or recover original retail object boundaries.
+Level categories include all scoped code and data, including unmatched remainders;
+source, owner and role categories describe only the accepted subset.
+
+The grouping runs after the ordinary integration/object proof validators. It
+retains the exact function and section records, unmatched section remainders,
+data coverage and all byte measures. Display unit counts describe source groups,
+not the number of proved function placements. A displayed source group covers
+its **accepted C subset**; an unqualified sibling in the same source file, such
+as the retained libgcc `fptodp` attempt, gains no credit from that group's status.
+
+Verified source paths point to `src/`. Ambiguous source attribution remains a
+separate unresolved unit. Original roles default to `unclassified`; reviewed
+assignments belong in `config/progress-modules.json` with explicit provenance.
+Names and addresses alone are not evidence of a game subsystem. The optional
+`source-modules.json` artifact records presentation provenance and the preserved
+function-placement count; it is separate from the matching proofs.
+The default descriptor has no assignments: complete source attribution does not
+mean that the original roles have been classified.
+
+The conservative unique-code artifact and its denominator remain unchanged.
+Categories are overlapping filters, so summing category totals is not a global
+progress calculation. The legacy ungrouped CLI remains available:
+
+```text
+python scripts/decomp_report.py --output <physical-report> --level-proof <level-proof> ...
+python scripts/progress_module_report.py --output <grouped-report> --source-module-summary <presentation-summary>
+```
+
 ## Boot pilot
 
 The ordered core fragments in `src/boot/` group layouts, resident accessors,
