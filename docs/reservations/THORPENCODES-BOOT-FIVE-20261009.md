@@ -56,3 +56,11 @@ renew through the shared CLI when required. An expired lease continues to
 exclude other contributors until inspected, but does not authorize work.
 The draft PR records this receipt; opening or merging it does not establish
 ownership independently of the shared ledger.
+
+## Subsequent one-function investigation
+
+The owner subsequently requested work on one member of this lot. Environment
+and complete baseline checks were rerun, and `FUN_00282C10` was investigated.
+Its observed ABI and the current compiler support gap are recorded in
+[the one-function analysis](../BOOT-282C10-ANALYSIS.md). The original receipt
+above remains historical; no new matching claim is implied by that analysis.

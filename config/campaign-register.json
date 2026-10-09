@@ -55,6 +55,19 @@
       "returncode": 0,
       "state": "passed"
     },
+    "07ba614c98134b96bd4e994b4ffd40c3": {
+      "action_manifest_sha256": "839104da666ac5e317ea5c8aa93047af774c1e28e70b101dfcdc0b41d63d3ed3",
+      "action_outcome_sha256": "555ef6fb38defc2caa48ed6d3c9c9b08e808f287796504e400b32dcb70d8b601",
+      "artifact": "runtime:runs/20261008T134500Z-a6a86dcc/builds/campaign-07ba614c98134b96bd4e994b4ffd40c3/report.json",
+      "artifact_sha256": "cddff6fcf7fd2d0313a4d2c83c545af98e3a098d5438a198a5c564551052b2a4",
+      "directory": "runtime:actions/07ba614c98134b96bd4e994b4ffd40c3",
+      "finished": "2026-10-09T03:07:37.498477+00:00",
+      "id": "07ba614c98134b96bd4e994b4ffd40c3",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "0c888b752786495a9220e1be4c82fe22": {
       "artifact": "runtime:actions/0c888b752786495a9220e1be4c82fe22/report.json",
       "artifact_sha256": "67016af14a91c7813825fa2e95e63e240b6a0a5f8ed29275ee5dc1c2e06f09a5",
@@ -4921,7 +4934,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 12178,
+  "revision": 12182,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -245563,6 +245576,29 @@
         }
       ]
     },
+    "thorpencodes-boot-282c10-vu-sqrt-analysis-20261009": {
+      "abi": "Observed F12 single-precision input and F0 output; twelve direct callers sampled, including 002AA658, 002AB3F8 and 0028CD44. No frame, calls or memory access in the complete leaf. A0/VU scratch state changed; original declaration and exceptional-input behavior unverified.",
+      "address": 2632720,
+      "created": "2026-10-09T03:11:37.836312+00:00",
+      "hypothesis": "Complete32-byte leaf transfers F12 through VU0, computes Q square root, waits and transfers result to F0. Pinned mips.md sqrtsf2 emits CPU sqrt.s; neither matching mips.md nor mips.c contains vsqrt/vwaitq/vaddq/qmtc2/qmfc2 lowering tokens. No supported ordinary-C candidate identified and no compilation attempted.",
+      "id": "thorpencodes-boot-282c10-vu-sqrt-analysis-20261009",
+      "kind": "research",
+      "next_action": "Retain measured ABI/backend evidence. Do not cycle scalar expressions or inject assembly. Resume only after the reopening condition is met, then verify the shared claim before a registered complete-symbol trial.",
+      "pointers": [
+        "docs/BOOT-282C10-ANALYSIS.md",
+        "config/function-catalog/boot.ndjson.gz",
+        "runtime:bank/reserved-boot-282c10-20261009/analysis-evidence.json"
+      ],
+      "program": "boot",
+      "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
+      "reopen_condition": "Independently verified compiler/source evidence for a permitted ordinary-C lowering of this complete vector-unit square-root body, under an explicitly qualified profile and measured float ABI.",
+      "size": 32,
+      "state": "blocked",
+      "symbols": [
+        "FUN_00282C10"
+      ],
+      "transitions": []
+    },
     "two-native-families-0_aranos_tutorial-20261004": {
       "budget": 2,
       "created": "2026-10-04T04:36:23.168449+00:00",
@@ -297891,6 +297927,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "cb1a0b02171f661a13bf9fc2a3b7f3eb8c30993024433a10072efebcfe4abb32"
+    "docs/CAMPAIGN-QUEUE.md": "8a26a8f1b66e8d0fe6f54104ef28994e3884aaf579078aa491b8a84a47e214b1"
   }
 }

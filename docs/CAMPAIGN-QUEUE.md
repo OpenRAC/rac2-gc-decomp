@@ -37176,6 +37176,18 @@ Reopen condition: Independent measured ABI/type/boundary or qualified lowering e
 - `runtime:trials/1d624d0e94f54593bdbb5223f7e8f1ea`
 - `runtime:trials/25c10bdeff4f493d8bcbd630fafc633c`
 
+## thorpencodes-boot-282c10-vu-sqrt-analysis-20261009
+
+State: `blocked`. Kind: `research`.
+
+Retain measured ABI/backend evidence. Do not cycle scalar expressions or inject assembly. Resume only after the reopening condition is met, then verify the shared claim before a registered complete-symbol trial.
+
+Reopen condition: Independently verified compiler/source evidence for a permitted ordinary-C lowering of this complete vector-unit square-root body, under an explicitly qualified profile and measured float ABI.
+
+- `docs/BOOT-282C10-ANALYSIS.md`
+- `config/function-catalog/boot.ndjson.gz`
+- `runtime:bank/reserved-boot-282c10-20261009/analysis-evidence.json`
+
 ## two-native-families-0_aranos_tutorial-20261004
 
 State: `stopped`. Kind: `candidate`.
