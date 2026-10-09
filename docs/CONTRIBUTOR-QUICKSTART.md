@@ -171,4 +171,8 @@ explains the website route too. The target project branch is `RAC2`, not `main`.
 
 You should receive a small understandable diff, a scoped English commit, actual
 test/gate outcomes and a **draft PR targeting `RAC2`**. Ask the AI to explain its
-description before requesting review. Never paste access tokens into chat or files.
+description before requesting review. Complete the mandatory
+[PR description format](PR-DESCRIPTIONS.md) for the actual change; its required
+status checks completeness, while technical review checks the evidence. Include
+the validated upstream SHA and disclose skipped checks instead of inventing
+results. Never paste access tokens into chat or files.
