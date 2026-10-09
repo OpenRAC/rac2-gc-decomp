@@ -68,6 +68,13 @@ Refresh source inventory, register views and the README bar when their inputs
 change. Use detailed English commits, explicit staging and a normal push, then
 verify the remote SHA and CI. Never force-push or include private runtime data.
 
+Integrate an eligible reviewed PR through the [merge queue](MERGE-QUEUE.md).
+It checks the temporary combined commit against the latest `RAC2`; an older
+topic base alone does not require another manual merge. If shared C, catalogue
+or proof inputs conflict or become stale, follow the contributor branch-update
+procedure and refresh the affected evidence before rejoining the queue. Do not
+use an administrator override to skip queue or integrity checks.
+
 An example short request:
 
 > Continue matching decompilation on branch RAC2. Read AGENTS.md, docs/CONTINUE.md
