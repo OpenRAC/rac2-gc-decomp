@@ -52,3 +52,62 @@ in total with configs and symbols).
 2. Pick one item, re-measure it against v1.01, and register it through the
    campaign workflow like any other lot.
 3. Add a row to the [CREDITS.md](../CREDITS.md) table in the same change.
+
+## Detailed comparison
+
+Based on reading the upstream tree at the reviewed revision. No address below
+has been re-measured against `config/target.json`; "overlap" means a similar
+purpose, not identical behavior.
+
+### libgcc and libm
+
+- Upstream `libgcc/MEMBERS` builds 20 archive members from GCC's own source:
+  the `libgcc2.c` DI modules (`_divdi3`, `_muldi3`, `_fixunsdfdi`,
+  `_floatdidf`, ...) and `fp-bit.c` modules (for example `_fpcmp_parts_df`),
+  each selected by `FINE_GRAINED_LIBRARIES` and its `L_<module>` define.
+  `LINK_ALIASES` binds names a member imports to game symbols without renaming
+  the game function.
+- This repository has the `fp-bit-ee.c` soft-float body (from rac1-decomp) and
+  RAC1 findings that the same DI modules match there
+  ([RAC1-DECOMP-FINDINGS.md](RAC1-DECOMP-FINDINGS.md)). Our register has the
+  `gnu-libgcc-udivdi3-pure-c-first-20261006` task stopped after a 1504-byte
+  result against 1488 required bytes. A per-module build as in their `MEMBERS`
+  is a different approach to that open question, so it is worth checking
+  against the stopped task's reopening condition, not restarting it.
+- Upstream also carves two libm members (`s_isnan`, `w_sqrt`) from newlib and
+  records their `.rodata`. We have no libm entry in the register or catalogue.
+  Check whether v1.01 contains the same members before using this.
+
+### Symbols
+
+- Upstream `symbol_addrs/usa/symbol_addrs.txt` pins names, sizes and splat
+  boundary fixes. It also records measured negatives, such as a name that was
+  a wrong libc match. Those notes are the most reusable part: they show which
+  libc/libm names fail on the same code shape.
+- Addresses are v2.00. We found no evidence in this review that v1.01 shares
+  them, so a name can move only when v1.01's code at the address does the same
+  job.
+
+### Tooling overlap
+
+| Upstream tool | Purpose | Closest here |
+| --- | --- | --- |
+| `tools/ee/symaddrs_lint.py` | Runs splat's own parser on each symbol file in a fresh process | none; we do not use splat symbol files |
+| `tools/ee/landing_gate.sh` | Runs flag-table, split and shadow checks before a landing | `scripts/campaign_finalize.py`, CI workflows |
+| `tools/ee/flagdiff.py` | Checks that per-unit compiler flag tables agree across scripts | `scripts/compiler_profiles.py` |
+| `tools/ee/overlay_bisect.sh` | Relinks excluding unit sets to find which body breaks boot | none |
+| `tools/ee/unit_report.sh`, `objdiff.json` | Per-function match reports | `scripts/decomp_report.py`, `campaign.py diff` |
+| `tools/native/` | Host build of the C bodies with HLE stubs and state-seeded tests | `ports/` (no unit-test harness) |
+
+The upstream approach depends on splat and a Docker/wibo build of the EE
+compiler, which this repository does not use, so only the ideas carry over. The
+lint's rule of one process per file because splat's symbol table is
+module-global is the kind of finding worth recording in
+[COMPILER-NOTES.md](COMPILER-NOTES.md) if we adopt splat inputs.
+
+### Not comparable
+
+Upstream's 31 C/C++ units target v2.00 and EU, and it keeps unmatched functions
+as `INCLUDE_ASM` with a `TARGET_NATIVE` body. Our bar counts only
+compiler-proven bytes on v1.01, so none of their source can add progress here
+without a v1.01 match.
