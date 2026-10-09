@@ -113,7 +113,12 @@ class DescriptionTests(unittest.TestCase):
         workflow = (ROOT / ".github/workflows/pr-description.yml").read_text()
         self.assertIn("group: pr-description-RAC2", workflow)
         self.assertIn("cancel-in-progress: false", workflow)
-        self.assertIn("github.event.pull_request.base.sha || github.sha", workflow)
+        # A PR may retain a stale base SHA with no validator. The privileged
+        # job must use the protected target repo/branch, independent of it.
+        self.assertIn("repository: ${{ github.repository }}", workflow)
+        self.assertIn("ref: refs/heads/RAC2", workflow)
+        self.assertNotIn("github.event.pull_request.base.sha", workflow)
+        self.assertNotIn("github.sha", workflow)
         self.assertIn("persist-credentials: false", workflow)
         self.assertNotIn("github.event.pull_request.head.sha", workflow)
 
