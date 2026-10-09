@@ -1,24 +1,24 @@
-"""Reproduce the retail assembler's division-erratum padding in GNU `as`.
+"""Reproduce a measured SDK 3.01 division-padding subset in GNU `as`.
 
-The retail EE assembler (SN ProDG `Ps2EeAs`) refuses to place a
+The SN ProDG 3.01 EE assembler (`Ps2EeAs`) warns about a
 single-precision COP1 division opcode too near a possible branch destination.
 Its own message is "DIV related opcode too near possible branch destination",
 and for a division inside a delay slot it says "DIV related opcode used in
 branch delay slot -- Automatic padding cannot take place".
 
-Measured rule. The oracle is the retail assembler itself, driven by a private
+Measured rule. The oracle is the authentic SDK 3.01 assembler, driven by a private
 diagnostic harness that is deliberately kept outside this repository; the
 harness reconstructs a witness around each sampled retail division site and
-asks the retail assembler to regenerate the run length. The witnesses live with
+asks the SDK 3.01 assembler to regenerate the run length. The witnesses live with
 that private harness, not here, and no binary, object or image from it is
 published.
 
   (A) Padding.  When a division opcode is emitted fewer than two instructions
-      after the most recent label -- any label, even one never branched to --
+      after the most recent code label, even one never branched to,
       the assembler emits `2 - n` nops before it, where `n` counts the
-      instructions emitted since that label.  The division therefore lands
+      emitted four-byte slots since that label. The division therefore lands
       exactly two slots after the label.  `n` counts every instruction,
-      including a `nop` written in the source.  No label has been defined yet
+      including generated nops and same-fragment `.word` slots. No code label exists
       in the file => no padding (the division may be the first instruction).
 
   (B) The floor is a maximum, not a sum.  A coprocessor hazard that already
@@ -41,11 +41,13 @@ HI/LO `div`/`divu` do not; and this SDK assembler does not accept the D forms
 at all.  This is narrower than the family names sometimes quoted for the wall,
 and it is what the oracle answers.
 
-The delay-slot half is NOT fixed here.  Our `cc1` places a `div.s` in the
-delay slot of the following `jal`, where the retail never does (measured 0 of
-19 806).  The accumulator below is skipped in noreorder regions, which is the
-same refusal the retail gives, so a division our scheduler parks in a delay
-slot still loses the padding.  See docs/COMPILER-NOTES.md.
+The delay-slot half is NOT fixed here. Retained compiler attempts place a
+`div.s` in a following `jal` delay slot and remain mismatches. This implementation
+suppresses its new floors in noreorder regions; SDK 3.01 pads ordinary noreorder
+cases too, so that behavior remains unsupported. A division scheduled in a delay
+slot still loses the padding. Cross-fragment alignment/relaxation and speculative
+nop removal are not generally reproduced. This is a bounded improvement, not
+whole-assembler equivalence. See docs/COMPILER-NOTES.md.
 
 Usage: pad_div_erratum_nops.py <gas source directory or tc-mips.c>
 """
@@ -56,17 +58,19 @@ STATE_ANCHOR = "static int insn_uses_fpr_exact PARAMS ((struct mips_cl_insn *ip,
 HELPER_ANCHOR = "\nstatic void\nmacro_build (char *place,"
 
 HELPER = '''
-/* RAC2 : etat du rembourrage d erratum de division du retail.  Insns comptees
-   depuis la derniere etiquette (toute etiquette), et temoin "une etiquette a
-   deja ete vue dans le fichier" qui porte l exemption de tete de section.  */
+/* RAC2: count emitted slots since the latest code label. A separate
+   flag tracks whether a label has been seen.
+    */
 static int rac2_div_insns_since_label;
 static int rac2_div_label_defined;
+static symbolS *rac2_div_last_code_label;
+static segT rac2_div_code_label_segment;
 
-/* RAC2 : famille mesuree a l oracle retail Ps2EeAs.  Seules les divisions
-   COP1 simple precision portent le rembourrage : div.s (fonction 0x03),
-   sqrt.s (0x04) et rsqrt.s (0x16).  add.s/sub.s/mul.s/neg.s/mov.s/madd.s/
-   msub.s/adda.s/cvt.w.s ne le portent pas, les div/divu entiers HI/LO non
-   plus, et cet assembleur SDK n accepte pas les formes D.  */
+/* RAC2: the measured SDK 3.01 padding family contains only COP1 single-
+   precision div.s (0x03), sqrt.s (0x04) and rsqrt.s (0x16). Other
+   single-precision operations and integer HI/LO div/divu do not trigger
+   this floor; the oracle rejects double-precision forms.
+    */
 static int
 rac2_div_erratum_p (ip)
      struct mips_cl_insn *ip;
@@ -87,6 +91,28 @@ rac2_div_erratum_p (ip)
       return 0;
     }
 }
+/* Count actual four-byte slots when the code label remains in this fragment.
+   This includes emitted .word data and fixed padding. Other fragments retain
+   the saturated instruction/nop fallback until relaxation is known. */
+static int
+rac2_div_code_distance ()
+{
+  if (rac2_div_last_code_label != 0
+      && rac2_div_code_label_segment == now_seg
+      && rac2_div_last_code_label->sy_frag == frag_now)
+    {
+      valueT here = (valueT) frag_now_fix ();
+      valueT start = S_GET_VALUE (rac2_div_last_code_label);
+      if (here >= start)
+        {
+          valueT bytes = here - start;
+          if ((bytes & 3) == 0)
+            return bytes >= 8 ? 2 : (int) (bytes / 4);
+        }
+    }
+  return rac2_div_insns_since_label;
+}
+
 '''
 
 PAD_ANCHOR = """      /* If the previous instruction was in a noreorder section, then
@@ -96,33 +122,39 @@ PAD_ANCHOR = """      /* If the previous instruction was in a noreorder section,
 	nops = 0;
 """
 
-PAD = """      /* RAC2 : erratum de division du retail.  Le retail refuse un opcode
-	 de division COP1 simple precision trop pres d une destination de
-	 branchement possible et emet 2 - n nops devant lui, n comptant les
-	 instructions emises depuis la derniere etiquette (n'importe quelle
-	 etiquette).  C est un PLANCHER, pas une addition : un alea
-	 coprocesseur qui demande deja un nop (mtc1 adjacent lu par la
-	 division, ou sync.p adjacent) occupe l un des deux emplacements.
-	 Mesure : etiquette a une instruction + mtc1 adjacent donne un nop ;
-	 sync.p + mtc1 + division donne un nop, pas deux.  Aucune etiquette
-	 dans le fichier : pas de rembourrage.  L exemption de « aucune
-	 instruction precedente » est portee par rac2_div_label_defined.  */
+PAD = """      /* RAC2: require two emitted slots between a code label and a division-
+   family operation. This is a minimum, not an addition: an existing
+   coprocessor hazard nop contributes to the floor. No observed code
+   label means no label-driven padding.
+
+
+
+
+
+
+    */
       if (rac2_div_label_defined
 	  && ! mips_opts.mips16
 	  && rac2_div_erratum_p (ip)
-	  && rac2_div_insns_since_label < 2)
+	  && rac2_div_code_label_segment == now_seg
+	  && rac2_div_code_distance () < 2)
 	{
-	  int rac2_need = 2 - rac2_div_insns_since_label;
+	  int rac2_need = 2 - rac2_div_code_distance ();
 	  if (nops < rac2_need)
 	    nops = rac2_need;
+
+	  /* A division label denotes the inserted padding, as in the oracle. */
+	  if (insn_labels != NULL && ! mips_opts.noreorder
+	      && ! prev_insn_unreordered)
+	    rac2_div_keep_labels = 1;
 	}
 
-      /* RAC2 : un sync.p immediatement devant l opcode de division demande
-	 aussi un nop au retail.  Mesure : sync.p oui, sync et sync.l non
-	 (les trois partagent le drapeau INSN_SYNC : c est bien l opcode
-	 precis qui compte), et seulement devant div.s/sqrt.s/rsqrt.s -- ni
-	 devant les div/divu entiers, ni devant add.s.  C est encore un
-	 plancher, pas une addition.  */
+      /* RAC2: an immediately preceding sync.p also requires one nop before
+   this COP1 family. Match the exact mnemonic: sync and sync.l share
+   INSN_SYNC but do not trigger the measured rule. This is another
+   minimum, not an addition.
+
+    */
       if (! mips_opts.mips16
 	  && rac2_div_erratum_p (ip)
 	  && prev_insn.insn_mo != 0
@@ -137,8 +169,9 @@ COUNT_ANCHOR = """  /* We just output an insn, so the next one doesn't have a la
   mips_clear_insn_labels ();
 """
 
-COUNT = """  /* RAC2 : compter l instruction emise pour le rembourrage de division.  */
-  ++rac2_div_insns_since_label;
+COUNT = """  /* RAC2: count this instruction; saturate at two slots. */
+  if (rac2_div_insns_since_label < 2)
+    ++rac2_div_insns_since_label;
 
   /* We just output an insn, so the next one doesn't have a label.  */
   mips_clear_insn_labels ();
@@ -153,12 +186,21 @@ LABEL = """  l->label = sym;
   l->next = insn_labels;
   insn_labels = l;
 
-  /* RAC2 : toute etiquette remet le compteur du rembourrage de division a
-     zero, meme une etiquette jamais ciblee.  */
-  rac2_div_insns_since_label = 0;
-  rac2_div_label_defined = 1;
+  /* RAC2: a code label starts a new padding distance, even when no branch
+   targets it. */
+  /* A data symbol is not a possible destination in this code stream. */
+  if ((bfd_get_section_flags (stdoutput, now_seg) & SEC_CODE) != 0)
+    {
+      rac2_div_insns_since_label = 0;
+      rac2_div_label_defined = 1;
+      rac2_div_last_code_label = sym;
+      rac2_div_code_label_segment = now_seg;
+    }
 """
 
+
+NOP_EMIT_ANCHOR = '#define emit_nop()\t\t\t\t\t\\\n  (mips_opts.mips16\t\t\t\t\t\\\n   ? md_number_to_chars (frag_more (2), 0x6500, 2)\t\\\n   : md_number_to_chars (frag_more (4), 0, 4))'
+NOP_EMIT = '#define emit_nop()\t\t\t\t\t\\\n  (mips_opts.mips16\t\t\t\t\t\\\n   ? md_number_to_chars (frag_more (2), 0x6500, 2)\t\\\n   : md_number_to_chars (frag_more (4), 0, 4),\\\n   (rac2_div_insns_since_label < 2\\\n    ? ++rac2_div_insns_since_label : rac2_div_insns_since_label))'
 
 def main() -> None:
     p = Path(sys.argv[1])
@@ -166,8 +208,10 @@ def main() -> None:
         p = p / "gas" / "config" / "tc-mips.c"
     source = p.read_text(encoding="utf-8")
 
-    assert "static int rac2_div_erratum_p" not in source, \
-        "already transformed: this transformer is not idempotent by design"
+    if "rac2_div_insns_since_label" in source:
+        raise SystemExit(
+            "already transformed: this transformer is not idempotent by design"
+        )
     assert source.count(STATE_ANCHOR) == 1, "anchor: insn_uses_fpr_exact declaration"
     assert source.count(HELPER_ANCHOR) == 1, "anchor: macro_build definition"
     assert source.count(PAD_ANCHOR) == 1, "anchor: noreorder nop reset"
@@ -179,6 +223,18 @@ def main() -> None:
     source = source.replace(PAD_ANCHOR, PAD + PAD_ANCHOR, 1)
     source = source.replace(COUNT_ANCHOR, COUNT, 1)
     source = source.replace(LABEL_ANCHOR, LABEL, 1)
+    assert source.count(NOP_EMIT_ANCHOR) == 1, "anchor: emitted-nop macro"
+    source = source.replace(NOP_EMIT_ANCHOR, NOP_EMIT, 1)
+    assert source.count("  int nops = 0;\n") == 1, "anchor: append_insn local state"
+    source = source.replace("  int nops = 0;\n", "  int nops = 0;\n  int rac2_div_keep_labels = 0;\n", 1)
+    # Keep the existing label relocation policy for every non-erratum case.
+    begin = source.index("append_insn (place, ip, address_expr, reloc_type, unmatched_hi)\n")
+    end = source.index("static void\nmips_emit_delays", begin)
+    part = source[begin:end]
+    label_loop = "for (l = insn_labels; l != NULL; l = l->next)"
+    assert part.count(label_loop) == 1, "anchor: append_insn label relocation"
+    part = part.replace(label_loop, "for (l = rac2_div_keep_labels ? NULL : insn_labels; l != NULL; l = l->next)", 1)
+    source = source[:begin] + part + source[end:]
 
     p.write_text(source, encoding="utf-8", newline="")
     print("Division-erratum padding installed in %s" % p)
