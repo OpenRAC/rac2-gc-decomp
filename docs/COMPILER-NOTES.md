@@ -220,8 +220,10 @@ Source-level lessons the witnesses also pinned down:
 ## Adoption of the folded zero store (9 October 2026)
 
 **Identity.** `cc1` moves from `8bed6eae…` to `5fed4e23…`. `cpp` (`2ac3d8d3…`)
-and GNU `as` (`cda1a4e4…`) are unchanged, so the assembler half of the identity
-is untouched. Four sources change: `config/mips/mips.md` (constraint and printer
+and GNU `as` (`cda1a4e4…`) are unchanged on that date, so the assembler half of
+the identity is untouched by this adoption. (The `as` was separately superseded
+by `a7d0c916…` in the division-erratum change documented below; `cc1` was not
+affected by it.) Four sources change: `config/mips/mips.md` (constraint and printer
 change retired), `config/mips/mips.c` (the fold pass), `config/mips/mips.h` (the
 hook) and `toplev.c` (the call site). The retired
 `allow_zero_ti_store.patch` was removed from the tree;
@@ -295,6 +297,10 @@ proofs:
 | `cc1` | `8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d` |
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `as` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
+
+(The current `cc1` is `5fed4e23…` and the current `as` is `a7d0c916…`; this table
+is the 7 October milestone those were built from. See the folded-zero-store and
+division-erratum sections below.)
 
 (An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
 and has been superseded. The earlier `cc1`, `3e7628b7…`, emitted the GPR save
@@ -385,6 +391,7 @@ patch -R -p1 -s < "$P/0001-r5900-quad-saves.patch"
 | `gcc/config/mips/mips.c` | emit the GPR save loop in **ascending** register order, with `gp_offset -= GET_MODE_SIZE (mips_reg_mode[0]) * (n_rac2 - 1)` pre-computed when more than one register is saved and the per-register decrement turned into `+=` | the retail saves in ascending order with the same layout and offsets |
 | `gcc/config/mips/mips.c` | run the FPR save block before the GPR save block (and keep GPR restores before FPR restores) | the retail orders the two intact blocks that way; patch `0026` covers the frame-save case, this completes it |
 | `gas/config/tc-mips.c` | insert the `rac2_mtc1_nop_ok()` helper and guard both `++nops` sites with it: a `nop` follows `mtc1` when the next instruction reads the written FPR, except when `mtc1` is the function's first instruction | measured 587 nop in 598 cases; the single exception is `FUN_00283CE0` |
+| `gas/config/tc-mips.c` | add the retail division-erratum padding: a counter of the instructions emitted since the last label, reset in `mips_define_label`; a floor of `2 - n` nops before a single-precision COP1 division; and a floor of one nop when a `sync.p` sits immediately before one | the retail assembler refuses a division too near a possible branch destination; see [the division-erratum section](#the-retail-division-erratum-padding-9-october-2026) |
 | `gcc/config/mips/mips.md` | the `movti_internal` register alternatives lose the `J` constraint (`"d,R,m,dJ,dJ,…"` becomes `"d,R,m,d,d,…"`) and the two store alternatives print `%1` again instead of `%z1` | the retired `allow_zero_ti_store.patch` earned no witness of its own; the architectural-zero fold is now the back-end pass below |
 | `gcc/config/mips/mips.c`, `gcc/config/mips/mips.h`, `gcc/toplev.c` | add `rac2_reg_live_after_store_p` and `rac2_fold_zero_ti_store` before `machine_dependent_reorg`, declare `MACHINE_DEPENDENT_REORG_AFTER_RELOAD`, and call it from `toplev.c` **before** `flag_schedule_insns_after_reload` | the retail materialises a TImode zero once and re-folds it into the store; running the pass after the second scheduler loses `FUN_002E5FE0` |
 
@@ -393,8 +400,9 @@ script that carries its exact replacement text; the five source adjustments are
 `neutralise_timode_anchor.py`, `enable_loop_padding.py`,
 `count_trap_length.py`, `ascending_save_order.py` and `reorder_save_blocks.py`,
 and the three that touch the assembler and the machine description are
-`fold_zero_ti_store.py`, `disable_frame_order_default.py` and
-`restrict_mtc1_exemption.py`. `fold_zero_ti_store.py` takes the `gcc` source
+`fold_zero_ti_store.py`, `disable_frame_order_default.py`,
+`restrict_mtc1_exemption.py` and `pad_div_erratum_nops.py`.
+`fold_zero_ti_store.py` takes the `gcc` source
 directory rather than one file, because it retires a machine-description change
 and inserts a back-end pass across three more sources at once; the
 `allow_zero_ti_store.patch` it replaces was removed from the tree on
@@ -433,18 +441,109 @@ match:
 | `gcc/config/mips/mips.h` | `87d59c06d047cf7252349cb02aebc266f8b4dcecd537c827e6ec3966a10bbfc3` |
 | `gcc/config/mips/mips.md` | `177caa696e7de5e58515d1500abce727f8783454b4522fd3e5cd3e0630b99acf` |
 | `gcc/toplev.c` | `38d52727addc0b0b299700835788808cf23fe59c863a961cdd6f28170faaf3cc` |
-| `gas/config/tc-mips.c` | `61e51c1ebcdf860db4503b6cc6a11c40596d1f3c969daf66ee56a45f454130ca` |
+| `gas/config/tc-mips.c` | `fa8fab54ca52b633ec8dad81c1266e43540fcde7cddaa21553d448248ba0e08d` |
 | `gcc/cc1` | `5fed4e239d6fe3ef19d3b18483844eaf5fb1e647c5d8556652c75fc8e9a73bc6` |
 | `gcc/cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
-| `gas/as-new` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
+| `gas/as-new` | `a7d0c916dc1b58207ec5fb6cdfba6958ec8b128f5961ba98398ba716ffddc1d3` |
 
 The whole recipe was last verified end to end on 7 October 2026 (six identities,
-then-current `cc1`); the four source rows and the `cc1` row above are the
-9 October 2026 identities, and the four source hashes were re-derived from the
-public `fold_zero_ti_store.py` on that date. A `mips.c` that hashes differently means a step above is missing
+then-current `cc1`); the four `gcc` source rows and the `cc1` row above are the
+9 October 2026 identities, re-derived from the public `fold_zero_ti_store.py` on
+that date. The `gas/config/tc-mips.c` and `gas/as-new` rows are the 9 October
+2026 division-erratum identities: the same date's `tc-mips.c` was
+`61e51c1e…` before `pad_div_erratum_nops.py` and is `fa8fab54…` after it, and a
+complete rebuild from a fresh archive extraction reproduced all eight rows with
+the same `as-new`. A `mips.c` that hashes differently means a step above is missing
 — a rebuild that skips the adjustments produces a compiler that still matches the
 measured corpus on simple bodies and diverges elsewhere, which is exactly the
 failure mode this section exists to prevent.
+
+## The retail division-erratum padding (9 October 2026)
+
+**Identity.** `as` moves from `cda1a4e4…` to `a7d0c916…`. `cc1` (`5fed4e23…`),
+`cpp` (`2ac3d8d3…`) and every other instrument are unchanged, and the four
+`gcc` sources are unchanged. `gas/config/tc-mips.c` moves from `61e51c1e…` to
+`fa8fab54…`; the public
+[`pad_div_erratum_nops.py`](../scripts/compiler/pad_div_erratum_nops.py)
+applied to the qualified `61e51c1e…` source reproduces `fa8fab54…` byte for byte
+(the delta is 3111 bytes, all inserted text). A complete rebuild from a fresh
+archive extraction reproduced all eight checkpoints above, including the
+unchanged `cc1` and `cpp`.
+
+**Why an assembler rule.** The retail EE assembler refuses to place a
+single-precision COP1 division opcode too near a possible branch destination.
+Its own diagnostic is *"DIV related opcode too near possible branch
+destination"*, and for a division inside a delay slot it says *"DIV related
+opcode used in branch delay slot — Automatic padding cannot take place"*. That
+is a property of the assembler that emitted the shipping image, not of the C
+that fed it, so it belongs to this reconstructed chain rather than to any one
+source unit.
+
+**The oracle and where it came from.** The rule was established against the
+retail assembler itself — SN ProDG `Ps2EeAs`, the same tool the reconstructed
+assembly path already uses (`c839dd63…`). The witnesses live outside this
+repository in the private diagnostic directory
+`D:/RAC2/work/army-20261009/diag-ps2eeas/`; no binary, object or image from it
+is published here. Because the oracle is the retail tool, every statement below
+is a measurement of the retail behaviour, not a model of it.
+
+**The measured rule.**
+
+1. *Padding.* When a division opcode is emitted fewer than two instructions
+   after the most recent label — any label, including one nothing branches to —
+   the assembler emits `2 - n` nops before it, where `n` counts the instructions
+   emitted since that label. The division therefore lands exactly two slots
+   after the label. `n` counts every instruction, including a `nop` written in
+   the source. If no label has yet been defined, there is no padding and the
+   division may be the first instruction.
+2. *The floor is a maximum, not a sum.* A coprocessor hazard that already asks
+   for a nop before the division satisfies one of the two slots; it is not
+   added. Measured: a label one instruction back together with an adjacent
+   `mtc1` yields one nop, and `sync.p` followed by `mtc1` followed by the
+   division yields one nop, not two.
+3. *`sync.p`.* A `sync.p` immediately before such a division asks for one nop on
+   its own. It is the exact `sync.p` opcode, not the `INSN_SYNC` class: `sync`
+   and `sync.l` share that flag and do not trigger.
+4. *The family is narrower than the wall's name.* `div.s` (COP1 single
+   precision, function 0x03), `sqrt.s` (0x04) and `rsqrt.s` (0x16) carry the
+   padding. `add.s`, `sub.s`, `mul.s`, `neg.s`, `mov.s`, `madd.s`, `msub.s`,
+   `adda.s` and `cvt.w.s` do not; the integer HI/LO `div` and `divu` do not
+   either, despite being the opcodes 0x1A and 0x1B; and this SDK assembler does
+   not accept the double-precision forms at all. The family was measured by
+   sweeping the whole COP1 single-precision function space against the oracle,
+   not assumed from the wall's description.
+
+**The implementation.** A static counter `rac2_div_insns_since_label` and a
+witness `rac2_div_label_defined`; the counter is cleared and the witness set in
+`mips_define_label`, and the counter is incremented where `append_insn` has
+finished emitting an instruction, next to its existing `mips_clear_insn_labels`
+call. The floors are applied inside the same coprocessor-hazard accumulator that
+already computes `nops`, before the `prev_insn_unreordered` reset, so the
+padding inherits the assembler's existing refusals rather than duplicating them.
+Nothing is keyed to a program, an address or a game name.
+
+**Validation by prediction.** `tools/validate2.py` samples real `div.s` sites
+from the reference images, rebuilds a witness around each one, and asks the
+oracle to regenerate the retail run length; it reproduced **120 of 120** sites
+(40 each with runs of 0, 1 and 2 nops) with **80 of 80** controls. The same
+sampling and the same witnesses assembled by the patched GNU `as` also
+reproduced **120 of 120** sites with **80 of 80** controls, so the patch — not
+just the oracle — predicts the retail bytes. A separate synthetic battery of 49
+witnesses covering the family sweep, the no-label case, literal nops, the
+`mtc1` and `sync.p` floors and their interaction agrees with the oracle on
+**49 of 49**.
+
+**What this does not fix: the delay slot.** The padding cannot be emitted when
+the division sits in a branch delay slot, and the retail assembler refuses there
+too. Our `cc1` does place a `div.s` in the delay slot of a following `jal`,
+which the retail never does (measured: 0 of 19 806). A family whose `div.s` our
+compiler parks in a delay slot therefore still cannot be padded by an assembler
+change; it needs the delay-slot placement changed on the compiler side as well.
+Similarly, the rule only fires when a label is genuinely present at that point
+in our compilation: a retail nop run whose original label our compiled body does
+not reproduce cannot be recovered by this patch. Both limits were measured on
+the blocked families rather than assumed; see the pull request that introduced
+this section for the per-family counts.
 
 ## Scope
 
