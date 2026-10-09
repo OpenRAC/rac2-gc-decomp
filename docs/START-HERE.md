@@ -36,7 +36,7 @@ Greatest Hits **v2.00** and other regions are **different targets** — the pinn
 proprietary entries above; a bare Python 3.12 runs them (that is what CI does).
 
 The current C checker compiles through `scripts/wsl_chain.py` and uses the SN
-toolchain directory for its linker. `8bed6eae` in a proof is the SHA-256 prefix
+toolchain directory for its linker. `5fed4e23` in a proof is the SHA-256 prefix
 of the reconstructed `cc1`, not a compiler version. Compatibility with the
 qualified retail bodies does not establish the original game's compiler identity.
 
