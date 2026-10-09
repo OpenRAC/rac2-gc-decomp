@@ -1,5 +1,10 @@
 # RAC2 merge queue
 
+The [primary maintainer test route](MAINTAINER-TESTING.md) can avoid redundant
+local/PR/main tool-suite runs for the authenticated primary maintainer. Every
+merge group still runs the complete suite; other contributors retain the existing
+workflow. Progress publication and matching gates are unchanged.
+
 Maintainers activate the queue only after its workflows and trusted validator
 are integrated into protected `RAC2`.
 

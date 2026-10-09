@@ -853,6 +853,8 @@ def main(argv=None):
     f.add_argument("--references", type=Path, help="Private pinned boot/level reference root when needed")
     f.add_argument("--task", action="append", default=[], help="Candidate to close after validation; repeat as needed")
     f.add_argument("--apply", action="store_true", help="Publish the validated staged files; default only prepares them")
+    f.add_argument("--maintainer-test", action="append", default=[],
+                   help="Primary maintainer only: targeted local test module; repeat as needed. Full queue suite remains mandatory")
     subs.add_parser("seed-history")
     subs.add_parser("refresh-history")
     subs.add_parser("import-legacy").add_argument("markdown", type=Path)
@@ -901,7 +903,7 @@ def main(argv=None):
         from campaign_finalize import finalize
         result = finalize(store, repo, args.action, manifest=args.manifest,
                           output=args.output, tasks=tuple(args.task), apply=args.apply,
-                          references=args.references)
+                          references=args.references, maintainer_tests=tuple(args.maintainer_test))
     elif args.command == "seed-history":
         result = seed_history(store, repo)
     elif args.command == "refresh-history":

@@ -1,5 +1,10 @@
 # Maintained C campaign workflow
 
+The [primary maintainer test route](MAINTAINER-TESTING.md) documents an explicit
+focused local-test option for the authenticated primary maintainer. Default
+finalization still runs the complete local suite; all matching and publication
+gates remain mandatory in both modes.
+
 Use the maintained campaign commands instead of creating a runner for each
 function. The campaign owns scheduling and experiment bookkeeping; the existing
 compiler, complete-symbol comparison and full-image integration gates remain
