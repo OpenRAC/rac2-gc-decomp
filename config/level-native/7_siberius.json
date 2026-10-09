@@ -56,6 +56,8 @@
     "LVL_7_SIBERIUS_F3777c7f5_D_002208E0": 2230496,
     "LVL_7_SIBERIUS_F430eca3b_D_001A79F0": 1735152,
     "LVL_7_SIBERIUS_F430eca3b_D_001AA7B0": 1746864,
+    "LVL_7_SIBERIUS_F45821cfb_D_001C6F80": 1863552,
+    "LVL_7_SIBERIUS_F45821cfb_FUN_002E42D8": 3031768,
     "LVL_7_SIBERIUS_F4615e05e_D_001C9D80": 1875328,
     "LVL_7_SIBERIUS_F4615e05e_D_001D1B80": 1907584,
     "LVL_7_SIBERIUS_F480de5ac_D_001BC9C8": 1821128,
@@ -76,6 +78,7 @@
     "LVL_7_SIBERIUS_F6b0741c38bf00fee_AT002A6288_ROLE00": 1618620,
     "LVL_7_SIBERIUS_F6b0741c38bf00fee_AT002A6288_ROLE01": 2777800,
     "LVL_7_SIBERIUS_F6b0741c38bf00fee_AT002A6288_ROLE02": 2849920,
+    "LVL_7_SIBERIUS_F6df9730c_FUN_002E4188": 3031432,
     "LVL_7_SIBERIUS_F70997ba9_FUN_002DC440": 2999360,
     "LVL_7_SIBERIUS_F70997ba9_FUN_002DC560": 2999648,
     "LVL_7_SIBERIUS_F70997ba9_FUN_002DF070": 3010672,
@@ -84,6 +87,12 @@
     "LVL_7_SIBERIUS_F70997ba9_FUN_002DF518": 3011864,
     "LVL_7_SIBERIUS_F70997ba9_FUN_002EA888": 3057800,
     "LVL_7_SIBERIUS_F70997ba9_FUN_003715E0": 3610080,
+    "LVL_7_SIBERIUS_F7242f0a4_D_001B9260": 1806944,
+    "LVL_7_SIBERIUS_F7242f0a4_FUN_002E4310": 3031824,
+    "LVL_7_SIBERIUS_F7242f0a4_FUN_002E4398": 3031960,
+    "LVL_7_SIBERIUS_F7242f0a4_FUN_002E4418": 3032088,
+    "LVL_7_SIBERIUS_F7242f0a4_FUN_0041CBF0": 4312048,
+    "LVL_7_SIBERIUS_F7242f0a4_FUN_0041CD50": 4312400,
     "LVL_7_SIBERIUS_F777b9bda_D_001B9040": 1806400,
     "LVL_7_SIBERIUS_F79744baad5ad7f65_AT0043B978_ROLE00": 1622228,
     "LVL_7_SIBERIUS_F7abba11e_D_001DA340": 1942336,
@@ -129,6 +138,19 @@
     "LVL_7_SIBERIUS_Fc895cb79_D_001D1D00": 1907968,
     "LVL_7_SIBERIUS_Fc936841d_FUN_002E4310": 3031824,
     "LVL_7_SIBERIUS_Fc936841d_FUN_002E4340": 3031872,
+    "LVL_7_SIBERIUS_Fd8e166aa_D_001BC640": 1820224,
+    "LVL_7_SIBERIUS_Fdb046c5d_D_001BF680": 1832576,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_002D2440": 2958400,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_002D2600": 2958848,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_002D2818": 2959384,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_002D2A80": 2960000,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_002D2DA0": 2960800,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_002D2EC0": 2961088,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_002E4440": 3032128,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_002E45F0": 3032560,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_0031B290": 3256976,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_00355488": 3495048,
+    "LVL_7_SIBERIUS_Fdb046c5d_FUN_00355868": 3496040,
     "LVL_7_SIBERIUS_Fea34650e_D_00189E20": 1613344,
     "LVL_7_SIBERIUS_Fee2b87d1_D_0014B540": 1357120,
     "LVL_7_SIBERIUS_Fee2b87d1_D_00152CD0": 1387728,
@@ -339,6 +361,12 @@
       "symbol": "LVL_7_SIBERIUS_FUN_002CD8F0"
     },
     {
+      "address": 2957352,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_7_SIBERIUS_FUN_002D2028"
+    },
+    {
       "address": 2958384,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -361,6 +389,12 @@
       "meaning": "shared native body of family 480de5ac3c9bd90f",
       "size": 116,
       "symbol": "LVL_7_SIBERIUS_FUN_002D8C18"
+    },
+    {
+      "address": 2987928,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_7_SIBERIUS_FUN_002D9798"
     },
     {
       "address": 2988744,
@@ -464,6 +498,12 @@
       "meaning": "shared native body of family 430eca3b2fc8d2b0",
       "size": 112,
       "symbol": "LVL_7_SIBERIUS_FUN_002FC838"
+    },
+    {
+      "address": 3141448,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_7_SIBERIUS_FUN_002FEF48"
     },
     {
       "address": 3142512,
@@ -1019,6 +1059,12 @@
       "symbol": "LVL_7_SIBERIUS_FUN_004177E0"
     },
     {
+      "address": 4314136,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_7_SIBERIUS_FUN_0041D418"
+    },
+    {
       "address": 4348736,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1256,6 +1302,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_7_SIBERIUS_FUN_0043FA90"
+    },
+    {
+      "address": 4456632,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_7_SIBERIUS_FUN_004400B8"
     },
     {
       "address": 4463232,

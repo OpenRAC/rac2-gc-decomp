@@ -74,6 +74,8 @@
     "LVL_6_NOTAK_F412a47f9_D_001B2DA0": 1781152,
     "LVL_6_NOTAK_F412a47f9_D_001B2DC0": 1781184,
     "LVL_6_NOTAK_F412a47f9_D_001B2F88": 1781640,
+    "LVL_6_NOTAK_F45821cfb_D_001C75C0": 1865152,
+    "LVL_6_NOTAK_F45821cfb_FUN_0032D590": 3331472,
     "LVL_6_NOTAK_F4e5bde81_D_00189E20": 1613344,
     "LVL_6_NOTAK_F4e5bde81_D_001A7B08": 1735432,
     "LVL_6_NOTAK_F4e5bde81_D_001A8FF0": 1740784,
@@ -91,6 +93,7 @@
     "LVL_6_NOTAK_F6b0741c38bf00fee_AT002E5788_ROLE00": 1618620,
     "LVL_6_NOTAK_F6b0741c38bf00fee_AT002E5788_ROLE01": 3037128,
     "LVL_6_NOTAK_F6b0741c38bf00fee_AT002E5788_ROLE02": 3118040,
+    "LVL_6_NOTAK_F6df9730c_FUN_0032D440": 3331136,
     "LVL_6_NOTAK_F70997ba9_FUN_00325AC8": 3300040,
     "LVL_6_NOTAK_F70997ba9_FUN_00325BE8": 3300328,
     "LVL_6_NOTAK_F70997ba9_FUN_003286F8": 3311352,
@@ -99,6 +102,12 @@
     "LVL_6_NOTAK_F70997ba9_FUN_00328BA0": 3312544,
     "LVL_6_NOTAK_F70997ba9_FUN_00333B40": 3357504,
     "LVL_6_NOTAK_F70997ba9_FUN_003BC960": 3918176,
+    "LVL_6_NOTAK_F7242f0a4_D_001B98A0": 1808544,
+    "LVL_6_NOTAK_F7242f0a4_FUN_0032D5C8": 3331528,
+    "LVL_6_NOTAK_F7242f0a4_FUN_0032D650": 3331664,
+    "LVL_6_NOTAK_F7242f0a4_FUN_0032D6D0": 3331792,
+    "LVL_6_NOTAK_F7242f0a4_FUN_00471538": 4658488,
+    "LVL_6_NOTAK_F7242f0a4_FUN_00471698": 4658840,
     "LVL_6_NOTAK_F74e6a904_D_001A8F10": 1740560,
     "LVL_6_NOTAK_F74e6a904_D_001B2370": 1778544,
     "LVL_6_NOTAK_F74e6a904_D_001B2374": 1778548,
@@ -153,6 +162,19 @@
     "LVL_6_NOTAK_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_6_NOTAK_Fc936841d_FUN_0032D5C8": 3331528,
     "LVL_6_NOTAK_Fc936841d_FUN_0032D5F8": 3331576,
+    "LVL_6_NOTAK_Fd8e166aa_D_001BCC80": 1821824,
+    "LVL_6_NOTAK_Fdb046c5d_D_001BFCC0": 1834176,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_0031BAC8": 3259080,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_0031BC88": 3259528,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_0031BEA0": 3260064,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_0031C108": 3260680,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_0031C428": 3261480,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_0031C548": 3261768,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_0032D6F8": 3331832,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_0032D8A8": 3332264,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_00365230": 3559984,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_003A0948": 3803464,
+    "LVL_6_NOTAK_Fdb046c5d_FUN_003A0D28": 3804456,
     "LVL_6_NOTAK_Fe77c6258_D_001ADD18": 1760536,
     "LVL_6_NOTAK_Fe77c6258_D_001ADD60": 1760608,
     "LVL_6_NOTAK_Fe77c6258_FUN_00115E38": 1138232,
@@ -396,6 +418,12 @@
       "symbol": "LVL_6_NOTAK_FUN_00317100"
     },
     {
+      "address": 3258032,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_6_NOTAK_FUN_0031B6B0"
+    },
+    {
       "address": 3259064,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -412,6 +440,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_6_NOTAK_FUN_0031C108"
+    },
+    {
+      "address": 3288608,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_6_NOTAK_FUN_00322E20"
     },
     {
       "address": 3289424,
@@ -544,6 +578,12 @@
       "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
       "symbol": "LVL_6_NOTAK_FUN_00344E30"
+    },
+    {
+      "address": 3440776,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_6_NOTAK_FUN_00348088"
     },
     {
       "address": 3441840,
@@ -1134,6 +1174,12 @@
       "symbol": "LVL_6_NOTAK_FUN_0046C128"
     },
     {
+      "address": 4660576,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_6_NOTAK_FUN_00471D60"
+    },
+    {
       "address": 4694576,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1371,6 +1417,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_6_NOTAK_FUN_00495B58"
+    },
+    {
+      "address": 4809088,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_6_NOTAK_FUN_00496180"
     },
     {
       "address": 4815688,

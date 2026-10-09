@@ -50,6 +50,8 @@
     "LVL_13_BOLDAN_F307ea0ee_FUN_002F8D30": 3116336,
     "LVL_13_BOLDAN_F307ea0ee_FUN_002F8D48": 3116360,
     "LVL_13_BOLDAN_F307ea0ee_FUN_002F9748": 3118920,
+    "LVL_13_BOLDAN_F45821cfb_D_001C7640": 1865280,
+    "LVL_13_BOLDAN_F45821cfb_FUN_002F8708": 3114760,
     "LVL_13_BOLDAN_F4e5bde81_D_00189E20": 1613344,
     "LVL_13_BOLDAN_F4e5bde81_D_001A7B08": 1735432,
     "LVL_13_BOLDAN_F4e5bde81_D_001A8FF0": 1740784,
@@ -67,6 +69,7 @@
     "LVL_13_BOLDAN_F6b0741c38bf00fee_AT002B1108_ROLE00": 1618620,
     "LVL_13_BOLDAN_F6b0741c38bf00fee_AT002B1108_ROLE01": 2822472,
     "LVL_13_BOLDAN_F6b0741c38bf00fee_AT002B1108_ROLE02": 2903008,
+    "LVL_13_BOLDAN_F6df9730c_FUN_002F85B8": 3114424,
     "LVL_13_BOLDAN_F70997ba9_FUN_002F0ED0": 3083984,
     "LVL_13_BOLDAN_F70997ba9_FUN_002F0FF0": 3084272,
     "LVL_13_BOLDAN_F70997ba9_FUN_002F3B00": 3095296,
@@ -75,6 +78,12 @@
     "LVL_13_BOLDAN_F70997ba9_FUN_002F3FA8": 3096488,
     "LVL_13_BOLDAN_F70997ba9_FUN_002FECB8": 3140792,
     "LVL_13_BOLDAN_F70997ba9_FUN_00384E68": 3690088,
+    "LVL_13_BOLDAN_F7242f0a4_D_001B9920": 1808672,
+    "LVL_13_BOLDAN_F7242f0a4_FUN_002F8740": 3114816,
+    "LVL_13_BOLDAN_F7242f0a4_FUN_002F87C8": 3114952,
+    "LVL_13_BOLDAN_F7242f0a4_FUN_002F8848": 3115080,
+    "LVL_13_BOLDAN_F7242f0a4_FUN_00432798": 4401048,
+    "LVL_13_BOLDAN_F7242f0a4_FUN_004328F8": 4401400,
     "LVL_13_BOLDAN_F79744baad5ad7f65_AT00453ED8_ROLE00": 1622228,
     "LVL_13_BOLDAN_F86f665335d9cb905_AT003C88B8_ROLE00": 3964688,
     "LVL_13_BOLDAN_F9328256b_D_00226700": 2254592,
@@ -124,6 +133,19 @@
     "LVL_13_BOLDAN_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_13_BOLDAN_Fc936841d_FUN_002F8740": 3114816,
     "LVL_13_BOLDAN_Fc936841d_FUN_002F8770": 3114864,
+    "LVL_13_BOLDAN_Fd8e166aa_D_001BCD00": 1821952,
+    "LVL_13_BOLDAN_Fdb046c5d_D_001BFD40": 1834304,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_002E6ED0": 3043024,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_002E7090": 3043472,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_002E72A8": 3044008,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_002E7510": 3044624,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_002E7830": 3045424,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_002E7950": 3045712,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_002F8870": 3115120,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_002F8A20": 3115552,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_0032E318": 3334936,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_00368E50": 3575376,
+    "LVL_13_BOLDAN_Fdb046c5d_FUN_00369230": 3576368,
     "LVL_13_BOLDAN_Fe77c6258_D_001ADD18": 1760536,
     "LVL_13_BOLDAN_Fe77c6258_D_001ADD60": 1760608,
     "LVL_13_BOLDAN_Fe77c6258_FUN_00115E38": 1138232,
@@ -355,6 +377,12 @@
       "symbol": "LVL_13_BOLDAN_FUN_002E23C8"
     },
     {
+      "address": 3041976,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_13_BOLDAN_FUN_002E6AB8"
+    },
+    {
       "address": 3043008,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -371,6 +399,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_13_BOLDAN_FUN_002E7510"
+    },
+    {
+      "address": 3072552,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_13_BOLDAN_FUN_002EE228"
     },
     {
       "address": 3073368,
@@ -473,6 +507,12 @@
       "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
       "symbol": "LVL_13_BOLDAN_FUN_0030FC08"
+    },
+    {
+      "address": 3223136,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_13_BOLDAN_FUN_00312E60"
     },
     {
       "address": 3224200,
@@ -1029,6 +1069,12 @@
       "symbol": "LVL_13_BOLDAN_FUN_0042D388"
     },
     {
+      "address": 4403136,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_13_BOLDAN_FUN_00432FC0"
+    },
+    {
       "address": 4442400,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1266,6 +1312,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_13_BOLDAN_FUN_00457FF0"
+    },
+    {
+      "address": 4556312,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_13_BOLDAN_FUN_00458618"
     },
     {
       "address": 4562912,

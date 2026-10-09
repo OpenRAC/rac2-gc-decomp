@@ -3650,3 +3650,155 @@ void LVL_10_HRUGIS_CLOUD_FUN_003A3218(Owner_F9e2cd219 *self)
         child->field4C = 1;
     }
 }
+extern void LVL_10_HRUGIS_CLOUD_F6df9730c_FUN_003089A8(char *dst, int *src, int count);
+
+void LVL_10_HRUGIS_CLOUD_FUN_00323660(char *dst, unsigned char *src)
+{
+    int table[256];
+    int tmp[16];
+    int *q;
+    int i, j, k;
+
+    for (i = 0; i < 256; i++) {
+        table[i] = 0;
+        if (i & 0x01) table[i] = 0x0000000f;
+        if (i & 0x02) table[i] |= 0x000000f0;
+        if (i & 0x04) table[i] |= 0x00000f00;
+        if (i & 0x08) table[i] |= 0x0000f000;
+        if (i & 0x10) table[i] |= 0x000f0000;
+        if (i & 0x20) table[i] |= 0x00f00000;
+        if (i & 0x40) table[i] |= 0x0f000000;
+        if (i & 0x80) table[i] |= 0xf0000000;
+    }
+    for (j = 0; j < 128; j++) {
+        char *next;
+        q = tmp;
+        next = dst + 64;
+        for (k = 15; k >= 0; k--) {
+            *q++ = table[*src++];
+        }
+        LVL_10_HRUGIS_CLOUD_F6df9730c_FUN_003089A8(dst, tmp, 64);
+        dst = next;
+        LVL_10_HRUGIS_CLOUD_F6df9730c_FUN_003089A8(dst, tmp, 64);
+        dst += 64;
+        LVL_10_HRUGIS_CLOUD_F6df9730c_FUN_003089A8(dst, tmp, 64);
+        dst += 64;
+        LVL_10_HRUGIS_CLOUD_F6df9730c_FUN_003089A8(dst, tmp, 64);
+        dst += 64;
+    }
+}
+extern void LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7240(void *);
+extern void LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7080(void *);
+extern int LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7458(void *);
+extern void LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00308E10(float, void *, void *);
+extern void LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00308C60(void *, void *, void *);
+extern void LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F79E0(void *, void *, void *);
+extern void LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_0033E158(void *, void *, int);
+extern int LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7B00(void *, void *, void *, float, float);
+extern int LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00373710(int, int, void *);
+extern void LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F76C0(void *, int, void *);
+extern int LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00373710(int, int, void *);
+extern void LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00373A60(int, void *);
+extern char LVL_10_HRUGIS_CLOUD_Fdb046c5d_D_001BFB00[];
+
+int LVL_10_HRUGIS_CLOUD_FUN_002F6C68(char *obj)
+{
+    float buf[4];
+    float out[4];
+    char *p;
+    char *s1;
+    unsigned char k;
+    int r;
+    int s4;
+    int s5;
+
+    p = *(char **)(obj + 104);
+    k = *(unsigned char *)(p + 92);
+    if (k >= 3)
+        return 1;
+    if (k != 0)
+        LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7240(obj);
+    else
+        LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7080(obj);
+
+    s5 = LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7458(obj);
+    if (s5 == -1)
+        return 0;
+
+    s1 = LVL_10_HRUGIS_CLOUD_Fdb046c5d_D_001BFB00;
+    s4 = -1;
+    LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00308E10(1.0f, s1, s1);
+    LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00308C60(buf, s1, p);
+    LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F79E0(obj, p + 16, buf);
+    LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_0033E158(obj + 16, out, 1);
+    r = LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7B00(p, s1, out, *(float *)(p + 56), *(float *)(p + 60));
+    if (r == 0) {
+        if (*(unsigned char *)(p + 94) != 255 && *(unsigned char *)(p + 92) == 0)
+            s4 = LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00373710(*(unsigned char *)(p + 94), 0, obj);
+        LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F76C0(obj, s5, out);
+    } else {
+        if (*(unsigned char *)(p + 94) != 255)
+            s4 = LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00373710(*(unsigned char *)(p + 94), 0, obj);
+    }
+    if (s4 != -1)
+        LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00373A60(s4, p + 32);
+    return 0;
+}
+extern void LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308BB8(char *out, void *source, float value);
+extern void LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_0043A808(char *buffer, int mode);
+extern void LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_0043A6A8(int value, char *buffer);
+extern void LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308B30(char *first, char *second, char *third);
+extern float LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308C38(void *owner, char *buffer);
+
+extern int LVL_10_HRUGIS_CLOUD_F7242f0a4_D_001B96E0[];
+
+void LVL_10_HRUGIS_CLOUD_FUN_0043AED0(void *owner, int flag, float value)
+{
+    char buffer[32];
+    int *root = LVL_10_HRUGIS_CLOUD_F7242f0a4_D_001B96E0;
+
+    LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308BB8(buffer, root + 8, value);
+    if (flag)
+        LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_0043A808(buffer + 16, 1);
+    else
+        LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_0043A6A8(root[-4], buffer + 16);
+    LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308B30(buffer, buffer, buffer + 16);
+    LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308BB8(owner, root + 12, LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308C38(root + 12, buffer));
+}
+extern char LVL_10_HRUGIS_CLOUD_F45821cfb_D_001C7400[];
+extern void LVL_10_HRUGIS_CLOUD_F45821cfb_FUN_00308AF8(char *);
+
+void LVL_10_HRUGIS_CLOUD_FUN_004617D8(void)
+{
+    float *p = (float *)LVL_10_HRUGIS_CLOUD_F45821cfb_D_001C7400;
+
+    p[224] = 0.4f;
+    p[225] = 0.8f;
+    p[226] = 1.2f;
+    *(int *)&p[227] = 0;
+    p[228] = 0.577f;
+    p[229] = 0.577f;
+    p[230] = -0.577f;
+    *(int *)&p[231] = 0;
+    LVL_10_HRUGIS_CLOUD_F45821cfb_FUN_00308AF8((char *)&p[232]);
+    LVL_10_HRUGIS_CLOUD_F45821cfb_FUN_00308AF8((char *)&p[236]);
+}
+extern char LVL_10_HRUGIS_CLOUD_Fd8e166aa_D_001BCAC0[];
+
+void LVL_10_HRUGIS_CLOUD_FUN_002FE3D8(void)
+{
+    char *g = LVL_10_HRUGIS_CLOUD_Fd8e166aa_D_001BCAC0;
+    int i = 0;
+    int *table = *(int **)(g + 8);
+    char *p = (char *)table + table[*(unsigned char *)0x1A7BB4];
+    int n = *(int *)p;
+
+    *(char **)(g + 12) = p + 8;
+    *(int *)(g + 16) = n;
+    for (i = 0; i < *(int *)(g + 16); i++) {
+        char *q = *(char **)(g + 12);
+        char *r = q - 8;
+
+        *(int *)(q + i * 16) = *(int *)(q + i * 16) + (int)r;
+    }
+}

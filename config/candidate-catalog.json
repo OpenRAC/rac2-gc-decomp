@@ -33,6 +33,9 @@
     "F01bd4546_FUN_00335E68": 3366504,
     "F01bd4546_FUN_00349630": 3446320,
     "F01bd4546_FUN_00349678": 3446392,
+    "F45821cfb_D_001C2740": 1845056,
+    "F45821cfb_FUN_00282C88": 2632840,
+    "F6df9730c_FUN_00282B50": 2632528,
     "F70997ba9_FUN_0027C540": 2606400,
     "F70997ba9_FUN_0027C660": 2606688,
     "F70997ba9_FUN_0027F110": 2617616,
@@ -41,6 +44,12 @@
     "F70997ba9_FUN_0027F5B8": 2618808,
     "F70997ba9_FUN_00288FB8": 2658232,
     "F70997ba9_FUN_002FC560": 3130720,
+    "F7242f0a4_D_001B53A0": 1790880,
+    "F7242f0a4_FUN_00282CC0": 2632896,
+    "F7242f0a4_FUN_00282D30": 2633008,
+    "F7242f0a4_FUN_00282DB0": 2633136,
+    "F7242f0a4_FUN_00334710": 3360528,
+    "F7242f0a4_FUN_00334730": 3360560,
     "F9e2cd219_FUN_002A7798": 2783128,
     "F9e2cd219_FUN_002ACF68": 2805608,
     "F9e2cd219_FUN_00305310": 3166992,
@@ -99,6 +108,19 @@
     "FUN_00348138": 3440952,
     "Fc936841d_FUN_00282CC0": 2632896,
     "Fc936841d_FUN_00282CF0": 2632944,
+    "Fd8e166aa_D_001B7F80": 1802112,
+    "Fdb046c5d_D_001BAFC0": 1814464,
+    "Fdb046c5d_FUN_00274128": 2572584,
+    "Fdb046c5d_FUN_002742E8": 2573032,
+    "Fdb046c5d_FUN_00274500": 2573568,
+    "Fdb046c5d_FUN_00274768": 2574184,
+    "Fdb046c5d_FUN_00274A88": 2574984,
+    "Fdb046c5d_FUN_00274BA8": 2575272,
+    "Fdb046c5d_FUN_00282DD8": 2633176,
+    "Fdb046c5d_FUN_00282F20": 2633504,
+    "Fdb046c5d_FUN_002AFFD8": 2818008,
+    "Fdb046c5d_FUN_002E5CF8": 3038456,
+    "Fdb046c5d_FUN_002E5F00": 3038976,
     "Fee2b87d1_D_0014B540": 1357120,
     "Fee2b87d1_D_00152CD0": 1387728,
     "__make_dp": 1192552,
@@ -440,6 +462,22 @@
       "xrefs": 0
     },
     {
+      "address": 2571536,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "ranges": 1,
+      "size": 392,
+      "symbol": "FUN_00273D10",
+      "xrefs": 1
+    },
+    {
+      "address": 2594856,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "ranges": 1,
+      "size": 116,
+      "symbol": "FUN_00279828",
+      "xrefs": 1
+    },
+    {
       "address": 2603336,
       "meaning": "Ordered measured64 GS privileged register writes from original three64-word config; no original source identifier inferred.",
       "size": 120,
@@ -652,6 +690,14 @@
       "size": 280,
       "symbol": "FUN_00297550",
       "xrefs": 0
+    },
+    {
+      "address": 2718168,
+      "meaning": "Shared native body; original game role is unknown.",
+      "ranges": 1,
+      "size": 464,
+      "symbol": "FUN_002979D8",
+      "xrefs": 1
     },
     {
       "address": 2720112,
@@ -1283,6 +1329,14 @@
       "ranges": 1,
       "size": 100,
       "symbol": "FUN_0032BDC8",
+      "xrefs": 1
+    },
+    {
+      "address": 3361256,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "ranges": 1,
+      "size": 160,
+      "symbol": "FUN_003349E8",
       "xrefs": 1
     },
     {
@@ -2002,6 +2056,14 @@
       "address": 3465752,
       "size": 8,
       "symbol": "FUN_0034E218"
+    },
+    {
+      "address": 3468256,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "ranges": 1,
+      "size": 144,
+      "symbol": "FUN_0034EBE0",
+      "xrefs": 1
     },
     {
       "address": 3470264,

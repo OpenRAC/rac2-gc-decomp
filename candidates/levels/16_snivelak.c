@@ -3671,3 +3671,155 @@ void LVL_16_SNIVELAK_FUN_00383FB0(Owner_F9e2cd219 *self)
         child->field4C = 1;
     }
 }
+extern void LVL_16_SNIVELAK_F6df9730c_FUN_002E7300(char *dst, int *src, int count);
+
+void LVL_16_SNIVELAK_FUN_00302350(char *dst, unsigned char *src)
+{
+    int table[256];
+    int tmp[16];
+    int *q;
+    int i, j, k;
+
+    for (i = 0; i < 256; i++) {
+        table[i] = 0;
+        if (i & 0x01) table[i] = 0x0000000f;
+        if (i & 0x02) table[i] |= 0x000000f0;
+        if (i & 0x04) table[i] |= 0x00000f00;
+        if (i & 0x08) table[i] |= 0x0000f000;
+        if (i & 0x10) table[i] |= 0x000f0000;
+        if (i & 0x20) table[i] |= 0x00f00000;
+        if (i & 0x40) table[i] |= 0x0f000000;
+        if (i & 0x80) table[i] |= 0xf0000000;
+    }
+    for (j = 0; j < 128; j++) {
+        char *next;
+        q = tmp;
+        next = dst + 64;
+        for (k = 15; k >= 0; k--) {
+            *q++ = table[*src++];
+        }
+        LVL_16_SNIVELAK_F6df9730c_FUN_002E7300(dst, tmp, 64);
+        dst = next;
+        LVL_16_SNIVELAK_F6df9730c_FUN_002E7300(dst, tmp, 64);
+        dst += 64;
+        LVL_16_SNIVELAK_F6df9730c_FUN_002E7300(dst, tmp, 64);
+        dst += 64;
+        LVL_16_SNIVELAK_F6df9730c_FUN_002E7300(dst, tmp, 64);
+        dst += 64;
+    }
+}
+extern void LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5880(void *);
+extern void LVL_16_SNIVELAK_Fdb046c5d_FUN_002D56C0(void *);
+extern int LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5A98(void *);
+extern void LVL_16_SNIVELAK_Fdb046c5d_FUN_002E7788(float, void *, void *);
+extern void LVL_16_SNIVELAK_Fdb046c5d_FUN_002E75B8(void *, void *, void *);
+extern void LVL_16_SNIVELAK_Fdb046c5d_FUN_002D6020(void *, void *, void *);
+extern void LVL_16_SNIVELAK_Fdb046c5d_FUN_0031D978(void *, void *, int);
+extern int LVL_16_SNIVELAK_Fdb046c5d_FUN_002D6140(void *, void *, void *, float, float);
+extern int LVL_16_SNIVELAK_Fdb046c5d_FUN_00357288(int, int, void *);
+extern void LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5D00(void *, int, void *);
+extern int LVL_16_SNIVELAK_Fdb046c5d_FUN_00357288(int, int, void *);
+extern void LVL_16_SNIVELAK_Fdb046c5d_FUN_003575D8(int, void *);
+extern char LVL_16_SNIVELAK_Fdb046c5d_D_001BFF80[];
+
+int LVL_16_SNIVELAK_FUN_002D52A8(char *obj)
+{
+    float buf[4];
+    float out[4];
+    char *p;
+    char *s1;
+    unsigned char k;
+    int r;
+    int s4;
+    int s5;
+
+    p = *(char **)(obj + 104);
+    k = *(unsigned char *)(p + 92);
+    if (k >= 3)
+        return 1;
+    if (k != 0)
+        LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5880(obj);
+    else
+        LVL_16_SNIVELAK_Fdb046c5d_FUN_002D56C0(obj);
+
+    s5 = LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5A98(obj);
+    if (s5 == -1)
+        return 0;
+
+    s1 = LVL_16_SNIVELAK_Fdb046c5d_D_001BFF80;
+    s4 = -1;
+    LVL_16_SNIVELAK_Fdb046c5d_FUN_002E7788(1.0f, s1, s1);
+    LVL_16_SNIVELAK_Fdb046c5d_FUN_002E75B8(buf, s1, p);
+    LVL_16_SNIVELAK_Fdb046c5d_FUN_002D6020(obj, p + 16, buf);
+    LVL_16_SNIVELAK_Fdb046c5d_FUN_0031D978(obj + 16, out, 1);
+    r = LVL_16_SNIVELAK_Fdb046c5d_FUN_002D6140(p, s1, out, *(float *)(p + 56), *(float *)(p + 60));
+    if (r == 0) {
+        if (*(unsigned char *)(p + 94) != 255 && *(unsigned char *)(p + 92) == 0)
+            s4 = LVL_16_SNIVELAK_Fdb046c5d_FUN_00357288(*(unsigned char *)(p + 94), 0, obj);
+        LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5D00(obj, s5, out);
+    } else {
+        if (*(unsigned char *)(p + 94) != 255)
+            s4 = LVL_16_SNIVELAK_Fdb046c5d_FUN_00357288(*(unsigned char *)(p + 94), 0, obj);
+    }
+    if (s4 != -1)
+        LVL_16_SNIVELAK_Fdb046c5d_FUN_003575D8(s4, p + 32);
+    return 0;
+}
+extern void LVL_16_SNIVELAK_F7242f0a4_FUN_002E7510(char *out, void *source, float value);
+extern void LVL_16_SNIVELAK_F7242f0a4_FUN_0042B428(char *buffer, int mode);
+extern void LVL_16_SNIVELAK_F7242f0a4_FUN_0042B2C8(int value, char *buffer);
+extern void LVL_16_SNIVELAK_F7242f0a4_FUN_002E7488(char *first, char *second, char *third);
+extern float LVL_16_SNIVELAK_F7242f0a4_FUN_002E7590(void *owner, char *buffer);
+
+extern int LVL_16_SNIVELAK_F7242f0a4_D_001B9B60[];
+
+void LVL_16_SNIVELAK_FUN_0042BAF0(void *owner, int flag, float value)
+{
+    char buffer[32];
+    int *root = LVL_16_SNIVELAK_F7242f0a4_D_001B9B60;
+
+    LVL_16_SNIVELAK_F7242f0a4_FUN_002E7510(buffer, root + 8, value);
+    if (flag)
+        LVL_16_SNIVELAK_F7242f0a4_FUN_0042B428(buffer + 16, 1);
+    else
+        LVL_16_SNIVELAK_F7242f0a4_FUN_0042B2C8(root[-4], buffer + 16);
+    LVL_16_SNIVELAK_F7242f0a4_FUN_002E7488(buffer, buffer, buffer + 16);
+    LVL_16_SNIVELAK_F7242f0a4_FUN_002E7510(owner, root + 12, LVL_16_SNIVELAK_F7242f0a4_FUN_002E7590(root + 12, buffer));
+}
+extern char LVL_16_SNIVELAK_F45821cfb_D_001C7880[];
+extern void LVL_16_SNIVELAK_F45821cfb_FUN_002E7450(char *);
+
+void LVL_16_SNIVELAK_FUN_0044FF68(void)
+{
+    float *p = (float *)LVL_16_SNIVELAK_F45821cfb_D_001C7880;
+
+    p[224] = 0.4f;
+    p[225] = 0.8f;
+    p[226] = 1.2f;
+    *(int *)&p[227] = 0;
+    p[228] = 0.577f;
+    p[229] = 0.577f;
+    p[230] = -0.577f;
+    *(int *)&p[231] = 0;
+    LVL_16_SNIVELAK_F45821cfb_FUN_002E7450((char *)&p[232]);
+    LVL_16_SNIVELAK_F45821cfb_FUN_002E7450((char *)&p[236]);
+}
+extern char LVL_16_SNIVELAK_Fd8e166aa_D_001BCF40[];
+
+void LVL_16_SNIVELAK_FUN_002DCA18(void)
+{
+    char *g = LVL_16_SNIVELAK_Fd8e166aa_D_001BCF40;
+    int i = 0;
+    int *table = *(int **)(g + 8);
+    char *p = (char *)table + table[*(unsigned char *)0x1A7BB4];
+    int n = *(int *)p;
+
+    *(char **)(g + 12) = p + 8;
+    *(int *)(g + 16) = n;
+    for (i = 0; i < *(int *)(g + 16); i++) {
+        char *q = *(char **)(g + 12);
+        char *r = q - 8;
+
+        *(int *)(q + i * 16) = *(int *)(q + i * 16) + (int)r;
+    }
+}

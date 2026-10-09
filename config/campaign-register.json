@@ -1598,6 +1598,19 @@
       "returncode": 0,
       "state": "provenance_changed"
     },
+    "fc45e81fc685483da9821e2f625cb21b": {
+      "action_manifest_sha256": "a8164a160eee7fc91376560ae5e13d3c3aa4c5a9605b76f2a282c1255c79bcaa",
+      "action_outcome_sha256": "bea7c31bbd162bb3f74c617c53b2e16f5849c98b14632f46e862b157ebb4eff7",
+      "artifact": "prepared-run:builds/campaign-fc45e81fc685483da9821e2f625cb21b/report.json",
+      "artifact_sha256": "c0d98f469d7a464c5f617ecf03021a0a3953024d97284642a1452bec09c91ebd",
+      "directory": "runtime:actions/fc45e81fc685483da9821e2f625cb21b",
+      "finished": "2026-10-09T14:12:31.272727+00:00",
+      "id": "fc45e81fc685483da9821e2f625cb21b",
+      "integration_credit": 0,
+      "kind": "integrate",
+      "returncode": 0,
+      "state": "passed"
+    },
     "feeb0c602b724c38a70686637f0ff9d2": {
       "artifact": "runtime:actions/feeb0c602b724c38a70686637f0ff9d2/report.json",
       "artifact_sha256": "5186fc185a66de58e3ee56152c8b37044f16399f17bf0b0a49f68b0c602cfc46",
@@ -4984,7 +4997,7 @@
       "validity": "historical_unverified"
     }
   },
-  "revision": 12572,
+  "revision": 12687,
   "schema": 1,
   "tasks": {
     "24_ship_shack-fun_002a3e18": {
@@ -13050,6 +13063,1958 @@
             "progress/levels/8_tabora.json": "f6b2f922bcbe7c64d8f4d2bc65eeb71f263eb4936bc99fe09b9821bc967b2d5e",
             "progress/levels/9_dobbo.json": "ad0a7c25d890a1436299bd06a3f7b888d56ae44a6d7f7663c9a7bb93571bb5a9",
             "progress/report.json": "dc4069713b8f858309217de32c8dfb084983240c911712dcd6ca563cc4f229ed"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-0_aranos_tutorial": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:03.741324+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 0_aranos_tutorial; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-0_aranos_tutorial",
+      "kind": "candidate",
+      "last_trial": "d3a73bd861f142f0a640d7333577cc45",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/0_aranos_tutorial.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/0_aranos_tutorial.json",
+          "id": "0_aranos_tutorial",
+          "reference": "runtime:references/levels/0_aranos_tutorial/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:05.852245+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d3a73bd861f142f0a640d7333577cc45"
+        },
+        {
+          "at": "2026-10-09T14:21:52.139506+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-10_hrugis_cloud": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:06.276213+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 10_hrugis_cloud; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-10_hrugis_cloud",
+      "kind": "candidate",
+      "last_trial": "dbaa3f6084db4287aaeba179e0204ed1",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/10_hrugis_cloud.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/10_hrugis_cloud.json",
+          "id": "10_hrugis_cloud",
+          "reference": "runtime:references/levels/10_hrugis_cloud/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:08.431773+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "dbaa3f6084db4287aaeba179e0204ed1"
+        },
+        {
+          "at": "2026-10-09T14:21:53.692175+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-11_joba": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:08.865786+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 11_joba; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-11_joba",
+      "kind": "candidate",
+      "last_trial": "1de937ec1d6a4844872b4a9d95899331",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/11_joba.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/11_joba.json",
+          "id": "11_joba",
+          "reference": "runtime:references/levels/11_joba/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:11.195763+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "1de937ec1d6a4844872b4a9d95899331"
+        },
+        {
+          "at": "2026-10-09T14:21:55.175856+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-12_todano": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:11.594154+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 12_todano; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-12_todano",
+      "kind": "candidate",
+      "last_trial": "c48d58b3bc474c9cb3f9588e26171751",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/12_todano.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/12_todano.json",
+          "id": "12_todano",
+          "reference": "runtime:references/levels/12_todano/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:13.671361+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "c48d58b3bc474c9cb3f9588e26171751"
+        },
+        {
+          "at": "2026-10-09T14:21:56.657831+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-13_boldan": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:14.081170+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 13_boldan; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-13_boldan",
+      "kind": "candidate",
+      "last_trial": "a0ed0499d7794543ac64d69423424ea0",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/13_boldan.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/13_boldan.json",
+          "id": "13_boldan",
+          "reference": "runtime:references/levels/13_boldan/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:16.186091+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "a0ed0499d7794543ac64d69423424ea0"
+        },
+        {
+          "at": "2026-10-09T14:21:58.120574+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-14_aranos_prison": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:16.586714+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 14_aranos_prison; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-14_aranos_prison",
+      "kind": "candidate",
+      "last_trial": "9052544cc5ab46e7ae7df15131e8c6e8",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/14_aranos_prison.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/14_aranos_prison.json",
+          "id": "14_aranos_prison",
+          "reference": "runtime:references/levels/14_aranos_prison/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:18.720135+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "9052544cc5ab46e7ae7df15131e8c6e8"
+        },
+        {
+          "at": "2026-10-09T14:21:59.626451+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-15_gorn": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:19.124267+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 15_gorn; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-15_gorn",
+      "kind": "candidate",
+      "last_trial": "504d50911c7043719918d5e0dda344f6",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/15_gorn.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/15_gorn.json",
+          "id": "15_gorn",
+          "reference": "runtime:references/levels/15_gorn/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:21.292164+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "504d50911c7043719918d5e0dda344f6"
+        },
+        {
+          "at": "2026-10-09T14:22:01.120770+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-16_snivelak": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:21.720534+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 16_snivelak; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-16_snivelak",
+      "kind": "candidate",
+      "last_trial": "661134f97db34ec39856e799095e724e",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/16_snivelak.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/16_snivelak.json",
+          "id": "16_snivelak",
+          "reference": "runtime:references/levels/16_snivelak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:23.825976+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "661134f97db34ec39856e799095e724e"
+        },
+        {
+          "at": "2026-10-09T14:22:02.604874+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-17_smolg": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:24.266249+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 17_smolg; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-17_smolg",
+      "kind": "candidate",
+      "last_trial": "0160e07dd132417784beb2e0e0cbc791",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/17_smolg.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/17_smolg.json",
+          "id": "17_smolg",
+          "reference": "runtime:references/levels/17_smolg/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:26.344841+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "0160e07dd132417784beb2e0e0cbc791"
+        },
+        {
+          "at": "2026-10-09T14:22:04.061060+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-18_damosel": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:26.739369+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 18_damosel; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-18_damosel",
+      "kind": "candidate",
+      "last_trial": "24b5a69fd0384f1b81746bfa08e3d915",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/18_damosel.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/18_damosel.json",
+          "id": "18_damosel",
+          "reference": "runtime:references/levels/18_damosel/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:28.936842+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "24b5a69fd0384f1b81746bfa08e3d915"
+        },
+        {
+          "at": "2026-10-09T14:22:05.537233+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-19_grelbin": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:29.347249+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 19_grelbin; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-19_grelbin",
+      "kind": "candidate",
+      "last_trial": "56c934f6f59d41d99fb60360ba9add82",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/19_grelbin.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/19_grelbin.json",
+          "id": "19_grelbin",
+          "reference": "runtime:references/levels/19_grelbin/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:31.495967+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "56c934f6f59d41d99fb60360ba9add82"
+        },
+        {
+          "at": "2026-10-09T14:22:07.008660+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-1_oozla": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:31.921538+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 1_oozla; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-1_oozla",
+      "kind": "candidate",
+      "last_trial": "7620c00bce16483db02e9daabd204947",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/1_oozla.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/1_oozla.json",
+          "id": "1_oozla",
+          "reference": "runtime:references/levels/1_oozla/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:33.921517+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "7620c00bce16483db02e9daabd204947"
+        },
+        {
+          "at": "2026-10-09T14:22:08.499326+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-20_yeedil": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:34.341258+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 20_yeedil; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-20_yeedil",
+      "kind": "candidate",
+      "last_trial": "03e1e4f091954d6a87c2b706f93f3e75",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/20_yeedil.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/20_yeedil.json",
+          "id": "20_yeedil",
+          "reference": "runtime:references/levels/20_yeedil/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:36.494375+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "03e1e4f091954d6a87c2b706f93f3e75"
+        },
+        {
+          "at": "2026-10-09T14:22:09.963571+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-22_dobbo_orbit": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:36.894651+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 22_dobbo_orbit; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-22_dobbo_orbit",
+      "kind": "candidate",
+      "last_trial": "47830cafa31f4c93818362dfb3916fa7",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/22_dobbo_orbit.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/22_dobbo_orbit.json",
+          "id": "22_dobbo_orbit",
+          "reference": "runtime:references/levels/22_dobbo_orbit/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:39.027996+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "47830cafa31f4c93818362dfb3916fa7"
+        },
+        {
+          "at": "2026-10-09T14:22:11.470474+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-23_damosel_orbit": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:39.446822+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 23_damosel_orbit; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-23_damosel_orbit",
+      "kind": "candidate",
+      "last_trial": "6bd01fd51da94ae98756eb20157853fa",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/23_damosel_orbit.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/23_damosel_orbit.json",
+          "id": "23_damosel_orbit",
+          "reference": "runtime:references/levels/23_damosel_orbit/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:41.629147+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "6bd01fd51da94ae98756eb20157853fa"
+        },
+        {
+          "at": "2026-10-09T14:22:12.961925+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-24_ship_shack": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:42.040040+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 24_ship_shack; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-24_ship_shack",
+      "kind": "candidate",
+      "last_trial": "65c1b4621b104e9b957c6320b5b97a38",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/24_ship_shack.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/24_ship_shack.json",
+          "id": "24_ship_shack",
+          "reference": "runtime:references/levels/24_ship_shack/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:44.064590+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "65c1b4621b104e9b957c6320b5b97a38"
+        },
+        {
+          "at": "2026-10-09T14:22:14.444771+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-25_wupash_nebula": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:44.455828+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 25_wupash_nebula; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-25_wupash_nebula",
+      "kind": "candidate",
+      "last_trial": "d36f707b839c45d79cb0b8ef41ac595f",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/25_wupash_nebula.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/25_wupash_nebula.json",
+          "id": "25_wupash_nebula",
+          "reference": "runtime:references/levels/25_wupash_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:46.505332+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d36f707b839c45d79cb0b8ef41ac595f"
+        },
+        {
+          "at": "2026-10-09T14:22:15.893418+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-26_jamming_array": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:46.930019+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 26_jamming_array; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-26_jamming_array",
+      "kind": "candidate",
+      "last_trial": "ad6d9cc658674730bf0919500dea5439",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/26_jamming_array.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/26_jamming_array.json",
+          "id": "26_jamming_array",
+          "reference": "runtime:references/levels/26_jamming_array/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:48.999464+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "ad6d9cc658674730bf0919500dea5439"
+        },
+        {
+          "at": "2026-10-09T14:22:17.353148+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-2_maktar_nebula": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:49.392848+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 2_maktar_nebula; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-2_maktar_nebula",
+      "kind": "candidate",
+      "last_trial": "cbb953442a1f48b3b339d63578a60cc8",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/2_maktar_nebula.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/2_maktar_nebula.json",
+          "id": "2_maktar_nebula",
+          "reference": "runtime:references/levels/2_maktar_nebula/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:51.548966+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "cbb953442a1f48b3b339d63578a60cc8"
+        },
+        {
+          "at": "2026-10-09T14:22:18.847279+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-30_insomniac_museum": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:51.950995+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 30_insomniac_museum; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-30_insomniac_museum",
+      "kind": "candidate",
+      "last_trial": "0499aadeb57e47d897043d3a604d7fa8",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/30_insomniac_museum.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/30_insomniac_museum.json",
+          "id": "30_insomniac_museum",
+          "reference": "runtime:references/levels/30_insomniac_museum/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:53.975137+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "0499aadeb57e47d897043d3a604d7fa8"
+        },
+        {
+          "at": "2026-10-09T14:22:20.326996+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-3_endako": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:54.391999+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 3_endako; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-3_endako",
+      "kind": "candidate",
+      "last_trial": "d5c42e6915e3430cbc3e891043fbcb84",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/3_endako.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/3_endako.json",
+          "id": "3_endako",
+          "reference": "runtime:references/levels/3_endako/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:56.489395+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "d5c42e6915e3430cbc3e891043fbcb84"
+        },
+        {
+          "at": "2026-10-09T14:22:21.827330+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-4_barlow": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:56.915246+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 4_barlow; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-4_barlow",
+      "kind": "candidate",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/4_barlow.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/4_barlow.json",
+          "id": "4_barlow",
+          "reference": "runtime:references/levels/4_barlow/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:22:23.292919+00:00",
+          "from": "queued",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-5_feltzin_system": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:58.223317+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 5_feltzin_system; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-5_feltzin_system",
+      "kind": "candidate",
+      "last_trial": "8a97f328ece04859928a372c07322216",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/5_feltzin_system.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/5_feltzin_system.json",
+          "id": "5_feltzin_system",
+          "reference": "runtime:references/levels/5_feltzin_system/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:04:00.458723+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "8a97f328ece04859928a372c07322216"
+        },
+        {
+          "at": "2026-10-09T14:22:24.776553+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-6_notak": {
+      "budget": 3,
+      "created": "2026-10-09T14:04:00.899397+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 6_notak; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-6_notak",
+      "kind": "candidate",
+      "last_trial": "3fca3860a93d443bae10bce762132e09",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/6_notak.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/6_notak.json",
+          "id": "6_notak",
+          "reference": "runtime:references/levels/6_notak/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:04:03.163319+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "3fca3860a93d443bae10bce762132e09"
+        },
+        {
+          "at": "2026-10-09T14:22:26.402277+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-7_siberius": {
+      "budget": 3,
+      "created": "2026-10-09T14:04:03.603187+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 7_siberius; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-7_siberius",
+      "kind": "candidate",
+      "last_trial": "e4d4dbe48f8c4f8dad4820d0368e275d",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/7_siberius.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/7_siberius.json",
+          "id": "7_siberius",
+          "reference": "runtime:references/levels/7_siberius/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:04:05.676847+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "e4d4dbe48f8c4f8dad4820d0368e275d"
+        },
+        {
+          "at": "2026-10-09T14:22:27.917722+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-8_tabora": {
+      "budget": 3,
+      "created": "2026-10-09T14:04:06.112561+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 8_tabora; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-8_tabora",
+      "kind": "candidate",
+      "last_trial": "8c7b59b5f10c440799ec60a41aec8bb5",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/8_tabora.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/8_tabora.json",
+          "id": "8_tabora",
+          "reference": "runtime:references/levels/8_tabora/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:04:08.217968+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "8c7b59b5f10c440799ec60a41aec8bb5"
+        },
+        {
+          "at": "2026-10-09T14:22:29.400753+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-9_dobbo": {
+      "budget": 3,
+      "created": "2026-10-09T14:04:08.656395+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in 9_dobbo; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-9_dobbo",
+      "kind": "candidate",
+      "last_trial": "106880aaaf9344349aef3b3880a0bc6e",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/levels/9_dobbo.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/level-native/9_dobbo.json",
+          "id": "9_dobbo",
+          "reference": "runtime:references/levels/9_dobbo/overlay.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:04:10.719854+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "106880aaaf9344349aef3b3880a0bc6e"
+        },
+        {
+          "at": "2026-10-09T14:22:30.872047+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
+          },
+          "reason": "Current published source/object/full-image proofs validated",
+          "to": "integrated"
+        }
+      ]
+    },
+    "data-families-20261009-boot": {
+      "budget": 3,
+      "created": "2026-10-09T14:03:00.766464+00:00",
+      "hypothesis": "Family data-families-20261009: one canonical C body reproduces the retail bytes at every measured placement in boot; the unit catalogue carries all prior controls.",
+      "id": "data-families-20261009-boot",
+      "kind": "candidate",
+      "last_trial": "4f5d1c227d54481bbe442c0ca64ced44",
+      "next_action": "Qualify the complete unit catalogue; then run the full boot and overlay gates.",
+      "pointers": [],
+      "reopen_condition": "New measured ABI, type or compiler evidence only.",
+      "source": "candidates/boot.c",
+      "state": "integrated",
+      "symbols": [
+        "data-families-20261009"
+      ],
+      "targets": [
+        {
+          "catalog": "config/candidate-catalog.json",
+          "id": "boot",
+          "reference": "runtime:references/boot.elf"
+        }
+      ],
+      "transitions": [
+        {
+          "at": "2026-10-09T14:03:03.343591+00:00",
+          "from": "queued",
+          "reason": "exact_private",
+          "to": "exact_private",
+          "trial": "4f5d1c227d54481bbe442c0ca64ced44"
+        },
+        {
+          "at": "2026-10-09T14:22:32.394952+00:00",
+          "from": "exact_private",
+          "proof_sha256": {
+            "progress/candidates.json": "64a5af06041f0f5ed92243786e2de5d37f261fc56fb7b641c626f0382e3e4126",
+            "progress/integration.json": "f2f216b6032a6a4c5e86e2e22a74255e9b9a5dc2ecd3dd9b2b64f5736658e1ab",
+            "progress/levels/0_aranos_tutorial.json": "1478e255a600a04778552782b5a68188765ef40f57dcc847d332b16f5044d183",
+            "progress/levels/10_hrugis_cloud.json": "4b929a150471911b9af97961f538aba1b1fe567f759e0ba4742c44a8469c5895",
+            "progress/levels/11_joba.json": "c2b5b8ed3edcff22de446807a1bd8d0223649fa0aae9a6720d560e8195f2f550",
+            "progress/levels/12_todano.json": "d95c1a4b4b2a6238db8b6e312752ad8e19277f43753beb2847df98a89a89d878",
+            "progress/levels/13_boldan.json": "9310cae2e185cda9207b9f3e2bc8ed174853433f126e06fb8ef1cc888d28713c",
+            "progress/levels/14_aranos_prison.json": "e2261f0bba468c53889bb81d688eeb37cea4ac7f164f2caa3dfd3a9cfe32adae",
+            "progress/levels/15_gorn.json": "cae75b1e67ffd59428cc1c8b6bf1790051d645791c2faf4471aa6a974f9d24e7",
+            "progress/levels/16_snivelak.json": "268111a12b71d800694170dcd8db26d655ecaf18a03e349a6bda6c2efd07a4f7",
+            "progress/levels/17_smolg.json": "4f8cff863f66c78acba83e507c94f0412036d2c0bb7518357966ca0779a8361c",
+            "progress/levels/18_damosel.json": "180d019603eb3a15cfbb2cac64760b6dc847aaee86311e7f389279e60f5b7523",
+            "progress/levels/19_grelbin.json": "b6be5a19f358d72819389469d024949a83b8624d2e42388e184d82b2a3a9d8de",
+            "progress/levels/1_oozla.json": "e2870a1b3ba5eb342a3e5a03e89c267bfc115c5c57526e9e622debb01185bf4f",
+            "progress/levels/20_yeedil.json": "4df9809f6fd430b415a01a749932d591f7162e584af7c2ecc19b685510e21e3d",
+            "progress/levels/22_dobbo_orbit.json": "b8286d25107a44d53dd6febb257190f6d14c5f20bce5995e9e598513916312f0",
+            "progress/levels/23_damosel_orbit.json": "bd7472e1e399e29be8387a0f985f150fa4e00b88230963dbaa48f3c3819895d9",
+            "progress/levels/24_ship_shack.json": "958ab3c6661bc869d31c97c5fd28372debec14c609632d873dd66f15d6d44c14",
+            "progress/levels/25_wupash_nebula.json": "32aa25e6e1c89ff7fce623ce897d28cc95d4eac1c1a2e7f8411a8351b5a8f581",
+            "progress/levels/26_jamming_array.json": "730ed5ae7d4e3c41aaf8eb53b902975336f4b841e8e456cbbbb6776a3edb0fe1",
+            "progress/levels/2_maktar_nebula.json": "0375004354791170f84c3a8c4f1e50f052b8c60b3ed2dcd64664a4084f86aad9",
+            "progress/levels/30_insomniac_museum.json": "ac5cc43948eb13187e1c59e2cf3e534ab79e525a525705472f5930a18c8fab87",
+            "progress/levels/3_endako.json": "64ea5a72b85707bc0e75350bc4d92b700ace5bda43c591b3e539323603f65b06",
+            "progress/levels/4_barlow.json": "ff3fc8ab44b701c789c6d62f16e93148c35be225795f896ea85cb223f0c5fad2",
+            "progress/levels/5_feltzin_system.json": "d60aa65be1a2691b712cca3d769f291ccc79299aac8b943201bbb02d44be557d",
+            "progress/levels/6_notak.json": "cac0a4300929cf97fb2b819ef440383fc5ded95185d33c65330429f216fa914a",
+            "progress/levels/7_siberius.json": "eb4c5e86d350f0902c780c3c4510dbfb06d2908e3c1c5cc73bb37b075b5f7f4b",
+            "progress/levels/8_tabora.json": "0e191f1dd74a46868f9929fb989e67522a9917cd694e8f4d1e5b9b60a044aeab",
+            "progress/levels/9_dobbo.json": "bd11cd5047e9a836c3509b19e71be4b4009a7674978b3b4d4779303514e4f8e1",
+            "progress/report.json": "2e0671d8a5414b0d5762a68a69f0c7ccdac0ae86d283478b2d46a3e5871f7f8a"
           },
           "reason": "Current published source/object/full-image proofs validated",
           "to": "integrated"
@@ -275940,6 +277905,19 @@
       "state": "exact_private",
       "task": "parent-20261008-b3-extra92-a1-ordinary-packet-count3-extra39-g8-s22-seed"
     },
+    "0160e07dd132417784beb2e0e0cbc791": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/0160e07dd132417784beb2e0e0cbc791",
+      "finished": "2026-10-09T14:03:26.248236+00:00",
+      "id": "0160e07dd132417784beb2e0e0cbc791",
+      "manifest_sha256": "4d37ae9445bc1174ac8558d89e543affa5c268faf41e4149e5c2378e05390389",
+      "measured_functions": 192,
+      "outcome_sha256": "392d201732eb207add66ff715ed7b923fce7eda7379f1b4327c7542b16218926",
+      "semantic_key": "24a092d085b294d40e85a75df81fb08a703414cfda44a93611abc04560824ac7",
+      "started": "2026-10-09T14:03:24.939217+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-17_smolg"
+    },
     "017411ff89754d92bd25137f4111b067": {
       "compile_attempted": true,
       "directory": "runtime:trials/017411ff89754d92bd25137f4111b067",
@@ -276474,6 +278452,19 @@
       "state": "exact_private",
       "task": "qwen-recovery-whole-native-30_insomniac_museum-ae36934fec6c"
     },
+    "03e1e4f091954d6a87c2b706f93f3e75": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/03e1e4f091954d6a87c2b706f93f3e75",
+      "finished": "2026-10-09T14:03:36.405151+00:00",
+      "id": "03e1e4f091954d6a87c2b706f93f3e75",
+      "manifest_sha256": "b1b65220f94c99a50b89b5c9f17428690348bcb20d461be7adeb93a83aadfb7c",
+      "measured_functions": 196,
+      "outcome_sha256": "ec30f0db1ccec93d0f645c77bfd6274a6d562143dacd57d306203fd6fa24212f",
+      "semantic_key": "ac153c4e5a3b7a4e81b1db44c0ccc2e5ccb50f130a1b6a583ddadbac822e8984",
+      "started": "2026-10-09T14:03:35.041647+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-20_yeedil"
+    },
     "03e1ea05b38140b2a044b3fb736eb101": {
       "compile_attempted": true,
       "directory": "runtime:trials/03e1ea05b38140b2a044b3fb736eb101",
@@ -276655,6 +278646,19 @@
       "started": "2026-10-05T02:45:31.354775+00:00",
       "state": "exact_private",
       "task": "orbital-float-interval-family-815-20261004-23_damosel_orbit"
+    },
+    "0499aadeb57e47d897043d3a604d7fa8": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/0499aadeb57e47d897043d3a604d7fa8",
+      "finished": "2026-10-09T14:03:53.887026+00:00",
+      "id": "0499aadeb57e47d897043d3a604d7fa8",
+      "manifest_sha256": "2b56f81bf8dda5c701c042ab7373a5443696c57325af8d8ab6022b06a547ec89",
+      "measured_functions": 191,
+      "outcome_sha256": "1bfd4133e45bd150deca0e841c5991492217ae12e8daff687df0dcac3c0e8a53",
+      "semantic_key": "d7686f53bab95afefae6fc82d05fb3916e31480b64696cd495da2535de0a8c82",
+      "started": "2026-10-09T14:03:52.601226+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-30_insomniac_museum"
     },
     "04a41eabbc5e472e8877eb77d5b8c52f": {
       "compile_attempted": true,
@@ -278816,6 +280820,19 @@
       "started": "2026-10-04T13:43:08.031745+00:00",
       "state": "exact_private",
       "task": "parallel-boot-analysis-list192-30-v1"
+    },
+    "106880aaaf9344349aef3b3880a0bc6e": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/106880aaaf9344349aef3b3880a0bc6e",
+      "finished": "2026-10-09T14:04:10.627333+00:00",
+      "id": "106880aaaf9344349aef3b3880a0bc6e",
+      "manifest_sha256": "9b3c24759678dc80bb872fb43818b370305c0ddf86d411b0b10e549c217a8a6f",
+      "measured_functions": 192,
+      "outcome_sha256": "a0856ae1a570964aedb503d0553f6090301d50c554cfca846afaba41c98cc6ec",
+      "semantic_key": "04e37428b9877e4c3c2256df216ea52d93e3235ab2fb6a6d89b3647af6493e93",
+      "started": "2026-10-09T14:04:09.327109+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-9_dobbo"
     },
     "108e547438a24c69aa1ee6e0003ecadc": {
       "compile_attempted": true,
@@ -281739,6 +283756,19 @@
       "state": "exact_private",
       "task": "parent-20261008-batch2-whole-unit-native-13_boldan-bc9ebc9e"
     },
+    "1de937ec1d6a4844872b4a9d95899331": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/1de937ec1d6a4844872b4a9d95899331",
+      "finished": "2026-10-09T14:03:11.101187+00:00",
+      "id": "1de937ec1d6a4844872b4a9d95899331",
+      "manifest_sha256": "bf71ca89f0623378382189c847618d49f9f2445ec0959d2f54c89f015a6cc03c",
+      "measured_functions": 211,
+      "outcome_sha256": "f776deb26d706da148a6f7fc2ba39cb6017c9f4d4ffb36adc006e530994aa13d",
+      "semantic_key": "3b1b2e23d157f152fd9de73a2fe6b79c7ec15c09299dc4246ab2dc977ab5423b",
+      "started": "2026-10-09T14:03:09.539056+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-11_joba"
+    },
     "1e08b92572b040aea1be2304b3b31e29": {
       "compile_attempted": true,
       "directory": "runtime:trials/1e08b92572b040aea1be2304b3b31e29",
@@ -283170,6 +285200,19 @@
       "started": "2026-10-06T05:07:12.064877+00:00",
       "state": "exact_private",
       "task": "missing-members-bitmap124-12_todano-20261006"
+    },
+    "24b5a69fd0384f1b81746bfa08e3d915": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/24b5a69fd0384f1b81746bfa08e3d915",
+      "finished": "2026-10-09T14:03:28.849827+00:00",
+      "id": "24b5a69fd0384f1b81746bfa08e3d915",
+      "manifest_sha256": "ac74e7451589d4669d0ec189e2567547d68341db240aeef0c04ed1635ce5512b",
+      "measured_functions": 210,
+      "outcome_sha256": "1ec6cb2a12da953cd2337d02570a510e8d8ada12ffa5ebd27554a40a7fd28cf7",
+      "semantic_key": "b56106cf7db5a26c30797c4107b3d1088495622a81242355971ed1c1eb4505cd",
+      "started": "2026-10-09T14:03:27.390419+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-18_damosel"
     },
     "24b7533d66c94f0fa66a66c86dc980c3": {
       "children": [
@@ -288337,6 +290380,26 @@
       "state": "exact_private",
       "task": "orbital-mode-set-family-20261004-3_endako"
     },
+    "3e7981ed11c94d0b94350181c1751188": {
+      "children": [
+        {
+          "id": "4_barlow",
+          "state": "unmeasured"
+        }
+      ],
+      "compile_attempted": false,
+      "directory": "runtime:trials/3e7981ed11c94d0b94350181c1751188",
+      "error": "Semantic duplicate trial: d6e6d9908aea422e813bf0a6e9caab67; provide --repeat-reason",
+      "finished": "2026-10-09T14:03:57.706328+00:00",
+      "id": "3e7981ed11c94d0b94350181c1751188",
+      "integration_credit": 0,
+      "manifest_sha256": "9cc61f4f13e1e98dbdcecf2b8d2b4ed614d045e72352dcec4528f9db44ab0b9d",
+      "measured_functions": 0,
+      "outcome_sha256": "5c9d96eee9f88bc42e6c06b4e681e6e47cfecfec4cacd0a0404dff7fc9d148e1",
+      "semantic_key": "42daf6c4c4a71f866ab613712ba5c81fc4d57fbc7a091e978b28405a06486eac",
+      "state": "preparation_rejected",
+      "task": "data-families-20261009-4_barlow"
+    },
     "3e79947acf3a4e0ea6beb3f3218197a1": {
       "compile_attempted": true,
       "directory": "runtime:trials/3e79947acf3a4e0ea6beb3f3218197a1",
@@ -288642,6 +290705,19 @@
       "started": "2026-10-05T02:45:39.036378+00:00",
       "state": "exact_private",
       "task": "orbital-float-interval-family-815-20261004-6_notak"
+    },
+    "3fca3860a93d443bae10bce762132e09": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/3fca3860a93d443bae10bce762132e09",
+      "finished": "2026-10-09T14:04:03.075559+00:00",
+      "id": "3fca3860a93d443bae10bce762132e09",
+      "manifest_sha256": "0232f8d2edef9ec3c208bf410dafb5db67d4650a3bfa061d2bf39ca49cd19533",
+      "measured_functions": 206,
+      "outcome_sha256": "ec99d3e2e1020745f7677cda77c080947f8ff2ac992cedf20dbaffc901d0cba3",
+      "semantic_key": "6e096fe99382ec2b02b7731dbca9477344580343ba2beabdbb5c86f1b61ee5be",
+      "started": "2026-10-09T14:04:01.600292+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-6_notak"
     },
     "40057b417c9d43a79feb23cca284b22c": {
       "compile_attempted": true,
@@ -290478,6 +292554,19 @@
       "state": "exact_private",
       "task": "parent-20261008-b3-packets-a1-ordinary-packet-static92-count41-g8-s20-seed"
     },
+    "47830cafa31f4c93818362dfb3916fa7": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/47830cafa31f4c93818362dfb3916fa7",
+      "finished": "2026-10-09T14:03:38.938421+00:00",
+      "id": "47830cafa31f4c93818362dfb3916fa7",
+      "manifest_sha256": "457ea67cab5a47c34b8ff5960f91f60bf2a0d18bae595067e90a34725c2faab2",
+      "measured_functions": 189,
+      "outcome_sha256": "ea725c7a40ebf9343180bda47bac436ea8aa8f849a57e20818bc92d3fcea25ad",
+      "semantic_key": "37a8d19e86c42ab410084ce2ecb518d7944dcd6de2a3fdaf89de39a919c316b2",
+      "started": "2026-10-09T14:03:37.588486+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-22_dobbo_orbit"
+    },
     "4783e87fea2e4a1ebf6f83a14ae9064d": {
       "compile_attempted": true,
       "directory": "runtime:trials/4783e87fea2e4a1ebf6f83a14ae9064d",
@@ -292042,6 +294131,19 @@
       "state": "mismatch",
       "task": "ratchet-ad393208-7909-4f05-a238-775715f448b6-candidate"
     },
+    "4f5d1c227d54481bbe442c0ca64ced44": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/4f5d1c227d54481bbe442c0ca64ced44",
+      "finished": "2026-10-09T14:03:03.250571+00:00",
+      "id": "4f5d1c227d54481bbe442c0ca64ced44",
+      "manifest_sha256": "152f8854d6d7e9d834923befc782648db0bf0ef0808d5724d0557c8fa34f1ae3",
+      "measured_functions": 309,
+      "outcome_sha256": "58742545f2148815e48af502adccd0ba30acce06de8ad5ed1d62b058e90c4edb",
+      "semantic_key": "68eff99ab6141fb9639c3d5b2af476a9ec88995f6126c3955ef76d1933c29919",
+      "started": "2026-10-09T14:03:01.417776+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-boot"
+    },
     "4f67b6a790664fe4a2d4a40145801363": {
       "compile_attempted": true,
       "directory": "runtime:trials/4f67b6a790664fe4a2d4a40145801363",
@@ -292208,6 +294310,19 @@
       "started": "2026-10-08T14:13:15.411134+00:00",
       "state": "mismatch",
       "task": "parent-20261008-bounds284-a1-ordinary-bounds-record284-g8-s20-seed"
+    },
+    "504d50911c7043719918d5e0dda344f6": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/504d50911c7043719918d5e0dda344f6",
+      "finished": "2026-10-09T14:03:21.193554+00:00",
+      "id": "504d50911c7043719918d5e0dda344f6",
+      "manifest_sha256": "e423c6d09037b181dfa05de16322fec463d6c0c65bd1cb5b1e0e9da23a205e48",
+      "measured_functions": 197,
+      "outcome_sha256": "f0f50ba09a4aea5f62365bdb933f7258d879b756f47d18f9fc2ebecbade0cb29",
+      "semantic_key": "a4b64d2a239fab083dc5ae25a2059541595c34bb6c6d398af1edfcbe66035281",
+      "started": "2026-10-09T14:03:19.817226+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-15_gorn"
     },
     "50652902485e40f9855d6299543d762c": {
       "compile_attempted": true,
@@ -293556,6 +295671,19 @@
       "started": "2026-10-04T14:34:45.863440+00:00",
       "state": "exact_private",
       "task": "orbital-class-filter-family-20261004-19_grelbin"
+    },
+    "56c934f6f59d41d99fb60360ba9add82": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/56c934f6f59d41d99fb60360ba9add82",
+      "finished": "2026-10-09T14:03:31.401764+00:00",
+      "id": "56c934f6f59d41d99fb60360ba9add82",
+      "manifest_sha256": "b6fae707a7e5af0d1190ccb69ab5bf311730c0da5c3b4a7fdb6e80c3cf984c02",
+      "measured_functions": 201,
+      "outcome_sha256": "9463f70013686762629b64beaf6d77f82f5a7660e6a07ff3d0e4940ac34d07e3",
+      "semantic_key": "d52487bafdd0086d59f855d9158d7d7e9d966f384eae33f726ce952e9174075d",
+      "started": "2026-10-09T14:03:30.043225+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-19_grelbin"
     },
     "56d373551c25422f9b17d1e444f0c4b5": {
       "compile_attempted": true,
@@ -296656,6 +298784,19 @@
       "state": "exact_private",
       "task": "parent-20261008-barlow-known-a1-barlow-known-db2acbef-g8-s0-seed"
     },
+    "65c1b4621b104e9b957c6320b5b97a38": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/65c1b4621b104e9b957c6320b5b97a38",
+      "finished": "2026-10-09T14:03:43.976011+00:00",
+      "id": "65c1b4621b104e9b957c6320b5b97a38",
+      "manifest_sha256": "4fefb565765a4ba36bffd470cdf0a9e0881eef370a8d32380f85226646377b87",
+      "measured_functions": 201,
+      "outcome_sha256": "45e5d06843cb9b42681dc00280db6b6b2c42e95e745b7db6e8e459de9795882c",
+      "semantic_key": "8ef940428ace7358f012a0daecc5709061c9949b36905d2f4f3232291f8ed686",
+      "started": "2026-10-09T14:03:42.695106+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-24_ship_shack"
+    },
     "65d3caa10ac347a5b57abfd0dc8e5bbf": {
       "compile_attempted": true,
       "directory": "runtime:trials/65d3caa10ac347a5b57abfd0dc8e5bbf",
@@ -296681,6 +298822,19 @@
       "started": "2026-10-04T17:52:27.967431+00:00",
       "state": "exact_private",
       "task": "orbital-flags-joint-20261004-10_hrugis_cloud"
+    },
+    "661134f97db34ec39856e799095e724e": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/661134f97db34ec39856e799095e724e",
+      "finished": "2026-10-09T14:03:23.729626+00:00",
+      "id": "661134f97db34ec39856e799095e724e",
+      "manifest_sha256": "898e9bd3d98681187e69bdd49407a63c24470beb7bc2b2c2591b1b1b7c19a750",
+      "measured_functions": 201,
+      "outcome_sha256": "b6cdb037ab1da229cc46f187259dfa0ec29b8a66769caa69c9ca2c12fde518dd",
+      "semantic_key": "153da03bfa3770f4cf3a509082390ac5c21a2edd83183aaf4ee9ce6674c08042",
+      "started": "2026-10-09T14:03:22.373032+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-16_snivelak"
     },
     "661eb0f7f8374c69a4082f1ec043fa44": {
       "compile_attempted": true,
@@ -297702,6 +299856,19 @@
       "started": "2026-10-08T14:14:53.961680+00:00",
       "state": "mismatch",
       "task": "parent-20261008-getter96-a1-absolute-getter96-g0-s5-seed"
+    },
+    "6bd01fd51da94ae98756eb20157853fa": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/6bd01fd51da94ae98756eb20157853fa",
+      "finished": "2026-10-09T14:03:41.536147+00:00",
+      "id": "6bd01fd51da94ae98756eb20157853fa",
+      "manifest_sha256": "46f77ee4e4b08b718f022d4c2ddbb842469a764885f3183b60df88b550811814",
+      "measured_functions": 190,
+      "outcome_sha256": "d88d52d21cab3ad5ccec3e7f7fe1878a55bede2990c1af46aad1fceb340b8645",
+      "semantic_key": "a4b517e048c3f4f70333666d6ae2204f12cd7e5329f711fe0b4d028b5a09c8db",
+      "started": "2026-10-09T14:03:40.147711+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-23_damosel_orbit"
     },
     "6bd99688d4fd47a58dccd9df4fe84105": {
       "compile_attempted": true,
@@ -299928,6 +302095,19 @@
       "semantic_key": "bcd0836e1cf5b4de238bd50e49c54fe3e307e086b23269bf5a8fc8632e198241",
       "state": "preparation_rejected",
       "task": "native-army2-20261007-0_aranos_tutorial"
+    },
+    "7620c00bce16483db02e9daabd204947": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/7620c00bce16483db02e9daabd204947",
+      "finished": "2026-10-09T14:03:33.833967+00:00",
+      "id": "7620c00bce16483db02e9daabd204947",
+      "manifest_sha256": "d0040e9d0df90cef6a9ead8c83f70d1f15316b809fa3edeffd394b0a1d8fb5ba",
+      "measured_functions": 185,
+      "outcome_sha256": "fcd640b08f366ed551e9ad1ba28cda5441372fa21825ee9030b89c144d45a7e7",
+      "semantic_key": "6373b80e9e5d6c2741db06cfbfdd04fb99c2f1166e0caddcf0551154dd70d83a",
+      "started": "2026-10-09T14:03:32.581341+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-1_oozla"
     },
     "7637516c96704f87944d86ce36c80b8a": {
       "compile_attempted": true,
@@ -304356,6 +306536,19 @@
       "state": "exact_private",
       "task": "known-scalar-reuse-3_endako-fixed-20261006"
     },
+    "8a97f328ece04859928a372c07322216": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8a97f328ece04859928a372c07322216",
+      "finished": "2026-10-09T14:04:00.365704+00:00",
+      "id": "8a97f328ece04859928a372c07322216",
+      "manifest_sha256": "ca8e8fa7f07a7affd3f2311abd42e74cb5d250908db98a094b0835dfb18487f3",
+      "measured_functions": 204,
+      "outcome_sha256": "8097c593d07e69671cba2bc0492b49caa0c803ca65c1b9903d85bfc4fc5b266b",
+      "semantic_key": "0f435dc04a2e8f3b2cda0c8201ca9d832fc46f4bfe8e1610f90a700e267c2de0",
+      "started": "2026-10-09T14:03:58.925874+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-5_feltzin_system"
+    },
     "8a9a23ba0e0a40d9ae09669047cebfcb": {
       "compile_attempted": true,
       "directory": "runtime:trials/8a9a23ba0e0a40d9ae09669047cebfcb",
@@ -304719,6 +306912,19 @@
       "started": "2026-10-07T11:20:15.211269+00:00",
       "state": "exact_private",
       "task": "native-army-20261007-10_hrugis_cloud"
+    },
+    "8c7b59b5f10c440799ec60a41aec8bb5": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/8c7b59b5f10c440799ec60a41aec8bb5",
+      "finished": "2026-10-09T14:04:08.123966+00:00",
+      "id": "8c7b59b5f10c440799ec60a41aec8bb5",
+      "manifest_sha256": "7f486315b7ed6097894ab8b89bef8efee1942135ade0669ae8b4bf909cfac289",
+      "measured_functions": 195,
+      "outcome_sha256": "d4903f37431e04e511727d7fdc8cc4e76d091a330b68762130863e9d490f8406",
+      "semantic_key": "b7d49af57e39167cff18133ff08a42e2ddb612ece8476730ac096ff0cee4bcb6",
+      "started": "2026-10-09T14:04:06.790691+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-8_tabora"
     },
     "8ca45658ac3e4715aa42fa351faddc96": {
       "compile_attempted": true,
@@ -305566,6 +307772,19 @@
       "started": "2026-10-08T10:52:33.406513+00:00",
       "state": "exact_private",
       "task": "parent-20261008-b3-sda-small-a1-sda-small-set-1aa3f4-8-g8-s0-remaining"
+    },
+    "9052544cc5ab46e7ae7df15131e8c6e8": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/9052544cc5ab46e7ae7df15131e8c6e8",
+      "finished": "2026-10-09T14:03:18.631074+00:00",
+      "id": "9052544cc5ab46e7ae7df15131e8c6e8",
+      "manifest_sha256": "03adb2ab75c6f0619af24795aba53ed57738dbc26eebc78ae9b33680a160b439",
+      "measured_functions": 198,
+      "outcome_sha256": "e84ac5af876a14bbf2da00942b6fecd6d981730c8f32c1c63cbc0b0edb70a0d2",
+      "semantic_key": "ae442af7f3f7fa44e17fcfb48da5b33a24e75dcace382cce55d1d564fe659cad",
+      "started": "2026-10-09T14:03:17.240357+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-14_aranos_prison"
     },
     "908754db1aa64b04ae9bac0733bfe868": {
       "compile_attempted": true,
@@ -308853,6 +311072,19 @@
       "state": "mismatch",
       "task": "parent-20261008-b3-native428-a1-absolute-table428-g0-s21-seed"
     },
+    "a0ed0499d7794543ac64d69423424ea0": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/a0ed0499d7794543ac64d69423424ea0",
+      "finished": "2026-10-09T14:03:16.096298+00:00",
+      "id": "a0ed0499d7794543ac64d69423424ea0",
+      "manifest_sha256": "5518b81a2ef9ce1b116d18b1f4be02bfb17998865ad440395b6e9a2f18b0f902",
+      "measured_functions": 194,
+      "outcome_sha256": "45e2e6a1bcd7f354ae3ca68ca54df28ec4fc958bf2d57ec40d279d6758aa69ab",
+      "semantic_key": "6f30786debdb926452e9dbdaae69f8f1852235ab7d85a4ad26c293858b166dd9",
+      "started": "2026-10-09T14:03:14.753112+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-13_boldan"
+    },
     "a0f1cf0b8f964260918dc8f4cf3c02c9": {
       "compile_attempted": true,
       "directory": "runtime:trials/a0f1cf0b8f964260918dc8f4cf3c02c9",
@@ -311374,6 +313606,19 @@
       "started": "2026-10-07T09:05:23.096001+00:00",
       "state": "exact_private",
       "task": "gp-lot-20261007-18_damosel"
+    },
+    "ad6d9cc658674730bf0919500dea5439": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/ad6d9cc658674730bf0919500dea5439",
+      "finished": "2026-10-09T14:03:48.903662+00:00",
+      "id": "ad6d9cc658674730bf0919500dea5439",
+      "manifest_sha256": "359ac9c8647afd148fbb2dfc6d69d73d8caf1812b75770c1cd98b376c66f71a3",
+      "measured_functions": 190,
+      "outcome_sha256": "2920fc0c4f4d2781d08f8b29f930bfe59eab6f01a4d9041d3a98122656dc1c4f",
+      "semantic_key": "2313984de27ac9c25c44889faf74354f23ef9b77f24c672be972c5c3c4601afc",
+      "started": "2026-10-09T14:03:47.627389+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-26_jamming_array"
     },
     "ad9f512822ec44f6a6702adc7f29cc56": {
       "compile_attempted": true,
@@ -315974,6 +318219,19 @@
       "state": "exact_private",
       "task": "parent-20261008-batch3-whole-unit-smalldata-18_damosel-4e8894f3"
     },
+    "c48d58b3bc474c9cb3f9588e26171751": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/c48d58b3bc474c9cb3f9588e26171751",
+      "finished": "2026-10-09T14:03:13.575712+00:00",
+      "id": "c48d58b3bc474c9cb3f9588e26171751",
+      "manifest_sha256": "1c05b68b3f39ed47445be5f6b6bef3d0c419cc56c061e3e4fe96bb52c08dedee",
+      "measured_functions": 195,
+      "outcome_sha256": "b02f3fe74fb33823660ba527d75d5f9f75097102437a64cc184e3b2a1ad9e428",
+      "semantic_key": "68ff9a85a1442e92ef9afd9707c75b142c7a5a76d2465eecbf54d49ef4b3aaa0",
+      "started": "2026-10-09T14:03:12.239110+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-12_todano"
+    },
     "c48ebfdc86cf411e9bfc001aead84589": {
       "compile_attempted": true,
       "directory": "runtime:trials/c48ebfdc86cf411e9bfc001aead84589",
@@ -317577,6 +319835,19 @@
       "started": "2026-10-04T10:09:50.174071+00:00",
       "state": "exact_private",
       "task": "native-review-index-family-20_yeedil-20261004"
+    },
+    "cbb953442a1f48b3b339d63578a60cc8": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/cbb953442a1f48b3b339d63578a60cc8",
+      "finished": "2026-10-09T14:03:51.460223+00:00",
+      "id": "cbb953442a1f48b3b339d63578a60cc8",
+      "manifest_sha256": "cfdb954e3f9e9a337c507546ea81a4f24b0deaa32201f0fe08c845818970e313",
+      "measured_functions": 199,
+      "outcome_sha256": "7a9a51fefc3aeb43f3667676ab6d5ad53a2fa595ae593c7e270aab77422a1b19",
+      "semantic_key": "cd37aa635582c7ca5a1c80fc4631c65634ce5efd7720e0a9c8a7d7302b296d1a",
+      "started": "2026-10-09T14:03:50.068633+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-2_maktar_nebula"
     },
     "cbdd29ba29404f89a732563aa0f9ba87": {
       "compile_attempted": true,
@@ -319182,6 +321453,19 @@
       "state": "exact_private",
       "task": "gs-family-18_damosel-136-v2"
     },
+    "d36f707b839c45d79cb0b8ef41ac595f": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d36f707b839c45d79cb0b8ef41ac595f",
+      "finished": "2026-10-09T14:03:46.416734+00:00",
+      "id": "d36f707b839c45d79cb0b8ef41ac595f",
+      "manifest_sha256": "144b8107d311be6c85f51e055cfcdd21b77634e51a12c6b3a922d6dad2eba344",
+      "measured_functions": 195,
+      "outcome_sha256": "30c64815cc96added05fa3d5db9579438c2d6fae0f619974977390d674736d41",
+      "semantic_key": "f151aad287660ede0fcb45520cc5deb5b6769cff0aa3288d34dd541244815300",
+      "started": "2026-10-09T14:03:45.124265+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-25_wupash_nebula"
+    },
     "d38b7be5e06e4d768e5b42882ab4d086": {
       "compile_attempted": true,
       "directory": "runtime:trials/d38b7be5e06e4d768e5b42882ab4d086",
@@ -319207,6 +321491,19 @@
       "started": "2026-10-08T11:52:39.109838+00:00",
       "state": "mismatch",
       "task": "parent-20261008-b3-native-owner88-a1-absolute-owner88-g0-s12-seed"
+    },
+    "d3a73bd861f142f0a640d7333577cc45": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d3a73bd861f142f0a640d7333577cc45",
+      "finished": "2026-10-09T14:03:05.761533+00:00",
+      "id": "d3a73bd861f142f0a640d7333577cc45",
+      "manifest_sha256": "242d35874c89c7a2d818abd87a78ca37003690ccd54469a6286fa87ad5300cef",
+      "measured_functions": 192,
+      "outcome_sha256": "ad93404f66bc1a521646bc4a6ec5dfb95335252d9dd2776bedb4e1d2293984d4",
+      "semantic_key": "88c5c12be6d5f1ef8c6ebda943c83e59267ff4835946afa5b71a430097ce4406",
+      "started": "2026-10-09T14:03:04.448777+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-0_aranos_tutorial"
     },
     "d3aa762e35364a3a8ba0b1b6f0e2b472": {
       "compile_attempted": true,
@@ -319630,6 +321927,19 @@
       "started": "2026-10-08T06:18:43.757362+00:00",
       "state": "exact_private",
       "task": "parent-20261008-whole-unit-8_tabora-ba8c4404"
+    },
+    "d5c42e6915e3430cbc3e891043fbcb84": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/d5c42e6915e3430cbc3e891043fbcb84",
+      "finished": "2026-10-09T14:03:56.401854+00:00",
+      "id": "d5c42e6915e3430cbc3e891043fbcb84",
+      "manifest_sha256": "1dc63d04994e62c85a80b4afd82931d3e9562207d2cfa71e3aedf55696470dfe",
+      "measured_functions": 201,
+      "outcome_sha256": "bc8fa670e649bf46d654da9eb5b62dd6a877da1100b81f0969a73702579541ff",
+      "semantic_key": "19076be540fddf71da195c2097ae4feaa3e60bccf29a6c431ede502237ad0f5e",
+      "started": "2026-10-09T14:03:55.044705+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-3_endako"
     },
     "d5c507d54b634485a3420fd47400eaf2": {
       "compile_attempted": true,
@@ -320878,6 +323188,19 @@
       "started": "2026-10-08T15:56:15.334422+00:00",
       "state": "mismatch",
       "task": "ratchet-91849d87-f97f-4769-b8cd-67427cc391b0-candidate"
+    },
+    "dbaa3f6084db4287aaeba179e0204ed1": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/dbaa3f6084db4287aaeba179e0204ed1",
+      "finished": "2026-10-09T14:03:08.333219+00:00",
+      "id": "dbaa3f6084db4287aaeba179e0204ed1",
+      "manifest_sha256": "bf1e031703133e569e7d29f3ce0be5b579ba109ece4ac0696bf80b44d69e1ae9",
+      "measured_functions": 201,
+      "outcome_sha256": "4dfbc1fa0672bc13bd29f91b57f545c8c093c724299d1178da73fd8e5a77b84c",
+      "semantic_key": "fcaf875646feea53d4490d6196932e95b3455b674acc4d1e3324762ba611da2f",
+      "started": "2026-10-09T14:03:06.959937+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-10_hrugis_cloud"
     },
     "dbd145bc220e4934903e5b4de57a1f5b": {
       "compile_attempted": true,
@@ -322902,6 +325225,19 @@
       "started": "2026-10-04T20:10:34.471298+00:00",
       "state": "exact_private",
       "task": "root-boot-g8-absolute-controls-20261004"
+    },
+    "e4d4dbe48f8c4f8dad4820d0368e275d": {
+      "compile_attempted": true,
+      "directory": "runtime:trials/e4d4dbe48f8c4f8dad4820d0368e275d",
+      "finished": "2026-10-09T14:04:05.587847+00:00",
+      "id": "e4d4dbe48f8c4f8dad4820d0368e275d",
+      "manifest_sha256": "53c3360586a4b991dab3be7a4729342db9c5ff288feb025c63a43f654c2af7c4",
+      "measured_functions": 192,
+      "outcome_sha256": "44c54c82979f7f4a5908a16ddb94b8bd55006feacc3046b5591f5ee4845d9406",
+      "semantic_key": "f72e532430944a23a449894580aa6e9811750b9382accc30e4a680ba242cbc27",
+      "started": "2026-10-09T14:04:04.296319+00:00",
+      "state": "exact_private",
+      "task": "data-families-20261009-7_siberius"
     },
     "e4d691f4a36b4e788ddf1378f1def2e5": {
       "compile_attempted": true,
@@ -329192,6 +331528,6 @@
   },
   "view_sha256": {
     "docs/C-NATIVE-EXPERIMENT-REGISTER.md": "5ba16b5c7f8b20b910187dd4810726cdadd2d765cae39365c07e09ea14caee21",
-    "docs/CAMPAIGN-QUEUE.md": "dda2eb8b2668896167c6d8ae6ade52e13cc6ef3989329deed41276a4a9bda407"
+    "docs/CAMPAIGN-QUEUE.md": "c9740a18e502eba67d5b78aa94ccf231dc2f07394bf9885dae077fbfeef61f8d"
   }
 }

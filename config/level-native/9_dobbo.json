@@ -48,6 +48,8 @@
     "LVL_9_DOBBO_F307ea0ee_FUN_002EAA60": 3058272,
     "LVL_9_DOBBO_F307ea0ee_FUN_002EAA78": 3058296,
     "LVL_9_DOBBO_F307ea0ee_FUN_002EB478": 3060856,
+    "LVL_9_DOBBO_F45821cfb_D_001C7780": 1865600,
+    "LVL_9_DOBBO_F45821cfb_FUN_002EA438": 3056696,
     "LVL_9_DOBBO_F490e2c59_D_001A79F0": 1735152,
     "LVL_9_DOBBO_F490e2c59_D_001AA7F0": 1746928,
     "LVL_9_DOBBO_F4e5bde81_D_00189E20": 1613344,
@@ -67,6 +69,7 @@
     "LVL_9_DOBBO_F6b0741c38bf00fee_AT002A9608_ROLE00": 1618620,
     "LVL_9_DOBBO_F6b0741c38bf00fee_AT002A9608_ROLE01": 2790984,
     "LVL_9_DOBBO_F6b0741c38bf00fee_AT002A9608_ROLE02": 2865424,
+    "LVL_9_DOBBO_F6df9730c_FUN_002EA2E8": 3056360,
     "LVL_9_DOBBO_F70997ba9_FUN_002E24F0": 3024112,
     "LVL_9_DOBBO_F70997ba9_FUN_002E2610": 3024400,
     "LVL_9_DOBBO_F70997ba9_FUN_002E5170": 3035504,
@@ -75,6 +78,12 @@
     "LVL_9_DOBBO_F70997ba9_FUN_002E5618": 3036696,
     "LVL_9_DOBBO_F70997ba9_FUN_002F09E8": 3082728,
     "LVL_9_DOBBO_F70997ba9_FUN_00378928": 3639592,
+    "LVL_9_DOBBO_F7242f0a4_D_001B9A60": 1808992,
+    "LVL_9_DOBBO_F7242f0a4_FUN_002EA470": 3056752,
+    "LVL_9_DOBBO_F7242f0a4_FUN_002EA4F8": 3056888,
+    "LVL_9_DOBBO_F7242f0a4_FUN_002EA578": 3057016,
+    "LVL_9_DOBBO_F7242f0a4_FUN_0042F1A0": 4387232,
+    "LVL_9_DOBBO_F7242f0a4_FUN_0042F300": 4387584,
     "LVL_9_DOBBO_F79744baad5ad7f65_AT0044EAC8_ROLE00": 1622228,
     "LVL_9_DOBBO_F86f665335d9cb905_AT003C2998_ROLE00": 3940336,
     "LVL_9_DOBBO_F9cdc323a4d0c2fbd_AT003960C8_ROLE00": 3645608,
@@ -126,6 +135,19 @@
     "LVL_9_DOBBO_Fd1b66aa7_D_001AA578": 1746296,
     "LVL_9_DOBBO_Fd1b66aa7_D_001AA588": 1746312,
     "LVL_9_DOBBO_Fd1b66aa7_FUN_00115DA8": 1138088,
+    "LVL_9_DOBBO_Fd8e166aa_D_001BCE40": 1822272,
+    "LVL_9_DOBBO_Fdb046c5d_D_001BFE80": 1834624,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_002D84F0": 2983152,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_002D86B0": 2983600,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_002D88C8": 2984136,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_002D8B30": 2984752,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_002D8E50": 2985552,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_002D8F70": 2985840,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_002EA5A0": 3057056,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_002EA750": 3057488,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_00321670": 3282544,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_0035C830": 3524656,
+    "LVL_9_DOBBO_Fdb046c5d_FUN_0035CB80": 3525504,
     "LVL_9_DOBBO_Fea34650e_D_00189E20": 1613344,
     "LVL_9_DOBBO_Feab1f2e5_D_001ADD98": 1760664,
     "LVL_9_DOBBO_Feab1f2e5_D_001ADDE0": 1760736,
@@ -355,6 +377,12 @@
       "symbol": "LVL_9_DOBBO_FUN_002D39E8"
     },
     {
+      "address": 2982104,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_9_DOBBO_FUN_002D80D8"
+    },
+    {
       "address": 2983136,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -371,6 +399,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_9_DOBBO_FUN_002D8B30"
+    },
+    {
+      "address": 3012680,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_9_DOBBO_FUN_002DF848"
     },
     {
       "address": 3013496,
@@ -474,6 +508,12 @@
       "meaning": "shared native body of family 490e2c59eb9d7105",
       "size": 112,
       "symbol": "LVL_9_DOBBO_FUN_003027C8"
+    },
+    {
+      "address": 3165912,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_9_DOBBO_FUN_00304ED8"
     },
     {
       "address": 3166976,
@@ -1018,6 +1058,12 @@
       "symbol": "LVL_9_DOBBO_FUN_00429D90"
     },
     {
+      "address": 4389320,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_9_DOBBO_FUN_0042F9C8"
+    },
+    {
       "address": 4424424,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1255,6 +1301,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_9_DOBBO_FUN_00452BE0"
+    },
+    {
+      "address": 4534792,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_9_DOBBO_FUN_00453208"
     },
     {
       "address": 4541392,

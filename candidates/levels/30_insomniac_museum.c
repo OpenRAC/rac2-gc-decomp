@@ -3270,3 +3270,155 @@ void LVL_30_INSOMNIAC_MUSEUM_FUN_0038B5F8(Owner_F9e2cd219 *self)
         child->field4C = 1;
     }
 }
+extern void LVL_30_INSOMNIAC_MUSEUM_F6df9730c_FUN_002F4CE0(char *dst, int *src, int count);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_0030F500(char *dst, unsigned char *src)
+{
+    int table[256];
+    int tmp[16];
+    int *q;
+    int i, j, k;
+
+    for (i = 0; i < 256; i++) {
+        table[i] = 0;
+        if (i & 0x01) table[i] = 0x0000000f;
+        if (i & 0x02) table[i] |= 0x000000f0;
+        if (i & 0x04) table[i] |= 0x00000f00;
+        if (i & 0x08) table[i] |= 0x0000f000;
+        if (i & 0x10) table[i] |= 0x000f0000;
+        if (i & 0x20) table[i] |= 0x00f00000;
+        if (i & 0x40) table[i] |= 0x0f000000;
+        if (i & 0x80) table[i] |= 0xf0000000;
+    }
+    for (j = 0; j < 128; j++) {
+        char *next;
+        q = tmp;
+        next = dst + 64;
+        for (k = 15; k >= 0; k--) {
+            *q++ = table[*src++];
+        }
+        LVL_30_INSOMNIAC_MUSEUM_F6df9730c_FUN_002F4CE0(dst, tmp, 64);
+        dst = next;
+        LVL_30_INSOMNIAC_MUSEUM_F6df9730c_FUN_002F4CE0(dst, tmp, 64);
+        dst += 64;
+        LVL_30_INSOMNIAC_MUSEUM_F6df9730c_FUN_002F4CE0(dst, tmp, 64);
+        dst += 64;
+        LVL_30_INSOMNIAC_MUSEUM_F6df9730c_FUN_002F4CE0(dst, tmp, 64);
+        dst += 64;
+    }
+}
+extern void LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3458(void *);
+extern void LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3298(void *);
+extern int LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3670(void *);
+extern void LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002F5130(float, void *, void *);
+extern void LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002F4F80(void *, void *, void *);
+extern void LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3BF8(void *, void *, void *);
+extern void LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_0032A160(void *, void *, int);
+extern int LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3D18(void *, void *, void *, float, float);
+extern int LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_0035FDB0(int, int, void *);
+extern void LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E38D8(void *, int, void *);
+extern int LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_0035FDB0(int, int, void *);
+extern void LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_00360100(int, void *);
+extern char LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_D_001C0240[];
+
+int LVL_30_INSOMNIAC_MUSEUM_FUN_002E2E80(char *obj)
+{
+    float buf[4];
+    float out[4];
+    char *p;
+    char *s1;
+    unsigned char k;
+    int r;
+    int s4;
+    int s5;
+
+    p = *(char **)(obj + 104);
+    k = *(unsigned char *)(p + 92);
+    if (k >= 3)
+        return 1;
+    if (k != 0)
+        LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3458(obj);
+    else
+        LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3298(obj);
+
+    s5 = LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3670(obj);
+    if (s5 == -1)
+        return 0;
+
+    s1 = LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_D_001C0240;
+    s4 = -1;
+    LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002F5130(1.0f, s1, s1);
+    LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002F4F80(buf, s1, p);
+    LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3BF8(obj, p + 16, buf);
+    LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_0032A160(obj + 16, out, 1);
+    r = LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E3D18(p, s1, out, *(float *)(p + 56), *(float *)(p + 60));
+    if (r == 0) {
+        if (*(unsigned char *)(p + 94) != 255 && *(unsigned char *)(p + 92) == 0)
+            s4 = LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_0035FDB0(*(unsigned char *)(p + 94), 0, obj);
+        LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_002E38D8(obj, s5, out);
+    } else {
+        if (*(unsigned char *)(p + 94) != 255)
+            s4 = LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_0035FDB0(*(unsigned char *)(p + 94), 0, obj);
+    }
+    if (s4 != -1)
+        LVL_30_INSOMNIAC_MUSEUM_Fdb046c5d_FUN_00360100(s4, p + 32);
+    return 0;
+}
+extern void LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_002F4ED8(char *out, void *source, float value);
+extern void LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_00425018(char *buffer, int mode);
+extern void LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_00424EB8(int value, char *buffer);
+extern void LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_002F4E68(char *first, char *second, char *third);
+extern float LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_002F4F58(void *owner, char *buffer);
+
+extern int LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_D_001B9E20[];
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_004256E0(void *owner, int flag, float value)
+{
+    char buffer[32];
+    int *root = LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_D_001B9E20;
+
+    LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_002F4ED8(buffer, root + 8, value);
+    if (flag)
+        LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_00425018(buffer + 16, 1);
+    else
+        LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_00424EB8(root[-4], buffer + 16);
+    LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_002F4E68(buffer, buffer, buffer + 16);
+    LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_002F4ED8(owner, root + 12, LVL_30_INSOMNIAC_MUSEUM_F7242f0a4_FUN_002F4F58(root + 12, buffer));
+}
+extern char LVL_30_INSOMNIAC_MUSEUM_F45821cfb_D_001C7B40[];
+extern void LVL_30_INSOMNIAC_MUSEUM_F45821cfb_FUN_002F4E30(char *);
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_004480F8(void)
+{
+    float *p = (float *)LVL_30_INSOMNIAC_MUSEUM_F45821cfb_D_001C7B40;
+
+    p[224] = 0.4f;
+    p[225] = 0.8f;
+    p[226] = 1.2f;
+    *(int *)&p[227] = 0;
+    p[228] = 0.577f;
+    p[229] = 0.577f;
+    p[230] = -0.577f;
+    *(int *)&p[231] = 0;
+    LVL_30_INSOMNIAC_MUSEUM_F45821cfb_FUN_002F4E30((char *)&p[232]);
+    LVL_30_INSOMNIAC_MUSEUM_F45821cfb_FUN_002F4E30((char *)&p[236]);
+}
+extern char LVL_30_INSOMNIAC_MUSEUM_Fd8e166aa_D_001BD200[];
+
+void LVL_30_INSOMNIAC_MUSEUM_FUN_002EA5F0(void)
+{
+    char *g = LVL_30_INSOMNIAC_MUSEUM_Fd8e166aa_D_001BD200;
+    int i = 0;
+    int *table = *(int **)(g + 8);
+    char *p = (char *)table + table[*(unsigned char *)0x1A7BB4];
+    int n = *(int *)p;
+
+    *(char **)(g + 12) = p + 8;
+    *(int *)(g + 16) = n;
+    for (i = 0; i < *(int *)(g + 16); i++) {
+        char *q = *(char **)(g + 12);
+        char *r = q - 8;
+
+        *(int *)(q + i * 16) = *(int *)(q + i * 16) + (int)r;
+    }
+}

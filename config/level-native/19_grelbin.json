@@ -57,6 +57,8 @@
     "LVL_19_GRELBIN_F435a49e6_FUN_0011AEA0": 1158816,
     "LVL_19_GRELBIN_F435a49e6_FUN_00126288": 1204872,
     "LVL_19_GRELBIN_F435a49e6_FUN_001265B0": 1205680,
+    "LVL_19_GRELBIN_F45821cfb_D_001C77C0": 1865664,
+    "LVL_19_GRELBIN_F45821cfb_FUN_002EB8E8": 3061992,
     "LVL_19_GRELBIN_F4e5bde81_D_00189E20": 1613344,
     "LVL_19_GRELBIN_F4e5bde81_D_001A7B08": 1735432,
     "LVL_19_GRELBIN_F4e5bde81_D_001A8FF0": 1740784,
@@ -83,6 +85,7 @@
     "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE00": 1618620,
     "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE01": 2791264,
     "LVL_19_GRELBIN_F6b0741c38bf00fee_AT002A9720_ROLE02": 2866896,
+    "LVL_19_GRELBIN_F6df9730c_FUN_002EB798": 3061656,
     "LVL_19_GRELBIN_F70997ba9_FUN_002E3E88": 3030664,
     "LVL_19_GRELBIN_F70997ba9_FUN_002E3FA8": 3030952,
     "LVL_19_GRELBIN_F70997ba9_FUN_002E6D38": 3042616,
@@ -91,6 +94,12 @@
     "LVL_19_GRELBIN_F70997ba9_FUN_002E7200": 3043840,
     "LVL_19_GRELBIN_F70997ba9_FUN_002F1F28": 3088168,
     "LVL_19_GRELBIN_F70997ba9_FUN_00379558": 3642712,
+    "LVL_19_GRELBIN_F7242f0a4_D_001B9AA0": 1809056,
+    "LVL_19_GRELBIN_F7242f0a4_FUN_002EB920": 3062048,
+    "LVL_19_GRELBIN_F7242f0a4_FUN_002EB990": 3062160,
+    "LVL_19_GRELBIN_F7242f0a4_FUN_002EBA10": 3062288,
+    "LVL_19_GRELBIN_F7242f0a4_FUN_00432140": 4399424,
+    "LVL_19_GRELBIN_F7242f0a4_FUN_004322A0": 4399776,
     "LVL_19_GRELBIN_F79744baad5ad7f65_AT00451188_ROLE00": 1622228,
     "LVL_19_GRELBIN_F86f665335d9cb905_AT003C0340_ROLE00": 3930520,
     "LVL_19_GRELBIN_F8a42bc68_D_002325D0": 2303440,
@@ -147,6 +156,19 @@
     "LVL_19_GRELBIN_Fcceeec15_D_001A6E90": 1732240,
     "LVL_19_GRELBIN_Fcceeec15_D_001B3188": 1782152,
     "LVL_19_GRELBIN_Fd1172b6a_D_001D2540": 1910080,
+    "LVL_19_GRELBIN_Fd8e166aa_D_001BCE80": 1822336,
+    "LVL_19_GRELBIN_Fdb046c5d_D_001BFEC0": 1834688,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_002D9E88": 2989704,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_002DA048": 2990152,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_002DA260": 2990688,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_002DA4C8": 2991304,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_002DA7E8": 2992104,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_002DA908": 2992392,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_002EBA38": 3062328,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_002EBC08": 3062792,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_00322C18": 3288088,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_0035D3D8": 3527640,
+    "LVL_19_GRELBIN_Fdb046c5d_FUN_0035D7B8": 3528632,
     "LVL_19_GRELBIN_Fe77c6258_D_001ADD18": 1760536,
     "LVL_19_GRELBIN_Fe77c6258_D_001ADD60": 1760608,
     "LVL_19_GRELBIN_Fe77c6258_FUN_00115E38": 1138232,
@@ -372,6 +394,12 @@
       "symbol": "LVL_19_GRELBIN_FUN_002D54C0"
     },
     {
+      "address": 2988656,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_19_GRELBIN_FUN_002D9A70"
+    },
+    {
       "address": 2989688,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -388,6 +416,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_19_GRELBIN_FUN_002DA4C8"
+    },
+    {
+      "address": 3019232,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_19_GRELBIN_FUN_002E11E0"
     },
     {
       "address": 3020048,
@@ -526,6 +560,12 @@
       "meaning": "shared native body of family 9306cc1f965a5c85",
       "size": 100,
       "symbol": "LVL_19_GRELBIN_FUN_00303C48"
+    },
+    {
+      "address": 3172072,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_19_GRELBIN_FUN_003066E8"
     },
     {
       "address": 3173136,
@@ -1100,6 +1140,12 @@
       "symbol": "LVL_19_GRELBIN_FUN_0042CD30"
     },
     {
+      "address": 4401512,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_19_GRELBIN_FUN_00432968"
+    },
+    {
       "address": 4435512,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1337,6 +1383,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_19_GRELBIN_FUN_004552A0"
+    },
+    {
+      "address": 4544712,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_19_GRELBIN_FUN_004558C8"
     },
     {
       "address": 4551312,

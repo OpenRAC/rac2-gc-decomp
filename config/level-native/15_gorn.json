@@ -53,6 +53,8 @@
     "LVL_15_GORN_F307ea0ee_FUN_00307208": 3174920,
     "LVL_15_GORN_F307ea0ee_FUN_00307220": 3174944,
     "LVL_15_GORN_F307ea0ee_FUN_00307C20": 3177504,
+    "LVL_15_GORN_F45821cfb_D_001C7540": 1865024,
+    "LVL_15_GORN_F45821cfb_FUN_00306BF8": 3173368,
     "LVL_15_GORN_F490e2c59_D_001A79F0": 1735152,
     "LVL_15_GORN_F490e2c59_D_001AA7F0": 1746928,
     "LVL_15_GORN_F4e5bde81_D_00189E20": 1613344,
@@ -72,6 +74,7 @@
     "LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE00": 1618620,
     "LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE01": 2879560,
     "LVL_15_GORN_F6b0741c38bf00fee_AT002BF008_ROLE02": 2960088,
+    "LVL_15_GORN_F6df9730c_FUN_00306AA8": 3173032,
     "LVL_15_GORN_F70997ba9_FUN_002FF208": 3142152,
     "LVL_15_GORN_F70997ba9_FUN_002FF328": 3142440,
     "LVL_15_GORN_F70997ba9_FUN_00302068": 3154024,
@@ -80,6 +83,12 @@
     "LVL_15_GORN_F70997ba9_FUN_00302510": 3155216,
     "LVL_15_GORN_F70997ba9_FUN_0030D1A8": 3199400,
     "LVL_15_GORN_F70997ba9_FUN_00397060": 3764320,
+    "LVL_15_GORN_F7242f0a4_D_001B9820": 1808416,
+    "LVL_15_GORN_F7242f0a4_FUN_00306C30": 3173424,
+    "LVL_15_GORN_F7242f0a4_FUN_00306CA0": 3173536,
+    "LVL_15_GORN_F7242f0a4_FUN_00306D20": 3173664,
+    "LVL_15_GORN_F7242f0a4_FUN_00445210": 4477456,
+    "LVL_15_GORN_F7242f0a4_FUN_00445370": 4477808,
     "LVL_15_GORN_F79744baad5ad7f65_AT00468158_ROLE00": 1622228,
     "LVL_15_GORN_F86f665335d9cb905_AT003D5AE0_ROLE00": 4018488,
     "LVL_15_GORN_F9cdc323a4d0c2fbd_AT003B4848_ROLE00": 3770072,
@@ -122,6 +131,19 @@
     "LVL_15_GORN_Fc84472d1_FUN_00115E38": 1138232,
     "LVL_15_GORN_Fc936841d_FUN_00306C30": 3173424,
     "LVL_15_GORN_Fc936841d_FUN_00306C60": 3173472,
+    "LVL_15_GORN_Fd8e166aa_D_001BCC00": 1821696,
+    "LVL_15_GORN_Fdb046c5d_D_001BFC40": 1834048,
+    "LVL_15_GORN_Fdb046c5d_FUN_002F5180": 3101056,
+    "LVL_15_GORN_Fdb046c5d_FUN_002F5340": 3101504,
+    "LVL_15_GORN_Fdb046c5d_FUN_002F5558": 3102040,
+    "LVL_15_GORN_Fdb046c5d_FUN_002F57C0": 3102656,
+    "LVL_15_GORN_Fdb046c5d_FUN_002F5AE0": 3103456,
+    "LVL_15_GORN_Fdb046c5d_FUN_002F5C00": 3103744,
+    "LVL_15_GORN_Fdb046c5d_FUN_00306D48": 3173704,
+    "LVL_15_GORN_Fdb046c5d_FUN_00306EF8": 3174136,
+    "LVL_15_GORN_Fdb046c5d_FUN_0033D6E8": 3397352,
+    "LVL_15_GORN_Fdb046c5d_FUN_00378070": 3637360,
+    "LVL_15_GORN_Fdb046c5d_FUN_00378450": 3638352,
     "LVL_15_GORN_Fe6db7296_D_001B9600": 1807872,
     "LVL_15_GORN_Fea34650e_D_00189E20": 1613344,
     "LVL_15_GORN_Feab1f2e5_D_001ADD98": 1760664,
@@ -369,6 +391,12 @@
       "symbol": "LVL_15_GORN_FUN_002F06E0"
     },
     {
+      "address": 3100008,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_15_GORN_FUN_002F4D68"
+    },
+    {
       "address": 3101040,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -391,6 +419,12 @@
       "meaning": "an 11-argument register/stack fill (10 values + index) into a 40-byte",
       "size": 116,
       "symbol": "LVL_15_GORN_FUN_002FB958"
+    },
+    {
+      "address": 3130584,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_15_GORN_FUN_002FC4D8"
     },
     {
       "address": 3131400,
@@ -505,6 +539,12 @@
       "meaning": "shared native body of family 490e2c59eb9d7105",
       "size": 112,
       "symbol": "LVL_15_GORN_FUN_0031F020"
+    },
+    {
+      "address": 3282736,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_15_GORN_FUN_00321730"
     },
     {
       "address": 3283800,
@@ -1049,6 +1089,12 @@
       "symbol": "LVL_15_GORN_FUN_0043FE00"
     },
     {
+      "address": 4479544,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_15_GORN_FUN_00445A38"
+    },
+    {
       "address": 4513416,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1286,6 +1332,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_15_GORN_FUN_0046C270"
+    },
+    {
+      "address": 4638872,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_15_GORN_FUN_0046C898"
     },
     {
       "address": 4645472,

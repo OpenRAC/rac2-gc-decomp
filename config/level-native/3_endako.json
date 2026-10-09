@@ -62,6 +62,8 @@
     "LVL_3_ENDAKO_F435a49e6_FUN_0011AEA0": 1158816,
     "LVL_3_ENDAKO_F435a49e6_FUN_00126288": 1204872,
     "LVL_3_ENDAKO_F435a49e6_FUN_001265B0": 1205680,
+    "LVL_3_ENDAKO_F45821cfb_D_001C77C0": 1865664,
+    "LVL_3_ENDAKO_F45821cfb_FUN_002EEF78": 3075960,
     "LVL_3_ENDAKO_F4e5bde81_D_00189E20": 1613344,
     "LVL_3_ENDAKO_F4e5bde81_D_001A7B08": 1735432,
     "LVL_3_ENDAKO_F4e5bde81_D_001A8FF0": 1740784,
@@ -85,6 +87,7 @@
     "LVL_3_ENDAKO_F6b0741c38bf00fee_AT002AC8F8_ROLE00": 1618620,
     "LVL_3_ENDAKO_F6b0741c38bf00fee_AT002AC8F8_ROLE01": 2804024,
     "LVL_3_ENDAKO_F6b0741c38bf00fee_AT002AC8F8_ROLE02": 2878832,
+    "LVL_3_ENDAKO_F6df9730c_FUN_002EEDF8": 3075576,
     "LVL_3_ENDAKO_F70997ba9_FUN_002E6F68": 3043176,
     "LVL_3_ENDAKO_F70997ba9_FUN_002E7088": 3043464,
     "LVL_3_ENDAKO_F70997ba9_FUN_002E9B98": 3054488,
@@ -93,6 +96,12 @@
     "LVL_3_ENDAKO_F70997ba9_FUN_002EA040": 3055680,
     "LVL_3_ENDAKO_F70997ba9_FUN_002F5570": 3102064,
     "LVL_3_ENDAKO_F70997ba9_FUN_0037CA78": 3656312,
+    "LVL_3_ENDAKO_F7242f0a4_D_001B99E0": 1808864,
+    "LVL_3_ENDAKO_F7242f0a4_FUN_002EEFB0": 3076016,
+    "LVL_3_ENDAKO_F7242f0a4_FUN_002EF020": 3076128,
+    "LVL_3_ENDAKO_F7242f0a4_FUN_002EF0A0": 3076256,
+    "LVL_3_ENDAKO_F7242f0a4_FUN_004320D0": 4399312,
+    "LVL_3_ENDAKO_F7242f0a4_FUN_00432230": 4399664,
     "LVL_3_ENDAKO_F79744baad5ad7f65_AT00450D50_ROLE00": 1622228,
     "LVL_3_ENDAKO_F7b754363_D_001ADD58": 1760600,
     "LVL_3_ENDAKO_F7b754363_D_001ADDA0": 1760672,
@@ -142,6 +151,19 @@
     "LVL_3_ENDAKO_Fcceeec15_D_001A6E90": 1732240,
     "LVL_3_ENDAKO_Fcceeec15_D_001B3188": 1782152,
     "LVL_3_ENDAKO_Fd1172b6a_D_001D2540": 1910080,
+    "LVL_3_ENDAKO_Fd8e166aa_D_001BCDC0": 1822144,
+    "LVL_3_ENDAKO_Fdb046c5d_D_001BFE00": 1834496,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_002DCF68": 3002216,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_002DD128": 3002664,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_002DD340": 3003200,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_002DD5A8": 3003816,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_002DD8C8": 3004616,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_002DD9E8": 3004904,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_002EF0C8": 3076296,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_002EF298": 3076760,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_00325550": 3298640,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_00360A80": 3541632,
+    "LVL_3_ENDAKO_Fdb046c5d_FUN_00360E60": 3542624,
     "LVL_3_ENDAKO_Fea34650e_D_00189E20": 1613344,
     "LVL_3_ENDAKO_Fee2b87d1_D_0014B540": 1357120,
     "LVL_3_ENDAKO_Fee2b87d1_D_00152CD0": 1387728,
@@ -366,6 +388,12 @@
       "symbol": "LVL_3_ENDAKO_FUN_002D8418"
     },
     {
+      "address": 3001168,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_3_ENDAKO_FUN_002DCB50"
+    },
+    {
       "address": 3002200,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -382,6 +410,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_3_ENDAKO_FUN_002DD5A8"
+    },
+    {
+      "address": 3031744,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_3_ENDAKO_FUN_002E42C0"
     },
     {
       "address": 3032560,
@@ -514,6 +548,12 @@
       "meaning": "shared native body of family 430eca3b2fc8d2b0",
       "size": 112,
       "symbol": "LVL_3_ENDAKO_FUN_00307730"
+    },
+    {
+      "address": 3186240,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_3_ENDAKO_FUN_00309E40"
     },
     {
       "address": 3187304,
@@ -1084,6 +1124,12 @@
       "symbol": "LVL_3_ENDAKO_FUN_0042CCC0"
     },
     {
+      "address": 4401400,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_3_ENDAKO_FUN_004328F8"
+    },
+    {
       "address": 4436000,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1321,6 +1367,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_3_ENDAKO_FUN_00454E68"
+    },
+    {
+      "address": 4543632,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_3_ENDAKO_FUN_00455490"
     },
     {
       "address": 4550232,

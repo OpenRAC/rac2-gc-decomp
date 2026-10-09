@@ -1,0 +1,57 @@
+extern void @@ROLE_0_00@@(void *);
+extern void @@ROLE_1_00@@(void *);
+extern int @@ROLE_2_00@@(void *);
+extern void @@ROLE_3_00@@(float, void *, void *);
+extern void @@ROLE_4_00@@(void *, void *, void *);
+extern void @@ROLE_5_00@@(void *, void *, void *);
+extern void @@ROLE_6_00@@(void *, void *, int);
+extern int @@ROLE_7_00@@(void *, void *, void *, float, float);
+extern int @@ROLE_8_00@@(int, int, void *);
+extern void @@ROLE_9_00@@(void *, int, void *);
+extern int @@ROLE_10_00@@(int, int, void *);
+extern void @@ROLE_11_00@@(int, void *);
+extern char @@DATA_0_00@@[];
+
+int @@FUNCTION@@(char *obj)
+{
+    float buf[4];
+    float out[4];
+    char *p;
+    char *s1;
+    unsigned char k;
+    int r;
+    int s4;
+    int s5;
+
+    p = *(char **)(obj + 104);
+    k = *(unsigned char *)(p + 92);
+    if (k >= 3)
+        return 1;
+    if (k != 0)
+        @@ROLE_0_01@@(obj);
+    else
+        @@ROLE_1_01@@(obj);
+
+    s5 = @@ROLE_2_01@@(obj);
+    if (s5 == -1)
+        return 0;
+
+    s1 = @@DATA_0_01@@;
+    s4 = -1;
+    @@ROLE_3_01@@(1.0f, s1, s1);
+    @@ROLE_4_01@@(buf, s1, p);
+    @@ROLE_5_01@@(obj, p + 16, buf);
+    @@ROLE_6_01@@(obj + 16, out, 1);
+    r = @@ROLE_7_01@@(p, s1, out, *(float *)(p + 56), *(float *)(p + 60));
+    if (r == 0) {
+        if (*(unsigned char *)(p + 94) != 255 && *(unsigned char *)(p + 92) == 0)
+            s4 = @@ROLE_8_01@@(*(unsigned char *)(p + 94), 0, obj);
+        @@ROLE_9_01@@(obj, s5, out);
+    } else {
+        if (*(unsigned char *)(p + 94) != 255)
+            s4 = @@ROLE_10_01@@(*(unsigned char *)(p + 94), 0, obj);
+    }
+    if (s4 != -1)
+        @@ROLE_11_01@@(s4, p + 32);
+    return 0;
+}
