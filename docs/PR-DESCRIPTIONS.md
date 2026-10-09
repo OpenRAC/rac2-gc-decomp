@@ -105,10 +105,15 @@ python scripts/pr_description.py --body-file <pr-body.md>
 ```
 
 The workflow reads current PR metadata and filenames through GitHub's API,
-executes only trusted target-branch code and publishes the status to the
+executes only code from this repository's current protected `RAC2` branch and
+publishes the status to the
 exact PR head. It never checks out the contributor branch or executes a pasted
 command. A maintainer can rerun **PR description contract** with the PR number
 on the `RAC2` branch to validate an older open PR after rollout.
+The checkout deliberately ignores the PR event's cached base SHA: an older
+PR may still name a base commit from before the validator existed. Updating a
+description must use the current trusted validator even while that PR's source
+branch awaits its separate upstream refresh.
 
 The check validates the description's structure, not the truth of tests,
 ownership, hashes, ABI claims or byte equality. Existing test/progress gates,
