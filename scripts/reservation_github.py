@@ -82,7 +82,7 @@ class GitHub:
             except OSError:
                 raise CoordinationError("github_transport_unconfirmed") from None
         else:
-            command = ["gh", "api", path.lstrip("/"), "--method", method,
+            command = ["gh", "api", path.lstrip("/"), "--hostname", "github.com", "--method", method,
                        "-H", "Accept: " + accept, "-H", "X-GitHub-Api-Version: 2022-11-28"]
             if value is not None:
                 command += ["--input", "-"]

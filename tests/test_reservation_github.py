@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from reservation_core import apply_command, empty_state, normalize_target, validate_state
@@ -92,6 +94,13 @@ def event(actor="alice", issue=1, command=10, request=None):
 
 
 class GitHubCoordinationTests(unittest.TestCase):
+    def test_cli_transport_pins_public_github_host_even_with_an_enterprise_default(self):
+        answer = SimpleNamespace(returncode=0, stdout=b'{"login":"alice"}', stderr=b'')
+        with patch.dict('os.environ', {'GH_HOST': 'enterprise.invalid'}), patch('reservation_github.subprocess.run', return_value=answer) as execute:
+            self.assertEqual(GitHub().user(), 'alice')
+        argv = execute.call_args.args[0]
+        self.assertEqual(argv[argv.index('--hostname') + 1], 'github.com')
+
     def test_racing_claims_recheck_after_cas_and_only_one_wins(self):
         api = MemoryAPI()
         request = {"op": "claim", "kind": "functions", "targets": [target()]}
