@@ -18,6 +18,10 @@ with the source commit and the repository file it informed.
   here until re-measured against `config/target.json`.
 - Licence: the repository carries no `LICENSE` file at the reviewed revision.
   No source text, script or data from it has been copied into this repository.
+- Permission: the maintainer reports that the author agreed to reuse. The
+  author's own approval on the pull request that introduced this file is the
+  record; the scope and licence of any later adoption are to be stated in the
+  row that adopts it.
 
 ### What was taken
 
