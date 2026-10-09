@@ -6,9 +6,12 @@ Its own message is "DIV related opcode too near possible branch destination",
 and for a division inside a delay slot it says "DIV related opcode used in
 branch delay slot -- Automatic padding cannot take place".
 
-Measured rule, on the retail assembler as the oracle
-(`D:/RAC2/work/army-20261009/diag-ps2eeas/`, witnesses reproduced by
-`tools/validate2.py`):
+Measured rule. The oracle is the retail assembler itself, driven by a private
+diagnostic harness that is deliberately kept outside this repository; the
+harness reconstructs a witness around each sampled retail division site and
+asks the retail assembler to regenerate the run length. The witnesses live with
+that private harness, not here, and no binary, object or image from it is
+published.
 
   (A) Padding.  When a division opcode is emitted fewer than two instructions
       after the most recent label -- any label, even one never branched to --

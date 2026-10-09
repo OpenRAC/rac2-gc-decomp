@@ -481,11 +481,11 @@ source unit.
 
 **The oracle and where it came from.** The rule was established against the
 retail assembler itself — SN ProDG `Ps2EeAs`, the same tool the reconstructed
-assembly path already uses (`c839dd63…`). The witnesses live outside this
-repository in the private diagnostic directory
-`D:/RAC2/work/army-20261009/diag-ps2eeas/`; no binary, object or image from it
-is published here. Because the oracle is the retail tool, every statement below
-is a measurement of the retail behaviour, not a model of it.
+assembly path already uses (`c839dd63…`). The witnesses and the harness that
+drives them live in a private diagnostic directory outside this repository; no
+binary, object or image from it is published here. Because the oracle is the
+retail tool, every statement below is a measurement of the retail behaviour,
+not a model of it.
 
 **The measured rule.**
 
