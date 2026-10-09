@@ -273,6 +273,9 @@ and contributed research in [community engine references](docs/COMMUNITY-ENGINE-
 Compiler, libgcc and SDK findings measured on RAC1 are summarised in
 [findings from rac1-decomp](docs/RAC1-DECOMP-FINDINGS.md).
 [OpenRAC](https://openrac.dev/) provides a community view of decompilation projects.
+Outside work used here is credited in [CREDITS.md](CREDITS.md); leads from
+[Promises/RC2-Going-Decompiled](https://github.com/Promises/RC2-Going-Decompiled)
+are in [the Promises gap report](docs/PROMISES-GAP-REPORT.md).
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before contributing. Write documentation,
 comments and commits in English; use a scoped subject and substantive commit body.
