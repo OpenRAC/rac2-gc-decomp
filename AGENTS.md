@@ -41,6 +41,13 @@ Write all repository documentation, code comments, user-facing messages,
 catalogue descriptions and commit messages in English. Preserve measured game
 identifiers, symbol names, program identities and pinned reference hashes.
 
+Every PR targeting `RAC2` must follow [the PR description contract](docs/PR-DESCRIPTIONS.md)
+and complete the repository template for its actual change. Report the validated
+base, scope/ownership, reproducible commands and real outcomes, relevant matching
+proofs and separate physical/unique deltas, limitations and provenance. Explain
+non-applicable fields instead of inventing tests. The required description check
+does not replace technical review, reservation acknowledgement or byte gates.
+
 Use the detailed Lombyte commit style: a scoped subject such as `overlay:`,
 `decomp:`, `compiler:`, `docs:` or `fix:`, followed by a substantive body.
 Describe the concrete change and its technical reason, the measured scope and
