@@ -46,7 +46,20 @@ class CampaignCommandTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertEqual(finalize.call_args.args[2], "b" * 32)
         self.assertEqual(finalize.call_args.kwargs, {"manifest": manifest, "output": destination,
-                                                    "references": refs, "tasks": ("one", "two"), "apply": True})
+                                                    "references": refs, "tasks": ("one", "two"), "apply": True,
+                                                    "maintainer_tests": ()})
+
+    def test_finalize_dispatch_forwards_explicit_maintainer_modules(self):
+        manifest, destination = self.runtime / "manifest.json", self.runtime / "final"
+        with mock.patch("campaign_finalize.finalize", return_value={"state": "prepared"}) as finalize, \
+                contextlib.redirect_stdout(io.StringIO()):
+            code = campaign.main([*self.prefix, "finalize", "b" * 32, "--manifest", str(manifest),
+                                  "--output", str(destination), "--maintainer-test", "test_campaign_finalize",
+                                  "--maintainer-test", "test_maintainer_test_policy"])
+        self.assertEqual(code, 0)
+        self.assertEqual(finalize.call_args.kwargs["maintainer_tests"],
+                         ("test_campaign_finalize", "test_maintainer_test_policy"))
+        self.assertFalse(finalize.call_args.kwargs["apply"])
 
     def test_browser_open_requires_readonly_server(self):
         with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as error:
