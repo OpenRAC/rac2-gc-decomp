@@ -79,6 +79,8 @@
     "LVL_18_DAMOSEL_F412a47f9_D_001B2DA0": 1781152,
     "LVL_18_DAMOSEL_F412a47f9_D_001B2DC0": 1781184,
     "LVL_18_DAMOSEL_F412a47f9_D_001B2F88": 1781640,
+    "LVL_18_DAMOSEL_F45821cfb_D_001C7540": 1865024,
+    "LVL_18_DAMOSEL_F45821cfb_FUN_003088B8": 3180728,
     "LVL_18_DAMOSEL_F4e5bde81_D_00189E20": 1613344,
     "LVL_18_DAMOSEL_F4e5bde81_D_001A7B08": 1735432,
     "LVL_18_DAMOSEL_F4e5bde81_D_001A8FF0": 1740784,
@@ -96,6 +98,7 @@
     "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE00": 1618620,
     "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE01": 2898928,
     "LVL_18_DAMOSEL_F6b0741c38bf00fee_AT002C3BB0_ROLE02": 2976952,
+    "LVL_18_DAMOSEL_F6df9730c_FUN_00308768": 3180392,
     "LVL_18_DAMOSEL_F70997ba9_FUN_00300C90": 3148944,
     "LVL_18_DAMOSEL_F70997ba9_FUN_00300DB0": 3149232,
     "LVL_18_DAMOSEL_F70997ba9_FUN_003038C0": 3160256,
@@ -104,6 +107,12 @@
     "LVL_18_DAMOSEL_F70997ba9_FUN_00303D88": 3161480,
     "LVL_18_DAMOSEL_F70997ba9_FUN_0030EE70": 3206768,
     "LVL_18_DAMOSEL_F70997ba9_FUN_003976B0": 3765936,
+    "LVL_18_DAMOSEL_F7242f0a4_D_001B9820": 1808416,
+    "LVL_18_DAMOSEL_F7242f0a4_FUN_003088F0": 3180784,
+    "LVL_18_DAMOSEL_F7242f0a4_FUN_00308960": 3180896,
+    "LVL_18_DAMOSEL_F7242f0a4_FUN_003089E0": 3181024,
+    "LVL_18_DAMOSEL_F7242f0a4_FUN_0044D810": 4511760,
+    "LVL_18_DAMOSEL_F7242f0a4_FUN_0044D970": 4512112,
     "LVL_18_DAMOSEL_F74e6a904_D_001A8F10": 1740560,
     "LVL_18_DAMOSEL_F74e6a904_D_001B2370": 1778544,
     "LVL_18_DAMOSEL_F74e6a904_D_001B2374": 1778548,
@@ -157,6 +166,19 @@
     "LVL_18_DAMOSEL_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_18_DAMOSEL_Fc936841d_FUN_003088F0": 3180784,
     "LVL_18_DAMOSEL_Fc936841d_FUN_00308920": 3180832,
+    "LVL_18_DAMOSEL_Fd8e166aa_D_001BCC00": 1821696,
+    "LVL_18_DAMOSEL_Fdb046c5d_D_001BFC40": 1834048,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_002F6C90": 3107984,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_002F6E50": 3108432,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_002F7068": 3108968,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_002F72D0": 3109584,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_002F75F0": 3110384,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_002F7710": 3110672,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_00308A08": 3181064,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_00308BD8": 3181528,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_0033FF10": 3407632,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_0037B6B0": 3651248,
+    "LVL_18_DAMOSEL_Fdb046c5d_FUN_0037BA00": 3652096,
     "LVL_18_DAMOSEL_Fe6db7296_D_001B9600": 1807872,
     "LVL_18_DAMOSEL_Fe77c6258_D_001ADD18": 1760536,
     "LVL_18_DAMOSEL_Fe77c6258_D_001ADD60": 1760608,
@@ -393,6 +415,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_002F22C8"
     },
     {
+      "address": 3106936,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_18_DAMOSEL_FUN_002F6878"
+    },
+    {
       "address": 3107968,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -415,6 +443,12 @@
       "meaning": "an 11-argument register/stack fill (10 values + index) into a 40-byte",
       "size": 116,
       "symbol": "LVL_18_DAMOSEL_FUN_002FD468"
+    },
+    {
+      "address": 3137512,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_18_DAMOSEL_FUN_002FDFE8"
     },
     {
       "address": 3138328,
@@ -553,6 +587,12 @@
       "meaning": "shared native body of family 0dbfe45a6dadbe96",
       "size": 100,
       "symbol": "LVL_18_DAMOSEL_FUN_003206C0"
+    },
+    {
+      "address": 3289440,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_18_DAMOSEL_FUN_00323160"
     },
     {
       "address": 3290504,
@@ -1168,6 +1208,12 @@
       "symbol": "LVL_18_DAMOSEL_FUN_00448400"
     },
     {
+      "address": 4513848,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_18_DAMOSEL_FUN_0044E038"
+    },
+    {
       "address": 4553208,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1405,6 +1451,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_18_DAMOSEL_FUN_004716C0"
+    },
+    {
+      "address": 4660456,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_18_DAMOSEL_FUN_00471CE8"
     },
     {
       "address": 4667056,

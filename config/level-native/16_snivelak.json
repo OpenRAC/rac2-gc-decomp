@@ -46,6 +46,8 @@
     "LVL_16_SNIVELAK_F307ea0ee_FUN_002E7A98": 3046040,
     "LVL_16_SNIVELAK_F307ea0ee_FUN_002E7AB0": 3046064,
     "LVL_16_SNIVELAK_F307ea0ee_FUN_002E84F0": 3048688,
+    "LVL_16_SNIVELAK_F45821cfb_D_001C7880": 1865856,
+    "LVL_16_SNIVELAK_F45821cfb_FUN_002E7450": 3044432,
     "LVL_16_SNIVELAK_F4a421ea7_D_00226940": 2255168,
     "LVL_16_SNIVELAK_F4a421ea7_D_00226C40": 2255936,
     "LVL_16_SNIVELAK_F4e5bde81_D_00189E20": 1613344,
@@ -70,6 +72,7 @@
     "LVL_16_SNIVELAK_F6b0741c38bf00fee_AT002A7508_ROLE00": 1618620,
     "LVL_16_SNIVELAK_F6b0741c38bf00fee_AT002A7508_ROLE01": 2782536,
     "LVL_16_SNIVELAK_F6b0741c38bf00fee_AT002A7508_ROLE02": 2856048,
+    "LVL_16_SNIVELAK_F6df9730c_FUN_002E7300": 3044096,
     "LVL_16_SNIVELAK_F70997ba9_FUN_002DF6C0": 3012288,
     "LVL_16_SNIVELAK_F70997ba9_FUN_002DF7E0": 3012576,
     "LVL_16_SNIVELAK_F70997ba9_FUN_002E22F0": 3023600,
@@ -78,6 +81,12 @@
     "LVL_16_SNIVELAK_F70997ba9_FUN_002E2798": 3024792,
     "LVL_16_SNIVELAK_F70997ba9_FUN_002EDA60": 3070560,
     "LVL_16_SNIVELAK_F70997ba9_FUN_003731D0": 3617232,
+    "LVL_16_SNIVELAK_F7242f0a4_D_001B9B60": 1809248,
+    "LVL_16_SNIVELAK_F7242f0a4_FUN_002E7488": 3044488,
+    "LVL_16_SNIVELAK_F7242f0a4_FUN_002E7510": 3044624,
+    "LVL_16_SNIVELAK_F7242f0a4_FUN_002E7590": 3044752,
+    "LVL_16_SNIVELAK_F7242f0a4_FUN_0042B2C8": 4371144,
+    "LVL_16_SNIVELAK_F7242f0a4_FUN_0042B428": 4371496,
     "LVL_16_SNIVELAK_F79744baad5ad7f65_AT0044B828_ROLE00": 1622228,
     "LVL_16_SNIVELAK_F7f9c1f18_D_001BD2C8": 1823432,
     "LVL_16_SNIVELAK_F86f665335d9cb905_AT003B8EF8_ROLE00": 3900752,
@@ -132,6 +141,19 @@
     "LVL_16_SNIVELAK_Fd1a69f7e_D_00238000": 2326528,
     "LVL_16_SNIVELAK_Fd1a69f7e_D_002392C0": 2331328,
     "LVL_16_SNIVELAK_Fd1a69f7e_D_002392C0_1": 2331328,
+    "LVL_16_SNIVELAK_Fd8e166aa_D_001BCF40": 1822528,
+    "LVL_16_SNIVELAK_Fdb046c5d_D_001BFF80": 1834880,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_002D56C0": 2971328,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5880": 2971776,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5A98": 2972312,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_002D5D00": 2972928,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_002D6020": 2973728,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_002D6140": 2974016,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_002E75B8": 3044792,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_002E7788": 3045256,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_0031D978": 3266936,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_00357288": 3502728,
+    "LVL_16_SNIVELAK_Fdb046c5d_FUN_003575D8": 3503576,
     "LVL_16_SNIVELAK_Fe21f3c02_D_001BC730": 1820464,
     "LVL_16_SNIVELAK_Fe77c6258_D_001ADD18": 1760536,
     "LVL_16_SNIVELAK_Fe77c6258_D_001ADD60": 1760608,
@@ -356,6 +378,12 @@
       "symbol": "LVL_16_SNIVELAK_FUN_002D0B60"
     },
     {
+      "address": 2970280,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_16_SNIVELAK_FUN_002D52A8"
+    },
+    {
       "address": 2971312,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -378,6 +406,12 @@
       "meaning": "shared native body of family 7f9c1f18f9690ee6",
       "size": 116,
       "symbol": "LVL_16_SNIVELAK_FUN_002DBE98"
+    },
+    {
+      "address": 3000856,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_16_SNIVELAK_FUN_002DCA18"
     },
     {
       "address": 3001672,
@@ -480,6 +514,12 @@
       "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
       "symbol": "LVL_16_SNIVELAK_FUN_002FF0F8"
+    },
+    {
+      "address": 3154768,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_16_SNIVELAK_FUN_00302350"
     },
     {
       "address": 3155832,
@@ -1078,6 +1118,12 @@
       "symbol": "LVL_16_SNIVELAK_FUN_00425EB8"
     },
     {
+      "address": 4373232,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_16_SNIVELAK_FUN_0042BAF0"
+    },
+    {
       "address": 4412536,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1315,6 +1361,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_16_SNIVELAK_FUN_0044F940"
+    },
+    {
+      "address": 4521832,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_16_SNIVELAK_FUN_0044FF68"
     },
     {
       "address": 4528432,

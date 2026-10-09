@@ -1,0 +1,21 @@
+extern void @@ROLE_0_00@@(char *out, void *source, float value);
+extern void @@ROLE_1_00@@(char *buffer, int mode);
+extern void @@ROLE_2_00@@(int value, char *buffer);
+extern void @@ROLE_3_00@@(char *first, char *second, char *third);
+extern float @@ROLE_4_00@@(void *owner, char *buffer);
+
+extern int @@DATA_0_00@@[];
+
+void @@FUNCTION@@(void *owner, int flag, float value)
+{
+    char buffer[32];
+    int *root = @@DATA_0_01@@;
+
+    @@ROLE_0_01@@(buffer, root + 8, value);
+    if (flag)
+        @@ROLE_1_01@@(buffer + 16, 1);
+    else
+        @@ROLE_2_01@@(root[-4], buffer + 16);
+    @@ROLE_3_01@@(buffer, buffer, buffer + 16);
+    @@ROLE_0_02@@(owner, root + 12, @@ROLE_4_01@@(root + 12, buffer));
+}

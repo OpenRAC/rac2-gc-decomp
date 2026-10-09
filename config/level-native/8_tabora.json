@@ -43,6 +43,8 @@
     "LVL_8_TABORA_F307ea0ee_FUN_002FA3C8": 3122120,
     "LVL_8_TABORA_F307ea0ee_FUN_002FA3E0": 3122144,
     "LVL_8_TABORA_F307ea0ee_FUN_002FADE0": 3124704,
+    "LVL_8_TABORA_F45821cfb_D_001C7880": 1865856,
+    "LVL_8_TABORA_F45821cfb_FUN_002F9DB8": 3120568,
     "LVL_8_TABORA_F4a421ea7_D_00226940": 2255168,
     "LVL_8_TABORA_F4a421ea7_D_00226C40": 2255936,
     "LVL_8_TABORA_F4e5bde81_D_00189E20": 1613344,
@@ -73,6 +75,7 @@
     "LVL_8_TABORA_F6b0741c38bf00fee_AT002B8598_ROLE00": 1618620,
     "LVL_8_TABORA_F6b0741c38bf00fee_AT002B8598_ROLE01": 2852312,
     "LVL_8_TABORA_F6b0741c38bf00fee_AT002B8598_ROLE02": 2927952,
+    "LVL_8_TABORA_F6df9730c_FUN_002F9C68": 3120232,
     "LVL_8_TABORA_F70997ba9_FUN_002F2230": 3088944,
     "LVL_8_TABORA_F70997ba9_FUN_002F2350": 3089232,
     "LVL_8_TABORA_F70997ba9_FUN_002F50E0": 3100896,
@@ -81,6 +84,12 @@
     "LVL_8_TABORA_F70997ba9_FUN_002F5588": 3102088,
     "LVL_8_TABORA_F70997ba9_FUN_003003D8": 3146712,
     "LVL_8_TABORA_F70997ba9_FUN_00389AB0": 3709616,
+    "LVL_8_TABORA_F7242f0a4_D_001B9B60": 1809248,
+    "LVL_8_TABORA_F7242f0a4_FUN_002F9DF0": 3120624,
+    "LVL_8_TABORA_F7242f0a4_FUN_002F9E60": 3120736,
+    "LVL_8_TABORA_F7242f0a4_FUN_002F9EE0": 3120864,
+    "LVL_8_TABORA_F7242f0a4_FUN_0043CD38": 4443448,
+    "LVL_8_TABORA_F7242f0a4_FUN_0043CE98": 4443800,
     "LVL_8_TABORA_F79744baad5ad7f65_AT0045BCD0_ROLE00": 1622228,
     "LVL_8_TABORA_F7f9c1f18_D_001BD2C8": 1823432,
     "LVL_8_TABORA_F86f665335d9cb905_AT003D2F30_ROLE00": 4007304,
@@ -142,6 +151,19 @@
     "LVL_8_TABORA_Fd1a69f7e_D_00238000": 2326528,
     "LVL_8_TABORA_Fd1a69f7e_D_002392C0": 2331328,
     "LVL_8_TABORA_Fd1a69f7e_D_002392C0_1": 2331328,
+    "LVL_8_TABORA_Fd8e166aa_D_001BCF40": 1822528,
+    "LVL_8_TABORA_Fdb046c5d_D_001BFF80": 1834880,
+    "LVL_8_TABORA_Fdb046c5d_FUN_002E8230": 3047984,
+    "LVL_8_TABORA_Fdb046c5d_FUN_002E83F0": 3048432,
+    "LVL_8_TABORA_Fdb046c5d_FUN_002E8608": 3048968,
+    "LVL_8_TABORA_Fdb046c5d_FUN_002E8870": 3049584,
+    "LVL_8_TABORA_Fdb046c5d_FUN_002E8B90": 3050384,
+    "LVL_8_TABORA_Fdb046c5d_FUN_002E8CB0": 3050672,
+    "LVL_8_TABORA_Fdb046c5d_FUN_002F9F08": 3120904,
+    "LVL_8_TABORA_Fdb046c5d_FUN_002FA0B8": 3121336,
+    "LVL_8_TABORA_Fdb046c5d_FUN_00333B60": 3357536,
+    "LVL_8_TABORA_Fdb046c5d_FUN_0036D8E0": 3594464,
+    "LVL_8_TABORA_Fdb046c5d_FUN_0036DCC0": 3595456,
     "LVL_8_TABORA_Fe21f3c02_D_001BC730": 1820464,
     "LVL_8_TABORA_Fea34650e_D_00189E20": 1613344,
     "LVL_8_TABORA_Fee2b87d1_D_0014B540": 1357120,
@@ -369,6 +391,12 @@
       "symbol": "LVL_8_TABORA_FUN_002E3868"
     },
     {
+      "address": 3046936,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_8_TABORA_FUN_002E7E18"
+    },
+    {
       "address": 3047968,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -391,6 +419,12 @@
       "meaning": "shared native body of family 7f9c1f18f9690ee6",
       "size": 116,
       "symbol": "LVL_8_TABORA_FUN_002EEA08"
+    },
+    {
+      "address": 3077512,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_8_TABORA_FUN_002EF588"
     },
     {
       "address": 3078328,
@@ -505,6 +539,12 @@
       "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
       "symbol": "LVL_8_TABORA_FUN_00311FA0"
+    },
+    {
+      "address": 3232248,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_8_TABORA_FUN_003151F8"
     },
     {
       "address": 3233312,
@@ -1049,6 +1089,12 @@
       "symbol": "LVL_8_TABORA_FUN_00437928"
     },
     {
+      "address": 4445536,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_8_TABORA_FUN_0043D560"
+    },
+    {
       "address": 4480640,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1286,6 +1332,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_8_TABORA_FUN_0045FDE8"
+    },
+    {
+      "address": 4588560,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_8_TABORA_FUN_00460410"
     },
     {
       "address": 4595160,

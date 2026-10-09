@@ -56,6 +56,8 @@
     "LVL_5_FELTZIN_SYSTEM_F307ea0ee_FUN_00306C08": 3173384,
     "LVL_5_FELTZIN_SYSTEM_F307ea0ee_FUN_00306C20": 3173408,
     "LVL_5_FELTZIN_SYSTEM_F307ea0ee_FUN_00307620": 3175968,
+    "LVL_5_FELTZIN_SYSTEM_F45821cfb_D_001C7440": 1864768,
+    "LVL_5_FELTZIN_SYSTEM_F45821cfb_FUN_003065F8": 3171832,
     "LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_00189E20": 1613344,
     "LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A7B08": 1735432,
     "LVL_5_FELTZIN_SYSTEM_F4e5bde81_D_001A8FF0": 1740784,
@@ -77,6 +79,7 @@
     "LVL_5_FELTZIN_SYSTEM_F6b0741c38bf00fee_AT002BEA08_ROLE00": 1618620,
     "LVL_5_FELTZIN_SYSTEM_F6b0741c38bf00fee_AT002BEA08_ROLE01": 2878024,
     "LVL_5_FELTZIN_SYSTEM_F6b0741c38bf00fee_AT002BEA08_ROLE02": 2958552,
+    "LVL_5_FELTZIN_SYSTEM_F6df9730c_FUN_003064A8": 3171496,
     "LVL_5_FELTZIN_SYSTEM_F70997ba9_FUN_002FEC08": 3140616,
     "LVL_5_FELTZIN_SYSTEM_F70997ba9_FUN_002FED28": 3140904,
     "LVL_5_FELTZIN_SYSTEM_F70997ba9_FUN_00301A68": 3152488,
@@ -85,6 +88,12 @@
     "LVL_5_FELTZIN_SYSTEM_F70997ba9_FUN_00301F10": 3153680,
     "LVL_5_FELTZIN_SYSTEM_F70997ba9_FUN_0030CBA8": 3197864,
     "LVL_5_FELTZIN_SYSTEM_F70997ba9_FUN_003906F8": 3737336,
+    "LVL_5_FELTZIN_SYSTEM_F7242f0a4_D_001B9720": 1808160,
+    "LVL_5_FELTZIN_SYSTEM_F7242f0a4_FUN_00306630": 3171888,
+    "LVL_5_FELTZIN_SYSTEM_F7242f0a4_FUN_003066A0": 3172000,
+    "LVL_5_FELTZIN_SYSTEM_F7242f0a4_FUN_00306720": 3172128,
+    "LVL_5_FELTZIN_SYSTEM_F7242f0a4_FUN_00438878": 4425848,
+    "LVL_5_FELTZIN_SYSTEM_F7242f0a4_FUN_004389D8": 4426200,
     "LVL_5_FELTZIN_SYSTEM_F79744baad5ad7f65_AT0045B4D8_ROLE00": 1622228,
     "LVL_5_FELTZIN_SYSTEM_F7a3a32da_D_001B2C88": 1780872,
     "LVL_5_FELTZIN_SYSTEM_F7a3a32da_FUN_00126288": 1204872,
@@ -143,6 +152,19 @@
     "LVL_5_FELTZIN_SYSTEM_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_5_FELTZIN_SYSTEM_Fc936841d_FUN_00306630": 3171888,
     "LVL_5_FELTZIN_SYSTEM_Fc936841d_FUN_00306660": 3171936,
+    "LVL_5_FELTZIN_SYSTEM_Fd8e166aa_D_001BCB00": 1821440,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_D_001BFB40": 1833792,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_002F4B80": 3099520,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_002F4D40": 3099968,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_002F4F58": 3100504,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_002F51C0": 3101120,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_002F54E0": 3101920,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_002F5600": 3102208,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_00306748": 3172168,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_003068F8": 3172600,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_0033C3F8": 3392504,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_00371900": 3610880,
+    "LVL_5_FELTZIN_SYSTEM_Fdb046c5d_FUN_00371C50": 3611728,
     "LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2048": 1777736,
     "LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2440": 1778752,
     "LVL_5_FELTZIN_SYSTEM_Fe7046bc9_D_001B2520": 1778976,
@@ -387,6 +409,12 @@
       "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002F00E0"
     },
     {
+      "address": 3098472,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002F4768"
+    },
+    {
       "address": 3099504,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -403,6 +431,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002F51C0"
+    },
+    {
+      "address": 3129048,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_002FBED8"
     },
     {
       "address": 3129864,
@@ -535,6 +569,12 @@
       "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
       "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0031DD00"
+    },
+    {
+      "address": 3280728,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00320F58"
     },
     {
       "address": 3281792,
@@ -1115,6 +1155,12 @@
       "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_00433468"
     },
     {
+      "address": 4427936,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_004390A0"
+    },
+    {
       "address": 4461808,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1352,6 +1398,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0045F5F0"
+    },
+    {
+      "address": 4586520,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_5_FELTZIN_SYSTEM_FUN_0045FC18"
     },
     {
       "address": 4593120,

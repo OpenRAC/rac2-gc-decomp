@@ -1,6 +1,6 @@
 {
-  "candidate_elf_sha256": "8dfaabf4f9a6f0ee3b6de20007a3a2cece7c28456cc6dadcf62b6305a2f1b0fa",
-  "catalog_sha256": "48cc47e6e3351a7891751458fd025c49731e3f7cabcc30e3a8f175cc468bfdc8",
+  "candidate_elf_sha256": "eb6bcc8320949413a74a570f5cfcab4026842b956fc03e57fb86cb9c7cc516f7",
+  "catalog_sha256": "c92612c62453ca2f8975525ece7165e437752f1dbe002e0187cc6859a66a59d1",
   "checker_sha256": "7c40d149419ff91694c03789372ef51da25fc9c9f3c37265d2a1bbfaa915fb07",
   "flags": [
     "-O2",
@@ -559,6 +559,26 @@
       "symbol": "FUN_0026FEB8"
     },
     {
+      "address": 2571536,
+      "candidate_sha256": "3fbfbb255537b04f9a50ac823716178837f9b358d041b60cfdfae6b840d7dd31",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "3fbfbb255537b04f9a50ac823716178837f9b358d041b60cfdfae6b840d7dd31",
+      "size": 392,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_00273D10"
+    },
+    {
+      "address": 2594856,
+      "candidate_sha256": "0fcd64d02ee5f703b8cdeb816e212001880e538346f6c4b4d19e06d6b58ddd6e",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "0fcd64d02ee5f703b8cdeb816e212001880e538346f6c4b4d19e06d6b58ddd6e",
+      "size": 116,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_00279828"
+    },
+    {
       "address": 2603336,
       "candidate_sha256": "d4411d7ace01ad58aa846443e4a135c934220a8a331cdd99f82fd18cc47659e4",
       "different_bytes": 0,
@@ -857,6 +877,16 @@
       "size": 280,
       "state": "matched_unintegrated",
       "symbol": "FUN_00297550"
+    },
+    {
+      "address": 2718168,
+      "candidate_sha256": "bc354613c2abd3da38afa606d168ec04de23be8729d42ede1700a1816e243b17",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "bc354613c2abd3da38afa606d168ec04de23be8729d42ede1700a1816e243b17",
+      "size": 464,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_002979D8"
     },
     {
       "address": 2720112,
@@ -1697,6 +1727,16 @@
       "size": 100,
       "state": "matched_unintegrated",
       "symbol": "FUN_0032BDC8"
+    },
+    {
+      "address": 3361256,
+      "candidate_sha256": "e85b20204aa499c9455237e116094d7633cbbcad11f1d62fc472ba23904e3dd8",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "e85b20204aa499c9455237e116094d7633cbbcad11f1d62fc472ba23904e3dd8",
+      "size": 160,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_003349E8"
     },
     {
       "address": 3366416,
@@ -2669,6 +2709,16 @@
       "symbol": "FUN_0034E218"
     },
     {
+      "address": 3468256,
+      "candidate_sha256": "367323c4932807201a969df63d8554ebc32be7d521d5cfcdc3c158f1fd93767c",
+      "different_bytes": 0,
+      "matched": true,
+      "reference_sha256": "367323c4932807201a969df63d8554ebc32be7d521d5cfcdc3c158f1fd93767c",
+      "size": 144,
+      "state": "matched_unintegrated",
+      "symbol": "FUN_0034EBE0"
+    },
+    {
       "address": 3470264,
       "candidate_sha256": "1003c2384ae2dcbbd7233d44bfc9a6be46d88e286fde165df8c3bddfaacb21c4",
       "different_bytes": 0,
@@ -3050,11 +3100,11 @@
     }
   ],
   "integrated_functions": 0,
-  "object_sha256": "596d23037a8448bd05f8dabf7bd7a051cd738f97cf8a6eebbb6aab1980817254",
+  "object_sha256": "b5a2be9bbd43e6f2a3d80f8b84eef1c0047328f4f015d4ffbec1bd324505b71e",
   "profile_scope": "Only the fully matched functions below; not a general RAC2 compiler qualification",
   "read_only_sections": [],
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
-  "source_sha256": "597b58747b1ea757d2bbf137159fa5158fd65b44f323222937e90c1ba491f934",
+  "source_sha256": "e97ccd1bb6670f20a917035bfc840b1fe416955f73b01962532fbb6db559d694",
   "target": "SCUS_972.68",
   "tools": {
     "as": "cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876",
@@ -3062,5 +3112,5 @@
     "cpp": "2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155",
     "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
   },
-  "verified_at": "2026-10-09T06:45:04.403520+00:00"
+  "verified_at": "2026-10-09T14:02:38.740207+00:00"
 }

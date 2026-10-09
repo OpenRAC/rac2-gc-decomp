@@ -48,6 +48,8 @@
     "LVL_11_JOBA_F307ea0ee_FUN_00300B08": 3148552,
     "LVL_11_JOBA_F307ea0ee_FUN_00300B20": 3148576,
     "LVL_11_JOBA_F307ea0ee_FUN_003015A8": 3151272,
+    "LVL_11_JOBA_F45821cfb_D_001C8640": 1869376,
+    "LVL_11_JOBA_F45821cfb_FUN_003004A8": 3146920,
     "LVL_11_JOBA_F489bf28e_D_001B3058": 1781848,
     "LVL_11_JOBA_F489bf28e_D_001B3068": 1781864,
     "LVL_11_JOBA_F489bf28e_D_001B3078": 1781880,
@@ -70,6 +72,7 @@
     "LVL_11_JOBA_F6b0741c38bf00fee_AT002BF3F8_ROLE00": 1618620,
     "LVL_11_JOBA_F6b0741c38bf00fee_AT002BF3F8_ROLE01": 2880568,
     "LVL_11_JOBA_F6b0741c38bf00fee_AT002BF3F8_ROLE02": 2955080,
+    "LVL_11_JOBA_F6df9730c_FUN_00300358": 3146584,
     "LVL_11_JOBA_F70997ba9_FUN_002F8248": 3113544,
     "LVL_11_JOBA_F70997ba9_FUN_002F8368": 3113832,
     "LVL_11_JOBA_F70997ba9_FUN_002FAE78": 3124856,
@@ -78,6 +81,12 @@
     "LVL_11_JOBA_F70997ba9_FUN_002FB320": 3126048,
     "LVL_11_JOBA_F70997ba9_FUN_00306B18": 3173144,
     "LVL_11_JOBA_F70997ba9_FUN_0038FD70": 3734896,
+    "LVL_11_JOBA_F7242f0a4_D_001BA920": 1812768,
+    "LVL_11_JOBA_F7242f0a4_FUN_003004E0": 3146976,
+    "LVL_11_JOBA_F7242f0a4_FUN_00300580": 3147136,
+    "LVL_11_JOBA_F7242f0a4_FUN_00300600": 3147264,
+    "LVL_11_JOBA_F7242f0a4_FUN_00481270": 4723312,
+    "LVL_11_JOBA_F7242f0a4_FUN_004813D0": 4723664,
     "LVL_11_JOBA_F79744baad5ad7f65_AT004A1738_ROLE00": 1622228,
     "LVL_11_JOBA_F86f665335d9cb905_AT003D2298_ROLE00": 4004080,
     "LVL_11_JOBA_F9b94f3cd_D_001A7350": 1733456,
@@ -140,6 +149,19 @@
     "LVL_11_JOBA_Fd50cdefe_D_001B3D08": 1785096,
     "LVL_11_JOBA_Fd50cdefe_D_001B3D08_1": 1785096,
     "LVL_11_JOBA_Fd50cdefe_FUN_00126288": 1204872,
+    "LVL_11_JOBA_Fd8e166aa_D_001BDD00": 1826048,
+    "LVL_11_JOBA_Fdb046c5d_D_001C0D40": 1838400,
+    "LVL_11_JOBA_Fdb046c5d_FUN_002EE248": 3072584,
+    "LVL_11_JOBA_Fdb046c5d_FUN_002EE408": 3073032,
+    "LVL_11_JOBA_Fdb046c5d_FUN_002EE620": 3073568,
+    "LVL_11_JOBA_Fdb046c5d_FUN_002EE888": 3074184,
+    "LVL_11_JOBA_Fdb046c5d_FUN_002EEBA8": 3074984,
+    "LVL_11_JOBA_Fdb046c5d_FUN_002EECC8": 3075272,
+    "LVL_11_JOBA_Fdb046c5d_FUN_00300628": 3147304,
+    "LVL_11_JOBA_Fdb046c5d_FUN_003007F8": 3147768,
+    "LVL_11_JOBA_Fdb046c5d_FUN_00337410": 3372048,
+    "LVL_11_JOBA_Fdb046c5d_FUN_00373CC0": 3620032,
+    "LVL_11_JOBA_Fdb046c5d_FUN_003740A0": 3621024,
     "LVL_11_JOBA_Fea34650e_D_00189E20": 1613344,
     "LVL_11_JOBA_Feab1f2e5_D_001ADD98": 1760664,
     "LVL_11_JOBA_Feab1f2e5_D_001ADDE0": 1760736,
@@ -381,6 +403,12 @@
       "symbol": "LVL_11_JOBA_FUN_002E9738"
     },
     {
+      "address": 3071536,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_11_JOBA_FUN_002EDE30"
+    },
+    {
       "address": 3072568,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -397,6 +425,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_11_JOBA_FUN_002EE888"
+    },
+    {
+      "address": 3102112,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_11_JOBA_FUN_002F55A0"
     },
     {
       "address": 3102928,
@@ -529,6 +563,12 @@
       "meaning": "shared native body of family 490e2c59eb9d7105",
       "size": 112,
       "symbol": "LVL_11_JOBA_FUN_00318850"
+    },
+    {
+      "address": 3256160,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_11_JOBA_FUN_0031AF60"
     },
     {
       "address": 3257224,
@@ -1145,6 +1185,12 @@
       "symbol": "LVL_11_JOBA_FUN_0047BE60"
     },
     {
+      "address": 4725400,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_11_JOBA_FUN_00481A98"
+    },
+    {
       "address": 4760144,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1382,6 +1428,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_11_JOBA_FUN_004A5850"
+    },
+    {
+      "address": 4873848,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_11_JOBA_FUN_004A5E78"
     },
     {
       "address": 4880448,

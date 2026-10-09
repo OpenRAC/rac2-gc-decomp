@@ -1,0 +1,37 @@
+extern void @@ROLE_0_00@@(char *dst, int *src, int count);
+
+void @@FUNCTION@@(char *dst, unsigned char *src)
+{
+    int table[256];
+    int tmp[16];
+    int *q;
+    int i, j, k;
+
+    for (i = 0; i < 256; i++) {
+        table[i] = 0;
+        if (i & 0x01) table[i] = 0x0000000f;
+        if (i & 0x02) table[i] |= 0x000000f0;
+        if (i & 0x04) table[i] |= 0x00000f00;
+        if (i & 0x08) table[i] |= 0x0000f000;
+        if (i & 0x10) table[i] |= 0x000f0000;
+        if (i & 0x20) table[i] |= 0x00f00000;
+        if (i & 0x40) table[i] |= 0x0f000000;
+        if (i & 0x80) table[i] |= 0xf0000000;
+    }
+    for (j = 0; j < 128; j++) {
+        char *next;
+        q = tmp;
+        next = dst + 64;
+        for (k = 15; k >= 0; k--) {
+            *q++ = table[*src++];
+        }
+        @@ROLE_0_01@@(dst, tmp, 64);
+        dst = next;
+        @@ROLE_0_02@@(dst, tmp, 64);
+        dst += 64;
+        @@ROLE_0_03@@(dst, tmp, 64);
+        dst += 64;
+        @@ROLE_0_04@@(dst, tmp, 64);
+        dst += 64;
+    }
+}

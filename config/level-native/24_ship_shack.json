@@ -56,6 +56,8 @@
     "LVL_24_SHIP_SHACK_F307ea0ee_FUN_002ECE20": 3067424,
     "LVL_24_SHIP_SHACK_F307ea0ee_FUN_002ECE38": 3067448,
     "LVL_24_SHIP_SHACK_F307ea0ee_FUN_002ED838": 3070008,
+    "LVL_24_SHIP_SHACK_F45821cfb_D_001C6440": 1860672,
+    "LVL_24_SHIP_SHACK_F45821cfb_FUN_002EC810": 3065872,
     "LVL_24_SHIP_SHACK_F4e5bde81_D_00189E20": 1613344,
     "LVL_24_SHIP_SHACK_F4e5bde81_D_001A7B08": 1735432,
     "LVL_24_SHIP_SHACK_F4e5bde81_D_001A8FF0": 1740784,
@@ -69,6 +71,7 @@
     "LVL_24_SHIP_SHACK_F62e6ff2b_D_00189E20": 1613344,
     "LVL_24_SHIP_SHACK_F6894d7c1_D_001A8E60": 1740384,
     "LVL_24_SHIP_SHACK_F6af85cabb56d3b41_AT00409138_ROLE00": 1613344,
+    "LVL_24_SHIP_SHACK_F6df9730c_FUN_002EC6C0": 3065536,
     "LVL_24_SHIP_SHACK_F70997ba9_FUN_002E5400": 3036160,
     "LVL_24_SHIP_SHACK_F70997ba9_FUN_002E5520": 3036448,
     "LVL_24_SHIP_SHACK_F70997ba9_FUN_002E8030": 3047472,
@@ -77,6 +80,12 @@
     "LVL_24_SHIP_SHACK_F70997ba9_FUN_002E84D8": 3048664,
     "LVL_24_SHIP_SHACK_F70997ba9_FUN_002F2DA8": 3091880,
     "LVL_24_SHIP_SHACK_F70997ba9_FUN_00372790": 3614608,
+    "LVL_24_SHIP_SHACK_F7242f0a4_D_001B8720": 1804064,
+    "LVL_24_SHIP_SHACK_F7242f0a4_FUN_002EC848": 3065928,
+    "LVL_24_SHIP_SHACK_F7242f0a4_FUN_002EC8B8": 3066040,
+    "LVL_24_SHIP_SHACK_F7242f0a4_FUN_002EC938": 3066168,
+    "LVL_24_SHIP_SHACK_F7242f0a4_FUN_004004C0": 4195520,
+    "LVL_24_SHIP_SHACK_F7242f0a4_FUN_00400620": 4195872,
     "LVL_24_SHIP_SHACK_F79744baad5ad7f65_AT0041ECC8_ROLE00": 1622228,
     "LVL_24_SHIP_SHACK_F86f665335d9cb905_AT003AE4A8_ROLE00": 3857152,
     "LVL_24_SHIP_SHACK_F9cdc323a4d0c2fbd_AT0038E1E0_ROLE00": 3620360,
@@ -131,6 +140,19 @@
     "LVL_24_SHIP_SHACK_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_24_SHIP_SHACK_Fc936841d_FUN_002EC848": 3065928,
     "LVL_24_SHIP_SHACK_Fc936841d_FUN_002EC878": 3065976,
+    "LVL_24_SHIP_SHACK_Fd8e166aa_D_001BBB00": 1817344,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_D_001BEB40": 1829696,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_002DB400": 2995200,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_002DB5C0": 2995648,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_002DB7D8": 2996184,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_002DBA40": 2996800,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_002DBD60": 2997600,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_002DBE80": 2997888,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_002EC960": 3066208,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_002ECB10": 3066640,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_00321670": 3282544,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_00356A10": 3500560,
+    "LVL_24_SHIP_SHACK_Fdb046c5d_FUN_00356D60": 3501408,
     "LVL_24_SHIP_SHACK_Fe77c6258_D_001ADD18": 1760536,
     "LVL_24_SHIP_SHACK_Fe77c6258_D_001ADD60": 1760608,
     "LVL_24_SHIP_SHACK_Fe77c6258_FUN_00115E38": 1138232,
@@ -398,6 +420,12 @@
       "symbol": "LVL_24_SHIP_SHACK_FUN_002D6CF8"
     },
     {
+      "address": 2994152,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002DAFE8"
+    },
+    {
       "address": 2995184,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -414,6 +442,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_24_SHIP_SHACK_FUN_002DBA40"
+    },
+    {
+      "address": 3024728,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_24_SHIP_SHACK_FUN_002E2758"
     },
     {
       "address": 3025544,
@@ -564,6 +598,12 @@
       "meaning": "returns the indexed resident bit using signed division by eight and an unsigned remainder validity guard",
       "size": 72,
       "symbol": "LVL_24_SHIP_SHACK_FUN_00303C88"
+    },
+    {
+      "address": 3174112,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00306EE0"
     },
     {
       "address": 3175176,
@@ -1078,6 +1118,12 @@
       "symbol": "LVL_24_SHIP_SHACK_FUN_003FB0B0"
     },
     {
+      "address": 4197608,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00400CE8"
+    },
+    {
       "address": 4231480,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1315,6 +1361,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_24_SHIP_SHACK_FUN_00422DE0"
+    },
+    {
+      "address": 4338696,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_24_SHIP_SHACK_FUN_00423408"
     },
     {
       "address": 4345296,

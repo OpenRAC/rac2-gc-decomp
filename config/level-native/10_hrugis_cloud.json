@@ -56,6 +56,8 @@
     "LVL_10_HRUGIS_CLOUD_F31cd0302_D_001BCE48": 1822280,
     "LVL_10_HRUGIS_CLOUD_F3cde0d02_D_001CA200": 1876480,
     "LVL_10_HRUGIS_CLOUD_F3cde0d02_D_001D2000": 1908736,
+    "LVL_10_HRUGIS_CLOUD_F45821cfb_D_001C7400": 1864704,
+    "LVL_10_HRUGIS_CLOUD_F45821cfb_FUN_00308AF8": 3181304,
     "LVL_10_HRUGIS_CLOUD_F4e5bde81_D_00189E20": 1613344,
     "LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A7B08": 1735432,
     "LVL_10_HRUGIS_CLOUD_F4e5bde81_D_001A8FF0": 1740784,
@@ -78,6 +80,7 @@
     "LVL_10_HRUGIS_CLOUD_F6b0741c38bf00fee_AT002C0F08_ROLE00": 1618620,
     "LVL_10_HRUGIS_CLOUD_F6b0741c38bf00fee_AT002C0F08_ROLE01": 2887496,
     "LVL_10_HRUGIS_CLOUD_F6b0741c38bf00fee_AT002C0F08_ROLE02": 2968024,
+    "LVL_10_HRUGIS_CLOUD_F6df9730c_FUN_003089A8": 3180968,
     "LVL_10_HRUGIS_CLOUD_F70997ba9_FUN_00301108": 3150088,
     "LVL_10_HRUGIS_CLOUD_F70997ba9_FUN_00301228": 3150376,
     "LVL_10_HRUGIS_CLOUD_F70997ba9_FUN_00303F68": 3161960,
@@ -86,6 +89,12 @@
     "LVL_10_HRUGIS_CLOUD_F70997ba9_FUN_00304410": 3163152,
     "LVL_10_HRUGIS_CLOUD_F70997ba9_FUN_0030F0C0": 3207360,
     "LVL_10_HRUGIS_CLOUD_F70997ba9_FUN_003923D8": 3744728,
+    "LVL_10_HRUGIS_CLOUD_F7242f0a4_D_001B96E0": 1808096,
+    "LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308B30": 3181360,
+    "LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308BB8": 3181496,
+    "LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_00308C38": 3181624,
+    "LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_0043A6A8": 4433576,
+    "LVL_10_HRUGIS_CLOUD_F7242f0a4_FUN_0043A808": 4433928,
     "LVL_10_HRUGIS_CLOUD_F79744baad5ad7f65_AT0045D098_ROLE00": 1622228,
     "LVL_10_HRUGIS_CLOUD_F7a3a32da_D_001B2C88": 1780872,
     "LVL_10_HRUGIS_CLOUD_F7a3a32da_FUN_00126288": 1204872,
@@ -136,6 +145,19 @@
     "LVL_10_HRUGIS_CLOUD_Fc68ad20a_D_0018C2B8": 1622712,
     "LVL_10_HRUGIS_CLOUD_Fc936841d_FUN_00308B30": 3181360,
     "LVL_10_HRUGIS_CLOUD_Fc936841d_FUN_00308B60": 3181408,
+    "LVL_10_HRUGIS_CLOUD_Fd8e166aa_D_001BCAC0": 1821376,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_D_001BFB00": 1833728,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7080": 3108992,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7240": 3109440,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7458": 3109976,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F76C0": 3110592,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F79E0": 3111392,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_002F7B00": 3111680,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00308C60": 3181664,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00308E10": 3182096,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_0033E158": 3400024,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00373710": 3618576,
+    "LVL_10_HRUGIS_CLOUD_Fdb046c5d_FUN_00373A60": 3619424,
     "LVL_10_HRUGIS_CLOUD_Fe5c553af_D_001B94C0": 1807552,
     "LVL_10_HRUGIS_CLOUD_Fe7046bc9_D_001B2048": 1777736,
     "LVL_10_HRUGIS_CLOUD_Fe7046bc9_D_001B2440": 1778752,
@@ -384,6 +406,12 @@
       "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F25E0"
     },
     {
+      "address": 3107944,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002F6C68"
+    },
+    {
       "address": 3108976,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -406,6 +434,12 @@
       "meaning": "shared native body of family 31cd0302df523a4c",
       "size": 116,
       "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002FD858"
+    },
+    {
+      "address": 3138520,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_002FE3D8"
     },
     {
       "address": 3139336,
@@ -539,6 +573,12 @@
       "meaning": "shared native body of family 82977136ab6de3be",
       "size": 100,
       "symbol": "LVL_10_HRUGIS_CLOUD_FUN_00320BC0"
+    },
+    {
+      "address": 3290720,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_00323660"
     },
     {
       "address": 3291784,
@@ -1101,6 +1141,12 @@
       "symbol": "LVL_10_HRUGIS_CLOUD_FUN_00435298"
     },
     {
+      "address": 4435664,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_0043AED0"
+    },
+    {
       "address": 4469536,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1326,6 +1372,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_10_HRUGIS_CLOUD_FUN_004611B0"
+    },
+    {
+      "address": 4593624,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_10_HRUGIS_CLOUD_FUN_004617D8"
     },
     {
       "address": 4600224,

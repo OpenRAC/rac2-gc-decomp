@@ -1,0 +1,18 @@
+extern char @@DATA_0_00@@[];
+extern void @@ROLE_0_00@@(char *);
+
+void @@FUNCTION@@(void)
+{
+    float *p = (float *)@@DATA_0_01@@;
+
+    p[224] = 0.4f;
+    p[225] = 0.8f;
+    p[226] = 1.2f;
+    *(int *)&p[227] = 0;
+    p[228] = 0.577f;
+    p[229] = 0.577f;
+    p[230] = -0.577f;
+    *(int *)&p[231] = 0;
+    @@ROLE_0_01@@((char *)&p[232]);
+    @@ROLE_0_02@@((char *)&p[236]);
+}

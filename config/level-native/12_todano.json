@@ -48,6 +48,8 @@
     "LVL_12_TODANO_F307ea0ee_FUN_002F1F38": 3088184,
     "LVL_12_TODANO_F307ea0ee_FUN_002F1F50": 3088208,
     "LVL_12_TODANO_F307ea0ee_FUN_002F2950": 3090768,
+    "LVL_12_TODANO_F45821cfb_D_001C7B80": 1866624,
+    "LVL_12_TODANO_F45821cfb_FUN_002F18F0": 3086576,
     "LVL_12_TODANO_F490e2c59_D_001A79F0": 1735152,
     "LVL_12_TODANO_F490e2c59_D_001AA7F0": 1746928,
     "LVL_12_TODANO_F4e5bde81_D_00189E20": 1613344,
@@ -67,6 +69,7 @@
     "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE00": 1618620,
     "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE01": 2800968,
     "LVL_12_TODANO_F6b0741c38bf00fee_AT002ABD08_ROLE02": 2880648,
+    "LVL_12_TODANO_F6df9730c_FUN_002F17A0": 3086240,
     "LVL_12_TODANO_F70997ba9_FUN_002E9AF8": 3054328,
     "LVL_12_TODANO_F70997ba9_FUN_002E9C18": 3054616,
     "LVL_12_TODANO_F70997ba9_FUN_002EC728": 3065640,
@@ -75,6 +78,12 @@
     "LVL_12_TODANO_F70997ba9_FUN_002ECBD0": 3066832,
     "LVL_12_TODANO_F70997ba9_FUN_002F7EC0": 3112640,
     "LVL_12_TODANO_F70997ba9_FUN_00380D80": 3673472,
+    "LVL_12_TODANO_F7242f0a4_D_001B9E60": 1810016,
+    "LVL_12_TODANO_F7242f0a4_FUN_002F1928": 3086632,
+    "LVL_12_TODANO_F7242f0a4_FUN_002F19B0": 3086768,
+    "LVL_12_TODANO_F7242f0a4_FUN_002F1A30": 3086896,
+    "LVL_12_TODANO_F7242f0a4_FUN_00436490": 4416656,
+    "LVL_12_TODANO_F7242f0a4_FUN_004365F0": 4417008,
     "LVL_12_TODANO_F79744baad5ad7f65_AT00456580_ROLE00": 1622228,
     "LVL_12_TODANO_F86f665335d9cb905_AT003C6170_ROLE00": 3954632,
     "LVL_12_TODANO_F9cdc323a4d0c2fbd_AT0039DE20_ROLE00": 3679224,
@@ -125,6 +134,19 @@
     "LVL_12_TODANO_Fd1b66aa7_D_001AA578": 1746296,
     "LVL_12_TODANO_Fd1b66aa7_D_001AA588": 1746312,
     "LVL_12_TODANO_Fd1b66aa7_FUN_00115DA8": 1138088,
+    "LVL_12_TODANO_Fd8e166aa_D_001BD240": 1823296,
+    "LVL_12_TODANO_Fdb046c5d_D_001C0280": 1835648,
+    "LVL_12_TODANO_Fdb046c5d_FUN_002DFAF8": 3013368,
+    "LVL_12_TODANO_Fdb046c5d_FUN_002DFCB8": 3013816,
+    "LVL_12_TODANO_Fdb046c5d_FUN_002DFED0": 3014352,
+    "LVL_12_TODANO_Fdb046c5d_FUN_002E0138": 3014968,
+    "LVL_12_TODANO_Fdb046c5d_FUN_002E0458": 3015768,
+    "LVL_12_TODANO_Fdb046c5d_FUN_002E0578": 3016056,
+    "LVL_12_TODANO_Fdb046c5d_FUN_002F1A58": 3086936,
+    "LVL_12_TODANO_Fdb046c5d_FUN_002F1C28": 3087400,
+    "LVL_12_TODANO_Fdb046c5d_FUN_003280C8": 3309768,
+    "LVL_12_TODANO_Fdb046c5d_FUN_00364DF8": 3558904,
+    "LVL_12_TODANO_Fdb046c5d_FUN_00365148": 3559752,
     "LVL_12_TODANO_Fea34650e_D_00189E20": 1613344,
     "LVL_12_TODANO_Feab1f2e5_D_001ADD98": 1760664,
     "LVL_12_TODANO_Feab1f2e5_D_001ADDE0": 1760736,
@@ -362,6 +384,12 @@
       "symbol": "LVL_12_TODANO_FUN_002DB058"
     },
     {
+      "address": 3012320,
+      "meaning": "Reads a byte at +92 of a structure reached through the pointer at +104 of the argument; for 0 or 1 it tail-calls one of two setup routines, then calls a third and aborts (returns 0) on -1; otherwise i",
+      "size": 392,
+      "symbol": "LVL_12_TODANO_FUN_002DF6E0"
+    },
+    {
       "address": 3013352,
       "meaning": "Return the constant signed integer one.",
       "size": 8,
@@ -378,6 +406,12 @@
       "meaning": "appendindexbyte59/count5C descriptor68, originalthreeGPR geometricupdate inclincomingdirectionA2, ifcount!=1 originalpointdifference24/transform40/bound80 andterminalcountbyte return",
       "size": 164,
       "symbol": "LVL_12_TODANO_FUN_002E0138"
+    },
+    {
+      "address": 3042896,
+      "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
+      "size": 116,
+      "symbol": "LVL_12_TODANO_FUN_002E6E50"
     },
     {
       "address": 3043712,
@@ -481,6 +515,12 @@
       "meaning": "shared native body of family 490e2c59eb9d7105",
       "size": 112,
       "symbol": "LVL_12_TODANO_FUN_0030A040"
+    },
+    {
+      "address": 3196752,
+      "meaning": "Shared native body; original game role is unknown.",
+      "size": 464,
+      "symbol": "LVL_12_TODANO_FUN_0030C750"
     },
     {
       "address": 3197816,
@@ -1034,6 +1074,12 @@
       "symbol": "LVL_12_TODANO_FUN_00431080"
     },
     {
+      "address": 4418744,
+      "meaning": "Builds a 32-byte local record, formats a float into its head, then either sets a flag word or converts an existing global-slot value into its tail depending on a boolean, joins the two halves, and fin",
+      "size": 160,
+      "symbol": "LVL_12_TODANO_FUN_00436CB8"
+    },
+    {
       "address": 4452648,
       "meaning": "When the global identity differs from the signed owner identity at offset 0x86 and the global mode is not 6, clear the owner byte at offset 0x7D and write signed short value 3 at offset 0x7E.",
       "size": 52,
@@ -1271,6 +1317,12 @@
       "meaning": "Return the complete supplied unsigned-long 64-bit value unchanged.",
       "size": 8,
       "symbol": "LVL_12_TODANO_FUN_0045A698"
+    },
+    {
+      "address": 4566208,
+      "meaning": "initialises eight float/int fields of one fixed global block and then hands two adjacent sub-blocks of it to the same helper twice",
+      "size": 144,
+      "symbol": "LVL_12_TODANO_FUN_0045ACC0"
     },
     {
       "address": 4572808,
