@@ -220,8 +220,10 @@ Source-level lessons the witnesses also pinned down:
 ## Adoption of the folded zero store (9 October 2026)
 
 **Identity.** `cc1` moves from `8bed6eae…` to `5fed4e23…`. `cpp` (`2ac3d8d3…`)
-and GNU `as` (`cda1a4e4…`) are unchanged, so the assembler half of the identity
-is untouched. Four sources change: `config/mips/mips.md` (constraint and printer
+and GNU `as` (`cda1a4e4…`) are unchanged on that date, so the assembler half of
+the identity is untouched by this adoption. (The `as` was separately superseded
+by `d81f2e93…` in the division-erratum change documented below; `cc1` was not
+affected by it.) Four sources change: `config/mips/mips.md` (constraint and printer
 change retired), `config/mips/mips.c` (the fold pass), `config/mips/mips.h` (the
 hook) and `toplev.c` (the call site). The retired
 `allow_zero_ti_store.patch` was removed from the tree;
@@ -295,6 +297,10 @@ proofs:
 | `cc1` | `8bed6eaeec23dba7b10c94e3d907416cf9931c1ddc69ce5ffd2068497a02ad5d` |
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `as` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
+
+(The current `cc1` is `5fed4e23…` and the current `as` is `d81f2e93…`; this table
+is the 7 October milestone those were built from. See the folded-zero-store and
+division-erratum sections below.)
 
 (An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
 and has been superseded. The earlier `cc1`, `3e7628b7…`, emitted the GPR save
@@ -385,6 +391,7 @@ patch -R -p1 -s < "$P/0001-r5900-quad-saves.patch"
 | `gcc/config/mips/mips.c` | emit the GPR save loop in **ascending** register order, with `gp_offset -= GET_MODE_SIZE (mips_reg_mode[0]) * (n_rac2 - 1)` pre-computed when more than one register is saved and the per-register decrement turned into `+=` | the retail saves in ascending order with the same layout and offsets |
 | `gcc/config/mips/mips.c` | run the FPR save block before the GPR save block (and keep GPR restores before FPR restores) | the retail orders the two intact blocks that way; patch `0026` covers the frame-save case, this completes it |
 | `gas/config/tc-mips.c` | insert the `rac2_mtc1_nop_ok()` helper and guard both `++nops` sites with it: a `nop` follows `mtc1` when the next instruction reads the written FPR, except when `mtc1` is the function's first instruction | measured 587 nop in 598 cases; the single exception is `FUN_00283CE0` |
+| `gas/config/tc-mips.c` | add a measured SDK 3.01 incoming division floor; count emitted NOPs, retain division labels on padding, isolate code-label state, and bound the counter at two | SDK 3.01 warnings and NOP runs; this is a limited subset with explicit fragment and noreorder failures; see [the division-erratum section](#division-erratum-padding-measured-sdk-301-subset-9-october-2026) |
 | `gcc/config/mips/mips.md` | the `movti_internal` register alternatives lose the `J` constraint (`"d,R,m,dJ,dJ,…"` becomes `"d,R,m,d,d,…"`) and the two store alternatives print `%1` again instead of `%z1` | the retired `allow_zero_ti_store.patch` earned no witness of its own; the architectural-zero fold is now the back-end pass below |
 | `gcc/config/mips/mips.c`, `gcc/config/mips/mips.h`, `gcc/toplev.c` | add `rac2_reg_live_after_store_p` and `rac2_fold_zero_ti_store` before `machine_dependent_reorg`, declare `MACHINE_DEPENDENT_REORG_AFTER_RELOAD`, and call it from `toplev.c` **before** `flag_schedule_insns_after_reload` | the retail materialises a TImode zero once and re-folds it into the store; running the pass after the second scheduler loses `FUN_002E5FE0` |
 
@@ -393,8 +400,9 @@ script that carries its exact replacement text; the five source adjustments are
 `neutralise_timode_anchor.py`, `enable_loop_padding.py`,
 `count_trap_length.py`, `ascending_save_order.py` and `reorder_save_blocks.py`,
 and the three that touch the assembler and the machine description are
-`fold_zero_ti_store.py`, `disable_frame_order_default.py` and
-`restrict_mtc1_exemption.py`. `fold_zero_ti_store.py` takes the `gcc` source
+`fold_zero_ti_store.py`, `disable_frame_order_default.py`,
+`restrict_mtc1_exemption.py` and `pad_div_erratum_nops.py`.
+`fold_zero_ti_store.py` takes the `gcc` source
 directory rather than one file, because it retires a machine-description change
 and inserts a back-end pass across three more sources at once; the
 `allow_zero_ti_store.patch` it replaces was removed from the tree on
@@ -433,18 +441,100 @@ match:
 | `gcc/config/mips/mips.h` | `87d59c06d047cf7252349cb02aebc266f8b4dcecd537c827e6ec3966a10bbfc3` |
 | `gcc/config/mips/mips.md` | `177caa696e7de5e58515d1500abce727f8783454b4522fd3e5cd3e0630b99acf` |
 | `gcc/toplev.c` | `38d52727addc0b0b299700835788808cf23fe59c863a961cdd6f28170faaf3cc` |
-| `gas/config/tc-mips.c` | `61e51c1ebcdf860db4503b6cc6a11c40596d1f3c969daf66ee56a45f454130ca` |
+| `gas/config/tc-mips.c` | `b014add9bd605ce4c2daf8245d932fe800380f259c2785d9ddce09d5e7ccbb62` |
 | `gcc/cc1` | `5fed4e239d6fe3ef19d3b18483844eaf5fb1e647c5d8556652c75fc8e9a73bc6` |
 | `gcc/cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
-| `gas/as-new` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
+| `gas/as-new` | `d81f2e934463174fe2313c8270cf88aad5cf7b0c8c92db0f14a7e60e0f9bd85c` |
 
 The whole recipe was last verified end to end on 7 October 2026 (six identities,
-then-current `cc1`); the four source rows and the `cc1` row above are the
-9 October 2026 identities, and the four source hashes were re-derived from the
-public `fold_zero_ti_store.py` on that date. A `mips.c` that hashes differently means a step above is missing
+then-current `cc1`); the four `gcc` source rows and the `cc1` row above are the
+9 October 2026 identities, re-derived from the public `fold_zero_ti_store.py` on
+that date. The `gas/config/tc-mips.c` and `gas/as-new` rows are the 9 October
+2026 division-erratum identities: the same date's `tc-mips.c` was
+`61e51c1e…` before `pad_div_erratum_nops.py` and is `b014add9…` after it, and a
+complete rebuild from a fresh archive extraction reproduced all eight rows with
+the same `as-new`. A `mips.c` that hashes differently means a step above is missing
 — a rebuild that skips the adjustments produces a compiler that still matches the
 measured corpus on simple bodies and diverges elsewhere, which is exactly the
 failure mode this section exists to prevent.
+
+## Division-erratum padding: measured SDK 3.01 subset (9 October 2026)
+
+**Identity and reproducibility.** The published GNU `as` moves from
+`cda1a4e4…` to `d81f2e93…`. The unchanged compiler and preprocessor remain
+`5fed4e23…` and `2ac3d8d3…`. Applying
+[`pad_div_erratum_nops.py`](../scripts/compiler/pad_div_erratum_nops.py) to
+the qualified `61e51c1e…` source reproduces `b014add9…` byte for byte.
+A fresh archive extraction and the public recipe reproduced all eight
+checkpoints above. The intermediate, unmerged assembler `a7d0c916…` is
+superseded: its NOP-only tests missed displaced labels.
+
+**Oracle provenance.** The padding oracle is authentic SN ProDG **3.01**
+`Ps2EeAs`, SHA-256
+`cb5adda955e64626564212ef7e0c1434708c4e1ef423344a92ec8033306ed3aa`.
+The private diagnostic copy is byte-identical to that SDK executable; it is
+not an instrumented assembler. It differs from the SN ProDG **2.0** tool used
+for full-image ASM reconstruction, SHA-256
+`c839dd63facabe7b76573c114056be61eaa7b3aa2329dd546930ab8f98898c76`.
+The two versions disagree on 44 of the 97 synthetic `.text` outputs tested.
+Do not identify either executable as the proven shipping-game assembler or
+claim that this change reproduces both versions. Tools, objects, game bytes
+and the private diagnostic bank remain outside the repository.
+
+**Measured incoming floor.** In the tested SDK 3.01 contexts, `div.s`,
+`sqrt.s` and `rsqrt.s` require two emitted slots after a code label. The label
+denotes the start of the padding, not the division after it. A required
+coprocessor hazard NOP contributes to that minimum rather than adding to it.
+An immediately preceding `sync.p` supplies another one-NOP minimum; `sync`
+and `sync.l` do not trigger it. Integer HI/LO division does not trigger this
+floor, and the oracle rejects the double-precision forms. No rule is keyed
+to a game address, program or function name.
+
+**Bounded implementation.** The counter saturates at two and includes NOPs
+actually emitted by `emit_nop`. Code labels alone update the state; a data
+label cannot contaminate the current text stream. For a code label in the
+current fragment, the helper measures emitted byte distance. Other fragments
+use the instruction/NOP fallback. The existing label-relocation loop is
+skipped only for the active division floor, so a branch to the division
+label lands on its padding. A second transformation is refused without
+changing the file, including under Python `-O`. Generated comments are English.
+
+**Stronger validation.** The original 49-witness test checked only preceding
+NOP run lengths; it was not proof of full text, label or branch equivalence.
+The retained intermediate objects fail 13 strict comparisons: 11 displaced
+label cases and two pre-existing integer macro differences. The final
+assembler passes **47 of those 49** strict comparisons, fixing all 11 labels.
+The expanded 97-witness battery compares every `.text` byte, required source
+label presence and offsets, branch targets and delay words, and canonical
+relocations. Its final result is **84 PASS, 13 FAIL, 0 ERROR** against genuine
+SDK 3.01. None of the previously passing cases regressed. Eight tests of the
+comparison harness pass. These counts are qualification evidence for the
+stated subset, not full-assembler equivalence or matching credit.
+
+The 13 strict failures remain explicit: two integer macro expansions, two
+local relocation encodings with different raw addends, three post-division
+hazard cases at a noreorder transition, four ordinary noreorder cases that
+differ between SDK versions, and two cross-fragment `.align` / `.word 0`
+distance cases. No byte masks, crops, relocation exemptions or acceptance
+waivers turn these failures into matches. In particular, the same-fragment
+helper does **not** establish general support for `.word` directives,
+alignment, relaxation or removal of speculative NOP fragments.
+
+**Delay-slot limitation.** SDK 3.01 emits a warning that automatic padding
+cannot take place for a division in a branch delay slot; it still returns
+success and produces an object. Calling that a compilation refusal was
+incorrect. This patch does not change compiler scheduling, add padding
+inside a branch delay slot, or reproduce SDK 3.01 ordinary noreorder floors.
+A missing code label or unsupported fragment transition can still leave a
+candidate short. The two retained division-family attempts remain mismatches
+and receive no credit.
+
+Current-corpus acceptance remains the separate exact-byte requirement:
+27 native and 27 small-data object qualifications reproduce their prior
+objects, candidate ELFs and every function result; the boot review reproduces
+all 309 complete definitions. Full boot and 27-overlay integration gates,
+fresh catalogue/binding exports and CI must pass on this identity before
+publication. No C body, declaration, prototype or placement is changed.
 
 ## Scope
 
