@@ -1,38 +1,42 @@
-<!--
-Keep this short. A reviewer must be able to reproduce your result with the command you paste.
--->
+<!-- Required format: docs/PR-DESCRIPTIONS.md. Replace TODOs; keep headings and
+field names. Use English and report only checks actually run. Commands use
+portable placeholders, never private paths. This check does not prove claims. -->
 
-## What this changes
+## Summary
 
-<!-- One or two sentences: which file(s), and why. -->
+TODO: Explain the concrete problem and resulting behavior.
 
-## Type
+## Scope
 
-- [ ] A matched function (C that reproduces retail bytes)
-- [ ] A level placement / catalogue change
-- [ ] Tooling or tests
-- [ ] Documentation
+- Type: TODO (matching, placement, nonmatching, tooling, documentation; comma-separated)
+- Validated base: TODO (full upstream RAC2 commit SHA used for validation)
+- Reservation: TODO (acknowledged issue/claim; or N/A: reason for non-decomp work)
+- Targets: TODO (symbols, programs and source modules; or N/A: reason)
 
-## Proof
+## Validation
 
-<!--
-Every match needs a proof: the exact command, and its result.
-Example:
-  python scripts/check_candidates.py --reference <boot.elf> --toolchain <ProDG-3.01> --runtime <dir>
-  -> all catalogued symbols "matched": true, "different_bytes": 0
--->
+<!-- Repeat Command/Result pairs as needed. Include failures and skipped checks.
+Use repository paths or <reference>, <toolchain>, <runtime> placeholders. -->
+- Command: TODO
+- Result: TODO (actual outcome, counts and relevant report location)
 
-- Command:
-- Result:
+## Matching evidence
 
-## Checks
+<!-- Matching/placement changes fill every field. Otherwise use N/A: reason.
+Nonmatching changes report zero deltas. Distinguish physical loaded coverage
+from unique code. No matching credit for ASM or approximate C. -->
+- Proofs: TODO (versioned proof paths, symbols and source/checker hashes)
+- Physical delta: TODO (signed byte count; before/after when available)
+- Unique delta: TODO (signed byte count; before/after when available)
+- Gates: TODO (complete symbols and affected full images; disclose failures/skips)
+- ABI review: TODO (arguments, returns, globals/callers checked and unknowns)
 
-- [ ] `python -m unittest discover -s tests -v` passes
-- [ ] Every changed program still gates: all loaded bytes of both PT_LOAD segments compare
-      equal to retail (boot, and each level overlay touched)
-- [ ] No retail-derived file in the diff — no `boot.elf`, overlays, disc images, extracted
-      `.bin`/`.o`, `asm/`, `build/`, runtime output
-- [ ] Pinned identities untouched, or the catalogue hashes were regenerated together
-      (`config/target.json`, `config/overlays.json`, `progress/candidates.json`)
-- [ ] Provenance: everything here comes from the retail disc I own or from my own work; any
-      external source is cited as reference only
+## Risks and follow-up
+
+TODO: State limitations, negative trials and remaining work. Use None only when justified.
+
+## Checklist
+
+- [ ] Description reflects this head and the validated combined source.
+- [ ] Only authored source and public proof metadata are included; no game bytes, proprietary tools, secrets or private runtime data.
+- [ ] Provenance and reused work are identified; incomplete or skipped validation is disclosed.
