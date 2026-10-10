@@ -8,6 +8,7 @@ import base64
 import hashlib
 import json
 import os
+import time
 from pathlib import Path
 import urllib.request
 
@@ -21,6 +22,7 @@ QUALIFIED_WORKFLOW_SHA256 = "dfb2d42a7f63161dc55e7b8bf284ad9bab44014f0e350896670
 QUALIFIED_EXPORTER_SHA256 = "901dd0ed500fc9f8813583a7db8f90d9e85702bed2c2e4ad18f03a607434acf2"
 FULL_JOB = "validation"
 FULL_STEP = "Run complete tool suite"
+ASSOCIATION_PENDING = "exact merged PR association is still pending"
 
 
 def identity(user):
@@ -74,6 +76,12 @@ def select(event_name, event, sha, api):
     if event_name != "push" or event.get("ref") != "refs/heads/RAC2" or event.get("after") != sha:
         return full("only an exact protected-branch push can reuse queue tests")
     prs = api.get("commits/" + sha + "/pulls?per_page=100")
+    if type(prs) is list and not prs:
+        return full(ASSOCIATION_PENDING)
+    if (type(prs) is list and len(prs) == 1 and trusted_pr(prs[0]) and prs[0].get("state") in ("open", "closed")
+            and type(prs[0].get("number")) is int and prs[0]["number"] > 0
+            and prs[0].get("merged_at") is None and prs[0].get("merge_commit_sha") in (None, sha)):
+        return full(ASSOCIATION_PENDING)
     merged = [pr for pr in prs if pr.get("merged_at") and pr.get("merge_commit_sha") == sha]
     if len(prs) >= 100 or len(merged) != 1 or not trusted_pr(merged[0]):
         return full("exact merged PR is absent, ambiguous or not the primary maintainer")
@@ -115,6 +123,29 @@ def select(event_name, event, sha, api):
     return full("no successful exact-SHA full merge-group suite was verified")
 
 
+def select_with_retry(event_name, event, sha, api, wait=None, clock=None):
+    """Wait at most 30s only for missing/pending trusted merged association.
+
+    HTTP requests retain the existing timeout/error behavior. Every attempt
+    reruns all exact identity and queue proof checks; no other refusal retries.
+    """
+    wait, clock = wait or time.sleep, clock or time.monotonic
+    deadline = clock() + 30
+    for delay in (2, 4, 6, 8, 10):
+        result = select(event_name, event, sha, api)
+        if result != full(ASSOCIATION_PENDING):
+            return result
+        remaining = deadline - clock()
+        if remaining <= 0:
+            break
+        wait(min(delay, remaining))
+    else:
+        result = select(event_name, event, sha, api)
+        if result != full(ASSOCIATION_PENDING):
+            return result
+    return full("exact merged PR association did not settle within the bounded retry window")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--event", type=Path, required=True)
@@ -122,7 +153,7 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         event = json.loads(args.event.read_bytes())
-        result = select(os.environ.get("GITHUB_EVENT_NAME"), event, os.environ.get("GITHUB_SHA"),
+        result = select_with_retry(os.environ.get("GITHUB_EVENT_NAME"), event, os.environ.get("GITHUB_SHA"),
                         GitHub(os.environ.get("GITHUB_TOKEN", "")))
     except Exception:
         # No API exception text: request errors must never disclose credentials.
