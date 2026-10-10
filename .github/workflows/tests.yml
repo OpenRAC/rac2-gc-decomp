@@ -7,6 +7,7 @@ on:
   merge_group:
     branches: [RAC2]
     types: [checks_requested]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,11 +21,10 @@ jobs:
       mode: ${{ steps.route.outputs.mode }}
       base_sha: ${{ steps.route.outputs.base_sha }}
     steps:
-      # A PR cannot replace its own identity/provenance selector. Missing older
-      # policy versions fall back to the complete suite during rollout.
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -38,7 +38,8 @@ jobs:
           else
             python scripts/maintainer_test_policy.py --event "$GITHUB_EVENT_PATH" --output "$GITHUB_OUTPUT"
           fi
-  tests:
+  validation:
+    name: validation
     needs: policy
     if: always()
     runs-on: ubuntu-latest
@@ -50,84 +51,113 @@ jobs:
         run: |
           test "$POLICY_RESULT" = success
           case "$GITHUB_EVENT_NAME:$TEST_MODE" in
-            merge_group:full|pull_request:full|pull_request:targeted|push:full|push:reuse) ;;
+            merge_group:full|pull_request:full|pull_request:targeted|push:full|push:reuse|workflow_dispatch:full) ;;
             *) echo 'Missing or invalid test route'; exit 1 ;;
           esac
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install qualified boundary decoder
         run: python -m pip install rabbitizer==1.16.2
-      # No policy output can suppress the full merge-group suite.
+      - name: Install pinned objdiff
+        if: github.event_name != 'pull_request' || needs.policy.outputs.mode == 'full'
+        run: |
+          curl --fail --location --retry 3 -o "$RUNNER_TEMP/objdiff-cli" \
+            https://github.com/encounter/objdiff/releases/download/v3.8.1/objdiff-cli-linux-x86_64
+          echo "c8290281e82114bcc1a06ff73061110d3902a177822e750337de2537188e358f  $RUNNER_TEMP/objdiff-cli" | sha256sum --check
+          chmod +x "$RUNNER_TEMP/objdiff-cli"
+      - name: Verify and restore exact queue export
+        id: restore
+        if: github.event_name == 'push' && needs.policy.outputs.mode == 'reuse'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/ci_export_reuse.py --event "$GITHUB_EVENT_PATH" --output "$GITHUB_OUTPUT" --objdiff "$RUNNER_TEMP/objdiff-cli"
+      # Full queue discovery is literal and cannot be suppressed by route outputs.
       - name: Run complete tool suite
-        if: github.event_name == 'merge_group' || needs.policy.outputs.mode == 'full'
+        if: github.event_name == 'merge_group' || needs.policy.outputs.mode == 'full' || (github.event_name == 'push' && needs.policy.outputs.mode == 'reuse' && steps.restore.outputs.reused != 'true')
         run: python -m unittest discover -s tests -v
       - name: Run primary maintainer focused checks
         if: github.event_name == 'pull_request' && needs.policy.outputs.mode == 'targeted'
         env:
           VERIFIED_BASE_SHA: ${{ needs.policy.outputs.base_sha }}
         run: python scripts/maintainer_tests.py --ci-base "$VERIFIED_BASE_SHA"
-      - name: Record verified queue-suite reuse
-        if: github.event_name == 'push' && needs.policy.outputs.mode == 'reuse'
-        run: echo 'The exact commit passed the qualified full merge-group suite; its provenance is recorded by the policy job.' >> "$GITHUB_STEP_SUMMARY"
-      - name: Check authored source and campaign views
-        run: |
-          python scripts/source_layout.py --check --inventory-check progress/source-inventory.json
-          python scripts/campaign.py --runtime /tmp/rac2-campaign-ci views --check
-      - name: Export verified RAC2 progress
-        run: |
-          python scripts/progress_module_report.py --output build/decomp/report.json \
-            --source-module-summary build/decomp/source-modules.json
-      - name: Validate the report with objdiff
-        # decomp.dev parses this artifact with objdiff; reject a report it cannot load.
-        # The release binary is pinned by version and SHA-256.
-        run: |
-          curl --fail --location --retry 3 -o "$RUNNER_TEMP/objdiff-cli" \
-            https://github.com/encounter/objdiff/releases/download/v3.8.1/objdiff-cli-linux-x86_64
-          echo "c8290281e82114bcc1a06ff73061110d3902a177822e750337de2537188e358f  $RUNNER_TEMP/objdiff-cli" | sha256sum --check
-          chmod +x "$RUNNER_TEMP/objdiff-cli"
-          "$RUNNER_TEMP/objdiff-cli" report changes build/decomp/report.json build/decomp/report.json \
-            -o "$RUNNER_TEMP/objdiff-validation.json"
-      - name: Validate the global unique catalogue and paired display
-        run: |
-          python scripts/unique_code_report.py --catalog config/function-catalog/catalog.json --output progress/unique-code-report.json --check
-          python scripts/unique_code_report.py --catalog config/function-catalog/catalog.json --output build/decomp/unique-summary.json --objdiff-output build/decomp/unique-report.json
-          python scripts/readme_unique_progress.py --catalogue-report progress/unique-code-report.json --physical-report build/decomp/report.json --check
-          # Parse every unit against an empty report. Comparing 84k units to
-          # themselves makes the CLI perform an unnecessary quadratic search.
-          python -c 'import sys,json; sys.path.insert(0,"scripts"); from decomp_report import measures; print(json.dumps({"version":2,"measures":measures(0,0,0),"units":[],"categories":[]}))' > "$RUNNER_TEMP/empty-report.json"
-          "$RUNNER_TEMP/objdiff-cli" report changes "$RUNNER_TEMP/empty-report.json" build/decomp/unique-report.json -o "$RUNNER_TEMP/unique-objdiff-validation.json"
+      - name: Verify primary maintainer source metadata
+        if: github.event_name == 'pull_request' && needs.policy.outputs.mode == 'targeted'
+        run: python scripts/ci_export.py --mode source
+      - name: Generate and validate complete exports
+        if: github.event_name == 'merge_group' || needs.policy.outputs.mode == 'full' || (github.event_name == 'push' && needs.policy.outputs.mode == 'reuse' && steps.restore.outputs.reused != 'true')
+        run: python scripts/ci_export.py --mode full --objdiff "$RUNNER_TEMP/objdiff-cli"
       - uses: actions/upload-artifact@v4
+        if: github.event_name == 'merge_group' || needs.policy.outputs.mode == 'full'
+        with:
+          name: SCUS_972.68_verified-export-${{ github.run_attempt }}
+          path: build/decomp/verified-export/*
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request' || needs.policy.outputs.mode == 'full'
         with:
           name: SCUS_972.68_report
           path: build/decomp/report.json
           if-no-files-found: error
       - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request' || needs.policy.outputs.mode == 'full'
         with:
           name: SCUS_972.68_source-modules
           path: build/decomp/source-modules.json
           if-no-files-found: error
       - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request' || needs.policy.outputs.mode == 'full'
+        with:
+          name: SCUS_972.68_authored_source
+          path: progress/source-inventory.json
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request' || needs.policy.outputs.mode == 'full'
         with:
           name: SCUS_972.68-unique_report
           path: build/decomp/unique-report.json
           if-no-files-found: error
       - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request' || needs.policy.outputs.mode == 'full'
         with:
           name: SCUS_972.68_unique-metrics
           path: build/decomp/unique-summary.json
           if-no-files-found: error
-      - name: Check supplementary reusable-code families
-        run: |
-          python scripts/code_reuse_report.py --repo . --catalog config/function-catalog/catalog.json \
-            --output progress/code-reuse-report.json --families-output progress/code-reuse-families.json.gz --check
       - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request' || needs.policy.outputs.mode == 'full'
         with:
           name: SCUS_972.68_code-reuse
           path: |
             progress/code-reuse-report.json
             progress/code-reuse-families.json.gz
           if-no-files-found: error
+  tests:
+    name: tests
+    needs: [policy, validation]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require verified shared validation
+        env:
+          POLICY_RESULT: ${{ needs.policy.result }}
+          VALIDATION_RESULT: ${{ needs.validation.result }}
+        run: |
+          test "$POLICY_RESULT" = success
+          test "$VALIDATION_RESULT" = success
+  progress:
+    name: SCUS_972.68 Progress
+    needs: [policy, validation]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require verified shared progress
+        env:
+          POLICY_RESULT: ${{ needs.policy.result }}
+          VALIDATION_RESULT: ${{ needs.validation.result }}
+        run: |
+          test "$POLICY_RESULT" = success
+          test "$VALIDATION_RESULT" = success

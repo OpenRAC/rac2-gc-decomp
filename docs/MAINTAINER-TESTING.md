@@ -58,8 +58,12 @@ Python files. It does not import changed scripts, infer transitive test coverage
 or fall back to full discovery for an unmapped executable. Deleted tests are
 not represented as executed coverage. This is deliberately limited pre-queue
 feedback; the complete merge-group suite remains mandatory for every change.
-The actual source inventory, proof/export/consumer and freshness commands still
-run on every route, and applicable local raw matching gates remain required.
+The primary-maintainer PR additionally checks current pinned source hashes,
+exact rendered compilation units, source-inventory metadata, the original
+physical proof/object metadata validators and physical README display once.
+It does not reclassify source families or generate/group the unique and reuse
+corpora on that limited route. Those full checks run in the mandatory queue.
+Applicable local legal-reference/compiler/SDK raw matching gates remain required.
 
 `Tool tests / tests` never relies on a skipped dependency: a missing or failed
 policy decision fails the required job. The merge-group command is a literal
@@ -68,18 +72,43 @@ unconditional `unittest discover` route regardless of policy output.
 On a protected-main push, reuse requires exactly one associated merged primary
 maintainer PR whose `merge_commit_sha` equals the current commit; both repository
 identities; a successful `merge_group` run of the exact `tests.yml` workflow ID,
-path, repository and commit; the current attempt's successful `tests` job and
-completed full-suite step; and the workflow byte hash reviewed in the policy.
+path, repository and commit; the current attempt's successful `validation` producer, successful required
+`tests` and `SCUS_972.68 Progress` consumers, completed full-suite/export steps
+and the workflow byte hash reviewed in the policy. The producer exports one
+physical/grouped, unique and reusable-code report set; the two required consumers
+fail if the policy or shared producer fails, is cancelled or is skipped.
 A matching step name alone is insufficient. The qualified workflow forces full
 discovery for every merge group. There is no tree-equivalence fallback. API
 errors, ambiguity, absent evidence or changed workflow bytes select full tests.
 Workflow changes require reviewing and updating this qualified hash.
 
 The policy job records the queue run, attempt, commit and workflow digest in its
-log. The main job truthfully records reuse; it still executes source/campaign,
-report-consumer, unique and supplementary freshness checks. The independent
-Progress workflow continues to validate and publish its artifacts on PR, queue
-and main. No test run is cancelled and no branch-protection rule is weakened.
+log. Main reuse additionally requires a unique attempt-specific immutable
+artifact, verified archive digest, current tracked-input and runtime/tool hashes,
+reviewed exporter bytes and exact per-file output hashes. Only allowlisted public
+report metadata is restored; unsafe paths, duplicates, symlinks, oversized archives
+and missing or changing API metadata refuse reuse. The pinned objdiff consumer
+is executed on the copied reports and must reproduce the captured validation
+hashes. Reused queue receipts remain byte-for-byte historical receipts.
+The producer and restoration guards require the checked-out commit to equal
+the announced `GITHUB_SHA`, with both tracked working tree and index unchanged
+before and after validation. A test that modifies tracked inputs cannot certify
+the original queue commit. Python subprocesses use the same qualified interpreter.
+The campaign-view check uses a cleaned temporary runtime outside the checkout,
+as required by the maintained campaign guard; no runtime is placed in the repository.
+
+The single `tests.yml` workflow now publishes the original decomp.dev artifact
+names; the duplicated `progress.yml` workflow is removed. Main republishes the
+verified same-SHA report bytes without regenerating the unique or reuse corpora.
+If identity, queue provenance, tools, artifacts or consumer validation cannot be
+verified, the job runs fresh full tests and exports. Maintainer source PRs do not
+publish mass reports before the queue; other contributors still use full checks.
+Actual external decomp.dev ingestion must be checked after rollout. No required
+status name, review rule or local raw byte gate is weakened.
+
+The manual `workflow_dispatch` trigger is retained on the unique workflow and
+always runs full tests and exports. It cannot select the focused or reuse routes,
+and a manual run cannot substitute for the required merge-group provenance.
 
 The identity and provenance checks use GitHub's read-only
 [workflow-run API](https://docs.github.com/en/rest/actions/workflow-runs) and

@@ -77,7 +77,7 @@ class PolicyTests(unittest.TestCase):
                "path": policy.WORKFLOW, "repository": self.repo, "head_repository": self.repo,
                "status": "completed", "conclusion": "success", "run_attempt": 1,
                "head_branch": "gh-readonly-queue/RAC2/pr-10-base"}
-        job = {"name": "tests", "run_id": 50, "head_sha": self.sha,
+        job = {"name": policy.FULL_JOB, "run_id": 50, "head_sha": self.sha,
                "status": "completed", "conclusion": "success",
                "steps": [{"name": policy.FULL_STEP, "status": "completed", "conclusion": "success"}]}
         self.values = {"commits/" + self.sha + "/pulls?per_page=100": [pr],
