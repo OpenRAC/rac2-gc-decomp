@@ -399,9 +399,13 @@ patch -R -p1 -s < "$P/0001-r5900-quad-saves.patch"
 script that carries its exact replacement text; the five source adjustments are
 `neutralise_timode_anchor.py`, `enable_loop_padding.py`,
 `count_trap_length.py`, `ascending_save_order.py` and `reorder_save_blocks.py`,
-and the three that touch the assembler and the machine description are
+and the ones that touch the assembler and the machine description are
 `fold_zero_ti_store.py`, `disable_frame_order_default.py`,
-`restrict_mtc1_exemption.py` and `pad_div_erratum_nops.py`.
+`restrict_mtc1_exemption.py`, `pad_div_erratum_nops.py`,
+`neutralise_div_dslot.py` and `pad_div_erratum_branch.py`.
+`pad_div_erratum_branch.py` applies **after** `pad_div_erratum_nops.py`: it
+rewrites that rule's generated anchors, so the label trigger keeps the exact
+text the 9 October 2026 label correction validated.
 `fold_zero_ti_store.py` takes the `gcc` source
 directory rather than one file, because it retires a machine-description change
 and inserts a back-end pass across three more sources at once; the
@@ -439,21 +443,22 @@ match:
 | --- | --- |
 | `gcc/config/mips/mips.c` | `7952e5da98031f907c8650b5ed5bd262b7c10ac27157af4463381adb87e59e3c` |
 | `gcc/config/mips/mips.h` | `87d59c06d047cf7252349cb02aebc266f8b4dcecd537c827e6ec3966a10bbfc3` |
-| `gcc/config/mips/mips.md` | `177caa696e7de5e58515d1500abce727f8783454b4522fd3e5cd3e0630b99acf` |
+| `gcc/config/mips/mips.md` | `9720897dc353fd246c6f94d5882c3beb16c81fa9e42438ee8d184c8a78a581ad` |
 | `gcc/toplev.c` | `38d52727addc0b0b299700835788808cf23fe59c863a961cdd6f28170faaf3cc` |
-| `gas/config/tc-mips.c` | `b014add9bd605ce4c2daf8245d932fe800380f259c2785d9ddce09d5e7ccbb62` |
-| `gcc/cc1` | `5fed4e239d6fe3ef19d3b18483844eaf5fb1e647c5d8556652c75fc8e9a73bc6` |
+| `gas/config/tc-mips.c` | `b22dfff81e41d3d378b1f35a231d2c11b60700967d6faf70b820f6300caf81d6` |
+| `gcc/cc1` | `4d069ae40f7e22d19bf35ccbe0b1a52973ba7f56622ce8bf85cf6d92811a6c78` |
 | `gcc/cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
-| `gas/as-new` | `d81f2e934463174fe2313c8270cf88aad5cf7b0c8c92db0f14a7e60e0f9bd85c` |
+| `gas/as-new` | `c71a15dba889fc273b0b699986de7316d056b94ae2155ad2c2573eaa62b8d902` |
 
 The whole recipe was last verified end to end on 7 October 2026 (six identities,
-then-current `cc1`); the four `gcc` source rows and the `cc1` row above are the
-9 October 2026 identities, re-derived from the public `fold_zero_ti_store.py` on
-that date. The `gas/config/tc-mips.c` and `gas/as-new` rows are the 9 October
-2026 division-erratum identities: the same date's `tc-mips.c` was
-`61e51c1e…` before `pad_div_erratum_nops.py` and is `b014add9…` after it, and a
-complete rebuild from a fresh archive extraction reproduced all eight rows with
-the same `as-new`. A `mips.c` that hashes differently means a step above is missing
+then-current `cc1`). The `gcc` rows and `cc1` above are the 9 October 2026
+identities; the same date's `mips.md` was `177caa69…` before
+`neutralise_div_dslot.py` and is `9720897d…` after it, and its `tc-mips.c` was
+`61e51c1e…` before `pad_div_erratum_nops.py`, `b014add9…` after it and
+`b22dfff8…` after `pad_div_erratum_branch.py`. A rebuild of the unmodified
+qualified tree reproduced `5fed4e23…` and `d81f2e93…` on that same host, so the
+two new rows are the transformers' work and not a build difference. A `mips.c`
+that hashes differently means a step above is missing
 — a rebuild that skips the adjustments produces a compiler that still matches the
 measured corpus on simple bodies and diverges elsewhere, which is exactly the
 failure mode this section exists to prevent.
@@ -527,7 +532,12 @@ incorrect. This patch does not change compiler scheduling, add padding
 inside a branch delay slot, or reproduce SDK 3.01 ordinary noreorder floors.
 A missing code label or unsupported fragment transition can still leave a
 candidate short. The two retained division-family attempts remain mismatches
-and receive no credit.
+and receive no credit. The compiler half of the same problem — a division the
+scheduler moved *into* a delay slot — is addressed separately by
+[`neutralise_div_dslot.py`](../scripts/compiler/neutralise_div_dslot.py), and
+the label trigger above is extended to its branch form by
+[`pad_div_erratum_branch.py`](../scripts/compiler/pad_div_erratum_branch.py);
+both are documented in the section below.
 
 Current-corpus acceptance remains the separate exact-byte requirement:
 27 native and 27 small-data object qualifications reproduce their prior
@@ -535,6 +545,93 @@ objects, candidate ELFs and every function result; the boot review reproduces
 all 309 complete definitions. Full boot and 27-overlay integration gates,
 fresh catalogue/binding exports and CI must pass on this identity before
 publication. No C body, declaration, prototype or placement is changed.
+
+## The division vein: delay-slot barrier and branch-group floor (9 October 2026)
+
+**Identity.** `cc1` moves from `5fed4e23…` to `4d069ae4…` and GNU `as` from
+`d81f2e93…` to `c71a15db…`; `cpp` (`2ac3d8d3…`) is unchanged, so the compiler
+half and the assembler half move for different reasons. Two sources move:
+`gcc/config/mips/mips.md` (`177caa69…` → `9720897d…`) and
+`gas/config/tc-mips.c` (`b014add9…` → `b22dfff8…`). The public transformers are
+[`neutralise_div_dslot.py`](../scripts/compiler/neutralise_div_dslot.py) and
+[`pad_div_erratum_branch.py`](../scripts/compiler/pad_div_erratum_branch.py);
+applying them to the qualified source tree reproduces both source hashes byte
+for byte, and a rebuild of the **unmodified** tree in the same build environment
+reproduced `5fed4e23…`/`d81f2e93…`, so the two new rows are the transformers'
+work and not a difference of host or build order.
+
+**Why the compiler half.** `dbr_schedule` (`reorg.c`), reached from `toplev.c`
+under `#ifdef DELAY_SLOTS` whenever `optimize > 0 && flag_delayed_branch`, fills
+delay slots with a backward scan and no `may_trap_p` guard, and accepts a
+candidate whose `dslot` attribute is "no" with length one — which `div.s` is.
+The retail build never does that: a census of the pinned reference image finds
+**0 of 19 806 `div.s` occupancies in a delay slot**, while integer HI/LO
+division occupies **61**. The oracle agrees: on the emitted assembly of the
+affected family the authentic SDK 3.01 assembler refuses a `div.s` in a delay
+slot ("Automatic padding cannot take place"), and accepts the same body once the
+scheduler leaves the division in place. The transformer adds the
+single-precision COP1 division/root family to the `dslot` barrier list, and
+leaves integer HI/LO division eligible.
+
+**Why the assembler half.** The floor merged on the same day is keyed to a
+**code label**; the witness family has no label between the function entry and
+its division. Probing the authentic SDK 3.01 assembler with complete snippets
+shows the trigger of that site is a **branch group**: `bc1t ; ld ; div.s` gains
+two `nop`, `bc1t ; ld ; addu ; div.s` gains one, `bc1t ; ld ; addu ; addu ;
+div.s` gains none. Conditional branches, branch-likely forms (`beql`, `bc1tl`)
+and the unconditional `b` all trigger it; `j`, `jal`, `jr` and `jalr` do **not**
+(`jal ; nop ; div.s` gains nothing, and so does `jal ; nop ; addu ; div.s`), so
+the generated test is the opcode class and not a mnemonic table. `sqrt.s` and
+`rsqrt.s` carry the same floor and integer HI/LO division does not. The
+transformer is applied after the label rule and rewrites that rule's own
+generated anchors; the label trigger keeps the text the earlier correction
+validated. It is deliberately **not** cleared by an immediately preceding
+`.set noreorder` region: the witness site keeps its branch and delay slot inside
+a compiler-generated `.set noreorder` block with the division in the following
+`.set reorder` block, and the oracle still pads it.
+
+**Zero measured impact on the published corpus.** Compiling the 55 published
+candidate sources with the new compiler and assembling them with the new
+assembler reproduces the previous chain's objects **byte for byte (55/55)**; the
+`.s` files are identical too, so the assembler half alone also moves nothing.
+The regenerated boot review differs from the published one in exactly
+`tools.cc1`, `tools.as` and `verified_at` — all 309 complete boot definitions,
+the object hash, the candidate ELF hash and the read-only sections are
+unchanged. The 27 native and 27 small-data unit reviews differ in exactly the
+two recorded instrument lines each (5 289 + 1 398 complete definitions,
+472 932 + 81 664 bytes). No published function changes status, and no C body,
+declaration, prototype or placement changes.
+
+**What the vein yields, measured.** Of the 4 657 unclaimed families, 460 carry a
+`div.s`; 117 of those have no mixed GPR+FPR frame, 72 carry a run of two `nop`
+at a division site, and 9 carry the branch trigger. The witness family
+(`4fbed03b15cb87e5`, 572 bytes × 27 placements) now reaches the retail size —
+**572 bytes / 143 words, against 560 under the qualified `5fed4e23` chain and
+564 with the compiler half alone** — and its division region `bc1t ; ld ; nop ; nop ; div.s ;
+jal ; nop` is byte-identical to the retail; it still does not match (85 words
+differ), because its prologue interleaves the GPR and FPR saves and hits the
+mixed-frame wall from the third word. The one non-vector branch-triggered family
+(`ad157649cfeed6f2`, 220 bytes × 8 placements) reproduces its branch-triggered
+division site as well but comes out 208 bytes: the retail also copies the
+incoming register (`mov.s $f3,$f12`) and carries two `nop` in front of its
+**first** division that the SDK 3.01 oracle does not insert for that instruction
+sequence, so they are compiler-emitted in the retail build. Both remain
+unintegrated.
+
+**Declared reserves.** (1) The compiler mechanism is **sufficient**, not the
+recovered original rule: the retail compiler's own reason for keeping `div.s`
+out of delay slots is not known. (2) `reorg.c` and `rtlanal.c` are byte-identical
+to the pristine `gnu-ee-binutils-gcc-1.1.tar.gz` archive in the qualified tree,
+and no patch of the `sce-991111b` stack touches `mips.md`, so "this is not a lost
+RAC2 adjustment" rests on that file identity. (3) `sqrt.s` and `rsqrt.s` carry
+**no witness at all** in the retail image (0 occurrences of each); extending the
+barrier to them is an extrapolation from the same COP1 family, and GNU `as`
+does not assemble `rsqrt.s` at all. (4) The branch trigger is bounded: a
+division emitted *inside* a noreorder region still receives no padding, and the
+majority of the retail's two-`nop` runs at a division site follow a non-branch
+instruction, are not produced by the SDK 3.01 assembler from that sequence
+(probed directly), and therefore have a compiler-side cause this lot does not
+recover.
 
 ## Scope
 
