@@ -1,0 +1,47 @@
+extern void @@ROLE_0_00@@(char *pkt);
+extern long long @@ROLE_1_00@@(char *p);
+extern float @@ROLE_2_00@@(float x, float y);
+extern float @@ROLE_3_00@@(char *p);
+extern float @@ROLE_4_00@@(float x, float y);
+extern void @@ROLE_5_00@@(float *matrix, float *quat);
+extern void @@ROLE_6_00@@(float *off, char *src, float scale);
+extern void @@ROLE_7_00@@(char *pkt, float angle);
+extern void @@ROLE_8_00@@(char *pkt, float *matrix, int mode);
+
+void @@FUNCTION@@(char *pos, int a1, int a2, char *a3, int t0,
+                                        char *src, float f12, float f13)
+{
+    char pkt[144];
+    float m[16];
+    float quat[4];
+    float off[4];
+    long long r;
+
+    @@ROLE_0_01@@(pkt);
+    r = @@ROLE_1_01@@(a3);
+
+    *(int *)(pkt + 76) = a1 + (a2 << 24);
+    *(int *)(pkt + 72) = a1 + (a2 << 24);
+    *(int *)(pkt + 68) = a1 + (a2 << 24);
+    *(int *)(pkt + 64) = a1 + (a2 << 24);
+    *(long long *)(pkt + 112) = 0LL;
+    *(long long *)(pkt + 120) = r;
+    *(long long *)(pkt + 128) = 280993940374112LL;
+    *(long long *)(pkt + 136) = ((long long)t0 << 2) | 0x8000000040LL;
+
+    quat[3] = 0.0f;
+    quat[2] = @@ROLE_2_01@@(*(float *)(src + 0), *(float *)(src + 4));
+    quat[1] = -@@ROLE_4_01@@(@@ROLE_3_01@@(src), *(float *)(src + 8));
+    quat[0] = f13;
+
+    @@ROLE_5_01@@(m, quat);
+    @@ROLE_6_01@@(off, src, 0.025f);
+
+    m[12] = *(float *)(pos + 0) + off[0];
+    m[13] = *(float *)(pos + 4) + off[1];
+    m[14] = *(float *)(pos + 8) + off[2];
+    m[15] = 1.0f;
+
+    @@ROLE_7_01@@(pkt, f12);
+    @@ROLE_8_01@@(pkt, m, 0);
+}

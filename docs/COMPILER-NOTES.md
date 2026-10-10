@@ -298,10 +298,11 @@ proofs:
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `as` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
 
-(The current `cc1` is `4d069ae4…` and the current `as` is `c71a15db…`; this
+(The current `cc1` is `adb1c1b4…` and the current `as` is `c71a15db…`; this
 table is the 7 October milestone those descend from, through the
-folded-zero-store identity, the division-erratum assembler and the two
-division fixes of 9 October 2026 documented below.)
+folded-zero-store identity, the division-erratum assembler, the two
+division fixes of 9 October 2026 and the save-block order of 10 October 2026
+documented below.)
 
 (An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
 and has been superseded. The earlier `cc1`, `3e7628b7…`, emitted the GPR save
@@ -442,18 +443,21 @@ match:
 
 | Artifact | sha256 |
 | --- | --- |
-| `gcc/config/mips/mips.c` | `7952e5da98031f907c8650b5ed5bd262b7c10ac27157af4463381adb87e59e3c` |
+| `gcc/config/mips/mips.c` | `58d25b2c66abd95aef2c6c8e662ce15bb471d916704b1268413fca72694e738a` |
 | `gcc/config/mips/mips.h` | `87d59c06d047cf7252349cb02aebc266f8b4dcecd537c827e6ec3966a10bbfc3` |
 | `gcc/config/mips/mips.md` | `9720897dc353fd246c6f94d5882c3beb16c81fa9e42438ee8d184c8a78a581ad` |
 | `gcc/toplev.c` | `38d52727addc0b0b299700835788808cf23fe59c863a961cdd6f28170faaf3cc` |
 | `gas/config/tc-mips.c` | `b22dfff81e41d3d378b1f35a231d2c11b60700967d6faf70b820f6300caf81d6` |
-| `gcc/cc1` | `4d069ae40f7e22d19bf35ccbe0b1a52973ba7f56622ce8bf85cf6d92811a6c78` |
+| `gcc/cc1` | `adb1c1b4bb33048f2877ddda3b7a32ebaf847c5a3ba52e15d2fb92b62bc1a022` |
 | `gcc/cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `gas/as-new` | `c71a15dba889fc273b0b699986de7316d056b94ae2155ad2c2573eaa62b8d902` |
 
 The whole recipe was last verified end to end on 7 October 2026 (six identities,
-then-current `cc1`). The `gcc` rows and `cc1` above are the 9 October 2026
-identities; the same date's `mips.md` was `177caa69…` before
+then-current `cc1`). The `gcc` rows and `cc1` above are the 10 October 2026
+identities: the whole list above was replayed from a fresh archive extraction on
+that date and reproduced all eight hashes, and the previous `mips.c`/`cc1` pair
+(`7952e5da…`/`4d069ae4…`) was reproduced the same way immediately before it.
+The 9 October 2026 identities were the same apart from those two rows; the same date's `mips.md` was `177caa69…` before
 `neutralise_div_dslot.py` and is `9720897d…` after it, and its `tc-mips.c` was
 `61e51c1e…` before `pad_div_erratum_nops.py`, `b014add9…` after it and
 `b22dfff8…` after `pad_div_erratum_branch.py`. A rebuild of the unmodified
@@ -633,6 +637,151 @@ majority of the retail's two-`nop` runs at a division site follow a non-branch
 instruction, are not produced by the SDK 3.01 assembler from that sequence
 (probed directly), and therefore have a compiler-side cause this lot does not
 recover.
+
+## Save-block order: the FPR-first inversion is retired (10 October 2026)
+
+**Identity.** `cc1` moves from `4d069ae4…` to `adb1c1b4…`. `cpp`
+(`2ac3d8d3…`) and GNU `as` (`c71a15db…`) do **not** move: the assembler half of
+the identity is untouched, because this change is entirely inside
+`config/mips/mips.c`. One source moves — `mips.c` `7952e5da…` → `58d25b2c…` —
+and `mips.h`, `mips.md`, `toplev.c` and `tc-mips.c` are byte-identical to the
+previous qualified tree. The change is confined to the transformer that
+introduced it: [`reorder_save_blocks.py`](../scripts/compiler/reorder_save_blocks.py)
+now emits the stock order instead of the inverted one.
+
+**The rule that was wrong.** The transformer used to force the FPR emission
+block ahead of the GPR block on saves, and the GPR block ahead of the FPR block
+on restores. That is not what the retail image does, and it is not what the
+original source does either. The SCE source in the qualified tree
+(`config/mips/mips.c`, `save_restore_insns`) runs one loop and emits **the GP
+block first, then the FP block, in both directions**.
+
+A byte-level census of the pinned reference, decoding the save sequence of every
+complete body, agrees. The measurement below is "the first save the body emits
+is a GPR", over the frames that save at least one GPR **and** at least one FPR:
+
+| program | mixed GPR+FPR frames | first save is a GPR |
+| --- | ---: | ---: |
+| `0_aranos_tutorial` | 1 102 | **92.3 %** |
+| the retail boot | 533 | **90.6 %** |
+| all 28 programs | 31 278 | **92.5 %** |
+
+The weaker test — the whole GP block emitted before any FPR save — holds for
+34.8 % of the tutorial's mixed frames, because the retail interleaves the two
+groups in most bodies. That is a property of the scheduler, not of the block
+order, and it is the reason the classifier above is stated as the first save
+rather than as a block boundary.
+
+**Dating the regression.** It is not a lost RAC2 adjustment but a defect of the
+save-block recipe itself. Two `cc1` builds of 3 October 2026 bracket it: the
+00:13 build emits the GP block first, the 06:23 build no longer does. The
+inversion therefore entered with the recipe, and it is undone inside the recipe.
+
+**Why not restore the pre-patch file.** Replacing `mips.c` with its pre-recipe
+form does not build: the qualified `mips.c` also carries `fold_zero_ti_store.py`
+(`rac2_fold_zero_ti_store`, called from `toplev.c`), and the link fails with
+`undefined reference to rac2_fold_zero_ti_store`. The reversion belongs in the
+transformer, and `ascending_save_order.py` must still run before it: this
+transformer rewrites the region that one has already produced.
+
+**How little moves.** The selector alone decides the emitted order. Both block
+bodies are order-symmetric — each initialises the shared save-area base when it
+runs first and reuses an already established base when it runs second — so the
+two-pass loop, both block bodies, their offsets, their directions and the shared
+base logic are untouched. A diff of the qualified `mips.c` against the new one
+changes six lines: the transformer's three-line annotation, the two words inside
+it that name the block, and the selector line.
+
+**Reproduction.** Applying the transformer list to a fresh extraction of
+`gnu-ee-binutils-gcc-1.1.tar.gz` reproduced all eight checkpoints above on
+10 October 2026, and the same list with the previous revision of
+`reorder_save_blocks.py` reproduced the previous eight on the same host — so the
+`cc1` move is the transformer's work and not a build difference.
+
+**Composition guard.** This change must be *added to* the adopted chain, never
+substituted for it. The variant that first measured it was built from a working
+tree that predates the two division fixes, so its `cc1` (`883d5abe…`) is **not**
+the chain to install: it lacks the delay-slot barrier and the branch-group
+floor. What was installed is the current qualified tree plus the selector flip
+alone. Four behaviours were re-measured on the installed chain, each against a
+negative control:
+
+| behaviour | negative control | installed chain |
+| --- | --- | --- |
+| a single-precision division is not taken into a delay slot | `cc1 5fed4e23…` (pre-barrier) emits `jal g` then `div.s` | `div.s` standalone, then `jal g` |
+| the assembler pads a division after a branch group | `as d81f2e93…` (label floor only) emits 0 `nop` | `bc1t ; lw ; div.s` gains 2, one interposed instruction gains 1, two gain 0; `b` triggers, `jal` does not |
+| the assembler pads a division after a code label | — | label + 0 slots gains 2, +1 gains 1, +2 gains 0 |
+| `FUN_00282C88` and `FUN_002E5FE0` | — | both byte-exact, `j $31 ; sq $0,0($4)` and the counted loop unchanged |
+
+The assembler half is preserved by identity as well as by measurement: the
+installed `as` is the same binary as the outgoing one
+(`c71a15db…`), and `tc-mips.c` and `mips.md` are byte-identical.
+
+**Control measurement on the published corpus.** All 55 published candidate
+sources (boot and the 27 native and 27 small-data units) compile and assemble to
+**byte-identical objects** under both chains — 55/55, 4 586 164 bytes either
+side, and the intermediate `.s` files are identical too. The corpus does not
+contain a body whose frame the inversion changed, which is exactly why it was
+worth measuring.
+
+**What the vein yields.** Six shared families were blocked by this and are now
+byte-exact at every placement; all six are integrated in the same lot and the
+requalification below counts them.
+
+| family | body | placements | measured placements × size |
+| --- | ---: | ---: | ---: |
+| `8411efa90fa80b88` | 384 B | 53 native + 1 boot | 20 736 B |
+| `2c74c194eb670e6a` | 104 B | 174 | 18 096 B |
+| `458c670ec3072df2` | 540 B | 22 | 11 880 B |
+| `40487154aa250cc8` | 296 B | 52 | 15 392 B |
+| `6eb4f363e5305bed` | 172 B | 80 | 13 760 B |
+| `c10c12168bf625ba` | 516 B | 27 | 13 932 B |
+
+Three of them — `8411efa90fa80b88`, `2c74c194eb670e6a` and
+`40487154aa250cc8` — close outright. `458c670ec3072df2` additionally needs one
+invariant data address (`0x00189E20`) bound explicitly; the bound word is not
+masked. `6eb4f363e5305bed` and `c10c12168bf625ba` were measured *before* this
+change and did not match; they were re-measured against the installed chain and
+close. One further family, `eb99aa89` (208 bytes), reproduces its retail body
+under this order but is refused by the promoter on an unmodelled data role, so it
+is measured and not integrated.
+
+The promotion tool's own dry run verifies one placement byte by byte and the
+others structurally, through their relocation signatures. The complete byte
+equality that a promotion needs is established by the maintained unit
+qualification, which asserts `different_bytes == 0` and an exact produced size
+for **every** catalogued function of every unit.
+
+**What it does not close.** The first four families below were parked on this
+same wall by other agents and re-measured against the installed chain with the
+pre-change compiler as a control; the last two come from the lot that first
+measured the order. Every one of them *is* reached by the change — the mixed
+GPR+FPR frame is corrected in all of them — but a second defect takes over, so
+none becomes exact:
+
+| family | residual before | residual after | what remains |
+| --- | ---: | ---: | --- |
+| `a61ca9b9c41fa885` (544 B) | 22 words | **8 words** | instruction ordering in the entry block around the first two calls, not a save-block problem |
+| `a9d9dba317e30df2` (544 B) | 34 words | **27 words** | register allocation, frame-relative against register-relative addressing, and `bnez` against `bgtz` |
+| `afeb08d657b74409` (548 B) | 16-word gap | unchanged (560 B candidate, 548 B retail) | an 8-byte alignment hole after a multi-word macro (the documented `as` artefact) plus constant materialisation order |
+| `59491c4e9e39388c` (504 B) | 7 words short | unchanged | the only body that exists for it is a draft attempt, not a solution |
+| `bdcda1de2c05fafe` (420 B) | 173 bytes | 172 bytes | the retail interleaves one FPR save *below* its siblings, which neither block order expresses |
+| `3936f04294b84d4b` (628 B) | 620 B, 8 bytes short | unchanged | not a save-order wall |
+
+The declared reserve is that the order alone is not a general key: it is the
+retail's order for the frames that were measured, and the families above show
+that a mixed frame is necessary but not sufficient.
+
+**Requalification.** The whole published corpus was re-qualified on the
+installed tree: **6 009 complete C functions exact across the 27 native units
+(625 536 bytes) and 1 398 across the 27 small-data units (81 664 bytes)**, the
+boot review reproduces all 324 complete definitions, and the full
+boot-and-27-overlay loaded-image gate passes with no failure. No previously
+matched body changed status; the run adds only the families this change closes.
+For comparison, the first run of this requalification on the installed chain,
+with four of the six families promoted, reported 5 905 native functions /
+598 704 bytes on the same instruments — so the two families re-measured after
+that run account for the difference.
 
 ## Scope
 

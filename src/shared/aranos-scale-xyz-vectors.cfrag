@@ -1,0 +1,12 @@
+extern void @@ROLE_0_00@@(char *dst, char *src, float scale);
+extern void @@ROLE_1_00@@(char *dst, char *src, float scale);
+extern void @@ROLE_2_00@@(char *dst, char *src, float scale);
+extern void @@ROLE_3_00@@(char *dst, char *src, float scale);
+
+void @@FUNCTION@@(char *p, float scale)
+{
+    @@ROLE_0_01@@(p, p, scale);
+    @@ROLE_1_01@@(p + 16, p + 16, scale);
+    @@ROLE_2_01@@(p + 32, p + 32, scale);
+    @@ROLE_3_01@@(p + 48, p + 48, scale);
+}

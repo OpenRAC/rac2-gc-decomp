@@ -36,6 +36,7 @@
     "F0a76d85b_D_001B5200": 1790464,
     "F0a76d85b_FUN_00279D18": 2596120,
     "F0a76d85b_FUN_00283360": 2634592,
+    "F2c74c194_FUN_00282D30": 2633008,
     "F391de845_D_001B5340": 1790784,
     "F391de845_FUN_00282E48": 2633288,
     "F391de845_FUN_002E45C8": 3032520,
@@ -57,6 +58,11 @@
     "F669d6320_FUN_00282D30": 2633008,
     "F669d6320_FUN_00282F20": 2633504,
     "F6df9730c_FUN_00282B50": 2632528,
+    "F6eb4f363_FUN_00282D30": 2633008,
+    "F6eb4f363_FUN_002A77E0": 2783200,
+    "F6eb4f363_FUN_002A7878": 2783352,
+    "F6eb4f363_FUN_002A90F8": 2789624,
+    "F6eb4f363_FUN_002BF728": 2881320,
     "F70997ba9_FUN_0027C540": 2606400,
     "F70997ba9_FUN_0027C660": 2606688,
     "F70997ba9_FUN_0027F110": 2617616,
@@ -73,6 +79,14 @@
     "F7242f0a4_FUN_00334730": 3360560,
     "F7cb419c1_D_001F2840": 2041920,
     "F7cb419c1_FUN_002DE618": 3008024,
+    "F8411efa9_FUN_0027C878": 2607224,
+    "F8411efa9_FUN_00280B90": 2624400,
+    "F8411efa9_FUN_00282E20": 2633248,
+    "F8411efa9_FUN_00282F20": 2633504,
+    "F8411efa9_FUN_00283248": 2634312,
+    "F8411efa9_FUN_00283410": 2634768,
+    "F8411efa9_FUN_00328CA8": 3312808,
+    "F8411efa9_FUN_00328D30": 3312944,
     "F9e2cd219_FUN_002A7798": 2783128,
     "F9e2cd219_FUN_002ACF68": 2805608,
     "F9e2cd219_FUN_00305310": 3166992,
@@ -137,6 +151,10 @@
     "Fa2d20de7_FUN_00282CF0": 2632944,
     "Fa2d20de7_FUN_00282D30": 2633008,
     "Fa2d20de7_FUN_002A7988": 2783624,
+    "Fc10c1216_FUN_00282978": 2632056,
+    "Fc10c1216_FUN_00282CC0": 2632896,
+    "Fc10c1216_FUN_00283CF0": 2637040,
+    "Fc10c1216_FUN_002B9180": 2855296,
     "Fc936841d_FUN_00282CC0": 2632896,
     "Fc936841d_FUN_00282CF0": 2632944,
     "Fd8e166aa_D_001B7F80": 1802112,
@@ -1038,6 +1056,14 @@
       "xrefs": 0
     },
     {
+      "address": 2877880,
+      "meaning": "Family c10c12168bf625ba: seed body at LVL_0_ARANOS_TUTORIAL_FUN_00335810.",
+      "ranges": 1,
+      "size": 516,
+      "symbol": "FUN_002BE9B8",
+      "xrefs": 1
+    },
+    {
       "address": 2923160,
       "meaning": "move a circular index backward to a nonzero entry",
       "ranges": 1,
@@ -1277,6 +1303,14 @@
       "xrefs": 0
     },
     {
+      "address": 3165032,
+      "meaning": "Family 6eb4f363e5305bed: seed body at LVL_0_ARANOS_TUTORIAL_FUN_00387408.",
+      "ranges": 1,
+      "size": 172,
+      "symbol": "FUN_00304B68",
+      "xrefs": 1
+    },
+    {
       "address": 3166760,
       "meaning": "Shared native body; original game role is unknown.",
       "ranges": 1,
@@ -1290,6 +1324,14 @@
       "ranges": 1,
       "size": 144,
       "symbol": "FUN_00305838",
+      "xrefs": 1
+    },
+    {
+      "address": 3175216,
+      "meaning": "Family 6eb4f363e5305bed: seed body at LVL_0_ARANOS_TUTORIAL_FUN_00387408.",
+      "ranges": 1,
+      "size": 172,
+      "symbol": "FUN_00307330",
       "xrefs": 1
     },
     {
@@ -1371,6 +1413,14 @@
       "xrefs": 1
     },
     {
+      "address": 3270904,
+      "meaning": "Scales four consecutive 16-byte XYZ vectors in place by one scalar through a vector helper.",
+      "ranges": 1,
+      "size": 104,
+      "symbol": "FUN_0031E8F8",
+      "xrefs": 1
+    },
+    {
       "address": 3273128,
       "meaning": "Derives a 16-byte element at index-1 from its index-2 and index-3 neighbours through two bound helpers; original game role is unknown.",
       "ranges": 1,
@@ -1403,11 +1453,35 @@
       "xrefs": 1
     },
     {
+      "address": 3312944,
+      "meaning": "Scales four consecutive 16-byte XYZ vectors in place by one scalar through a vector helper.",
+      "ranges": 1,
+      "size": 104,
+      "symbol": "FUN_00328D30",
+      "xrefs": 1
+    },
+    {
+      "address": 3313048,
+      "meaning": "Builds a 144-byte packet, derives a quaternion from source floats through four float helpers, writes the last matrix row from a source point plus a computed offset, then dispatches the packet.",
+      "ranges": 1,
+      "size": 384,
+      "symbol": "FUN_00328D98",
+      "xrefs": 1
+    },
+    {
       "address": 3322608,
       "meaning": "resets a state record: zero words, plus/minus one float flags and two 64-bit fields in the retail store order",
       "ranges": 1,
       "size": 136,
       "symbol": "FUN_0032B2F0",
+      "xrefs": 1
+    },
+    {
+      "address": 3322744,
+      "meaning": "Scales four consecutive 16-byte XYZ vectors in place by one scalar through a vector helper.",
+      "ranges": 1,
+      "size": 104,
+      "symbol": "FUN_0032B378",
       "xrefs": 1
     },
     {
