@@ -1,3 +1,4 @@
+.config/
 .local/
 .venv/
 reference/
@@ -22,3 +23,16 @@ __pycache__/
 .env
 .env.*
 config/local.json
+
+# Legal compliance - never commit copyrighted material per LEGAL.md
+# baserom/ - User's legally acquired copy (never committed)
+# extracted/ - Extracted ROM files (never committed)
+# candidates/ - Generated standalone units (never committed)
+# progress/ - Progress tracking (never committed)
+# going-decompiled/ - Matching decompilation work (never committed)
+# These are generated from baserom which users must provide themselves
+baserom/
+extracted/
+candidates/
+progress/
+going-decompiled/
