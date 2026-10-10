@@ -1634,6 +1634,230 @@ Qualify the complete unit catalogue; then run the full boot and overlay gates.
 
 Reopen condition: New measured ABI, type or compiler evidence only.
 
+## call-families-lot4-20261010-0_aranos_tutorial
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-10_hrugis_cloud
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-11_joba
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-12_todano
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-13_boldan
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-14_aranos_prison
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-15_gorn
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-16_snivelak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-17_smolg
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-18_damosel
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-19_grelbin
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-1_oozla
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-20_yeedil
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-22_dobbo_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-23_damosel_orbit
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-24_ship_shack
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-25_wupash_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-26_jamming_array
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-2_maktar_nebula
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-30_insomniac_museum
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-3_endako
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-4_barlow
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-5_feltzin_system
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-6_notak
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-7_siberius
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-8_tabora
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-9_dobbo
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
+## call-families-lot4-20261010-boot
+
+State: `integrated`. Kind: `candidate`.
+
+Qualify the complete unit catalogue; then run the full boot and overlay gates.
+
+Reopen condition: New measured ABI, type or compiler evidence only.
+
 ## camera-activation-state112-aranos-source-binding-v2-20261006
 
 State: `stopped`. Kind: `candidate`.

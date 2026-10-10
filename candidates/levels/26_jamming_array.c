@@ -4202,3 +4202,969 @@ void LVL_26_JAMMING_ARRAY_FUN_00335320(char *p)
     *(char *)(p + 8) = (char)(q[2] * 255.0f);
     LVL_26_JAMMING_ARRAY_Fc10c1216_FUN_002EE328(p + 16, p + 16, (char *)(q + 4));
 }
+extern int LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_002EDFC8(char *p);
+extern void LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_0032F720(char *p);
+extern void LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_002EE328(char *p0, char *p1, char *p2);
+
+void LVL_26_JAMMING_ARRAY_FUN_0033F068(char *a0)
+{
+    char local[16];
+    char *s1 = a0;
+    char *s0;
+    int a1;
+    int v1;
+    char *p;
+
+    if (LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_002EDFC8(a0 + 10) != 0) {
+        LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_0032F720(a0);
+        return;
+    }
+    s0 = a0 + 32;
+    a1 = *(int *)(s1 + 4);
+    v1 = (a1 >> 24) + *(unsigned char *)(s0 + 20);
+    *(int *)(s1 + 4) = (a1 & 0x00ffffff) | (v1 << 24);
+    p = s1 + 16;
+    *(float *)(local + 0) = *(float *)(s1 + 32);
+    *(float *)(local + 4) = *(float *)(s0 + 4);
+    *(float *)(local + 8) = *(float *)(s0 + 8);
+    *(int *)(local + 12) = 0;
+    LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_002EE328(p, p, local);
+    *(float *)(s0 + 8) = *(float *)(s0 + 8) - *(float *)(s0 + 12);
+    *(unsigned char *)(s1 + 8) = *(unsigned char *)(s1 + 8) + *(unsigned char *)(s0 + 21);
+    *(float *)(s1 + 12) = *(float *)(s1 + 12) + *(float *)(s0 + 16);
+}
+extern int LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_002EDFC8(char *p);
+extern void LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_0032F720(char *p);
+extern void LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_002EE328(char *p0, char *p1, char *p2);
+
+void LVL_26_JAMMING_ARRAY_FUN_0033FE80(char *a0)
+{
+    char local[16];
+    char *s1 = a0;
+    char *s0;
+    int a1;
+    int v1;
+    char *p;
+
+    if (LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_002EDFC8(a0 + 10) != 0) {
+        LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_0032F720(a0);
+        return;
+    }
+    s0 = a0 + 32;
+    a1 = *(int *)(s1 + 4);
+    v1 = (a1 >> 24) + *(unsigned char *)(s0 + 20);
+    *(int *)(s1 + 4) = (a1 & 0x00ffffff) | (v1 << 24);
+    p = s1 + 16;
+    *(float *)(local + 0) = *(float *)(s1 + 32);
+    *(float *)(local + 4) = *(float *)(s0 + 4);
+    *(float *)(local + 8) = *(float *)(s0 + 8);
+    *(int *)(local + 12) = 0;
+    LVL_26_JAMMING_ARRAY_F250fbfa4_FUN_002EE328(p, p, local);
+    *(float *)(s0 + 8) = *(float *)(s0 + 8) - *(float *)(s0 + 12);
+    *(unsigned char *)(s1 + 8) = *(unsigned char *)(s1 + 8) + *(unsigned char *)(s0 + 21);
+    *(float *)(s1 + 12) = *(float *)(s1 + 12) + *(float *)(s0 + 16);
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_00423C00(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_00424040(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_004242F8(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_00424880(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_00425308(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_004255D0(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_00425998(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_00425C48(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_00425E40(char *object)
+{
+    LVL_26_JAMMING_ARRAY_Ffb202470_FUN_00422A18(object + 8);
+    return object;
+}
+extern void LVL_26_JAMMING_ARRAY_Fe524d931_FUN_00422CF0(char *p);
+extern void LVL_26_JAMMING_ARRAY_Fe524d931_FUN_00422EE0(char *p, float x, float y);
+extern void LVL_26_JAMMING_ARRAY_Fe524d931_FUN_0035EEF8(int a, int b, int c);
+extern void LVL_26_JAMMING_ARRAY_Fe524d931_FUN_002F06B8(void);
+extern short LVL_26_JAMMING_ARRAY_Fe524d931_D_001A6480[];
+
+int LVL_26_JAMMING_ARRAY_FUN_00423D60(char *object, int mask)
+{
+    char *sub = object + 8;
+    short oldx;
+    short oldy;
+    int *v;
+
+    LVL_26_JAMMING_ARRAY_Fe524d931_FUN_00422CF0(sub);
+    v = *(int **)(object + 684);
+    LVL_26_JAMMING_ARRAY_Fe524d931_FUN_00422EE0(sub, *(float *)v, *(float *)(v + 1));
+    if ((mask & 0x40) != 0 && *(int *)(object + 680) == 0)
+        LVL_26_JAMMING_ARRAY_Fe524d931_FUN_0035EEF8(4, 0, 0);
+    if ((mask & 0xf000) != 0) {
+        short *p = LVL_26_JAMMING_ARRAY_Fe524d931_D_001A6480;
+        oldx = p[180];
+        oldy = p[181];
+        if ((mask & 0x1000) != 0) {
+            ((unsigned short *)p)[181] = ((unsigned short *)p)[181] - 1;
+            if ((short)((unsigned short *)p)[181] < -32)
+                p[181] = -32;
+        }
+        if ((mask & 0x4000) != 0) {
+            unsigned short *q = (unsigned short *)LVL_26_JAMMING_ARRAY_Fe524d931_D_001A6480;
+            q[181] = q[181] + 1;
+            if ((short)q[181] > 32)
+                ((short *)q)[181] = 32;
+        }
+        if ((mask & 0x8000) != 0) {
+            unsigned short *q = (unsigned short *)LVL_26_JAMMING_ARRAY_Fe524d931_D_001A6480;
+            q[180] = q[180] - 1;
+            if ((short)q[180] < -40)
+                ((short *)q)[180] = -40;
+        }
+        if ((mask & 0x2000) != 0) {
+            unsigned short *q = (unsigned short *)LVL_26_JAMMING_ARRAY_Fe524d931_D_001A6480;
+            q[180] = q[180] + 1;
+            if ((short)q[180] > 40)
+                ((short *)q)[180] = 40;
+        }
+        {
+            short *q = LVL_26_JAMMING_ARRAY_Fe524d931_D_001A6480;
+            if (oldx != q[180] || oldy != q[181])
+                LVL_26_JAMMING_ARRAY_Fe524d931_FUN_0035EEF8(4, 0, 0);
+        }
+        LVL_26_JAMMING_ARRAY_Fe524d931_FUN_002F06B8();
+    }
+    return (mask >> 6) & 1;
+}
+extern void LVL_26_JAMMING_ARRAY_F0b028b34_FUN_00438750(char *a, unsigned int b, int c, int d);
+extern void LVL_26_JAMMING_ARRAY_F0b028b34_FUN_00438750(char *a, unsigned int b, int c, int d);
+extern void LVL_26_JAMMING_ARRAY_F0b028b34_FUN_004386E0(int a);
+
+int LVL_26_JAMMING_ARRAY_FUN_004387F0(int *p)
+{
+    int i;
+
+    p[17] = 1;
+    p[3] = 0;
+    p[4] = 0;
+    p[5] = 0;
+    p[22] = 0;
+    p[23] = 0;
+    for (i = 0; i < p[21]; i++) {
+        *(long long *)((char *)p[20] + i * 24) = -1;
+        *(long long *)((char *)p[20] + i * 24 + 8) = -1;
+        *(int *)((char *)p[20] + i * 24 + 16) = 0;
+        *(int *)((char *)p[20] + i * 24 + 20) = 0;
+    }
+    for (i = 0; i < p[2]; i++) {
+        LVL_26_JAMMING_ARRAY_F0b028b34_FUN_00438750((char *)(p[1] + i * 16), (i * 2048 + p[0]) & 0x0FFFFFFF, 3, 128);
+    }
+    LVL_26_JAMMING_ARRAY_F0b028b34_FUN_00438750((char *)(p[1] + i * 16), p[1] & 0x0FFFFFFF, 2, 0);
+    *(volatile unsigned int *)0x1000B420 = 0;
+    *(volatile unsigned int *)0x1000B410 = p[0] & 0x0FFFFFFF;
+    *(volatile unsigned int *)0x1000B430 = p[1] & 0x0FFFFFFF;
+    LVL_26_JAMMING_ARRAY_F0b028b34_FUN_004386E0(5);
+    return 1;
+}
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_0037F148(char *a, char *b);
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE328(char *a, char *b, char *c);
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE398(char *a, char *b, float f);
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_0037D028(char *a, char *b);
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE398(char *a, char *b, float f);
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE328(char *a, char *b, char *c);
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE398(char *a, char *b, float f);
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE328(char *a, char *b, char *c);
+extern int LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EF4F8(unsigned int a, int b, float f);
+extern void LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_0032F720(char *a);
+
+void LVL_26_JAMMING_ARRAY_FUN_00340CA8(int *obj)
+{
+    char *a = (char *)obj + 16;
+    char *b = (char *)obj + 32;
+    char tmp[16];
+
+    LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_0037F148(a, a);
+    *(int *)(b + 16) = *(int *)(b + 16) - 1;
+    if (*(int *)(b + 16) < 0)
+        *(int *)(b + 16) = 0;
+    *(unsigned char *)((char *)obj + 8) = *(unsigned char *)((char *)obj + 8) + 1;
+    LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE328(a, b, a);
+    *(float *)((char *)obj + 12) = *(float *)((char *)obj + 12) + 1.5750000000000000000000e+03f;
+    LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE398(b, b, 9.9000000953674316406250e-01f);
+    LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_0037D028(a, tmp);
+    if ((*(int *)((char *)obj + 4) & 0xFF) < 32) {
+        LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE398(tmp, tmp, 1.5000000130385160446167e-03f);
+        LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE328(b, b, tmp);
+    } else {
+        LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE398(tmp, tmp, -7.5000000651925802230835e-04f);
+        LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EE328(b, b, tmp);
+    }
+    *(int *)((char *)obj + 4) = LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_002EF4F8(*(unsigned int *)((char *)obj + 4) & 0x00FFFFFF, 0, 2.5000000372529029846191e-02f)
+        | (*(int *)(b + 16) << 24);
+    if (*(int *)(b + 16) == 0)
+        LVL_26_JAMMING_ARRAY_Fbdd4a4aa_FUN_0032F720((char *)obj);
+}
+#ifndef RAC2_T_OBJ_F7B2F1854
+#define RAC2_T_OBJ_F7B2F1854
+typedef struct Obj_F7b2f1854 {
+    int *f0;
+    int *f4;
+    int *f8;
+    int *f12;
+    int *f16;
+    int f20;
+    int f24;
+    int f28;
+    int f32;
+    int f36;
+    int f40;
+    int f44;
+} Obj_F7b2f1854;
+#endif
+
+
+extern int *LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041ED00(int n);
+extern int *LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041EC68(int size, int *p);
+extern void LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041DD28(Obj_F7b2f1854 *o, int v);
+
+void LVL_26_JAMMING_ARRAY_FUN_0041DE88(Obj_F7b2f1854 *o, int a1, int count)
+{
+    int *p;
+    int n;
+
+    o->f44 = count;
+    if (count != 0) {
+        p = LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041EC68(16, LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041ED00(count));
+        n = o->f44;
+        o->f0 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041EC68(16, LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041ED00(n));
+        n = o->f44;
+        o->f8 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041EC68(16, LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041ED00(n));
+        n = o->f44;
+        o->f4 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041EC68(16, LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041ED00(n));
+        n = o->f44;
+        o->f12 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041EC68(16, LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041ED00(n));
+        o->f16 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+    }
+    o->f40 = a1;
+    o->f32 = 0;
+    o->f20 = 0;
+    o->f28 = 0;
+    o->f24 = 0;
+    o->f36 = 0;
+    LVL_26_JAMMING_ARRAY_F7b2f1854_FUN_0041DD28(o, 1);
+}
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E590(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_0042B868(char *p)
+{
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 76);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 152);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 228);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 304);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 380);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 456);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 528);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E590(p + 600);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 664);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 736);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 808);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 880);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 952);
+    return p;
+}
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E590(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+extern void LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(char *p);
+
+char *LVL_26_JAMMING_ARRAY_FUN_0042D2C8(char *p)
+{
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 76);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 152);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 228);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 304);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E068(p + 380);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 456);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 528);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E590(p + 600);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 664);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 736);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 808);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 880);
+    LVL_26_JAMMING_ARRAY_F449e2f67_FUN_0041E828(p + 952);
+    return p;
+}
+extern char *LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_00320EE8(char *a1);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EEB90(char *dst, char *src);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE328(char *dst, char *src, char *tail);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE358(char *dst, char *src, char *tail);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EEB90(char *dst, char *src);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EEE18(char *dst, char *src);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE7D0(char *dst, char *src, char *tail);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE7D0(char *dst, char *src, char *tail);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE7D0(char *dst, char *src, char *tail);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE328(char *dst, char *src, char *tail);
+extern void LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EEEF8(char *dst, char *src, char *tail);
+
+void LVL_26_JAMMING_ARRAY_FUN_00399D38(char *o0, char *o1)
+{
+    char b0[64];
+    char b1[64];
+    char b2[64];
+    char *r = LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_00320EE8(o1);
+
+    if (r == 0)
+        return;
+    LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EEB90(b0, r);
+    LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE328(o0 + 16, o0 + 16, r + 16);
+    LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE358(o0 + 16, o0 + 16, o1 + 16);
+    if ((*(int *)(r + 60) & 2) != 0) {
+        LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EEB90(b2, r + 32);
+        LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EEE18(b1, b2);
+        LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE7D0(o0 + 16, o0 + 16, b1);
+        LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE7D0(o0 + 16, o0 + 16, o1 + 192);
+    } else {
+        LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE7D0(o0 + 16, o0 + 16, b0);
+    }
+    LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EE328(o0 + 16, o0 + 16, o1 + 16);
+    LVL_26_JAMMING_ARRAY_Ffc961fca_FUN_002EEEF8(o0 + 192, b0, o0 + 192);
+}
+extern int LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_002EDFC8(char *p);
+extern int LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_002EF4B0(float v);
+extern int LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_002EDFC8(char *p);
+extern void LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_0032F720(char *p);
+extern int LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_002EF4B0(float v);
+
+void LVL_26_JAMMING_ARRAY_FUN_00332E88(char *p)
+{
+    char *q = p + 32;
+    int r;
+    int v;
+    float f;
+
+    *(unsigned char *)(p + 8) = *(unsigned char *)(p + 8) + *(unsigned char *)(q + 8);
+    *(float *)(p + 24) = *(float *)(p + 24) + *(float *)(q + 16);
+    *(float *)(p + 12) = *(float *)(p + 12) * *(float *)(q + 12);
+    if (*(int *)(q + 4) == 0) {
+        r = LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_002EDFC8(p + 10);
+        if (r != 0) {
+            *(int *)(q + 4) = 1;
+            *(short *)(p + 10) = 30;
+            *(int *)(p + 4) = *(int *)(q + 20) | 0x7f000000;
+        } else {
+            f = (float)(10 - *(short *)(p + 10)) * 9.6000003814697265625000e+00f;
+            v = LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_002EF4B0(f);
+            *(int *)(p + 4) = ((v + 32) << 24) | *(int *)(q + 20);
+        }
+    } else {
+        r = LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_002EDFC8(p + 10);
+        if (r != 0) {
+            LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_0032F720(p);
+        } else {
+            f = (float)*(short *)(p + 10) * 4.2333333492279052734375e+00f;
+            v = LVL_26_JAMMING_ARRAY_Fd1c348f5_FUN_002EF4B0(f);
+            *(int *)(p + 4) = (v << 24) | *(int *)(q + 20);
+        }
+    }
+}
+extern void LVL_26_JAMMING_ARRAY_F2d5993bb_FUN_002EE0B0(char *p, int a1, int a2);
+extern void LVL_26_JAMMING_ARRAY_F2d5993bb_FUN_002EE100(char *p, int a1, int a2);
+extern int LVL_26_JAMMING_ARRAY_F2d5993bb_FUN_0030C0B0(char *p, int a1);
+
+int LVL_26_JAMMING_ARRAY_FUN_0030C198(char *out, int mult, int *recs)
+{
+    int off = 0;
+    char *p = out + 8;
+    char *r;
+    int v;
+    int w;
+
+    if (*(int *)recs != 0) {
+        r = (char *)recs;
+        do {
+            off += 8;
+            v = *(int *)(r + 0) + mult * *(int *)(r + 4);
+            *(int *)(p + 0) = *(int *)(r + 8);
+            *(int *)(p + 4) = *(int *)(r + 4);
+            p += 8;
+            if (*(int *)(r + 8) == 6000)
+                LVL_26_JAMMING_ARRAY_F2d5993bb_FUN_002EE0B0(p, 0, *(int *)(r + 4));
+            else
+                LVL_26_JAMMING_ARRAY_F2d5993bb_FUN_002EE100(p, v, *(int *)(r + 4));
+            w = *(int *)(r + 4);
+            r += 16;
+            p += w;
+            off += w;
+            p = (char *)(((int)p + 3) & ~3);
+            off = (off + 3) & ~3;
+        } while (*(int *)r != 0);
+    }
+    off += 8;
+    *(int *)(p + 4) = 0;
+    *(int *)(p + 0) = -1;
+    v = LVL_26_JAMMING_ARRAY_F2d5993bb_FUN_0030C0B0(out + 8, off);
+    *(int *)(out + 4) = v;
+    *(int *)(out + 0) = off;
+    return off + 8;
+}
+extern int LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031F3A8(char *object);
+extern float *LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031E8E0(char *object);
+
+int LVL_26_JAMMING_ARRAY_FUN_003D4530(char *object)
+{
+    float *p;
+
+    if (LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031F3A8(object) != 0)
+        return 0;
+    p = LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031E8E0(object);
+    if (p == 0)
+        return 0;
+    if (0.0f < *p)
+        return 0;
+    return 1;
+}
+extern int LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031F3A8(char *object);
+extern float *LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031E8E0(char *object);
+
+int LVL_26_JAMMING_ARRAY_FUN_003E2710(char *object)
+{
+    float *p;
+
+    if (LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031F3A8(object) != 0)
+        return 0;
+    p = LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031E8E0(object);
+    if (p == 0)
+        return 0;
+    if (0.0f < *p)
+        return 0;
+    return 1;
+}
+extern int LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031F3A8(char *object);
+extern float *LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031E8E0(char *object);
+
+int LVL_26_JAMMING_ARRAY_FUN_00413008(char *object)
+{
+    float *p;
+
+    if (LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031F3A8(object) != 0)
+        return 0;
+    p = LVL_26_JAMMING_ARRAY_F77a1e64d_FUN_0031E8E0(object);
+    if (p == 0)
+        return 0;
+    if (0.0f < *p)
+        return 0;
+    return 1;
+}
+extern void LVL_26_JAMMING_ARRAY_Fb342d477_D_0011AC60(int value);
+extern void LVL_26_JAMMING_ARRAY_Fb342d477_FUN_004386E0(int value);
+extern void LVL_26_JAMMING_ARRAY_Fb342d477_FUN_00438670(int value);
+extern void LVL_26_JAMMING_ARRAY_Fb342d477_D_0011AC40(int value);
+
+int LVL_26_JAMMING_ARRAY_FUN_00438CA0(int *p)
+{
+    LVL_26_JAMMING_ARRAY_Fb342d477_D_0011AC60(p[16]);
+    p[17] = 0;
+    LVL_26_JAMMING_ARRAY_Fb342d477_FUN_004386E0(5);
+    p[7] = *(volatile int *)0x1000B410;
+    p[8] = *(volatile int *)0x1000B430;
+    p[9] = *(volatile int *)0x1000B420;
+    p[10] = *(volatile int *)0x1000B400;
+    if (*(volatile int *)0x10002010 & 0xF0)
+        while (*(volatile int *)0x10002010 & 0xF0)
+            ;
+    LVL_26_JAMMING_ARRAY_Fb342d477_FUN_00438670(0);
+    p[11] = *(volatile int *)0x1000B010;
+    p[12] = *(volatile int *)0x1000B020;
+    p[13] = *(volatile int *)0x1000B000;
+    p[14] = *(volatile int *)0x10002020;
+    p[15] = *(volatile int *)0x10002010;
+    LVL_26_JAMMING_ARRAY_Fb342d477_D_0011AC40(p[16]);
+    return 1;
+}
+/* Family 0e7bb6a8908d30dc -- 244 bytes, 28 placements (1 boot + 27 levels). */
+
+extern char *LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_00320EE8(char *a);
+extern void LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEB90(char *dst, char *src);
+extern void LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEE18(char *dst, char *src);
+extern void LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEE18(char *dst, char *src);
+extern void LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EE358(char *dst, char *a, char *b);
+extern void LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EE7F8(char *a, char *b, char *c);
+extern void LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEB90(char *dst, char *src);
+extern void LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEF48(char *a, char *b, char *c);
+extern void LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_0031EEC0(char *a, char *b);
+
+int LVL_26_JAMMING_ARRAY_FUN_00321430(char *unused, char *obj, char *arg2, char *arg3, char *arg4, char *arg5)
+{
+    char buf0[64];
+    char buf1[16];
+    char buf2[64];
+    char *p;
+
+    p = LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_00320EE8(obj);
+    if (p == 0)
+        return 0;
+    if (*(int *)(p + 60) & 0x40) {
+        LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEB90(buf0, obj + 240);
+        LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEE18(buf0, buf0);
+    } else {
+        LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEE18(buf0, obj + 192);
+    }
+    LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EE358(buf1, arg2, obj + 16);
+    LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EE7F8(arg4, buf1, buf0);
+    LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEB90(buf2, arg3);
+    LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_002EEF48(buf2, buf0, buf2);
+    LVL_26_JAMMING_ARRAY_F0e7bb6a8_FUN_0031EEC0(buf2, arg5);
+    return 1;
+}
+extern void LVL_26_JAMMING_ARRAY_Fa2a84657_FUN_002EE3B0(float *tmp, char *v, float k);
+extern void LVL_26_JAMMING_ARRAY_Fa2a84657_FUN_002EE340(float *tmp, char *a, char *v);
+extern int LVL_26_JAMMING_ARRAY_Fa2a84657_FUN_002EDFC8(char *field);
+extern void LVL_26_JAMMING_ARRAY_Fa2a84657_FUN_0032F720(unsigned char *p);
+
+void LVL_26_JAMMING_ARRAY_FUN_00338BD0(unsigned char *p)
+{
+    float tmp[4];
+    char *v;
+    int n;
+
+    v = (char *)p + 32;
+    LVL_26_JAMMING_ARRAY_Fa2a84657_FUN_002EE3B0(tmp, v, 9.4999998807907104492188e-01f);
+    *(float *)(v + 8) = *(float *)(v + 8) + 1.3888889225199818611145e-03f;
+    LVL_26_JAMMING_ARRAY_Fa2a84657_FUN_002EE340(tmp, (char *)p + 16, v);
+
+    n = *(int *)(p + 4) + (int)0xFE000000;
+    *(int *)(p + 4) = n;
+    if (((unsigned)(n & 0xFF000000) - 1) > 0x5EFFFFFFu || LVL_26_JAMMING_ARRAY_Fa2a84657_FUN_002EDFC8((char *)p + 10) != 0) {
+        LVL_26_JAMMING_ARRAY_Fa2a84657_FUN_0032F720(p);
+    } else {
+        float f0;
+        float f1;
+
+        f1 = *(float *)(p + 12);
+        f0 = 2.1000000000000000000000e+05f - f1;
+        f0 = f0 * 7.0000000298023223876953e-02f;
+        f1 = f1 + f0;
+        *(float *)(p + 12) = f1;
+        p[8] = p[8] + 1;
+    }
+}
+extern int LVL_26_JAMMING_ARRAY_F750245c6_D_001A7340 __attribute__((sda));
+extern void LVL_26_JAMMING_ARRAY_F750245c6_FUN_002FB798(int a, int b, int c, int d, char *e, int f);
+void LVL_26_JAMMING_ARRAY_FUN_00347EF0(int a0, char *a1)
+{
+    int h, k, p, m;
+    k = a0 / 2 + 5;
+    h = LVL_26_JAMMING_ARRAY_F750245c6_D_001A7340 / 2;
+    m = h - k;
+    p = h + k;
+    LVL_26_JAMMING_ARRAY_F750245c6_FUN_002FB798(m - 2, 312, p + 4, 314, a1, 0);
+    LVL_26_JAMMING_ARRAY_F750245c6_FUN_002FB798(m - 2, 333, p + 4, 335, a1, 0);
+    LVL_26_JAMMING_ARRAY_F750245c6_FUN_002FB798(m - 2, 313, m, 334, a1, 0);
+    LVL_26_JAMMING_ARRAY_F750245c6_FUN_002FB798(p + 2, 313, p + 4, 334, a1, 0);
+}
+extern float LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EF4A0(int a);
+extern void LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EE398(char *p, char *q, float f);
+extern void LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EE328(char *p, char *q, char *r);
+extern int LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_0031CAD0(int a, int b, float f);
+extern int LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EDFC8(char *p);
+extern void LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_0032F720(char *p);
+
+void LVL_26_JAMMING_ARRAY_FUN_00331508(char *a0)
+{
+    char *s0 = a0 + 32;
+    int x;
+    int u;
+    int t;
+    float f;
+
+    x = *(int *)(s0 + 28);
+    t = *(short *)(a0 + 10);
+    u = *(short *)(s0 + 24) * (x - t) / x + *(short *)(s0 + 26);
+
+    f = LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EF4A0(u) * 1000.0f;
+    *(float *)(a0 + 12) = f;
+    LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EE398(s0, s0, 9.8000001907348632812500e-01f);
+    LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EE328(a0 + 16, a0 + 16, s0);
+    *(unsigned char *)(a0 + 8) = *(unsigned char *)(a0 + 8) + 1;
+    f = LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EF4A0(*(int *)(s0 + 28));
+    *(int *)(a0 + 4) = LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_0031CAD0(*(int *)(s0 + 20), *(int *)(s0 + 16),
+                               (float)*(short *)(a0 + 10) / f);
+    if (LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_002EDFC8(a0 + 10) != 0)
+        LVL_26_JAMMING_ARRAY_Fe617c30b_FUN_0032F720(a0);
+}
+extern int LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_00436390(int);
+
+void LVL_26_JAMMING_ARRAY_FUN_0030CAB8(void)
+{
+    int value = LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_00436390(value + 0x36F28);
+}
+extern int LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_004363B0(int);
+
+void LVL_26_JAMMING_ARRAY_FUN_0030D0E8(void)
+{
+    int value = LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_004363B0(value + 0x36F28);
+}
+extern int LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_00436350(int);
+
+void LVL_26_JAMMING_ARRAY_FUN_0030D338(void)
+{
+    int value = LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_00436350(value + 0x36F28);
+}
+extern int LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_004363D0(int);
+
+void LVL_26_JAMMING_ARRAY_FUN_0030D368(void)
+{
+    int value = LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_004363D0(value + 0x36F28);
+}
+extern int LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_0041FF68(int);
+
+void LVL_26_JAMMING_ARRAY_FUN_0030DF78(void)
+{
+    int value = LVL_26_JAMMING_ARRAY_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_26_JAMMING_ARRAY_F4a4e68d9_FUN_0041FF68(value + 0x36F28);
+}
+extern void LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE5F0(char *a0, char *a1, float f);
+extern void LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE398(char *a0, char *a1, float f);
+extern void LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE328(char *a0, char *a1, char *a2);
+extern char LVL_26_JAMMING_ARRAY_F42d2147f_D_00189E20[];
+extern char LVL_26_JAMMING_ARRAY_F42d2147f_D_00189EA0[];
+
+void LVL_26_JAMMING_ARRAY_FUN_004191C0(char *object)
+{
+    char local[16];
+    char buf[16];
+    char *p = LVL_26_JAMMING_ARRAY_F42d2147f_D_00189E20;
+    unsigned char v;
+
+    LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE5F0(local, (char *)(*(int *)(p + 8848) + 224), 1.0f);
+    v = *(unsigned char *)(p + 8884);
+    if (v == 2) {
+        LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE398(buf, local, 9.5f);
+    } else if (v == 1) {
+        LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE398(buf, local, 0.75f);
+    } else {
+        LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE398(buf, local, 1.6f);
+    }
+    LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE328(object + 48, LVL_26_JAMMING_ARRAY_F42d2147f_D_00189EA0, buf);
+    LVL_26_JAMMING_ARRAY_F42d2147f_FUN_002EE328(object + 48, LVL_26_JAMMING_ARRAY_F42d2147f_D_00189EA0 + 208, object + 48);
+}
+extern char LVL_26_JAMMING_ARRAY_F93479d13_D_00189E20[];
+extern void LVL_26_JAMMING_ARRAY_F93479d13_FUN_003105C8(char *entry);
+extern void LVL_26_JAMMING_ARRAY_F93479d13_FUN_003105C8(char *entry);
+
+void LVL_26_JAMMING_ARRAY_FUN_002B1830(int slot, int value)
+{
+    char *e;
+    void (*fn)(char *);
+
+    {
+        char *p = LVL_26_JAMMING_ARRAY_F93479d13_D_00189E20 + slot * 80;
+
+        *(int *)(p + 4660) = value;
+        if (*(int *)(p + 4676) != 3) {
+            *(int *)(p + 4676) = 3;
+            e = *(char **)(p + 4640);
+            if (e != 0) {
+                if (*(unsigned char *)(e + 32) != 254) {
+                    if (*(unsigned char *)(e + 32) != 253) {
+                        fn = *(void (**)(char *))(e + 100);
+                        if (fn != 0)
+                            fn(e);
+                    }
+                }
+            }
+        }
+    }
+    {
+        char *q = LVL_26_JAMMING_ARRAY_F93479d13_D_00189E20 + slot * 80;
+
+        e = *(char **)(q + 4640);
+        *(int *)(q + 4676) = 0;
+        *(int *)(q + 4680) = 0;
+        if (e != 0) {
+            LVL_26_JAMMING_ARRAY_F93479d13_FUN_003105C8(e);
+            *(char **)(q + 4640) = 0;
+        }
+        e = *(char **)(q + 4644);
+        if (e != 0 && slot != 3) {
+            LVL_26_JAMMING_ARRAY_F93479d13_FUN_003105C8(e);
+            *(char **)(q + 4644) = 0;
+        }
+    }
+}
+extern char LVL_26_JAMMING_ARRAY_F5fa3e1af_D_00189E20[];
+extern float LVL_26_JAMMING_ARRAY_F5fa3e1af_FUN_002EE2F0(float *buf);
+extern float LVL_26_JAMMING_ARRAY_F5fa3e1af_FUN_002EE458(float *buf);
+
+void LVL_26_JAMMING_ARRAY_FUN_003CF5A8(char *obj)
+{
+    float buf[2];
+    char *d = LVL_26_JAMMING_ARRAY_F5fa3e1af_D_00189E20;
+    char *e = *(char **)(obj + 104);
+    float a, b, x;
+
+    a = -*(float *)(d + 8112);
+    *(float *)(e + 20) = a;
+    b = -*(float *)(d + 8116);
+    *(float *)(e + 16) = b;
+
+    if (a > 1.0f) {
+        *(float *)(e + 20) = 1.0f;
+    } else if (a < -1.0f) {
+        *(float *)(e + 20) = -1.0f;
+    }
+
+    x = *(float *)(e + 16);
+    if (x > 1.0f) {
+        *(float *)(e + 16) = 1.0f;
+    } else if (x < -1.0f) {
+        *(float *)(e + 16) = -1.0f;
+    }
+    LVL_26_JAMMING_ARRAY_F5fa3e1af_FUN_002EE2F0(buf);
+    buf[0] = *(float *)(e + 16);
+    buf[1] = *(float *)(e + 20);
+    *(float *)(e + 48) = LVL_26_JAMMING_ARRAY_F5fa3e1af_FUN_002EE458(buf);
+}
+
+
+extern int LVL_26_JAMMING_ARRAY_F9a90bcc4_FUN_0031A860(int count);
+
+int LVL_26_JAMMING_ARRAY_FUN_00326AF0(u8 *owner, int b, int *outIndex,
+                                       float *o0, float *o1, float *o2, float *o3,
+                                       float *o4, float *o5, float *o6)
+{
+    int n;
+    int count;
+    int i;
+    int k;
+    int left;
+    u8 *p;
+
+    n = 0;
+    count = *(u8 *)(*(int *)(owner + 36) + 12);
+    if (count != 0) {
+        int *t = (int *)(*(int *)(owner + 36) + 72);
+        u8 *q;
+        left = count;
+        do {
+            q = *(u8 **)(*t + 20);
+            if (q != 0 && *q == b)
+                n++;
+            t++;
+            left--;
+        } while (left != 0);
+    }
+
+    if (n != 0)
+        goto second;
+
+    return 0;
+
+found:
+    *o0 = *(float *)(p + 8) * 0.016666668f;
+    *o1 = *(float *)(p + 12) * 0.016666668f;
+    *o2 = *(float *)(p + 16) * 0.00027777778f;
+    *o3 = *(float *)(p + 20) * 0.00027777778f;
+    *o6 = *(float *)(p + 4) * 0.00027777778f;
+    *o4 = *(float *)(p + 24);
+    *o5 = *(float *)(p + 28);
+    *outIndex = i;
+    return 1;
+
+second:
+    k = LVL_26_JAMMING_ARRAY_F9a90bcc4_FUN_0031A860(n);
+    for (i = 0; i < *(u8 *)(*(int *)(owner + 36) + 12); i++) {
+        char *tbl = (char *)(*(int *)(owner + 36) + 72);
+        char *e = *(char **)(tbl + i * 4);
+        p = *(u8 **)(e + 20);
+        if (p == 0 || *p != b)
+            continue;
+        if (k == 0)
+            goto found;
+        k--;
+    }
+    return 0;
+}
+
+
+extern void LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EE328(void *out, void *in, void *src);
+extern int LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EDFC8(void *p);
+extern void LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_0032F720(void *self);
+extern float LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EF4A0(int n);
+extern int LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EF4F8(int handle, int previous, float ratio);
+extern char LVL_26_JAMMING_ARRAY_Feda2e14e_D_00189E20[];
+
+void LVL_26_JAMMING_ARRAY_FUN_00339DD0(u8 *self)
+{
+    char *s2 = (char *)self + 32;
+    int n;
+    float a;
+    float b;
+
+    if (*(int *)(s2 + 28) == 1) {
+        char *base = LVL_26_JAMMING_ARRAY_Feda2e14e_D_00189E20;
+        *(float *)(self + 16) = *(float *)(base + 128) + *(float *)(s2 + 16);
+        *(float *)(self + 20) = *(float *)(base + 132) + *(float *)(s2 + 20);
+        *(float *)(self + 24) = *(float *)(base + 136) + *(float *)(s2 + 24);
+        LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EE328(self + 16, self + 16, s2);
+        *(float *)(s2 + 16) = *(float *)(self + 16) - *(float *)(base + 128);
+        *(float *)(s2 + 20) = *(float *)(self + 20) - *(float *)(base + 132);
+        *(float *)(s2 + 24) = *(float *)(self + 24) - *(float *)(base + 136);
+    } else {
+        LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EE328(self + 16, self + 16, s2);
+    }
+
+    if (*(float *)(self + 16) < 2.0f || *(float *)(self + 16) > 1021.0f
+        || *(float *)(self + 20) < 2.0f || *(float *)(self + 20) > 1021.0f
+        || *(float *)(self + 24) < 2.0f || *(float *)(self + 24) > 1021.0f) {
+        LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_0032F720(self);
+        return;
+    }
+
+    if (LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EDFC8((char *)self + 10) != 0) {
+        LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_0032F720(self);
+        return;
+    }
+
+    n = *(int *)(self + 4) & 0xFFFFFF;
+    a = LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EF4A0(*(short *)(self + 10) - 1);
+    b = LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EF4A0(*(short *)(self + 10));
+    *(int *)(self + 4) = LVL_26_JAMMING_ARRAY_Feda2e14e_FUN_002EF4F8(n, *(int *)(self + 4), a / b);
+}
+extern void LVL_26_JAMMING_ARRAY_Feb99aa89_FUN_002D3DB8(char *target, int mode, float value, float zero, float scale);
+extern int LVL_26_JAMMING_ARRAY_Feb99aa89_FUN_002DEB50(char *first, char *second, int mode, int flag, int extra);
+extern float LVL_26_JAMMING_ARRAY_Feb99aa89_FUN_002EE4D0(char *source, short *table);
+
+extern short LVL_26_JAMMING_ARRAY_Feb99aa89_D_001BEFE0[];
+extern float LVL_26_JAMMING_ARRAY_Feb99aa89_D_0018A084;
+
+int LVL_26_JAMMING_ARRAY_FUN_002AB708(float *out, float scale, float amount)
+{
+    char buffer[32];
+
+    LVL_26_JAMMING_ARRAY_Feb99aa89_FUN_002D3DB8(buffer, 1, LVL_26_JAMMING_ARRAY_Feb99aa89_D_0018A084 - 0.02f, 0.0f, scale);
+    LVL_26_JAMMING_ARRAY_Feb99aa89_FUN_002D3DB8(buffer + 16, 1, amount, 0.0f, scale);
+    if (LVL_26_JAMMING_ARRAY_Feb99aa89_FUN_002DEB50(buffer, buffer + 16, 2, 0, 0)) {
+        if (out)
+            *out = LVL_26_JAMMING_ARRAY_Feb99aa89_FUN_002EE4D0(buffer, LVL_26_JAMMING_ARRAY_Feb99aa89_D_001BEFE0);
+        return 1;
+    }
+    return 0;
+}

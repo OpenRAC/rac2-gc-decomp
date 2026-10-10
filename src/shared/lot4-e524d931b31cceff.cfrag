@@ -1,0 +1,54 @@
+extern void @@ROLE_0_00@@(char *p);
+extern void @@ROLE_1_00@@(char *p, float x, float y);
+extern void @@ROLE_2_00@@(int a, int b, int c);
+extern void @@ROLE_4_00@@(void);
+extern short @@BIND_DATA0_00@@[];
+
+int @@FUNCTION@@(char *object, int mask)
+{
+    char *sub = object + 8;
+    short oldx;
+    short oldy;
+    int *v;
+
+    @@ROLE_0_01@@(sub);
+    v = *(int **)(object + 684);
+    @@ROLE_1_01@@(sub, *(float *)v, *(float *)(v + 1));
+    if ((mask & 0x40) != 0 && *(int *)(object + 680) == 0)
+        @@ROLE_2_01@@(4, 0, 0);
+    if ((mask & 0xf000) != 0) {
+        short *p = @@BIND_DATA0_01@@;
+        oldx = p[180];
+        oldy = p[181];
+        if ((mask & 0x1000) != 0) {
+            ((unsigned short *)p)[181] = ((unsigned short *)p)[181] - 1;
+            if ((short)((unsigned short *)p)[181] < -32)
+                p[181] = -32;
+        }
+        if ((mask & 0x4000) != 0) {
+            unsigned short *q = (unsigned short *)@@BIND_DATA0_02@@;
+            q[181] = q[181] + 1;
+            if ((short)q[181] > 32)
+                ((short *)q)[181] = 32;
+        }
+        if ((mask & 0x8000) != 0) {
+            unsigned short *q = (unsigned short *)@@BIND_DATA0_03@@;
+            q[180] = q[180] - 1;
+            if ((short)q[180] < -40)
+                ((short *)q)[180] = -40;
+        }
+        if ((mask & 0x2000) != 0) {
+            unsigned short *q = (unsigned short *)@@BIND_DATA0_04@@;
+            q[180] = q[180] + 1;
+            if ((short)q[180] > 40)
+                ((short *)q)[180] = 40;
+        }
+        {
+            short *q = @@BIND_DATA0_05@@;
+            if (oldx != q[180] || oldy != q[181])
+                @@ROLE_2_02@@(4, 0, 0);
+        }
+        @@ROLE_4_01@@();
+    }
+    return (mask >> 6) & 1;
+}

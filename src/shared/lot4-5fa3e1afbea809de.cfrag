@@ -1,0 +1,33 @@
+extern char @@BIND_DATA0_00@@[];
+extern float @@ROLE_0_00@@(float *buf);
+extern float @@ROLE_1_00@@(float *buf);
+
+void @@FUNCTION@@(char *obj)
+{
+    float buf[2];
+    char *d = @@BIND_DATA0_01@@;
+    char *e = *(char **)(obj + 104);
+    float a, b, x;
+
+    a = -*(float *)(d + 8112);
+    *(float *)(e + 20) = a;
+    b = -*(float *)(d + 8116);
+    *(float *)(e + 16) = b;
+
+    if (a > 1.0f) {
+        *(float *)(e + 20) = 1.0f;
+    } else if (a < -1.0f) {
+        *(float *)(e + 20) = -1.0f;
+    }
+
+    x = *(float *)(e + 16);
+    if (x > 1.0f) {
+        *(float *)(e + 16) = 1.0f;
+    } else if (x < -1.0f) {
+        *(float *)(e + 16) = -1.0f;
+    }
+    @@ROLE_0_01@@(buf);
+    buf[0] = *(float *)(e + 16);
+    buf[1] = *(float *)(e + 20);
+    *(float *)(e + 48) = @@ROLE_1_01@@(buf);
+}

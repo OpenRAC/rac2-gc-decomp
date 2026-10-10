@@ -1,0 +1,25 @@
+extern void @@ROLE_0_00@@(char *a0, char *a1, float f);
+extern void @@ROLE_1_00@@(char *a0, char *a1, float f);
+extern void @@ROLE_4_00@@(char *a0, char *a1, char *a2);
+extern char @@BIND_DATA0_00@@[];
+extern char @@BIND_DATA1_00@@[];
+
+void @@FUNCTION@@(char *object)
+{
+    char local[16];
+    char buf[16];
+    char *p = @@BIND_DATA0_01@@;
+    unsigned char v;
+
+    @@ROLE_0_01@@(local, (char *)(*(int *)(p + 8848) + 224), 1.0f);
+    v = *(unsigned char *)(p + 8884);
+    if (v == 2) {
+        @@ROLE_1_01@@(buf, local, 9.5f);
+    } else if (v == 1) {
+        @@ROLE_1_02@@(buf, local, 0.75f);
+    } else {
+        @@ROLE_1_03@@(buf, local, 1.6f);
+    }
+    @@ROLE_4_01@@(object + 48, @@BIND_DATA1_01@@, buf);
+    @@ROLE_4_02@@(object + 48, @@BIND_DATA1_02@@ + 208, object + 48);
+}

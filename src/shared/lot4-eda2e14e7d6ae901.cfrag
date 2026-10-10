@@ -1,0 +1,46 @@
+
+
+extern void @@ROLE_0_00@@(void *out, void *in, void *src);
+extern int @@ROLE_2_00@@(void *p);
+extern void @@ROLE_3_00@@(void *self);
+extern float @@ROLE_4_00@@(int n);
+extern int @@ROLE_6_00@@(int handle, int previous, float ratio);
+extern char @@BIND_DATA0_00@@[];
+
+void @@FUNCTION@@(u8 *self)
+{
+    char *s2 = (char *)self + 32;
+    int n;
+    float a;
+    float b;
+
+    if (*(int *)(s2 + 28) == 1) {
+        char *base = @@BIND_DATA0_01@@;
+        *(float *)(self + 16) = *(float *)(base + 128) + *(float *)(s2 + 16);
+        *(float *)(self + 20) = *(float *)(base + 132) + *(float *)(s2 + 20);
+        *(float *)(self + 24) = *(float *)(base + 136) + *(float *)(s2 + 24);
+        @@ROLE_0_01@@(self + 16, self + 16, s2);
+        *(float *)(s2 + 16) = *(float *)(self + 16) - *(float *)(base + 128);
+        *(float *)(s2 + 20) = *(float *)(self + 20) - *(float *)(base + 132);
+        *(float *)(s2 + 24) = *(float *)(self + 24) - *(float *)(base + 136);
+    } else {
+        @@ROLE_0_02@@(self + 16, self + 16, s2);
+    }
+
+    if (*(float *)(self + 16) < 2.0f || *(float *)(self + 16) > 1021.0f
+        || *(float *)(self + 20) < 2.0f || *(float *)(self + 20) > 1021.0f
+        || *(float *)(self + 24) < 2.0f || *(float *)(self + 24) > 1021.0f) {
+        @@ROLE_3_01@@(self);
+        return;
+    }
+
+    if (@@ROLE_2_01@@((char *)self + 10) != 0) {
+        @@ROLE_3_02@@(self);
+        return;
+    }
+
+    n = *(int *)(self + 4) & 0xFFFFFF;
+    a = @@ROLE_4_01@@(*(short *)(self + 10) - 1);
+    b = @@ROLE_4_02@@(*(short *)(self + 10));
+    *(int *)(self + 4) = @@ROLE_6_01@@(n, *(int *)(self + 4), a / b);
+}

@@ -1,0 +1,40 @@
+extern void @@ROLE_0_00@@(char *p, int a1, int a2);
+extern void @@ROLE_1_00@@(char *p, int a1, int a2);
+extern int @@ROLE_2_00@@(char *p, int a1);
+
+int @@FUNCTION@@(char *out, int mult, int *recs)
+{
+    int off = 0;
+    char *p = out + 8;
+    char *r;
+    int v;
+    int w;
+
+    if (*(int *)recs != 0) {
+        r = (char *)recs;
+        do {
+            off += 8;
+            v = *(int *)(r + 0) + mult * *(int *)(r + 4);
+            *(int *)(p + 0) = *(int *)(r + 8);
+            *(int *)(p + 4) = *(int *)(r + 4);
+            p += 8;
+            if (*(int *)(r + 8) == 6000)
+                @@ROLE_0_01@@(p, 0, *(int *)(r + 4));
+            else
+                @@ROLE_1_01@@(p, v, *(int *)(r + 4));
+            w = *(int *)(r + 4);
+            r += 16;
+            p += w;
+            off += w;
+            p = (char *)(((int)p + 3) & ~3);
+            off = (off + 3) & ~3;
+        } while (*(int *)r != 0);
+    }
+    off += 8;
+    *(int *)(p + 4) = 0;
+    *(int *)(p + 0) = -1;
+    v = @@ROLE_2_01@@(out + 8, off);
+    *(int *)(out + 4) = v;
+    *(int *)(out + 0) = off;
+    return off + 8;
+}

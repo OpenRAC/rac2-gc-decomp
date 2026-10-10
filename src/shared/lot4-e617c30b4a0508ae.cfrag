@@ -1,0 +1,30 @@
+extern float @@ROLE_0_00@@(int a);
+extern void @@ROLE_1_00@@(char *p, char *q, float f);
+extern void @@ROLE_2_00@@(char *p, char *q, char *r);
+extern int @@ROLE_4_00@@(int a, int b, float f);
+extern int @@ROLE_5_00@@(char *p);
+extern void @@ROLE_6_00@@(char *p);
+
+void @@FUNCTION@@(char *a0)
+{
+    char *s0 = a0 + 32;
+    int x;
+    int u;
+    int t;
+    float f;
+
+    x = *(int *)(s0 + 28);
+    t = *(short *)(a0 + 10);
+    u = *(short *)(s0 + 24) * (x - t) / x + *(short *)(s0 + 26);
+
+    f = @@ROLE_0_01@@(u) * 1000.0f;
+    *(float *)(a0 + 12) = f;
+    @@ROLE_1_01@@(s0, s0, 9.8000001907348632812500e-01f);
+    @@ROLE_2_01@@(a0 + 16, a0 + 16, s0);
+    *(unsigned char *)(a0 + 8) = *(unsigned char *)(a0 + 8) + 1;
+    f = @@ROLE_0_02@@(*(int *)(s0 + 28));
+    *(int *)(a0 + 4) = @@ROLE_4_01@@(*(int *)(s0 + 20), *(int *)(s0 + 16),
+                               (float)*(short *)(a0 + 10) / f);
+    if (@@ROLE_5_01@@(a0 + 10) != 0)
+        @@ROLE_6_01@@(a0);
+}
