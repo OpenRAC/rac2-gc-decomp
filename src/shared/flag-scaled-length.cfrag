@@ -1,0 +1,16 @@
+extern int @@BIND_FLAG_00@@ __attribute__((sda));
+extern char @@DATA_0_00@@[] __attribute__((sda));
+extern char @@DATA_1_00@@[] __attribute__((sda));
+extern float @@ROLE_0_00@@(char *a, char *b);
+
+float @@FUNCTION@@(char *p)
+{
+    float v;
+
+    if (@@BIND_FLAG_01@@ == 0) {
+        v = @@ROLE_0_01@@(p, @@DATA_0_01@@);
+    } else {
+        v = 100.0f - @@ROLE_0_02@@(p, @@DATA_1_01@@);
+    }
+    return v;
+}

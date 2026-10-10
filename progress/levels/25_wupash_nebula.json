@@ -1,51 +1,51 @@
 {
-  "boot_review_sha256": "dcf2aa3ab0b10629f4b1840e67376d0a8cb5ae6065146a47e3aa343b896e1724",
+  "boot_review_sha256": "5fb19cdc8e5781eac2dd43a3633d671faa5f94dca2a4268ec973f5c8fc9f87be",
   "c_link_object_adapter": {
     "compiled_code_unchanged": true,
-    "compiled_object_sha256": "b5a2be9bbd43e6f2a3d80f8b84eef1c0047328f4f015d4ffbec1bd324505b71e",
+    "compiled_object_sha256": "4b053977a7792c40a8876cb84b7f84782682732a33666834779649017057563e",
     "integration_credit": 0,
     "kind": "reviewed-shared-import-relocation-adapter",
-    "link_object_sha256": "eba078c6c4de9eb6608465f40243b511809f0d4816f5552ef6cd808ecde8596a",
+    "link_object_sha256": "c173070ee042e89a79d1c4b5393b72b2b0da6093b93207070a019bda86f07747",
     "new_physical_bytes": 0,
     "relocation_changes": [
       {
         "caller": "FUN_0034F898",
         "caller_address": 4528224,
-        "new_r_info": 111364,
-        "new_symbol_index": 435,
+        "new_r_info": 113412,
+        "new_symbol_index": 443,
         "old_r_info": 67844,
         "old_symbol_index": 265,
         "provider": "FUN_001338C8",
         "provider_address": 1259720,
         "provider_reference_sha256": "df665c024f2c2f2122ca91cb5b61048030b7f98a3df2606d8c91441295d69d2f",
         "provider_size": 36,
-        "r_info_offset": 110272
+        "r_info_offset": 116224
       },
       {
         "caller": "FUN_0034FB20",
         "caller_address": 4528996,
-        "new_r_info": 128260,
-        "new_symbol_index": 501,
+        "new_r_info": 130308,
+        "new_symbol_index": 509,
         "old_r_info": 68100,
         "old_symbol_index": 266,
         "provider": "FUN_00133930",
         "provider_address": 1259824,
         "provider_reference_sha256": "d1b7a40a24b4537c4f9b704b87cafb6001ecaf64ef96c01c869fd05532732474",
         "provider_size": 44,
-        "r_info_offset": 110720
+        "r_info_offset": 116672
       },
       {
         "caller": "FUN_002B7170",
         "caller_address": 3384764,
-        "new_r_info": 142596,
-        "new_symbol_index": 557,
+        "new_r_info": 144644,
+        "new_symbol_index": 565,
         "old_r_info": 67588,
         "old_symbol_index": 264,
         "provider": "FUN_00133490",
         "provider_address": 1258640,
         "provider_reference_sha256": "1c102a1be303b46fbc85f02f327e97d8ecdbbf6635d3458a6454c0c7de75c75a",
         "provider_size": 40,
-        "r_info_offset": 111032
+        "r_info_offset": 116984
       }
     ],
     "schema": 1,
@@ -69,7 +69,7 @@
       {
         "index": 5,
         "name": ".mdebug",
-        "sha256": "f68b313f458385fdc23576b8b4ed6a90bec6cd0670e3657e4fb9ac9425ceab6f"
+        "sha256": "933adf106a5413a261b40baaad19070e9c1a031d8e36b075934cfa4100baa86a"
       },
       {
         "index": 6,
@@ -1688,29 +1688,69 @@
       },
       {
         "index": 440,
-        "name": ".shstrtab",
-        "sha256": "cf25a6821455714f54a5c0b81e2a723dff861ae4c7644231093fd15f91279cd2"
-      },
-      {
-        "index": 441,
-        "name": ".symtab",
-        "sha256": "0f6fa54a0b3b657de8e7f47c7adf996fb081d7796c96d521df415dd0dd426008"
+        "name": ".text.FUN_002D4E10",
+        "sha256": "a8676595c567569004a5593e8ec58c810dd0c27f0362c0bdcf4a022103432611"
       },
       {
         "index": 442,
+        "name": ".text.FUN_0034EC70",
+        "sha256": "12a13f773a4450fbc9d7e9bc664115f322058a9f643f21ba85b1ae0322e5b5fb"
+      },
+      {
+        "index": 444,
+        "name": ".text.FUN_002E46C0",
+        "sha256": "dce4524975475049e746d94bca280f5a9b9f19693e77a99c02a2739983a1e687"
+      },
+      {
+        "index": 446,
+        "name": ".text.FUN_00293CA8",
+        "sha256": "e74b7eb12a26601c43476977470e0713c48f0c39046031809fd38008a6af5d7c"
+      },
+      {
+        "index": 448,
+        "name": ".text.FUN_002E4478",
+        "sha256": "19eb8bea954758107bfa70beeb67787dd158173a05733753b1cf58d0a4308a46"
+      },
+      {
+        "index": 450,
+        "name": ".text.FUN_00274128",
+        "sha256": "7681577e80523b7bd374570a001aaf35bfe5afa4cc45e9d6024b2acc9a6c72b7"
+      },
+      {
+        "index": 452,
+        "name": ".text.FUN_00274208",
+        "sha256": "7681577e80523b7bd374570a001aaf35bfe5afa4cc45e9d6024b2acc9a6c72b7"
+      },
+      {
+        "index": 454,
+        "name": ".text.FUN_0031A998",
+        "sha256": "c59e0502110792ab05e18abe5a69eb3869c2588ecdab762c9af03f2dd0ac4f45"
+      },
+      {
+        "index": 456,
+        "name": ".shstrtab",
+        "sha256": "e9e9896fdff45c65c2b637b52abe325fcdf0aeb6b901806dcfa0f6e25318bb74"
+      },
+      {
+        "index": 457,
+        "name": ".symtab",
+        "sha256": "bc5ff3a256bed88f2e118b0b7e702c2ab90d4d0aaa03d935e0a1d09ca3cdae3a"
+      },
+      {
+        "index": 458,
         "name": ".strtab",
-        "sha256": "6add012a7b2c038503b5b6c96edbf3697e91c4a90988170c762399f422a99359"
+        "sha256": "8a34009d466a74210011f89e99d08b377ff25c5284c52d3200334ad83e4e0178"
       }
     ]
   },
-  "c_link_object_adapter_sha256": "6b3fa723fc50d850ebb8fa8169f1d88ad84cf3c2958aa63e480257d0fad9269d",
-  "c_link_object_sha256": "eba078c6c4de9eb6608465f40243b511809f0d4816f5552ef6cd808ecde8596a",
-  "c_object_sha256": "b5a2be9bbd43e6f2a3d80f8b84eef1c0047328f4f015d4ffbec1bd324505b71e",
-  "candidate_elf_sha256": "e51b2fab5b518d8c52511cc5c55b2ae21ca3c46b476c3cac575cfe9d81d0241e",
+  "c_link_object_adapter_sha256": "4f5f78c033869b7d0eb2fb96dda9a15b84c42b20702c7d8cc2bf942a634bb80e",
+  "c_link_object_sha256": "c173070ee042e89a79d1c4b5393b72b2b0da6093b93207070a019bda86f07747",
+  "c_object_sha256": "4b053977a7792c40a8876cb84b7f84782682732a33666834779649017057563e",
+  "candidate_elf_sha256": "0d2d92a87b1056d8ee0e523d23d74f6528443987c185edeaf1c32d7387b3bff7",
   "candidate_entry": 2846088,
   "candidate_source": "candidates/boot.c",
   "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
-  "dependency_sha256": "4b238fe8b208574dd4d46daaa2d77008b47cb451646a09eed8a13f157c92260e",
+  "dependency_sha256": "65fb50d56a419d3a89b964b5f38a226c36a173386deedf22d9f5806ccf2ae6be",
   "full_level_gate": {
     "bytes_compared": 2802432,
     "matched": true,
@@ -4042,6 +4082,20 @@
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_002B9388"
     },
     {
+      "address": 2856480,
+      "candidate_sha256": "03840ae5a918aac84ce022148bcfe3529384995d0788946c95bcc6f5408bb943",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "03840ae5a918aac84ce022148bcfe3529384995d0788946c95bcc6f5408bb943",
+      "size": 440,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_002B9620"
+    },
+    {
       "address": 2859632,
       "candidate_sha256": "e2ec8d2f09ca1ffacdd130557390561523bfbf5994b8731317081b8e7e180cd1",
       "candidate_source": "candidates/levels/25_wupash_nebula.c",
@@ -4322,6 +4376,20 @@
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_002E71B0"
     },
     {
+      "address": 3046384,
+      "candidate_sha256": "ee26ff929be2bbd9e70436cc17175db08d9357ffe9a1d6e8d5c22ce9a3a6417e",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "ee26ff929be2bbd9e70436cc17175db08d9357ffe9a1d6e8d5c22ce9a3a6417e",
+      "size": 496,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_002E7BF0"
+    },
+    {
       "address": 3053792,
       "candidate_sha256": "bbd2a6336c8052a954f8a0f0ed975a607d07cadc74011cf689c011a6cca0cb6c",
       "candidate_source": "candidates/levels/25_wupash_nebula.c",
@@ -4474,6 +4542,34 @@
       "size": 8,
       "state": "integrated",
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EF4F8"
+    },
+    {
+      "address": 3077376,
+      "candidate_sha256": "56fe37fc50e36ed7d4451d16fa7c6d1356b24248302cbf1c6b70fc88e5106cd7",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "56fe37fc50e36ed7d4451d16fa7c6d1356b24248302cbf1c6b70fc88e5106cd7",
+      "size": 220,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EF500"
+    },
+    {
+      "address": 3077600,
+      "candidate_sha256": "56fe37fc50e36ed7d4451d16fa7c6d1356b24248302cbf1c6b70fc88e5106cd7",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "56fe37fc50e36ed7d4451d16fa7c6d1356b24248302cbf1c6b70fc88e5106cd7",
+      "size": 220,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EF5E0"
     },
     {
       "address": 3078976,
@@ -4728,6 +4824,20 @@
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_00312D38"
     },
     {
+      "address": 3239416,
+      "candidate_sha256": "8bc8cca21a30916dec3d40030c88877a00fc2502cfdf16433f964aec1fc8e77b",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "8bc8cca21a30916dec3d40030c88877a00fc2502cfdf16433f964aec1fc8e77b",
+      "size": 132,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00316DF8"
+    },
+    {
       "address": 3241752,
       "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
       "candidate_source": "candidates/levels/25_wupash_nebula.c",
@@ -4936,6 +5046,20 @@
       "size": 128,
       "state": "integrated",
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_003346D0"
+    },
+    {
+      "address": 3368864,
+      "candidate_sha256": "afe902a5774e004c22669bc3a57a2b2b35fe94b4a65d85079f2585c35bda4748",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "afe902a5774e004c22669bc3a57a2b2b35fe94b4a65d85079f2585c35bda4748",
+      "size": 88,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_003367A0"
     },
     {
       "address": 3372072,
@@ -5148,6 +5272,20 @@
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_00358D88"
     },
     {
+      "address": 3516424,
+      "candidate_sha256": "05b346a5b6d5f3541135aa0276bfb49c062a4d0aee101ed98fab49ad9a852333",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "05b346a5b6d5f3541135aa0276bfb49c062a4d0aee101ed98fab49ad9a852333",
+      "size": 52,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_0035A808"
+    },
+    {
       "address": 3518264,
       "candidate_sha256": "df483f01d0580ad0b06f96b5c66bc5e8e41df7178c66d35128f3f34bc39a2903",
       "candidate_source": "candidates/levels/25_wupash_nebula.c",
@@ -5204,6 +5342,34 @@
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_00366E80"
     },
     {
+      "address": 3580480,
+      "candidate_sha256": "520679f66129e8c4f9a3c4c319112ca3145b23fcae2986c094ec629e77991f55",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "520679f66129e8c4f9a3c4c319112ca3145b23fcae2986c094ec629e77991f55",
+      "size": 172,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_0036A240"
+    },
+    {
+      "address": 3581064,
+      "candidate_sha256": "662e052e5e0c1bcf0025e9a22c30dbdfc17ddbbeae61378b3f820c70c49b1d74",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "662e052e5e0c1bcf0025e9a22c30dbdfc17ddbbeae61378b3f820c70c49b1d74",
+      "size": 68,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_0036A488"
+    },
+    {
       "address": 3585688,
       "candidate_sha256": "7951b2cbb91617f11428db64e29dbb210606237bfb7c26c24b9733e5f956f32e",
       "candidate_source": "candidates/levels/25_wupash_nebula.c",
@@ -5230,6 +5396,20 @@
       "size": 116,
       "state": "integrated",
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_0036BDD8"
+    },
+    {
+      "address": 3624440,
+      "candidate_sha256": "b9bdba22e7645da11b7bc11ea41df82d33eaf3288e641820c6f1024149ff7003",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "b9bdba22e7645da11b7bc11ea41df82d33eaf3288e641820c6f1024149ff7003",
+      "size": 272,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00374DF8"
     },
     {
       "address": 3634824,
@@ -6086,6 +6266,34 @@
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_0042A248"
     },
     {
+      "address": 4380448,
+      "candidate_sha256": "0fb31e40b7ee68d6ab61e3e9cefe52e8e95bfea55d16de97a51be7213b4f192e",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "0fb31e40b7ee68d6ab61e3e9cefe52e8e95bfea55d16de97a51be7213b4f192e",
+      "size": 100,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_0042D720"
+    },
+    {
+      "address": 4397688,
+      "candidate_sha256": "ebb202fe53fc36fb4497f1c6bbed89de098c6a329370c65c1d625c3b52cf132b",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "ebb202fe53fc36fb4497f1c6bbed89de098c6a329370c65c1d625c3b52cf132b",
+      "size": 220,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00431A78"
+    },
+    {
       "address": 4400792,
       "candidate_sha256": "95856f135bef1d7b1f452a615dbfc836fa59bdf176ddff0fc7b3eaf2ade484f7",
       "candidate_source": "candidates/levels/25_wupash_nebula.c",
@@ -6672,6 +6880,20 @@
       "size": 144,
       "state": "integrated",
       "symbol": "LVL_25_WUPASH_NEBULA_FUN_00450BA0"
+    },
+    {
+      "address": 4525104,
+      "candidate_sha256": "3e7cdc757ba12b8e816c94c09ec65d3d1687e34e91c894b7e4619291c73c2b2b",
+      "candidate_source": "candidates/levels/25_wupash_nebula.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "level-native",
+      "program": "25_wupash_nebula",
+      "reference_sha256": "3e7cdc757ba12b8e816c94c09ec65d3d1687e34e91c894b7e4619291c73c2b2b",
+      "size": 56,
+      "state": "integrated",
+      "symbol": "LVL_25_WUPASH_NEBULA_FUN_00450C30"
     },
     {
       "address": 4531560,
@@ -7459,13 +7681,13 @@
     }
   ],
   "kind": "level-c-integration",
-  "matched_code_bytes": 29584,
+  "matched_code_bytes": 32120,
   "native": {
     "catalog_path": "config/level-native/25_wupash_nebula.json",
     "object_qualification": {
-      "candidate_elf_sha256": "1e9385710f58031ec2cf4b88ad8b53868cb40f2ff3fe413474edbbefe790a1f1",
+      "candidate_elf_sha256": "5bb6ea7e0c114f334877f7a332deef1f97eceb38cd610f1cf53dc7cf49b054f1",
       "candidate_source": "candidates/levels/25_wupash_nebula.c",
-      "catalog_sha256": "8d168b1c3fd5cadc5c4522cf7a67ba54e7b873fef590c3b073beb67f7fa21909",
+      "catalog_sha256": "5b5b076b14b874fd193afeda1fe7d672daa2befd7886fefa3a65c863390aac9d",
       "checker_sha256": "bfc3a7714e257ed26ff1d8fb68346df89c1d2eaa01651849db022ac871ac30f5",
       "flags": [
         "-O2",
@@ -7505,6 +7727,17 @@
           "size": 60,
           "state": "matched_unintegrated",
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_002B9388"
+        },
+        {
+          "address": 2856480,
+          "candidate_sha256": "03840ae5a918aac84ce022148bcfe3529384995d0788946c95bcc6f5408bb943",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 440,
+          "reference_sha256": "03840ae5a918aac84ce022148bcfe3529384995d0788946c95bcc6f5408bb943",
+          "size": 440,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_002B9620"
         },
         {
           "address": 2859632,
@@ -7727,6 +7960,17 @@
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_002E71B0"
         },
         {
+          "address": 3046384,
+          "candidate_sha256": "ee26ff929be2bbd9e70436cc17175db08d9357ffe9a1d6e8d5c22ce9a3a6417e",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 496,
+          "reference_sha256": "ee26ff929be2bbd9e70436cc17175db08d9357ffe9a1d6e8d5c22ce9a3a6417e",
+          "size": 496,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_002E7BF0"
+        },
+        {
           "address": 3053792,
           "candidate_sha256": "bbd2a6336c8052a954f8a0f0ed975a607d07cadc74011cf689c011a6cca0cb6c",
           "different_bytes": 0,
@@ -7846,6 +8090,28 @@
           "size": 8,
           "state": "matched_unintegrated",
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EF4F8"
+        },
+        {
+          "address": 3077376,
+          "candidate_sha256": "56fe37fc50e36ed7d4451d16fa7c6d1356b24248302cbf1c6b70fc88e5106cd7",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 220,
+          "reference_sha256": "56fe37fc50e36ed7d4451d16fa7c6d1356b24248302cbf1c6b70fc88e5106cd7",
+          "size": 220,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EF500"
+        },
+        {
+          "address": 3077600,
+          "candidate_sha256": "56fe37fc50e36ed7d4451d16fa7c6d1356b24248302cbf1c6b70fc88e5106cd7",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 220,
+          "reference_sha256": "56fe37fc50e36ed7d4451d16fa7c6d1356b24248302cbf1c6b70fc88e5106cd7",
+          "size": 220,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_002EF5E0"
         },
         {
           "address": 3078976,
@@ -8046,6 +8312,17 @@
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_00312D38"
         },
         {
+          "address": 3239416,
+          "candidate_sha256": "8bc8cca21a30916dec3d40030c88877a00fc2502cfdf16433f964aec1fc8e77b",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 132,
+          "reference_sha256": "8bc8cca21a30916dec3d40030c88877a00fc2502cfdf16433f964aec1fc8e77b",
+          "size": 132,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_00316DF8"
+        },
+        {
           "address": 3241752,
           "candidate_sha256": "c7a60a61ce9a76559a9f70d7fed39faff8e933713e8243c959a08a88cdd3dbb9",
           "different_bytes": 0,
@@ -8209,6 +8486,17 @@
           "size": 128,
           "state": "matched_unintegrated",
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_003346D0"
+        },
+        {
+          "address": 3368864,
+          "candidate_sha256": "afe902a5774e004c22669bc3a57a2b2b35fe94b4a65d85079f2585c35bda4748",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 88,
+          "reference_sha256": "afe902a5774e004c22669bc3a57a2b2b35fe94b4a65d85079f2585c35bda4748",
+          "size": 88,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_003367A0"
         },
         {
           "address": 3372072,
@@ -8376,6 +8664,17 @@
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_00358D88"
         },
         {
+          "address": 3516424,
+          "candidate_sha256": "05b346a5b6d5f3541135aa0276bfb49c062a4d0aee101ed98fab49ad9a852333",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 52,
+          "reference_sha256": "05b346a5b6d5f3541135aa0276bfb49c062a4d0aee101ed98fab49ad9a852333",
+          "size": 52,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_0035A808"
+        },
+        {
           "address": 3518264,
           "candidate_sha256": "df483f01d0580ad0b06f96b5c66bc5e8e41df7178c66d35128f3f34bc39a2903",
           "different_bytes": 0,
@@ -8420,6 +8719,28 @@
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_00366E80"
         },
         {
+          "address": 3580480,
+          "candidate_sha256": "520679f66129e8c4f9a3c4c319112ca3145b23fcae2986c094ec629e77991f55",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 172,
+          "reference_sha256": "520679f66129e8c4f9a3c4c319112ca3145b23fcae2986c094ec629e77991f55",
+          "size": 172,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_0036A240"
+        },
+        {
+          "address": 3581064,
+          "candidate_sha256": "662e052e5e0c1bcf0025e9a22c30dbdfc17ddbbeae61378b3f820c70c49b1d74",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 68,
+          "reference_sha256": "662e052e5e0c1bcf0025e9a22c30dbdfc17ddbbeae61378b3f820c70c49b1d74",
+          "size": 68,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_0036A488"
+        },
+        {
           "address": 3585688,
           "candidate_sha256": "7951b2cbb91617f11428db64e29dbb210606237bfb7c26c24b9733e5f956f32e",
           "different_bytes": 0,
@@ -8440,6 +8761,17 @@
           "size": 116,
           "state": "matched_unintegrated",
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_0036BDD8"
+        },
+        {
+          "address": 3624440,
+          "candidate_sha256": "b9bdba22e7645da11b7bc11ea41df82d33eaf3288e641820c6f1024149ff7003",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 272,
+          "reference_sha256": "b9bdba22e7645da11b7bc11ea41df82d33eaf3288e641820c6f1024149ff7003",
+          "size": 272,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_00374DF8"
         },
         {
           "address": 3634824,
@@ -9113,6 +9445,28 @@
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_0042A248"
         },
         {
+          "address": 4380448,
+          "candidate_sha256": "0fb31e40b7ee68d6ab61e3e9cefe52e8e95bfea55d16de97a51be7213b4f192e",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 100,
+          "reference_sha256": "0fb31e40b7ee68d6ab61e3e9cefe52e8e95bfea55d16de97a51be7213b4f192e",
+          "size": 100,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_0042D720"
+        },
+        {
+          "address": 4397688,
+          "candidate_sha256": "ebb202fe53fc36fb4497f1c6bbed89de098c6a329370c65c1d625c3b52cf132b",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 220,
+          "reference_sha256": "ebb202fe53fc36fb4497f1c6bbed89de098c6a329370c65c1d625c3b52cf132b",
+          "size": 220,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_00431A78"
+        },
+        {
           "address": 4400792,
           "candidate_sha256": "95856f135bef1d7b1f452a615dbfc836fa59bdf176ddff0fc7b3eaf2ade484f7",
           "different_bytes": 0,
@@ -9575,6 +9929,17 @@
           "symbol": "LVL_25_WUPASH_NEBULA_FUN_00450BA0"
         },
         {
+          "address": 4525104,
+          "candidate_sha256": "3e7cdc757ba12b8e816c94c09ec65d3d1687e34e91c894b7e4619291c73c2b2b",
+          "different_bytes": 0,
+          "matched": true,
+          "produced_size": 56,
+          "reference_sha256": "3e7cdc757ba12b8e816c94c09ec65d3d1687e34e91c894b7e4619291c73c2b2b",
+          "size": 56,
+          "state": "matched_unintegrated",
+          "symbol": "LVL_25_WUPASH_NEBULA_FUN_00450C30"
+        },
+        {
           "address": 4531560,
           "candidate_sha256": "6d64edf91449c1b17746c1ef18afa2eb25c70bdf1322ab3df5a2630993b7e2f1",
           "different_bytes": 0,
@@ -9620,14 +9985,14 @@
         }
       ],
       "kind": "level-native-candidate",
-      "matched_code_bytes": 17772,
-      "object_sha256": "94372b72a479aff20dbfd05b7e9968d58581f2b4af17fcafbe6e6b5cf4b8c6da",
+      "matched_code_bytes": 20308,
+      "object_sha256": "ec0ae75b4b37b3a8dca3e0b4f0ec7a1235c94299891b35421d6a46c3bf375f64",
       "program": "levels/25_wupash_nebula",
       "read_only_sections": [],
       "reference_entry": 2846088,
       "reference_sha256": "075a0a55f83fd7d35957af62eeac8e911357cee2fa6119edd9f2cfcdea7e9cdc",
       "schema": 1,
-      "source_sha256": "96a3a3977d366ef3da64c3f226ca4d0d943be7c75da4fcfccaf61b83e69a5dc1",
+      "source_sha256": "960e4b834715b0d40e823a85db7e53256bbbe0eda09877a1ea1ce55c2d4da2bf",
       "state": "matched_unintegrated",
       "target": "SCUS_972.68",
       "tools": {
@@ -9637,9 +10002,9 @@
         "ld.exe": "80f3724a63ce3c77c8b00d075f5c49448636518700ae251e5d6a6c809bbf5f48"
       }
     },
-    "object_sha256": "94372b72a479aff20dbfd05b7e9968d58581f2b4af17fcafbe6e6b5cf4b8c6da",
+    "object_sha256": "ec0ae75b4b37b3a8dca3e0b4f0ec7a1235c94299891b35421d6a46c3bf375f64",
     "review_path": "progress/level-candidates/25_wupash_nebula.json",
-    "review_sha256": "d129f946ad4178e1d54bdc9359112f5f52f11828100a271e695db3e774c11a48",
+    "review_sha256": "eb135be3a6687dd2541c3ed2cb339f90682220bb51b5869e37182063d76e2c64",
     "source": "candidates/levels/25_wupash_nebula.c"
   },
   "program": "25_wupash_nebula",
@@ -9817,6 +10182,7 @@
       "LVL_25_WUPASH_NEBULA_FUN_002B80F0",
       "LVL_25_WUPASH_NEBULA_FUN_002B81E8",
       "LVL_25_WUPASH_NEBULA_FUN_002B9388",
+      "LVL_25_WUPASH_NEBULA_FUN_002B9620",
       "LVL_25_WUPASH_NEBULA_FUN_002BA270",
       "LVL_25_WUPASH_NEBULA_FUN_002BA2F0",
       "LVL_25_WUPASH_NEBULA_FUN_002C0EF8",
@@ -9837,6 +10203,7 @@
       "LVL_25_WUPASH_NEBULA_FUN_002E6600",
       "LVL_25_WUPASH_NEBULA_FUN_002E6978",
       "LVL_25_WUPASH_NEBULA_FUN_002E71B0",
+      "LVL_25_WUPASH_NEBULA_FUN_002E7BF0",
       "LVL_25_WUPASH_NEBULA_FUN_002E98E0",
       "LVL_25_WUPASH_NEBULA_FUN_002E9960",
       "LVL_25_WUPASH_NEBULA_FUN_002E9A30",
@@ -9848,6 +10215,8 @@
       "LVL_25_WUPASH_NEBULA_FUN_002EF0E8",
       "LVL_25_WUPASH_NEBULA_FUN_002EF4F0",
       "LVL_25_WUPASH_NEBULA_FUN_002EF4F8",
+      "LVL_25_WUPASH_NEBULA_FUN_002EF500",
+      "LVL_25_WUPASH_NEBULA_FUN_002EF5E0",
       "LVL_25_WUPASH_NEBULA_FUN_002EFB40",
       "LVL_25_WUPASH_NEBULA_FUN_002F5CD8",
       "LVL_25_WUPASH_NEBULA_FUN_002F6858",
@@ -9866,6 +10235,7 @@
       "LVL_25_WUPASH_NEBULA_FUN_0030F180",
       "LVL_25_WUPASH_NEBULA_FUN_0030F188",
       "LVL_25_WUPASH_NEBULA_FUN_00312D38",
+      "LVL_25_WUPASH_NEBULA_FUN_00316DF8",
       "LVL_25_WUPASH_NEBULA_FUN_00317718",
       "LVL_25_WUPASH_NEBULA_FUN_00317FD8",
       "LVL_25_WUPASH_NEBULA_FUN_00318058",
@@ -9881,6 +10251,7 @@
       "LVL_25_WUPASH_NEBULA_FUN_0032CD78",
       "LVL_25_WUPASH_NEBULA_FUN_003312D8",
       "LVL_25_WUPASH_NEBULA_FUN_003346D0",
+      "LVL_25_WUPASH_NEBULA_FUN_003367A0",
       "LVL_25_WUPASH_NEBULA_FUN_00337428",
       "LVL_25_WUPASH_NEBULA_FUN_00338190",
       "LVL_25_WUPASH_NEBULA_FUN_0033A068",
@@ -9896,12 +10267,16 @@
       "LVL_25_WUPASH_NEBULA_FUN_003588D8",
       "LVL_25_WUPASH_NEBULA_FUN_00358C88",
       "LVL_25_WUPASH_NEBULA_FUN_00358D88",
+      "LVL_25_WUPASH_NEBULA_FUN_0035A808",
       "LVL_25_WUPASH_NEBULA_FUN_0035AF38",
       "LVL_25_WUPASH_NEBULA_FUN_0035F190",
       "LVL_25_WUPASH_NEBULA_FUN_00364C00",
       "LVL_25_WUPASH_NEBULA_FUN_00366E80",
+      "LVL_25_WUPASH_NEBULA_FUN_0036A240",
+      "LVL_25_WUPASH_NEBULA_FUN_0036A488",
       "LVL_25_WUPASH_NEBULA_FUN_0036B698",
       "LVL_25_WUPASH_NEBULA_FUN_0036BDD8",
+      "LVL_25_WUPASH_NEBULA_FUN_00374DF8",
       "LVL_25_WUPASH_NEBULA_FUN_00377688",
       "LVL_25_WUPASH_NEBULA_FUN_00379E58",
       "LVL_25_WUPASH_NEBULA_FUN_0037E588",
@@ -9963,6 +10338,8 @@
       "LVL_25_WUPASH_NEBULA_FUN_004245A8",
       "LVL_25_WUPASH_NEBULA_FUN_00424610",
       "LVL_25_WUPASH_NEBULA_FUN_0042A248",
+      "LVL_25_WUPASH_NEBULA_FUN_0042D720",
+      "LVL_25_WUPASH_NEBULA_FUN_00431A78",
       "LVL_25_WUPASH_NEBULA_FUN_00432698",
       "LVL_25_WUPASH_NEBULA_FUN_00437AB8",
       "LVL_25_WUPASH_NEBULA_FUN_00437C68",
@@ -10005,6 +10382,7 @@
       "LVL_25_WUPASH_NEBULA_FUN_004501D8",
       "LVL_25_WUPASH_NEBULA_FUN_00450578",
       "LVL_25_WUPASH_NEBULA_FUN_00450BA0",
+      "LVL_25_WUPASH_NEBULA_FUN_00450C30",
       "LVL_25_WUPASH_NEBULA_FUN_00452568",
       "LVL_25_WUPASH_NEBULA_FUN_00452668",
       "LVL_25_WUPASH_NEBULA_FUN_00453E00",
@@ -10067,50 +10445,50 @@
   "shared": {
     "c_link_object_adapter": {
       "compiled_code_unchanged": true,
-      "compiled_object_sha256": "b5a2be9bbd43e6f2a3d80f8b84eef1c0047328f4f015d4ffbec1bd324505b71e",
+      "compiled_object_sha256": "4b053977a7792c40a8876cb84b7f84782682732a33666834779649017057563e",
       "integration_credit": 0,
       "kind": "reviewed-shared-import-relocation-adapter",
-      "link_object_sha256": "eba078c6c4de9eb6608465f40243b511809f0d4816f5552ef6cd808ecde8596a",
+      "link_object_sha256": "c173070ee042e89a79d1c4b5393b72b2b0da6093b93207070a019bda86f07747",
       "new_physical_bytes": 0,
       "relocation_changes": [
         {
           "caller": "FUN_0034F898",
           "caller_address": 4528224,
-          "new_r_info": 111364,
-          "new_symbol_index": 435,
+          "new_r_info": 113412,
+          "new_symbol_index": 443,
           "old_r_info": 67844,
           "old_symbol_index": 265,
           "provider": "FUN_001338C8",
           "provider_address": 1259720,
           "provider_reference_sha256": "df665c024f2c2f2122ca91cb5b61048030b7f98a3df2606d8c91441295d69d2f",
           "provider_size": 36,
-          "r_info_offset": 110272
+          "r_info_offset": 116224
         },
         {
           "caller": "FUN_0034FB20",
           "caller_address": 4528996,
-          "new_r_info": 128260,
-          "new_symbol_index": 501,
+          "new_r_info": 130308,
+          "new_symbol_index": 509,
           "old_r_info": 68100,
           "old_symbol_index": 266,
           "provider": "FUN_00133930",
           "provider_address": 1259824,
           "provider_reference_sha256": "d1b7a40a24b4537c4f9b704b87cafb6001ecaf64ef96c01c869fd05532732474",
           "provider_size": 44,
-          "r_info_offset": 110720
+          "r_info_offset": 116672
         },
         {
           "caller": "FUN_002B7170",
           "caller_address": 3384764,
-          "new_r_info": 142596,
-          "new_symbol_index": 557,
+          "new_r_info": 144644,
+          "new_symbol_index": 565,
           "old_r_info": 67588,
           "old_symbol_index": 264,
           "provider": "FUN_00133490",
           "provider_address": 1258640,
           "provider_reference_sha256": "1c102a1be303b46fbc85f02f327e97d8ecdbbf6635d3458a6454c0c7de75c75a",
           "provider_size": 40,
-          "r_info_offset": 111032
+          "r_info_offset": 116984
         }
       ],
       "schema": 1,
@@ -10134,7 +10512,7 @@
         {
           "index": 5,
           "name": ".mdebug",
-          "sha256": "f68b313f458385fdc23576b8b4ed6a90bec6cd0670e3657e4fb9ac9425ceab6f"
+          "sha256": "933adf106a5413a261b40baaad19070e9c1a031d8e36b075934cfa4100baa86a"
         },
         {
           "index": 6,
@@ -11753,25 +12131,65 @@
         },
         {
           "index": 440,
-          "name": ".shstrtab",
-          "sha256": "cf25a6821455714f54a5c0b81e2a723dff861ae4c7644231093fd15f91279cd2"
-        },
-        {
-          "index": 441,
-          "name": ".symtab",
-          "sha256": "0f6fa54a0b3b657de8e7f47c7adf996fb081d7796c96d521df415dd0dd426008"
+          "name": ".text.FUN_002D4E10",
+          "sha256": "a8676595c567569004a5593e8ec58c810dd0c27f0362c0bdcf4a022103432611"
         },
         {
           "index": 442,
+          "name": ".text.FUN_0034EC70",
+          "sha256": "12a13f773a4450fbc9d7e9bc664115f322058a9f643f21ba85b1ae0322e5b5fb"
+        },
+        {
+          "index": 444,
+          "name": ".text.FUN_002E46C0",
+          "sha256": "dce4524975475049e746d94bca280f5a9b9f19693e77a99c02a2739983a1e687"
+        },
+        {
+          "index": 446,
+          "name": ".text.FUN_00293CA8",
+          "sha256": "e74b7eb12a26601c43476977470e0713c48f0c39046031809fd38008a6af5d7c"
+        },
+        {
+          "index": 448,
+          "name": ".text.FUN_002E4478",
+          "sha256": "19eb8bea954758107bfa70beeb67787dd158173a05733753b1cf58d0a4308a46"
+        },
+        {
+          "index": 450,
+          "name": ".text.FUN_00274128",
+          "sha256": "7681577e80523b7bd374570a001aaf35bfe5afa4cc45e9d6024b2acc9a6c72b7"
+        },
+        {
+          "index": 452,
+          "name": ".text.FUN_00274208",
+          "sha256": "7681577e80523b7bd374570a001aaf35bfe5afa4cc45e9d6024b2acc9a6c72b7"
+        },
+        {
+          "index": 454,
+          "name": ".text.FUN_0031A998",
+          "sha256": "c59e0502110792ab05e18abe5a69eb3869c2588ecdab762c9af03f2dd0ac4f45"
+        },
+        {
+          "index": 456,
+          "name": ".shstrtab",
+          "sha256": "e9e9896fdff45c65c2b637b52abe325fcdf0aeb6b901806dcfa0f6e25318bb74"
+        },
+        {
+          "index": 457,
+          "name": ".symtab",
+          "sha256": "bc5ff3a256bed88f2e118b0b7e702c2ab90d4d0aaa03d935e0a1d09ca3cdae3a"
+        },
+        {
+          "index": 458,
           "name": ".strtab",
-          "sha256": "6add012a7b2c038503b5b6c96edbf3697e91c4a90988170c762399f422a99359"
+          "sha256": "8a34009d466a74210011f89e99d08b377ff25c5284c52d3200334ad83e4e0178"
         }
       ]
     },
-    "c_link_object_adapter_sha256": "6b3fa723fc50d850ebb8fa8169f1d88ad84cf3c2958aa63e480257d0fad9269d",
-    "c_link_object_sha256": "eba078c6c4de9eb6608465f40243b511809f0d4816f5552ef6cd808ecde8596a",
-    "c_object_sha256": "b5a2be9bbd43e6f2a3d80f8b84eef1c0047328f4f015d4ffbec1bd324505b71e",
-    "candidate_elf_sha256": "e51b2fab5b518d8c52511cc5c55b2ae21ca3c46b476c3cac575cfe9d81d0241e",
+    "c_link_object_adapter_sha256": "4f5f78c033869b7d0eb2fb96dda9a15b84c42b20702c7d8cc2bf942a634bb80e",
+    "c_link_object_sha256": "c173070ee042e89a79d1c4b5393b72b2b0da6093b93207070a019bda86f07747",
+    "c_object_sha256": "4b053977a7792c40a8876cb84b7f84782682732a33666834779649017057563e",
+    "candidate_elf_sha256": "0d2d92a87b1056d8ee0e523d23d74f6528443987c185edeaf1c32d7387b3bff7",
     "candidate_source": "candidates/boot.c",
     "catalog_sha256": "fc792ac26dd3bbec8f54565bc6a44fe3ed2c05756e5f66981ceb3d9c294fb7b0",
     "full_level_gate": {
@@ -11950,6 +12368,7 @@
         "LVL_25_WUPASH_NEBULA_FUN_002B80F0",
         "LVL_25_WUPASH_NEBULA_FUN_002B81E8",
         "LVL_25_WUPASH_NEBULA_FUN_002B9388",
+        "LVL_25_WUPASH_NEBULA_FUN_002B9620",
         "LVL_25_WUPASH_NEBULA_FUN_002BA270",
         "LVL_25_WUPASH_NEBULA_FUN_002BA2F0",
         "LVL_25_WUPASH_NEBULA_FUN_002C0EF8",
@@ -11970,6 +12389,7 @@
         "LVL_25_WUPASH_NEBULA_FUN_002E6600",
         "LVL_25_WUPASH_NEBULA_FUN_002E6978",
         "LVL_25_WUPASH_NEBULA_FUN_002E71B0",
+        "LVL_25_WUPASH_NEBULA_FUN_002E7BF0",
         "LVL_25_WUPASH_NEBULA_FUN_002E98E0",
         "LVL_25_WUPASH_NEBULA_FUN_002E9960",
         "LVL_25_WUPASH_NEBULA_FUN_002E9A30",
@@ -11981,6 +12401,8 @@
         "LVL_25_WUPASH_NEBULA_FUN_002EF0E8",
         "LVL_25_WUPASH_NEBULA_FUN_002EF4F0",
         "LVL_25_WUPASH_NEBULA_FUN_002EF4F8",
+        "LVL_25_WUPASH_NEBULA_FUN_002EF500",
+        "LVL_25_WUPASH_NEBULA_FUN_002EF5E0",
         "LVL_25_WUPASH_NEBULA_FUN_002EFB40",
         "LVL_25_WUPASH_NEBULA_FUN_002F5CD8",
         "LVL_25_WUPASH_NEBULA_FUN_002F6858",
@@ -11999,6 +12421,7 @@
         "LVL_25_WUPASH_NEBULA_FUN_0030F180",
         "LVL_25_WUPASH_NEBULA_FUN_0030F188",
         "LVL_25_WUPASH_NEBULA_FUN_00312D38",
+        "LVL_25_WUPASH_NEBULA_FUN_00316DF8",
         "LVL_25_WUPASH_NEBULA_FUN_00317718",
         "LVL_25_WUPASH_NEBULA_FUN_00317FD8",
         "LVL_25_WUPASH_NEBULA_FUN_00318058",
@@ -12014,6 +12437,7 @@
         "LVL_25_WUPASH_NEBULA_FUN_0032CD78",
         "LVL_25_WUPASH_NEBULA_FUN_003312D8",
         "LVL_25_WUPASH_NEBULA_FUN_003346D0",
+        "LVL_25_WUPASH_NEBULA_FUN_003367A0",
         "LVL_25_WUPASH_NEBULA_FUN_00337428",
         "LVL_25_WUPASH_NEBULA_FUN_00338190",
         "LVL_25_WUPASH_NEBULA_FUN_0033A068",
@@ -12029,12 +12453,16 @@
         "LVL_25_WUPASH_NEBULA_FUN_003588D8",
         "LVL_25_WUPASH_NEBULA_FUN_00358C88",
         "LVL_25_WUPASH_NEBULA_FUN_00358D88",
+        "LVL_25_WUPASH_NEBULA_FUN_0035A808",
         "LVL_25_WUPASH_NEBULA_FUN_0035AF38",
         "LVL_25_WUPASH_NEBULA_FUN_0035F190",
         "LVL_25_WUPASH_NEBULA_FUN_00364C00",
         "LVL_25_WUPASH_NEBULA_FUN_00366E80",
+        "LVL_25_WUPASH_NEBULA_FUN_0036A240",
+        "LVL_25_WUPASH_NEBULA_FUN_0036A488",
         "LVL_25_WUPASH_NEBULA_FUN_0036B698",
         "LVL_25_WUPASH_NEBULA_FUN_0036BDD8",
+        "LVL_25_WUPASH_NEBULA_FUN_00374DF8",
         "LVL_25_WUPASH_NEBULA_FUN_00377688",
         "LVL_25_WUPASH_NEBULA_FUN_00379E58",
         "LVL_25_WUPASH_NEBULA_FUN_0037E588",
@@ -12096,6 +12524,8 @@
         "LVL_25_WUPASH_NEBULA_FUN_004245A8",
         "LVL_25_WUPASH_NEBULA_FUN_00424610",
         "LVL_25_WUPASH_NEBULA_FUN_0042A248",
+        "LVL_25_WUPASH_NEBULA_FUN_0042D720",
+        "LVL_25_WUPASH_NEBULA_FUN_00431A78",
         "LVL_25_WUPASH_NEBULA_FUN_00432698",
         "LVL_25_WUPASH_NEBULA_FUN_00437AB8",
         "LVL_25_WUPASH_NEBULA_FUN_00437C68",
@@ -12138,6 +12568,7 @@
         "LVL_25_WUPASH_NEBULA_FUN_004501D8",
         "LVL_25_WUPASH_NEBULA_FUN_00450578",
         "LVL_25_WUPASH_NEBULA_FUN_00450BA0",
+        "LVL_25_WUPASH_NEBULA_FUN_00450C30",
         "LVL_25_WUPASH_NEBULA_FUN_00452568",
         "LVL_25_WUPASH_NEBULA_FUN_00452668",
         "LVL_25_WUPASH_NEBULA_FUN_00453E00",
@@ -12196,7 +12627,7 @@
         "LVL_25_WUPASH_NEBULA_FUN_0038A400"
       ]
     },
-    "source_sha256": "e97ccd1bb6670f20a917035bfc840b1fe416955f73b01962532fbb6db559d694",
+    "source_sha256": "674b48506ecbcb96864012e352137f26b99c2a1cc4532b8efaa87aeb7a7f7058",
     "state": "integrated",
     "target": "SCUS_972.68",
     "tools": {
@@ -12816,7 +13247,7 @@
     "review_sha256": "a9f516c5dbe070d268ff7da59d2595b80b5648ce2a684ad686c8cb95936c9e96",
     "source": "candidates/levels/25_wupash_nebula-g8.c"
   },
-  "source_sha256": "e97ccd1bb6670f20a917035bfc840b1fe416955f73b01962532fbb6db559d694",
+  "source_sha256": "674b48506ecbcb96864012e352137f26b99c2a1cc4532b8efaa87aeb7a7f7058",
   "state": "integrated",
   "target": "SCUS_972.68",
   "tools": {

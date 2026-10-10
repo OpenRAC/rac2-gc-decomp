@@ -33,8 +33,29 @@
     "F01bd4546_FUN_00335E68": 3366504,
     "F01bd4546_FUN_00349630": 3446320,
     "F01bd4546_FUN_00349678": 3446392,
+    "F0a76d85b_D_001B5200": 1790464,
+    "F0a76d85b_FUN_00279D18": 2596120,
+    "F0a76d85b_FUN_00283360": 2634592,
+    "F391de845_D_001B5340": 1790784,
+    "F391de845_FUN_00282E48": 2633288,
+    "F391de845_FUN_002E45C8": 3032520,
     "F45821cfb_D_001C2740": 1845056,
     "F45821cfb_FUN_00282C88": 2632840,
+    "F46b43b72_D_0014B540": 1357120,
+    "F46b43b72_D_001B8840": 1804352,
+    "F46b43b72_FUN_002B7B18": 2849560,
+    "F46b43b72_FUN_002B7CE0": 2850016,
+    "F4778f810_FUN_00282CC0": 2632896,
+    "F4778f810_FUN_00282CF0": 2632944,
+    "F4778f810_FUN_00283098": 2633880,
+    "F4778f810_FUN_00283738": 2635576,
+    "F4778f810_FUN_00283958": 2636120,
+    "F4778f810_FUN_002B00D8": 2818264,
+    "F669d6320_D_001BAFC0": 1814464,
+    "F669d6320_FUN_002761F8": 2580984,
+    "F669d6320_FUN_00282CC0": 2632896,
+    "F669d6320_FUN_00282D30": 2633008,
+    "F669d6320_FUN_00282F20": 2633504,
     "F6df9730c_FUN_00282B50": 2632528,
     "F70997ba9_FUN_0027C540": 2606400,
     "F70997ba9_FUN_0027C660": 2606688,
@@ -50,6 +71,8 @@
     "F7242f0a4_FUN_00282DB0": 2633136,
     "F7242f0a4_FUN_00334710": 3360528,
     "F7242f0a4_FUN_00334730": 3360560,
+    "F7cb419c1_D_001F2840": 2041920,
+    "F7cb419c1_FUN_002DE618": 3008024,
     "F9e2cd219_FUN_002A7798": 2783128,
     "F9e2cd219_FUN_002ACF68": 2805608,
     "F9e2cd219_FUN_00305310": 3166992,
@@ -106,6 +129,14 @@
     "FUN_0033AB50": 3386192,
     "FUN_00342F70": 3420016,
     "FUN_00348138": 3440952,
+    "Fa2d20de7_D_001886CC": 1607372,
+    "Fa2d20de7_D_001B5340": 1790784,
+    "Fa2d20de7_D_001BAFA0": 1814432,
+    "Fa2d20de7_FUN_002761F8": 2580984,
+    "Fa2d20de7_FUN_00282CC0": 2632896,
+    "Fa2d20de7_FUN_00282CF0": 2632944,
+    "Fa2d20de7_FUN_00282D30": 2633008,
+    "Fa2d20de7_FUN_002A7988": 2783624,
     "Fc936841d_FUN_00282CC0": 2632896,
     "Fc936841d_FUN_00282CF0": 2632944,
     "Fd8e166aa_D_001B7F80": 1802112,
@@ -470,6 +501,22 @@
       "xrefs": 1
     },
     {
+      "address": 2572584,
+      "meaning": "Drives eight calls over a parameter object: loads the pointer at +104, builds four 16-byte stack scratch records at sp+0/+16/+32/+48, and passes the object's +16 and +192 regions to the callees.",
+      "ranges": 1,
+      "size": 220,
+      "symbol": "FUN_00274128",
+      "xrefs": 1
+    },
+    {
+      "address": 2572808,
+      "meaning": "Drives eight calls over a parameter object: loads the pointer at +104, builds four 16-byte stack scratch records at sp+0/+16/+32/+48, and passes the object's +16 and +192 regions to the callees.",
+      "ranges": 1,
+      "size": 220,
+      "symbol": "FUN_00274208",
+      "xrefs": 1
+    },
+    {
       "address": 2594856,
       "meaning": "Picks an entry from an int table at a global root using a byte read from a fixed absolute address, uses the entry as a byte offset from the table to reach a count word, stores the pointer just past th",
       "ranges": 1,
@@ -660,6 +707,14 @@
       "size": 60,
       "symbol": "FUN_002934B8",
       "xrefs": 0
+    },
+    {
+      "address": 2702504,
+      "meaning": "Reads a record count from a per-level data root, indexes a fixed 332-byte-stride table with it, and when the int after position index is greater than the one at position index calls two helpers with the entry value added to a per-level base; returns 1.",
+      "ranges": 1,
+      "size": 132,
+      "symbol": "FUN_00293CA8",
+      "xrefs": 1
     },
     {
       "address": 2704944,
@@ -1063,6 +1118,14 @@
       "symbol": "FUN_002D3390"
     },
     {
+      "address": 2969104,
+      "meaning": "Reads a 32-bit field of a shared global block, passes it to one routine and stores that routine's result back into the same field; returns zero.",
+      "ranges": 1,
+      "size": 52,
+      "symbol": "FUN_002D4E10",
+      "xrefs": 1
+    },
+    {
       "address": 2970944,
       "meaning": "Run the three measured setup calls with an explicit long zero, then return the defined integer zero.",
       "size": 48,
@@ -1090,6 +1153,22 @@
       "size": 64,
       "symbol": "FUN_002DE810",
       "xrefs": 0
+    },
+    {
+      "address": 3032184,
+      "meaning": "Runs a setup call on a state object with two float parameters, packs the object and a static table into a 16-bit table entry, then calls a 130-mode query that also reads an int out of a fixed global slot; only when that query returns non-zero does it apply a second table entry, call a float setter, and re-pack the table entry.",
+      "ranges": 1,
+      "size": 172,
+      "symbol": "FUN_002E4478",
+      "xrefs": 1
+    },
+    {
+      "address": 3032768,
+      "meaning": "Computes a length against a bound data vector, loads a vector pointer from the object and passes it with three floats to a bound consumer.",
+      "ranges": 1,
+      "size": 68,
+      "symbol": "FUN_002E46C0",
+      "xrefs": 1
     },
     {
       "address": 3037616,
@@ -1259,6 +1338,14 @@
       "ranges": 1,
       "size": 100,
       "symbol": "FUN_00316DA0",
+      "xrefs": 1
+    },
+    {
+      "address": 3254680,
+      "meaning": "Normalises and combines two temporary vectors from a state block, dispatches on the combined result and conditionally scales the output vector.",
+      "ranges": 1,
+      "size": 276,
+      "symbol": "FUN_0031A998",
       "xrefs": 1
     },
     {
@@ -2063,6 +2150,14 @@
       "ranges": 1,
       "size": 144,
       "symbol": "FUN_0034EBE0",
+      "xrefs": 1
+    },
+    {
+      "address": 3468400,
+      "meaning": "Writes three consecutive 32-bit counters of a shared global block to zero, then passes the block's +880 tail to one routine and calls a second initialiser; returns nothing.",
+      "ranges": 1,
+      "size": 56,
+      "symbol": "FUN_0034EC70",
       "xrefs": 1
     },
     {

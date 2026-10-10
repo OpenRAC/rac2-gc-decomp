@@ -1,0 +1,11 @@
+extern char @@DATA_0_00@@[];
+
+extern int @@ROLE_0_00@@(int arg);
+
+int @@FUNCTION@@(void)
+{
+    char *p = @@DATA_0_01@@;
+
+    *(int *)(p + 460) = @@ROLE_0_01@@(*(int *)(p + 460));
+    return 0;
+}

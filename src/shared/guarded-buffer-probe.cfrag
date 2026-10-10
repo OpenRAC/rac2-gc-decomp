@@ -1,0 +1,19 @@
+extern char @@DATA_0_00@@[];
+extern void @@ROLE_0_00@@(char *local, char *data);
+extern float @@ROLE_1_00@@(char *local, char *p);
+
+int @@FUNCTION@@(int a0, int a1)
+{
+    char local[16];
+    int s0;
+    int r;
+
+    if (a1 != 1) {
+        r = 0;
+    } else {
+        s0 = *(int *)(a0 + 112) + 352;
+        @@ROLE_0_01@@(local, @@DATA_0_01@@);
+        r = @@ROLE_1_01@@(local, (char *)s0) < 0.0f ? 1 : 0;
+    }
+    return r;
+}

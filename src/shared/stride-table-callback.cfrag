@@ -1,0 +1,25 @@
+extern void @@ROLE_0_00@@(int value, char *target);
+extern void @@ROLE_1_00@@(int value);
+
+extern int @@DATA_0_00@@[];
+extern int @@BIND_DATA2_00@@[];
+
+int @@FUNCTION@@(int index)
+{
+    int j = index + 1;
+    int *d = @@DATA_0_01@@;
+    int *b = @@BIND_DATA2_01@@;
+    int *t = (int *)((char *)b + 25416);
+    int n = d[12] * 332;
+    int hold = d[28];
+    int j4 = j * 4;
+    int cur = *(int *)((char *)t + (n + index * 4));
+    int next = *(int *)((char *)t + (j4 + n));
+
+    n = next - cur;
+    if (n > 0) {
+        @@ROLE_0_01@@(hold, (char *)(cur + b[6341]));
+        @@ROLE_1_01@@(0);
+    }
+    return 1;
+}

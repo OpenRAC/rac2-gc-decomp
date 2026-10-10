@@ -25,33 +25,53 @@ class MaintainerTests(unittest.TestCase):
     def write(self, path, data):
         (self.repo / path).write_text(data, encoding="utf8")
 
-    def test_transitive_imports_and_changed_tests_are_included(self):
+    def test_changed_tests_selected_without_transitive_import_suites(self):
         self.write("scripts/one.py", "pass\n")
         self.write("scripts/two.py", "from one import value\n")
         self.write("tests/test_two.py", "import two\n")
         self.write("tests/test_added.py", "pass\n")
         result = tests.select_modules(self.repo, ["scripts/one.py", "tests/test_added.py"])
-        self.assertIn("test_two", result)
+        self.assertNotIn("test_two", result)
         self.assertIn("test_added", result)
 
-    def test_unmapped_script_does_not_hide_behind_another_mapped_change(self):
+    def test_orphan_script_stays_explicitly_limited_owner_precheck(self):
         self.write("scripts/one.py", "pass\n")
         self.write("scripts/orphan.py", "pass\n")
         self.write("tests/test_one.py", "import one\n")
-        self.assertIsNone(tests.select_modules(self.repo, ["scripts/one.py", "scripts/orphan.py"]))
+        self.assertEqual(len(tests.select_modules(self.repo, ["scripts/one.py", "scripts/orphan.py"])), 3)
 
-    def test_deleted_tests_and_nonpython_executables_fall_back_to_full(self):
-        self.assertIsNone(tests.select_modules(self.repo, ["tests/test_deleted.py"]))
-        self.assertIsNone(tests.select_modules(self.repo, ["scripts/tool.sh"]))
+    def test_deleted_tests_and_nonpython_executables_keep_limited_smoke(self):
+        self.assertEqual(len(tests.select_modules(self.repo, ["tests/test_deleted.py"])), 3)
+        self.assertEqual(len(tests.select_modules(self.repo, ["scripts/tool.sh"])), 3)
 
-    def test_unmapped_toolchain_workflows_and_executables_fall_back_to_full(self):
+    def test_toolchain_workflows_and_executables_do_not_claim_full_coverage(self):
         for path in ("toolchain/compiler.json", ".github/workflows/progress.yml", "tools/helper.ps1", "misc/tool.py"):
             with self.subTest(path=path):
-                self.assertIsNone(tests.select_modules(self.repo, [path]))
+                self.assertEqual(len(tests.select_modules(self.repo, [path])), 3)
 
     def test_source_or_docs_changes_keep_integrity_smoke_checks(self):
         result = tests.select_modules(self.repo, ["src/boot/00-types.cfrag", "docs/README.md"])
         self.assertEqual(len(result), 3)
+
+    def test_changed_python_syntax_checked_without_importing(self):
+        self.write("scripts/one.py", "raise RuntimeError('must not execute')\n")
+        self.assertEqual(tests.check_changed_python(self.repo, ["scripts/one.py"]), ["scripts/one.py"])
+        self.write("scripts/one.py", "def broken(:\n")
+        with self.assertRaises(SyntaxError):
+            tests.select_modules(self.repo, ["scripts/one.py"])
+
+    def test_unchanged_heavy_source_layout_suite_not_selected(self):
+        self.write("scripts/source_layout.py", "pass\n")
+        result = tests.select_modules(self.repo, ["scripts/source_layout.py"])
+        self.assertNotIn("test_source_layout", result)
+        self.assertIn("test_source_layout", tests.select_modules(self.repo, ["tests/test_source_layout.py"]))
+
+    def test_nested_changed_test_does_not_select_flat_homonym(self):
+        (self.repo / "tests/nested").mkdir()
+        self.write("tests/nested/test_same.py", "pass\n")
+        self.write("tests/test_same.py", "pass\n")
+        result = tests.select_modules(self.repo, ["tests/nested/test_same.py"])
+        self.assertNotIn("test_same", result)
 
     def test_module_paths_and_missing_modules_are_refused(self):
         for modules in ([], ["../test_one"], ["test_missing"], ["os"], ["test_one.py"]):

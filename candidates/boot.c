@@ -4467,3 +4467,257 @@ void FUN_00279828(void)
         *(int *)(q + i * 16) = *(int *)(q + i * 16) + (int)r;
     }
 }
+extern char F7cb419c1_D_001F2840[];
+
+extern int F7cb419c1_FUN_002DE618(int arg);
+
+int FUN_002D4E10(void)
+{
+    char *p = F7cb419c1_D_001F2840;
+
+    *(int *)(p + 460) = F7cb419c1_FUN_002DE618(*(int *)(p + 460));
+    return 0;
+}
+extern char F0a76d85b_D_001B5200[];
+
+extern void F0a76d85b_FUN_00283360(char *p);
+extern void F0a76d85b_FUN_00279D18(void);
+
+void FUN_0034EC70(void)
+{
+    char *p = F0a76d85b_D_001B5200;
+
+    *(int *)(p + 320) = 0;
+    *(int *)(p + 324) = 0;
+    *(int *)(p + 328) = 0;
+    F0a76d85b_FUN_00283360(p + 880);
+    F0a76d85b_FUN_00279D18();
+}
+extern char F391de845_D_001B5340[];
+extern float F391de845_FUN_00282E48(char *a, char *b);
+extern float F391de845_FUN_002E45C8(void *self, float d, float x, float y);
+
+float FUN_002E46C0(char *self, char *p)
+{
+    float v = F391de845_FUN_00282E48(p, F391de845_D_001B5340);
+    float *q = *(float **)(self + 8);
+
+    return F391de845_FUN_002E45C8(q, v, q[0], q[1]);
+}
+extern void F46b43b72_FUN_002B7B18(int value, char *target);
+extern void F46b43b72_FUN_002B7CE0(int value);
+
+extern int F46b43b72_D_001B8840[];
+extern int F46b43b72_D_0014B540[];
+
+int FUN_00293CA8(int index)
+{
+    int j = index + 1;
+    int *d = F46b43b72_D_001B8840;
+    int *b = F46b43b72_D_0014B540;
+    int *t = (int *)((char *)b + 25416);
+    int n = d[12] * 332;
+    int hold = d[28];
+    int j4 = j * 4;
+    int cur = *(int *)((char *)t + (n + index * 4));
+    int next = *(int *)((char *)t + (j4 + n));
+
+    n = next - cur;
+    if (n > 0) {
+        F46b43b72_FUN_002B7B18(hold, (char *)(cur + b[6341]));
+        F46b43b72_FUN_002B7CE0(0);
+    }
+    return 1;
+}
+extern void Fa2d20de7_FUN_002A7988(void *object, float first, float second);
+extern void Fa2d20de7_FUN_00282CC0(char *first, char *second, void *third);
+extern int Fa2d20de7_FUN_002761F8(void *first, char *second, int mode, int value, int extra);
+extern void Fa2d20de7_FUN_00282CF0(void *first, void *second, void *third);
+extern void Fa2d20de7_FUN_00282D30(void *first, void *second, float value);
+
+extern short Fa2d20de7_D_001B5340[];
+extern short Fa2d20de7_D_001BAFA0[];
+extern int Fa2d20de7_D_001886CC[];
+
+void FUN_002E4478(void *object)
+{
+    Fa2d20de7_FUN_002A7988(object, 0.5f, 6.0f);
+    Fa2d20de7_FUN_00282CC0(object, object, Fa2d20de7_D_001B5340);
+    if (Fa2d20de7_FUN_002761F8(Fa2d20de7_D_001B5340, object, 130, Fa2d20de7_D_001886CC[0], 0)) {
+        Fa2d20de7_FUN_00282CF0(object, Fa2d20de7_D_001BAFA0, Fa2d20de7_D_001B5340);
+        Fa2d20de7_FUN_00282D30(object, object, 0.75f);
+        Fa2d20de7_FUN_00282CC0(object, object, Fa2d20de7_D_001B5340);
+    }
+}
+
+#ifndef RAC2_T_S8_F4778F810
+#define RAC2_T_S8_F4778F810
+typedef signed char s8_F4778f810;
+#endif
+
+#ifndef RAC2_T_S16_F4778F810
+#define RAC2_T_S16_F4778F810
+typedef signed short s16_F4778f810;
+#endif
+
+#ifndef RAC2_T_U16_F4778F810
+#define RAC2_T_U16_F4778F810
+typedef unsigned short u16_F4778f810;
+#endif
+
+
+
+
+
+extern void F4778f810_FUN_002B00D8(char *a, char *b, char *c, f32 d);
+extern void F4778f810_FUN_00282CC0(char *a, char *b, char *c);
+extern void F4778f810_FUN_00283098(char *a, char *b, char *c);
+extern void F4778f810_FUN_00283958(char *a, char *b);
+extern void F4778f810_FUN_00283738(char *a, char *b, char *c);
+extern void F4778f810_FUN_00283098(char *a, char *b, char *c);
+extern void F4778f810_FUN_00282CF0(char *a, char *b, char *c);
+extern void F4778f810_FUN_00282CF0(char *a, char *b, char *c);
+
+#ifndef RAC2_T_V4_F4778F810
+#define RAC2_T_V4_F4778F810
+typedef struct {
+    f32 x, y, z, w;
+} V4_F4778f810;
+#endif
+
+
+#ifndef RAC2_T_SUB_F4778F810
+#define RAC2_T_SUB_F4778F810
+typedef struct {
+    u8 pad000[0x10];
+    u8 at010[0x10];
+    u8 at020[0x28];
+    f32 f048;
+} Sub_F4778f810;
+#endif
+
+
+#ifndef RAC2_T_OBJ_F4778F810
+#define RAC2_T_OBJ_F4778F810
+typedef struct {
+    u8 pad000[0x10];
+    u8 at010[0x58];
+    char *p068;
+    u8 pad06C[0xC0 - 0x6C];
+    u8 at0C0[0x10];
+} Obj_F4778f810;
+#endif
+
+
+void FUN_00274128(Obj_F4778f810 *obj)
+{
+    V4_F4778f810 tmp[6];
+    Sub_F4778f810 *p = (Sub_F4778f810 *)obj->p068;
+
+    F4778f810_FUN_002B00D8((char *)obj + 0x10, (char *)p, (char *)p, p->f048);
+    F4778f810_FUN_00282CC0((char *)obj + 0x10, (char *)obj + 0x10, (char *)p);
+    F4778f810_FUN_00283098((char *)&tmp[0], (char *)p + 0x20, (char *)obj + 0xC0);
+    F4778f810_FUN_00283958((char *)p + 0x10, (char *)&tmp[3]);
+    F4778f810_FUN_00283738((char *)obj + 0xC0, (char *)&tmp[3], (char *)obj + 0xC0);
+    F4778f810_FUN_00283098((char *)&tmp[1], (char *)p + 0x20, (char *)obj + 0xC0);
+    F4778f810_FUN_00282CF0((char *)&tmp[2], (char *)&tmp[1], (char *)&tmp[0]);
+    F4778f810_FUN_00282CF0((char *)obj + 0x10, (char *)obj + 0x10, (char *)&tmp[2]);
+}
+
+#ifndef RAC2_T_S8_F4778F810
+#define RAC2_T_S8_F4778F810
+typedef signed char s8_F4778f810;
+#endif
+
+#ifndef RAC2_T_S16_F4778F810
+#define RAC2_T_S16_F4778F810
+typedef signed short s16_F4778f810;
+#endif
+
+#ifndef RAC2_T_U16_F4778F810
+#define RAC2_T_U16_F4778F810
+typedef unsigned short u16_F4778f810;
+#endif
+
+
+
+
+
+extern void F4778f810_FUN_002B00D8(char *a, char *b, char *c, f32 d);
+extern void F4778f810_FUN_00282CC0(char *a, char *b, char *c);
+extern void F4778f810_FUN_00283098(char *a, char *b, char *c);
+extern void F4778f810_FUN_00283958(char *a, char *b);
+extern void F4778f810_FUN_00283738(char *a, char *b, char *c);
+extern void F4778f810_FUN_00283098(char *a, char *b, char *c);
+extern void F4778f810_FUN_00282CF0(char *a, char *b, char *c);
+extern void F4778f810_FUN_00282CF0(char *a, char *b, char *c);
+
+#ifndef RAC2_T_V4_F4778F810
+#define RAC2_T_V4_F4778F810
+typedef struct {
+    f32 x, y, z, w;
+} V4_F4778f810;
+#endif
+
+
+#ifndef RAC2_T_SUB_F4778F810
+#define RAC2_T_SUB_F4778F810
+typedef struct {
+    u8 pad000[0x10];
+    u8 at010[0x10];
+    u8 at020[0x28];
+    f32 f048;
+} Sub_F4778f810;
+#endif
+
+
+#ifndef RAC2_T_OBJ_F4778F810
+#define RAC2_T_OBJ_F4778F810
+typedef struct {
+    u8 pad000[0x10];
+    u8 at010[0x58];
+    char *p068;
+    u8 pad06C[0xC0 - 0x6C];
+    u8 at0C0[0x10];
+} Obj_F4778f810;
+#endif
+
+
+void FUN_00274208(Obj_F4778f810 *obj)
+{
+    V4_F4778f810 tmp[6];
+    Sub_F4778f810 *p = (Sub_F4778f810 *)obj->p068;
+
+    F4778f810_FUN_002B00D8((char *)obj + 0x10, (char *)p, (char *)p, p->f048);
+    F4778f810_FUN_00282CC0((char *)obj + 0x10, (char *)obj + 0x10, (char *)p);
+    F4778f810_FUN_00283098((char *)&tmp[0], (char *)p + 0x20, (char *)obj + 0xC0);
+    F4778f810_FUN_00283958((char *)p + 0x10, (char *)&tmp[3]);
+    F4778f810_FUN_00283738((char *)obj + 0xC0, (char *)&tmp[3], (char *)obj + 0xC0);
+    F4778f810_FUN_00283098((char *)&tmp[1], (char *)p + 0x20, (char *)obj + 0xC0);
+    F4778f810_FUN_00282CF0((char *)&tmp[2], (char *)&tmp[1], (char *)&tmp[0]);
+    F4778f810_FUN_00282CF0((char *)obj + 0x10, (char *)obj + 0x10, (char *)&tmp[2]);
+}
+extern char F669d6320_D_001BAFC0[];
+extern void F669d6320_FUN_00282F20(void *out, void *in, float scale);
+extern void F669d6320_FUN_00282CC0(void *out, void *in1, void *in2);
+extern int F669d6320_FUN_002761F8(void *a, void *b, int mode, void *self, int flag);
+extern void F669d6320_FUN_00282D30(void *out, void *in, float scale);
+
+void FUN_0031A998(char *self, char *p1, int p2)
+{
+    float a[4];
+    float b[4];
+
+    F669d6320_FUN_00282F20(a, self + 224, 0.1f);
+    F669d6320_FUN_00282F20(b, self + 224, -3.0f);
+    F669d6320_FUN_00282CC0(a, a, self + 16);
+    F669d6320_FUN_00282CC0(b, b, self + 16);
+
+    if (F669d6320_FUN_002761F8(a, b, 2, self, 0))
+        F669d6320_FUN_00282F20(p1, F669d6320_D_001BAFC0, 1.0f);
+    else
+        F669d6320_FUN_00282F20(p1, self + 224, -1.0f);
+
+    if (p2 == 0)
+        F669d6320_FUN_00282D30(p1, p1, -1.0f);
+}
