@@ -554,13 +554,13 @@ class MergeGroupTests(unittest.TestCase):
         self.assertIn("ref: refs/heads/RAC2", workflow)
         self.assertIn("persist-credentials: false", workflow)
         self.assertNotIn("github.event.pull_request.head", workflow)
-        for name in ("tests.yml", "progress.yml"):
+        for name in ("tests.yml",):
             required = (ROOT / ".github/workflows" / name).read_text()
             self.assertIn("merge_group:", required)
             self.assertIn("checks_requested", required)
             self.assertIn("contents: read", required)
         self.assertIn("\n  tests:\n", (ROOT / ".github/workflows/tests.yml").read_text())
-        self.assertIn("name: SCUS_972.68 Progress", (ROOT / ".github/workflows/progress.yml").read_text())
+        self.assertIn("name: SCUS_972.68 Progress", (ROOT / ".github/workflows/tests.yml").read_text())
 
 
 if __name__ == "__main__":

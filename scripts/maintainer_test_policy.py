@@ -17,7 +17,9 @@ MAINTAINER_ID = 191315338
 MAINTAINER_LOGIN = "llesieur99"
 WORKFLOW = ".github/workflows/tests.yml"
 # Updated only after reviewing the literal, unconditional merge-group suite.
-QUALIFIED_WORKFLOW_SHA256 = "5e180fe1ee75bef514d74cfe6b30fc7523c03366e30f40e3ec070e75ff503583"
+QUALIFIED_WORKFLOW_SHA256 = "dfb2d42a7f63161dc55e7b8bf284ad9bab44014f0e35089667011d19597a15b7"
+QUALIFIED_EXPORTER_SHA256 = "901dd0ed500fc9f8813583a7db8f90d9e85702bed2c2e4ad18f03a607434acf2"
+FULL_JOB = "validation"
 FULL_STEP = "Run complete tool suite"
 
 
@@ -97,7 +99,7 @@ def select(event_name, event, sha, api):
         if not isinstance(attempt, int) or attempt < 1:
             continue
         jobs = api.get(f"actions/runs/{run['id']}/attempts/{attempt}/jobs?per_page=100")
-        matches = [job for job in jobs.get("jobs", []) if job.get("name") == "tests"]
+        matches = [job for job in jobs.get("jobs", []) if job.get("name") == FULL_JOB]
         if jobs.get("total_count", 101) > 100 or len(matches) != 1:
             continue
         job = matches[0]
