@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from functools import lru_cache
 import hashlib
 import json
 from pathlib import Path
@@ -224,7 +225,8 @@ def write_new(path: Path, data: bytes) -> None:
     path.write_bytes(data)
 
 
-def function_span(data: bytes, name: str) -> tuple[int, int]:
+@lru_cache(maxsize=16000)
+def _function_span_cached(data: bytes, name: str) -> tuple[int, int]:
     """Locate a catalogued definition and lex braces outside comments/strings."""
     pattern = rb"(?m)^[A-Za-z_][^;{}]*?\b" + re.escape(name.encode()) + rb"\s*\([^;{}]*?\)\s*\{"
     hits = list(re.finditer(pattern, data))
@@ -266,6 +268,14 @@ def function_span(data: bytes, name: str) -> tuple[int, int]:
                 return start, pos + 1
         pos += 1
     raise ValueError(f"unterminated definition: {name}")
+
+
+def function_span(data: bytes, name: str) -> tuple[int, int]:
+    """Reuse only exact immutable source bytes/name; freshness stays external."""
+    if type(data) is bytes and type(name) is str:
+        return _function_span_cached(data, name)
+    # Mutable/invalid/subclass inputs retain the original uncached API behavior.
+    return _function_span_cached.__wrapped__(data, name)
 
 
 def normalized_body(data: bytes, name: str, externals: dict) -> tuple[bytes, dict]:
