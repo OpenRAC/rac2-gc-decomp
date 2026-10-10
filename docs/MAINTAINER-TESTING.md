@@ -7,7 +7,7 @@ merge queue, matching credit, or byte-exact gates.
 | Contribution | Local preparation | PR tool tests | Merge-group tool tests | Main tool tests |
 | --- | --- | --- | --- | --- |
 | Other contributors | Existing full-suite workflow | Full | Full | Full |
-| Authenticated primary maintainer | Explicit focused tests and applicable matching gates | Focused when mapped; otherwise full | **Full, always** | Reuse verified exact-SHA full queue run; otherwise full |
+| Authenticated primary maintainer | Explicit focused tests and applicable matching gates | Limited smoke, changed test modules and Python syntax | **Full, always** | Reuse verified exact-SHA full queue run; otherwise full |
 
 GitHub metadata must identify author ID `191315338`, login `llesieur99`, and
 both head/base repository ID `1400228215` (`OpenRAC/rac2-gc-decomp`). Git names,
@@ -52,13 +52,14 @@ mode adds credit or proves gameplay.
 
 ## CI and post-merge provenance
 
-Focused PR selection includes changed tests and tests importing changed Python
-modules, including transitive imports, plus report/policy smoke tests. The actual
-source-layout command remains mandatory once on every route; its regression
-module is included when that tool changes.
-Unmapped executable, toolchain, deleted-test or other workflow changes fall back
-to full discovery. Static imports cannot establish exhaustive coverage; the full
-merge-group suite remains the final tool-test gate.
+The primary maintainer PR check runs the policy/command/report smoke modules,
+explicitly changed maintained test modules and an AST syntax check of changed
+Python files. It does not import changed scripts, infer transitive test coverage
+or fall back to full discovery for an unmapped executable. Deleted tests are
+not represented as executed coverage. This is deliberately limited pre-queue
+feedback; the complete merge-group suite remains mandatory for every change.
+The actual source inventory, proof/export/consumer and freshness commands still
+run on every route, and applicable local raw matching gates remain required.
 
 `Tool tests / tests` never relies on a skipped dependency: a missing or failed
 policy decision fails the required job. The merge-group command is a literal

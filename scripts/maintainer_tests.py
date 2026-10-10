@@ -38,51 +38,35 @@ def validate_modules(repo, modules):
     return values
 
 
-def select_modules(repo, paths):
-    """Map changed Python modules through static imports; unknown scripts fall back.
+def check_changed_python(repo, paths):
+    """Syntax-only owner precheck; never import executable contributors here."""
+    checked = []
+    for relative in sorted(set(paths)):
+        if not relative.endswith(".py"):
+            continue
+        path = repo / relative
+        if path.is_absolute() and not path.resolve().is_relative_to(repo.resolve()):
+            raise ValueError("Changed Python path escapes the repository")
+        if path.is_file():
+            ast.parse(path.read_bytes(), filename=relative)
+            checked.append(relative)
+    return checked
 
-    CI is a fast pre-queue check, not exhaustive coverage. Every changed test is
-    included, and unmappable executable inputs request full discovery.
+
+def select_modules(repo, paths):
+    """Owner PR precheck: smoke + directly changed test modules + syntax.
+
+    This deliberately does not infer transitive coverage or run a heavy suite
+    for an orphan executable. It is limited pre-queue feedback; every queued
+    contribution still runs unconditional full discovery in the workflow.
     """
-    tests = {p.stem: p for p in (repo / "tests").glob("test_*.py")}
-    scripts = {p.stem: p for p in (repo / "scripts").glob("*.py")}
-    imports = {}
-    for name, path in {**scripts, **tests}.items():
-        tree = ast.parse(path.read_bytes(), filename=str(path))
-        imports[name] = {node.module.split(".")[0] for node in ast.walk(tree)
-                         if isinstance(node, ast.ImportFrom) and node.module}
-        imports[name].update(alias.name.split(".")[0] for node in ast.walk(tree)
-                             if isinstance(node, ast.Import) for alias in node.names)
-    impacted = {Path(p).stem for p in paths if p.startswith("scripts/") and p.endswith(".py")}
-    unknown = [p for p in paths if (p.startswith("scripts/") and (not p.endswith(".py") or Path(p).stem not in scripts))
-               or (p.startswith("tests/") and (not p.endswith(".py") or Path(p).stem not in tests))]
-    unknown.extend(p for p in paths if p.startswith("toolchain/")
-                   or (p.startswith(".github/") and p != ".github/workflows/tests.yml")
-                   or (not p.startswith(("scripts/", "tests/"))
-                       and Path(p).suffix.lower() in {".py", ".sh", ".ps1", ".bat", ".cmd", ".exe", ".dll"}))
-    if unknown:
-        return None
-    while True:
-        expanded = impacted | {name for name, deps in imports.items() if deps & impacted}
-        if expanded == impacted:
-            break
-        impacted = expanded
-    # The workflow still executes source_layout --check once for every route.
-    # Its corpus-wide regression class is selected when that module changes.
+    check_changed_python(repo, paths)
     selected = {"test_maintainer_test_policy", "test_maintainer_tests", "test_decomp_report_cli"}
-    selected.update(name for name in impacted if name in tests)
-    selected.update(Path(p).stem for p in paths if p.startswith("tests/") and p.endswith(".py"))
-    for name in {Path(p).stem for p in paths if p.startswith("scripts/") and p.endswith(".py")}:
-        affected = {name}
-        while True:
-            expanded = affected | {module for module, deps in imports.items() if deps & affected}
-            if affected == expanded:
-                break
-            affected = expanded
-        if not (affected & tests.keys()) and "test_" + name not in tests:
-            return None
-        if "test_" + name in tests:
-            selected.add("test_" + name)
+    for relative in paths:
+        if Path(relative).parent == Path("tests") and relative.endswith(".py"):
+            name = Path(relative).stem
+            if name.startswith("test_") and (repo / "tests" / (name + ".py")).is_file():
+                selected.add(name)
     return validate_modules(repo, selected)
 
 
