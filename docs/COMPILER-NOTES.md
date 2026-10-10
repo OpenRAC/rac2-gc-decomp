@@ -196,8 +196,8 @@ Two complete builds reproduce release compiler `1ae7dceb` with the zero-store
 change, and another two reproduce `8bed6eae` with the frame option default off.
 `cpp` and GNU `as` retain their hashes. The complete release rebuilds exclude
 all diagnostic buffer/ranking instrumentation. The intermediate object-rebuild
-hashes remain private diagnostics rather than release identities. The current
-`5fed4e23` was built from the four sources the
+hashes remain private diagnostics rather than release identities. The
+`5fed4e23` compiler was built from the four sources the
 [fold transformer](../scripts/compiler/fold_zero_ti_store.py) produces; applying
 that script to the qualified source tree was re-verified on 9 October 2026 to
 reproduce the four file hashes below byte for byte.
@@ -255,7 +255,7 @@ the other reload-range passes run (after reload, i.e. after sched2),
 after: sched2 never saw the folded form. It is called from `toplev.c` before
 `flag_schedule_insns_after_reload` through `MACHINE_DEPENDENT_REORG_AFTER_RELOAD`.
 
-**Requalification.** The whole published corpus was re-qualified on the current
+**Requalification.** The whole published corpus was re-qualified on that
 tree with `5fed4e23`, function by function: **6996 / 6996 complete C functions
 exact — 309 in boot (17 148 bytes), 5289 across the 27 native units
 (472 932 bytes) and 1398 across the 27 small-data units (81 664 bytes)**, with
@@ -298,9 +298,10 @@ proofs:
 | `cpp` | `2ac3d8d3ca177e6705ac2cbdd1bd9e9a7181ac3e40f6230dea6875c3218ec155` |
 | `as` | `cda1a4e43dc8eaef2670d2445d6916050137330b2051a0695fe0d2631f3d7876` |
 
-(The current `cc1` is `5fed4e23…` and the current `as` is `d81f2e93…`; this table
-is the 7 October milestone those were built from. See the folded-zero-store and
-division-erratum sections below.)
+(The current `cc1` is `4d069ae4…` and the current `as` is `c71a15db…`; this
+table is the 7 October milestone those descend from, through the
+folded-zero-store identity, the division-erratum assembler and the two
+division fixes of 9 October 2026 documented below.)
 
 (An earlier `as`, `87a1a012…`, carried the two-point `mtc1` rule described above
 and has been superseded. The earlier `cc1`, `3e7628b7…`, emitted the GPR save
