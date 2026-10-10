@@ -1,0 +1,18 @@
+extern int @@ROLE_0_00@@(int mode);
+extern float @@ROLE_1_00@@(char *object, char *local);
+extern void @@ROLE_2_00@@(char *local, int value, float scale);
+extern float @@ROLE_3_00@@(float low, float high);
+extern void @@ROLE_4_00@@(char *object, char *local, float amount, float base);
+
+void @@FUNCTION@@(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (@@ROLE_0_01@@(5))
+        return;
+    base = @@ROLE_1_01@@(object + 16, local);
+    @@ROLE_2_01@@(local, value, 0.25f);
+    @@ROLE_4_01@@(object + 16, local, @@ROLE_3_01@@(0.05f, 0.1f) * 210000.0f, base);
+}

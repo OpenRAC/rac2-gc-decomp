@@ -4142,3 +4142,306 @@ void LVL_3_ENDAKO_FUN_002D5510(void)
                     0.040724355727434158f);
     }
 }
+extern void LVL_3_ENDAKO_F8411efa9_FUN_003E69A0(char *pkt);
+extern long long LVL_3_ENDAKO_F8411efa9_FUN_002E72A0(char *p);
+extern float LVL_3_ENDAKO_F8411efa9_FUN_002EF670(float x, float y);
+extern float LVL_3_ENDAKO_F8411efa9_FUN_002EF110(char *p);
+extern float LVL_3_ENDAKO_F8411efa9_FUN_002EF670(float x, float y);
+extern void LVL_3_ENDAKO_F8411efa9_FUN_002EF838(float *matrix, float *quat);
+extern void LVL_3_ENDAKO_F8411efa9_FUN_002EF298(float *off, char *src, float scale);
+extern void LVL_3_ENDAKO_F8411efa9_FUN_003E6A28(char *pkt, float angle);
+extern void LVL_3_ENDAKO_F8411efa9_FUN_002EB690(char *pkt, float *matrix, int mode);
+
+void LVL_3_ENDAKO_FUN_003E6C48(char *pos, int a1, int a2, char *a3, int t0,
+                                        char *src, float f12, float f13)
+{
+    char pkt[144];
+    float m[16];
+    float quat[4];
+    float off[4];
+    long long r;
+
+    LVL_3_ENDAKO_F8411efa9_FUN_003E69A0(pkt);
+    r = LVL_3_ENDAKO_F8411efa9_FUN_002E72A0(a3);
+
+    *(int *)(pkt + 76) = a1 + (a2 << 24);
+    *(int *)(pkt + 72) = a1 + (a2 << 24);
+    *(int *)(pkt + 68) = a1 + (a2 << 24);
+    *(int *)(pkt + 64) = a1 + (a2 << 24);
+    *(long long *)(pkt + 112) = 0LL;
+    *(long long *)(pkt + 120) = r;
+    *(long long *)(pkt + 128) = 280993940374112LL;
+    *(long long *)(pkt + 136) = ((long long)t0 << 2) | 0x8000000040LL;
+
+    quat[3] = 0.0f;
+    quat[2] = LVL_3_ENDAKO_F8411efa9_FUN_002EF670(*(float *)(src + 0), *(float *)(src + 4));
+    quat[1] = -LVL_3_ENDAKO_F8411efa9_FUN_002EF670(LVL_3_ENDAKO_F8411efa9_FUN_002EF110(src), *(float *)(src + 8));
+    quat[0] = f13;
+
+    LVL_3_ENDAKO_F8411efa9_FUN_002EF838(m, quat);
+    LVL_3_ENDAKO_F8411efa9_FUN_002EF298(off, src, 0.025f);
+
+    m[12] = *(float *)(pos + 0) + off[0];
+    m[13] = *(float *)(pos + 4) + off[1];
+    m[14] = *(float *)(pos + 8) + off[2];
+    m[15] = 1.0f;
+
+    LVL_3_ENDAKO_F8411efa9_FUN_003E6A28(pkt, f12);
+    LVL_3_ENDAKO_F8411efa9_FUN_002EB690(pkt, m, 0);
+}
+extern void LVL_3_ENDAKO_F8411efa9_FUN_003E9F48(char *pkt);
+extern long long LVL_3_ENDAKO_F8411efa9_FUN_002E72A0(char *p);
+extern float LVL_3_ENDAKO_F8411efa9_FUN_002EF670(float x, float y);
+extern float LVL_3_ENDAKO_F8411efa9_FUN_002EF110(char *p);
+extern float LVL_3_ENDAKO_F8411efa9_FUN_002EF670(float x, float y);
+extern void LVL_3_ENDAKO_F8411efa9_FUN_002EF838(float *matrix, float *quat);
+extern void LVL_3_ENDAKO_F8411efa9_FUN_002EF298(float *off, char *src, float scale);
+extern void LVL_3_ENDAKO_F8411efa9_FUN_003E9FD0(char *pkt, float angle);
+extern void LVL_3_ENDAKO_F8411efa9_FUN_002EB690(char *pkt, float *matrix, int mode);
+
+void LVL_3_ENDAKO_FUN_003EA038(char *pos, int a1, int a2, char *a3, int t0,
+                                        char *src, float f12, float f13)
+{
+    char pkt[144];
+    float m[16];
+    float quat[4];
+    float off[4];
+    long long r;
+
+    LVL_3_ENDAKO_F8411efa9_FUN_003E9F48(pkt);
+    r = LVL_3_ENDAKO_F8411efa9_FUN_002E72A0(a3);
+
+    *(int *)(pkt + 76) = a1 + (a2 << 24);
+    *(int *)(pkt + 72) = a1 + (a2 << 24);
+    *(int *)(pkt + 68) = a1 + (a2 << 24);
+    *(int *)(pkt + 64) = a1 + (a2 << 24);
+    *(long long *)(pkt + 112) = 0LL;
+    *(long long *)(pkt + 120) = r;
+    *(long long *)(pkt + 128) = 280993940374112LL;
+    *(long long *)(pkt + 136) = ((long long)t0 << 2) | 0x8000000040LL;
+
+    quat[3] = 0.0f;
+    quat[2] = LVL_3_ENDAKO_F8411efa9_FUN_002EF670(*(float *)(src + 0), *(float *)(src + 4));
+    quat[1] = -LVL_3_ENDAKO_F8411efa9_FUN_002EF670(LVL_3_ENDAKO_F8411efa9_FUN_002EF110(src), *(float *)(src + 8));
+    quat[0] = f13;
+
+    LVL_3_ENDAKO_F8411efa9_FUN_002EF838(m, quat);
+    LVL_3_ENDAKO_F8411efa9_FUN_002EF298(off, src, 0.025f);
+
+    m[12] = *(float *)(pos + 0) + off[0];
+    m[13] = *(float *)(pos + 4) + off[1];
+    m[14] = *(float *)(pos + 8) + off[2];
+    m[15] = 1.0f;
+
+    LVL_3_ENDAKO_F8411efa9_FUN_003E9FD0(pkt, f12);
+    LVL_3_ENDAKO_F8411efa9_FUN_002EB690(pkt, m, 0);
+}
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+
+void LVL_3_ENDAKO_FUN_003DBDB0(char *p, float scale)
+{
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p, p, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 16, p + 16, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 32, p + 32, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 48, p + 48, scale);
+}
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+
+void LVL_3_ENDAKO_FUN_003E6A28(char *p, float scale)
+{
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p, p, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 16, p + 16, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 32, p + 32, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 48, p + 48, scale);
+}
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+
+void LVL_3_ENDAKO_FUN_003E9FD0(char *p, float scale)
+{
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p, p, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 16, p + 16, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 32, p + 32, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 48, p + 48, scale);
+}
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+
+void LVL_3_ENDAKO_FUN_003F02B0(char *p, float scale)
+{
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p, p, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 16, p + 16, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 32, p + 32, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 48, p + 48, scale);
+}
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+
+void LVL_3_ENDAKO_FUN_003FC4B0(char *p, float scale)
+{
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p, p, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 16, p + 16, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 32, p + 32, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 48, p + 48, scale);
+}
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+extern void LVL_3_ENDAKO_F2c74c194_FUN_002EF020(char *dst, char *src, float scale);
+
+void LVL_3_ENDAKO_FUN_003FD858(char *p, float scale)
+{
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p, p, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 16, p + 16, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 32, p + 32, scale);
+    LVL_3_ENDAKO_F2c74c194_FUN_002EF020(p + 48, p + 48, scale);
+}
+extern void LVL_3_ENDAKO_F40487154_FUN_002EF818(char *a, char *b);
+extern float LVL_3_ENDAKO_F40487154_FUN_002EF5C0(float value);
+extern void LVL_3_ENDAKO_F40487154_FUN_002EF020(char *a, char *b, float value);
+extern float LVL_3_ENDAKO_F40487154_FUN_002F0000(float value, float scale);
+
+void LVL_3_ENDAKO_FUN_003ECAF0(char *object)
+{
+    char *data;
+    float x;
+    float y;
+    float z;
+
+    data = *(char **)(object + 104);
+    LVL_3_ENDAKO_F40487154_FUN_002EF818(object + 192, object + 240);
+    x = LVL_3_ENDAKO_F40487154_FUN_002EF5C0(*(float *)(data + 4)) * 0.15f + 0.35000002f;
+    y = LVL_3_ENDAKO_F40487154_FUN_002EF5C0(*(float *)(data + 8)) * 0.15f + 0.35000002f;
+    z = LVL_3_ENDAKO_F40487154_FUN_002EF5C0(*(float *)(data + 12)) * 0.15f + 0.35000002f;
+    LVL_3_ENDAKO_F40487154_FUN_002EF020(object + 192, object + 192, x);
+    LVL_3_ENDAKO_F40487154_FUN_002EF020(object + 208, object + 208, y);
+    LVL_3_ENDAKO_F40487154_FUN_002EF020(object + 224, object + 224, z);
+    *(float *)(data + 4) = LVL_3_ENDAKO_F40487154_FUN_002F0000(*(float *)(data + 4), 0.5f);
+    *(float *)(data + 8) = LVL_3_ENDAKO_F40487154_FUN_002F0000(*(float *)(data + 8), 0.5f);
+    *(float *)(data + 12) = LVL_3_ENDAKO_F40487154_FUN_002F0000(*(float *)(data + 12), 0.5f);
+}
+extern void LVL_3_ENDAKO_F40487154_FUN_002EF818(char *a, char *b);
+extern float LVL_3_ENDAKO_F40487154_FUN_002EF5C0(float value);
+extern void LVL_3_ENDAKO_F40487154_FUN_002EF020(char *a, char *b, float value);
+extern float LVL_3_ENDAKO_F40487154_FUN_002F0000(float value, float scale);
+
+void LVL_3_ENDAKO_FUN_003F9D40(char *object)
+{
+    char *data;
+    float x;
+    float y;
+    float z;
+
+    data = *(char **)(object + 104);
+    LVL_3_ENDAKO_F40487154_FUN_002EF818(object + 192, object + 240);
+    x = LVL_3_ENDAKO_F40487154_FUN_002EF5C0(*(float *)(data + 4)) * 0.15f + 0.35000002f;
+    y = LVL_3_ENDAKO_F40487154_FUN_002EF5C0(*(float *)(data + 8)) * 0.15f + 0.35000002f;
+    z = LVL_3_ENDAKO_F40487154_FUN_002EF5C0(*(float *)(data + 12)) * 0.15f + 0.35000002f;
+    LVL_3_ENDAKO_F40487154_FUN_002EF020(object + 192, object + 192, x);
+    LVL_3_ENDAKO_F40487154_FUN_002EF020(object + 208, object + 208, y);
+    LVL_3_ENDAKO_F40487154_FUN_002EF020(object + 224, object + 224, z);
+    *(float *)(data + 4) = LVL_3_ENDAKO_F40487154_FUN_002F0000(*(float *)(data + 4), 0.5f);
+    *(float *)(data + 8) = LVL_3_ENDAKO_F40487154_FUN_002F0000(*(float *)(data + 8), 0.5f);
+    *(float *)(data + 12) = LVL_3_ENDAKO_F40487154_FUN_002F0000(*(float *)(data + 12), 0.5f);
+}
+extern int LVL_3_ENDAKO_F6eb4f363_FUN_0031B9F0(int mode);
+extern float LVL_3_ENDAKO_F6eb4f363_FUN_0031D830(char *object, char *local);
+extern void LVL_3_ENDAKO_F6eb4f363_FUN_002EF020(char *local, int value, float scale);
+extern float LVL_3_ENDAKO_F6eb4f363_FUN_0031BA88(float low, float high);
+extern void LVL_3_ENDAKO_F6eb4f363_FUN_00337BE0(char *object, char *local, float amount, float base);
+
+void LVL_3_ENDAKO_FUN_0038C5B0(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (LVL_3_ENDAKO_F6eb4f363_FUN_0031B9F0(5))
+        return;
+    base = LVL_3_ENDAKO_F6eb4f363_FUN_0031D830(object + 16, local);
+    LVL_3_ENDAKO_F6eb4f363_FUN_002EF020(local, value, 0.25f);
+    LVL_3_ENDAKO_F6eb4f363_FUN_00337BE0(object + 16, local, LVL_3_ENDAKO_F6eb4f363_FUN_0031BA88(0.05f, 0.1f) * 210000.0f, base);
+}
+extern int LVL_3_ENDAKO_F6eb4f363_FUN_0031B9F0(int mode);
+extern float LVL_3_ENDAKO_F6eb4f363_FUN_0031D830(char *object, char *local);
+extern void LVL_3_ENDAKO_F6eb4f363_FUN_002EF020(char *local, int value, float scale);
+extern float LVL_3_ENDAKO_F6eb4f363_FUN_0031BA88(float low, float high);
+extern void LVL_3_ENDAKO_F6eb4f363_FUN_00337BE0(char *object, char *local, float amount, float base);
+
+void LVL_3_ENDAKO_FUN_0038F058(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (LVL_3_ENDAKO_F6eb4f363_FUN_0031B9F0(5))
+        return;
+    base = LVL_3_ENDAKO_F6eb4f363_FUN_0031D830(object + 16, local);
+    LVL_3_ENDAKO_F6eb4f363_FUN_002EF020(local, value, 0.25f);
+    LVL_3_ENDAKO_F6eb4f363_FUN_00337BE0(object + 16, local, LVL_3_ENDAKO_F6eb4f363_FUN_0031BA88(0.05f, 0.1f) * 210000.0f, base);
+}
+extern int LVL_3_ENDAKO_F6eb4f363_FUN_0031B9F0(int mode);
+extern float LVL_3_ENDAKO_F6eb4f363_FUN_0031D830(char *object, char *local);
+extern void LVL_3_ENDAKO_F6eb4f363_FUN_002EF020(char *local, int value, float scale);
+extern float LVL_3_ENDAKO_F6eb4f363_FUN_0031BA88(float low, float high);
+extern void LVL_3_ENDAKO_F6eb4f363_FUN_00337BE0(char *object, char *local, float amount, float base);
+
+void LVL_3_ENDAKO_FUN_003954C0(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (LVL_3_ENDAKO_F6eb4f363_FUN_0031B9F0(5))
+        return;
+    base = LVL_3_ENDAKO_F6eb4f363_FUN_0031D830(object + 16, local);
+    LVL_3_ENDAKO_F6eb4f363_FUN_002EF020(local, value, 0.25f);
+    LVL_3_ENDAKO_F6eb4f363_FUN_00337BE0(object + 16, local, LVL_3_ENDAKO_F6eb4f363_FUN_0031BA88(0.05f, 0.1f) * 210000.0f, base);
+}
+extern int LVL_3_ENDAKO_Fc10c1216_FUN_002EEC20(char *);
+extern void LVL_3_ENDAKO_Fc10c1216_FUN_00331270(char *);
+extern int LVL_3_ENDAKO_Fc10c1216_FUN_002F0158(float);
+extern void LVL_3_ENDAKO_Fc10c1216_FUN_002EEFB0(char *, char *, char *);
+
+void LVL_3_ENDAKO_FUN_00336E70(char *p)
+{
+    float *q = (float *)(p + 32);
+
+    if (0.0f < q[3])
+        q[1] = q[1] + q[3] * 0.007f;
+    else if (0.03f < q[1])
+        q[1] = q[1] + q[3] * 0.007f;
+    else {
+        q[1] = q[1] + q[3] * 1.4000000664964318275452e-03f;
+        *(float *)(p + 12) = *(float *)(p + 12) + 5460.0f;
+    }
+
+    if (q[1] <= 0.0244f || LVL_3_ENDAKO_Fc10c1216_FUN_002EEC20(p + 10) != 0) {
+        LVL_3_ENDAKO_Fc10c1216_FUN_00331270(p);
+        return;
+    }
+
+    if (q[1] >= 0.12f) {
+        q[3] = -q[3];
+        q[1] = q[1] + q[3] * 0.007f;
+    }
+    *(float *)(p + 12) = *(float *)(p + 12) + 5460.0f;
+    *(int *)(p + 4) = (*(int *)(p + 4) & 0xffffff) | (LVL_3_ENDAKO_Fc10c1216_FUN_002F0158(q[1] * 255.0f) << 24);
+    q[2] = q[2] + 0.002f;
+    if (q[2] > 1.0f)
+        q[2] = q[2] - 1.0f;
+    *(char *)(p + 8) = (char)(q[2] * 255.0f);
+    LVL_3_ENDAKO_Fc10c1216_FUN_002EEFB0(p + 16, p + 16, (char *)(q + 4));
+}

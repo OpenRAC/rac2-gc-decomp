@@ -4721,3 +4721,157 @@ void FUN_0031A998(char *self, char *p1, int p2)
     if (p2 == 0)
         F669d6320_FUN_00282D30(p1, p1, -1.0f);
 }
+extern void F8411efa9_FUN_00328CA8(char *pkt);
+extern long long F8411efa9_FUN_0027C878(char *p);
+extern float F8411efa9_FUN_00283248(float x, float y);
+extern float F8411efa9_FUN_00282E20(char *p);
+extern float F8411efa9_FUN_00283248(float x, float y);
+extern void F8411efa9_FUN_00283410(float *matrix, float *quat);
+extern void F8411efa9_FUN_00282F20(float *off, char *src, float scale);
+extern void F8411efa9_FUN_00328D30(char *pkt, float angle);
+extern void F8411efa9_FUN_00280B90(char *pkt, float *matrix, int mode);
+
+void FUN_00328D98(char *pos, int a1, int a2, char *a3, int t0,
+                                        char *src, float f12, float f13)
+{
+    char pkt[144];
+    float m[16];
+    float quat[4];
+    float off[4];
+    long long r;
+
+    F8411efa9_FUN_00328CA8(pkt);
+    r = F8411efa9_FUN_0027C878(a3);
+
+    *(int *)(pkt + 76) = a1 + (a2 << 24);
+    *(int *)(pkt + 72) = a1 + (a2 << 24);
+    *(int *)(pkt + 68) = a1 + (a2 << 24);
+    *(int *)(pkt + 64) = a1 + (a2 << 24);
+    *(long long *)(pkt + 112) = 0LL;
+    *(long long *)(pkt + 120) = r;
+    *(long long *)(pkt + 128) = 280993940374112LL;
+    *(long long *)(pkt + 136) = ((long long)t0 << 2) | 0x8000000040LL;
+
+    quat[3] = 0.0f;
+    quat[2] = F8411efa9_FUN_00283248(*(float *)(src + 0), *(float *)(src + 4));
+    quat[1] = -F8411efa9_FUN_00283248(F8411efa9_FUN_00282E20(src), *(float *)(src + 8));
+    quat[0] = f13;
+
+    F8411efa9_FUN_00283410(m, quat);
+    F8411efa9_FUN_00282F20(off, src, 0.025f);
+
+    m[12] = *(float *)(pos + 0) + off[0];
+    m[13] = *(float *)(pos + 4) + off[1];
+    m[14] = *(float *)(pos + 8) + off[2];
+    m[15] = 1.0f;
+
+    F8411efa9_FUN_00328D30(pkt, f12);
+    F8411efa9_FUN_00280B90(pkt, m, 0);
+}
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+
+void FUN_0031E8F8(char *p, float scale)
+{
+    F2c74c194_FUN_00282D30(p, p, scale);
+    F2c74c194_FUN_00282D30(p + 16, p + 16, scale);
+    F2c74c194_FUN_00282D30(p + 32, p + 32, scale);
+    F2c74c194_FUN_00282D30(p + 48, p + 48, scale);
+}
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+
+void FUN_00328D30(char *p, float scale)
+{
+    F2c74c194_FUN_00282D30(p, p, scale);
+    F2c74c194_FUN_00282D30(p + 16, p + 16, scale);
+    F2c74c194_FUN_00282D30(p + 32, p + 32, scale);
+    F2c74c194_FUN_00282D30(p + 48, p + 48, scale);
+}
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+extern void F2c74c194_FUN_00282D30(char *dst, char *src, float scale);
+
+void FUN_0032B378(char *p, float scale)
+{
+    F2c74c194_FUN_00282D30(p, p, scale);
+    F2c74c194_FUN_00282D30(p + 16, p + 16, scale);
+    F2c74c194_FUN_00282D30(p + 32, p + 32, scale);
+    F2c74c194_FUN_00282D30(p + 48, p + 48, scale);
+}
+extern int F6eb4f363_FUN_002A77E0(int mode);
+extern float F6eb4f363_FUN_002A90F8(char *object, char *local);
+extern void F6eb4f363_FUN_00282D30(char *local, int value, float scale);
+extern float F6eb4f363_FUN_002A7878(float low, float high);
+extern void F6eb4f363_FUN_002BF728(char *object, char *local, float amount, float base);
+
+void FUN_00304B68(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (F6eb4f363_FUN_002A77E0(5))
+        return;
+    base = F6eb4f363_FUN_002A90F8(object + 16, local);
+    F6eb4f363_FUN_00282D30(local, value, 0.25f);
+    F6eb4f363_FUN_002BF728(object + 16, local, F6eb4f363_FUN_002A7878(0.05f, 0.1f) * 210000.0f, base);
+}
+extern int F6eb4f363_FUN_002A77E0(int mode);
+extern float F6eb4f363_FUN_002A90F8(char *object, char *local);
+extern void F6eb4f363_FUN_00282D30(char *local, int value, float scale);
+extern float F6eb4f363_FUN_002A7878(float low, float high);
+extern void F6eb4f363_FUN_002BF728(char *object, char *local, float amount, float base);
+
+void FUN_00307330(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (F6eb4f363_FUN_002A77E0(5))
+        return;
+    base = F6eb4f363_FUN_002A90F8(object + 16, local);
+    F6eb4f363_FUN_00282D30(local, value, 0.25f);
+    F6eb4f363_FUN_002BF728(object + 16, local, F6eb4f363_FUN_002A7878(0.05f, 0.1f) * 210000.0f, base);
+}
+extern int Fc10c1216_FUN_00282978(char *);
+extern void Fc10c1216_FUN_002B9180(char *);
+extern int Fc10c1216_FUN_00283CF0(float);
+extern void Fc10c1216_FUN_00282CC0(char *, char *, char *);
+
+void FUN_002BE9B8(char *p)
+{
+    float *q = (float *)(p + 32);
+
+    if (0.0f < q[3])
+        q[1] = q[1] + q[3] * 0.007f;
+    else if (0.03f < q[1])
+        q[1] = q[1] + q[3] * 0.007f;
+    else {
+        q[1] = q[1] + q[3] * 1.4000000664964318275452e-03f;
+        *(float *)(p + 12) = *(float *)(p + 12) + 5460.0f;
+    }
+
+    if (q[1] <= 0.0244f || Fc10c1216_FUN_00282978(p + 10) != 0) {
+        Fc10c1216_FUN_002B9180(p);
+        return;
+    }
+
+    if (q[1] >= 0.12f) {
+        q[3] = -q[3];
+        q[1] = q[1] + q[3] * 0.007f;
+    }
+    *(float *)(p + 12) = *(float *)(p + 12) + 5460.0f;
+    *(int *)(p + 4) = (*(int *)(p + 4) & 0xffffff) | (Fc10c1216_FUN_00283CF0(q[1] * 255.0f) << 24);
+    q[2] = q[2] + 0.002f;
+    if (q[2] > 1.0f)
+        q[2] = q[2] - 1.0f;
+    *(char *)(p + 8) = (char)(q[2] * 255.0f);
+    Fc10c1216_FUN_00282CC0(p + 16, p + 16, (char *)(q + 4));
+}

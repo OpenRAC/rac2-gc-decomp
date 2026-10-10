@@ -3963,3 +3963,419 @@ void LVL_20_YEEDIL_FUN_002E89B0(void)
                     0.040724355727434158f);
     }
 }
+extern void LVL_20_YEEDIL_F8411efa9_FUN_003F6FC8(char *pkt);
+extern long long LVL_20_YEEDIL_F8411efa9_FUN_002FA720(char *p);
+extern float LVL_20_YEEDIL_F8411efa9_FUN_00302920(float x, float y);
+extern float LVL_20_YEEDIL_F8411efa9_FUN_003023C0(char *p);
+extern float LVL_20_YEEDIL_F8411efa9_FUN_00302920(float x, float y);
+extern void LVL_20_YEEDIL_F8411efa9_FUN_00302AE8(float *matrix, float *quat);
+extern void LVL_20_YEEDIL_F8411efa9_FUN_00302548(float *off, char *src, float scale);
+extern void LVL_20_YEEDIL_F8411efa9_FUN_003F7050(char *pkt, float angle);
+extern void LVL_20_YEEDIL_F8411efa9_FUN_002FEBF0(char *pkt, float *matrix, int mode);
+
+void LVL_20_YEEDIL_FUN_003F7270(char *pos, int a1, int a2, char *a3, int t0,
+                                        char *src, float f12, float f13)
+{
+    char pkt[144];
+    float m[16];
+    float quat[4];
+    float off[4];
+    long long r;
+
+    LVL_20_YEEDIL_F8411efa9_FUN_003F6FC8(pkt);
+    r = LVL_20_YEEDIL_F8411efa9_FUN_002FA720(a3);
+
+    *(int *)(pkt + 76) = a1 + (a2 << 24);
+    *(int *)(pkt + 72) = a1 + (a2 << 24);
+    *(int *)(pkt + 68) = a1 + (a2 << 24);
+    *(int *)(pkt + 64) = a1 + (a2 << 24);
+    *(long long *)(pkt + 112) = 0LL;
+    *(long long *)(pkt + 120) = r;
+    *(long long *)(pkt + 128) = 280993940374112LL;
+    *(long long *)(pkt + 136) = ((long long)t0 << 2) | 0x8000000040LL;
+
+    quat[3] = 0.0f;
+    quat[2] = LVL_20_YEEDIL_F8411efa9_FUN_00302920(*(float *)(src + 0), *(float *)(src + 4));
+    quat[1] = -LVL_20_YEEDIL_F8411efa9_FUN_00302920(LVL_20_YEEDIL_F8411efa9_FUN_003023C0(src), *(float *)(src + 8));
+    quat[0] = f13;
+
+    LVL_20_YEEDIL_F8411efa9_FUN_00302AE8(m, quat);
+    LVL_20_YEEDIL_F8411efa9_FUN_00302548(off, src, 0.025f);
+
+    m[12] = *(float *)(pos + 0) + off[0];
+    m[13] = *(float *)(pos + 4) + off[1];
+    m[14] = *(float *)(pos + 8) + off[2];
+    m[15] = 1.0f;
+
+    LVL_20_YEEDIL_F8411efa9_FUN_003F7050(pkt, f12);
+    LVL_20_YEEDIL_F8411efa9_FUN_002FEBF0(pkt, m, 0);
+}
+extern void LVL_20_YEEDIL_F8411efa9_FUN_00402320(char *pkt);
+extern long long LVL_20_YEEDIL_F8411efa9_FUN_002FA720(char *p);
+extern float LVL_20_YEEDIL_F8411efa9_FUN_00302920(float x, float y);
+extern float LVL_20_YEEDIL_F8411efa9_FUN_003023C0(char *p);
+extern float LVL_20_YEEDIL_F8411efa9_FUN_00302920(float x, float y);
+extern void LVL_20_YEEDIL_F8411efa9_FUN_00302AE8(float *matrix, float *quat);
+extern void LVL_20_YEEDIL_F8411efa9_FUN_00302548(float *off, char *src, float scale);
+extern void LVL_20_YEEDIL_F8411efa9_FUN_004023A8(char *pkt, float angle);
+extern void LVL_20_YEEDIL_F8411efa9_FUN_002FEBF0(char *pkt, float *matrix, int mode);
+
+void LVL_20_YEEDIL_FUN_00402410(char *pos, int a1, int a2, char *a3, int t0,
+                                        char *src, float f12, float f13)
+{
+    char pkt[144];
+    float m[16];
+    float quat[4];
+    float off[4];
+    long long r;
+
+    LVL_20_YEEDIL_F8411efa9_FUN_00402320(pkt);
+    r = LVL_20_YEEDIL_F8411efa9_FUN_002FA720(a3);
+
+    *(int *)(pkt + 76) = a1 + (a2 << 24);
+    *(int *)(pkt + 72) = a1 + (a2 << 24);
+    *(int *)(pkt + 68) = a1 + (a2 << 24);
+    *(int *)(pkt + 64) = a1 + (a2 << 24);
+    *(long long *)(pkt + 112) = 0LL;
+    *(long long *)(pkt + 120) = r;
+    *(long long *)(pkt + 128) = 280993940374112LL;
+    *(long long *)(pkt + 136) = ((long long)t0 << 2) | 0x8000000040LL;
+
+    quat[3] = 0.0f;
+    quat[2] = LVL_20_YEEDIL_F8411efa9_FUN_00302920(*(float *)(src + 0), *(float *)(src + 4));
+    quat[1] = -LVL_20_YEEDIL_F8411efa9_FUN_00302920(LVL_20_YEEDIL_F8411efa9_FUN_003023C0(src), *(float *)(src + 8));
+    quat[0] = f13;
+
+    LVL_20_YEEDIL_F8411efa9_FUN_00302AE8(m, quat);
+    LVL_20_YEEDIL_F8411efa9_FUN_00302548(off, src, 0.025f);
+
+    m[12] = *(float *)(pos + 0) + off[0];
+    m[13] = *(float *)(pos + 4) + off[1];
+    m[14] = *(float *)(pos + 8) + off[2];
+    m[15] = 1.0f;
+
+    LVL_20_YEEDIL_F8411efa9_FUN_004023A8(pkt, f12);
+    LVL_20_YEEDIL_F8411efa9_FUN_002FEBF0(pkt, m, 0);
+}
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+
+void LVL_20_YEEDIL_FUN_003ED240(char *p, float scale)
+{
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p, p, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 16, p + 16, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 32, p + 32, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 48, p + 48, scale);
+}
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+
+void LVL_20_YEEDIL_FUN_003F7050(char *p, float scale)
+{
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p, p, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 16, p + 16, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 32, p + 32, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 48, p + 48, scale);
+}
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+
+void LVL_20_YEEDIL_FUN_004023A8(char *p, float scale)
+{
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p, p, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 16, p + 16, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 32, p + 32, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 48, p + 48, scale);
+}
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+
+void LVL_20_YEEDIL_FUN_00408688(char *p, float scale)
+{
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p, p, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 16, p + 16, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 32, p + 32, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 48, p + 48, scale);
+}
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+
+void LVL_20_YEEDIL_FUN_00414258(char *p, float scale)
+{
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p, p, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 16, p + 16, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 32, p + 32, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 48, p + 48, scale);
+}
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+
+void LVL_20_YEEDIL_FUN_00415600(char *p, float scale)
+{
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p, p, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 16, p + 16, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 32, p + 32, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 48, p + 48, scale);
+}
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+
+void LVL_20_YEEDIL_FUN_00446CA0(char *p, float scale)
+{
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p, p, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 16, p + 16, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 32, p + 32, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 48, p + 48, scale);
+}
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+extern void LVL_20_YEEDIL_F2c74c194_FUN_003022D0(char *dst, char *src, float scale);
+
+void LVL_20_YEEDIL_FUN_0044B3C8(char *p, float scale)
+{
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p, p, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 16, p + 16, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 32, p + 32, scale);
+    LVL_20_YEEDIL_F2c74c194_FUN_003022D0(p + 48, p + 48, scale);
+}
+
+
+
+
+extern u8 LVL_20_YEEDIL_F458c670e_D_00189E20[];
+
+extern void LVL_20_YEEDIL_F458c670e_FUN_00332AA8(f32 *a, f32 *b, f32 c, f32 d, f32 e, f32 f);
+extern f32 LVL_20_YEEDIL_F458c670e_FUN_003021D0(f32 v);
+extern void LVL_20_YEEDIL_F458c670e_FUN_003329E8(f32 *p, f32 v, f32 w);
+
+#ifndef RAC2_T_RES_F458C670E
+#define RAC2_T_RES_F458C670E
+typedef struct {
+    u8 pad000[0x88];
+    f32 f088;
+    u8 pad08C[0x1B8 - 0x08C];
+    s32 i1B8;
+    u8 pad1BC[0x330 - 0x1BC];
+    f32 f330;
+    u8 pad334[0x790 - 0x334];
+    f32 f790;
+    f32 f794;
+    u8 pad798[4];
+    f32 f79C;
+    f32 f7A0;
+    u8 pad7A4[0x9B0 - 0x7A4];
+    f32 f9B0;
+    u8 pad9B4[0xA3C - 0x9B4];
+    f32 fA3C;
+    u8 padA40[0x2294 - 0xA40];
+    s32 i2294;
+    u8 pad2298[4];
+    s32 i229C;
+    u8 pad22A0[4];
+    s32 i22A4;
+    u8 pad22A8[8];
+    s32 i22B0;
+} Res_F458c670e;
+#endif
+
+
+void LVL_20_YEEDIL_FUN_002DCA60(void)
+{
+    f32 old, v, r, sum;
+
+    if (((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->i1B8 >= 11
+        || ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f790 < 0.0f
+        || ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->i22A4 == 17
+        || ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->i22B0 == 17) {
+        if (((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->i2294 == 53) {
+            LVL_20_YEEDIL_F458c670e_FUN_00332AA8(&((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f790,
+                    &((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->fA3C,
+                    0.0f, 0.03f, 0.3f, 0.025000002f);
+            ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f794 = 0.0f;
+        } else {
+            old = ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f790;
+            v = ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f794;
+            ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f794 =
+                v - (old * 0.005f + v * 0.045f);
+            r = LVL_20_YEEDIL_F458c670e_FUN_003021D0(old);
+            if (r < 0.001f) {
+                if (((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f794 < 0.0001f)
+                    ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f794 = 0.0f;
+            }
+        }
+    }
+    sum = ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f790
+        + ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f794;
+    ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f790 = sum;
+    if (((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->i2294 == 53) {
+        if (sum > 0.0f) {
+            if (((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f794 > 0.0f)
+                ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f794 = 0.0f;
+            LVL_20_YEEDIL_F458c670e_FUN_003329E8(&((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f790,
+                    0.0f, 0.011666667f);
+        }
+    }
+    if (((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->i2294 != 124) {
+        f32 x = ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f330;
+        if (((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->i229C == 22)
+            x = ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f9B0;
+        LVL_20_YEEDIL_F458c670e_FUN_00332AA8(&((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f79C,
+                &((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f7A0,
+                x, 0.027f, 0.3f, 0.0f);
+    }
+    ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f088 =
+        (((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f79C + (-0.12f))
+        + ((Res_F458c670e *)LVL_20_YEEDIL_F458c670e_D_00189E20)->f790;
+}
+extern void LVL_20_YEEDIL_F40487154_FUN_00302AC8(char *a, char *b);
+extern float LVL_20_YEEDIL_F40487154_FUN_00302870(float value);
+extern void LVL_20_YEEDIL_F40487154_FUN_003022D0(char *a, char *b, float value);
+extern float LVL_20_YEEDIL_F40487154_FUN_00303270(float value, float scale);
+
+void LVL_20_YEEDIL_FUN_00404EC8(char *object)
+{
+    char *data;
+    float x;
+    float y;
+    float z;
+
+    data = *(char **)(object + 104);
+    LVL_20_YEEDIL_F40487154_FUN_00302AC8(object + 192, object + 240);
+    x = LVL_20_YEEDIL_F40487154_FUN_00302870(*(float *)(data + 4)) * 0.15f + 0.35000002f;
+    y = LVL_20_YEEDIL_F40487154_FUN_00302870(*(float *)(data + 8)) * 0.15f + 0.35000002f;
+    z = LVL_20_YEEDIL_F40487154_FUN_00302870(*(float *)(data + 12)) * 0.15f + 0.35000002f;
+    LVL_20_YEEDIL_F40487154_FUN_003022D0(object + 192, object + 192, x);
+    LVL_20_YEEDIL_F40487154_FUN_003022D0(object + 208, object + 208, y);
+    LVL_20_YEEDIL_F40487154_FUN_003022D0(object + 224, object + 224, z);
+    *(float *)(data + 4) = LVL_20_YEEDIL_F40487154_FUN_00303270(*(float *)(data + 4), 0.5f);
+    *(float *)(data + 8) = LVL_20_YEEDIL_F40487154_FUN_00303270(*(float *)(data + 8), 0.5f);
+    *(float *)(data + 12) = LVL_20_YEEDIL_F40487154_FUN_00303270(*(float *)(data + 12), 0.5f);
+}
+extern void LVL_20_YEEDIL_F40487154_FUN_00302AC8(char *a, char *b);
+extern float LVL_20_YEEDIL_F40487154_FUN_00302870(float value);
+extern void LVL_20_YEEDIL_F40487154_FUN_003022D0(char *a, char *b, float value);
+extern float LVL_20_YEEDIL_F40487154_FUN_00303270(float value, float scale);
+
+void LVL_20_YEEDIL_FUN_004104D8(char *object)
+{
+    char *data;
+    float x;
+    float y;
+    float z;
+
+    data = *(char **)(object + 104);
+    LVL_20_YEEDIL_F40487154_FUN_00302AC8(object + 192, object + 240);
+    x = LVL_20_YEEDIL_F40487154_FUN_00302870(*(float *)(data + 4)) * 0.15f + 0.35000002f;
+    y = LVL_20_YEEDIL_F40487154_FUN_00302870(*(float *)(data + 8)) * 0.15f + 0.35000002f;
+    z = LVL_20_YEEDIL_F40487154_FUN_00302870(*(float *)(data + 12)) * 0.15f + 0.35000002f;
+    LVL_20_YEEDIL_F40487154_FUN_003022D0(object + 192, object + 192, x);
+    LVL_20_YEEDIL_F40487154_FUN_003022D0(object + 208, object + 208, y);
+    LVL_20_YEEDIL_F40487154_FUN_003022D0(object + 224, object + 224, z);
+    *(float *)(data + 4) = LVL_20_YEEDIL_F40487154_FUN_00303270(*(float *)(data + 4), 0.5f);
+    *(float *)(data + 8) = LVL_20_YEEDIL_F40487154_FUN_00303270(*(float *)(data + 8), 0.5f);
+    *(float *)(data + 12) = LVL_20_YEEDIL_F40487154_FUN_00303270(*(float *)(data + 12), 0.5f);
+}
+extern int LVL_20_YEEDIL_F6eb4f363_FUN_0032F680(int mode);
+extern float LVL_20_YEEDIL_F6eb4f363_FUN_00331670(char *object, char *local);
+extern void LVL_20_YEEDIL_F6eb4f363_FUN_003022D0(char *local, int value, float scale);
+extern float LVL_20_YEEDIL_F6eb4f363_FUN_0032F718(float low, float high);
+extern void LVL_20_YEEDIL_F6eb4f363_FUN_0034BAD0(char *object, char *local, float amount, float base);
+
+void LVL_20_YEEDIL_FUN_003A3E40(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (LVL_20_YEEDIL_F6eb4f363_FUN_0032F680(5))
+        return;
+    base = LVL_20_YEEDIL_F6eb4f363_FUN_00331670(object + 16, local);
+    LVL_20_YEEDIL_F6eb4f363_FUN_003022D0(local, value, 0.25f);
+    LVL_20_YEEDIL_F6eb4f363_FUN_0034BAD0(object + 16, local, LVL_20_YEEDIL_F6eb4f363_FUN_0032F718(0.05f, 0.1f) * 210000.0f, base);
+}
+extern int LVL_20_YEEDIL_F6eb4f363_FUN_0032F680(int mode);
+extern float LVL_20_YEEDIL_F6eb4f363_FUN_00331670(char *object, char *local);
+extern void LVL_20_YEEDIL_F6eb4f363_FUN_003022D0(char *local, int value, float scale);
+extern float LVL_20_YEEDIL_F6eb4f363_FUN_0032F718(float low, float high);
+extern void LVL_20_YEEDIL_F6eb4f363_FUN_0034BAD0(char *object, char *local, float amount, float base);
+
+void LVL_20_YEEDIL_FUN_003A6900(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (LVL_20_YEEDIL_F6eb4f363_FUN_0032F680(5))
+        return;
+    base = LVL_20_YEEDIL_F6eb4f363_FUN_00331670(object + 16, local);
+    LVL_20_YEEDIL_F6eb4f363_FUN_003022D0(local, value, 0.25f);
+    LVL_20_YEEDIL_F6eb4f363_FUN_0034BAD0(object + 16, local, LVL_20_YEEDIL_F6eb4f363_FUN_0032F718(0.05f, 0.1f) * 210000.0f, base);
+}
+extern int LVL_20_YEEDIL_F6eb4f363_FUN_0032F680(int mode);
+extern float LVL_20_YEEDIL_F6eb4f363_FUN_00331670(char *object, char *local);
+extern void LVL_20_YEEDIL_F6eb4f363_FUN_003022D0(char *local, int value, float scale);
+extern float LVL_20_YEEDIL_F6eb4f363_FUN_0032F718(float low, float high);
+extern void LVL_20_YEEDIL_F6eb4f363_FUN_0034BAD0(char *object, char *local, float amount, float base);
+
+void LVL_20_YEEDIL_FUN_003ACD18(char *object)
+{
+    char local[16];
+    float base;
+    int value = *(int *)(object + 104);
+
+    if (LVL_20_YEEDIL_F6eb4f363_FUN_0032F680(5))
+        return;
+    base = LVL_20_YEEDIL_F6eb4f363_FUN_00331670(object + 16, local);
+    LVL_20_YEEDIL_F6eb4f363_FUN_003022D0(local, value, 0.25f);
+    LVL_20_YEEDIL_F6eb4f363_FUN_0034BAD0(object + 16, local, LVL_20_YEEDIL_F6eb4f363_FUN_0032F718(0.05f, 0.1f) * 210000.0f, base);
+}
+extern int LVL_20_YEEDIL_Fc10c1216_FUN_00301F00(char *);
+extern void LVL_20_YEEDIL_Fc10c1216_FUN_00345160(char *);
+extern int LVL_20_YEEDIL_Fc10c1216_FUN_003033C8(float);
+extern void LVL_20_YEEDIL_Fc10c1216_FUN_00302260(char *, char *, char *);
+
+void LVL_20_YEEDIL_FUN_0034AD60(char *p)
+{
+    float *q = (float *)(p + 32);
+
+    if (0.0f < q[3])
+        q[1] = q[1] + q[3] * 0.007f;
+    else if (0.03f < q[1])
+        q[1] = q[1] + q[3] * 0.007f;
+    else {
+        q[1] = q[1] + q[3] * 1.4000000664964318275452e-03f;
+        *(float *)(p + 12) = *(float *)(p + 12) + 5460.0f;
+    }
+
+    if (q[1] <= 0.0244f || LVL_20_YEEDIL_Fc10c1216_FUN_00301F00(p + 10) != 0) {
+        LVL_20_YEEDIL_Fc10c1216_FUN_00345160(p);
+        return;
+    }
+
+    if (q[1] >= 0.12f) {
+        q[3] = -q[3];
+        q[1] = q[1] + q[3] * 0.007f;
+    }
+    *(float *)(p + 12) = *(float *)(p + 12) + 5460.0f;
+    *(int *)(p + 4) = (*(int *)(p + 4) & 0xffffff) | (LVL_20_YEEDIL_Fc10c1216_FUN_003033C8(q[1] * 255.0f) << 24);
+    q[2] = q[2] + 0.002f;
+    if (q[2] > 1.0f)
+        q[2] = q[2] - 1.0f;
+    *(char *)(p + 8) = (char)(q[2] * 255.0f);
+    LVL_20_YEEDIL_Fc10c1216_FUN_00302260(p + 16, p + 16, (char *)(q + 4));
+}
