@@ -1,0 +1,26 @@
+extern void @@BIND_RES0_00@@(int value);
+extern void @@ROLE_0_00@@(int value);
+extern void @@ROLE_1_00@@(int value);
+extern void @@BIND_RES1_00@@(int value);
+
+int @@FUNCTION@@(int *p)
+{
+    @@BIND_RES0_01@@(p[16]);
+    p[17] = 0;
+    @@ROLE_0_01@@(5);
+    p[7] = *(volatile int *)0x1000B410;
+    p[8] = *(volatile int *)0x1000B430;
+    p[9] = *(volatile int *)0x1000B420;
+    p[10] = *(volatile int *)0x1000B400;
+    if (*(volatile int *)0x10002010 & 0xF0)
+        while (*(volatile int *)0x10002010 & 0xF0)
+            ;
+    @@ROLE_1_01@@(0);
+    p[11] = *(volatile int *)0x1000B010;
+    p[12] = *(volatile int *)0x1000B020;
+    p[13] = *(volatile int *)0x1000B000;
+    p[14] = *(volatile int *)0x10002020;
+    p[15] = *(volatile int *)0x10002010;
+    @@BIND_RES1_01@@(p[16]);
+    return 1;
+}

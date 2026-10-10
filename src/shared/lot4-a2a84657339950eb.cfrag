@@ -1,0 +1,32 @@
+extern void @@ROLE_0_00@@(float *tmp, char *v, float k);
+extern void @@ROLE_1_00@@(float *tmp, char *a, char *v);
+extern int @@ROLE_2_00@@(char *field);
+extern void @@ROLE_3_00@@(unsigned char *p);
+
+void @@FUNCTION@@(unsigned char *p)
+{
+    float tmp[4];
+    char *v;
+    int n;
+
+    v = (char *)p + 32;
+    @@ROLE_0_01@@(tmp, v, 9.4999998807907104492188e-01f);
+    *(float *)(v + 8) = *(float *)(v + 8) + 1.3888889225199818611145e-03f;
+    @@ROLE_1_01@@(tmp, (char *)p + 16, v);
+
+    n = *(int *)(p + 4) + (int)0xFE000000;
+    *(int *)(p + 4) = n;
+    if (((unsigned)(n & 0xFF000000) - 1) > 0x5EFFFFFFu || @@ROLE_2_01@@((char *)p + 10) != 0) {
+        @@ROLE_3_01@@(p);
+    } else {
+        float f0;
+        float f1;
+
+        f1 = *(float *)(p + 12);
+        f0 = 2.1000000000000000000000e+05f - f1;
+        f0 = f0 * 7.0000000298023223876953e-02f;
+        f1 = f1 + f0;
+        *(float *)(p + 12) = f1;
+        p[8] = p[8] + 1;
+    }
+}

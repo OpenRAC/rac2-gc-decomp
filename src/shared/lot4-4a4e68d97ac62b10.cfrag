@@ -1,0 +1,10 @@
+extern int @@BIND_DATA0_00@@ __attribute__((sda));
+extern void @@ROLE_0_00@@(int);
+
+void @@FUNCTION@@(void)
+{
+    int value = @@BIND_DATA0_01@@;
+
+    if (value != 0)
+        @@ROLE_0_01@@(value + 0x36F28);
+}

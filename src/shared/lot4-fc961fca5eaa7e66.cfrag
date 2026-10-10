@@ -1,0 +1,35 @@
+extern char *@@ROLE_0_00@@(char *a1);
+extern void @@ROLE_1_00@@(char *dst, char *src);
+extern void @@ROLE_2_00@@(char *dst, char *src, char *tail);
+extern void @@ROLE_3_00@@(char *dst, char *src, char *tail);
+extern void @@ROLE_4_00@@(char *dst, char *src);
+extern void @@ROLE_5_00@@(char *dst, char *src);
+extern void @@ROLE_6_00@@(char *dst, char *src, char *tail);
+extern void @@ROLE_7_00@@(char *dst, char *src, char *tail);
+extern void @@ROLE_8_00@@(char *dst, char *src, char *tail);
+extern void @@ROLE_9_00@@(char *dst, char *src, char *tail);
+extern void @@ROLE_10_00@@(char *dst, char *src, char *tail);
+
+void @@FUNCTION@@(char *o0, char *o1)
+{
+    char b0[64];
+    char b1[64];
+    char b2[64];
+    char *r = @@ROLE_0_01@@(o1);
+
+    if (r == 0)
+        return;
+    @@ROLE_1_01@@(b0, r);
+    @@ROLE_2_01@@(o0 + 16, o0 + 16, r + 16);
+    @@ROLE_3_01@@(o0 + 16, o0 + 16, o1 + 16);
+    if ((*(int *)(r + 60) & 2) != 0) {
+        @@ROLE_4_01@@(b2, r + 32);
+        @@ROLE_5_01@@(b1, b2);
+        @@ROLE_6_01@@(o0 + 16, o0 + 16, b1);
+        @@ROLE_7_01@@(o0 + 16, o0 + 16, o1 + 192);
+    } else {
+        @@ROLE_8_01@@(o0 + 16, o0 + 16, b0);
+    }
+    @@ROLE_9_01@@(o0 + 16, o0 + 16, o1 + 16);
+    @@ROLE_10_01@@(o0 + 192, b0, o0 + 192);
+}

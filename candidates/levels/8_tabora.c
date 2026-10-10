@@ -4533,3 +4533,969 @@ void LVL_8_TABORA_FUN_00344028(char *p)
     *(char *)(p + 8) = (char)(q[2] * 255.0f);
     LVL_8_TABORA_Fc10c1216_FUN_002F9DF0(p + 16, p + 16, (char *)(q + 4));
 }
+extern int LVL_8_TABORA_F250fbfa4_FUN_002F9A90(char *p);
+extern void LVL_8_TABORA_F250fbfa4_FUN_0033E208(char *p);
+extern void LVL_8_TABORA_F250fbfa4_FUN_002F9DF0(char *p0, char *p1, char *p2);
+
+void LVL_8_TABORA_FUN_0034E038(char *a0)
+{
+    char local[16];
+    char *s1 = a0;
+    char *s0;
+    int a1;
+    int v1;
+    char *p;
+
+    if (LVL_8_TABORA_F250fbfa4_FUN_002F9A90(a0 + 10) != 0) {
+        LVL_8_TABORA_F250fbfa4_FUN_0033E208(a0);
+        return;
+    }
+    s0 = a0 + 32;
+    a1 = *(int *)(s1 + 4);
+    v1 = (a1 >> 24) + *(unsigned char *)(s0 + 20);
+    *(int *)(s1 + 4) = (a1 & 0x00ffffff) | (v1 << 24);
+    p = s1 + 16;
+    *(float *)(local + 0) = *(float *)(s1 + 32);
+    *(float *)(local + 4) = *(float *)(s0 + 4);
+    *(float *)(local + 8) = *(float *)(s0 + 8);
+    *(int *)(local + 12) = 0;
+    LVL_8_TABORA_F250fbfa4_FUN_002F9DF0(p, p, local);
+    *(float *)(s0 + 8) = *(float *)(s0 + 8) - *(float *)(s0 + 12);
+    *(unsigned char *)(s1 + 8) = *(unsigned char *)(s1 + 8) + *(unsigned char *)(s0 + 21);
+    *(float *)(s1 + 12) = *(float *)(s1 + 12) + *(float *)(s0 + 16);
+}
+extern int LVL_8_TABORA_F250fbfa4_FUN_002F9A90(char *p);
+extern void LVL_8_TABORA_F250fbfa4_FUN_0033E208(char *p);
+extern void LVL_8_TABORA_F250fbfa4_FUN_002F9DF0(char *p0, char *p1, char *p2);
+
+void LVL_8_TABORA_FUN_0034EE50(char *a0)
+{
+    char local[16];
+    char *s1 = a0;
+    char *s0;
+    int a1;
+    int v1;
+    char *p;
+
+    if (LVL_8_TABORA_F250fbfa4_FUN_002F9A90(a0 + 10) != 0) {
+        LVL_8_TABORA_F250fbfa4_FUN_0033E208(a0);
+        return;
+    }
+    s0 = a0 + 32;
+    a1 = *(int *)(s1 + 4);
+    v1 = (a1 >> 24) + *(unsigned char *)(s0 + 20);
+    *(int *)(s1 + 4) = (a1 & 0x00ffffff) | (v1 << 24);
+    p = s1 + 16;
+    *(float *)(local + 0) = *(float *)(s1 + 32);
+    *(float *)(local + 4) = *(float *)(s0 + 4);
+    *(float *)(local + 8) = *(float *)(s0 + 8);
+    *(int *)(local + 12) = 0;
+    LVL_8_TABORA_F250fbfa4_FUN_002F9DF0(p, p, local);
+    *(float *)(s0 + 8) = *(float *)(s0 + 8) - *(float *)(s0 + 12);
+    *(unsigned char *)(s1 + 8) = *(unsigned char *)(s1 + 8) + *(unsigned char *)(s0 + 21);
+    *(float *)(s1 + 12) = *(float *)(s1 + 12) + *(float *)(s0 + 16);
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044D558(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044D998(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044DC50(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044E1D8(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044EC60(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044EF28(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044F2F0(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044F5A0(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Ffb202470_FUN_0044C370(char *p);
+
+char *LVL_8_TABORA_FUN_0044F798(char *object)
+{
+    LVL_8_TABORA_Ffb202470_FUN_0044C370(object + 8);
+    return object;
+}
+extern void LVL_8_TABORA_Fe524d931_FUN_0044C648(char *p);
+extern void LVL_8_TABORA_Fe524d931_FUN_0044C838(char *p, float x, float y);
+extern void LVL_8_TABORA_Fe524d931_FUN_0036DA40(int a, int b, int c);
+extern void LVL_8_TABORA_Fe524d931_FUN_002FC140(void);
+extern short LVL_8_TABORA_Fe524d931_D_001A6480[];
+
+int LVL_8_TABORA_FUN_0044D6B8(char *object, int mask)
+{
+    char *sub = object + 8;
+    short oldx;
+    short oldy;
+    int *v;
+
+    LVL_8_TABORA_Fe524d931_FUN_0044C648(sub);
+    v = *(int **)(object + 684);
+    LVL_8_TABORA_Fe524d931_FUN_0044C838(sub, *(float *)v, *(float *)(v + 1));
+    if ((mask & 0x40) != 0 && *(int *)(object + 680) == 0)
+        LVL_8_TABORA_Fe524d931_FUN_0036DA40(4, 0, 0);
+    if ((mask & 0xf000) != 0) {
+        short *p = LVL_8_TABORA_Fe524d931_D_001A6480;
+        oldx = p[180];
+        oldy = p[181];
+        if ((mask & 0x1000) != 0) {
+            ((unsigned short *)p)[181] = ((unsigned short *)p)[181] - 1;
+            if ((short)((unsigned short *)p)[181] < -32)
+                p[181] = -32;
+        }
+        if ((mask & 0x4000) != 0) {
+            unsigned short *q = (unsigned short *)LVL_8_TABORA_Fe524d931_D_001A6480;
+            q[181] = q[181] + 1;
+            if ((short)q[181] > 32)
+                ((short *)q)[181] = 32;
+        }
+        if ((mask & 0x8000) != 0) {
+            unsigned short *q = (unsigned short *)LVL_8_TABORA_Fe524d931_D_001A6480;
+            q[180] = q[180] - 1;
+            if ((short)q[180] < -40)
+                ((short *)q)[180] = -40;
+        }
+        if ((mask & 0x2000) != 0) {
+            unsigned short *q = (unsigned short *)LVL_8_TABORA_Fe524d931_D_001A6480;
+            q[180] = q[180] + 1;
+            if ((short)q[180] > 40)
+                ((short *)q)[180] = 40;
+        }
+        {
+            short *q = LVL_8_TABORA_Fe524d931_D_001A6480;
+            if (oldx != q[180] || oldy != q[181])
+                LVL_8_TABORA_Fe524d931_FUN_0036DA40(4, 0, 0);
+        }
+        LVL_8_TABORA_Fe524d931_FUN_002FC140();
+    }
+    return (mask >> 6) & 1;
+}
+extern void LVL_8_TABORA_F0b028b34_FUN_004620A8(char *a, unsigned int b, int c, int d);
+extern void LVL_8_TABORA_F0b028b34_FUN_004620A8(char *a, unsigned int b, int c, int d);
+extern void LVL_8_TABORA_F0b028b34_FUN_00462038(int a);
+
+int LVL_8_TABORA_FUN_00462148(int *p)
+{
+    int i;
+
+    p[17] = 1;
+    p[3] = 0;
+    p[4] = 0;
+    p[5] = 0;
+    p[22] = 0;
+    p[23] = 0;
+    for (i = 0; i < p[21]; i++) {
+        *(long long *)((char *)p[20] + i * 24) = -1;
+        *(long long *)((char *)p[20] + i * 24 + 8) = -1;
+        *(int *)((char *)p[20] + i * 24 + 16) = 0;
+        *(int *)((char *)p[20] + i * 24 + 20) = 0;
+    }
+    for (i = 0; i < p[2]; i++) {
+        LVL_8_TABORA_F0b028b34_FUN_004620A8((char *)(p[1] + i * 16), (i * 2048 + p[0]) & 0x0FFFFFFF, 3, 128);
+    }
+    LVL_8_TABORA_F0b028b34_FUN_004620A8((char *)(p[1] + i * 16), p[1] & 0x0FFFFFFF, 2, 0);
+    *(volatile unsigned int *)0x1000B420 = 0;
+    *(volatile unsigned int *)0x1000B410 = p[0] & 0x0FFFFFFF;
+    *(volatile unsigned int *)0x1000B430 = p[1] & 0x0FFFFFFF;
+    LVL_8_TABORA_F0b028b34_FUN_00462038(5);
+    return 1;
+}
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_003902D8(char *a, char *b);
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_002F9DF0(char *a, char *b, char *c);
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_002F9E60(char *a, char *b, float f);
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_0038E1B8(char *a, char *b);
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_002F9E60(char *a, char *b, float f);
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_002F9DF0(char *a, char *b, char *c);
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_002F9E60(char *a, char *b, float f);
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_002F9DF0(char *a, char *b, char *c);
+extern int LVL_8_TABORA_Fbdd4a4aa_FUN_002FAF80(unsigned int a, int b, float f);
+extern void LVL_8_TABORA_Fbdd4a4aa_FUN_0033E208(char *a);
+
+void LVL_8_TABORA_FUN_0034FC78(int *obj)
+{
+    char *a = (char *)obj + 16;
+    char *b = (char *)obj + 32;
+    char tmp[16];
+
+    LVL_8_TABORA_Fbdd4a4aa_FUN_003902D8(a, a);
+    *(int *)(b + 16) = *(int *)(b + 16) - 1;
+    if (*(int *)(b + 16) < 0)
+        *(int *)(b + 16) = 0;
+    *(unsigned char *)((char *)obj + 8) = *(unsigned char *)((char *)obj + 8) + 1;
+    LVL_8_TABORA_Fbdd4a4aa_FUN_002F9DF0(a, b, a);
+    *(float *)((char *)obj + 12) = *(float *)((char *)obj + 12) + 1.5750000000000000000000e+03f;
+    LVL_8_TABORA_Fbdd4a4aa_FUN_002F9E60(b, b, 9.9000000953674316406250e-01f);
+    LVL_8_TABORA_Fbdd4a4aa_FUN_0038E1B8(a, tmp);
+    if ((*(int *)((char *)obj + 4) & 0xFF) < 32) {
+        LVL_8_TABORA_Fbdd4a4aa_FUN_002F9E60(tmp, tmp, 1.5000000130385160446167e-03f);
+        LVL_8_TABORA_Fbdd4a4aa_FUN_002F9DF0(b, b, tmp);
+    } else {
+        LVL_8_TABORA_Fbdd4a4aa_FUN_002F9E60(tmp, tmp, -7.5000000651925802230835e-04f);
+        LVL_8_TABORA_Fbdd4a4aa_FUN_002F9DF0(b, b, tmp);
+    }
+    *(int *)((char *)obj + 4) = LVL_8_TABORA_Fbdd4a4aa_FUN_002FAF80(*(unsigned int *)((char *)obj + 4) & 0x00FFFFFF, 0, 2.5000000372529029846191e-02f)
+        | (*(int *)(b + 16) << 24);
+    if (*(int *)(b + 16) == 0)
+        LVL_8_TABORA_Fbdd4a4aa_FUN_0033E208((char *)obj);
+}
+#ifndef RAC2_T_OBJ_F7B2F1854
+#define RAC2_T_OBJ_F7B2F1854
+typedef struct Obj_F7b2f1854 {
+    int *f0;
+    int *f4;
+    int *f8;
+    int *f12;
+    int *f16;
+    int f20;
+    int f24;
+    int f28;
+    int f32;
+    int f36;
+    int f40;
+    int f44;
+} Obj_F7b2f1854;
+#endif
+
+
+extern int *LVL_8_TABORA_F7b2f1854_FUN_00448658(int n);
+extern int *LVL_8_TABORA_F7b2f1854_FUN_004485C0(int size, int *p);
+extern void LVL_8_TABORA_F7b2f1854_FUN_00447680(Obj_F7b2f1854 *o, int v);
+
+void LVL_8_TABORA_FUN_004477E0(Obj_F7b2f1854 *o, int a1, int count)
+{
+    int *p;
+    int n;
+
+    o->f44 = count;
+    if (count != 0) {
+        p = LVL_8_TABORA_F7b2f1854_FUN_004485C0(16, LVL_8_TABORA_F7b2f1854_FUN_00448658(count));
+        n = o->f44;
+        o->f0 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = LVL_8_TABORA_F7b2f1854_FUN_004485C0(16, LVL_8_TABORA_F7b2f1854_FUN_00448658(n));
+        n = o->f44;
+        o->f8 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = LVL_8_TABORA_F7b2f1854_FUN_004485C0(16, LVL_8_TABORA_F7b2f1854_FUN_00448658(n));
+        n = o->f44;
+        o->f4 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = LVL_8_TABORA_F7b2f1854_FUN_004485C0(16, LVL_8_TABORA_F7b2f1854_FUN_00448658(n));
+        n = o->f44;
+        o->f12 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = LVL_8_TABORA_F7b2f1854_FUN_004485C0(16, LVL_8_TABORA_F7b2f1854_FUN_00448658(n));
+        o->f16 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+    }
+    o->f40 = a1;
+    o->f32 = 0;
+    o->f20 = 0;
+    o->f28 = 0;
+    o->f24 = 0;
+    o->f36 = 0;
+    LVL_8_TABORA_F7b2f1854_FUN_00447680(o, 1);
+}
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00447EE8(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+
+char *LVL_8_TABORA_FUN_004551C0(char *p)
+{
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 76);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 152);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 228);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 304);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 380);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 456);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 528);
+    LVL_8_TABORA_F449e2f67_FUN_00447EE8(p + 600);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 664);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 736);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 808);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 880);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 952);
+    return p;
+}
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_004479C0(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00447EE8(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+extern void LVL_8_TABORA_F449e2f67_FUN_00448180(char *p);
+
+char *LVL_8_TABORA_FUN_00456C20(char *p)
+{
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 76);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 152);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 228);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 304);
+    LVL_8_TABORA_F449e2f67_FUN_004479C0(p + 380);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 456);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 528);
+    LVL_8_TABORA_F449e2f67_FUN_00447EE8(p + 600);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 664);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 736);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 808);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 880);
+    LVL_8_TABORA_F449e2f67_FUN_00448180(p + 952);
+    return p;
+}
+extern char *LVL_8_TABORA_Ffc961fca_FUN_0032FB80(char *a1);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002FA658(char *dst, char *src);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002F9DF0(char *dst, char *src, char *tail);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002F9E20(char *dst, char *src, char *tail);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002FA658(char *dst, char *src);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002FA8E0(char *dst, char *src);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002FA298(char *dst, char *src, char *tail);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002FA298(char *dst, char *src, char *tail);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002FA298(char *dst, char *src, char *tail);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002F9DF0(char *dst, char *src, char *tail);
+extern void LVL_8_TABORA_Ffc961fca_FUN_002FA980(char *dst, char *src, char *tail);
+
+void LVL_8_TABORA_FUN_003AAF10(char *o0, char *o1)
+{
+    char b0[64];
+    char b1[64];
+    char b2[64];
+    char *r = LVL_8_TABORA_Ffc961fca_FUN_0032FB80(o1);
+
+    if (r == 0)
+        return;
+    LVL_8_TABORA_Ffc961fca_FUN_002FA658(b0, r);
+    LVL_8_TABORA_Ffc961fca_FUN_002F9DF0(o0 + 16, o0 + 16, r + 16);
+    LVL_8_TABORA_Ffc961fca_FUN_002F9E20(o0 + 16, o0 + 16, o1 + 16);
+    if ((*(int *)(r + 60) & 2) != 0) {
+        LVL_8_TABORA_Ffc961fca_FUN_002FA658(b2, r + 32);
+        LVL_8_TABORA_Ffc961fca_FUN_002FA8E0(b1, b2);
+        LVL_8_TABORA_Ffc961fca_FUN_002FA298(o0 + 16, o0 + 16, b1);
+        LVL_8_TABORA_Ffc961fca_FUN_002FA298(o0 + 16, o0 + 16, o1 + 192);
+    } else {
+        LVL_8_TABORA_Ffc961fca_FUN_002FA298(o0 + 16, o0 + 16, b0);
+    }
+    LVL_8_TABORA_Ffc961fca_FUN_002F9DF0(o0 + 16, o0 + 16, o1 + 16);
+    LVL_8_TABORA_Ffc961fca_FUN_002FA980(o0 + 192, b0, o0 + 192);
+}
+extern int LVL_8_TABORA_Fd1c348f5_FUN_002F9A90(char *p);
+extern int LVL_8_TABORA_Fd1c348f5_FUN_002FAF38(float v);
+extern int LVL_8_TABORA_Fd1c348f5_FUN_002F9A90(char *p);
+extern void LVL_8_TABORA_Fd1c348f5_FUN_0033E208(char *p);
+extern int LVL_8_TABORA_Fd1c348f5_FUN_002FAF38(float v);
+
+void LVL_8_TABORA_FUN_00341970(char *p)
+{
+    char *q = p + 32;
+    int r;
+    int v;
+    float f;
+
+    *(unsigned char *)(p + 8) = *(unsigned char *)(p + 8) + *(unsigned char *)(q + 8);
+    *(float *)(p + 24) = *(float *)(p + 24) + *(float *)(q + 16);
+    *(float *)(p + 12) = *(float *)(p + 12) * *(float *)(q + 12);
+    if (*(int *)(q + 4) == 0) {
+        r = LVL_8_TABORA_Fd1c348f5_FUN_002F9A90(p + 10);
+        if (r != 0) {
+            *(int *)(q + 4) = 1;
+            *(short *)(p + 10) = 30;
+            *(int *)(p + 4) = *(int *)(q + 20) | 0x7f000000;
+        } else {
+            f = (float)(10 - *(short *)(p + 10)) * 9.6000003814697265625000e+00f;
+            v = LVL_8_TABORA_Fd1c348f5_FUN_002FAF38(f);
+            *(int *)(p + 4) = ((v + 32) << 24) | *(int *)(q + 20);
+        }
+    } else {
+        r = LVL_8_TABORA_Fd1c348f5_FUN_002F9A90(p + 10);
+        if (r != 0) {
+            LVL_8_TABORA_Fd1c348f5_FUN_0033E208(p);
+        } else {
+            f = (float)*(short *)(p + 10) * 4.2333333492279052734375e+00f;
+            v = LVL_8_TABORA_Fd1c348f5_FUN_002FAF38(f);
+            *(int *)(p + 4) = (v << 24) | *(int *)(q + 20);
+        }
+    }
+}
+extern void LVL_8_TABORA_F2d5993bb_FUN_002F9B78(char *p, int a1, int a2);
+extern void LVL_8_TABORA_F2d5993bb_FUN_002F9BC8(char *p, int a1, int a2);
+extern int LVL_8_TABORA_F2d5993bb_FUN_00318598(char *p, int a1);
+
+int LVL_8_TABORA_FUN_00318680(char *out, int mult, int *recs)
+{
+    int off = 0;
+    char *p = out + 8;
+    char *r;
+    int v;
+    int w;
+
+    if (*(int *)recs != 0) {
+        r = (char *)recs;
+        do {
+            off += 8;
+            v = *(int *)(r + 0) + mult * *(int *)(r + 4);
+            *(int *)(p + 0) = *(int *)(r + 8);
+            *(int *)(p + 4) = *(int *)(r + 4);
+            p += 8;
+            if (*(int *)(r + 8) == 6000)
+                LVL_8_TABORA_F2d5993bb_FUN_002F9B78(p, 0, *(int *)(r + 4));
+            else
+                LVL_8_TABORA_F2d5993bb_FUN_002F9BC8(p, v, *(int *)(r + 4));
+            w = *(int *)(r + 4);
+            r += 16;
+            p += w;
+            off += w;
+            p = (char *)(((int)p + 3) & ~3);
+            off = (off + 3) & ~3;
+        } while (*(int *)r != 0);
+    }
+    off += 8;
+    *(int *)(p + 4) = 0;
+    *(int *)(p + 0) = -1;
+    v = LVL_8_TABORA_F2d5993bb_FUN_00318598(out + 8, off);
+    *(int *)(out + 4) = v;
+    *(int *)(out + 0) = off;
+    return off + 8;
+}
+extern int LVL_8_TABORA_F77a1e64d_FUN_0032D390(char *object);
+extern float *LVL_8_TABORA_F77a1e64d_FUN_0032BF50(char *object);
+
+int LVL_8_TABORA_FUN_003F2270(char *object)
+{
+    float *p;
+
+    if (LVL_8_TABORA_F77a1e64d_FUN_0032D390(object) != 0)
+        return 0;
+    p = LVL_8_TABORA_F77a1e64d_FUN_0032BF50(object);
+    if (p == 0)
+        return 0;
+    if (0.0f < *p)
+        return 0;
+    return 1;
+}
+extern int LVL_8_TABORA_F77a1e64d_FUN_0032D390(char *object);
+extern float *LVL_8_TABORA_F77a1e64d_FUN_0032BF50(char *object);
+
+int LVL_8_TABORA_FUN_003FDDF0(char *object)
+{
+    float *p;
+
+    if (LVL_8_TABORA_F77a1e64d_FUN_0032D390(object) != 0)
+        return 0;
+    p = LVL_8_TABORA_F77a1e64d_FUN_0032BF50(object);
+    if (p == 0)
+        return 0;
+    if (0.0f < *p)
+        return 0;
+    return 1;
+}
+extern int LVL_8_TABORA_F77a1e64d_FUN_0032D390(char *object);
+extern float *LVL_8_TABORA_F77a1e64d_FUN_0032BF50(char *object);
+
+int LVL_8_TABORA_FUN_0043CCD8(char *object)
+{
+    float *p;
+
+    if (LVL_8_TABORA_F77a1e64d_FUN_0032D390(object) != 0)
+        return 0;
+    p = LVL_8_TABORA_F77a1e64d_FUN_0032BF50(object);
+    if (p == 0)
+        return 0;
+    if (0.0f < *p)
+        return 0;
+    return 1;
+}
+extern void LVL_8_TABORA_Fb342d477_D_0011AC60(int value);
+extern void LVL_8_TABORA_Fb342d477_FUN_00462038(int value);
+extern void LVL_8_TABORA_Fb342d477_FUN_00461FC8(int value);
+extern void LVL_8_TABORA_Fb342d477_D_0011AC40(int value);
+
+int LVL_8_TABORA_FUN_004625F8(int *p)
+{
+    LVL_8_TABORA_Fb342d477_D_0011AC60(p[16]);
+    p[17] = 0;
+    LVL_8_TABORA_Fb342d477_FUN_00462038(5);
+    p[7] = *(volatile int *)0x1000B410;
+    p[8] = *(volatile int *)0x1000B430;
+    p[9] = *(volatile int *)0x1000B420;
+    p[10] = *(volatile int *)0x1000B400;
+    if (*(volatile int *)0x10002010 & 0xF0)
+        while (*(volatile int *)0x10002010 & 0xF0)
+            ;
+    LVL_8_TABORA_Fb342d477_FUN_00461FC8(0);
+    p[11] = *(volatile int *)0x1000B010;
+    p[12] = *(volatile int *)0x1000B020;
+    p[13] = *(volatile int *)0x1000B000;
+    p[14] = *(volatile int *)0x10002020;
+    p[15] = *(volatile int *)0x10002010;
+    LVL_8_TABORA_Fb342d477_D_0011AC40(p[16]);
+    return 1;
+}
+/* Family 0e7bb6a8908d30dc -- 244 bytes, 28 placements (1 boot + 27 levels). */
+
+extern char *LVL_8_TABORA_F0e7bb6a8_FUN_0032FB80(char *a);
+extern void LVL_8_TABORA_F0e7bb6a8_FUN_002FA658(char *dst, char *src);
+extern void LVL_8_TABORA_F0e7bb6a8_FUN_002FA8E0(char *dst, char *src);
+extern void LVL_8_TABORA_F0e7bb6a8_FUN_002FA8E0(char *dst, char *src);
+extern void LVL_8_TABORA_F0e7bb6a8_FUN_002F9E20(char *dst, char *a, char *b);
+extern void LVL_8_TABORA_F0e7bb6a8_FUN_002FA2C0(char *a, char *b, char *c);
+extern void LVL_8_TABORA_F0e7bb6a8_FUN_002FA658(char *dst, char *src);
+extern void LVL_8_TABORA_F0e7bb6a8_FUN_002FA9D0(char *a, char *b, char *c);
+extern void LVL_8_TABORA_F0e7bb6a8_FUN_0032CEA8(char *a, char *b);
+
+int LVL_8_TABORA_FUN_003300C8(char *unused, char *obj, char *arg2, char *arg3, char *arg4, char *arg5)
+{
+    char buf0[64];
+    char buf1[16];
+    char buf2[64];
+    char *p;
+
+    p = LVL_8_TABORA_F0e7bb6a8_FUN_0032FB80(obj);
+    if (p == 0)
+        return 0;
+    if (*(int *)(p + 60) & 0x40) {
+        LVL_8_TABORA_F0e7bb6a8_FUN_002FA658(buf0, obj + 240);
+        LVL_8_TABORA_F0e7bb6a8_FUN_002FA8E0(buf0, buf0);
+    } else {
+        LVL_8_TABORA_F0e7bb6a8_FUN_002FA8E0(buf0, obj + 192);
+    }
+    LVL_8_TABORA_F0e7bb6a8_FUN_002F9E20(buf1, arg2, obj + 16);
+    LVL_8_TABORA_F0e7bb6a8_FUN_002FA2C0(arg4, buf1, buf0);
+    LVL_8_TABORA_F0e7bb6a8_FUN_002FA658(buf2, arg3);
+    LVL_8_TABORA_F0e7bb6a8_FUN_002FA9D0(buf2, buf0, buf2);
+    LVL_8_TABORA_F0e7bb6a8_FUN_0032CEA8(buf2, arg5);
+    return 1;
+}
+extern void LVL_8_TABORA_Fa2a84657_FUN_002F9E78(float *tmp, char *v, float k);
+extern void LVL_8_TABORA_Fa2a84657_FUN_002F9E08(float *tmp, char *a, char *v);
+extern int LVL_8_TABORA_Fa2a84657_FUN_002F9A90(char *field);
+extern void LVL_8_TABORA_Fa2a84657_FUN_0033E208(unsigned char *p);
+
+void LVL_8_TABORA_FUN_00347948(unsigned char *p)
+{
+    float tmp[4];
+    char *v;
+    int n;
+
+    v = (char *)p + 32;
+    LVL_8_TABORA_Fa2a84657_FUN_002F9E78(tmp, v, 9.4999998807907104492188e-01f);
+    *(float *)(v + 8) = *(float *)(v + 8) + 1.3888889225199818611145e-03f;
+    LVL_8_TABORA_Fa2a84657_FUN_002F9E08(tmp, (char *)p + 16, v);
+
+    n = *(int *)(p + 4) + (int)0xFE000000;
+    *(int *)(p + 4) = n;
+    if (((unsigned)(n & 0xFF000000) - 1) > 0x5EFFFFFFu || LVL_8_TABORA_Fa2a84657_FUN_002F9A90((char *)p + 10) != 0) {
+        LVL_8_TABORA_Fa2a84657_FUN_0033E208(p);
+    } else {
+        float f0;
+        float f1;
+
+        f1 = *(float *)(p + 12);
+        f0 = 2.1000000000000000000000e+05f - f1;
+        f0 = f0 * 7.0000000298023223876953e-02f;
+        f1 = f1 + f0;
+        *(float *)(p + 12) = f1;
+        p[8] = p[8] + 1;
+    }
+}
+extern int LVL_8_TABORA_F750245c6_D_001A7340 __attribute__((sda));
+extern void LVL_8_TABORA_F750245c6_FUN_003074D0(int a, int b, int c, int d, char *e, int f);
+void LVL_8_TABORA_FUN_00356A38(int a0, char *a1)
+{
+    int h, k, p, m;
+    k = a0 / 2 + 5;
+    h = LVL_8_TABORA_F750245c6_D_001A7340 / 2;
+    m = h - k;
+    p = h + k;
+    LVL_8_TABORA_F750245c6_FUN_003074D0(m - 2, 312, p + 4, 314, a1, 0);
+    LVL_8_TABORA_F750245c6_FUN_003074D0(m - 2, 333, p + 4, 335, a1, 0);
+    LVL_8_TABORA_F750245c6_FUN_003074D0(m - 2, 313, m, 334, a1, 0);
+    LVL_8_TABORA_F750245c6_FUN_003074D0(p + 2, 313, p + 4, 334, a1, 0);
+}
+extern float LVL_8_TABORA_Fe617c30b_FUN_002FAF28(int a);
+extern void LVL_8_TABORA_Fe617c30b_FUN_002F9E60(char *p, char *q, float f);
+extern void LVL_8_TABORA_Fe617c30b_FUN_002F9DF0(char *p, char *q, char *r);
+extern int LVL_8_TABORA_Fe617c30b_FUN_0032A098(int a, int b, float f);
+extern int LVL_8_TABORA_Fe617c30b_FUN_002F9A90(char *p);
+extern void LVL_8_TABORA_Fe617c30b_FUN_0033E208(char *p);
+
+void LVL_8_TABORA_FUN_0033FFF0(char *a0)
+{
+    char *s0 = a0 + 32;
+    int x;
+    int u;
+    int t;
+    float f;
+
+    x = *(int *)(s0 + 28);
+    t = *(short *)(a0 + 10);
+    u = *(short *)(s0 + 24) * (x - t) / x + *(short *)(s0 + 26);
+
+    f = LVL_8_TABORA_Fe617c30b_FUN_002FAF28(u) * 1000.0f;
+    *(float *)(a0 + 12) = f;
+    LVL_8_TABORA_Fe617c30b_FUN_002F9E60(s0, s0, 9.8000001907348632812500e-01f);
+    LVL_8_TABORA_Fe617c30b_FUN_002F9DF0(a0 + 16, a0 + 16, s0);
+    *(unsigned char *)(a0 + 8) = *(unsigned char *)(a0 + 8) + 1;
+    f = LVL_8_TABORA_Fe617c30b_FUN_002FAF28(*(int *)(s0 + 28));
+    *(int *)(a0 + 4) = LVL_8_TABORA_Fe617c30b_FUN_0032A098(*(int *)(s0 + 20), *(int *)(s0 + 16),
+                               (float)*(short *)(a0 + 10) / f);
+    if (LVL_8_TABORA_Fe617c30b_FUN_002F9A90(a0 + 10) != 0)
+        LVL_8_TABORA_Fe617c30b_FUN_0033E208(a0);
+}
+extern int LVL_8_TABORA_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_8_TABORA_F4a4e68d9_FUN_0045FCE8(int);
+
+void LVL_8_TABORA_FUN_00318FE8(void)
+{
+    int value = LVL_8_TABORA_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_8_TABORA_F4a4e68d9_FUN_0045FCE8(value + 0x36F28);
+}
+extern int LVL_8_TABORA_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_8_TABORA_F4a4e68d9_FUN_0045FD08(int);
+
+void LVL_8_TABORA_FUN_00319618(void)
+{
+    int value = LVL_8_TABORA_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_8_TABORA_F4a4e68d9_FUN_0045FD08(value + 0x36F28);
+}
+extern int LVL_8_TABORA_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_8_TABORA_F4a4e68d9_FUN_0045FCA8(int);
+
+void LVL_8_TABORA_FUN_00319868(void)
+{
+    int value = LVL_8_TABORA_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_8_TABORA_F4a4e68d9_FUN_0045FCA8(value + 0x36F28);
+}
+extern int LVL_8_TABORA_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_8_TABORA_F4a4e68d9_FUN_0045FD28(int);
+
+void LVL_8_TABORA_FUN_00319898(void)
+{
+    int value = LVL_8_TABORA_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_8_TABORA_F4a4e68d9_FUN_0045FD28(value + 0x36F28);
+}
+extern int LVL_8_TABORA_F4a4e68d9_D_001A904C __attribute__((sda));
+extern void LVL_8_TABORA_F4a4e68d9_FUN_004498C0(int);
+
+void LVL_8_TABORA_FUN_0031A4A8(void)
+{
+    int value = LVL_8_TABORA_F4a4e68d9_D_001A904C;
+
+    if (value != 0)
+        LVL_8_TABORA_F4a4e68d9_FUN_004498C0(value + 0x36F28);
+}
+extern void LVL_8_TABORA_F42d2147f_FUN_002FA0B8(char *a0, char *a1, float f);
+extern void LVL_8_TABORA_F42d2147f_FUN_002F9E60(char *a0, char *a1, float f);
+extern void LVL_8_TABORA_F42d2147f_FUN_002F9DF0(char *a0, char *a1, char *a2);
+extern char LVL_8_TABORA_F42d2147f_D_00189E20[];
+extern char LVL_8_TABORA_F42d2147f_D_00189EA0[];
+
+void LVL_8_TABORA_FUN_00442E48(char *object)
+{
+    char local[16];
+    char buf[16];
+    char *p = LVL_8_TABORA_F42d2147f_D_00189E20;
+    unsigned char v;
+
+    LVL_8_TABORA_F42d2147f_FUN_002FA0B8(local, (char *)(*(int *)(p + 8848) + 224), 1.0f);
+    v = *(unsigned char *)(p + 8884);
+    if (v == 2) {
+        LVL_8_TABORA_F42d2147f_FUN_002F9E60(buf, local, 9.5f);
+    } else if (v == 1) {
+        LVL_8_TABORA_F42d2147f_FUN_002F9E60(buf, local, 0.75f);
+    } else {
+        LVL_8_TABORA_F42d2147f_FUN_002F9E60(buf, local, 1.6f);
+    }
+    LVL_8_TABORA_F42d2147f_FUN_002F9DF0(object + 48, LVL_8_TABORA_F42d2147f_D_00189EA0, buf);
+    LVL_8_TABORA_F42d2147f_FUN_002F9DF0(object + 48, LVL_8_TABORA_F42d2147f_D_00189EA0 + 208, object + 48);
+}
+extern char LVL_8_TABORA_F93479d13_D_00189E20[];
+extern void LVL_8_TABORA_F93479d13_FUN_0031D540(char *entry);
+extern void LVL_8_TABORA_F93479d13_FUN_0031D540(char *entry);
+
+void LVL_8_TABORA_FUN_002C2840(int slot, int value)
+{
+    char *e;
+    void (*fn)(char *);
+
+    {
+        char *p = LVL_8_TABORA_F93479d13_D_00189E20 + slot * 80;
+
+        *(int *)(p + 4660) = value;
+        if (*(int *)(p + 4676) != 3) {
+            *(int *)(p + 4676) = 3;
+            e = *(char **)(p + 4640);
+            if (e != 0) {
+                if (*(unsigned char *)(e + 32) != 254) {
+                    if (*(unsigned char *)(e + 32) != 253) {
+                        fn = *(void (**)(char *))(e + 100);
+                        if (fn != 0)
+                            fn(e);
+                    }
+                }
+            }
+        }
+    }
+    {
+        char *q = LVL_8_TABORA_F93479d13_D_00189E20 + slot * 80;
+
+        e = *(char **)(q + 4640);
+        *(int *)(q + 4676) = 0;
+        *(int *)(q + 4680) = 0;
+        if (e != 0) {
+            LVL_8_TABORA_F93479d13_FUN_0031D540(e);
+            *(char **)(q + 4640) = 0;
+        }
+        e = *(char **)(q + 4644);
+        if (e != 0 && slot != 3) {
+            LVL_8_TABORA_F93479d13_FUN_0031D540(e);
+            *(char **)(q + 4644) = 0;
+        }
+    }
+}
+extern char LVL_8_TABORA_F5fa3e1af_D_00189E20[];
+extern float LVL_8_TABORA_F5fa3e1af_FUN_002F9DB8(float *buf);
+extern float LVL_8_TABORA_F5fa3e1af_FUN_002F9F20(float *buf);
+
+void LVL_8_TABORA_FUN_003ED670(char *obj)
+{
+    float buf[2];
+    char *d = LVL_8_TABORA_F5fa3e1af_D_00189E20;
+    char *e = *(char **)(obj + 104);
+    float a, b, x;
+
+    a = -*(float *)(d + 8112);
+    *(float *)(e + 20) = a;
+    b = -*(float *)(d + 8116);
+    *(float *)(e + 16) = b;
+
+    if (a > 1.0f) {
+        *(float *)(e + 20) = 1.0f;
+    } else if (a < -1.0f) {
+        *(float *)(e + 20) = -1.0f;
+    }
+
+    x = *(float *)(e + 16);
+    if (x > 1.0f) {
+        *(float *)(e + 16) = 1.0f;
+    } else if (x < -1.0f) {
+        *(float *)(e + 16) = -1.0f;
+    }
+    LVL_8_TABORA_F5fa3e1af_FUN_002F9DB8(buf);
+    buf[0] = *(float *)(e + 16);
+    buf[1] = *(float *)(e + 20);
+    *(float *)(e + 48) = LVL_8_TABORA_F5fa3e1af_FUN_002F9F20(buf);
+}
+
+
+extern int LVL_8_TABORA_F9a90bcc4_FUN_00327858(int count);
+
+int LVL_8_TABORA_FUN_00336390(u8 *owner, int b, int *outIndex,
+                                       float *o0, float *o1, float *o2, float *o3,
+                                       float *o4, float *o5, float *o6)
+{
+    int n;
+    int count;
+    int i;
+    int k;
+    int left;
+    u8 *p;
+
+    n = 0;
+    count = *(u8 *)(*(int *)(owner + 36) + 12);
+    if (count != 0) {
+        int *t = (int *)(*(int *)(owner + 36) + 72);
+        u8 *q;
+        left = count;
+        do {
+            q = *(u8 **)(*t + 20);
+            if (q != 0 && *q == b)
+                n++;
+            t++;
+            left--;
+        } while (left != 0);
+    }
+
+    if (n != 0)
+        goto second;
+
+    return 0;
+
+found:
+    *o0 = *(float *)(p + 8) * 0.016666668f;
+    *o1 = *(float *)(p + 12) * 0.016666668f;
+    *o2 = *(float *)(p + 16) * 0.00027777778f;
+    *o3 = *(float *)(p + 20) * 0.00027777778f;
+    *o6 = *(float *)(p + 4) * 0.00027777778f;
+    *o4 = *(float *)(p + 24);
+    *o5 = *(float *)(p + 28);
+    *outIndex = i;
+    return 1;
+
+second:
+    k = LVL_8_TABORA_F9a90bcc4_FUN_00327858(n);
+    for (i = 0; i < *(u8 *)(*(int *)(owner + 36) + 12); i++) {
+        char *tbl = (char *)(*(int *)(owner + 36) + 72);
+        char *e = *(char **)(tbl + i * 4);
+        p = *(u8 **)(e + 20);
+        if (p == 0 || *p != b)
+            continue;
+        if (k == 0)
+            goto found;
+        k--;
+    }
+    return 0;
+}
+
+
+extern void LVL_8_TABORA_Feda2e14e_FUN_002F9DF0(void *out, void *in, void *src);
+extern int LVL_8_TABORA_Feda2e14e_FUN_002F9A90(void *p);
+extern void LVL_8_TABORA_Feda2e14e_FUN_0033E208(void *self);
+extern float LVL_8_TABORA_Feda2e14e_FUN_002FAF28(int n);
+extern int LVL_8_TABORA_Feda2e14e_FUN_002FAF80(int handle, int previous, float ratio);
+extern char LVL_8_TABORA_Feda2e14e_D_00189E20[];
+
+void LVL_8_TABORA_FUN_00348C78(u8 *self)
+{
+    char *s2 = (char *)self + 32;
+    int n;
+    float a;
+    float b;
+
+    if (*(int *)(s2 + 28) == 1) {
+        char *base = LVL_8_TABORA_Feda2e14e_D_00189E20;
+        *(float *)(self + 16) = *(float *)(base + 128) + *(float *)(s2 + 16);
+        *(float *)(self + 20) = *(float *)(base + 132) + *(float *)(s2 + 20);
+        *(float *)(self + 24) = *(float *)(base + 136) + *(float *)(s2 + 24);
+        LVL_8_TABORA_Feda2e14e_FUN_002F9DF0(self + 16, self + 16, s2);
+        *(float *)(s2 + 16) = *(float *)(self + 16) - *(float *)(base + 128);
+        *(float *)(s2 + 20) = *(float *)(self + 20) - *(float *)(base + 132);
+        *(float *)(s2 + 24) = *(float *)(self + 24) - *(float *)(base + 136);
+    } else {
+        LVL_8_TABORA_Feda2e14e_FUN_002F9DF0(self + 16, self + 16, s2);
+    }
+
+    if (*(float *)(self + 16) < 2.0f || *(float *)(self + 16) > 1021.0f
+        || *(float *)(self + 20) < 2.0f || *(float *)(self + 20) > 1021.0f
+        || *(float *)(self + 24) < 2.0f || *(float *)(self + 24) > 1021.0f) {
+        LVL_8_TABORA_Feda2e14e_FUN_0033E208(self);
+        return;
+    }
+
+    if (LVL_8_TABORA_Feda2e14e_FUN_002F9A90((char *)self + 10) != 0) {
+        LVL_8_TABORA_Feda2e14e_FUN_0033E208(self);
+        return;
+    }
+
+    n = *(int *)(self + 4) & 0xFFFFFF;
+    a = LVL_8_TABORA_Feda2e14e_FUN_002FAF28(*(short *)(self + 10) - 1);
+    b = LVL_8_TABORA_Feda2e14e_FUN_002FAF28(*(short *)(self + 10));
+    *(int *)(self + 4) = LVL_8_TABORA_Feda2e14e_FUN_002FAF80(n, *(int *)(self + 4), a / b);
+}
+extern void LVL_8_TABORA_Feb99aa89_FUN_002DF3D0(char *target, int mode, float value, float zero, float scale);
+extern int LVL_8_TABORA_Feb99aa89_FUN_002EA300(char *first, char *second, int mode, int flag, int extra);
+extern float LVL_8_TABORA_Feb99aa89_FUN_002F9F98(char *source, short *table);
+
+extern short LVL_8_TABORA_Feb99aa89_D_001BFF60[];
+extern float LVL_8_TABORA_Feb99aa89_D_0018A084;
+
+int LVL_8_TABORA_FUN_002BCFE8(float *out, float scale, float amount)
+{
+    char buffer[32];
+
+    LVL_8_TABORA_Feb99aa89_FUN_002DF3D0(buffer, 1, LVL_8_TABORA_Feb99aa89_D_0018A084 - 0.02f, 0.0f, scale);
+    LVL_8_TABORA_Feb99aa89_FUN_002DF3D0(buffer + 16, 1, amount, 0.0f, scale);
+    if (LVL_8_TABORA_Feb99aa89_FUN_002EA300(buffer, buffer + 16, 2, 0, 0)) {
+        if (out)
+            *out = LVL_8_TABORA_Feb99aa89_FUN_002F9F98(buffer, LVL_8_TABORA_Feb99aa89_D_001BFF60);
+        return 1;
+    }
+    return 0;
+}

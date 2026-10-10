@@ -1,0 +1,16 @@
+extern int @@ROLE_0_00@@(char *object);
+extern float *@@ROLE_1_00@@(char *object);
+
+int @@FUNCTION@@(char *object)
+{
+    float *p;
+
+    if (@@ROLE_0_01@@(object) != 0)
+        return 0;
+    p = @@ROLE_1_01@@(object);
+    if (p == 0)
+        return 0;
+    if (0.0f < *p)
+        return 0;
+    return 1;
+}

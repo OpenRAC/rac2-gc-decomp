@@ -1,0 +1,77 @@
+#ifndef RAC2_T_OBJ_F7B2F1854
+#define RAC2_T_OBJ_F7B2F1854
+typedef struct Obj_F7b2f1854 {
+    int *f0;
+    int *f4;
+    int *f8;
+    int *f12;
+    int *f16;
+    int f20;
+    int f24;
+    int f28;
+    int f32;
+    int f36;
+    int f40;
+    int f44;
+} Obj_F7b2f1854;
+#endif
+
+
+extern int *@@ROLE_0_00@@(int n);
+extern int *@@ROLE_1_00@@(int size, int *p);
+extern void @@ROLE_10_00@@(Obj_F7b2f1854 *o, int v);
+
+void @@FUNCTION@@(Obj_F7b2f1854 *o, int a1, int count)
+{
+    int *p;
+    int n;
+
+    o->f44 = count;
+    if (count != 0) {
+        p = @@ROLE_1_01@@(16, @@ROLE_0_01@@(count));
+        n = o->f44;
+        o->f0 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = @@ROLE_1_02@@(16, @@ROLE_0_02@@(n));
+        n = o->f44;
+        o->f8 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = @@ROLE_1_03@@(16, @@ROLE_0_03@@(n));
+        n = o->f44;
+        o->f4 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = @@ROLE_1_04@@(16, @@ROLE_0_04@@(n));
+        n = o->f44;
+        o->f12 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+
+        p = @@ROLE_1_05@@(16, @@ROLE_0_05@@(n));
+        o->f16 = p;
+        p[1] = 0;
+        p[2] = 0;
+        p[3] = 0;
+        p[0] = 0;
+    }
+    o->f40 = a1;
+    o->f32 = 0;
+    o->f20 = 0;
+    o->f28 = 0;
+    o->f24 = 0;
+    o->f36 = 0;
+    @@ROLE_10_01@@(o, 1);
+}

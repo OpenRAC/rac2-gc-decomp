@@ -1,0 +1,35 @@
+/* Family 0e7bb6a8908d30dc -- 244 bytes, 28 placements (1 boot + 27 levels). */
+
+extern char *@@ROLE_0_00@@(char *a);
+extern void @@ROLE_1_00@@(char *dst, char *src);
+extern void @@ROLE_2_00@@(char *dst, char *src);
+extern void @@ROLE_3_00@@(char *dst, char *src);
+extern void @@ROLE_4_00@@(char *dst, char *a, char *b);
+extern void @@ROLE_5_00@@(char *a, char *b, char *c);
+extern void @@ROLE_6_00@@(char *dst, char *src);
+extern void @@ROLE_7_00@@(char *a, char *b, char *c);
+extern void @@ROLE_8_00@@(char *a, char *b);
+
+int @@FUNCTION@@(char *unused, char *obj, char *arg2, char *arg3, char *arg4, char *arg5)
+{
+    char buf0[64];
+    char buf1[16];
+    char buf2[64];
+    char *p;
+
+    p = @@ROLE_0_01@@(obj);
+    if (p == 0)
+        return 0;
+    if (*(int *)(p + 60) & 0x40) {
+        @@ROLE_1_01@@(buf0, obj + 240);
+        @@ROLE_2_01@@(buf0, buf0);
+    } else {
+        @@ROLE_3_01@@(buf0, obj + 192);
+    }
+    @@ROLE_4_01@@(buf1, arg2, obj + 16);
+    @@ROLE_5_01@@(arg4, buf1, buf0);
+    @@ROLE_6_01@@(buf2, arg3);
+    @@ROLE_7_01@@(buf2, buf0, buf2);
+    @@ROLE_8_01@@(buf2, arg5);
+    return 1;
+}

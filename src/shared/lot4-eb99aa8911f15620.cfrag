@@ -1,0 +1,20 @@
+extern void @@ROLE_0_00@@(char *target, int mode, float value, float zero, float scale);
+extern int @@ROLE_2_00@@(char *first, char *second, int mode, int flag, int extra);
+extern float @@ROLE_3_00@@(char *source, short *table);
+
+extern short @@DATA_0_00@@[];
+extern float @@BIND_DATA1_00@@;
+
+int @@FUNCTION@@(float *out, float scale, float amount)
+{
+    char buffer[32];
+
+    @@ROLE_0_01@@(buffer, 1, @@BIND_DATA1_01@@ - 0.02f, 0.0f, scale);
+    @@ROLE_0_02@@(buffer + 16, 1, amount, 0.0f, scale);
+    if (@@ROLE_2_01@@(buffer, buffer + 16, 2, 0, 0)) {
+        if (out)
+            *out = @@ROLE_3_01@@(buffer, @@DATA_0_01@@);
+        return 1;
+    }
+    return 0;
+}

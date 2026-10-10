@@ -1,0 +1,38 @@
+extern int @@ROLE_0_00@@(char *p);
+extern int @@ROLE_1_00@@(float v);
+extern int @@ROLE_2_00@@(char *p);
+extern void @@ROLE_3_00@@(char *p);
+extern int @@ROLE_4_00@@(float v);
+
+void @@FUNCTION@@(char *p)
+{
+    char *q = p + 32;
+    int r;
+    int v;
+    float f;
+
+    *(unsigned char *)(p + 8) = *(unsigned char *)(p + 8) + *(unsigned char *)(q + 8);
+    *(float *)(p + 24) = *(float *)(p + 24) + *(float *)(q + 16);
+    *(float *)(p + 12) = *(float *)(p + 12) * *(float *)(q + 12);
+    if (*(int *)(q + 4) == 0) {
+        r = @@ROLE_0_01@@(p + 10);
+        if (r != 0) {
+            *(int *)(q + 4) = 1;
+            *(short *)(p + 10) = 30;
+            *(int *)(p + 4) = *(int *)(q + 20) | 0x7f000000;
+        } else {
+            f = (float)(10 - *(short *)(p + 10)) * 9.6000003814697265625000e+00f;
+            v = @@ROLE_1_01@@(f);
+            *(int *)(p + 4) = ((v + 32) << 24) | *(int *)(q + 20);
+        }
+    } else {
+        r = @@ROLE_2_01@@(p + 10);
+        if (r != 0) {
+            @@ROLE_3_01@@(p);
+        } else {
+            f = (float)*(short *)(p + 10) * 4.2333333492279052734375e+00f;
+            v = @@ROLE_4_01@@(f);
+            *(int *)(p + 4) = (v << 24) | *(int *)(q + 20);
+        }
+    }
+}

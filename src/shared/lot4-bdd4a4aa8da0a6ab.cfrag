@@ -1,0 +1,38 @@
+extern void @@ROLE_0_00@@(char *a, char *b);
+extern void @@ROLE_1_00@@(char *a, char *b, char *c);
+extern void @@ROLE_2_00@@(char *a, char *b, float f);
+extern void @@ROLE_3_00@@(char *a, char *b);
+extern void @@ROLE_4_00@@(char *a, char *b, float f);
+extern void @@ROLE_5_00@@(char *a, char *b, char *c);
+extern void @@ROLE_6_00@@(char *a, char *b, float f);
+extern void @@ROLE_7_00@@(char *a, char *b, char *c);
+extern int @@ROLE_8_00@@(unsigned int a, int b, float f);
+extern void @@ROLE_9_00@@(char *a);
+
+void @@FUNCTION@@(int *obj)
+{
+    char *a = (char *)obj + 16;
+    char *b = (char *)obj + 32;
+    char tmp[16];
+
+    @@ROLE_0_01@@(a, a);
+    *(int *)(b + 16) = *(int *)(b + 16) - 1;
+    if (*(int *)(b + 16) < 0)
+        *(int *)(b + 16) = 0;
+    *(unsigned char *)((char *)obj + 8) = *(unsigned char *)((char *)obj + 8) + 1;
+    @@ROLE_1_01@@(a, b, a);
+    *(float *)((char *)obj + 12) = *(float *)((char *)obj + 12) + 1.5750000000000000000000e+03f;
+    @@ROLE_2_01@@(b, b, 9.9000000953674316406250e-01f);
+    @@ROLE_3_01@@(a, tmp);
+    if ((*(int *)((char *)obj + 4) & 0xFF) < 32) {
+        @@ROLE_4_01@@(tmp, tmp, 1.5000000130385160446167e-03f);
+        @@ROLE_5_01@@(b, b, tmp);
+    } else {
+        @@ROLE_6_01@@(tmp, tmp, -7.5000000651925802230835e-04f);
+        @@ROLE_7_01@@(b, b, tmp);
+    }
+    *(int *)((char *)obj + 4) = @@ROLE_8_01@@(*(unsigned int *)((char *)obj + 4) & 0x00FFFFFF, 0, 2.5000000372529029846191e-02f)
+        | (*(int *)(b + 16) << 24);
+    if (*(int *)(b + 16) == 0)
+        @@ROLE_9_01@@((char *)obj);
+}

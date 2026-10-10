@@ -1,0 +1,44 @@
+extern char @@BIND_DATA0_00@@[];
+extern void @@ROLE_0_00@@(char *entry);
+extern void @@ROLE_1_00@@(char *entry);
+
+void @@FUNCTION@@(int slot, int value)
+{
+    char *e;
+    void (*fn)(char *);
+
+    {
+        char *p = @@BIND_DATA0_01@@ + slot * 80;
+
+        *(int *)(p + 4660) = value;
+        if (*(int *)(p + 4676) != 3) {
+            *(int *)(p + 4676) = 3;
+            e = *(char **)(p + 4640);
+            if (e != 0) {
+                if (*(unsigned char *)(e + 32) != 254) {
+                    if (*(unsigned char *)(e + 32) != 253) {
+                        fn = *(void (**)(char *))(e + 100);
+                        if (fn != 0)
+                            fn(e);
+                    }
+                }
+            }
+        }
+    }
+    {
+        char *q = @@BIND_DATA0_02@@ + slot * 80;
+
+        e = *(char **)(q + 4640);
+        *(int *)(q + 4676) = 0;
+        *(int *)(q + 4680) = 0;
+        if (e != 0) {
+            @@ROLE_0_01@@(e);
+            *(char **)(q + 4640) = 0;
+        }
+        e = *(char **)(q + 4644);
+        if (e != 0 && slot != 3) {
+            @@ROLE_1_01@@(e);
+            *(char **)(q + 4644) = 0;
+        }
+    }
+}
