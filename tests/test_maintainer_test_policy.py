@@ -167,6 +167,76 @@ class PolicyTests(unittest.TestCase):
         self.assertIn("if: always()", text)
         self.assertIn('test "$POLICY_RESULT" = success', text)
 
+    def retry_fixture(self, responses):
+        event = self.push_fixture()
+        key = "commits/" + self.sha + "/pulls?per_page=100"
+        valid = copy.deepcopy(self.values[key])
+        api = Api(self.values)
+        base_get = api.get
+        count = [0]
+        def get(path):
+            if path == key:
+                value = responses[min(count[0], len(responses) - 1)]
+                count[0] += 1
+                if isinstance(value, Exception): raise value
+                if value == "valid": return valid
+                return copy.deepcopy(value)
+            return base_get(path)
+        api.get = get
+        waits, clock = [], [0]
+        def wait(seconds):
+            waits.append(seconds)
+            clock[0] += seconds
+        return event, api, waits, wait, lambda: clock[0], count
+
+    def test_transient_empty_then_trusted_pending_then_exact_queue_success(self):
+        event = self.push_fixture()
+        pending = copy.deepcopy(self.values["commits/" + self.sha + "/pulls?per_page=100"])
+        pending[0]["merged_at"] = None
+        event, api, waits, wait, clock, count = self.retry_fixture([[], pending, "valid"])
+        with patch.object(policy, "QUALIFIED_WORKFLOW_SHA256", self.pin):
+            result = policy.select_with_retry("push", event, self.sha, api, wait, clock)
+        self.assertEqual(result["mode"], "reuse")
+        self.assertEqual(result["commit_sha"], self.sha)
+        self.assertEqual(waits, [2, 4])
+        self.assertEqual(count[0], 3)
+
+    def test_pending_exhausted_is_full_with_finite_wait_budget(self):
+        event, api, waits, wait, clock, count = self.retry_fixture([[]])
+        result = policy.select_with_retry("push", event, self.sha, api, wait, clock)
+        self.assertEqual(result["mode"], "full")
+        self.assertIn("bounded retry window", result["reason"])
+        self.assertLessEqual(sum(waits), 30)
+        self.assertEqual(count[0], 6)
+
+    def test_wrong_owner_fork_sha_and_ambiguity_never_wait(self):
+        event = self.push_fixture()
+        row = self.values["commits/" + self.sha + "/pulls?per_page=100"][0]
+        for kind in ("owner", "fork", "sha", "ambiguous"):
+            with self.subTest(kind=kind):
+                altered = copy.deepcopy(row)
+                altered["merged_at"] = None
+                if kind == "owner": altered["user"]["id"] = 1
+                elif kind == "fork": altered["head"]["repo"]["id"] = 1
+                elif kind == "sha": altered["merge_commit_sha"] = "d" * 40
+                responses = [altered, copy.deepcopy(altered)] if kind == "ambiguous" else [altered]
+                event, api, waits, wait, clock, count = self.retry_fixture([responses])
+                result = policy.select_with_retry("push", event, self.sha, api, wait, clock)
+                self.assertEqual(result["mode"], "full")
+                self.assertEqual(waits, [])
+                self.assertEqual(count[0], 1)
+
+    def test_api_error_unknown_event_and_other_proof_failures_never_retry(self):
+        event, api, waits, wait, clock, count = self.retry_fixture([PermissionError("secret-token")])
+        with self.assertRaises(PermissionError):
+            policy.select_with_retry("push", event, self.sha, api, wait, clock)
+        self.assertEqual(waits, [])
+        self.assertEqual(policy.select_with_retry("merge_group", {}, self.sha, api, wait, clock)["mode"], "full")
+        event, api, waits, wait, clock, count = self.retry_fixture(["valid"])
+        with patch.object(policy, "QUALIFIED_WORKFLOW_SHA256", "0" * 64):
+            self.assertEqual(policy.select_with_retry("push", event, self.sha, api, wait, clock)["mode"], "full")
+        self.assertEqual(waits, [])
+
 
 if __name__ == "__main__":
     unittest.main()
