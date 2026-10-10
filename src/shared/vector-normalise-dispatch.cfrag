@@ -1,0 +1,24 @@
+extern char @@DATA_0_00@@[];
+extern void @@ROLE_0_00@@(void *out, void *in, float scale);
+extern void @@ROLE_2_00@@(void *out, void *in1, void *in2);
+extern int @@ROLE_4_00@@(void *a, void *b, int mode, void *self, int flag);
+extern void @@ROLE_7_00@@(void *out, void *in, float scale);
+
+void @@FUNCTION@@(char *self, char *p1, int p2)
+{
+    float a[4];
+    float b[4];
+
+    @@ROLE_0_01@@(a, self + 224, 0.1f);
+    @@ROLE_0_02@@(b, self + 224, -3.0f);
+    @@ROLE_2_01@@(a, a, self + 16);
+    @@ROLE_2_02@@(b, b, self + 16);
+
+    if (@@ROLE_4_01@@(a, b, 2, self, 0))
+        @@ROLE_0_03@@(p1, @@DATA_0_01@@, 1.0f);
+    else
+        @@ROLE_0_04@@(p1, self + 224, -1.0f);
+
+    if (p2 == 0)
+        @@ROLE_7_01@@(p1, p1, -1.0f);
+}

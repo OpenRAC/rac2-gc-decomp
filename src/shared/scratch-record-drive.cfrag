@@ -1,0 +1,74 @@
+
+#ifndef RAC2_T_S8_F4778F810
+#define RAC2_T_S8_F4778F810
+typedef signed char s8_F4778f810;
+#endif
+
+#ifndef RAC2_T_S16_F4778F810
+#define RAC2_T_S16_F4778F810
+typedef signed short s16_F4778f810;
+#endif
+
+#ifndef RAC2_T_U16_F4778F810
+#define RAC2_T_U16_F4778F810
+typedef unsigned short u16_F4778f810;
+#endif
+
+
+
+
+
+extern void @@ROLE_0_00@@(char *a, char *b, char *c, f32 d);
+extern void @@ROLE_1_00@@(char *a, char *b, char *c);
+extern void @@ROLE_2_00@@(char *a, char *b, char *c);
+extern void @@ROLE_3_00@@(char *a, char *b);
+extern void @@ROLE_4_00@@(char *a, char *b, char *c);
+extern void @@ROLE_5_00@@(char *a, char *b, char *c);
+extern void @@ROLE_6_00@@(char *a, char *b, char *c);
+extern void @@ROLE_7_00@@(char *a, char *b, char *c);
+
+#ifndef RAC2_T_V4_F4778F810
+#define RAC2_T_V4_F4778F810
+typedef struct {
+    f32 x, y, z, w;
+} V4_F4778f810;
+#endif
+
+
+#ifndef RAC2_T_SUB_F4778F810
+#define RAC2_T_SUB_F4778F810
+typedef struct {
+    u8 pad000[0x10];
+    u8 at010[0x10];
+    u8 at020[0x28];
+    f32 f048;
+} Sub_F4778f810;
+#endif
+
+
+#ifndef RAC2_T_OBJ_F4778F810
+#define RAC2_T_OBJ_F4778F810
+typedef struct {
+    u8 pad000[0x10];
+    u8 at010[0x58];
+    char *p068;
+    u8 pad06C[0xC0 - 0x6C];
+    u8 at0C0[0x10];
+} Obj_F4778f810;
+#endif
+
+
+void @@FUNCTION@@(Obj_F4778f810 *obj)
+{
+    V4_F4778f810 tmp[6];
+    Sub_F4778f810 *p = (Sub_F4778f810 *)obj->p068;
+
+    @@ROLE_0_01@@((char *)obj + 0x10, (char *)p, (char *)p, p->f048);
+    @@ROLE_1_01@@((char *)obj + 0x10, (char *)obj + 0x10, (char *)p);
+    @@ROLE_2_01@@((char *)&tmp[0], (char *)p + 0x20, (char *)obj + 0xC0);
+    @@ROLE_3_01@@((char *)p + 0x10, (char *)&tmp[3]);
+    @@ROLE_4_01@@((char *)obj + 0xC0, (char *)&tmp[3], (char *)obj + 0xC0);
+    @@ROLE_5_01@@((char *)&tmp[1], (char *)p + 0x20, (char *)obj + 0xC0);
+    @@ROLE_6_01@@((char *)&tmp[2], (char *)&tmp[1], (char *)&tmp[0]);
+    @@ROLE_7_01@@((char *)obj + 0x10, (char *)obj + 0x10, (char *)&tmp[2]);
+}

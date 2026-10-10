@@ -1,0 +1,20 @@
+extern void @@ROLE_0_00@@(void *object, float first, float second);
+extern void @@ROLE_1_00@@(char *first, char *second, void *third);
+extern int @@ROLE_2_00@@(void *first, char *second, int mode, int value, int extra);
+extern void @@ROLE_3_00@@(void *first, void *second, void *third);
+extern void @@ROLE_4_00@@(void *first, void *second, float value);
+
+extern short @@DATA_0_00@@[];
+extern short @@DATA_1_00@@[];
+extern int @@BIND_DATA2_00@@[];
+
+void @@FUNCTION@@(void *object)
+{
+    @@ROLE_0_01@@(object, 0.5f, 6.0f);
+    @@ROLE_1_01@@(object, object, @@DATA_0_01@@);
+    if (@@ROLE_2_01@@(@@DATA_0_02@@, object, 130, @@BIND_DATA2_01@@[0], 0)) {
+        @@ROLE_3_01@@(object, @@DATA_1_01@@, @@DATA_0_03@@);
+        @@ROLE_4_01@@(object, object, 0.75f);
+        @@ROLE_1_02@@(object, object, @@DATA_0_04@@);
+    }
+}

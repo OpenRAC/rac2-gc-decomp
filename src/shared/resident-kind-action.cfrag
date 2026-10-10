@@ -1,0 +1,75 @@
+
+
+extern void @@ROLE_0_00@@(int arg0, int arg1, int arg2, int arg3);
+extern int @@ROLE_1_00@@(float value);
+extern void @@ROLE_2_00@@(int arg0, int arg1, int arg2, int arg3);
+extern int @@ROLE_3_00@@(float value);
+extern void @@ROLE_4_00@@(int arg0, int arg1, int arg2, int arg3);
+extern int @@ROLE_5_00@@(float value);
+extern void @@ROLE_6_00@@(int arg0, int arg1, int arg2, int arg3);
+extern int @@ROLE_7_00@@(float value);
+extern void @@ROLE_8_00@@(int arg0, int arg1, int arg2, int arg3);
+extern int @@ROLE_9_00@@(float value);
+extern void @@ROLE_10_00@@(int arg0, int arg1, int arg2, int arg3);
+
+#ifndef RAC2_T_RESIDENTSTATE_FD160FB9C
+#define RAC2_T_RESIDENTSTATE_FD160FB9C
+typedef struct {
+    u8 pad000[0x1b8];
+    int f1B8;
+    u8 pad1bc[0xc2c - 0x1bc];
+    int fC2C;
+    u8 padc30[0x149d - 0xc30];
+    u8 b149D;
+    u8 pad149e[0x2290 - 0x149e];
+    u8 *p2290;
+    int f2294;
+} ResidentState_Fd160fb9c;
+#endif
+
+
+extern ResidentState_Fd160fb9c @@BIND_DATA0_00@@;
+
+void @@FUNCTION@@(void)
+{
+    int selector;
+
+    if (@@BIND_DATA0_01@@.f2294 == 2) {
+        if (@@BIND_DATA0_02@@.f1B8 < 15)
+            return;
+    }
+
+    selector = @@BIND_DATA0_03@@.b149D;
+
+    if (@@BIND_DATA0_04@@.f2294 == 2) {
+        if (@@BIND_DATA0_05@@.f1B8 == 22)
+            @@ROLE_0_01@@(selector, 0, 1, 30);
+    }
+
+    switch (@@BIND_DATA0_06@@.p2290[67]) {
+    case 3:
+        if (@@BIND_DATA0_07@@.fC2C != 0)
+            return;
+        if (@@ROLE_1_01@@(49.5f) != 0)
+            @@ROLE_2_01@@(selector, 0, 1, 30);
+        if (@@ROLE_5_01@@(17.0f) != 0)
+            @@ROLE_6_01@@(selector, 1, 1, 30);
+        return;
+    case 4:
+        if (@@BIND_DATA0_08@@.fC2C != 0)
+            return;
+        if (@@ROLE_3_01@@(12.5f) != 0)
+            @@ROLE_4_01@@(selector, 0, 1, 30);
+        if (@@ROLE_5_02@@(1.0f) != 0)
+            @@ROLE_6_02@@(selector, 1, 1, 30);
+        return;
+    case 20:
+        if (@@BIND_DATA0_09@@.fC2C != 0)
+            return;
+        if (@@ROLE_7_01@@(8.0f) != 0)
+            @@ROLE_8_01@@(selector, 0, 1, 30);
+        if (@@ROLE_9_01@@(21.0f) != 0)
+            @@ROLE_10_01@@(selector, 1, 1, 30);
+        return;
+    }
+}

@@ -1,0 +1,30 @@
+extern char @@DATA_0_00@@[];
+extern char @@BIND_LVL_0_ARANOS_TUTORIAL_D_00189E20_00@@[];
+extern float @@ROLE_0_00@@(float a, float b);
+extern float @@ROLE_1_00@@(float a, float b);
+extern float @@ROLE_2_00@@(char *a, char *b);
+
+void @@FUNCTION@@(char *o)
+{
+    char *B = @@DATA_0_01@@;
+    char *D = @@BIND_LVL_0_ARANOS_TUTORIAL_D_00189E20_01@@;
+    float *p = *(float **)(D + 8848);
+    float r = @@ROLE_1_01@@(*(float *)(B + 344),
+                      @@ROLE_0_01@@(p[4] - *(float *)(B + 320),
+                              p[5] - *(float *)(B + 324)));
+
+    if (r < 0.5585054f) {
+        r = @@ROLE_2_01@@(D + 128, B + 320);
+        if (r < 8.0f) {
+            *(char *)(B + 659) = 0;
+            *(short *)(o + 126) = 2;
+            *(float *)(B + 692) = 0.018f;
+            *(float *)(B + 680) = 0.018f;
+        } else {
+            *(short *)(o + 126) = 4;
+        }
+    } else {
+        *(short *)(o + 126) = 4;
+    }
+    *(char *)(o + 125) = 0;
+}

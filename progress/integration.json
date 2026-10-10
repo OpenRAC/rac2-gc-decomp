@@ -1,15 +1,15 @@
 {
   "default": {
-    "c_object_sha256": "b5a2be9bbd43e6f2a3d80f8b84eef1c0047328f4f015d4ffbec1bd324505b71e",
-    "candidate_elf_sha256": "649f85eaed370c4ff2612a179ef60be18d0fb5d4ec687317d69b279c1d63b6ad",
+    "c_object_sha256": "4b053977a7792c40a8876cb84b7f84782682732a33666834779649017057563e",
+    "candidate_elf_sha256": "d82d82e5d9c692bacf622d1f0acd156b6c11edefd9c1436129ef5c61f7990cd7",
     "candidate_source": "candidates/boot.c",
-    "catalog_sha256": "c92612c62453ca2f8975525ece7165e437752f1dbe002e0187cc6859a66a59d1",
+    "catalog_sha256": "127eca7778fc598b5fe696f48275d917c50d954f4aa9601968801369fe9bbfce",
     "full_boot_gate": {
       "bytes_compared": 2521763,
       "matched": true,
       "segments": 2
     },
-    "matched_code_bytes": 17148,
+    "matched_code_bytes": 18344,
     "program": "boot",
     "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
     "replacement_inputs": {
@@ -75,6 +75,8 @@
         "FUN_0026F808",
         "FUN_0026FEB8",
         "FUN_00273D10",
+        "FUN_00274128",
+        "FUN_00274208",
         "FUN_00279828",
         "FUN_0027B948",
         "FUN_0027F128",
@@ -102,6 +104,7 @@
         "FUN_002912F0",
         "FUN_00291758",
         "FUN_002934B8",
+        "FUN_00293CA8",
         "FUN_00294630",
         "FUN_00294E48",
         "FUN_00295BE8",
@@ -156,10 +159,13 @@
         "FUN_002D2EE0",
         "FUN_002D3290",
         "FUN_002D3390",
+        "FUN_002D4E10",
         "FUN_002D5540",
         "FUN_002D7AC8",
         "FUN_002D9798",
         "FUN_002DE810",
+        "FUN_002E4478",
+        "FUN_002E46C0",
         "FUN_002E59B0",
         "FUN_002E59F8",
         "FUN_002E5F60",
@@ -182,6 +188,7 @@
         "FUN_00312E10",
         "FUN_00316B40",
         "FUN_00316DA0",
+        "FUN_0031A998",
         "FUN_0031AB08",
         "FUN_0031C8E0",
         "FUN_0031E750",
@@ -290,6 +297,7 @@
         "FUN_0034CE98",
         "FUN_0034E218",
         "FUN_0034EBE0",
+        "FUN_0034EC70",
         "FUN_0034F3B8",
         "FUN_0034F898",
         "FUN_0034F8C0",
@@ -330,7 +338,7 @@
         "FUN_00351FA0"
       ]
     },
-    "source_sha256": "e97ccd1bb6670f20a917035bfc840b1fe416955f73b01962532fbb6db559d694",
+    "source_sha256": "674b48506ecbcb96864012e352137f26b99c2a1cc4532b8efaa87aeb7a7f7058",
     "state": "integrated",
     "target": "SCUS_972.68",
     "tools": {
@@ -1187,6 +1195,36 @@
       "unit_id": "default-gnu8bed"
     },
     {
+      "address": 2572584,
+      "candidate_sha256": "ecf55a83564d6df959ffc6a02db154da44b0febd45e62890957d29a6fa13866e",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "ecf55a83564d6df959ffc6a02db154da44b0febd45e62890957d29a6fa13866e",
+      "size": 220,
+      "state": "integrated",
+      "symbol": "FUN_00274128",
+      "unit_id": "default-gnu8bed"
+    },
+    {
+      "address": 2572808,
+      "candidate_sha256": "ecf55a83564d6df959ffc6a02db154da44b0febd45e62890957d29a6fa13866e",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "ecf55a83564d6df959ffc6a02db154da44b0febd45e62890957d29a6fa13866e",
+      "size": 220,
+      "state": "integrated",
+      "symbol": "FUN_00274208",
+      "unit_id": "default-gnu8bed"
+    },
+    {
       "address": 2594856,
       "candidate_sha256": "0fcd64d02ee5f703b8cdeb816e212001880e538346f6c4b4d19e06d6b58ddd6e",
       "candidate_source": "candidates/boot.c",
@@ -1589,6 +1627,21 @@
       "size": 60,
       "state": "integrated",
       "symbol": "FUN_002934B8",
+      "unit_id": "default-gnu8bed"
+    },
+    {
+      "address": 2702504,
+      "candidate_sha256": "5c48a831c491e32a7438303f29f709d4ebbb187d9edaf5ed83f8baa186c23847",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "5c48a831c491e32a7438303f29f709d4ebbb187d9edaf5ed83f8baa186c23847",
+      "size": 132,
+      "state": "integrated",
+      "symbol": "FUN_00293CA8",
       "unit_id": "default-gnu8bed"
     },
     {
@@ -2402,6 +2455,21 @@
       "unit_id": "default-gnu8bed"
     },
     {
+      "address": 2969104,
+      "candidate_sha256": "e0246a57ebbc250aaf3951b45a0b136de36d8131dbb5949ca4b5e3cd2c73e3f5",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "e0246a57ebbc250aaf3951b45a0b136de36d8131dbb5949ca4b5e3cd2c73e3f5",
+      "size": 52,
+      "state": "integrated",
+      "symbol": "FUN_002D4E10",
+      "unit_id": "default-gnu8bed"
+    },
+    {
       "address": 2970944,
       "candidate_sha256": "0e20ed771d506ca2f2e77c92a9593a9ec18a4a1e4c8955b52296b359582bf65c",
       "candidate_source": "candidates/boot.c",
@@ -2459,6 +2527,36 @@
       "size": 64,
       "state": "integrated",
       "symbol": "FUN_002DE810",
+      "unit_id": "default-gnu8bed"
+    },
+    {
+      "address": 3032184,
+      "candidate_sha256": "d4dfb7874feee7aafebc8e7beb7363a631b47849bdd23bc6bbbe5e49544da57d",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "d4dfb7874feee7aafebc8e7beb7363a631b47849bdd23bc6bbbe5e49544da57d",
+      "size": 172,
+      "state": "integrated",
+      "symbol": "FUN_002E4478",
+      "unit_id": "default-gnu8bed"
+    },
+    {
+      "address": 3032768,
+      "candidate_sha256": "5bcf89f78ae5550a0204e7b90454209a7e2d314592acd46fb771bbed72cb03fe",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "5bcf89f78ae5550a0204e7b90454209a7e2d314592acd46fb771bbed72cb03fe",
+      "size": 68,
+      "state": "integrated",
+      "symbol": "FUN_002E46C0",
       "unit_id": "default-gnu8bed"
     },
     {
@@ -2789,6 +2887,21 @@
       "size": 100,
       "state": "integrated",
       "symbol": "FUN_00316DA0",
+      "unit_id": "default-gnu8bed"
+    },
+    {
+      "address": 3254680,
+      "candidate_sha256": "a39a546272154fca803ece78a1af2a4d851cbd4649818c01f41ea5090e791e1f",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "a39a546272154fca803ece78a1af2a4d851cbd4649818c01f41ea5090e791e1f",
+      "size": 276,
+      "state": "integrated",
+      "symbol": "FUN_0031A998",
       "unit_id": "default-gnu8bed"
     },
     {
@@ -4412,6 +4525,21 @@
       "unit_id": "default-gnu8bed"
     },
     {
+      "address": 3468400,
+      "candidate_sha256": "e2bdd63520fe452eeb8c35cd4692a96dc64966cf1bf0b101ced361239f59062c",
+      "candidate_source": "candidates/boot.c",
+      "different_bytes": 0,
+      "integrated": true,
+      "matched": true,
+      "origin": "boot-default",
+      "program": "boot",
+      "reference_sha256": "e2bdd63520fe452eeb8c35cd4692a96dc64966cf1bf0b101ced361239f59062c",
+      "size": 56,
+      "state": "integrated",
+      "symbol": "FUN_0034EC70",
+      "unit_id": "default-gnu8bed"
+    },
+    {
       "address": 3470264,
       "candidate_sha256": "1003c2384ae2dcbbd7233d44bfc9a6be46d88e286fde165df8c3bddfaacb21c4",
       "candidate_source": "candidates/boot.c",
@@ -5028,7 +5156,7 @@
     }
   ],
   "kind": "boot-c-owner-integration",
-  "matched_code_bytes": 18292,
+  "matched_code_bytes": 19488,
   "program": "boot",
   "reference_sha256": "36d5814d8d95328d5839612ccdf7a2e7ecac0b6f868d3ad4bb2e98411f734b4a",
   "schema": 3,

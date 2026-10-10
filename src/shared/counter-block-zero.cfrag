@@ -1,0 +1,15 @@
+extern char @@DATA_0_00@@[];
+
+extern void @@ROLE_0_00@@(char *p);
+extern void @@ROLE_1_00@@(void);
+
+void @@FUNCTION@@(void)
+{
+    char *p = @@DATA_0_01@@;
+
+    *(int *)(p + 320) = 0;
+    *(int *)(p + 324) = 0;
+    *(int *)(p + 328) = 0;
+    @@ROLE_0_01@@(p + 880);
+    @@ROLE_1_01@@();
+}

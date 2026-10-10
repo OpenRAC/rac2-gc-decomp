@@ -1,0 +1,42 @@
+extern char *@@ROLE_0_00@@(char *object, int flag);
+extern void @@ROLE_1_00@@(char *target);
+extern void @@ROLE_2_00@@(char *object);
+extern void @@ROLE_3_00@@(char *object, int value);
+extern void @@ROLE_4_00@@(char *object, int value);
+extern void @@ROLE_5_00@@(char *object);
+extern void @@ROLE_6_00@@(char *object);
+extern int @@DATA_0_00@@[];
+
+void @@FUNCTION@@(char *object, int flag)
+{
+    char *s;
+    int **slot;
+
+    s = @@ROLE_0_01@@(object, flag);
+    if (s == 0)
+        return;
+
+    *(short *)(object + 50) = 511;
+    *(unsigned char *)(object + 48) = 255;
+    *(short *)(object + 52) = *(unsigned short *)(object + 52) & 0xfffc;
+    *(int *)(object + 152) = *(int *)(*(int *)(object + 36) + 16);
+    *(int *)(s + 272) = 1;
+    *(int *)(s + 248) = 0;
+    @@ROLE_1_01@@(s + 112);
+    *(int *)(s + 268) = 0;
+    *(int *)(s + 280) = 0;
+    *(int *)(s + 252) = 0;
+    *(int *)(s + 308) = 0;
+    *(int *)(s + 332) = 1;
+    *(int *)(s + 348) = 0;
+    slot = *(int ***)(object + 104);
+    *(float *)*slot = (float)*(int *)(s + 328);
+    @@DATA_0_01@@[4] = @@DATA_0_02@@[4] + 1;
+    @@ROLE_2_01@@(object);
+    @@ROLE_3_01@@(object, 1);
+    @@ROLE_4_01@@(object, 1);
+    if (flag)
+        @@ROLE_5_01@@(object);
+    if (@@DATA_0_03@@[13] == 1)
+        @@ROLE_6_01@@(object);
+}
