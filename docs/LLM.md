@@ -57,10 +57,11 @@ For each target function:
    - Document logic
    - Extract pseudocode
 
-3. **Check function size**:
-   - Small (0-100 bytes): Likely simple helper
-   - Medium (101-500 bytes): Moderate complexity
-   - Big (501+ bytes): Complex function
+3. **Check function size** (verify with function_size_rank.py):
+   ```bash
+   python3 scripts/function_size_rank.py --format compact | grep func_XXXXXX
+   # Expected: func_XXXXXX size N [small|medium|big]
+   ```
 
 ### 3. Verify Function Size
 
@@ -118,6 +119,12 @@ Good for beginners. Examples:
 - Getters/setters
 - Small state transitions
 
+**Verification**: Use `function_size_rank.py` to verify categorization:
+```bash
+python3 scripts/function_size_rank.py --format compact | grep func_XXXXXX
+# Expected: func_XXXXXX size N small
+```
+
 ### Medium Functions (101-500 bytes)
 
 Moderate complexity. Examples:
@@ -158,6 +165,47 @@ sh tools/ee/build.sh usa
 # Check byte-exact match
 cmp extracted/usa/SCUS_972.68.rom going-decompiled/build/usa/SCUS_972.68.rom
 ```
+
+## Function Size Ranking Verification
+
+### Using function_size_rank.py
+
+The `scripts/function_size_rank.py` script provides comprehensive function analysis:
+
+```bash
+# Rank all functions by size
+python3 scripts/function_size_rank.py --format compact | head -20
+
+# Filter by category
+python3 scripts/function_size_rank.py --category small --limit 10
+
+# Filter by size range
+python3 scripts/function_size_rank.py --min-size 100 --max-size 300
+
+# Get JSON output for automation
+python3 scripts/function_size_rank.py --format json
+
+# Get CSV output for spreadsheets
+python3 scripts/function_size_rank.py --format csv
+```
+
+### Compact Format
+
+The compact format is ideal for scripting:
+```
+func_001163A0 size 64 small
+func_00116580 size 128 medium
+func_00116780 size 256 medium
+```
+
+### Test Coverage
+
+Run unit tests for the function size ranking:
+```bash
+python3 tests/test_function_size_rank_simple.py
+```
+
+Expected: 100% pass rate for categorization and filtering.
 
 ## Common Patterns
 
