@@ -99,6 +99,7 @@ This project builds upon years of dedicated reverse-engineering research and too
 - **[rac1-decomp](https://github.com/OpenRAC/rac1-decomp)** by Lynder063, OpenRAC contributors – Matching decompilation of the first *Ratchet & Clank*. Invaluable reference for function pairing, struct definitions, symbol names, and engine insights ([`docs/SIBLING_DECOMPS.md`](docs/SIBLING_DECOMPS.md)).
 - **[rac3-uya-decomp](https://github.com/OpenRAC/rac3-uya-decomp)** by vetusmagnus – Matching decompilation of *Ratchet & Clank: Up Your Arsenal*. Foundation for SN Systems compiler flag discoveries and build setup.
 - **[Wrench](https://github.com/chaoticgd/wrench)** by chaoticgd – Ratchet & Clank PS2 modding tools and asset format specifications ([`tools/extract/README.md`](tools/extract/README.md)).
+- **[RC2-Going-Decompiled](https://github.com/Promises/RC2-Going-Decompiled)** by Promises – Comprehensive matching build system with period-correct ee-gcc, VU0 macro fixup, and ASM mirroring. Our matching build toolchain (`tools/ee/`) is based on this project.
 
 ---
 
